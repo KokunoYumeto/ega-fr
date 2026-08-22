@@ -1,0 +1,1206 @@
+\section{Conditions de finitude}
+\label{section:I.6-fr}
+
+\subsection{Préschémas noethériens et localement noethériens.}
+\label{subsection:I.6.1-fr}
+
+\begin{definition}[6.1.1]
+\label{I.6.1.1-fr}
+On dit qu'un préschéma $X$ est \emph{noethérien} (resp. \emph{localement
+noethérien}) s'il est réunion finie (resp. réunion) d'ouverts affines
+$V_\alpha$ tels que l'anneau de chacun des schémas induits sur les $V_\alpha$
+soit noethérien.
+\end{definition}
+
+Il résulte aussitôt de (\hyperref[I.1.5.2-fr]{1.5.2}) que si $X$ est
+localement noethérien, le faisceau structural $\mathscr{O}_X$ est un
+\emph{faisceau cohérent d'anneaux}, la question étant locale. \emph{Tout
+sous-$\mathscr{O}_X$-}
+
+\oldpage[I]{141}
+\emph{Module (resp. tout $\mathscr{O}_X$-Module quotient) quasi-cohérent}
+d'un $\mathscr{O}_X$-Module \emph{cohérent} $\mathscr{F}$ est alors
+\emph{cohérent}, car la question est de nouveau locale, et il suffit
+d'appliquer (\hyperref[I.1.5.1-fr]{1.5.1}),
+(\hyperref[I.1.4.1-fr]{1.4.1}) et
+(\hyperref[I.1.3.10-fr]{1.3.10}), joints au fait qu'un sous-module (resp.
+module quotient) d'un module de type fini sur un anneau noethérien est de
+type fini. Plus particulièrement, \emph{tout faisceau d'idéaux
+quasi-cohérent} de $\mathscr{O}_X$ est \emph{cohérent}.
+
+Si un préschéma $X$ est réunion finie (resp. réunion) d'ouverts $W_\lambda$
+tels que les préschémas induits sur les $W_\lambda$ soient noethériens (resp.
+localement noethériens), il est clair que $X$ est noethérien (resp.
+localement noethérien).
+
+\begin{proposition}[6.1.2]
+\label{I.6.1.2-fr}
+Pour qu'un préschéma $X$ soit noethérien, il faut et il suffit qu'il soit
+localement noethérien et que son espace sous-jacent soit quasi-compact.
+L'espace sous-jacent de $X$ est alors noethérien.
+\end{proposition}
+
+\begin{proof}
+La première assertion découle aussitôt des définitions et de
+(\hyperref[I.1.1.10-fr]{1.1.10 (ii)}). La seconde résulte de
+(\hyperref[I.1.1.6-fr]{1.1.6}) et du fait que tout espace réunion finie de
+sous-espaces noethériens est noethérien
+(\hyperref[0.2.2.3-fr]{0, 2.2.3}).
+\end{proof}
+
+\begin{proposition}[6.1.3]
+\label{I.6.1.3-fr}
+Soit $X$ un schéma affine d'anneau $A$. Les conditions suivantes sont
+équivalentes~: a) $X$ est noethérien~; b) $X$ est localement noethérien~;
+c) $A$ est noethérien.
+\end{proposition}
+
+\begin{proof}
+L'équivalence de a) et b) résulte de (\hyperref[I.6.1.2-fr]{6.1.2}) et de ce
+que tout schéma affine a un espace sous-jacent quasi-compact
+(\hyperref[I.1.1.10-fr]{1.1.10})~; il est clair en outre que c) entraîne a).
+Pour voir que a) entraîne c), remarquons qu'il y a un recouvrement fini
+$(V_i)$ de $X$ par des ouverts affines tels que l'anneau $A_i$ du préschéma
+induit sur $V_i$ soit noethérien. Soit alors $(\mathfrak{a}_n)$ une suite
+croissante d'idéaux de $A$~; il lui correspond canoniquement de façon
+biunivoque (\hyperref[I.1.3.7-fr]{1.3.7}) une suite croissante
+$(\widetilde{\mathfrak{a}}_n)$ de faisceaux d'idéaux dans
+$\widetilde{A}\equiv\mathscr{O}_X$~; pour voir que la suite
+$(\mathfrak{a}_n)$ est stationnaire, il suffit de prouver que la suite
+$(\widetilde{\mathfrak{a}}_n)$ l'est. Or, la restriction
+$\widetilde{\mathfrak{a}}_n|V_i$ est un faisceau quasi-cohérent d'idéaux dans
+$\mathscr{O}_X|V_i$, étant l'image réciproque de
+$\widetilde{\mathfrak{a}}_n$ par l'injection canonique $V_i\to X$
+(\hyperref[0.5.1.4-fr]{0, 5.1.4})~; $\widetilde{\mathfrak{a}}_n|V_i$ est
+donc de la forme $\widetilde{\mathfrak{a}}_{ni}$, où $\mathfrak{a}_{ni}$ est
+un idéal de $A_i$ (\hyperref[I.1.3.7-fr]{1.3.7}). Comme $A_i$ est noethérien,
+la suite $(\mathfrak{a}_{ni})$ est stationnaire pour tout $i$, d'où la
+proposition.
+\end{proof}
+
+On notera que le raisonnement précédent prouve aussi que \emph{si $X$ est un
+préschéma noethérien, toute suite croissante de faisceaux cohérents d'idéaux
+de $\mathscr{O}_X$ est stationnaire}.
+
+\begin{proposition}[6.1.4]
+\label{I.6.1.4-fr}
+Tout sous-préschéma d'un préschéma noethérien (resp. localement noethérien)
+est noethérien (resp. localement noethérien).
+\end{proposition}
+
+\begin{proof}
+Il suffit de faire la démonstration pour un préschéma noethérien $X$~; en
+outre, on est aussitôt ramené par la définition
+(\hyperref[I.6.1.1-fr]{6.1.1}) au cas où $X$ est un schéma affine. Comme tout
+sous-préschéma de $X$ est un sous-préschéma fermé d'un préschéma induit sur
+un ouvert (\hyperref[I.4.1.3-fr]{4.1.3}), on peut se borner à considérer le
+cas d'un sous-préschéma $Y$ fermé ou induit sur un ouvert de $X$. Le cas où
+$Y$ est fermé est immédiat, car si $A$ est l'anneau de $X$, on sait que $Y$
+est un schéma affine d'anneau $A/\mathfrak{J}$, où $\mathfrak{J}$ est un
+idéal de $A$ (\hyperref[I.4.2.3-fr]{4.2.3})~; comme $A$ est noethérien
+(\hyperref[I.6.1.3-fr]{6.1.3}), il en est de même de $A/\mathfrak{J}$.
+
+Supposons maintenant $Y$ ouvert dans $X$~; l'espace sous-jacent $Y$ est
+noethérien (\hyperref[I.6.1.2-fr]{6.1.2}), donc quasi-compact, et par suite
+réunion finie d'ouverts $D(f_i)$ ($f_i\in A$)~;
+\oldpage[I]{142}
+tout revient à démontrer la proposition lorsque $Y=D(f)$ avec $f\in A$. Mais
+alors $Y$ est un schéma affine dont l'anneau est isomorphe à $A_f$
+(\hyperref[I.1.3.6-fr]{1.3.6})~; comme $A$ est noethérien
+(\hyperref[I.6.1.3-fr]{6.1.3}), il en est de même de $A_f$.
+\end{proof}
+
+\begin{env}[6.1.5]
+\label{I.6.1.5-fr}
+On notera que le \emph{produit} de deux $S$-préschémas noethériens n'est pas
+nécessairement noethérien, même si ces préschémas sont affines, car le produit
+tensoriel de deux algèbres noethériennes n'est pas nécessairement un anneau
+noethérien (cf. (\hyperref[I.6.3.8-fr]{6.3.8})).
+\end{env}
+
+\begin{proposition}[6.1.6]
+\label{I.6.1.6-fr}
+Si $X$ est un préschéma noethérien, le Nilradical $\mathscr{N}_X$ de
+$\mathscr{O}_X$ est nilpotent.
+\end{proposition}
+
+On peut en effet recouvrir $X$ par un nombre fini d'ouverts affines $U_i$ et il
+suffit de prouver qu'il existe des entiers $n_i$ tels que
+$(\mathscr{N}_X|U_i)^{n_i}=0$~; si $n$ est le plus grand des $n_i$, on aura
+alors $\mathscr{N}_X^n=0$. On est donc ramené au cas où
+$X=\operatorname{Spec}(A)$ est affine, $A$ étant un anneau noethérien~; en
+vertu de (\hyperref[I.5.1.1-fr]{5.1.1}) et de
+(\hyperref[I.1.3.13-fr]{1.3.13}), il suffit d'observer que le nilradical de
+$A$ est nilpotent (\cite{I-11}, p.~127, cor.~4).
+
+\begin{corollary}[6.1.7]
+\label{I.6.1.7-fr}
+Soit $X$ un préschéma noethérien~; pour que $X$ soit un schéma affine, il faut
+et il suffit que $X_{\mathrm{red}}$ le soit.
+\end{corollary}
+
+Cela résulte de (\hyperref[I.6.1.6-fr]{6.1.6}) et
+(\hyperref[I.5.1.10-fr]{5.1.10}).
+
+\begin{lemma}[6.1.8]
+\label{I.6.1.8-fr}
+Soient $X$ un espace topologique, $x$ un point de $X$, $U$ un voisinage ouvert
+de $x$ n'ayant qu'un nombre fini de composantes irréductibles. Alors il existe
+un voisinage $V$ de $x$ tel que tout voisinage ouvert de $x$ contenu dans $V$
+soit connexe.
+\end{lemma}
+
+Soient $U_i$ ($1\leq i\leq m$) les composantes irréductibles de $U$ ne
+contenant pas $x$~; le complémentaire dans $U$ de la réunion des $U_i$ est un
+voisinage ouvert $V$ de $x$ dans $U$, donc aussi dans $X$~; c'est d'ailleurs
+le complémentaire dans $X$ de la réunion des composantes irréductibles de $X$
+qui ne contiennent pas $x$ (\hyperref[0.2.1.6-fr]{0, 2.1.6}). Soit alors $W$
+un voisinage ouvert de $x$ contenu dans $V$. Les composantes irréductibles de
+$W$ sont les traces sur $W$ des composantes irréductibles de $U$ qui
+rencontrent $W$ (\hyperref[0.2.1.6-fr]{0, 2.1.6}), donc ces composantes
+contiennent $x$~; comme elles sont connexes, il en est de même de $W$.
+
+\begin{corollary}[6.1.9]
+\label{I.6.1.9-fr}
+Un espace topologique localement noethérien est localement connexe (ce qui
+entraîne entre autres que ses composantes connexes sont ouvertes).
+\end{corollary}
+
+\begin{proposition}[6.1.10]
+\label{I.6.1.10-fr}
+Soit $X$ un espace topologique localement noethérien. Les conditions suivantes
+sont équivalentes~:
+\begin{enumerate}
+  \item[a)] Les composantes irréductibles de $X$ sont ouvertes.
+  \item[b)] Les composantes irréductibles de $X$ sont identiques à ses
+    composantes connexes.
+  \item[c)] Les composantes connexes de $X$ sont irréductibles.
+  \item[d)] Deux composantes irréductibles distinctes de $X$ ne se rencontrent
+    pas.
+\end{enumerate}
+
+Enfin, si $X$ est un préschéma, ces conditions équivalent aussi à~:
+\begin{enumerate}
+  \item[e)] Pour tout $x\in X$, $\operatorname{Spec}(\mathscr{O}_x)$ est
+    irréductible (autrement dit le nilradical de $\mathscr{O}_x$ est premier).
+\end{enumerate}
+\end{proposition}
+
+Il est immédiat que a) entraîne b), car un espace irréductible est connexe, et
+a) entraîne que les composantes irréductibles de $X$ sont des ensembles à la
+fois ouverts et fermés. Il est trivial que b) entraîne c)~; inversement, un
+ensemble fermé $F$ contenant
+\oldpage[I]{143}
+une composante connexe $C$ de $X$ et distinct de $C$ ne peut être
+irréductible, car cet ensemble n'étant pas connexe est réunion de deux
+ensembles non vides disjoints à la fois ouverts et fermés dans $F$, donc
+fermés dans $X$~; par suite c) entraîne b). On en conclut aussitôt que c)
+entraîne d), deux composantes connexes distinctes étant sans point commun.
+
+Nous n'avons pas utilisé jusqu'ici le fait que $X$ est localement noethérien.
+Supposons maintenant cette hypothèse réalisée et montrons que d) entraîne
+a)~: en vertu de (\hyperref[0.2.1.6-fr]{0, 2.1.6}), on peut se borner au cas
+où l'espace $X$ est noethérien, donc n'a qu'un nombre fini de composantes
+irréductibles. Comme celles-ci sont fermées et deux à deux disjointes, elles
+sont ouvertes.
+
+Enfin l'équivalence de d) et e) est valable sans supposer que l'espace
+sous-jacent au préschéma $X$ soit localement noethérien. On peut en effet se
+ramener au cas où $X=\operatorname{Spec}(A)$ est affine en vertu de
+(\hyperref[0.2.1.6-fr]{0, 2.1.6})~; dire que $x$ n'est contenu que dans une
+seule composante irréductible de $X$ signifie alors que $\mathfrak{j}_x$ ne
+contient qu'un seul idéal minimal de $A$ (\hyperref[I.1.1.14-fr]{1.1.14}), ce
+qui équivaut à dire que $\mathfrak{j}_x\mathscr{O}_x$ ne contient qu'un seul
+idéal minimal de $\mathscr{O}_x$, d'où la conclusion.
+
+\begin{corollary}[6.1.11]
+\label{I.6.1.11-fr}
+Soit $X$ un espace localement noethérien. Pour que $X$ soit irréductible, il
+faut et il suffit que $X$ soit connexe et non vide, et que deux composantes
+irréductibles distinctes de $X$ ne se rencontrent pas. Si $X$ est un
+préschéma, cette dernière condition équivaut à ce que
+$\operatorname{Spec}(\mathscr{O}_x)$ est irréductible pour tout $x\in X$.
+\end{corollary}
+
+La dernière partie a été vue dans (\hyperref[I.6.1.10-fr]{6.1.10})~; il n'y a
+donc à prouver que la suffisance des conditions de la première assertion.
+Mais d'après (\hyperref[I.6.1.10-fr]{6.1.10}), ces conditions entraînent que
+les composantes irréductibles de $X$ sont ses composantes connexes, et comme
+$X$ est connexe et non vide, il est irréductible.
+
+\begin{corollary}[6.1.12]
+\label{I.6.1.12-fr}
+Soit $X$ un préschéma localement noethérien. Pour que $X$ soit intègre, il
+faut et il suffit que $X$ soit connexe et que $\mathscr{O}_x$ soit intègre
+pour tout $x\in X$.
+\end{corollary}
+
+\begin{proposition}[6.1.13]
+\label{I.6.1.13-fr}
+Soit $X$ un préschéma localement noethérien, et soit $x\in X$ un point tel que
+le nilradical $\mathscr{N}_x$ de $\mathscr{O}_x$ soit premier (resp. que
+$\mathscr{O}_x$ soit réduit, resp. intègre)~; alors il existe un voisinage
+ouvert $U$ de $x$ qui est irréductible (resp. réduit, resp. intègre).
+\end{proposition}
+
+Il suffit de considérer les deux cas où $\mathscr{N}_x$ est premier et où
+$\mathscr{N}_x=0$, la troisième hypothèse étant conjonction des deux
+premières. Si $\mathscr{N}_x$ est premier, $x$ n'appartient qu'à une seule
+composante irréductible $Y$ de $X$ (\hyperref[I.6.1.10-fr]{6.1.10})~; la
+réunion des composantes irréductibles de $X$ ne contenant pas $x$ est fermée
+(l'ensemble de ces composantes étant localement fini), et le complémentaire
+$U$ de cette réunion est donc ouvert et contenu dans $Y$, donc irréductible
+(\hyperref[0.2.1.6-fr]{0, 2.1.6}). Si $\mathscr{N}_x=0$, on a aussi
+$\mathscr{N}_y=0$ pour tout $y$ dans un voisinage de $x$, car $\mathscr{N}$
+est quasi-cohérent (\hyperref[I.5.1.1-fr]{5.1.1}), et par suite cohérent
+puisque $X$ est localement noethérien, et la conclusion résulte de
+(\hyperref[0.5.2.2-fr]{0, 5.2.2}).
+
+\subsection{Préschémas artiniens.}
+\label{subsection:I.6.2-fr}
+
+\begin{definition}[6.2.1]
+\label{I.6.2.1-fr}
+On dit qu'un préschéma est \emph{artinien} s'il est affine et si son anneau
+est artinien.
+\end{definition}
+
+\oldpage[I]{144}
+\begin{proposition}[6.2.2]
+\label{I.6.2.2-fr}
+Étant donné un préschéma $X$, les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $X$ est un schéma artinien~;
+  \item[b)] $X$ est noethérien et son espace sous-jacent est discret~;
+  \item[c)] $X$ est noethérien et les points de son espace sous-jacent sont
+    fermés (condition $\mathrm{T}_1$).
+\end{enumerate}
+
+Lorsqu'il en est ainsi, l'espace sous-jacent à $X$ est fini, et l'anneau $A$
+de $X$ est composé direct des anneaux locaux (artiniens) des points de $X$.
+\end{proposition}
+
+On sait que a) entraîne la dernière assertion (\cite{I-13}, p.~205, th.~3),
+tout idéal premier de $A$ est alors maximal et est l'image réciproque de
+l'idéal maximal de l'un des composants locaux de $A$, donc l'espace $X$ est
+fini et discret~; a) entraîne donc b) et b) entraîne évidemment c). Pour voir
+que c) entraîne a), montrons d'abord que $X$ est alors fini~; on peut en effet
+se ramener au cas où $X$ est affine, et on sait qu'un anneau noethérien dont
+tous les idéaux premiers sont maximaux est artinien (\cite{I-13}, p.~203),
+d'où notre assertion. L'espace sous-jacent $X$ est alors discret, somme
+topologique d'un nombre fini de points $x_i$, et les anneaux locaux
+$\mathscr{O}_{x_i}=A_i$ sont artiniens~; il est clair que $X$ est isomorphe au
+schéma affine spectre premier de l'anneau $A$ composé direct des $A_i$
+(\hyperref[I.1.7.3-fr]{1.7.3}).
+
+\subsection{Morphismes de type fini.}
+\label{subsection:I.6.3-fr}
+
+\begin{definition}[6.3.1]
+\label{I.6.3.1-fr}
+On dit qu'un morphisme $f:X\to Y$ est \emph{de type fini} si $Y$ est réunion
+d'une famille $(V_\alpha)$ d'ouverts affines ayant la propriété suivante~:
+\begin{enumerate}
+  \item[(P)] $f^{-1}(V_\alpha)$ est réunion finie d'ouverts affines
+    $U_{\alpha i}$ tels que chacun des anneaux $A(U_{\alpha i})$ soit une
+    algèbre de type fini sur $A(V_\alpha)$.
+\end{enumerate}
+On dit alors aussi que $X$ est un préschéma de type fini sur $Y$, ou un
+$Y$-préschéma de type fini.
+\end{definition}
+
+\begin{proposition}[6.3.2]
+\label{I.6.3.2-fr}
+Si $f:X\to Y$ est un morphisme de type fini, tout ouvert affine $W$ de $Y$
+possède la propriété (P) de la déf. (\hyperref[I.6.3.1-fr]{6.3.1}).
+\end{proposition}
+
+Nous démontrerons d'abord le
+
+\begin{lemma}[6.3.2.1]
+\label{I.6.3.2.1-fr}
+Si $T\subset Y$ est un ouvert affine, possédant la propriété (P), alors, pour
+tout $g\in A(T)$, $D(g)$ possède la propriété (P).
+\end{lemma}
+
+En effet, par hypothèse, $f^{-1}(T)$ est réunion finie d'ouverts affines
+$Z_j$ tels que $A(Z_j)$ soit une algèbre de type fini sur $A(T)$~; soit
+$\varphi_j:A(T)\to A(Z_j)$ l'homomorphisme d'anneaux correspondant à la
+restriction de $f$ à $Z_j$ (\hyperref[I.2.2.4-fr]{2.2.4}), et posons
+$g_j=\varphi_j(g)$~; on a alors
+$f^{-1}(D(g))\cap Z_j=D(g_j)$
+(\hyperref[I.1.2.2.2-fr]{1.2.2.2}). Or,
+$A(D(g_j))=A(Z_j)_{g_j}=A(Z_j)[1/g_j]$ est de type fini sur $A(Z_j)$ et
+\emph{a fortiori} sur $A(T)$ en vertu de l'hypothèse, donc aussi sur
+$A(D(g))=A(T)[1/g]$, ce qui démontre le lemme.
+
+Ce lemme étant établi, comme $W$ est quasi-compact
+(\hyperref[I.1.1.10-fr]{1.1.10}), il existe un recouvrement fini de $W$ par
+des ensembles de la forme $D(g_i)$, où chaque $g_i$ appartient à un anneau
+$A(V_{\alpha(i)})$. Chaque $D(g_i)$, étant quasi-compact, est réunion finie
+d'ensembles $D(h_{ik})$ où $h_{ik}\in A(W)$~; si
+$\varphi_i:A(W)\to A(D(g_i))$ est l'application canonique, on a
+$D(h_{ik})=D(\varphi_i(h_{ik}))$ en vertu de
+(\hyperref[I.1.2.2.2-fr]{1.2.2.2}). En vertu de
+(\hyperref[I.6.3.2.1-fr]{6.3.2.1}), chacun des
+$f^{-1}(D(h_{ik}))$ admet un recouvrement fini par des ouverts affines
+$U_{ijk}$ tels que $A(U_{ijk})$ soit une algèbre de type fini sur
+$A(D(h_{ik}))=A(W)[1/h_{ik}]$, d'où la proposition.
+
+\oldpage[I]{145}
+On peut donc dire que la notion de préschéma de type fini sur $Y$ est
+\emph{locale sur $Y$}.
+
+\begin{proposition}[6.3.3]
+\label{I.6.3.3-fr}
+Soient $X$, $Y$ deux schémas affines~; pour que $X$ soit de type fini sur
+$Y$, il faut et il suffit que $A(X)$ soit une algèbre de type fini sur
+$A(Y)$.
+\end{proposition}
+
+La condition étant évidemment suffisante, prouvons qu'elle est nécessaire.
+Posons $A=A(Y)$, $B=A(X)$~; en vertu de
+(\hyperref[I.6.3.2-fr]{6.3.2}), il existe un recouvrement ouvert affine fini
+$(V_i)$ de $X$ tel que chacun des anneaux $A(V_i)$ soit une $A$-algèbre de
+type fini. En outre, les $V_i$ étant quasi-compacts, on peut recouvrir chacun
+d'eux par un nombre fini d'ouverts de la forme $D(g_{ij})\subset V_i$, où
+$g_{ij}\in B$~; si $\varphi_i$ est l'homomorphisme $B\to A(V_i)$ correspondant
+à l'injection canonique $V_i\to X$, on a
+\[
+  B_{g_{ij}}=(A(V_i))_{\varphi_i(g_{ij})}
+  =A(V_i)[1/\varphi_i(g_{ij})],
+\]
+donc $B_{g_{ij}}$ est une $A$-algèbre de type fini. On peut donc se ramener
+au cas où $V_i=D(g_i)$ avec $g_i\in B$. Par hypothèse, il existe une partie
+finie $F_i$ de $B$ et un entier $n_i\geq 0$ tels que $B_{g_i}$ soit l'algèbre
+engendrée sur $A$ par les éléments $b_i/g_i^{n_i}$, où $b_i$ parcourt $F_i$.
+Comme les $g_i$ sont en nombre fini, on peut d'ailleurs supposer tous les
+$n_i$ égaux à un même entier $n$. En outre, comme les $D(g_i)$ forment un
+recouvrement de $X$, l'idéal engendré dans $B$ par les $g_i$ est égal à $B$,
+autrement dit, il existe des $h_i\in B$ tels que
+$\sum_i h_i g_i=1$. Soit alors $F$ la partie finie de $B$, réunion des $F_i$,
+de l'ensemble des $g_i$ et de l'ensemble des $h_i$~; montrons que le
+sous-anneau $B'=A[F]$ de $B$ est égal à $B$. Par hypothèse, pour tout $b\in B$
+et tout $i$, l'image canonique de $b$ dans $B_{g_i}$ est de la forme
+$b'_i/g_i^{m_i}$, où $b'_i\in B'$~; en multipliant les $b'_i$ par des
+puissances convenables des $g_i$, on peut encore supposer tous les $m_i$
+égaux à un même entier $m$. Par définition des anneaux de fractions, il y a
+donc un entier $N$ (dépendant de $b$) tel que $N\geq m$ et $g_i^N b\in B'$ pour
+tout $i$~; or, \emph{dans l'anneau $B'$}, les $g_i^N$ engendrent l'idéal $B'$,
+puisqu'il en est ainsi des $g_i$ (les $h_i$ appartenant à $B'$)~; il y a donc
+des $c_i\in B'$ tels que $\sum_i c_i g_i^N=1$, d'où
+$b=\sum_i c_i g_i^N b\in B'$, C.Q.F.D.
+
+\begin{proposition}[6.3.4]
+\label{I.6.3.4-fr}
+\begin{enumerate}
+  \item[(i)] Toute immersion fermée est de type fini.
+  \item[(ii)] Le composé de deux morphismes de type fini est de type fini.
+  \item[(iii)] Si $f:X\to X'$, $g:Y\to Y'$ sont deux $S$-morphismes de type
+    fini, $f\times_S g$ est de type fini.
+  \item[(iv)] Si $f:X\to Y$ est un $S$-morphisme de type fini, $f_{(S')}$ est
+    de type fini pour toute extension $g:S'\to S$ du préschéma de base.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est de type fini, et
+    si $g$ est séparé, $f$ est de type fini.
+  \item[(vi)] Si un morphisme $f$ est de type fini, il en est de même de
+    $f_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+En vertu de (\hyperref[I.5.5.12-fr]{5.5.12}), il suffit de démontrer (i),
+(ii) et (iv).
+
+Pour établir (i), on peut se borner au cas d'une injection canonique
+$X\to Y$, $X$ étant un sous-préschéma fermé de $Y$~; en outre
+(\hyperref[I.6.3.2-fr]{6.3.2}), on peut supposer $Y$ affine, auquel cas $X$
+est aussi affine (\hyperref[I.4.2.3-fr]{4.2.3}) et son anneau est isomorphe à
+un anneau quotient $A/\mathfrak{J}$, où $A$ est l'anneau de $Y$ et
+$\mathfrak{J}$ un idéal de $A$~; comme $A/\mathfrak{J}$ est de type fini sur
+$A$, la conclusion en résulte.
+
+Démontrons maintenant (ii). Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes de
+type fini, et soit $U$ un ouvert affine de $Z$~; $g^{-1}(U)$ admet un
+recouvrement fini par des ouverts affines $V_i$ tels que $A(V_i)$ soit une
+algèbre de type fini sur $A(U)$ (\hyperref[I.6.3.2-fr]{6.3.2})~; de même,
+
+\oldpage[I]{146}
+chacun des $f^{-1}(V_i)$ admet un recouvrement fini par des ouverts affines
+$W_{ij}$ tels que $A(W_{ij})$ soit une algèbre de type fini sur $A(V_i)$, et
+par suite aussi une algèbre de type fini sur $A(U)$~; d'où la conclusion.
+
+Enfin, pour démontrer (iv), on peut se borner au cas où $S=Y$~; en effet,
+$f_{(S')}$ est aussi égal à $f_{(Y_{(S')})}$, $f$ étant considéré comme un
+$Y$-morphisme, et l'extension de la base étant $Y_{(S')}\to Y$
+(\hyperref[I.3.3.9-fr]{3.3.9}). Soient alors $p$, $q$ les projections
+$X_{(S')}\to X$ et $X_{(S')}\to S'$. Soit $V$ un ouvert affine dans $S$~;
+$f^{-1}(V)$ est réunion finie d'ouverts affines $W_i$ dont chacun est tel que
+$A(W_i)$ soit une algèbre de type fini sur $A(V)$
+(\hyperref[I.6.3.2-fr]{6.3.2}). Soit $V'$ un ouvert affine de $S'$ contenu
+dans $g^{-1}(V)$~; comme $f\circ p=g\circ q$, $q^{-1}(V')$ est contenu dans la
+réunion des $p^{-1}(W_i)$~; d'autre part, l'intersection
+$p^{-1}(W_i)\cap q^{-1}(V')$ s'identifie au produit $W_i\times_V V'$
+(\hyperref[I.3.2.7-fr]{3.2.7}), qui est un schéma affine d'anneau isomorphe à
+$A(W_i)\otimes_{A(V)}A(V')$ (\hyperref[I.3.2.2-fr]{3.2.2})~; ce dernier étant
+par hypothèse une algèbre de type fini sur $A(V')$, la proposition est
+démontrée.
+
+\begin{corollary}[6.3.5]
+\label{I.6.3.5-fr}
+Soit $f:X\to Y$ un morphisme d'immersion. Si l'espace sous-jacent à $Y$
+(resp. $X$) est localement noethérien (resp. noethérien), $f$ est de type fini.
+\end{corollary}
+
+On peut toujours supposer $Y$ affine (\hyperref[I.6.3.2-fr]{6.3.2})~; si
+l'espace sous-jacent à $Y$ est localement noethérien, on peut en outre le
+supposer noethérien et alors l'espace sous-jacent à $X$, qui en est un
+sous-espace, est noethérien. Autrement dit, on peut supposer $Y$ affine et
+l'espace sous-jacent à $X$ noethérien~; il existe alors un recouvrement de $X$
+par un nombre fini d'ouverts affines $D(g_i)\subset Y$, où $g_i\in A(Y)$, tels
+que $X\cap D(g_i)$ soit fermé dans $D(g_i)$ (donc un schéma affine
+(\hyperref[I.4.2.3-fr]{4.2.3})), puisque $X$ est localement fermé dans $Y$
+(\hyperref[I.4.1.3-fr]{4.1.3}). Alors $A(X\cap D(g_i))$ est une algèbre de type
+fini sur $A(D(g_i))$, d'après (\hyperref[I.6.3.4-fr]{6.3.4, (i)}) et
+(\hyperref[I.6.3.3-fr]{6.3.3}), et
+$A(D(g_i))=A(Y)_{g_i}=A(Y)[1/g_i]$ est de type fini sur $A(Y)$, ce qui achève
+la démonstration.
+
+\begin{corollary}[6.3.6]
+\label{I.6.3.6-fr}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes. Si $g\circ f$ est de type fini,
+et si $X$ est noethérien, ou $X\times_Z Y$ localement noethérien, $f$ est de
+type fini.
+\end{corollary}
+
+Cela résulte aussitôt de la démonstration de
+(\hyperref[I.5.5.12-fr]{5.5.12}) et de (\hyperref[I.6.3.5-fr]{6.3.5}) appliquée
+au morphisme d'immersion $\Gamma_f$.
+
+\begin{proposition}[6.3.7]
+\label{I.6.3.7-fr}
+Soit $f:X\to Y$ un morphisme de type fini~; si $Y$ est noethérien (resp.
+localement noethérien), $X$ est noethérien (resp. localement noethérien).
+\end{proposition}
+
+On peut se borner à faire la démonstration lorsque $Y$ est noethérien. Alors $Y$
+est réunion finie d'ouverts affines $V_i$ tels que les $A(V_i)$ soient des
+anneaux noethériens. En vertu de (\hyperref[I.6.3.2-fr]{6.3.2}), chacun des
+$f^{-1}(V_i)$ est réunion d'un nombre fini d'ouverts affines $W_{ij}$ tels que
+les $A(W_{ij})$ soient des algèbres de type fini sur $A(V_i)$, donc des anneaux
+noethériens~; cela prouve que $X$ est noethérien.
+
+\begin{corollary}[6.3.8]
+\label{I.6.3.8-fr}
+Soit $X$ un préschéma de type fini sur $S$. Pour toute extension de la base
+$S'\to S$ telle que $S'$ soit noethérien (resp. localement noethérien),
+$X_{(S')}$ est noethérien (resp. localement noethérien).
+\end{corollary}
+
+Cela résulte de (\hyperref[I.6.3.7-fr]{6.3.7}), $X_{(S')}$ étant de type fini
+sur $S'$ en vertu de (\hyperref[I.6.3.4-fr]{6.3.4, (iv)}).
+
+On peut encore dire que dans un produit $X\times_S Y$ de $S$-préschémas, si
+\emph{l'un} des
+\oldpage[I]{147}
+facteurs $X$, $Y$ est \emph{de type fini} sur $S$ et
+\emph{l'autre noethérien} (resp. \emph{localement noethérien}), alors
+$X\times_S Y$ est \emph{noethérien} (resp. \emph{localement noethérien}).
+
+\begin{corollary}[6.3.9]
+\label{I.6.3.9-fr}
+Soit $X$ un préschéma de type fini sur un préschéma localement noethérien $S$.
+Alors tout $S$-morphisme $f:X\to Y$ est de type fini.
+\end{corollary}
+
+En effet, on peut supposer $S$ noethérien~; si $\varphi:X\to S$,
+$\psi:Y\to S$ sont les morphismes structuraux, on a $\varphi=\psi\circ f$, et
+$X$ est noethérien en vertu de (\hyperref[I.6.3.7-fr]{6.3.7})~; $f$ est donc
+de type fini en vertu de (\hyperref[I.6.3.6-fr]{6.3.6}).
+
+\begin{proposition}[6.3.10]
+\label{I.6.3.10-fr}
+Soit $f:X\to Y$ un morphisme de type fini. Pour que $f$ soit surjectif, il faut
+et il suffit que, pour tout corps algébriquement clos $\Omega$, l'application
+$X(\Omega)\to Y(\Omega)$ correspondant à $f$
+(\hyperref[I.3.4.1-fr]{3.4.1}) soit surjective.
+\end{proposition}
+
+La condition est suffisante, comme on le voit en considérant pour tout
+$y\in Y$, une extension algébriquement close $\Omega$ de $k(y)$, et le
+diagramme commutatif
+\[
+  \xymatrix{
+    X\ar[dd]_f\\
+    & \operatorname{Spec}(\Omega)\ar[ul]\ar[dl]\\
+    Y
+  }
+\]
+(\emph{cf.} (\hyperref[I.3.5.3-fr]{3.5.3})). Inversement, supposons $f$
+surjective, et soit $g:\{\xi\}=\operatorname{Spec}(\Omega)\to Y$ un morphisme,
+$\Omega$ étant un corps algébriquement clos. Si on considère le diagramme
+\[
+  \xymatrix{
+    X\ar[d]_f &
+    X_{(\Omega)}\ar[l]\ar[d]^{f_{(\Omega)}}\\
+    Y &
+    \operatorname{Spec}(\Omega)\ar[l]
+  }
+\]
+il suffit donc de montrer qu'il existe dans $X_{(\Omega)}$ un
+\emph{point rationnel sur $\Omega$}
+(\hyperref[I.3.3.14-fr]{3.3.14}, \hyperref[I.3.4.3-fr]{3.4.3} et
+\hyperref[I.3.4.4-fr]{3.4.4}). Comme $f$ est surjectif, $X_{(\Omega)}$ n'est
+pas vide (\hyperref[I.3.5.10-fr]{3.5.10}) et comme $f$ est de type fini, il en
+est de même de $f_{(\Omega)}$ (\hyperref[I.6.3.4-fr]{6.3.4, (iv)})~; donc
+$X_{(\Omega)}$ contient un ouvert affine non vide $Z$ tel que $A(Z)$ soit une
+algèbre de type fini non nulle sur $\Omega$. En vertu du th. des zéros de
+Hilbert \cite{I-21}, il existe un $\Omega$-homomorphisme $A(Z)\to\Omega$, donc
+une section de $X_{(\Omega)}$ au-dessus de $\operatorname{Spec}(\Omega)$, ce
+qui démontre la proposition.
+
+\subsection{Préschémas algébriques.}
+\label{subsection:I.6.4-fr}
+
+\begin{definition}[6.4.1]
+\label{I.6.4.1-fr}
+Étant donné un corps $K$, on appelle \emph{$K$-préschéma algébrique} un
+préschéma $X$ de type fini sur $K$~; $K$ est appelé le \emph{corps de base}
+de $X$. Si en outre $X$ est un schéma (ou, ce qui revient au même
+(\hyperref[I.5.5.8-fr]{5.5.8}), si $X$ est un $K$-schéma), on dit aussi que
+$X$ est un \emph{$K$-schéma algébrique}.
+\end{definition}
+
+Tout $K$-préschéma algébrique est \emph{noethérien}
+(\hyperref[I.6.3.7-fr]{6.3.7}).
+
+\begin{proposition}[6.4.2]
+\label{I.6.4.2-fr}
+Soit $X$ un $K$-préschéma algébrique. Pour qu'un point $x\in X$ soit fermé,
+il faut et il suffit que $k(x)$ soit une extension algébrique de $K$, de degré
+fini.
+\end{proposition}
+
+On peut supposer $X$ affine, l'anneau $A$ de $X$ étant une $K$-algèbre de type
+fini. En effet, les ouverts affines $U$ de $X$ tels que $A(U)$ soit une
+$K$-algèbre de type fini forment un recouvrement de $X$
+(\hyperref[I.6.3.1-fr]{6.3.1}). Les points fermés de $X$ sont alors les points
+tels que $\mathfrak{j}_x$ soit
+\oldpage[I]{148}
+un idéal maximal de $A$, autrement dit tels que $A/\mathfrak{j}_x$ soit un
+corps (nécessairement égal à $k(x)$). Comme $A/\mathfrak{j}_x$ est une
+$K$-algèbre de type fini, on voit que si $x$ est fermé, $k(x)$ est un corps
+qui est une algèbre de type fini sur $K$, donc nécessairement une $K$-algèbre
+de \emph{rang fini} \cite{I-21}. Inversement, si $k(x)$ est de rang fini sur
+$K$, il en est de même de $A/\mathfrak{j}_x\subset k(x)$ et comme tout anneau
+intègre qui est une $K$-algèbre de rang fini est un corps, on a
+$A/\mathfrak{j}_x=k(x)$, donc $x$ est fermé.
+
+\begin{corollary}[6.4.3]
+\label{I.6.4.3-fr}
+Soient $K$ un corps algébriquement clos, $X$ un $K$-préschéma algébrique~; les
+points fermés de $X$ sont alors les points rationnels sur $K$
+(\hyperref[I.3.4.4-fr]{3.4.4}) et s'identifient canoniquement aux points de
+$X$ à valeurs dans $K$.
+\end{corollary}
+
+\begin{proposition}[6.4.4]
+\label{I.6.4.4-fr}
+Soit $X$ un préschéma algébrique sur un corps $K$. Les propriétés suivantes
+sont équivalentes~:
+\begin{enumerate}
+  \item[\rm(a)] $X$ est artinien.
+  \item[\rm(b)] L'espace sous-jacent à $X$ est discret.
+  \item[\rm(c)] L'espace sous-jacent à $X$ n'a qu'un nombre fini de points
+    fermés.
+  \item[\rm(c')] L'espace sous-jacent à $X$ est fini.
+  \item[\rm(d)] Les points de $X$ sont fermés.
+  \item[\rm(e)] $X$ est isomorphe à $\operatorname{Spec}(A)$, où $A$ est une
+    $K$-algèbre de rang fini.
+\end{enumerate}
+\end{proposition}
+
+Comme $X$ est noethérien, il résulte de (\hyperref[I.6.2.2-fr]{6.2.2}) que
+les conditions a), b), d) sont équivalentes et entraînent c) et c')~; par
+ailleurs, il est clair que e) entraîne a). Reste à voir que c) entraîne d) et
+e)~; on peut se borner au cas où $X$ est affine. Alors $A(X)$ est une
+$K$-algèbre de type fini (\hyperref[I.6.3.3-fr]{6.3.3}), donc un anneau de
+Jacobson (\cite[p.~3-11 et 3-12]{I-1}), dans lequel il n'y a par hypothèse
+qu'un nombre fini d'idéaux maximaux. Comme une intersection finie d'idéaux
+premiers ne peut être un idéal premier que si elle est égale à l'un d'eux,
+tout idéal premier de $A(X)$ est donc maximal, d'où d). En outre, on sait
+alors (\hyperref[I.6.2.2-fr]{6.2.2}) que $A(X)$ est une $K$-algèbre
+artinienne de type fini, donc nécessairement de \emph{rang fini} \cite{I-21}.
+
+\begin{env}[6.4.5]
+\label{I.6.4.5-fr}
+Lorsque les conditions de (\hyperref[I.6.4.4-fr]{6.4.4}) sont satisfaites,
+on dit que $X$ est un schéma \emph{fini sur $K$}
+(\emph{cf.} (\hyperref[II.6.1.1-fr]{II, 6.1.1})), ou un
+\emph{$K$-schéma fini}, de \emph{rang} $[A:K]$ que l'on note aussi
+$\operatorname{rg}_K(X)$~; si $X$, $Y$ sont deux schémas finis sur $K$, on a
+\[
+  \operatorname{rg}_K(X\amalg Y)
+  =\operatorname{rg}_K(X)+\operatorname{rg}_K(Y)
+  \tag{6.4.5.1}\label{I.6.4.5.1-fr}
+\]
+\[
+  \operatorname{rg}_K(X\times_K Y)
+  =\operatorname{rg}_K(X)\operatorname{rg}_K(Y)
+  \tag{6.4.5.2}\label{I.6.4.5.2-fr}
+\]
+comme il résulte de (\hyperref[I.3.2.2-fr]{3.2.2}).
+\end{env}
+
+\begin{corollary}[6.4.6]
+\label{I.6.4.6-fr}
+Soit $X$ un schéma fini sur un corps $K$. Pour toute extension $K'$ de $K$,
+$X\otimes_K K'$ est un schéma fini sur $K'$, et son rang sur $K'$ est égal au
+rang de $X$ sur $K$.
+\end{corollary}
+
+En effet, si $A=A(X)$, on a $[A\otimes_K K':K']=[A:K]$.
+
+\begin{corollary}[6.4.7]
+\label{I.6.4.7-fr}
+Soit $X$ un schéma fini sur un corps $K$~; on pose
+$n=\sum_{x\in X}[k(x):K]_s$
+\emph{(on rappelle que si $K'$ est une extension de $K$, $[K':K]_s$ est le
+\emph{rang séparable} de $K'$ sur $K$, rang de la plus grande extension
+algébrique séparable de $K$ contenue dans $K'$)}~;
+\oldpage[I]{149}
+alors, pour toute extension algébriquement close $\Omega$ de $K$, l'espace
+sous-jacent à $X\otimes_K\Omega$ a exactement $n$ points, qui s'identifient
+aux points de $X$ à valeurs dans $\Omega$.
+\end{corollary}
+
+On peut évidemment se borner au cas où l'anneau $A=A(X)$ est local
+(\hyperref[I.6.2.2-fr]{6.2.2})~; soient $\mathfrak m$ son idéal maximal,
+$L=A/\mathfrak m$ son corps résiduel, extension algébrique de $K$. Les points
+de $X$ à valeurs dans $\Omega$ correspondent alors biunivoquement aux
+$\Omega$-sections de $X\otimes_K\Omega$
+(\hyperref[I.3.4.1-fr]{3.4.1} et \hyperref[I.3.3.14-fr]{3.3.14}), et aussi
+aux $K$-homomorphismes de $L$ dans $\Omega$
+(\hyperref[I.1.7.3-fr]{1.7.3}), d'où la proposition (Bourbaki, \emph{Alg.},
+chap.~V, \textsection7, n\textsuperscript{o}~5, prop.~8), compte tenu de
+(\hyperref[I.6.4.3-fr]{6.4.3}).
+
+\begin{env}[6.4.8]
+\label{I.6.4.8-fr}
+Le nombre $n$ défini dans (\hyperref[I.6.4.7-fr]{6.4.7}) s'appelle le
+\emph{rang séparable} de $A$ (ou de $X$) sur $K$, ou aussi le
+\emph{nombre géométrique de points de $X$}~; il est donc égal au nombre
+d'éléments de $X(\Omega)_K$. Il résulte aussitôt de cette définition que,
+pour toute extension $K'$ de $K$, $X\otimes_K K'$ a même nombre géométrique
+de points que $X$. Si on désigne ce nombre par $n(X)$, il est clair que si
+$X$, $Y$ sont deux schémas finis sur $K$, on a
+\[
+  n(X\amalg Y)=n(X)+n(Y).
+  \tag{6.4.8.1}\label{I.6.4.8.1-fr}
+\]
+
+Sous les mêmes hypothèses, on a aussi
+\[
+  n(X\times_K Y)=n(X)n(Y)
+  \tag{6.4.8.2}\label{I.6.4.8.2-fr}
+\]
+comme il résulte aussitôt de l'interprétation de $n(X)$ comme nombre
+d'éléments de $X(\Omega)_K$ et de la formule
+(\hyperref[I.3.4.3.1-fr]{3.4.3.1}).
+\end{env}
+
+\begin{proposition}[6.4.9]
+\label{I.6.4.9-fr}
+Soient $K$ un corps, $X$, $Y$ deux $K$-préschémas algébriques, $f:X\to Y$ un
+$K$-morphisme, $\Omega$ une extension algébriquement close de $K$, de degré
+de transcendance infini sur $K$. Pour que $f$ soit surjectif, il faut et il
+suffit que l'application $X(\Omega)_K\to Y(\Omega)_K$ correspondant à $f$
+(\hyperref[I.3.4.1-fr]{3.4.1}) soit surjective.
+\end{proposition}
+
+La nécessité résulte de (\hyperref[I.6.3.10-fr]{6.3.10}), en remarquant que
+$f$ est nécessairement de type fini (\hyperref[I.6.3.9-fr]{6.3.9}). Pour voir
+que la condition est suffisante, on raisonne comme dans
+(\hyperref[I.6.3.10-fr]{6.3.10}), en remarquant que pour tout $y\in Y$,
+$k(y)$ est une extension de $K$ de type fini, et par suite est $K$-isomorphe
+à un sous-corps de $\Omega$.
+
+\begin{remark}[6.4.10]
+\label{I.6.4.10-fr}
+Nous verrons au chap.~IV que la conclusion de
+(\hyperref[I.6.4.9-fr]{6.4.9}) est encore valable sans hypothèse relative au
+degré de transcendance de $\Omega$ sur $K$.
+\end{remark}
+
+\begin{proposition}[6.4.11]
+\label{I.6.4.11-fr}
+Si $f:X\to Y$ est un morphisme de type fini, pour tout $y\in Y$, la fibre
+$f^{-1}(y)$ est un préschéma algébrique sur le corps résiduel $k(y)$ et pour
+tout $x\in f^{-1}(y)$, $k(x)$ est une extension de type fini de $k(y)$.
+\end{proposition}
+
+Comme $f^{-1}(y)=X\otimes_Y k(y)$
+(\hyperref[I.3.6.3-fr]{3.6.3}), la proposition résulte de
+(\hyperref[I.6.3.4-fr]{6.3.4, (iv)}) et de
+(\hyperref[I.6.3.3-fr]{6.3.3}).
+
+\begin{proposition}[6.4.12]
+\label{I.6.4.12-fr}
+Soient $f:X\to Y$, $g:Y'\to Y$ deux morphismes~; posons
+$X'=X\times_Y Y'$ et soit $f'=f_{(Y')}:X'\to Y'$. Soit $y'\in Y'$,
+$y=g(y')$~; si la fibre $f^{-1}(y)$ est un schéma algébrique fini sur $k(y)$,
+alors la fibre $f'^{-1}(y')$ est un schéma algébrique fini sur $k(y')$, ayant
+même rang et même nombre géométrique de points que $f^{-1}(y)$.
+\end{proposition}
+
+Compte tenu de la transitivité des fibres
+(\hyperref[I.3.6.5-fr]{3.6.5}), cela résulte aussitôt de
+(\hyperref[I.6.4.6-fr]{6.4.6}) et
+(\hyperref[I.6.4.8-fr]{6.4.8}).
+
+\begin{env}[6.4.13]
+\label{I.6.4.13-fr}
+La prop. (\hyperref[I.6.4.11-fr]{6.4.11}) montre que les morphismes de type
+fini correspondent intuitivement aux «~familles algébriques de variétés
+algébriques~», les points de $Y$ jouant
+\oldpage[I]{150}
+le rôle de «~paramètres~», ce qui donne à ces morphismes une signification
+«~géométrique~». Les morphismes qui ne sont pas de type fini interviendront
+surtout par la suite dans les questions de «~changement du préschéma de
+base~», par exemple par localisation ou complétion.
+\end{env}
+
+\subsection{Détermination locale d'un morphisme.}
+\label{subsection:I.6.5-fr}
+
+\begin{proposition}[6.5.1]
+\label{I.6.5.1-fr}
+Soient $X$, $Y$ deux $S$-préschémas, $Y$ étant de type fini sur $S$~; soient
+$x\in X$, $y\in Y$ au-dessus d'un même point $s\in S$.
+\begin{enumerate}
+  \item[(i)] Si deux $S$-morphismes $f=(\psi,\theta)$,
+    $f'=(\psi',\theta')$ de $X$ dans $Y$ sont tels que
+    $\psi(x)=\psi'(x)=y$, et que les $\mathscr{O}_s$-homomorphismes (locaux)
+    $\theta_x^\sharp$ et ${\theta'}_x^\sharp$ de $\mathscr{O}_y$ dans
+    $\mathscr{O}_x$ soient identiques, $f$ et $f'$ coïncident dans un
+    voisinage ouvert de $x$.
+  \item[(ii)] Supposons en outre $S$ localement noethérien. Pour tout
+    $\mathscr{O}_s$-homomorphisme local
+    $\varphi:\mathscr{O}_y\to\mathscr{O}_x$, il existe un voisinage ouvert
+    $U$ de $x$ dans $X$ et un $S$-morphisme $f=(\psi,\theta)$ de $U$ dans $Y$
+    tels que $\psi(x)=y$ et $\theta_x^\sharp=\varphi$.
+\end{enumerate}
+\end{proposition}
+
+\begin{enumerate}
+  \item[(i)] La question étant locale sur $S$, $X$ et $Y$, on peut supposer
+    $S$, $X$, $Y$ affines d'anneaux respectifs $A$, $B$, $C$, $f$ et $f'$
+    étant de la forme $({}^a\varphi,\widetilde{\varphi})$ et
+    $({}^a\varphi',\widetilde{\varphi}')$ respectivement, où $\varphi$ et
+    $\varphi'$ sont deux $A$-homomorphismes de $C$ dans $B$ tels que
+    $\varphi^{-1}(\mathfrak{j}_x)={\varphi'}^{-1}(\mathfrak{j}_x)
+    =\mathfrak{j}_y$, et les homomorphismes $\varphi_x$ et $\varphi'_x$ de
+    $C_y$ dans $B_x$, déduits de $\varphi$ et $\varphi'$, sont identiques~;
+    on peut en outre supposer que $C$ est une $A$-algèbre de type fini. Soient
+    $c_i$ ($1\leq i\leq n$) des générateurs de la $A$-algèbre $C$, et posons
+    $b_i=\varphi(c_i)$, $b'_i=\varphi'(c_i)$~; par hypothèse, on a
+    $b_i/1=b'_i/1$ dans l'anneau de fractions $B_x$ ($1\leq i\leq n$). Cela
+    signifie qu'il existe des éléments $s_i\in B-\mathfrak{j}_x$ tels que
+    $s_i(b_i-b'_i)=0$ pour $1\leq i\leq n$, et on peut évidemment supposer
+    tous les $s_i$ égaux à un même élément $g\in B-\mathfrak{j}_x$. On en
+    conclut que l'on a $b_i/1=b'_i/1$ pour $1\leq i\leq n$ dans l'anneau de
+    fractions $B_g$~; si $i_g$ est l'homomorphisme canonique $B\to B_g$, on a
+    par suite $i_g\circ\varphi=i_g\circ\varphi'$~; donc les restrictions de
+    $f$ et $f'$ à $D(g)$ sont identiques.
+  \item[(ii)] On peut se ramener à la même situation que dans (i), et supposer
+    en outre que l'anneau $A$ est noethérien. Soient $c_i$
+    ($1\leq i\leq n$) des générateurs de la $A$-algèbre $C$, et soit
+    $\alpha:A[X_1,\ldots,X_n]\to C$ l'homomorphisme de l'algèbre de polynômes
+    $A[X_1,\ldots,X_n]$ sur $C$ transformant $X_i$ en $c_i$ pour
+    $1\leq i\leq n$. Soit d'autre part $i_y$ l'homomorphisme canonique
+    $C\to C_y$, et considérons l'homomorphisme composé
+    \[
+      \beta:A[X_1,\ldots,X_n]
+      \xrightarrow{\alpha} C
+      \xrightarrow{i_y} C_y
+      \xrightarrow{\varphi} B_x.
+    \]
+    Désignons par $\mathfrak{a}$ le noyau de $\beta$~; comme $A$ est
+    noethérien, il en est de même de $A[X_1,\ldots,X_n]$, et par suite
+    $\mathfrak{a}$ admet un système fini de générateurs
+    $Q_j(X_1,\ldots,X_n)$ ($1\leq j\leq m$). D'autre part, chacun des
+    éléments $\varphi(i_y(c_i))$ peut s'écrire $b_i/s_i$, où $b_i\in B$ et
+    $s_i\notin\mathfrak{j}_x$~; on peut en outre supposer tous les $s_i$ égaux
+    à un même élément $g\in B-\mathfrak{j}_x$. Cela étant, on a par hypothèse
+    $Q_j(b_1/g,\ldots,b_n/g)=0$ dans $B_x$~; posons
+    \[
+      Q_j(X_1/T,\ldots,X_n/T)
+      =P_j(X_1,\ldots,X_n,T)/T^{k_j}
+    \]
+    où $P_j$ est homogène de degré $k_j$. Soit alors
+    $d_j=P_j(b_1,\ldots,b_n,g)\in B$. Par hypothèse, on a $t_jd_j=0$ pour un
+    $t_j\in B-\mathfrak{j}_x$ ($1\leq j\leq m$), et on peut évidemment
+    supposer tous les $t_j$
+\oldpage[I]{151}
+    égaux à un même élément $h\in B-\mathfrak{j}_x$~; on en conclut que
+    $P_j(hb_1,\ldots,hb_n,hg)=0$ pour $1\leq j\leq m$. Cela étant, considérons
+    l'homomorphisme $\rho$ de $A[X_1,\ldots,X_n]$ dans l'anneau de fractions
+    $B_{hg}$ qui applique $X_i$ sur $hb_i/hg$ ($1\leq i\leq n$)~; l'image de
+    $\mathfrak{a}$ par cet homomorphisme est 0, et il en est \emph{a fortiori}
+    de même de l'image par $\rho$ du noyau $\alpha^{-1}(0)$. Donc $\rho$ se
+    factorise en
+    $A[X_1,\ldots,X_n]\xrightarrow{\alpha}C\xrightarrow{\gamma}B_{hg}$, avec
+    $\gamma(c_i)=hb_i/hg$, et il est clair que si $i_x$ est l'homomorphisme
+    canonique $B_{hg}\to B_x$, le diagramme
+    \[
+      \xymatrix{
+        C\ar[r]^\gamma\ar[d]_{i_y} & B_{hg}\ar[d]^{i_x}\\
+        C_y\ar[r]_\varphi & B_x
+      }
+      \tag{6.5.1.1}\label{I.6.5.1.1-fr}
+    \]
+    est commutatif~; on a donc $\varphi=\gamma_x$, et comme $\varphi$ est un
+    homomorphisme local, ${}^a\gamma(x)=y$~; $f=({}^a\gamma,\widetilde{\gamma})$
+    est donc un $S$-morphisme du voisinage $D(hg)$ de $x$ dans $Y$ qui répond à
+    la question.
+\end{enumerate}
+
+\begin{corollary}[6.5.2]
+\label{I.6.5.2-fr}
+Sous les hypothèses de (\hyperref[I.6.5.1-fr]{6.5.1, (ii)}), si en outre $X$
+est de type fini sur $S$, on peut supposer le morphisme $f$ de type fini.
+\end{corollary}
+
+Cela résulte de (\hyperref[I.6.3.6-fr]{6.3.6}).
+
+\begin{corollary}[6.5.3]
+\label{I.6.5.3-fr}
+Supposons vérifiées les hypothèses de
+(\hyperref[I.6.5.1-fr]{6.5.1, (ii)}), et supposons en outre que $Y$ soit
+intègre, et $\varphi$ un homomorphisme injectif. Alors on peut supposer que
+$f=({}^a\gamma,\widetilde{\gamma})$, où $\gamma$ est injectif.
+\end{corollary}
+
+En effet, on peut supposer $C$ intègre
+(\hyperref[I.5.1.4-fr]{5.1.4}), donc $i_y$ injectif~; il résulte alors du
+diagramme (\hyperref[I.6.5.1.1-fr]{6.5.1.1}) que $\gamma$ est injectif.
+
+\begin{proposition}[6.5.4]
+\label{I.6.5.4-fr}
+Soient $f=(\psi,\theta):X\to Y$ un morphisme de type fini, $x$ un point de
+$X$, $y=\psi(x)$.
+\begin{enumerate}
+  \item[(i)] Pour que $f$ soit une immersion locale au point $x$
+    (\hyperref[I.4.5.1-fr]{4.5.1}), il faut et il suffit que
+    $\theta_x^\sharp:\mathscr{O}_y\to\mathscr{O}_x$ soit surjectif.
+  \item[(ii)] On suppose en outre $Y$ localement noethérien. Pour que $f$ soit
+    un isomorphisme local au point $x$
+    (\hyperref[I.4.5.2-fr]{4.5.2}), il faut et il suffit que
+    $\theta_x^\sharp$ soit un isomorphisme.
+\end{enumerate}
+\end{proposition}
+
+\begin{enumerate}
+  \item[(ii)] En vertu de (\hyperref[I.6.5.1-fr]{6.5.1}), il existe alors un
+    voisinage ouvert $V$ de $y$ et un morphisme $g:V\to X$ tels que $g\circ f$
+    (resp. $f\circ g$) soit défini et coïncide avec l'identité dans un
+    voisinage de $x$ (resp. $y$), d'où on tire aisément que $f$ est un
+    isomorphisme local.
+  \item[(i)] La question étant locale sur $X$ et $Y$, on peut supposer $X$ et
+    $Y$ affines, d'anneaux respectifs $A$, $B$~; on a
+    $f=({}^a\varphi,\widetilde{\varphi})$, où $\varphi$ est un homomorphisme
+    d'anneaux $B\to A$ qui fait de $A$ une $B$-algèbre de type fini~; on a
+    $\varphi^{-1}(\mathfrak{j}_x)=\mathfrak{j}_y$ et l'homomorphisme
+    $\varphi_x:B_y\to A_x$ déduit de $\varphi$ est surjectif. Soit $(t_i)$
+    ($1\leq i\leq n$) un système de générateurs de la $B$-algèbre $A$~;
+    l'hypothèse sur $\varphi_x$ implique qu'il existe des $b_i\in B$ et un
+    $c\in B-\mathfrak{j}_y$ tels que, dans l'anneau de fractions $A_x$, on ait
+    $t_i/1=\varphi(b_i)/\varphi(c)$ pour $1\leq i\leq n$. Par suite
+    (\hyperref[I.1.3.3-fr]{1.3.3}), il existe $a\in A-\mathfrak{j}_x$ tel que,
+    si l'on pose $g=a\varphi(c)$, on ait aussi
+    $t_i/1=a\varphi(b_i)/g$ \emph{dans l'anneau de fractions $A_g$}. Cela étant,
+    il existe par hypothèse un polynôme $Q(X_1,\ldots,X_n)$ à coefficients dans
+    l'anneau $\varphi(B)$,
+\oldpage[I]{152}
+    tel que $a=Q(t_1,\ldots,t_n)$~; posons
+    \[
+      Q(X_1/T,\ldots,X_n/T)
+      =P(X_1,\ldots,X_n,T)/T^m,
+    \]
+    où $P$ est homogène de degré $m$. Dans l'anneau $A_g$, on a
+    \[
+      a/1
+      =a^mP(\varphi(b_1),\ldots,\varphi(b_n),\varphi(c))/g^m
+      =a^m\varphi(d)/g^m
+    \]
+    où $d\in B$. Comme, dans $A_g$,
+    $g/1=(a/1)(\varphi(c)/1)$ est inversible par définition, il en est de même
+    de $a/1$ et de $\varphi(c)/1$, et on peut donc écrire
+    \[
+      a/1=(\varphi(d)/1)(\varphi(c)/1)^{-m}.
+    \]
+    On en conclut que $\varphi(d)/1$ est aussi inversible dans $A_g$. Posons
+    alors $h=cd$~; comme $\varphi(h)/1$ est inversible dans $A_g$,
+    l'homomorphisme composé
+    \[
+      B\xrightarrow{\varphi}A\longrightarrow A_g
+    \]
+    se factorise en
+    \[
+      B\longrightarrow B_h\xrightarrow{\gamma}A_g
+    \]
+    (\hyperref[0.1.2.4-fr]{0, 1.2.4}). Montrons que $\gamma$ est
+    \emph{surjectif}~; il suffit de vérifier que l'image de $B_h$ dans $A_g$
+    contient les $t_i/1$ et $(g/1)^{-1}$. Or, on a
+    \[
+      (g/1)^{-1}
+      =(\varphi(c)/1)^{m-1}(\varphi(d)/1)^{-1}
+      =\gamma(c^m/h),
+    \]
+    et
+    \[
+      a/1=\gamma(d^{m+1}/h^m),
+    \]
+    donc
+    \[
+      (a\varphi(b_i))/1=\gamma(b_i d^{m+1}/h^m),
+    \]
+    et comme
+    $t_i/1=(a\varphi(b_i)/1)(g/1)^{-1}$, notre assertion est démontrée. Le
+    choix de $h$ implique que $\psi(D(g))\subset D(h)$, et la restriction de
+    $f$ à $D(g)$ est égale à
+    $({}^a\gamma,\widetilde{\gamma})$~; comme $\gamma$ est surjectif, cette
+    restriction est une immersion fermée de $D(g)$ dans $D(h)$
+    (\hyperref[I.4.2.3-fr]{4.2.3}).
+\end{enumerate}
+
+\begin{corollary}[6.5.5]
+\label{I.6.5.5-fr}
+Soit $f=(\psi,\theta):X\to Y$ un morphisme de type fini. On suppose $X$
+irréductible, on désigne par $x$ son point générique, et on pose $y=\psi(x)$.
+\begin{enumerate}
+  \item[(i)] Pour que $f$ soit une immersion locale en un point de $X$, il
+    faut et il suffit que
+    $\theta_x^\sharp:\mathscr{O}_y\to\mathscr{O}_x$ soit surjectif.
+  \item[(ii)] On suppose de plus $Y$ irréductible et localement noethérien.
+    Pour que $f$ soit un isomorphisme local en un point de $X$, il faut et il
+    suffit que $y$ soit le point générique de $Y$ (ou, ce qui revient au même
+    (\hyperref[0.2.1.4-fr]{0, 2.1.4}) que $f$ soit un morphisme
+    \emph{dominant}) et que $\theta_x^\sharp$ soit un isomorphisme (autrement
+    dit, que $f$ soit \emph{birationnel}
+    (\hyperref[I.2.2.9-fr]{2.2.9})).
+\end{enumerate}
+\end{corollary}
+
+Il est clair que (i) résulte de
+(\hyperref[I.6.5.4-fr]{6.5.4, (i)}) compte tenu de ce que tout ouvert non vide
+de $X$ contient $x$~; de même (ii) résulte de
+(\hyperref[I.6.5.4-fr]{6.5.4, (ii)}).
+
+\subsection{Morphismes quasi-compacts et morphismes localement de type fini.}
+\label{subsection:I.6.6-fr}
+
+\begin{definition}[6.6.1]
+\label{I.6.6.1-fr}
+On dit qu'un morphisme $f:X\to Y$ est \emph{quasi-compact} si l'image
+réciproque par $f$ de tout ouvert quasi-compact de $Y$ est quasi-compacte.
+\end{definition}
+
+Soit $\mathfrak{B}$ une base de la topologie de $Y$ formée d'ouverts
+quasi-compacts (par exemple d'ouverts affines)~; pour que $f$ soit
+quasi-compact, il faut et il suffit que l'image réciproque par $f$ de tout
+ensemble de $\mathfrak{B}$ soit quasi-compacte (ou, ce qui revient au même,
+réunion \emph{finie} d'ouverts affines), car tout ouvert quasi-compact de $Y$
+est réunion finie d'ensembles de $\mathfrak{B}$. Par exemple, si $X$ est
+\emph{quasi-compact} et $Y$ \emph{affine}, alors \emph{tout} morphisme
+$f:X\to Y$ est quasi-compact~: en effet, $X$ est réunion finie d'ensembles
+ouverts affines $U_i$, et pour tout ouvert affine $V$ de $Y$,
+$U_i\cap f^{-1}(V)$ est affine
+(\hyperref[I.5.5.10-fr]{5.5.10}), donc quasi-compact.
+
+Si $f:X\to Y$ est un morphisme quasi-compact, il est clair que pour tout
+ouvert $V$ de $Y$, la restriction de $f$ à $f^{-1}(V)$ est un morphisme
+quasi-compact $f^{-1}(V)\to V$. Inversement, si $(U_\alpha)$ est un
+recouvrement ouvert de $Y$ et $f:X\to Y$ un morphisme tel que les restrictions
+$f^{-1}(U_\alpha)\to U_\alpha$ soient quasi-compactes, alors $f$ est
+quasi-compact.
+
+\begin{definition}[6.6.2]
+\label{I.6.6.2-fr}
+On dit qu'un morphisme $f:X\to Y$ est \emph{localement de type fini} si, pour
+tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ et un voisinage ouvert
+$V\supset f(U)$ de $y$ tels que la
+\oldpage[I]{153}
+restriction de $f$ à $U$ soit un morphisme de type fini de $U$ dans $V$. On
+dit alors aussi que $X$ est un préschéma localement de type fini sur $Y$, ou
+un $Y$-préschéma localement de type fini.
+\end{definition}
+
+Il résulte aussitôt de (\hyperref[I.6.3.2-fr]{6.3.2}) que si $f$ est
+localement de type fini, alors, pour tout ouvert $W$ de $Y$, la restriction
+de $f$ à $f^{-1}(W)$ est un morphisme $f^{-1}(W)\to W$ qui est localement de
+type fini.
+
+Si $Y$ est localement noethérien et si $X$ est localement de type fini sur
+$Y$, $X$ est localement noethérien en vertu de
+(\hyperref[I.6.3.7-fr]{6.3.7}).
+
+\begin{proposition}[6.6.3]
+\label{I.6.6.3-fr}
+Pour qu'un morphisme $f:X\to Y$ soit de type fini, il faut et il suffit qu'il
+soit quasi-compact et localement de type fini.
+\end{proposition}
+
+La nécessité des conditions est immédiate, vu
+(\hyperref[I.6.3.1-fr]{6.3.1}) et la remarque suivant
+(\hyperref[I.6.6.1-fr]{6.6.1}). Inversement, supposons ces conditions
+satisfaites et soit $U$ un ouvert affine de $Y$, d'anneau $A$~; pour tout
+$x\in f^{-1}(U)$, il y a par hypothèse un voisinage
+$V(x)\subset f^{-1}(U)$ de $x$ et un voisinage $W(x)\subset U$ de
+$y=f(x)$, contenant $f(V(x))$ et tel que la restriction de $f$ à $V(x)$ soit
+un morphisme $V(x)\to W(x)$ qui est de type fini. En remplaçant $W(x)$ par
+un voisinage $W_1(x)\subset W(x)$ de $x$ de la forme $D(g)$ (avec $g\in A$),
+et $V(x)$ par $V(x)\cap f^{-1}(W_1(x))$, on peut supposer que $W(x)$ est de
+la forme $D(g)$, donc de type fini sur $U$ (puisque son anneau s'écrit
+$A[1/g]$)~; par suite $V(x)$ est de type fini sur $U$. En outre
+$f^{-1}(U)$ est quasi-compact par hypothèse, donc réunion d'un nombre fini
+d'ouverts $V(x_i)$, ce qui achève la démonstration.
+
+\begin{proposition}[6.6.4]
+\label{I.6.6.4-fr}
+\begin{enumerate}
+  \item[(i)] Une immersion $X\to Y$ est quasi-compacte si elle est fermée,
+    ou si l'espace sous-jacent à $Y$ est localement noethérien ou si l'espace
+    sous-jacent à $X$ est noethérien.
+  \item[(ii)] Le composé de deux morphismes quasi-compacts est quasi-compact.
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme quasi-compact, il en est de
+    même de $f_{(S')}:X_{(S')}\to Y_{(S')}$ pour toute extension $g:S'\to S$
+    du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+    quasi-compacts, $f\times_S g$ est quasi-compact.
+  \item[(v)] Si le composé de deux morphismes $f:X\to Y$, $g:Y\to Z$ est
+    quasi-compact et si $g$ est séparé, ou l'espace sous-jacent à $X$
+    localement noethérien, $f$ est quasi-compact.
+  \item[(vi)] Pour qu'un morphisme $f$ soit quasi-compact, il faut et il
+    suffit que $f_{\mathrm{red}}$ le soit.
+\end{enumerate}
+\end{proposition}
+
+On notera que (vi) est évident puisque la propriété d'être quasi-compact pour
+un morphisme ne dépend que de l'application continue correspondante des
+espaces sous-jacents. Démontrons de même la partie de (v) correspondant au cas
+où l'espace sous-jacent $X$ est supposé localement noethérien. Posons
+$h=g\circ f$, et soit $U$ un ouvert quasi-compact dans $Y$~; $g(U)$ est
+quasi-compact (non nécessairement ouvert) dans $Z$, donc contenu dans une
+réunion finie d'ouverts quasi-compacts $V_j$
+(\hyperref[I.2.1.3-fr]{2.1.3}), et $f^{-1}(U)$ est par suite contenu dans la
+réunion des $h^{-1}(V_j)$, qui sont des sous-espaces quasi-compacts de $X$,
+donc des sous-espaces noethériens. On en conclut
+(\hyperref[0.2.2.3-fr]{0, 2.2.3}) que $f^{-1}(U)$ est un espace noethérien,
+et \emph{a fortiori} quasi-compact.
+
+Pour prouver les autres assertions, il suffit de démontrer (i), (ii) et (iii)
+(\hyperref[I.5.5.12-fr]{5.5.12}). Or, (ii) est évidente, et (i) résulte de
+(\hyperref[I.6.3.5-fr]{6.3.5}) lorsque l'espace $Y$ est localement noethérien
+ou l'espace $X$ noethérien et est évidente pour une immersion fermée. Pour
+établir (iii),
+\oldpage[I]{154}
+on peut se borner au cas où $S=Y$ (\hyperref[I.3.3.11-fr]{3.3.11})~; posons
+$f'=f_{(S')}$, et soit $U'$ un ouvert quasi-compact dans $S'$. Pour tout
+$s'\in U'$, soit $T$ un voisinage ouvert affine de $g(s')$ dans $S$, et soit
+$W$ un voisinage ouvert affine de $s'$ contenu dans
+$U'\cap g^{-1}(T)$~; il suffira de montrer que $f'^{-1}(W)$ est
+quasi-compact~; autrement dit, on peut se ramener à prouver que lorsque $S$
+et $S'$ sont affines, l'espace sous-jacent à $X\times_S S'$ est
+quasi-compact. Mais comme $X$ est alors par hypothèse réunion finie d'ouverts
+affines $V_j$, $X\times_S S'$ est réunion des espaces sous-jacents aux
+schémas affines $V_j\times_S S'$
+(\hyperref[I.3.2.2-fr]{3.2.2} et \hyperref[I.3.2.7-fr]{3.2.7}), ce qui achève
+de prouver la proposition.
+
+On notera aussi que si $X=X'\amalg X''$ est somme de deux préschémas, un
+morphisme $f:X\to Y$ est quasi-compact si et seulement si ses restrictions à
+$X'$ et $X''$ le sont.
+
+\begin{proposition}[6.6.5]
+\label{I.6.6.5-fr}
+Soit $f:X\to Y$ un morphisme quasi-compact. Pour que $f$ soit dominant, il
+faut et il suffit que pour tout point générique $y$ d'une composante
+irréductible de $Y$, $f^{-1}(y)$ contienne le point générique d'une composante
+irréductible de $X$.
+\end{proposition}
+
+Il est immédiat que la condition est suffisante (sans supposer $f$
+quasi-compact). Pour voir qu'elle est nécessaire, considérons un voisinage
+ouvert affine $U$ de $y$~; $f^{-1}(U)$ est quasi-compact, donc réunion
+\emph{finie} d'ouverts affines $V_i$, et l'hypothèse que $f$ est dominant
+implique que $y$ appartient à l'adhérence dans $U$ d'un des $f(V_i)$. On peut
+évidemment supposer $X$ et $Y$ réduits~; comme l'adhérence dans $X$ d'une
+composante irréductible de $V_i$ est une composante irréductible de $X$
+(\hyperref[0.2.1.6-fr]{0, 2.1.6}), on peut remplacer $X$ par $V_i$, $Y$ par
+le sous-préschéma fermé réduit de $U$ ayant $\overline{f(V_i)}\cap U$ pour
+espace sous-jacent (\hyperref[I.5.2.1-fr]{5.2.1}), et on est ainsi ramené à
+démontrer la proposition lorsque $X=\operatorname{Spec}(A)$ et
+$Y=\operatorname{Spec}(B)$ sont affines et réduits. Comme $f$ est dominant,
+$B$ est alors un sous-anneau de $A$ (\hyperref[I.1.2.7-fr]{1.2.7}), et la
+proposition résulte alors du fait que tout idéal premier minimal de $B$ est
+l'intersection de $B$ et d'un idéal premier minimal de $A$
+(\hyperref[0.1.5.8-fr]{0, 1.5.8}).
+
+\begin{proposition}[6.6.6]
+\label{I.6.6.6-fr}
+\begin{enumerate}
+  \item[(i)] Toute immersion locale est localement de type fini.
+  \item[(ii)] Si deux morphismes $f:X\to Y$, $g:Y\to Z$ sont localement de
+    type fini, il en est de même de $g\circ f$.
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme localement de type fini,
+    $f_{(S')}:X_{(S')}\to Y_{(S')}$ est localement de type fini pour toute
+    extension $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+    localement de type fini, $f\times_S g$ est localement de type fini.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est localement de
+    type fini, $f$ est localement de type fini.
+  \item[(vi)] Si un morphisme $f$ est localement de type fini, il en est de
+    même de $f_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+En vertu de (\hyperref[I.5.5.12-fr]{5.5.12}), il suffit de démontrer (i), (ii)
+et (iii). Si $j:X\to Y$ est une immersion locale, pour tout $x\in X$, il y a
+un voisinage ouvert $V$ de $j(x)$ dans $Y$ et un voisinage ouvert $U$ de $x$
+dans $X$ tels que la restriction de $j$ à $U$ soit une immersion fermée
+$U\to V$ (\hyperref[I.4.5.1-fr]{4.5.1}), donc cette restriction est de type
+fini. Pour établir (ii), considérons un point $x\in X$~; il y a par hypothèse
+un voisinage ouvert $W$ de $g(f(x))$ et un voisinage ouvert $V$ de $f(x)$
+tels que $g(V)\subset W$ et que $V$ soit de type fini sur $W$~; en outre
+$f^{-1}(V)$ est localement de type fini sur $V$
+(\hyperref[I.6.6.2-fr]{6.6.2}), donc il y a un voisinage ouvert $U$ de $x$ qui
+\oldpage[I]{155}
+est contenu dans $f^{-1}(V)$ et de type fini sur $V$~; par suite on a
+$g(f(U))\subset W$ et $U$ est de type fini sur $W$
+(\hyperref[I.6.3.4-fr]{6.3.4, (ii)}). Enfin, pour démontrer (iii), on peut se
+borner au cas où $Y=S$ (\hyperref[I.3.3.11-fr]{3.3.11})~; pour tout
+$x'\in X'=X_{(S')}$, soient $x$ l'image de $x'$ dans $X$, $s$ l'image de $x$
+dans $S$, $T$ un voisinage ouvert de $s$, $T'$ son image réciproque dans $S'$,
+$U$ un voisinage ouvert de $x$ dont l'image est contenue dans $T$ et qui est de
+type fini sur $T$~; alors $U\times_S T'=U\times_T T'$ est un voisinage ouvert
+de $x'$ (\hyperref[I.3.2.7-fr]{3.2.7}) qui est de type fini sur $T'$
+(\hyperref[I.6.3.4-fr]{6.3.4, (iv)}).
+
+\begin{corollary}[6.6.7]
+\label{I.6.6.7-fr}
+Soient $X$, $Y$ deux $S$-préschémas qui sont localement de type fini sur $S$.
+Si $S$ est localement noethérien, $X\times_S Y$ est localement noethérien.
+\end{corollary}
+
+En effet, $X$ étant localement de type fini sur $S$, est localement
+noethérien, et $X\times_S Y$ est localement de type fini sur $X$, donc est
+aussi localement noethérien.
+
+\begin{remark}[6.6.8]
+\label{I.6.6.8-fr}
+La proposition (\hyperref[I.6.3.10-fr]{6.3.10}) et sa démonstration s'étendent
+aussitôt au cas où l'on suppose seulement que le morphisme $f$ est localement
+de type fini. De même, les propositions
+(\hyperref[I.6.4.2-fr]{6.4.2}) et (\hyperref[I.6.4.9-fr]{6.4.9}) restent
+valables lorsqu'on suppose que les préschémas $X$, $Y$ qui figurent dans leur
+énoncé sont seulement localement de type fini sur le corps $K$.
+\end{remark}

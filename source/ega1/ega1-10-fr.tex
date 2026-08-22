@@ -1,0 +1,3516 @@
+\section{Schémas formels}
+\label{section:I.10-fr}
+
+\subsection{Schémas formels affines.}
+\label{subsection:I.10.1-fr}
+
+\begin{env}[10.1.1]
+\label{I.10.1.1-fr}
+Soit $A$ un anneau topologique \emph{admissible}
+(\hyperref[0.7.1.2-fr]{0, 7.1.2})~; pour tout idéal de définition
+$\mathfrak{J}$ de $A$, $\operatorname{Spec}(A/\mathfrak{J})$ s'identifie
+au sous-espace fermé $V(\mathfrak{J})$ de $\operatorname{Spec}(A)$
+(\hyperref[I.1.1.11-fr]{1.1.11}), ensemble des idéaux premiers
+\emph{ouverts} de $A$~; cet espace topologique ne dépend pas de
+\oldpage[I]{181}
+l'idéal de définition $\mathfrak{J}$ considéré~; notons-le
+$\mathfrak{X}$. Soit $(\mathfrak{J}_\lambda)$ un système fondamental de
+voisinages de 0 dans $A$, formé d'idéaux de définition, et pour tout
+$\lambda$, soit $\mathscr{O}_\lambda$ le faisceau structural de
+$\operatorname{Spec}(A/\mathfrak{J}_\lambda)$~; ce faisceau est induit sur
+$\mathfrak{X}$ par
+$\widetilde{A}/\widetilde{\mathfrak{J}}_\lambda$ (lequel est nul hors de
+$\mathfrak{X}$).
+
+Pour $\mathfrak{J}_\mu\subset\mathfrak{J}_\lambda$, l'homomorphisme
+canonique $A/\mathfrak{J}_\mu\to A/\mathfrak{J}_\lambda$ définit donc un
+homomorphisme
+$u_{\lambda\mu}:\mathscr{O}_\mu\to\mathscr{O}_\lambda$ de faisceaux
+d'anneaux (\hyperref[I.1.6.1-fr]{1.6.1}), et
+$(\mathscr{O}_\lambda)$ est un \emph{système projectif de faisceaux
+d'anneaux} pour ces homomorphismes. Comme la topologie de $\mathfrak{X}$
+admet une base formée d'ouverts quasi-compacts, on peut associer à tout
+$\mathscr{O}_\lambda$ un \emph{faisceau d'anneaux topologiques
+pseudo-discrets} (\hyperref[0.3.8.1-fr]{0, 3.8.1}) qui a
+$\mathscr{O}_\lambda$ comme faisceau d'anneaux (sans topologie) sous-jacent,
+et que nous noterons encore $\mathscr{O}_\lambda$~; et les
+$\mathscr{O}_\lambda$ forment encore un \emph{système projectif de faisceaux
+d'anneaux topologiques} (\hyperref[0.3.8.2-fr]{0, 3.8.2}). Nous désignerons
+par $\mathscr{O}_{\mathfrak{X}}$ le \emph{faisceau d'anneaux topologiques}
+sur $\mathfrak{X}$, limite projective du système
+$(\mathscr{O}_\lambda)$~; pour tout ouvert \emph{quasi-compact} $U$ de
+$\mathfrak{X}$, $\Gamma(U,\mathscr{O}_{\mathfrak{X}})$ est donc l'anneau
+topologique limite projective du système d'anneaux \emph{discrets}
+$\Gamma(U,\mathscr{O}_\lambda)$
+(\hyperref[0.3.2.6-fr]{0, 3.2.6}).
+\end{env}
+
+\begin{definition}[10.1.2]
+\label{I.10.1.2-fr}
+Étant donné un anneau topologique admissible $A$, on appelle spectre formel
+de $A$ et on note $\operatorname{Spf}(A)$ le sous-espace fermé
+$\mathfrak{X}$ de $\operatorname{Spec}(A)$ formé des idéaux premiers
+ouverts de $A$. On dit qu'un espace topologiquement annelé est un schéma
+formel affine s'il est isomorphe à un spectre formel
+$\operatorname{Spf}(A)=\mathfrak{X}$ muni du faisceau d'anneaux
+topologiques $\mathscr{O}_{\mathfrak{X}}$ limite projective des faisceaux
+d'anneaux pseudo-discrets
+$(\widetilde{A}/\widetilde{\mathfrak{J}}_\lambda)|\mathfrak{X}$, où
+$\mathfrak{J}_\lambda$ parcourt l'ensemble filtrant des idéaux de
+définition de $A$.
+\end{definition}
+
+Quand nous parlerons d'un \emph{spectre formel}
+$\mathfrak{X}=\operatorname{Spf}(A)$ comme d'un schéma formel affine, il
+s'agira toujours de l'espace topologiquement annelé
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$ où
+$\mathscr{O}_{\mathfrak{X}}$ est défini comme ci-dessus.
+
+On notera que tout \emph{schéma affine} $X=\operatorname{Spec}(A)$ peut être
+considéré comme un schéma formel affine d'une seule manière, en considérant
+$A$ comme un anneau topologique discret~: les anneaux topologiques
+$\Gamma(U,\mathscr{O}_X)$ sont alors discrets lorsque $U$ est
+quasi-compact (mais non en général lorsque $U$ est un ouvert quelconque de
+$X$).
+
+\begin{proposition}[10.1.3]
+\label{I.10.1.3-fr}
+Si $\mathfrak{X}=\operatorname{Spf}(A)$, où $A$ est un anneau admissible,
+$\Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$ est topologiquement
+isomorphe à $A$.
+\end{proposition}
+
+\begin{proof}
+En effet, comme $\mathfrak{X}$ est fermé dans $\operatorname{Spec}(A)$, il
+est quasi-compact, et par suite
+$\Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$ est topologiquement
+isomorphe à la limite projective des anneaux discrets
+$\Gamma(\mathfrak{X},\mathscr{O}_\lambda)$~; mais
+$\Gamma(\mathfrak{X},\mathscr{O}_\lambda)$ est isomorphe à
+$A/\mathfrak{J}_\lambda$ (\hyperref[I.1.3.7-fr]{1.3.7})~; comme $A$ est
+séparé et complet, il est topologiquement isomorphe à
+$\varprojlim A/\mathfrak{J}_\lambda$
+(\hyperref[0.7.2.1-fr]{0, 7.2.1}), d'où la proposition.
+\end{proof}
+
+\begin{proposition}[10.1.4]
+\label{I.10.1.4-fr}
+Soient $A$ un anneau admissible, $\mathfrak{X}=\operatorname{Spf}(A)$, et
+pour tout $f\in A$, soit
+$\mathfrak{D}(f)=D(f)\cap\mathfrak{X}$~; l'espace topologiquement annelé
+$(\mathfrak{D}(f),\mathscr{O}_{\mathfrak{X}}|\mathfrak{D}(f))$ est
+isomorphe au spectre formel affine
+$\operatorname{Spf}(A_{\{f\}})$
+(\hyperref[0.7.6.15-fr]{0, 7.6.15}).
+\end{proposition}
+
+\begin{proof}
+Pour tout idéal de définition $\mathfrak{J}$ de $A$, l'anneau discret
+$S_f^{-1}A/S_f^{-1}\mathfrak{J}$ s'identifie canoniquement à
+$A_{\{f\}}/\mathfrak{J}_{\{f\}}$
+(\hyperref[0.7.6.9-fr]{0, 7.6.9}), donc
+(\hyperref[I.1.2.5-fr]{1.2.5} et \hyperref[I.1.2.6-fr]{1.2.6}), l'espace
+topologique $\operatorname{Spf}(A_{\{f\}})$ s'identifie canoniquement à
+$\mathfrak{D}(f)$. En outre, pour tout ouvert quasi-compact $U$ de
+$\mathfrak{X}$ contenu dans $\mathfrak{D}(f)$,
+$\Gamma(U,\mathscr{O}_\lambda)$ s'identifie au module des sections du
+faisceau structural de
+$\operatorname{Spec}(S_f^{-1}A/S_f^{-1}\mathfrak{J}_\lambda)$ au-dessus de
+$U$ (\hyperref[I.1.3.6-fr]{1.3.6}), donc, si on pose
+$\mathfrak{Y}=\operatorname{Spf}(A_{\{f\}})$,
+$\Gamma(U,\mathscr{O}_{\mathfrak{X}})$ s'identifie au module des sections
+$\Gamma(U,\mathscr{O}_{\mathfrak{Y}})$, ce qui démontre la proposition.
+\end{proof}
+
+\oldpage[I]{182}
+\begin{env}[10.1.5]
+\label{I.10.1.5-fr}
+En tant que faisceau d'anneaux \emph{sans topologie}, le faisceau
+structural $\mathscr{O}_{\mathfrak{X}}$ de
+$\operatorname{Spf}(A)$ admet pour tout $x\in\mathfrak{X}$ une fibre qui,
+en vertu de (\hyperref[I.10.1.4-fr]{10.1.4}), s'identifie à la limite
+inductive
+$\varinjlim_{f\notin\mathfrak{j}_x}A_{\{f\}}$. Par suite
+(\hyperref[0.7.6.17-fr]{0, 7.6.17} et
+\hyperref[0.7.6.18-fr]{7.6.18})~:
+\end{env}
+
+\begin{proposition}[10.1.6]
+\label{I.10.1.6-fr}
+Pour tout $x\in\mathfrak{X}=\operatorname{Spf}(A)$, la fibre
+$\mathscr{O}_x$ est un anneau local dont le corps résiduel est isomorphe à
+$k(x)=A_x/\mathfrak{j}_xA_x$. Si en outre $A$ est adique et noethérien,
+$\mathscr{O}_x$ est un anneau noethérien.
+\end{proposition}
+
+Comme $k(x)$ n'est pas réduit à 0, on conclut de ce résultat que le
+\emph{support} du faisceau d'anneaux $\mathscr{O}_{\mathfrak{X}}$ est
+\emph{égal à $\mathfrak{X}$}.
+
+\subsection{Morphismes de schémas formels affines.}
+\label{subsection:I.10.2-fr}
+
+\begin{env}[10.2.1]
+\label{I.10.2.1-fr}
+Soient $A$, $B$ deux anneaux admissibles, et soit
+$\varphi:B\to A$ un homomorphisme \emph{continu}. L'application continue
+$ {}^a\varphi:\operatorname{Spec}(A)\to\operatorname{Spec}(B)$
+(\hyperref[I.1.2.1-fr]{1.2.1}) applique alors
+$\mathfrak{X}=\operatorname{Spf}(A)$ dans
+$\mathfrak{Y}=\operatorname{Spf}(B)$, car l'image réciproque par
+$\varphi$ d'un idéal premier ouvert de $A$ est un idéal premier ouvert de
+$B$. D'autre part, pour tout $g\in B$, $\varphi$ définit un homomorphisme
+continu
+\[
+  \Gamma(\mathfrak{D}(g),\mathscr{O}_{\mathfrak{Y}})
+  \longrightarrow
+  \Gamma(\mathfrak{D}(\varphi(g)),\mathscr{O}_{\mathfrak{X}})
+\]
+en vertu de (\hyperref[I.10.1.4-fr]{10.1.4}),
+(\hyperref[I.10.1.3-fr]{10.1.3}) et
+(\hyperref[0.7.6.7-fr]{0, 7.6.7})~; comme ces homomorphismes satisfont aux
+conditions de compatibilité pour les restrictions correspondant au
+passage de $g$ à un multiple de $g$, et que
+$\mathfrak{D}(\varphi(g))={}^a\varphi^{-1}(\mathfrak{D}(g))$, ils
+définissent un homomorphisme \emph{continu} de faisceaux d'anneaux
+topologiques
+$\mathscr{O}_{\mathfrak{Y}}\to
+{}^a\varphi_*(\mathscr{O}_{\mathfrak{X}})$
+(\hyperref[0.3.2.5-fr]{0, 3.2.5}), que nous noterons encore
+$\widetilde{\varphi}$~; on a ainsi obtenu un morphisme
+$\Phi=({}^a\varphi,\widetilde{\varphi})$ d'espaces topologiquement annelés
+$\mathfrak{X}\to\mathfrak{Y}$. On notera qu'en tant qu'homomorphisme de
+faisceaux d'anneaux sans topologie, $\widetilde{\varphi}$ définit un
+homomorphisme
+$\widetilde{\varphi}_x^\sharp:
+\mathscr{O}_{{}^a\varphi(x)}\to\mathscr{O}_x$ sur les fibres, pour tout
+$x\in\mathfrak{X}$.
+\end{env}
+
+\begin{proposition}[10.2.2]
+\label{I.10.2.2-fr}
+Soient $A$, $B$ deux anneaux topologiques admissibles, et soient
+$\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$. Pour qu'un morphisme
+$u=(\psi,\theta):\mathfrak{X}\to\mathfrak{Y}$ d'espaces topologiquement
+annelés soit de la forme $({}^a\varphi,\widetilde{\varphi})$, où
+$\varphi$ est un homomorphisme continu d'anneaux $B\to A$, il faut et il
+suffit que pour tout $x\in\mathfrak{X}$,
+$\theta_x^\sharp$ soit un homomorphisme local
+$\mathscr{O}_{\psi(x)}\to\mathscr{O}_x$.
+\end{proposition}
+
+\begin{proof}
+La condition est nécessaire~: en effet, soit
+$\mathfrak{p}=\mathfrak{j}_x\in\operatorname{Spf}(A)$, et soit
+$\mathfrak{q}=\varphi^{-1}(\mathfrak{j}_x)$~; si
+$g\notin\mathfrak{q}$, on a donc $\varphi(g)\notin\mathfrak{p}$, et il est
+immédiat que l'homomorphisme
+$B_{\{g\}}\to A_{\{\varphi(g)\}}$ déduit de $\varphi$
+(\hyperref[0.7.6.7-fr]{0, 7.6.7}) transforme
+$\mathfrak{q}_{\{g\}}$ en une partie de
+$\mathfrak{p}_{\{\varphi(g)\}}$~; passant à la limite inductive, on voit
+donc (compte tenu de (\hyperref[I.10.1.5-fr]{10.1.5}) et de
+(\hyperref[0.7.6.17-fr]{0, 7.6.17})) que
+$\widetilde{\varphi}_x^\sharp$ est un homomorphisme local.
+
+Inversement, soit $(\psi,\theta)$ un morphisme vérifiant la condition de
+l'énoncé~; en vertu de (\hyperref[I.10.1.3-fr]{10.1.3}), $\theta$ définit
+un homomorphisme continu d'anneaux
+\[
+  \varphi=\Gamma(\theta):
+  B=\Gamma(\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}})
+  \longrightarrow
+  \Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})=A.
+\]
+En vertu de l'hypothèse sur $\theta$, pour que la section $\varphi(g)$ de
+$\mathscr{O}_{\mathfrak{X}}$ au-dessus de $\mathfrak{X}$ ait un germe
+inversible au point $x$, il faut et il suffit que $g$ ait un germe
+inversible au point $\psi(x)$. Mais en vertu de
+(\hyperref[0.7.6.17-fr]{0, 7.6.17}), les sections de
+$\mathscr{O}_{\mathfrak{X}}$ (resp. $\mathscr{O}_{\mathfrak{Y}}$)
+au-dessus de $\mathfrak{X}$ (resp. $\mathfrak{Y}$) dont le germe n'est pas
+inversible au point $x$ (resp. $\psi(x)$) sont exactement les éléments de
+$\mathfrak{j}_x$
+\oldpage[I]{183}
+(resp. $\mathfrak{j}_{\psi(x)}$)~; la remarque précédente montre donc que
+${}^a\varphi=\psi$. Enfin, pour tout $g\in B$, le diagramme
+\[
+  \xymatrix{
+    B=\Gamma(\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}})
+      \ar[r]^\varphi\ar[d] &
+    \Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})=A\ar[d]\\
+    B_{\{g\}}=\Gamma(\mathfrak{D}(g),\mathscr{O}_{\mathfrak{Y}})
+      \ar[r]_{\Gamma(\theta_{\mathfrak{D}(g)})} &
+    \Gamma(\mathfrak{D}(\varphi(g)),\mathscr{O}_{\mathfrak{X}})
+      =A_{\{\varphi(g)\}}
+  }
+\]
+est commutatif~; d'après la propriété universelle des anneaux complets de
+fractions (\hyperref[0.7.6.6-fr]{0, 7.6.6}),
+$\theta_{\mathfrak{D}(g)}$ est égale à
+$\widetilde{\varphi}_{\mathfrak{D}(g)}$ pour tout $g\in B$, donc
+(\hyperref[0.3.2.5-fr]{0, 3.2.5}) on a
+$\theta=\widetilde{\varphi}$.
+\end{proof}
+
+Nous dirons qu'un morphisme $(\psi,\theta)$ d'espaces topologiquement
+annelés vérifiant la condition de (\hyperref[I.10.2.2-fr]{10.2.2}) est un
+\emph{morphisme de schémas formels affines}. On peut dire que les foncteurs
+$\operatorname{Spf}(A)$ en $A$ et
+$\Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$ en $\mathfrak{X}$
+définissent une \emph{équivalence} de la catégorie des anneaux admissibles
+et de la catégorie duale de la catégorie des schémas formels affines
+(T, I, 1.2).
+
+\begin{env}[10.2.3]
+\label{I.10.2.3-fr}
+Comme cas particulier de (\hyperref[I.10.2.2-fr]{10.2.2}), notons que, pour
+$f\in A$, l'injection canonique du schéma formel affine induit par
+$\mathfrak{X}$ sur $\mathfrak{D}(f)$ correspond à l'homomorphisme continu
+canonique $A\to A_{\{f\}}$. Sous les hypothèses de
+(\hyperref[I.10.2.2-fr]{10.2.2}), soient $h$ un élément de $B$, $g$ un
+élément de $A$, multiple de $\varphi(h)$~; on a alors
+$\psi(\mathfrak{D}(g))\subset\mathfrak{D}(h)$~; la restriction de $u$ à
+$\mathfrak{D}(g)$, considérée comme morphisme de $\mathfrak{D}(g)$ dans
+$\mathfrak{D}(h)$, est l'unique morphisme $v$ rendant commutatif le
+diagramme
+\[
+  \xymatrix{
+    \mathfrak{D}(g)\ar[r]^v\ar[d] &
+    \mathfrak{D}(h)\ar[d]\\
+    \mathfrak{X}\ar[r]_u &
+    \mathfrak{Y}
+  }
+\]
+Ce morphisme correspond à l'unique homomorphisme continu
+$\varphi':B_{\{h\}}\to A_{\{g\}}$
+(\hyperref[0.7.6.7-fr]{0, 7.6.7}) rendant commutatif le diagramme
+\[
+  \xymatrix{
+    A\ar[d] &
+    B\ar[l]_\varphi\ar[d]\\
+    A_{\{g\}} &
+    B_{\{h\}}\ar[l]_{\varphi'}
+  }
+\]
+\end{env}
+
+\subsection{Idéaux de définition d'un schéma formel affine.}
+\label{subsection:I.10.3-fr}
+
+\begin{env}[10.3.1]
+\label{I.10.3.1-fr}
+Soient $A$ un anneau admissible, $\mathfrak{J}$ un idéal ouvert de $A$,
+$\mathfrak{X}$ le schéma formel affine $\operatorname{Spf}(A)$. Soit
+$(\mathfrak{J}_\lambda)$ l'ensemble des idéaux de définition de $A$
+contenus dans $\mathfrak{J}$~; alors
+$\widetilde{\mathfrak{J}}/\widetilde{\mathfrak{J}}_\lambda$ est un
+faisceau d'idéaux de
+$\widetilde{A}/\widetilde{\mathfrak{J}}_\lambda$. Désignons par
+$\mathfrak{J}^\Delta$ la limite projective des faisceaux induits sur
+$\mathfrak{X}$ par
+$\widetilde{\mathfrak{J}}/\widetilde{\mathfrak{J}}_\lambda$, qui
+s'identifie à un \emph{faisceau d'idéaux} de
+$\mathscr{O}_{\mathfrak{X}}$ (\hyperref[0.3.2.6-fr]{0, 3.2.6}). Pour tout
+$f\in A$, $\Gamma(\mathfrak{D}(f),\mathfrak{J}^\Delta)$ est la limite
+projective de
+$S_f^{-1}\mathfrak{J}/S_f^{-1}\mathfrak{J}_\lambda$, autrement dit
+s'identifie à l'idéal ouvert $\mathfrak{J}_{\{f\}}$ de l'anneau
+$A_{\{f\}}$ (\hyperref[0.7.6.9-fr]{0, 7.6.9}), et en particulier
+$\Gamma(\mathfrak{X},\mathfrak{J}^\Delta)=\mathfrak{J}$~; on en conclut
+(les $\mathfrak{D}(f)$ formant une base de la topologie de $\mathfrak{X}$)
+que l'on a
+\[
+  \mathfrak{J}^\Delta|\mathfrak{D}(f)
+  =(\mathfrak{J}_{\{f\}})^\Delta.
+  \tag{10.3.1.1}\label{I.10.3.1.1-fr}
+\]
+\end{env}
+
+\oldpage[I]{184}
+\begin{env}[10.3.2]
+\label{I.10.3.2-fr}
+Avec les notations de (\hyperref[I.10.3.1-fr]{10.3.1}), pour tout $f\in A$,
+l'application canonique de
+$A_{\{f\}}=\Gamma(\mathfrak{D}(f),\mathscr{O}_{\mathfrak{X}})$ dans
+$\Gamma\bigl(\mathfrak{D}(f),
+(\widetilde{A}/\widetilde{\mathfrak{J}})|\mathfrak{X}\bigr)
+=S_f^{-1}A/S_f^{-1}\mathfrak{J}$
+est \emph{surjective} et a pour noyau
+$\Gamma(\mathfrak{D}(f),\mathfrak{J}^\Delta)=\mathfrak{J}_{\{f\}}$
+(\hyperref[0.7.6.9-fr]{0, 7.6.9})~; ces applications définissent donc un
+homomorphisme \emph{surjectif} continu, dit \emph{canonique}, du faisceau
+d'anneaux topologiques $\mathscr{O}_{\mathfrak{X}}$ sur le faisceau
+d'anneaux discrets
+$(\widetilde{A}/\widetilde{\mathfrak{J}})|\mathfrak{X}$, dont le noyau est
+$\mathfrak{J}^\Delta$~; cet homomorphisme n'est autre d'ailleurs que
+$\widetilde{\varphi}$ (\hyperref[I.10.2.1-fr]{10.2.1}), où $\varphi$ est
+l'homomorphisme continu $A\to A/\mathfrak{J}$~; le morphisme
+$({}^a\varphi,\widetilde{\varphi}):
+\operatorname{Spec}(A/\mathfrak{J})\to\mathfrak{X}$ de schémas formels
+affines (où ${}^a\varphi$ est d'ailleurs l'homéomorphisme identique de
+$\mathfrak{X}$ sur lui-même) est encore dit \emph{canonique}. On a donc,
+d'après ce qui précède, un \emph{isomorphisme canonique}
+\[
+  \mathscr{O}_{\mathfrak{X}}/\mathfrak{J}^\Delta
+  \xrightarrow{\sim}
+  (\widetilde{A}/\widetilde{\mathfrak{J}})|\mathfrak{X}.
+  \tag{10.3.2.1}\label{I.10.3.2.1-fr}
+\]
+
+Il est clair (en vertu de
+$\Gamma(\mathfrak{X},\mathfrak{J}^\Delta)=\mathfrak{J}$) que
+l'application $\mathfrak{J}\to\mathfrak{J}^\Delta$ est
+\emph{strictement croissante}~; d'après ce qui précède, pour
+$\mathfrak{J}\subset\mathfrak{J}'$, le faisceau
+${\mathfrak{J}'}^\Delta/\mathfrak{J}^\Delta$ est canoniquement isomorphe à
+$\widetilde{\mathfrak{J}'}/\widetilde{\mathfrak{J}}
+=\widetilde{\mathfrak{J}'/\mathfrak{J}}$.
+\end{env}
+
+\begin{env}[10.3.3]
+\label{I.10.3.3-fr}
+Les hypothèses et notations étant toujours celles de
+(\hyperref[I.10.3.1-fr]{10.3.1}), nous dirons qu'un faisceau d'idéaux
+$\mathscr{J}$ de $\mathscr{O}_{\mathfrak{X}}$ est un
+\emph{faisceau d'idéaux de définition de $\mathfrak{X}$} (ou un
+\emph{Idéal de définition de $\mathfrak{X}$}) si, pour tout
+$x\in\mathfrak{X}$, il existe un voisinage ouvert de $x$ de la forme
+$\mathfrak{D}(f)$, où $f\in A$, tel que
+$\mathscr{J}|\mathfrak{D}(f)$ soit de la forme $\mathfrak{H}^\Delta$, où
+$\mathfrak{H}$ est un idéal de définition de $A_{\{f\}}$.
+\end{env}
+
+\begin{proposition}[10.3.4]
+\label{I.10.3.4-fr}
+Pour tout $f\in A$, tout Idéal de définition de $\mathfrak{X}$ induit un
+Idéal de définition de $\mathfrak{D}(f)$.
+\end{proposition}
+
+\begin{proof}
+Cela résulte de (\hyperref[I.10.3.1.1-fr]{10.3.1.1}).
+\end{proof}
+
+\begin{proposition}[10.3.5]
+\label{I.10.3.5-fr}
+Si $A$ est un anneau admissible, tout Idéal de définition de
+$\mathfrak{X}=\operatorname{Spf}(A)$ est de la forme
+$\mathfrak{J}^\Delta$, où $\mathfrak{J}$ est un idéal de définition de
+$A$, uniquement déterminé.
+\end{proposition}
+
+\begin{proof}
+En effet, soit $\mathscr{J}$ un Idéal de définition de $\mathfrak{X}$~;
+par hypothèse, et puisque $\mathfrak{X}$ est quasi-compact, il y a un nombre
+fini d'éléments $f_i\in A$ tels que les $\mathfrak{D}(f_i)$ recouvrent
+$\mathfrak{X}$ et que
+$\mathscr{J}|\mathfrak{D}(f_i)=\mathfrak{H}_i^\Delta$, où
+$\mathfrak{H}_i$ est un idéal de définition de $A_{\{f_i\}}$. Pour tout
+$i$, il existe donc un idéal ouvert $\mathfrak{K}_i$ de $A$ tel que
+$(\mathfrak{K}_i)_{\{f_i\}}=\mathfrak{H}_i$
+(\hyperref[0.7.6.9-fr]{0, 7.6.9})~; soit $\mathfrak{K}$ un idéal de
+définition de $A$ contenu dans tous les $\mathfrak{K}_i$. L'image canonique
+de $\mathscr{J}/\mathfrak{K}^\Delta$ dans le faisceau structural
+$\widetilde{A/\mathfrak{K}}$ de
+$\operatorname{Spec}(A/\mathfrak{K})$
+(\hyperref[I.10.3.2-fr]{10.3.2}) est donc telle que sa restriction à
+$\mathfrak{D}(f_i)$ soit égale à celle de
+$\widetilde{\mathfrak{K}_i/\mathfrak{K}}$~; on en conclut que cette image
+canonique est un faisceau quasi-cohérent sur
+$\operatorname{Spec}(A/\mathfrak{K})$, donc de la forme
+$\widetilde{\mathfrak{J}/\mathfrak{K}}$, où $\mathfrak{J}$ est un idéal de
+$A$ contenant $\mathfrak{K}$ (\hyperref[I.1.4.1-fr]{1.4.1}) d'où
+$\mathscr{J}=\mathfrak{J}^\Delta$
+(\hyperref[I.10.3.2-fr]{10.3.2})~; en outre, comme pour tout $i$ il existe
+un entier $n_i$ tel que
+$\mathfrak{H}_i^{n_i}\subset\mathfrak{K}_{\{f_i\}}$, on aura, en désignant
+par $n$ le plus grand des $n_i$,
+$(\mathscr{J}/\mathfrak{K}^\Delta)^n=0$, et par suite
+(\hyperref[I.10.3.2-fr]{10.3.2})
+$(\widetilde{\mathfrak{J}/\mathfrak{K}})^n=0$, d'où finalement
+$(\mathfrak{J}/\mathfrak{K})^n=0$
+(\hyperref[I.1.3.13-fr]{1.3.13}), ce qui prouve que $\mathfrak{J}$ est un
+idéal de définition de $A$ (\hyperref[0.7.1.4-fr]{0, 7.1.4}).
+\end{proof}
+
+\begin{proposition}[10.3.6]
+\label{I.10.3.6-fr}
+Soient $A$ un anneau adique, $\mathfrak{J}$ un idéal de définition de $A$
+tel que $\mathfrak{J}/\mathfrak{J}^2$ soit un
+$A/\mathfrak{J}$-module de type fini. Pour tout entier $n>0$, on a alors
+$(\mathfrak{J}^\Delta)^n=(\mathfrak{J}^n)^\Delta$.
+\end{proposition}
+
+\begin{proof}
+En effet, pour tout $f\in A$, on a (puisque $\mathfrak{J}^n$ est un idéal
+ouvert)
+\[
+  \bigl(\Gamma(\mathfrak{D}(f),\mathfrak{J}^\Delta)\bigr)^n
+  =(\mathfrak{J}_{\{f\}})^n
+  =(\mathfrak{J}^n)_{\{f\}}
+  =\Gamma\bigl(\mathfrak{D}(f^n),(\mathfrak{J}^n)^\Delta\bigr)
+\]
+\oldpage[I]{185}
+en vertu de (\hyperref[I.10.3.1.1-fr]{10.3.1.1}) et de
+(\hyperref[0.7.6.12-fr]{0, 7.6.12}). Comme
+$(\mathfrak{J}^\Delta)^n$ est associé au préfaisceau
+$U\mapsto(\Gamma(U,\mathfrak{J}^\Delta))^n$
+(\hyperref[0.4.1.6-fr]{0, 4.1.6}), le corollaire en résulte, puisque les
+$\mathfrak{D}(f)$ forment une base de la topologie de $\mathfrak{X}$.
+\end{proof}
+
+\begin{env}[10.3.7]
+\label{I.10.3.7-fr}
+On dit qu'une famille $(\mathscr{J}_\lambda)$ d'Idéaux de définition de
+$\mathfrak{X}$ est un \emph{système fondamental d'Idéaux de définition}
+si tout Idéal de définition de $\mathfrak{X}$ contient un des
+$\mathscr{J}_\lambda$~; comme
+$\mathscr{J}_\lambda=\mathfrak{J}_\lambda^\Delta$, il revient au même de
+dire que les $\mathfrak{J}_\lambda$ forment un \emph{système fondamental
+de voisinages de 0} dans $A$. Soit $(f_\alpha)$ une famille d'éléments de
+$A$ tels que les $\mathfrak{D}(f_\alpha)$ recouvrent $\mathfrak{X}$. Si
+$(\mathscr{J}_\lambda)$ est une famille filtrante décroissante d'idéaux de
+$\mathscr{O}_{\mathfrak{X}}$ telle que pour tout $\alpha$, la famille
+$(\mathscr{J}_\lambda|\mathfrak{D}(f_\alpha))$ soit un système fondamental
+d'Idéaux de définition de $\mathfrak{D}(f_\alpha)$, alors
+$(\mathscr{J}_\lambda)$ est un système fondamental d'Idéaux de définition
+de $\mathfrak{X}$. En effet, pour tout Idéal de définition $\mathscr{J}$
+de $\mathfrak{X}$, il y a un recouvrement fini de $\mathfrak{X}$ par des
+$\mathfrak{D}(f_i)$ tel que, pour tout $i$,
+$\mathscr{J}_{\lambda_i}|\mathfrak{D}(f_i)$ soit un Idéal de définition
+de $\mathfrak{D}(f_i)$ contenu dans
+$\mathscr{J}|\mathfrak{D}(f_i)$. Si $\mu$ est un indice tel que
+$\mathscr{J}_\mu\subset\mathscr{J}_{\lambda_i}$ pour tout $i$, il résulte
+de (\hyperref[I.10.3.3-fr]{10.3.3}) que $\mathscr{J}_\mu$ est un Idéal de
+définition de $\mathfrak{X}$, évidemment contenu dans $\mathscr{J}$, d'où
+notre assertion.
+\end{env}
+
+\subsection{Préschémas formels et morphismes de préschémas formels.}
+\label{subsection:I.10.4-fr}
+
+\begin{env}[10.4.1]
+\label{I.10.4.1-fr}
+Étant donné un espace topologiquement annelé $\mathfrak{X}$, on dit qu'un
+ouvert $U\subset\mathfrak{X}$ est un \emph{ouvert formel affine} (resp. un
+\emph{ouvert formel affine adique}, resp. un \emph{ouvert formel affine
+noethérien}) si l'espace topologiquement annelé induit par $\mathfrak{X}$
+sur $U$ est un schéma formel affine (resp. un tel schéma dont l'anneau est
+adique, resp. adique et noethérien).
+\end{env}
+
+\begin{definition}[10.4.2]
+\label{I.10.4.2-fr}
+On appelle préschéma formel un espace topologiquement annelé $\mathfrak{X}$
+dont tout point admet un voisinage ouvert formel affine. On dit que le
+préschéma formel $\mathfrak{X}$ est adique (resp. localement noethérien) si
+tout point de $\mathfrak{X}$ admet un voisinage ouvert formel affine adique
+(resp. noethérien). On dit que $\mathfrak{X}$ est noethérien s'il est
+localement noethérien et si son espace sous-jacent est quasi-compact (donc
+noethérien).
+\end{definition}
+
+\begin{proposition}[10.4.3]
+\label{I.10.4.3-fr}
+Si $\mathfrak{X}$ est un préschéma formel (resp. localement noethérien),
+les ensembles ouverts formels affines (resp. affines noethériens) forment
+une base de la topologie de $\mathfrak{X}$.
+\end{proposition}
+
+\begin{proof}
+Cela résulte de (\hyperref[I.10.4.2-fr]{10.4.2}) et
+(\hyperref[I.10.1.4-fr]{10.1.4}) en tenant compte de ce que si $A$ est un
+anneau adique noethérien, il en est de même de $A_{\{f\}}$ pour tout
+$f\in A$ (\hyperref[0.7.6.11-fr]{0, 7.6.11}).
+\end{proof}
+
+\begin{corollary}[10.4.4]
+\label{I.10.4.4-fr}
+Si $\mathfrak{X}$ est un préschéma formel (resp. un préschéma formel
+localement noethérien, resp. noethérien), l'espace topologiquement annelé
+induit sur tout ouvert de $\mathfrak{X}$ est encore un préschéma formel
+(resp. un préschéma formel localement noethérien, resp. noethérien).
+\end{corollary}
+
+\begin{definition}[10.4.5]
+\label{I.10.4.5-fr}
+Étant donnés deux préschémas formels $\mathfrak{X}$, $\mathfrak{Y}$, on
+appelle morphisme (de préschémas formels) de $\mathfrak{X}$ dans
+$\mathfrak{Y}$ tout morphisme $(\psi,\theta)$ d'espaces topologiquement
+annelés tel que, pour tout $x\in\mathfrak{X}$, $\theta_x^\sharp$ soit un
+homomorphisme local
+$\mathscr{O}_{\psi(x)}\to\mathscr{O}_x$.
+\end{definition}
+
+Il est immédiat que le composé de deux morphismes de préschémas formels est
+encore un tel morphisme~; les préschémas formels forment donc une
+\emph{catégorie}, et on notera
+$\operatorname{Hom}(\mathfrak{X},\mathfrak{Y})$ l'ensemble des morphismes
+d'un préschéma formel $\mathfrak{X}$ dans un préschéma formel
+$\mathfrak{Y}$.
+
+\oldpage[I]{186}
+Si $U$ est une partie ouverte de $\mathfrak{X}$, l'injection canonique
+dans $\mathfrak{X}$ du préschéma formel induit par $\mathfrak{X}$ sur $U$
+est un morphisme de préschémas formels (et même un
+\emph{monomorphisme} d'espaces topologiquement annelés
+(\hyperref[0.4.1.1-fr]{0, 4.1.1})).
+
+\begin{proposition}[10.4.6]
+\label{I.10.4.6-fr}
+Soient $\mathfrak{X}$ un préschéma formel,
+$\mathfrak{S}=\operatorname{Spf}(A)$ un schéma formel affine. Il existe
+une correspondance biunivoque canonique entre les morphismes du préschéma
+formel $\mathfrak{X}$ dans le préschéma formel $\mathfrak{S}$ et les
+homomorphismes continus de l'anneau $A$ dans l'anneau topologique
+$\Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$.
+\end{proposition}
+
+La démonstration est la même que celle de
+(\hyperref[I.2.2.4-fr]{2.2.4}), en remplaçant «~homomorphisme~» par
+«~homomorphisme continu~», «~ouvert affine~» par «~ouvert formel
+affine~», et en utilisant (\hyperref[I.10.2.2-fr]{10.2.2}) au lieu de
+(\hyperref[I.1.7.3-fr]{1.7.3})~; nous en laissons les détails au lecteur.
+
+\begin{env}[10.4.7]
+\label{I.10.4.7-fr}
+Étant donné un préschéma formel $\mathfrak{S}$, on dit que la donnée d'un
+préschéma formel $\mathfrak{X}$ et d'un morphisme
+$\varphi:\mathfrak{X}\to\mathfrak{S}$ définit un préschéma formel
+$\mathfrak{X}$ \emph{au-dessus de $\mathfrak{S}$} ou un
+\emph{$\mathfrak{S}$-préschéma formel}, $\varphi$ étant appelé le
+\emph{morphisme structural} du $\mathfrak{S}$-préschéma
+$\mathfrak{X}$. Si $\mathfrak{S}=\operatorname{Spf}(A)$, où $A$ est un
+anneau admissible, on dit aussi que le $\mathfrak{S}$-préschéma formel
+$\mathfrak{X}$ est un \emph{$A$-préschéma formel} ou un préschéma formel
+\emph{au-dessus de $A$}. Un préschéma formel quelconque peut toujours
+être considéré comme un préschéma formel au-dessus de $\mathbf{Z}$ (muni
+de la topologie discrète).
+
+Si $\mathfrak{X}$, $\mathfrak{Y}$ sont deux $\mathfrak{S}$-préschémas
+formels, on dit qu'un morphisme
+$u:\mathfrak{X}\to\mathfrak{Y}$ est un
+\emph{$\mathfrak{S}$-morphisme} si le diagramme
+\[
+  \xymatrix{
+    \mathfrak{X}\ar[rr]^u\ar[rd] & &
+    \mathfrak{Y}\ar[ld]\\
+    & \mathfrak{S}
+  }
+\]
+(où les flèches obliques sont les morphismes structuraux) est
+commutatif. Avec cette définition, les $\mathfrak{S}$-préschémas formels
+(pour $\mathfrak{S}$ fixé) forment une \emph{catégorie}. On désigne par
+$\operatorname{Hom}_{\mathfrak{S}}(\mathfrak{X},\mathfrak{Y})$
+l'ensemble des $\mathfrak{S}$-morphismes du $\mathfrak{S}$-préschéma
+formel $\mathfrak{X}$ dans le $\mathfrak{S}$-préschéma formel
+$\mathfrak{Y}$. Lorsque $\mathfrak{S}=\operatorname{Spf}(A)$, on dit
+aussi \emph{$A$-morphisme} au lieu de
+\emph{$\mathfrak{S}$-morphisme}.
+\end{env}
+
+\begin{env}[10.4.8]
+\label{I.10.4.8-fr}
+Comme tout schéma affine peut être considéré comme un schéma formel affine
+(\hyperref[I.10.1.2-fr]{10.1.2}), tout préschéma (usuel) peut être
+considéré comme un préschéma formel. Il résulte en outre de
+(\hyperref[I.10.4.5-fr]{10.4.5}) que pour les préschémas \emph{usuels},
+les morphismes (resp. $S$-morphismes) de préschémas \emph{formels}
+coïncident avec les morphismes (resp. $S$-morphismes) définis au
+\S~\hyperref[section:I.2-fr]{2}.
+\end{env}
+
+\subsection{Idéaux de définition des préschémas formels.}
+\label{subsection:I.10.5-fr}
+
+\begin{env}[10.5.1]
+\label{I.10.5.1-fr}
+Soit $\mathfrak{X}$ un préschéma formel~; on dit qu'un
+$\mathscr{O}_{\mathfrak{X}}$-Idéal $\mathscr{J}$ est un
+\emph{faisceau d'idéaux de définition} (ou un
+\emph{Idéal de définition}) de $\mathfrak{X}$ si tout
+$x\in\mathfrak{X}$ possède un voisinage ouvert formel affine $U$ tel que
+$\mathscr{J}|U$ soit un Idéal de définition du schéma formel affine
+induit par $\mathfrak{X}$ sur $U$
+(\hyperref[I.10.3.3-fr]{10.3.3})~; en vertu de
+(\hyperref[I.10.3.1.1-fr]{10.3.1.1}) et
+(\hyperref[I.10.4.3-fr]{10.4.3}), pour tout ouvert
+$V\subset\mathfrak{X}$, $\mathscr{J}|V$ est alors un Idéal de définition
+du préschéma formel induit par $\mathfrak{X}$ sur $V$.
+
+On dit qu'une famille $(\mathscr{J}_\lambda)$ d'Idéaux de définition de
+$\mathfrak{X}$ est un \emph{système fondamental}
+\oldpage[I]{187}
+\emph{d'Idéaux de définition} s'il existe un recouvrement
+$(U_\alpha)$ de $\mathfrak{X}$ par des ouverts formels affines tel que,
+pour tout $\alpha$, la famille des
+$\mathscr{J}_\lambda|U_\alpha$ soit un système fondamental d'Idéaux de
+définition (\hyperref[I.10.3.6-fr]{10.3.6}) du schéma formel affine
+induit par $\mathfrak{X}$ sur $U_\alpha$. Il résulte de la remarque finale
+de (\hyperref[I.10.3.7-fr]{10.3.7}) que lorsque $\mathfrak{X}$ est un
+schéma formel affine, cette définition coïncide avec la définition donnée
+dans (\hyperref[I.10.3.7-fr]{10.3.7}). Pour tout ouvert $V$ de
+$\mathfrak{X}$, les restrictions $\mathscr{J}_\lambda|V$ forment alors un
+système fondamental d'Idéaux de définition du préschéma formel induit sur
+$V$, en vertu de (\hyperref[I.10.3.1.1-fr]{10.3.1.1}). Si
+$\mathfrak{X}$ est un préschéma formel \emph{localement noethérien}, et
+$\mathscr{J}$ un Idéal de définition de $\mathfrak{X}$, il résulte de
+(\hyperref[I.10.3.6-fr]{10.3.6}) que les puissances $\mathscr{J}^n$
+forment un système fondamental d'Idéaux de définition de $\mathfrak{X}$.
+\end{env}
+
+\begin{env}[10.5.2]
+\label{I.10.5.2-fr}
+Soient $\mathfrak{X}$ un préschéma formel, $\mathscr{J}$ un Idéal de
+définition de $\mathfrak{X}$. Alors l'espace annelé
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})$ est un
+\emph{préschéma} (usuel), qui est affine (resp. localement noethérien,
+resp. noethérien) lorsque $\mathfrak{X}$ est un schéma formel affine
+(resp. un préschéma formel localement noethérien, resp. noethérien)~; on
+est en effet aussitôt ramené au cas affine, et alors la proposition a déjà
+été démontrée dans (\hyperref[I.10.3.2-fr]{10.3.2}). En outre, si
+$\theta:\mathscr{O}_{\mathfrak{X}}\to
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}$ est l'homomorphisme canonique,
+$u=(1_{\mathfrak{X}},\theta)$ est un \emph{morphisme} (dit
+\emph{canonique}) de préschémas formels
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})\to
+(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$, car ici encore, cela a été vu
+dans le cas affine (\hyperref[I.10.3.2-fr]{10.3.2}), auquel on se ramène
+aussitôt.
+\end{env}
+
+\begin{proposition}[10.5.3]
+\label{I.10.5.3-fr}
+Soient $\mathfrak{X}$ un préschéma formel, $(\mathscr{J}_\lambda)$ un
+système fondamental d'Idéaux de définition de $\mathfrak{X}$. Alors le
+faisceau d'anneaux topologiques $\mathscr{O}_{\mathfrak{X}}$ est limite
+projective des faisceaux d'anneaux pseudo-discrets
+(\hyperref[0.3.8.1-fr]{0, 3.8.1})
+$\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda$.
+\end{proposition}
+
+\begin{proof}
+Comme la topologie de $\mathfrak{X}$ admet une base d'ouverts formels
+affines quasi-compacts (\hyperref[I.10.4.3-fr]{10.4.3}), on est ramené au
+cas affine, où la proposition est conséquence de
+(\hyperref[I.10.3.5-fr]{10.3.5}),
+(\hyperref[I.10.3.2-fr]{10.3.2}) et de la définition
+(\hyperref[I.10.1.1-fr]{10.1.1}).
+\end{proof}
+
+Il n'est pas certain que tout préschéma formel admette des Idéaux de
+définition. Toutefois~:
+
+\begin{proposition}[10.5.4]
+\label{I.10.5.4-fr}
+Soit $\mathfrak{X}$ un préschéma formel localement noethérien. Il existe
+un plus grand Idéal de définition $\mathscr{T}$ de $\mathfrak{X}$~;
+c'est le seul Idéal de définition $\mathscr{J}$ tel que le préschéma
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})$ soit réduit. Si
+$\mathscr{J}$ est un Idéal de définition de $\mathfrak{X}$,
+$\mathscr{T}$ est l'image réciproque par
+$\mathscr{O}_{\mathfrak{X}}\to
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}$ du Nilradical de
+$\mathscr{O}_{\mathfrak{X}}/\mathscr{J}$.
+\end{proposition}
+
+\begin{proof}
+Supposons d'abord que $\mathfrak{X}=\operatorname{Spf}(A)$, où $A$ est
+un anneau adique noethérien. L'existence et les propriétés de
+$\mathscr{T}$ résultent immédiatement de
+(\hyperref[I.10.3.4-fr]{10.3.4}) et
+(\hyperref[I.5.1.1-fr]{5.1.1}), compte tenu de l'existence et des
+propriétés du plus grand idéal de définition de $A$
+(\hyperref[0.7.1.6-fr]{0, 7.1.6} et
+\hyperref[0.7.1.7-fr]{7.1.7}).
+
+Pour prouver l'existence et les propriétés de $\mathscr{T}$ dans le cas
+général, il suffit de montrer que si $U\supset V$ sont deux ouverts
+formels affines noethériens de $\mathfrak{X}$, le plus grand Idéal de
+définition $\mathscr{T}_U$ de $U$ induit le plus grand Idéal de définition
+$\mathscr{T}_V$ de $V$~; mais comme
+$(V,(\mathscr{O}_{\mathfrak{X}}|V)/(\mathscr{T}_U|V))$ est réduit, cela
+résulte de ce qui précède.
+\end{proof}
+
+On désigne par $\mathfrak{X}_{\mathrm{red}}$ le préschéma (usuel) réduit
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{T})$.
+
+\begin{corollary}[10.5.5]
+\label{I.10.5.5-fr}
+Soient $\mathfrak{X}$ un préschéma formel localement noethérien,
+$\mathscr{T}$ le plus grand Idéal de définition de $\mathfrak{X}$~; pour
+tout ouvert $V$ de $\mathfrak{X}$, $\mathscr{T}|V$ est le plus grand
+Idéal de définition du préschéma formel induit par $\mathfrak{X}$ sur
+$V$.
+\end{corollary}
+
+\oldpage[I]{188}
+
+\begin{proposition}[10.5.6]
+\label{I.10.5.6-fr}
+Soient $\mathfrak{X}$, $\mathfrak{Y}$ deux préschémas formels,
+$\mathscr{J}$ (resp. $\mathscr{K}$) un Idéal de définition de
+$\mathfrak{X}$ (resp. $\mathfrak{Y}$),
+$f:\mathfrak{X}\to\mathfrak{Y}$ un morphisme de préschémas formels.
+\begin{enumerate}
+  \item[\rm{(i)}] Si
+    $f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$,
+    il existe un unique morphisme
+    $f':(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})\to
+    (\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})$ de
+    préschémas usuels rendant commutatif le diagramme
+    \[
+      \label{I.10.5.6.1-fr}
+      \xymatrix{
+        (\mathfrak{X},\mathscr{O}_{\mathfrak{X}})\ar[r]^f &
+        (\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}})\\
+        (\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})
+          \ar[r]_{f'}\ar[u] &
+        (\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})\ar[u]
+      }
+      \tag{10.5.6.1}
+    \]
+    où les flèches verticales sont les morphismes canoniques.
+  \item[\rm{(ii)}] Supposons que
+    $\mathfrak{X}=\operatorname{Spf}(A)$,
+    $\mathfrak{Y}=\operatorname{Spf}(B)$ soient des schémas formels
+    affines, $\mathscr{J}=\mathfrak{J}^{\Delta}$,
+    $\mathscr{K}=\mathfrak{K}^{\Delta}$, où $\mathfrak{J}$ (resp.
+    $\mathfrak{K}$) est un idéal de définition de $A$ (resp. $B$), et
+    $f=({}^a\varphi,\widetilde{\varphi})$, où
+    $\varphi:B\to A$ est un homomorphisme continu~; pour que
+    $f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$,
+    il faut et il suffit que
+    $\varphi(\mathfrak{K})\subset\mathfrak{J}$, et $f'$ est alors le
+    morphisme $({}^a\varphi',\widetilde{\varphi'})$, où
+    $\varphi':B/\mathfrak{K}\to A/\mathfrak{J}$ est l'homomorphisme
+    déduit de $\varphi$ par passage aux quotients.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm{(i)}] Si $f=(\psi,\theta)$, l'hypothèse entraîne que
+    l'image par
+    $\theta^\sharp:\psi^*(\mathscr{O}_{\mathfrak{Y}})\to
+    \mathscr{O}_{\mathfrak{X}}$ du faisceau d'idéaux
+    $\psi^*(\mathscr{K})$ de $\psi^*(\mathscr{O}_{\mathfrak{Y}})$ est
+    contenue dans $\mathscr{J}$
+    (\hyperref[0.4.3.5-fr]{0, 4.3.5}). Par passage aux quotients, on
+    déduit donc de $\theta^\sharp$ un homomorphisme de faisceau d'anneaux
+    \[
+      \omega:\psi^*(\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})
+      =\psi^*(\mathscr{O}_{\mathfrak{Y}})/\psi^*(\mathscr{K})
+      \to\mathscr{O}_{\mathfrak{X}}/\mathscr{J}~;
+    \]
+    en outre, comme pour tout $x\in\mathfrak{X}$,
+    $\theta_x^\sharp$ est un homomorphisme \emph{local}, il en est de
+    même de $\omega_x$. Le morphisme d'espaces annelés
+    $(\psi,\omega^b)$ est donc
+    (\hyperref[I.2.2.1-fr]{2.2.1}) l'unique morphisme $f'$ d'espaces
+    annelés répondant à la question.
+  \item[\rm{(ii)}] La correspondance canonique fonctorielle entre
+    morphismes de préschémas formels affines et homomorphismes continus
+    d'anneaux (\hyperref[I.10.2.2-fr]{10.2.2}) montre que dans le cas
+    considéré, la relation
+    $f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$
+    entraîne que l'on a
+    $f'=({}^a\varphi',\widetilde{\varphi'})$, où
+    $\varphi':B/\mathfrak{K}\to A/\mathfrak{J}$ est l'unique
+    homomorphisme rendant commutatif le diagramme
+    \[
+      \label{I.10.5.6.2-fr}
+      \xymatrix{
+        B\ar[r]^\varphi\ar[d] & A\ar[d]\\
+        B/\mathfrak{K}\ar[r]_{\varphi'} & A/\mathfrak{J}
+      }
+      \tag{10.5.6.2}
+    \]
+    L'existence de $\varphi'$ implique donc que
+    $\varphi(\mathfrak{K})\subset\mathfrak{J}$. Inversement, si cette
+    condition est vérifiée, en désignant par $\varphi'$ l'unique
+    homomorphisme rendant commutatif le diagramme
+    (\hyperref[I.10.5.6.2-fr]{10.5.6.2}) et posant
+    $f'=({}^a\varphi',\widetilde{\varphi'})$, il est clair que le
+    diagramme (\hyperref[I.10.5.6.1-fr]{10.5.6.1}) est commutatif~; la
+    considération des homomorphismes
+    ${}^a\varphi^*(\mathscr{O}_{\mathfrak{Y}})\to
+    \mathscr{O}_{\mathfrak{X}}$ et
+    ${}^a{\varphi'}^*(\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})\to
+    \mathscr{O}_{\mathfrak{X}}/\mathscr{J}$ correspondant à $f$ et
+    $f'$ respectivement, montre alors que cela entraîne la relation
+    $f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$.
+\end{enumerate}
+\end{proof}
+
+Il est clair que la correspondance $f\mapsto f'$ définie ci-dessus est
+\emph{fonctorielle}.
+
+\subsection{Préschémas formels comme limites inductives de préschémas.}
+\label{subsection:I.10.6-fr}
+
+\begin{env}[10.6.1]
+\label{I.10.6.1-fr}
+Soient $\mathfrak{X}$ un préschéma formel,
+$(\mathscr{J}_\lambda)$ un système fondamental d'Idéaux de définition de
+$\mathfrak{X}$~; pour tout $\lambda$, soit $f_\lambda$ le morphisme
+canonique
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda)
+\to\mathfrak{X}$ (\hyperref[I.10.5.2-fr]{10.5.2})~; pour
+$\mathscr{J}_\mu\subset\mathscr{J}_\lambda$, l'homomorphisme canonique
+$\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\mu\to
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda$ définit un morphisme
+
+\oldpage[I]{189}
+
+canonique
+$f_{\mu\lambda}:(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda)\to
+(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\mu)$ de préschémas
+(usuels) tel que l'on ait $f_\lambda=f_\mu\circ f_{\mu\lambda}$. Les
+préschémas
+$X_\lambda=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda)$ et les morphismes
+$f_{\mu\lambda}$ constituent donc (en vertu de
+\hyperref[I.10.4.8-fr]{10.4.8}) un \emph{système inductif} dans la
+catégorie des préschémas formels.
+\end{env}
+
+\begin{proposition}[10.6.2]
+\label{I.10.6.2-fr}
+Avec les notations de (\hyperref[I.10.6.1-fr]{10.6.1}), le préschéma
+formel $\mathfrak{X}$ et les morphismes $f_\lambda$ constituent une
+limite inductive (T, I, 1.8) du système $(X_\lambda,f_{\mu\lambda})$
+dans la catégorie des préschémas formels.
+\end{proposition}
+
+\begin{proof}
+Soit $\mathfrak{Y}$ un préschéma formel, et pour chaque indice $\lambda$,
+soit
+\[
+  g_\lambda=(\psi_\lambda,\theta_\lambda):X_\lambda\to\mathfrak{Y}
+\]
+un morphisme, tel que l'on ait
+$g_\lambda=g_\mu\circ f_{\mu\lambda}$ pour
+$\mathscr{J}_\mu\subset\mathscr{J}_\lambda$. Cette dernière condition
+et la définition des $X_\lambda$ entraînent d'abord que tous les
+$\psi_\lambda$ sont identiques à une même application continue
+$\psi:\mathfrak{X}\to\mathfrak{Y}$ des espaces sous-jacents~; en outre,
+les homomorphismes
+$\theta_\lambda^\sharp:\psi^*(\mathscr{O}_{\mathfrak{Y}})\to
+\mathscr{O}_{X_\lambda}=
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda$ forment un
+\emph{système projectif} d'homomorphismes de faisceaux d'anneaux. Par
+passage à la limite projective, on en déduit donc un homomorphisme
+\[
+  \omega:\psi^*(\mathscr{O}_{\mathfrak{Y}})\to
+  \varprojlim\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda
+  =\mathscr{O}_{\mathfrak{X}},
+\]
+et il est clair que le morphisme $g=(\psi,\omega^b)$ d'\emph{espaces
+annelés} est le \emph{seul} rendant commutatif les diagrammes
+\[
+  \label{I.10.6.2.1-fr}
+  \xymatrix{
+    X_\lambda\ar[rr]^{g_\lambda}\ar[rd]_{f_\lambda} &&
+    \mathfrak{Y}\\
+    & \mathfrak{X}\ar[ru]_g
+  }
+  \tag{10.6.2.1}
+\]
+Il reste donc à prouver que $g$ est un morphisme de \emph{préschémas
+formels}~; la question étant locale sur $\mathfrak{X}$ et
+$\mathfrak{Y}$, on peut donc supposer
+$\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$, $A$ et $B$ étant des anneaux
+admissibles, avec
+$\mathscr{J}_\lambda=\mathfrak{J}_\lambda^{\Delta}$, où
+$(\mathfrak{J}_\lambda)$ est un système fondamental d'idéaux de
+définition de $A$ (\hyperref[I.10.3.5-fr]{10.3.5})~; comme
+$A=\varprojlim A/\mathfrak{J}_\lambda$, l'existence d'un morphisme de
+schémas formels affines $g$ rendant commutatifs les diagrammes
+(\hyperref[I.10.6.2.1-fr]{10.6.2.1}) résulte alors de la correspondance
+biunivoque (\hyperref[I.10.2.2-fr]{10.2.2}) entre morphismes de schémas
+formels affines et homomorphismes continus d'anneaux, et de la définition
+de la limite projective. Mais l'unicité de $g$ en tant que morphisme
+d'espaces annelés montre qu'il coïncide avec le morphisme noté de même au
+début de la démonstration.
+\end{proof}
+
+La proposition suivante établit, sous certaines conditions
+supplémentaires, l'existence de la limite inductive d'un système inductif
+donné de préschémas (usuels) dans la catégorie des préschémas formels~:
+
+\begin{proposition}[10.6.3]
+\label{I.10.6.3-fr}
+Soient $\mathfrak{X}$ un espace topologique,
+$(\mathscr{O}_i,u_{ji})$ un système projectif de faisceaux d'anneaux sur
+$\mathfrak{X}$, ayant $\mathbf{N}$ pour ensemble d'indices. Soit
+$\mathscr{J}_i$ le noyau de
+$u_{0i}:\mathscr{O}_i\to\mathscr{O}_0$. On suppose que~:
+\begin{enumerate}
+  \item[a)] L'espace annelé $(\mathfrak{X},\mathscr{O}_i)$ est un
+    préschéma $X_i$.
+  \item[b)] Pour tout $x\in X$ et tout $i$, il existe un voisinage
+    ouvert $U_i$ de $x$ dans $\mathfrak{X}$ tel que la restriction
+    $\mathscr{J}_i|U_i$ soit nilpotente.
+  \item[c)] Les homomorphismes $u_{ji}$ sont surjectifs.
+\end{enumerate}
+
+\oldpage[I]{190}
+
+Soit $\mathscr{O}_{\mathfrak{X}}$ le faisceau d'anneaux topologiques
+limite projective des faisceaux d'anneaux pseudo-discrets
+$\mathscr{O}_i$, et soit
+$u_i:\mathscr{O}_{\mathfrak{X}}\to\mathscr{O}_i$ l'homomorphisme
+canonique. Alors l'espace topologiquement annelé
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$ est un préschéma formel~;
+les homomorphismes $u_i$ sont surjectifs~; leurs noyaux
+$\mathscr{J}^{(i)}$ forment un système fondamental d'Idéaux de définition
+de $\mathfrak{X}$, et $\mathscr{J}^{(0)}$ est la limite projective des
+faisceaux d'idéaux $\mathscr{J}_i$.
+\end{proposition}
+
+\begin{proof}
+Notons d'abord que sur chaque fibre, $u_{ji}$ est un homomorphisme
+surjectif et \emph{a fortiori} un homomorphisme local~; donc
+$v_{ij}=(1_{\mathfrak{X}},u_{ji})$ est un morphisme de préschémas
+$X_j\to X_i$ ($i\geq j$) (\hyperref[I.2.2.1-fr]{2.2.1}). Supposons
+d'abord que chaque $X_i$ soit un schéma affine d'anneau $A_i$. Il existe
+un homomorphisme \emph{d'anneaux}
+$\varphi_{ji}:A_i\to A_j$ tel que
+$u_{ji}=\widetilde{\varphi_{ji}}$
+(\hyperref[I.1.7.3-fr]{1.7.3})~; par suite
+(\hyperref[I.1.6.3-fr]{1.6.3}), le faisceau $\mathscr{O}_j$ est un
+$\mathscr{O}_i$-Module quasi-cohérent sur $X_i$ (pour la loi externe
+définie par $u_{ji}$), associé à $A_j$ considéré comme $A_i$-module à
+l'aide de $\varphi_{ji}$. Pour tout $f\in A_i$, soit
+$f'=\varphi_{ji}(f)$~; par hypothèse, les ouverts $D(f)$ et $D(f')$ sont
+identiques dans $\mathfrak{X}$, et l'homomorphisme de
+$\Gamma(D(f),\mathscr{O}_i)=(A_i)_f$ dans
+$\Gamma(D(f),\mathscr{O}_j)=(A_j)_{f'}$ correspondant à $u_{ji}$ n'est
+autre que $(\varphi_{ji})_f$ (\hyperref[I.1.6.1-fr]{1.6.1}). Mais
+lorsqu'on considère $A_j$ comme $A_i$-module, $(A_j)_{f'}$ est le
+$(A_i)_f$-module $(A_j)_f$, donc on a aussi
+$u_{ji}=\widetilde{\varphi_{ji}}$ lorsque $\varphi_{ji}$ est cette fois
+considéré comme homomorphisme de $A_i$-modules. Alors, comme $u_{ji}$ est
+surjectif, on en conclut que $\varphi_{ji}$ l'est aussi
+(\hyperref[I.1.3.9-fr]{1.3.9}) et si $\mathfrak{J}_{ji}$ est le noyau de
+$\varphi_{ji}$, le noyau de $u_{ji}$ est un $\mathscr{O}_i$-Module
+quasi-cohérent égal à $\widetilde{\mathfrak{J}_{ji}}$. En particulier,
+on a $\mathscr{J}_i=\widetilde{\mathfrak{J}_i}$, où $\mathfrak{J}_i$ est
+le noyau de $\varphi_{0i}:A_i\to A_0$. L'hypothèse b) entraîne que
+$\mathscr{J}_i$ est \emph{nilpotent}~: en effet, comme $\mathfrak{X}$
+est quasi-compact, on peut recouvrir $\mathfrak{X}$ par un nombre fini
+d'ouverts $U_k$ tels que $(\mathscr{J}_i|U_k)^{n_k}=0$ et en prenant pour
+$n$ le plus grand des $n_k$, on a $\mathscr{J}_i^n=0$. On en conclut que
+$\mathfrak{J}_i$ est nilpotent (\hyperref[I.1.3.13-fr]{1.3.13}). Alors
+l'anneau $A=\varprojlim A_i$ est admissible
+(\hyperref[0.7.2.2-fr]{0, 7.2.2}), l'homomorphisme canonique
+$\varphi_i:A\to A_i$ est surjectif et son noyau
+$\mathfrak{J}^{(i)}$ est égal à la limite projective des
+$\mathfrak{J}_{ik}$ pour $k\geq i$~; les $\mathfrak{J}^{(i)}$ forment
+un système fondamental de voisinages de 0 dans $A$. Les assertions de
+(\hyperref[I.10.6.3-fr]{10.6.3}) résultent dans ce cas de
+(\hyperref[I.10.1.1-fr]{10.1.1}) et
+(\hyperref[I.10.3.2-fr]{10.3.2}),
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$ n'étant autre que
+$\operatorname{Spf}(A)$.
+
+Toujours dans ce même cas particulier, notons que si $f=(f_i)$ est un
+élément de la limite projective $A=\varprojlim A_i$, tous les ouverts
+$D(f_i)$ (ouvert affine dans $X_i$) s'identifient à l'ouvert
+$\mathfrak{D}(f)$ de $\mathfrak{X}$, le préschéma induit par $X_i$ sur
+$\mathfrak{D}(f)$ s'identifiant donc au schéma affine
+$\operatorname{Spec}((A_i)_{f_i})$.
+
+Dans le cas général, remarquons d'abord que pour tout ouvert quasi-compact
+$U$ de $\mathfrak{X}$, chacun des $\mathscr{J}_i|U$ est nilpotent, comme
+le montre le raisonnement fait ci-dessus. Nous allons voir que pour tout
+$x\in\mathfrak{X}$, il y a un voisinage ouvert $U$ de $x$ dans
+$\mathfrak{X}$ qui est un \emph{ouvert affine pour tous les $X_i$}. En
+effet, prenons $U$ ouvert affine pour $X_0$, et observons que
+$\mathscr{O}_{X_0}=\mathscr{O}_{X_i}/\mathscr{J}_i$. Comme
+$\mathscr{J}_i|U$ est nilpotent, en vertu de ce qui précède, $U$ est
+ouvert affine aussi pour chaque $X_i$ en vertu de
+(\hyperref[I.5.1.9-fr]{5.1.9}). Cela étant, pour tout $U$ satisfaisant
+aux conditions précédentes, l'étude du cas affine faite plus haut montre
+que $(U,\mathscr{O}_{\mathfrak{X}}|U)$ est un préschéma formel dont les
+$\mathscr{J}^{(i)}|U$ forment un système fondamental d'idéaux de
+définition et $\mathscr{J}^{(0)}|U$ est limite projective des
+$\mathscr{J}_i|U$~; d'où la conclusion.
+\end{proof}
+
+\begin{corollary}[10.6.4]
+\label{I.10.6.4-fr}
+Supposons que pour $i\geq j$, le noyau de $u_{ji}$ soit
+$\mathscr{J}_i^{j+1}$ et que $\mathscr{J}_1/\mathscr{J}_1^2$
+
+\oldpage[I]{191}
+
+soit de type fini sur
+$\mathscr{O}_0=\mathscr{O}_1/\mathscr{J}_1$. Alors $\mathfrak{X}$ est
+un préschéma formel adique, et si $\mathscr{J}^{(n)}$ est le noyau de
+$\mathscr{O}_{\mathfrak{X}}\to\mathscr{O}_n$, on a
+$\mathscr{J}^{(n)}=\mathscr{J}^{n+1}$ et
+$\mathscr{J}/\mathscr{J}^2$ est isomorphe à $\mathscr{J}_1$. Si en
+outre $X_0$ est localement noethérien (resp. noethérien),
+$\mathfrak{X}$ est localement noethérien (resp. noethérien).
+\end{corollary}
+
+\begin{proof}
+Comme les espaces sous-jacents à $\mathfrak{X}$ et $X_0$ sont les mêmes,
+la question est locale et l'on peut supposer tous les $X_i$ affines~;
+compte tenu des relations
+$\mathscr{J}_{ij}=\widetilde{\mathfrak{J}_{ji}}$ (avec les notations
+de (\hyperref[I.10.6.3-fr]{10.6.3})), on est aussitôt ramené aux
+assertions correspondantes de
+(\hyperref[0.7.2.7-fr]{0, 7.2.7} et
+\hyperref[0.7.2.8-fr]{7.2.8}), en notant que
+$\mathfrak{J}_1/\mathfrak{J}_1^2$ est alors un $A_0$-module de type
+fini (\hyperref[I.1.3.9-fr]{1.3.9}).
+\end{proof}
+
+En particulier, \emph{tout préschéma formel localement noethérien
+$\mathfrak{X}$} est limite inductive d'une suite $(X_n)$ de préschémas
+(usuels) localement noethériens vérifiant les conditions de
+(\hyperref[I.10.6.3-fr]{10.6.3}) et
+(\hyperref[I.10.6.4-fr]{10.6.4})~: il suffit de considérer un Idéal de
+définition $\mathscr{J}$ de $\mathfrak{X}$
+(\hyperref[I.10.5.4-fr]{10.5.4}) et de prendre
+$X_n=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$
+((\hyperref[I.10.5.1-fr]{10.5.1}) et
+(\hyperref[I.10.6.2-fr]{10.6.2})).
+
+\begin{corollary}[10.6.5]
+\label{I.10.6.5-fr}
+Soit $A$ un anneau admissible. Pour que le schéma formel affine
+$\mathfrak{X}=\operatorname{Spf}(A)$ soit noethérien, il faut et il
+suffit que $A$ soit adique et noethérien.
+\end{corollary}
+
+\begin{proof}
+La condition est évidemment suffisante. Inversement, supposons que
+$\mathfrak{X}$ soit noethérien, et soient $\mathfrak{J}$ un idéal de
+définition de $A$, $\mathscr{J}=\mathfrak{J}^\Delta$ l'Idéal de
+définition correspondant de $\mathfrak{X}$. Les préschémas (usuels)
+$X_n=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$ sont alors affines et
+noethériens, donc les anneaux
+$A_n=A/\mathfrak{J}^{n+1}$ sont noethériens
+(\hyperref[I.6.1.3-fr]{6.1.3}), d'où on conclut que
+$\mathfrak{J}/\mathfrak{J}^2$ est un $A/\mathfrak{J}$-module de type
+fini. Comme les $\mathscr{J}^n$ forment un système fondamental d'Idéaux
+de définition de $\mathfrak{X}$
+(\hyperref[I.10.5.1-fr]{10.5.1}), on a
+$\mathscr{O}_{\mathfrak{X}}
+=\varprojlim(\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^n)$
+(\hyperref[I.10.5.3-fr]{10.5.3})~; on en conclut
+(\hyperref[I.10.1.3-fr]{10.1.3}) que $A$ est topologiquement isomorphe à
+$\varprojlim A/\mathfrak{J}^n$, donc est adique et noethérien
+(\hyperref[0.7.2.8-fr]{0, 7.2.8}).
+\end{proof}
+
+\begin{remark}[10.6.6]
+\label{I.10.6.6-fr}
+Avec les notations de (\hyperref[I.10.6.3-fr]{10.6.3}), soit
+$\mathscr{F}_i$ un $\mathscr{O}_i$-Module, et supposons donné, pour
+$i\geq j$, un $v_{ij}$-morphisme
+$\theta_{ji}:\mathscr{F}_i\to\mathscr{F}_j$, de sorte que
+$\theta_{kj}\circ\theta_{ji}=\theta_{ki}$ pour $k\leq j\leq i$.
+Comme l'application continue sous-jacente à $v_{ij}$ est l'identité,
+$\theta_{ji}$ est un homomorphisme de faisceaux de groupes abéliens sur
+l'espace $\mathfrak{X}$~; en outre, si $\mathscr{F}$ est la limite
+projective du système projectif $(\mathscr{F}_i)$ de faisceaux de groupes
+abéliens, le fait que les $\theta_{ji}$ sont des $v_{ij}$-morphismes
+permet de définir sur $\mathscr{F}$ une structure de
+$\mathscr{O}_{\mathfrak{X}}$-Module par passage à la limite projective~;
+muni de cette structure, nous dirons que $\mathscr{F}$ est la
+\emph{limite projective} (pour les $\theta_{ji}$) du système de
+$\mathscr{O}_i$-Modules $(\mathscr{F}_i)$. Dans le cas particulier où
+$v_{ij}^*(\mathscr{F}_i)=\mathscr{F}_j$ et où $\theta_{ji}$ est
+l'\emph{identité}, nous dirons pour abréger, que $\mathscr{F}$ est la
+limite projective d'un système $(\mathscr{F}_i)$ tel que
+$v_{ij}^*(\mathscr{F}_i)=\mathscr{F}_j$ pour $j\leq i$ (sans
+mentionner les $\theta_{ji}$).
+\end{remark}
+
+\begin{env}[10.6.7]
+\label{I.10.6.7-fr}
+Soient $\mathfrak{X}$, $\mathfrak{Y}$ deux préschémas formels,
+$\mathscr{J}$ (resp. $\mathscr{K}$) un Idéal de définition de
+$\mathfrak{X}$ (resp. $\mathfrak{Y}$),
+$f:\mathfrak{X}\to\mathfrak{Y}$ un morphisme tel que
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$. On a
+alors pour tout entier $n>0$,
+$f^*(\mathscr{K}^n)\mathscr{O}_{\mathfrak{X}}
+=(f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}})^n
+\subset\mathscr{J}^n$~; on peut donc
+(\hyperref[I.10.5.6-fr]{10.5.6}) déduire de $f$ un morphisme de
+préschémas (usuels) $f_n:X_n\to Y_n$, en posant
+$X_n=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$,
+$Y_n=(\mathfrak{Y},
+\mathscr{O}_{\mathfrak{Y}}/\mathscr{K}^{n+1})$, et il résulte
+aussitôt des définitions que les diagrammes
+\[
+  \label{I.10.6.7.1-fr}
+  \xymatrix{
+    X_m\ar[r]^{f_m}\ar[d] &
+    Y_m\ar[d]\\
+    X_n\ar[r]_{f_n} &
+    Y_n
+  }
+  \tag{10.6.7.1}
+\]
+
+\oldpage[I]{192}
+
+sont commutatifs pour $m\leq n$~; autrement dit, $(f_n)$ est un
+\emph{système inductif} de morphismes.
+\end{env}
+
+\begin{env}[10.6.8]
+\label{I.10.6.8-fr}
+Inversement, soit $(X_n)$ (resp. $(Y_n)$) un système inductif de
+préschémas (usuels) satisfaisant aux conditions b) et c) de
+(\hyperref[I.10.6.3-fr]{10.6.3}), et soit $\mathfrak{X}$ (resp.
+$\mathfrak{Y}$) sa limite inductive. Par définition des limites
+inductives, toute suite $(f_n)$ de morphismes $X_n\to Y_n$ formant un
+système inductif admet une \emph{limite inductive}
+$f:\mathfrak{X}\to\mathfrak{Y}$, qui est l'unique morphisme de
+préschémas formels rendant commutatifs les diagrammes
+\[
+  \xymatrix{
+    X_n\ar[r]^{f_n}\ar[d] &
+    Y_n\ar[d]\\
+    \mathfrak{X}\ar[r]_f &
+    \mathfrak{Y}
+  }
+\]
+\end{env}
+
+\begin{proposition}[10.6.9]
+\label{I.10.6.9-fr}
+Soient $\mathfrak{X}$, $\mathfrak{Y}$ deux préschémas formels
+localement noethériens, $\mathscr{J}$ (resp. $\mathscr{K}$) un Idéal
+de définition de $\mathfrak{X}$ (resp. $\mathfrak{Y}$)~;
+l'application $f\mapsto(f_n)$ définie dans
+(\hyperref[I.10.6.7-fr]{10.6.7}) est une bijection de l'ensemble des
+morphismes $f:\mathfrak{X}\to\mathfrak{Y}$ tels que
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$, sur
+l'ensemble des suites $(f_n)$ de morphismes rendant commutatifs les
+diagrammes (\hyperref[I.10.6.7.1-fr]{10.6.7.1}).
+\end{proposition}
+
+\begin{proof}
+Si $f$ est la limite inductive d'une telle suite, il faut montrer que
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$. La
+question étant locale sur $\mathfrak{X}$ et $\mathfrak{Y}$, on peut se
+borner au cas où $\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$ sont affines, $A$ et $B$ étant
+adiques noethériens,
+$\mathscr{J}=\mathfrak{J}^\Delta$,
+$\mathscr{K}=\mathfrak{K}^\Delta$, où $\mathfrak{J}$ (resp.
+$\mathfrak{K}$) est un idéal de définition de $A$ (resp. $B$). On a
+alors $X_n=\operatorname{Spec}(A_n)$,
+$Y_n=\operatorname{Spec}(B_n)$, avec
+$A_n=A/\mathfrak{J}^{n+1}$ et $B_n=B/\mathfrak{K}^{n+1}$, en vertu de
+(\hyperref[I.10.3.6-fr]{10.3.6}) et
+(\hyperref[I.10.3.2-fr]{10.3.2})~;
+$f_n=({}^a\varphi_n,\widetilde{\varphi_n})$, où les homomorphismes
+$\varphi_n:B_n\to A_n$ forment un système projectif, donc
+$f=({}^a\varphi,\widetilde{\varphi})$, où
+$\varphi=\varprojlim\varphi_n$. La commutativité du diagramme
+(\hyperref[I.10.6.7.1-fr]{10.6.7.1}) pour $m=0$ donne alors la
+condition
+$\varphi_n(\mathfrak{K}/\mathfrak{K}^{n+1})
+\subset\mathfrak{J}/\mathfrak{J}^{n+1}$ pour tout $n$, donc, en
+passant à la limite projective, $\varphi(\mathfrak{K})\subset
+\mathfrak{J}$, et cela entraîne
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$
+(\hyperref[I.10.5.6-fr]{10.5.6, (ii)}).
+\end{proof}
+
+\begin{corollary}[10.6.10]
+\label{I.10.6.10-fr}
+Soient $\mathfrak{X}$, $\mathfrak{Y}$ deux préschémas formels
+localement noethériens, $\mathscr{T}$ le plus grand Idéal de définition
+de $\mathfrak{X}$ (\hyperref[I.10.5.4-fr]{10.5.4}).
+\begin{enumerate}
+  \item[\rm{(i)}] Pour tout Idéal de définition $\mathscr{K}$ de
+  $\mathfrak{Y}$ et tout morphisme
+  $f:\mathfrak{X}\to\mathfrak{Y}$, on a
+  $f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{T}$.
+  \item[\rm{(ii)}] Il y a correspondance biunivoque canonique entre
+  $\operatorname{Hom}(\mathfrak{X},\mathfrak{Y})$ et l'ensemble des
+  suites $(f_n)$ de morphismes rendant commutatifs les diagrammes
+  (\hyperref[I.10.6.7.1-fr]{10.6.7.1}), où
+  $X_n=(\mathfrak{X},
+  \mathscr{O}_{\mathfrak{X}}/\mathscr{T}^{n+1})$,
+  $Y_n=(\mathfrak{Y},
+  \mathscr{O}_{\mathfrak{Y}}/\mathscr{K}^{n+1})$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(ii) résulte aussitôt de (i) et de
+(\hyperref[I.10.6.9-fr]{10.6.9}). Pour démontrer (i), on peut se borner
+au cas où $\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$, $A$ et $B$ étant noethériens,
+$\mathscr{T}=\mathfrak{T}^\Delta$,
+$\mathscr{K}=\mathfrak{K}^\Delta$, où $\mathfrak{T}$ est le plus grand
+idéal de définition de $A$ et $\mathfrak{K}$ un idéal de définition de
+$B$. Soit $f=({}^a\varphi,\widetilde{\varphi})$, où
+$\varphi:B\to A$ est un homomorphisme continu~; comme les éléments de
+$\mathfrak{K}$ sont topologiquement nilpotents
+(\hyperref[0.7.1.4-fr]{0, 7.1.4, (ii)}), il en est de même de ceux de
+$\varphi(\mathfrak{K})$, donc
+$\varphi(\mathfrak{K})\subset\mathfrak{T}$ puisque $\mathfrak{T}$ est
+l'ensemble des éléments topologiquement nilpotents de $A$
+(\hyperref[0.7.1.6-fr]{0, 7.1.6})~; d'où la conclusion en vertu de
+(\hyperref[I.10.5.6-fr]{10.5.6, (ii)}).
+\end{proof}
+
+\begin{corollary}[10.6.11]
+\label{I.10.6.11-fr}
+Soient $\mathfrak{S}$, $\mathfrak{X}$, $\mathfrak{Y}$ trois
+préschémas formels localement noethériens,
+$f:\mathfrak{X}\to\mathfrak{S}$,
+$g:\mathfrak{Y}\to\mathfrak{S}$ des morphismes faisant de
+$\mathfrak{X}$ et $\mathfrak{Y}$ des $\mathfrak{S}$-préschémas
+formels. Soit $\mathscr{J}$ (resp. $\mathscr{K}$, $\mathscr{L}$) un
+Idéal de définition de $\mathfrak{S}$ (resp. $\mathfrak{X}$,
+$\mathfrak{Y}$), et supposons que
+$f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{K}$,
+$g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}}=\mathscr{L}$~; posons
+$S_n=(\mathfrak{S},
+\mathscr{O}_{\mathfrak{S}}/\mathscr{J}^{n+1})$,
+$X_n=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{K}^{n+1})$,
+$Y_n=(\mathfrak{Y},
+\mathscr{O}_{\mathfrak{Y}}/\mathscr{L}^{n+1})$. Il y a alors
+correspondance
+
+\oldpage[I]{193}
+
+biunivoque canonique entre
+$\operatorname{Hom}_{\mathfrak{S}}(\mathfrak{X},\mathfrak{Y})$ et
+l'ensemble des suites $(u_n)$ de $S_n$-morphismes
+$u_n:X_n\to Y_n$ rendant commutatifs les diagrammes
+(\hyperref[I.10.6.7.1-fr]{10.6.7.1}).
+\end{corollary}
+
+\begin{proof}
+Pour tout $\mathfrak{S}$-morphisme
+$u:\mathfrak{X}\to\mathfrak{Y}$, on a par définition $f=g\circ u$, donc
+\[
+  u^*(\mathscr{L})\mathscr{O}_{\mathfrak{X}}
+  =u^*(g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}})
+    \mathscr{O}_{\mathfrak{X}}
+  =f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}
+  \subset\mathscr{K}
+\]
+le corollaire découle donc de
+(\hyperref[I.10.6.9-fr]{10.6.9}).
+\end{proof}
+
+On notera que, pour $m\leq n$, la donnée d'un morphisme
+$f_n:X_n\to Y_n$ détermine un morphisme et un seul
+$f_m:X_m\to Y_m$ rendant commutatif le diagramme
+(\hyperref[I.10.6.7.1-fr]{10.6.7.1}), comme on le voit aussitôt en se
+ramenant au cas affine~; on a ainsi défini une application
+$\varphi_{mn}:\operatorname{Hom}_{S_n}(X_n,Y_n)
+\to\operatorname{Hom}_{S_m}(X_m,Y_m)$ et les
+$\operatorname{Hom}_{S_n}(X_n,Y_n)$ forment pour les $\varphi_{mn}$ un
+\emph{système projectif d'ensembles}~;
+(\hyperref[I.10.6.11-fr]{10.6.11}) s'énonce encore en disant qu'il existe
+une bijection canonique
+\[
+  \operatorname{Hom}_{\mathfrak{S}}(\mathfrak{X},\mathfrak{Y})
+  \xrightarrow{\sim}
+  \varprojlim_n\operatorname{Hom}_{S_n}(X_n,Y_n).
+\]
+
+\subsection{Produit de préschémas formels.}
+\label{subsection:I.10.7-fr}
+
+\begin{env}[10.7.1]
+\label{I.10.7.1-fr}
+Soit $\mathfrak{S}$ un préschéma formel~; les $\mathfrak{S}$-préschémas
+formels formant une catégorie, on peut définir la notion de
+\emph{produit} de $\mathfrak{S}$-préschémas formels.
+\end{env}
+
+\begin{proposition}[10.7.2]
+\label{I.10.7.2-fr}
+Soient $\mathfrak{X}=\operatorname{Spf}(B)$,
+$\mathfrak{Y}=\operatorname{Spf}(C)$ deux schémas formels affines
+au-dessus d'un schéma formel affine
+$\mathfrak{S}=\operatorname{Spf}(A)$. Soient
+$\mathfrak{Z}=\operatorname{Spf}(B\widehat{\otimes}_A C)$,
+$p_1$, $p_2$ les $\mathfrak{S}$-morphismes correspondant
+(\hyperref[I.10.2.2-fr]{10.2.2}) aux $A$-homomorphismes canoniques
+(continus) $\rho$ et $\sigma$ de $B$ et $C$ dans
+$B\widehat{\otimes}_A C$~; alors $(\mathfrak{Z},p_1,p_2)$ est un produit
+des $\mathfrak{S}$-schémas formels affines $\mathfrak{X}$ et
+$\mathfrak{Y}$.
+\end{proposition}
+
+\begin{proof}
+En vertu de (\hyperref[I.10.4.6-fr]{10.4.6}), tout revient à vérifier que
+si, à tout $A$-homomorphisme continu
+$\varphi:B\widehat{\otimes}_A C\to D$, où $D$ est un anneau admissible qui
+est une $A$-algèbre topologique, on associe le couple
+$(\varphi\circ\rho,\varphi\circ\sigma)$, on définit une bijection
+\[
+  \operatorname{Hom}_A(B\widehat{\otimes}_A C,D)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_A(B,D)\times\operatorname{Hom}_A(C,D)
+\]
+ce qui n'est autre que la propriété universelle du produit tensoriel
+complété (\hyperref[0.7.7.6-fr]{0, 7.7.6}).
+\end{proof}
+
+\begin{proposition}[10.7.3]
+\label{I.10.7.3-fr}
+Étant donnés deux $\mathfrak{S}$-préschémas formels
+$\mathfrak{X}$, $\mathfrak{Y}$, le produit
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ existe.
+\end{proposition}
+
+\begin{proof}
+La démonstration est identique à celle de
+(\hyperref[I.3.2.6-fr]{3.2.6}), en y remplaçant les schémas affines
+(resp. les ouverts affines) par les schémas formels affines (resp. les
+ouverts formels affines), et la prop.
+(\hyperref[I.3.2.2-fr]{3.2.2}) par
+(\hyperref[I.10.7.2-fr]{10.7.2}).
+\end{proof}
+
+Toutes les propriétés formelles du produit de préschémas
+(\hyperref[I.3.2.7-fr]{3.2.7} et
+\hyperref[I.3.2.8-fr]{3.2.8},
+\hyperref[I.3.3.1-fr]{3.3.1} à
+\hyperref[I.3.3.12-fr]{3.3.12}) sont valables sans aucune modification
+pour le produit de préschémas formels.
+
+\begin{env}[10.7.4]
+\label{I.10.7.4-fr}
+Soient $\mathfrak{S}$, $\mathfrak{X}$, $\mathfrak{Y}$ trois préschémas
+formels et soient $f:\mathfrak{X}\to\mathfrak{S}$,
+$g:\mathfrak{Y}\to\mathfrak{S}$ deux morphismes. Supposons qu'il existe
+dans $\mathfrak{S}$, $\mathfrak{X}$, $\mathfrak{Y}$ respectivement,
+trois systèmes fondamentaux d'Idéaux de définition
+$(\mathscr{J}_\lambda)$, $(\mathscr{K}_\lambda)$,
+$(\mathscr{L}_\lambda)$ respectivement, ayant même ensemble d'indices
+$I$, tels que
+$f^*(\mathscr{J}_\lambda)\mathscr{O}_{\mathfrak{X}}
+\subset\mathscr{K}_\lambda$ et
+$g^*(\mathscr{J}_\lambda)\mathscr{O}_{\mathfrak{Y}}
+\subset\mathscr{L}_\lambda$ pour tout $\lambda$. Posons
+$S_\lambda=(\mathfrak{S},
+\mathscr{O}_{\mathfrak{S}}/\mathscr{J}_\lambda)$,
+$X_\lambda=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{K}_\lambda)$,
+$Y_\lambda=(\mathfrak{Y},
+\mathscr{O}_{\mathfrak{Y}}/\mathscr{L}_\lambda)$~; pour
+$\mathscr{J}_\mu\subset\mathscr{J}_\lambda$,
+$\mathscr{K}_\mu\subset\mathscr{K}_\lambda$,
+$\mathscr{L}_\mu\subset\mathscr{L}_\lambda$, notons que
+$S_\lambda$ (resp. $X_\lambda$, $Y_\lambda$) est un sous-préschéma fermé
+de $S_\mu$ (resp. $X_\mu$, $Y_\mu$) ayant même
+
+\oldpage[I]{194}
+
+espace sous-jacent (\hyperref[I.10.6.1-fr]{10.6.1}). Comme
+$S_\lambda\to S_\mu$ est un monomorphisme de préschémas, on voit donc
+d'abord que les produits
+$X_\lambda\times_{S_\lambda}Y_\lambda$ et
+$X_\lambda\times_{S_\mu}Y_\lambda$ sont identiques
+(\hyperref[I.3.2.4-fr]{3.2.4}), puis que
+$X_\lambda\times_{S_\mu}Y_\lambda$ s'identifie à un sous-préschéma fermé
+de $X_\mu\times_{S_\mu}Y_\mu$ ayant même espace sous-jacent
+(\hyperref[I.4.3.1-fr]{4.3.1}). Cela étant, le produit
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ est la
+\emph{limite inductive} des préschémas usuels
+$X_\lambda\times_{S_\lambda}Y_\lambda$~: en effet, on voit comme dans
+(\hyperref[I.10.6.2-fr]{10.6.2}) qu'on peut se ramener au cas où
+$\mathfrak{S}$, $\mathfrak{X}$ et $\mathfrak{Y}$ sont des schémas formels
+affines. Compte tenu de (\hyperref[I.10.5.6-fr]{10.5.6, (ii)}) et de
+l'hypothèse sur les systèmes fondamentaux d'Idéaux de définition de
+$\mathfrak{S}$, $\mathfrak{X}$ et $\mathfrak{Y}$, on voit aussitôt que
+notre assertion résulte de la définition du produit tensoriel complété de
+deux algèbres (\hyperref[0.7.7.1-fr]{0, 7.7.1}).
+
+En outre, soit $\mathfrak{Z}$ un $\mathfrak{S}$-préschéma formel,
+$(\mathscr{M}_\lambda)$ un système fondamental d'Idéaux de définition de
+$\mathfrak{Z}$ ayant $I$ comme ensemble d'indices,
+$u:\mathfrak{Z}\to\mathfrak{X}$,
+$v:\mathfrak{Z}\to\mathfrak{Y}$ deux $\mathfrak{S}$-morphismes tels que
+$u^*(\mathscr{K}_\lambda)\mathscr{O}_{\mathfrak{Z}}
+\subset\mathscr{M}_\lambda$ et
+$v^*(\mathscr{L}_\lambda)\mathscr{O}_{\mathfrak{Z}}
+\subset\mathscr{M}_\lambda$. Si l'on pose
+$Z_\lambda=(\mathfrak{Z},
+\mathscr{O}_{\mathfrak{Z}}/\mathscr{M}_\lambda)$, et si
+$u_\lambda:Z_\lambda\to X_\lambda$ et
+$v_\lambda:Z_\lambda\to Y_\lambda$ sont les $S_\lambda$-morphismes
+correspondant à $u$ et $v$ (\hyperref[I.10.5.6-fr]{10.5.6}), on vérifie
+aussitôt que $(u,v)_{\mathfrak{S}}$ est la limite inductive des
+$S_\lambda$-morphismes $(u_\lambda,v_\lambda)_{S_\lambda}$.
+
+Les considérations de ce numéro s'appliquent en particulier lorsque
+$\mathfrak{S}$, $\mathfrak{X}$ et $\mathfrak{Y}$ sont localement
+noethériens, en prenant comme systèmes fondamentaux d'Idéaux de définition
+les systèmes formés des puissances d'un Idéal de définition
+(\hyperref[I.10.5.1-fr]{10.5.1}). Mais on notera que
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ n'est pas nécessairement
+localement noethérien (voir toutefois
+(\hyperref[I.10.13.5-fr]{10.13.5})).
+\end{env}
+
+\subsection{Complété formel d'un préschéma le long d'une partie fermée.}
+\label{subsection:I.10.8-fr}
+
+\begin{env}[10.8.1]
+\label{I.10.8.1-fr}
+Soient $X$ un préschéma (usuel) localement noethérien, $X'$ une partie
+fermée de l'espace sous-jacent à $X$~; désignons par $\Phi$ l'ensemble des
+faisceaux cohérents d'idéaux $\mathscr{J}$ dans $\mathscr{O}_X$, tels que
+le support de $\mathscr{O}_X/\mathscr{J}$ soit $X'$. L'ensemble $\Phi$
+n'est pas vide (\hyperref[I.5.2.1-fr]{5.2.1},
+\hyperref[I.4.1.4-fr]{4.1.4} et
+\hyperref[I.6.1.1-fr]{6.1.1})~; nous l'ordonnerons par la relation
+$\supset$.
+\end{env}
+
+\begin{lemma}[10.8.2]
+\label{I.10.8.2-fr}
+L'ensemble ordonné $\Phi$ est filtrant~; si $X$ est noethérien, pour tout
+$\mathscr{J}_0\in\Phi$, l'ensemble des puissances
+$\mathscr{J}_0^n$ ($n>0$) est cofinal à $\Phi$.
+\end{lemma}
+
+\begin{proof}
+En effet, si $\mathscr{J}_1$ et $\mathscr{J}_2$ appartiennent à $\Phi$, et
+si on pose $\mathscr{J}=\mathscr{J}_1\cap\mathscr{J}_2$,
+$\mathscr{J}$ est cohérent puisque $\mathscr{O}_X$ est cohérent
+(\hyperref[I.6.1.1-fr]{6.1.1} et
+\hyperref[0.5.3.4-fr]{0, 5.3.4}), et l'on a
+$\mathscr{J}_x=(\mathscr{J}_1)_x\cap(\mathscr{J}_2)_x$ pour tout
+$x\in X$, donc $\mathscr{J}_x=\mathscr{O}_x$ pour $x\notin X'$ et
+$\mathscr{J}_x\neq\mathscr{O}_x$ pour $x\in X'$, ce qui prouve que
+$\mathscr{J}\in\Phi$. D'autre part, si $X$ est noethérien, et si
+$\mathscr{J}_0$ et $\mathscr{J}$ appartiennent à $\Phi$, il existe un
+entier $n>0$ tel que
+$\mathscr{J}_0^n(\mathscr{O}_X/\mathscr{J})=0$
+(\hyperref[I.9.3.4-fr]{9.3.4}), ce qui signifie que
+$\mathscr{J}_0^n\subset\mathscr{J}$.
+\end{proof}
+
+\begin{env}[10.8.3]
+\label{I.10.8.3-fr}
+Soit maintenant $\mathscr{F}$ un $\mathscr{O}_X$-Module cohérent~; pour
+tout $\mathscr{J}\in\Phi$,
+$\mathscr{F}\otimes_{\mathscr{O}_X}(\mathscr{O}_X/\mathscr{J})$ est un
+$\mathscr{O}_X$-Module cohérent
+(\hyperref[I.9.1.1-fr]{9.1.1}), de support contenu dans $X'$, et que nous
+identifierons le plus souvent à sa restriction à $X'$. Lorsque
+$\mathscr{J}$ parcourt $\Phi$, ces faisceaux forment un
+\emph{système projectif} de faisceaux de groupes abéliens.
+\end{env}
+
+\begin{definition}[10.8.4]
+\label{I.10.8.4-fr}
+Étant donnés une partie fermée $X'$ d'un préschéma localement noethérien
+$X$ et un $\mathscr{O}_X$-Module cohérent $\mathscr{F}$, on appelle
+\emph{complété de $\mathscr{F}$ le long de $X'$} et on désigne par
+$\mathscr{F}_{/X'}$ ou par $\widehat{\mathscr{F}}$ (lorsqu'aucune confusion
+n'est possible) la restriction à $X'$ du faisceau
+
+\oldpage[I]{195}
+
+$\varprojlim_{\Phi}
+(\mathscr{F}\otimes_{\mathscr{O}_X}
+(\mathscr{O}_X/\mathscr{J}))$~; on dit que ses sections au-dessus de $X'$ sont
+les \emph{sections formelles de $\mathscr{F}$ le long de $X'$}.
+\end{definition}
+
+Il est immédiat que pour tout ouvert $U\subset X$, on a
+$(\mathscr{F}|U)_{/(U\cap X')}=(\mathscr{F}_{/X'})|(U\cap X')$.
+
+Par passage à la limite projective, il est clair que
+$(\mathscr{O}_X)_{/X'}$ est un faisceau d'anneaux, et que
+$\mathscr{F}_{/X'}$ peut être considéré comme un
+$(\mathscr{O}_X)_{/X'}$-Module. En outre, comme il existe une base de la
+topologie de $X'$ formée d'ouverts quasi-compacts, on peut considérer
+$(\mathscr{O}_X)_{/X'}$ (resp. $\mathscr{F}_{/X'}$) comme un
+\emph{faisceau d'anneaux topologiques} (resp. de
+\emph{groupes topologiques}) limite projective des faisceaux d'anneaux
+(resp. groupes) \emph{pseudo-discrets}
+$\mathscr{O}_X/\mathscr{J}$ (resp.
+$\mathscr{F}\otimes_{\mathscr{O}_X}
+(\mathscr{O}_X/\mathscr{J})=\mathscr{F}/\mathscr{J}\mathscr{F}$), et, par
+passage à la limite projective, $\mathscr{F}_{/X'}$ devient alors un
+\emph{$(\mathscr{O}_X)_{/X'}$-Module topologique}
+(\hyperref[0.3.8.1-fr]{0, 3.8.1} et
+\hyperref[0.3.8.2-fr]{3.8.2})~; rappelons que pour tout ouvert
+\emph{quasi-compact} $U\subset X$,
+$\Gamma(U\cap X',(\mathscr{O}_X)_{/X'})$ (resp.
+$\Gamma(U\cap X',\mathscr{F}_{/X'})$) est alors limite projective des
+anneaux (resp. groupes) discrets $\Gamma(U,\mathscr{O}_X/\mathscr{J})$
+(resp. $\Gamma(U,\mathscr{F}/\mathscr{J}\mathscr{F})$).
+
+Si maintenant $u:\mathscr{F}\to\mathscr{G}$ est un homomorphisme de
+$\mathscr{O}_X$-Modules, on en déduit canoniquement des homomorphismes
+$u_{\mathscr{J}}:
+\mathscr{F}\otimes_{\mathscr{O}_X}(\mathscr{O}_X/\mathscr{J})
+\to
+\mathscr{G}\otimes_{\mathscr{O}_X}(\mathscr{O}_X/\mathscr{J})$
+pour tout $\mathscr{J}\in\Phi$, et ces homomorphismes forment un système
+projectif. Par passage à la limite projective et restriction à $X'$, ils
+donnent donc un $(\mathscr{O}_X)_{/X'}$-homomorphisme continu
+$\mathscr{F}_{/X'}\to\mathscr{G}_{/X'}$, noté $u_{/X'}$ ou $\widehat u$,
+et appelé le \emph{complété de l'homomorphisme $u$ le long de $X'$}. Il est
+clair que si $v:\mathscr{G}\to\mathscr{H}$ est un second homomorphisme de
+$\mathscr{O}_X$-Modules, on a
+$(v\circ u)_{/X'}=(v_{/X'})\circ(u_{/X'})$ donc
+$\mathscr{F}_{/X'}$ est un \emph{foncteur additif covariant} en
+$\mathscr{F}$, de la catégorie des $\mathscr{O}_X$-Modules cohérents, à
+valeurs dans la catégorie des $(\mathscr{O}_X)_{/X'}$-Modules topologiques.
+
+\begin{proposition}[10.8.5]
+\label{I.10.8.5-fr}
+Le support de $(\mathscr{O}_X)_{/X'}$ est $X'$~; l'espace topologiquement
+annelé $(X',(\mathscr{O}_X)_{/X'})$ est un préschéma formel localement
+noethérien, et si $\mathscr{J}\in\Phi$, $\mathscr{J}_{/X'}$ est un Idéal de
+définition de ce préschéma formel. Si $X=\operatorname{Spec}(A)$ est un
+schéma affine d'anneau noethérien, $\mathscr{J}=\widetilde{\mathfrak{J}}$
+où $\mathfrak{J}$ est un idéal de $A$, et $X'=V(\mathfrak{J})$,
+$(X',(\mathscr{O}_X)_{/X'})$ s'identifie canoniquement à
+$\operatorname{Spf}(\widehat A)$, où $\widehat A$ est le séparé complété de
+$A$ pour la topologie $\mathfrak{J}$-préadique.
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se borner à prouver la dernière assertion. On sait
+(\hyperref[0.7.3.3-fr]{0, 7.3.3}) que le séparé complété
+$\widehat{\mathfrak{J}}$ de $\mathfrak{J}$ pour la topologie
+$\mathfrak{J}$-préadique s'identifie à l'idéal
+$\mathfrak{J}\widehat A$ de $\widehat A$, et que $\widehat A$ est un anneau
+$\widehat{\mathfrak{J}}$-adique noethérien tel que
+$\widehat A/\widehat{\mathfrak{J}}^n=A/\mathfrak{J}^n$
+(\hyperref[0.7.2.6-fr]{0, 7.2.6}). Cette dernière relation montre que les
+idéaux premiers ouverts de $\widehat A$ sont les idéaux
+$\widehat{\mathfrak p}=\mathfrak p\widehat A$, où $\mathfrak p$ est un
+idéal premier de $A$ contenant $\mathfrak{J}$, et que l'on a
+$\widehat{\mathfrak p}\cap A=\mathfrak p$, d'où
+$\operatorname{Spf}(\widehat A)=X'$. Comme
+$\mathscr{O}_X/\mathscr{J}^n=(A/\mathfrak{J}^n)^{\sim}$, la proposition
+découle aussitôt des définitions.
+\end{proof}
+
+On dit que le préschéma formel ainsi défini est le
+\emph{complété de $X$ le long de $X'$} et on le note $X_{/X'}$ ou
+$\widehat X$ si aucune confusion n'est à craindre. Lorsque l'on prend
+$X'=X$, on peut prendre $\mathscr{J}=0$, et on a donc $X_{/X}=X$.
+
+Il est clair que si $U$ est un sous-préschéma induit sur un ouvert de $X$,
+$U_{/(U\cap X')}$ s'identifie canoniquement au sous-préschéma formel induit
+par $X_{/X'}$ sur l'ouvert $U\cap X'$ de $X'$.
+
+\begin{corollary}[10.8.6]
+\label{I.10.8.6-fr}
+Le préschéma (usuel) $\widehat X_{\mathrm{red}}$ est l'unique
+sous-préschéma réduit de $X$ ayant pour espace sous-jacent $X'$
+(\hyperref[I.5.2.1-fr]{5.2.1}). Pour que $\widehat X$ soit noethérien, il
+faut et il suffit que $\widehat X_{\mathrm{red}}$ le soit, et il suffit que
+$X$ le soit.
+\end{corollary}
+
+\oldpage[I]{196}
+
+La détermination de $\widehat X_{\mathrm{red}}$ étant locale
+(\hyperref[I.10.5.4-fr]{10.5.4}), on peut encore supposer que $X$ est un
+schéma affine d'anneau noethérien~; avec les notations de
+(\hyperref[I.10.8.5-fr]{10.8.5}), l'idéal $\mathfrak{T}$ des éléments
+topologiquement nilpotents de $\widehat A$ est l'image réciproque par
+l'application canonique
+$\widehat A\to\widehat A/\widehat{\mathfrak{J}}=A/\mathfrak{J}$ du
+nilradical de $A/\mathfrak{J}$
+(\hyperref[0.7.1.3-fr]{0, 7.1.3}), donc $\widehat A/\mathfrak{T}$ est
+isomorphe au quotient de $A/\mathfrak{J}$ par son nilradical. La première
+assertion résulte donc de (\hyperref[I.10.5.4-fr]{10.5.4}) et
+(\hyperref[I.5.1.1-fr]{5.1.1}). Si $\widehat X_{\mathrm{red}}$ est
+noethérien, son espace sous-jacent $X'$ l'est aussi, donc les
+$X'_n=\operatorname{Spec}(\mathscr{O}_X/\mathscr{J}^n)$ sont noethériens
+(\hyperref[I.6.1.2-fr]{6.1.2}) et il en est de même de $\widehat X$
+(\hyperref[I.10.6.4-fr]{10.6.4})~; la réciproque est immédiate, en vertu
+de (\hyperref[I.6.1.2-fr]{6.1.2}).
+
+\begin{env}[10.8.7]
+\label{I.10.8.7-fr}
+Les homomorphismes canoniques
+$\mathscr{O}_X\to\mathscr{O}_X/\mathscr{J}$ (pour
+$\mathscr{J}\in\Phi$) forment un système projectif et donnent donc, par
+passage à la limite projective, un homomorphisme de faisceau d'anneaux
+$\theta:\mathscr{O}_X\to\psi_*((\mathscr{O}_X)_{/X'})
+=\varprojlim_\Phi(\mathscr{O}_X/\mathscr{J})$, en désignant par $\psi$
+l'injection canonique $X'\to X$ des espaces sous-jacents. Nous désignerons
+par $i$ (ou $i_X$) le morphisme (dit canonique)
+\[
+  (\psi,\theta):X_{/X'}\to X
+\]
+d'espaces annelés.
+
+Par tensorisation, pour tout $\mathscr{O}_X$-Module cohérent
+$\mathscr{F}$, les homomorphismes canoniques
+$\mathscr{O}_X\to\mathscr{O}_X/\mathscr{J}$ donnent des homomorphismes
+$\mathscr{F}\to
+\mathscr{F}\otimes_{\mathscr{O}_X}(\mathscr{O}_X/\mathscr{J})$ de
+$\mathscr{O}_X$-Modules qui forment encore un système projectif, et
+donnent donc, par passage à la limite projective, un homomorphisme
+canonique fonctoriel
+$\gamma:\mathscr{F}\to\psi_*(\mathscr{F}_{/X'})$ de
+$\mathscr{O}_X$-Modules.
+\end{env}
+
+\begin{proposition}[10.8.8]
+\label{I.10.8.8-fr}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm{(i)}] Le foncteur $\mathscr{F}_{/X'}$ (en $\mathscr{F}$) est
+    exact.
+  \item[\rm{(ii)}] L'homomorphisme fonctoriel
+    $\gamma^\sharp:i^*(\mathscr{F})\to\mathscr{F}_{/X'}$ de
+    $(\mathscr{O}_X)_{/X'}$-Modules est un isomorphisme.
+\end{enumerate}
+\end{proposition}
+
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm{(i)}] Il suffit de prouver que si
+    $0\to\mathscr{F}'\to\mathscr{F}\to\mathscr{F}''\to0$ est une suite
+    exacte de $\mathscr{O}_X$-Modules cohérents, et $U$ un ouvert affine
+    de $X$, d'anneau noethérien $A$, la suite
+    \[
+      0\to\Gamma(U\cap X',\mathscr{F}'_{/X'})
+      \to\Gamma(U\cap X',\mathscr{F}_{/X'})
+      \to\Gamma(U\cap X',\mathscr{F}''_{/X'})\to0
+    \]
+    est exacte. On a alors $\mathscr{F}|U=\widetilde M$,
+    $\mathscr{F}'|U=\widetilde{M'}$, $\mathscr{F}''|U=\widetilde{M''}$,
+    où $M$, $M'$, $M''$ sont trois $A$-modules de type fini tels que la
+    suite $0\to M'\to M\to M''\to0$ soit exacte
+    (\hyperref[I.1.5.1-fr]{1.5.1} et
+    \hyperref[I.1.3.11-fr]{1.3.11})~; soit $\mathscr{J}\in\Phi$ et soit
+    $\mathfrak{J}$ un idéal de $A$ tel que
+    $\mathscr{J}|U=\widetilde{\mathfrak{J}}$. On a alors
+    \[
+      \Gamma(U\cap X',
+      \mathscr{F}\otimes_{\mathscr{O}_X}(\mathscr{O}_X/\mathscr{J}^n))
+      =M\otimes_A(A/\mathfrak{J}^n)
+    \]
+    (\hyperref[I.1.3.12-fr]{1.3.12})~; donc, par définition de la limite
+    projective, on a
+    \[
+      \Gamma(U\cap X',\mathscr{F}_{/X'})
+      =\varprojlim_n(M\otimes_A(A/\mathfrak{J}^n))=\widehat M
+    \]
+    séparé complété de $M$ pour la topologie $\mathfrak{J}$-préadique, et
+    de même
+    \[
+      \Gamma(U\cap X',\mathscr{F}'_{/X'})=\widehat{M'},\qquad
+      \Gamma(U\cap X',\mathscr{F}''_{/X'})=\widehat{M''}~;
+    \]
+    notre assertion résulte alors de ce que lorsque $A$ est noethérien,
+    le foncteur $\widehat M$ en $M$ est exact sur la catégorie des
+    $A$-modules de type fini (\hyperref[0.7.3.3-fr]{0, 7.3.3}).
+
+\oldpage[I]{197}
+  \item[\rm{(ii)}] La question étant locale, on peut supposer que l'on a
+    une suite exacte
+    $\mathscr{O}_X^m\to\mathscr{O}_X^n\to\mathscr{F}\to0$
+    (\hyperref[0.5.3.2-fr]{0, 5.3.2})~; comme $\gamma^\sharp$ est
+    fonctoriel, et que les foncteurs $i^*(\mathscr{F})$ et
+    $\mathscr{F}_{/X'}$ sont exacts à droite (d'après (i) et
+    (\hyperref[0.4.3.1-fr]{0, 4.3.1})), on a le diagramme commutatif
+    \[
+      \xymatrix{
+        i^*(\mathscr{O}_X^m)\ar[r]\ar[d]_{\gamma^\sharp} &
+        i^*(\mathscr{O}_X^n)\ar[r]\ar[d]_{\gamma^\sharp} &
+        i^*(\mathscr{F})\ar[r]\ar[d]_{\gamma^\sharp} &
+        0\\
+        (\mathscr{O}_X^m)_{/X'}\ar[r] &
+        (\mathscr{O}_X^n)_{/X'}\ar[r] &
+        \mathscr{F}_{/X'}\ar[r] &
+        0
+      }
+      \tag{10.8.8.1}\label{I.10.8.8.1-fr}
+    \]
+    dont les lignes sont exactes. En outre, les deux foncteurs
+    $i^*(\mathscr{F})$ et $\mathscr{F}_{/X'}$ commutent aux sommes
+    directes finies (\hyperref[0.3.2.6-fr]{0, 3.2.6} et
+    \hyperref[0.4.3.2-fr]{4.3.2}) et on est donc ramené à démontrer notre
+    assertion pour $\mathscr{F}=\mathscr{O}_X$. On a alors
+    $i^*(\mathscr{O}_X)=(\mathscr{O}_X)_{/X'}=
+    \mathscr{O}_{\widehat X}$
+    (\hyperref[0.4.3.4-fr]{0, 4.3.4}), et $\gamma^\sharp$ est un
+    homomorphisme de $\mathscr{O}_{\widehat X}$-Modules~; il suffit donc
+    de vérifier que $\gamma^\sharp$ transforme la section unité de
+    $\mathscr{O}_{\widehat X}$ au-dessus d'un ouvert de $X'$ en elle-même,
+    ce qui est immédiat et montre donc que dans ce cas $\gamma^\sharp$ est
+    l'identité.
+\end{enumerate}
+
+\begin{corollary}[10.8.9]
+\label{I.10.8.9-fr}
+Le morphisme d'espaces annelés $i:X_{/X'}\to X$ est plat.
+\end{corollary}
+
+Cela résulte en effet de (\hyperref[0.6.7.3-fr]{0, 6.7.3}) et de
+(\hyperref[I.10.8.8-fr]{10.8.8, (i)}).
+
+\begin{corollary}[10.8.10]
+\label{I.10.8.10-fr}
+Si $\mathscr{F}$ et $\mathscr{G}$ sont des $\mathscr{O}_X$-Modules
+cohérents, il existe des isomorphismes canoniques fonctoriels (en
+$\mathscr{F}$ et $\mathscr{G}$)
+\[
+  (\mathscr{F}_{/X'})\otimes_{(\mathscr{O}_X)_{/X'}}
+  (\mathscr{G}_{/X'})
+  \xrightarrow{\sim}
+  (\mathscr{F}\otimes_{\mathscr{O}_X}\mathscr{G})_{/X'}
+  \tag{10.8.10.1}\label{I.10.8.10.1-fr}
+\]
+\[
+  (\mathscr{H}\!om_{\mathscr{O}_X}(\mathscr{F},\mathscr{G}))_{/X'}
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{(\mathscr{O}_X)_{/X'}}
+  (\mathscr{F}_{/X'},\mathscr{G}_{/X'})
+  \tag{10.8.10.2}\label{I.10.8.10.2-fr}
+\]
+\end{corollary}
+
+Cela résulte de l'identification canonique de $i^*(\mathscr{F})$ et de
+$\mathscr{F}_{/X'}$~; l'existence du premier isomorphisme est alors un
+résultat valable pour tous les morphismes d'espaces annelés
+(\hyperref[0.4.3.3.1-fr]{0, 4.3.3.1}) et celle du second est un résultat
+valable pour tous les morphismes plats
+(\hyperref[0.6.7.6-fr]{0, 6.7.6}), donc découle de
+(\hyperref[I.10.8.9-fr]{10.8.9}).
+
+\begin{proposition}[10.8.11]
+\label{I.10.8.11-fr}
+Pour tout $\mathscr{O}_X$-Module cohérent $\mathscr{F}$, le noyau de
+l'homomorphisme canonique
+$\Gamma(X,\mathscr{F})\to\Gamma(X',\mathscr{F}_{/X'})$ déduit de
+$\mathscr{F}\to\mathscr{F}_{/X'}$ est formé des sections nulles dans un
+voisinage de $X'$.
+\end{proposition}
+
+Il résulte de la définition de $\mathscr{F}_{/X'}$ que l'image canonique
+d'une telle section est nulle. Réciproquement, si
+$s\in\Gamma(X,\mathscr{F})$ a une image nulle dans
+$\Gamma(X',\mathscr{F}_{/X'})$, il suffit de voir que tout $x\in X'$ admet
+un voisinage dans $X$ dans lequel $s$ est nulle, et on peut donc se ramener
+au cas où $X=\operatorname{Spec}(A)$ est affine, $A$ noethérien,
+$X'=V(\mathfrak{J})$, où $\mathfrak{J}$ est un idéal de $A$, et
+$\mathscr{F}=\widetilde M$, où $M$ est un $A$-module de type fini. Alors
+$\Gamma(X',\mathscr{F}_{/X'})$ est le séparé complété $\widehat M$ de $M$
+pour la topologie $\mathfrak{J}$-préadique, et l'homomorphisme
+$\Gamma(X,\mathscr{F})\to\Gamma(X',\mathscr{F}_{/X'})$ est
+l'homomorphisme canonique $M\to\widehat M$. On sait
+(\hyperref[0.7.3.7-fr]{0, 7.3.7}) que le noyau de cet homomorphisme est
+l'ensemble des $z\in M$ annulés par un élément de $1+\mathfrak{J}$. On a
+donc $(1+f)s=0$ pour un $f\in\mathfrak{J}$~; pour tout $x\in X'$ on en
+déduit $(1_x+f_x)s_x=0$, et comme $1_x+f_x$ est inversible dans
+$\mathscr{O}_x$ ($\mathfrak{J}_x\mathscr{O}_x$ étant contenu dans l'idéal
+maximal de $\mathscr{O}_x$), on a $s_x=0$, ce qui démontre la proposition.
+
+\begin{corollary}[10.8.12]
+\label{I.10.8.12-fr}
+Le support de $\mathscr{F}_{/X'}$ est égal à
+$\operatorname{Supp}(\mathscr{F})\cap X'$.
+\end{corollary}
+
+Il est clair que $\mathscr{F}_{/X'}$ est un
+$(\mathscr{O}_X)_{/X'}$-Module de type fini
+(\hyperref[I.10.8.8-fr]{10.8.8, (ii)}) et
+(\hyperref[0.5.2.4-fr]{0, 5.2.4}),
+
+\oldpage[I]{198}
+
+donc son support est fermé (\hyperref[0.5.2.2-fr]{0, 5.2.2}) et
+évidemment contenu dans $\operatorname{Supp}(\mathscr{F})\cap X'$. Pour
+montrer qu'il est égal à ce dernier ensemble, on est aussitôt ramené à
+prouver que la relation $\Gamma(X',\mathscr{F}_{/X'})=0$ entraîne
+$\operatorname{Supp}(\mathscr{F})\cap X'=\varnothing$~; or cela résulte de
+(\hyperref[I.10.8.11-fr]{10.8.11}) et de
+(\hyperref[I.1.4.1-fr]{1.4.1}).
+
+\begin{corollary}[10.8.13]
+\label{I.10.8.13-fr}
+Soit $u:\mathscr{F}\to\mathscr{G}$ un homomorphisme de
+$\mathscr{O}_X$-Modules cohérents. Pour que
+$u_{/X'}:\mathscr{F}_{/X'}\to\mathscr{G}_{/X'}$ soit nul, il faut et il
+suffit que $u$ soit nul dans un voisinage de $X'$.
+\end{corollary}
+
+En effet, d'après (\hyperref[I.10.8.8-fr]{10.8.8, (ii)}), $u_{/X'}$
+s'identifie à $i^*(u)$, donc si on considère $u$ comme une section au-dessus
+de $X$ du faisceau
+$\mathscr{H}=\mathscr{H}\!om_{\mathscr{O}_X}(\mathscr{F},\mathscr{G})$,
+$u_{/X'}$ est la section de
+$i^*(\mathscr{H})=\mathscr{H}_{/X'}$ au-dessus de $X'$ qui lui correspond
+canoniquement ((\hyperref[I.10.8.10.2-fr]{10.8.10.2}) et
+(\hyperref[0.4.4.6-fr]{0, 4.4.6})). Il suffit donc d'appliquer
+(\hyperref[I.10.8.11-fr]{10.8.11}) au $\mathscr{O}_X$-Module cohérent
+$\mathscr{H}$.
+
+\begin{corollary}[10.8.14]
+\label{I.10.8.14-fr}
+Soit $u:\mathscr{F}\to\mathscr{G}$ un homomorphisme de
+$\mathscr{O}_X$-Modules cohérents. Pour que $u_{/X'}$ soit un monomorphisme
+(resp. un épimorphisme), il faut et il suffit que $u$ soit un monomorphisme
+(resp. un épimorphisme) dans un voisinage de $X'$.
+\end{corollary}
+
+Soient $\mathscr{P}$ et $\mathscr{N}$ le conoyau et le noyau de $u$, de
+sorte qu'on a la suite exacte
+\[
+  0\to\mathscr{N}\xrightarrow{v}\mathscr{F}\xrightarrow{u}
+  \mathscr{G}\xrightarrow{w}\mathscr{P}\to0,
+\]
+d'où (\hyperref[I.10.8.8-fr]{10.8.8, (i)}) la suite exacte
+\[
+  0\to\mathscr{N}_{/X'}\xrightarrow{v_{/X'}}
+  \mathscr{F}_{/X'}\xrightarrow{u_{/X'}}
+  \mathscr{G}_{/X'}\xrightarrow{w_{/X'}}
+  \mathscr{P}_{/X'}\to0.
+\]
+Si $u_{/X'}$ est un monomorphisme (resp. un épimorphisme), on a
+$v_{/X'}=0$ (resp. $w_{/X'}=0$), donc il y a un voisinage de $X'$ dans
+lequel $v=0$ (resp. $w=0$) en vertu de
+(\hyperref[I.10.8.13-fr]{10.8.13}).
+
+\subsection{Prolongement d'un morphisme aux complétés.}
+\label{subsection:I.10.9-fr}
+
+\begin{env}[10.9.1]
+\label{I.10.9.1-fr}
+Soient $X$, $Y$ deux préschémas (usuels) localement noethériens,
+$f:X\to Y$ un morphisme, $X'$ (resp. $Y'$) une partie fermée de l'espace
+sous-jacent $X$ (resp. $Y$), telles que $f(X')\subset Y'$. Soit
+$\mathscr{J}$ (resp. $\mathscr{K}$) un faisceau d'idéaux de
+$\mathscr{O}_X$ (resp. $\mathscr{O}_Y$) tel que le support de
+$\mathscr{O}_X/\mathscr{J}$ (resp. $\mathscr{O}_Y/\mathscr{K}$) soit
+$X'$ (resp. $Y'$) et que
+$f^*(\mathscr{K})\mathscr{O}_X\subset\mathscr{J}$~; on notera qu'il
+existe toujours de tels faisceaux d'idéaux, car on peut par exemple prendre
+pour $\mathscr{J}$ le plus grand faisceau d'idéaux de $\mathscr{O}_X$
+définissant un sous-préschéma de $X$ ayant $X'$ pour espace sous-jacent
+(\hyperref[I.5.2.1-fr]{5.2.1}), et l'hypothèse $f(X')\subset Y'$ entraîne
+alors $f^*(\mathscr{K})\mathscr{O}_X\subset\mathscr{J}$
+(\hyperref[I.5.2.4-fr]{5.2.4}). On a donc pour tout entier $n>0$,
+$f^*(\mathscr{K}^n)\mathscr{O}_X\subset\mathscr{J}^n$
+(\hyperref[0.4.3.5-fr]{0, 4.3.5})~; par suite
+(\hyperref[I.4.4.6-fr]{4.4.6}), si on pose
+\[
+  X'_n=(X',\mathscr{O}_X/\mathscr{J}^{n+1}),\qquad
+  Y'_n=(Y',\mathscr{O}_Y/\mathscr{K}^{n+1}),
+\]
+on déduit de $f$ un morphisme $f_n:X'_n\to Y'_n$, et il est immédiat que
+les $f_n$ forment un système inductif. Nous désignerons sa limite inductive
+(\hyperref[I.10.6.8-fr]{10.6.8}) par
+$\widehat f:X_{/X'}\to Y_{/Y'}$, et nous dirons (par abus de langage) que
+$\widehat f$ est le \emph{prolongement de $f$ aux complétés de $X$ et $Y$
+le long de $X'$ et $Y'$}. Il est immédiat de vérifier que ce morphisme ne
+dépend pas du choix des faisceaux d'idéaux $\mathscr{J}$, $\mathscr{K}$
+vérifiant les conditions ci-dessus. Il suffit de le voir en effet lorsque
+$X$ et $Y$ sont des schémas affines noethériens d'anneaux $A$, $B$~; alors
+$\mathscr{J}=\widetilde{\mathfrak{J}}$,
+$\mathscr{K}=\widetilde{\mathfrak{K}}$, où $\mathfrak{J}$ (resp.
+$\mathfrak{K}$) est un idéal de $A$ (resp. $B$), $f$ correspond à un
+homomorphisme d'anneaux $\varphi:B\to A$ tel que
+$\varphi(\mathfrak{K})\subset\mathfrak{J}$
+(\hyperref[I.4.4.6-fr]{4.4.6} et
+\hyperref[I.1.7.4-fr]{1.7.4})~; \emph{$\widehat f$ est alors le morphisme
+qui correspond (\hyperref[I.10.2.2-fr]{10.2.2}) à l'homomorphisme continu
+$\widehat\varphi:\widehat B\to\widehat A$}, où $\widehat A$ (resp.
+$\widehat B$) est le séparé complété de $A$ (resp. $B$) pour la topologie
+$\mathfrak{J}$-préadique (resp. $\mathfrak{K}$-préadique)
+(\hyperref[I.10.6.8-fr]{10.6.8})~; et on sait que si on remplace
+$\mathscr{J}$ par un autre
+
+\oldpage[I]{199}
+
+faisceau d'idéaux
+$\mathscr{J}'=\widetilde{\mathfrak{J}'}$ tel que le support de
+$\mathscr{O}_X/\mathscr{J}'$ soit encore $X'$, les topologies
+$\mathfrak{J}$-préadique et $\mathfrak{J}'$-préadique sur $A$ sont les
+mêmes (\hyperref[I.10.8.2-fr]{10.8.2}).
+
+On notera que, d'après cette définition, l'application continue
+$X'\to Y'$ des espaces sous-jacents à $X_{/X'}$ et $Y_{/Y'}$, qui
+correspond à $\widehat f$, n'est autre que la restriction à $X'$ de $f$.
+\end{env}
+
+\begin{env}[10.9.2]
+\label{I.10.9.2-fr}
+Il résulte aussitôt de la définition précédente que le diagramme de
+morphismes d'espaces annelés
+\[
+  \label{I.10.9.2.1-fr}
+  \xymatrix{
+    \widehat X\ar[r]^{\widehat f}\ar[d]_{i_X} &
+    \widehat Y\ar[d]^{i_Y}\\
+    X\ar[r]_f &
+    Y
+  }
+\]
+est commutatif, les flèches verticales étant les morphismes canoniques
+(\hyperref[I.10.8.7-fr]{10.8.7}).
+\end{env}
+
+\begin{env}[10.9.3]
+\label{I.10.9.3-fr}
+Soient $Z$ un troisième préschéma, $g:Y\to Z$ un morphisme, $Z'$ une
+partie fermée de $Z$ telle que $g(Y')\subset Z'$. Si $\widehat g$ désigne
+le complété le long de $Y'$ et $Z'$ du morphisme $g$, il résulte aussitôt
+de (\hyperref[I.10.9.1-fr]{10.9.1}) que l'on a
+$\widehat{(g\circ f)}=\widehat g\circ\widehat f$.
+\end{env}
+
+\begin{proposition}[10.9.4]
+\label{I.10.9.4-fr}
+Soient $X$, $Y$ deux $S$-préschémas localement noethériens, $Y$ étant de
+type fini sur $S$. Soient $f$, $g$, deux $S$-morphismes de $X$ dans $Y$
+tels que $f(X')\subset Y'$, $g(X')\subset Y'$. Pour que
+$\widehat f=\widehat g$, il faut et il suffit que $f$ et $g$ coïncident
+dans un voisinage de $X'$.
+\end{proposition}
+
+La condition est évidemment suffisante (sans hypothèse de finitude sur
+$Y$). Pour voir qu'elle est nécessaire, remarquons d'abord que l'hypothèse
+$\widehat f=\widehat g$ implique $f(x)=g(x)$ pour tout $x\in X'$. D'autre
+part, la question étant locale, on peut supposer que $X$ et $Y$ sont des
+voisinages ouverts affines respectifs de $x$ et de $y=f(x)=g(x)$,
+d'anneaux noethériens, que $S$ est affine et que
+$\Gamma(Y,\mathscr{O}_Y)$ est une $\Gamma(S,\mathscr{O}_S)$-algèbre de
+type fini (\hyperref[I.6.3.3-fr]{6.3.3}). Alors $f$ et $g$ correspondent à
+deux $\Gamma(S,\mathscr{O}_S)$-homomorphismes $\rho$, $\sigma$ de
+$\Gamma(Y,\mathscr{O}_Y)$ dans $\Gamma(X,\mathscr{O}_X)$
+(\hyperref[I.1.7.3-fr]{1.7.3}), et par hypothèse, les prolongements par
+continuité de ces homomorphismes au séparé complété de
+$\Gamma(Y,\mathscr{O}_Y)$ sont les mêmes. On conclut de
+(\hyperref[I.10.8.11-fr]{10.8.11}) que pour toute section
+$s\in\Gamma(Y,\mathscr{O}_Y)$, les sections $\rho(s)$ et $\sigma(s)$
+coïncident dans un voisinage de $X'$ (dépendant de $s$)~; comme
+$\Gamma(Y,\mathscr{O}_Y)$ est une algèbre de type fini sur
+$\Gamma(S,\mathscr{O}_S)$, on en déduit aussitôt qu'il existe un
+voisinage $V$ de $X'$ tel que $\rho(s)$ et $\sigma(s)$ coïncident dans
+$V$ pour \emph{toute} section $s\in\Gamma(Y,\mathscr{O}_Y)$. Si
+$h\in\Gamma(Y,\mathscr{O}_X)$ est tel que $D(h)$ soit un voisinage de $x$
+contenu dans $V$, on conclut de ce qui précède et de
+(\hyperref[I.1.4.1-fr]{1.4.1, d)}) que $f$ et $g$ coïncident dans $D(h)$.
+
+\begin{proposition}[10.9.5]
+\label{I.10.9.5-fr}
+Sous les hypothèses de (\hyperref[I.10.9.1-fr]{10.9.1}), pour tout
+$\mathscr{O}_Y$-Module cohérent $\mathscr{G}$, il existe un isomorphisme
+canonique fonctoriel de $(\mathscr{O}_X)_{/X'}$-Modules
+\[
+  (f^*(\mathscr{G}))_{/X'}\xrightarrow{\sim}
+  \widehat f^*(\mathscr{G}_{/Y'})
+\]
+\end{proposition}
+
+Si on identifie canoniquement $(f^*(\mathscr{G}))_{/X'}$ à
+$i_X^*(f^*(\mathscr{G}))$ et $\widehat f^*(\mathscr{G}_{/Y'})$ à
+$\widehat f^*(i_Y^*(\mathscr{G}))$
+(\hyperref[I.10.8.8-fr]{10.8.8}), la proposition résulte aussitôt de la
+commutativité du diagramme de
+(\hyperref[I.10.9.2-fr]{10.9.2}).
+
+\begin{env}[10.9.6]
+\label{I.10.9.6-fr}
+Soient maintenant $\mathscr{F}$ un $\mathscr{O}_X$-Module cohérent,
+$\mathscr{G}$ un $\mathscr{O}_Y$-Module cohérent. Si
+$u:\mathscr{G}\to\mathscr{F}$ est un $f$-morphisme de $\mathscr{G}$ dans
+$\mathscr{F}$, il lui correspond un $\mathscr{O}_X$-homomorphisme
+$u^\sharp:f^*(\mathscr{G})\to\mathscr{F}$, donc par complétion un
+$(\mathscr{O}_X)_{/X'}$-homomorphisme continu
+$(u^\sharp)_{/X'}:(f^*(\mathscr{G}))_{/X'}\to\mathscr{F}_{/X'}$, et en
+vertu de (\hyperref[I.10.9.5-fr]{10.9.5}) il existe un
+$\widehat f$-morphisme $v:\mathscr{G}_{/Y'}\to\mathscr{F}_{/X'}$,
+\oldpage[I]{200}
+
+et un seul, tel que $v^\sharp=(u^\sharp)_{/X'}$. Si on considère les
+triplets $(\mathscr{F},X,X')$ ($\mathscr{F}$ étant un
+$\mathscr{O}_X$-Module cohérent et $X'$ une partie fermée de $X$) comme
+une \emph{catégorie}, les morphismes
+$(\mathscr{F},X,X')\to(\mathscr{G},Y,Y')$ consistant en un morphisme de
+préschémas $f:X\to Y$ tel que $f(X')\subset Y'$ et en un
+$f$-morphisme $u:\mathscr{G}\to\mathscr{F}$, on peut donc dire que
+$(X_{/X'},\mathscr{F}_{/X'})$ est un \emph{foncteur} en
+$(\mathscr{F},X,X')$, prenant ses valeurs dans la catégorie des couples
+$(\mathfrak{Z},\mathscr{H})$ formés d'un préschéma formel localement
+noethérien $\mathfrak{Z}$ et d'un
+$\mathscr{O}_{\mathfrak{Z}}$-Module $\mathscr{H}$, les morphismes de
+cette dernière catégorie consistant en les couples formés d'un morphisme
+$g$ de préschémas formels et d'un $g$-morphisme.
+\end{env}
+
+\begin{proposition}[10.9.7]
+\label{I.10.9.7-fr}
+Soient $S$, $X$, $Y$ trois préschémas localement noethériens,
+$g:X\to S$, $h:Y\to S$ deux morphismes, $S'$ une partie fermée de $S$,
+$X'$ (resp. $Y'$) une partie fermée de $X$ (resp. $Y$) telle que
+$g(X')\subset S'$ (resp. $h(Y')\subset S'$)~; soit
+$Z=X\times_S Y$~; supposons $Z$ localement noethérien, et soit
+$Z'=p^{-1}(X')\cap q^{-1}(Y')$, où $p$ et $q$ sont les projections de
+$X\times_S Y$. Dans ces conditions, le complété $Z_{/Z'}$ s'identifie au
+produit des $S_{/S'}$-préschémas formels
+$(X_{/X'})\times_{S_{/S'}}(Y_{/Y'})$, les morphismes structuraux
+s'identifiant à $\widehat g$ et $\widehat h$, et les projections à
+$\widehat p$ et $\widehat q$.
+\end{proposition}
+
+Il est immédiat que la question est locale pour $S$, $X$ et $Y$, et on
+est donc ramené au cas où $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(C)$,
+$S'=V(\mathfrak{J})$, $X'=V(\mathfrak{K})$, $Y'=V(\mathfrak{L})$, où
+$\mathfrak{J}$, $\mathfrak{K}$, $\mathfrak{L}$ sont trois idéaux tels
+que $\varphi(\mathfrak{J})\subset\mathfrak{K}$ et
+$\psi(\mathfrak{J})\subset\mathfrak{L}$, en désignant par $\varphi$ et
+$\psi$ les homomorphismes $A\to B$ et $A\to C$ qui correspondent à $g$
+et $h$. Alors on sait que $Z=\operatorname{Spec}(B\otimes_A C)$ et que
+$Z'=V(\mathfrak{M})$, où $\mathfrak{M}$ est l'idéal
+$\operatorname{Im}(\mathfrak{K}\otimes_A C)
++\operatorname{Im}(B\otimes_A\mathfrak{L})$. La conclusion résulte
+(\hyperref[I.10.7.2-fr]{10.7.2}) de ce que le produit tensoriel complété
+$(\widehat B\otimes_{\widehat A}\widehat C)^\wedge$ (où $\widehat A$,
+$\widehat B$, $\widehat C$ sont respectivement les séparés complétés de
+$A$, $B$, $C$ pour les topologies $\mathfrak{J}$-, $\mathfrak{K}$- et
+$\mathfrak{L}$-préadiques) est le séparé complété du produit tensoriel
+$B\otimes_A C$ pour la topologie $\mathfrak{M}$-préadique
+(\hyperref[0.7.7.2-fr]{0, 7.7.2}).
+
+On notera en outre que si $T$ est un $S$-préschéma localement
+noethérien, $u:T\to X$, $v:T\to Y$ deux $S$-morphismes, $T'$ une partie
+fermée de $T$ telle que $u(T')\subset X'$, $v(T')\subset Y'$, alors le
+prolongement aux complétés $((u,v)_S)^\wedge$ s'identifie à
+$(\widehat u,\widehat v)_{S_{/S'}}$.
+
+\begin{corollary}[10.9.8]
+\label{I.10.9.8-fr}
+Soient $X$, $Y$ deux $S$-préschémas localement noethériens tels que
+$X\times_S Y$ soit localement noethérien~; soient $S'$ une partie fermée
+de $S$, $X'$ (resp. $Y'$) une partie fermée de $X$ (resp. $Y$) dont
+l'image dans $S$ est contenue dans $S'$. Pour tout $S$-morphisme
+$f:X\to Y$ tel que $f(X')\subset Y'$, le morphisme graphe
+$\Gamma_{\widehat f}$ s'identifie au prolongement $(\Gamma_f)^\wedge$ du
+morphisme graphe de $f$.
+\end{corollary}
+
+\begin{corollary}[10.9.9]
+\label{I.10.9.9-fr}
+Soient $X$, $Y$ deux préschémas localement noethériens, $f:X\to Y$ un
+morphisme, $Y'$ une partie fermée de $Y$, $X'=f^{-1}(Y')$. Alors le
+préschéma $X_{/X'}$ s'identifie par le diagramme commutatif
+\[
+  \label{I.10.9.9.1-fr}
+  \xymatrix{
+    X\ar[d]_f &
+    X_{/X'}\ar[l]\ar[d]^{\widehat f}\\
+    Y &
+    Y_{/Y'}\ar[l]
+  }
+\]
+au produit $X\times_Y(Y_{/Y'})$ de préschémas formels.
+\end{corollary}
+
+Il suffit d'appliquer (\hyperref[I.10.9.7-fr]{10.9.7}) en remplaçant
+$S$ et $S'$ par $Y$, $X$ et $X'$ par $X$.
+\oldpage[I]{201}
+
+\begin{remark}[10.9.10]
+\label{I.10.9.10-fr}
+Si $X$ est la somme $X_1\amalg X_2$
+(\hyperref[subsection:I.3.1-fr]{3.1}), $X'$ la réunion
+$X'_1\cup X'_2$, où $X'_i$ est une partie fermée de $X_i$ ($i=1,2$),
+on voit aussitôt que l'on a
+$X_{/X'}={X_1}_{/X'_1}\amalg {X_2}_{/X'_2}$.
+\end{remark}
+
+\subsection{Application aux faisceaux cohérents sur les schémas formels
+affines.}
+\label{subsection:I.10.10-fr}
+
+\begin{env}[10.10.1]
+\label{I.10.10.1-fr}
+Dans tout ce paragraphe, $A$ désignera un \emph{anneau adique
+noethérien}, $\mathfrak{J}$ un idéal de définition de $A$. Soit
+$X=\operatorname{Spec}(A)$, $\mathfrak{X}=\operatorname{Spf}(A)$, qui
+s'identifie à la partie fermée $V(\mathfrak{J})$ de $X$
+(\hyperref[I.10.1.2-fr]{10.1.2}). En outre, la définition
+(\hyperref[I.10.1.2-fr]{10.1.2}) et la définition
+(\hyperref[I.10.8.4-fr]{10.8.4}) montrent que le
+\emph{schéma formel affine $\mathfrak{X}$} est identique au
+\emph{complété $X_{/\mathfrak{X}}$} du schéma affine $X$ le long de la
+partie fermée $\mathfrak{X}$ de son espace sous-jacent. A tout
+$\mathscr{O}_X$-Module cohérent $\mathscr{F}$ correspond donc un
+$\mathscr{O}_{\mathfrak{X}}$-Module de type fini
+$\mathscr{F}_{/\mathfrak{X}}$, qui est d'ailleurs un faisceau de modules
+topologiques sur le faisceau d'anneaux topologiques
+$\mathscr{O}_{\mathfrak{X}}$. Mais tout $\mathscr{O}_X$-Module cohérent
+$\mathscr{F}$ est de la forme $\widetilde M$, où $M$ est un $A$-module
+de type fini (\hyperref[I.1.5.1-fr]{1.5.1})~; nous poserons
+$(\widetilde M)_{/\mathfrak{X}}=M^\Delta$. En outre, si $u:M\to N$ est
+un $A$-homomorphisme de $A$-modules de type fini, il lui correspond un
+homomorphisme $\widetilde u:\widetilde M\to\widetilde N$, et par suite
+aussi un homomorphisme continu
+$\widetilde u_{/\mathfrak{X}}:(\widetilde M)_{/\mathfrak{X}}\to
+(\widetilde N)_{/\mathfrak{X}}$, que nous noterons $u^\Delta$. Il est
+immédiat que
+$(v\circ u)^\Delta=v^\Delta\circ u^\Delta$~; on a ainsi défini un
+\emph{foncteur additif covariant $M^\Delta$} de la catégorie des
+$A$-modules de type fini dans celle des
+$\mathscr{O}_{\mathfrak{X}}$-Modules de type fini. Lorsque $A$ est un
+anneau \emph{discret}, on a $M^\Delta=\widetilde M$.
+\end{env}
+
+\begin{proposition}[10.10.2]
+\label{I.10.10.2-fr}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm{(i)}] $M^\Delta$ est un foncteur exact en $M$, et il existe
+    un isomorphisme canonique fonctoriel de $A$-modules
+    $\Gamma(\mathfrak{X},M^\Delta)\xrightarrow{\sim}M$.
+  \item[\rm{(ii)}] Si $M$ et $N$ sont deux $A$-modules de type fini, il
+    existe des isomorphismes canoniques fonctoriels
+    \[
+      (M\otimes_A N)^\Delta
+      \xrightarrow{\sim}
+      M^\Delta\otimes_{\mathscr{O}_{\mathfrak{X}}}N^\Delta
+      \tag{10.10.2.1}\label{I.10.10.2.1-fr}
+    \]
+    \[
+      (\operatorname{Hom}_A(M,N))^\Delta
+      \xrightarrow{\sim}
+      \mathscr{H}\!om_{\mathscr{O}_{\mathfrak{X}}}
+      (M^\Delta,N^\Delta)
+      \tag{10.10.2.2}\label{I.10.10.2.2-fr}
+    \]
+  \item[\rm{(iii)}] L'application $u\to u^\Delta$ est un isomorphisme
+    fonctoriel
+    \[
+      \operatorname{Hom}_A(M,N)
+      \xrightarrow{\sim}
+      \operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+      (M^\Delta,N^\Delta)
+      \tag{10.10.2.3}\label{I.10.10.2.3-fr}
+    \]
+\end{enumerate}
+\end{proposition}
+
+L'exactitude de $M^\Delta$ résulte de l'exactitude des foncteurs
+$\widetilde M$ (\hyperref[I.1.3.5-fr]{1.3.5}) et
+$\mathscr{F}_{/\mathfrak{X}}$ (\hyperref[I.10.8.8-fr]{10.8.8}). Par
+définition, $\Gamma(\mathfrak{X},M^\Delta)$ est le séparé complété du
+$A$-module $\Gamma(X,\widetilde M)=M$ pour la topologie
+$\mathfrak{J}$-préadique~; mais comme $A$ est complet et $M$ de type
+fini, on sait (\hyperref[0.7.3.6-fr]{0, 7.3.6}) que $M$ est séparé et
+complet, ce qui achève de prouver (i). L'isomorphisme
+(\hyperref[I.10.10.2.1-fr]{10.10.2.1}) (resp.
+\hyperref[I.10.10.2.2-fr]{10.10.2.2}) provient de la composition des
+isomorphismes (\hyperref[I.1.3.12-fr]{1.3.12, (i)}) et
+(\hyperref[I.10.8.10.1-fr]{10.8.10.1}) (resp.
+(\hyperref[I.1.3.12-fr]{1.3.12, (ii)}) et
+(\hyperref[I.10.8.10.2-fr]{10.8.10.2})). Enfin, comme
+$\operatorname{Hom}_A(M,N)$ est un $A$-module de type fini, on peut lui
+appliquer (i), qui identifie
+$\Gamma(\mathfrak{X},(\operatorname{Hom}_A(M,N))^\Delta)$ à
+$\operatorname{Hom}_A(M,N)$, et utiliser
+(\hyperref[I.10.10.2.2-fr]{10.10.2.2}), qui prouve que
+l'homomorphisme (\hyperref[I.10.10.2.3-fr]{10.10.2.3}) est un
+isomorphisme.
+
+On déduit de (\hyperref[I.10.10.2-fr]{10.10.2}) toute une série de
+conséquences analogues à celles déduites de
+(\hyperref[I.1.3.7-fr]{1.3.7}) et
+(\hyperref[I.1.3.12-fr]{1.3.12}), que nous laissons au lecteur le soin
+de formuler.
+\oldpage[I]{202}
+
+Notons que la propriété d'exactitude de $M^\Delta$, appliqué à la suite
+exacte
+$0\to\mathfrak{J}\to A\to A/\mathfrak{J}\to0$ montre que le faisceau
+d'idéaux de $\mathscr{O}_{\mathfrak{X}}$ désigné ici par
+$\mathfrak{J}^\Delta$ coïncide avec celui qui avait été noté de la même
+façon en (\hyperref[I.10.3.1-fr]{10.3.1}), en vertu de
+(\hyperref[I.10.3.2-fr]{10.3.2}).
+
+\begin{proposition}[10.10.3]
+\label{I.10.10.3-fr}
+Sous les hypothèses de (\hyperref[I.10.10.1-fr]{10.10.1}),
+$\mathscr{O}_{\mathfrak{X}}$ est un faisceau cohérent d'anneaux.
+\end{proposition}
+
+Si $f\in A$, on sait que $A_{\{f\}}$ est un anneau adique noethérien
+(\hyperref[0.7.6.11-fr]{0, 7.6.11}) et comme la question est locale, on
+est ramené (\hyperref[I.10.1.4-fr]{10.1.4}) à prouver que le noyau d'un
+homomorphisme
+$v:\mathscr{O}_{\mathfrak{X}}^n\to\mathscr{O}_{\mathfrak{X}}$ est un
+$\mathscr{O}_{\mathfrak{X}}$-Module de type fini. On a alors
+$v=u^\Delta$, où $u$ est un $A$-homomorphisme $A^n\to A$
+(\hyperref[I.10.10.2-fr]{10.10.2})~; comme $A$ est noethérien, le noyau
+de $u$ est de type fini, autrement dit on a un homomorphisme
+$A^m\xrightarrow{w}A^n$ tel que la suite
+$A^m\xrightarrow{w}A^n\xrightarrow{u}A$ soit exacte. On en conclut
+(\hyperref[I.10.10.2-fr]{10.10.2}) que la suite
+$\mathscr{O}_{\mathfrak{X}}^m\xrightarrow{w^\Delta}
+\mathscr{O}_{\mathfrak{X}}^n\xrightarrow{v}
+\mathscr{O}_{\mathfrak{X}}$ est exacte, ce qui prouve que le noyau de
+$v$ est de type fini.
+
+\begin{env}[10.10.4]
+\label{I.10.10.4-fr}
+Avec les notations précédentes, posons
+$A_n=A/\mathfrak{J}^{n+1}$, et soit $X_n$ le schéma affine
+$\operatorname{Spec}(A_n)=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$,
+$\mathscr{J}=\mathfrak{J}^\Delta$ étant le faisceau d'idéaux de
+définition de $\mathscr{O}_{\mathfrak{X}}$ correspondant à l'idéal
+$\mathfrak{J}$. Soit $u_{mn}$ le morphisme de préschémas
+$X_m\to X_n$ correspondant à l'homomorphisme canonique
+$A_n\to A_m$ pour $m\leq n$~; le schéma formel $\mathfrak{X}$ est
+limite inductive des $X_n$ pour les $u_{mn}$
+(\hyperref[I.10.6.3-fr]{10.6.3}).
+\end{env}
+
+\begin{proposition}[10.10.5]
+\label{I.10.10.5-fr}
+Sous les hypothèses de (\hyperref[I.10.10.1-fr]{10.10.1}), soit
+$\mathscr{F}$ un $\mathscr{O}_{\mathfrak{X}}$-Module. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $\mathscr{F}$ est un $\mathscr{O}_{\mathfrak{X}}$-Module
+    cohérent.
+  \item[b)] $\mathscr{F}$ est isomorphe à la limite projective
+    (\hyperref[I.10.6.6-fr]{10.6.6}) d'une suite $(\mathscr{F}_n)$ de
+    $\mathscr{O}_{X_n}$-Modules cohérents tels que
+    $u_{mn}^*(\mathscr{F}_n)=\mathscr{F}_m$.
+  \item[c)] Il existe un $A$-module de type fini $M$ (déterminé à un
+    isomorphisme canonique près par
+    (\hyperref[I.10.10.2-fr]{10.10.2, (i)})) tel que $\mathscr{F}$ soit
+    isomorphe à $M^\Delta$.
+\end{enumerate}
+\end{proposition}
+
+Montrons d'abord que b) implique c). On a
+$\mathscr{F}_n=\widetilde{M_n}$, où $M_n$ est un $A_n$-module de type
+fini, et l'hypothèse entraîne que
+$M_m=M_n\otimes_{A_n}A_m$ pour $m\leq n$
+(\hyperref[I.1.6.5-fr]{1.6.5})~; les $M_n$ forment donc un système
+projectif pour les di-homomorphismes canoniques $M_n\to M_m$
+($m\leq n$), et il résulte aussitôt de la définition des $A_n$ que ce
+système projectif vérifie les conditions de
+(\hyperref[0.7.2.9-fr]{0, 7.2.9})~; sa limite projective $M$ est par
+suite un $A$-module de type fini tel que
+$M_n=M\otimes_A A_n$ pour tout $n$. On en déduit que $\mathscr{F}_n$
+est induit sur $X_n$ par
+$\widetilde M\otimes_{\mathscr{O}_X}
+(\mathscr{O}_X/\widetilde{\mathfrak{J}}^{n+1})$, donc
+$\mathscr{F}=M^\Delta$ par définition
+(\hyperref[I.10.8.4-fr]{10.8.4}).
+
+Inversement, c) entraîne b)~; en effet, si $u_n$ est le morphisme
+d'immersion $X_n\to X$,
+$u_n^*(\widetilde M)=(M\otimes_A A_n)^{\sim}$ est induit sur $X_n$ par
+$\widetilde M\otimes_{\mathscr{O}_X}
+(\mathscr{O}_X/\widetilde{\mathfrak{J}}^{n+1})$, et
+$M^\Delta=\varprojlim u_n^*(\widetilde M)$ par définition
+(\hyperref[I.10.8.4-fr]{10.8.4})~; comme
+$u_m=u_n\circ u_{mn}$ pour $m\leq n$, les
+$\mathscr{F}_n=u_n^*(\widetilde M)$ vérifient les conditions de b),
+d'où notre assertion.
+
+Montrons maintenant que c) implique a)~: en effet, on a par définition
+$\mathscr{O}_{\mathfrak{X}}=A^\Delta$~; $M$ étant conoyau d'un
+homomorphisme $A^m\to A^n$, il résulte de
+(\hyperref[I.10.10.2-fr]{10.10.2}) que $M^\Delta$ est conoyau d'un
+homomorphisme
+$\mathscr{O}_{\mathfrak{X}}^m\to\mathscr{O}_{\mathfrak{X}}^n$, et
+comme le faisceau d'anneaux $\mathscr{O}_{\mathfrak{X}}$ est cohérent
+(\hyperref[I.10.10.3-fr]{10.10.3}), il en est de même de $M^\Delta$
+(\hyperref[0.5.3.4-fr]{0, 5.3.4}).
+\oldpage[I]{203}
+
+Enfin, a) entraîne b). Considéré comme
+$\mathscr{O}_{\mathfrak{X}}$-Module, on a
+$\mathscr{O}_{X_n}=\mathscr{O}_{\mathfrak{X}}/
+\mathscr{J}^{n+1}=A_n^\Delta$~; $\mathscr{F}_n=\mathscr{F}
+\otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{O}_{X_n}$ est un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent
+(\hyperref[0.5.3.5-fr]{0, 5.3.5}), et comme c'est aussi un
+$\mathscr{O}_{X_n}$-Module et que $\mathscr{J}^{n+1}$ est cohérent,
+on en conclut que $\mathscr{F}_n$ est un
+$\mathscr{O}_{X_n}$-Module cohérent
+(\hyperref[0.5.3.10-fr]{0, 5.3.10}), et il est immédiat que
+$u_{mn}^*(\mathscr{F}_n)=\mathscr{F}_m$ pour $m\leq n$ (en se
+souvenant que l'application continue $X_m\to X_n$ des espaces
+sous-jacents est l'identité de $\mathfrak{X}$). Le faisceau
+$\mathscr{G}=\varprojlim\mathscr{F}_n$ est donc un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent, puisqu'on a vu que b)
+entraîne a). Les homomorphismes canoniques
+$\mathscr{F}\to\mathscr{F}_n$ forment un système projectif, qui par
+passage à la limite donne un homomorphisme canonique
+$w:\mathscr{F}\to\mathscr{G}$, et tout revient à démontrer que $w$ est
+bijectif. La question étant maintenant locale, on peut se borner au cas
+où $\mathscr{F}$ est conoyau d'un homomorphisme
+$\mathscr{O}_{\mathfrak{X}}^p\to\mathscr{O}_{\mathfrak{X}}^q$~; cet
+homomorphisme étant de la forme $v^\Delta$, où $v$ est un homomorphisme
+$A^m\to A^n$ (\hyperref[I.10.10.2-fr]{10.10.2}), $\mathscr{F}$ est
+isomorphe à $M^\Delta$, où $M=\operatorname{Coker}v$
+(\hyperref[I.10.10.2-fr]{10.10.2}). On a alors, en vertu de
+(\hyperref[I.10.10.2-fr]{10.10.2}),
+$\mathscr{F}_n=M^\Delta\otimes_{\mathscr{O}_{\mathfrak{X}}}A_n^\Delta
+=(M\otimes_A A_n)^\Delta$, et comme la topologie $\mathfrak{J}$-adique
+sur $M\otimes_A A_n$ est discrète, on a
+$(M\otimes_A A_n)^\Delta=(M\otimes_A A_n)^{\sim}$ (en tant que
+$\mathscr{O}_{X_n}$-Module)~; on a vu plus haut que
+$M^\Delta=\varprojlim\mathscr{F}_n$ et $w$ est donc bien dans ce cas
+l'identité.
+\par\hfill C.Q.F.D.\par
+
+\begin{corollary}[10.10.6]
+\label{I.10.10.6-fr}
+Si $\mathscr{F}$ vérifie la condition b) de
+(\hyperref[I.10.10.5-fr]{10.10.5}), le système projectif
+$(\mathscr{F}_n)$ est isomorphe au système des
+$\mathscr{F}\otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{O}_{X_n}$.
+\end{corollary}
+
+\begin{env}[10.10.7]
+\label{I.10.10.7-fr}
+Soient maintenant $A$, $B$ deux anneaux adiques noethériens,
+$\varphi:B\to A$ un homomorphisme continu~; on désignera par
+$\mathfrak{J}$ (resp. $\mathfrak{K}$) un idéal de définition de $A$
+(resp. $B$), tels que $\varphi(\mathfrak{K})\subset\mathfrak{J}$, et
+on posera $X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$,
+$\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$. Soient $f:X\to Y$ le morphisme
+de préschémas correspondant à $\varphi$
+(\hyperref[I.1.6.1-fr]{1.6.1}), $\widehat f:\mathfrak{X}\to
+\mathfrak{Y}$ son prolongement aux complétés
+(\hyperref[I.10.9.1-fr]{10.9.1}), qui est aussi le morphisme de
+préschémas formels correspondant à $\varphi$
+(\hyperref[I.10.2.2-fr]{10.2.2}).
+\end{env}
+
+\begin{proposition}[10.10.8]
+\label{I.10.10.8-fr}
+Pour tout $B$-module $N$ de type fini, il existe un isomorphisme
+canonique fonctoriel de $\mathscr{O}_{\mathfrak{X}}$-Modules
+\[
+  \widehat f^*(N^\Delta)
+  \xrightarrow{\sim}
+  (N\otimes_B A)^\Delta.
+\]
+\end{proposition}
+
+En effet, en désignant par $i_X:\mathfrak{X}\to X$ et
+$i_Y:\mathfrak{Y}\to Y$ les morphismes canoniques, on a
+(\hyperref[I.10.8.8-fr]{10.8.8}), à des isomorphismes canoniques
+fonctoriels près, $N^\Delta=i_Y^*(\widetilde N)$ et
+\[
+  (N\otimes_B A)^\Delta
+  =i_X^*((N\otimes_B A)^{\sim})
+  =i_X^*(f^*(\widetilde N))
+\]
+(\hyperref[I.1.6.5-fr]{1.6.5})~; la proposition résulte donc de la
+commutativité du diagramme (\hyperref[I.10.9.2-fr]{10.9.2}).
+
+\begin{corollary}[10.10.9]
+\label{I.10.10.9-fr}
+Pour tout idéal $\mathfrak b$ de $B$, on a
+$\widehat f^*(\mathfrak b^\Delta)\mathscr{O}_{\mathfrak{X}}
+=(\mathfrak bA)^\Delta$.
+\end{corollary}
+
+En effet, soit $j$ l'injection canonique $\mathfrak b\to B$, à laquelle
+il correspond l'injection canonique
+$j^\Delta:\mathfrak b^\Delta\to\mathscr{O}_{\mathfrak{Y}}$ de
+faisceaux de $\mathscr{O}_{\mathfrak{Y}}$-Modules~; par définition,
+$\widehat f^*(\mathfrak b^\Delta)\mathscr{O}_{\mathfrak{X}}$ est
+l'image de l'homomorphisme
+$\widehat f^*(j^\Delta):\widehat f^*(\mathfrak b^\Delta)\to
+\mathscr{O}_{\mathfrak{X}}=\widehat f^*(\mathscr{O}_{\mathfrak{Y}})$~;
+mais cet homomorphisme s'identifie à
+$(j\otimes1)^\Delta:(\mathfrak b\otimes_B A)^\Delta\to
+\mathscr{O}_{\mathfrak{X}}=(B\otimes_B A)^\Delta$ d'après
+(\hyperref[I.10.10.8-fr]{10.10.8}). Comme l'image de $j\otimes1$ est
+l'idéal $\mathfrak bA$ de $A$, l'image de $(j\otimes1)^\Delta$ est
+donc $(\mathfrak bA)^\Delta$ en vertu de
+(\hyperref[I.10.10.2-fr]{10.10.2}), d'où la conclusion.
+\oldpage[I]{204}
+
+\subsection{Faisceaux cohérents sur les préschémas formels.}
+\label{subsection:I.10.11-fr}
+
+\begin{proposition}[10.11.1]
+\label{I.10.11.1-fr}
+Si $\mathfrak{X}$ est un préschéma formel localement noethérien, le
+faisceau d'anneaux $\mathscr{O}_{\mathfrak{X}}$ est cohérent et tout
+faisceau d'idéaux de définition de $\mathfrak{X}$ est cohérent.
+\end{proposition}
+
+La question étant locale, on est ramené au cas d'un schéma formel affine
+noethérien, et la proposition résulte donc de
+(\hyperref[I.10.10.3-fr]{10.10.3}) et
+(\hyperref[I.10.10.5-fr]{10.10.5}).
+
+\begin{env}[10.11.2]
+\label{I.10.11.2-fr}
+Soient $\mathfrak{X}$ un préschéma formel localement noethérien,
+$\mathscr{J}$ un faisceau d'idéaux de définition de $\mathfrak{X}$,
+$X_n$ le préschéma (usuel) localement noethérien
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$, de
+sorte que $\mathfrak{X}$ est limite inductive de la suite $(X_n)$ pour
+les morphismes canoniques $u_{mn}:X_m\to X_n$
+(\hyperref[I.10.6.3-fr]{10.6.3}). Avec ces notations~:
+\end{env}
+
+\begin{theorem}[10.11.3]
+\label{I.10.11.3-fr}
+Pour qu'un $\mathscr{O}_{\mathfrak{X}}$-Module $\mathscr{F}$ soit
+cohérent, il faut et il suffit qu'il soit isomorphe à une limite
+projective d'une suite $(\mathscr{F}_n)$, où $\mathscr{F}_n$ est un
+$\mathscr{O}_{X_n}$-Module cohérent, tel que
+$u_{mn}^*(\mathscr{F}_n)=\mathscr{F}_m$ pour $m\leq n$
+(\hyperref[I.10.6.6-fr]{10.6.6}). Le système projectif
+$(\mathscr{F}_n)$ est alors isomorphe au système des
+$u_n^*(\mathscr{F})=\mathscr{F}
+\otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{O}_{X_n}$, $u_n$ étant
+le morphisme canonique $X_n\to\mathfrak{X}$.
+\end{theorem}
+
+La question étant locale, on est ramené au cas où $\mathfrak{X}$ est
+un schéma formel affine noethérien, et le théorème est alors conséquence
+de (\hyperref[I.10.10.5-fr]{10.10.5}) et
+(\hyperref[I.10.10.6-fr]{10.10.6}).
+
+On peut donc dire que \emph{la donnée d'un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent équivaut à celle d'un
+système projectif $(\mathscr{F}_n)$ de
+$\mathscr{O}_{X_n}$-Modules cohérents tels que
+$u_{mn}^*(\mathscr{F}_n)=\mathscr{F}_m$ pour $m\leq n$}.
+
+\begin{corollary}[10.11.4]
+\label{I.10.11.4-fr}
+Si $\mathscr{F}$ et $\mathscr{G}$ sont deux
+$\mathscr{O}_{\mathfrak{X}}$-Modules cohérents, on peut (avec les
+notations de (\hyperref[I.10.11.3-fr]{10.11.3})) définir un
+isomorphisme canonique fonctoriel
+\[
+  \label{I.10.11.4.1-fr}
+  \operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+  (\mathscr{F},\mathscr{G})
+  \xrightarrow{\sim}
+  \varprojlim_n
+  \operatorname{Hom}_{\mathscr{O}_{X_n}}
+  (\mathscr{F}_n,\mathscr{G}_n).
+  \tag{10.11.4.1}
+\]
+\end{corollary}
+
+La limite projective du second membre doit s'entendre pour les
+applications
+$\theta_n\mapsto u_{mn}^*(\theta_n)$ ($m\leq n$) de
+$\operatorname{Hom}_{\mathscr{O}_{X_n}}
+(\mathscr{F}_n,\mathscr{G}_n)$ dans
+$\operatorname{Hom}_{\mathscr{O}_{X_m}}
+(\mathscr{F}_m,\mathscr{G}_m)$. L'homomorphisme
+(\hyperref[I.10.11.4.1-fr]{10.11.4.1}) fait correspondre à un élément
+$\theta\in\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ la suite $(u_n^*(\theta))$~; on voit
+aussitôt qu'on en définit un homomorphisme réciproque du précédent en
+faisant correspondre au système projectif
+$(\theta_n)\in\varprojlim_n
+\operatorname{Hom}_{\mathscr{O}_{X_n}}
+(\mathscr{F}_n,\mathscr{G}_n)$
+sa limite projective dans
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$, compte tenu de
+(\hyperref[I.10.11.3-fr]{10.11.3}).
+
+\begin{corollary}[10.11.5]
+\label{I.10.11.5-fr}
+Pour qu'un homomorphisme $\theta:\mathscr{F}\to\mathscr{G}$ soit
+surjectif, il faut et il suffit que l'homomorphisme correspondant
+$\theta_0=u_0^*(\theta):\mathscr{F}_0\to\mathscr{G}_0$ le soit.
+\end{corollary}
+
+La question étant locale, on est ramené au cas où
+$\mathfrak{X}=\operatorname{Spf}(A)$, $A$ étant adique noethérien,
+$\mathscr{F}=M^\Delta$, $\mathscr{G}=N^\Delta$ et $\theta=u^\Delta$,
+où $M$ et $N$ sont des $A$-modules de type fini et $u$ un
+homomorphisme $M\to N$~; on a en outre alors
+$\theta_0=\widetilde{u_0}$, où $u_0$ est l'homomorphisme
+$u\otimes1:M\otimes_A A/\mathfrak{J}\to
+N\otimes_A A/\mathfrak{J}$~;
+la conclusion résulte de ce que $\theta$ et $u$ (resp. $\theta_0$ et
+$u_0$) sont simultanément surjectifs
+(\hyperref[I.1.3.9-fr]{1.3.9} et
+\hyperref[I.10.10.2-fr]{10.10.2}) et de ce que $u$ et $u_0$ sont
+simultanément surjectifs (\hyperref[0.7.1.14-fr]{0, 7.1.14}).
+
+\begin{env}[10.11.6]
+\label{I.10.11.6-fr}
+Le th. (\hyperref[I.10.11.3-fr]{10.11.3}) montre qu'on peut considérer
+tout $\mathscr{O}_{\mathfrak{X}}$-Module cohérent $\mathscr{F}$ comme
+un $\mathscr{O}_{\mathfrak{X}}$-Module \emph{topologique}, en le
+considérant comme limite projective des faisceaux de groupes
+\emph{pseudo-discrets} $\mathscr{F}_n$
+(\hyperref[0.3.8.1-fr]{0, 3.8.1}). Il résulte alors de
+(\hyperref[I.10.11.4-fr]{10.11.4}) que tout homomorphisme
+$u:\mathscr{F}\to\mathscr{G}$ de
+$\mathscr{O}_{\mathfrak{X}}$-Modules cohérents est automatiquement
+\emph{continu}
+
+\oldpage[I]{205}
+
+(\hyperref[0.3.8.2-fr]{0, 3.8.2}). En outre, si $\mathscr{H}$ est un
+sous-$\mathscr{O}_{\mathfrak{X}}$-Module cohérent d'un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent $\mathscr{F}$, pour tout
+ouvert $U\subset\mathfrak{X}$, $\Gamma(U,\mathscr{H})$ est un sous-groupe
+\emph{fermé} du groupe topologique $\Gamma(U,\mathscr{F})$ car le foncteur
+$\Gamma$ étant exact à gauche, $\Gamma(U,\mathscr{H})$ est le noyau de
+l'homomorphisme
+$\Gamma(U,\mathscr{F})\to\Gamma(U,\mathscr{F}/\mathscr{H})$, qui est
+\emph{continu} d'après ce qui précède, puisque $\mathscr{F}/\mathscr{H}$
+est cohérent (\hyperref[0.5.3.4-fr]{0, 5.3.4})~; notre assertion résulte
+de ce que $\Gamma(U,\mathscr{F}/\mathscr{H})$ est un groupe topologique
+séparé.
+\end{env}
+
+\begin{proposition}[10.11.7]
+\label{I.10.11.7-fr}
+Soient $\mathscr{F}$ et $\mathscr{G}$ deux
+$\mathscr{O}_{\mathfrak{X}}$-Modules cohérents. On peut définir (avec les
+notations de (\hyperref[I.10.11.3-fr]{10.11.3})) des isomorphismes
+canoniques fonctoriels de $\mathscr{O}_{\mathfrak{X}}$-Modules
+topologiques (\hyperref[I.10.11.6-fr]{10.11.6})
+\[
+  \label{I.10.11.7.1-fr}
+  \mathscr{F}\otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{G}
+  \xrightarrow{\sim}
+  \varprojlim_n
+  (\mathscr{F}_n\otimes_{\mathscr{O}_{X_n}}\mathscr{G}_n)
+  \tag{10.11.7.1}
+\]
+\[
+  \label{I.10.11.7.2-fr}
+  \mathscr{H}\!om_{\mathscr{O}_{\mathfrak{X}}}
+  (\mathscr{F},\mathscr{G})
+  \xrightarrow{\sim}
+  \varprojlim_n
+  \mathscr{H}\!om_{\mathscr{O}_{X_n}}(\mathscr{F}_n,\mathscr{G}_n)
+  \tag{10.11.7.2}
+\]
+\end{proposition}
+
+L'existence de l'isomorphisme
+(\hyperref[I.10.11.7.1-fr]{10.11.7.1}) résulte de la formule
+\[
+  \mathscr{F}_n\otimes_{\mathscr{O}_{X_n}}\mathscr{G}_n
+  =
+  (\mathscr{F}\otimes_{\mathscr{O}_{\mathfrak{X}}}
+  \mathscr{O}_{X_n})
+  \otimes_{\mathscr{O}_{X_n}}
+  (\mathscr{G}\otimes_{\mathscr{O}_{\mathfrak{X}}}
+  \mathscr{O}_{X_n})
+  =
+  (\mathscr{F}\otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{G})
+  \otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{O}_{X_n}
+\]
+et de (\hyperref[I.10.11.3-fr]{10.11.3}). L'isomorphisme
+(\hyperref[I.10.11.7.2-fr]{10.11.7.2}) où les deux membres sont
+considérés comme faisceaux de modules sans topologie, résulte de la
+définition des sections de
+$\mathscr{H}\!om_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ et
+$\mathscr{H}\!om_{\mathscr{O}_{X_n}}(\mathscr{F}_n,\mathscr{G}_n)$ et de
+l'existence de l'isomorphisme
+(\hyperref[I.10.11.4.1-fr]{10.11.4.1}), appliqué au préschéma induit sur
+un ouvert formel affine noethérien arbitraire de $\mathfrak{X}$. Reste à
+prouver que l'isomorphisme
+(\hyperref[I.10.11.7.2-fr]{10.11.7.2}) est bicontinu au-dessus d'un
+ensemble quasi-compact, et on est donc ramené au cas où
+$\mathfrak{X}=\operatorname{Spf}(A)$, $A$ étant adique noethérien, d'où
+(\hyperref[I.10.10.5-fr]{10.10.5})
+$\mathscr{F}=M^\Delta$, $\mathscr{G}=N^\Delta$, $M$, $N$ étant des
+$A$-modules de type fini~; compte tenu de
+(\hyperref[I.10.10.2.1-fr]{10.10.2.1}),
+(\hyperref[I.10.10.2.3-fr]{10.10.2.3}) et
+(\hyperref[I.1.3.12-fr]{1.3.12, (ii)}), on est ramené à montrer que
+l'isomorphisme canonique
+$\operatorname{Hom}_A(M,N)\xrightarrow{\sim}
+\varprojlim_n\operatorname{Hom}_{A_n}(M_n,N_n)$ (avec
+$M_n=M\otimes_A A_n$, $N_n=N\otimes_A A_n$) est continu, ce qui a été
+prouvé dans (\hyperref[0.7.8.2-fr]{0, 7.8.2}).
+
+\begin{env}[10.11.8]
+\label{I.10.11.8-fr}
+Comme $\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ est le groupe des sections du faisceau de
+groupes topologiques
+$\mathscr{H}\!om_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$, il est muni d'une topologie de groupe. Si
+$\mathfrak{X}$ est \emph{noethérien}, il résulte de
+(\hyperref[I.10.11.7.2-fr]{10.11.7.2}) qu'un système fondamental de
+voisinages de $0$ dans ce groupe s'obtient en prenant les sous-groupes
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{J}^n\mathscr{G})$ ($n$ arbitraire).
+\end{env}
+
+\begin{proposition}[10.11.9]
+\label{I.10.11.9-fr}
+Soient $\mathfrak{X}$ un préschéma formel noethérien, $\mathscr{F}$ et
+$\mathscr{G}$ deux $\mathscr{O}_{\mathfrak{X}}$-Modules cohérents. Dans
+le groupe topologique
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ les homomorphismes surjectifs (resp.
+injectifs, bijectifs) forment une partie ouverte.
+\end{proposition}
+
+En vertu de (\hyperref[I.10.11.5-fr]{10.11.5}), l'ensemble des
+homomorphismes surjectifs dans
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ est l'image réciproque par l'application
+continue
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})\to
+\operatorname{Hom}_{\mathscr{O}_{X_0}}(\mathscr{F}_0,\mathscr{G}_0)$
+d'une partie du groupe discret
+$\operatorname{Hom}_{\mathscr{O}_{X_0}}(\mathscr{F}_0,\mathscr{G}_0)$
+d'où la première assertion. Pour démontrer la seconde, recouvrons
+$\mathfrak{X}$ par un nombre fini d'ouverts formels affines noethériens
+$U_i$. Pour que
+$\theta\in\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ soit injectif, il faut et il suffit que toutes
+ses images par les applications (continues) de restriction
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})\to
+\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}|U_i}
+(\mathscr{F}|U_i,\mathscr{G}|U_i)$ le soient~; on est donc ramené au cas
+affine, et alors cela a déjà été prouvé dans
+(\hyperref[0.7.8.3-fr]{0, 7.8.3}).
+
+\oldpage[I]{206}
+
+\subsection{Morphismes adiques de préschémas formels.}
+\label{subsection:I.10.12-fr}
+
+\begin{env}[10.12.1]
+\label{I.10.12.1-fr}
+Soient $\mathfrak{X}$, $\mathfrak{S}$ deux préschémas formels
+\emph{localement noethériens}~; nous dirons qu'un morphisme
+$f:\mathfrak{X}\to\mathfrak{S}$ est \emph{adique} s'il existe un Idéal
+de définition $\mathscr{J}$ de $\mathfrak{S}$ tel que
+$\mathscr{K}=f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}$ soit un Idéal de
+définition de $\mathfrak{X}$~; on dit aussi alors que $\mathfrak{X}$ est
+un \emph{$\mathfrak{S}$-préschéma adique} (pour $f$). Lorsqu'il en est
+ainsi, pour \emph{tout} Idéal de définition $\mathscr{J}_1$ de
+$\mathfrak{S}$,
+$\mathscr{K}_1=f^*(\mathscr{J}_1)\mathscr{O}_{\mathfrak{X}}$ est un Idéal
+de définition de $\mathfrak{X}$. En effet, la question étant locale, on
+peut supposer $\mathfrak{X}$ et $\mathfrak{S}$ affines noethériens~; il
+existe donc un entier $n$ tel que $\mathscr{J}^n\subset\mathscr{J}_1$ et
+$\mathscr{J}_1^n\subset\mathscr{J}$
+(\hyperref[I.10.3.6-fr]{10.3.6} et
+\hyperref[0.7.1.4-fr]{0, 7.1.4}), d'où
+$\mathscr{K}^n\subset\mathscr{K}_1$ et
+$\mathscr{K}_1^n\subset\mathscr{K}$. La première de ces relations prouve
+que $\mathscr{K}_1=\mathfrak{K}_1^\Delta$, où $\mathfrak{K}_1$ est un
+idéal ouvert de
+$A=\Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$, et la seconde prouve
+que $\mathfrak{K}_1$ est un idéal de définition de $A$
+(\hyperref[0.7.1.4-fr]{0, 7.1.4}), d'où notre assertion.
+\end{env}
+
+Il résulte aussitôt de ce qui précède que si $\mathfrak{X}$ et
+$\mathfrak{Y}$ sont deux $\mathfrak{S}$-préschémas adiques, \emph{tout
+$\mathfrak{S}$-morphisme $u:\mathfrak{X}\to\mathfrak{Y}$ est adique}~:
+en effet, si $f:\mathfrak{X}\to\mathfrak{S}$,
+$g:\mathfrak{Y}\to\mathfrak{S}$ sont les morphismes structuraux, et
+$\mathscr{J}$ un Idéal de définition de $\mathfrak{S}$, on a
+$f=g\circ u$, donc
+$u^*(g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}})
+\mathscr{O}_{\mathfrak{X}}=f^*(\mathscr{J})
+\mathscr{O}_{\mathfrak{X}}$ est un Idéal de définition de
+$\mathfrak{X}$, et par hypothèse
+$g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}}$ est un Idéal de définition
+de $\mathfrak{Y}$.
+
+\begin{env}[10.12.2]
+\label{I.10.12.2-fr}
+Dans ce qui suit, nous supposerons fixé un préschéma formel localement
+noethérien $\mathfrak{S}$ et un Idéal de définition $\mathscr{J}$ de
+$\mathfrak{S}$~; nous poserons
+$S_n=(\mathfrak{S},\mathscr{O}_{\mathfrak{S}}/\mathscr{J}^{n+1})$. Les
+$\mathfrak{S}$-préschémas adiques (localement noethériens) forment
+évidemment une \emph{catégorie}. Nous dirons qu'un système inductif
+$(X_n)$ de $S_n$-préschémas (usuels) localement noethériens est un
+\emph{$(S_n)$-système inductif adique} si les morphismes structuraux
+$f_n:X_n\to S_n$ sont tels que, pour $m\leq n$, les diagrammes
+\[
+  \label{I.10.12.2.1-fr}
+  \xymatrix{
+    X_n \ar[d]_{f_n}
+    & X_m \ar[l] \ar[d]^{f_m}\\
+    S_n
+    & S_m \ar[l]
+  }
+  \tag{10.12.2.1}
+\]
+soient commutatifs et \emph{identifient $X_m$ au produit
+$X_n\times_{S_n}S_m=(X_n)_{(S_m)}$}. Les systèmes inductifs adiques
+forment une \emph{catégorie}~: il suffit en effet de définir un morphisme
+$(X_n)\to(Y_n)$ de tels systèmes comme un \emph{système inductif de
+$S_n$-morphismes $u_n:X_n\to Y_n$} tel que $u_m$ s'identifie à
+$(u_n)_{(S_m)}$ pour $m\leq n$. Cela étant~:
+\end{env}
+
+\begin{theorem}[10.12.3]
+\label{I.10.12.3-fr}
+Il y a équivalence canonique entre la catégorie des
+$\mathfrak{S}$-préschémas adiques et la catégorie des
+$(S_n)$-systèmes inductifs adiques.
+\end{theorem}
+
+L'équivalence en question s'obtient de la façon suivante~: si
+$\mathfrak{X}$ est un $\mathfrak{S}$-préschéma adique,
+$f:\mathfrak{X}\to\mathfrak{S}$ le morphisme structural,
+$\mathscr{K}=f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}$ est un Idéal de
+définition de $\mathfrak{X}$ et on fait correspondre à $\mathfrak{X}$ le
+système inductif des
+$X_n=(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{K}^{n+1})$, le
+morphisme structural $f_n:X_n\to S_n$ correspondant à $f$
+(\hyperref[I.10.5.6-fr]{10.5.6}). Montrons d'abord que $(X_n)$ est un
+\emph{système inductif adique}~: si $f=(\psi,\theta)$, on a
+$\psi^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}=\mathscr{K}$, donc
+$\psi^*(\mathscr{J}^n)\mathscr{O}_{\mathfrak{X}}=\mathscr{K}^n$ pour tout
+$n$, et (par l'exactitude du foncteur $\psi^*$)
+$\mathscr{K}^{m+1}/\mathscr{K}^{n+1}
+=\psi^*(\mathscr{J}^{m+1}/\mathscr{J}^{n+1})
+(\mathscr{O}_{\mathfrak{X}}/\mathscr{K}^{n+1})$ pour $m\leq n$~; notre
+conclusion résulte donc de (\hyperref[I.4.4.5-fr]{4.4.5}). Il est immédiat
+en outre de vérifier qu'à un $\mathfrak{S}$-morphisme
+$u:\mathfrak{X}\to\mathfrak{Y}$ de $\mathfrak{S}$-préschémas adiques
+correspond (avec des notations évidentes)
+
+\oldpage[I]{207}
+
+un système inductif de $S_n$-morphismes $u_n:X_n\to Y_n$ tel que $u_m$
+s'identifie à $(u_n)_{(S_m)}$ pour $m\leq n$.
+
+Le fait qu'on a bien défini ainsi une équivalence résultera de la proposition
+plus précise suivante~:
+
+\begin{proposition}[10.12.3.1]
+\label{I.10.12.3.1-fr}
+Soit $(X_n)$ un système inductif de $S_n$-préschémas~; on suppose que les
+morphismes structuraux $f_n:X_n\to S_n$ sont tels que les diagrammes
+(\hyperref[I.10.12.2.1-fr]{10.12.2.1}) soient commutatifs et identifient
+$X_m$ à $X_n\times_{S_n}S_m$ pour $m\leq n$. Alors le système inductif
+$(X_n)$ vérifie les conditions b) et c) de
+(\hyperref[I.10.6.3-fr]{10.6.3})~; soient $\mathfrak{X}$ sa limite inductive,
+$f:\mathfrak{X}\to\mathfrak{S}$ le morphisme limite inductive du système
+inductif $(f_n)$. Alors, si $X_0$ est localement noethérien,
+$\mathfrak{X}$ est localement noethérien et $f$ est un morphisme adique.
+\end{proposition}
+
+Comme le faisceau d'idéaux de $\mathscr{O}_{S_n}$ qui définit le
+sous-préschéma $S_m$ de $S_n$ est nilpotent, il en est de même, en vertu de
+(\hyperref[I.4.4.5-fr]{4.4.5}) du faisceau d'idéaux de
+$\mathscr{O}_{X_n}$ définissant le sous-préschéma $X_m$ de $X_n$, donc les
+conditions de (\hyperref[I.10.6.3-fr]{10.6.3}) sont bien vérifiées. La
+question est par suite locale sur $\mathfrak{X}$ et $\mathfrak{S}$ et on
+peut supposer que $\mathfrak{S}=\operatorname{Spf}(A)$,
+$\mathscr{J}=\mathfrak{J}^\Delta$, $A$ étant un anneau $\mathfrak{J}$-adique
+noethérien, et $X_n=\operatorname{Spec}(B_n)$~; si
+$A_n=A/\mathfrak{J}^{n+1}$, l'hypothèse entraîne que $B_0$ est noethérien et
+que si on pose $\mathfrak{J}_n=\mathfrak{J}/\mathfrak{J}^{n+1}$,
+$B_m=B_n/\mathfrak{J}_n^{m+1}B_n$. Le noyau de $B_n\to B_0$ est donc
+$\mathfrak{K}_n=\mathfrak{J}_nB_n$ et le noyau de $B_n\to B_m$ est
+$\mathfrak{K}_n^{m+1}$ pour $m\leq n$~; en outre, comme $A_1$ est
+noethérien, $\mathfrak{J}_1$ est de type fini sur $A_1$, donc
+$\overline{\mathfrak{K}}_1=\mathfrak{K}_1/\mathfrak{K}_1^2$ est de type fini
+sur $B_1$, et \emph{a fortiori} sur
+$B_0=B_1/\mathfrak{K}_1$~; le fait que $\mathfrak{X}$ soit noethérien
+résulte alors de (\hyperref[I.10.6.4-fr]{10.6.4})~; si
+$B=\varprojlim B_n$, on a $\mathfrak{X}=\operatorname{Spf}(B)$, et si
+$\mathfrak{K}$ est le noyau de $B\to B_0$,
+$B_n=B/\mathfrak{K}^{n+1}$. Si
+$\rho_n:A/\mathfrak{J}^{n+1}\to B/\mathfrak{K}^{n+1}$ est l'homomorphisme
+correspondant à $f_n$, on a donc
+\[
+  \mathfrak{K}/\mathfrak{K}^{n+1}
+  =(B/\mathfrak{K}^{n+1})\rho_n(\mathfrak{J}/\mathfrak{J}^{n+1})
+\]
+comme l'homomorphisme $\rho:A\to B$ correspondant à $f$ est égal à
+$\varprojlim\rho_n$, l'idéal $\mathfrak{J}B$ de $B$ est dense dans
+$\mathfrak{K}$, et comme tout idéal de $B$ est fermé
+(\hyperref[0.7.3.5-fr]{0, 7.3.5}), on a $\mathfrak{K}=\mathfrak{J}B$. Si
+$\mathscr{K}=\mathfrak{K}^\Delta$, la relation
+$f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}=\mathscr{K}$ résulte alors de
+(\hyperref[I.10.10.9-fr]{10.10.9}) et achève la démonstration.
+
+\begin{env}[10.12.3.2]
+\label{I.10.12.3.2-fr}
+L'équivalence précédente fournit, pour deux $\mathfrak{S}$-préschémas
+adiques $\mathfrak{X}$, $\mathfrak{Y}$, une \emph{bijection canonique}
+\[
+  \operatorname{Hom}_{\mathfrak{S}}(\mathfrak{X},\mathfrak{Y})
+  \xrightarrow{\sim}
+  \varprojlim_n\operatorname{Hom}_{S_n}(X_n,Y_n)
+\]
+la limite projective étant relative aux applications
+$u_n\to(u_n)_{(S_m)}$ pour $m\leq n$.
+\end{env}
+
+\subsection{Morphismes de type fini.}
+\label{subsection:I.10.13-fr}
+
+\begin{proposition}[10.13.1]
+\label{I.10.13.1-fr}
+Soient $\mathfrak{Y}$ un préschéma formel localement noethérien,
+$\mathscr{K}$ un Idéal de définition de $\mathfrak{Y}$,
+$f:\mathfrak{X}\to\mathfrak{Y}$ un morphisme de préschémas formels. Les
+conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $\mathfrak{X}$ est localement noethérien, $f$ est un morphisme
+    adique (\hyperref[I.10.12.1-fr]{10.12.1}) et si l'on pose
+    $\mathscr{J}=f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}$, le morphisme
+    $f_0:(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})
+    \to(\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})$ déduit de
+    $f$ est de type fini.
+  \item[b)] $\mathfrak{X}$ est localement noethérien, et est limite
+    inductive d'un $(Y_n)$-système inductif adique $(X_n)$ tel que le
+    morphisme $X_0\to Y_0$ soit de type fini.
+
+\oldpage[I]{208}
+
+  \item[c)] Tout point de $\mathfrak{Y}$ possède un voisinage ouvert formel
+    affine noethérien $V$ ayant la propriété suivante~:
+    \begin{enumerate}
+      \item[(\textbf{Q})] $f^{-1}(V)$ est réunion d'une famille finie
+        d'ouverts formels affines noethériens $U_i$ tels que l'anneau adique
+        noethérien $\Gamma(U_i,\mathscr{O}_{\mathfrak{X}})$ soit
+        topologiquement isomorphe au quotient d'une algèbre de séries
+        formelles restreintes (\hyperref[0.7.5.1-fr]{0, 7.5.1}) sur
+        $\Gamma(V,\mathscr{O}_{\mathfrak{Y}})$, par un idéal (nécessairement
+        fermé).
+    \end{enumerate}
+\end{enumerate}
+\end{proposition}
+
+Il est immédiat que a) entraîne b) en vertu de
+(\hyperref[I.10.12.3-fr]{10.12.3}). Pour montrer que b) entraîne c), on
+peut, puisque la question est locale sur $\mathfrak{Y}$, supposer que
+$\mathfrak{Y}=\operatorname{Spf}(B)$, où $B$ est adique noethérien~; soit
+$\mathscr{K}=\mathfrak{K}^\Delta$, $\mathfrak{K}$ étant un idéal de
+définition de $B$. Comme par hypothèse, $X_0$ est de type fini sur $Y_0$,
+$X_0$ est réunion finie d'ouverts affines $U_i$ tels que l'anneau $A_{i0}$
+du schéma affine induit par $X_0$ sur $U_i$ soit une algèbre de type fini sur
+l'anneau $B/\mathfrak{K}$ de $Y_0$
+(\hyperref[I.6.3.2-fr]{6.3.2}). En vertu de
+(\hyperref[I.5.1.9-fr]{5.1.9}), $U_i$ est aussi un ouvert affine dans chacun
+des préschémas noethériens $X_n$, et si $A_{in}$ est l'anneau du schéma
+affine induit par $X_n$ sur $U_i$, l'hypothèse b) entraîne que pour
+$m\leq n$, $A_{im}$ est isomorphe à
+$A_{in}/\mathfrak{K}^{m+1}A_{in}$. Par suite, le préschéma formel induit sur
+$U_i$ par $\mathfrak{X}$ est isomorphe à $\operatorname{Spf}(A_i)$, où
+$A_i=\varprojlim_n A_{in}$ (\hyperref[I.10.6.4-fr]{10.6.4})~; $A_i$ est un
+anneau $\mathfrak{K}A_i$-adique, et $A_i/\mathfrak{K}A_i$, isomorphe à
+$A_{i0}$, est une algèbre de type fini sur $B/\mathfrak{K}$. On en conclut
+(\hyperref[0.7.5.5-fr]{0, 7.5.5}) que $A_i$ est topologiquement isomorphe à
+un quotient d'une algèbre de séries formelles restreintes sur $B$ (par un
+idéal nécessairement fermé, puisqu'une telle algèbre est noethérienne
+(\hyperref[0.7.5.4-fr]{0, 7.5.4})).
+
+Pour démontrer que c) entraîne a), on peut se limiter au cas où
+$\mathfrak{X}=\operatorname{Spf}(A)$ est aussi affine, $A$ étant un anneau
+adique noethérien, isomorphe au quotient d'une algèbre de séries formelles
+restreintes sur $B$ par un idéal fermé. Alors
+(\hyperref[0.7.5.5-fr]{0, 7.5.5}), $A/\mathfrak{K}A$ est une algèbre de type
+fini sur $B/\mathfrak{K}$, et $\mathfrak{K}A=\mathfrak{J}$ est un idéal de
+définition de $A$, donc, en vertu de
+(\hyperref[I.10.10.9-fr]{10.10.9}), les conditions de a) sont satisfaites.
+
+On notera que si les conditions de la prop.
+(\hyperref[I.10.13.1-fr]{10.13.1}) sont remplies, la propriété a) est
+valable pour \emph{tout Idéal de définition $\mathscr{K}$} de
+$\mathfrak{Y}$ (en vertu de c)), et par suite, dans la propriété b),
+\emph{tous les $f_n$ sont des morphismes de type fini}.
+
+\begin{corollary}[10.13.2]
+\label{I.10.13.2-fr}
+Si les conditions de (\hyperref[I.10.13.1-fr]{10.13.1}) sont vérifiées,
+tout ouvert formel affine noethérien $V$ de $\mathfrak{Y}$ possède la
+propriété (\textbf{Q}) et si $\mathfrak{Y}$ est noethérien, il en est de
+même de $\mathfrak{X}$.
+\end{corollary}
+
+Cela résulte aussitôt de (\hyperref[I.10.13.1-fr]{10.13.1}) et de
+(\hyperref[I.6.3.2-fr]{6.3.2}).
+
+\begin{definition}[10.13.3]
+\label{I.10.13.3-fr}
+Lorsque les propriétés équivalentes a), b), c) de
+(\hyperref[I.10.13.1-fr]{10.13.1}) sont vérifiées, on dit que le morphisme
+$f$ est \emph{de type fini}, ou que $\mathfrak{X}$ est un
+\emph{$\mathfrak{Y}$-préschéma formel de type fini}, ou un
+\emph{préschéma formel de type fini au-dessus de $\mathfrak{Y}$}.
+\end{definition}
+
+\begin{corollary}[10.13.4]
+\label{I.10.13.4-fr}
+Soient $\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$ deux schémas formels affines
+noethériens~; pour que $\mathfrak{X}$ soit de type fini sur
+$\mathfrak{Y}$, il faut et il suffit que l'anneau adique noethérien $A$ soit
+isomorphe au quotient d'une algèbre de séries formelles restreintes sur $B$
+par un idéal fermé.
+\end{corollary}
+
+En effet, avec les notations de (\hyperref[I.10.13.1-fr]{10.13.1}), si
+$\mathfrak{X}$ est de type fini sur $\mathfrak{Y}$,
+$A/\mathfrak{K}A$ est alors une $(B/\mathfrak{K})$-algèbre de type fini en
+vertu de (\hyperref[I.6.3.3-fr]{6.3.3}) et $\mathfrak{K}A$ est un idéal de
+définition de $A$ (\hyperref[I.10.10.9-fr]{10.10.9}). On conclut donc par
+(\hyperref[0.7.5.5-fr]{0, 7.5.5}).
+
+\begin{proposition}[10.13.5]
+\label{I.10.13.5-fr}
+\medskip\noindent
+\begin{enumerate}
+  \item[\rm{(i)}] Le composé de deux morphismes de préschémas formels qui
+    sont de type fini est de type fini.
+
+\oldpage[I]{209}
+
+  \item[\rm{(ii)}] Soient $\mathfrak{X}$, $\mathfrak{S}$,
+    $\mathfrak{S}'$ trois préschémas formels localement noethériens (resp.
+    noethériens), $f:\mathfrak{X}\to\mathfrak{S}$,
+    $g:\mathfrak{S}'\to\mathfrak{S}$ deux morphismes. Si $f$ est de type
+    fini, $\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{S}'$ est localement
+    noethérien (resp. noethérien) et est de type fini sur $\mathfrak{S}'$.
+  \item[\rm{(iii)}] Soient $\mathfrak{S}$ un préschéma formel localement
+    noethérien, $\mathfrak{X}'$, $\mathfrak{Y}'$ deux
+    $\mathfrak{S}$-préschémas formels localement noethériens tels que
+    $\mathfrak{X}'\times_{\mathfrak{S}}\mathfrak{Y}'$ soit localement
+    noethérien. Si $\mathfrak{X}$, $\mathfrak{Y}$ sont des
+    $\mathfrak{S}$-préschémas formels localement noethériens,
+    $f:\mathfrak{X}\to\mathfrak{X}'$,
+    $g:\mathfrak{Y}\to\mathfrak{Y}'$ deux $\mathfrak{S}$-morphismes de
+    type fini, $\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ est
+    localement noethérien et $f\times_{\mathfrak{S}}g$ est un
+    $\mathfrak{S}$-morphisme de type fini.
+\end{enumerate}
+\end{proposition}
+
+(iii) se déduit de (i) et (ii) par le raisonnement formel de
+(\hyperref[I.3.5.1-fr]{3.5.1}) et il suffit donc de prouver (i) et (ii).
+
+Soient $\mathfrak{X}$, $\mathfrak{Y}$, $\mathfrak{Z}$ trois préschémas
+formels localement noethériens, $f:\mathfrak{X}\to\mathfrak{Y}$,
+$g:\mathfrak{Y}\to\mathfrak{Z}$ deux morphismes de type fini. Si
+$\mathscr{L}$ est un Idéal de définition de $\mathfrak{Z}$,
+$\mathscr{K}=g^*(\mathscr{L})\mathscr{O}_{\mathfrak{Y}}$ en est un pour
+$\mathfrak{Y}$ et
+$\mathscr{J}=f^*(g^*(\mathscr{L}))\mathscr{O}_{\mathfrak{X}}$ en est un
+pour $\mathfrak{X}$. Posons
+$X_0=(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J})$,
+$Y_0=(\mathfrak{Y},\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})$,
+$Z_0=(\mathfrak{Z},\mathscr{O}_{\mathfrak{Z}}/\mathscr{L})$ et soient
+$f_0:X_0\to Y_0$, $g_0:Y_0\to Z_0$ les morphismes correspondant à $f$ et
+$g$. Comme par hypothèse $f_0$ et $g_0$ sont de type fini, il en est de même
+de $g_0\circ f_0$ (\hyperref[I.6.3.4-fr]{6.3.4}) qui correspond à
+$g\circ f$~; donc $g\circ f$ est de type fini par
+(\hyperref[I.10.13.1-fr]{10.13.1}).
+
+Sous les conditions de (ii), $\mathfrak{S}$ (resp. $\mathfrak{X}$,
+$\mathfrak{S}'$) est limite inductive d'une suite $(S_n)$ (resp. $(X_n)$,
+$(S'_n)$) de préschémas localement noethériens et on peut supposer
+(\hyperref[I.10.13.1-fr]{10.13.1}) que
+$X_m=X_n\times_{S_n}S_m$ pour $m\leq n$. Le préschéma formel
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{S}'$ est alors limite inductive
+des préschémas $X_n\times_{S_n}S'_n$
+(\hyperref[I.10.7.4-fr]{10.7.4}), et on a
+\[
+  X_m\times_{S_m}S'_m
+  =(X_n\times_{S_n}S_m)\times_{S_m}S'_m
+  =(X_n\times_{S_n}S'_n)\times_{S'_n}S'_m.
+\]
+En outre, $X_0\times_{S_0}S'_0$ est localement noethérien puisque $X_0$
+est de type fini sur $S_0$ (\hyperref[I.6.3.8-fr]{6.3.8}). On en conclut
+d'abord (\hyperref[I.10.12.3.1-fr]{10.12.3.1}) que
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{S}'$ est localement
+noethérien~; en outre, comme $X_0\times_{S_0}S'_0$ est de type fini sur
+$S'_0$ (\hyperref[I.6.3.8-fr]{6.3.8}), il résulte de
+(\hyperref[I.10.12.3.1-fr]{10.12.3.1}) et de
+(\hyperref[I.10.13.1-fr]{10.13.1}) que
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{S}'$ est de type fini sur
+$\mathfrak{S}'$, ce qui achève de prouver (ii) (l'assertion relative aux
+préschémas noethériens étant conséquence immédiate de
+(\hyperref[I.6.3.8-fr]{6.3.8})).
+
+\begin{corollary}[10.13.6]
+\label{I.10.13.6-fr}
+Sous les hypothèses de (\hyperref[I.10.9.9-fr]{10.9.9}), si $f$ est un
+morphisme de type fini, il en est de même de son prolongement $\widehat f$
+aux complétés.
+\end{corollary}
+
+\subsection{Sous-préschémas fermés des préschémas formels.}
+\label{subsection:I.10.14-fr}
+
+\begin{proposition}[10.14.1]
+\label{I.10.14.1-fr}
+Soient $\mathfrak{X}$ un préschéma formel localement noethérien,
+$\mathscr{A}$ un faisceau d'idéaux cohérent de
+$\mathscr{O}_{\mathfrak{X}}$. Si $\mathfrak{Y}$ est le support (fermé) de
+$\mathscr{O}_{\mathfrak{X}}/\mathscr{A}$, l'espace topologiquement annelé
+$(\mathfrak{Y},(\mathscr{O}_{\mathfrak{X}}/\mathscr{A})|\mathfrak{Y})$ est
+un préschéma formel localement noethérien, qui est noethérien si
+$\mathfrak{X}$ l'est.
+\end{proposition}
+
+Notons que $\mathscr{O}_{\mathfrak{X}}/\mathscr{A}$ est cohérent en vertu de
+(\hyperref[I.10.10.3-fr]{10.10.3}) et
+(\hyperref[0.5.3.4-fr]{0, 5.3.4}), donc son support $\mathfrak{Y}$ est fermé
+(\hyperref[0.5.2.2-fr]{0, 5.2.2}). Soit $\mathscr{J}$ un Idéal de définition
+de $\mathfrak{X}$, et soit
+$X_n=(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$~; le
+faisceau d'anneaux $\mathscr{O}_{\mathfrak{X}}/\mathscr{A}$ est limite
+projective des faisceaux
+$\mathscr{O}_{\mathfrak{X}}/(\mathscr{A}+\mathscr{J}^{n+1})
+=(\mathscr{O}_{\mathfrak{X}}/\mathscr{A})
+\otimes_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$
+(\hyperref[I.10.11.3-fr]{10.11.3}), qui ont tous pour support
+$\mathfrak{Y}$. Le faisceau
+$(\mathscr{A}+\mathscr{J}^{n+1})/\mathscr{J}^{n+1}$ est un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent, puisque
+$\mathscr{J}^{n+1}$ est cohérent, donc
+$(\mathscr{A}+\mathscr{J}^{n+1})/\mathscr{J}^{n+1}$ est aussi un
+$(\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$-Module cohérent
+(\hyperref[0.5.3.10-fr]{0, 5.3.10})~; si $Y_n$ est le sous-préschéma fermé
+de $X_n$ défini par ce faisceau d'idéaux, il est immédiat que
+$(\mathfrak{Y},(\mathscr{O}_{\mathfrak{X}}/\mathscr{A})|\mathfrak{Y})$
+
+\oldpage[I]{210}
+est le préschéma formel limite inductive des $Y_n$, et comme les conditions de
+(\hyperref[I.10.6.4-fr]{10.6.4}) sont satisfaites, cela prouve que ce préschéma
+formel est localement noethérien, et noethérien si $\mathfrak{X}$ l'est (puisque
+alors $Y_0$ l'est en vertu de (\hyperref[I.6.1.4-fr]{6.1.4})).
+
+\begin{definition}[10.14.2]
+\label{I.10.14.2-fr}
+On appelle \emph{sous-préschéma fermé} d'un préschéma formel $\mathfrak{X}$ tout
+préschéma formel
+$(\mathfrak{Y},(\mathscr{O}_{\mathfrak{X}}/\mathscr{A})|\mathfrak{Y})$ où
+$\mathscr{A}$ est un $\mathscr{O}_{\mathfrak{X}}$-Module cohérent~; on dit que ce
+préschéma est le sous-préschéma fermé défini par $\mathscr{A}$.
+\end{definition}
+
+Il est clair que la correspondance ainsi définie entre
+$\mathscr{O}_{\mathfrak{X}}$-Modules cohérents et sous-préschémas fermés de
+$\mathfrak{X}$ est biunivoque.
+
+Le morphisme d'espaces topologiquement annelés
+$j=(\psi,\theta):\mathfrak{Y}\to\mathfrak{X}$, où $\psi$ est l'injection
+$\mathfrak{Y}\to\mathfrak{X}$ et $\theta^\sharp$ l'homomorphisme canonique
+$\mathscr{O}_{\mathfrak{X}}\to\mathscr{O}_{\mathfrak{X}}/\mathscr{A}$, est
+évidemment (\hyperref[I.10.4.5-fr]{10.4.5}) un morphisme de préschémas formels,
+qu'on appelle l'\emph{injection canonique} de $\mathfrak{Y}$ dans $\mathfrak{X}$.
+On notera que si $\mathfrak{X}=\operatorname{Spf}(A)$, où $A$ est adique
+noethérien, on a $\mathscr{A}=\mathfrak{a}^\Delta$, où $\mathfrak{a}$ est un
+idéal de $A$ (\hyperref[I.10.10.5-fr]{10.10.5}), et il résulte aussitôt de ce
+qui précède que l'on a alors
+$\mathfrak{Y}=\operatorname{Spf}(A/\mathfrak{a})$ à un isomorphisme près, et que
+$j$ correspond (\hyperref[I.10.2.2-fr]{10.2.2}) à l'homomorphisme canonique
+$A\to A/\mathfrak{a}$.
+
+On dit qu'un morphisme $f:\mathfrak{Z}\to\mathfrak{X}$ de préschémas formels
+localement noethériens est une \emph{immersion fermée} si elle se factorise en
+$\mathfrak{Z}\xrightarrow{g}\mathfrak{Y}\xrightarrow{j}\mathfrak{X}$, où $g$
+est un isomorphisme de $\mathfrak{Z}$ sur un sous-préschéma fermé
+$\mathfrak{Y}$ de $\mathfrak{X}$ et $j$ l'injection canonique. Comme $j$ est un
+monomorphisme d'espaces annelés, $g$ et $\mathfrak{Y}$ sont nécessairement
+\emph{uniques}.
+
+\begin{proposition}[10.14.3]
+\label{I.10.14.3-fr}
+Une immersion fermée est un morphisme de type fini.
+\end{proposition}
+
+On se ramène aussitôt au cas où $\mathfrak{X}$ est un schéma formel affine
+$\operatorname{Spf}(A)$ et $\mathfrak{Y}=\operatorname{Spf}(A/\mathfrak{a})$~;
+la proposition résulte de (\hyperref[I.10.13.1-fr]{10.13.1, c)}).
+
+\begin{lemma}[10.14.4]
+\label{I.10.14.4-fr}
+Soit $f:\mathfrak{Y}\to\mathfrak{X}$ un morphisme de préschémas formels
+localement noethériens, et soit $(U_\alpha)$ un recouvrement de
+$f(\mathfrak{Y})$ par des ouverts formels affines noethériens de
+$\mathfrak{X}$, tels que les $f^{-1}(U_\alpha)$ soient des ouverts formels
+affines noethériens de $\mathfrak{Y}$. Pour que $f$ soit une immersion fermée,
+il faut et il suffit que $f(\mathfrak{Y})$ soit une partie fermée de
+$\mathfrak{X}$ et que, pour tout $\alpha$, la restriction de $f$ à
+$f^{-1}(U_\alpha)$ corresponde (\hyperref[I.10.4.6-fr]{10.4.6}) à un
+homomorphisme surjectif
+$\Gamma(U_\alpha,\mathscr{O}_{\mathfrak{X}})\to
+\Gamma(f^{-1}(U_\alpha),\mathscr{O}_{\mathfrak{Y}})$.
+\end{lemma}
+
+Les conditions sont évidemment nécessaires. Inversement, si elles sont
+remplies, et si on désigne par $\mathfrak{a}_\alpha$ le noyau de
+$\Gamma(U_\alpha,\mathscr{O}_{\mathfrak{X}})\to
+\Gamma(f^{-1}(U_\alpha),\mathscr{O}_{\mathfrak{Y}})$, on définit un faisceau
+cohérent d'idéaux $\mathscr{A}$ de $\mathscr{O}_{\mathfrak{X}}$ en prenant
+$\mathscr{A}|U_\alpha=\mathfrak{a}_\alpha^\Delta$, et en prenant $\mathscr{A}$
+nul dans le complémentaire de la réunion des $U_\alpha$. En effet, puisque
+$f(\mathfrak{Y})$ est fermé et que le support de
+$\mathfrak{a}_\alpha^\Delta$ est $U_\alpha\cap f(\mathfrak{Y})$, tout revient
+à vérifier que $\mathfrak{a}_\alpha^\Delta$ et
+$\mathfrak{a}_\beta^\Delta$ induisent le même faisceau sur un ouvert formel
+affine noethérien $V\subset U_\alpha\cap U_\beta$. Or, la restriction de $f$
+à $f^{-1}(U_\alpha)$ étant une immersion fermée de ce préschéma formel dans
+$U_\alpha$, $f^{-1}(V)$ est un ouvert formel affine noethérien dans
+$f^{-1}(U_\alpha)$ et la restriction de $f$ à $f^{-1}(V)$ est une immersion
+fermée~; si $\mathfrak{b}$ est le noyau de l'homomorphisme surjectif
+$\Gamma(V,\mathscr{O}_{\mathfrak{X}})\to
+\Gamma(f^{-1}(V),\mathscr{O}_{\mathfrak{Y}})$ correspondant à cette
+restriction, il est immédiat (\hyperref[I.10.10.2-fr]{10.10.2}) que
+$\mathfrak{a}_\alpha^\Delta$ induit $\mathfrak{b}^\Delta$ sur $V$. Le faisceau
+d'idéaux $\mathscr{A}$ étant ainsi défini, il est alors clair que
+$f=g\circ j$, où $j:\mathfrak{Z}\to\mathfrak{X}$ est l'injection canonique du
+sous-préschéma fermé $\mathfrak{Z}$ de $\mathfrak{X}$ défini par
+$\mathscr{A}$, et $g$ un isomorphisme de $\mathfrak{Y}$ sur $\mathfrak{Z}$.
+
+\begin{proposition}[10.14.5]
+\label{I.10.14.5-fr}
+\begin{enumerate}
+  \item[\rm{(i)}] Si $f:\mathfrak{Z}\to\mathfrak{Y}$,
+  $g:\mathfrak{Y}\to\mathfrak{X}$ sont des immersions fermées de préschémas
+  formels localement noethériens, $g\circ f$ est une immersion fermée.
+
+\oldpage[I]{211}
+  \item[\rm{(ii)}] Soient $\mathfrak{X}$, $\mathfrak{Y}$, $\mathfrak{S}$ trois
+  préschémas formels localement noethériens,
+  $f:\mathfrak{X}\to\mathfrak{S}$ une immersion fermée,
+  $g:\mathfrak{Y}\to\mathfrak{S}$ un morphisme. Alors le morphisme
+  $\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}\to\mathfrak{Y}$ est une
+  immersion fermée.
+  \item[\rm{(iii)}] Soient $\mathfrak{S}$ un préschéma formel localement
+  noethérien, $\mathfrak{X}'$, $\mathfrak{Y}'$ deux
+  $\mathfrak{S}$-préschémas formels localement noethériens tels que
+  $\mathfrak{X}'\times_{\mathfrak{S}}\mathfrak{Y}'$ soit localement
+  noethérien. Si $\mathfrak{X}$, $\mathfrak{Y}$ sont des
+  $\mathfrak{S}$-préschémas formels localement noethériens,
+  $f:\mathfrak{X}\to\mathfrak{X}'$, $g:\mathfrak{Y}\to\mathfrak{Y}'$ deux
+  $\mathfrak{S}$-morphismes qui sont des immersions fermées, alors
+  $f\times_{\mathfrak{S}}g$ est une immersion fermée.
+\end{enumerate}
+\end{proposition}
+
+En vertu de (\hyperref[I.3.5.1-fr]{3.5.1}), il suffit encore de prouver (i)
+et (ii).
+
+Pour démontrer (i), on peut supposer que $\mathfrak{Y}$ (resp.
+$\mathfrak{Z}$) est un sous-préschéma fermé de $\mathfrak{X}$ (resp.
+$\mathfrak{Y}$) défini par un faisceau cohérent $\mathscr{J}$ (resp.
+$\mathscr{K}$) d'idéaux de $\mathscr{O}_{\mathfrak{X}}$ (resp.
+$\mathscr{O}_{\mathfrak{Y}}$)~; si $\psi$ est l'injection
+$\mathfrak{Y}\to\mathfrak{X}$ des espaces sous-jacents,
+$\psi_*(\mathscr{K})$ est un faisceau cohérent d'idéaux de
+$\psi_*(\mathscr{O}_{\mathfrak{Y}})
+=\mathscr{O}_{\mathfrak{X}}/\mathscr{J}$
+(\hyperref[0.5.3.12-fr]{0, 5.3.12}), donc aussi un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent
+(\hyperref[0.5.3.10-fr]{0, 5.3.10})~; le noyau $\mathscr{K}_1$ de
+$\mathscr{O}_{\mathfrak{X}}\to
+(\mathscr{O}_{\mathfrak{X}}/\mathscr{J})/\psi_*(\mathscr{K})$ est donc un
+faisceau cohérent d'idéaux de $\mathscr{O}_{\mathfrak{X}}$
+(\hyperref[0.5.3.4-fr]{0, 5.3.4}), et
+$\mathscr{O}_{\mathfrak{X}}/\mathscr{K}_1$ est isomorphe à
+$\psi_*(\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})$, ce qui prouve que
+$\mathfrak{Z}$ est isomorphe à un sous-préschéma fermé de $\mathfrak{X}$.
+
+Pour démontrer (ii), il est immédiat qu'on peut se limiter au cas où
+$\mathfrak{S}=\operatorname{Spf}(A)$,
+$\mathfrak{X}=\operatorname{Spf}(B)$,
+$\mathfrak{Y}=\operatorname{Spf}(C)$, $A$ étant un anneau
+$\mathfrak{J}$-adique noethérien, $B=A/\mathfrak{a}$, où $\mathfrak{a}$ est
+un idéal de $A$, $C$ une $A$-algèbre topologique adique et noethérienne. Tout
+revient à prouver que l'homomorphisme
+$C\to C\widehat{\otimes}_A(A/\mathfrak{a})$ est \emph{surjectif}~: or,
+$A/\mathfrak{a}$ est un $A$-module de type fini, et sa topologie est la
+topologie $\mathfrak{J}$-adique~; il résulte alors de
+(\hyperref[0.7.7.8-fr]{0, 7.7.8}) que
+$C\widehat{\otimes}_A(A/\mathfrak{a})$ s'identifie à
+$C\otimes_A(A/\mathfrak{a})=C/\mathfrak{a}C$, d'où notre assertion.
+
+\begin{corollary}[10.14.6]
+\label{I.10.14.6-fr}
+Sous les hypothèses de (\hyperref[I.10.14.5-fr]{10.14.5, (ii)}), soient
+$p:\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}\to\mathfrak{X}$,
+$q:\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}\to\mathfrak{Y}$ les
+projections, de sorte que le diagramme
+\[
+  \xymatrix{
+    \mathfrak{X} \ar[d]_{f}
+    & \mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}
+      \ar[l]_{p} \ar[d]^{q}\\
+    \mathfrak{S}
+    & \mathfrak{Y} \ar[l]^{g}
+  }
+\]
+est commutatif. Pour tout $\mathscr{O}_{\mathfrak{X}}$-Module cohérent
+$\mathscr{F}$, on a alors un isomorphisme canonique de
+$\mathscr{O}_{\mathfrak{Y}}$-Modules
+\[
+  \label{I.10.14.6.1-fr}
+  u:g^*(f_*(\mathscr{F}))
+  \xrightarrow{\sim}
+  q_*(p^*(\mathscr{F})).
+  \tag{10.14.6.1}
+\]
+\end{corollary}
+
+Pour définir un homomorphisme
+$g^*(f_*(\mathscr{F}))\to q_*(p^*(\mathscr{F}))$, on sait qu'il revient au
+même de définir un homomorphisme
+$f_*(\mathscr{F})\to g_*(q_*(p^*(\mathscr{F})))
+=f_*(p_*(p^*(\mathscr{F})))$
+(\hyperref[0.4.4.3-fr]{0, 4.4.3})~: nous prendrons $u=f_*(\rho)$, où $\rho$
+est l'homomorphisme canonique
+$\mathscr{F}\to p_*(p^*(\mathscr{F}))$
+(\hyperref[0.4.4.3-fr]{0, 4.4.3}). Pour voir que $u$ est un isomorphisme, on
+se ramène aussitôt au cas où $\mathfrak{S}$, $\mathfrak{X}$,
+$\mathfrak{Y}$ sont des spectres formels d'anneaux adiques noethériens $A$,
+$B$, $C$, avec les conditions vues ci-dessus dans
+(\hyperref[I.10.14.5-fr]{10.14.5, (ii)})~; on a alors
+$\mathscr{F}=M^\Delta$, où $M$ est un $(A/\mathfrak{a})$-module de type fini
+(\hyperref[I.10.10.5-fr]{10.10.5}), et les deux membres de
+(\hyperref[I.10.14.6.1-fr]{10.14.6.1}) s'identifient respectivement, en vertu
+de (\hyperref[I.10.10.8-fr]{10.10.8}), à
+$(C\otimes_A M)^\Delta$ et à
+$((C/\mathfrak{a}C)\otimes_{A/\mathfrak{a}}M)^\Delta$, d'où le corollaire,
+puisque
+$(C/\mathfrak{a}C)\otimes_{A/\mathfrak{a}}M
+=(C\otimes_A(A/\mathfrak{a}))\otimes_{A/\mathfrak{a}}M$ s'identifie
+canoniquement à $C\otimes_A M$.
+
+\oldpage[I]{212}
+\begin{corollary}[10.14.7]
+\label{I.10.14.7-fr}
+Soient $X$ un préschéma usuel localement noethérien, $Y$ un sous-préschéma
+fermé de $X$, $j$ l'injection canonique $Y\to X$, $X'$ une partie fermée de
+$X$ et $Y'=Y\cap X'$~; alors
+$\widehat{j}:Y_{/Y'}\to X_{/X'}$ est une immersion fermée, et pour tout
+$\mathscr{O}_Y$-Module cohérent $\mathscr{F}$, on a
+\[
+  \widehat{j}_*(\mathscr{F}_{/Y'})=(j_*(\mathscr{F}))_{/X'}.
+\]
+\end{corollary}
+
+Comme $Y'=j^{-1}(X')$, il suffit d'utiliser
+(\hyperref[I.10.9.9-fr]{10.9.9}) et d'appliquer
+(\hyperref[I.10.14.5-fr]{10.14.5}) et
+(\hyperref[I.10.14.6-fr]{10.14.6}).
+
+\subsection{Préschémas formels séparés.}
+\label{subsection:I.10.15-fr}
+
+\begin{definition}[10.15.1]
+\label{I.10.15.1-fr}
+Soient $\mathfrak{S}$ un préschéma formel, $\mathfrak{X}$ un
+$\mathfrak{S}$-préschéma formel,
+$f:\mathfrak{X}\to\mathfrak{S}$ le morphisme structural. On appelle
+morphisme diagonal
+$\Delta_{\mathfrak{X}|\mathfrak{S}}:\mathfrak{X}\to
+\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{X}$ (noté aussi
+$\Delta_{\mathfrak{X}}$) le morphisme
+$(1_{\mathfrak{X}},1_{\mathfrak{X}})_{\mathfrak{S}}$. On dit que
+$\mathfrak{X}$ est séparé sur $\mathfrak{S}$, ou un
+$\mathfrak{S}$-schéma formel, ou que $f$ est un morphisme séparé, si l'image
+par $\Delta_{\mathfrak{X}}$ de l'espace sous-jacent $\mathfrak{X}$ est une
+partie fermée de l'espace sous-jacent à
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{X}$. On dit qu'un préschéma
+formel $\mathfrak{X}$ est séparé, ou est un schéma formel, s'il est séparé
+sur $\mathbf{Z}$.
+\end{definition}
+
+\begin{proposition}[10.15.2]
+\label{I.10.15.2-fr}
+Supposons que les préschémas formels $\mathfrak{S}$, $\mathfrak{X}$ soient
+respectivement limites inductives des suites $(S_n)$, $(X_n)$ de
+préschémas usuels, et que le morphisme
+$f:\mathfrak{X}\to\mathfrak{S}$ soit limite inductive d'une suite de
+morphismes $f_n:X_n\to S_n$. Pour que $f$ soit séparé, il faut et il suffit
+que le morphisme $f_0:X_0\to S_0$ le soit.
+\end{proposition}
+
+En effet, $\Delta_{\mathfrak{X}|\mathfrak{S}}$ est alors limite inductive de
+la suite de morphismes $\Delta_{X_n|S_n}$
+(\hyperref[I.10.7.4-fr]{10.7.4}), et l'image par
+$\Delta_{\mathfrak{X}|\mathfrak{S}}$ de l'espace sous-jacent
+$\mathfrak{X}$ (resp. l'espace sous-jacent
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{X}$) est identique à l'image
+par $\Delta_{X_0|S_0}$ de l'espace sous-jacent $X_0$ (resp. à l'espace
+sous-jacent $X_0\times_{S_0}X_0$)~; d'où la conclusion.
+
+\begin{proposition}[10.15.3]
+\label{I.10.15.3-fr}
+On suppose dans ce qui suit que tous les préschémas formels (resp.
+morphismes de préschémas formels) considérés soient limites inductives de
+suites de préschémas usuels (resp. de morphismes de préschémas usuels).
+\begin{enumerate}
+  \item[\rm{(i)}] Le composé de deux morphismes séparés est séparé.
+  \item[\rm{(ii)}] Si $f:\mathfrak{X}\to\mathfrak{X}'$,
+  $g:\mathfrak{Y}\to\mathfrak{Y}'$ sont deux $\mathfrak{S}$-morphismes
+  séparés, $f\times_{\mathfrak{S}}g$ est séparé.
+  \item[\rm{(iii)}] Si $f:\mathfrak{X}\to\mathfrak{Y}$ est un
+  $\mathfrak{S}$-morphisme séparé, le $\mathfrak{S}'$-morphisme
+  $f_{(\mathfrak{S}')}$ est séparé pour toute extension
+  $\mathfrak{S}'\to\mathfrak{S}$ du préschéma formel de base.
+  \item[\rm{(iv)}] Si le composé $g\circ f$ de deux morphismes est séparé,
+  $f$ est séparé.
+\end{enumerate}
+\emph{(On sous-entend dans cet énoncé que si un même préschéma formel
+$\mathfrak{Z}$ intervient plusieurs fois dans une même proposition, on le
+considère comme limite inductive de la \emph{même} suite $(Z_n)$ de
+préschémas usuels partout où il figure, et les morphismes de $\mathfrak{Z}$
+dans un préschéma formel (resp. d'un préschéma formel dans $\mathfrak{Z}$)
+comme limites inductives de morphismes des $Z_n$ dans des préschémas usuels
+(resp. de préschémas usuels dans les $Z_n$)).}
+\end{proposition}
+
+Avec les notations de (\hyperref[I.10.15.2-fr]{10.15.2}), on a en effet
+$(g\circ f)_0=g_0\circ f_0$, et
+$(f\times_{\mathfrak{S}}g)_0=f_0\times_{S_0}g_0$~; les assertions de
+(\hyperref[I.10.15.3-fr]{10.15.3}) sont alors conséquences immédiates de
+(\hyperref[I.10.15.2-fr]{10.15.2}) et des assertions correspondantes de
+(\hyperref[I.5.5.1-fr]{5.5.1}) pour les préschémas usuels.
+
+Nous laissons au lecteur le soin d'énoncer pour la même espèce de
+préschémas formels et de morphismes que dans
+(\hyperref[I.10.15.3-fr]{10.15.3}) les propositions correspondant à
+(\hyperref[I.5.5.5-fr]{5.5.5}),
+
+\oldpage[I]{213}
+(\hyperref[I.5.5.9-fr]{5.5.9}) et
+(\hyperref[I.5.5.10-fr]{5.5.10}) (en y remplaçant «~ouvert affine~» par
+«~ouvert formel affine vérifiant la condition b) de
+(\hyperref[I.10.6.3-fr]{10.6.3})~»).
+
+Un raisonnement analogue montre aussi que tout schéma formel affine
+\emph{noethérien} est séparé, ce qui justifie la terminologie.
+
+\begin{proposition}[10.15.4]
+\label{I.10.15.4-fr}
+Soient $\mathfrak{S}$ un préschéma formel localement noethérien,
+$\mathfrak{X}$, $\mathfrak{Y}$ deux $\mathfrak{S}$-préschémas formels
+localement noethériens, tels que $\mathfrak{X}$ ou $\mathfrak{Y}$ soit de
+type fini sur $\mathfrak{S}$ (de sorte que
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ est localement noethérien)
+et que $\mathfrak{Y}$ soit séparé sur $\mathfrak{S}$. Soit
+$f:\mathfrak{X}\to\mathfrak{Y}$ un $\mathfrak{S}$-morphisme~; alors le
+morphisme graphe
+$\Gamma_f=(1_{\mathfrak{X}},f)_{\mathfrak{S}}:\mathfrak{X}\to
+\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ est une immersion fermée.
+\end{proposition}
+
+On peut supposer que $\mathfrak{S}$ est limite inductive d'une suite
+$(S_n)$ de préschémas localement noethériens, $\mathfrak{X}$ (resp.
+$\mathfrak{Y}$) limite inductive d'une suite $(X_n)$ (resp. $(Y_n)$) de
+$S_n$-préschémas, $f$ limite inductive d'une suite de $S_n$-morphismes
+$f_n:X_n\to Y_n$~; alors
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ est limite inductive de la
+suite $(X_n\times_{S_n}Y_n)$ et $\Gamma_f$ de la suite
+$(\Gamma_{f_n})$ (\hyperref[I.10.7.4-fr]{10.7.4})~; par hypothèse, $Y_0$ est
+séparé sur $S_0$ (\hyperref[I.10.15.2-fr]{10.15.2}), donc l'espace
+$\Gamma_{f_0}(X_0)$ est un sous-espace fermé de
+$X_0\times_{S_0}Y_0$~; comme les espaces sous-jacents de
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$ (resp.
+$\Gamma_f(\mathfrak{X})$) et $X_0\times_{S_0}Y_0$ (resp.
+$\Gamma_{f_0}(X_0)$) sont les mêmes, on voit déjà que
+$\Gamma_f(\mathfrak{X})$ est un sous-espace \emph{fermé} de
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$. Remarquons maintenant que
+lorsque $(U,V)$ parcourt l'ensemble des couples formés d'un ouvert formel
+affine noethérien $U$ (resp. $V$) de $\mathfrak{X}$ (resp.
+$\mathfrak{Y}$) tels que $f(U)\subset V$, les ouverts
+$U\times_{\mathfrak{S}}V$ forment un recouvrement de
+$\Gamma_f(\mathfrak{X})$ dans
+$\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}$, et si
+$f_U:U\to V$ est la restriction de $f$ à $U$,
+$\Gamma_{f_U}:U\to U\times_{\mathfrak{S}}V$ est la restriction de
+$\Gamma_f$ à $U$. Si nous montrons que $\Gamma_{f_U}$ est une immersion
+fermée, il en sera donc de même de $\Gamma_f$
+(\hyperref[I.10.14.4-fr]{10.14.4}), autrement dit, on est ramené au cas où
+$\mathfrak{S}=\operatorname{Spf}(A)$,
+$\mathfrak{X}=\operatorname{Spf}(B)$,
+$\mathfrak{Y}=\operatorname{Spf}(C)$ sont affines ($A$, $B$, $C$ adiques
+noethériens), $f$ correspondant à un $A$-homomorphisme continu
+$\varphi:C\to B$~; $\Gamma_f$ correspond alors à l'unique homomorphisme
+continu $\omega:B\widehat{\otimes}_A C\to B$ qui, composé avec les
+homomorphismes canoniques $B\to B\widehat{\otimes}_A C$ et
+$C\to B\widehat{\otimes}_A C$, donne respectivement l'identité et
+$\varphi$. Or, il est clair que $\omega$ est \emph{surjectif}, d'où notre
+assertion.
+
+\begin{corollary}[10.15.5]
+\label{I.10.15.5-fr}
+Soient $\mathfrak{S}$ un préschéma formel localement noethérien,
+$\mathfrak{X}$ un $\mathfrak{S}$-préschéma de type fini~; pour que
+$\mathfrak{X}$ soit séparé sur $\mathfrak{S}$, il faut et il suffit que le
+morphisme diagonal
+$\mathfrak{X}\to\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{X}$ soit une
+immersion fermée.
+\end{corollary}
+
+\begin{proposition}[10.15.6]
+\label{I.10.15.6-fr}
+Une immersion fermée $j:\mathfrak{Y}\to\mathfrak{X}$ de préschémas formels
+localement noethériens est un morphisme séparé.
+\end{proposition}
+
+Avec les notations de (\hyperref[I.10.14.2-fr]{10.14.2}),
+$j_0:Y_0\to X_0$ est une immersion fermée, donc un morphisme séparé, et il
+suffit d'appliquer (\hyperref[I.10.15.2-fr]{10.15.2}).
+
+\begin{proposition}[10.15.7]
+\label{I.10.15.7-fr}
+Soient $X$ un préschéma (usuel) localement noethérien, $X'$ une partie
+fermée de $X$ et $\widehat{X}=X_{/X'}$. Pour que $\widehat{X}$ soit séparé,
+il faut et il suffit que $\widehat{X}_{\mathrm{red}}$ le soit, et il suffit
+que $X$ le soit.
+\end{proposition}
+
+En effet, avec les notations de (\hyperref[I.10.8.5-fr]{10.8.5}), pour que
+$\widehat{X}$ soit séparé, il faut et il suffit que $X'_0$ le soit
+(\hyperref[I.10.15.2-fr]{10.15.2}), et comme
+$\widehat{X}_{\mathrm{red}}=(X'_0)_{\mathrm{red}}$, il est équivalent de
+dire que $\widehat{X}_{\mathrm{red}}$ l'est
+(\hyperref[I.5.5.1-fr]{5.5.1, (vi)}).
