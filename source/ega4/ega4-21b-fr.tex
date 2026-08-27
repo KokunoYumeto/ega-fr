@@ -1,0 +1,1611 @@
+\subsection{Cycle 1-codimensionnel associé à un diviseur}
+\label{subsection:IV.21.6}
+\label{IV.21.6}
+
+\begin{env}[21.6.1]
+\label{IV.21.6.1}
+Soit $X$ un préschéma localement noethérien, et soit $\mathfrak{I}(X)$ l'ensemble des \emph{parties fermées irréductibles} de $X$ (qui est en correspondance biunivoque avec $X$ par l'application $x\mapsto\overline{\{x\}}$).
+Dans le groupe produit $\bb{Z}^X$, considérons le sous-groupe $\mathfrak{Z}(X)$ des éléments $(n_x)_{x\in X}$ tels que l'ensemble des $\overline{\{x\}}\in\mathfrak{I}(X)$ tels que $n_x\neq0$ (ou, ce qui revient au même, l'ensemble des $x\in X$ tels que $n_x\neq0$) soit localement fini.
+Il est clair que $\mathfrak{Z}(X)$ est un sous-groupe de $\bb{Z}^X$ qui contient le groupe somme directe $\bb{Z}^{(X)}$ (groupe libre ayant pour base $\mathfrak{I}(X)$), et lui est égal lorsque $X$ est noethérien.
+Les éléments de $\mathfrak{Z}(X)$ sont appelés \emph{cycles} sur $X$ et ceux de $\mathfrak{I}(X)$ \emph{cycles premiers} (ils ne forment pas en général une base de $\mathfrak{Z}(X)$ lorsque $X$ n'est pas noethérien).
+On considère toujours $\mathfrak{Z}(X)$ comme ordonné par l'ordre induit sur ce sous-groupe par l'ordre produit de $\bb{Z}^X$ et on notera $\mathfrak{Z}^+(X)$ l'ensemble des cycles $\geq0$.
+
+\oldpage[IV-4]{271}
+
+Pour tout cycle $Z\in\mathfrak{Z}(X)$, égal à $(n_x)_{x\in X}$, on écrira par abus de langage,
+\[
+  Z=\sum_{x\in X}n_x\cdot\overline{\{x\}}.
+\]
+On appelle \emph{multiplicité de $Z$ au point $x$} et on note $\operatorname{mult}_x(Z)$ l'entier $n_x$ (positif ou négatif).
+Dire que $Z\geq0$ signifie que $\operatorname{mult}_x(Z)\geq0$ pour tout $x\in X$.
+On appelle \emph{support de $Z$} et on note $\Supp(Z)$ la réunion des $\overline{\{x\}}$ tels que $\operatorname{mult}_x(Z)\neq0$;
+par définition de $\mathfrak{Z}(X)$, c'est une partie fermée de $X$, comme réunion d'une famille localement finie de parties fermées.
+On appelle \emph{dimension} (resp.\ \emph{codimension}) de $Z$ et on note $\dim(Z)$ (resp.\ $\codim(Z)$) la dimension (resp.\ codimension dans $X$) de $\Supp(Z)$.
+\end{env}
+
+\begin{env}[21.6.2]
+\label{IV.21.6.2}
+On dit qu'une partie fermée $Y$ de $X$ est \emph{purement de codimension $p$} (dans $X$) si \emph{chacune} de ses composantes irréductibles est de codimension $p$ dans $X$.
+On dit qu'un cycle est \emph{purement de codimension $p$}, ou (par abus de langage) est un \emph{cycle $p$-codimensionnel}, si son support est purement de codimension $p$.
+On note $X^{(p)}$ l'ensemble des $x\in X$ tels que $\codim(\overline{\{x\}},X)=p$, ou, ce qui revient au même \sref{IV.5.1.2}, $\dim(\sh{O}_{X,x})=p$:
+les cycles purement de codimension $p$ forment un sous-groupe $\mathfrak{Z}^p(X)$ de $\mathfrak{Z}(X)$, isomorphe au sous-groupe de $\bb{Z}^{X^{(p)}}$ formé des $(n_x)_{x\in X^{(p)}}$ tels que l'ensemble des $\overline{\{x\}}$ (ou l'ensemble des $x$) pour lesquels $n_x\neq0$ soit localement fini;
+ce sous-groupe contient le groupe libre $\bb{Z}^{(X^{(p)})}$ et lui est identique lorsque $X$ est noethérien.
+On note $\mathfrak{Z}^{p+}(X)$ l'ensemble des éléments $\geq0$ de $\mathfrak{Z}^p(X)$.
+Il est clair que le groupe ordonné $\mathfrak{Z}(X)$ contient la somme directe des sous-groupes ordonnés $\mathfrak{Z}^p(X)$, et est identique à cette somme directe lorsque $X$ est noethérien;
+dans ce dernier cas, on considère $\mathfrak{Z}(X)$ comme \emph{gradué} par les $\mathfrak{Z}^p(X)$ pour $p\in\bb{N}$.
+\end{env}
+
+\begin{env}[21.6.3]
+\label{IV.21.6.3}
+Soient $Z=\sum_{x\in X}n_x\cdot\overline{\{x\}}$ un cycle sur $X$, $U$ un ouvert de $X$;
+on appelle \emph{restriction} de $Z$ à $U$ et on note $Z|U$ le cycle $\sum_{x\in U}n_x\cdot(U\cap\overline{\{x\}})$ sur $U$;
+on a $\Supp(Z|U)=\Supp(Z)\cap U$.
+Il est clair que $Z\mapsto Z|U$ est un homomorphisme de groupes ordonnés de $\mathfrak{Z}(X)$ dans $\mathfrak{Z}(U)$ (resp.\ de $\mathfrak{Z}^p(X)$ dans $\mathfrak{Z}^p(U)$), et que si $V$ est un ouvert contenu dans $U$, on a $Z|V=(Z|U)|V$;
+l'application $U\mapsto\mathfrak{Z}(U)$ (resp.\ $U\mapsto\mathfrak{Z}^p(U)$) est donc un \emph{préfaisceau} sur $X$ de groupes ordonnés commutatifs.
+En fait ce préfaisceau est un \emph{faisceau}, somme directe des faisceaux $(i_x)_*(\bb{Z}_{\overline{\{x\}}})$, où $x$ parcourt $X$ (resp.\ $X^{(p)}$) et pour chaque $x\in X$, $i_x$ est l'injection canonique $\overline{\{x\}}\to X$ et $\bb{Z}_{\overline{\{x\}}}$ est le faisceau simple associé au faisceau constant $\bb{Z}$ sur l'espace $\overline{\{x\}}$:
+cela résulte aussitôt de la description des sections d'une somme directe de faisceaux de groupes commutatifs (G, II, 2.7).
+On note ce faisceau $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+On note $\mathscr{Z}_X^+$ (resp.\ $\mathscr{Z}_X^{p+}$) le sous-faisceau
+\oldpage[IV-4]{272}
+de monoïdes $U\mapsto\mathfrak{Z}^+(U)$ (resp.\ $U\mapsto\mathfrak{Z}^{p+}(U)$) de $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+Le faisceau $\mathscr{Z}_X$ est évidemment \emph{somme directe} des faisceaux $\mathscr{Z}_X^p$.
+
+Notons enfin que les faisceaux $\mathscr{Z}_X^p$ (donc aussi $\mathscr{Z}_X$) sont \emph{flasques}.
+Supposons en effet donnée une section $Z$ de $\mathscr{Z}_X^p$ au-dessus d'un ouvert $U$, de sorte que l'ensemble $S$ des $x\in U$ tels que $\operatorname{mult}_x(Z)\neq0$ est localement fini \emph{dans} $U$;
+cet ensemble est aussi localement fini \emph{dans} $X$, car pour tout $z\in X$ et tout voisinage ouvert noethérien $V$ de $z$, $U\cap V$ est noethérien, donc ne contient qu'un nombre fini de points de $S$.
+On définit donc une section $Z'$ de $\mathscr{Z}_X^p$ au-dessus de $X$ en posant $Z'=\sum_{x\in U}\operatorname{mult}_x(Z)\cdot\overline{\{x\}}$ et puisque l'adhérence de $x$ dans $U$ est $\overline{\{x\}}\cap U$, on a bien $Z'|U=Z$, d'où notre assertion.
+\end{env}
+
+\begin{env}[21.6.4]
+\label{IV.21.6.4}
+Nous nous proposons de définir un homomorphisme canonique
+\[
+\label{IV.21.6.4.1}
+  c:\sh{D}iv_X\to\mathscr{Z}_X^1
+  \tag{21.6.4.1}
+\]
+de faisceaux de groupes commutatifs.
+Il suffit évidemment de définir un homomorphisme de $\sh{M}_X^*$ dans $\mathscr{Z}_X^1$, qui s'annule dans $\sh{O}_X^*$ \sref{IV.21.1.2};
+or, par définition, $\sh{M}_X^*$ est le \emph{symétrisé} du faisceau de monoïdes $\sh{O}_X\cap\sh{M}_X^*$, et un homomorphisme $\sh{M}_X^*\to\mathscr{Z}_X^1$ est déterminé de façon unique par la donnée de sa restriction $\sh{S}(\sh{O}_X)\to\mathscr{Z}_X^1$ qui est un homomorphisme de faisceaux de \emph{monoïdes} soumis à la seule condition d'être nul dans $\sh{O}_X^*$;
+il revient au même de dire que pour définir $c$, il suffit de définir un homomorphisme de \emph{faisceaux de monoïdes}
+\[
+\label{IV.21.6.4.2}
+  c:\sh{D}iv_X^+\to\mathscr{Z}_X^{1+}.
+  \tag{21.6.4.2}
+\]
+\end{env}
+
+\begin{env}[21.6.5]
+\label{IV.21.6.5}
+Or, on a vu qu'à tout diviseur positif $D$ sur $X$ on fait correspondre le sous-préschéma fermé $Y(D)$ de $X$, défini par l'Idéal $\sh{J}_X(D)\subset\sh{O}_X$, et qui est régulièrement immergé et de codimension $1$.
+En chacun des points maximaux $x$ de $Y(D)$, on a donc (\sref{IV.19.1.4} et \sref{IV.5.1.2}) $\codim(\overline{\{x\}},X)=\dim(\sh{O}_{X,x})=1$, autrement dit $x\in X^{(1)}$;
+d'ailleurs l'ensemble de ces points maximaux est localement fini dans $X$ \sref{IV.3.1.6}, et $\sh{O}_{Y(D),x}$ est un anneau \emph{artinien}.
+En tout point $x\in X^{(1)}$ qui n'est pas point maximal de $Y(D)$, on a nécessairement $x\notin Y(D)$, donc $\sh{O}_{Y(D),x}=0$.
+Posons
+\[
+\label{IV.21.6.5.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{long}(\sh{O}_{Y(D),x})\cdot\overline{\{x\}}
+  \tag{21.6.5.1}
+\]
+qui est donc un élément de $\mathfrak{Z}^1(X)$.
+\end{env}
+
+\begin{proposition}[21.6.6]
+\label{IV.21.6.6}
+L'application $D\mapsto\operatorname{cyc}(D)$ est un homomorphisme du monoïde $\operatorname{Div}^+(X)$ dans $\mathfrak{Z}^{1+}(X)$.
+\end{proposition}
+
+\begin{proof}
+Tout revient à voir que pour deux diviseurs positifs $D$, $D'$, on a
+\[
+  \operatorname{cyc}(D+D')=\operatorname{cyc}(D)+\operatorname{cyc}(D').
+\]
+Or, on a \sref{IV.21.2.5} $\sh{J}_X(D+D')=\sh{J}_X(D)\sh{J}_X(D')$;
+tout revient à voir que si $x\in X^{(1)}$, si l'on pose $A=\sh{O}_{X,x}$, et si $t$ et $t'$ sont deux éléments réguliers de $A$, on a $\operatorname{long}(A/tt'A)=\operatorname{long}(A/tA)+\operatorname{long}(A/t'A)$;
+mais puisque $t$ est régulier, $tA/tt'A$ est isomorphe à $A/t'A$, d'où aussitôt la proposition.
+\end{proof}
+
+Il résulte aussitôt des définitions que pour tout ouvert $U\subset X$, on a
+\[
+  Y(D|U)=Y(D)\cap U,
+\]
+\oldpage[IV-4]{273}
+donc $\operatorname{cyc}(D|U)=\operatorname{cyc}(D)|U$, et les homomorphismes $\operatorname{cyc}:\operatorname{Div}^+(U)\to\mathfrak{Z}^1(U)$ définissent donc un homomorphisme de faisceaux de monoïdes \sref{IV.21.6.4.2}, d'où l'homomorphisme cherché \sref{IV.21.6.4.1} de faisceaux de groupes.
+
+On a $\Supp(\operatorname{cyc}(D))\subset\Supp(D)$ pour tout diviseur $D$ et
+\begin{env}[21.6.6.2]
+\label{IV.21.6.6.2}
+\[
+  \Supp(\operatorname{cyc}(D))=\Supp(D)\quad\text{lorsque}\quad D\geq0;
+\]
+\end{env}
+on a déjà vu en effet la seconde relation \sref{IV.21.2.12};
+lorsque $D$ est quelconque, la relation $D_x=0$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ tel que $D|U=0$, d'où $\operatorname{cyc}(D)|U=0$, ce qui prouve notre assertion.
+
+\begin{env}[21.6.7]
+\label{IV.21.6.7}
+L'homomorphisme \sref{IV.21.6.4.1} donne, par passage aux groupes de sections au-dessus de $X$, un \emph{homomorphisme croissant de groupes ordonnés} $\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$, que nous noterons encore $D\mapsto\operatorname{cyc}(D)$;
+le nombre $\operatorname{mult}_x(\operatorname{cyc}(D))$ pour $x\in X^{(1)}$ se note encore $\operatorname{mult}_x(D)$ ou $\operatorname{mult}_{\overline{\{x\}}}(D)$ et s'appelle \emph{multiplicité du diviseur $D$ au point $x$}, ou \emph{multiplicité du cycle premier $\overline{\{x\}}$ dans $D$};
+c'est un entier positif ou négatif, égal comme on l'a vu à $\operatorname{long}(\sh{O}_{Y(D),x})$ lorsque $D$ est un diviseur \emph{positif};
+on a donc par définition
+\[
+\label{IV.21.6.7.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{mult}_x(D)\cdot\overline{\{x\}},
+  \tag{21.6.7.1}
+\]
+et en vertu du fait que $D\mapsto\operatorname{cyc}(D)$ est un homomorphisme, on a
+\[
+\label{IV.21.6.7.2}
+  \operatorname{mult}_x(-D)=-\operatorname{mult}_x(D),\qquad
+  \operatorname{mult}_x(D+D')=\operatorname{mult}_x(D)+\operatorname{mult}_x(D')
+  \tag{21.6.7.2}
+\]
+pour deux diviseurs quelconques $D$, $D'$.
+
+Pour toute fonction méromorphe régulière $f$ sur $X$, on pose en particulier, pour $x\in X^{(1)}$
+\[
+\label{IV.21.6.7.3}
+  o_x(f)=\operatorname{mult}_x(\operatorname{div}(f))
+  \tag{21.6.7.3}
+\]
+et on dit que $o_x(f)$ (entier positif ou négatif) est \emph{l'ordre de $f$ au point} $x\in X^{(1)}$.
+Si $f_x\in\sh{O}_{X,x}$ (élément régulier de cet anneau local par hypothèse), on a donc
+\[
+\label{IV.21.6.7.4}
+  o_x(f)=\operatorname{long}(\sh{O}_{X,x}/f_x\sh{O}_{X,x});
+  \tag{21.6.7.4}
+\]
+pour deux fonctions méromorphes régulières $f$, $f'$ sur $X$, on a
+\[
+\label{IV.21.6.7.5}
+  o_x(ff')=o_x(f)+o_x(f'),\qquad o_x(f^{-1})=-o_x(f)
+  \tag{21.6.7.5}
+\]
+pour tout $x\in X^{(1)}$.
+Les cycles $1$-codimensionnels
+\[
+  Z^+(f)=\sum_{x\in X^{(1)}}(o_x(f))^+\cdot\overline{\{x\}},\qquad
+  Z^-(f)=\sum_{x\in X^{(1)}}(o_x(f))^-\cdot\overline{\{x\}}
+\]
+sont appelés respectivement le \emph{cycle des zéros} et le \emph{cycle des pôles} (ou \emph{cycle polaire}) de $f$, et l'on a évidemment $\operatorname{cyc}(\operatorname{div}(f))=Z^+(f)-Z^-(f)$.
+Les cycles $1$-codimensionnels de la forme $\operatorname{cyc}(\operatorname{div}(f))$ sont appelés \emph{principaux} (ou \emph{linéairement équivalents à zéro}) et forment un sous-groupe $\mathfrak{Z}^1_\mathrm{princ}(X)$ de $\mathfrak{Z}^1(X)$.
+Les sections au-dessus de $X$ de l'image $c(\sh{D}iv_X)\subset\mathscr{Z}_X^1$ sont
+\oldpage[IV-4]{274}
+appelées \emph{cycles localement principaux};
+un tel cycle $Z$ est donc caractérisé par le fait que, pour tout $y\in X$, il y a un voisinage ouvert $U$ de $y$ dans $X$ et une fonction méromorphe régulière $f$ sur $U$ telle que $Z|U=\sum_{x\in U\cap X^{(1)}}o_x(f)(\overline{\{x\}}\cap U)$.
+Si $Z=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}$, il revient au même de dire que, pour tout $y\in X$, si l'on pose $T_y=\Spec(\sh{O}_{X,y})$ et $Z_y=\sum_{x\in X^{(1)}\cap T_y}n_x(\overline{\{x\}}\cap T_y)$, $Z_y$ est \emph{principal}, autrement dit il existe une fonction méromorphe régulière $g$ sur $T_y$ telle que $Z_y=\operatorname{cyc}(\operatorname{div}(g))$.
+Cela résulte aussitôt en effet de la définition précédente et de \sref{IV.20.3.7} qui établit une correspondance biunivoque entre les fonctions méromorphes régulières sur $T_y$ et les germes de fonctions méromorphes régulières sur les voisinages ouverts de $y$ dans $X$ lorsque $X$ est localement noethérien.
+On exprime encore le fait que $Z_y$ est principal en disant que $Z$ est \emph{principal au point $y$}.
+L'ensemble des points où $Z$ est principal est évidemment \emph{ouvert}, en vertu de ce qui précède.
+
+On déduit de l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ un homomorphisme $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$, en vertu de la définition de $\mathfrak{Z}^1_\mathrm{princ}(X)$.
+On dit que le groupe $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$ est le \emph{groupe des classes de cycles $1$-codimensionnels} de $X$ et on le note $\mathfrak{Cl}(X)$.
+Deux éléments de $\mathfrak{Z}^1(X)$ ayant même image dans $\mathfrak{Cl}(X)$ sont appelés \emph{linéairement équivalents}.
+\end{env}
+
+\begin{env}[21.6.8]
+\label{IV.21.6.8}
+Considérons en particulier le cas où $X=\Spec(A)$, où $A$ est un anneau \emph{noethérien intègre et intégralement clos}.
+Alors $X^{(1)}$ est l'ensemble des \emph{idéaux premiers de hauteur $1$} de $A$, et $\mathfrak{Z}^1(X)$ s'identifie donc au \emph{groupe des diviseurs} (au sens de N.~Bourbaki) de l'anneau de Krull $A$ (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~1, n\textsuperscript{o}~3, cor.\ du th.~2 et n\textsuperscript{o}~6, th.~3).
+
+Comme d'autre part, les fonctions méromorphes régulières sur $X$ s'identifient alors aux éléments non nuls du corps des fractions $K$ de $A$, l'application $f\mapsto\operatorname{cyc}(\operatorname{div}(f))$ de $M(X)$ dans $\mathfrak{Z}^1(X)$ s'identifie à l'application notée $f\mapsto\operatorname{div}(f)$ dans Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~1);
+$\mathfrak{Z}^1_\mathrm{princ}(X)$ s'identifie donc au \emph{groupe des diviseurs principaux} de $A$ au sens de Bourbaki, et $\mathfrak{Cl}(X)$ au \emph{groupe des classes de diviseurs} de $A$ au sens de Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~2 et n\textsuperscript{o}~10).
+\end{env}
+
+\begin{theorem}[21.6.9]
+\label{IV.21.6.9}
+Soit $X$ un préschéma localement noethérien normal.
+\begin{enumerate}[label=(\roman*)]
+  \item L'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est injectif et son image est formée des cycles localement principaux.
+  \item Les conditions suivantes sont équivalentes:
+  \begin{enumerate}[label=\emph{\alph*)}]
+    \item L'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est bijectif.
+    \item Tout cycle $1$-codimensionnel est localement principal.
+    \item Pour tout $x\in X$, l'anneau local $\sh{O}_{X,x}$ est factoriel.
+  \end{enumerate}
+  (On dit alors que $X$ est un préschéma \emph{localement factoriel}.)
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Il suffit de démontrer que
+\[
+\label{IV.21.6.9.1}
+  \operatorname{cyc}^{-1}(\mathfrak{Z}^{1+}(X))=\operatorname{Div}^+(X),
+  \tag{21.6.9.1}
+\]
+puisque l'on a $\operatorname{Div}^+(X)\cap(-\operatorname{Div}^+(X))=0$ et $\mathfrak{Z}^{1+}(X)\cap(-\mathfrak{Z}^{1+}(X))=0$.
+On est donc ramené à prouver que si $D$ est un diviseur sur $X$ tel que $\operatorname{mult}_x(D)\geq0$ pour tout $x\in X^{(1)}$, on a $D\geq0$.
+Or, pour tout $x\notin X^{(1)}$, l'anneau local $\sh{O}_{X,x}$ est intègre et intégralement clos et
+\oldpage[IV-4]{275}
+de dimension $0$ ou $\geq2$, donc on a $\operatorname{prof}(\sh{O}_{X,x})=0$ ou $\operatorname{prof}(\sh{O}_{X,x})\geq2$ \sref[0]{0.16.5.1}.
+D'autre part, aux points $x\in X^{(1)}$, l'anneau $\sh{O}_{X,x}$ est un anneau de valuation discrète (\sref[II]{II.7.1.6}), donc $\operatorname{prof}(\sh{O}_{X,x})=1$ \sref[0]{0.16.5.1};
+les seuls points de $X$ tels que $\operatorname{prof}(\sh{O}_{X,x})=1$ sont donc les points de $X^{(1)}$, et la conclusion résulte par suite de \sref{IV.21.1.8}.
+
+  \item L'équivalence de \emph{a)} et \emph{b)} est claire en vertu de (i).
+D'après la caractérisation des cycles localement principaux donnée dans \sref{IV.21.6.7}, et la relation entre cycles $1$-codimensionnels sur $\Spec(A)$ et diviseurs (au sens de Bourbaki) de l'anneau $A$ lorsque $A$ est un anneau noethérien intégralement clos \sref{IV.21.6.8}, la condition \emph{b)} équivaut à dire que pour tout $x\in X$, tout diviseur de l'anneau $\sh{O}_{X,x}$ est principal, autrement dit que l'anneau $\sh{O}_{X,x}$ est factoriel (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~3, n\textsuperscript{o}~1), d'où l'équivalence de \emph{b)} et \emph{c)}.
+\end{enumerate}
+\end{proof}
+
+\begin{env}[21.6.9.2]
+\label{IV.21.6.9.2}
+Lorsque $A$ est un anneau noethérien \emph{factoriel}, il est clair que $X=\Spec(A)$ est localement factoriel (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~3, n\textsuperscript{o}~4, prop.~3).
+Si, dans ce cas, on écrit un élément $f\neq0$ du corps des fractions $K$ de $A$ sous la forme $r/s$, où $r$ et $s$ sont deux éléments \emph{étrangers} de $A$, dont les diviseurs sont bien déterminés (\emph{loc.\ cit.}, \textsection~3, n\textsuperscript{o}~3), ces diviseurs s'identifient respectivement au \emph{diviseur des zéros} et au \emph{diviseur des pôles} de $f$ \sref{IV.21.6.7}.
+\end{env}
+
+\begin{corollary}[21.6.10]
+\label{IV.21.6.10}
+Soit $X$ un préschéma localement noethérien normal.
+\begin{enumerate}[label=(\roman*)]
+  \item Il existe un homomorphisme canonique injectif
+\[
+\label{IV.21.6.10.1}
+  \operatorname{Pic}(X)\to\mathfrak{Cl}(X).
+  \tag{21.6.10.1}
+\]
+
+  \item Si $X$ est localement factoriel, l'homomorphisme \sref{IV.21.6.10.1} est bijectif, et réciproquement.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+On a vu \sref{IV.21.6.7} que l'image de $\operatorname{Div.princ}(X)$ par l'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est $\mathfrak{Z}^1_\mathrm{princ}(X)$;
+on déduit donc de \sref{IV.21.6.9} que l'homomorphisme $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)=\mathfrak{Cl}(X)$ déduit de $\operatorname{cyc}$ est injectif, et qu'il est bijectif si et seulement si $X$ est localement factoriel.
+La conclusion résulte donc de ce que, lorsque $X$ est localement noethérien et réduit, l'homomorphisme canonique $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\operatorname{Pic}(X)$ \sref{IV.21.3.3.1} est bijectif \sref{IV.21.3.4}, (ii).
+\end{proof}
+
+\begin{corollary}[21.6.11]
+\label{IV.21.6.11}
+Soit $X$ un préschéma localement noethérien et localement factoriel.
+Alors le faisceau $\sh{D}iv_X$ est flasque, et pour tout ouvert $U$ de $X$, l'homomorphisme canonique $\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ est surjectif.
+\end{corollary}
+
+\begin{proof}
+Tenant compte de \sref{IV.21.6.9}, (ii), la première assertion équivaut à dire que le faisceau $\mathscr{Z}_X^1$ est flasque, ce qui a été vu plus haut \sref{IV.21.6.3}.
+Pour tout ouvert $U$ de $X$, l'homomorphisme canonique $\mathfrak{Z}^1(X)\to\mathfrak{Z}^1(U)$ est donc surjectif;
+comme en vertu de \sref{IV.21.6.10}, l'homomorphisme $\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ s'identifie canoniquement à $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)\to\mathfrak{Z}^1(U)/\mathfrak{Z}^1_\mathrm{princ}(U)$, il est aussi surjectif.
+\end{proof}
+
+\begin{proposition}[21.6.12]
+\label{IV.21.6.12}
+Soit $X$ un préschéma noethérien réduit.
+Soit $(U_\lambda)_{\lambda\in L}$ une famille filtrante décroissante d'ouverts de $X$ vérifiant les conditions suivantes:
+\begin{enumerate}
+  \item[\rm 1\textsuperscript{o}] Si $Y_\lambda=X-U_\lambda$, on a $\codim(Y_\lambda,X)\geq2$ pour tout $\lambda\in L$.
+  \item[\rm 2\textsuperscript{o}] Pour tout $x\in\bigcap_{\lambda\in L}U_\lambda$, l'anneau $\sh{O}_{X,x}$ est factoriel.
+\end{enumerate}
+Alors il existe des isomorphismes canoniques
+\[
+\label{IV.21.6.12.1}
+  \varinjlim\operatorname{Div}(U_\lambda)\simto\mathfrak{Z}^1(X),\qquad
+  \varinjlim\operatorname{Pic}(U_\lambda)\simto\mathfrak{Cl}(X)
+  \tag{21.6.12.1}
+\]
+tels que, pour tout ouvert $V$ de $X$, les diagrammes
+\[
+\label{IV.21.6.12.2}
+  \xymatrix{
+    \varinjlim\operatorname{Div}(U_\lambda) \ar[r]^-\sim \ar[d] & \mathfrak{Z}^1(X) \ar[d] & & \varinjlim\operatorname{Pic}(U_\lambda) \ar[r]^-\sim \ar[d] & \mathfrak{Cl}(X) \ar[d]\\
+    \varinjlim\operatorname{Div}(U_\lambda\cap V) \ar[r]^-\sim & \mathfrak{Z}^1(V) & & \varinjlim\operatorname{Pic}(U_\lambda\cap V) \ar[r]^-\sim & \mathfrak{Cl}(V)
+  }
+  \tag{21.6.12.2}
+\]
+soient commutatifs.
+\end{proposition}
+
+\begin{proof}
+L'hypothèse 1\textsuperscript{o} sur $U_\lambda$ implique que pour tout $\lambda\in L$, on a $X^{(1)}\subset U_\lambda$ \sref{IV.5.1.3.1} donc l'homomorphisme de restriction $\mathfrak{Z}^1(X)\to\mathfrak{Z}^1(U_\lambda)$ est bijectif et par suite on a un isomorphisme canonique $\varinjlim\mathfrak{Z}^1(U_\lambda)\simto\mathfrak{Z}^1(X)$.
+Les homomorphismes canoniques $\operatorname{cyc}:\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(U_\lambda)$ définissent donc, par passage à la limite inductive, le premier des homomorphismes canoniques \sref{IV.21.6.12.1}, et le second s'en déduit par passage aux quotients.
+En outre, il résulte de la condition 1\textsuperscript{o} que les $U_\lambda$ sont denses dans $X$, donc schématiquement denses puisque $X$ est réduit \sref{IV.11.10.4}, et par suite toute fonction méromorphe sur $X$ est entièrement déterminée par sa restriction à chaque $U_\lambda$;
+on déduit aussitôt de là que dans l'isomorphisme $\mathfrak{Z}^1(X)\simto\mathfrak{Z}^1(U_\lambda)$, l'image de $\mathfrak{Z}^1_\mathrm{princ}(X)$ est $\mathfrak{Z}^1_\mathrm{princ}(U_\lambda)$, donc on a aussi un isomorphisme canonique $\varinjlim\mathfrak{Cl}(U_\lambda)\simto\mathfrak{Cl}(X)$.
+Le second des homomorphismes canoniques \sref{IV.21.6.12.1} sera donc un isomorphisme si le premier l'est, et il reste donc à prouver ce dernier point, la commutativité des diagrammes \sref{IV.21.6.12.2} étant triviale.
+
+\oldpage[IV-4]{276}
+Montrons d'abord que l'homomorphisme $\varinjlim\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(X)$ est \emph{injectif}.
+Posons $T=\bigcap_\lambda U_\lambda$, et notons que les $U_\lambda$ forment un \emph{système fondamental de voisinages} de $T$.
+En effet, pour tout ouvert $V\supset T$, $X-V$ est un sous-espace fermé de $X$, donc un espace noethérien dont toute partie fermée irréductible admet un point générique;
+comme les ensembles $(X-V)\cap(X-U_\lambda)$ sont fermés dans $X-V$, forment une famille filtrante croissante et ont pour réunion $X-V$, notre assertion résulte de \sref[0]{0.9.2.4}.
+Cela étant, il s'agit de voir que si $D\in\operatorname{Div}(U_\lambda)$ est tel que $\operatorname{cyc}(D)=0$ dans $\mathfrak{Z}^1(U_\lambda)$, alors il existe $\mu\geq\lambda$ tel que $D|U_\mu=0$.
+En vertu de ce qui précède, il suffira de voir que pour tout $x\in T$, on a $D_x=0$;
+en effet, il y aura alors un voisinage $W(x)$ de $x$ dans $X$ tel que $D|W(x)=0$, et la réunion des $W(x)$ pour $x\in T$ contient un $U_\mu$.
+Compte tenu de \sref{IV.21.4.6}, on est donc ramené au cas où $X=\Spec(\sh{O}_{X,x})$ avec $x\in T$;
+mais par hypothèse $\sh{O}_{X,x}$ est factoriel, donc intègre et intégralement clos, et $\Spec(\sh{O}_{X,x})$ est alors normal;
+donc la conclusion résulte de \sref{IV.21.6.9}, (i).
+
+\oldpage[IV-4]{277}
+Pour prouver que l'homomorphisme $\varinjlim\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(X)$ est bijectif, il suffira de prouver de même que pour tout $Z\in\mathfrak{Z}^1(X)$ et tout $x\in T$, il y a un voisinage $W(x)$ de $x$ dans $X$ et un diviseur $D^{(x)}$ sur $W(x)$ tel que $\operatorname{cyc}(D^{(x)})=Z|W(x)$.
+En effet, on pourra alors recouvrir l'ensemble quasi-compact $T$ par un nombre fini de $W(x_i)$, et en vertu de la première partie de la démonstration, puisque les couples $(i,j)$ sont en nombre fini, il existera un indice $\lambda$ tel que dans chacun des $W(x_i)\cap W(x_j)\cap U_\lambda$, les restrictions de $D^{(x_i)}$ et $D^{(x_j)}$ coïncident;
+comme on peut supposer en outre que $U_\lambda$ est contenu dans la réunion des $W(x_i)$, on voit que les restrictions $D^{(x_i)}|(W(x_i)\cap U_\lambda)$ sont les restrictions d'un même diviseur $D\in\operatorname{Div}(U_\lambda)$ qui sera tel que $\operatorname{cyc}(D)=Z|U_\lambda$.
+On est donc ramené encore au cas où $X=\Spec(\sh{O}_{X,x})$ avec $x\in T$, mais comme $\sh{O}_{X,x}$ est factoriel, il en est de même de ses localisés (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~3, n\textsuperscript{o}~4, prop.~3), et il suffit d'appliquer \sref{IV.21.6.9}, (ii).
+\end{proof}
+
+\begin{corollary}[21.6.13]
+\label{IV.21.6.13}
+Soit $A$ un anneau local noethérien intègre et intégralement clos et de dimension $\geq2$.
+Posons $X=\Spec(A)$, et soient $a$ le point fermé de $X$, $U=X-\{a\}$.
+Pour que $A$ soit factoriel, il faut et il suffit que $U$ soit localement factoriel et que $\operatorname{Pic}(U)=0$.
+\end{corollary}
+
+\begin{proof}
+En effet, dire que $A$ est factoriel équivaut à dire que $\mathfrak{Cl}(X)=0$ (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~1, n\textsuperscript{o}~4, cor.\ du th.~2 et \textsection~3, n\textsuperscript{o}~2, th.~1);
+il suffit donc d'utiliser l'existence du second isomorphisme \sref{IV.21.6.12.1}, en prenant la famille $(U_\lambda)$ restreinte au seul ouvert $U$.
+\end{proof}
+
+\begin{corollary}[21.6.14]
+\label{IV.21.6.14}
+Soient $A$ un anneau local noethérien de dimension $\geq2$, $X=\Spec(A)$, $a$ le point fermé de $X$, $U=X-\{a\}$.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $A$ est factoriel.
+  \item $\operatorname{Pic}(U)=0$ et $\operatorname{prof}(A)\geq2$ (conditions que nous exprimerons plus loin \sref{IV.21.13} en disant que l'anneau $A$ est \emph{parafactoriel}), et $U$ est localement factoriel.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que si $A$ est factoriel, il est normal, donc $\operatorname{prof}(A)\geq2$ puisque $\dim(A)\geq2$ \sref[0]{0.16.5.1}, et \sref{IV.21.6.13} montre que \emph{a)} implique \emph{b)}.
+Inversement, si \emph{b)} est vérifiée, il suffit de voir que $A$ est intégralement clos pour en conclure par \sref{IV.21.6.13} que \emph{b)} entraîne \emph{a)}.
+En vertu du critère de Serre \sref{IV.5.8.6}, il suffit de vérifier pour $X$ les conditions $(\mathrm{R}_1)$ et $(\mathrm{S}_2)$.
+Or, $U$ étant localement factoriel vérifie ces conditions, et l'hypothèse $\operatorname{prof}(A)\geq2$ entraîne que $X$ les vérifie également.
+\end{proof}
+\subsection{Interprétation des cycles positifs 1-codimensionnels en termes de sous-préschémas}
+\label{subsection:IV.21.7}
+\label{IV.21.7}
+
+\begin{env}[21.7.1]
+\label{IV.21.7.1}
+Soient $X$ un préschéma localement noethérien, $C=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}$ un cycle $1$-codimensionnel positif (de sorte que l'on a $n_x\geq0$ pour tout $x\in X^{(1)}$, et $n_x=0$ sauf en un ensemble localement fini de points).
+Désignons par $Y(C)$ le sous-préschéma fermé de $X$, \emph{image fermée} (\sref[I]{I.9.5.3} et \sref{IV.9.5.1}) du préschéma \emph{somme} $Y'(C)=\coprod_{x\in X^{(1)}}\Spec(\sh{O}_{X,x}/\mathfrak{m}_x^{n_x})$ par le morphisme canonique, et par $\sh{J}_X(C)$ (ou $\sh{J}(C)$) l'Idéal de $\sh{O}_X$ définissant $Y(C)$.
+\end{env}
+
+\begin{proposition}[21.7.2]
+\label{IV.21.7.2}
+Soit $X$ un préschéma localement noethérien vérifiant la condition $(\mathrm{R}_1)$ \sref{IV.5.8.2}.
+Pour qu'un sous-préschéma fermé $Y$ de $X$ soit de la forme $Y(C)$, où $C$ est un cycle $1$-codimensionnel positif, il faut et il suffit qu'il vérifie les deux conditions suivantes:
+\begin{enumerate}[label=(\roman*)]
+  \item $Y$ est purement de codimension $1$.
+\oldpage[IV-4]{278}
+  \item $Y$ vérifie la condition $(\mathrm{S}_1)$, autrement dit \sref{IV.5.7.5} n'a pas de cycle premier associé immergé.
+\end{enumerate}
+On a alors
+\[
+\label{IV.21.7.2.1}
+  \operatorname{mult}_x(C)=\operatorname{long}\sh{O}_{Y,x}.
+  \tag{21.7.2.1}
+\]
+L'application $C\mapsto Y(C)$ est une bijection de $\mathfrak{Z}^{1+}(X)$ sur l'ensemble des sous-préschémas fermés de $X$ vérifiant les conditions (i) et (ii).
+\end{proposition}
+
+\begin{proof}
+Les conditions sont nécessaires (sans supposer que $X$ vérifie $(\mathrm{R}_1)$).
+En effet, la question étant locale sur $X$, on peut supposer que $X=\Spec(A)$, où $A$ est un anneau noethérien;
+on a alors $Y(C)=\Spec(A/\mathfrak{J})$, où $\mathfrak{J}$ est, par définition \sref[I]{I.9.5.1}, le noyau de l'homomorphisme canonique $A\to\bigoplus_i A_{\mathfrak{p}_i}/\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$, où les $\mathfrak{p}_i$ sont les idéaux premiers correspondant aux points $x\in X^{(1)}$ pour lesquels $n_x>0$, et où l'on a posé $n_i=n_x$.
+L'image réciproque $\mathfrak{q}_i$ de $\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$ dans $A$ est un idéal $\mathfrak{p}_i$-primaire et on a $\mathfrak{J}=\bigcap_i\mathfrak{q}_i$.
+D'ailleurs, comme les $x\in X^{(1)}$ sont tels que $\overline{\{x\}}$ est de codimension $1$, aucun point de $X^{(1)}$ ne peut être adhérent à un autre point de $X^{(1)}$.
+Donc les $\mathfrak{p}_i$ sont les idéaux premiers minimaux de $A/\mathfrak{J}$ et l'ensemble des $\mathfrak{p}_i$ est égal à $\operatorname{Ass}(A/\mathfrak{J})$, ce qui prouve les conditions (i) et (ii).
+
+Les conditions sont suffisantes.
+Désignant par $\sh{J}$ l'Idéal de $\sh{O}_X$ définissant $Y$, l'hypothèse (ii) implique que $\operatorname{Ass}(\sh{O}_X/\sh{J})$ est identique à l'ensemble $F$ des points maximaux de $Y$, et l'hypothèse (i) implique que $F$ est contenu dans $X^{(1)}$;
+donc \sref{IV.3.2.6} $\sh{O}_X/\sh{J}$ s'identifie à un sous-$\sh{O}_X$-Module de $\bigoplus_{x\in F}\mathscr{G}(x)$, où pour chaque $x\in F$, $\mathscr{G}(x)$ est un $\sh{O}_X$-Module irredondant tel que $\operatorname{Ass}(\mathscr{G}(x))=\{x\}$.
+Or, puisque $X$ vérifie $(\mathrm{R}_1)$, pour chaque $x\in F$, $\sh{O}_{X,x}$ est un anneau de valuation discrète et par suite les idéaux primaires non nuls de cet anneau sont les puissances $\mathfrak{m}_x^{n_x}$ de l'idéal maximal;
+supposant encore que $X=\Spec(A)$, on en conclut que $\sh{J}=\widetilde{\mathfrak{J}}$, où $\widetilde{\mathfrak{J}}=\bigcap_i\mathfrak{q}_i$, les $\mathfrak{q}_i$ étant les images réciproques dans $A$ d'idéaux $\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$, où les $\mathfrak{p}_i$ correspondent aux points de $F$.
+On voit donc bien que $Y$ est de la forme $Y(C)$.
+\end{proof}
+
+\begin{corollary}[21.7.3]
+\label{IV.21.7.3}
+Soit $X$ un préschéma localement noethérien.
+Pour tout diviseur positif $D$ sur $X$, tel que $X$ vérifie $(\mathrm{R}_1)$ aux points maximaux du sous-préschéma fermé $Y(D)$ \sref{IV.21.2.12}, $Y(D)$ majore le sous-préschéma fermé $Y(\operatorname{cyc}(D))$ \sref{IV.21.7.1}, et a même espace sous-jacent;
+pour que ces deux sous-préschémas soient égaux, il faut et il suffit que $Y(D)$ vérifie la condition $(\mathrm{S}_1)$, ou encore que, pour tout $z\in Y(D)$ distinct d'un point maximal de $Y(D)$, on ait $\operatorname{prof}(\sh{O}_{X,z})\geq2$ (condition toujours vérifiée lorsque $X$ est \emph{normal}).
+\end{corollary}
+
+\begin{proof}
+En effet, la question étant locale, on peut toujours supposer que $\sh{J}_X(D)=t\sh{O}_X$, $t$ étant une section régulière de $\sh{O}_X$ au-dessus de $X$;
+en tout point maximal $x$ de $Y(D)$, appartenant nécessairement à $X^{(1)}$, $\sh{O}_{X,x}$ est par hypothèse un anneau de valuation discrète, donc $t_x\sh{O}_{X,x}=\mathfrak{m}_x^{n_x}$ où $n_x=\operatorname{mult}_x(D)$.
+On peut supposer $X=\Spec(A)$, et alors, si $\sh{J}_X(\operatorname{cyc}(D))=\widetilde{\mathfrak{J}}$, il résulte de ce qui précède et de \sref{IV.21.7.1} que $\mathfrak{J}=tA$ et $\widetilde{\mathfrak{J}}$ ont mêmes \emph{idéaux primaires non immergés}, donc $\widetilde{\mathfrak{J}}\subset\mathfrak{J}$, puisque $\widetilde{\mathfrak{J}}$ est l'intersection
+\oldpage[IV-4]{279}
+de ces idéaux primaires \sref{IV.21.7.2}.
+Cela prouve que $Y(D)$ majore $Y(\operatorname{cyc}(D))$ et que ces deux sous-préschémas sont égaux si et seulement si $Y(D)$ n'a pas de cycle premier associé immergé (autrement dit vérifie $(\mathrm{S}_1)$).
+Comme pour tout $x\in Y(D)$, il y a par hypothèse un voisinage ouvert $U$ de $x$ dans $X$ et un élément régulier $t\in\Gamma(U,\sh{O}_X)$ tel que $\sh{O}_{Y(D)}|(U\cap Y(D))$ soit restriction à $Y(D)\cap U$ de $\sh{O}_U/t\sh{O}_U$, dire que $Y(D)$ vérifie $(\mathrm{S}_1)$ signifie aussi qu'en tout point $z\in Y(D)$ non maximal, on a $\operatorname{prof}(\sh{O}_{X,z}/t_z\sh{O}_{X,z})\geq1$, c'est-à-dire \sref[0]{0.16.4.6} $\operatorname{prof}(\sh{O}_{X,z})\geq2$.
+L'assertion concernant le cas où $X$ est normal est alors immédiate puisque $X$ vérifie $(\mathrm{S}_2)$ et qu'aux points non maximaux $z$ de $Y(D)$ on a $\dim(\sh{O}_{X,z})\geq2$ \sref[0]{0.16.3.4}.
+\end{proof}
+
+\begin{env}[21.7.3.1]
+\label{IV.21.7.3.1}
+On voit donc que lorsque $X$ est \emph{normal}, $\operatorname{Div}^+(X)$ s'identifie canoniquement à l'ensemble des sous-préschémas fermés $Y$ de $X$ vérifiant les conditions (i) et (ii) de \sref{IV.21.7.2} et \emph{régulièrement immergés} dans $X$.
+\end{env}
+
+\begin{proposition}[21.7.4]
+\label{IV.21.7.4}
+Soit $X$ un préschéma localement noethérien, réduit en chacun de ses points isolés.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] L'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ \sref{IV.21.6.4} est un isomorphisme de faisceaux de groupes ordonnés.
+  \item[\emph{a$'$)}] Tout cycle premier $1$-codimensionnel de $X$ est l'image par $\operatorname{cyc}$ d'un diviseur positif, et l'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ est injectif.
+  \item[\emph{a$''$)}] Pour tout sous-préschéma fermé intègre $Y$ de $X$, de codimension $1$, l'immersion canonique $Y\to X$ est régulière.
+  \item[\emph{b)}] $X$ est normal et l'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est bijectif.
+  \item[\emph{c)}] $X$ est localement factoriel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence de \emph{b)} et \emph{c)} a été démontrée dans \sref{IV.21.6.9}, ainsi que le fait que \emph{c)} entraîne \emph{a)}.
+De plus \emph{b)} entraîne \emph{a$''$)} en vertu de \sref{IV.21.7.3.1}, et \emph{a)} implique trivialement \emph{a$'$)}.
+Il reste à voir que \emph{a$'$)} ou \emph{a$''$)} entraîne \emph{c)}.
+
+Supposons donc vérifiée la condition \emph{a$'$)}, et montrons d'abord que $X$ est normal.
+Notons en premier lieu que si $X$ vérifie \emph{a$'$)}, il en est de même de tout schéma local $\Spec(\sh{O}_{X,x})$.
+Considérons alors $x\in X^{(1)}$, de sorte que $A=\sh{O}_{X,x}$ est un anneau local noethérien de dimension $1$.
+Appliquant la condition \emph{a$'$)} à $\Spec(A)$ et au cycle premier $1$-codimensionnel formé du point fermé de $\Spec(A)$, on voit que dans $A$ l'idéal maximal est engendré par un seul élément régulier dans $A$;
+donc \sref[0]{0.17.1.1} $A$ est un anneau régulier.
+Comme les anneaux localisés $A_{\mathfrak p}$ sont aussi réguliers \sref[0]{0.17.3.2}, on voit que $X$ est régulier en tous ses points maximaux non isolés;
+comme il est aussi réduit (donc régulier) en ses points isolés par hypothèse, on en conclut que $X$ vérifie la condition $(\mathrm{R}_1)$.
+Montrons en outre que $X$ vérifie aussi $(\mathrm{S}_1)$, autrement dit que pour tout $x\in X$ tel que $\dim(\sh{O}_{X,x})\geq1$, on a $\mathfrak{m}_x\notin\operatorname{Ass}(\sh{O}_{X,x})$ \sref[0]{0.16.4.6}.
+En effet, l'hypothèse \emph{a$'$)} appliquée à $X_1=\Spec(\sh{O}_{X,x})$ montre qu'il existe sur ce préschéma au moins un diviseur non nul, autrement dit que l'on a $\sh{M}_{X_1}^*\neq\sh{O}_{X_1}^*$, et il suffit d'appliquer \sref{IV.21.1.10}.
+On déduit donc déjà de ces résultats que $X$ est réduit \sref{IV.5.8.5}.
+Prouvons ensuite qu'il vérifie la condition $(\mathrm{S}_2)$ (ce qui établira que $X$ est normal, en vertu du critère de Serre \sref{IV.5.8.6}).
+Raisonnons par l'absurde en supposant que l'ensemble $E$ des points $x\in X$ où $X$ ne vérifie pas $(\mathrm{S}_2)$ soit non vide, et soit $x\in E$ un point pour lequel $\dim(\sh{O}_{X,x})$ est la plus petite possible;
+puisque $X$ vérifie $(\mathrm{S}_1)$, on a $\dim(\sh{O}_{X,x})\geq2$.
+Dans $X_1=\Spec(\sh{O}_{X,x})$, l'ouvert $U=X_1-\{x\}$ vérifie $(\mathrm{S}_2)$;
+montrons que $X_1$ vérifie $(\mathrm{S}_2)$, de sorte que l'on aura abouti à une contradiction.
+Il suffit, en vertu de \sref{IV.5.10.5}, de montrer que toute section $f$ de $\sh{O}_{X_1}$ au-dessus de $U$ se prolonge en une section de $\sh{O}_{X_1}$ au-dessus de $X_1$.
+Comme $X_1$ est réduit et $U$ dense dans $X_1$, $U$ est schématiquement dense dans $X_1$, et par suite $f$ est la restriction à $U$ d'une section méromorphe régulière $g\in M(X_1)$.
+En outre, comme $\dim(\sh{O}_{X,x})\geq2$, on a $\operatorname{cyc}(\operatorname{div}(g))\geq0$ puisque $g|U=f$;
+comme l'homomorphisme $\operatorname{cyc}$ est injectif, on a nécessairement $\operatorname{div}(g)\geq0$, donc \sref{IV.21.6.4} $g$ est une section de $\sh{O}_{X_1}$ au-dessus de $X_1$, ce qui établit notre assertion.
+
+Pour montrer que \emph{a$'$)} implique \emph{c)}, remarquons alors que la condition \emph{a$'$)} implique que l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est surjectif;
+puisque $X$ est normal, il suffit d'appliquer \sref{IV.21.6.9}.
+
+Prouvons maintenant que \emph{a$''$)} entraîne \emph{c)}.
+Il résulte de \sref{IV.21.6.5} que \emph{a$''$)} entraîne que tout cycle premier $1$-codimensionnel sur $X$ est l'image par $\operatorname{cyc}$ d'un diviseur positif;
+la première partie du raisonnement fait ci-dessus prouve donc encore que $X$ vérifie $(\mathrm{R}_1)$ et $(\mathrm{S}_1)$.
+Il reste encore à voir que $X$ est normal (la fin du raisonnement étant alors la même), c'est-à-dire que si $x\in X$ est tel que $\dim(\sh{O}_{X,x})\geq2$, on a $\operatorname{prof}(\sh{O}_{X,x})\geq2$.
+Or, si $y$ est une générisation de $x$ telle que $\overline{\{y\}}$ soit de codimension $1$ dans $X$, le sous-préschéma réduit $Y$ de $X$ ayant $\overline{\{y\}}$ pour espace
+\oldpage[IV-4]{280}
+sous-jacent est intègre, donc régulièrement immergé dans $X$ par hypothèse.
+Cela entraîne qu'il existe un élément régulier $t$ de $\sh{O}_{X,x}$ tel que l'idéal $t\sh{O}_{X,x}$ soit l'idéal premier définissant le préschéma $Y_1$ image réciproque de $Y$ dans $X_1=\Spec(\sh{O}_{X,x})$.
+Comme $\sh{O}_{X,x}/t\sh{O}_{X,x}$ est intègre, cela prouve que $\operatorname{prof}(\sh{O}_{X,x})\geq2$ et termine la preuve de \sref{IV.21.7.4}.
+\end{proof}
+
+\begin{remark}[21.7.5]
+\label{IV.21.7.5}
+On ne peut dans \sref{IV.21.7.4} remplacer la condition \emph{a$'$)} par la condition plus faible que tout cycle premier $1$-codimensionnel de $X$ soit l'image par $\operatorname{cyc}$ d'un diviseur positif.
+C'est ce que montre l'exemple où $X$ est le schéma affine défini dans \sref{IV.14.1.5} (« réunion d'un plan et d'une droite qui le coupe ») \emph{qui n'est pas normal};
+avec les notations introduites dans \sref{IV.14.1.5}, les cycles premiers $1$-codimensionnels de $X$ sont ceux du plan $X_1$ et les points fermés de la droite $X_2$ distincts du point commun à $X_1$ et $X_2$;
+si $t_1$, $t_2$, $t_3$ sont les images de $T_1$, $T_2$, $T_3$ dans $A/\mathfrak a$, on voit donc que les cycles premiers $1$-codimensionnels de $X$ sont définis par les idéaux premiers monogènes de générateurs $P(t_1,t_2)$ ($P$ irréductible dans $K[T_1,T_2]$) ou $t_3-a$, avec $a\neq0$ dans $K$;
+ces éléments étant réguliers dans $A/\mathfrak a$, tout cycle $1$-codimensionnel est bien l'image canonique d'un diviseur positif.
+\end{remark}
+
+\begin{corollary}[21.7.6]
+\label{IV.21.7.6}
+Soit $X$ un préschéma localement noethérien, réduit en chacun de ses points isolés.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] L'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ est un isomorphisme de faisceaux de groupes ordonnés, et on a $\operatorname{Div}(X)=\operatorname{Div.princ}(X)$.
+  \item[\emph{a$'$)}] L'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ est injectif, et tout cycle premier $1$-codimensionnel est l'image par $\operatorname{cyc}$ d'un diviseur positif principal, autrement dit est de la forme $\operatorname{cyc}(\operatorname{div}(f))$, où $f$ est une section régulière de $\sh{O}_X$ au-dessus de $X$.
+  \item[\emph{a$''$)}] Pour tout sous-préschéma fermé intègre $Y$ de $X$, de codimension $1$, il existe une section régulière $f$ de $\sh{O}_X$ au-dessus de $X$ telle que $Y$ soit défini par l'Idéal $f\sh{O}_X$.
+  \item[\emph{b)}] $X$ est normal et tout cycle premier $1$-codimensionnel sur $X$ est principal.
+  \item[\emph{c)}] $X$ est localement factoriel et $\operatorname{Pic}(X)=0$.
+  \item[\emph{d)}] $X$ est normal, et pour tout ouvert $U$ de $X$, on a $\operatorname{Pic}(U)=0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+L'équivalence de \emph{a)}, \emph{a$'$)}, \emph{a$''$)}, \emph{b)} et \emph{c)} résulte aussitôt de \sref{IV.21.7.4} et de \sref{IV.21.6.11}.
+En outre, il résulte aussitôt de \emph{a$''$)} que tout ouvert non vide $U$ de $X$ vérifie encore les mêmes conditions, autrement dit ces conditions impliquent \emph{d)}.
+Reste à voir que \emph{d)} entraîne \emph{b)}.
+Or, désignons par $U_\lambda$ les ouverts complémentaires des réunions finies d'ensembles de la forme $\overline{\{x\}}$, où $\dim(\sh{O}_{X,x})\geq2$;
+il est clair que les $U_\lambda$ forment une famille filtrante décroissante et que pour tout $x\in\bigcap_\lambda U_\lambda$, on a $\dim(\sh{O}_{X,x})\leq1$, donc $\sh{O}_{X,x}$ est un anneau principal en vertu de l'hypothèse.
+On peut donc appliquer à la famille $(U_\lambda)$ la proposition \sref{IV.21.6.12}, qui montre que $\mathfrak{Cl}(X)$ est isomorphe à $\varinjlim\operatorname{Pic}(U_\lambda)$, donc $\mathfrak{Cl}(X)=0$ en vertu de l'hypothèse, ce qui prouve \emph{b)} par définition.
+\end{proof}
+
+\begin{remark}[21.7.7]
+\label{IV.21.7.7}
+Lorsque $X=\Spec(A)$, où $A$ est un anneau noethérien intègre, les conditions équivalentes de \sref{IV.21.7.6} équivalent à dire que $A$ est un anneau \emph{factoriel}.
+\end{remark}
+
+\subsection{Diviseurs et normalisation}
+\label{subsection:IV.21.8}
+
+\begin{lemma}[21.8.1]
+\label{IV.21.8.1}
+Soit $f:X'\to X$ un morphisme entier de préschémas.
+Pour tout $\sh{O}_{X'}$-Module localement libre $E'$ de rang constant $n$ et tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que, si l'on pose $U'=f^{-1}(U)$, $E'|U'$ soit isomorphe à $\sh{O}_{U'}^n$.
+\end{lemma}
+
+\begin{proof}
+La question étant locale sur $X$, on peut se borner au cas où $X=\Spec(A)$ est affine, auquel cas on a $X'=\Spec(A')$, où $A'$ est une $A$-algèbre entière.
+Alors $A'$ est limite inductive de ses sous-$A$-algèbres \emph{finies} $A'_\lambda$.
+Posant $X'_\lambda=\Spec(A'_\lambda)$ et désignant par $p_\lambda:X'\to X'_\lambda$ le morphisme structural, il résulte de \sref{IV.8.5.2} et \sref{IV.8.5.5} qu'il existe un indice $\lambda$ et un $\sh{O}_{X'_\lambda}$-Module localement libre $E'_\lambda$ de rang $n$ tel que $E'=p_\lambda^*(E'_\lambda)$ et il suffira évidemment de prouver le lemme pour $X'_\lambda$ et $E'_\lambda$;
+autrement dit, on peut se borner au cas où le morphisme $f$ est \emph{fini}.
+Posons $B=\sh{O}_{X,x}$ et soit $B'$ l'anneau du schéma affine $X'_0=X'\times_X\Spec(\sh{O}_{X,x})$;
+comme $B$ est un anneau local et que $B'$ est une $B$-algèbre finie, $B'$ est un anneau semi-local (Bourbaki, \emph{Alg.\ comm.}, chap.~V, \textsection~2, n\textsuperscript{o}~1, prop.~3);
+on en conclut que le $\sh{O}_{X'_0}$-Module localement libre $E'_0=E'\otimes_{\sh{O}_{X'}}\sh{O}_{X'_0}$ est isomorphe à $\sh{O}_{X'_0}^n$ (Bourbaki, \emph{Alg.\ comm.}, chap.~II, \textsection~5, n\textsuperscript{o}~3, prop.~5).
+Considérant $X'_0$ comme limite
+\oldpage[IV-4]{281}
+projective des préschémas induits par $X'$ sur les ouverts $f^{-1}(U)$, où $U$ parcourt l'ensemble filtrant des voisinages ouverts affines de $x$ dans $X$, suivant la méthode de \sref{IV.8.1.2}, \emph{a)}), et appliquant \sref{IV.8.5.2.5}, on obtient la conclusion cherchée.
+\end{proof}
+
+\begin{corollary}[21.8.2]
+\label{IV.21.8.2}
+Soit $f:X'\to X$ un morphisme entier de préschémas.
+Alors:
+\begin{enumerate}[label=(\roman*)]
+  \item On a $\RR^1 f_*(\sh{O}^*_{X'})=0$ \sref[0]{0.12.2.1}.
+  \item Le groupe $\operatorname{Pic}(X')$ est canoniquement isomorphe à $\HH^1(X,f_*(\sh{O}^*_{X'}))$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item $\RR^1 f_*(\sh{O}^*_{X'})$ est le faisceau associé au préfaisceau de groupes commutatifs $U\mapsto\HH^1(f^{-1}(U),\sh{O}^*_{X'})$ sur $X$ (\emph{loc.\ cit.});
+la fibre de ce faisceau en un point $x$ peut donc \sref[0]{0.5.4.7} être identifiée au groupe commutatif $\varinjlim\operatorname{Pic}(f^{-1}(U))$, où $U$ parcourt l'ensemble des voisinages ouverts de $x$, les homomorphismes de transition $\operatorname{Pic}(f^{-1}(U'))\to\operatorname{Pic}(f^{-1}(U))$ pour deux ouverts $U\subset U'$ étant définis par \sref{IV.21.3.2.4}.
+Or, pour tout $x\in X$, tout voisinage ouvert $U'$ de $x$ dans $X$, et tout élément $\zeta\in\operatorname{Pic}(f^{-1}(U'))$, il résulte de \sref{IV.21.8.1} qu'il y a un voisinage ouvert $U\subset U'$ de $x$ tel que l'image de $\zeta$ dans $\operatorname{Pic}(f^{-1}(U))$ soit nulle.
+Donc la fibre de $\RR^1f_*(\sh{O}^*_{X'})$ au point $x$ est nulle.
+
+  \item La suite spectrale de Leray pour le foncteur composé $\sh{F}'\mapsto\Gamma(X,f_*(\sh{F}'))$ de faisceaux de groupes commutatifs sur $X'$ (T, 2.4) donne la suite exacte de termes de bas degré
+\[
+  0\to\HH^1(X,f_*(\sh{O}^*_{X'}))\to\HH^1(X',\sh{O}^*_{X'})\to\HH^0(X,\RR^1f_*(\sh{O}^*_{X'}))
+\]
+et la conclusion résulte de (i) et de l'isomorphisme de $\operatorname{Pic}(X')$ et de $\HH^1(X',\sh{O}^*_{X'})$ \sref[0]{0.5.4.7}.
+\end{enumerate}
+\end{proof}
+
+\begin{proposition}[21.8.3]
+\label{IV.21.8.3}
+Soit $f=(\psi,\theta):X'\to X$ un morphisme entier de préschémas;
+supposons que, pour tout ouvert $U$ de $X$, l'homomorphisme $\Gamma(\theta):\Gamma(U,\sh{O}_X)\to\Gamma(U,f_*(\sh{O}_{X'}))$ transforme les éléments réguliers en éléments réguliers, ce qui permet de prolonger canoniquement l'homomorphisme $\theta:\sh{O}_X\to f_*(\sh{O}_{X'})$ en un homomorphisme de faisceaux d'anneaux $\theta':\sh{M}_X\to f_*(\sh{M}_{X'})$, d'où des homomorphismes de faisceaux de groupes multiplicatifs $\theta^*:\sh{O}^*_X\to f_*(\sh{O}^*_{X'})$ et $\theta'^*:\sh{M}^*_X\to f_*(\sh{M}^*_{X'})$, donnant par passage aux quotients un homomorphisme $\theta''^*:\sh{D}iv_X\to f_*(\sh{D}iv_{X'})$.
+On a alors un diagramme commutatif
+\[
+\label{IV.21.8.3.1}
+  \xymatrix{
+    1 \ar[r] & \sh{O}^*_X \ar[r] \ar[d]^{\theta^*} & \sh{M}^*_X \ar[r] \ar[d]^{\theta'^*} & \sh{D}iv_X \ar[r] \ar[d]^{\theta''^*} & 0\\
+    1 \ar[r] & f_*(\sh{O}^*_{X'}) \ar[r] & f_*(\sh{M}^*_{X'}) \ar[r] & f_*(\sh{D}iv_{X'}) \ar[r] & 0
+  }
+  \tag{21.8.3.1}
+\]
+dans lequel les deux lignes sont exactes.
+\end{proposition}
+
+\begin{proof}
+Le seul point à vérifier est l'exactitude de la seconde ligne du diagramme, qui résulte de l'application de la suite exacte de cohomologie pour le foncteur $f_*$ à la suite exacte de faisceaux de groupes commutatifs sur $X'$
+\[
+  1\to\sh{O}^*_{X'}\to\sh{M}^*_{X'}\to\sh{D}iv_{X'}\to0
+\]
+et de \sref{IV.21.8.2}.
+\end{proof}
+
+\begin{corollary}[21.8.4]
+\label{IV.21.8.4}
+Si, en outre des hypothèses de \sref{IV.21.8.3}, l'homomorphisme $\theta'$ est un isomorphisme de faisceaux d'anneaux, alors $\theta^*:\sh{O}^*_X\to f_*(\sh{O}^*_{X'})$ est injectif, $\theta''^*:\sh{D}iv_X\to f_*(\sh{D}iv_{X'})$ est surjectif et $\operatorname{Ker}(\theta''^*)$ est isomorphe à $\operatorname{Coker}(\theta^*)$.
+\end{corollary}
+
+\begin{proof}
+C'est une conséquence immédiate du diagramme du serpent (Bourbaki, \emph{Alg.\ comm.}, chap.~I, \textsection~2, n\textsuperscript{o}~4, prop.~2) appliqué au diagramme \sref{IV.21.8.3.1}.
+\end{proof}
+
+\oldpage[IV-4]{282}
+
+\begin{proposition}[21.8.5]
+\label{IV.21.8.5}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme entier;
+on suppose qu'il existe un ouvert schématiquement dense $U$ dans $X$ tel que $f^{-1}(U)$ soit schématiquement dense dans $X'$ (cf.\ \sref{IV.20.3.5}), et que le morphisme $f^{-1}(U)\to U$, restriction de $f$, soit un isomorphisme.
+Alors:
+\begin{enumerate}[label=(\roman*)]
+  \item L'homomorphisme $\theta':\sh{M}_X\to f_*(\sh{M}_{X'})$ est défini et bijectif, l'homomorphisme
+\[
+  \theta^*:\sh{O}^*_X\to f_*(\sh{O}^*_{X'})
+\]
+est injectif, l'homomorphisme $\theta''^*:\sh{D}iv_X\to f_*(\sh{D}iv_{X'})$ est surjectif, $\operatorname{Ker}(\theta''^*)$ est isomorphe à $\sh{N}=\operatorname{Coker}(\theta^*)$ et le support du faisceau de groupes multiplicatifs $\sh{N}$ est contenu dans $S=X-U$.
+  \item Supposons de plus l'ensemble $S$ discret et posons pour abréger $\sh{O}'_X=f_*(\sh{O}_{X'})$.
+Alors on a un diagramme commutatif
+\[
+\label{IV.21.8.5.1}
+  \xymatrix{
+    1 \ar[r] & \prod_{s\in S}\sh{O}'^{*}_{X,s}/\sh{O}^*_{X,s} \ar[r]^-{j} \ar[d] & \operatorname{Div}(X) \ar[r] \ar[d]^{k_X} & \operatorname{Div}(X') \ar[r] \ar[d]^{k_{X'}} & 0\\
+    1 \ar[r] & \bigl(\prod_{s\in S}\sh{O}'^{*}_{X,s}/\sh{O}^*_{X,s}\bigr)/\operatorname{Im}\Gamma(X',\sh{O}^*_{X'}) \ar[r]^-{j'} & \operatorname{Pic}(X) \ar[r] & \operatorname{Pic}(X') \ar[r] & 0
+  }
+  \tag{21.8.5.1}
+\]
+où les lignes sont exactes et où la flèche verticale de gauche est l'homomorphisme canonique.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item L'hypothèse entraîne que l'on a un isomorphisme canonique $\sh{M}''_X\simto f_*(\sh{M}''_{X'})$ pour les faisceaux de germes de pseudo-fonctions \sref{IV.20.2.2}, d'où l'assertion relative à $\theta'$ vu l'existence des isomorphismes canoniques $\sh{M}_X\simto\sh{M}''_X$ et $\sh{M}_{X'}\simto\sh{M}''_{X'}$ \sref{IV.20.2.11}.
+Le reste de l'assertion (i) découle de \sref{IV.21.8.4}, sauf ce qui concerne le support de $\sh{N}$, qui résulte directement de l'hypothèse sur $U$.
+
+  \item Appliquant la suite exacte de cohomologie aux deux suites exactes de faisceaux de groupes commutatifs
+\[
+\label{IV.21.8.5.2}
+\begin{gathered}
+  1\to\sh{N}\to\sh{D}iv_X\to f_*(\sh{D}iv_{X'})\to0,\\
+  1\to\sh{O}^*_X\to f_*(\sh{O}^*_{X'})\to\sh{N}\to1,
+\end{gathered}
+  \tag{21.8.5.2}
+\]
+il vient respectivement les suites exactes
+\[
+\label{IV.21.8.5.3}
+\begin{gathered}
+  1\to\Gamma(X,\sh{N})\xrightarrow{j}\operatorname{Div}(X)\to\operatorname{Div}(X')\to\HH^1(X,\sh{N}),\\
+  \Gamma(X',\sh{O}^*_{X'})\to\Gamma(X,\sh{N})\xrightarrow{\partial}\operatorname{Pic}(X)\to\operatorname{Pic}(X')\to\HH^1(X,\sh{N}),
+\end{gathered}
+  \tag{21.8.5.3}
+\]
+\oldpage[IV-4]{283}
+compte tenu de l'isomorphisme canonique $\operatorname{Pic}(X')\simto\HH^1(X,f_*(\sh{O}^*_{X'}))$ \sref{IV.21.8.2}.
+Or, comme le support de $\sh{N}$ est contenu dans l'ensemble discret $S$, fermé dans $X$, on a
+\[
+  \HH^1(X,\sh{N})=\HH^1(S,\sh{N}|S)\quad\text{(G, II, 4.9.2)},\qquad
+  \HH^1(S,\sh{N}|S)=\prod_{s\in S}\HH^1(\{s\},\sh{N}_s)=0
+\]
+par définition de la cohomologie (G, II, 4.4).
+De même on a $\Gamma(X,\sh{N})=\prod_{s\in S}\sh{N}_s$ et $\sh{N}_s=\sh{O}'^{*}_{X,s}/\sh{O}^*_{X,s}$ en vertu de la seconde suite exacte \sref{IV.21.8.5.2}.
+Reste à préciser les injections $j$ et $j'$.
+Or, on peut décrire une section $t$ de $\sh{N}$ au-dessus de $X$ en prenant un recouvrement de $X$ formé de $U$ et d'ouverts $U_i$ tels que $U_i\cap S$ soit réduit à un seul point $s_i$, et que $U_i\cap U_j\subset U$ pour $i\neq j$, puis en considérant pour chaque $i$ une section $t_i$ de $\sh{N}$ au-dessus de $U_i$, nécessairement telle que $(t_i)_{s_i}\in\sh{O}'^{*}_{X,s_i}/\sh{O}^*_{X,s_i}$ et $(t_i)_x=0$ aux points $x\in U_i-\{s_i\}$.
+Le germe $(t_i)_{s_i}$ provient d'une section $u_i$ de $\sh{O}^*_{X'}$ au-dessus de $f^{-1}(U_i)$, qu'on peut aussi considérer comme une section de $\sh{M}^*_{X'}$ au-dessus de $f^{-1}(U_i)$, donc une section de $\sh{M}^*_X$ au-dessus de $U_i$ (en vertu de l'hypothèse);
+il correspond canoniquement à cette section une section $d_i\in\Gamma(U_i,\sh{D}iv_X)$ et comme dans $f^{-1}(U\cap U_i)$ la restriction de $u_i$ s'identifie à une section de $\sh{O}^*_X$ au-dessus de $U\cap U_i$ en vertu de l'hypothèse, les restrictions des $d_i$ à $U\cap U_i$ sont toutes nulles, donc les $d_i$ sont les restrictions d'un même diviseur de $\operatorname{Div}(X)$, qui est l'image de la section $t$ par $j$.
+De même, l'image de $t$ par $\partial:\Gamma(X,\sh{N})\to\HH^1(X,\sh{O}^*_X)$ provient du cocycle égal à la restriction de $u_i$ dans $U\cap U_i$ pour chaque $i$, à $(u_i|(U_i\cap U_j))(u_j|(U_i\cap U_j))^{-1}$ dans $U_i\cap U_j$, d'où l'expression de $j'(t)$ et la commutativité du diagramme \sref{IV.21.8.5.1}.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[21.8.6]
+\label{IV.21.8.6}
+\begin{enumerate}[label=(\roman*)]
+  \item Les conditions d'application de \sref{IV.21.8.5}, (i) sont en particulier remplies lorsque $X$ est un préschéma localement noethérien réduit n'ayant qu'un nombre fini de composantes irréductibles, $X'$ son normalisé et que $X'$ est aussi localement noethérien (\sref[II]{II.6.3.8});
+le $\sh{O}_X$-Module $\sh{D}iv_X$ est alors une \emph{extension} de $f_*(\sh{D}iv_{X'})$ par le conoyau $\sh{N}$ de $\sh{O}^{*}_X\to f_*(\sh{O}^*_{X'})$, que l'on peut considérer comme connu.
+Si de plus $X$ est une courbe algébrique (réduite) sur un corps $k$, on est dans les conditions d'application de \sref{IV.21.8.5}, (ii).
+
+  \item Lorsque les conditions d'application de \sref{IV.21.8.5}, (ii) sont remplies et en outre que l'homomorphisme canonique global $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ est \emph{bijectif}, on voit que les noyaux des homomorphismes surjectifs $\operatorname{Div}(X)\to\operatorname{Div}(X')$ et $\operatorname{Pic}(X)\to\operatorname{Pic}(X')$ sont \emph{isomorphes}.
+
+  \item Lorsque les conditions d'application de \sref{IV.21.8.5}, (ii) sont remplies, on voit que l'homomorphisme $\operatorname{Div}(X)\to\operatorname{Div}(X')$ ne peut être injectif (auquel cas il est bijectif) que si $\sh{O}'^{*}_{X,s}=\sh{O}^*_{X,s}$ pour tout $s\in S$.
+Pour un $s\in S$ tel que l'anneau $\sh{O}'_{X,s}$ soit \emph{local} (ce qui, compte tenu du fait que $X'=\Spec(\sh{O}'_X)$ \sref[II]{II.1.3}, signifie qu'il n'existe qu'un seul point $s'\in X'$ au-dessus de $s$) cela entraîne nécessairement que les corps résiduels $\boldsymbol{k}(s)$ et $\boldsymbol{k}(s')$ sont égaux et que $1+\mathfrak{m}_s=1+\mathfrak{m}_{s'}$, donc finalement équivaut à la relation $\sh{O}'_{X,s}=\sh{O}_{X,s}$ ou encore (compte tenu de l'hypothèse) au fait qu'il y a un voisinage ouvert $V$ de $s$ dans $X$ tel que le morphisme $f^{-1}(V)\to V$ soit un isomorphisme.
+Dans le cas général, l'anneau $\sh{O}'_{X,s}$ est semi-local (c'est évident lorsque le morphisme $f$ est fini et dans le cas général cela résulte de \sref[0]{0.23.2.6}), l'homomorphisme canonique $\sh{O}^{*}_{X,s}\to\sh{O}'^{*}_{X,s}$ définit, par passage aux quotients, un homomorphisme du groupe multiplicatif $\boldsymbol{k}(s)^*$ dans le produit des groupes multiplicatifs $\boldsymbol{k}(s'_j)^*$, les $s'_j$ étant les points (en
+\oldpage[IV-4]{284}
+nombre $>1$) de $X'$ au-dessus de $s$.
+Il est immédiat que cet homomorphisme ne peut être bijectif que si $\boldsymbol{k}(s)$ et tous les $\boldsymbol{k}(s'_j)$ sont égaux au corps $\bb{F}_2$ à $2$ éléments;
+de plus, si cette condition est vérifiée, il faut en outre que le groupe multiplicatif $1+\mathfrak{m}_s$ ait pour image $1+\mathfrak{r}$, où $\mathfrak{r}$ est le radical de $\sh{O}'_{X,s}$, ou encore que $\mathfrak{m}_s=\mathfrak{r}$, ce qui entraîne que $\sh{O}'_{X,s}\otimes_{\sh{O}_{X,s}}\boldsymbol{k}(s)$ est composé direct de corps isomorphes à $\boldsymbol{k}(s)$ (ce qui, lorsque le morphisme $f$ est fini, entraîne qu'il est non ramifié aux points $s'_j$ \sref{IV.17.4.1}).
+Si par exemple \emph{aucun} corps résiduel de $X$ n'est isomorphe à $\bb{F}_2$, l'homomorphisme canonique $\operatorname{Div}(X)\to\operatorname{Div}(X')$ ne peut être bijectif que si $f$ est un \emph{isomorphisme}.
+Dans le cas où l'homomorphisme canonique $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ est bijectif, on conclut de ce qui précède et de (ii) que dans les considérations précédentes, on peut remplacer l'homomorphisme $\operatorname{Div}(X)\to\operatorname{Div}(X')$ par l'homomorphisme $\operatorname{Pic}(X)\to\operatorname{Pic}(X')$.
+\end{enumerate}
+\end{remark}
+
+\subsection{Diviseurs sur les préschémas de dimension 1}
+\label{subsection:IV.21.9}
+\label{IV.21.9}
+
+\begin{env}[21.9.1]
+\label{IV.21.9.1}
+Soient $X$ un espace topologique, $x$ un point de $X$, $i_x:\{x\}\to X$ l'injection canonique.
+Si $A(x)$ est un groupe commutatif, on peut le considérer comme un faisceau de groupes commutatifs sur l'espace $\{x\}$ réduit à un seul point, et prendre son image directe $(i_x)_*(A(x))$ qui est un faisceau de groupes commutatifs sur $X$ \sref[0]{0.3.4.1};
+il résulte aussitôt des définitions que pour tout ouvert $U$ de $X$, $\Gamma(U,(i_x)_*(A(x)))=A(x)$ si $x\in U$, et est réduit à $0$ dans le cas contraire;
+donc, pour $y\in\overline{\{x\}}$ on a $((i_x)_*(A(x)))_y=A(x)$, et pour $y\notin\overline{\{x\}}$, $((i_x)_*(A(x)))_y=0$.
+
+Si maintenant $\sh{F}$ est un faisceau de groupes commutatifs sur $X$ et $Y$ une partie de $X$, pour tout ouvert $U$ de $X$, on a un homomorphisme canonique
+\[
+\label{IV.21.9.1.1}
+  \Gamma(U,\sh{F})\to\prod_{x\in U\cap Y}\sh{F}_x
+  =\prod_{x\in Y}\Gamma(U,(i_x)_*(\sh{F}_x))
+  \tag{21.9.1.1}
+\]
+et comme ces homomorphismes commutent aux opérateurs de restriction, ils définissent un homomorphisme canonique de \emph{faisceaux}
+\[
+\label{IV.21.9.1.2}
+  j_Y:\sh{F}\to\prod_{x\in Y}(i_x)_*(\sh{F}_x).
+  \tag{21.9.1.2}
+\]
+\end{env}
+
+\begin{lemma}[21.9.2]
+\label{IV.21.9.2}
+Soient $X$ un espace topologique localement noethérien, $X_0$ l'ensemble de ses points fermés, $\sh{F}$ un faisceau de groupes commutatifs sur $X$.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item L'homomorphisme canonique $j_{X_0}:\sh{F}\to\prod_{x\in X_0}(i_x)_*(\sh{F}_x)$ est injectif et a pour image $\bigoplus_{x\in X_0}(i_x)_*(\sh{F}_x)$.
+  \item[\rm a$'$)] Il existe une famille de groupes commutatifs $(A(x))_{x\in X_0}$ telle que $\sh{F}$ soit isomorphe à $\bigoplus_{x\in X_0}(i_x)_*(A(x))$.
+  \item Toute section de $\sh{F}$ au-dessus d'un ouvert $U$ de $X$ a un support discret contenu dans $X_0$.
+\end{enumerate}
+Lorsqu'il en est ainsi, pour tout $x\in X_0$, le groupe $A(x)$ est déterminé à isomorphisme unique près et est isomorphe à $\sh{F}_x$.
+En outre, le faisceau $\sh{F}$ est alors flasque.
+\end{lemma}
+
+\begin{proof}
+\oldpage[IV-4]{285}
+Comme les points de $X_0$ sont fermés dans $X$, on a $((i_x)_*(A(x)))_y=0$ pour tout $y\neq x\in X_0$;
+cette remarque prouve l'assertion d'unicité relative aux groupes $A(x)$, et il est clair par ailleurs que \emph{a)} implique \emph{a$'$)}.
+Pour voir que \emph{a$'$)} implique \emph{b)}, on peut se borner au cas où $U$ est noethérien;
+alors (G, II, 3.10) on a
+\[
+  \Gamma(U,\bigoplus_{x\in X_0}(i_x)_*(A(x)))
+  =\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(A(x))),
+\]
+donc toute section $s$ de $\sh{F}$ au-dessus de $U$ est somme directe d'un nombre \emph{fini} de sections $s_k\in\Gamma(U,(i_{x_k})_*(A(x_k)))$ ($1\leq k\leq n$) avec $x_k\in X_0$.
+Mais puisque $x_k$ est fermé dans $X$, le support de $s_k$ est réduit à $\{x_k\}$, donc le support de $s$ est contenu dans l'ensemble fini des $x_k$, qui est évidemment discret puisque les points $x_k$ sont fermés dans $X$.
+Montrons enfin que \emph{b)} entraîne \emph{a)};
+pour tout ouvert noethérien $U$, tout support d'une section de $\sh{F}$ au-dessus de $U$ étant discret et quasi-compact, est \emph{fini}.
+On déduit donc de l'hypothèse \emph{b)} que pour tout ouvert noethérien $U$, l'image de l'homomorphisme \sref{IV.21.9.1.1} (pour $Y=X_0$) est contenue dans $\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(\sh{F}_x))$ et que cet homomorphisme est injectif, ce qui établit \emph{a)}.
+
+Enfin, pour montrer que $\sh{F}$ est flasque, considérons une section $s$ de $\sh{F}$ au-dessus d'un ouvert $U$ de $X$;
+comme le support de $s$ est un sous-espace discret et fermé dans $X$, on prolonge $s$ en une section $s'$ de $\sh{F}$ au-dessus de $X$ en posant $s'_x=0$ dans $X-U$.
+\end{proof}
+
+\begin{remark}[21.9.3]
+\label{IV.21.9.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Dans la condition \emph{b)} de \sref{IV.21.9.2}, il ne suffit pas de supposer que le support de toute section de $\sh{F}$ au-dessus d'un ouvert quelconque de $X$ soit \emph{discret};
+c'est ce que montre l'exemple où on prend pour $X$ un spectre d'anneau de valuation discrète, avec un point fermé $b$ et un point générique $a$, et pour $\sh{F}$ le faisceau de groupes commutatifs tel que $\sh{F}_b=0$ et $\sh{F}_a=\bb{Z}$.
+
+  \item Les conditions de \sref{IV.21.9.2} étant supposées vérifiées, soit $E$ une partie discrète de $X_0$, et pour tout $x\in E$, soit $a(x)$ un élément de $A(x)$.
+Il existe alors une section $t$ de $\bigoplus_{x\in X_0}(i_x)_*(A(x))$ et une seule au-dessus de $X$ telle que $t_x=a(x)$ pour tout $x\in E$ et que le support de $t$ soit contenu dans $E$.
+En effet, pour tout ouvert noethérien $U$, $E\cap U$ est fini, et il suffit de prendre pour $t$ la section de $\bigoplus_{x\in E}(i_x)_*(A(x))$ dont la restriction à chaque ouvert noethérien $U$ est la somme des $a(x)$ pour $x\in E\cap U$.
+\end{enumerate}
+\end{remark}
+
+\begin{proposition}[21.9.4]
+\label{IV.21.9.4}
+Soient $X$ un préschéma localement noethérien de dimension $\leq1$, $X^{(1)}$ l'ensemble des points $x\in X$ tels que $\dim(\sh{O}_{X,x})=1$.
+On a alors un isomorphisme canonique
+\[
+\label{IV.21.9.4.1}
+  \sh{D}iv_X\simto\bigoplus_{x\in X^{(1)}}(i_x)_*(\operatorname{Div}(\sh{O}_{X,x}))
+  \tag{21.9.4.1}
+\]
+et $\sh{D}iv_X$ est flasque.
+\end{proposition}
+
+\begin{proof}
+Compte tenu de l'isomorphisme \sref{IV.21.4.6.1}, l'homomorphisme \sref{IV.21.9.4.1} est défini par \sref{IV.21.9.1.2}:
+prouvons que c'est une bijection.
+Comme $\dim(X)\leq1$, les points de $X^{(1)}$ sont les \emph{points fermés non isolés} de $X$.
+On est ramené à prouver que:
+1\textsuperscript{o} $\sh{D}iv_X$ vérifie la condition \emph{b)} de \sref{IV.21.9.2};
+2\textsuperscript{o} pour tout point isolé $x\in X$, on a $(\sh{D}iv_X)_x=0$.
+Le second point résulte de ce qu'alors $\sh{O}_{X,x}$ est un anneau artinien et de ce que tout élément régulier de $\sh{O}_{X,x}$ est donc inversible.
+\oldpage[IV-4]{286}
+Pour le 1\textsuperscript{o}, il suffit de noter que pour tout ouvert $U$ de $X$ et tout diviseur $D\in\operatorname{Div}(U)$, les points maximaux du support $S$ de $D$ sont tels que $\operatorname{prof}(\sh{O}_{X,x})=1$ \sref{IV.21.1.9}, donc \emph{a fortiori} appartiennent à $X^{(1)}\cap U$;
+puisque $\dim(X)\leq1$, l'ensemble de ces points est égal à $S$, et $S$ est donc discret, l'ensemble des composantes irréductibles de $S$ étant localement fini.
+\end{proof}
+
+\begin{corollary}[21.9.5]
+\label{IV.21.9.5}
+Soit $X$ un préschéma localement noethérien de dimension $\leq1$.
+Pour toute partie discrète $E\subset X^{(1)}$ et toute famille $(D(x))_{x\in E}$ avec $D(x)\in\operatorname{Div}(\sh{O}_{X,x})$, il existe un diviseur $D$ sur $X$ et un seul tel que le support de $D$ soit contenu dans $E$ et que $D_x=D(x)$ pour tout $x\in E$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de \sref{IV.21.9.4} et de \sref{IV.21.9.3}, (ii).
+\end{proof}
+
+\begin{corollary}[21.9.6]
+\label{IV.21.9.6}
+Soit $X$ un préschéma localement noethérien de dimension $\leq1$;
+tout diviseur $D$ sur $X$ est de la forme $D'-D''$, où $D'$, $D''$ sont deux diviseurs $\geq0$ de supports contenus dans celui de $D$.
+\end{corollary}
+
+\begin{proof}
+En vertu de \sref{IV.21.9.5}, on est aussitôt ramené au cas où $X=\Spec(A)$, où $A$ est un anneau local noethérien;
+il suffit alors d'observer que $M(X)$ est l'anneau total des fractions de $A$, et qu'une section de $\sh{M}^*_X$ au-dessus de $X$ s'écrit par définition comme quotient $b/a$ de deux éléments réguliers de $A$.
+\end{proof}
+
+\begin{corollary}[21.9.7]
+\label{IV.21.9.7}
+Soient $X$ un préschéma localement noethérien de dimension $\leq1$, sans point isolé, et $U$ un ouvert dense dans $X$.
+Il existe alors un diviseur $D\geq0$ sur $X$, de support contenu dans $U$ et rencontrant chacune des composantes irréductibles de $X$.
+\end{corollary}
+
+\begin{proof}
+On peut supposer que $U$ est réunion d'ensembles ouverts disjoints non vides $U_\alpha$, dont chacun est contenu dans une seule composante irréductible de $X$;
+il suffit alors de prendre dans chaque $U_\alpha$ un point $x_\alpha$ fermé dans $X$ (il en existe puisque l'unique point générique de $U_\alpha$ ne peut être isolé par hypothèse), et d'appliquer \sref{IV.21.9.5} à l'ensemble discret des $x_\alpha$.
+\end{proof}
+
+L'intérêt de ce corollaire est qu'il permettra de prouver qu'une courbe algébrique séparée $X$ sur un corps $k$ est quasi-projective, le diviseur $D\geq0$ défini dans \sref{IV.21.9.7} étant alors nécessairement \emph{ample} en vertu du théorème de Riemann--Roch pour les courbes (chap.~V).
+
+\begin{env}[21.9.8]
+\label{IV.21.9.8}
+Pour les préschémas localement noethériens $X$ de dimension $\leq1$ la proposition \sref{IV.21.9.4} ramène la détermination de $\sh{D}iv_X$ au cas où $X=\Spec(A)$, $A$ étant un anneau local noethérien de dimension $1$.
+
+Lorsque $A$ est un anneau local régulier de dimension $1$ (autrement dit, un anneau de valuation discrète), le groupe $\operatorname{Div}(A)$ s'identifie canoniquement à $\bb{Z}$ \sref{IV.21.6.8};
+par suite, en vertu de \sref{IV.21.9.2}:
+\end{env}
+
+\begin{proposition}[21.9.9]
+\label{IV.21.9.9}
+Soit $X$ un préschéma localement noethérien régulier de dimension $\leq1$.
+Alors le faisceau $\sh{D}iv_X$ est canoniquement isomorphe à $\bigoplus_{x\in X^{(1)}}(i_x)_*(\bb{Z}(x))$, où $\bb{Z}(x)$ est le groupe additif $\bb{Z}$ considéré comme faisceau de groupes sur l'espace $\{x\}$.
+\end{proposition}
+
+\begin{env}[21.9.10]
+\label{IV.21.9.10}
+Supposons seulement que l'anneau local noethérien $A$ de dimension $1$ soit \emph{réduit};
+alors, si $A'$ est le \emph{normalisé} de $A$ (fermeture intégrale de $A$ dans son anneau total de fractions), $A'$ est noethérien en vertu du théorème de Krull--Akizuki (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~2, n\textsuperscript{o}~5, prop.~5), et on a vu dans \sref{IV.21.8.6} comment
+\oldpage[IV-4]{287}
+$\operatorname{Div}(A)$ peut s'obtenir comme \emph{extension} de $\operatorname{Div}(A')$ et ce dernier groupe est de la forme $\bb{Z}^r$.
+\end{env}
+
+\begin{proposition}[21.9.11]
+\label{IV.21.9.11}
+Soient $X$ un préschéma noethérien, $X_0$ un sous-préschéma fermé de $X$ ayant les propriétés suivantes:
+\begin{enumerate}
+  \item[\rm 1\textsuperscript{o}] $\dim(X_0)\leq1$.
+  \item[\rm 2\textsuperscript{o}] Pour toute partie localement fermée $Y$ de $X$ telle que $Y\cap X_0$ soit discret, il existe une partie $Y'$ de $Y$, fermée dans $X$ et ouverte dans $Y$, contenant $Y\cap X_0$.
+\end{enumerate}
+Dans ces conditions:
+\begin{enumerate}[label=(\roman*)]
+  \item Soit $Z_0$ la réunion des ensembles $\overline{\{x\}}\cap X_0$ lorsque $x$ parcourt la partie de $\operatorname{Ass}(\sh{O}_X)$ formée des points tels que $\overline{\{x\}}\cap X_0$ soit fini.
+Alors, pour tout diviseur $D_0$ sur $X_0$, dont le support ne rencontre pas $Z_0$, il existe un diviseur $D$ sur $X$ dont l'image réciproque par l'injection canonique $X_0\to X$ existe \sref{IV.21.4} et est égale à $D_0$;
+si de plus $D_0\geq0$, on peut supposer $D\geq0$.
+
+  \item Supposons en outre qu'il existe dans $X_0$ un ouvert affine $U_0$ contenant $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ (condition automatiquement vérifiée lorsqu'il existe un $\sh{O}_{X_0}$-Module ample \sref[II]{II.4.5.4}).
+Alors l'homomorphisme canonique \sref{IV.21.3.2.4} $\operatorname{Pic}(X)\to\operatorname{Pic}(X_0)$ est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Compte tenu de \sref{IV.21.9.6}, on peut se borner à prouver l'assertion relative aux diviseurs $D_0\geq0$;
+en vertu de \sref{IV.21.9.4}, le support $T$ de $D_0$ est un ensemble discret et fermé dans $X_0$.
+On peut supposer $D_0\neq0$, c'est-à-dire $T\neq\emp$, sans quoi il n'y a rien à démontrer.
+Pour tout $x\in T$, il existe un élément $s_x\in\sh{O}_{X_0,x}$ qui est non diviseur de zéro dans cet anneau, appartient à son idéal maximal, et dont l'image dans $(\sh{D}iv_{X_0})_x$ est $(D_0)_x$.
+Il existe un voisinage ouvert affine $U^{(x)}$ de $x$ dans $X$ et une section $g^{(x)}$ de $\sh{O}_X$ au-dessus de $U^{(x)}$ tels que $s_x$ soit l'image dans $\sh{O}_{X_0,x}$ du germe $(g^{(x)})_x\in\sh{O}_{X,x}$;
+nous allons voir qu'en prenant $U^{(x)}$ assez petit, on peut faire en sorte que $g^{(x)}$ ne soit pas diviseur de zéro dans $\Gamma(U^{(x)},\sh{O}_X)$, autrement dit \sref{IV.3.1.9}, en désignant par $V^{(x)}$ la partie fermée de $U^{(x)}$ formée des $y$ tels que $g^{(x)}(y)=0$, que l'on ait $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
+
+Or, si $z\in\operatorname{Ass}(\sh{O}_X)$, l'hypothèse $x\notin Z_0$ entraîne que l'on a, ou bien $x\notin\overline{\{z\}}$, ou bien que $x$ n'est pas isolé dans $\overline{\{z\}}\cap X_0$.
+En remplaçant $U^{(x)}$ par un ouvert plus petit, on peut supposer que c'est le second cas qui se produit pour un $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$.
+$V^{(x)}$ contiendrait donc une composante irréductible de dimension $1$ de $X_0\cap U^{(x)}$, contenant $x$;
+mais cela signifierait que l'image $\overline{g}^{(x)}$ de $g^{(x)}$ dans $\Gamma(U^{(x)}\cap X_0,\sh{O}_{X_0})$ serait dans le nilradical de cet anneau, et par suite $s_x$ appartiendrait au nilradical de $\sh{O}_{X_0,x}$, ce qui est absurde.
+On a donc $x\notin\overline{\{z\}}$ pour tout point $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$, et comme cet ensemble est fini, on peut, en remplaçant $U^{(x)}$ par un voisinage ouvert plus petit de $x$, supposer que $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
+
+En vertu du choix de $U^{(x)}$, on peut définir un diviseur $D'^{(x)}$ sur $U^{(x)}$ par $D'^{(x)}=\operatorname{div}(g^{(x)})$;
+d'ailleurs on a vu ci-dessus que $x$ est nécessairement isolé dans $V^{(x)}\cap X_0$, donc en remplaçant encore $U^{(x)}$ par un voisinage ouvert plus petit de $x$, on peut supposer que $V^{(x)}\cap X_0$ est réduit au point $x$.
+Mais il existe alors, en vertu de la condition 2\textsuperscript{o}, une partie $W^{(x)}$ de $V^{(x)}$, fermée dans $X$ et ouverte dans $V^{(x)}$, telle que $W^{(x)}\cap X_0=\{x\}$.
+Remplaçant encore $U^{(x)}$ par un voisinage ouvert plus petit de $x$, on peut donc supposer
+\oldpage[IV-4]{288}
+que $W^{(x)}=V^{(x)}$, autrement dit que $V^{(x)}$ est fermé dans $X$.
+On peut alors définir un diviseur $D^{(x)}$ sur $X$ par la condition que $D^{(x)}|U^{(x)}=D'^{(x)}$, et $D^{(x)}|(X-V^{(x)})=0$, ce qui a un sens puisque dans $U^{(x)}\cap(X-V^{(x)})$ la restriction de $g^{(x)}$ est une section inversible, donc les restrictions à cet ouvert des deux diviseurs considérés sur $U^{(x)}$ et $X-V^{(x)}$ sont égales.
+Il suffit alors, pour répondre à la question, de prendre $D=\sum_{x\in T}D^{(x)}$, ce qui a un sens puisque $T$ est fini.
+
+  \item Compte tenu du diagramme commutatif \sref{IV.21.4.2.1}, la conclusion résultera de (i) si l'on prouve que tout $\sh{O}_{X_0}$-Module inversible $\sh{L}_0$ est isomorphe à un $\sh{O}_{X_0}$-Module de la forme $\sh{O}_{X_0}(D_0)$ \sref{IV.21.2.8}, où $D_0$ est un diviseur sur $X_0$ dont le support ne rencontre pas $Z_0$.
+Or, comme $U_0$ est schématiquement dense dans $X_0$ \sref{IV.20.2.13}, (iv), il suffit pour cela de prouver qu'il existe une section $t\in\Gamma(U_0,\sh{L}_0)$ telle que $t(z_0)\neq0$ aux points de $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ \sref{IV.3.1.9}.
+On peut donc se borner au cas où $X_0=\Spec(A_0)$ est affine;
+mais alors $\sh{L}_0$ est ample \sref[II]{II.5.1.4} et comme l'ensemble $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ est fini, la conclusion résulte de \sref[II]{II.4.5.4}.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[21.9.12]
+\label{IV.21.9.12}
+Soient $A$ un anneau local hensélien \sref{IV.18.5.8}, $S=\Spec(A)$, $s_0$ le point fermé de $S$, $f:X\to S$ un morphisme séparé de présentation finie, et supposons que l'ensemble $X_0=f^{-1}(s_0)$ soit de dimension $\leq1$.
+Alors, pour tout sous-schéma fermé $X'_0$ de $X$, ayant $X_0$ pour ensemble sous-jacent et de présentation finie sur $S$, l'homomorphisme canonique \sref{IV.21.3.2.4} $\operatorname{Pic}(X)\to\operatorname{Pic}(X'_0)$ est surjectif.
+\end{corollary}
+
+\begin{proof}
+Montrons d'abord qu'il suffit de prouver le corollaire lorsque l'anneau local hensélien $A$ est de plus noethérien.
+On sait en effet \sref{IV.18.6.15} que l'on peut écrire $A=\varinjlim A_\lambda$, où les $A_\lambda$ sont des anneaux locaux noethériens et henséliens, les homomorphismes $A_\lambda\to A$ étant locaux;
+il existe en outre un indice $\alpha$ et un morphisme séparé de présentation finie $f_\alpha:X_\alpha\to S_\alpha=\Spec(A_\alpha)$ tels que $X$ et $f$ soient déduits de $X_\alpha$ et $f_\alpha$ par le changement de base $S\to S_\alpha$ \sref{IV.8.10.5}, (v);
+avec les notations habituelles \sref{IV.8.8.1}, les morphismes $f_\lambda:X_\lambda\to S_\lambda$ seront séparés pour $\lambda\geq\alpha$ et on aura $X=X_\lambda\times_{S_\lambda}S$.
+En outre, on peut supposer que, si $s_{0\alpha}$ est l'unique point fermé de $S_\alpha$, il y a un sous-schéma fermé $X'_{0\alpha}$ de $X_\alpha$, ayant même ensemble sous-jacent que $f_\alpha^{-1}(s_{0\alpha})$, tel que $X'_0=X'_{0\alpha}\times_{S_\alpha}S$ \sref{IV.8.6.3};
+pour $\lambda\geq\alpha$, posons $X'_{0\lambda}=X'_{0\alpha}\times_{S_\alpha}S_\lambda$;
+on a $\dim(X'_{0\lambda})=\dim(X'_0)\leq1$ par transitivité des fibres et \sref{IV.4.1.4}.
+Il s'agit de voir que si l'on a prouvé que l'homomorphisme $\operatorname{Pic}(X_\lambda)\to\operatorname{Pic}(X'_{0\lambda})$ est surjectif pour tout $\lambda\geq\alpha$, il en est de même de $\operatorname{Pic}(X)\to\operatorname{Pic}(X'_0)$.
+On a évidemment le diagramme commutatif d'homomorphismes canoniques
+\[
+  \xymatrix{
+    \operatorname{Pic}(X_\lambda) \ar[r] \ar[d] & \operatorname{Pic}(X) \ar[d]\\
+    \operatorname{Pic}(X'_{0\lambda}) \ar[r] & \operatorname{Pic}(X'_0)
+  }
+\]
+Pour tout $\sh{O}_{X'_0}$-Module inversible $\sh{L}'_0$, il existe un $\lambda\geq\alpha$ et un $\sh{O}_{X'_{0\lambda}}$-Module inversible $\sh{L}'_{0\lambda}$ tel que $\sh{L}'_0$ s'en déduise par changement de base $S\to S_\lambda$ \sref{IV.8.5.2} et \sref{IV.8.5.5};
+il suffit de considérer un $\sh{O}_{X_\lambda}$-Module inversible $\sh{L}_\lambda$ tel que $\operatorname{cl}(\sh{L}'_{0\lambda})$ soit l'image de $\operatorname{cl}(\sh{L}_\lambda)$ dans $\operatorname{Pic}(X'_{0\lambda})$, puis de prendre le $\sh{O}_X$-Module inversible $\sh{L}$ déduit de $\sh{L}_\lambda$ par changement de base;
+en vertu de la commutativité du diagramme précédent, $\operatorname{cl}(\sh{L}'_0)$ sera l'image de $\operatorname{cl}(\sh{L})$.
+
+Supposons donc $A$ noethérien, donc aussi $X$, et vérifions que $X$ et $X'_0$ satisfont aux conditions de \sref{IV.21.9.11}, (ii).
+On a par hypothèse $\dim(X'_0)\leq1$;
+d'autre part, pour vérifier la condition 2\textsuperscript{o} de \sref{IV.21.9.11}, considérons un sous-préschéma réduit $Y$ de $X$ ayant une partie localement fermée $Y$ pour ensemble sous-jacent;
+le morphisme $g:Y\to S$, restriction de $f$, étant quasi-fini en chacun des points $x_i$ de $Y\cap X_0$ ($1\leq i\leq n$), on peut appliquer \sref{IV.18.5.11}, c), et on voit que $Y$ est somme des sous-préschémas ouverts $Y_i=\Spec(\sh{O}_{Y,x_i})$ ($1\leq i\leq n$) et d'un préschéma $Y''$ tel que $Y''\cap X_0=\emp$, et en outre que les injections canoniques $j_i:Y_i\to X$ sont telles que $f\circ j_i$ soit un morphisme fini.
+Comme $f$ est séparé, $j_i$ est aussi un morphisme fini, donc $Y_i$ est fermé dans $X$;
+on répond donc à la question en prenant $Y'=\bigcup_{1\leq i\leq n}Y_i$.
+
+Il reste à vérifier l'hypothèse supplémentaire de \sref{IV.21.9.11}, (ii).
+Or, $X'_0$ étant une courbe séparée sur le corps $\boldsymbol{k}(s_0)$, est un $\boldsymbol{k}(s_0)$-schéma quasi-projectif (chap.~V)\footnote{Le lecteur vérifiera que \sref{IV.21.9.12} n'est pas utilisé pour prouver cette propriété au chap.~V.}, donc il existe un $\sh{O}_{X'_0}$-Module ample \sref[II]{II.5.3.1}, et cela achève la démonstration.
+\end{proof}
+
+\begin{remark}[21.9.13]
+\label{IV.21.9.13}
+Sous les conditions de \sref{IV.21.9.12}, supposant en outre $f$ propre, le morphisme $f$ est même \emph{projectif}:
+en effet, si $\sh{L}_0$ est un $\sh{O}_{X'_0}$-Module ample, il existe, en vertu de \sref{IV.21.9.12}, un $\sh{O}_X$-Module inversible $\sh{L}$ dont l'image réciproque dans $X'_0$ est isomorphe à $\sh{L}_0$, donc est ample.
+Puisque tout voisinage de $s_0$ dans $S$ est nécessairement $S$ tout entier, on déduit alors de \sref{IV.9.6.4} que $\sh{L}$ est un $\sh{O}_X$-Module ample, d'où la conclusion (\sref[II]{II.5.3.1} et \sref[II]{II.5.5.3}).
+\end{remark}
+
+\subsection{Images réciproques et images directes de cycles 1-codimensionnels}
+\label{subsection:IV.21.10}
+
+Dans un chapitre ultérieur, consacré à la théorie des intersections, seront développées de façon systématique les notions d'image inverse et d'image directe de cycles.
+Dans le présent numéro, nous nous contenterons de définir ces notions dans certains cas particuliers utiles, et pour les cycles $1$-codimensionnels, ces définitions étant choisies de telle sorte qu'elles soient compatibles avec les définitions correspondantes pour les diviseurs \sref{IV.21.4} et \sref{IV.21.5}, compte tenu de l'homomorphisme $\operatorname{cyc}$ défini en \sref{IV.21.6}.
+
+\begin{env}[21.10.1]
+\label{IV.21.10.1}
+\oldpage[IV-4]{289}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme, $T$ une partie de $X$;
+supposons que l'image par $f$ de tout point maximal de $X'$ soit un point maximal de $X$, et que, pour tout $x'\in X'^{(1)}$ (i.e.\ tel que $\dim(\sh{O}_{X',x'})=1$), on ait l'une des trois conditions suivantes pour le point $x=f(x')$:
+\begin{enumerate}[label=(\roman*)]
+  \item $x\notin T$;
+  \item $x\in X^{(1)}$ et $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat;
+  \item l'anneau $\sh{O}_{X,x}$ est factoriel et $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$.
+\end{enumerate}
+Sous ces conditions, nous nous proposons, pour tout cycle $1$-codimensionnel $Z$ sur $X$ de support contenu dans $T$, de définir un cycle $1$-codimensionnel $Z'=f^*(Z)$, de sorte que $Z\mapsto f^*(Z)$ soit un homomorphisme de groupes ordonnés du sous-groupe de $\mathfrak{Z}^1(X)$ formé des cycles de support contenu dans $T$, dans le groupe ordonné $\mathfrak{Z}^1(X')$.
+Pour cela, soit
+\[
+\label{IV.21.10.1.1}
+  Z=\sum_{x\in T\cap X^{(1)}}n_x\cdot\overline{\{x\}}
+  \tag{21.10.1.1}
+\]
+où la famille des $x\in T\cap X^{(1)}$ tels que $n_x\neq0$ est localement finie.
+Pour tout $x'\in X'^{(1)}$, définissons un entier $n_{x'}$ de la façon suivante, en posant $x=f(x')$:
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item si $x\notin T$, on prend $n_{x'}=0$;
+  \item si $x\in X^{(1)}$ et si $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat, on sait \sref{IV.6.1.1} que $\dim(\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'})=0$, autrement dit $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ est un $\sh{O}_{X',x'}$-module de longueur finie $\lambda_{x'}$, et on prend $n_{x'}=\lambda_{x'}n_x$;
+  \item si $\sh{O}_{X,x}$ est factoriel et $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, on sait \sref{IV.21.6.9} que l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(\sh{O}_{X,x})\to\mathfrak{Z}^1(\Spec(\sh{O}_{X,x}))$ est bijectif, et d'autre part comme $\dim(\sh{O}_{X',x'})=1$ et $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, $\operatorname{Ass}(\sh{O}_{X',x'})$ se compose uniquement des points maximaux de $\Spec(\sh{O}_{X',x'})$, donc l'hypothèse sur $f$ implique que $f(\operatorname{Ass}(\sh{O}_{X',x'}))\subset\operatorname{Ass}(\sh{O}_{X,x})$ et il résulte de \sref{IV.21.4.5}, (ii) que l'homomorphisme $f^*:\operatorname{Div}(\sh{O}_{X,x})\to\operatorname{Div}(\sh{O}_{X',x'})$ est défini;
+enfin, $x'$ étant l'unique point fermé de $\Spec(\sh{O}_{X',x'})$, $\mathfrak{Z}^1(\Spec(\sh{O}_{X',x'}))$ est canoniquement isomorphe à $\bb{Z}$.
+\end{enumerate}
+On a donc un homomorphisme canonique composé
+\[
+\label{IV.21.10.1.2}
+  \mathfrak{Z}^1(\Spec(\sh{O}_{X,x}))
+  \xrightarrow{\operatorname{cyc}^{-1}}\operatorname{Div}(\sh{O}_{X,x})
+  \xrightarrow{f^*}\operatorname{Div}(\sh{O}_{X',x'})
+  \xrightarrow{\operatorname{cyc}}\mathfrak{Z}^1(\Spec(\sh{O}_{X',x'}))
+  \xrightarrow{\sim}\bb{Z}
+  \tag{21.10.1.2}
+\]
+Si $Z_x$ est le cycle $\sum_{y\in\Spec(\sh{O}_{X,x})\cap X^{(1)}}n_y(\overline{\{y\}}\cap\Spec(\sh{O}_{X,x}))$ sur $\Spec(\sh{O}_{X,x})$, on prend alors pour $n_{x'}$ l'\emph{image} de $Z_x$ par l'homomorphisme \sref{IV.21.10.1.2}.
+\end{env}
+
+\oldpage[IV-4]{290}
+\begin{env}[21.10.2]
+\label{IV.21.10.2}
+Nous nous proposons de montrer que:
+\begin{enumerate}[label=\emph{\Alph*)}]
+  \item Lorsque deux des conditions 1\textsuperscript{o}, 2\textsuperscript{o}, 3\textsuperscript{o} de \sref{IV.21.10.1} sont \emph{simultanément} satisfaites, les valeurs correspondantes de $n_{x'}$ \emph{coïncident}.
+  \item L'ensemble des $x'\in X'^{(1)}$ tels que $n_{x'}\neq0$ est \emph{localement fini} dans $X'$.
+\end{enumerate}
+
+Pour démontrer A), supposons d'abord que $x\notin T$ et que $x$ vérifie l'une des conditions 2\textsuperscript{o} ou 3\textsuperscript{o} de \sref{IV.21.10.1};
+alors $n_x=0$ et si l'on est dans le cas 2\textsuperscript{o}, on a $n_{x'}=0$;
+si on est dans le cas 3\textsuperscript{o}, on a $Z_x=0$ puisque $\Supp(Z)\subset T$, donc encore $n_{x'}=0$.
+Il reste à considérer le cas où l'on est à la fois dans le cas 2\textsuperscript{o} et dans le cas 3\textsuperscript{o};
+alors, puisque $\dim(\sh{O}_{X,x})=1$, $\sh{O}_{X,x}$ est un anneau de valuation discrète;
+si $t$ est une uniformisante de cet anneau, le diviseur correspondant à $Z_x$ est $\operatorname{div}(t^{n_x})$ dans $\operatorname{Div}(\sh{O}_{X,x})$, et son image dans $\operatorname{Div}(\sh{O}_{X',x'})$ est le diviseur de $t'^{n_x}$, où $t'$ est l'élément (régulier) de $\sh{O}_{X',x'}$ image de $t$.
+On peut évidemment se borner au cas où $n_x=1$, et alors la définition \sref{IV.21.6.5.1} montre que l'image de $Z_x$ par \sref{IV.21.10.1.2} est le nombre $\lambda_{x'}$, ce qui achève de prouver A).
+
+Démontrons maintenant B).
+Posons $T_0=\Supp(Z)\subset T$, $T'_0=f^{-1}(T_0)$;
+il suffit de prouver que la relation $n_{x'}\neq0$ implique que $x'$ appartient à l'ensemble des points maximaux de $T'_0$, ce dernier étant localement fini dans $X'$.
+Il est immédiat que l'on a nécessairement $x'\in T'_0$;
+si $x'$ n'était pas maximal dans l'ensemble fermé $T'_0$, il existerait
+\oldpage[IV-4]{291}
+une générisation $y'$ de $x'$ dans $T'_0$, distincte de $x'$, et puisque $x'\in X'^{(1)}$, $y'$ serait nécessairement un point maximal de $X'$;
+par suite $y=f(y')$ serait point maximal de $X$ par hypothèse;
+mais cela est absurde puisque $y\in T_0$ et que $T_0$ est purement de codimension $1$ dans $X$.
+\end{env}
+
+\begin{env}[21.10.3]
+\label{IV.21.10.3}
+On peut maintenant poser
+\[
+  f^*(Z)=\sum_{x'\in X'^{(1)}}n_{x'}\overline{\{x'\}},
+\]
+la somme du second membre ayant un sens en vertu de ce qu'on a prouvé dans \sref{IV.21.10.2};
+on dit que le cycle $1$-codimensionnel $f^*(Z)$ est l'\emph{image réciproque} de $Z$ par $f$.
+Il est immédiat que l'application $f^*$ ainsi définie est un homomorphisme de groupes ordonnés.
+En outre, si $U$ est un ouvert de $X$, $V$ un ouvert de $X'$ tel que $f(V)\subset U$ et $f':V\to U$ la restriction de $f$, il résulte aussitôt des définitions que l'on a
+\[
+\label{IV.21.10.3.1}
+  f'^*(Z|U)=f^*(Z)|V.
+  \tag{21.10.3.1}
+\]
+
+Désignons par $\Gamma_T(\mathscr{Z}^1_X)$ le plus grand sous-faisceau de groupes commutatifs de $\mathscr{Z}^1_X$ de support contenu dans $T$;
+il résulte de la relation \sref{IV.21.10.3.1} que les applications $\Gamma(U,\Gamma_T(\mathscr{Z}^1_X))\to\Gamma(V,\mathscr{Z}^1_{X'})$ que l'on vient de définir, définissent un homomorphisme de faisceaux de groupes commutatifs ordonnés sur $X'$
+\[
+  \psi^*(\Gamma_T(\mathscr{Z}^1_X))\to\mathscr{Z}^1_{X'}
+\]
+où $\psi$ est l'application continue sous-jacente au morphisme $f$.
+\end{env}
+
+\begin{proposition}[21.10.4]
+\label{IV.21.10.4}
+Supposons vérifiées les conditions de \sref{IV.21.10.1}.
+Alors, pour tout diviseur $D$ sur $X$ tel que $\Supp(D)\subset T$ et que $f^*(D)$ soit défini \sref{IV.21.4.2}, on a
+\[
+\label{IV.21.10.4.1}
+  \operatorname{cyc}(f^*(D))=f^*(\operatorname{cyc}(D)).
+  \tag{21.10.4.1}
+\]
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$, on peut se borner au cas où $X=\Spec(A)$ est affine, où $D=\operatorname{div}(t)$, où $t$ est un élément régulier non inversible de $A$, et où le sous-préschéma $Y(D)$ \sref{IV.21.2.12} n'a qu'un seul point maximal $y$, de sorte que $\operatorname{cyc}(D)=n_y\cdot\overline{\{y\}}$, où $n_y$ est la longueur de $\sh{O}_{X,y}/t_y\sh{O}_{X,y}$ \sref{IV.21.6.5.1}.
+On a vu dans la démonstration de \sref{IV.21.10.2}, B) que les points $x'\in X'$ tels que $\operatorname{mult}_{x'}(f^*(\operatorname{cyc}(D)))\neq0$ sont des points maximaux de $f^{-1}(\overline{\{y\}})$.
+Si le point $x'$ est dans le cas 3\textsuperscript{o} de \sref{IV.21.10.1}, l'égalité des multiplicités en $x'$ des deux membres de \sref{IV.21.10.4.1} résulte de la définition de $n_{x'}$ au moyen de l'homomorphisme \sref{IV.21.10.1.2}.
+Supposons au contraire que $x'$ soit dans le cas 2\textsuperscript{o} de \sref{IV.21.10.1}, et soit $x=f(x')$;
+puisque $x\in X^{(1)}\cap\overline{\{y\}}$, on a nécessairement $x=y$.
+Remarquons maintenant que $f^*(D)=\operatorname{div}(t')$, où $t'$ est l'image de $t$ dans $\Gamma(X',\sh{O}_{X'})$, et $Y(f^*(D))=f^{-1}(Y(D))$;
+la multiplicité de $f^*(D)$ au point $x'$ est donc la longueur $n'_{x'}$ du $\sh{O}_{X',x'}$-module
+\[
+  \sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}
+  =(\sh{O}_{X,y}/t_y\sh{O}_{X,y})\otimes_{\sh{O}_{X,y}}\sh{O}_{X',x'};
+\]
+comme il résulte de \sref{IV.4.7.1} que l'on a $n'_{x'}=\lambda_{x'}n_y$, les multiplicités au point $x'$ des deux membres de \sref{IV.21.10.4.1} sont encore égales, ce qui achève la démonstration.
+\end{proof}
+
+\begin{env}[21.10.5]
+\label{IV.21.10.5}
+\oldpage[IV-4]{292}
+Supposons maintenant que $f:X'\to X$ soit un morphisme de préschémas localement noethériens, transformant tout point maximal de $X'$ en point maximal de $X$, et supposons en outre que pour toute partie fermée rare $T$ de $X$, $f$ vérifie les conditions de \sref{IV.21.10.1};
+cela signifie encore que pour tout $x'\in X'^{(1)}$, ou bien $x=f(x')$ est point maximal de $X$, ou bien $x'$ vérifie l'une des conditions (ii), (iii) de \sref{IV.21.10.1}.
+Si on tient compte de ce que tout cycle $1$-codimensionnel a un support rare dans $X$, on voit que $f^*(Z)$ est défini pour tout cycle $1$-codimensionnel $Z$ sur $X$;
+en vertu de \sref{IV.21.10.3.1}, on a donc défini ainsi un homomorphisme de faisceaux de groupes commutatifs ordonnés
+\[
+  \psi^*(\mathscr{Z}^1_X)\to\mathscr{Z}^1_{X'}.
+\]
+Si de plus, pour tout diviseur $D$ sur $X$, $f^*(D)$ est défini \sref{IV.21.4.5}, le fait que le support de $D$ soit rare dans $X$ \sref{IV.21.6.6} entraîne que \sref{IV.21.10.4} est applicable, et on a donc la formule \sref{IV.21.10.4.1} pour tout diviseur $D$ sur $X$.
+En particulier:
+\end{env}
+
+\begin{proposition}[21.10.6]
+\label{IV.21.10.6}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme plat.
+Alors $f^*(Z)$ est défini pour tout cycle $1$-codimensionnel $Z$ sur $X$, $f^*(D)$ est défini pour tout diviseur $D$ sur $X$ et l'on a la relation \sref{IV.21.10.4.1}.
+\end{proposition}
+
+\begin{proof}
+En effet, si $x'\in X'^{(1)}$ est tel que $x=f(x')$ ne soit pas maximal, il résulte de \sref{IV.6.1.1} que l'on a nécessairement $x\in X^{(1)}$, donc on est dans le cas (ii) de \sref{IV.21.10.1}.
+On peut donc appliquer \sref{IV.21.10.5}, compte tenu de \sref{IV.21.4.5} et de \sref{IV.2.3.4}.
+\end{proof}
+
+\begin{remark}[21.10.7]
+\label{IV.21.10.7}
+L'existence de $f^*(Z)$ pour tout cycle $1$-codimensionnel $Z$ sur $X$ résulte déjà de l'hypothèse que $f$ est \emph{plat aux points $x'$ de $X'$ de codimension $\leq1$ dans $X'$} (i.e.\ tels que $\dim\sh{O}_{X',x'}\leq1$);
+en effet, pour tout point maximal $z'\in X'$, il résulte de \sref{IV.6.1.1} que $z=f(z')$ est point maximal de $X$ puisque $\dim\sh{O}_{X,z}\leq\dim\sh{O}_{X',z'}=0$.
+De même, si $x'\in X'^{(1)}$, $x=f(x')$ est maximal ou appartient à $X^{(1)}$ par \sref{IV.6.1.1};
+on peut donc encore appliquer \sref{IV.21.10.5}.
+\end{remark}
+
+\begin{proposition}[21.10.8]
+\label{IV.21.10.8}
+Soient $X$, $X'$, $X''$ trois préschémas localement noethériens, $f:X'\to X$, $g:X''\to X'$ deux morphismes;
+on suppose que $f$ (resp.\ $g$) est plat en tout point de codimension $\leq1$ dans $X'$ (resp.\ $X''$).
+Alors $f\circ g$ est plat en tout point de codimension $\leq1$ dans $X''$ et pour tout cycle $1$-codimensionnel $Z$ sur $X$, on a $(f\circ g)^*(Z)=g^*(f^*(Z))$.
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de \sref{IV.6.1.1} et \sref{IV.2.1.6}.
+La seconde résulte de ce que $f$ (resp.\ $g$, resp.\ $f\circ g$) transforme les points maximaux de $X'$ (resp.\ $X''$, resp.\ $X''$) en points maximaux de $X$ (resp.\ $X'$, resp.\ $X$) et de ce que, si $x''\in X''^{(1)}$ est tel que $x'=g(x'')\in X'^{(1)}$ et $x=f(x')\in X^{(1)}$, on a
+\[
+  \operatorname{long}(\sh{O}_{X'',x''}/\mathfrak{m}_x\sh{O}_{X'',x''})
+  =\operatorname{long}(\sh{O}_{X'',x''}/\mathfrak{m}_{x'}\sh{O}_{X'',x''})
+   \cdot\operatorname{long}(\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}).
+\]
+En effet, si l'on pose $A=\sh{O}_{X,x}$, $A'=\sh{O}_{X',x'}$, $A''=\sh{O}_{X'',x''}$, $\mathfrak{m}=\mathfrak{m}_x$, $\mathfrak{m}'=\mathfrak{m}_{x'}$, on a $A''/\mathfrak{m}A''=(A'/\mathfrak{m}A')\otimes_{A'}A''$, et la formule
+\[
+  \operatorname{long}_{A''}(A''/\mathfrak{m}A'')
+  =\operatorname{long}_{A'}(A'/\mathfrak{m}A')
+   \cdot\operatorname{long}_{A''}(A''/\mathfrak{m}'A'')
+\]
+résulte de \sref{IV.4.7.1} et de l'hypothèse de platitude de $A''$ sur $A'$.
+\end{proof}
+
+\begin{env}[21.10.9]
+\label{IV.21.10.9}
+Soient $X$ un préschéma localement noethérien, $\Lambda$ un groupe commutatif, noté additivement, et considéré donc comme $\bb{Z}$-module;
+on notera encore par $\bb{Z}$ et $\Lambda$ les faisceaux simples sur $X$ associés aux préfaisceaux constants égaux respectivement à $\bb{Z}$ et $\Lambda$ \sref[0]{0.3.6}.
+On appelle \emph{faisceau des germes de cycles $1$-codimensionnels à coefficients dans $\Lambda$} le faisceau de groupes commutatifs $\mathscr{Z}^1_X\otimes_{\bb{Z}}\Lambda$.
+Si $\Lambda=\bb{Q}$, on dit que les sections
+\oldpage[IV-4]{293}
+de $\mathscr{Z}^1_X\otimes_{\bb{Z}}\bb{Q}$ au-dessus de $X$ sont les \emph{cycles $1$-codimensionnels à coefficients rationnels}.
+Comme les fibres de $\mathscr{Z}^1_X$ sont des $\bb{Z}$-modules sans torsion \sref{IV.21.6.3}, l'homomorphisme canonique $\mathscr{Z}^1_X\to\mathscr{Z}^1_X\otimes_{\bb{Z}}\bb{Q}$ est \emph{injectif}, de sorte que les cycles $1$-codimensionnels s'identifient à des cycles $1$-codimensionnels à coefficients rationnels.
+\end{env}
+
+\begin{env}[21.10.10]
+\label{IV.21.10.10}
+Nous allons voir que sous certaines conditions, on peut élargir la définition de $f^*(Z)$ donnée dans \sref{IV.21.10.3} pour un cycle $1$-codimensionnel $Z$ sur $X$, mais à condition de prendre pour $f^*(Z)$ un cycle $1$-codimensionnel à coefficients rationnels sur $X'$.
+Le cas plus général où nous nous plaçons est celui où $f$ transforme tout point maximal de $X'$ en un point maximal de $X$, et où, en tout point $x'\in X'^{(1)}$, on a l'une des conditions (i), (ii), (iii) de \sref{IV.21.10.1} \emph{ou une quatrième condition} (en posant $x=f(x')$):
+\begin{enumerate}
+  \item[(iv)] $x\in X^{(1)}$, $\mathfrak{m}_x\notin\operatorname{Ass}(\sh{O}_{X,x})$, et \emph{en outre, si l'on pose} $A=\widehat{\sh{O}}_{X,x}$, $A'=\widehat{\sh{O}}_{X',x'}$, \emph{et si $K$ désigne l'anneau total des fractions de $A$, alors $A'$ est une $A$-algèbre finie et $K'=A'\otimes_AK$ est un $K$-module} libre.
+\end{enumerate}
+
+Notons alors $r_{x'}$ le rang du $K$-module libre $K'$, $q_{x'}$ le degré de $\boldsymbol{k}(x')=\boldsymbol{k}(A')$ sur $\boldsymbol{k}(x)=\boldsymbol{k}(A)$, et posons $\mu_{x'}=r_{x'}/q_{x'}$.
+Pour un cycle $1$-codimensionnel de support contenu dans $T$, donné par \sref{IV.21.10.1.1} et tout $x'\in X'^{(1)}$, on définit $c_{x'}\in\bb{Q}$, comme égal au nombre $n_{x'}\in\bb{Z}$ lorsque l'on est dans l'un des cas $1\textsuperscript{o}$, $2\textsuperscript{o}$, $3\textsuperscript{o}$ de \sref{IV.21.10.1}; mais il reste ici une quatrième possibilité:
+\begin{enumerate}
+  \item[$4\textsuperscript{o}$] si $x'$ vérifie la condition (iv) ci-dessus, on prend $c_{x'}=\mu_{x'}n_x\in\bb{Q}$.
+\end{enumerate}
+\end{env}
+
+\begin{env}[21.10.11]
+\label{IV.21.10.11}
+Il faut encore prouver que lorsque la condition $4\textsuperscript{o}$ de \sref{IV.21.10.10} est vérifiée \emph{en même temps} qu'une des conditions $1\textsuperscript{o}$, $2\textsuperscript{o}$, $3\textsuperscript{o}$ de \sref{IV.21.10.1}, on a $n_{x'}=c_{x'}$.
+C'est évident si $x\notin T$ puisque alors $n_x=0$.
+Pour étudier les deux autres cas, notons que $\mathfrak{m}_x\sh{O}_{X',x'}$ est fermé pour la topologie $\mathfrak{m}_{x'}$-préadique, donc le complété de $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ pour cette dernière topologie est $A'/\mathfrak{m}_xA'$.
+Si l'on est à la fois dans le cas $2\textsuperscript{o}$ et le cas $4\textsuperscript{o}$, $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ est discret pour la topologie $\mathfrak{m}_{x'}$-préadique, donc isomorphe à $A'/\mathfrak{m}_xA'$.
+Comme $A'$ est une $A$-algèbre finie et \emph{plate} $(\mathbf{0}_{\mathrm{III}},10.2.3)$, c'est un $A$-module \emph{libre} $(\mathbf{0}_{\mathrm{III}},10.1.3)$, et le rang de $A'/\mathfrak{m}_xA'$ sur $A/\mathfrak{m}_xA=\boldsymbol{k}(x)$ est égal au rang de $A'$ sur $A$, donc aussi à celui de $K'$ sur $K$.
+D'autre part ce rang est aussi égal au produit de la longueur $\lambda_{x'}$ de $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ (en tant que $\sh{O}_{X',x'}$-module, ou de $\boldsymbol{k}(x')$-module) par le rang $[\boldsymbol{k}(x'): \boldsymbol{k}(x)]=q_{x'}$, ce qui prouve la relation $\mu_{x'}=r_{x'}/q_{x'}=\lambda_{x'}$ dans ce cas.
+
+Supposons enfin que l'on soit à la fois dans le cas $3\textsuperscript{o}$ et le cas $4\textsuperscript{o}$.
+Alors, puisque $\dim(\sh{O}_{X,x})=1$, $\sh{O}_{X,x}$ est un anneau de valuation discrète, donc régulier.
+D'autre part, $\sh{O}_{X',x'}$ est de dimension $1$, et puisque $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, $\sh{O}_{X',x'}$ est un anneau de Cohen--Macaulay $(\mathbf{0},16.4.6)$;
+enfin, puisque $A'$ est un $A$-module de type fini, $A'/\mathfrak{m}_xA'$ est un $\boldsymbol{k}(x)$-espace vectoriel de rang fini;
+puisque $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ est contenu dans $A'/\mathfrak{m}_xA'$, c'est aussi un $\boldsymbol{k}(x)$-espace vectoriel de rang fini, donc un anneau artinien.
+L'application de \sref{IV.6.1.5} montre alors que $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module \emph{plat}, donc on est aussi dans le cas $2\textsuperscript{o}$, et on conclut par ce qui a été vu plus haut.
+
+Cela étant, dans le cas que l'on a considéré, on posera
+\[
+  f^*(Z)=\sum_{x'\in X'^{(1)}}c_{x'}\cdot\overline{\{x'\}}.
+\]
+\oldpage[IV-4]{294}
+qui est donc un cycle $1$-codimensionnel sur $X'$ à coefficients \emph{rationnels}.
+On a encore défini ainsi un homomorphisme $f^*$ de groupes ordonnés, vérifiant \sref{IV.21.10.3.1}, et par suite un homomorphisme de faisceaux de groupes commutatifs
+\[
+  \psi^*(\Gamma_T(\mathscr{Z}^1_X))\to\mathscr{Z}^1_{X'}\otimes_{\bb{Z}}\bb{Q}.
+\]
+
+Lorsque $f$ vérifie les conditions précédentes pour \emph{toute partie fermée $T$ rare} dans $X$, c'est-à-dire que pour tout $x'\in X'^{(1)}$, ou bien $x=f(x')$ est point maximal de $X$, ou bien $x'$ vérifie l'une des conditions (ii), (iii) ou (iv), $f^*(Z)$ est alors défini pour tout cycle $1$-codimensionnel $Z$ sur $X$, et on a défini un homomorphisme de faisceaux de groupes commutatifs ordonnés
+\[
+  \psi^*(\mathscr{Z}^1_X)\to\mathscr{Z}^1_{X'}\otimes_{\bb{Z}}\bb{Q},
+\]
+d'où, par tensorisation, un homomorphisme de faisceaux de $\bb{Q}$-espaces vectoriels ordonnés
+\[
+\label{IV.21.10.11.1}
+  \psi^*(\mathscr{Z}^1_X\otimes_{\bb{Z}}\bb{Q})\to\mathscr{Z}^1_{X'}\otimes_{\bb{Z}}\bb{Q}.
+  \tag{21.10.11.1}
+\]
+\end{env}
+
+\begin{remark}[21.10.12]
+\label{IV.21.10.12}
+Lorsqu'on est dans la situation de \sref{IV.21.10.10}, on peut effectivement, pour des cycles $1$-codimensionnels $Z$ sur $X$, avoir pour $f^*(Z)$ des cycles $1$-codimensionnels à coefficients \emph{non entiers}; autrement dit les nombres $\mu_{x'}$ peuvent être non entiers.
+On en a un exemple en prenant l'anneau intègre complet $A$ de $(\mathbf{0}_{\mathrm{IV}},6.15.11)$, (ii) et sa clôture intégrale $A'$: le point fermé $x'$ de $\Spec(A')$ vérifie la condition (iv) de \sref{IV.21.10.10} et l'on a $\mu_{x'}=\frac12$.
+\end{remark}
+
+\begin{lemma}[21.10.13]
+\label{IV.21.10.13}
+Soient $A$ un anneau local noethérien de dimension $1$, $t$ un élément régulier de $A$ appartenant à l'idéal maximal $\mathfrak{m}$ (ce qui implique que $\mathfrak{m}\notin\operatorname{Ass}(A)$).
+\begin{enumerate}[label=(\roman*)]
+  \item Pour tout $A$-module $M$ de type fini, le noyau $N_t(M)$ et le conoyau $P_t(M)$ de l'homothétie $t_M:M\to M$ de rapport $t$ sont de longueurs finies. On pose $d_t(M)=\operatorname{long}P_t(M)-\operatorname{long}N_t(M)$.
+  \item Si $0\to M'\to M\to M''\to0$ est une suite exacte de $A$-modules de type fini, on a $d_t(M)=d_t(M')+d_t(M'')$.
+  \item On a $d_t(M)\geq0$ pour tout $A$-module $M$ de type fini; pour que $d_t(M)=0$, il faut et il suffit que $M$ soit de longueur finie.
+  \item Si $K$ est l'anneau total des fractions de $A$ et si $M\otimes_AK$ est un $K$-module libre de rang $n$, on a $d_t(M)=n\cdot d_t(A)=n\cdot\operatorname{long}(A/tA)$.
+  \item Si $M$ vérifie les hypothèses de (iv) et si de plus $t$ est $M$-régulier, on a $\operatorname{long}(M/tM)=n\cdot\operatorname{long}(A/tA)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) $\Spec(A)$ est formé du point $\mathfrak{m}$ et des idéaux premiers minimaux $\mathfrak{p}_i$;
+comme par hypothèse $t\notin\mathfrak{p}_i$ pour tout $i$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~1, n\textsuperscript{o}~1, cor.~3 de la prop.~2), l'image de $t$ dans chacun des $A_{\mathfrak{p}_i}$ est inversible, et les supports des $A$-modules de type fini $N_t(M)$ et $P_t(M)$ sont donc vides ou réduits à $\mathfrak{m}$;
+on en conclut $(\mathbf{0},16.1.10)$ que ces modules sont de longueur finie.
+
+(ii) Puisque $t$ est régulier, on a une suite exacte
+\[
+  0\to A\xrightarrow{t_A}A\to A/tA\to0
+\]
+\oldpage[IV-4]{295}
+et puisque $\operatorname{Tor}_i^A(M,A)=0$ pour $i\geq1$, la suite exacte des Tor donne d'une part la suite exacte
+\[
+  0\to\operatorname{Tor}_1^A(M,A/tA)\to M\xrightarrow{t_M}M\to M/tM\to0
+\]
+et d'autre part, pour $i\geq2$,
+\[
+  0=\operatorname{Tor}_i^A(M,A)\to\operatorname{Tor}_i^A(M,A/tA)\to\operatorname{Tor}_{i-1}^A(M,A)=0,
+\]
+donc on a $N_t(M)=\operatorname{Tor}_1^A(M,A/tA)$ et $\operatorname{Tor}_i^A(M,A/tA)=0$ pour $i\geq2$;
+la suite exacte des Tor donne une suite exacte
+\[
+  0\to\operatorname{Tor}_1^A(M',A/tA)\to\operatorname{Tor}_1^A(M,A/tA)\to\operatorname{Tor}_1^A(M'',A/tA)\to
+\]
+\[
+  M'\otimes_A(A/tA)\to M\otimes_A(A/tA)\to M''\otimes_A(A/tA)\to0
+\]
+et cette suite s'écrit, d'après ce qui précède,
+\[
+  0\to N_t(M')\to N_t(M)\to N_t(M'')\to P_t(M')\to P_t(M)\to P_t(M'')\to0,
+\]
+ce qui prouve (ii).
+
+Pour prouver (iii), notons qu'il y a une suite de composition $(M_h)$ de $M$ dont les quotients $M_h/M_{h+1}$ sont isomorphes à $A/\mathfrak{m}$ ou à un des $A/\mathfrak{p}_i$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~1, n\textsuperscript{o}~4, th.~1), et pour que $M$ soit de longueur finie, il faut et il suffit que tous ces quotients soient isomorphes à $A/\mathfrak{m}$.
+Tout revient donc (en vertu de (ii)) à prouver que $d_t(A/\mathfrak{m})=0$ et $d_t(A/\mathfrak{p}_i)>0$.
+Or, l'image de $t$ dans $A/\mathfrak{m}$ étant $0$, on a $N_t(A/\mathfrak{m})=A/\mathfrak{m}$ et $P_t(A/\mathfrak{m})=A/\mathfrak{m}$, d'où la première assertion;
+d'autre part, l'image de $t$ dans $A/\mathfrak{p}_i$ est régulière, donc $N_t(A/\mathfrak{p}_i)=0$ et $P_t(A/\mathfrak{p}_i)=A/(tA+\mathfrak{p}_i)$ qui n'est pas réduit à $0$, d'où la seconde assertion.
+
+(iv) Il y a une base de $M\otimes_AK$ de la forme $(x_j/s)_{1\leq j\leq n}$, où $s$ est un élément régulier de $A$ et $x_j\in M$.
+Considérons l'homomorphisme $u:A^n\to M$ qui transforme l'élément $e_j$ $(1\leq j\leq n)$ de la base canonique de $A^n$ en $x_j$ et montrons que $\operatorname{Ker}(u)$ et $\operatorname{Coker}(u)$ sont de \emph{longueur finie};
+en effet, pour tout $i$, l'image de $s$ dans $A_{\mathfrak{p}_i}$ est inversible, et comme $K_{\mathfrak{p}_i}=A_{\mathfrak{p}_i}$, les images des $x_j/s$ dans $M_{\mathfrak{p}_i}$ forment une base de ce $A_{\mathfrak{p}_i}$-module;
+donc $u_{\mathfrak{p}_i}:A_{\mathfrak{p}_i}^n\to M_{\mathfrak{p}_i}$ est bijectif.
+Comme dans (i), on en conclut que les supports de $\operatorname{Ker}(u)$ et de $\operatorname{Coker}(u)$ sont contenus dans $\{\mathfrak{m}\}$, donc que ces modules sont de longueur finie.
+Cela étant, il résulte de (ii) et (iii) que l'on a $d_t(M)=d_t(A^n)=n\cdot d_t(A)=n\cdot\operatorname{long}(A/tA)$ puisque $t$ est régulier.
+
+Enfin, il est clair que (v) se déduit aussitôt de (iv), puisque alors $N_t(M)=0$.
+\end{proof}
+
+Ce lemme permet de généraliser \sref{IV.21.10.4}:
+
+\begin{proposition}[21.10.13]
+\label{IV.21.10.13bis}
+Supposons que $f$ vérifie les conditions de \sref{IV.21.10.10}.
+Alors, pour tout diviseur $D$ sur $X$ tel que $\Supp(D)\subset T$ et que $f^*(D)$ soit défini, on a
+\[
+\label{IV.21.10.13.1}
+  \operatorname{cyc}(f^*(D))=f^*(\operatorname{cyc}(D)).
+  \tag{21.10.13.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Raisonnant comme dans \sref{IV.21.10.4}, tout revient à voir (avec les mêmes notations) que si $x'$ est dans le cas $4\textsuperscript{o}$ de \sref{IV.21.10.10} et si $n_y$ est la longueur de $\sh{O}_{X,y}/t_y\sh{O}_{X,y}$, alors la
+\oldpage[IV-4]{296}
+longueur $n_{x'}$ de $\sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}$ est égale à $\mu_{x'}n_y$, $\mu_{x'}$ étant le nombre rationnel défini dans \sref{IV.21.10.10}.
+Comme $\sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}$ est de longueur finie, il a même longueur que son complété $\mathfrak{m}_{x'}$-préadique $A'/t'_{x'}A'$, qu'on peut aussi écrire $A'/t_yA'$;
+d'ailleurs, comme $t'_{x'}$ est régulier par hypothèse dans $\sh{O}_{X',x'}$, il l'est aussi dans $A'$ par platitude $(\mathbf{0}_{\mathrm{I}},6.3.4)$, et lorsque $A'$ est considéré comme $A$-module, on peut aussi dire que $t_y$ est $A'$-régulier.
+Comme $A$ est de dimension $1$ et que $A'$ est un $A$-module de type fini tel que $A'\otimes_AK$ soit un $K$-module libre de rang $r_{x'}$, on peut appliquer \sref{IV.21.10.13}, (v) à $M=A'$ et à $t_y$, et la longueur de $A'/t_yA'$ en tant que $A$-module est donc $r_{x'}n_y$.
+Comme $\boldsymbol{k}(x')$ est un $\boldsymbol{k}(x)$-espace vectoriel de rang $q_{x'}$, la longueur de $A'/t_yA'$ en tant que $A'$-module est donc $r_{x'}n_y/q_{x'}=\mu_{x'}n_y$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{env}[21.10.14]
+\label{IV.21.10.14}
+Soient maintenant $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme ayant les \emph{deux propriétés} suivantes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est fini;
+  \item l'image par $f$ de tout point maximal de $X'$ est un point maximal de $X$.
+\end{enumerate}
+Pour tout $x\in X^{(1)}$, les points $x'\in f^{-1}(x)$ appartiennent alors tous à $X'^{(1)}$, comme il résulte de l'hypothèse \emph{b)} et de l'inégalité $(\mathbf{0},16.3.9.1)$, la fibre $f^{-1}(x)$ étant discrète.
+Soit alors
+\[
+  Z'=\sum_{x'\in X'^{(1)}}n_{x'}\cdot\overline{\{x'\}}
+\]
+un cycle $1$-codimensionnel sur $X'$.
+Pour tout $x\in X^{(1)}$, définissons un entier $n_x$ par la formule
+\[
+  n_x=\sum_{x'\in f^{-1}(x)}n_{x'}\cdot[\boldsymbol{k}(x'): \boldsymbol{k}(x)],
+\]
+ce qui a un sens, les points de $f^{-1}(x)$ étant en nombre fini et $\boldsymbol{k}(x')$ étant un corps de degré fini sur $\boldsymbol{k}(x)$ \sref[I]{I.6.4.4}.
+En outre, l'ensemble des $x\in X^{(1)}$ tels que $n_x\neq0$ est \emph{localement fini} dans $X$, car il est contenu dans l'image par $f$ de l'ensemble des $x'\in X'^{(1)}$ tels que $n_{x'}\neq0$, et la conclusion résulte de ce que le morphisme $f$ est quasi-compact.
+On peut donc définir un cycle $1$-codimensionnel sur $X$ en posant
+\[
+\label{IV.21.10.14.1}
+  f_*(Z')=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}
+  \tag{21.10.14.1}
+\]
+et on dit que $f_*(Z')$ est l'\emph{image directe} de $Z'$ par $f$.
+Il est clair que l'application $f_*:\mathfrak{Z}^1(X')\to\mathfrak{Z}^1(X)$ ainsi définie est un homomorphisme de groupes ordonnés.
+En outre, si $U$ est un ouvert de $X$, $f_U:f^{-1}(U)\to U$ la restriction de $f$, il résulte aussitôt des définitions que l'on a
+\[
+\label{IV.21.10.14.2}
+  (f_U)_*(Z'|f^{-1}(U))=f_*(Z')|U,
+  \tag{21.10.14.2}
+\]
+donc, en désignant par $\psi$ l'application continue sous-jacente au morphisme $f$, les applications $\Gamma(f^{-1}(U),\mathscr{Z}^1_{X'})\to\Gamma(U,\mathscr{Z}^1_X)$ que l'on vient de définir définissent un homomorphisme de faisceaux de groupes commutatifs ordonnés sur $X$
+\[
+  \psi_*(\mathscr{Z}^1_{X'})\to\mathscr{Z}^1_X.
+\]
+\end{env}
+
+\begin{proposition}[21.10.15]
+\label{IV.21.10.15}
+\oldpage[IV-4]{297}
+Soient $X$, $X'$, $X''$ trois préschémas localement noethériens, $f:X'\to X$, $g:X''\to X'$ deux morphismes vérifiant les conditions \emph{a)} et \emph{b)} de \sref{IV.21.10.14}.
+Alors $f\circ g$ vérifie les mêmes conditions, et pour tout cycle $1$-codimensionnel $Z''$ sur $X''$, on a
+\[
+  (f\circ g)_*(Z'')=f_*(g_*(Z'')).
+\]
+\end{proposition}
+
+\begin{proof}
+Cela résulte aussitôt des définitions.
+\end{proof}
+
+\begin{proposition}[21.10.16]
+\label{IV.21.10.16}
+Soient $X$, $X'$, $X_1$ trois préschémas localement noethériens, $f:X'\to X$ un morphisme vérifiant les conditions \emph{a)} et \emph{b)} de \sref{IV.21.10.14}, $g:X_1\to X$ un morphisme plat.
+On pose $X'_1=X'\times_XX_1$ (de sorte que $X'_1$ est localement noethérien) et on note $f_1:X'_1\to X_1$ et $g_1:X'_1\to X'$ les projections canoniques.
+Alors $f_1$ vérifie les conditions \emph{a)} et \emph{b)} de \sref{IV.21.10.14}, et pour tout $1$-cycle codimensionnel $Z'$ sur $X'$, on a
+\[
+\label{IV.21.10.16.1}
+  g^*(f_*(Z'))=(f_1)_*(g_1^*(Z')).
+  \tag{21.10.16.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Il est clair que $f_1$ est fini, et il vérifie la condition \emph{b)} de \sref{IV.21.10.14} en vertu de \sref{IV.2.3.7}.
+Pour prouver \sref{IV.21.10.16.1}, on est aussitôt ramené au cas où $X$, $X'$ et $X_1$ sont des spectres d'anneaux locaux noethériens de dimension $1$, $A$, $A'$ et $A_1$, $A'$ étant un $A$-module fini et $A_1$ un $A$-module plat.
+Désignant par $x$, $x'$ et $x_1$ les points fermés de $X$, $X'$ et $X_1$ respectivement, il s'agit de voir que l'on a
+\[
+\label{IV.21.10.16.2}
+  \sum_{x'_1}\lambda_{x'_1}[\boldsymbol{k}(x'_1):\boldsymbol{k}(x_1)]
+  =\lambda_{x_1}[\boldsymbol{k}(x'):\boldsymbol{k}(x)]
+  \tag{21.10.16.2}
+\]
+où $x'_1$ parcourt l'ensemble des points fermés de $X'_1$ (i.e. l'ensemble des points à la fois au-dessus de $x'$ et de $x_1$) et où $\lambda_{x'_1}=\operatorname{long}(\sh{O}_{X'_1,x'_1}/\mathfrak{m}_{x'}\sh{O}_{X'_1,x'_1})$ et $\lambda_{x_1}=\operatorname{long}(A_1/\mathfrak{m}_xA_1)$.
+Comme on a
+\[
+  [\boldsymbol{k}(x'_1):\boldsymbol{k}(x')]\cdot[\boldsymbol{k}(x'):\boldsymbol{k}(x)]
+  =[\boldsymbol{k}(x'_1):\boldsymbol{k}(x_1)]\cdot[\boldsymbol{k}(x_1):\boldsymbol{k}(x)],
+\]
+le premier membre de \sref{IV.21.10.16.2} s'écrit aussi
+\[
+  \frac{[\boldsymbol{k}(x'): \boldsymbol{k}(x)]}{[\boldsymbol{k}(x_1): \boldsymbol{k}(x)]}
+  \operatorname{long}_{A'}(A'_1/\mathfrak{m}_{x'}A'_1)
+  =\operatorname{long}_{A_1}(A'_1/\mathfrak{m}_{x'}A'_1),
+\]
+où on a posé $A'_1=A'\otimes_AA_1$.
+On a donc $A'_1/\mathfrak{m}_{x'}A'_1=(A'/\mathfrak{m}_{x'}A')\otimes_AA_1$, et comme $A_1$ est un $A$-module plat, on a par \sref{IV.4.7.1}
+\[
+  \operatorname{long}_{A_1}(A'_1/\mathfrak{m}_{x'}A'_1)
+  =\operatorname{long}_{A'}(A'/\mathfrak{m}_{x'}A')\operatorname{long}_{A_1}(A_1/\mathfrak{m}_xA_1)
+  =[\boldsymbol{k}(x'): \boldsymbol{k}(x)]\cdot\lambda_{x_1},
+\]
+ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[21.10.17]
+\label{IV.21.10.17}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme fini localement libre.
+Alors $f$ vérifie la condition \emph{b)} de \sref{IV.21.10.14}, et pour tout diviseur $D'$ sur $X'$, on a
+\[
+\label{IV.21.10.17.1}
+  f_*(\operatorname{cyc}(D'))=\operatorname{cyc}(f_*(D')).
+  \tag{21.10.17.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Comme $f$ est plat et fini, la condition \emph{b)} de \sref{IV.21.10.14} et la relation $f(X'^{(1)})\subset X^{(1)}$ résultent de \sref{IV.6.1.1}.
+La définition \sref{IV.21.10.14.1} montre qu'on peut se ramener au cas où $X=\Spec(A)=\Spec(\sh{O}_{X,x})$ pour un $x\in X^{(1)}$;
+alors $X'=\Spec(A')$, où $A'$ est une
+\oldpage[IV-4]{298}
+$A$-algèbre qui est un $A$-module libre de rang fini;
+en outre, on peut supposer que $D'=\operatorname{div}(t')$, où $t'$ est un élément régulier de $A'$;
+on a alors $f_*(D')=\operatorname{div}(t)$, où $t=\mathrm{N}_{A'/A}(t')$ est un élément régulier de $A$ \sref{IV.21.5.2}.
+On peut se borner au cas où $t'$ n'est pas inversible dans $A'$, ce qui équivaut au fait que $t$ ne l'est pas dans $A$;
+l'anneau $A/tA$ est alors de longueur finie et $\neq0$, et $A'/tA'$ est composé direct d'anneaux locaux artiniens $A'_i$ $(1\leq i\leq r)$, le corps résiduel de $A'_i$ étant $\boldsymbol{k}(x'_i)$, où les $x'_i$ $(1\leq i\leq r)$ sont les points de $X'$ au-dessus de $x$.
+Si $t'_i$ $(1\leq i\leq r)$ est l'image de $t'$ dans $A'_i$, $A'/t'A'$ est composé direct des $A'_i/t'_iA'_i$;
+comme le produit $\operatorname{long}_{A'_i}(A'_i/t'_iA'_i)\cdot[\boldsymbol{k}(x'_i):\boldsymbol{k}(x)]$ est égal à $\operatorname{long}_A(A'_i/t'_iA'_i)$, on voit que la multiplicité au point $x$ du premier membre de \sref{IV.21.10.17.1} est $\operatorname{long}_A(A'/t'A')$, si bien que la formule à démontrer se réduit à
+\[
+\label{IV.21.10.17.2}
+  \operatorname{long}_A(A'/t'A')=\operatorname{long}_A(A/tA).
+  \tag{21.10.17.2}
+\]
+
+Cette relation découle du lemme plus général suivant.
+\end{proof}
+
+\begin{lemma}[21.10.17.3]
+\label{IV.21.10.17.3}
+Soient $A$ un anneau local noethérien de dimension $1$, $M$ un $A$-module libre de rang fini, $u$ un endomorphisme injectif de $M$.
+Alors on a
+\[
+\label{IV.21.10.17.4}
+  \operatorname{long}_A(\operatorname{Coker}u)=\operatorname{long}_A(A/(\det u)A).
+  \tag{21.10.17.4}
+\]
+\end{lemma}
+
+\begin{proof}
+Distinguons plusieurs cas.
+
+I) $A$ est un anneau de valuation discrète.
+Soit en effet $\pi$ une uniformisante de $A$, et remarquons que $\operatorname{long}_A(A/\pi^kA)=k$;
+si $n$ est le rang de $M$ et si $\pi^{m_i}$ $(1\leq i\leq n)$ sont les facteurs invariants de $u$, $\operatorname{Coker}(u)$ est somme directe des $A$-modules $A/\pi^{m_i}A$, donc a pour longueur $m=\sum_{i=1}^nm_i$ et $\det(u)$ est produit d'un élément inversible et de $\pi^m$, d'où la conclusion dans ce cas (Bourbaki, \emph{Alg.}, chap.~VII, \textsection~4, n\textsuperscript{o}~5, cor.~1 de la prop.~4).
+
+II) $A$ est un anneau complet intègre (de dimension $1$).
+On sait alors $(\mathbf{0},19.8.8)$, (ii) qu'il y a un sous-anneau $B$ de $A$, qui est un anneau de valuation discrète, tel que $B\to A$ soit un homomorphisme local faisant de $A$ un $B$-module de type fini;
+comme ce $B$-module est évidemment sans torsion, il est libre (Bourbaki, \emph{Alg. comm.}, chap.~VI, \textsection~3, n\textsuperscript{o}~6, lemme~1).
+Notons $M'$ l'ensemble $M$ muni de sa structure de $B$-module (libre), par $u'$ l'endomorphisme $u$ considéré comme $B$-endomorphisme.
+Il résulte de I) que l'on a
+\[
+\label{IV.21.10.17.5}
+  \operatorname{long}_B(\operatorname{Coker}u')=\operatorname{long}_B(B/(\det u')B).
+  \tag{21.10.17.5}
+\]
+Mais on a (Bourbaki, \emph{Alg.}, chap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7)
+\[
+  \det u'=\mathrm{N}_{A/B}(\det u),
+\]
+donc, en appliquant \sref{IV.21.10.17.4} à l'homothétie $x\mapsto(\det u)x$ du $B$-module libre $A$, il vient
+\[
+  \operatorname{long}_B(B/(\det u')B)=\operatorname{long}_B(A/(\det u)A),
+\]
+d'où, en portant dans \sref{IV.21.10.17.5} et divisant par $[\boldsymbol{k}(A):\boldsymbol{k}(B)]$, longueur du $B$-module $\boldsymbol{k}(A)$, on obtient \sref{IV.21.10.17.4} dans le cas envisagé.
+
+\oldpage[IV-4]{299}
+III) $A$ est un anneau complet.
+Notons qu'on peut supposer en outre que $\mathfrak{m}\notin\operatorname{Ass}(A)$;
+en effet, puisque $\det(u)$ est un élément régulier de $A$, si l'on avait $\mathfrak{m}\in\operatorname{Ass}(A)$, on en déduirait $\det(u)\notin\mathfrak{m}$, donc $\det(u)$ serait inversible, $u$ un automorphisme de $M$, et la formule \sref{IV.21.10.17.4} devient alors triviale, les deux membres étant nuls.
+
+Dans ce qui suit, pour un endomorphisme $v$ d'un module $N$ sur un anneau $R$, tel que $\operatorname{Ker}v$ et $\operatorname{Coker}v$ soient de longueur finie, on posera
+\[
+  \chi(N,v)=\operatorname{long}_R(\operatorname{Ker}(v))-\operatorname{long}_R(\operatorname{Coker}(v)).
+\]
+On notera que l'hypothèse sur $v$ revient à dire que le complexe
+\[
+  K^0:0\to N\xrightarrow{v}N\to0
+\]
+a ses modules de cohomologie de longueur finie et que $\chi(N,v)=\chi(H^0(K^0))$ $(\mathbf{0}_{\mathrm{III}},11.10)$.
+On en déduit que si $N'$, $N$, $N''$ sont trois $R$-modules, si l'on a un diagramme commutatif
+\[
+  \xymatrix{
+    0 \ar[r] & N' \ar[r]^r \ar[d]^{v'} & N \ar[r]^s \ar[d]^v & N'' \ar[r] \ar[d]^{v''} & 0\\
+    0 \ar[r] & N' \ar[r]_r & N \ar[r]_s & N'' \ar[r] & 0
+  }
+\]
+dont les lignes sont exactes, et si deux des trois nombres $\chi(N,v)$, $\chi(N',v')$ et $\chi(N'',v'')$ sont définis, alors il en est de même du troisième et on a
+\[
+\label{IV.21.10.17.6}
+  \chi(N,v)=\chi(N',v')+\chi(N'',v'').
+  \tag{21.10.17.6}
+\]
+Cela résulte en effet aussitôt de la suite exacte de cohomologie.
+
+Enfin, si $N$ est un $R$-module de longueur finie, on a $\chi(N,v)=0$.
+
+Avec ces notations, on a le lemme suivant.
+\end{proof}
+
+\begin{lemma}[21.10.17.7]
+\label{IV.21.10.17.7}
+Soient $A$ un anneau local noethérien de dimension $1$ dont l'idéal maximal $\mathfrak{m}$ est tel que $\mathfrak{m}\notin\operatorname{Ass}(A)$;
+soient $\mathfrak{p}_i$ $(1\leq i\leq n)$ les idéaux premiers minimaux de $A$.
+Soient $M$ un $A$-module libre de type fini, $u$ un endomorphisme de $M$ tel que $\chi(M,u)$ soit défini;
+pour chaque $i$, posons $M_i=M\otimes_A(A/\mathfrak{p}_i)$ et soit $u_i$ l'endomorphisme $u\otimes1_{A/\mathfrak{p}_i}$ de $M_i$;
+alors si $\chi(M_i,u_i)$ est défini pour chaque $i$, on a
+\[
+\label{IV.21.10.17.8}
+  \chi(M,u)=\sum_{i=1}^n\operatorname{long}(A_{\mathfrak{p}_i})\cdot\chi(M_i,u_i).
+  \tag{21.10.17.8}
+\]
+\end{lemma}
+
+\begin{proof}
+Puisque $\mathfrak{m}\notin\operatorname{Ass}(A)$, on a une décomposition primaire réduite unique $(0)=\bigcap_{1\leq i\leq n}\mathfrak{q}_i$, où l'idéal $\mathfrak{q}_i$ est $\mathfrak{p}_i$-primaire pour $1\leq i\leq n$.
+Si l'on pose $M'_i=M\otimes_A(A/\mathfrak{q}_i)$, on a donc une suite exacte
+\[
+  0\to M\to\bigoplus_iM'_i\to M''\to0
+\]
+de $A$-modules, où $M''$ est de longueur finie:
+en effet, en localisant la suite exacte précédente en chacun des $\mathfrak{p}_i$, on obtient $M''_{\mathfrak{p}_i}=0$, car $(\mathfrak{q}_i)_{\mathfrak{p}_i}=0$ et $(\mathfrak{q}_j)_{\mathfrak{p}_i}=A_{\mathfrak{p}_i}$ pour $j\neq i$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~2, n\textsuperscript{o}~4, prop.~6), donc $(M'_i)_{\mathfrak{p}_i}=M_{\mathfrak{p}_i}$ et $(M'_j)_{\mathfrak{p}_i}=0$;
+\oldpage[IV-4]{300}
+le support de $M''$ étant donc réduit à $\mathfrak{m}$, $M''$ est de longueur finie $(\mathbf{0},16.1.10)$.
+Si l'on pose $u'_i=u\otimes1_{A/\mathfrak{q}_i}$, et si $u''$ est l'endomorphisme de $M''$ déduit de $\bigoplus u'_i$ par passage aux quotients, on déduit de \sref{IV.21.10.17.6} que $\chi(M,u)+\chi(M'',u'')=\sum_i\chi(M'_i,u'_i)$, et puisque $M''$ est de longueur finie, $\chi(M'',u'')=0$.
+Pour prouver \sref{IV.21.10.17.8}, on peut donc se ramener au cas où $n=1$.
+On désignera alors par $\mathfrak{p}$ l'unique idéal premier minimal, qui est le nilradical de $A$;
+si $A_0=A/\mathfrak{p}$, $M_0=M\otimes_AA_0$, $u_0=u\otimes1_{A_0}$, il s'agit de prouver que si $\chi(M_0,u_0)$ est défini, on a
+\[
+\label{IV.21.10.17.9}
+  \chi(M,u)=\operatorname{long}A_{\mathfrak{p}}\cdot\chi(M_0,u_0).
+  \tag{21.10.17.9}
+\]
+
+Soit $\mathfrak{n}_j$ $(0\leq j\leq r)$ la « puissance symbolique $j$-ème » de $\mathfrak{p}$, image réciproque dans $A$ de l'idéal $(\mathfrak{p}A_{\mathfrak{p}})^j$ de $A_{\mathfrak{p}}$ $(1\leq j\leq r)$, avec $\mathfrak{n}_0=A$ et $\mathfrak{n}_r=0$;
+posons
+\[
+  M_j=\mathfrak{n}_jM/\mathfrak{n}_{j+1}M\qquad(0\leq j\leq r-1),
+\]
+et notons $v_j$ l'endomorphisme de $M_j$ déduit de $u$ par restriction à $\mathfrak{n}_jM$ et passage aux quotients.
+Nous allons d'abord montrer que chacun des nombres $\chi(M_j,v_j)$ est défini et que l'on a
+\[
+\label{IV.21.10.17.10}
+  \chi(M,u)=\sum_j\chi(M_j,v_j).
+  \tag{21.10.17.10}
+\]
+La première assertion entraînera la seconde, en appliquant \sref{IV.21.10.17.6} à chacune des suites exactes
+\[
+  0\to\mathfrak{n}_jM/\mathfrak{n}_{j+1}M\to M/\mathfrak{n}_{j+1}M\to M/\mathfrak{n}_jM\to0.
+\]
+
+Pour prouver la première assertion, on note que si $m$ est le rang du $A$-module libre $M$, $M_j$ est isomorphe à $(\mathfrak{n}_j/\mathfrak{n}_{j+1})^m$, ou encore (puisque $\mathfrak{p}$ annule chacun des quotients $\mathfrak{n}_j/\mathfrak{n}_{j+1}$), $M_j$ est un $A_0$-module isomorphe à $M_0\otimes_{A_0}(\mathfrak{n}_j/\mathfrak{n}_{j+1})$.
+Désignons par $l_j$ le rang du $A_0$-module $\mathfrak{n}_j/\mathfrak{n}_{j+1}$;
+comme le corps des fractions $K_0$ de $A_0$ est le corps résiduel de $A_{\mathfrak{p}}$, $l_j$ est aussi la longueur du $A_{\mathfrak{p}}$-module $(\mathfrak{p}A_{\mathfrak{p}})^j/(\mathfrak{p}A_{\mathfrak{p}})^{j+1}$.
+Il y a un système de générateurs du $A_0$-module $M_j$ qui contient une base de $M_j\otimes_{A_0}K_0$;
+donc il y a un $A_0$-homomorphisme
+\[
+  w_j:M_0^{l_j}\to M_j
+\]
+dont le localisé en l'idéal $(0)$ de $A_0$ est un isomorphisme, de sorte que le support de $\operatorname{Ker}(w_j)$ et de $\operatorname{Coker}(w_j)$ est réduit à l'idéal maximal $\mathfrak{m}/\mathfrak{p}$ de $A_0$;
+$\operatorname{Ker}(w_j)$ et $\operatorname{Coker}(w_j)$ sont donc des $A_0$-modules de longueur finie $(\mathbf{0},16.1.10)$.
+Comme par hypothèse $\chi(M_0,u_0)$ est défini, il en est de même de $\chi(M_0^{l_j},u_0^{l_j})=l_j\chi(M_0,u_0)$ et en vertu de \sref{IV.21.10.17.6} et du fait que $\operatorname{Ker}(w_j)$ et $\operatorname{Coker}(w_j)$ sont de longueur finie, on voit que $\chi(M_j,v_j)$ est défini et égal à $l_j\chi(M_0,u_0)$;
+la relation \sref{IV.21.10.17.10} donne alors
+\[
+  \chi(M,u)=\left(\sum_jl_j\right)\chi(M_0,u_0),
+\]
+et en vertu d'une remarque précédente, $\sum_jl_j$ n'est autre que la longueur de $A_{\mathfrak{p}}$, ce qui achève de prouver le lemme \sref{IV.21.10.17.7}.
+\end{proof}
+
+\oldpage[IV-4]{301}
+Pour appliquer ce lemme lorsque $A$ est un anneau complet et $\mathfrak{m}\notin\operatorname{Ass}(A)$, on observe que si $u$ est injectif, il en est de même des $u_i$ (avec les notations du lemme):
+en effet, $\det u$ est alors un élément régulier de $A$, donc n'appartient à aucun des $\mathfrak{p}_i$, et son image $\det u_i$ dans $A/\mathfrak{p}_i$ est par suite un élément $\neq0$ de cet anneau intègre, ce qui prouve que $u_i$ est injectif.
+Comme $\operatorname{Coker}(u_i)$ est image de $\operatorname{Coker}(u)$, il est aussi de longueur finie et $\chi(M_i,u_i)$ est donc défini pour tout $i$;
+on a par suite la formule \sref{IV.21.10.17.8}.
+D'autre part, puisque $\det(u)$ est un élément régulier de $A$, il n'est contenu dans aucun des $\mathfrak{p}_i$;
+l'idéal $(\det u)A$ est donc $\mathfrak{m}$-primaire et le quotient $A/(\det u)A$ de longueur finie.
+Appliquant le même raisonnement que ci-dessus à l'homothétie injective $t:\xi\mapsto(\det u)\xi$ de $A$ et à ses images $t_i=\det u_i$ dans les $A/\mathfrak{p}_i$, il vient
+\[
+  \chi(A,t)=\sum_i\operatorname{long}(A_{\mathfrak{p}_i})\cdot\chi(A/\mathfrak{p}_i,t_i).
+\]
+Mais les anneaux $A/\mathfrak{p}_i$ sont intègres et complets, et en appliquant le résultat de II) à chacun d'eux, on obtient encore la relation \sref{IV.21.10.17.4} pour $M$ et $u$.
+
+IV) Cas général.
+Posons $A'=\widehat{A}$, $M'=M\otimes_AA'$, $u'=u\otimes1_{A'}$;
+on a $\det(u')=\det(u)$, et par platitude, $\operatorname{Coker}(u')=(\operatorname{Coker}(u))_{(A')}$ et $A'/(\det u)A'=(A/(\det u)A)_{(A')}$;
+comme la formule \sref{IV.21.10.17.4} est vraie pour $A'$ et $u'$ en vertu de III), elle est aussi vraie pour $A$ et $u$ en vertu de \sref{IV.4.7.1}.
+
+Ceci termine donc la démonstration de \sref{IV.21.10.17}.
+
+\begin{proposition}[21.10.18]
+\label{IV.21.10.18}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme fini, transformant tout point maximal de $X'$ en un point maximal de $X$, et vérifiant pour tout $x'\in X'$ l'une des conditions (ii), (iii), (iv) de \sref{IV.21.10.10}.
+On suppose en outre qu'il existe un entier $n$ tel que, pour tout point maximal $x$ de $X$, $(f_*(\sh{O}_{X'}))_x$ soit un $\sh{O}_{X,x}$-module libre de rang $n$.
+Alors, pour tout cycle $1$-codimensionnel $Z$ sur $X$, on a
+\[
+\label{IV.21.10.18.1}
+  f_*(f^*(Z))=n\cdot Z
+  \tag{21.10.18.1}
+\]
+(« formule de projection »).
+\end{proposition}
+
+\begin{proof}
+En vertu des définitions, on est aussitôt ramené au cas où $X$ est spectre d'un anneau local noethérien $A$ de dimension $1$, de point fermé $x$, et où $Z=\overline{\{x\}}$;
+posons $X'=\Spec(A')$ où $A'$ est une $A$-algèbre finie, et, pour tout idéal premier minimal $\mathfrak{p}_i$ de $A$, $A'_{\mathfrak{p}_i}$ est un $A_{\mathfrak{p}_i}$-module libre de rang $n$.
+Montrons qu'on peut se borner en outre au cas où $A$ est complet.
+Faisons en effet le changement de base $h:Y\to X$, où $Y=\Spec(B)$, avec $B=\widehat{A}$, et posons
+\[
+  Y'=X'\times_XY=\Spec(B\otimes_AA'),\qquad g=f_{\{Y\}}:Y'\to Y;
+\]
+le morphisme $g$ est alors fini, et comme $h$ est plat, les points maximaux de $Y$ sont au-dessus de ceux de $X$;
+au-dessus de chacun des $\mathfrak{p}_i$, il n'y a qu'un nombre fini d'idéaux minimaux $\mathfrak{p}_{ij}$ de $B$, et $(B\otimes_AA')_{\mathfrak{p}_{ij}}$ est un $B_{\mathfrak{p}_{ij}}$-module libre de rang $n$.
+Enfin, si $f$ vérifie l'une des conditions (ii), (iii) ou (iv) de \sref{IV.21.10.10} en chacun des points $x'$ de $f^{-1}(x)$, $g$ vérifie la condition correspondante en l'unique point $y'$ de $g^{-1}(y)$ au-dessus de $x'$ (en désignant par $y$ le point fermé de $Y$);
+c'est immédiat pour les conditions (ii) et (iv);
+pour la condition (iii), elle implique que $A$ est un anneau de valuation discrète, donc il en est de même de $B$, et la condition
+\oldpage[IV-4]{302}
+$\mathfrak{m}_{y'}\notin\operatorname{Ass}(\sh{O}_{Y',y'})$ résulte, par platitude, de la condition $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$ $(\mathbf{0},3.3.1)$.
+Le morphisme $g$ vérifie donc les mêmes conditions que $f$;
+si l'on prouve la formule \sref{IV.21.10.18.1} pour $g$ et $\overline{\{y\}}$, la même formule sera valable pour $f$ et $\overline{\{x\}}$, en vertu de \sref{IV.21.10.16.1}.
+
+On peut donc supposer que $A$ est \emph{complet};
+alors il en est de même de $A'$ qui est donc composé direct d'anneaux locaux complets;
+on peut par suite se borner au cas où $A'$ est un anneau \emph{local}, et il reste à vérifier \sref{IV.21.10.18.1} dans chacun des cas (ii), (iii), (iv) pour le point fermé $x'$ de $X'$.
+Dans le cas (ii), $A'$ étant un $A$-module plat de type fini, est un $A$-module \emph{libre} $(\mathbf{0}_{\mathrm{III}},10.1.3)$, de rang $n$ en vertu de l'hypothèse.
+Or, on a par définition \sref{IV.21.10.1} et \sref{IV.21.10.3}
+\[
+  f^*(Z)=\lambda_{x'}\cdot\overline{\{x'\}},
+\]
+où $\lambda_{x'}$ est la longueur du $A'$-module $A'/\mathfrak{m}_xA'$, puis
+\[
+  f_*(f^*(Z))=(\lambda_{x'}[\boldsymbol{k}(x'): \boldsymbol{k}(x)])\cdot\overline{\{x\}};
+\]
+mais $\lambda_{x'}[\boldsymbol{k}(x'): \boldsymbol{k}(x)]$ est la longueur de $A'/\mathfrak{m}_xA'=A'\otimes_A\boldsymbol{k}(x)$ en tant que $A$-module, ou encore son rang en tant que $\boldsymbol{k}(x)$-espace vectoriel, donc est égal à $n$.
+
+Dans le cas (iii), $A$ est un anneau de valuation discrète, donc régulier, et l'hypothèse $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$ entraîne que $A'$ est un anneau de Cohen--Macaulay $(\mathbf{0},16.4.6)$;
+comme $\dim(A')=\dim(A)=1$ et que $A'/\mathfrak{m}_xA'$ est un anneau artinien, il résulte de \sref{IV.6.1.5} que $A'$ est un $A$-module plat et on est ramené au cas (ii).
+
+Dans le cas (iv), si $K$ est l'anneau total des fractions de $A$, $K'=A'\otimes_AK$ est par hypothèse un $K$-module libre de rang $n$ et par définition \sref{IV.21.10.10}, on a
+\[
+  f^*(Z)=\frac{n}{[\boldsymbol{k}(x'): \boldsymbol{k}(x)]}\cdot\overline{\{x'\}},
+\]
+d'où $f_*(f^*(Z))=n\cdot\overline{\{x\}}$.
+\end{proof}
+
+On notera que la formule \sref{IV.21.10.18.1} est applicable en particulier lorsque le morphisme $f$ est \emph{fini} et \emph{plat} et tel que pour tout point maximal $x$ de $X$, $(f_*(\sh{O}_{X'}))_x$ soit un $\sh{O}_{X,x}$-module libre de rang $n$.
+
+\begin{corollary}[21.10.19]
+\label{IV.21.10.19}
+Sous les hypothèses de \sref{IV.21.10.18}, soit $D$ un diviseur sur $X$ tel que $f^*(D)$ soit défini \sref{IV.21.4.5}; alors on a
+\[
+\label{IV.21.10.19.1}
+  f_*(\operatorname{cyc}(f^*(D)))=n\cdot\operatorname{cyc}(D).
+  \tag{21.10.19.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Cela résulte de \sref{IV.21.10.18} et \sref{IV.21.10.13bis}.
+\end{proof}

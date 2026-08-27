@@ -1,0 +1,4468 @@
+\section{Invariants différentiels. Morphismes différentiellement lisses}
+\label{section:IV.16}
+
+\oldpage[IV-4]{5}
+Dans ce paragraphe, nous présentons, sous forme globale, quelques notions de
+calcul différentiel particulièrement utiles en Géométrie algébrique. Nous passons sous
+silence de nombreux développements, classiques en Géométrie différentielle (connexions,
+transformations infinitésimales associées à un champ de vecteurs, jets, etc.), bien que ces
+notions s'écrivent de façon particulièrement naturelle dans le cadre des schémas. Nous
+passons également sous silence ici les phénomènes spéciaux à la caractéristique $p>0$
+(dont certains sont étudiés, dans le cadre affine, dans (0, 21)). Pour certains compléments
+sur le formalisme différentiel dans les préschémas, le lecteur pourra consulter les
+exposés II et VII de [42], ainsi que les chapitres ultérieurs de ce Traité.
+
+\subsection{Invariants normaux d'une immersion}
+\label{IV.16.1}
+
+\begin{env}[16.1.1]
+\label{IV.16.1.1}
+Soient $(X,\mathcal{O}_X)$, $(Y,\mathcal{O}_Y)$ deux espaces annelés,
+$f=(\psi,\theta):Y\to X$ un morphisme d'espaces annelés (0\textsubscript{I}, 4.1.1)
+tel que l'homomorphisme
+\[
+  \theta^\#:\psi^*(\mathcal{O}_X)\longrightarrow\mathcal{O}_Y
+\]
+soit surjectif, de sorte que $\mathcal{O}_Y$ s'identifie à un faisceau d'anneaux quotient
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f$. On peut alors munir
+$\psi^*(\mathcal{O}_X)$ de la filtration $\mathscr{I}_f$-préadique.
+\end{env}
+
+\begin{definition}[16.1.2]
+\label{IV.16.1.2}
+Le faisceau d'anneaux $\mathcal{O}_Y$-augmenté
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1}$ est appelé le $n$-ème invariant normal
+de $f$; l'espace annelé
+$(Y,\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1})$ est appelé le $n$-ème voisinage
+infinitésimal de $Y$ pour le morphisme $f$, et noté $Y_f^{(n)}$ ou simplement
+$Y^{(n)}$. Le faisceau d'anneaux gradués associé au faisceau d'anneaux filtrés
+$\psi^*(\mathcal{O}_X)$
+\[
+  \mathscr{G}r_\bullet(f)=\bigoplus_{n\geq 0}
+  (\mathscr{I}_f^n/\mathscr{I}_f^{n+1})
+  \tag{16.1.2.1}
+  \label{IV.16.1.2.1}
+\]
+est appelé le faisceau d'anneaux gradués associé à $f$. Le faisceau
+$\mathscr{G}r_1(f)=\mathscr{I}_f/\mathscr{I}_f^2$ est appelé le faisceau conormal
+de $f$ (que l'on note aussi $\mathscr{N}_{Y/X}$ s'il n'en résulte pas de confusion).
+\end{definition}
+
+Il est clair que les
+$\mathcal{O}_{Y^{(n)}}=\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1}$
+(qu'on note aussi $\mathcal{O}_{Y_f^{(n)}}$) forment un
+\oldpage[IV-4]{6}
+système projectif de faisceaux d'anneaux sur $Y$, l'homomorphisme de transition
+$\varphi_{nm}:\mathcal{O}_{Y^{(m)}}\to\mathcal{O}_{Y^{(n)}}$ pour $n\leq m$
+identifiant $\mathcal{O}_{Y^{(n)}}$ au quotient de $\mathcal{O}_{Y^{(m)}}$ par la
+puissance $(\mathscr{I}_f/\mathscr{I}_f^{n+1})^m$ de l'Idéal d'augmentation de
+$\mathcal{O}_{Y^{(n)}}$, noyau de
+$\varphi_{0n}:\mathcal{O}_{Y^{(n)}}\to\mathcal{O}_Y$. Les $Y^{(n)}$ forment par
+suite un système inductif d'espaces annelés, ayant tous pour espace sous-jacent
+l'espace $Y$, et on a des morphismes canoniques d'espaces annelés
+$h_n:Y^{(n)}\to X$ égaux à $(\psi,\theta_n)$, où $\theta_n^\#$ est le morphisme
+canonique
+$\psi^*(\mathcal{O}_X)\to\psi^*(\mathcal{O}_X)/\mathscr{I}_f^{n+1}$.
+Il est clair que le faisceau $\mathscr{G}r_\bullet(f)$ est un faisceau d'algèbres
+graduées sur le faisceau d'anneaux
+$\mathcal{O}_Y=\mathscr{G}r_0(f)$, et les $\mathscr{G}r_k(f)$ des
+$\mathcal{O}_Y$-Modules.
+
+Comme pour tout faisceau d'anneaux filtré, on a un homomorphisme canonique
+surjectif de $\mathcal{O}_Y$-Algèbres graduées
+\[
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{G}r_1(f))
+  \longrightarrow\mathscr{G}r_\bullet(f)
+  \tag{16.1.2.2}
+  \label{IV.16.1.2.2}
+\]
+coïncidant en degrés 0 et 1 avec les homomorphismes identiques.
+
+\begin{examples}[16.1.3]
+\label{IV.16.1.3}
+\begin{enumerate}
+\item[(i)] Supposons que $X$ soit un espace annelé en anneaux locaux, que $Y$ soit
+réduit à un seul point $y$ (muni d'un anneau $\mathcal{O}_y$) et que, si
+$x=\psi(y)$, $\theta^\#:\mathcal{O}_x\to\mathcal{O}_y$ soit un homomorphisme
+surjectif d'anneaux ayant pour noyau l'idéal maximal $\mathfrak{m}_x$ de
+$\mathcal{O}_x$. Alors les $\mathcal{O}_{Y^{(n)}}$ s'identifient aux anneaux
+$\mathcal{O}_x/\mathfrak{m}_x^{n+1}$, et $\mathscr{G}r_\bullet(f)$ à l'anneau
+gradué associé à l'anneau local $\mathcal{O}_x$ muni de sa filtration
+$\mathfrak{m}_x$-préadique.
+\item[(ii)] Supposons que $Y$ soit une partie fermée d'un sous-espace ouvert $U$
+de $X$ et que $\mathcal{O}_Y$ soit induit sur $Y$ par un faisceau quotient
+$\mathcal{O}_U/\mathscr{I}$, où $\mathscr{I}$ est un Idéal de $\mathcal{O}_U$
+tel que $\mathscr{I}_x=\mathcal{O}_x$ pour tout $x\notin Y$; si $X$ est un
+espace annelé en anneaux locaux, nous supposerons de plus que
+$\mathscr{I}_x\neq\mathcal{O}_x$ pour $x\in Y$, de sorte que
+$(Y,\mathcal{O}_Y)$ est encore un espace annelé en anneaux locaux.
+
+Soit $\psi_0:Y\to U$ l'injection canonique, et notons
+$\theta_0:\mathcal{O}_U\to(\psi_0)_*(\mathcal{O}_Y)$ l'homomorphisme tel que
+$\theta_0^\#$ soit l'homomorphisme canonique
+$\psi_0^*(\mathcal{O}_U)=\mathcal{O}_U|Y\to
+(\mathcal{O}_U/\mathscr{I})|Y$, de sorte que
+$j_0=(\psi_0,\theta_0):Y\to U$ est un morphisme d'espaces annelés (et d'espaces
+annelés en anneaux locaux si $X$ est un espace annelé en anneaux locaux); si
+$i:U\to X$ est l'injection canonique (morphisme d'espaces annelés),
+$j=i\circ j_0$ est le morphisme $(\psi,\theta)$ de $Y$ dans $X$, où
+$\psi:Y\to X$ est l'injection canonique, et
+$\theta:\mathcal{O}_X\to\psi_*(\mathcal{O}_Y)$ est l'homomorphisme tel que
+$\theta^\#=\theta_0^\#$. Comme $\theta^\#$ est surjectif, on peut appliquer les
+définitions précédentes; $\mathcal{O}_{Y^{(n)}}$ est égal à
+$\psi_0^*(\mathcal{O}_U/\mathscr{I}^{n+1})$, et l'on a
+$(\psi_0)_*(\mathcal{O}_{Y^{(n)}})=\mathcal{O}_U/\mathscr{I}^{n+1}$, et
+$\mathscr{G}r_n(j)=\mathscr{G}r_n(j_0)=
+\psi_0^*(\mathscr{I}^n/\mathscr{I}^{n+1})=
+j_0^*(\mathscr{I}^n/\mathscr{I}^{n+1})$.
+\end{enumerate}
+\end{examples}
+
+\begin{env}[16.1.4]
+\label{IV.16.1.4}
+L'exemple (16.1.3, (ii)) montre qu'en général les
+$\mathcal{O}_{Y^{(n)}}$ ne sont pas munis canoniquement d'une structure de
+$\mathcal{O}_Y$-Module, ni a fortiori d'une structure de
+$\mathcal{O}_Y$-Algèbre. La donnée d'une telle structure équivaut à celle d'un
+homomorphisme de faisceaux d'anneaux
+$\lambda_n:\mathcal{O}_Y\to\mathcal{O}_{Y^{(n)}}$, inverse à droite de
+l'homomorphisme d'augmentation $\varphi_{0n}$; cela revient aussi à la donnée
+d'un morphisme d'espaces annelés
+$(1_Y,\lambda_n):Y^{(n)}\to Y$, inverse à gauche du morphisme canonique
+$(1_Y,\varphi_{0n}):Y\to Y^{(n)}$.
+\end{env}
+
+\begin{proposition}[16.1.5]
+\label{IV.16.1.5}
+Soit $f=(\psi,\theta):Y\to X$ une immersion de préschémas. Alors:
+\begin{enumerate}
+\item[(i)] $\mathscr{G}r_\bullet(f)$ est une $\mathcal{O}_Y$-Algèbre graduée
+quasi-cohérente.
+\oldpage[IV-4]{7}
+\item[(ii)] Les $Y^{(n)}$ sont des préschémas, canoniquement isomorphes à des
+sous-préschémas de $X$.
+\item[(iii)] Tout homomorphisme de faisceaux d'anneaux
+$\lambda_n:\mathcal{O}_Y\to\mathcal{O}_{Y^{(n)}}$, inverse à droite de
+l'homomorphisme d'augmentation $\varphi_{0n}$, fait de
+$\mathcal{O}_{Y^{(n)}}$ et des $\mathcal{O}_{Y^{(k)}}$ pour $k\leq n$, des
+$\mathcal{O}_Y$-Algèbres quasi-cohérentes; les structures de
+$\mathcal{O}_Y$-Module déduites des structures précédentes sur les
+$\mathscr{G}r_k(f)$ pour $k\leq n$ coïncident avec celles définies dans
+(16.1.2).
+\end{enumerate}
+\end{proposition}
+
+\noindent(i) La question étant locale sur $X$ et sur $Y$, on peut se borner au cas
+où $Y$ est un sous-préschéma fermé de $X$ défini par un Idéal quasi-cohérent
+$\mathscr{I}$ de $\mathcal{O}_X$; comme $\mathcal{O}_Y$ est la restriction à
+$Y$ de $\mathcal{O}_X/\mathscr{I}$, l'assertion (i) est évidente, et $Y^{(n)}$
+est le sous-préschéma fermé de $X$ défini par l'Idéal quasi-cohérent
+$\mathscr{I}^{n+1}$ de $\mathcal{O}_X$. Enfin, pour prouver (iii), notons que la
+donnée de $\lambda_n$ fait de l'Idéal
+$\mathscr{I}/\mathscr{I}^{n+1}$ de l'augmentation $\varphi_{0n}$ et de ses
+quotients $\mathscr{I}/\mathscr{I}^{k+1}$ ($1\leq k\leq n$) des
+$\mathcal{O}_Y$-Modules, et il suffit de prouver par récurrence sur $k$ que les
+$\mathscr{I}/\mathscr{I}^{k+1}$ sont des $\mathcal{O}_Y$-Modules
+quasi-cohérents et que la structure de $\mathcal{O}_Y$-Module quotient qu'on en
+déduit sur $\mathscr{I}^k/\mathscr{I}^{k+1}$ est la même que celle définie en
+(16.1.2). La seconde assertion est immédiate,
+$\mathscr{I}^k/\mathscr{I}^{k+1}$ étant annulé par
+$\mathscr{I}/\mathscr{I}^{n+1}$; la première résulte, par récurrence sur $k$,
+de ce qu'elle est triviale pour $k=1$ et de ce que
+$\mathscr{I}/\mathscr{I}^{k+1}$ est une extension de
+$\mathscr{I}/\mathscr{I}^k$ par
+$\mathscr{I}^k/\mathscr{I}^{k+1}$ (III, 1.4.17).
+
+\begin{corollary}[16.1.6]
+\label{IV.16.1.6}
+Sous les hypothèses générales de (16.1.5), si l'immersion $f$ est localement de
+présentation finie, les $\mathscr{G}r_n(f)$ sont des $\mathcal{O}_Y$-Modules
+quasi-cohérents de type fini.
+\end{corollary}
+
+En effet, avec les notations de la démonstration de (16.1.5), $\mathscr{I}$ est un
+Idéal de type fini de $\mathcal{O}_X$ (1.4.7), donc les
+$\mathscr{I}^n/\mathscr{I}^{n+1}$ sont des $\mathcal{O}_Y$-Modules de type fini,
+d'où la conclusion.
+
+\begin{corollary}[16.1.7]
+\label{IV.16.1.7}
+Sous les hypothèses générales de (16.1.5), soit $g:X\to Y$ un morphisme de
+préschémas inverse à gauche de $f$. Alors, pour tout $n$, le morphisme composé
+$(1,\lambda_n):Y^{(n)}\xrightarrow{h_n}X\xrightarrow{g}Y$ définit un
+homomorphisme de faisceaux d'anneaux
+$\lambda_n:\mathcal{O}_Y\to\mathcal{O}_{Y^{(n)}}$ inverse à droite de
+l'augmentation $\varphi_{0n}$, faisant de $\mathcal{O}_{Y^{(n)}}$ une
+$\mathcal{O}_Y$-Algèbre quasi-cohérente; pour ces homomorphismes, les
+homomorphismes de transition
+$\varphi_{nm}:\mathcal{O}_{Y^{(m)}}\to\mathcal{O}_{Y^{(n)}}$ ($n\leq m$) sont
+des homomorphismes de $\mathcal{O}_Y$-Algèbres. En outre, si $g$ est localement
+de type fini, les $\mathcal{O}_{Y^{(n)}}$ sont des $\mathcal{O}_Y$-Modules
+quasi-cohérents de type fini.
+\end{corollary}
+
+La première assertion résulte aussitôt des définitions et de (16.1.5). D'autre
+part, si $g$ est localement de type fini, alors $f$ est localement de
+présentation finie (1.4.3, (v)); les $\mathscr{G}r_n(f)$ étant alors des
+$\mathcal{O}_Y$-Modules quasi-cohérents de type fini par (16.1.6), il en est de
+même des $\mathcal{O}_Y$-Modules
+$\mathscr{I}/\mathscr{I}^{n+1}$, qui sont des extensions d'un nombre fini de
+$\mathscr{G}r_k(f)$ (III, 1.4.17).
+
+\begin{proposition}[16.1.8]
+\label{IV.16.1.8}
+Soient $X$ un préschéma localement noethérien, $j:Y\to X$ une immersion. Alors
+les $Y^{(n)}$ sont des préschémas localement noethériens, les
+$\mathscr{G}r_n(j)$ sont des $\mathcal{O}_Y$-Modules cohérents, et
+$\mathscr{G}r_\bullet(j)$ est un faisceau d'anneaux cohérent sur l'espace $Y$.
+\end{proposition}
+
+Tout étant local sur $X$ et $Y$, on est ramené au cas où $X$ est affine et $j$
+une immersion fermée, et alors toutes les assertions sont évidentes sauf la
+dernière, qui résulte de ce que si $A$ est un anneau noethérien et
+$\mathfrak{I}$ un idéal de $A$, $\operatorname{gr}_{\mathfrak{I}}^\bullet(A)$
+est un anneau noethérien, compte tenu de l'exactitude du foncteur $\psi^*$ et de
+(0\textsubscript{I}, 5.3.7).
+
+\begin{proposition}[16.1.9]
+\label{IV.16.1.9}
+\oldpage[IV-4]{8}
+Soient $X$ un préschéma, $j:Y\to X$ une immersion localement de présentation
+finie, $y$ un point de $Y$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+\item[(a)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que $j|U$ soit
+un homéomorphisme de $U$ sur un ouvert de $X$.
+\item[(b)] Il existe un entier $n>0$ tel que l'homomorphisme canonique
+\[
+  (\varphi_{n,n-1})_y:
+  \mathcal{O}_{Y^{(n)},y}\longrightarrow\mathcal{O}_{Y^{(n-1)},y}
+\]
+soit bijectif.
+\item[(c)] Il existe un entier $n>0$ tel que
+$(\mathscr{G}r_n(j))_y=0$.
+\end{enumerate}
+De plus, si l'entier $n$ vérifie b) ou c), il existe un voisinage $V$ de $y$
+dans $Y$ tel que $\mathscr{G}r_m(j)|V=0$ pour $m\geq n$ et que
+$\varphi_{nm}|V:\mathcal{O}_{Y^{(m)}}|V\to\mathcal{O}_{Y^{(n)}}|V$ soit
+bijectif pour $m\geq n$.
+\end{proposition}
+
+La question étant locale sur $Y$, on peut se borner au cas où $j$ est une
+immersion fermée, $Y$ étant défini par un Idéal quasi-cohérent de type fini
+$\mathscr{I}$ de $\mathcal{O}_X$. L'équivalence de b) et c), pour un $n$ donné,
+est alors immédiate; en outre, comme
+$\mathscr{I}^n/\mathscr{I}^{n+1}$ est un $\mathcal{O}_X$-Module de type fini,
+il existe un voisinage ouvert $U$ de $y$ dans $X$ tel que
+$\mathscr{I}^n|U=\mathscr{I}^{n+1}|U$ (0\textsubscript{I}, 5.2.2), donc aussi
+$\mathscr{I}^n|U=\mathscr{I}^m|U$ pour $m\geq n$, ce qui prouve les dernières
+assertions. Pour prouver que a) entraîne b), on peut se borner au cas où
+l'espace sous-jacent à $Y$ est égal à l'espace sous-jacent à $X$, et où
+$\mathscr{I}$ est engendré par un nombre fini de ses sections au-dessus de $X$:
+comme $\mathscr{I}$ est alors contenu dans le Nilradical $\mathscr{N}$ de
+$\mathcal{O}_X$ (I, 5.1.2), il est nilpotent, ce qui prouve b). Enfin, pour
+prouver que b) entraîne a), on peut aussi se borner au cas où
+$\mathscr{I}^n=\mathscr{I}^{n+1}$; alors, pour tout $y\in Y$, comme
+$\mathscr{I}_y\subset\mathfrak{m}_y$, idéal maximal de
+$\mathcal{O}_{X,y}$, on a nécessairement $\mathscr{I}_y^n=0$ en vertu du
+lemme de Nakayama, puisque $\mathscr{I}_y$ est un idéal de type fini.
+L'ensemble des $x\in X$ tels que $\mathscr{I}_x^n=0$ est donc un ouvert $U$ de
+$X$ contenant $Y$ (0\textsubscript{I}, 5.2.2); comme d'autre part
+$\mathscr{I}_x\neq 0$ pour $x\notin Y$, on a nécessairement $U=Y$.
+
+\begin{corollary}[16.1.10]
+\label{IV.16.1.10}
+Pour que la restriction de l'immersion $j$ à un voisinage de $y$ dans $Y$ soit
+une immersion ouverte (autrement dit pour que $j$ soit un isomorphisme local au
+point $y$), il faut et il suffit que
+$(\mathscr{G}r_1(j))_y=(\mathscr{N}_{Y/X})_y=0$.
+\end{corollary}
+
+La condition est évidemment nécessaire, et le raisonnement précédent, appliqué
+pour $n=1$, prouve qu'elle est suffisante.
+
+\begin{remarks}[16.1.11]
+\label{IV.16.1.11}
+\begin{enumerate}
+\item[(i)] Sous les conditions de la définition (16.1.1), la limite projective
+du système projectif
+$(\mathcal{O}_{Y^{(n)}},\varphi_{nm})$ de faisceaux d'anneaux sur $Y$ est
+appelé l'invariant normal d'ordre infini de $f$, et parfois noté
+$\mathcal{O}_{Y^{(\infty)}}$. Lorsque $X$ est un préschéma localement
+noethérien, $j:Y\to X$ une immersion fermée, $Y$ étant donc un sous-préschéma
+fermé de $X$ défini par un Idéal cohérent $\mathscr{I}$,
+$\mathcal{O}_{Y^{(\infty)}}$ n'est autre que le complété formel de
+$\mathcal{O}_X$ le long de $Y$ (I, 10.8.4), et
+$Y^{(\infty)}=(Y,\mathcal{O}_{Y^{(\infty)}})$ le préschéma formel complété de
+$X$ le long de $Y$ (I, 10.8.5). Dans tous les cas, on pourra dire que
+$Y^{(\infty)}$ est le voisinage formel de $Y$ dans $X$ (pour le morphisme
+$f$). Dans le cas particulier qu'on vient d'envisager, c'est donc le préschéma
+formel limite inductive des voisinages infinitésimaux d'ordre $n$.
+\item[(ii)] On notera que pour un morphisme de préschémas
+$f=(\psi,\theta):Y\to X$, il peut se faire que l'homomorphisme
+$\theta^\#:\psi^*(\mathcal{O}_X)\to\mathcal{O}_Y$ soit surjectif sans que $f$
+soit une immersion
+\oldpage[IV-4]{9}
+locale, et sans que $f$ soit injectif. On en a un exemple en prenant pour $Y$
+une somme de préschémas $Y_\lambda$ tous isomorphes à
+$\operatorname{Spec}(\mathcal{O}_x)$, où $x\in X$, et pour $f$ le morphisme
+égal au morphisme canonique dans chacun des $Y_\lambda$.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Propriétés fonctorielles des invariants normaux d'une immersion}
+\label{IV.16.2}
+
+\begin{env}[16.2.1]
+\label{IV.16.2.1}
+Soient $f=(\psi,\theta):Y\to X$,
+$f'=(\psi',\theta'):Y'\to X'$ deux morphismes d'espaces annelés tels que les
+homomorphismes $\theta^\#$ et $\theta'^\#$ soient surjectifs; considérons un
+diagramme commutatif de morphismes d'espaces annelés
+\[
+  \xymatrix{
+    Y \ar[r]^f & X \\
+    Y' \ar[r]_{f'} \ar[u]^u & X' \ar[u]_v
+  }
+  \tag{16.2.1.1}
+  \label{IV.16.2.1.1}
+\]
+Posons $u=(\rho,\lambda)$, $v=(\sigma,\mu)$. On a
+$\rho^*(\psi^*(\mathcal{O}_X))=
+\psi'^*(\sigma^*(\mathcal{O}_X))$ et on a par suite un diagramme commutatif
+d'homomorphismes de faisceaux d'anneaux sur $Y'$
+\[
+  \xymatrix{
+    \rho^*(\psi^*(\mathcal{O}_X))
+      =\psi'^*(\sigma^*(\mathcal{O}_X))
+      \ar[r]^-{\psi'^*(\mu^\#)}
+      \ar[d]_{\rho^*(\theta^\#)}
+      & \psi'^*(\mathcal{O}_{X'}) \ar[d]^{\theta'^\#} \\
+    \rho^*(\mathcal{O}_Y) \ar[r]_-{\lambda^\#}
+      & \mathcal{O}_{Y'}
+  }
+\]
+d'où l'on conclut, si $\mathscr{I}$ et $\mathscr{I}'$ sont les noyaux de
+$\theta^\#$ et $\theta'^\#$, que l'on a
+$\psi'^*(\mu^\#)(\rho^*(\mathscr{I}))\subset\mathscr{I}'$, compte tenu de
+l'exactitude du foncteur $\rho^*$. On en déduit aussitôt que pour tout entier
+$n$,
+$\psi'^*(\mu^\#)(\rho^*(\mathscr{I}^n))\subset\mathscr{I}'^n$, ce qui montre
+que $\psi'^*(\mu^\#)$ définit, par passage aux quotients, un homomorphisme de
+faisceaux d'anneaux
+\[
+  \nu_n:
+  \rho^*(\psi^*(\mathcal{O}_X)/\mathscr{I}^{n+1})
+  \longrightarrow
+  \psi'^*(\mathcal{O}_{X'})/\mathscr{I}'^{n+1}
+  \tag{16.2.1.2}
+  \label{IV.16.2.1.2}
+\]
+et par suite un morphisme d'espaces annelés
+$w_n=(\rho,\nu_n):Y'^{(n)}\to Y^{(n)}$ (qui, pour $n=0$, n'est autre que
+$u$). Il résulte aussitôt de cette définition que les diagrammes
+\[
+  \xymatrix@R=1pc{
+    Y^{(n)} \ar[r]^-{h_{mn}} & Y^{(m)} \ar[r]^-{h_m} & X \\
+    & & & (n\leq m) \\
+    Y'^{(n)} \ar[r]_-{h'_{mn}} \ar[uu]^-{w_n}
+      & Y'^{(m)} \ar[r]_-{h'_m} \ar[uu]^-{w_m}
+      & X' \ar[uu]_-v
+  }
+\]
+(où les flèches horizontales sont les morphismes canoniques (16.1.2)) sont
+commutatifs.
+
+Par passage aux quotients à partir des homomorphismes (16.2.1.2), et en tenant
+\oldpage[IV-4]{10}
+compte de l'exactitude du foncteur $\rho^*$, on obtient un di-homomorphisme
+d'Algèbres graduées (relatif à l'homomorphisme
+$\lambda^\#:\rho^*(\mathcal{O}_Y)\to\mathcal{O}_{Y'}$)
+\[
+  \operatorname{gr}(u):
+  \rho^*(\mathscr{G}r_\bullet(f))
+  \longrightarrow\mathscr{G}r_\bullet(f')
+  \tag{16.2.1.3}
+  \label{IV.16.2.1.3}
+\]
+(ou, si on veut, un $\rho$-morphisme (0\textsubscript{I}, 3.5.1)
+$\mathscr{G}r_\bullet(f)\to\mathscr{G}r_\bullet(f')$), et en particulier un
+di-homomorphisme des faisceaux conormaux
+\[
+  \operatorname{gr}_1(u):
+  \rho^*(\mathscr{G}r_1(f))\longrightarrow\mathscr{G}r_1(f').
+\]
+Il est immédiat en outre que ces homomorphismes donnent lieu à un diagramme
+commutatif
+\[
+  \xymatrix{
+    \rho^*(\mathscr{S}_{\mathcal{O}_Y}^{\bullet}
+      (\mathscr{G}r_1(f)))
+      \ar[r] \ar[d]_-{\mathscr{S}(\operatorname{gr}_1(u))}
+      & \rho^*(\mathscr{G}r_\bullet(f))
+        \ar[d]^-{\operatorname{gr}(u)} \\
+    \mathscr{S}_{\mathcal{O}_{Y'}}^{\bullet}
+      (\mathscr{G}r_1(f'))
+      \ar[r]
+      & \mathscr{G}r_\bullet(f')
+  }
+  \tag{16.2.1.4}
+  \label{IV.16.2.1.4}
+\]
+où les flèches horizontales sont les homomorphismes canoniques (16.1.2.2).
+
+Enfin, si l'on a un diagramme commutatif de morphismes d'espaces annelés
+\[
+  \xymatrix{
+    Y \ar[r]^f & X \\
+    Y' \ar[r]_{f'} \ar[u]^u & X' \ar[u]_v \\
+    Y'' \ar[r]_{f''} \ar[u]^{u'} & X'' \ar[u]_{v'}
+  }
+\]
+où $f''=(\psi'',\theta'')$ est tel que $\theta''^\#$ soit surjectif, et si
+$w'_n$ et $w''_n$ sont définis à partir de $u'$, $v'$ d'une part, et de
+$u''=u\circ u'$, $v''=v\circ v'$ de l'autre, alors on a
+$w''_n=w_n\circ w'_n$, comme il résulte aussitôt des définitions et de
+(0\textsubscript{I}, 3.5.5); on a de même
+$\operatorname{gr}(u'')=
+\operatorname{gr}(u')\circ\rho'^*(\operatorname{gr}(u))$ si
+$u'=(\rho',\lambda')$. On peut donc dire que les $Y^{(n)}$ et
+$\mathscr{G}r_\bullet(f)$ dépendent fonctoriellement de $f$.
+\end{env}
+
+\begin{proposition}[16.2.2]
+\label{IV.16.2.2}
+Avec les notations et hypothèses de (16.2.1), supposons de plus que $f$, $f'$,
+$u$ et $v$ soient des morphismes de préschémas. Alors:
+\begin{enumerate}
+\item[(i)] Les morphismes $w_n:Y'^{(n)}\to Y^{(n)}$ sont des morphismes de
+préschémas.
+\item[(ii)] Si $Y'=Y\times_X X'$, $u$ et $f'$ étant les projections
+canoniques, et si $f$ est une immersion ou si $v$ est plat, on a
+$Y'^{(n)}=Y^{(n)}\times_X X'$.
+\item[(iii)] Si $Y'=Y\times_X X'$ et si $v$ est plat (resp. si $f$ est une
+immersion), l'homomorphisme
+\[
+  \operatorname{Gr}(u)=\operatorname{gr}(u)\otimes 1:
+  \mathscr{G}r_\bullet(f)\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow\mathscr{G}r_\bullet(f')
+\]
+est bijectif (resp. surjectif).
+\end{enumerate}
+\end{proposition}
+
+\noindent(i) Les hypothèses entraînent aussitôt que pour tout $y'\in Y'$,
+$\rho_{y'}^*(\theta_{\psi'(y')}^\#)$ est un homomorphisme local (I, 1.6.2),
+donc $w_n$ est un morphisme de préschémas (I, 2.2.1).
+
+\oldpage[IV-4]{11}
+\noindent(ii) et (iii) Si $f$ est une immersion, on peut se borner au cas où
+$f$ est une immersion fermée, $Y$ étant donc défini par l'Idéal
+quasi-cohérent $\mathscr{I}$ de $\mathcal{O}_X$, et $Y^{(n)}$ par l'Idéal
+$\mathscr{I}^{n+1}$; les assertions résultent alors de (I, 4.4.5).
+
+Supposons en second lieu que $v$ soit plat; on peut se borner au cas où
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$,
+$X'=\operatorname{Spec}(A')$ sont affines, $A'$ étant un $A$-module plat;
+alors $Y'=\operatorname{Spec}(B')$ avec $B'=B\otimes_A A'$; en outre, si
+$\mathfrak{I}$ est le noyau de l'homomorphisme $A\to B$, le noyau
+$\mathfrak{I}'$ de $A'\to B'$ s'identifie à $\mathfrak{I}\otimes_A A'$ par
+platitude, et
+\[
+  \mathfrak{I}'^n/\mathfrak{I}'^{n+1}
+  =(\mathfrak{I}^n/\mathfrak{I}^{n+1})\otimes_A A'.
+\]
+On en déduit aussitôt, compte tenu de (0\textsubscript{I}, 4.3.3), que le
+$\mathcal{O}_{Y'}$-Module
+$\mathscr{I}'^n/\mathscr{I}'^{n+1}$ est égal à
+\begin{align*}
+&\psi'^*\!\left(\sigma^*
+  \left((\mathfrak{I}^n/\mathfrak{I}^{n+1})^{\sim}\right)\right)
+  \otimes_{\sigma^*(\mathcal{O}_X)}\mathcal{O}_{X'} \\
+={}&
+\psi'^*\!\left(\sigma^*
+  \left((\mathfrak{I}^n/\mathfrak{I}^{n+1})^{\sim}\right)\right)
+  \otimes_{\psi'^*(\sigma^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}) \\
+={}&
+\rho^*(\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\rho^*(\psi^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}),
+\end{align*}
+et comme en particulier pour $n=0$, on a
+\[
+  \mathcal{O}_{Y'}=
+  \rho^*(\mathcal{O}_Y)
+  \otimes_{\rho^*(\psi^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}),
+\]
+on obtient un isomorphisme canonique de
+$\mathscr{I}'^n/\mathscr{I}'^{n+1}$ sur
+\[
+  \rho^*(\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\rho^*(\mathcal{O}_Y)}\mathcal{O}_{Y'}
+  =
+  (\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'},
+\]
+ce qui prouve (iii). Posons maintenant
+$C_n=\Gamma(Y,\mathcal{O}_{Y^{(n)}})$,
+$C'_n=\Gamma(Y',\mathcal{O}_{Y'^{(n)}})$. Puisque $Y^{(n)}$ et
+$Y'^{(n)}$ sont des schémas affines (16.1.5), le noyau
+$\mathfrak{K}_n$ (resp. $\mathfrak{K}'_n$) de l'homomorphisme
+$C_n\to C_{n-1}$ (resp. $C'_n\to C'_{n-1}$) est
+$\Gamma(Y,\mathscr{I}^n/\mathscr{I}^{n+1})$ (resp.
+$\Gamma(Y',\mathscr{I}'^n/\mathscr{I}'^{n+1})$); on déduit donc de ce qui
+précède que $\mathfrak{K}'_n=\mathfrak{K}_n\otimes_A A'$. Or, on a un
+diagramme commutatif
+\[
+  \xymatrix{
+    0 \ar[r] &
+    \mathfrak{K}_n\otimes_A A' \ar[r]\ar[d]^r &
+    C_n\otimes_A A' \ar[r]\ar[d]^{s_n} &
+    C_{n-1}\otimes_A A' \ar[r]\ar[d]^{s_{n-1}} & 0 \\
+    0 \ar[r] &
+    \mathfrak{K}'_n \ar[r] &
+    C'_n \ar[r] &
+    C'_{n-1} \ar[r] & 0
+  }
+\]
+où la flèche verticale de gauche est bijective et les deux lignes sont exactes
+($A'$ étant un $A$-module plat). On en déduit par récurrence que $s_n$ est
+bijectif pour tout $n$, car c'est vrai par hypothèse pour $n=0$, et se déduit
+par application du lemme des cinq pour $n$ quelconque. Cela prouve la seconde
+assertion de (ii).
+
+\begin{corollary}[16.2.3]
+\label{IV.16.2.3}
+Soient $g:X\to Y$, $u:Y'\to Y$ deux morphismes de préschémas,
+$X'=X\times_Y Y'$, $g':X'\to Y'$ et $v:X'\to X$ les projections canoniques.
+Soient $f:Y\to X$ une $Y$-section de $X$ (donc une immersion),
+$f'=f_{(Y')}:Y'\to X'$ la $Y'$-section de $X'$ déduite de $f$ par le
+changement de base $u$. Alors:
+\begin{enumerate}
+\item[(i)] Le morphisme
+$w_n:Y_{f'}'^{(n)}\to Y_f^{(n)}$ correspondant à $f$, $f'$, $u$, $v$
+(16.2.1) et le morphisme canonique
+$h'_n:Y_{f'}'^{(n)}\to X'$ identifient $Y_{f'}'^{(n)}$ au produit
+$Y_f^{(n)}\times_X X'$.
+\item[(ii)] Si l'on munit $\mathcal{O}_{Y_f^{(n)}}$ (resp.
+$\mathcal{O}_{Y_{f'}'^{(n)}}$) de la structure de $\mathcal{O}_Y$-Algèbre
+définie par $g$ (resp. de la structure de $\mathcal{O}_{Y'}$-Algèbre définie
+par $g'$) (16.1.6), l'homomorphisme de $\mathcal{O}_{Y'}$-Algèbres
+\[
+  \rho^*(\mathcal{O}_{Y_f^{(n)}})
+  \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow
+  \mathcal{O}_{Y_{f'}'^{(n)}}
+  \tag{16.2.3.1}
+  \label{IV.16.2.3.1}
+\]
+\oldpage[IV-4]{12}
+déduit de l'homomorphisme $\nu_n$ (16.2.1.2) est bijectif. En outre,
+l'homomorphisme de $\mathcal{O}_{Y'}$-Modules
+\[
+  \operatorname{Gr}_1(u):
+  \mathscr{G}r_1(f)\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow\mathscr{G}r_1(f')
+  \tag{16.2.3.2}
+  \label{IV.16.2.3.2}
+\]
+est bijectif.
+\end{enumerate}
+\end{corollary}
+
+\noindent(i) Notons d'abord que les morphismes $f':Y'\to X'$ et $u:Y'\to Y$
+identifient $Y'$ au produit $Y\times_X X'$ (pour les morphismes structuraux
+$f:Y\to X$ et $v:X'\to X$) (14.5.12.1). La conclusion de (i) résulte alors de
+(16.2.2, (ii)), le morphisme $g$ étant une immersion.
+
+\noindent(ii) Le diagramme commutatif
+\[
+  \xymatrix{
+    Y_f^{(n)} \ar[d]^{h_n}
+      & Y_{f'}'^{(n)} \ar[d]^-{h'_n} \ar[l]^{w_n} \\
+    X \ar[d]^g
+      & X' \ar[d]^{g'} \ar[l]^v \\
+    Y
+      & Y' \ar[l]^u
+  }
+\]
+identifie $Y_{f'}'^{(n)}$ au produit $Y_f^{(n)}\times_X X'$ et $X'$ au produit
+$X\times_Y Y'$, donc (I, 3.3.9) il identifie (pour les morphismes
+$g'\circ h'_n$ et $w_n$) $Y_{f'}'^{(n)}$ au produit
+$Y_f^{(n)}\times_Y Y'$. Comme $Y_f^{(n)}$ (resp. $Y_{f'}'^{(n)}$) est le
+préschéma affine au-dessus de $Y$ (resp. $Y'$) associé à la
+$\mathcal{O}_Y$-Algèbre $\mathcal{O}_{Y_f^{(n)}}$ (resp. à la
+$\mathcal{O}_{Y'}$-Algèbre $\mathcal{O}_{Y_{f'}'^{(n)}}$), le fait que
+l'homomorphisme canonique (16.2.3.1) soit bijectif résulte de (II, 1.5.2).
+Enfin, l'homomorphisme canonique (16.2.3.1) est compatible avec les
+augmentations
+$\mathcal{O}_{Y_f^{(n)}}\to\mathcal{O}_Y$ et
+$\mathcal{O}_{Y_{f'}'^{(n)}}\to\mathcal{O}_{Y'}$; comme
+$\mathcal{O}_{Y_f^{(n)}}$ est somme directe (en tant que
+$\mathcal{O}_Y$-Module) de $\mathcal{O}_Y$ et de l'Idéal d'augmentation
+$\mathscr{I}/\mathscr{I}^{n+1}$, on voit donc que l'homomorphisme canonique
+(16.2.3.1), restreint à
+$(\mathscr{I}/\mathscr{I}^{n+1})\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}$,
+est une bijection de ce dernier sur
+$\mathscr{I}'/\mathscr{I}'^{n+1}$. Pour $n=1$, cela montre que
+$\operatorname{Gr}_1(u)$ est bijectif.
+
+On notera que, sous les hypothèses de (16.2.3), les homomorphismes
+$\operatorname{Gr}_n(u)$ sont surjectifs en vertu de ce qui précède, mais ne
+sont pas bijectifs en général pour $n\geq 2$. Toutefois:
+
+\begin{corollary}[16.2.4]
+\label{IV.16.2.4}
+Sous les hypothèses de (16.2.3), supposons que $u:Y'\to Y$ soit un morphisme
+plat (resp. que les $\mathscr{G}r_n(f)$ soient des $\mathcal{O}_Y$-Modules
+plats pour $n\leq m$). Alors l'homomorphisme
+\[
+  \operatorname{Gr}_n(u):
+  \mathscr{G}r_n(f)\otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow\mathscr{G}r_n(f')
+\]
+est bijectif pour tout $n$ (resp. pour $n\leq m$).
+\end{corollary}
+
+Si $u$ est plat, il en est de même de $v:X'\to X$ qui s'en déduit par
+changement de base, et on sait déjà dans ce cas que $\operatorname{Gr}(u)$ est
+bijectif (16.2.2, (iii)). Si les $\mathscr{G}r_n(f)$ sont plats pour
+$n\leq m$, on voit d'abord par récurrence sur $n$ qu'il en est de même des
+$\mathscr{I}/\mathscr{I}^{n+1}$ pour $n\leq m$, en vertu des suites exactes
+\[
+  0\longrightarrow\mathscr{I}^n/\mathscr{I}^{n+1}
+  \longrightarrow\mathscr{I}/\mathscr{I}^{n+1}
+  \longrightarrow\mathscr{I}/\mathscr{I}^n
+  \longrightarrow 0
+\]
+\oldpage[IV-4]{13}
+(0\textsubscript{I}, 6.1.2); en outre, on a alors des diagrammes commutatifs
+\[
+  \xymatrix{
+    0 \ar[r] &
+    (\mathscr{I}^n/\mathscr{I}^{n+1})
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] &
+    (\mathscr{I}/\mathscr{I}^{n+1})
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] &
+    (\mathscr{I}/\mathscr{I}^n)
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] & 0 \\
+    0 \ar[r] &
+    \mathscr{I}'^n/\mathscr{I}'^{n+1}
+      \ar[r] &
+    \mathscr{I}'/\mathscr{I}'^{n+1}
+      \ar[r] &
+    \mathscr{I}'/\mathscr{I}'^n
+      \ar[r] & 0
+  }
+\]
+dans lesquels les lignes sont exactes (la première par platitude
+(0\textsubscript{I}, 6.1.2)) et les deux dernières flèches verticales sont
+bijectives en vertu de (16.2.3, (ii)); d'où la conclusion.
+
+\begin{remarks}[16.2.5]
+\label{IV.16.2.5}
+\begin{enumerate}
+\item[(i)] Le raisonnement de (16.2.2, (i)) s'applique encore lorsque dans
+(16.2.1.1) il s'agit de morphismes d'espaces annelés en anneaux locaux
+($\mathbf{Err}_{\mathrm{II}}$, (1.8.2)).
+\item[(ii)] Dans (16.2.2, (ii)), la conclusion n'est plus nécessairement valable
+lorsqu'on suppose seulement que $v$ et $f$ sont des morphismes de préschémas
+($f$ vérifiant la condition de (16.1.1)). Par exemple (avec les notations de la
+démonstration de (16.2.2, (ii)), il peut se faire que $\mathfrak{I}=0$ mais que
+le noyau $\mathfrak{I}'$ de $A'\to B'=B\otimes_A A'$ ne soit pas nul et que
+$B'\neq 0$, auquel cas on a $Y^{(n)}=Y$ pour tout $n$, mais
+$Y'^{(n)}\neq Y'$. On a un exemple de ce fait en prenant
+$A=\mathbb{Z}$, $B=\mathbb{Q}$,
+$A'=\prod_{h=1}^{\infty}(\mathbb{Z}/m^h\mathbb{Z})$ où $m>1$.
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[16.2.6]
+\label{IV.16.2.6}
+Considérons le cas particulier du diagramme (16.2.1.1) où $X'=X$, $v$ étant
+l'identité, $X$ est un préschéma, $Y$ un sous-préschéma de $X$, $Y'$ un
+sous-préschéma de $Y$, $f$, $u$ et $f'=f\circ u$ les injections canoniques; le
+di-homomorphisme (16.2.1.3) donne, par tensorisation avec
+$\mathcal{O}_{Y'}$ au-dessus de $\rho^*(\mathcal{O}_Y)$, un homomorphisme de
+$\mathcal{O}_{Y'}$-Algèbres graduées
+\[
+  u^*(\mathscr{G}r_\bullet(f))
+  \longrightarrow\mathscr{G}r_\bullet(f')
+  \tag{16.2.6.1}
+  \label{IV.16.2.6.1}
+\]
+D'autre part, on identifie $\mathcal{O}_Y$ à
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f$, $\mathcal{O}_{Y'}$ à
+$\rho^*(\mathcal{O}_Y)/\mathscr{I}_u$; comme $\rho^*$ est un foncteur exact,
+on a
+$\rho^*(\mathcal{O}_Y)=
+\rho^*(\psi^*(\mathcal{O}_X))/\rho^*(\mathscr{I}_f)=
+\psi'^*(\mathcal{O}_X)/\rho^*(\mathscr{I}_f)$, et comme
+$\mathcal{O}_{Y'}$ s'identifie par ailleurs à
+$\psi'^*(\mathcal{O}_X)/\mathscr{I}_{f'}$, on voit que l'on a
+$\mathscr{I}_u=\mathscr{I}_{f'}/\rho^*(\mathscr{I}_f)$. On en déduit pour
+tout entier $n$ un homomorphisme canonique
+$\mathscr{I}_{f'}^n/\mathscr{I}_{f'}^{n+1}\to
+\mathscr{I}_u^n/\mathscr{I}_u^{n+1}$, d'où un homomorphisme canonique de
+$\mathcal{O}_{Y'}$-Algèbres graduées
+\[
+  \mathscr{G}r_\bullet(f')
+  \longrightarrow\mathscr{G}r_\bullet(u).
+  \tag{16.2.6.2}
+  \label{IV.16.2.6.2}
+\]
+\end{env}
+
+\begin{proposition}[16.2.7]
+\label{IV.16.2.7}
+Soient $X$ un préschéma, $Y$ un sous-préschéma de $X$, $Y'$ un
+sous-préschéma de $Y$, $j:Y'\to Y$ l'injection canonique. On a alors une suite
+exacte de faisceaux conormaux ($\mathcal{O}_{Y'}$-Modules)
+\[
+  \xymatrix{
+    j^*(\mathscr{N}_{Y/X}) \ar[r] &
+    \mathscr{N}_{Y'/X} \ar[r] &
+    \mathscr{N}_{Y'/Y} \ar[r] & 0
+  }
+  \tag{16.2.7.1}
+  \label{IV.16.2.7.1}
+\]
+où les flèches sont les composantes de degré 1 des homomorphismes canoniques
+(16.2.6.1) et (16.2.6.2).
+\end{proposition}
+
+La question étant locale, on peut se borner au cas où
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(A/\mathfrak{I})$,
+$Y'=\operatorname{Spec}(A/\mathfrak{K})$, $\mathfrak{I}$ et $\mathfrak{K}$
+étant deux idéaux de $A$ tels que $\mathfrak{I}\subset\mathfrak{K}$; tout
+revient à voir alors
+\oldpage[IV-4]{14}
+que la suite d'homomorphismes canoniques
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}\to
+\mathfrak{K}/\mathfrak{K}^2\to
+(\mathfrak{K}/\mathfrak{I})/(\mathfrak{K}/\mathfrak{I})^2\to 0$
+est exacte, ce qui est immédiat puisque l'image de
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}$ dans
+$\mathfrak{K}/\mathfrak{K}^2$ est
+$(\mathfrak{I}+\mathfrak{K}^2)/\mathfrak{K}^2$ et que
+$(\mathfrak{K}/\mathfrak{I})/(\mathfrak{K}/\mathfrak{I})^2$ s'identifie à
+$\mathfrak{K}/(\mathfrak{I}+\mathfrak{K}^2)$.
+
+Il est facile de donner des exemples où la suite (16.2.7.1) prolongée à gauche
+par un 0 n'est plus exacte; avec les notations précédentes, il suffit de
+prendre $A=k[T]$, $\mathfrak{I}=AT^2$, $\mathfrak{K}=AT$, car on a alors
+$(\mathfrak{I}+\mathfrak{K}^2)/\mathfrak{K}^2=0$ et
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}\neq 0$. Voir cependant (16.9.13) et
+(19.1.5) pour des cas utiles où la suite prolongée reste encore exacte.
+
+\subsection{Invariants différentiels fondamentaux d'un morphisme de préschémas}
+\label{IV.16.3}
+
+\begin{definition}[16.3.1]
+\label{IV.16.3.1}
+Soient $f:X\to S$ un morphisme de préschémas, $\Delta_f:X\to X\times_S X$
+le morphisme diagonal correspondant, qui est une immersion (I, 5.3.9 et
+$\mathbf{Err}_{\mathrm{III}}$, 10). On désigne par $\mathscr{P}_f^n$ ou
+$\mathscr{P}_{X/S}^n$, et l'on appelle faisceau des parties principales d'ordre $n$
+du $S$-préschéma $X$, le faisceau d'anneaux $\mathcal{O}_X$-augmentés, $n$-ème
+invariant normal de $\Delta_f$ (16.1.2). On pose
+$\mathscr{P}_f^\infty=\mathscr{P}_{X/S}^\infty=
+\varprojlim_n\mathscr{P}_{X/S}^n$,
+$\mathscr{G}r_n(\mathscr{P}_f)=\mathscr{G}r_n(\mathscr{P}_{X/S})=
+\mathscr{G}r_n(\Delta_f)$ (16.1.2); le $\mathcal{O}_X$-Module
+$\mathscr{G}r_1(\Delta_f)$, Idéal d'augmentation de $\mathscr{P}_{X/S}^1$, est
+aussi noté $\Omega_f^1$ ou $\Omega_{X/S}^1$, et appelé le $\mathcal{O}_X$-Module
+des 1-différentielles de $f$, ou de $X$ par rapport à $S$, ou du $S$-préschéma $X$.
+\end{definition}
+
+Il résulte de cette définition que $\mathscr{P}_{X/S}^0$ s'identifie
+canoniquement à $\mathcal{O}_X$ (16.1.2).
+
+On a (16.1.2.2) un homomorphisme canonique surjectif de
+$\mathcal{O}_X$-Algèbres graduées
+\[
+  \mathscr{S}_{\mathcal{O}_X}^{\bullet}(\Omega_{X/S}^1)
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X/S}).
+  \tag{16.3.1.1}
+  \label{IV.16.3.1.1}
+\]
+Il résulte aussi de la définition (16.3.1) que pour tout ouvert $U$ de $X$, on a
+$\mathscr{P}_{f|U}^n=\mathscr{P}_f^n|U$,
+$\mathscr{P}_{f|U}^\infty=\mathscr{P}_f^\infty|U$,
+$\mathscr{G}r_n(\mathscr{P}_{f|U})=\mathscr{G}r_n(\mathscr{P}_f)|U$,
+$\Omega_{f|U}^1=\Omega_f^1|U$ (autrement dit, les notions introduites sont
+locales sur $X$).
+
+\begin{env}[16.3.2]
+\label{IV.16.3.2}
+Notons $p_1$, $p_2$ les deux projections canoniques du produit $X\times_S X$;
+comme $\Delta_f$ est une $X$-section de $X\times_S X$ à la fois pour les
+morphismes $p_1$ et $p_2$, chacun de ces morphismes définit, pour tout $n$, un
+homomorphisme de faisceaux d'anneaux $\mathcal{O}_X\to\mathscr{P}_{X/S}^n$,
+inverse à droite de l'augmentation $\mathscr{P}_{X/S}^n\to\mathcal{O}_X$
+(16.1.7); on peut encore dire que l'on définit ainsi sur
+$\mathscr{P}_{X/S}^n$ deux structures de $\mathcal{O}_X$-Algèbres augmentées
+quasi-cohérentes; les structures correspondantes de $\mathcal{O}_X$-Module sur
+$\mathscr{G}r_n(\mathscr{P}_{X/S})$ sont les mêmes. On a de même, par passage à
+la limite, deux structures de $\mathcal{O}_X$-Algèbre sur
+$\mathscr{P}_{X/S}^\infty$.
+\end{env}
+
+\begin{env}[16.3.3]
+\label{IV.16.3.3}
+Le morphisme $s=(p_2,p_1)_S:X\times_S X\to X\times_S X$ est un automorphisme
+involutif de $X\times_S X$, appelé la symétrie canonique, tel que
+\[
+  p_1\circ s=p_2,\qquad p_2\circ s=p_1,\qquad s\circ\Delta_f=\Delta_f.
+  \tag{16.3.3.1}
+  \label{IV.16.3.3.1}
+\]
+Si l'on pose $s=(\rho,\lambda)$, $p_i=(\pi_i,\mu_i)$ ($i=1,2$),
+$\Delta_f=(\delta,\nu)$, $\lambda^\#$ est donc un isomorphisme de
+$\rho^*(\pi_1^*(\mathcal{O}_X))$ sur $\pi_2^*(\mathcal{O}_X)$, et
+$\delta^*(\lambda^\#)$ laisse invariant $\delta^*(\mathcal{O}_{X\times_S X})$
+et le noyau $\mathscr{I}$ de l'homomorphisme
+$\nu^\#:\delta^*(\mathcal{O}_{X\times_S X})\to\mathcal{O}_X$. Par suite:
+\end{env}
+
+\begin{proposition}[16.3.4]
+\label{IV.16.3.4}
+L'homomorphisme $\sigma=\delta^*(\lambda^\#)$ déduit de $s$ (et appelé encore
+symétrie canonique) est un automorphisme involutif du système projectif
+$(\mathscr{P}_{X/S}^n)$ de faisceaux
+\oldpage[IV-4]{15}
+d'anneaux $\mathcal{O}_X$-augmentés, et par suite aussi de leur limite projective
+$\mathscr{P}_{X/S}^\infty$. Cet automorphisme permute les deux structures de
+$\mathcal{O}_X$-Algèbre sur les $\mathscr{P}_{X/S}^n$ et sur
+$\mathscr{P}_{X/S}^\infty$.
+\end{proposition}
+
+\begin{env}[16.3.5]
+\label{IV.16.3.5}
+Dans ce qui suit, les deux structures de $\mathcal{O}_X$-Algèbre définies sur les
+$\mathscr{P}_{X/S}^n$ et sur $\mathscr{P}_{X/S}^\infty$ joueront des rôles très
+différents: nous conviendrons désormais, sauf mention expresse du contraire,
+que lorsque $\mathscr{P}_{X/S}^n$ ou $\mathscr{P}_{X/S}^\infty$ sera considéré
+comme une $\mathcal{O}_X$-Algèbre, c'est de la structure d'Algèbre définie par
+$p_1$ qu'il s'agira.
+\end{env}
+
+Pour tout ouvert $U$ de $X$ et toute section $t\in\Gamma(U,\mathcal{O}_X)$, on
+notera simplement $t.1$ ou même $t$ l'image de $t$ par l'homomorphisme
+structural $\Gamma(U,\mathcal{O}_X)\to\Gamma(U,\mathscr{P}_{X/S}^n)$ (resp.
+$\Gamma(U,\mathcal{O}_X)\to\Gamma(U,\mathscr{P}_{X/S}^\infty)$)
+(c'est-à-dire l'homomorphisme correspondant à $p_1$).
+
+\begin{definition}[16.3.6]
+\label{IV.16.3.6}
+On désigne par $d_f^n$, ou $d_{X/S}^n$ (resp. $d_f^\infty$, ou
+$d_{X/S}^\infty$), ou simplement $d^n$ (resp. $d^\infty$), l'homomorphisme de
+faisceaux d'anneaux $\mathcal{O}_X\to\mathscr{P}_f^n=\mathscr{P}_{X/S}^n$
+(resp. $\mathcal{O}_X\to\mathscr{P}_f^\infty=\mathscr{P}_{X/S}^\infty$)
+déduit de $p_2$. Pour tout ouvert $U$ de $X$, et tout
+$t\in\Gamma(U,\mathcal{O}_X)$, $d^nt$ (resp. $d^\infty t$) est appelé la partie
+principale d'ordre $n$ (resp. partie principale d'ordre infini) de $t$. On pose
+$dt=d^1t-t$, et on dit que $dt$ est la différentielle de $t$ (élément de
+$\Gamma(U,\Omega_{X/S}^1)$, aussi noté $d_{X/S}(t)$).
+\end{definition}
+
+Il résulte aussitôt de cette définition que l'on a
+\[
+  d(t_1t_2)=t_1dt_2+t_2dt_1
+  \tag{16.3.6.1}
+  \label{IV.16.3.6.1}
+\]
+quels que soient $t_1,t_2$ dans $\Gamma(U,\mathcal{O}_X)$, autrement dit, $d$
+est une dérivation de l'anneau $\Gamma(U,\mathcal{O}_X)$ dans le
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\Omega_{X/S}^1)$.
+
+Dans toutes les notations introduites dans (16.3.1) et (16.3.6), on remplacera
+parfois $S$ par $A$ lorsque $S=\operatorname{Spec}(A)$.
+
+\begin{env}[16.3.7]
+\label{IV.16.3.7}
+Supposons en particulier que $S=\operatorname{Spec}(A)$ et
+$X=\operatorname{Spec}(B)$ soient des schémas affines, $B$ étant donc une
+$A$-algèbre. Alors $\Delta_f$ correspond à l'homomorphisme canonique surjectif
+$\pi:B\otimes_A B\to B$ tel que $\pi(b\otimes b')=bb'$, de noyau
+$\mathfrak{I}=\mathfrak{I}_{B/A}$ (0, 20.4.1); $\mathscr{P}_f^n$ est le faisceau
+structural du préschéma $\operatorname{Spec}(P_{B/A}^n)$, où
+\[
+  P_{B/A}^n=(B\otimes_A B)/\mathfrak{I}^{n+1};
+\]
+$\mathscr{G}r_\bullet(\mathscr{P}_f)$ est le $\mathcal{O}_X$-Module
+quasi-cohérent correspondant au $B$-module gradué
+\[
+  \operatorname{gr}_{\mathfrak{I}}^\bullet(B\otimes_A B)
+  =\bigoplus_{n\geq 0}(\mathfrak{I}^n/\mathfrak{I}^{n+1});
+\]
+en particulier $\Omega_f^1=\Omega_{X/S}^1$ est le $\mathcal{O}_X$-Module
+quasi-cohérent correspondant au $B$-module des 1-différentielles de $B$ par
+rapport à $A$, $\Omega_{B/A}^1$ (0, 20.4.3). Les morphismes projections
+$p_1:X\times_S X\to X$, $p_2:X\times_S X\to X$ correspondent aux deux
+homomorphismes d'anneaux $j_1:B\to B\otimes_A B$, $j_2:B\to B\otimes_A B$
+tels que $j_1(b)=b\otimes 1$, $j_2(b)=1\otimes b$, de sorte que (par la
+convention de (16.3.5)), $P_{B/A}^n$ est toujours considérée comme une
+$B$-algèbre pour l'homomorphisme composé
+$B\xrightarrow{j_1}B\otimes_A B\to P_{B/A}^n$; l'homomorphisme d'anneaux
+$B\xrightarrow{j_2}B\otimes_A B\to P_{B/A}^n$ se note $d_{B/A}^n$ et correspond
+à $d_{X/S}^n$ opérant sur $\Gamma(X,\mathcal{O}_X)$; pour tout $t\in B$, $dt$
+est égal à $d_{B/A}t$, défini dans (0, 20.4.6) (cf. $\mathbf{Err}_{\mathrm{IV}}$,
+11).
+
+Si $\pi_n:B\otimes_A B\to P_{B/A}^n$ est l'homomorphisme canonique, on a donc,
+en vertu des définitions précédentes
+\[
+  \pi_n(b\otimes b')=b.\pi_n(1\otimes b')=b.d_{B/A}^n(b')
+  \quad\text{pour }b\in B,\ b'\in B.
+  \tag{16.3.7.1}
+  \label{IV.16.3.7.1}
+\]
+\end{env}
+
+\oldpage[IV-4]{16}
+\begin{proposition}[16.3.8]
+\label{IV.16.3.8}
+L'image de l'homomorphisme $d_{X/S}^n:\mathcal{O}_X\to\mathscr{P}_{X/S}^n$
+engendre le $\mathcal{O}_X$-Module $\mathscr{P}_{X/S}^n$.
+\end{proposition}
+
+On se ramène aussitôt au cas où $X=\operatorname{Spec}(B)$ et
+$S=\operatorname{Spec}(A)$ sont affines et la proposition résulte de (16.3.7.1)
+puisque $\pi_n$ est surjectif. On notera qu'en général $d_{X/S}^n$ n'est pas
+surjectif (même déjà pour $n=1$).
+
+\begin{proposition}[16.3.9]
+\label{IV.16.3.9}
+Supposons que $f:X\to S$ soit un morphisme localement de type fini. Alors les
+$\mathscr{P}_f^n$ et les $\mathscr{G}r_n(\mathscr{P}_f)$ sont des
+$\mathcal{O}_X$-Modules quasi-cohérents de type fini.
+\end{proposition}
+
+Cela résulte de (16.1.6) et du fait que $\Delta_f$ est localement de présentation
+finie (I, 4.3.1).
+
+\subsection{Propriétés fonctorielles des invariants différentiels}
+\label{IV.16.4}
+
+\begin{env}[16.4.1]
+\label{IV.16.4.1}
+Considérons un diagramme commutatif de morphismes de préschémas
+\[
+  \xymatrix{
+    X \ar[d]_-{f} & X' \ar[l]_-u \ar[d]^-{f'} \\
+    S & S' \ar[l]^-w
+  }
+  \tag{16.4.1.1}
+  \label{IV.16.4.1.1}
+\]
+On en déduit un diagramme commutatif
+\[
+  \xymatrix{
+    X \ar[d]_-{\Delta_f} & X' \ar[l]_-u \ar[d]^-{\Delta_{f'}} \\
+    X\times_S X & X'\times_{S'}X' \ar[l]^-v
+  }
+\]
+où $v$ est l'homomorphisme composé (I, 5.3.5 et 5.3.15)
+\[
+  X'\times_{S'}X'
+  \xrightarrow{(p'_1,p'_2)_S}X'\times_S X'
+  \xrightarrow{u\times_S u}X\times_S X.
+  \tag{16.4.1.2}
+  \label{IV.16.4.1.2}
+\]
+On déduit donc de $u$ et $v$, comme il a été expliqué dans (16.2.1), des
+homomorphismes de faisceaux d'anneaux augmentés
+\[
+  \nu_n:\rho^*(\mathscr{P}_{X/S}^n)\longrightarrow
+  \mathscr{P}_{X'/S'}^n
+  \tag{16.4.1.3}
+  \label{IV.16.4.1.3}
+\]
+(où l'on a posé $u=(\rho,\lambda)$); ces homomorphismes forment un système
+projectif, et donnent donc à la limite un homomorphisme de faisceaux d'anneaux
+augmentés
+\[
+  \nu_\infty:\rho^*(\mathscr{P}_{X/S}^\infty)\longrightarrow
+  \mathscr{P}_{X'/S'}^\infty;
+  \tag{16.4.1.4}
+  \label{IV.16.4.1.4}
+\]
+d'autre part, par passage aux quotients, les homomorphismes $\nu_n$ donnent un
+di-homomorphisme d'Algèbres graduées (relatif à $\lambda^\#$):
+\[
+  \operatorname{gr}(u):\rho^*(\mathscr{G}r_\bullet(\mathscr{P}_{X/S}))
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X'/S'}).
+  \tag{16.4.1.5}
+  \label{IV.16.4.1.5}
+\]
+\end{env}
+
+\begin{env}[16.4.2]
+\label{IV.16.4.2}
+\oldpage[IV-4]{17}
+Si l'on a un diagramme commutatif
+\[
+  \xymatrix{
+    X \ar[d]_-{f} & X' \ar[l]_-u \ar[d]^-{f'} &
+      X'' \ar[l]_-{u'} \ar[d]^-{f''} \\
+    S & S' \ar[l]^-w & S'' \ar[l]^-{w'}
+  }
+\]
+on en déduit un diagramme commutatif
+\[
+  \xymatrix{
+    X \ar[d]_-{\Delta_f} & X' \ar[l]_-u \ar[d]^-{\Delta_{f'}} &
+      X'' \ar[l]_-{u'} \ar[d]^-{\Delta_{f''}} \\
+    X\times_S X & X'\times_{S'}X' \ar[l]^-v &
+      X''\times_{S''}X'' \ar[l]^-{v'}
+  }
+\]
+où $v'$ est défini à partir de $u'$, $w'$, $f'$, $f''$ comme $v$ à partir de
+$u$, $w$, $f$, $f'$. On vérifie aussitôt que si $u''=u\circ u'$,
+$w''=w\circ w'$, alors le morphisme composé $v\circ v'$ est égal au morphisme
+$v''$ défini à partir de $u''$, $w''$, $f$, $f''$ comme $v$ à partir de $u$,
+$w$, $f$, $f'$. Si l'on pose $u'=(\rho',\lambda')$,
+$u''=(\rho'',\lambda'')$ il résulte alors de (16.2.1) que l'homomorphisme
+$\nu_n'':\rho''^*(\mathscr{P}_{X/S}^n)\to\mathscr{P}_{X''/S''}^n$ est égal au
+composé
+\[
+  \rho'^*(\rho^*(\mathscr{P}_{X/S}^n))
+  \xrightarrow{\rho'^*(\nu_n^\#)}
+  \rho'^*(\mathscr{P}_{X'/S'}^n)
+  \xrightarrow{\nu_n'}\mathscr{P}_{X''/S''}^n
+\]
+et l'on a des propriétés de transitivité analogues pour les homomorphismes
+(16.4.1.4) et (16.4.1.5), ce qui permet de dire que les
+$\mathscr{P}_{X/S}^n$, $\mathscr{P}_{X/S}^\infty$ et
+$\mathscr{G}r_\bullet(\mathscr{P}_{X/S})$ dépendent fonctoriellement de $f$.
+\end{env}
+
+\begin{env}[16.4.3]
+\label{IV.16.4.3}
+On vérifie aussitôt (par exemple en se ramenant au cas affine à l'aide de
+(16.3.7)) qu'avec les notations de (16.4.1), le diagramme
+\[
+  \xymatrix{
+    \rho^*(\mathcal{O}_X) \ar[r]^{\lambda^\#} \ar[d] &
+      \mathcal{O}_{X'} \ar[d] \\
+    \rho^*(\mathscr{P}_{X/S}^n) \ar[r]_{\nu_n} &
+      \mathscr{P}_{X'/S'}^n
+  }
+  \tag{16.4.3.1}
+  \label{IV.16.4.3.1}
+\]
+où les flèches verticales sont celles définissant les structures d'Algèbre
+choisies dans (16.3.5) (c'est-à-dire celles provenant des premières projections)
+est commutatif; il en est de même du diagramme
+\[
+  \xymatrix{
+    \rho^*(\mathcal{O}_X) \ar[r]^{\lambda^\#}
+      \ar[d]_{\rho^*(d_{X/S}^n)} &
+      \mathcal{O}_{X'} \ar[d]^{d_{X'/S'}^n} \\
+    \rho^*(\mathscr{P}_{X/S}^n) \ar[r]_{\nu_n} &
+      \mathscr{P}_{X'/S'}^n
+  }
+  \tag{16.4.3.2}
+  \label{IV.16.4.3.2}
+\]
+\oldpage[IV-4]{18}
+les flèches verticales définissant ici les structures d'Algèbre provenant des
+secondes projections; d'ailleurs, si $\sigma$ et $\sigma'$ sont les symétries
+canoniques correspondant à $f$ et $f'$ (16.3.4), on a
+\[
+  \nu_n\circ\rho^*(\sigma)=\sigma'\circ\nu_n
+\]
+qui fait passer d'un des diagrammes précédents à l'autre. On déduit donc de
+(16.4.3.1) un homomorphisme canonique de $\mathcal{O}_{X'}$-Algèbres augmentées
+\[
+  P^n(u):u^*(\mathscr{P}_{X/S}^n)
+  =\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\mathscr{P}_{X'/S'}^n
+  \tag{16.4.3.3}
+  \label{IV.16.4.3.3}
+\]
+et il résulte de (16.4.3.2) que le diagramme
+\[
+  \xymatrix{
+    \mathcal{O}_{X'} \ar[r]^{\operatorname{id}}
+      \ar[d]_{u^*(d_{X/S}^n)} &
+      \mathcal{O}_{X'} \ar[d]^{d_{X'/S'}^n} \\
+    u^*(\mathscr{P}_{X/S}^n) \ar[r]_{P^n(u)} &
+      \mathscr{P}_{X'/S'}^n
+  }
+  \tag{16.4.3.4}
+  \label{IV.16.4.3.4}
+\]
+est commutatif. On en déduit un homomorphisme de $\mathcal{O}_{X'}$-Algèbres
+graduées
+\[
+  \operatorname{Gr}_\bullet(u):u^*(\mathscr{G}r_\bullet(\mathscr{P}_{X/S}))
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X'/S'})
+  \tag{16.4.3.5}
+  \label{IV.16.4.3.5}
+\]
+et en particulier un homomorphisme de $\mathcal{O}_{X'}$-Modules
+\[
+  \operatorname{Gr}_1(u):
+  \Omega_{X/S}^1\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\Omega_{X'/S'}^1
+  \tag{16.4.3.6}
+  \label{IV.16.4.3.6}
+\]
+donnant lieu à un diagramme commutatif
+\[
+  \xymatrix{
+    \mathcal{O}_{X'} \ar[r]^{\operatorname{id}}
+      \ar[d]_{d_{X/S}\otimes 1} &
+      \mathcal{O}_{X'} \ar[d]^{d_{X'/S'}} \\
+    \Omega_{X/S}^1\otimes_{\mathcal{O}_X}\mathcal{O}_{X'} \ar[r] &
+      \Omega_{X'/S'}^1
+  }
+  \tag{16.4.3.7}
+  \label{IV.16.4.3.7}
+\]
+\end{env}
+
+\begin{env}[16.4.4]
+\label{IV.16.4.4}
+Lorsque $S=\operatorname{Spec}(A)$, $S'=\operatorname{Spec}(A')$,
+$X=\operatorname{Spec}(B)$, $X'=\operatorname{Spec}(B')$ sont affines, de sorte
+que l'on a un diagramme commutatif d'homomorphismes d'anneaux
+\[
+  \xymatrix{
+    B \ar[r] & B' \\
+    A \ar[u] \ar[r] & A' \ar[u]
+  }
+\]
+l'image de $\mathfrak{I}_{B/A}$ dans $B'\otimes_{A'}B'$ est contenue dans
+$\mathfrak{I}_{B'/A'}$, et l'homomorphisme $\nu_n$ correspond à
+l'homomorphisme d'anneaux $P_{B/A}^n\to P_{B'/A'}^n$ déduit de l'homomorphisme
+$B\otimes_A B\to B'\otimes_{A'}B'$ par passage aux quotients. L'homomorphisme
+(16.4.3.6) correspond à l'homomorphisme défini dans (0, 20.5.4.1), et le
+diagramme commutatif (16.4.3.7) au diagramme (0, 20.5.4.2).
+\end{env}
+
+\oldpage[IV-4]{19}
+\begin{proposition}[16.4.5]
+\label{IV.16.4.5}
+Supposons que $X'=X\times_S S'$, $f'$ et $u$ étant les projections canoniques.
+Alors les homomorphismes canoniques $P^n(u)$ (16.4.3.3) et
+$\operatorname{Gr}_1(u)$ (16.4.3.6) sont bijectifs.
+\end{proposition}
+
+On a en effet alors $X'\times_{S'}X'=(X\times_S X)\times_S S'$, et on peut donc
+appliquer (16.2.3, (ii)) en remplaçant $g$ par la première projection
+$p_1:X\times_S X\to X$ et $f$ par la diagonale $\Delta_f$.
+
+On notera aussi que sous les hypothèses de (16.4.5) l'homomorphisme
+$\operatorname{Gr}_\bullet(u)$ (16.4.3.5) est surjectif, mais non bijectif en
+général. Toutefois (16.2.4):
+
+\begin{corollary}[16.4.6]
+\label{IV.16.4.6}
+Les hypothèses étant celles de (16.4.5), supposons de plus que $w:S'\to S$ soit
+plat (resp. que les $\mathscr{G}r_n(\mathscr{P}_{X/S})$ soient des
+$\mathcal{O}_X$-Modules plats pour $n\leq m$); alors l'homomorphisme
+\[
+  \operatorname{Gr}_n(u):u^*(\mathscr{G}r_n(\mathscr{P}_{X/S}))
+  \longrightarrow\mathscr{G}r_n(\mathscr{P}_{X'/S'})
+\]
+est bijectif pour tout $n$ (resp. pour $n\leq m$).
+\end{corollary}
+
+En effet, si $w$ est plat, il en est de même de
+$v:X'\times_{S'}X'\to X\times_S X$, donc la conclusion résulte de (16.2.4).
+
+\begin{env}[16.4.7]
+\label{IV.16.4.7}
+Soient $S$ un préschéma, $\mathscr{E}$ un $\mathcal{O}_S$-Module
+quasi-cohérent, et posons $X=\mathbf{V}(\mathscr{E})$ (II, 1.7.8), fibré
+vectoriel associé à $\mathscr{E}$, égal à
+$\operatorname{Spec}(\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))$. Soit
+$f:X\to S$ le morphisme structural. Pour tout ouvert $U$ de $S$, et toute
+section $t\in\Gamma(U,\mathscr{E})$, $t$ s'identifie à une section de
+$\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})$ au-dessus de $U$; soit $t'$ son
+image dans
+$\Gamma(f^{-1}(U),\mathcal{O}_X)=\Gamma(U,f_*(\mathcal{O}_X))=
+\Gamma(U,\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))$, et posons
+\[
+  \delta(t)=d_{X/S}^n(t')-t'\in
+  \Gamma(f^{-1}(U),\mathscr{P}_{X/S}^n);
+  \tag{16.4.7.1}
+  \label{IV.16.4.7.1}
+\]
+il est clair que $\delta$ est un di-homomorphisme de modules (correspondant à
+l'homomorphisme d'anneaux
+$\Gamma(U,\mathcal{O}_S)\to\Gamma(f^{-1}(U),\mathcal{O}_X)$) de
+$\Gamma(U,\mathscr{E})$ dans $\Gamma(f^{-1}(U),\mathscr{P}_{X/S}^n)$, dont
+l'image appartient d'ailleurs à l'idéal d'augmentation de
+$\Gamma(f^{-1}(U),\mathscr{P}_{X/S}^n)$. On en déduit (en faisant varier $U$)
+un homomorphisme canonique de $\mathcal{O}_X$-Algèbres
+\[
+  f^*(\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))
+  \longrightarrow\mathscr{P}_{X/S}^n
+  \tag{16.4.7.2}
+  \label{IV.16.4.7.2}
+\]
+et d'après la remarque précédente, si $\mathscr{K}$ est l'Idéal noyau de
+l'augmentation $\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})\to\mathcal{O}_S$,
+l'image de $\mathscr{K}^{n+1}$ par (16.4.7.2) est nulle, si bien qu'en
+factorisant par $\mathscr{K}^{n+1}$, on a finalement un homomorphisme canonique
+\[
+  \delta_n:f^*(\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})/
+  \mathscr{K}^{n+1})\longrightarrow\mathscr{P}_{X/S}^n.
+  \tag{16.4.7.3}
+  \label{IV.16.4.7.3}
+\]
+\end{env}
+
+\begin{proposition}[16.4.8]
+\label{IV.16.4.8}
+Sous les conditions de (16.4.7), les homomorphismes $\delta_n$ sont bijectifs et
+forment un système projectif d'isomorphismes; on en déduit un isomorphisme de
+$\mathcal{O}_X$-Algèbres graduées
+\[
+  f^*(\mathscr{S}_{\mathcal{O}_S}^{\bullet}(\mathscr{E}))
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X/S}).
+  \tag{16.4.8.1}
+  \label{IV.16.4.8.1}
+\]
+\end{proposition}
+
+Le fait que les homomorphismes (16.4.7.3) forment un système projectif résulte
+aussitôt de leur définition. Pour prouver que ce sont des isomorphismes, il
+suffira de
+\oldpage[IV-4]{20}
+démontrer que (16.4.8.1) est un isomorphisme, les filtrations des deux membres de
+(16.4.7.3) étant finies (Bourbaki, \emph{Alg. comm.}, chap. III, \S~2,
+n\textsuperscript{o} 8, cor. 3 du th. 1). Pour cela, considérons la suite exacte
+scindée de $\mathcal{O}_S$-Modules
+\[
+  \xymatrix{
+    0 \ar[r] & \mathscr{E} \ar[r]^{u} &
+    \mathscr{E}\oplus\mathscr{E} \ar[r]^{v} &
+    \mathscr{E} \ar[r] & 0
+  }
+  \tag{16.4.8.2}
+  \label{IV.16.4.8.2}
+\]
+où, pour tout couple de sections $s$, $t$ de $\mathscr{E}$ au-dessus d'un ouvert
+$U$ de $S$, on prend $u(s)=(-s,s)$ et $v(s,t)=s+t$. On a
+\[
+  X\times_S X=\operatorname{Spec}
+  (\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})\otimes_{\mathcal{O}_S}
+  \mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))
+  =\operatorname{Spec}(\mathscr{S}_{\mathcal{O}_S}
+  (\mathscr{E}\oplus\mathscr{E}))
+\]
+(II, 1.4.6 et 1.7.11), et le morphisme diagonal $X\to X\times_S X$ correspond
+(II, 1.2.7) à l'homomorphisme de $\mathcal{O}_S$-Algèbres
+$\mathscr{S}(v):\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}\oplus\mathscr{E})
+\to\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})$ (II, 1.7.4), de sorte que si
+$\mathscr{I}$ est le noyau de cet homomorphisme, on a
+\[
+  \mathscr{P}_{X/S}^n=f^*(\mathscr{S}_{\mathcal{O}_S}
+  (\mathscr{E}\oplus\mathscr{E})/\mathscr{I}^{n+1}).
+\]
+
+La proposition sera conséquence du lemme suivant:
+
+\begin{lemma}[16.4.8.3]
+\label{IV.16.4.8.3}
+Soient $Y$ un espace annelé,
+$0\to\mathscr{F}'\xrightarrow{u}\mathscr{F}\xrightarrow{v}\mathscr{F}''\to0$
+une suite exacte de $\mathcal{O}_Y$-Modules telle que tout point $y\in Y$
+possède un voisinage ouvert $V$ tel que la suite
+$0\to\mathscr{F}'|V\to\mathscr{F}|V\to\mathscr{F}''|V\to0$ soit scindée.
+Soit $\mathscr{I}$ l'Idéal noyau de
+$\mathscr{S}(v):\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})\to
+\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}'')$, et soit
+$\operatorname{gr}_{\mathscr{I}}^\bullet
+(\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))$ la $\mathcal{O}_Y$-Algèbre graduée
+associée à la $\mathcal{O}_Y$-Algèbre
+$\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})$ munie de la filtration
+$\mathscr{I}$-préadique. Alors l'homomorphisme de $\mathcal{O}_Y$-Algèbres
+graduées
+\[
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')
+  \otimes_{\mathcal{O}_Y}
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')
+  \longrightarrow
+  \operatorname{gr}_{\mathscr{I}}^\bullet
+  (\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))
+  \tag{16.4.8.4}
+  \label{IV.16.4.8.4}
+\]
+(où le premier membre est le produit tensoriel gradué des
+$\mathcal{O}_Y$-Algèbres symétriques munies de leur graduation canonique
+(II, 1.7.4 et 2.1.2)), provenant de l'injection canonique
+\[
+  \mathscr{F}'\longrightarrow\mathscr{I}
+  =\operatorname{gr}_{\mathscr{I}}^1
+  (\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})),
+\]
+est bijectif.
+\end{lemma}
+
+L'injection $\mathscr{F}'\to\mathscr{I}$ donne en effet canoniquement un
+homomorphisme de $\mathcal{O}_Y$-Algèbres graduées\linebreak
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')\to\allowbreak
+\operatorname{gr}_{\mathscr{I}}^\bullet
+(\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))$, et comme le second membre est par
+définition une $\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$-Algèbre
+graduée, on en déduit l'homomorphisme canonique (16.4.8.4) par tensorisation du
+précédent avec $\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$. Pour
+prouver le lemme, on peut, la question étant locale, se borner au cas où
+$\mathscr{F}=\mathscr{F}'\oplus\mathscr{F}''$, $u$ et $v$ étant les
+homomorphismes canoniques. Alors l'Algèbre graduée
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F})$ s'identifie canoniquement au
+produit tensoriel gradué
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')
+\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$ (II, 1.7.4), et il est
+immédiat que $\mathscr{I}$ est alors l'Idéal
+$\mathscr{I}'\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, où $\mathscr{I}'$ est
+l'Idéal d'augmentation de
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')$, c'est-à-dire la somme
+(directe) des $\mathscr{S}_{\mathcal{O}_Y}^m(\mathscr{F}')$ pour $m\geq1$. On en
+conclut que $\mathscr{I}^n=\mathscr{I}'^n\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, où cette fois
+$\mathscr{I}'^n$ est la somme (directe) des
+$\mathscr{S}_{\mathcal{O}_Y}^m(\mathscr{F}')$ pour $m\geq n$; on a par suite
+$\mathscr{I}^n/\mathscr{I}^{n+1}=
+\mathscr{S}_{\mathcal{O}_Y}^n(\mathscr{F}')\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, ce qui prouve que
+(16.4.8.4) est bijectif.
+
+\oldpage[IV-4]{21}
+Ce lemme étant démontré, il reste à voir que l'homomorphisme (16.4.8.1) est
+bien l'image par $f^*$ de l'homomorphisme (16.4.8.4) correspondant à la suite
+exacte (16.4.8.2); on constate aisément que cela résulte de la définition de
+$u$ (16.4.8.2) et de celle de $\delta$ (16.4.7.1), compte tenu de la définition
+de la structure de $\mathcal{O}_X$-Algèbre sur $\mathscr{P}_{X/S}^n$ et de
+celle de $d_{X/S}^n$ (16.3.5 et 16.3.6).
+
+En particulier:
+
+\begin{corollary}[16.4.9]
+\label{IV.16.4.9}
+Sous les conditions de (16.4.7), on a un isomorphisme canonique
+\[
+  \operatorname{gr}_1(\delta):f^*(\mathscr{E})
+  \xrightarrow{\sim}\Omega_{X/S}^1.
+  \tag{16.4.9.1}
+  \label{IV.16.4.9.1}
+\]
+\end{corollary}
+
+\begin{corollary}[16.4.10]
+\label{IV.16.4.10}
+Si $S=\operatorname{Spec}(A)$, $\mathscr{E}=\mathcal{O}_S^m$, de sorte que
+\[
+  X=\operatorname{Spec}(A[T_1,\ldots,T_m]),
+\]
+$\mathscr{P}_{X/S}^n$ s'identifie canoniquement à la
+$\mathcal{O}_X$-Algèbre correspondant à la $A[T_1,\ldots,T_m]$-algèbre quotient
+\[
+  A[T_1,\ldots,T_m,U_1,\ldots,U_m]/\mathfrak{K}^{n+1},
+\]
+où les $U_i$ ($1\leq i\leq m$) sont $m$ nouvelles indéterminées et
+$\mathfrak{K}$ est l'idéal engendré par $U_1,\ldots,U_m$.
+\end{corollary}
+
+On retrouve ainsi en particulier la structure de $\Omega_{X/S}^1$ dans ce cas
+(0, 20.5.13).
+
+Notons en outre que $d_{X/S}^n$ fait alors correspondre à un polynôme
+$F(T_1,\ldots,T_m)$ la classe mod.\ $\mathfrak{K}^{n+1}$ de
+$F(T_1+U_1,\ldots,T_m+U_m)$, comme il résulte de la définition (16.4.7.1).
+
+\begin{proposition}[16.4.11]
+\label{IV.16.4.11}
+Soient $f:X\to S$ un morphisme, $g:S\to X$ une $S$-section de $X$,
+$S_g^{(n)}$ le $n$-ème voisinage infinitésimal de $S$ pour l'immersion $g$
+(16.1.2). Il existe alors un isomorphisme et un seul de
+$\mathcal{O}_S$-Algèbres
+\[
+  \varpi_n:g^*(\mathscr{P}_{X/S}^n)\longrightarrow
+  \mathcal{O}_{S_g^{(n)}}
+  \tag{16.4.11.1}
+  \label{IV.16.4.11.1}
+\]
+(pour la structure de $\mathcal{O}_S$-Algèbre sur
+$\mathcal{O}_{S_g^{(n)}}$ définie par $f$ (16.1.7)), rendant commutatif le
+diagramme
+\[
+  \xymatrix{
+    \mathcal{O}_S=g^*(\mathcal{O}_X)
+      \ar[rr]^-{\lambda_n}\ar[dr]_-{g^*(d_{X/S}^n)}
+      &&\mathcal{O}_{S_g^{(n)}}\\
+    &g^*(\mathscr{P}_{X/S}^n)\ar[ur]_-{\varpi_n}
+  }
+  \tag{16.4.11.2}
+  \label{IV.16.4.11.2}
+\]
+(où $\lambda_n$ est l'homomorphisme structural).
+\end{proposition}
+
+En vertu de (I, 5.3.7), où l'on remplace $X$, $Y$, $S$ par $S$, $X$, $S$
+respectivement et $f$ par $g$, les diagrammes
+\[
+  \xymatrix@=3pc{
+    S\ar[r]^-g\ar[d]_-g&X\ar[d]^-{\Delta_f}
+      &S\ar[r]^-g\ar[d]_-g&X\ar[d]^-{\Delta_f}\\
+    X\ar[r]_{(g\circ f,1_X)_S}&X\times_S X
+      &X\ar[r]_{(1_X,g\circ f)_S}&X\times_S X
+  }
+  \tag{16.4.11.3}
+  \label{IV.16.4.11.3}
+\]
+\oldpage[IV-4]{22}
+identifient $S$ au produit des $(X\times_S X)$-préschémas $X$ et $X$ pour les
+morphismes $\Delta_f$ et $(g\circ f,1_X)_S$ (resp.\ $(1_X,g\circ f)_S$).
+D'autre part, les diagrammes
+\[
+  \xymatrix@=3pc{
+    X\ar[r]^{(g\circ f,1_X)_S}\ar[d]_-f&X\times_S X\ar[d]^-{p_1}
+      &X\ar[r]^{(1_X,g\circ f)_S}\ar[d]_-f&X\times_S X\ar[d]^-{p_2}\\
+    S\ar[r]_{g}&X&S\ar[r]_{g}&X
+  }
+  \tag{16.4.11.4}
+  \label{IV.16.4.11.4}
+\]
+identifient $X$ au produit des $X$-préschémas $S$ et $X\times_S X$ pour les
+morphismes $g$ et $p_1$ (resp.\ $p_2$) (cas particulier de la formule
+d'associativité (I, 3.3.9.1)). On peut dire que $\Delta_f$, considéré comme
+$X$-section de $X\times_S X$ (relativement à $p_1$ ou $p_2$) joue le rôle
+d'une \emph{section universelle} pour les $S$-sections de $X$: chacune de ces
+sections $g$ s'en déduit en effet par le \emph{changement de base}
+$(g\circ f,1_X)_S:X\to X\times_S X$. La définition de l'homomorphisme
+$\varpi_n$ et le fait qu'il est bijectif résultent donc de ces remarques et de
+(16.2.3, (ii)) appliqué au premier diagramme (16.4.11.4). La commutativité du
+diagramme (16.4.11.2) résulte de même de (16.2.3, (ii)) appliqué cette fois au
+second diagramme (16.4.11.4). Pour expliciter $\varpi_n$, on peut se borner au
+cas où $g$ est une immersion \emph{fermée}: en effet, pour tout $s\in S$, il y
+a un voisinage ouvert $W$ de $s$ dans $S$ tel que $g(W)$ soit fermé dans un
+ouvert $U$ de $X$, et il est clair que $g|W$ est une $W$-section du morphisme
+$U\cap f^{-1}(W)\to W$, restriction de $f$, et $g(W)$ est \emph{a fortiori}
+fermé dans $U\cap f^{-1}(W)$. On peut donc supposer que $S$ est un
+sous-préschéma fermé de $X$ défini par un Idéal quasi-cohérent $\mathscr{K}$.
+Alors les définitions précédentes montrent que si $W$ est un ouvert de $S$,
+$t$ une section de $\mathcal{O}_X$ au-dessus de $f^{-1}(W)$,
+$\varpi_n(d^n t|W)$ est égal à l'image canonique de $t$ dans
+$\Gamma(W,(\mathcal{O}_X/\mathscr{K}^{n+1})|W)$. L'unicité de $\varpi_n$
+résulte donc de ce que l'image de $\mathcal{O}_X$ par $d_{X/S}^n$ engendre le
+$\mathcal{O}_X$-Module $\mathscr{P}_{X/S}^n$ (16.3.8).
+
+\begin{corollary}[16.4.12]
+\label{IV.16.4.12}
+Soient $k$ un corps, $X$ un $k$-préschéma, $x$ un point de $X$ rationnel sur
+$k$. Alors $(\mathscr{P}_{X/k}^n)_x\otimes_{\mathcal{O}_x}k(x)$ est
+canoniquement isomorphe (en tant que $k(x)$-algèbre augmentée) à
+$\mathcal{O}_x/\mathfrak{m}_x^{n+1}$.
+\end{corollary}
+
+Il suffit de considérer l'unique $k$-section $g$ de $X$ telle que
+$g(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[16.4.13]
+\label{IV.16.4.13}
+Soient $f:X\to S$ un morphisme, $s$ un point de $S$,
+$X_s=X\times_S\operatorname{Spec}(k(s))$ la fibre de $f$ en $s$. Si
+$x\in X_s$ est rationnel sur $k(s)$,
+$(\mathscr{P}_{X/S}^n)_x\otimes_{\mathcal{O}_s}k(s)$ est canoniquement
+isomorphe à $\mathcal{O}_{X_s,x}/\mathfrak{m}'_x{}^{\,n+1}$, où
+$\mathfrak{m}'_x$ est l'idéal maximal de $\mathcal{O}_{X_s,x}$; de façon
+précise, cet isomorphisme fait correspondre à $(d^n t)_x\otimes1$ (où $t$ est
+une section de $\mathcal{O}_X$ au-dessus d'un voisinage ouvert de $x$ dans
+$X$) la classe de $t_x\otimes1$ modulo $\mathfrak{m}'_x{}^{\,n+1}$.
+\end{corollary}
+
+Cela résulte de (16.4.5) et (16.4.12).
+
+Les corollaires précédents justifient la terminologie de «faisceau des parties
+principales d'ordre $n$».
+
+\begin{proposition}[16.4.14]
+\label{IV.16.4.14}
+Soit $\rho:A\to B$ un homomorphisme d'anneaux, $S$ une partie
+multiplicativement stable de $B$. Alors les homomorphismes canoniques
+\[
+  S^{-1}P_{B/A}^n\longrightarrow P_{S^{-1}B/A}^n
+  \tag{16.4.14.1}
+  \label{IV.16.4.14.1}
+\]
+\oldpage[IV-4]{23}
+déduits des homomorphismes canoniques
+$P_{B/A}^n\to P_{S^{-1}B/A}^n$ (16.4.4), forment un système projectif et sont
+bijectifs.
+\end{proposition}
+
+Il suffit de remarquer que
+\[
+  S^{-1}((B\otimes_A B)/\mathfrak{I}^{n+1})
+  =S^{-1}(B\otimes_A B)/(S^{-1}\mathfrak{I})^{n+1}
+\]
+par platitude, et que
+$S^{-1}(B\otimes_A B)=(S^{-1}B)\otimes_A(S^{-1}B)$ (I, 1.3.4).
+
+\begin{corollary}[16.4.15]
+\label{IV.16.4.15}
+Les notations étant celles de (16.4.14), soit $R$ une partie multiplicative de
+$A$ telle que $\rho(R)\subset S$. Alors on a des isomorphismes canoniques
+\[
+  S^{-1}P_{B/A}^n\xrightarrow{\sim}P_{S^{-1}B/R^{-1}A}^n
+  \tag{16.4.15.1}
+  \label{IV.16.4.15.1}
+\]
+formant un système projectif.
+\end{corollary}
+
+Il suffit évidemment de définir des isomorphismes canoniques
+\[
+  P_{S^{-1}B/A}^n\xrightarrow{\sim}P_{S^{-1}B/R^{-1}A}^n,
+  \tag{16.4.15.2}
+  \label{IV.16.4.15.2}
+\]
+c'est-à-dire que l'on est ramené au cas où $\rho(R)$ est formé d'éléments
+\emph{inversibles} de $B$. Mais alors l'isomorphisme (16.4.15.2) est simplement
+déduit de l'isomorphisme canonique
+$B\otimes_A B\to B\otimes_{R^{-1}A}B$ par passage aux quotients
+(0$_{\rm I}$, 1.5.3).
+
+\begin{corollary}[16.4.16]
+\label{IV.16.4.16}
+Soient $f:X\to S$ un morphisme de préschémas, $x$ un point de $X$,
+$s=f(x)$. Alors on a des isomorphismes canoniques
+\[
+  (\mathscr{P}_{X/S}^n)_x\xrightarrow{\sim}
+  P_{\mathcal{O}_x/\mathcal{O}_s}^n
+  \tag{16.4.16.1}
+  \label{IV.16.4.16.1}
+\]
+formant un système projectif.
+\end{corollary}
+
+On déduit de là des isomorphismes pour les gradués associés, et en particulier
+un isomorphisme canonique
+\[
+  (\Omega_{X/S}^1)_x\xrightarrow{\sim}
+  \Omega_{\mathcal{O}_x/\mathcal{O}_s}^1.
+  \tag{16.4.16.2}
+  \label{IV.16.4.16.2}
+\]
+
+\begin{corollary}[16.4.17]
+\label{IV.16.4.17}
+Soient $k$ un corps, $K$ le corps des fractions rationnelles
+$k(T_1,\ldots,T_r)$. Alors, pour tout entier $n$, l'homomorphisme de
+$K[U_1,\ldots,U_r]$ ($U_i$ indéterminées) dans $P_{K/k}^n$ qui, à tout $U_i$,
+fait correspondre $d^nT_i-T_i\cdot1$, est surjectif et définit un isomorphisme
+du quotient $K[U_1,\ldots,U_r]/\mathfrak{m}^{n+1}$ (où $\mathfrak{m}$ est
+l'idéal engendré par les $U_i$) sur $P_{K/k}^n$.
+\end{corollary}
+
+Cela résulte de (16.4.8), (16.4.10) et (16.4.14), où l'on fait $A=k$,
+$B=k[T_1,\ldots,T_r]$ et $S=B-\{0\}$.
+
+On retrouve ainsi le fait que les $dT_i$ forment une base du $K$-espace
+vectoriel $\Omega_{K/k}^1$ (0, 20.5.10).
+
+\begin{proposition}[16.4.18]
+\label{IV.16.4.18}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes de préschémas; et considérons
+les homomorphismes canoniques de $\mathcal{O}_X$-Algèbres augmentées
+(16.4.3.3)
+\[
+  g_{X/Y/Z}:\mathscr{P}_{X/Z}^n\longrightarrow\mathscr{P}_{X/Y}^n
+  \tag{16.4.18.1}
+  \label{IV.16.4.18.1}
+\]
+\[
+  f_{X/Y/Z}:f^*(\mathscr{P}_{Y/Z}^n)
+  \longrightarrow\mathscr{P}_{X/Z}^n.
+  \tag{16.4.18.2}
+  \label{IV.16.4.18.2}
+\]
+Alors $g_{X/Y/Z}$ est surjectif, et son noyau est l'Idéal engendré par l'image
+par $f_{X/Y/Z}$ de l'Idéal d'augmentation de
+$f^*(\mathscr{P}_{Y/Z}^n)$.
+\end{proposition}
+
+\oldpage[IV-4]{24}
+Notons d'abord que $g_{X/Y/Z}$ correspond au cas où dans (16.4.3.3) on fait
+$X'=X$, $S'=Y$, $S=Z$ et $u=1_X$, et $f_{X/Y/Z}$ au cas où l'on remplace
+$X'$, $X$, $S$, $S'$ par $X$, $Y$, $Z$, $Z$ respectivement et $u$, $f$ par
+$f$, $g$ respectivement.
+
+On a un diagramme commutatif (I, 5.3.5)
+\[
+  \xymatrix{
+    X\ar[r]^-{\Delta_f}\ar[dr]_-f
+      &X\times_Y X\ar[d]^-p\ar[r]^-j
+      &X\times_Z X\ar[d]^-{f\times_Z f}\\
+    &Y\ar[r]_-{\Delta_g}&Y\times_Z Y
+  }
+  \tag{16.4.18.3}
+  \label{IV.16.4.18.3}
+\]
+où $j=(1_X,1_X)_Z$ est une immersion, $j\circ\Delta_f=\Delta_{g\circ f}$ et
+$p$ est le morphisme structural. Comme on peut se borner au cas où $X$, $Y$,
+$Z$ sont affines, on peut supposer les immersions $\Delta_f$, $\Delta_g$ et
+$j$ fermées, de sorte que $\mathcal{O}_X$ et
+$\mathcal{O}_{X\times_Y X}$ s'identifient respectivement à
+$\mathcal{O}_{X\times_Z X}/\mathscr{J}$ et
+$\mathcal{O}_{X\times_Z X}/\mathscr{L}$, où
+$\mathscr{J}\supset\mathscr{L}$ sont les deux Idéaux quasi-cohérents
+correspondant respectivement aux immersions $\Delta_{g\circ f}$ et $j$. La
+$\mathcal{O}_X$-Algèbre $\mathscr{P}_{X/Z}^n$ s'identifie donc à
+$\mathcal{O}_{X\times_Z X}/\mathscr{J}^{n+1}$, et
+$\mathscr{P}_{X/Y}^n$ s'identifie à
+$\mathcal{O}_{X\times_Y X}/(\mathscr{J}/\mathscr{L})^{n+1}$, c'est-à-dire à
+$\mathcal{O}_{X\times_Z X}/(\mathscr{J}^{n+1}+\mathscr{L})$, et par suite au
+quotient de $\mathscr{P}_{X/Z}^n$ par
+$(\mathscr{J}^{n+1}+\mathscr{L})/\mathscr{J}^{n+1}$. Mais on sait
+(\emph{loc. cit.}) que $p$ et $j$ font de $X\times_Y X$ le produit des
+$(Y\times_Z Y)$-préschémas $Y$ et $X\times_Z X$, donc si $\mathcal{O}_Y$ est
+identifié à $\mathcal{O}_{Y\times_Z Y}/\mathscr{K}$, où $\mathscr{K}$ est
+l'Idéal correspondant à $\Delta_g$, $\mathscr{L}$ est égal à
+$(f\times_Z f)^*(\mathscr{K})\cdot\mathcal{O}_{X\times_Z X}$ (I, 4.4.5).
+Comme $(\mathscr{J}^{n+1}+\mathscr{L})/\mathscr{J}^{n+1}$ est l'Idéal de
+$\mathscr{P}_{X/Z}^n$ engendré par l'image de $\mathscr{L}$, on en déduit la
+proposition.
+
+\begin{corollary}[16.4.19]
+\label{IV.16.4.19}
+Avec les notations de (16.4.18), on a une suite exacte de
+$\mathcal{O}_X$-Modules quasi-cohérents
+\[
+  \xymatrix{
+    f^*(\Omega_{Y/Z}^1)\ar[r]^-{f_{X/Y/Z}}&
+    \Omega_{X/Z}^1\ar[r]^-{g_{X/Y/Z}}&
+    \Omega_{X/Y}^1\ar[r]&0.
+  }
+  \tag{16.4.19.1}
+  \label{IV.16.4.19.1}
+\]
+\end{corollary}
+
+Lorsque $X$, $Y$, $Z$ sont affines, on retrouve ainsi la suite exacte
+(0, 20.5.7.1).
+
+\begin{proposition}[16.4.20]
+\label{IV.16.4.20}
+Soient $f:Y\to Z$ un morphisme, $j:X\to Y$ une immersion fermée,
+$\mathscr{K}$ l'Idéal quasi-cohérent de $\mathcal{O}_Y$ correspondant à $j$.
+Alors on a
+$\mathscr{P}_{X/Y}^n=\mathcal{O}_X=\mathcal{O}_Y/\mathscr{K}$,
+l'homomorphisme canonique
+$j_{X/Y/Z}:j^*(\mathscr{P}_{Y/Z}^n)\to\mathscr{P}_{X/Z}^n$ est surjectif, et
+son noyau est l'Idéal de $j^*(\mathscr{P}_{Y/Z}^n)$ engendré par
+$j^*(\mathcal{O}_Y\cdot d_{Y/Z}^n(\mathscr{K}))$ (il faut noter que
+$d_{Y/Z}^n(\mathscr{K})$ est un sous-faisceau de groupes commutatifs de
+$\mathscr{P}_{Y/Z}^n$, mais non un $\mathcal{O}_Y$-Module en général).
+\end{proposition}
+
+On sait (I, 5.3.8) que la diagonale
+$\Delta_j:X\to X\times_Y X$ est un isomorphisme, d'où la première assertion.
+Si $\varpi_1$ et $\varpi_2$ sont les deux homomorphismes d'Algèbres
+$\mathcal{O}_Y\to\mathscr{P}_{Y/Z}^n$ correspondant respectivement aux deux
+projections canoniques $p_1$, $p_2$ de $Y\times_Z Y$ sur $Y$, rappelons que
+par définition (16.3.5 et 16.3.6) $\varpi_1$ est l'homomorphisme structural de
+la $\mathcal{O}_Y$-Algèbre $\mathscr{P}_{Y/Z}^n$ et
+$\varpi_2=d_{Y/Z}^n$. La $\mathcal{O}_X$-Algèbre
+$j^*(\mathscr{P}_{Y/Z}^n)$ s'identifie donc à
+$\mathscr{P}_{Y/Z}^n/\varpi_1(\mathscr{K})\mathscr{P}_{Y/Z}^n$ et son quotient
+par l'Idéal engendré par $j^*(d_{Y/Z}^n(\mathscr{K}))$ à
+\[
+  \mathscr{P}_{Y/Z}^n/
+  (\varpi_1(\mathscr{K})+\varpi_2(\mathscr{K}))\mathscr{P}_{Y/Z}^n.
+\]
+Notons maintenant qu'on a un diagramme commutatif
+\oldpage[IV-4]{25}
+\[
+  \xymatrix{
+    Y\ar[d]_-{\Delta_f}&X\ar[l]_-j\ar[d]^-{\Delta_{f\circ j}}\\
+    Y\times_Z Y&X\times_Z X\ar[l]^-{j\times_Z j}
+  }
+\]
+identifiant $X$ au produit des $(Y\times_Z Y)$-préschémas $Y$ et
+$X\times_Z X$ (I, 5.3.7). Comme $j\times_Z j$ est une immersion, on déduit
+donc de cette remarque et de (16.2.2) que si $\Delta_{Y/Z}^n$ et
+$\Delta_{X/Z}^n$ désignent les voisinages infinitésimaux d'ordre $n$ de $Y$
+et $X$ pour les immersions canoniques $\Delta_f$ et $\Delta_{f\circ j}$
+respectivement, on a un diagramme
+\[
+  \xymatrix{
+    \Delta_{Y/Z}^n\ar[d]&\Delta_{X/Z}^n\ar[l]\ar[d]\\
+    Y\times_Z Y&X\times_Z X\ar[l]^-{j\times_Z j}
+  }
+\]
+faisant de $\Delta_{X/Z}^n$ le produit des $(Y\times_Z Y)$-préschémas
+$\Delta_{Y/Z}^n$ et $X\times_Z X$. On peut encore dire que
+$\mathscr{P}_{X/Z}^n$ s'identifie au faisceau d'anneaux
+$\mathscr{P}_{Y/Z}^n\otimes_{\mathcal{O}_{Y\times_Z Y}}
+\mathcal{O}_{X\times_Z X}$. Mais on voit aussitôt (par exemple en se ramenant
+au cas affine) que
+\[
+  \mathcal{O}_{X\times_Z X}=
+  \mathcal{O}_{Y\times_Z Y}/
+  (p_1^*(\mathscr{K})+p_2^*(\mathscr{K}))
+  \mathcal{O}_{Y\times_Z Y}.
+\]
+Donc $\mathscr{P}_{X/Z}^n$ s'identifie au quotient de
+$\mathscr{P}_{Y/Z}^n$ par l'Idéal engendré par l'image dans
+$\mathscr{P}_{Y/Z}^n$ de $p_1^*(\mathscr{K})+p_2^*(\mathscr{K})$. Mais par
+définition cet Idéal est aussi engendré par
+$\varpi_1(\mathscr{K})+\varpi_2(\mathscr{K})$. C.Q.F.D.
+
+\begin{corollary}[16.4.21]
+\label{IV.16.4.21}
+Soient $f:Y\to Z$ un morphisme, $j:X\to Y$ une immersion. On a une suite
+exacte de $\mathcal{O}_X$-Modules quasi-cohérents
+\[
+  \xymatrix{
+    \mathscr{N}_{X/Y}\ar[r]&j^*(\Omega_{Y/Z}^1)\ar[r]&
+    \Omega_{X/Z}^1\ar[r]&0.
+  }
+  \tag{16.4.21.1}
+  \label{IV.16.4.21.1}
+\]
+\end{corollary}
+
+Lorsque $X$, $Y$ et $Z$ sont affines, on retrouve ainsi la suite exacte
+(0, 20.5.12.1).
+
+\begin{corollary}[16.4.22]
+\label{IV.16.4.22}
+Si $f:X\to S$ est un morphisme localement de présentation finie,
+$\mathscr{P}_{X/S}^n$ et $\Omega_{X/S}^1$ sont des
+$\mathcal{O}_X$-Modules quasi-cohérents de présentation finie.
+\end{corollary}
+
+On est aussitôt ramené au cas où $S=\operatorname{Spec}(A)$ est affine,
+$X=\operatorname{Spec}(B)$, où
+$B=A[T_1,\ldots,T_r]/\mathfrak{K}$, $\mathfrak{K}$ étant un idéal de type
+fini de $C=A[T_1,\ldots,T_r]$. On applique alors (16.4.20) avec $Z=S$,
+$Y=\operatorname{Spec}(C)$ et $\mathscr{K}=\widetilde{\mathfrak{K}}$. Alors
+$j^*(\mathscr{P}_{Y/Z}^n)$ est un $\mathcal{O}_X$-Module libre de rang fini
+(16.4.10) et l'hypothèse sur $\mathfrak{K}$ entraîne que
+$j^*(\mathcal{O}_Y\cdot d_{Y/Z}^n(\mathscr{K}))$ engendre un
+$\mathcal{O}_X$-Module quasi-cohérent de type fini; d'où la conclusion.
+
+\begin{proposition}[16.4.23]
+\label{IV.16.4.23}
+Soient $X$, $Y$ deux $S$-préschémas, $Z=X\times_S Y$ leur produit,
+$p:X\times_S Y\to X$ et $q:X\times_S Y\to Y$ les projections canoniques.
+Alors l'homomorphisme canonique
+\[
+  p_{Z/X/S}\oplus q_{Z/Y/S}:
+  p^*(\Omega_{X/S}^1)\oplus q^*(\Omega_{Y/S}^1)
+  \longrightarrow\Omega_{(X\times_S Y)/S}^1
+  \tag{16.4.23.1}
+  \label{IV.16.4.23.1}
+\]
+est bijectif.
+\end{proposition}
+
+\oldpage[IV-4]{26}
+Le diagramme commutatif
+\[
+  \xymatrix{
+    Y\ar[d]_-g&X\times_S Y\ar[l]_-q\ar[d]_-h&
+      X\times_S Y\ar[l]_-{\operatorname{id}}\ar[d]^-p\\
+    S&S\ar[l]^-{\operatorname{id}}&X\ar[l]^-f
+  }
+\]
+donne une factorisation de l'\emph{isomorphisme} canonique $P^n(p)$ (16.4.5)
+\[
+  p^*(\mathscr{P}_{X/S}^n)\longrightarrow
+  \mathscr{P}_{Z/S}^n\longrightarrow\mathscr{P}_{Z/Y}^n
+\]
+et de même, en intervertissant les rôles de $X$ et $Y$, on a une factorisation
+de l'\emph{isomorphisme} $P^n(q)$
+\[
+  q^*(\mathscr{P}_{Y/S}^n)\longrightarrow
+  \mathscr{P}_{Z/S}^n\longrightarrow\mathscr{P}_{Z/X}^n.
+\]
+Ceci prouve que l'homomorphisme canonique (16.4.18.1)
+\[
+  p_{Z/X/S}:p^*(\mathscr{P}_{X/S}^n)\longrightarrow\mathscr{P}_{Z/S}^n
+  \quad\text{(resp.\
+  $q_{Z/Y/S}:q^*(\mathscr{P}_{Y/S}^n)\to\mathscr{P}_{Z/S}^n$)}
+\]
+est \emph{injectif}, et que le noyau de l'homomorphisme canonique surjectif
+(16.4.18.2)
+\[
+  \mathscr{P}_{Z/S}^n\longrightarrow\mathscr{P}_{Z/Y}^n
+  \quad\text{(resp.\
+  $\mathscr{P}_{Z/S}^n\to\mathscr{P}_{Z/X}^n$)}
+\]
+est supplémentaire de l'image de $p_{Z/X/S}$ (resp.\ $q_{Z/Y/S}$). Mais
+d'autre part, ce noyau est, en vertu de (16.4.18), engendré par l'image par
+$q_{Z/Y/S}$ (resp.\ $p_{Z/X/S}$) de l'Idéal d'augmentation de
+$q^*(\mathscr{P}_{Y/S}^n)$ (resp.\ $p^*(\mathscr{P}_{X/S}^n)$). On en conclut
+la proposition en considérant le cas $n=1$.
+
+On généralise aussitôt (16.4.23) au cas d'un produit d'un nombre fini
+quelconque de $S$-préschémas.
+
+\begin{remarks}[16.4.24]
+\label{IV.16.4.24}
+\begin{enumerate}
+\item[(i)] Nous verrons (17.2.3) que lorsque le morphisme $f:X\to Y$ dans
+(16.4.18) est \emph{lisse}, l'homomorphisme $f_{X/Y/Z}$ dans (16.4.19.1) est
+localement \emph{inversible à gauche} et en particulier injectif. De même,
+lorsque le morphisme $f\circ j:X\to Z$ de (16.4.20) est \emph{lisse},
+l'homomorphisme de gauche dans (16.4.21.2) est localement
+\emph{inversible à gauche} et \emph{a fortiori} injectif (17.2.5). Au chap. V,
+nous donnerons aussi une variante, dans le cas des Modules sur les
+préschémas, des «modules d'imperfection» étudiés dans (0, 20.6), et des suites
+exactes où ils figurent.
+
+\item[(ii)] Soient $X$ un espace topologique, $\mathscr{A}$ un faisceau
+d'anneaux sur $X$ et $\mathscr{B}$ une $\mathscr{A}$-Algèbre sur $X$. Alors il
+est clair que
+\[
+  U\longmapsto
+  P_{\Gamma(U,\mathscr{B})/\Gamma(U,\mathscr{A})}^n
+  \qquad (U\text{ ouvert dans }X)
+\]
+est un préfaisceau de $\Gamma(U,\mathscr{B})$-algèbres augmentées, donc le
+faisceau associé $\mathscr{P}_{\mathscr{B}/\mathscr{A}}^n$ est une
+$\mathscr{B}$-Algèbre augmentée. Dans le cas particulier où $X$ est un
+préschéma, $f=(\psi,\theta):X\to S$ un morphisme de préschémas, il résulte
+aisément de (16.4.16) et de l'exactitude du foncteur $\varinjlim$ que
+$\mathscr{P}_{X/S}^n$ est canoniquement isomorphe à
+$\mathscr{P}_{\mathcal{O}_X/\psi^*(\mathcal{O}_S)}^n$. Il s'ensuit que le
+formalisme développé dans le présent paragraphe pourrait être considéré comme
+un
+\oldpage[IV-4]{27}
+cas particulier d'un formalisme différentiel pour des espaces annelés munis
+d'un faisceau d'algèbres sur le faisceau structural. Cependant, nous n'avons
+pas voulu partir de ce point de vue, moins intuitif et moins commode pour les
+applications. Il semble d'ailleurs que, pour les diverses espèces de
+«variétés», la construction «globale» des $\mathscr{P}^n$ analogue à celle que
+nous utilisons ici soit également mieux adaptée aux applications.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Faisceaux et fibrés tangents relatifs; dérivations.}
+\label{IV.16.5}
+
+\begin{env}[16.5.1]
+\label{IV.16.5.1}
+Soit $f=(\psi,\theta):X\to S$ un morphisme d'espaces annelés. Pour tout
+$\mathcal{O}_X$-Module $\mathscr{F}$, on appelle \emph{$S$-dérivation}
+(ou \emph{$(X/S)$-dérivation}, ou \emph{$f$-dérivation}) \emph{de
+$\mathcal{O}_X$ dans $\mathscr{F}$} tout homomorphisme de \emph{faisceaux de
+groupes additifs} $D:\mathcal{O}_X\to\mathscr{F}$, vérifiant les conditions
+suivantes:
+\begin{enumerate}
+\item[(a)] pour tout ouvert $V$ de $X$, et tout couple de sections
+$(t_1,t_2)$ de $\mathcal{O}_X$ au-dessus de $V$, on a
+\[
+  D(t_1t_2)=t_1D(t_2)+D(t_1)t_2;
+  \tag{16.5.1.1}
+  \label{IV.16.5.1.1}
+\]
+\item[(b)] pour tout ouvert $V$ de $X$, toute section $t$ de $\mathcal{O}_X$
+au-dessus de $V$ et toute section $s$ de $\mathcal{O}_S$ au-dessus d'un ouvert
+$U$ de $S$ tel que $V\subset f^{-1}(U)$, on a
+\[
+  D((s|V)t)=(s|V)D(t).
+  \tag{16.5.1.2}
+  \label{IV.16.5.1.2}
+\]
+\end{enumerate}
+Il est clair qu'il revient au même de dire que pour tout $x\in X$,
+l'homomorphisme de groupes additifs
+$D_x:\mathcal{O}_x\to\mathscr{F}_x$ est une
+$\mathcal{O}_{f(x)}$-dérivation.
+
+Une autre interprétation consiste à considérer la $\mathcal{O}_X$-Algèbre
+$\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})$ égale à
+$\mathcal{O}_X\oplus\mathscr{F}$, la structure d'Algèbre étant définie par la
+condition que pour tout ouvert $V$ de $X$, le produit de deux sections de
+$\mathcal{O}_X$ (resp. d'une section de $\mathcal{O}_X$ et d'une section de
+$\mathscr{F}$) au-dessus de $V$ est défini par la structure d'anneau de
+$\Gamma(V,\mathcal{O}_X)$ (resp. la structure de
+$\Gamma(V,\mathcal{O}_X)$-module sur $\Gamma(V,\mathscr{F})$), et le produit de
+deux sections de $\mathscr{F}$ au-dessus de $V$ est pris égal à 0; alors,
+$\mathscr{F}$ est un Idéal de
+$\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})$, noyau de l'augmentation canonique
+$\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})\to\mathcal{O}_X$, et dire que $D$
+est une $S$-dérivation de $\mathcal{O}_X$ dans $\mathscr{F}$ signifie que
+$1_{\mathcal{O}_X}+D$ est un $\mathcal{O}_S$-homomorphisme d'Algèbres de
+$\mathcal{O}_X$ dans $\mathscr{D}_{\mathcal{O}_X}(\mathscr{F})$, qui, composé
+avec l'augmentation, donne $1_{\mathcal{O}_X}$.
+
+Les $S$-dérivations de $\mathcal{O}_X$ dans $\mathscr{F}$ forment évidemment
+un $\Gamma(X,\mathcal{O}_X)$-module
+$\operatorname{Dér}_S(\mathcal{O}_X,\mathscr{F})$.
+
+Lorsque $\mathscr{F}=\mathcal{O}_X$, une $S$-dérivation de $\mathcal{O}_X$ dans
+lui-même est simplement appelée une \emph{$S$-dérivation de $\mathcal{O}_X$}.
+\end{env}
+
+\begin{proposition}[16.5.2]
+\label{IV.16.5.2}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $L$ un $B$-module; on pose
+$S=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$,
+$\mathscr{F}=\widetilde{L}$. Alors l'application $D\mapsto\Gamma(D)$ qui, à
+toute $S$-dérivation $D$ de $\mathcal{O}_X$ dans $\mathscr{F}$ fait
+correspondre l'application $\Gamma(D):t\mapsto D(t)$ de $B$ dans $L$, est un
+isomorphisme de $B$-modules de
+$\operatorname{Dér}_S(\mathcal{O}_X,\mathscr{F})$ sur
+$\operatorname{Dér}_A(B,L)$ (cf. (0, 20.1.2)).
+\end{proposition}
+
+Cela résulte aussitôt de l'interprétation donnée ci-dessus des $S$-dérivations
+en termes
+\oldpage[IV-4]{28}
+d'homomorphismes d'Algèbres, de l'interprétation analogue donnée dans
+(0, 20.1.6), et de la correspondance canonique entre homomorphismes de
+$\mathcal{O}_X$-Algèbres et homomorphismes de $B$-algèbres (I, 1.3.13 et
+1.3.8).
+
+\begin{proposition}[16.5.3]
+\label{IV.16.5.3}
+Soit $f=(\psi,\theta):X\to S$ un morphisme de préschémas.
+\begin{enumerate}
+\item[(i)] La différentielle
+$d_{X/S}:\mathcal{O}_X\to\Omega_{X/S}^1$ (16.3.6) est une $S$-dérivation.
+\item[(ii)] Pour tout $\mathcal{O}_X$-Module $\mathscr{F}$, l'application
+$u\mapsto u\circ d_{X/S}$ est un isomorphisme de
+$\Gamma(X,\mathcal{O}_X)$-modules
+\[
+  \operatorname{Hom}_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathscr{F})
+  \xrightarrow{\sim}
+  \operatorname{Dér}_S(\mathcal{O}_X,\mathscr{F}).
+  \tag{16.5.3.1}
+  \label{IV.16.5.3.1}
+\]
+\end{enumerate}
+\end{proposition}
+
+L'assertion (i) a déjà été notée (16.3.6). D'autre part, il est immédiat (en
+vertu de (0, 20.4.8)) que $u\mapsto u\circ d_{X/S}$ est injectif, en
+considérant les restrictions à une fibre $\mathcal{O}_x$ des deux membres et
+utilisant (16.4.16.2). Pour voir que l'homomorphisme (16.5.3.1) est surjectif,
+considérons une $S$-dérivation $D:\mathcal{O}_X\to\mathscr{F}$; pour tout
+ouvert affine $V=\operatorname{Spec}(B)$ de $X$, tel que $f(V)$ soit contenu
+dans un ouvert affine $U=\operatorname{Spec}(A)$ de $S$,
+$D_V:B\to\Gamma(V,\mathscr{F})$ est une $A$-dérivation, donc il existe un
+\emph{unique} $B$-homomorphisme
+$u_V:\Omega_{B/A}^1\to\Gamma(V,\mathscr{F})$ tel que
+$D_V=u_V\circ d_{B/A}$ (0, 20.4.8); en outre l'unicité de $u_V$ montre
+aussitôt que pour tout ouvert affine $W\subset V$, on a $u_W=u_V|W$, donc les
+$u_V$ définissent un homomorphisme de $\mathcal{O}_X$-Modules
+$u:\mathcal{O}_X\to\mathscr{F}$ répondant à la question.
+
+\begin{env}[16.5.4]
+\label{IV.16.5.4}
+Avec les notations de (16.5.1), pour tout ouvert $U$ de $X$,
+$\operatorname{Dér}_S(\mathcal{O}_U,\mathscr{F}|U)$ est un
+$\Gamma(U,\mathcal{O}_X)$-module et il est clair que l'application
+$U\mapsto\operatorname{Dér}_S(\mathcal{O}_U,\mathscr{F}|U)$ est un
+préfaisceau; en fait, c'est même un \emph{faisceau} (donc un
+$\mathcal{O}_X$-Module), en vertu de la caractérisation ponctuelle des
+$S$-dérivations, vue en (16.5.1). Cet $\mathcal{O}_X$-Module se note
+$\mathscr{D}\!{\rm ér}_S(\mathcal{O}_X,\mathscr{F})$ et est appelé
+\emph{faisceau des $S$-dérivations de $\mathcal{O}_X$ dans $\mathscr{F}$}, et
+ce qu'on vient de voir s'exprime encore par le corollaire suivant:
+\end{env}
+
+\begin{corollary}[16.5.5]
+\label{IV.16.5.5}
+Pour tout $\mathcal{O}_X$-Module $\mathscr{F}$, l'homomorphisme de
+$\mathcal{O}_X$-Modules déduit de $u\mapsto u\circ d_{X/S}$
+\[
+  \mathscr{H}\!om_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathscr{F})
+  \longrightarrow
+  \mathscr{D}\!{\rm ér}_S(\mathcal{O}_X,\mathscr{F})
+  \tag{16.5.5.1}
+  \label{IV.16.5.5.1}
+\]
+est bijectif.
+\end{corollary}
+
+\begin{corollary}[16.5.6]
+\label{IV.16.5.6}
+\begin{enumerate}
+\item[(i)] Si le morphisme $f:X\to S$ est localement de présentation finie et
+si $\mathscr{F}$ est un $\mathcal{O}_X$-Module quasi-cohérent, alors
+$\mathscr{D}\!{\rm ér}_S(\mathcal{O}_X,\mathscr{F})$ est un
+$\mathcal{O}_X$-Module quasi-cohérent.
+\item[(ii)] Si de plus $S$ est localement noethérien et si $\mathscr{F}$ est
+cohérent, alors $\mathscr{D}\!{\rm ér}_S(\mathcal{O}_X,\mathscr{F})$ est un
+$\mathcal{O}_X$-Module cohérent.
+\end{enumerate}
+\end{corollary}
+
+L'assertion (i) résulte de l'isomorphisme (16.5.5.1), de (16.4.22) et
+(I, 1.3.12); l'assertion (ii) résulte de (0$_{\rm I}$, 5.3.5).
+
+\begin{env}[16.5.7]
+\label{IV.16.5.7}
+On pose
+\[
+  \mathfrak{G}_{X/S}=
+  \mathscr{H}\!om_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathcal{O}_X)
+  =\mathscr{D}\!{\rm ér}_S(\mathcal{O}_X,\mathcal{O}_X)
+  \tag{16.5.7.1}
+  \label{IV.16.5.7.1}
+\]
+et on dit que c'est le \emph{faisceau des $S$-dérivations de
+$\mathcal{O}_X$}, ou encore le \emph{faisceau tangent de $X$ relativement à
+$S$}: c'est donc le \emph{dual} du $\mathcal{O}_X$-Module
+$\Omega_{X/S}^1$. Si $f$ est localement de présentation
+\oldpage[IV-4]{29}
+finie, $\mathfrak{G}_{X/S}$ est un $\mathcal{O}_X$-Module quasi-cohérent; si
+de plus $S$ est localement noethérien, $\mathfrak{G}_{X/S}$ est cohérent
+(16.5.6).
+\end{env}
+
+\begin{env}[16.5.8]
+\label{IV.16.5.8}
+Supposons plus particulièrement que $\Omega_{X/S}^1$ soit un
+$\mathcal{O}_X$-Module \emph{localement libre} (de rang fini) (ce qui sera le
+cas lorsque $f$ est \emph{lisse} (17.2.3)); alors $\mathfrak{G}_{X/S}$ est un
+$\mathcal{O}_X$-Module localement libre et a même rang que $\Omega_{X/S}^1$
+en chaque point. De façon plus précise, supposons que $\Omega_{X/S}^1$ soit de
+rang $n$ en un point $x$; il y a alors $n$ sections $s_i$ ($1\leq i\leq n$)
+de $\mathcal{O}_X$ au-dessus d'un voisinage affine $U$ de $x$ telles que les
+images canoniques des $ds_i$ dans
+$\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x)$ forment une base de ce
+$k(x)$-espace vectoriel; en vertu du lemme de Nakayama, les germes
+$(ds_i)_x=d(s_i)_x$ des $ds_i$ au point $x$ forment une base du
+$\mathcal{O}_x$-module $(\Omega_{X/S}^1)_x$, donc, en restreignant $U$, on
+peut supposer que les $ds_i$ forment une \emph{base} du
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\Omega_{X/S}^1)$. Alors le
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\mathfrak{G}_{X/S})$ est dual du
+précédent; on note $(D_i)_{1\leq i\leq n}$ ou
+$\left(\frac{\partial}{\partial s_i}\right)_{1\leq i\leq n}$ la base duale de
+$(ds_i)_{1\leq i\leq n}$, de sorte que, par (16.5.3), on a
+\[
+  D_is_j=\langle D_i,ds_j\rangle
+  =\left\langle\frac{\partial}{\partial s_i},ds_j\right\rangle
+  =\delta_{ij}\qquad\text{(indice de Kronecker).}
+  \tag{16.5.8.1}
+  \label{IV.16.5.8.1}
+\]
+Toute $\Gamma(S,\mathcal{O}_S)$-dérivation de la
+$\Gamma(S,\mathcal{O}_S)$-algèbre $\Gamma(U,\mathcal{O}_X)$ s'écrit donc
+d'une seule manière
+\[
+  D=\sum_{i=1}^n a_iD_i=\sum_{i=1}^n a_i\frac{\partial}{\partial s_i}
+\]
+où les $a_i$ ($1\leq i\leq n$) sont des sections de $\mathcal{O}_X$ au-dessus
+de $U$. Pour toute section $g\in\Gamma(U,\mathcal{O}_X)$, si l'on pose
+$dg=\sum_{i=1}^n c_i ds_i$, on a
+$c_i=\langle D_i,dg\rangle=D_ig$ en vertu de (16.5.8.1), autrement dit
+\[
+  dg=\sum_{i=1}^n(D_ig)ds_i
+  =\sum_{i=1}^n\frac{\partial g}{\partial s_i}ds_i.
+  \tag{16.5.8.2}
+  \label{IV.16.5.8.2}
+\]
+\end{env}
+
+\begin{env}[16.5.9]
+\label{IV.16.5.9}
+Soient $D_1$, $D_2$ deux $S$-dérivations de $\mathcal{O}_X$. Pour tout ouvert
+$U$ de $X$, si $D_1^U$, $D_2^U$ sont les dérivations correspondantes de
+l'anneau $\Gamma(U,\mathcal{O}_X)$, le \emph{crochet}
+\[
+  [D_1^U,D_2^U]=D_1^U\circ D_2^U-D_2^U\circ D_1^U
+\]
+est aussi une dérivation de cet anneau, donc le
+$\psi^*(\mathcal{O}_S)$-endomorphisme de $\mathcal{O}_X$
+\[
+  [D_1,D_2]=D_1\circ D_2-D_2\circ D_1
+  \tag{16.5.9.1}
+  \label{IV.16.5.9.1}
+\]
+est encore une $S$-dérivation; comme on vérifie aussitôt que ce crochet
+vérifie l'identité de Jacobi, on voit qu'on a ainsi défini sur
+$\operatorname{Dér}_S(\mathcal{O}_X,\mathcal{O}_X)$ une structure de
+$\Gamma(S,\mathcal{O}_S)$-algèbre de Lie. Comme la définition de cette
+structure commute à la restriction à un ouvert de $X$, on voit que
+$\mathfrak{G}_{X/S}$ est canoniquement muni d'une structure de
+$\psi^*(\mathcal{O}_S)$-Algèbre de Lie. On notera que l'application
+$(D_1,D_2)\mapsto[D_1,D_2]$ n'est pas
+$\Gamma(X,\mathcal{O}_X)$-bilinéaire.
+\end{env}
+
+\begin{env}[16.5.10]
+\label{IV.16.5.10}
+Pour tout changement de base $g:S'\to S$, si l'on pose $X'=X\times_S S'$, on
+a vu (16.4.5) que l'on a un isomorphisme canonique
+\[
+  \Omega_{X/S}^1\otimes_S S'\xrightarrow{\sim}\Omega_{X'/S'}^1
+  \tag{16.5.10.1}
+  \label{IV.16.5.10.1}
+\]
+\oldpage[IV-4]{30}
+d'où l'on déduit, en vertu de (16.5.10.1), un homomorphisme canonique
+(Bourbaki, \emph{Alg.}, chap. II, 3\textsuperscript{e} éd., \S~5,
+n\textsuperscript{o} 3)
+\[
+  \mathfrak{G}_{X/S}\otimes_{\mathcal{O}_S}\mathcal{O}_{S'}
+  \longrightarrow\mathfrak{G}_{X'/S'}
+  \tag{16.5.10.2}
+  \label{IV.16.5.10.2}
+\]
+qui en général n'est ni injectif ni surjectif. Toutefois:
+\end{env}
+
+\begin{proposition}[16.5.11]
+\label{IV.16.5.11}
+\begin{enumerate}
+\item[(i)] Si $g:S'\to S$ est un morphisme plat et si $f$ est localement de
+type fini (resp.\ localement de présentation finie), l'homomorphisme
+(16.5.10.2) est injectif (resp.\ bijectif).
+\item[(ii)] Si $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module localement libre
+de type fini, l'homomorphisme (16.5.10.2) est bijectif.
+\end{enumerate}
+\end{proposition}
+
+En effet, l'assertion (ii) résulte de Bourbaki, \emph{Alg.}, chap. II,
+3\textsuperscript{e} éd., \S~5, n\textsuperscript{o} 3, prop. 7. L'assertion
+(i) résulte de même de Bourbaki, \emph{Alg. comm.}, chap. I, \S~2,
+n\textsuperscript{o} 10, prop. 11 et du fait que si $f$ est localement de type
+fini (resp.\ localement de présentation finie), $\Omega_{X/S}^1$ est un
+$\mathcal{O}_X$-Module de type fini (resp.\ de présentation finie) ((16.3.9)
+et (16.4.22)).
+
+\begin{env}[16.5.12]
+\label{IV.16.5.12}
+Puisque $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module quasi-cohérent, on peut
+considérer le fibré vectoriel sur $X$ défini par $\Omega_{X/S}^1$
+(II, 1.7.8)
+\[
+  T_{X/S}=\mathbf{V}(\Omega_{X/S}^1)
+  \tag{16.5.12.1}
+  \label{IV.16.5.12.1}
+\]
+qu'on appelle \emph{fibré tangent de $X$ relativement à $S$}. On a donc une
+bijection canonique (II, 1.7.9)
+\[
+  \Gamma(T_{X/S}/S)\xrightarrow{\sim}
+  \operatorname{Hom}_{\mathcal{O}_X}(\Omega_{X/S}^1,\mathcal{O}_X)
+  =\Gamma(X,\mathfrak{G}_{X/S})
+\]
+par définition de $\mathfrak{G}_{X/S}$, et on peut dans cet isomorphisme
+remplacer $X$ par un ouvert quelconque $U$ de $X$; on peut donc dire que le
+\emph{faisceau tangent} de $X$ relativement à $S$ est isomorphe au
+\emph{faisceau des germes de $S$-sections} du fibré tangent de $X$
+relativement à $S$. Si $f:X\to Y$ est un $S$-morphisme, on a vu (16.4.19)
+qu'on a un homomorphisme canonique
+$f_{X/Y/S}:f^*(\Omega_{Y/S}^1)\to\Omega_{X/S}^1$, ce qui donne, compte tenu de
+ce que
+\[
+  \mathbf{V}(f^*(\Omega_{Y/S}^1))
+  =\mathbf{V}(\Omega_{Y/S}^1)\times_Y X\qquad\text{(II, 1.7.11),}
+\]
+un $X$-morphisme
+$T_{X/S}(f):T_{X/S}\to T_{Y/S}\times_Y X$. Si $g:Y\to Z$ est un second
+$S$-morphisme, on a
+$T_{X/S}(g\circ f)=(T_{Y/S}(g)\times1_X)\circ T_{X/S}(f)$ (0, 20.5.4.1).
+
+Il résulte de (16.5.10.1) et de (II, 1.7.11) que pour tout changement de base
+$g:S'\to S$, on a un isomorphisme canonique
+\[
+  T_{X'/S'}\xrightarrow{\sim}T_{X/S}\times_S S'
+  =T_{X/S}\times_X X'.
+  \tag{16.5.12.2}
+  \label{IV.16.5.12.2}
+\]
+\end{env}
+
+\begin{env}[16.5.13]
+\label{IV.16.5.13}
+Pour tout point $x\in X$, on appelle \emph{espace tangent à $X$ au point $x$}
+(relativement à $S$) l'ensemble des points de la fibre
+$T_{X/S}\times_X\operatorname{Spec}(k(x))$ \emph{rationnels sur $k(x)$}, donc
+l'ensemble
+\[
+  T_{X/S}(x)=
+  \operatorname{Hom}_{k(x)}
+  (\Omega_{X/S}^1\otimes_{\mathcal{O}_x}k(x),k(x))
+  \tag{16.5.13.1}
+  \label{IV.16.5.13.1}
+\]
+qui est le \emph{dual} du $k(x)$-espace vectoriel
+$\Omega_{\mathcal{O}_x/\mathcal{O}_s}^1/
+\mathfrak{m}_x\cdot\Omega_{\mathcal{O}_x/\mathcal{O}_s}^1$. Lorsque
+$\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module de \emph{type fini},
+$T_{X/S}(x)$ est donc un espace vectoriel de rang fini sur $k(x)$, et pour
+tout
+\oldpage[IV-4]{31}
+changement de base $g:S'\to S$, et tout point
+$x'\in X'=X\times_S S'$ au-dessus de $x$, on a un isomorphisme canonique
+\[
+  T_{X'/S'}(x')\xrightarrow{\sim}
+  T_{X/S}(x)\otimes_{k(x)}k(x').
+  \tag{16.5.13.2}
+  \label{IV.16.5.13.2}
+\]
+
+Si $x$ est \emph{rationnel sur $k(s)$}, où $s=f(x)$ (de sorte que
+$k(s)\to k(x)$ est un isomorphisme), il résulte de (16.4.13) que l'on a un
+isomorphisme canonique
+\[
+  T_{X/S}(x)=T_{X_s/k(s)}(x)
+  =\operatorname{Hom}_{k(s)}
+  (\mathfrak{m}'_x/\mathfrak{m}'_x{}^2,k(s))
+  \tag{16.5.13.3}
+  \label{IV.16.5.13.3}
+\]
+où $\mathfrak{m}'_x$ est l'idéal maximal de
+$\mathcal{O}_{X_s,x}=\mathcal{O}_{X,x}/
+\mathfrak{m}_s\mathcal{O}_{X,x}$. Dans le cas où $S$ est le spectre d'un corps
+$k$, on retrouve ainsi la définition de Zariski de l'espace tangent en un
+point $x\in X$ \emph{rationnel sur $k$}, comme dual de
+$\mathfrak{m}_x/\mathfrak{m}_x^2$.
+
+Soit $Y$ un second $S$-préschéma et soit $g:Y\to X$ un $S$-morphisme; on a
+alors un homomorphisme canonique de $\mathcal{O}_Y$-Modules (16.4.19)
+\[
+  g_{Y/X/S}:g^*(\Omega_{X/S}^1)\longrightarrow\Omega_{Y/S}^1.
+  \tag{16.5.13.4}
+  \label{IV.16.5.13.4}
+\]
+Notons maintenant que si $y\in Y$ et $x=g(y)$, on a
+\[
+  g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y)
+  =(\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x))
+  \otimes_{k(x)}k(y)
+\]
+et par suite, si $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module
+\emph{de type fini}, on peut identifier
+\[
+  \operatorname{Hom}_{k(y)}
+  (g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y),k(y))
+\]
+à $T_{X/S}(x)\otimes_{k(x)}k(y)$. On déduit donc alors de l'homomorphisme
+(16.5.13.4) un homomorphisme de \emph{$k(y)$-espaces vectoriels}
+\[
+  T_y(g):T_{Y/S}(y)\longrightarrow
+  T_{X/S}(x)\otimes_{k(x)}k(y)
+  \tag{16.5.13.5}
+  \label{IV.16.5.13.5}
+\]
+dit \emph{application linéaire tangente à $g$ au point $y$}. Lorsque $y$ est
+\emph{rationnel sur $k(s)$}, on peut identifier $k(s)$, $k(y)$ et $k(x)$ et
+$T_y(g)$ est alors un homomorphisme de $k(s)$-espaces vectoriels
+$T_{Y/S}(y)\to T_{X/S}(x)$; on notera d'ailleurs que dans ce cas,
+$g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y)$ s'identifie à
+$\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x)$, et l'homomorphisme précédent est
+donc défini sans aucune condition de finitude sur $\Omega_{X/S}^1$ et n'est
+autre que l'homomorphisme $T_{Y/S}(g)$ (16.5.12) restreint à la fibre au point
+$y$ de $T_{Y/S}$.
+\end{env}
+
+\begin{env}[16.5.14]
+\label{IV.16.5.14}
+L'interprétation des dérivations d'une $A$-algèbre $B$ dans un $B$-module
+$L$, donnée dans (0, 20.1.1), se traduit dans le langage des préschémas de la
+façon suivante.
+
+Considérons deux morphismes de préschémas $f:X\to S$, $g:Y\to S$, et un
+sous-préschéma fermé $Y_0$ de $Y$ défini par un Idéal de carré nul
+$\mathscr{J}$ de $\mathcal{O}_Y$ (de sorte que $Y$ et $Y_0$ ont
+\emph{même espace topologique sous-jacent}). Supposons donné un $S$-morphisme
+$u_0:Y_0\to X$, de sorte qu'on a un diagramme commutatif
+\[
+  \xymatrix{
+    X\ar[d]_-f & Y_0\ar[l]_-{u_0}\ar[d]^j\\
+    S & Y\ar@{-->}[ul]_-u\ar[l]^-g
+  }
+  \tag{16.5.14.1}
+  \label{IV.16.5.14.1}
+\]
+\oldpage[IV-4]{32}
+et proposons-nous de chercher s'il existe des \emph{$S$-morphismes}
+$u:Y\to X$ tels que $u_0=u\circ j$ (autrement dit, s'il est possible de
+compléter le diagramme précédent par la flèche pointillée $u$, de façon à le
+laisser \emph{commutatif}).
+
+Pour cela, considérons un ouvert affine $U=\operatorname{Spec}(C)$ de $Y$;
+son image réciproque $j^{-1}(U)$ est l'ouvert affine
+$U_0=\operatorname{Spec}(C/\mathfrak{L})$, où
+$\mathfrak{L}=\Gamma(U,\mathscr{J})$, idéal \emph{de carré nul} dans $C$;
+nous supposerons $U$ assez petit pour que $u_0(U_0)$ soit contenu dans un
+ouvert affine $V=\operatorname{Spec}(B)$ de $X$, et
+$g(U)=f(u_0(U_0))$ contenu dans un ouvert affine
+$W=\operatorname{Spec}(A)$ de $S$, de sorte que $B$ et $C$ sont des
+$A$-algèbres et que $u_0|U_0$ correspond à un $A$-homomorphisme $\psi$ de
+$B$ dans $C/\mathfrak{L}$; soit $P(U_0)$ l'ensemble des restrictions $u|U$
+des homomorphismes cherchés, qui correspondent canoniquement aux
+$A$-homomorphismes d'algèbres $\varphi:B\to C$ tels que le \emph{composé}
+\[
+  B\xrightarrow{\varphi}C\longrightarrow C/\mathfrak{L}
+\]
+\emph{soit égal à $\psi$}. On sait donc (0, 20.1.1) que l'ensemble de ces
+homomorphismes est vide ou de la forme
+$\varphi_1+\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$; lorsque $P(U_0)$ n'est pas
+vide, le groupe additif $\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$ opère par
+addition dans $P(U_0)$, qui est donc un \emph{espace affine} pour le groupe
+additif $\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$ (ou encore un
+\emph{espace homogène principal} (ou \emph{torseur}) \emph{sous}
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$).
+
+Remarquons maintenant que, puisque $\mathfrak{L}$ est muni d'une structure de
+$B$-module au moyen de $\psi$, on a un \emph{isomorphisme}
+$v\mapsto v\circ d_{B/A}$ de
+$\operatorname{Hom}_B(\Omega_{B/A}^1,\mathfrak{L})$ sur
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{L})$ (0, 20.4.8). D'ailleurs, comme
+$\mathfrak{L}$ est de carré nul, donc un $(C/\mathfrak{L})$-module, tout
+$B$-homomorphisme $v:\Omega_{B/A}^1\to\mathfrak{L}$ peut être considéré
+comme un $(C/\mathfrak{L})$-homomorphisme
+$\Omega_{B/A}^1\otimes_B(C/\mathfrak{L})\to\mathfrak{L}$. Comme
+$\mathscr{J}$ est de carré nul, il peut être considéré comme un
+$\mathcal{O}_{Y_0}$-Module quasi-cohérent; introduisons le
+$\mathcal{O}_{Y_0}$-Module
+\[
+  \mathscr{G}=\mathscr{H}om(u_0^*(\Omega_{X/S}^1),\mathscr{J});
+  \tag{16.5.14.2}
+  \label{IV.16.5.14.2}
+\]
+il résulte alors du fait que
+$\Omega_{B/A}^1=\Gamma(V,\Omega_{X/S}^1)$ (16.3.7) que l'on peut écrire
+$\operatorname{D\acute{e}r}_A(B,\mathfrak{L})=\Gamma(U_0,\mathscr{G})$.
+
+Comme $P(U_0)$ est défini comme ensemble de $S$-morphismes $U\to X$, il est
+clair que $U_0\mapsto P(U_0)$ est un \emph{faisceau d'ensembles}
+$\mathscr{P}$ sur $Y_0$. Utilisons ce fait pour prouver que l'application
+\[
+  h:\Gamma(U_0,\mathscr{G})\times P(U_0)\longrightarrow P(U_0)
+\]
+définissant la structure de torseur sur $P(U_0)$ est aussi indépendante du
+choix de $V$ et $W$, et en outre que, si $U'\subset U$ est un second ouvert
+affine de $Y$, $U'_0$ son image réciproque dans $Y_0$, le diagramme
+\[
+  \xymatrix{
+    \Gamma(U_0,\mathscr{G})\times P(U_0)\ar[d]\ar[r]^h
+      & P(U_0)\ar[d]\\
+    \Gamma(U'_0,\mathscr{G})\times P(U'_0)\ar[r]_{h'}
+      & P(U'_0)
+  }
+  \tag{16.5.14.3}
+  \label{IV.16.5.14.3}
+\]
+est commutatif (les flèches verticales étant les opérateurs de restriction).
+En vertu de la remarque précédente, on est ramené à prouver la commutativité
+du diagramme précédent lorsque $h$ est défini comme ci-dessus à partir des
+ouverts affines $V$, $W$ et $h'$ à partir d'ouverts
+\oldpage[IV-4]{33}
+affines $V'\subset V$ et $W'\subset W$. Mais en vertu de la description
+précédente de $h$, cela résulte de la commutativité du diagramme (0, 20.5.4.2).
+
+Les applications
+$\Gamma(U_0,\mathscr{G})\times P(U_0)\to P(U_0)$ définissent donc un
+homomorphisme de \emph{faisceaux d'ensembles}
+$m:\mathscr{G}\times\mathscr{P}\to\mathscr{P}$ tel que, pour tout ouvert
+$U_0$ pour lequel $\Gamma(U_0,\mathscr{P})\neq\varnothing$,
+\[
+  m_{U_0}:\Gamma(U_0,\mathscr{G})\times\Gamma(U_0,\mathscr{P})
+  \longrightarrow\Gamma(U_0,\mathscr{P})
+\]
+soit une loi externe définissant sur $\Gamma(U_0,\mathscr{P})$ une structure
+de torseur sous le groupe $\Gamma(U_0,\mathscr{G})$.
+\end{env}
+
+\begin{env}[16.5.15]
+\label{IV.16.5.15}
+D'une façon générale, lorsqu'on se donne sur un espace topologique $Z$ un
+faisceau d'ensembles $\mathscr{P}$, un faisceau de groupes $\mathscr{G}$ (non
+nécessairement commutatif) et un homomorphisme de faisceaux d'ensembles
+$m:\mathscr{G}\times\mathscr{P}\to\mathscr{P}$ tel que, pour tout ouvert
+$U\subset Z$ tel que $\Gamma(U,\mathscr{P})\neq\varnothing$,
+\[
+  m_U:\Gamma(U,\mathscr{G})\times\Gamma(U,\mathscr{P})
+  \longrightarrow\Gamma(U,\mathscr{P})
+\]
+fasse de $\Gamma(U,\mathscr{P})$ un \emph{torseur} sous le groupe
+$\Gamma(U,\mathscr{G})$, on dit que $\mathscr{P}$ est un
+\emph{pseudo-torseur} (ou \emph{faisceau formellement principal homogène})
+sous le faisceau de groupes $\mathscr{G}$. On dit que $\mathscr{P}$ est un
+\emph{torseur} (ou \emph{faisceau principal homogène}) sous $\mathscr{G}$ si
+de plus $\Gamma(U,\mathscr{P})\neq\varnothing$ pour tout ouvert
+$U\neq\varnothing$ d'une base convenable de la topologie de $Z$.
+
+Pour la théorie générale des torseurs, nous renvoyons à [42]; nous nous
+bornerons ici à rappeler la correspondance canonique entre les classes
+d'isomorphie de ces torseurs (pour un $\mathscr{G}$ donné) et les éléments de
+l'ensemble de cohomologie $H^1(Z,\mathscr{G})$. Considérons en effet un
+torseur $\mathscr{P}$ sous $\mathscr{G}$ et un recouvrement ouvert
+$(U_\lambda)$ de $Z$ tel que
+$\Gamma(U_\lambda,\mathscr{P})\neq\varnothing$ pour tout $\lambda$;
+désignons par $p_\lambda$ un élément de
+$\Gamma(U_\lambda,\mathscr{P})$. Pour tout couple d'indices $\lambda$, $\mu$
+tel que $U_\lambda\cap U_\mu\neq\varnothing$, il existe alors un élément et
+un seul $\gamma_{\lambda\mu}$ de
+$\Gamma(U_\lambda\cap U_\mu,\mathscr{G})$ tel que
+\[
+  \gamma_{\lambda\mu}\cdot
+  (p_\mu|U_\lambda\cap U_\mu)=p_\lambda|U_\lambda\cap U_\mu;
+\]
+en outre, si $\lambda$, $\mu$, $\nu$ sont trois indices tels que
+$U_\lambda\cap U_\mu\cap U_\nu\neq\varnothing$, les restrictions
+$\gamma'_{\lambda\mu}$, $\gamma'_{\mu\nu}$, $\gamma'_{\lambda\nu}$ de
+$\gamma_{\lambda\mu}$, $\gamma_{\mu\nu}$, $\gamma_{\lambda\nu}$ à
+$U_\lambda\cap U_\mu\cap U_\nu$ vérifient la condition
+$\gamma'_{\lambda\nu}=\gamma'_{\lambda\mu}\gamma'_{\mu\nu}$; autrement dit
+$(\lambda,\mu)\mapsto\gamma_{\lambda\mu}$ est un \emph{1-cocycle} du
+recouvrement $(U_\lambda)$ à valeurs dans $\mathscr{G}$. Si, pour tout
+$\lambda$, $p'_\lambda$ est un second élément de
+$\Gamma(U_\lambda,\mathscr{P})$, il existe un élément et un seul
+$\beta_\lambda\in\Gamma(U_\lambda,\mathscr{G})$ tel que
+$p'_\lambda=\beta_\lambda\cdot p_\lambda$ et le 1-cocycle
+$(\gamma'_{\lambda\mu})$ correspondant à la famille $(p'_\lambda)$ est donné
+par
+\[
+  \gamma'_{\lambda\mu}=\beta_\lambda\gamma_{\lambda\mu}\beta_\mu^{-1},
+\]
+autrement dit, est \emph{cohomologue} à $(\gamma_{\lambda\mu})$.
+Inversement, la donnée d'un 1-cocycle $(\gamma_{\lambda\mu})$ définit, pour
+tout couple $(\lambda,\mu)$, un automorphisme $\theta_{\lambda\mu}$ du
+faisceau \emph{d'ensembles}
+$\mathscr{G}|U_\lambda\cap U_\mu$, savoir la translation à droite par
+$\gamma_{\lambda\mu}$, et le fait qu'il s'agisse d'un cocycle montre que l'on
+peut \emph{recoller} les faisceaux d'ensembles $\mathscr{G}|U_\lambda$ à
+l'aide des automorphismes $\theta_{\lambda\mu}$ (0, 3.3.1); on obtient ainsi
+de façon évidente un torseur sous $\mathscr{G}$, soit $\mathscr{P}$, et si
+l'on prend pour $p_\lambda$ la section unité au-dessus de $U_\lambda$, le
+1-cocycle correspondant n'est autre que le 1-cocycle donné
+$(\gamma_{\lambda\mu})$; en outre, si l'on remplace
+$(\gamma_{\lambda\mu})$ par un 1-cocycle
+$\gamma'_{\lambda\mu}=\beta_\lambda\gamma_{\lambda\mu}\beta_\mu^{-1}$ qui
+lui est cohomologue, on vérifie aussitôt que le torseur obtenu est isomorphe
+à $\mathscr{P}$.
+
+En particulier, si $(\gamma_{\lambda\mu})$ est un \emph{1-cobord}, autrement
+dit de la forme
+$\gamma_{\lambda\mu}=\beta_\lambda\beta_\mu^{-1}$, le torseur obtenu
+$\mathscr{P}$ est \emph{isomorphe à $\mathscr{G}$} (considéré comme torseur
+sous lui-même pour les translations à gauche); on dit dans ce cas que
+$\mathscr{P}$ est \emph{trivial}, et la réciproque est évidente.
+
+Plus particulièrement, il résulte de (III, 1.3.1) que l'on a:
+\end{env}
+
+\begin{proposition}[16.5.16]
+\label{IV.16.5.16}
+Soient $Z$ un schéma affine, $\mathscr{G}$ un $\mathcal{O}_Z$-Module
+quasi-cohérent; alors tout torseur sous $\mathscr{G}$ est trivial.
+\end{proposition}
+
+\oldpage[IV-4]{34}
+Revenant au problème considéré en (16.5.13), on obtient donc:
+
+\begin{proposition}[16.5.17]
+\label{IV.16.5.17}
+Soient $X$, $Y$ deux $S$-préschémas, $Y_0$ un sous-préschéma fermé de $Y$
+défini par un Idéal quasi-cohérent $\mathscr{J}$ de $\mathcal{O}_Y$ tel que
+$\mathscr{J}^2=0$, $j:Y_0\to Y$ l'injection canonique. Soit
+$u_0:Y_0\to X$ un $S$-morphisme, et $\mathscr{P}$ le faisceau d'ensembles sur
+$Y$ tel que, pour tout ouvert $U$ de $Y$, $\Gamma(U,\mathscr{P})$ soit
+l'ensemble des $S$-morphismes $u:U\to X$ tels que
+$u_0|U_0=u\circ(j|U_0)$, où $U_0=j^{-1}(U)$. Alors il existe sur
+$\mathscr{P}$ une structure de pseudo-torseur sous le
+$\mathcal{O}_{Y_0}$-Module
+\[
+  \mathscr{G}=\mathscr{H}om_{\mathcal{O}_{Y_0}}
+  (u_0^*(\Omega_{X/S}^1),\mathscr{J}).
+\]
+\end{proposition}
+
+En particulier:
+
+\begin{corollary}[16.5.18]
+\label{IV.16.5.18}
+Avec les notations de (16.5.16), supposons $Y$ affine et $\Omega_{X/S}^1$ de
+présentation finie; s'il existe un recouvrement ouvert $(U_\alpha)$ de $Y$,
+et, pour chaque indice $\alpha$, un $S$-morphisme $v_\alpha:U_\alpha\to X$
+tel que, si $U_\alpha^0=j^{-1}(U_\alpha)$, on ait
+$v_\alpha\circ(j|U_\alpha^0)=u_0|U_\alpha^0$, alors il existe un
+$S$-morphisme $u:Y\to X$ tel que $u\circ j=u_0$.
+\end{corollary}
+
+En effet, $\mathscr{G}$ est alors un $\mathcal{O}_{Y_0}$-Module
+quasi-cohérent (I, 1.3.12); en vertu de (16.5.16) et du fait que $Y_0$ est
+alors affine, le faisceau $\mathscr{P}$, qui est par hypothèse un torseur sous
+$\mathscr{G}$, et non seulement un pseudo-torseur, est \emph{trivial}; mais si
+$w$ est un isomorphisme de $\mathscr{G}$ sur $\mathscr{P}$ (en tant que
+torseurs sous $\mathscr{G}$), l'image par $w$ de la section 0 de
+$\mathscr{G}$ est le $S$-morphisme $u$ cherché.
+
+\subsection{Faisceaux de $p$-différentielles et différentielle extérieure.}
+\label{IV.16.6}
+
+\begin{env}[16.6.1]
+\label{IV.16.6.1}
+Soit $f:X\to S$ un morphisme de préschémas. On appelle \emph{faisceau des
+$p$-différentielles de $X$ relativement à $S$} ($p$ entier) la
+\emph{puissance extérieure $p$-ème} (0, 4.1.5) du $\mathcal{O}_X$-Module
+$\Omega_{X/S}^1$, notée
+\[
+  \Omega_{X/S}^p=\bigwedge^p(\Omega_{X/S}^1).
+  \tag{16.6.1.1}
+  \label{IV.16.6.1.1}
+\]
+On a donc $\Omega_{X/S}^0=\mathcal{O}_X$, et $\Omega_{X/S}^p=0$ pour $p<0$;
+les $\Omega_{X/S}^p$ sont les composants homogènes de l'Algèbre extérieure
+sur $\Omega_{X/S}^1$
+\[
+  \Omega_{X/S}^{\bullet}=\bigwedge(\Omega_{X/S}^1)
+  =\bigoplus_{p\in\mathbf{Z}}\bigwedge^p(\Omega_{X/S}^1),
+  \tag{16.6.1.2}
+  \label{IV.16.6.1.2}
+\]
+qui est donc une $\mathcal{O}_X$-Algèbre graduée quasi-cohérente,
+anticommutative et dont les éléments de degré 1 sont de carré nul. Pour tout
+ouvert affine $U$ de $X$, on a
+\[
+  \Gamma(U,\Omega_{X/S}^{\bullet})
+  =\bigwedge(\Gamma(U,\Omega_{X/S}^1)),
+\]
+où $\Gamma(U,\Omega_{X/S}^1)$ est considéré comme
+$\Gamma(U,\mathcal{O}_X)$-module.
+
+Lorsque $S=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ sont
+affines, $B$ étant donc une $A$-algèbre, on a (0, 4.1.5)
+$\Omega_{X/S}^p=(\Omega_{B/A}^p)^{\sim}$, en posant
+$\Omega_{B/A}^p=\bigwedge^p\Omega_{B/A}^1$.
+\end{env}
+
+\begin{theorem}[16.6.2]
+\label{IV.16.6.2}
+Il existe un endomorphisme et un seul $d$ du faisceau de groupes additifs
+$\Omega_{X/S}^{\bullet}$, ayant les propriétés suivantes:
+\begin{enumerate}
+\item[(i)] $d\circ d=0$.
+\item[(ii)] Pour tout ouvert $U$ de $X$ et toute section
+$f\in\Gamma(U,\mathcal{O}_X)$, on a $df=d_{X/S}f$.
+\oldpage[IV-4]{35}
+\item[(iii)] Pour tout ouvert $U$ de $X$, tout couple d'entiers $p$, $q$ et
+tout couple de sections
+$\omega'_p\in\Gamma(U,\Omega_{X/S}^p)$,
+$\omega''_q\in\Gamma(U,\Omega_{X/S}^q)$, on a
+\[
+  d(\omega'_p\wedge\omega''_q)
+  =(d\omega'_p)\wedge\omega''_q
+  +(-1)^p\omega'_p\wedge d\omega''_q.
+  \tag{16.6.2.1}
+  \label{IV.16.6.2.1}
+\]
+\end{enumerate}
+En outre, $d$ est un endomorphisme de $\psi^*(\mathcal{O}_X)$-Modules
+gradués, de degré $+1$.
+\end{theorem}
+
+Supposons prouvée l'existence de l'endomorphisme $d$. Pour tout ouvert affine
+$U$ de $X$, toute section de $\Omega_{X/S}^p$ au-dessus de $U$ est (en vertu
+de (i)) combinaison linéaire d'un nombre fini d'éléments de la forme
+$g(df_1\wedge df_2\wedge\cdots\wedge df_p)$, où $g$ et les $f_i$ sont des
+sections de $\mathcal{O}_X$ au-dessus de $U$ (0, 20.4.7). Les conditions (i)
+et (iii) montrent alors, par récurrence sur $p$, que l'on a nécessairement
+\[
+  d(g(df_1\wedge df_2\wedge\cdots\wedge df_p))
+  =dg\wedge df_1\wedge df_2\wedge\cdots\wedge df_p.
+  \tag{16.6.2.2}
+  \label{IV.16.6.2.2}
+\]
+Cela prouve donc l'\emph{unicité} de $d$ et la dernière assertion du théorème.
+En vertu de cette propriété d'unicité, pour démontrer l'existence de $d$, on
+peut se borner au cas où $S=\operatorname{Spec}(A)$ et
+$X=\operatorname{Spec}(B)$ sont affines. Or (Bourbaki, \emph{Alg.}, chap.
+III, 3\textsuperscript{e} éd., \S~10) pour définir une $A$-antidérivation
+$D$ de degré $+1$ d'une algèbre extérieure $\bigwedge(M)$ (où $M$ est un
+$B$-module et $B$ une $A$-algèbre), cette antidérivation prenant ses valeurs
+dans une $A$-algèbre \emph{graduée anticommutative}
+$C=\bigoplus_{n=0}^{\infty}C_n$, dont les éléments de degré 1 sont de carré
+nul, il suffit de se donner arbitrairement une $A$-dérivation $D_0$ de $B$
+dans $C_1$ et un $A$-homomorphisme $D_1$ de $M$ dans $C_2$; il existe alors
+une $A$-antidérivation $D$ et une seule de $\bigwedge(M)$ dans $C$
+coïncidant avec $D_0$ dans $B$ et avec $D_1$ dans $M$.
+
+Dans le cas actuel, $D_0$ est nécessairement égal à $d_{B/A}$ en vertu de
+(ii); tout revient à voir, compte tenu de (16.6.2.2), qu'il y a un
+$A$-homomorphisme $u$ de $\Omega_{B/A}^1$ dans $\Omega_{B/A}^2$ tel que
+l'on ait
+\[
+  u(g.df)=dg\wedge df
+  \tag{16.6.2.3}
+  \label{IV.16.6.2.3}
+\]
+quels que soient $f$, $g$ dans $A$; il suffira pour cela de montrer qu'il
+existe un $A$-homomorphisme
+$v:B\otimes_A\Omega_{B/A}^1\to\Omega_{B/A}^2$ tel que
+\[
+  v(g.\omega)=dg\wedge\omega
+  \tag{16.6.2.4}
+  \label{IV.16.6.2.4}
+\]
+pour $g\in B$ et $\omega\in\Omega_{B/A}^1$. Finalement, comme
+$\Omega_{B/A}^1=\mathfrak{I}/\mathfrak{I}^2$ (où
+$\mathfrak{I}=\mathfrak{I}_{B/A}$ est le noyau de l'homomorphisme canonique
+$B\otimes_A B\to B$) et que $\Omega_{B/A}^1$ est engendré par les éléments
+de la forme $g.df$, il suffit de définir un $A$-homomorphisme
+$w:B\otimes_A(B\otimes_A B)\to\Omega_{B/A}^2$ tel que
+\[
+  w(g'\otimes g\otimes f)=dg'\wedge(g.df)
+  \tag{16.6.2.5}
+  \label{IV.16.6.2.5}
+\]
+et tel que $w$ soit nul dans l'image de $B\otimes_A\mathfrak{I}^2$. Or,
+comme le second membre de (16.6.2.5) est $A$-trilinéaire en $g'$, $g$, $f$,
+l'existence de $w$ vérifiant (16.6.2.5) est immédiate. Comme, d'autre part,
+$\mathfrak{I}$ est engendré par les éléments $1\otimes x-x\otimes1$
+($x\in B$), on est ramené à vérifier que lorsque
+$z=(1\otimes x-x\otimes1)(1\otimes y-y\otimes1)$, on a
+$w(g'\otimes z)=0$. Or, comme
+$z=1\otimes(xy)+(xy)\otimes1-x\otimes y-y\otimes x$, la formule (16.6.2.4)
+montre qu'il
+\oldpage[IV-4]{36}
+suffit de voir que l'on a $d(xy)-x.dy-y.dx=0$, ce qui exprime que $d$ est une
+dérivation.
+
+Il reste à prouver que $d$ vérifie la condition (i). Or, le carré d'une
+antidérivation est une dérivation (Bourbaki, \emph{loc. cit.}), et comme
+$\Omega_{B/A}^{\bullet}$ est engendré par $\Omega_{B/A}^1$ comme
+$B$-algèbre, il suffit de vérifier que $d(dz)=0$ pour $z\in B$ et
+$z\in\Omega_{B/A}^1$; dans le premier cas, cela résulte de la formule
+(16.6.2.3) avec $g=1$; dans le second, on peut se borner au cas où $z=g.df$
+avec $f$, $g$ dans $B$, et alors, en vertu de (16.6.2.1) et (16.6.2.3), on a
+\[
+  d(d(g.df))=d(dg\wedge df)
+  =(d(dg))\wedge(df)-(dg)\wedge(d(df))=0.
+\]
+\hfill C.Q.F.D.
+
+\begin{definition}[16.6.3]
+\label{IV.16.6.3}
+L'antidérivation $d$ définie dans (16.6.2) (aussi notée $d_{X/S}$) est
+appelée \emph{différentielle extérieure sur $X$} (relativement à $S$).
+\end{definition}
+
+\begin{proposition}[16.6.4]
+\label{IV.16.6.4}
+Pour tout changement de base $g:S'\to S$, si l'on pose
+$X'=X\times_S S'$, l'homomorphisme canonique
+\[
+  \Omega_{X/S}^{\bullet}\otimes_S S'
+  \longrightarrow\Omega_{X'/S'}^{\bullet}
+  \tag{16.6.4.1}
+  \label{IV.16.6.4.1}
+\]
+déduit de l'isomorphisme (16.5.9.1) est bijectif. En outre, si $s$ est une
+section de $\Omega_{X/S}^{\bullet}$ au-dessus d'un ouvert $U$ de $X$,
+$s\otimes1$ son image réciproque, section de $\Omega_{X'/S'}^{\bullet}$
+au-dessus de l'image réciproque $U'$ de $U$ dans $X'$, on a
+$d_{X'/S'}(s\otimes1)=d_{X/S}(s)\otimes1$.
+\end{proposition}
+
+La première assertion est immédiate, la formation de l'algèbre extérieure
+d'un module permutant avec toute extension de l'anneau des scalaires. Pour
+prouver la seconde, on peut, en vertu de (16.6.2.2), se borner au cas où
+$s\in\Gamma(U,\mathcal{O}_X)$, et dans ce cas l'assertion a déjà été prouvée
+(16.4.3.7).
+
+\begin{env}[16.6.5]
+\label{IV.16.6.5}
+Supposons que $\Omega_{X/S}^1$ soit un $\mathcal{O}_X$-Module localement libre
+de rang $n$ en un point $x$, de sorte qu'il y a $n$ sections
+$s_i\in\Gamma(U,\mathcal{O}_X)$ telles que les $ds_i$ forment une base du
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\Omega_{X/S}^1)$ (16.5.8).
+Alors, pour tout entier $p\geq1$, les $p$-différentielles
+$ds_{i_1}\wedge ds_{i_2}\wedge\cdots\wedge ds_{i_p}$ (pour
+$i_1<i_2<\cdots<i_p$, éléments de $[1,n]$) forment une base de
+$\binom{n}{p}$ éléments de $\Gamma(U,\Omega_{X/S}^p)$ sur
+$\Gamma(U,\mathcal{O}_X)$. En outre la formule (16.6.2.2) montre que pour
+toute section $g\in\Gamma(U,\mathcal{O}_X)$, on a
+\[
+  d(g.ds_{i_1}\wedge ds_{i_2}\wedge\cdots\wedge ds_{i_p})
+  =\sum_k(-1)^r\frac{\partial g}{\partial s_k}
+  ds_{i_1}\wedge\cdots\wedge ds_{i_r}\wedge ds_k\wedge
+  ds_{i_{r+1}}\wedge\cdots\wedge ds_{i_p}
+  \tag{16.6.5.1}
+  \label{IV.16.6.5.1}
+\]
+où, au second membre, $k$ parcourt l'ensemble des $n-p$ indices distincts des
+$i_h$, $i_r$ étant le plus grand indice $<k$.
+
+On notera que la relation $d(dg)=0$ pour toute section
+$g\in\Gamma(U,\mathcal{O}_X)$ s'exprime sous la forme
+\[
+  D_i(D_jg)=D_j(D_ig)\qquad\text{pour $i\neq j$};
+\]
+autrement dit, les dérivations $D_i$ définies dans (16.5.7) sont deux à deux
+permutables.
+\end{env}
+
+\subsection{Les $\mathscr{P}_{X/S}^n(\mathscr{F})$.}
+\label{IV.16.7}
+
+\begin{env}[16.7.1]
+\label{IV.16.7.1}
+Soient $f:X\to S$ un morphisme de préschémas, $\mathscr{F}$ un
+$\mathcal{O}_X$-Module. Désignons par $X_{\Delta_f}^{(n)}$ le \emph{$n$-ème
+voisinage infinitésimal de $X$} pour le morphisme diagonal
+\oldpage[IV-4]{37}
+$\Delta_f:X\to X\times_S X$, par
+$h_n:X_{\Delta_f}^{(n)}\to X\times_S X$ le morphisme canonique (16.1.2), et
+considérons les deux morphismes composés
+\[
+  p_1^{(n)}:X_{\Delta_f}^{(n)}\xrightarrow{h_n}X\times_S X
+  \xrightarrow{p_1}X,qquad
+  p_2^{(n)}:X_{\Delta_f}^{(n)}\xrightarrow{h_n}X\times_S X
+  \xrightarrow{p_2}X
+\]
+de sorte que, par définition, $p_1^{(n)}$ correspond à l'homomorphisme de
+faisceaux d'anneaux $\mathcal{O}_X\to\mathscr{P}_{X/S}^n$ que nous avons
+choisi pour définir la structure de $\mathcal{O}_X$-Algèbre sur
+$\mathscr{P}_{X/S}^n$ (16.3.5), et $p_2^{(n)}$ à l'homomorphisme de faisceaux
+d'anneaux $d_{X/S}^n:\mathcal{O}_X\to\mathscr{P}_{X/S}^n$ (16.3.6). Comme
+$X_{\Delta_f}^{(n)}$ et $X$ ont même espace sous-jacent, on peut écrire
+\[
+  \mathscr{P}_{X/S}^n
+  =(p_1^{(n)})_*((p_2^{(n)})^*(\mathcal{O}_X)).
+  \tag{16.7.1.1}
+  \label{IV.16.7.1.1}
+\]
+Plus généralement, nous poserons
+\[
+  \mathscr{P}_{X/S}^n(\mathscr{F})
+  =(p_1^{(n)})_*((p_2^{(n)})^*(\mathscr{F}))
+  \tag{16.7.1.2}
+  \label{IV.16.7.1.2}
+\]
+de sorte que
+$\mathscr{P}_{X/S}^n=\mathscr{P}_{X/S}^n(\mathcal{O}_X)$; par définition,
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est donc un $\mathcal{O}_X$-Module.
+\end{env}
+
+\begin{env}[16.7.2]
+\label{IV.16.7.2}
+Si l'on revient aux définitions des images réciproques de Modules sur les
+espaces annelés (0, 4.3.1) et que l'on tienne compte de ce que
+$X_{\Delta_f}^{(n)}$ et $X$ ont même espace sous-jacent, on voit que l'on peut
+aussi écrire la définition (16.7.1.2) sous la forme
+\[
+  \mathscr{P}_{X/S}^n(\mathscr{F})
+  =\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}
+  \tag{16.7.2.1}
+  \label{IV.16.7.2.1}
+\]
+mais où il faut prendre garde que, dans l'interprétation du signe $\otimes$,
+$\mathscr{P}_{X/S}^n$ est muni de sa structure de $\mathcal{O}_X$-Module
+définie par l'homomorphisme de faisceaux d'anneaux
+$d_{X/S}^n:\mathcal{O}_X\to\mathscr{P}_{X/S}^n$. Il résulte aussitôt de cette
+formule (ou directement de (16.7.1.2)) que
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est canoniquement muni d'une structure de
+$\mathscr{P}_{X/S}^n$-Module.
+\end{env}
+
+\begin{proposition}[16.7.3]
+\label{IV.16.7.3}
+\begin{enumerate}
+\item[(i)] Le foncteur
+$\mathscr{F}\mapsto\mathscr{P}_{X/S}^n(\mathscr{F})$ de la catégorie des
+$\mathcal{O}_X$-Modules dans celle des $\mathscr{P}_{X/S}^n$-Modules est
+exact à droite, et commute aux limites inductives quelconques; il est exact
+lorsque $\mathscr{P}_{X/S}^n$ est un $\mathcal{O}_X$-Module plat.
+\item[(ii)] Si $\mathscr{F}$ est un $\mathcal{O}_X$-Module quasi-cohérent
+(resp. de type fini, resp. de présentation finie),
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est un $\mathscr{P}_{X/S}^n$-Module
+quasi-cohérent (resp. de type fini, resp. de présentation finie).
+\end{enumerate}
+\end{proposition}
+
+Les assertions de (i) résultent aussitôt de la formule (16.7.2.1) et de la
+considération de la symétrie de $\mathscr{P}_{X/S}^n$ (16.3.4). Les assertions
+de (ii) découlent de l'exactitude à droite du foncteur
+$\mathscr{F}\mapsto\mathscr{P}_{X/S}^n(\mathscr{F})$.
+
+\begin{env}[16.7.4]
+\label{IV.16.7.4}
+Les deux structures de $\mathcal{O}_X$-Module de $\mathscr{P}_{X/S}^n$
+définissent sur $\mathscr{P}_{X/S}^n(\mathscr{F})$ deux structures de
+$\mathcal{O}_X$-Module, d'ailleurs permutables, donc une structure de
+$\mathcal{O}_X$-Bimodule. Il est commode de noter \emph{à gauche} celle de
+ces structures provenant de l'homomorphisme structural
+$\mathcal{O}_X\to\mathscr{P}_{X/S}^n$ (choisi dans (16.3.5)) et
+\emph{à droite} celle provenant de l'homomorphisme
+$d_{X/S}^n:\mathcal{O}_X\to\mathscr{P}_{X/S}^n$. Autrement dit, pour tout
+ouvert $U$ de $X$, et tout triplet d'éléments
+$a\in\Gamma(U,\mathcal{O}_X)$, $b\in\Gamma(U,\mathscr{P}_{X/S}^n)$,
+$t\in\Gamma(U,\mathscr{F})$, on a par définition
+\[
+  a(b\otimes t)=(ab)\otimes t,qquad
+  (b\otimes t)a=(b.d^na)\otimes t=b\otimes(at)
+  =(d^na).(b\otimes t).
+  \tag{16.7.4.1}
+  \label{IV.16.7.4.1}
+\]
+La structure de $\mathcal{O}_X$-Module provenant de la définition (16.7.1.2)
+est donc, avec ces conventions, la structure de $\mathcal{O}_X$-Module à
+gauche.
+
+\oldpage[IV-4]{38}
+Si $\mathscr{F}$ est un $\mathcal{O}_X$-Module quasi-cohérent, il en est de
+même de $\mathscr{P}_{X/S}^n(\mathscr{F})$ pour l'une ou l'autre de ses
+structures de $\mathcal{O}_X$-Module. Si de plus $\mathscr{F}$ est de type
+fini (resp. de présentation finie) et $f:X\to S$ localement de type fini
+(resp. localement de présentation finie),
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est (pour l'une ou l'autre de ses
+structures de $\mathcal{O}_X$-Module) de type fini (resp. de présentation
+finie), comme il résulte de (16.3.9) et de (16.4.22).
+\end{env}
+
+\begin{env}[16.7.5]
+\label{IV.16.7.5}
+La définition (16.7.2.1) entraîne l'existence d'un homomorphisme de faisceaux
+de groupes commutatifs
+\[
+  d_{X/S,\mathscr{F}}^n:\mathscr{F}
+  \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F})
+  \qquad\text{(aussi noté $d_{X/S}^n$)}
+  \tag{16.7.5.1}
+  \label{IV.16.7.5.1}
+\]
+tel qu'avec les notations de (16.7.4), on ait
+\[
+  d_{X/S,\mathscr{F}}^n(t)=1\otimes t
+  \tag{16.7.5.2}
+  \label{IV.16.7.5.2}
+\]
+et par suite, en vertu de (16.7.4.1)
+\[
+  d_{X/S,\mathscr{F}}^n(at)
+  =(1\otimes t)a=(d_{X/S,\mathscr{F}}^n(t)).a
+  \tag{16.7.5.3}
+  \label{IV.16.7.5.3}
+\]
+\[
+  d_{X/S,\mathscr{F}}^n(at)
+  =(d_{X/S}^n(a)).(1\otimes t)
+  =(d_{X/S}^n(a))(d_{X/S,\mathscr{F}}^n(t)).
+  \tag{16.7.5.4}
+  \label{IV.16.7.5.4}
+\]
+Il est donc $\mathcal{O}_X$-linéaire pour la structure de
+$\mathcal{O}_X$-Module à droite sur $\mathscr{P}_{X/S}^n(\mathscr{F})$, et
+\emph{semi-linéaire} (relativement à l'automorphisme $\sigma$ (16.3.4)) pour
+la structure de $\mathcal{O}_X$-Module à gauche.
+\end{env}
+
+\begin{proposition}[16.7.6]
+\label{IV.16.7.6}
+Le $\mathcal{O}_X$-Module à gauche $\mathscr{P}_{X/S}^n(\mathscr{F})$ est
+engendré par l'image de $\mathscr{F}$ par l'homomorphisme canonique
+$d_{X/S,\mathscr{F}}^n$.
+\end{proposition}
+
+Cela résulte aussitôt de (16.7.5.3) et du cas particulier correspondant à
+$\mathscr{F}=\mathcal{O}_X$ (16.3.8).
+
+\begin{env}[16.7.7]
+\label{IV.16.7.7}
+Les homomorphismes canoniques de faisceaux d'anneaux
+\[
+  \varphi_{nm}:\mathscr{P}_{X/S}^m\longrightarrow\mathscr{P}_{X/S}^n
+\]
+pour $n\leq m$ (16.1.2) définissent, en vertu de (16.7.2.1) des
+homomorphismes canoniques
+\[
+  \mathscr{P}_{X/S}^m(\mathscr{F})
+  \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F})qquad(n\leq m)
+\]
+qui sont des homomorphismes de $\mathcal{O}_X$-Bimodules en vertu de (16.1.6)
+et (16.7.4.1); en outre on a des diagrammes commutatifs
+\[
+  \xymatrix{
+    \mathscr{P}_{X/S}^m(\mathscr{F})\ar[rr]
+      &&\mathscr{P}_{X/S}^n(\mathscr{F})\\
+    &\mathscr{F}\ar[ul]^-{d_{X/S,\mathscr{F}}^m}
+      \ar[ur]_-{d_{X/S,\mathscr{F}}^n}
+  }
+\]
+On a donc ainsi un système projectif de $\mathcal{O}_X$-Bimodules
+$(\mathscr{P}_{X/S}^n(\mathscr{F}))$, et l'on pose
+\[
+  \mathscr{P}_{X/S}^{\infty}(\mathscr{F})
+  =\varprojlim\mathscr{P}_{X/S}^n(\mathscr{F}).
+  \tag{16.7.7.1}
+  \label{IV.16.7.7.1}
+\]
+En outre, ce qui précède montre que les homomorphismes (16.7.5.1) forment un
+système projectif d'homomorphismes, et définissent donc un homomorphisme
+canonique
+\[
+  d_{X/S,\mathscr{F}}^{\infty}:\mathscr{F}
+  \longrightarrow\mathscr{P}_{X/S}^{\infty}(\mathscr{F}).
+  \tag{16.7.7.2}
+  \label{IV.16.7.7.2}
+\]
+\end{env}
+
+\oldpage[IV-4]{39}
+
+\begin{env}[16.7.8]
+\label{IV.16.7.8}
+Soient $\mathscr{F}$, $\mathscr{G}$ deux $\mathcal{O}_X$-Modules; il résulte
+aussitôt de la définition (16.7.2.1) que l'on a un isomorphisme canonique de
+$\mathscr{P}_{X/S}^n$-Modules
+\[
+  \mathscr{P}_{X/S}^n(\mathscr{F}\otimes_{\mathcal{O}_X}\mathscr{G})
+  \xrightarrow{\sim}
+  \mathscr{P}_{X/S}^n(\mathscr{F})
+  \otimes_{\mathscr{P}_{X/S}^n}\mathscr{P}_{X/S}^n(\mathscr{G})
+  \tag{16.7.8.1}
+  \label{IV.16.7.8.1}
+\]
+(Bourbaki, \emph{Alg.}, chap.~II, 3\textsuperscript{e} éd., §~5,
+n\textsuperscript{o}~1, prop.~3).
+
+On en conclut en particulier (ou l'on voit directement sur la définition
+(16.7.2.1)) que si $\mathscr{F}$ est muni d'une structure de
+$\mathcal{O}_X$-Algèbre (non nécessairement associative),
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est canoniquement muni d'une structure de
+$\mathscr{P}_{X/S}^n$-Algèbre; cette dernière est associative (resp.
+commutative, resp. unitaire, resp. une Algèbre de Lie) lorsqu'il en est ainsi
+de $\mathscr{F}$. En outre les homomorphismes canoniques
+$\mathscr{P}_{X/S}^m(\mathscr{F})\to\mathscr{P}_{X/S}^n(\mathscr{F})$ pour
+$n\leq m$ (16.7.7) sont alors des di-homomorphismes d'Algèbres; de même
+(16.7.5.1) est alors un homomorphisme de $\mathcal{O}_X$-Algèbres lorsque
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est muni de sa structure de
+$\mathcal{O}_X$-Algèbre provenant de sa structure de $\mathcal{O}_X$-Module
+\emph{à droite}.
+
+Avec les mêmes notations, on a également un homomorphisme canonique de
+$\mathscr{P}_{X/S}^n$-Modules
+\[
+  \mathscr{P}_{X/S}^n
+  (\mathscr{H}\!om_{\mathcal{O}_X}(\mathscr{F},\mathscr{G}))
+  \longrightarrow
+  \mathscr{H}\!om_{\mathscr{P}_{X/S}^n}
+  (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{P}_{X/S}^n(\mathscr{G}))
+  \tag{16.7.8.2}
+  \label{IV.16.7.8.2}
+\]
+(Bourbaki, \emph{Alg.}, 3\textsuperscript{e} éd., §~5,
+n\textsuperscript{o}~3), qui est bijectif lorsque $\mathscr{P}_{X/S}^n$ est
+un $\mathcal{O}_X$-Module \emph{localement libre de type fini}
+(\emph{loc. cit.}, prop.~7).
+\end{env}
+
+\begin{env}[16.7.9]
+\label{IV.16.7.9}
+Supposons qu'on soit dans la situation décrite dans (16.4.1); alors, de
+l'homomorphisme canonique $P^n(u)$ (16.4.3.3), on déduit aussitôt un
+homomorphisme canonique de $\mathcal{O}_{X'}$-Bimodules
+\[
+  u^*(\mathscr{P}_{X/S}^n(\mathscr{F}))
+  \longrightarrow
+  \mathscr{P}_{X'/S'}^n(u^*(\mathscr{F})).
+  \tag{16.7.9.1}
+  \label{IV.16.7.9.1}
+\]
+Nous laissons au lecteur le soin d'étendre à cet homomorphisme les propriétés
+vues dans (16.4) pour le cas $\mathscr{F}=\mathcal{O}_X$.
+\end{env}
+
+\begin{remark}[16.7.10]
+\label{IV.16.7.10}
+La définition de $\mathscr{P}_{X/S}^n(\mathscr{F})$ sous la forme (16.7.1.2)
+garde un sens lorsque $\mathscr{F}$ est un faisceau d'ensembles quelconque
+(l'image réciproque d'un faisceau d'ensembles par $p_2^{(n)}$ étant définie
+dans (0\textsubscript{I}, 3.7.1)); une variante de cette définition permet de
+définir le «schéma des jets» (relativement à $S$) d'un $X$-préschéma
+quelconque.
+\end{remark}
+
+\subsection{Opérateurs différentiels.}
+\footnote{Pour un formalisme plus général, voir l'Exposé VII de [42]
+(dû à P. Gabriel).}
+\label{IV.16.8}
+
+\begin{definition}[16.8.1]
+\label{IV.16.8.1}
+Soient $f=(\psi,\theta):X\to S$ un morphisme de préschémas,
+$\mathscr{F}$, $\mathscr{G}$ deux $\mathcal{O}_X$-Modules, $n$ un entier
+$\geq0$. On dit qu'un homomorphisme de faisceaux de groupes additifs
+$D:\mathscr{F}\to\mathscr{G}$ est un \emph{opérateur différentiel d'ordre
+$\leq n$} (relativement à $S$) s'il existe un homomorphisme de
+$\mathcal{O}_X$-Modules
+$u:\mathscr{P}_{X/S}^n(\mathscr{F})\to\mathscr{G}$ (où
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est muni de sa structure de
+$\mathcal{O}_X$-Module à gauche (16.7.4)) tel que l'on ait
+$D=u\circ d_{X/S,\mathscr{F}}^n$.
+\end{definition}
+
+Il est clair, en vertu de l'existence des homomorphismes canoniques
+\[
+  \mathscr{P}_{X/S}^m(\mathscr{F})
+  \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F})
+\]
+\oldpage[IV-4]{40}
+pour $n\leq m$ (16.7.7) qu'un opérateur différentiel d'ordre $\leq n$ est
+aussi un opérateur différentiel d'ordre $\leq m$ pour tout $m\geq n$. Si
+$D:\mathscr{F}\to\mathscr{G}$ est un opérateur différentiel d'ordre
+$\leq n$, alors, pour tout ouvert $U$ de $X$,
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ est aussi un opérateur différentiel
+d'ordre $\leq n$.
+
+On dit qu'un homomorphisme $D:\mathscr{F}\to\mathscr{G}$ des faisceaux de
+groupes additifs sous-jacents à $\mathscr{F}$ et à $\mathscr{G}$ est un
+\emph{opérateur différentiel} (relativement à $S$) si, pour tout $x\in X$, il
+existe un voisinage ouvert $U$ de $x$ et un entier $n\geq0$ tels que
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ soit un opérateur différentiel d'ordre
+$\leq n$. L'\emph{ordre} d'un opérateur différentiel
+$D:\mathscr{F}\to\mathscr{G}$ est la borne inférieure des entiers $n$ tels
+que $D$ soit un opérateur différentiel d'ordre $\leq n$ (et donc $+\infty$
+s'il n'y a pas de tels entiers); cet ordre est toujours fini si $X$ est
+\emph{quasi-compact}. Les opérateurs différentiels d'ordre $0$ ne sont autres
+que les homomorphismes de $\mathcal{O}_X$-Modules
+$\mathscr{F}\to\mathscr{G}$; on convient que tout opérateur différentiel
+d'ordre $<0$ est \emph{nul}. Pour $n\geq0$, un opérateur différentiel n'est
+pas en général un homomorphisme de $\mathcal{O}_X$-Modules mais est toujours
+un homomorphisme de $\psi^*(\mathcal{O}_S)$-Modules.
+
+Lorsque $\mathscr{F}=\mathcal{O}_X$, un opérateur différentiel d'ordre
+$\leq1$ de $\mathcal{O}_X$ dans $\mathscr{G}$ s'écrit d'une seule manière
+sous la forme $v+D$, où $v:\mathcal{O}_X\to\mathscr{G}$ est un
+$\mathcal{O}_X$-homomorphisme, et $D$ une $S$-\emph{dérivation} (16.5.1) de
+$\mathcal{O}_X$ dans $\mathscr{G}$: cela résulte de la structure de
+$P_{B/A}^1$ (0, 20.4.8).
+
+\begin{env}[16.8.2]
+\label{IV.16.8.2}
+Pour décrire de façon plus explicite un opérateur différentiel d'ordre
+$\leq n$, $D:\mathscr{F}\to\mathscr{G}$, il suffit, pour tout ouvert affine
+$U$ de $X$, dont l'image dans $S$ est contenue dans un ouvert affine $V$, de
+caractériser l'homomorphisme
+$D=D_U:\Gamma(U,\mathscr{F})\to\Gamma(U,\mathscr{G})$. Si l'on pose
+$\Gamma(V,\mathcal{O}_S)=A$, $\Gamma(U,\mathcal{O}_X)=B$, de sorte que $B$
+est une $A$-algèbre, on a
+\[
+  \Gamma(U,\mathscr{P}_{X/S}^n)
+  =(B\otimes_A B)/\mathfrak{I}^{n+1},
+\]
+où l'on a posé pour abréger $\mathfrak{I}=\mathfrak{I}_{B/A}$. Posons en
+outre $M=\Gamma(U,\mathscr{F})$, $N=\Gamma(U,\mathscr{G})$; alors la
+définition de $D$ signifie que pour chaque couple $(U,V)$ vérifiant les
+conditions précédentes, le $A$-homomorphisme $D:M\to N$ se factorise en
+\[
+  M\longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M
+  \xrightarrow{v}N
+\]
+où la première flèche est l'homomorphisme canonique $t\mapsto1\otimes t$, et
+$v$ est un $B$-homomorphisme, la structure de $B$-module de
+$((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M$ provenant du premier
+facteur $B$ (alors qu'on rappelle que dans la formation du produit tensoriel
+sur $B$, la structure de $B$-module de
+$(B\otimes_A B)/\mathfrak{I}^{n+1}$ provient du second facteur $B$). Notons
+maintenant que le $B$-module
+$((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M$ est isomorphe à
+$(B\otimes_A M)/\mathfrak{I}^{n+1}(B\otimes_A M)$, où $B\otimes_A M$ est
+considéré comme $(B\otimes_A B)$-module et sa structure de $B$-module
+provient de l'homomorphisme $b\mapsto b\otimes1$ de $B$ dans $B\otimes_A B$.
+Soit alors $D'$ le $B$-homomorphisme de $B\otimes_A M$ dans $N$ tel que
+$D'(b\otimes t)=bD(t)$; la condition de factorisation sur $D$ s'exprime encore
+en disant que $D'$ doit \emph{être nul dans le $B$-module}
+$\mathfrak{I}^{n+1}(B\otimes_A M)$.
+\end{env}
+
+\begin{env}[16.8.3]
+\label{IV.16.8.3}
+Il est clair que l'ensemble des opérateurs différentiels d'ordre $\leq n$ de
+$\mathscr{F}$ dans $\mathscr{G}$ est un groupe additif, noté
+$\operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})$; lorsque
+$\mathscr{F}=\mathscr{G}=\mathcal{O}_X$, on écrit aussi
+$\operatorname{Diff}_{X/S}^n$ au lieu de
+$\operatorname{Diff}_{X/S}^n(\mathcal{O}_X,\mathcal{O}_X)$.
+
+On a vu (16.8.1) que l'on a pour deux ouverts $U\supset V$ de $X$, un
+homomorphisme canonique de restriction
+\[
+  \operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U)
+  \longrightarrow
+  \operatorname{Diff}_{V/S}^n(\mathscr{F}|V,\mathscr{G}|V)
+\]
+\oldpage[IV-4]{41}
+donc $U\mapsto\operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U)$ est
+un préfaisceau de groupes additifs; en fait c'est même un \emph{faisceau}, car
+pour $U$ ouvert variable dans $X$, les homomorphismes
+$u\mapsto u\circ d_{U/S,\mathscr{F}|U}^n$ sont des \emph{isomorphismes} de
+groupes additifs
+\[
+  \mathscr{H}\!om_{\mathcal{O}_U}
+  (\mathscr{P}_{U/S}^n(\mathscr{F}|U),\mathscr{G}|U)
+  \xrightarrow{\sim}
+  \operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U),
+  \tag{16.8.3.1}
+  \label{IV.16.8.3.1}
+\]
+en vertu du fait que l'image de $\mathscr{F}$ par
+$d_{X/S,\mathscr{F}}^n$ engendre $\mathscr{P}_{X/S}^n(\mathscr{F})$
+(16.7.6). On note ce faisceau
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$, et on a donc:
+\end{env}
+
+\begin{proposition}[16.8.4]
+\label{IV.16.8.4}
+Les isomorphismes (16.8.3.1) définissent un isomorphisme de faisceaux de
+groupes additifs
+\[
+  \mathscr{H}\!om_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+  \xrightarrow{\sim}
+  \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G}).
+  \tag{16.8.4.1}
+  \label{IV.16.8.4.1}
+\]
+\end{proposition}
+
+Lorsque $\mathscr{F}=\mathscr{G}=\mathcal{O}_X$, on écrit aussi
+$\mathscr{D}\!iff_{X/S}^n$ au lieu de
+$\mathscr{D}\!iff_{X/S}^n(\mathcal{O}_X,\mathcal{O}_X)$; il résulte de
+(16.8.4) que $\mathscr{D}\!iff_{X/S}^n$ s'identifie canoniquement au
+\emph{dual} du $\mathcal{O}_X$-Module $\mathscr{P}_{X/S}^n$; aussi écrit-on
+$\langle t,D\rangle$ au lieu de $u(t)$ si $t$ est une section de
+$\mathscr{P}_{X/S}^n$ au-dessus d'un ouvert et si $u$ est l'homomorphisme de
+$\mathscr{P}_{X/S}^n$ dans $\mathcal{O}_X$ correspondant à $D$.
+
+\begin{env}[16.8.5]
+\label{IV.16.8.5}
+Puisque $\mathscr{P}_{X/S}^n(\mathscr{F})$ est muni d'une structure de
+$\mathcal{O}_X$-Bimodule (16.7.4), on en déduit canoniquement une structure de
+$\mathcal{O}_X$-Bimodule sur
+$\mathscr{H}\!om_{\mathcal{O}_X}
+(\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})$, donc aussi sur
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ en vertu de (16.8.4.1).
+De façon précise, à la structure de $\mathcal{O}_X$-Module à gauche de
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ correspond, en vertu de la définition
+(16.8.1), la structure de $\mathcal{O}_X$-Module à gauche sur
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ explicitée comme suit:
+pour tout ouvert $U$ de $X$, toute section
+$a\in\Gamma(U,\mathcal{O}_X)$ et tout opérateur différentiel
+$D:\mathscr{F}|U\to\mathscr{G}|U$, $aD$ est l'opérateur différentiel qui, à
+toute section $t\in\Gamma(U,\mathscr{F})$, fait correspondre la section
+\[
+  (aD)(t)=a(D(t))
+  \tag{16.8.5.1}
+  \label{IV.16.8.5.1}
+\]
+de $\Gamma(U,\mathscr{G})$. De même, à la structure de
+$\mathcal{O}_X$-Module à droite de $\mathscr{P}_{X/S}^n(\mathscr{F})$
+correspond la structure de $\mathcal{O}_X$-Module à droite sur
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ explicitée comme suit:
+avec les mêmes notations que ci-dessus, $Da$ est l'opérateur différentiel qui,
+à $t\in\Gamma(U,\mathscr{F})$, fait correspondre la section
+\[
+  (Da)(t)=D(at).
+  \tag{16.8.5.2}
+  \label{IV.16.8.5.2}
+\]
+\end{env}
+
+\begin{proposition}[16.8.6]
+\label{IV.16.8.6}
+Si $f:X\to S$ est un morphisme localement de présentation finie,
+$\mathscr{F}$ un $\mathcal{O}_X$-Module quasi-cohérent de présentation finie
+et $\mathscr{G}$ un $\mathcal{O}_X$-Module quasi-cohérent, alors
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ est un
+$\mathcal{O}_X$-Module quasi-cohérent pour l'une ou l'autre structure définies
+dans (16.8.5).
+\end{proposition}
+
+La proposition résulte de ce que, sous les hypothèses faites,
+$\mathscr{P}_{X/S}^n(\mathscr{F})$ est un $\mathcal{O}_X$-Module
+quasi-cohérent de présentation finie (16.7.4), et de (I, 1.3.12).
+
+\begin{env}[16.8.7]
+\label{IV.16.8.7}
+L'ensemble des opérateurs différentiels de $\mathscr{F}$ dans $\mathscr{G}$
+(d'ordre non précisé (16.8.1)) se note
+$\operatorname{Diff}_{X/S}(\mathscr{F},\mathscr{G})$; on voit encore comme
+dans (16.8.3) que
+$U\mapsto\operatorname{Diff}_{U/S}(\mathscr{F}|U,\mathscr{G}|U)$ est un
+faisceau de groupes additifs, que nous désignerons par
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$. Il est immédiat que
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$ est réunion de la famille
+filtrante croissante de ses sous-faisceaux
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$; si $X$ est
+quasi-compact, $\operatorname{Diff}_{X/S}(\mathscr{F},\mathscr{G})$
+\oldpage[IV-4]{42}
+est de même réunion de ses sous-groupes
+$\operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})$ (16.8.1). Les
+structures de $\mathcal{O}_X$-Bimodule sur les
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ définissent donc une
+structure de $\mathcal{O}_X$-Bimodule sur
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$, explicitée encore par
+(16.8.5.1) et (16.8.5.2).
+
+Notons que, pour $n\leq m$, on a un diagramme commutatif
+\[
+  \xymatrix{
+    \mathscr{H}\!om_{\mathcal{O}_X}
+      (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+      \ar[r]^-{\sim}\ar[d]
+      &\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})\ar[d]\\
+    \mathscr{H}\!om_{\mathcal{O}_X}
+      (\mathscr{P}_{X/S}^m(\mathscr{F}),\mathscr{G})
+      \ar[r]^-{\sim}
+      &\mathscr{D}\!iff_{X/S}^m(\mathscr{F},\mathscr{G})
+  }
+  \tag{16.8.7.1}
+  \label{IV.16.8.7.1}
+\]
+où les flèches horizontales sont les isomorphismes (16.8.4.2) et la flèche
+verticale de gauche provient de l'homomorphisme canonique
+$\mathscr{P}_{X/S}^m(\mathscr{F})\to
+\mathscr{P}_{X/S}^n(\mathscr{F})$ (16.7.7). Pour tout ouvert $U$ de $X$,
+munissons alors
+\[
+  \Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))
+  =\varprojlim\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))
+\]
+de la topologie limite projective des topologies discrètes sur les
+$\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))$, ce qui définit
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ comme un
+$\Gamma(U,\mathcal{O}_X)$-bimodule topologique, de sorte que
+$\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ apparaît comme un faisceau à valeurs
+dans la catégorie des groupes commutatifs topologiques
+(0\textsubscript{I}, 3.2.6). Alors (G, II, 1.11) la limite du système inductif
+de faisceaux de groupes commutatifs
+\[
+  (\mathscr{H}\!om_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G}))
+\]
+n'est autre que le faisceau des germes d'homomorphismes \emph{continus} de
+$\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ dans $\mathscr{G}$ (ce dernier
+étant muni de la topologie discrète): les homomorphismes continus de
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ dans le groupe discret
+$\Gamma(U,\mathscr{G})$ correspondent en effet biunivoquement aux systèmes
+inductifs d'homomorphismes de groupes
+$\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))\to\Gamma(U,\mathscr{G})$. On peut
+donc encore exprimer (16.8.4) en disant qu'on a un isomorphisme canonique
+\[
+  \mathscr{H}\!om.\mathrm{cont}_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^{\infty}(\mathscr{F}),\mathscr{G})
+  \xrightarrow{\sim}
+  \mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})
+\]
+où le premier membre désigne le faisceau des germes d'homomorphismes continus
+de $\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ dans $\mathscr{G}$.
+\end{env}
+
+\begin{proposition}[16.8.8]
+\label{IV.16.8.8}
+Soient $\mathscr{F}$, $\mathscr{G}$ deux $\mathcal{O}_X$-Modules,
+$D:\mathscr{F}\to\mathscr{G}$ un homomorphisme de
+$\psi^*(\mathcal{O}_S)$-Modules, $n$ un entier $\geq0$. Les conditions
+suivantes sont équivalentes:
+\begin{enumerate}
+  \item[(a)] $D$ est un opérateur différentiel d'ordre $\leq n$.
+  \item[(b)] Pour toute section $a$ de $\mathcal{O}_X$ au-dessus d'un ouvert
+  $U$, l'homomorphisme $D_a:\mathscr{F}|U\to\mathscr{G}|U$ tel que, pour
+  toute section $t$ de $\mathscr{F}$ au-dessus d'un ouvert $V\subset U$, on
+  ait
+  \[
+    D_a(t)=D(at)-aD(t)
+    \tag{16.8.8.1}
+    \label{IV.16.8.8.1}
+  \]
+  est un opérateur différentiel d'ordre $\leq n-1$.
+  \item[(c)] Pour tout ouvert $U$ de $X$, toute famille
+  $(a_i)_{1\leq i\leq n+1}$ de $n+1$ sections de $\mathcal{O}_X$ au-dessus
+  de $U$ et toute section $t$ de $\mathscr{F}$ au-dessus de $U$, on a
+  l'identité
+  \[
+    \sum_{H\subset I_{n+1}}(-1)^{\operatorname{Card}(H)}
+    \left(\prod_{i\in H}a_i\right)
+    D\!\left(\left(\prod_{i\notin H}a_i\right)t\right)=0
+    \tag{16.8.8.2}
+    \label{IV.16.8.8.2}
+  \]
+  (où $I_{n+1}$ est l'intervalle $1\leq i\leq n+1$ de $\mathbb{N}$).
+\end{enumerate}
+\oldpage[IV-4]{43}
+\end{proposition}
+
+Prouvons d'abord l'équivalence de a) et c). Par définition, pour prouver que
+$D$ est un opérateur différentiel d'ordre $\leq n$, il suffit de montrer qu'il
+en est ainsi pour la restriction
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ à tout ouvert affine $U$ de $X$, et
+d'autre part la propriété c) est valable pour tout ouvert $U$ de $X$ si elle
+l'est pour tout ouvert affine. On peut donc se borner au cas où
+$S=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ sont affines. En
+vertu de (16.8.2) (dont on garde les notations), la condition a) signifie
+alors que le $A$-homomorphisme $D':B\otimes_A M\to N$ tel que
+$D'(b\otimes t)=bD(t)$ s'annule dans
+$\mathfrak{I}^{n+1}(B\otimes_A M)$, ce qui, en vertu de (0, 20.4.4), équivaut
+à dire que $D'$ s'annule pour tous les éléments de la forme
+\[
+  \left(\prod_{i=1}^{n+1}(a_i\otimes1-1\otimes a_i)\right).(1\otimes t)
+\]
+où $a_i\in B$ et $t\in M$. Or, cet élément s'écrit
+\[
+  \sum_{H\subset I_{n+1}}
+  \left(\prod_{i\in H}a_i\right)\otimes
+  \left(\left(\prod_{i\notin H}a_i\right)t\right),
+\]
+et la valeur de $D'$ pour cet élément n'est autre que le premier membre de
+(16.8.8.2), ce qui prouve l'équivalence de a) et c).
+
+Prouvons maintenant l'équivalence de b) et c). Raisonnons par récurrence sur
+$n$, l'assertion étant triviale pour $n=0$. Écrivant $a_{n+1}$ au lieu de $a$
+dans la condition b), on voit, en vertu de l'hypothèse de récurrence, que la
+condition b) signifie que pour toute famille $(a_i)_{1\leq i\leq n}$ de $n$
+sections de $\mathcal{O}_X$ au-dessus de $U$ et toute section $t$ de
+$\mathscr{F}$ au-dessus de $U$, on a
+\[
+  \sum_{H'\subset I_n}(-1)^{\operatorname{Card}(H')}
+  \left(\prod_{i\in H'}a_i\right)
+  D_{a_{n+1}}\!\left(\left(\prod_{i\notin H'}a_i\right)t\right)=0.
+\]
+Mais si l'on remplace dans cette relation $D_{a_{n+1}}$ par sa définition
+(16.8.8.1), on constate aussitôt qu'on obtient, au signe près, le premier
+membre de (16.8.8.2); d'où la conclusion.
+
+\begin{proposition}[16.8.9]
+\label{IV.16.8.9}
+Si $D:\mathscr{F}\to\mathscr{G}$ est un opérateur différentiel d'ordre
+$\leq n$, et $D':\mathscr{G}\to\mathscr{H}$ un opérateur différentiel d'ordre
+$\leq n'$, alors $D'\circ D:\mathscr{F}\to\mathscr{H}$ est un opérateur
+différentiel d'ordre $\leq n+n'$.
+\end{proposition}
+
+Par hypothèse, on peut écrire $D=u\circ d_{X/S,\mathscr{F}}^n$ et
+$D'=v\circ d_{X/S,\mathscr{G}}^{n'}$, où
+$u:\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}\to\mathscr{G}$ et
+$v:\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}\to\mathscr{H}$
+sont des $\mathcal{O}_X$-homomorphismes. Tout revient à montrer que
+l'homomorphisme composé de faisceaux de groupes additifs
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^n}
+      &\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}
+        \ar[r]^-u
+      &\mathscr{G}\ar[r]^-{d_{X/S,\mathscr{G}}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}
+  }
+\]
+se factorise en
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^{n+n'}}
+      &\mathscr{P}_{X/S}^{n+n'}\otimes_{\mathcal{O}_X}\mathscr{F}
+        \ar[r]^-w
+      &\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}
+  }
+\]
+où $w$ est un $\mathcal{O}_X$-homomorphisme. Il suffira de prouver le
+
+\begin{lemma}[16.8.9.1]
+\label{IV.16.8.9.1}
+Il existe un $\mathcal{O}_X$-homomorphisme et un seul
+\[
+  \delta:\mathscr{P}_{X/S}^{n+n'}
+  \longrightarrow
+  \mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n)
+  =\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{P}_{X/S}^n
+  \tag{16.8.9.2}
+  \label{IV.16.8.9.2}
+\]
+\oldpage[IV-4]{44}
+rendant commutatif le diagramme
+\[
+  \xymatrix{
+    \mathcal{O}_X\ar[r]^-{d_{X/S}^{n+n'}}\ar[d]_-{d_{X/S}^n}
+      &\mathscr{P}_{X/S}^{n+n'}\ar[d]^-\delta\\
+    \mathscr{P}_{X/S}^n
+      \ar[r]_-{d_{X/S,\mathscr{P}_{X/S}^n}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n)
+  }
+  \tag{16.8.9.3}
+  \label{IV.16.8.9.3}
+\]
+\end{lemma}
+
+On aura alors en effet un diagramme commutatif déduit de (16.8.9.3) par
+tensorisation avec $\mathscr{F}$
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^{n+n'}}
+      \ar[d]_-{d_{X/S,\mathscr{F}}^n}
+      &\mathscr{P}_{X/S}^{n+n'}(\mathscr{F})
+        \ar[d]^-{\delta\otimes1}\\
+    \mathscr{P}_{X/S}^n(\mathscr{F})
+      \ar[r]_-{d_{X/S,\mathscr{P}_{X/S}^n(\mathscr{F})}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n(\mathscr{F}))
+  }
+\]
+et d'autre part, on vérifie aussitôt sur la définition (16.7.5) que le
+diagramme
+\[
+  \xymatrix{
+    \mathscr{P}_{X/S}^n(\mathscr{F})\ar[r]^-u
+      \ar[d]_-{d_{X/S,\mathscr{P}_{X/S}^n(\mathscr{F})}^{n'}}
+      &\mathscr{G}\ar[d]^-{d_{X/S,\mathscr{G}}^{n'}}\\
+    \mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n(\mathscr{F}))
+      \ar[r]_-{1\otimes u}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{G})
+  }
+\]
+est commutatif. On répondra donc à la question en prenant pour $w$ le
+$\mathcal{O}_X$-homomorphisme composé
+\[
+  \xymatrix{
+    \mathscr{P}_{X/S}^{n+n'}(\mathscr{F})
+      \ar[r]^-{\delta\otimes1}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n(\mathscr{F}))
+        \ar[r]^-{1\otimes u}
+      &\mathscr{P}_{X/S}^{n'}(\mathscr{G}).
+  }
+\]
+
+Reste à prouver le lemme (16.8.9.1). Compte tenu de (16.7.6), qui prouve
+l'unicité de $\delta$, on est ramené au cas où $S=\operatorname{Spec}(A)$ et
+$X=\operatorname{Spec}(B)$ sont affines; posant
+$\mathfrak{I}=\mathfrak{I}_{B/A}$, il s'agit de définir un homomorphisme
+canonique de $B$-modules
+\[
+  \varphi:(B\otimes_A B)/\mathfrak{I}^{n+n'+1}
+  \longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n'+1})
+  \otimes_B((B\otimes_A B)/\mathfrak{I}^{n+1})
+\]
+les structures de $B$-module des deux membres provenant du premier facteur
+$B$; rappelons que dans le produit tensoriel du second membre,
+$(B\otimes_A B)/\mathfrak{I}^{n'+1}$ doit être considéré
+\oldpage[IV-4]{45}
+comme $B$-module à droite par son second facteur $B$ et
+$(B\otimes_A B)/\mathfrak{I}^{n+1}$ comme $B$-module à gauche par son premier
+facteur $B$ (16.7.2). Il revient au même de définir un homomorphisme de
+$B$-modules
+\[
+  \varphi_0:B\otimes_A B\longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n'+1})
+  \otimes_B((B\otimes_A B)/\mathfrak{I}^{n+1})
+\]
+et de prouver qu'il s'annule dans $\mathfrak{I}^{n+n'+1}$. Or, on définit
+aussitôt un tel homomorphisme par la condition que
+\[
+  \varphi_0(b\otimes b')
+  =\pi_{n'}(b\otimes1)\otimes\pi_n(1\otimes b')
+  \qquad\text{pour $b,b'$ dans $B$}
+\]
+avec les notations de (16.3.7). En outre, il est immédiat que $\varphi_0$ est
+un homomorphisme d'\emph{anneaux}. Or, on peut écrire
+\[
+  \begin{aligned}
+  \varphi_0(b\otimes1-1\otimes b)
+  ={}&\pi_{n'}(b\otimes1-1\otimes b)\otimes\pi_n(1\otimes1)\\
+  &+\pi_{n'}(1\otimes b)\otimes\pi_n(1\otimes1)
+  -\pi_{n'}(1\otimes1)\otimes\pi_n(1\otimes b)
+  \end{aligned}
+\]
+et on a
+\[
+  \begin{aligned}
+  \pi_{n'}(1\otimes b)\otimes\pi_n(1\otimes1)
+  &=\pi_{n'}(1\otimes1)b\otimes\pi_n(1\otimes1)\\
+  &=\pi_{n'}(1\otimes1)\otimes b\pi_n(1\otimes1)\\
+  &=\pi_{n'}(1\otimes1)\otimes\pi_n(b\otimes1)
+  \end{aligned}
+\]
+d'où finalement
+\[
+  \begin{aligned}
+  \varphi_0(b\otimes1-1\otimes b)
+  ={}&\pi_{n'}(b\otimes1-1\otimes b)\otimes\pi_n(1\otimes1)\\
+  &+\pi_{n'}(1\otimes1)\otimes\pi_n(b\otimes1-1\otimes b).
+  \end{aligned}
+  \tag{16.8.9.4}
+  \label{IV.16.8.9.4}
+\]
+Un produit de $n+n'+1$ termes de la forme (16.8.9.4) est donc
+nécessairement nul, car il en est ainsi d'un produit de $n+1$ termes de la
+forme $\pi_n(b\otimes1-1\otimes b)$ et d'un produit de $n'+1$ termes de la
+forme $\pi_{n'}(b\otimes1-1\otimes b)$. La conclusion résulte donc de
+(0, 20.4.4).
+
+\begin{corollary}[16.8.10]
+\label{IV.16.8.10}
+Le faisceau $\mathscr{D}\!iff_{X/S}(\mathcal{O}_X,\mathcal{O}_X)$ (aussi noté
+$\mathscr{D}\!iff_{X/S}$) est canoniquement muni d'une structure de faisceau
+d'anneaux, les $\mathscr{D}\!iff_{X/S}^n$ formant une filtration croissante
+compatible avec cette structure.
+\end{corollary}
+
+En particulier, $\mathscr{D}\!iff_{X/S}^0$ est un faisceau de sous-anneaux de
+$\mathscr{D}\!iff_{X/S}$, qui s'identifie canoniquement à $\mathcal{O}_X$
+(16.8.1). Les formules (16.8.5.1) et (16.8.5.2) montrent que la structure de
+$\mathcal{O}_X$-Bimodule de $\mathscr{D}\!iff_{X/S}$ provient de la
+multiplication à gauche et à droite par les sections de $\mathcal{O}_X$
+considéré comme faisceau de sous-anneaux de $\mathscr{D}\!iff_{X/S}$.
+
+\begin{remarks}[16.8.11]
+\label{IV.16.8.11}
+\begin{enumerate}
+  \item[(i)] Supposons que
+  $\mathscr{F}=\bigoplus_{\lambda\in L}\mathscr{F}_\lambda$; alors il est
+  clair (16.7.2.1) que
+  $\mathscr{P}_{X/S}^n(\mathscr{F})=
+  \bigoplus_{\lambda\in L}\mathscr{P}_{X/S}^n(\mathscr{F}_\lambda)$; comme le
+  foncteur $\mathscr{F}\mapsto\Gamma(U,\mathscr{F})$ commute à la formation
+  des sommes directes quelconques, $d_{X/S,\mathscr{F}}^n$ est
+  l'homomorphisme dont la restriction à chaque $\mathscr{F}_\lambda$ est
+  \[
+    d_{X/S,\mathscr{F}_\lambda}^n:\mathscr{F}_\lambda
+    \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F}_\lambda);
+  \]
+  on en conclut aussitôt que l'on a
+  \[
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\lambda\in L}
+    \operatorname{Diff}_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}),
+  \]
+  et par suite aussi (0\textsubscript{I}, 3.2.6)
+  \[
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\lambda\in L}
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}).
+  \]
+  Par ailleurs, si $\mathscr{G}=\prod_{\mu\in M}\mathscr{G}_\mu$
+  (0\textsubscript{I}, 3.2.6), on a
+  \[
+    \operatorname{Hom}_{\mathcal{O}_X}
+    (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+    =\prod_{\mu\in M}\operatorname{Hom}_{\mathcal{O}_X}
+    (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G}_\mu),
+  \]
+  \oldpage[IV-4]{46}
+  tout homomorphisme $u$ de $\mathscr{P}_{X/S}^n(\mathscr{F})$ dans
+  $\mathscr{G}$ correspondant biunivoquement à la famille de ses composés
+  \[
+    u_\mu:\mathscr{P}_{X/S}^n(\mathscr{F})
+    \longrightarrow\mathscr{G}\longrightarrow\mathscr{G}_\mu.
+  \]
+  On a donc
+  \[
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\mu\in M}
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G}_\mu),
+  \]
+  et par suite aussi
+  \[
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\mu\in M}
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G}_\mu).
+  \]
+  \item[(ii)] Jusqu'ici, on n'a guère rencontré d'opérateurs différentiels
+  $\mathscr{F}\to\mathscr{G}$ que lorsque $\mathscr{F}$ et $\mathscr{G}$ sont
+  des $\mathcal{O}_X$-Modules localement libres de rang fini, auquel cas, leur
+  structure se ramène localement, en vertu de (i), à celle du faisceau
+  $\mathscr{D}\!iff_{X/S}$; cette dernière va être étudiée plus loin (16.11)
+  dans un cas particulier.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Immersions régulières et quasi-régulières.}
+\label{IV.16.9}
+
+\begin{definition}[16.9.1]
+\label{IV.16.9.1}
+Soit $X$ un espace annelé. On dit qu'un Idéal $\mathscr{I}$ de
+$\mathcal{O}_X$ est \emph{régulier} (resp. \emph{quasi-régulier}) si, pour
+tout point $x\in\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$, il existe un
+voisinage ouvert $U$ de $x$ dans $X$ et une suite régulière (0, 15.2.2) (resp.
+quasi-régulière (0, 15.2.2)) d'éléments de $\Gamma(U,\mathcal{O}_X)$ qui
+engendre $\mathscr{I}|U$.
+\end{definition}
+
+On dira qu'une suite régulière (resp. quasi-régulière) de sections de
+$\mathcal{O}_X$ au-dessus de $U$ qui engendre $\mathscr{I}|U$ est un
+\emph{système régulier} (resp. \emph{quasi-régulier}) \emph{de générateurs}
+de $\mathscr{I}|U$.
+
+\begin{definition}[16.9.2]
+\label{IV.16.9.2}
+Soit $j:Y\to X$ une immersion de préschémas et soit $U$ un ouvert de $X$ tel
+que $j(Y)\subset U$ et que $j$ soit une immersion fermée de $Y$ dans $U$. On
+dit que $j$ est \emph{régulière} (resp. \emph{quasi-régulière}) si le
+sous-préschéma fermé $j(Y)$ de $U$ associé à $j$ est défini par un Idéal
+régulier (resp. quasi-régulier) de $\mathcal{O}_U$ (condition indépendante de
+l'ouvert $U$ choisi).
+\end{definition}
+
+On dit qu'un sous-préschéma $Y$ d'un préschéma $X$ est \emph{régulièrement
+immergé} (resp. \emph{quasi-régulièrement immergé}) si l'injection canonique
+$j:Y\to X$ est une immersion régulière (resp. quasi-régulière). Si $Y$ est un
+sous-préschéma fermé de $X$ et $\mathscr{I}$ l'Idéal de $\mathcal{O}_X$ qui
+définit $Y$, il revient au même de dire que $\mathscr{I}$ est \emph{régulier}
+(resp. \emph{quasi-régulier}).
+
+Par exemple, si $A$ est un anneau \emph{intègre}, $f$ un élément $\neq0$ de
+$A$, le sous-préschéma fermé $V(f)$ de $\operatorname{Spec}(A)$ (isomorphe à
+$\operatorname{Spec}(A/fA)$) est \emph{régulièrement immergé} dans
+$\operatorname{Spec}(A)$.
+
+Tout Idéal régulier est quasi-régulier (0, 15.2.2); toute immersion régulière
+est quasi-régulière (cf. (16.9.11) pour une réciproque).
+
+\begin{proposition}[16.9.3]
+\label{IV.16.9.3}
+Soient $X$ un espace annelé, $\mathscr{I}$ un Idéal de $\mathcal{O}_X$,
+$(f_i)_{1\leq i\leq m}$ une suite finie de sections de $\mathcal{O}_X$
+au-dessus de $X$ engendrant $\mathscr{I}$. Pour que $(f_i)$ soit une suite
+quasi-régulière (0, 15.2.2), il faut et il suffit que les conditions suivantes
+soient vérifiées:
+\begin{enumerate}
+  \item[(i)] Les images canoniques des $f_i$ dans
+  $\mathscr{I}/\mathscr{I}^2$ forment une base de cet
+  $\mathcal{O}_X/\mathscr{I}$-Module.
+  \item[(ii)] L'homomorphisme surjectif canonique (16.1.2.2)
+  \[
+    \mathbf{S}_{\mathcal{O}_X/\mathscr{I}}^{\bullet}
+    (\mathscr{I}/\mathscr{I}^2)
+    \longrightarrow\mathscr{G}r_{\mathscr{I}}^{\bullet}(\mathcal{O}_X)
+  \]
+  est bijectif.
+\end{enumerate}
+En outre, s'il en est ainsi, toute suite $(f'_i)_{1\leq i\leq n}$ de $n$
+sections de $\mathscr{I}$ au-dessus de $X$ qui engendre $\mathscr{I}$ est
+quasi-régulière.
+\end{proposition}
+
+\oldpage[IV-4]{47}
+
+Les deux conditions de l'énoncé ne font que traduire la définition donnée dans
+(0, 15.2.2), compte tenu de la définition des homomorphismes canoniques
+(0, 15.2.1.1). La dernière assertion résulte de ce que, si un module $M$ sur
+un anneau commutatif $A$ admet une base de $n$ éléments, tout système de
+générateurs de $M$ ayant $n$ éléments est une base de $M$ (Bourbaki,
+\emph{Alg. comm.}, chap.~II, §~3, cor.~5 du th.~1).
+
+\begin{corollary}[16.9.4]
+\label{IV.16.9.4}
+Soient $X$ un espace annelé en anneaux locaux, $\mathscr{I}$ un Idéal de
+$\mathcal{O}_X$. Pour que $\mathscr{I}$ soit quasi-régulier, il faut et il
+suffit qu'il vérifie les conditions suivantes:
+\begin{enumerate}
+  \item[(i)] $\mathscr{I}$ est de type fini.
+  \item[(ii)] $\mathscr{I}/\mathscr{I}^2$ est un
+  $(\mathcal{O}_X/\mathscr{I})$-Module localement libre.
+  \item[(iii)] L'homomorphisme canonique
+  \[
+    \mathbf{S}_{\mathcal{O}_X/\mathscr{I}}^{\bullet}
+    (\mathscr{I}/\mathscr{I}^2)
+    \longrightarrow\mathscr{G}r_{\mathscr{I}}^{\bullet}(\mathcal{O}_X)
+    \tag{16.9.4.1}
+    \label{IV.16.9.4.1}
+  \]
+  est bijectif.
+\end{enumerate}
+\end{corollary}
+
+La nécessité des conditions résulte aussitôt de (16.9.3). Pour voir que ces
+conditions sont suffisantes, il faut montrer, en vertu de (16.9.3), que si, en
+un point $x\in\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$, il existe un
+voisinage ouvert $U$ de $x$ dans $X$ et $n$ sections $f_i$ ($1\leq i\leq n$)
+de $\mathscr{I}$ au-dessus de $U$ dont les images canoniques dans
+$\mathscr{I}/\mathscr{I}^2$ forment une base de
+$(\mathscr{I}/\mathscr{I}^2)|U$ sur
+$(\mathcal{O}_X/\mathscr{I})|U$, alors il y a un voisinage ouvert
+$V\subset U$ de $x$ tel que les $f_i|V$ engendrent $\mathscr{I}|V$. Or, par
+hypothèse, on a $\mathscr{I}_x\neq\mathcal{O}_x$, donc $\mathscr{I}_x$ est
+contenu dans l'idéal maximal de $\mathcal{O}_x$; comme $\mathscr{I}_x$ est un
+$\mathcal{O}_x$-module de type fini et que les classes des $(f_i)_x$ dans
+$\mathscr{I}_x/\mathscr{I}_x^2$ engendrent cet
+$(\mathcal{O}_x/\mathscr{I}_x)$-module, le lemme de Nakayama montre que les
+$(f_i)_x$ engendrent $\mathscr{I}_x$. Comme $\mathscr{I}$ est de type fini,
+on conclut par (0\textsubscript{I}, 5.2.2).
+
+\begin{corollary}[16.9.5]
+\label{IV.16.9.5}
+Soient $X$ un espace annelé en anneaux locaux, $\mathscr{I}$ un Idéal
+quasi-régulier de $\mathcal{O}_X$, $(f_i)_{1\leq i\leq n}$ une suite de
+sections de $\mathscr{I}$ au-dessus de $X$,
+$x$ un point de $\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$. Les
+conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[(a)] Il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que les
+  $f_i|U$ forment une suite quasi-régulière d'éléments de
+  $\Gamma(U,\mathcal{O}_X)$ engendrant $\mathscr{I}|U$.
+  \item[(b)] Les $(f_i)_x$ forment un système de générateurs de
+  $\mathscr{I}_x$ dont le nombre d'éléments est le plus petit possible.
+  \item[(b')] Les $(f_i)_x$ forment un système minimal de générateurs de
+  $\mathscr{I}_x$.
+  \item[(c)] Si $\bar f_i$ est l'image canonique de $f_i$ dans
+  $\Gamma(X,\mathscr{I}/\mathscr{I}^2)$, les $(\bar f_i)_x$ forment une base
+  du $(\mathcal{O}_x/\mathscr{I}_x)$-module
+  $\mathscr{I}_x/\mathscr{I}_x^2$.
+\end{enumerate}
+\end{corollary}
+
+Par hypothèse, $\mathcal{O}_x$ est un anneau local, $\mathscr{I}_x$ un idéal
+de type fini de $\mathcal{O}_x$ contenu dans l'idéal maximal de
+$\mathcal{O}_x$; l'équivalence de b), b') et c) résulte donc du lemme de
+Nakayama (Bourbaki, \emph{Alg. comm.}, chap.~II, §~3,
+n\textsuperscript{o}~2, prop.~5). Il est clair que a) entraîne c) en vertu de
+(16.9.3); d'autre part, il résulte de (0\textsubscript{I}, 5.2.2) que si la
+condition c) est vérifiée (donc aussi b)), il y a un voisinage $U$ de $x$ dans
+$X$ tel que $(\mathscr{I}/\mathscr{I}^2)|U$ ait un rang constant égal à $n$,
+et que les $f_i|U$ engendrent $\mathscr{I}|U$; il suffit donc d'appliquer dans
+$U$ la dernière assertion de (16.9.3).
+
+\begin{remarks}[16.9.6]
+\label{IV.16.9.6}
+\begin{enumerate}
+  \item[(i)] Sous les hypothèses générales de (16.9.5), il ne suffit pas que
+  les $(\bar f_i)_y$ forment une base du
+  $(\mathcal{O}_y/\mathscr{I}_y)$-module
+  $\mathscr{I}_y/\mathscr{I}_y^2$ pour tout $y\in X$ pour que la suite
+  $(f_i)$ engendre $\mathscr{I}$. On en a un exemple en
+\oldpage[IV-4]{48}
+  prenant $X=\operatorname{Spec}(A)$, où $A$ est un anneau de Dedekind, et
+  $\mathscr{I}=\widetilde{\mathfrak{I}}$, où $\mathfrak{I}$ est un idéal
+  premier non principal de $A$; on a alors en effet
+  $\mathscr{I}_y/\mathscr{I}_y^2=0$ en tout point $y$ distinct du point
+  $x\in X$ correspondant à $\mathfrak{I}$, et
+  $\mathscr{I}_x/\mathscr{I}_x^2$ est de rang $1$ sur le corps
+  $\mathcal{O}_x/\mathscr{I}_x$; en outre $\mathscr{I}$ est évidemment un
+  Idéal régulier.
+  \item[(ii)] Dans (16.9.5), on ne peut remplacer « quasi-régulière » par
+  « régulière », même lorsque $X$ est un préschéma (cf. (16.9.12)).
+  Désignons en effet par $B$ l'anneau des germes de fonctions indéfiniment
+  différentiables au point $0$ dans $\mathbb{R}$; il a un idéal maximal
+  $\mathfrak{m}$ engendré par le germe $t$ de l'application identique de
+  $\mathbb{R}$ au point $0$, et l'intersection $\mathfrak{n}$ des
+  $\mathfrak{m}^k$ pour $k>0$ n'est pas réduite à $0$. Soit maintenant $A$
+  l'anneau quotient $B[T]/\mathfrak{n}TB[T]$, et soient $f_1,f_2$ les images
+  canoniques dans $A$ des éléments $t$ et $T$ de $B[T]$. La suite
+  $(f_1,f_2)$ est régulière dans $A$: en effet, $f_1$ n'est pas diviseur de
+  $0$ dans $A$, car la relation $tP[T]\in\mathfrak{n}TB[T]$, pour un
+  polynôme $P\in B[T]$, entraîne que les produits de $t$ par les coefficients
+  de $P$ appartiennent à l'idéal $\mathfrak{n}$, et il en résulte aussitôt que
+  ces coefficients sont eux-mêmes dans $\mathfrak{n}$, donc
+  $P[T]\in\mathfrak{n}TB[T]$. Comme $B/tB$ est isomorphe à $\mathbb{R}$,
+  $A/f_1A$ est isomorphe à l'anneau de polynômes $\mathbb{R}[T]$, donc
+  intègre, et l'image de $f_2$ dans $A/f_1A$, étant égale à $T$, n'est donc
+  pas diviseur de $0$, ce qui prouve notre assertion. Cependant $f_2$ est
+  diviseur de $0$ dans $A$, car pour tout élément $x\in\mathfrak{n}$ non nul,
+  l'image de $x$ dans $A$ est $\ne0$, mais l'image de $xT$ est nulle. On en
+  conclut que la suite $(f_2,f_1)$ n'est pas régulière dans $A$; d'autre part
+  l'idéal $\mathfrak{I}=f_1A+f_2A$ est distinct de $A$, donc les conditions
+  b), b') et c) de (16.9.5) n'entraînent pas la condition a) lorsqu'on y
+  remplace « quasi-régulière » par « régulière ».
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[16.9.7]
+\label{IV.16.9.7}
+Si $X=\operatorname{Spec}(A)$ est un schéma affine, nous dirons qu'un idéal
+$\mathfrak{I}$ de $A$ est régulier (resp. quasi-régulier) si l'Idéal
+$\mathscr{I}=\widetilde{\mathfrak{I}}$ de $\mathcal{O}_X$ est régulier
+(resp. quasi-régulier); on notera que cette notion est locale et n'implique
+nullement l'existence d'un système de générateurs de $\mathfrak{I}$ formant
+dans $A$ une suite régulière (resp. quasi-régulière) comme le montre l'exemple
+(16.9.6, (i)); il en est toutefois ainsi lorsque $A$ est local (16.9.5).
+
+La proposition (16.9.4) se traduit en termes d'immersions quasi-régulières de
+la façon suivante:
+\end{env}
+
+\begin{proposition}[16.9.8]
+\label{IV.16.9.8}
+Soit $j:Y\to X$ un morphisme de préschémas; pour que $j$ soit une immersion
+quasi-régulière, il faut et il suffit que $j$ satisfasse aux conditions
+suivantes:
+\begin{enumerate}
+  \item[(i)] $j$ est une immersion localement de présentation finie.
+  \item[(ii)] Le faisceau conormal
+  $\operatorname{Gr}^1(j)=\mathcal{N}_{Y/X}$ (16.1.2) est un
+  $\mathcal{O}_Y$-Module localement libre.
+  \item[(iii)] L'homomorphisme canonique
+  \[
+    \operatorname{S}_{\mathcal{O}_Y}^{\bullet}
+      (\operatorname{Gr}^1(j))\longrightarrow\operatorname{Gr}^{\bullet}(j)
+  \]
+  (16.1.2.2) est bijectif.
+\end{enumerate}
+\end{proposition}
+
+La question étant locale sur $Y$, on peut se borner au cas où $j$ est
+l'injection canonique d'un sous-préschéma fermé $Y$ de $X$, et alors la
+traduction de (16.9.4) en (16.9.8) résulte de l'explicitation de
+$\operatorname{Gr}^1(j)$ et $\operatorname{Gr}^{\bullet}(j)$ en termes de
+l'Idéal $\mathscr{I}$ de $\mathcal{O}_X$ définissant le sous-préschéma $Y$
+(16.1.3, (ii)).
+
+\begin{corollary}[16.9.9]
+\label{IV.16.9.9}
+Soient $Y$ un préschéma, $X$ un $Y$-préschéma, $j:Y\to X$ une $Y$-section
+de $X$, de sorte que le $n$-ème invariant normal $\mathscr{A}^{(n)}$ de $j$
+(16.1.2) est une $\mathcal{O}_Y$-Algèbre augmentée (16.1.7); posons
+$\mathscr{A}^{(\infty)}=\varprojlim\mathscr{A}^{(n)}$. Pour que $j$ soit une
+immersion quasi-régulière, il faut et il suffit que $j$ soit localement de
+présentation finie, et que tout $y\in Y$ admette un voisinage ouvert affine
+$U$ d'anneau $C$ tel que $\mathscr{A}^{(\infty)}|U$ soit isomorphe comme
+$\mathcal{O}_U$-Algèbre topologique augmentée à
+$\mathcal{O}_U[[T_1,\ldots,T_n]]$.
+\end{corollary}
+
+On peut se borner au cas où $j$ est une immersion fermée en se restreignant
+à un voisinage assez petit de $y$ (voir le raisonnement de (16.4.11)), et
+alors $\mathcal{O}_Y$ s'identifie à une Algèbre quotient
+$\mathcal{O}_X/\mathscr{I}$ et l'homomorphisme surjectif canonique
+$\mathcal{O}_X\to\mathcal{O}_Y$ admet un
+\oldpage[IV-4]{49}
+inverse à droite (16.1.7). On peut donc supposer
+$X=\operatorname{Spec}(B)$ et $Y=\operatorname{Spec}(A)$ affines, $B$ étant
+une $A$-algèbre augmentée, et l'idéal d'augmentation $\mathfrak{I}$ étant de
+type fini. Comme $\mathscr{A}^{(n)}$ s'identifie alors à
+$(B/\mathfrak{I}^{n+1})^{\sim}$, le corollaire résulte de l'équivalence de b)
+et c) dans (0, 19.5.4) puisque $B/\mathfrak{I}=A$.
+
+On notera que, dans le cas affine envisagé, le fait que $j$ soit une immersion
+quasi-régulière équivaut encore, en vertu de (0, 19.5.4), à dire que $B$ est
+une $A$-algèbre formellement lisse pour la topologie
+$\mathfrak{I}$-pré-adique.
+
+On notera aussi que la condition que $j$ soit une immersion localement de
+présentation finie est toujours vérifiée lorsque le morphisme $X\to Y$ est
+localement de type fini (1.4.3, (v)).
+
+\begin{proposition}[16.9.10]
+\label{IV.16.9.10}
+Soient $X$ un préschéma localement noethérien, $Y$ un sous-préschéma de $X$,
+$j:Y\to X$ l'injection canonique, $y$ un point de $Y$.
+\begin{enumerate}
+  \item[(i)] Pour qu'il existe un voisinage ouvert $U$ de $y$ dans $X$ tel que
+  la restriction $Y\cap U\to U$ de $j$ soit une immersion régulière, il faut
+  et il suffit que le noyau $\mathscr{I}_y$ de l'homomorphisme surjectif
+  $\mathcal{O}_{X,y}\to\mathcal{O}_{Y,y}$ soit engendré par une suite régulière
+  d'éléments de $\mathcal{O}_{X,y}$.
+  \item[(ii)] Pour que l'immersion $j$ soit régulière, il faut et il suffit
+  qu'elle soit quasi-régulière.
+\end{enumerate}
+\end{proposition}
+
+\begin{enumerate}
+  \item[(i)] On peut se borner au cas où $Y$ est un sous-préschéma fermé de
+  $X$ défini par un Idéal \emph{cohérent} $\mathscr{I}$ de $\mathcal{O}_X$.
+  La condition est évidemment nécessaire. Inversement, si $\mathscr{I}_y$
+  est engendré par une suite régulière $(s_i)_y$, où les $s_i$ sont des
+  sections de $\mathscr{I}$ au-dessus d'un voisinage ouvert $U$ de $y$ dans
+  $X$, on peut supposer que les $s_i$ engendrent $\mathscr{I}|U$
+  (0\textsubscript{I}, 5.2.2) et forment une suite régulière (0, 15.2.4),
+  d'où l'assertion.
+  \item[(ii)] Le fait qu'une immersion quasi-régulière soit régulière résulte
+  de (i) et de l'identité des suites quasi-régulières et des suites régulières
+  dans $\mathcal{O}_{X,y}$, formées d'éléments de l'idéal maximal
+  (0, 15.1.11).
+\end{enumerate}
+
+Lorsque (sans hypothèse noethérienne sur $X$) le noyau $\mathscr{I}_y$ de
+$\mathcal{O}_{X,y}\to\mathcal{O}_{Y,y}$ est engendré par une suite régulière
+d'éléments de $\mathcal{O}_{X,y}$, on dit que l'immersion $j$ est
+\emph{régulière au point $y$}.
+
+\begin{corollary}[16.9.11]
+\label{IV.16.9.11}
+Soit $X$ un préschéma localement noethérien; alors tout Idéal quasi-régulier de
+$\mathcal{O}_X$ est régulier.
+\end{corollary}
+
+\begin{remarks}[16.9.12]
+\label{IV.16.9.12}
+\begin{enumerate}
+  \item[(i)] On notera qu'une immersion régulière n'est pas en général un
+  morphisme plat, ni \emph{a fortiori} un morphisme \emph{régulier} au sens de
+  (6.8.1).
+  \item[(ii)] Soit $A$ un anneau local noethérien; il résulte aussitôt de
+  (16.9.4) et de (0, 17.1.1) que pour que $A$ soit \emph{régulier}, il faut et
+  il suffit que son idéal maximal $\mathfrak{m}$ soit \emph{quasi-régulier}
+  (ou \emph{régulier}, ce qui revient au même puisque $A$ est noethérien).
+  Pour qu'un schéma affine noethérien $X$ soit \emph{régulier}, il faut et il
+  suffit que pour tout point fermé $x\in X$, l'injection canonique
+  $\operatorname{Spec}(k(x))\to X$ soit une immersion \emph{régulière}.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[16.9.13]
+\label{IV.16.9.13}
+Soient $X$ un préschéma localement noethérien, $Y$ un sous-préschéma de $X$,
+$Y'$ un sous-préschéma de $Y$, tel que l'injection canonique $j:Y'\to Y$ soit
+régulière. Alors la suite de $\mathcal{O}_{Y'}$-Modules
+\[
+  \xymatrix{
+    0\ar[r] & j^*(\mathcal{N}_{Y/X})\ar[r]
+      & \mathcal{N}_{Y'/X}\ar[r] & \mathcal{N}_{Y'/Y}\ar[r] & 0
+  }
+  \tag{16.9.13.1}
+  \label{IV.16.9.13.1}
+\]
+\oldpage[IV-4]{50}
+est exacte; en outre, pour tout $x\in X$, il existe un voisinage ouvert $U$
+de $x$ tel que les restrictions à $U$ des homomorphismes de (16.9.13.1)
+forment une suite exacte et scindée.
+\end{proposition}
+
+Prouvons d'abord le lemme suivant:
+
+\begin{lemma}[16.9.13.2]
+\label{IV.16.9.13.2}
+Soient $A$ un anneau, $\mathfrak{I}$ un idéal de $A$,
+$A'=A/\mathfrak{I}$, $(f_i)_{1\leq i\leq r}$ une suite d'éléments de $A$ qui
+est $A'$-régulière, $\mathfrak{K}=\sum_i f_iA$,
+$\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$,
+$\mathfrak{K}'=\sum_i f_iA'$, de sorte que $C=A/\mathfrak{L}$ est isomorphe à
+$A'/\mathfrak{K}'$. Alors pour tout entier $n>0$ et tout entier $N\geq n$,
+on a la relation
+\[
+  \mathfrak{I}\cap\mathfrak{K}^n
+  =\mathfrak{I}\mathfrak{K}^n+(\mathfrak{I}\cap\mathfrak{K}^N).
+  \tag{16.9.13.3}
+  \label{IV.16.9.13.3}
+\]
+\end{lemma}
+
+Il suffit évidemment de prouver que tout élément du premier membre est
+contenu dans le second, et, par récurrence sur $n$, on se ramène au cas où
+$N=n+1$. Un élément du premier membre de (16.9.13.3), étant dans
+$\mathfrak{K}^n$, s'écrit $P(f_1,\ldots,f_r)$, où
+$P\in A[T_1,\ldots,T_r]$ est homogène et de degré $n$. Si $f_i'$ est l'image
+canonique de $f_i$ dans $A'$, l'hypothèse
+$P(f_1,\ldots,f_r)\in\mathfrak{I}$ signifie que
+$P(f_1',\ldots,f_r')=0$. Mais
+$P(f_1',\ldots,f_r')\in\mathfrak{K}'^n$, donc l'image canonique de
+$P(f_1',\ldots,f_r')$ dans
+$\mathfrak{K}'^n/\mathfrak{K}'^{n+1}$ est nulle. Or l'hypothèse que la suite
+$(f_i)$ est $A'$-régulière implique que l'homomorphisme canonique
+\[
+  \mathbf{S}_C^n(\mathfrak{K}'/\mathfrak{K}'^2)
+  \longrightarrow\mathfrak{K}'^n/\mathfrak{K}'^{n+1}
+\]
+est bijectif (0, 15.1.9); on conclut que les coefficients de $P$ appartiennent
+à $\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$. Il en résulte aussitôt que l'on a
+$P(f_1,\ldots,f_r)\in\mathfrak{I}\mathfrak{K}^n+\mathfrak{K}^{n+1}$, et comme
+$P(f_1,\ldots,f_r)\in\mathfrak{I}$, on a finalement
+\[
+  P(f_1,\ldots,f_r)
+  \in\mathfrak{I}\mathfrak{K}^n
+    +(\mathfrak{I}\cap\mathfrak{K}^{n+1}),
+\]
+ce qui prouve le lemme.
+
+En prenant les quotients des deux membres de (16.9.13.3) par
+$\mathfrak{I}\mathfrak{K}^n$, on voit que les relations (16.9.13.3) pour
+$N\geq n$ entraînent
+\[
+  (\mathfrak{I}\cap\mathfrak{K}^n)/\mathfrak{I}\mathfrak{K}^n
+  \subset\bigcap_{N\geq n}\mathfrak{K}^N
+    \cdot(A/(\mathfrak{I}\mathfrak{K}^n)).
+  \tag{16.9.13.4}
+  \label{IV.16.9.13.4}
+\]
+On en déduit le
+
+\begin{corollary}[16.9.13.5]
+\label{IV.16.9.13.5}
+Supposons vérifiées les hypothèses de (16.9.13.2) et supposons en outre que
+l'anneau $A$ soit noethérien et que $\mathfrak{K}$ soit contenu dans le
+radical de $A$. Alors on a pour tout entier $n>0$,
+\[
+  \mathfrak{I}\cap\mathfrak{K}^n=\mathfrak{I}\mathfrak{K}^n.
+  \tag{16.9.13.6}
+  \label{IV.16.9.13.6}
+\]
+\end{corollary}
+
+En effet, le second membre de (16.9.13.4) est alors nul, puisque
+$A/\mathfrak{I}\mathfrak{K}^n$ est un $A$-module de type fini (Bourbaki,
+\emph{Alg. comm.}, chap.~III, §~3, n\textsuperscript{o}~3, prop.~6).
+
+Prenons en particulier $n=2$ dans (16.9.13.6), et remarquons que l'on a
+$\mathfrak{L}^2=\mathfrak{I}^2+\mathfrak{I}\mathfrak{K}+\mathfrak{K}^2
+=\mathfrak{I}\mathfrak{L}+\mathfrak{K}^2$; puisque
+$\mathfrak{I}\mathfrak{L}\subset\mathfrak{L}^2$, on en déduit que
+\[
+  \mathfrak{I}\cap\mathfrak{L}^2
+  =\mathfrak{I}\mathfrak{L}+(\mathfrak{I}\cap\mathfrak{K}^2)
+  =\mathfrak{I}\mathfrak{L}+\mathfrak{I}\mathfrak{K}^2
+  =\mathfrak{I}\mathfrak{L},
+\]
+autrement dit
+\[
+  \mathfrak{I}\cap\mathfrak{L}^2=\mathfrak{I}\mathfrak{L},
+  \tag{16.9.13.7}
+  \label{IV.16.9.13.7}
+\]
+ce qu'on peut encore exprimer en disant que l'homomorphisme canonique
+\[
+  \mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow(\mathfrak{I}+\mathfrak{L}^2)/\mathfrak{L}^2
+\]
+est bijectif.
+
+Ces lemmes étant démontrés, prouvons la première assertion de (16.9.13): il
+suffit
+\oldpage[IV-4]{51}
+évidemment de prouver que la suite des fibres des faisceaux figurant dans
+(16.9.13.1), en un point $x\in Y'$, est exacte. Or, si l'on pose
+$A=\mathcal{O}_{X,x}$, on peut écrire
+$\mathcal{O}_{Y,x}=A'=A/\mathfrak{I}$ où $\mathfrak{I}$ est un idéal contenu
+dans l'idéal maximal de $A$, puis
+$\mathcal{O}_{Y',x}=A'/\mathfrak{K}'$, où $\mathfrak{K}'$ est engendré par une
+suite $A'$-régulière d'éléments de $A'$, eux-mêmes images des éléments d'une
+suite $A'$-régulière d'éléments de $A$ appartenant à l'idéal maximal de $A$.
+Si $\mathfrak{K}$ est l'idéal engendré par ces derniers et
+$\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$, on a
+$\mathcal{O}_{Y',x}=A/\mathfrak{L}$, et comme on est dans la situation de
+(16.9.13.5), l'homomorphisme canonique
+\[
+  \mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow(\mathfrak{I}+\mathfrak{L}^2)/\mathfrak{L}^2
+\]
+est bijectif. Mais cela montre que la suite
+\[
+  0\longrightarrow\mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow\mathfrak{L}/\mathfrak{L}^2
+  \longrightarrow(\mathfrak{L}/\mathfrak{I})/
+    (\mathfrak{L}/\mathfrak{I})^2\longrightarrow0
+\]
+est exacte (voir la démonstration de (16.2.7)), et les modules figurant dans
+cette suite sont précisément les fibres en $x$ des faisceaux de (16.9.13.1).
+La seconde assertion résulte de ce que $\mathcal{N}_{Y'/Y}$ est un
+$\mathcal{O}_{Y'}$-Module localement \emph{libre} (16.9.8) et de Bourbaki,
+\emph{Alg.}, chap.~II, 3\textsuperscript{e} éd., §~1, n\textsuperscript{o}~11,
+prop.~21.
+
+\subsection{Morphismes différentiellement lisses}
+\label{IV.16.10}
+
+\begin{definition}[16.10.1]
+\label{IV.16.10.1}
+On dit qu'un morphisme de préschémas $f:X\to S$ est
+\emph{différentiellement lisse} (ou que $X$ est \emph{différentiellement
+lisse sur $S$}) s'il vérifie les conditions suivantes:
+\begin{enumerate}
+  \item[(i)] $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module localement
+  projectif, c'est-à-dire que tout point de $X$ admet un voisinage ouvert
+  affine $U$ tel que $\Gamma(U,\Omega_{X/S}^1)$ soit un
+  $\Gamma(U,\mathcal{O}_X)$-module projectif (non nécessairement de type
+  fini).
+  \item[(ii)] L'homomorphisme canonique (16.3.1.1)
+  \[
+    \mathbf{S}_{\mathcal{O}_X}^{\bullet}(\Omega_{X/S}^1)
+    \longrightarrow\mathscr{G}r_{\bullet}(\mathscr{P}_{X/S})
+  \]
+  est bijectif.
+\end{enumerate}
+En particulier, si $\Omega_{X/S}^1$ est localement libre de rang fini, les
+$\mathscr{P}_{X/S}^n$ sont des $\mathcal{O}_X$-Modules localement libres de
+rang fini (étant des extensions de tels Modules).
+\end{definition}
+
+On dit que $f$ est \emph{différentiellement lisse en un point $x\in X$} (ou
+que $X$ est différentiellement lisse sur $S$ au point $x$) s'il existe un
+voisinage ouvert $U$ de $x$ dans $X$ tel que $f|U$ soit différentiellement
+lisse.
+
+Nous verrons plus loin (17.12.4) qu'un morphisme lisse est différentiellement
+lisse, ce qui justifie la terminologie; mais la réciproque est inexacte; en
+effet, un \emph{monomorphisme} $f:X\to S$ est différentiellement lisse,
+puisque $\Omega_{X/S}^1=0$ en vertu de (I, 5.3.8), et par suite
+l'homomorphisme surjectif (16.3.1.1) est évidemment bijectif; or un
+monomorphisme n'est même pas nécessairement plat, ni \emph{a fortiori} lisse.
+Bornons-nous ici à noter la proposition suivante:
+
+\begin{proposition}[16.10.2]
+\label{IV.16.10.2}
+Soient $A$ un anneau, $B$ une $A$-algèbre formellement lisse pour les
+topologies discrètes (0, 19.3.1). Alors $\operatorname{Spec}(B)$ est
+différentiellement lisse sur $\operatorname{Spec}(A)$.
+\end{proposition}
+
+En effet, $B\otimes_A B$ est alors (pour les topologies discrètes) une
+$B$-algèbre formellement lisse (pour l'un ou l'autre des homomorphismes
+canoniques $b\mapsto b\otimes1$, $b\mapsto1\otimes b$ de $B$
+\oldpage[IV-4]{52}
+dans $B\otimes_A B$) (0, 19.3.5, (iii)); donc $B\otimes_A B$ est aussi une
+$A$-algèbre formellement lisse pour les topologies discrètes (0, 19.3.5,
+(ii)). Posant $\mathfrak{I}=\mathfrak{I}_{B/A}$, il en résulte que
+$B\otimes_A B$ est aussi une $A$-algèbre formellement lisse pour la topologie
+$\mathfrak{I}$-préadique (0, 19.3.8); comme par hypothèse
+$B=(B\otimes_A B)/\mathfrak{I}$ est une $A$-algèbre formellement lisse pour
+les topologies discrètes, la proposition résulte de l'équivalence de a) et b)
+dans (0, 19.5.4).
+
+\begin{proposition}[16.10.3]
+\label{IV.16.10.3}
+Pour qu'un morphisme $f:X\to S$ soit différentiellement lisse, il faut et il
+suffit que pour tout $x\in X$, il existe un voisinage ouvert affine $U$ de
+$x$, d'anneau $A$, tel que $\Gamma(U,\mathscr{P}_{X/S}^{\infty})$ soit une
+$A$-algèbre topologique augmentée isomorphe à l'algèbre complétée $\widehat B$,
+où $B=\mathbf{S}_A(V)$, $V$ étant un $A$-module projectif et $B$ étant muni de
+la topologie $B^+$-préadique (où $B^+$ est l'idéal d'augmentation). Si
+$\Omega_{X/S}^1$ est localement libre de rang fini, on peut remplacer
+$\widehat B$ par l'algèbre de séries formelles $A[[T_1,\ldots,T_n]]$.
+\end{proposition}
+
+La notion de morphisme différentiellement lisse étant évidemment locale sur
+$X$, on peut se borner au cas où $S=\operatorname{Spec}(B)$,
+$X=\operatorname{Spec}(C)$. Considérons $C\otimes_B C$ comme une $C$-algèbre
+(pour le premier facteur); posons $\mathfrak{I}=\mathfrak{I}_{C/B}$ et
+munissons $C\otimes_B C$ de la topologie $\mathfrak{I}$-préadique; on peut
+appliquer à la $C$-algèbre topologique $C\otimes_B C$ et à l'idéal
+$\mathfrak{I}$ de $C\otimes_B C$ l'équivalence de b) et c) dans (0, 19.5.4),
+puisque $(C\otimes_B C)/\mathfrak{I}=C$ est évidemment une $C$-algèbre
+formellement lisse pour les topologies discrètes. La topologie sur
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty})$ est évidemment la topologie de limite
+projective de cet anneau (16.1.11).
+
+On notera que l'entier $n$ de l'énoncé de (16.10.3) est le \emph{rang} de
+$\Omega_{X/S}^1$ au point $x$. Nous verrons plus loin (17.13.5) que lorsque
+$f$ est différentiellement lisse et localement de type fini, $n$ est aussi
+égal à la dimension de la fibre $f^{-1}(f(x))$ au point $x$.
+
+\begin{proposition}[16.10.4]
+\label{IV.16.10.4}
+Soient $f:X\to S$, $g:S'\to S$ deux morphismes, et posons
+$X'=X\times_S S'$, $f'=f_{(S')}:X'\to S'$.
+\begin{enumerate}
+  \item[(i)] Si $f$ est différentiellement lisse, il en est de même de $f'$.
+  \item[(ii)] Inversement, si $g$ est fidèlement plat et quasi-compact, et si
+  $f'$ est différentiellement lisse et $\Omega_{X'/S'}^1$ un
+  $\mathcal{O}_{X'}$-Module de type fini, $f$ est différentiellement lisse et
+  $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module de type fini.
+\end{enumerate}
+\end{proposition}
+
+En effet, si $f$ est différentiellement lisse, les
+$\mathscr{G}r_n(\mathscr{P}_{X/S})$ sont des $\mathcal{O}_X$-Modules
+\emph{plats}; par suite (16.4.6), l'homomorphisme
+\[
+  \mathscr{G}r_n(\mathscr{P}_{X/S})\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\mathscr{G}r_n(\mathscr{P}_{X'/S'})
+\]
+est bijectif pour tout $n$, et en vertu de la commutativité du diagramme
+(16.2.1.3), il résulte de la définition (16.10.1) que $f'$ est
+différentiellement lisse. D'autre part, si $g$ est fidèlement plat et
+quasi-compact, il résulte encore de (16.4.6) que
+\[
+  \mathscr{G}r_n(\mathscr{P}_{X/S})\otimes_{\mathcal{O}_X}\mathcal{O}_{X'}
+  \longrightarrow\mathscr{G}r_n(\mathscr{P}_{X'/S'})
+\]
+est bijectif pour tout $n$. Supposons alors $f'$ différentiellement lisse et
+$\Omega_{X'/S'}^1$ de rang fini. Comme la projection canonique $X'\to X$ est
+un morphisme fidèlement plat et quasi-compact, il résulte d'abord de (2.5.2)
+que $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module localement libre de rang
+fini, puis de (2.2.7) que l'homomorphisme canonique (16.3.1.1) est bijectif,
+donc $f$ est différentiellement lisse.
+
+\begin{proposition}[16.10.5]
+\label{IV.16.10.5}
+Pour qu'un morphisme localement de type fini $f:X\to S$ soit
+différentiellement lisse, il faut et il suffit que l'immersion diagonale
+$\Delta_f:X\to X\times_S X$ soit quasi-régulière.
+\end{proposition}
+
+\oldpage[IV-4]{53}
+
+La question étant locale, on peut se borner au cas où $S$ et $X$ sont
+affines, et par suite le sous-préschéma diagonal de $X\times_S X$ est fermé.
+L'hypothèse que $f$ est localement de type fini entraîne que $\Delta_f$ est
+localement de présentation finie (I, 4.3.1), donc le sous-préschéma diagonal
+de $X\times_S X$ est défini par un Idéal de type fini $\mathscr{I}$, et
+$\Omega_{X/S}^1=\mathscr{I}/\mathscr{I}^2$ est un $\mathcal{O}_X$-Module de
+type fini. La proposition résulte alors aussitôt de la comparaison des
+conditions dans (16.10.1) et (16.9.4).
+
+\begin{remark}[16.10.6]
+\label{IV.16.10.6}
+Soit $f:X\to S$ un morphisme tel que le $\mathcal{O}_X$-Module
+$\Omega_{X/S}^1$ soit localement libre de rang fini. Il résulte alors de
+(0, 20.4.7) que tout $x\in X$ possède un voisinage ouvert $U$ tel qu'il existe
+une famille finie $(z_\lambda)_{\lambda\in L}$ de sections de
+$\mathcal{O}_X$ au-dessus de $U$ pour lesquelles $(dz_\lambda)_{\lambda\in L}$
+forme une \emph{base} du $\Gamma(U,\mathcal{O}_X)$-module
+$\Gamma(U,\Omega_{X/S}^1)$.
+\end{remark}
+
+\subsection{Opérateurs différentiels sur un $S$-préschéma différentiellement
+lisse}
+\label{IV.16.11}
+
+\begin{env}[16.11.1]
+\label{IV.16.11.1}
+Soient $f:X\to S$ un morphisme, $U$ un ouvert de $X$,
+$(z_\lambda)_{\lambda\in L}$ une famille de sections de $\mathcal{O}_X$
+au-dessus de $U$ telle que les $dz_\lambda$ forment un système de générateurs
+de $\Omega_{X/S}^1|U=\Omega_{U/S}^1$. Soit $m$ un entier ou le symbole
+$\infty$, et posons, pour tout $\lambda$
+\[
+  \zeta_\lambda=\delta z_\lambda=d^m z_\lambda-z_\lambda
+  \in\Gamma(U,\mathscr{P}_{X/S}^m).
+  \tag{16.11.1.1}
+  \label{IV.16.11.1.1}
+\]
+
+Nous utiliserons d'autre part les notations usuelles de l'analyse; pour tout
+$\mathbf{p}=(p_\lambda)\in\mathbb{N}^{(L)}$ (avec $p_\lambda=0$ sauf pour un
+nombre fini d'indices), nous poserons
+\[
+  |\mathbf{p}|=\sum_\lambda p_\lambda,
+  \qquad \mathbf{p}!=\prod_\lambda(p_\lambda!)
+  \tag{16.11.1.2}
+  \label{IV.16.11.1.2}
+\]
+\[
+  \binom{\mathbf{p}}{\mathbf{q}}
+  =\mathbf{p}!/(\mathbf{q}!(\mathbf{p}-\mathbf{q})!)
+  \quad\text{pour $\mathbf{p},\mathbf{q}$ dans $\mathbb{N}^{(L)}$,
+  $\mathbf{q}\leq\mathbf{p}$}
+  \tag{16.11.1.3}
+  \label{IV.16.11.1.3}
+\]
+et on convient que $\binom{\mathbf{p}}{\mathbf{q}}=0$ si
+$\mathbf{q}\nleq\mathbf{p}$,
+\[
+  \mathbf{z}^{\mathbf{p}}=\prod_\lambda(z_\lambda)^{p_\lambda},
+  \qquad
+  \boldsymbol{\zeta}^{\mathbf{p}}=\prod_\lambda(\zeta_\lambda)^{p_\lambda}.
+  \tag{16.11.1.4}
+  \label{IV.16.11.1.4}
+\]
+
+On aura donc, avec ces notations
+\[
+  d^m(\mathbf{z}^{\mathbf{p}})
+  =(d^m(\mathbf{z}))^{\mathbf{p}}
+  =(\boldsymbol{\zeta}+\mathbf{z})^{\mathbf{p}}
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}\boldsymbol{\zeta}^{\mathbf{q}}
+  \tag{16.11.1.5}
+  \label{IV.16.11.1.5}
+\]
+\[
+  \boldsymbol{\zeta}^{\mathbf{p}}
+  =(d^m\mathbf{z}-\mathbf{z})^{\mathbf{p}}
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    (-1)^{|\mathbf{p}-\mathbf{q}|}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}d^m(\mathbf{z}^{\mathbf{q}}).
+  \tag{16.11.1.6}
+  \label{IV.16.11.1.6}
+\]
+
+Comme les $dz_\lambda$ engendrent $\Omega_{X/S}^1$ et sont les images des
+$\delta z_\lambda$, et que l'homomorphisme canonique (16.3.1.1) est
+surjectif, on en conclut que pour $m$ fini, les $\delta z_\lambda$ engendrent
+la $\mathcal{O}_U$-Algèbre $\mathscr{P}_{U/S}^m$ (Bourbaki,
+\emph{Alg. comm.}, chap.~III, §~2, n\textsuperscript{o}~8, cor.~2 du th.~1).
+Donc les $\boldsymbol{\zeta}^{\mathbf{p}}$ (pour $|\mathbf{p}|\leq m$)
+engendrent le $\mathcal{O}_U$-Module $\mathscr{P}_{U/S}^m$. Un opérateur
+différentiel $D\in\operatorname{Diff}_{U/S}^m$ est par suite entièrement
+déterminé par les valeurs des
+$\langle\boldsymbol{\zeta}^{\mathbf{p}},D\rangle$ pour
+$|\mathbf{p}|\leq m$, ou, ce qui revient au même par (16.11.1.5) et
+(16.11.1.6), par les valeurs
+\oldpage[IV-4]{54}
+des $\langle d^m(\mathbf{z}^{\mathbf{p}}),D\rangle=D(\mathbf{z}^{\mathbf{p}})$
+pour $|\mathbf{p}|\leq m$; de façon précise, il résulte de (16.11.1.5) que
+l'on a
+\[
+  D(\mathbf{z}^{\mathbf{p}})
+  =\langle d^m(\mathbf{z}^{\mathbf{p}}),D\rangle
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \langle\boldsymbol{\zeta}^{\mathbf{q}},D\rangle
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}.
+  \tag{16.11.1.7}
+  \label{IV.16.11.1.7}
+\]
+\end{env}
+
+\begin{theorem}[16.11.2]
+\label{IV.16.11.2}
+Soient $f:X\to S$ un morphisme, $U$ un ouvert de $X$,
+$(z_\lambda)_{\lambda\in L}$ une famille de sections de $\mathcal{O}_X$
+au-dessus de $U$ telle que la famille $(dz_\lambda)_{\lambda\in L}$ engendre
+$\Omega_{X/S}^1|U=\Omega_{U/S}^1$. Les conditions suivantes sont
+équivalentes:
+\begin{enumerate}
+  \item[a)] $f|U$ est différentiellement lisse et $(dz_\lambda)$ est une base
+  du $\mathcal{O}_U$-Module $\Omega_{U/S}^1$.
+  \item[b)] Il existe une famille
+  $(D_{\mathbf{p}})_{\mathbf{p}\in\mathbb{N}^{(L)}}$ d'opérateurs
+  différentiels de $\mathcal{O}_U$ dans lui-même vérifiant les conditions
+  \[
+    D_{\mathbf{p}}(\mathbf{z}^{\mathbf{q}})
+    =\binom{\mathbf{q}}{\mathbf{p}}
+      \mathbf{z}^{\mathbf{q}-\mathbf{p}}
+    \quad(\mathbf{p},\mathbf{q}\text{ dans }\mathbb{N}^{(L)}).
+    \tag{16.11.2.1}
+    \label{IV.16.11.2.1}
+  \]
+\end{enumerate}
+De plus, lorsque ces conditions sont vérifiées, la famille
+$(D_{\mathbf{p}})$ est déterminée de façon unique par les conditions
+(16.11.2.1) et vérifie les relations
+\[
+  D_{\mathbf{p}}\circ D_{\mathbf{q}}
+  =D_{\mathbf{q}}\circ D_{\mathbf{p}}
+  =\frac{(\mathbf{p}+\mathbf{q})!}{\mathbf{p}!\mathbf{q}!}
+    D_{\mathbf{p}+\mathbf{q}}
+  \quad(\mathbf{p},\mathbf{q}\text{ dans }\mathbb{N}^{(L)}).
+  \tag{16.11.2.2}
+  \label{IV.16.11.2.2}
+\]
+Enfin, si $L$ est fini, pour tout entier $m$, les $D_{\mathbf{p}}$ tels que
+$|\mathbf{p}|\leq m$ forment une base du $\mathcal{O}_U$-Module
+$\operatorname{Diff}_{U/S}^m$, autrement dit, tout opérateur différentiel
+d'ordre $\leq m$ sur $U$ s'écrit d'une seule façon sous la forme
+\[
+  D=\sum_{|\mathbf{p}|\leq m}a_{\mathbf{p}}D_{\mathbf{p}}
+\]
+où les $a_{\mathbf{p}}$ sont des sections de $\mathcal{O}_X$ au-dessus de
+$U$.
+\end{theorem}
+
+Notons d'abord qu'en vertu de (16.11.1.6) et (16.11.1.5), on vérifie aussitôt
+que les conditions (16.11.2.1) sont équivalentes à
+\[
+  \langle\boldsymbol{\zeta}^{\mathbf{p}},D_{\mathbf{q}}\rangle
+  =\delta_{\mathbf{p}\mathbf{q}}
+  \quad\text{(indice de Kronecker)}.
+  \tag{16.11.2.3}
+  \label{IV.16.11.2.3}
+\]
+L'existence de la famille $(D_{\mathbf{p}})$ vérifiant ces relations entraîne
+donc d'abord (en prenant $|\mathbf{p}|=1$) que les $dz_\lambda$ sont
+linéairement indépendants, donc forment une \emph{base} du
+$\mathcal{O}_U$-Module $\Omega_{U/S}^1$. Puis, pour tout entier $m\geq1$, on
+déduit de même de (16.11.2.3) que les $\boldsymbol{\zeta}^{\mathbf{p}}$ tels
+que $|\mathbf{p}|\leq m$ sont linéairement indépendants; par suite
+l'homomorphisme canonique (16.3.1.1) est injectif, donc bijectif, et cela
+prouve que b) entraîne a). La réciproque découle aussitôt de la définition
+(16.10.1), le fait que les $\boldsymbol{\zeta}^{\mathbf{p}}$ forment une base
+de $\mathscr{P}_{U/S}^m$ pour $|\mathbf{p}|\leq m$ entraînant l'existence et
+l'unicité d'une famille d'homomorphismes
+$u_{\mathbf{q},m}:\mathscr{P}_{U/S}^m\to\mathcal{O}_U$
+($|\mathbf{q}|\leq m$) tels que
+$\langle\boldsymbol{\zeta}^{\mathbf{p}},u_{\mathbf{q},m}\rangle
+=\delta_{\mathbf{p}\mathbf{q}}$ pour $|\mathbf{p}|\leq m$,
+$|\mathbf{q}|\leq m$. Pour une valeur de $\mathbf{q}$ donnée, les opérateurs
+différentiels correspondant aux $u_{\mathbf{q},m}$ pour
+$m\geq|\mathbf{q}|$ sont identifiés à un même opérateur $D_{\mathbf{q}}$.
+Cela prouve donc que a) entraîne b), et en outre que la famille
+$(D_{\mathbf{p}})$ est déterminée de façon unique et que, si $L$ est fini,
+pour $|\mathbf{p}|\leq m$, les $D_{\mathbf{p}}$ forment une base du dual
+$\operatorname{Diff}_{U/S}^m$ de $\mathscr{P}_{U/S}^m$. Enfin, les relations
+(16.11.2.2) découlent aussitôt de l'expression des valeurs des trois
+opérateurs considérés pour les $\mathbf{z}^{\mathbf{r}}$, et du fait que les
+$\boldsymbol{\zeta}^{\mathbf{r}}$ pour $|\mathbf{r}|\leq m$ engendrent
+$\mathscr{P}_{U/S}^m$.
+
+\oldpage[IV-4]{55}
+
+\begin{remarks}[16.11.3]
+\label{IV.16.11.3}
+\begin{enumerate}
+  \item[(i)] Le fait que les $D_{\mathbf{p}}$ sont deux à deux permutables en
+  vertu de (16.11.2.2) n'implique naturellement pas que la
+  $\mathcal{O}_U$-Algèbre $\operatorname{Diff}_{U/S}$ soit commutative, les
+  $D_{\mathbf{p}}$ ne permutant aux produits par les sections de
+  $\mathcal{O}_U$ que si $n=0$.
+  \item[(ii)] Les indices $\mathbf{p}$ tels que $|\mathbf{p}|=1$ sont les
+  $\boldsymbol{\varepsilon}_\lambda
+  =(\varepsilon_{\lambda\mu})_{\mu\in L}$ avec
+  $\varepsilon_{\lambda\mu}=0$ si $\mu\neq\lambda$ et
+  $\varepsilon_{\lambda\lambda}=1$; lorsque $L$ est fini, les opérateurs
+  $D_{\boldsymbol{\varepsilon}_\lambda}$ ne sont autres que les
+  $S$-dérivations $D_i$ introduites dans (16.5.7). On notera qu'en général
+  (et contrairement à ce qui se passe en Analyse classique), il n'est pas
+  vrai qu'un opérateur différentiel d'ordre quelconque puisse s'écrire comme
+  combinaison linéaire de puissances des $D_i$ (cf. (16.12)).
+  \item[(iii)] Pour tout entier $r\geq1$, on peut définir la notion de
+  morphisme \emph{différentiellement lisse jusqu'à l'ordre $r$} en remplaçant
+  dans (16.10.1) la condition (ii) par la condition que les homomorphismes
+  \[
+    \mathbf{S}_{\mathcal{O}_X}^m(\Omega_{X/S}^1)
+    \longrightarrow\mathscr{G}r_m(\mathscr{P}_{X/S})
+  \]
+  soient bijectifs \emph{pour tout $m\leq r$}. Le raisonnement de (16.11.2)
+  prouve alors que si, dans la condition a), on remplace «différentiellement
+  lisse» par «différentiellement lisse jusqu'à l'ordre $r$», cette condition
+  est équivalente à la condition b) dans laquelle on se borne aux
+  $\mathbf{p}\in\mathbb{N}^{(L)}$, $\mathbf{q}\in\mathbb{N}^{(L)}$ tels que
+  $|\mathbf{p}|\leq r$, $|\mathbf{q}|\leq r$.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Cas de la caractéristique nulle: critère jacobien pour les
+morphismes différentiellement lisses}
+\label{IV.16.12}
+
+\begin{env}[16.12.1]
+\label{IV.16.12.1}
+On dit qu'un préschéma $X$ est \emph{de caractéristique $p$} ($p$ égal à $0$
+ou à un nombre premier) si, pour tout ouvert affine $U$ de $X$, l'anneau
+$\Gamma(U,\mathcal{O}_X)$ est de caractéristique $p$ (0, 21.1.1). Il résulte
+de (0, 21.1.3) que pour que $X$ soit de caractéristique $0$, il faut et il
+suffit que pour tout point \emph{fermé} $x$ de $X$, le corps résiduel $k(x)$
+soit de caractéristique $0$, ou encore que $X$ puisse être muni d'une
+structure de $\mathbb{Q}$-préschéma (nécessairement unique).
+\end{env}
+
+\begin{theorem}[16.12.2]
+\label{IV.16.12.2}
+Soient $X$ un préschéma de caractéristique $0$, $f:X\to S$ un morphisme. Si
+$\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module localement libre (non
+nécessairement de type fini), $f$ est différentiellement lisse.
+\end{theorem}
+
+La question étant locale sur $X$, on peut supposer qu'il existe une famille
+$(z_\lambda)$ de sections de $\mathcal{O}_X$ au-dessus de $X$ telle que
+$(dz_\lambda)$ soit une base du $\mathcal{O}_X$-Module $\Omega_{X/S}^1$.
+Appliquant le critère (16.11.2), il suffit de remarquer que les opérateurs
+\[
+  D_{\mathbf{p}}=(\mathbf{p}!)^{-1}
+  \prod_\lambda D_\lambda^{p_\lambda}
+\]
+(où les $D_\lambda$ sont les formes coordonnées correspondant à la base
+$(dz_\lambda)$) vérifient les relations (16.11.2.1), ce qui est une
+conséquence du fait que les $D_\lambda$ sont des dérivations.
+
+\begin{env}[16.12.3]
+\label{IV.16.12.3}
+Le théorème précédent n'est plus exact lorsqu'on abandonne l'hypothèse que
+$X$ est de caractéristique $0$. Par exemple, si
+$S=\operatorname{Spec}(k)$, où $k$ est un corps de caractéristique $p>0$,
+$X=\operatorname{Spec}(K)$ où $K=k(\alpha)$ avec
+$\alpha\notin k$, $\alpha^p\in k$, on vérifie aussitôt
+\oldpage[IV-4]{56}
+que $\Omega_{X/S}^1$ est de rang $1$, et que le morphisme $X\to S$ est
+différentiellement lisse jusqu'à l'ordre $p-1$ (16.11.3, (iii)), mais non
+jusqu'à l'ordre $p$. Cependant, la démonstration de (16.12.2) prouve que si
+$\Omega_{X/S}^1$ est localement libre, et si $n!1_{\mathcal{O}_X}$ est
+inversible dans $\Gamma(X,\mathcal{O}_X)$, alors $X$ est différentiellement
+lisse sur $S$ jusqu'à l'ordre $n$.
+\end{env}

@@ -1,0 +1,1726 @@
+\section{Morphismes universellement ouverts}
+\label{section:IV.14-fr}
+
+Les \S\S~14 et 15 sont consacrés à l'étude de la notion de morphisme
+\emph{universellement ouvert} (2.4.2). On a déjà vu (2.4.6) qu'un morphisme
+\emph{plat} et localement de présentation finie est universellement ouvert, la
+réciproque étant inexacte. Au \S~14, on examine d'abord les propriétés des
+dimensions des fibres d'un morphisme universellement ouvert $f:X\to Y$~;
+lorsque $X$ et $Y$ sont localement noethériens, $f$ se comporte à cet égard
+(14.2.1) comme un morphisme plat (cf. 6.1.2), et est en particulier
+\emph{équidimensionnel} lorsqu'il est localement de type fini et dominant et que
+$X$ est irréductible (14.2.2). Inversement, un morphisme équidimensionnel
+localement de type fini $f:X\to Y$ est universellement ouvert lorsqu'on suppose
+en outre que $Y$ est \emph{géométriquement unibranche}, et en particulier lorsque
+$Y$ est \emph{normal} (critère de Chevalley, 14.4.4). Nous montrons aussi que les
+morphismes universellement ouverts localement de type fini $f:X\to Y$ (lorsque
+$X$ et $Y$ sont
+\oldpage[IV-3]{200}
+localement noethériens et $Y$ irréductible) admettent «~suffisamment~» de
+\emph{quasi-sections}, i.e. au voisinage d'un point fermé $x$ d'une fibre
+$f^{-1}(y)$, il y a un sous-préschéma fermé $X'$ de $X$ contenant $x$ et tel que
+la restriction $X'\to Y$ de $f$ soit un morphisme \emph{quasi-fini} (donc à fibres
+\emph{discrètes}) et dominant (14.5.3).
+
+Au \S~15 on étudie diverses propriétés des fibres des morphismes universellement
+ouverts $f:X\to Y$, localement de type fini, notamment lorsque $X$ et $Y$ sont
+localement noethériens. On obtient ainsi en particulier un critère pour qu'un
+point $x\in X$ n'appartienne qu'à \emph{une seule} composante irréductible de $X$,
+en termes de propriétés de \emph{la fibre} $f^{-1}(f(x))$ de $x$~: il suffit que
+$Y$ soit géométriquement unibranche (par exemple normal) au point $f(x)$ et que
+$f^{-1}(f(x))$ soit géométriquement ponctuellement intègre au point $x$ (15.3.3)~;
+si de plus $Y$ est localement intègre au point $f(x)$, $f$ est \emph{plat} au point
+$x$ et $X$ localement intègre au point $x$. On étudie aussi la variation du
+\emph{nombre géométrique de composantes connexes} d'une fibre $f^{-1}(y)$~; par
+exemple, si $f$ est universellement ouvert et \emph{propre}, et les fibres de $f$
+géométriquement réduites, ce nombre est \emph{localement constant} (15.5.7).
+Enfin, lorsque $f$ admet une \emph{section} $g$ (ce qui sera le cas lorsque $X$ est
+un $Y$-\emph{schéma en groupes}) et que pour tout $y\in Y$, on désigne par $X_y^0$
+la composante connexe de la fibre $X_y=f^{-1}(y)$ au point $g(y)$ («~composante
+neutre~» dans le cas des groupes), on étudie la réunion $X^0$ des $X_y^0$ pour
+$y\in Y$, et on montre (15.6.4) que si $f$ est universellement ouvert et les fibres
+$X_y$ géométriquement réduites, alors $X^0$ est un ensemble \emph{ouvert} dans $X$.
+
+\subsection{Morphismes ouverts}
+\label{subsection:IV.14.1-fr}
+
+\begin{env}[14.1.1]
+\label{IV.14.1.1-fr}
+Rappelons (1.10.2) qu'une application continue $\psi:X\to Y$ est dite
+\emph{ouverte en un point} $x\in X$ si l'image par $\psi$ de \emph{tout} voisinage
+de $x$ dans $X$ est un voisinage de $\psi(x)$ dans $Y$.
+
+On notera que cela \emph{n'implique pas} qu'il existe un système fondamental de
+voisinages de $x$ dont les images soient \emph{ouvertes} dans $Y$.
+\end{env}
+
+\begin{proposition}[14.1.2]
+\label{IV.14.1.2-fr}
+Soient $X$, $Y$ deux espaces topologiques, $\psi:X\to Y$ une application
+continue, $x$ un point de $X$, $y=\psi(x)$.
+\begin{enumerate}[label=(\roman*)]
+  \item Si $\psi$ est ouverte en $x$, alors pour toute partie $Y'$ de $Y$ contenant
+  $\psi(x)$ la restriction $\psi^{-1}(Y')\to Y'$ de $\psi$ à $Y'$ est ouverte au
+  point $x$.
+  \item Supposons que $Y$ soit réunion d'une famille localement finie de parties
+  fermées $(Y_i)$ et que pour tout $i$ tel que $\psi(x)\in Y_i$, la restriction
+  $\psi^{-1}(Y_i)\to Y_i$ de $\psi$ soit ouverte au point $x$~; alors $\psi$ est
+  ouverte au point $x$.
+  \item Soient $\gamma:X'\to X$ une application continue, $x'$ un point de $X'$~;
+  si l'application composée $\psi\circ\gamma:X'\to Y$ est ouverte au point $x'$,
+  $\psi$ est ouverte au point $\gamma(x')$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Si $U$ est un voisinage de $x$, on a
+$\psi(U\cap\psi^{-1}(Y'))=\psi(U)\cap Y'$~; d'où aussitôt (i). Pour prouver (ii),
+notons qu'il y a un voisinage $W$ de $\psi(x)$ dans $Y$ ne rencontrant que les
+parties fermées $Y_i$ en nombre \emph{fini} qui \emph{contiennent} $\psi(x)$~; donc
+$W$ est réunion des $W\cap Y_i$ pour ces indices. Or, si $U$ est un voisinage de
+$x$ tel que $\psi(U)\cap Y_i$ soit un voisinage de $\psi(x)$ dans $Y_i$, il existe
+un voisinage $V\subset W$ de $\psi(x)$ dans $Y$ tel que pour tous les $i$ tels que
+$\psi(x)\in Y_i$,
+\oldpage[IV-3]{201}
+on ait $V\cap Y_i\subset\psi(U)\cap Y_i$ et comme la réunion des $V\cap Y_i$ pour
+ces indices est $V$, on a $V\subset\psi(U)$, donc $\psi(U)$ est un voisinage de
+$\psi(x)$ dans $Y$. L'assertion (iii) est triviale.
+\end{proof}
+
+\begin{remarks}[14.1.3]
+\label{IV.14.1.3-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item L'ensemble $Z$ des points $x\in X$ où un morphisme est ouvert
+  \emph{n'est pas nécessairement ouvert}. Par exemple, soient $K$ un corps, $A$
+  l'anneau de polynômes $K[S,T]$, $V$ le plan affine $\operatorname{Spec}(A)$,
+  $X$ le sous-préschéma fermé de $V$ «~réunion de la droite $X_1$ définie par
+  $T=0$ et de la droite $X_2$ définie par $S=0$~», c'est-à-dire
+  $\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a=AST$~; prenons
+  $Y=X_2=\operatorname{Spec}(A/AS)$ et pour $f$ la projection correspondant à
+  l'injection canonique $K[T]\to A/\mathfrak a$~; alors on a $Z=X_2$, qui n'est
+  pas ouvert dans $X$.
+
+  \item Soient $X$, $Y$ deux préschémas noethériens irréductibles de points
+  génériques $\xi$, $\eta$ respectivement, $f:X\to Y$ un morphisme
+  \emph{dominant localement de type fini}~; alors $f$ \emph{est ouvert au point
+  $\xi$}. En effet, on peut évidemment se borner au cas où $X$ et $Y$ sont réduits
+  (donc intègres) (1.5.4) et affines~; en vertu du théorème de platitude générique
+  (6.9.1), il existe un ouvert non vide $V$ de $Y$ tel que la restriction
+  $f^{-1}(V)\to V$ de $f$ soit un morphisme \emph{plat}, et on conclut de (2.4.6)
+  que cette restriction est un morphisme ouvert. Toutefois, comme il y a des
+  morphismes dominants de type fini $f:X\to Y$ (où $X$ et $Y$ sont
+  \emph{irréductibles}) qui ne sont pas ouverts (voir par exemple (\textbf{II},
+  8.1)), l'ensemble des points où un tel morphisme est ouvert n'est pas
+  nécessairement \emph{fermé} dans $X$.
+
+  \item Nous ignorons si, lorsque $X$ et $Y$ sont localement noethériens et
+  $f:X\to Y$ un morphisme localement de type fini, l'ensemble des points de $X$
+  où $f$ est ouvert est ou non \emph{localement constructible}.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[14.1.4]
+\label{IV.14.1.4-fr}
+Soient $X$, $Y$ deux espaces topologiques, $\psi:X\to Y$ une application
+continue. Pour tout $y\in Y$, l'ensemble des $x\in\psi^{-1}(y)$ où $\psi$ est
+ouvert est une partie fermée de $\psi^{-1}(y)$.
+\end{proposition}
+
+\begin{proof}
+En effet, supposons que $\psi$ ne soit pas ouvert en un point
+$x\in\psi^{-1}(y)$~; il existe alors un voisinage ouvert $V$ de $x$ dans $X$ tel
+que $\psi(V)$ ne soit pas un voisinage de $y$~; il en résulte que pour tout
+$x'\in V\cap\psi^{-1}(y)$, $\psi$ n'est pas ouvert au point $x'$.
+\end{proof}
+
+\begin{remark}[14.1.5]
+\label{IV.14.1.5-fr}
+Même si $X$ et $Y$ sont localement noethériens et $f$ un morphisme \emph{fini},
+il peut se faire que $f$ soit ouvert en tous les points d'une fibre $f^{-1}(y)$,
+sans qu'il existe un \emph{voisinage} de $f^{-1}(y)$ en tous les points duquel $f$
+soit ouvert. Soient par exemple $K$ un corps, $A$ l'anneau de polynômes
+$K[T_1,T_2,T_3]$, $V=\operatorname{Spec}(A)$ l'espace affine à 3 dimensions sur
+$K$, $X=\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a=\mathfrak b\mathfrak c$,
+avec $\mathfrak b=(T_3)$ et $\mathfrak c=(T_1)+(T_2-T_3)$ dans $A$, de sorte que
+$X$ est réunion du plan $X_1=\operatorname{Spec}(A/\mathfrak b)$ («~plan
+d'équation $T_3=0$~») et de la droite $X_2=\operatorname{Spec}(A/\mathfrak c)$
+(«~droite d'équations $T_1=0$, $T_2=T_3$~») qui sont ses composantes
+irréductibles. Prenons $Y=X_1$ et soit $f:X\to Y$ la projection correspondant à
+l'injection canonique $K[T_1,T_2]\to A/\mathfrak a$~; si $y$ est le point commun
+à $X_1$ et $X_2$, $f^{-1}(y)$ est réduit à $y$ et $f$ est ouvert en ce point mais
+n'est ouvert en aucun point de $X_2$ dans un voisinage de $y$ et distinct de $y$.
+\end{remark}
+
+\begin{env}[14.1.6]
+\label{IV.14.1.6-fr}
+Dans ce qui suit, le rôle essentiel sera joué par le critère (1.10.3)
+caractérisant les morphismes \emph{localement de présentation finie} $f:X\to Y$
+qui sont ouverts en un point $x$ par le «~relèvement des générisations~»~: pour
+toute générisation $y'$ de $y=f(x)$, il existe $x'\in X$, générisation de $x$, tel
+que $y'=f(x')$.
+\end{env}
+
+\oldpage[IV-3]{202}
+\subsection{Morphismes ouverts et formule des dimensions}
+\label{subsection:IV.14.2-fr}
+
+\begin{theorem}[14.2.1]
+\label{IV.14.2.1-fr}
+Soient $X$, $Y$ deux préschémas localement noethériens, $f:X\to Y$ un morphisme,
+$x$ un point de $X$, $y=f(x)$. On suppose que $f$ est ouvert aux points génériques
+des composantes irréductibles de $f^{-1}(y)$ contenant $x$. Alors on a la relation
+\begin{equation}
+\tag{14.2.1.1}
+\label{IV.14.2.1.1-fr}
+  \dim(\mathcal O_x)=\dim(\mathcal O_y)+
+  \dim(\mathcal O_x\otimes_{\mathcal O_y}k(y)).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Soit $y'$ une générisation quelconque de $y$ distincte de $y$, et considérons le
+sous-préschéma fermé réduit $Y'$ de $Y$ ayant pour espace sous-jacent
+$\overline{\{y'\}}$~; alors aucune composante irréductible $X'$ de $f^{-1}(Y')$
+contenant $x$ ne peut être contenue dans $f^{-1}(y)$~: en effet, si $x'$ est le
+point générique de $X'$, on aurait $f(x')=y\ne y'$, et comme $x'$ est sa seule
+générisation dans $f^{-1}(Y')$, cela contredirait l'hypothèse que $f$ est ouvert
+au point $x'$, en vertu du fait que $a)$ implique $c)$ dans (1.10.3). On peut donc
+appliquer (6.1.2) à l'homomorphisme local d'anneaux noethériens
+$\mathcal O_y\to\mathcal O_x$, d'où la conclusion.
+\end{proof}
+
+\begin{corollary}[14.2.2]
+\label{IV.14.2.2-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $x$ un point de $X$, $y=f(x)$. Supposons $f$ ouvert aux points
+génériques des composantes irréductibles de $f^{-1}(y)$ contenant $x$. Alors $f$
+est équidimensionnel au point $x$ dans chacun des deux cas suivants~:
+\begin{enumerate}[label=(\roman*)]
+  \item $X$ est irréductible et $f$ est dominant.
+  \item Les anneaux $\mathcal O_x$ et $\mathcal O_y$ sont équidimensionnels.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Pour (i), cela résulte de (14.2.1) et de (13.2.3). Pour (ii), cela résulte de
+(14.2.1) et de (13.3.6).
+\end{proof}
+
+\begin{proposition}[14.2.3]
+\label{IV.14.2.3-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $\eta$ son point
+générique, $f:X\to Y$ un morphisme localement de type fini, $y$ un point de
+$f(X)$, $Z$ une composante irréductible de $f^{-1}(y)$ telle que $f$ soit ouvert
+au point générique de $Z$. Alors $Z$ est contenue dans une composante irréductible
+$X'$ de $X$ dominant $Y$ et telle que
+\[
+  \dim(Z)=\dim(X'\cap f^{-1}(y))=\dim(X'\cap f^{-1}(\eta)).
+\]
+\end{proposition}
+
+\begin{proof}
+Cela résulte en effet de (14.2.1) appliqué au point générique de $Z$, et de
+(13.2.7).
+\end{proof}
+
+\begin{corollary}[14.2.4]
+\label{IV.14.2.4-fr}
+Avec les notations de (14.2.3), supposons que $f$ soit ouvert en tous les points
+de $f^{-1}(y)$. Pour tout $z\in Y$, soient $E(z)$ l'ensemble des dimensions des
+composantes irréductibles de $f^{-1}(z)$ et
+$d(z)=\sup E(z)=\dim(f^{-1}(z))$. On a alors $E(y)\subset E(\eta)$, d'où
+$d(y)\leq d(\eta)$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte aussitôt de (14.2.3).
+\end{proof}
+
+\begin{corollary}[14.2.5]
+\label{IV.14.2.5-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$y\in Y$ un point tel que $f$ soit ouvert en tous les points de $f^{-1}(y)$. Alors
+la fonction $z\mapsto\dim(f^{-1}(z))$ est constante dans un voisinage de $y$.
+\end{corollary}
+
+\begin{proof}
+Soient $Y_i$ ($1\leq i\leq n$) les sous-préschémas fermés réduits de $Y$ ayant
+pour espaces sous-jacents les composantes irréductibles de $Y$ contenant $y$~;
+si $f_i:f^{-1}(Y_i)\to Y_i$ est la restriction de $f$, on sait que chacun des
+$f_i$ est propre (\textbf{II}, 5.4.5) et ouvert en tous les points de $f^{-1}(y)$
+(14.1.2). Comme la réunion des $Y_i$ est un voisinage de $y$ dans $Y$,
+\oldpage[IV-3]{203}
+on voit qu'on peut se borner à démontrer le corollaire lorsque $Y$ est
+irréductible~; soit $\eta$ son point générique. Il résulte de (14.2.4) que
+$d(y)\leq d(\eta)$~; d'autre part, comme $f$ est propre, on déduit de (13.1.5) que
+$z\mapsto\dim(f^{-1}(z))$ est semi-continue supérieurement~; en particulier
+$d(y)\geq d(\eta)$, donc $d(y)=d(\eta)$. De plus, il y a un voisinage $V$ de $y$
+tel que $d(z)\leq d(y)$ pour tout $z\in V$~; mais comme $z$ est spécialisation de
+$\eta$, on a d'autre part $d(z)\geq d(\eta)$, d'où finalement $d(z)=d(y)$ pour
+$z\in V$.
+\end{proof}
+
+\begin{corollary}[14.2.6]
+\label{IV.14.2.6-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme ouvert de
+type fini, $y$ un point de $Y$. Soient $y_i$ ($1\leq i\leq n$) les points
+génériques des composantes irréductibles de $Y$ contenant $y$. Alors, avec les
+notations de (14.2.4)~:
+\begin{enumerate}[label=(\roman*)]
+  \item Si pour $1\leq i\leq n$, on a $E(y)=E(y_i)$ (resp. $d(y)=d(y_i)$), la
+  fonction $E$ (resp. $d$) est constante dans un voisinage de $y$.
+  \item Il existe un voisinage ouvert $U$ de $f^{-1}(y)$ tel que la fonction
+  $z\mapsto\dim(U\cap f^{-1}(z))$ soit constante dans un voisinage de $y$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Le même raisonnement que dans (14.2.5) montre qu'on peut se borner à
+  considérer le cas où $Y$ est irréductible, de point générique $\eta$. Si $y'$
+  est une générisation quelconque de $y$, on a alors (en appliquant (14.2.4) à la
+  restriction $f^{-1}(Y')\to Y'$ de $f$, où $Y'=\overline{\{y'\}}$, et utilisant
+  (14.1.2)) $E(y)\subset E(y')\subset E(\eta)$ et
+  $d(y)\leq d(y')\leq d(\eta)$~; cela montre que la relation $E(y)=E(\eta)$
+  (resp. $d(y)=d(\eta)$) entraîne $E(y)=E(y')$ (resp. $d(y)=d(y')$) pour toute
+  générisation $y'$ de $y$. Or, en vertu de (9.5.5), les fonctions $E$ et $d$ sont
+  localement constructibles, donc il résulte de ($\mathbf{0}_{\mathrm{III}}$,
+  9.2.5) appliqué à l'ensemble des $z$ tels que $E(z)=E(y)$ (resp.
+  $d(z)=d(y)$) que cet ensemble est un voisinage de $y$.
+
+  \item Pour chacun des $y_i$, $f^{-1}(y_i)$ est un espace noethérien puisque $f$
+  est de type fini~; soient $x_{ij}$ ($1\leq j\leq m_i$) les points génériques de
+  ses composantes irréductibles, et posons $X'_{ij}=\overline{\{x_{ij}\}}$~;
+  montrons que le complémentaire $U$ dans $X$ de la réunion des $X'_{ij}$ qui ne
+  rencontrent pas $f^{-1}(y)$ (qui est évidemment un voisinage ouvert de
+  $f^{-1}(y)$) répond à la question. En effet, la restriction $f|U:U\to Y$ de $f$
+  est un morphisme ouvert de type fini (I, 6.3.5)~; pour tout couple $(i,j)$ tel
+  que $x_{ij}\in U$, $x_{ij}$ est point maximal de $U\cap f^{-1}(y_i)$, et il
+  résulte de (13.1.1) appliqué à la restriction
+  $X'_{ij}\to Y_i=\overline{\{y_i\}}$ de $f$ (compte tenu de (I, 5.2.2) et de
+  (1.5.4)) que toutes les composantes irréductibles de
+  $X'_{ij}\cap f^{-1}(y)$ ont une dimension
+  $\geq\dim(X'_{ij}\cap f^{-1}(y_i))$. Compte tenu de (14.2.3) appliqué à la
+  restriction $f^{-1}(Y_i)\to Y_i$ de $f$, qui est un morphisme ouvert (14.1.2),
+  $f^{-1}(y)$ est, pour chaque $i$, la réunion des composantes irréductibles de
+  $X'_{ij}\cap f^{-1}(y)$ ($1\leq j\leq m_i$), donc
+  $\dim(f^{-1}(y))\geq\dim(U\cap f^{-1}(y_i))$~; mais comme $f|U$ est ouvert, on a
+  aussi $\dim(f^{-1}(y))\leq\dim(f^{-1}(y_i)\cap U)$ en vertu de (14.2.4)~; on voit
+  donc qu'on peut appliquer (i) à $f|U$, d'où la conclusion.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[14.2.7]
+\label{IV.14.2.7-fr}
+L'exemple (13.2.12, (iii)) montre que sous les hypothèses de (14.2.5) ou
+(14.2.6, (ii)), on ne peut, dans la conclusion, remplacer la fonction
+$z\mapsto\dim(f^{-1}(z))$ par la fonction $z\mapsto E(z)$~; en effet, dans cet
+exemple, $f$ est propre et plat (donc universellement ouvert (2.4.6)) et tout
+voisinage de l'unique point de $f^{-1}(y_0)$ contient les points génériques des
+composantes irréductibles de $f^{-1}(\eta)$.
+\end{remark}
+
+\oldpage[IV-3]{204}
+\subsection{Morphismes universellement ouverts}
+\label{subsection:IV.14.3-fr}
+
+\begin{env}[14.3.1]
+\label{IV.14.3.1-fr}
+Rappelons (2.4.2) que dire qu'un morphisme $f:X\to Y$ est universellement ouvert
+signifie que pour tout morphisme $g:Y'\to Y$, $f_{(Y')}:X_{(Y')}\to Y'$ est
+ouvert~; il suffit d'ailleurs qu'il en soit ainsi lorsque
+$Y'=Y[T_1,\ldots,T_e]$, pour tout $e$ (8.10.2) (et si $Y$ est localement
+noethérien, il suffit donc qu'il en soit ainsi pour tout $Y'$ localement
+noethérien).
+\end{env}
+
+\begin{proposition}[14.3.2]
+\label{IV.14.3.2-fr}
+Soit $f:X\to Y$ un morphisme de préschémas. Si $f$ est universellement ouvert,
+alors, pour tout morphisme $g:Y'\to Y$, où $Y'$ est irréductible, l'image par
+$f'=f_{(Y')}:X_{(Y')}\to Y'$ de toute composante irréductible de $X_{(Y')}$ est
+dense dans $Y'$. Réciproquement, si cette condition est vérifiée pour tout $Y'$
+irréductible et tout morphisme de type fini $g:Y'\to Y$, et si de plus $f$ est
+localement de présentation finie, alors $f$ est universellement ouvert.
+\end{proposition}
+
+\begin{proof}
+En effet, il résulte de (1.10.4) que si $f$ est universellement ouvert, il vérifie
+la condition de l'énoncé. Inversement, supposons que $f$ soit localement de
+présentation finie, et montrons que pour tout entier $e$, si l'on pose
+$Y''=Y[T_1,\ldots,T_e]$, $f_{(Y'')}$ est ouvert. En effet, soit $Y'$ un
+sous-préschéma fermé de $Y''$ ayant pour espace sous-jacent une partie fermée
+irréductible de $Y''$~; le morphisme composé $Y'\to Y''\to Y$ est de type fini,
+donc toute composante irréductible de $X_{(Y')}$ domine $Y'$ par hypothèse~; on
+déduit donc de (1.10.4) que $f_{(Y'')}$ est un morphisme ouvert.
+\end{proof}
+
+Cette proposition montre que la définition (\textbf{III}, 4.3.9) coïncide dans
+le cas considéré avec la définition générale des morphismes universellement
+ouverts donnée dans (2.4.2).
+
+A la notion de morphisme ouvert en un point (14.1.1) correspond de même la
+suivante~:
+
+\begin{definition}[14.3.3]
+\label{IV.14.3.3-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $x$ un point de $X$. On dit que $f$
+est \emph{universellement ouvert au point $x$} si, pour tout morphisme $g:Y'\to Y$,
+en posant $X'=X\times_Y Y'$, le morphisme $f'=f_{(Y')}:X'\to Y'$ est ouvert en
+tout point $x'$ de $X'$ dont la projection dans $X$ est $x$.
+\end{definition}
+
+\begin{remarks}[14.3.3.1]
+\label{IV.14.3.3.1-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Le raisonnement de (8.10.1) montre (avec les mêmes notations) que si $x$
+  est un point de $X$, $x_\lambda$ sa projection dans $X_\lambda$, alors, si
+  $f_\mu$ est ouvert au point $x_\mu$ pour tout $\mu\geq\lambda$, $f$ est ouvert
+  au point $x$~; il suffit de se borner aux ouverts $U$ de $X$ contenant $x$ et de
+  remarquer que l'hypothèse implique que $f_\mu(U_\mu)$ est un voisinage de
+  $f_\mu(x_\mu)$, donc $f(v_\mu^{-1}(U_\mu))$ est un voisinage de $f(x)$. On en
+  déduit que l'énoncé (8.10.2) est encore exact quand on y remplace
+  «~universellement ouvert~» par «~universellement ouvert au point $x$~», et
+  «~morphisme ouvert~» par «~morphisme ouvert en tout point $x_n$ de $X_n$ dont
+  la projection dans $X$ est $x$~»~: il suffit dans la démonstration de se limiter
+  aux ouverts $V$ contenant un $x_n$.
+
+  \item Le résultat de (14.1.4) est encore valable pour un morphisme $f:X\to Y$,
+  en y remplaçant «~ouvert~» par «~universellement ouvert~». En effet, supposons
+  que $f$ ne soit pas universellement ouvert en un point $x\in f^{-1}(y)$~; il y a
+  par suite un morphisme $Y'\to Y$ et un point $x'\in X'$ se projetant en $x$, tels
+  que $f'$ ne soit pas ouvert au point $x'$.
+\end{enumerate}
+\end{remarks}
+
+\oldpage[IV-3]{205}
+
+Or, si $y'=f'(x')$, la projection $f'^{-1}(y')\to f^{-1}(y)$ est un morphisme
+ouvert (2.4.10), et il y a, en vertu de (14.1.4), un voisinage $V'$ de $x'$ dans
+$f'^{-1}(y')$ où $f'$ n'est pas ouvert~; donc $f$ n'est pas universellement ouvert
+aux points de l'image de $V'$ dans $f^{-1}(y)$, qui est un voisinage de $x$ dans
+$f^{-1}(y)$.
+
+\begin{proposition}[14.3.4]
+\label{IV.14.3.4-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes, $x$ un point de $X$,
+  $y=f(x)$. Si $f$ est universellement ouvert au point $x$ et $g$ universellement
+  ouvert au point $y$, alors $g\circ f$ est universellement ouvert au point $x$.
+  Inversement, si $g\circ f$ est universellement ouvert au point $x$, $g$ est
+  universellement ouvert au point $y$.
+
+  \item Si $f:X\to Y$ est un $S$-morphisme universellement ouvert au point
+  $x\in X$, alors, pour tout changement de base $S'\to S$,
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ est universellement ouvert en tout point de
+  $X_{(S')}$ au-dessus de $x$.
+
+  \item Pour que $f:X\to Y$ soit universellement ouvert au point $x\in X$, il
+  faut et il suffit que $f_{\mathrm{red}}$ le soit.
+
+  \item Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un
+  point de $X$, $y=f(x)$~; posons $Y_1=\operatorname{Spec}(\mathcal O_y)$,
+  $X_1=X\times_Y Y_1$, $f_1=f_{(Y_1)}$. Pour que $f$ soit universellement ouvert
+  au point $x$, il faut et il suffit que $f_1$ le soit (on rappelle (I, 3.6.5) que
+  $X_1$ est canoniquement identifié à un sous-espace de $X$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En effet (ii) est une conséquence évidente de la définition (14.3.3)~; il résulte
+aussi de la définition que pour démontrer l'assertion (i), il suffit de le faire
+lorsqu'on y supprime partout le mot «~universellement~», et cela résulte alors de
+(14.1.2). L'assertion (iii) résulte de (ii) et de ce que le morphisme canonique
+$X_{\mathrm{red}}\to X$ est surjectif. Enfin, la condition (iv) est trivialement
+nécessaire. D'autre part, si elle est vérifiée, et si $g:Y'\to Y$ est un morphisme
+quelconque, $X'=X_{(Y')}$, $f'=f_{(Y')}$, $x'$ un point de $X'$ au-dessus de $x$,
+alors $f'$ est localement de présentation finie, et pour voir qu'il est ouvert au
+point $x'$, il suffit d'appliquer le critère (1.10.3, $b$). Soient
+$y'=f'(x')$, $Y'_1=\operatorname{Spec}(\mathcal O_{y'})$,
+$X'_1=X'\times_{Y'}Y'_1$, $f'_1=f_{(Y'_1)}$. Comme $g(y')=y$, le morphisme
+composé $Y'_1\to Y'\to Y$ se factorise en $Y'_1\to Y_1\to Y$ (I, 2.4.4), donc
+$X'_1=X_1\times_{Y_1}Y'_1$ et $f'_1=(f_1)_{(Y'_1)}$~; la conclusion résulte alors
+aussitôt de l'hypothèse que $f'_1$ est ouvert au point $x'$ et de (1.10.3).
+\end{proof}
+
+\begin{proposition}[14.3.5]
+\label{IV.14.3.5-fr}
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme, $x$ un point de $X$.
+Soit $(Y_i)_{1\leq i\leq n}$ une famille localement finie de sous-préschémas
+fermés de $Y$ telle que l'espace $Y$ soit réunion des $Y_i$, et supposons que pour
+tout $i$ tel que $f(x)\in Y_i$, la restriction $f^{-1}(Y_i)\to Y_i$ de $f$ soit un
+morphisme universellement ouvert au point $x$~; alors $f$ est universellement
+ouvert au point $x$.
+\end{proposition}
+
+\begin{proof}
+Compte tenu de la définition, cela résulte de la proposition analogue (14.1.2,
+(ii)) pour les morphismes ouverts en un point.
+\end{proof}
+
+\begin{proposition}[14.3.6]
+\label{IV.14.3.6-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini. Pour que $f$ soit universellement ouvert en un point $x\in X$, il
+faut et il suffit que la condition suivante soit vérifiée~: pour tout morphisme
+$g:Y'\to Y$, où $Y'=\operatorname{Spec}(A)$ est le spectre d'un anneau de
+valuation discrète, tel que l'image $g(y')$ du point fermé $y'$ de $Y'$ soit égale
+à $y=f(x)$, et pour tout point $x'\in X'=X\times_Y Y'$ dont les projections sur
+$X$ et $Y'$ sont $x$ et $y'$ respectivement, il existe une générisation $z'$ de
+$x'$ dans $X'$ dont la projection dans $Y'$ est le point générique de $Y'$
+(autrement dit, il existe une composante irréductible de $X'$ contenant $x'$ et
+dominant $Y'$).
+
+\oldpage[IV-3]{206}
+
+De plus, on peut, dans la condition précédente, se borner au cas où $A$ est
+complet, a un corps résiduel algébriquement clos, et où $x'$ est rationnel sur
+$k(y')$.
+\end{proposition}
+
+\begin{proof}
+Si $Y'$ est comme dans l'énoncé, la nécessité de la condition résulte de ce que
+$f'$ doit être ouvert au point $x'$, et du critère (1.10.3). Pour voir que la
+condition est suffisante, considérons un morphisme de type fini $g:Y''\to U$, et
+soient $X''=X\times_Y Y''$, $f''=f_{(Y'')}:X''\to Y''$, et $x''$ un point de $X''$
+au-dessus de $x$. Posons $y''=f''(x'')$, et soit $t$ une générisation de $y''$
+dans $Y''$, distincte de $y''$. Puisque $Y''$ est localement noethérien, il
+résulte de (\textbf{II}, 7.1.9) et ($\mathbf{0}_{\mathrm{III}}$, 10.3.1) qu'il
+existe un schéma $Y'=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation
+discrète complet, dont le corps résiduel est une clôture algébrique de $k(x'')$,
+et un morphisme $g:Y'\to Y''$ tels que, si $s$ et $y'$ sont le point générique et
+le point fermé de $Y'$, on ait $g(s)=t$ et $g(y')=y''$. Il y a alors un point $x'$
+de $X'=X\times_Y Y'=X''\times_{Y''}Y'$ dont les projections dans $X''$ et $Y'$
+soient $x''$ et $y'$ respectivement, et qui soit rationnel sur $k(y')$ (I, 3.4.9).
+L'hypothèse entraîne qu'il y a une générisation $z'$ de $x'$ dans $X'$ dont la
+projection dans $Y'$ soit $s$~; si $z''$ est la projection de $z'$ dans $X''$,
+$z''$ est une générisation de $x''$ et sa projection dans $Y''$ est $t$~; on
+conclut donc de (1.10.3) que $f''$ est ouvert au point $x''$, donc que $f$ est
+universellement ouvert au point $x$ (14.3.3.1, (i)).
+\end{proof}
+
+\begin{corollary}[14.3.7]
+\label{IV.14.3.7-fr}
+Les notations étant celles de (14.3.6)~:
+\begin{enumerate}[label=(\roman*)]
+  \item Étant donné un point $y\in Y$, pour que $f$ soit universellement ouvert en
+  tous les points de $f^{-1}(y)$, il faut et il suffit que pour tout morphisme
+  $g:Y'\to Y$, où $Y'$ est le spectre d'un anneau de valuation discrète, et où
+  l'image $g(y')$ du point fermé $y'$ de $Y'$ est $y$, toute composante
+  irréductible de $X'=X\times_Y Y'$ domine $Y'$.
+  \item Pour que $f$ soit universellement ouvert, il faut et il suffit que pour
+  tout morphisme $g:Y'\to Y$, où $Y'$ est le spectre d'un anneau de valuation
+  discrète, toute composante irréductible de $X'=X\times_Y Y'$ domine $Y'$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair qu'il suffit de prouver (i)~; la nécessité de (i) résulte de (14.3.2)
+et sa suffisance de (14.3.6).
+\end{proof}
+
+\begin{proposition}[14.3.8]
+\label{IV.14.3.8-fr}
+Soient $Y$ un préschéma localement noethérien, irréductible, régulier et de
+dimension 1 (par exemple le spectre d'un anneau de Dedekind), $f:X\to Y$ un
+morphisme localement de type fini, $y$ un point de $Y$. Les conditions suivantes
+sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f_{\mathrm{red}}$ est plat en tout point de $f^{-1}(y)$.
+  \item $f$ est universellement ouvert dans un voisinage de $f^{-1}(y)$.
+  \item $f$ est ouvert dans un voisinage de $f^{-1}(y)$.
+  \item Toute composante irréductible de $X$ rencontrant $f^{-1}(y)$ domine $Y$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $f_{\mathrm{red}}$ est localement de type fini (1.3.4), $a)$ entraîne que
+$f_{\mathrm{red}}$ est plat dans un voisinage de $f^{-1}(y)$ (11.1.1), et il
+suffit d'appliquer (2.4.6) dans un tel voisinage pour voir que $a)$ entraîne $b)$.
+L'implication $b)\Rightarrow c)$ est triviale, et l'implication
+$c)\Rightarrow d)$ résulte de (1.10.4) appliqué à un voisinage de $f^{-1}(y)$.
+Reste à voir que $d)$ entraîne $a)$. On peut évidemment, en vertu de (1.3.4), se
+borner au cas où $X$ est réduit. La question étant en outre locale sur $X$ et sur
+$Y$, on peut supposer $Y=\operatorname{Spec}(A)$ et
+$X=\operatorname{Spec}(B)$
+\oldpage[IV-3]{207}
+affines~; si $X_i$ ($1\leq i\leq n$) sont les sous-préschémas fermés (intègres)
+de $X$ ayant pour espaces sous-jacents les composantes irréductibles de $X$,
+alors, pour tout $x\in X$, $\mathcal O_{X,x}$, étant réduit, est un sous-anneau du
+composé direct des $\mathcal O_{X_i,x}$~; si $y=f(x)$, il suffira de montrer que
+chacun des $\mathcal O_{X_i,x}$ est un $\mathcal O_y$-module \emph{sans torsion},
+car il en sera alors de même de $\mathcal O_{X,x}$~; comme par hypothèse
+$\mathcal O_y$ est un anneau local régulier de dimension 1, c'est-à-dire un anneau
+de valuation discrète (\textbf{II}, 7.1.6), il résultera alors de
+($\mathbf{0}_{\mathrm I}$, 6.3.4) que $\mathcal O_{X,x}$ est un
+$\mathcal O_y$-module \emph{plat}. Mais si $X_i=\operatorname{Spec}(B_i)$, où
+$B_i$ est un anneau intègre, l'hypothèse $d)$ entraîne que l'homomorphisme
+$A\to B_i$ est \emph{injectif} (I, 1.2.7)~; donc $B_i$ est un $A$-module sans
+torsion, et \emph{a fortiori} $\mathcal O_{X_i,x}$ est un $\mathcal O_y$-module
+sans torsion.
+\end{proof}
+
+\begin{remarks}[14.3.9]
+\label{IV.14.3.9-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Dans l'énoncé de (14.3.8), on ne peut se dispenser de l'hypothèse que $Y$
+  est \emph{régulier}. Avec les notations de (11.7.5), prenons en effet
+  $Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(\overline A)$, de sorte que
+  $f:X\to Y$ est un morphisme \emph{fini surjectif}~; comme $A$ est un anneau
+  local intègre de dimension 1, ainsi que $\overline A$, il résulte aussitôt de
+  (1.10.4) que le morphisme $f$ est \emph{ouvert}. Cependant $f$ n'est pas
+  universellement ouvert (ni \emph{a fortiori} plat), comme le montre (11.7.5).
+  On aurait un exemple analogue en prenant pour $Y$ le schéma local au point
+  double d'une courbe algébrique ayant un «~point double ordinaire~» et pour $X$
+  le normalisé de $Y$.
+
+  \item L'exemple de (14.1.3, (i)) montre que l'ensemble des points de $X$ où un
+  morphisme est universellement ouvert n'est pas nécessairement ouvert, le
+  morphisme $f$ dans cet exemple étant universellement ouvert en tous les points
+  où il est ouvert. L'exemple $f:X\to Y$ vu ci-dessus en (i) montre de même que
+  l'ensemble des points où un morphisme est universellement ouvert n'est pas
+  nécessairement fermé, car il est immédiat qu'en tous les points de $X$ sauf un
+  le morphisme $f$ est universellement ouvert (c'est même un isomorphisme local).
+  Il serait intéressant de savoir si l'ensemble des points où un morphisme est
+  universellement ouvert est localement constructible.
+\end{enumerate}
+\end{remarks}
+
+Les deux propositions suivantes nous ont été signalées par M.~Artin~:
+
+\begin{lemma}[14.3.10]
+\label{IV.14.3.10-fr}
+Soient $A$ un anneau de valuation (non nécessairement discrète), $k$ son corps
+résiduel, $K$ son corps des fractions, et posons $S=\operatorname{Spec}(A)$. Soient
+$X$ un préschéma irréductible, $f:X\to S$ un morphisme dominant de type fini~; soit
+$X_0=X\otimes_A k$ (resp. $X_1=X\otimes_A K$) la fibre de $f$ au point fermé
+(resp. au point générique) de $S$. Alors, si $X_0\ne\varnothing$, on a
+$\dim(X_0)=\dim(X_1)$.
+\end{lemma}
+
+On peut se borner au cas où $X$ est affine, en remplaçant au besoin $X$ par un
+ouvert affine contenant un point générique d'une composante irréductible de $X_0$,
+de dimension maximale, et utilisant (4.1.1.3). Soit $n=\dim(X_0)\geq 0$~; il résulte
+de (13.3.1.1) qu'il existe un voisinage $U$ de $X_0$ dans $X$ et un $S$-morphisme
+quasi-fini
+\[
+  g:U\to S[T_1,\ldots,T_n]=Z
+\]
+tel que le morphisme restriction
+$g_0:U_0=U\cap X_0\to Z_0=\operatorname{Spec}(k[T_1,\ldots,T_n])$ soit fini et
+\emph{surjectif}. Par changement de base $\operatorname{Spec}(K)\to S$ et restriction
+à l'ouvert $U_1=U\cap X_1$ de $X_1$, on déduit de $g$ un morphisme quasi-fini
+$g_1:U_1\to Z_1=\operatorname{Spec}(K[T_1,\ldots,T_n])$. Comme $U_1$ est dense dans
+$X_1$, on a $\dim(U_1)=\dim(X_1)$ (4.1.1.3)~; la proposition sera établie, en vertu
+de (4.1.2), si nous prouvons que le morphisme $g_1$ est \emph{dominant}. Supposons
+le contraire~; il existerait alors un polynôme $F_1\ne 0$ dans
+$K[T_1,\ldots,T_n]$ tel que $g_1(U_1)\subset V(F_1)$. Si $\omega$ est une valuation
+sur $K$ associée à $A$, et si $(a_\alpha)$ est la famille des coefficients de $F_1$,
+on peut, après multiplication de $F_1$ par un élément $\ne 0$ de $K$, supposer que
+l'on a $\inf_\alpha(\omega(a_\alpha))=0$~; autrement dit, $F_1$ provient d'un
+polynôme $F\in A[T_1,\ldots,T_n]$ (avec lequel il s'identifie) tel que l'image $F_0$
+de $F$ dans $k[T_1,\ldots,T_n]$ soit \emph{non nul}. Considérons alors dans $Z$
+l'ensemble fermé $V(F)$~; on a $V(F)\cap Z_1=V(F_1)$, et comme $U_1$ est dense
+dans $U$ (puisqu'il contient le point générique de $X$), $g(U)\subset V(F)$~; en
+particulier, on aurait $g_0(U_0)\subset V(F)\cap Z_0=V(F_0)$~; mais puisque
+$F_0\ne 0$, $V(F_0)$ est une partie fermée de $Z_0$ \emph{distincte de $Z_0$} et
+l'on aboutit à une contradiction. C.Q.F.D.
+
+\oldpage[IV-3]{208}
+
+\begin{proposition}[14.3.11]
+\label{IV.14.3.11-fr}
+Soient $f:X\to S$ un morphisme de type fini, $(g_\lambda)_{\lambda\in L}$ une
+famille de morphismes universellement ouverts $g_\lambda:Y_\lambda\to S$, et pour
+tout $\lambda\in L$, soit $u_\lambda:Y_\lambda\to X$ un $S$-morphisme. Pour tout
+$s\in S$, posons $X_s=X\times_S\operatorname{Spec}(k(s))$,
+$(Y_\lambda)_s=Y_\lambda\times_S\operatorname{Spec}(k(s))$, et soit
+$(u_\lambda)_s:(Y_\lambda)_s\to X_s$ le morphisme $u_\lambda\times 1$ déduit de
+$u_\lambda$ par changement de base. Soit $Z(s)$ l'adhérence dans $X_s$ de la
+réunion des ensembles $(u_\lambda)_s((Y_\lambda)_s)$, et posons
+$d(s)=\dim(Z(s))$. Alors, pour toute générisation $s'$ d'un point $s\in S$, on a
+$d(s)\leq d(s')$.
+\end{proposition}
+
+\begin{proof}
+On sait (\textbf{II}, 7.1.4) qu'il existe un anneau de valuation $A'$ et un
+morphisme $h:S'=\operatorname{Spec}(A')\to S$ tels que si $a$ (resp. $b$) est le
+point fermé (resp. le point générique) de $S'$, on ait $h(a)=s$, $h(b)=s'$. En
+outre, le morphisme projection
+$p:X_s\otimes_{k(s)}k(a)\to X_s$ est surjectif et ouvert (2.4.10), donc fait de
+$X_s$ un espace quotient de $X_s\otimes_{k(s)}k(a)$ par une relation d'équivalence
+ouverte~; pour toute partie $M$ de $X_s$, $p^{-1}(\overline M)$ est donc égal à
+l'adhérence $\overline{p^{-1}(M)}$ (Bourbaki, \emph{Top. gén.}, chap.~I\textsuperscript{er},
+4\textsuperscript{e} éd., \S~5, n\textsuperscript{o}~3, prop.~7)~; on raisonne de
+même pour $X_{s'}$, et compte tenu de (I, 3.4.8), de (4.2.7) et du fait que les
+$g_\lambda$ sont universellement ouverts, on voit qu'on peut se ramener à prouver
+la proposition sur la situation obtenue après changement de base $S'\to S$.
+Supposons donc $S'=S$, $s$ étant le point fermé et $s'$ le point générique de $S$.
+L'hypothèse que $g_\lambda$ est ouvert entraîne que toute composante irréductible
+de $Y_\lambda$ domine $S$ (1.10.4), donc que son point générique est un point
+maximal de $(Y_\lambda)_{s'}$~; si $Z$ désigne l'adhérence dans $X$ de $Z(s')$, on
+a donc $u_\lambda(Y_\lambda)\subset Z$, et par suite
+$(u_\lambda)_s((Y_\lambda)_s)\subset Z_s=Z\cap X_s$~; autrement dit, on a
+$Z(s)\subset Z_s$, d'où $\dim(Z(s))\leq\dim(Z_s)$. Mais en appliquant (14.3.10) à
+un sous-préschéma réduit de $X$ ayant pour espace sous-jacent une composante
+irréductible de $Z$, on obtient $\dim(Z_s)\leq\dim(Z_{s'})$ (l'inégalité provenant
+de ce qu'il peut y avoir des composantes irréductibles de $Z$ ne rencontrant pas
+$X_s$). D'autre part, comme $Z(s')$ est par définition fermé dans $X_{s'}$, on a
+$Z_{s'}=Z(s')$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{remark}[14.3.12]
+\label{IV.14.3.12-fr}
+Le cas envisagé par M.~Artin était celui où $Y_\lambda=S$ pour tout $\lambda$,
+autrement dit le cas où $(u_\lambda)$ est une famille de $S$-sections de $X$. Un
+autre cas utile est celui où la famille $(u_\lambda)$ est réduite à un seul
+élément~; on peut d'ailleurs toujours se ramener à ce cas en considérant le
+préschéma $Y$ somme des $Y_\lambda$ et les morphismes $g:Y\to S$ et $u:Y\to X$
+dont les restrictions à chaque $Y_\lambda$ sont respectivement $g_\lambda$ et
+$u_\lambda$.
+\end{remark}
+
+\begin{proposition}[14.3.13]
+\label{IV.14.3.13-fr}
+Soient $f:X\to Y$ un morphisme localement de type fini, $y$ un point de $Y$, $x$
+un point maximal de la fibre $X_y=X\times_Y\operatorname{Spec}(k(y))$.
+Considérons les conditions suivantes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert au point $x$ (ou encore en tout point de la
+  composante irréductible de $X_y$ de point générique $x$ (14.3.3.1, (ii))).
+  \item Pour toute composante irréductible $Y_0$ de $Y$ contenant $y$, il existe
+  une composante irréductible $Z$ de $X$ contenant $x$, dominant $Y_0$ et telle que
+  $\dim_x(X_y)=\dim_x(Z\cap X_y)=\dim(Z\cap X_\eta)$, où $\eta$ est le point
+  générique de $Y_0$ (ce qui entraîne que $Z$ est équidimensionnelle sur $Y_0$ au
+  point $x$ (13.2.2)).
+\end{enumerate}
+
+\oldpage[IV-3]{209}
+
+\begin{enumerate}[label=\emph{\alph*$'$)}]
+  \item[b$'$)] Pour tout voisinage ouvert $U$ de $x$ dans $X$ et toute
+  générisation $y'$ de $y$, on a
+  $\dim(U\cap X_{y'})\geq\dim_x(U\cap X_y)$.
+\end{enumerate}
+Alors on a les implications $a)\Rightarrow b)\Leftrightarrow b')$.
+\end{proposition}
+
+\begin{proof}
+Pour montrer que $b)$ implique $b')$, il suffit de remarquer que $y'$ appartient à
+une composante irréductible $Y_0$ de $Y$ contenant $y$, de point générique $\eta$~;
+prenant $Z$ comme dans $b)$ et notant que le point générique de $Z$ (qui est aussi
+celui de $Z\cap X_\eta$ ($\mathbf{0}_{\mathrm I}$, 2.1.8)) est contenu dans $U$, on
+a $\dim(U\cap X_{y'})\geq\dim(U\cap Z\cap X_{y'})$, et, en vertu de (13.1.6),
+$\dim(U\cap Z\cap X_{y'})\geq\dim(Z\cap X_\eta)$~; d'où l'assertion, puisque
+$\dim_x(U\cap X_y)=\dim_x(X_y)$ (4.1.1.3).
+
+Pour prouver que $b')$ implique $b)$, on peut d'abord remplacer $X$ par
+$f^{-1}(Y_0)$, donc supposer $Y_0=Y$~; on peut se borner au cas où $X$ et $Y$ sont
+affines, puisque $\dim_x(U\cap X_y)=\dim_x(X_y)$ (4.1.1.3). Les composantes
+irréductibles $W_i$ du préschéma noethérien $X_\eta$ sont alors en nombre fini, et
+le complémentaire de la réunion des $\overline W_i$ (adhérences dans $X$) qui ne
+contiennent pas $x$ est un voisinage ouvert $V$ de $x$. En remplaçant $X$ par $V$,
+on peut donc supposer que $x\in\overline W_i$ pour tout $i$ (l'hypothèse $b')$
+entraîne $\dim(V\cap X_\eta)\geq 0$, donc $x$ appartient à un des $\overline W_i$
+pour un $i$ au moins). En outre, les $\overline W_i$ sont exactement les
+composantes irréductibles de $X$ qui dominent $Y$ ($\mathbf{0}_{\mathrm I}$,
+2.1.8)~; cela étant, si l'on avait, pour chacune de ces composantes $Z$,
+$\dim(Z\cap X_\eta)<\dim_x(X_y)$, on en conclurait
+$\dim(X_\eta)<\dim_x(X_y)$, contrairement à l'hypothèse $b')$. La relation
+$\dim_x(Z\cap X_y)=\dim(Z\cap X_\eta)$ résulte alors de (13.1.6).
+
+Reste à démontrer que $a)$ entraîne $b')$. Tenant compte de (\textbf{II}, 7.1.4)
+et de l'invariance des hypothèses et de la conclusion par changement de base (en
+vertu de (4.2.7)), on peut se borner au cas où $Y$ est un spectre d'anneau de
+valuation, de point fermé $y$ et de point générique $y'$, et où $U=X$.
+L'hypothèse que $f$ est ouvert au point $x$ entraîne qu'il existe une composante
+irréductible $Z$ de $X$ contenant $x$ et dominant $Y$ (1.10.3). Appliquant
+(14.3.10) à un voisinage de $x$ dans $Z$, on en conclut que
+$\dim(Z\cap X_{y'})=\dim_x(Z\cap X_y)$~; mais comme $x$ est maximal dans $X_y$,
+$Z\cap X_y$ contient la composante irréductible de $X_y$ de point générique $x$,
+donc $\dim_x(Z\cap X_y)=\dim_x(X_y)$~; d'autre part, on a
+$\dim(X_{y'})\geq\dim(Z\cap X_{y'})$, ce qui achève de prouver $b')$.
+\end{proof}
+
+\begin{remark}[14.3.14]
+\label{IV.14.3.14-fr}
+Nous ignorons si dans (14.3.13), la conclusion subsiste lorsqu'on remplace
+l'hypothèse $a)$ par l'hypothèse plus faible que $f$ est ouvert au point $x$. On
+peut montrer aisément qu'il suffirait de traiter le cas où $Y$ est spectre d'un
+anneau local intègre, dont le point générique est isolé, et où $X$ est un
+sous-préschéma fermé du fibré vectoriel $Y[T]$.
+\end{remark}
+
+\subsection{Le critère de Chevalley pour les morphismes universellement ouverts}
+\label{subsection:IV.14.4-fr}
+
+\begin{theorem}[14.4.1]
+\label{IV.14.4.1-fr}
+Soient $f:X\to Y$ un morphisme localement de type fini, $y$ un point de $Y$, $x$
+un point maximal de la fibre $X_y=X\times_Y\operatorname{Spec}(k(y))$. Supposons
+$y$ géométriquement unibranche. Alors les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert au point $x$ (ou encore en tout point de la
+  composante irréductible de $X_y$ de point générique $x$ (14.3.3.1, (iii))).
+
+  \oldpage[IV-3]{210}
+
+  \item Si $Y_0$ est l'unique composante irréductible de $Y$ contenant $y$, $\eta$
+  son point générique, il existe une composante irréductible $Z$ de $X$ contenant
+  $x$, dominant $Y_0$ et telle que
+  $\dim_x(Z\cap X_y)=\dim(Z\cap X_\eta)$ (ce qui signifie que $Z$ est
+  équidimensionnelle sur $Y_0$ au point $x$ (13.2.2)).
+  \item[b$'$)] Pour tout voisinage ouvert $U$ de $x$ dans $X$ et toute
+  générisation $y'$ de $y$, on a
+  $\dim(U\cap X_{y'})\geq\dim_x(U\cap X_y)$.
+\end{enumerate}
+Si de plus $Y$ est localement noethérien, ces conditions sont aussi équivalentes à
+la suivante~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item[c)] $f$ est ouvert au point $x$.
+\end{enumerate}
+\end{theorem}
+
+Notons d'abord que puisque $(\mathcal O_y)_{\mathrm{red}}$ est intègre, $y$
+n'appartient qu'à une seule composante irréductible $Y_0$ de $Y$. Le fait que $b)$
+et $b')$ sont équivalentes et que $a)$ implique $b')$ résulte de (14.3.13)~;
+d'autre part, si $Y$ est localement noethérien, on a vu dans (14.2.3) que $c)$
+implique $b)$. Il reste donc à montrer que lorsque $y$ est géométriquement
+unibranche, $b)$ entraîne $a)$.
+
+\begin{lemma}[14.4.1.1]
+\label{IV.14.4.1.1-fr}
+Soient $Y$ un préschéma, $Y'=Y[T_1,\ldots,T_n]$, $y'$ un point de $Y'$, $y$ son
+image dans $Y$. Si $Y$ est géométriquement unibranche au point $y$, alors $Y'$ est
+géométriquement unibranche au point $y'$.
+\end{lemma}
+
+En effet, comme pour tout $y\in Y$,
+$\operatorname{Spec}(k(y)[T_1,\ldots,T_n])$ est géométriquement régulier sur $k(y)$
+($\mathbf{0}_{\mathrm{IV}}$, 17.3.7), le morphisme structural $Y'\to Y$ est lisse
+(6.8.1), et il suffit d'appliquer (11.3.14).
+
+\begin{lemma}[14.4.1.2]
+\label{IV.14.4.1.2-fr}
+Soient $A$ un anneau local intègre unibranche, $B$ un anneau intègre contenant $A$
+et entier sur $A$, $\mathfrak n$ un idéal premier de $B$ au-dessus de l'idéal
+maximal $\mathfrak m$ de $A$. Alors le morphisme
+$\operatorname{Spec}(B_{\mathfrak n})\to\operatorname{Spec}(A)$ est surjectif,
+autrement dit, pour tout idéal premier $\mathfrak p$ de $A$, il existe un idéal
+premier $\mathfrak q$ de $B$ tel que $\mathfrak q\subset\mathfrak n$ et
+$\mathfrak q\cap A=\mathfrak p$.
+\end{lemma}
+
+Soient $K$ (resp. $L$) le corps des fractions de $A$ (resp. $B$), $A'$ la clôture
+intégrale de $A$, $B'$ le sous-anneau de $L$ engendré par $A'$ et $B$, de sorte
+qu'on a un diagramme commutatif d'injections canoniques
+\[
+  \xymatrix{
+    B \ar[r] & B' \\
+    A \ar[u] \ar[r] & A' \ar[u]
+  }
+\]
+Comme $B'$ est entier sur $B$, il existe un idéal premier $\mathfrak n'$ de $B'$
+tel que $\mathfrak n'\cap B=\mathfrak n$ (Bourbaki, \emph{Alg. comm.}, chap.~V,
+\S~2, n\textsuperscript{o}~1, th.~1), et (pour la même raison)
+$\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ est surjectif. D'autre part,
+comme $A$ est unibranche, $A'$ est un anneau \emph{local}, donc
+$\mathfrak n'\cap A'$, qui est au-dessus de l'idéal maximal $\mathfrak m$ de $A$,
+est nécessairement égal à l'unique idéal maximal $\mathfrak m'$ de $A'$. En vertu
+du second théorème de Cohen--Seidenberg (\emph{loc. cit.}, \S~2,
+n\textsuperscript{o}~4, th.~3) le morphisme
+$\operatorname{Spec}(B'_{\mathfrak n'})\to\operatorname{Spec}(A')$ est surjectif,
+donc il en est de même du composé
+$\operatorname{Spec}(B'_{\mathfrak n'})\to\operatorname{Spec}(A')\to
+\operatorname{Spec}(A)$~; mais ce morphisme est aussi le composé
+$\operatorname{Spec}(B'_{\mathfrak n'})\to\operatorname{Spec}(B_{\mathfrak n})
+\to\operatorname{Spec}(A)$, donc le morphisme
+$\operatorname{Spec}(B_{\mathfrak n})\to\operatorname{Spec}(A)$ est surjectif.
+
+Ces lemmes étant établis, revenons à la démonstration de l'implication $b)\Rightarrow
+a)$ dans (14.4.1). En vertu de (14.3.3.1, (i)), il suffit de prouver que, pour tout
+entier $n\geq 0$ et tout point $x'$ de $X'=X[T_1,\ldots,T_n]$ au-dessus de $x$, le
+morphisme
+
+\oldpage[IV-3]{211}
+
+$f':X'\to Y'=Y[T_1,\ldots,T_n]$, déduit de $f$ par changement de base, est ouvert
+au point $x'$. Compte tenu du lemme (14.4.1.1), de (2.3.4) et (4.2.7), on est donc
+ramené à prouver que $f$ est \emph{ouvert} au point $x$~: en outre, il suffit
+évidemment (14.1.2, (iii)) de montrer que la restriction de $f$ à un
+sous-préschéma fermé de $X$ ayant $Z$ pour espace sous-jacent est ouverte au point
+$x$, si bien qu'on peut se borner au cas où $X=Z$ est irréductible. Quitte à
+remplacer $X$ par un voisinage ouvert $V$ de $x$ tel que $V\cap X_y$ soit
+irréductible, on peut supposer, en vertu de (13.3.1), que le morphisme $f$ se
+factorise en
+\[
+  X\xrightarrow{g}Y''=Y[T_1,\ldots,T_m]\to Y,
+\]
+où $g$ est quasi-fini, dominant et localement de type fini. Comme le morphisme
+structural $Y''\to Y$ est ouvert (2.4.6), on est ramené à prouver que $g:X\to Y''$
+est ouvert au point $x$. D'ailleurs, en vertu de (14.4.1.1), $g(x)$ est un point
+géométriquement unibranche de $Y''$. On est donc ramené à prouver le lemme suivant~:
+
+\begin{lemma}[14.4.1.3]
+\label{IV.14.4.1.3-fr}
+Soient $X$, $Y$ deux préschémas irréductibles, $f:X\to Y$ un morphisme localement
+quasi-fini et dominant. Si $x\in X$ est tel que $y=f(x)$ soit unibranche sur $Y$,
+alors $f$ est ouvert au point $x$.
+\end{lemma}
+
+Il suffit de prouver que
+$f(\operatorname{Spec}(\mathcal O_{X,x}))=\operatorname{Spec}(\mathcal O_{Y,y})$
+(1.10.3). On peut donc se borner, par le changement de base
+$\operatorname{Spec}(\mathcal O_{Y,y})\to Y$, au cas où $Y=\operatorname{Spec}(A)$,
+où $A$ est un anneau local et $y$ est le point fermé de $Y$ (tenant compte de
+(I, 3.6.5) et ($\mathbf{0}_{\mathrm I}$, 2.1.8), qui prouvent que
+$X\times_Y\operatorname{Spec}(\mathcal O_{Y,y})$ est irréductible)~; remplaçant $f$
+par $f_{\mathrm{red}}$, on peut supposer $X$ et $Y$ réduits, donc intègres.
+Remplaçant éventuellement $X$ et $Y$ par des voisinages affines de $x$ et $y$
+respectivement, on peut supposer (8.12.9) que le morphisme $f$ se factorise en
+$X\xrightarrow{j}X_1\xrightarrow{g}Y$, où $j$ est une immersion ouverte et $g$ un
+morphisme \emph{fini} (évidemment dominant)~; comme $X$ et $X_1$ sont affines, $j$
+est affine, donc séparé et quasi-compact, et par suite se factorise en
+$X\xrightarrow{u}X_2\xrightarrow{h}X_1$, où $X_2$ est l'image fermée de $X$ par
+$j$, $h$ l'injection canonique et $u$ une immersion ouverte (I, 9.5.3). En d'autres
+termes, on peut supposer que $X_1$ est intègre, ou encore de la forme
+$X_1=\operatorname{Spec}(B)$, où $B$ est une $A$-algèbre intègre et finie, contenant
+$A$ puisque $g$ est dominant. Si $\mathfrak n$ est l'idéal premier de $B$
+correspondant au point $x$, l'hypothèse que $A$ est unibranche implique alors
+(14.4.1.2) que le morphisme
+$\operatorname{Spec}(B_{\mathfrak n})\to\operatorname{Spec}(A)$ est surjectif,
+c'est-à-dire que
+$\operatorname{Spec}(\mathcal O_{X,x})\to\operatorname{Spec}(\mathcal O_{Y,y})$
+est surjectif. C.Q.F.D.
+
+\begin{corollary}[14.4.2]
+\label{IV.14.4.2-fr}
+Soient $f:X\to Y$ un morphisme localement de type fini, $y$ un point
+géométriquement unibranche de $Y$, $\eta$ le point générique de l'unique composante
+irréductible $Y_0$ de $Y$ contenant $y$. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert en tous les points de $X_y$ (ou, ce qui
+  revient au même (14.3.3.1, (ii)), aux points maximaux de $X_y$).
+  \item Pour tout $x\in X_y$, il existe une composante irréductible $Z$ de $X$
+  contenant $x$ et équidimensionnelle sur $Y$ au point $x$ (13.2.2).
+  \item[b$'$)] Pour tout $x\in X_y$ et tout voisinage ouvert $U$ de $x$ dans $X$,
+  on a $\dim(U\cap X_\eta)\geq\dim_x(U\cap X_y)$.
+  \item[b$''$)] Pour tout ouvert $U$ de $X$, on a
+  $\dim(U\cap X_\eta)\geq\dim(U\cap X_y)$.
+\end{enumerate}
+
+\oldpage[IV-3]{212}
+
+Lorsque de plus $Y$ est localement noethérien, ces conditions sont encore
+équivalentes à la suivante~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item[c)] $f$ est ouvert en tous les points de $X_y$ (ou, ce qui revient au même
+  (14.3.3.1, (ii)), aux points maximaux de $X_y$).
+\end{enumerate}
+\end{corollary}
+
+L'équivalence de $a)$ et $c)$ lorsque $Y$ est localement noethérien résulte de
+(14.4.1)~; les conditions $b)$ ou $b')$, appliquées aux \emph{points maximaux} de
+$X_y$, entraînent $a)$ en vertu également de (14.3.3.1, (ii))~; enfin, $b')$ et
+$b'')$ sont équivalentes, car
+\[
+  \dim(U\cap X_y)=\sup_{x\in X_y}(\dim_x(U\cap X_y)).
+\]
+Reste à voir que la condition $a)$ entraîne $b)$ et $b')$ en \emph{tout} point
+$x\in X_y$. Posons $d=\dim_x(X_y)$, et soit $x'$ le point générique d'une
+composante irréductible de $X_y$ contenant $x$ et de dimension $d$. En vertu de
+$a)$ et de (14.4.1), il y a une composante irréductible $Z$ de $X$ contenant $x'$
+et équidimensionnelle sur $Y$ au point $x'$, donc telle que
+$\dim_{x'}(Z\cap X_y)=\dim(Z\cap X_\eta)$. Mais par construction
+$\dim_{x'}(Z\cap X_y)=\dim_{x'}(X_y)=d$, et
+$\dim_x(Z\cap X_y)\leq\dim(Z\cap X_y)=d$~; compte tenu de (13.1.6), cela prouve
+que $Z$ est équidimensionnel sur $Y$ au point $x$~; donc $a)$ entraîne $b)$. De
+plus, on a $\dim(X_\eta)\geq\dim(Z\cap X_\eta)=d=\dim_x(X_y)$. Remplaçant $X$ par
+un voisinage ouvert $U$ de $x$, on voit ainsi que $a)$ entraîne $b')$. C.Q.F.D.
+
+\begin{corollary}[14.4.3]
+\label{IV.14.4.3-fr}
+Soient $Y$ un préschéma géométriquement unibranche, $f:X\to Y$ un morphisme
+localement de type fini. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert.
+  \item Pour tout ouvert $U$ de $X$, tout $y\in Y$ et toute générisation $y'$ de
+  $y$, on a $\dim(U\cap X_{y'})\geq\dim(U\cap X_y)$.
+\end{enumerate}
+Si de plus $Y$ est localement noethérien, ces conditions sont aussi équivalentes à
+la suivante~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item[c)] $f$ est ouvert.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}[14.4.4]
+\label{IV.14.4.4-fr}
+(critère de Chevalley). Soit $f:X\to Y$ un morphisme localement de type fini.
+\begin{enumerate}[label=(\roman*)]
+  \item Si $f$ est équidimensionnel en un point $x\in X$ (13.3.2) et si
+  $y=f(x)$ est un point géométriquement unibranche de $Y$, $f$ est
+  universellement ouvert au point $x$.
+  \item Si $Y$ est géométriquement unibranche, $f$ est universellement ouvert en
+  tous les points de $X$ où $f$ est équidimensionnel, et l'ensemble de ces points
+  est ouvert dans $X$. En particulier, si $f$ est équidimensionnel, il est
+  universellement ouvert.
+\end{enumerate}
+\end{corollary}
+
+L'assertion (ii) est conséquence triviale de (i), puisqu'on sait déjà que l'ensemble
+des points où $f$ est équidimensionnel est ouvert (13.3.2). Quant à l'assertion (i),
+elle résulte de ce que l'hypothèse implique que la condition $b)$ de (14.4.1) est
+vérifiée au point générique d'une composante irréductible de $X_y$ contenant $x$,
+compte tenu de (13.3.1)~; il suffit donc d'appliquer (14.4.1).
+
+\begin{remark}[14.4.5]
+\label{IV.14.4.5-fr}
+On peut prouver que si $Y$ est localement noethérien, et si toutes les générisations
+de $y=f(x)$ sont des points géométriquement unibranches de $Y$ (cf. (6.15.2)),
+alors, si $f$ est équidimensionnel au point $x$, il est universellement ouvert
+\emph{dans un voisinage de $x$}.
+\end{remark}
+
+\oldpage[IV-3]{213}
+
+\begin{corollary}[14.4.6]
+\label{IV.14.4.6-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini. Soit $y$ un point géométriquement unibranche de $Y$, et supposons en
+outre que pour tout $x\in f^{-1}(y)$, l'anneau $\mathcal O_{X,x}$ soit
+équidimensionnel. Alors les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est équidimensionnel (13.3.2) en tous les points de $f^{-1}(y)$.
+  \item $f$ est ouvert en tous les points de $f^{-1}(y)$.
+  \item $f$ est universellement ouvert en tous les points de $f^{-1}(y)$.
+\end{enumerate}
+\end{corollary}
+
+En effet, $c)$ implique trivialement $b)$, et $a)$ implique $c)$ en vertu de
+(14.4.4)~; enfin, en raison des hypothèses sur $\mathcal O_y$ et $\mathcal O_x$,
+$b)$ implique $a)$ par (14.2.2). Plus généralement~:
+
+\begin{proposition}[14.4.7]
+\label{IV.14.4.7-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $x$ un point de $X$, tel que $y=f(x)$ soit géométriquement unibranche.
+Les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est équidimensionnel (13.3.2) au point $x$.
+  \item L'anneau $\mathcal O_x$ est équidimensionnel et $f$ est ouvert aux points
+  génériques des composantes irréductibles de $f^{-1}(y)$ contenant $x$ (donc
+  aussi en tout point d'une telle composante).
+  \item L'anneau $\mathcal O_x$ est équidimensionnel, et $f$ est universellement
+  ouvert aux points génériques des composantes irréductibles de $f^{-1}(y)$
+  contenant $x$ (donc aussi en tout point d'une telle composante).
+\end{enumerate}
+En outre, lorsque ces conditions sont satisfaites, pour tout sous-préschéma fermé
+réduit $X_i$ de $X$ ayant pour espace sous-jacent une composante irréductible de $X$
+contenant $x$, la restriction $f_i:X_i\to Y$ de $f$ est un morphisme
+équidimensionnel au point $x$, et universellement ouvert en tous les points des
+composantes irréductibles de $f^{-1}(y)\cap X_i$ qui contiennent $x$.
+\end{proposition}
+
+La condition $a)$ implique que $f$ est équidimensionnel en tous les points
+génériques des composantes irréductibles de $f^{-1}(y)$ contenant $x$ (13.3.1), et
+par suite (14.4.4) universellement ouvert en ces points~; le même raisonnement
+appliqué à chaque $f_i$ (compte tenu de (13.3.3)) prouve la dernière assertion de
+la proposition, compte tenu de (14.3.3.1, (iii)). En outre, d'après (14.2.1), on a
+les relations
+\begin{equation}
+\tag{14.4.7.1}
+\label{IV.14.4.7.1-fr}
+  \dim(\mathcal O_{X_i,x})=\dim(\mathcal O_y)+
+  \dim(\mathcal O_{X_i,x}\otimes_{\mathcal O_y}k(y))
+\end{equation}
+\begin{equation}
+\tag{14.4.7.2}
+\label{IV.14.4.7.2-fr}
+  \dim(\mathcal O_{X,x})=\dim(\mathcal O_y)+
+  \dim(\mathcal O_{X,x}\otimes_{\mathcal O_y}k(y))
+\end{equation}
+et puisque $f$ est équidimensionnel au point $x$, il résulte de (13.3.1) que l'on
+a $\dim_x(X_i\cap f^{-1}(y))=\dim_x(f^{-1}(y))$, donc (5.2.3)
+\[
+  \dim(\mathcal O_{X_i,x}\otimes_{\mathcal O_y}k(y))=
+  \dim(\mathcal O_{X,x}\otimes_{\mathcal O_y}k(y)).
+\]
+On conclut donc que $\dim(\mathcal O_{X_i,x})=\dim(\mathcal O_{X,x})$ pour tout
+$i$, autrement dit $\mathcal O_{X,x}$ est équidimensionnel, et cela achève de
+montrer que $a)$ entraîne $c)$. Il est clair que $c)$ entraîne $b)$~; enfin, $b)$
+entraîne la relation (14.4.7.2) en vertu de (14.2.1)~; il résulte alors de (13.3.6)
+que $b)$ entraîne $a)$.
+
+\begin{proposition}[14.4.8]
+\label{IV.14.4.8-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme localement de type
+fini, $y$ un point de $Y$, $x$ un point maximal de $X_y=f^{-1}(y)$. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Le morphisme $f$ est universellement ouvert au point $x$, autrement dit,
+  pour tout changement de base $g:Y'\to Y$, on a la propriété $P(Y')$~: pour tout
+  point $x'$ de $X'=X\times_Y Y'$ au-dessus de $x$, le morphisme
+  $f'=f_{(Y')}:X'\to Y'$ est ouvert au point $x'$.
+
+  \oldpage[IV-3]{214}
+
+  \item[a$'$)] La propriété $P(Y')$ est vraie pour tout morphisme fini
+  $g:Y'\to Y$.
+  \item[a$''$)] La propriété $P(Y'')$ est vraie pour le normalisé $Y''$ de
+  $Y_{\mathrm{red}}$ (\textbf{II}, 6.3.8).
+  \item Pour tout point $x''$ de $X''=X\times_Y Y''$ au-dessus de $x$, il existe
+  une composante irréductible $Z''$ de $X''$ contenant $x''$ et
+  équidimensionnelle sur $Y''$ au point $x''$.
+\end{enumerate}
+\end{proposition}
+
+Il est trivial que $a)$ implique $a')$. Pour montrer que $a')$ implique $a'')$
+notons que l'on peut écrire $Y''=\operatorname{Spec}(\mathcal B)$, où $\mathcal B$
+est une $\mathcal O_Y$-Algèbre quasi-cohérente entière sur $\mathcal O_Y$~; comme
+$Y$ est noethérien, $\mathcal B$ est limite inductive de ses sous-$\mathcal O_Y$-
+Algèbres $\mathcal B_\lambda$ qui sont quasi-cohérentes et de type fini (I, 9.6.6)~;
+mais alors les $\mathcal B_\lambda$ sont des $\mathcal O_Y$-Algèbres \emph{finies}
+(\textbf{II}, 6.1.2)~; on peut donc écrire
+$Y''=\varprojlim Y'_\lambda$, où
+$Y'_\lambda=\operatorname{Spec}(\mathcal B_\lambda)$, d'où
+$X''=X\times_Y Y''=\varprojlim X'_\lambda$, avec
+$X'_\lambda=X\times_Y Y'_\lambda$. En vertu de $a')$, les morphismes
+$f'_\lambda:X'_\lambda\to Y'_\lambda$ sont ouverts en tous les points de
+$X'_\lambda$ au-dessus de $x$~; on en conclut que $f''$ est ouvert en tous les
+points de $X''$ au-dessus de $x$, par (8.10.1) et (14.3.3.1, (i)).
+
+Comme le préschéma $Y''$ est \emph{normal} par définition, le fait que $b)$ entraîne
+$a'')$ résulte de (14.4.4) appliqué à la composante irréductible
+équidimensionnelle de l'énoncé et à la restriction de $f''$ à cette composante. Il
+reste donc à montrer que $a'')$ entraîne $a)$ et $b)$. Compte tenu de (1.10.3), on
+peut se borner au cas où $Y=\operatorname{Spec}(\mathcal O_y)$, en notant que le
+morphisme canonique $\operatorname{Spec}(\mathcal O_y)\to Y$ est universellement
+bicontinu (I, 3.6.5), et d'autre part que
+$Y''\times_Y\operatorname{Spec}(\mathcal O_y)$ est le normalisé de
+$(\operatorname{Spec}(\mathcal O_y))_{\mathrm{red}}$ comme il résulte de la
+permutabilité des opérations de fermeture intégrale et de localisation (Bourbaki,
+\emph{Alg. comm.}, chap.~V, \S~1, n\textsuperscript{o}~5, prop.~16). Supposant donc
+$Y=\operatorname{Spec}(A)$, où $A$ est un anneau local noethérien, et $y$ le point
+fermé de $Y$, on sait ($\mathbf{0}_{\mathrm{IV}}$, 23.2.5) qu'il existe une
+factorisation
+\[
+  Y''\xrightarrow{u}Y_1\xrightarrow{v}Y
+\]
+du morphisme structural, telle que $v$ soit un morphisme \emph{fini surjectif}, $u$
+un morphisme entier, \emph{radiciel et dominant}, donc surjectif (\textbf{II},
+6.1.10) et par suite un \emph{homéomorphisme universel} (2.4.5). Si l'on pose
+$X_1=X\times_Y Y_1$, la projection $X''\to X_1$ est donc un homéomorphisme, et
+l'hypothèse $a'')$ entraîne par suite que $f_1=f_{(Y_1)}:X_1\to Y_1$ est ouvert en
+tous les points de $X_1$ au-dessus de $x$. En outre, cela montre que pour prouver
+la propriété $b)$, il suffit de prouver la même propriété où l'on remplace $Y''$,
+$X''$ et $x''$ par $Y_1$, $X_1$ et un point $x_1$ de $X_1$ au-dessus de $x$~: Mais
+$Y_1$ est noethérien et en outre il est géométriquement unibranche puisque $Y''$
+est normal et $u$ radiciel (6.15.1)~; la propriété à prouver résulte donc de
+(14.4.1). Il reste à montrer que $f$ est universellement ouvert au point $x$, ce
+qui résultera du lemme suivant~:
+
+\begin{lemma}[14.4.8.1]
+\label{IV.14.4.8.1-fr}
+Soit $v:Y_1\to Y$ un morphisme fermé (resp. universellement fermé) et surjectif.
+Pour qu'un morphisme $f:X\to Y$ soit ouvert (resp. universellement ouvert) en un
+point $x\in X$, il suffit que $f_1=f_{(Y_1)}:X_1=X\times_Y Y_1\to Y_1$ soit ouvert
+(resp. universellement ouvert) en tous les points de $X_1$ au-dessus de $x$.
+\end{lemma}
+
+La seconde assertion résulte trivialement de la première et du fait que pour tout
+changement de base $Y'\to Y$, le morphisme
+$v_{(Y')}:Y_1\times_Y Y'\to Y'$ est encore surjectif et est fermé si $v$ est
+universellement fermé. Pour prouver la première assertion, considérons
+
+\oldpage[IV-3]{215}
+
+un voisinage ouvert $U$ de $x$ dans $X$~; comme $v$ est fermé et surjectif, pour
+que $f(U)$ soit un voisinage de $y=f(x)$, il faut et il suffit que
+$v^{-1}(f(U))$ soit un voisinage de $v^{-1}(y)$. Mais si $p:X_1\to X$ est la
+projection canonique, on a $v^{-1}(f(U))=f_1(p^{-1}(U))$ (I, 3.4.8), et
+l'hypothèse entraîne que $f_1(p^{-1}(U))$ est un voisinage de
+$f_1(p^{-1}(x))=v^{-1}(y)$ (I, 3.4.8).
+
+\begin{corollary}[14.4.9]
+\label{IV.14.4.9-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme localement de type
+fini. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert, autrement dit, pour tout changement de
+  base $Y'\to Y$, le morphisme $f_{(Y')}:X\times_Y Y'\to Y'$ est ouvert.
+  \item[a$'$)] Pour tout morphisme fini $Y_1\to Y$, $f_{(Y_1)}$ est ouvert.
+  \item[a$''$)] Si $Y''$ est le normalisé de $Y_{\mathrm{red}}$, $f_{(Y'')}$ est
+  ouvert.
+  \item Pour tout point $x''$ de $X''=X\times_Y Y''$, il existe une composante
+  irréductible $Z''$ de $X''$ contenant $x''$ et équidimensionnelle sur $Y''$ au
+  point $x''$ (cf. (14.4.10, (ii))).
+\end{enumerate}
+\end{corollary}
+
+Cela résulte aussitôt de (14.4.8) et (14.1.4).
+
+\begin{remarks}[14.4.10]
+\label{IV.14.4.10-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item L'équivalence des conditions $a)$ et $b)$ dans (14.4.8) (resp. (14.4.9))
+  est encore valable pour un préschéma $Y$ quelconque et un morphisme $f$
+  localement de type fini. En effet, $a)$ entraîne $b)$ en vertu de (14.4.1)~;
+  inversement, $b)$ entraîne que $f''$ est universellement ouvert aux points de
+  $X''$ au-dessus de $x$ (resp. en tout point de $X''$) en vertu de (14.4.1), et
+  on en conclut la propriété $a)$ en appliquant le lemme (14.4.8.1) au morphisme
+  entier et surjectif $Y''\to Y$.
+
+  Il se peut que, dans (14.4.1), pour l'équivalence de $a)$ et $c)$, l'hypothèse
+  supplémentaire que $Y$ est noethérien soit superflue (cf. (14.3.14)). S'il en
+  est ainsi, les hypothèses noethériennes sont également superflues dans (14.4.2),
+  (14.4.3), (14.4.8) et (14.4.9).
+
+  \item On peut donner des exemples de morphismes $f:X\to Y$ ayant les propriétés
+  suivantes~: $Y$ est noethérien, régulier et de dimension 2, $f$ est
+  \emph{universellement ouvert} et de type fini, $X$ a deux composantes
+  irréductibles $X_1$, $X_2$, mais la restriction $X_1\to Y$ de $f$ à l'une
+  d'elles \emph{n'est pas un morphisme ouvert}. Le principe de la construction
+  s'appuie sur la méthode générale de «~recollement~» qui sera exposée au chap.~V,
+  et ne peut donc qu'être esquissé ici. On part d'un point fermé $y$ de $Y$, et on
+  considère le $Y$-schéma $Y_1$ obtenu en faisant \emph{éclater} $y$
+  (\textbf{II}, 8.1.3)~; si $f_1:Y_1\to Y$ est le morphisme structural, on sait que
+  la restriction de $f_1$ à $f_1^{-1}(Y-\{y\})$ est un \emph{isomorphisme} sur
+  $Y-\{y\}$ (\emph{loc. cit.}), tandis que la fibre $f_1^{-1}(y)$ est isomorphe à
+  $\operatorname{Proj}(S)$, où
+  $S=\bigoplus_{k=0}^{\infty}\mathfrak m_y^k/\mathfrak m_y^{k+1}$
+  (\textbf{II}, 3.5.3), c'est-à-dire ici à $\mathbf P^1_{k(y)}$~; il résulte de
+  (14.4.1) que $f_1$ n'est pas ouvert au point générique de $f_1^{-1}(y)$. D'autre
+  part, posons $Y_2=\mathbf P^1_Y$, et soit $f_2:Y_2\to Y$ le morphisme structural~;
+  il résulte de (\textbf{II}, 8.4.4) que $f_2$ est plat, donc universellement ouvert
+  (2.4.6)~; en outre (\textbf{II}, 3.5.3), $f_2^{-1}(y)$ est isomorphe à
+  $\mathbf P^1_{k(y)}$~; il suffit alors de «~recoller~» $Y_1$ et $Y_2$ le long des
+  fibres isomorphes $f_1^{-1}(y)$ et $f_2^{-1}(y)$, ce qui donne un morphisme
+  $f:X\to Y$ où les composantes irréductibles $X_1$, $X_2$ de $X$ s'identifient
+  canoniquement à $Y_1$ et $Y_2$ respectivement, et les restrictions de $f$ à ces
+  composantes à $f_1$ et $f_2$.
+
+  Rappelons toutefois (12.1.1.5) que si $Y$ est localement noethérien, $f:X\to Y$
+  de type fini et \emph{plat}, alors toute composante irréductible de $X$ est
+  \emph{équidimensionnelle} sur $Y$ (et par suite la restriction de $f$ à une telle
+  composante est \emph{universellement ouverte} si tous les points de $Y$ sont
+  \emph{géométriquement unibranches}).
+
+  \item Rappelons (12.1.2, (i)) qu'il y a des morphismes $f:X\to Y$ ayant les
+  propriétés suivantes~: $Y$ est noethérien (non géométriquement unibranche), $f$
+  est fini et plat (et même étale (17.6.3)), mais la restriction de $f$ à une
+  composante irréductible de $X$ \emph{n'est pas un morphisme ouvert} (bien que $f$
+  lui-même le soit d'après (2.4.6)).
+
+  \item Le critère de Chevalley (14.4.4) explique l'importance de la notion de
+  morphisme universellement ouvert. Cette notion permet en effet, dans de nombreux
+  résultats, plus ou moins classiques, de remplacer une hypothèse de \emph{normalité}
+  par l'hypothèse qu'un certain morphisme est universellement ouvert~; l'énoncé plus
+  général
+
+  \oldpage[IV-3]{216}
+
+  ainsi obtenu s'appliquera en particulier à des morphismes \emph{plats} (2.4.6),
+  dont l'importance en géométrie algébrique va croissant. On peut considérer que
+  les énoncés faisant intervenir l'hypothèse qu'un morphisme est universellement
+  ouvert sont des généralisations communes d'énoncés faisant intervenir une
+  hypothèse de normalité et d'énoncés faisant intervenir une hypothèse de platitude.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Morphismes universellement ouverts et quasi-sections}
+\label{subsection:IV.14.5-fr}
+
+\begin{lemma}[14.5.1]
+\label{IV.14.5.1-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $f:X\to Y$ un
+morphisme localement de type fini, $x$ un point de $X$, tel que $f$ soit
+équidimensionnel (13.3.2) au point $x$~; on pose $y=f(x)$,
+$e=\dim_x(f^{-1}(y))$. Soit $X'$ une partie fermée irréductible de $X$ contenant
+$x$, $n$ un entier tel que l'on ait $\operatorname{codim}(X',X)\leq n$ et
+$\dim_x(X'\cap f^{-1}(y))\leq e-n$. Alors on a nécessairement
+$\operatorname{codim}(X',X)=n$, $\dim_x(X'\cap f^{-1}(y))=e-n$, et la restriction $X'\to Y$
+de $f$ est un morphisme équidimensionnel en $x$ (et a fortiori dominant).
+\end{lemma}
+
+La question étant locale sur $X$, on peut supposer que $f$ est de type fini et
+\emph{équidimensionnel}, de sorte que pour \emph{tout} $z\in Y$, \emph{toutes} les
+composantes irréductibles de $f^{-1}(z)$ sont de dimension $e$ (13.3.1, $a''$).
+Soient $x'$ le point générique de $X'$, $y'=f(x')$,
+$Y'=\overline{\{y'\}}=\overline{f(X')}$ et posons $Z=f^{-1}(Y')$. En vertu de
+($\mathbf 0$, 14.2.2), on a
+\begin{equation}
+  \operatorname{codim}(X',Z)\leq n.
+  \tag{14.5.1.1}\label{IV.14.5.1.1-fr}
+\end{equation}
+Et si les deux membres sont égaux, on a nécessairement $\operatorname{codim}(X',X)=n$ et $Z$
+contient une composante irréductible de $X$, ce qui entraîne (13.3.1) que
+$f(X')$ est dense dans $Y$ et par suite $Z=X$~; donc l'égalité
+$\operatorname{codim}(X',Z)=n$ équivaut à la conjonction de l'égalité $\operatorname{codim}(X',X)=n$ et de
+la relation $Z=X$.
+
+D'autre part, en raisonnant dans les préschémas réduits de $Y$ et $X$ ayant $Y'$
+et $Z$ respectivement pour espaces sous-jacents, on déduit de (5.1.2) et de
+(\textbf{I}, 3.6.5) que l'on a
+\begin{equation}
+  \operatorname{codim}(X'\cap f^{-1}(y'),f^{-1}(y'))=\operatorname{codim}(X',Z).
+  \tag{14.5.1.2}\label{IV.14.5.1.2-fr}
+\end{equation}
+En vertu de l'hypothèse, $f^{-1}(y')$ est biéquidimensionnel (5.2.1) et de
+dimension $e$, donc ($\mathbf 0$, 14.3.5), on a, en vertu de (14.5.1.2) et
+(14.5.1.1)
+\begin{equation}
+  e'=\dim(X'\cap f^{-1}(y'))=e-\operatorname{codim}(X',Z)\geq e-n,
+  \tag{14.5.1.3}\label{IV.14.5.1.3-fr}
+\end{equation}
+l'égalité ayant lieu si et seulement si $\operatorname{codim}(X',X)=n$ et si $f(X')$ est dense
+dans $Y$. Enfin, (13.1.1), on a $\dim_x(X'\cap f^{-1}(y))\geq e'$, d'où, par
+(14.5.1.3),
+\begin{equation}
+  \dim_x(X'\cap f^{-1}(y))\geq e'\geq e-n.
+  \tag{14.5.1.4}\label{IV.14.5.1.4-fr}
+\end{equation}
+Or, par hypothèse, on a aussi $\dim_x(X'\cap f^{-1}(y))\leq e-n$, d'où les
+conclusions de la proposition.
+
+\begin{corollary}[14.5.2]
+\label{IV.14.5.2-fr}
+Les hypothèses sur $f$, $X$, $Y$, $x$ étant celles de (14.5.1), supposons en
+outre que $x$ ne soit pas point maximal de $f^{-1}(y)$. Alors il existe un
+voisinage ouvert affine $U$ de $x$ dans $X$, et une section
+$g\in\Gamma(U,\mathcal O_X)$ telle que l'ensemble $X'$ des $x'\in U$ tels que
+$g(x')=0$ contienne $x$ et ne contienne aucun point maximal de $f^{-1}(y)$. Pour
+tout $g$ ayant ces propriétés, $X'$ est équidimensionnel sur $Y$ au point $x$, et
+l'on a
+\begin{equation}
+  \dim_x(X'\cap f^{-1}(y))=e-1 \qquad\text{et}\qquad \operatorname{codim}(X',X)=1.
+  \tag{14.5.2.1}\label{IV.14.5.2.1-fr}
+\end{equation}
+\end{corollary}
+
+\oldpage[IV-3]{217}
+
+On peut se borner au cas où $X=U$ est un voisinage ouvert affine de $x$ tel que
+toutes les composantes irréductibles de $f^{-1}(y)$ contiennent $x$. Ces
+composantes correspondent aux idéaux premiers minimaux de
+$\mathcal O_x/\mathfrak m_y\mathcal O_x$, et par hypothèse ces idéaux sont
+distincts de $\mathfrak m_x/\mathfrak m_y\mathcal O_x$ (Bourbaki,
+\emph{Alg. comm.}, chap.~II, \S~1, n\textsuperscript{o}~1, prop.~2)~; pour obtenir
+un $g\in\Gamma(U,\mathcal O_X)$ vérifiant les conditions de l'énoncé, il suffit de
+prendre $g\in\mathfrak j_x$ tel que l'image de $g$ dans $\mathfrak m_x$
+n'appartienne à aucun des idéaux premiers précédents. D'ailleurs, on a
+$\operatorname{codim}(X',X)\leq 1$ (5.1.8), et comme $X'$ ne contient aucune des composantes
+irréductibles de $f^{-1}(y)$ et que celles-ci sont de dimension $e$, on a
+($\mathbf 0$, 14.2.2.2) $\dim_x(X'\cap f^{-1}(y))\leq e-1$. Il suffit alors
+d'appliquer (14.5.1).
+
+\begin{proposition}[14.5.3]
+\label{IV.14.5.3-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $f:X\to Y$ un
+morphisme localement de type fini, $x$ un point de $X$. On suppose que $f$ est
+équidimensionnel au point $x$ et que $x$ est fermé dans $f^{-1}(f(x))$. Alors il
+existe une partie irréductible $X'$ de $X$, localement fermée dans $X$, contenant
+$x$ et telle que la restriction $X'\to Y$ de $f$ (où $X'$ est le sous-préschéma
+réduit de $X$ ayant $X'$ pour espace sous-jacent) soit un morphisme quasi-fini et
+dominant.
+\end{proposition}
+
+En effet, avec les notations de (14.5.2), l'hypothèse que $x$ est fermé dans
+$f^{-1}(y)$ entraîne que $x$ n'est pas point maximal de $X'\cap f^{-1}(y)$ tant
+que $e-1\geq 1$. Il suffit donc d'appliquer (14.5.2) en raisonnant par récurrence
+descendante sur $e=\dim_x(f^{-1}(f(x)))$ jusqu'à ce que l'on arrive à $e=1$~;
+l'application de (14.5.2) dans ce dernier cas donne un $X'$ tel que
+$X'\cap f^{-1}(f(x))$ soit noethérien et de dimension 0, donc fini et discret~;
+comme alors $X'$ est équidimensionnel sur $Y$, $X'\cap f^{-1}(f(x'))$ est de
+dimension 0 pour tout $x'\in X'$, ce qui entraîne que la restriction $X'\to Y$ de
+$f$ est un morphisme quasi-fini (\textbf{II}, 6.2.2).
+
+\begin{corollary}[14.5.4]
+\label{IV.14.5.4-fr}
+Sous les hypothèses de (14.5.3), supposons en outre que $Y=\operatorname{Spec}(A)$, où $A$ est
+un anneau local noethérien intègre et complet, et que $y=f(x)$ soit l'unique point
+fermé de $Y$. Alors, il existe un anneau local intègre $A'$, contenant $A$, qui est
+une $A$-algèbre finie et possède la propriété suivante~: si l'on pose
+$Y'=\operatorname{Spec}(A')$ et $X'=X\times_Y Y'$, il existe une $Y'$-section $h:Y'\to X'$ telle
+que le morphisme composé $Y'\xrightarrow{h}X'\to X$ soit une immersion dont
+l'image contient $x$.
+\end{corollary}
+
+Remplaçant au besoin $X$ par un sous-préschéma réduit irréductible de $X$, on peut,
+en vertu de (14.5.3), se borner au cas où le morphisme $f$ est déjà quasi-fini et
+dominant. Utilisant (\textbf{II}, 6.2.5), on en déduit que $\mathcal O_x=A'$ est un
+anneau intègre qui est une $A$-algèbre finie, et que $X$ est somme disjointe du
+sous-préschéma fermé $Y'=\operatorname{Spec}(A')$ et d'un sous-préschéma $Y''$~; le schéma $Y'$
+répond à la question, le morphisme composé $Y'\to X'\to X$ n'étant autre que le
+morphisme canonique $\operatorname{Spec}(\mathcal O_x)\to X$.
+
+\begin{remark}[14.5.5]
+\label{IV.14.5.5-fr}
+Si on n'exige pas que dans l'énoncé de (14.5.4), le morphisme $Y'\to X$ soit une
+immersion, on peut supposer que $A'$ est en outre \emph{intégralement clos}~: il
+suffit en effet de remplacer $A'$ par sa \emph{clôture intégrale} $A_1$, car on
+sait ($\mathbf 0$, 23.1.5) que $A_1$ est un $A$-module de type fini.
+\end{remark}
+
+\begin{proposition}[14.5.6]
+\label{IV.14.5.6-fr}
+Soient $Y$ un préschéma localement noethérien, irréductible, régulier et de
+dimension 1, $f:X\to Y$ un morphisme localement de type fini, $y$ un point de $Y$.
+Les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f_{\mathrm{red}}$ est plat en tout point de $f^{-1}(y)$.
+
+  \oldpage[IV-3]{218}
+
+  \item $f$ est universellement ouvert dans un voisinage de $f^{-1}(y)$.
+  \item $f$ est ouvert dans un voisinage de $f^{-1}(y)$.
+  \item Toute composante irréductible de $X$ rencontrant $f^{-1}(y)$ domine $Y$.
+  \item Pour tout point $x\in f^{-1}(y)$, fermé dans $f^{-1}(y)$, et toute
+  composante irréductible $X_i$ de $X$ contenant $x$, il existe une partie
+  irréductible $X'$ de $X$, localement fermée dans $X$, contenant $x$, contenue
+  dans $X_i$, et telle que la restriction $X'\to Y$ de $f$ soit un morphisme
+  quasi-fini et dominant.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de $a)$, $b)$, $c)$ et $d)$ a déjà été démontrée (14.3.8). Il est
+clair que $e)$ entraîne $d)$, car pour toute composante irréductible $X_i$ de $X$
+rencontrant $f^{-1}(y)$, il existe dans $X_i\cap f^{-1}(y)$ un point fermé dans cet
+espace (5.1.11). Enfin, pour prouver que $c)$ entraîne $e)$, on peut se borner au
+cas où $f$ est un morphisme de type fini~; considérons un point fermé $x$ de
+$f^{-1}(y)$ et soit $X_i$ une composante irréductible de $X$ contenant $x$. Comme
+la restriction $f_i:X_i\to Y$ de $f$ à $X_i$ est un morphisme dominant, il résulte
+de l'équivalence de $c)$ et $d)$ pour $f_i$ que ce morphisme est ouvert aux points
+génériques de $X_i\cap f^{-1}(y)$. Il résulte donc de (14.2.2) que $f_i$ est
+équidimensionnel au point $x$, et on conclut alors à l'aide de (14.5.3).
+
+\begin{remark}[14.5.7]
+\label{IV.14.5.7-fr}
+Si, dans l'énoncé de (14.5.5), on suppose que $Y=\operatorname{Spec}(A)$, où $A$ est un anneau
+de valuation discrète complet, et que $y$ est le point fermé de $Y$, on peut en
+outre supposer que $X'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation discrète qui
+est une $A$-algèbre finie, comme le montre la démonstration de (14.5.4) et le fait
+qu'un anneau local intègre régulier et de dimension 1 est un anneau de valuation
+discrète (\textbf{II}, 7.1.6).
+\end{remark}
+
+\begin{proposition}[14.5.8]
+\label{IV.14.5.8-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $y$ un point de $Y$.
+
+Pour tout $Y$-préschéma $Y'$, posons $X(Y')=\operatorname{Hom}_Y(Y',X)$. Soit $x$ un point de
+$f^{-1}(y)$~; afin que $f$ soit universellement ouvert au point $x$, il faut et il
+suffit que la condition suivante soit vérifiée~:
+
+Pour tout anneau de valuation discrète complet $A$, de corps résiduel
+algébriquement clos, tout morphisme $g:Y'=\operatorname{Spec}(A)\to Y$ tel que l'image par $g$ du
+point fermé $y'$ de $Y'$ soit égal à $y$, et tout élément
+$u_0\in X(\operatorname{Spec}(k(y')))$ tel que $u_0(y')=x$, il existe un anneau de valuation
+discrète $B$, un homomorphisme local $A\to B$ faisant de $B$ une $A$-algèbre finie,
+et, si l'on pose $Z'=\operatorname{Spec}(B)$, un élément $u\in X(Z')$ tels que, si $z'$ est le
+point fermé de $Z'$, le diagramme
+\[
+  \xymatrix{
+    \operatorname{Spec}(k(z')) \ar[r] \ar[d]^{\ell} & Z' \ar[d]^{u} \\
+    \operatorname{Spec}(k(y')) \ar[r]_{u_0} & X
+  }
+\]
+soit commutatif.
+\end{proposition}
+
+\oldpage[IV-3]{219}
+
+Notons que si $A$ et $B$ vérifient les conditions de l'énoncé, $B$ est un anneau
+de valuation discrète complet (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~3,
+n\textsuperscript{o}~3, prop.~7 et chap.~IV, \S~2, n\textsuperscript{o}~2,
+cor.~3 de la prop.~9) de corps résiduel isomorphe à celui de $A$, donc
+algébriquement clos, et puisque $u(z')=x$, il y a dans $X''=X\times_Y Z'$ un point
+$x''$, dont les projections dans $X$ et $Z'$ sont $x$ et $z'$ et qui est rationnel
+sur $k(z')$~; en outre, puisqu'il existe une $Z'$-section $v$ de $X''$ telle que
+$v(z')=x''$, l'image par $v$ du point générique $s$ de $Z'$ est une générisation
+$t$ de $x''$ dont la projection dans $Z'$ est $s$~; en appliquant (14.3.6), on voit
+que la condition de l'énoncé est \emph{suffisante}. Prouvons maintenant qu'elle est
+\emph{nécessaire}. Posons $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Il y a par
+hypothèse un point $x'\in X'$ au-dessus de $x$ et de $y'$ et rationnel sur $k(y')$
+(\textbf{I}, 3.3.14), donc fermé dans $f'^{-1}(y')$. En vertu de (14.3.6), il y a
+une composante irréductible $T'$ de $X'$ contenant $x'$ et dominant $Y'$, donc
+((14.3.8) et (14.3.13)) la restriction $T'\to Y'$ de $f'$ est équidimensionnelle au
+point $x$. On déduit donc de (14.5.5) qu'il y a une $A$-algèbre finie $B$ qui est
+un anneau local intègre et intégralement clos et domine $A$ (donc est un anneau de
+valuation discrète) et, en posant $Z'=\operatorname{Spec}(B)$ et
+$X''=X\times_Y Z'=X'\times_{Y'}Z'$, une $Z'$-section $v:Z'\to X''$ telle que
+l'image du point fermé $z'$ de $Z'$ par le morphisme composé $Z'\to X''\to X'$ soit
+$x'$~; le morphisme composé $u:Z'\to X''\to X$ répond donc à la question.
+
+\begin{proposition}[14.5.9]
+\label{IV.14.5.9-fr}
+Soient $Y$ un préschéma localement noethérien irréductible, $f:X\to Y$ un
+morphisme localement de type fini, $y$ un point géométriquement unibranche de $Y$.
+Alors les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert en tout point de $f^{-1}(y)$.
+  \item $f$ est ouvert en tout point de $f^{-1}(y)$.
+  \item Pour toute composante irréductible $Z$ de $f^{-1}(y)$, de point générique
+  $z$, il existe une composante irréductible $X_i$ de $X$ contenant $z$ et
+  équidimensionnelle sur $Y$ au point $z$.
+  \item Pour tout point fermé $x$ de $f^{-1}(y)$, il existe une partie irréductible
+  $X'$ de $X$, localement fermée dans $X$, contenant $x$, et telle que la
+  restriction $X'\to Y$ de $f$ soit un morphisme quasi-fini et dominant.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de $a)$, $b)$ et $c)$ a déjà été démontrée (14.4.2). Pour prouver
+que $a)$ entraîne $d)$, notons qu'en vertu de (14.4.2), $a)$ entraîne qu'il existe
+une composante irréductible $Z$ de $X$ contenant $x$ et équidimensionnelle sur $Y$
+au point $x$~; l'existence de $X'$ provient alors de (14.5.3) appliqué à la
+restriction $Z\to Y$ de $f$. Inversement, supposons $d)$ vérifiée~; en vertu du
+critère de Chevalley (14.4.4), la restriction $X'\to Y$ de $f$ est un morphisme
+universellement ouvert au point $x$, et a fortiori $f$ est ouvert au point $x$~;
+$f$ est donc ouvert en tous les points fermés de $X_y=f^{-1}(y)$. Mais $X_y$ est
+un $k(y)$-préschéma localement de type fini, donc un préschéma de Jacobson~;
+l'ensemble des points fermés de $X_y$ est donc \emph{dense} dans $X_y$ (10.3.1),
+et il résulte de (14.1.4) que $f$ est ouvert en \emph{tous} les points de $X_y$, ce
+qui achève de prouver que $d)$ entraîne $b)$.
+
+Le résultat suivant a été mis en évidence par D.~Mumford~:
+
+\begin{proposition}[14.5.10]
+\label{IV.14.5.10-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme universellement ouvert,
+surjectif et localement de type fini. Alors il existe un morphisme fini surjectif
+$g:Y'\to Y$ tel que, si l'on pose $X'=X\times_Y Y'$ et
+$f'=f_{(Y')}:X'\to Y'$, tout point $y'\in Y'$ admette un voisinage ouvert $U'$ tel
+qu'il existe une $U'$-section de $f'^{-1}(U')$.
+\end{proposition}
+
+Nous démontrerons la proposition en plusieurs étapes.
+
+\oldpage[IV-3]{220}
+
+\emph{I) Réduction au cas où $Y$ est intègre.} -- Si l'on a prouvé la proposition
+pour chacun des sous-préschémas réduits $Y_i$ ayant pour espace sous-jacent une
+composante irréductible de $Y$, et pour les images réciproques $f^{-1}(Y_i)$, il est
+clair que le préschéma $Y'$ \emph{somme} des $Y'_i$ correspondants répondra à la
+question. On peut donc supposer $Y$ \emph{intègre} et on va dans ce qui suit se
+borner à ce cas. Alors, dans la conclusion, on pourra aussi prendre $Y'$ intègre
+(quitte à le remplacer par une composante irréductible convenable).
+
+\emph{II) Caractère local sur $Y$.} -- Nous allons montrer que si l'on peut
+recouvrir $Y$ par des ouverts $U_j$ en nombre fini, tels que, pour tout $j$, la
+conclusion de la proposition soit vraie pour le morphisme $f^{-1}(U_j)\to U_j$,
+restriction de $f$, alors la conclusion est vraie également pour $f$. En effet, on
+peut évidemment supposer les $U_j$ affines, de sorte que $U_j=\operatorname{Spec}(A_j)$, où
+$A_j$ est un anneau intègre noethérien dont le corps des fractions $K=R(Y)$ est le
+corps des fonctions rationnelles sur $Y$. Pour tout $j$, il y a par hypothèse une
+$A_j$-algèbre finie intègre $A'_j$ telle que l'homomorphisme $A_j\to A'_j$ soit
+injectif (\textbf{I}, 1.2.7) et que le morphisme correspondant
+$g_j:U'_j=\operatorname{Spec}(A'_j)\to\operatorname{Spec}(A_j)=U_j$ vérifie les conditions de la proposition
+(pour $U_j$ et $f^{-1}(U_j)$). Soit alors $K'$ une extension finie de $K$ contenant
+les corps des fractions de tous les $A'_j$ (qui sont des extensions finies de $K$).
+Considérons le normalisé $Y''$ de $Y$ dans $K'$ (\textbf{II}, 6.3.8), qui est de la
+forme $\operatorname{Spec}(\mathcal B)$, où $\mathcal B$ est une $\mathcal O_Y$-Algèbre entière
+quasi-cohérente, fermeture intégrale de $\mathcal O_Y$ dans $K'$ (\textbf{II},
+6.3.4). Ces définitions prouvent que pour tout $j$,
+\[
+  A'_j=\Gamma(U'_j,\mathcal O_{U'_j})
+      =\Gamma(U_j,(g_j)_*(\mathcal O_{U'_j}))
+\]
+s'identifie à une sous-$A_j$-algèbre finie de $\Gamma(U_j,\mathcal B)$~; autrement
+dit, $(g_j)_*(\mathcal O_{U'_j})=\mathcal A'_j$ est une
+$\mathcal O_{U_j}$-Algèbre cohérente, sous-Algèbre de $\mathcal B|U_j$. Il existe
+donc un sous-$\mathcal O_Y$-Module $\mathcal C'_j$ cohérent de $\mathcal B$ tel que
+$\mathcal C'_j|U_j=\mathcal A'_j$ (\textbf{I}, 9.4.7). Si l'on pose
+$\mathcal C'=\sum_j\mathcal C'_j$, la sous-$\mathcal O_Y$-Algèbre $\mathcal B'$ de
+$\mathcal B$ engendrée par $\mathcal C'$ est cohérente puisque $\mathcal B$ est une
+$\mathcal O_Y$-Algèbre entière. Montrons alors que $Y'=\operatorname{Spec}(\mathcal B')$ répond à
+la question. En effet, il est clair que le morphisme $g:Y'\to Y$ est fini surjectif
+et que $Y'$ est intègre~; en outre, pour tout $j$, $\Gamma(U_j,\mathcal B')$ est une
+$A'_j$-algèbre finie, autrement dit le morphisme $g^{-1}(U_j)\to U_j$, restriction
+de $g$, se factorise en $g^{-1}(U_j)\to U'_j\to U_j$, et comme l'existence locale
+de sections est stable par changement de base, cela établit notre assertion, tout
+$y\in Y$ appartenant à un $U_j$.
+
+\emph{III) Réduction au cas où $Y$ est intègre, local et géométriquement
+unibranche.} -- Supposons d'abord que la proposition ait été prouvée lorsque $Y$
+est intègre et \emph{local} (avec $Y'$ intègre), et montrons qu'elle est valable
+lorsque $Y$ est intègre (noethérien) affine quelconque. En effet, en vertu de la
+réduction II), il suffit de prouver que pour tout point $y\in Y$, la proposition est
+vraie pour un voisinage ouvert affine $V$ de $y$ dans $Y$. Soient $Y=\operatorname{Spec}(A)$,
+$Y_1=\operatorname{Spec}(A_{\mathfrak p})$, où $\mathfrak p=\mathfrak j_y$, et posons
+$X_1=X\times_Y Y_1$~; par hypothèse, il existe un morphisme fini surjectif
+$g_1:Y'_1\to Y_1$, où $Y'_1=\operatorname{Spec}(B_1)$, $B_1$ étant une
+$A_{\mathfrak p}$-algèbre intègre finie, donc un anneau semi-local, tel que $g_1$
+vérifie les conditions de l'énoncé pour $Y_1$ et $X_1$. Si $y'_j$
+($1\leq j\leq r$) sont les points fermés de $Y'_1$, il y a donc un recouvrement de
+$Y'_1$ par des ouverts $U'_j$ tels que $y'_j\in U'_j$ et qu'il existe une
+$U'_j$-section $h'_j$ de $X\times_Y U'_j$ ($1\leq j\leq r$). Le
+$A_{\mathfrak p}$-module $B_1$ admet un système fini de générateurs de la forme
+$z_i/s$ (avec $s\in A-\mathfrak p$,
+
+\oldpage[IV-3]{221}
+
+$z_i$ entiers sur $A$), que l'on peut supposer (en multipliant au besoin $s$ par un
+élément de $A$) être des éléments du corps des fractions de $B_1$, entiers sur
+$A_s$, de sorte que si $V$ est l'ouvert affine $D(s)=\operatorname{Spec}(A_s)\subset Y$, $Y'_1$
+s'identifie à $Y_1\times_V V'$, où $V'$ est le spectre de la $A_s$-algèbre finie
+engendrée par les $z_i/s$~; $g:V'\to V$ est donc un morphisme fini surjectif et
+$g_1=g_{(Y_1)}$. De plus, appliquant la méthode de (8.1.2, $a)$), on peut supposer
+que chacun des $U'_j$ est l'image réciproque par $p:Y'_1\to V'$ d'un ouvert $W'_j$
+de $V'$, tel que les $W'_j$ recouvrent $V'$ (8.3.11), et que chacune des sections
+$h'_j$ est de la forme $(v'_j)_{(Y_1)}$, où $v'_j$ est une $W'_j$-section de
+$X\times_Y W'_j$ (8.8.2, (i)). On est donc bien ramené à prouver la proposition
+lorsque $Y=\operatorname{Spec}(A)$, $A$ étant un anneau local intègre et noethérien. On sait alors
+qu'il existe une $A$-algèbre intègre finie $B$, ayant même corps des fractions que
+$A$, telle que $A\subset B$ et que $\operatorname{Spec}(B)$ soit géométriquement unibranche
+(($\mathbf 0$, 23.2.5) et (6.15.5))~; comme le morphisme
+$\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ est surjectif, on peut évidemment remplacer $Y$ par
+$\operatorname{Spec}(B)$ et $X$ par $X\otimes_A B$ pour prouver la proposition. Raisonnant comme
+au début de la réduction III), on peut donc supposer $A$ local, intègre et
+$Y=\operatorname{Spec}(A)$ géométriquement unibranche.
+
+\emph{IV) Réduction au cas où $X$ est intègre, affine, et $f$ quasi-fini,
+surjectif, birationnel et universellement ouvert.} -- Supposons donc $Y=\operatorname{Spec}(A)$
+intègre, local et géométriquement unibranche. Il existe alors un sous-préschéma
+irréductible $X_0$ de $X$ tel que la restriction $f_0:X_0\to Y$ de $f$ soit un
+morphisme quasi-fini et dominant et que $f_0(X_0)$ contienne le point fermé $y$ de
+$Y$ (14.5.9)~; comme $Y$ est géométriquement unibranche, il résulte de (14.4.1) que
+$f_0$ est encore \emph{universellement ouvert}. Comme en outre on peut supposer
+$X_0$ réduit, donc intègre, on voit qu'on peut, en remplaçant $X$ par $X_0$,
+supposer que $X$ est \emph{intègre} et $f$ \emph{quasi-fini et dominant}, et tel que
+$f(X)$ contienne $y$~; comme $f$ est \emph{ouvert} et que tout ouvert de $Y$
+contenant $y$ est égal à $Y$, $f$ est surjectif.
+
+Soient $\xi$, $\eta$ les points génériques de $X$ et $Y$ respectivement~;
+$k(\xi)$ est donc une extension \emph{finie} de $K=k(\eta)$. Par suite (4.6.8), il
+y a une extension \emph{finie} $K'$ de $K$ telle que
+$(\operatorname{Spec}(k(\xi)\otimes_K K'))_{\mathrm{red}}$ soit géométriquement réduit sur $K$ et
+que ses composantes irréductibles soient géométriquement irréductibles~; il en
+résulte ((4.5.9) et (4.6.1)) que les corps résiduels de
+$\operatorname{Spec}(k(\xi)\otimes_K K')$ sont des extensions finies, primaires et séparables de
+$K'$, donc sont \emph{égaux à} $K'$. Appliquant de nouveau ($\mathbf 0$, 23.2.5) et
+(6.15.5), il existe une $A$-algèbre intègre \emph{finie} $B$, ayant $K'$ pour
+corps des fractions, contenant $A$ et telle que $\operatorname{Spec}(B)$ soit géométriquement
+unibranche~; on peut donc de nouveau remplacer $Y$ par $\operatorname{Spec}(B)$ et $X$ par
+$(X\otimes_A B)_{\mathrm{red}}$ pour prouver la proposition~; la réduction III)
+permet alors de supposer encore $A$ local, intègre et $Y=\operatorname{Spec}(A)$ géométriquement
+unibranche, de point fermé $y$. En outre, $f$ est alors un morphisme \emph{quasi-fini,
+surjectif et universellement ouvert}~; chacune des composantes irréductibles $X_i$
+de $X$ ($1\leq i\leq m$) domine $Y$ (1.10.4) et est \emph{birationnelle} sur $Y$.
+Soit alors $x$ un point de $f^{-1}(y)$ et soit $X_i$ une composante irréductible de
+$X$ contenant $x$~; désignons encore par $X_i$ le sous-préschéma réduit (donc
+intègre) de $X$ ayant $X_i$ pour espace sous-jacent, et soit $f_i:X_i\to Y$ la
+restriction de $f$. Appliquant de nouveau (14.4.1) au morphisme quasi-fini et
+dominant $f_i$, on voit que $f_i$ est universellement ouvert~; si $U$ est un ouvert
+affine de $X_i$ contenant $x$, $f_i(U)$ est donc
+
+\oldpage[IV-3]{222}
+
+ouvert dans $Y$ et contient $y$, donc est égal à $Y$. On peut ainsi remplacer $X$
+par $U$ pour prouver la proposition.
+
+\emph{V) Fin de la démonstration.} -- Nous supposons donc $Y$ local, intègre et
+géométriquement unibranche, $X$ intègre et affine, $f$ quasi-fini, surjectif,
+birationnel et universellement ouvert~; il en résulte que $f$ est automatiquement
+\emph{séparé}. En vertu du Main theorem (8.12.6), il existe une factorisation
+$X\xrightarrow{j}Z\xrightarrow{u}Y$, où $j$ est une immersion ouverte et $u$ un
+morphisme \emph{fini}. Remplaçant en outre $Z$ par l'image fermée de $j$
+(\textbf{I}, 9.5.10), on peut supposer que $Z$ est \emph{intègre}~; comme $u$ est
+fini et birationnel et $Y$ géométriquement unibranche, il résulte de
+(\textbf{III}, 4.3.5 et 4.3.4) que $u$ (et par suite $f$) est un morphisme
+\emph{radiciel}~; comme $f$ est universellement ouvert et surjectif, c'est donc un
+\emph{homéomorphisme universel}. Par suite (2.4.5, (ii)) $f$ est un morphisme
+\emph{fini}. Mais alors on répond aux conditions de l'énoncé avec $Y'$ \emph{intègre}
+en prenant simplement $Y'=X$ et $g=f$, la $Y'$-section étant le morphisme diagonal
+$\Delta_f$. C.Q.F.D.
+
+Ce résultat peut être utilisé pour développer des critères de «~descente~» de
+diverses propriétés par les morphismes universellement ouverts et surjectifs.
+Signalons en particulier le critère suivant, dû à D.~Mumford~:
+
+\begin{corollary}[14.5.11]
+\label{IV.14.5.11-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $g:Y'\to Y$ un morphisme localement de type fini, universellement
+ouvert et surjectif~; posons $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Alors,
+pour que $f$ soit affine, il faut et il suffit que $f'$ le soit.
+\end{corollary}
+
+On doit seulement prouver que la condition est suffisante. La question étant locale
+sur $Y$, on peut supposer $Y$ affine, donc noethérien. En vertu de (14.5.10), il
+existe un morphisme fini surjectif $h:Y_1\to Y$ tel que, si l'on pose
+$Y'_1=Y'\times_Y Y_1$, et $g'=g_{(Y_1)}:Y'_1\to Y_1$, tout point de $Y_1$ admette
+un voisinage ouvert $U_1$ tel qu'il existe une $U_1$-section de $g'^{-1}(U_1)$. Si
+l'on pose $X_1=X\times_Y Y_1$, la projection canonique $p:X_1\to X$ est un
+morphisme fini surjectif, donc, si l'on prouve que $X_1$ est un schéma affine, il en
+résultera d'abord que $X$ est quasi-compact, donc noethérien, puis que $X$ est affine
+en vertu du théorème de Chevalley (\textbf{II}, 6.7.1). Il suffit par suite de
+prouver que le morphisme $f_1=f_{(Y_1)}:X_1\to Y_1$ est affine. Or, si l'on pose
+\[
+  X'_1=X_1\times_{Y_1}Y'_1=X'\times_{Y'}Y'_1
+  \qquad\text{et}\qquad
+  f'_1=(f_1)_{(Y'_1)}=f'_{(Y'_1)}:X'_1\to Y'_1,
+\]
+$f'_1$ est affine en vertu de l'hypothèse. On est donc ramené à prouver le corollaire
+en y remplaçant $Y$, $X$, $f$ et $Y'$ par $Y_1$, $X_1$, $f_1$ et $Y'_1$,
+autrement dit, il suffit de prouver que $f$ est affine lorsqu'on fait de plus, dans
+l'énoncé de (14.5.11), l'hypothèse que tout point de $Y$ admet un voisinage ouvert
+$U$ tel qu'il existe une $U$-section de $g^{-1}(U)$. La question étant locale sur
+$Y$, on peut même supposer qu'il existe une $Y$-section $s$ de $Y'$. Or, on a le
+lemme élémentaire suivant (valable dans toute catégorie admettant des produits
+fibrés)~:
+
+\begin{lemma}[14.5.11.1]
+\label{IV.14.5.11.1-fr}
+Soient $f:X\to S$, $g:Y\to S$ deux morphismes, $p_1:X\times_S Y\to X$,
+$p_2:X\times_S Y\to Y$ les projections canoniques. Si $s:S\to Y$ est une section
+de $g$, alors $s'=(1,s\circ f)_S$ est une section de $p_1$ et $X$, muni des
+morphismes $f:X\to S$ et $s':X\to X\times_S Y$, s'identifie au produit des
+$Y$-préschémas $S$ et $X\times_S Y$ pour les morphismes $s:S\to Y$ et
+$p_2:X\times_S Y\to Y$.
+\end{lemma}
+
+\oldpage[IV-3]{223}
+
+\begin{proof}
+C'est un cas particulier de (\textbf{I}, 3.3.11), où l'on remplace le diagramme par
+\[
+  \xymatrix{
+    X \ar[r]^{p_1} \ar[d]_{f} & X\times_S Y \ar[r]^{s'} \ar[d]^{p_2} & X \ar[d]^{f} \\
+    S \ar[r]_{s} & Y \ar[r]_{g} & S
+  }
+\]
+\end{proof}
+
+Appliquant ce lemme en y remplaçant $S$, $Y$ par $Y$, $Y'$, on voit que l'on peut
+écrire $f=(f')_{(Y)}$ pour le changement de base $s:Y\to Y'$, donc $f$ est affine
+puisque $f'$ l'est. C.Q.F.D.
+
+Une variante de ce critère est la suivante~:
+
+\begin{corollary}[14.5.12]
+\label{IV.14.5.12-fr}
+Avec les notations et hypothèses générales de (14.5.11), soit $\mathcal L$ un
+$\mathcal O_X$-Module inversible. Supposons qu'il existe une partie fermée $Z$ de
+$X$, propre sur $Y$ (\textbf{II}, 5.4.10) et telle que le préschéma induit par $X$
+sur l'ouvert $X-Z$ soit normal. Alors, pour que $\mathcal L$ soit ample relativement
+à $f$, il faut et il suffit que
+$\mathcal L'=\mathcal L\otimes_{\mathcal O_Y}\mathcal O_{Y'}$ soit ample
+relativement à $f'$.
+\end{corollary}
+
+Gardons les notations de la démonstration de (14.5.11). Posons
+$\mathcal L_1=\mathcal L\otimes_{\mathcal O_Y}\mathcal O_{Y_1}$~; il suffira de
+prouver que $\mathcal L_1$ est ample relativement à $f\circ p$, en vertu de
+(\textbf{III}, 2.6.2)~; mais $f\circ p=h\circ f_1$, et, compte tenu de
+(\textbf{II}, 4.6.13, (v)), il suffira de prouver que $\mathcal L_1$ est ample
+relativement à $f_1$. La question étant locale sur $Y_1$, on peut de nouveau
+supposer que $g'$ admet une section $s$~; si
+$\mathcal L'_1=\mathcal L'\otimes_{\mathcal O_{Y'}}\mathcal O_{Y'_1}$, on peut
+alors écrire, en vertu du lemme (14.5.11.1),
+$\mathcal L_1=\mathcal L'_1\otimes_{\mathcal O_{Y'_1}}\mathcal O_{Y_1}$ pour le
+changement de base $s:Y_1\to Y'_1$~; la conclusion résulte donc de deux
+applications de (\textbf{II}, 4.6.13, (iii)).
+
+% IV3_B31_P223_END_BEFORE_SECTION_15

@@ -1,0 +1,863 @@
+\section{Diviseurs}
+\label{section:IV.21}
+
+Sur le contenu du présent paragraphe, voir les commentaires de l'introduction du \textsection~20.
+Pour les propriétés \emph{globales} des diviseurs, le lecteur se reportera au paragraphe qui leur est consacré au chap.~V.
+
+\subsection{Diviseurs sur un espace annelé}
+\label{subsection:IV.21.1}
+\label{IV.21.1}
+
+\begin{env}[21.1.1]
+\label{IV.21.1.1}
+Soient $(X,\sh{O}_X)$ un espace annelé, $\sh{M}_X$ le faisceau des germes de fonctions méromorphes sur $X$ \sref{IV.20.1.3}, $\sh{M}_X^*$ le faisceau (de groupes multiplicatifs) des germes de fonctions méromorphes régulières sur $X$ \sref{IV.20.1.8}.
+Il est clair que le faisceau (de groupes multiplicatifs) $\sh{O}_X^*$ des germes de sections inversibles de $\sh{O}_X$ s'identifie canoniquement à un sous-faisceau (de groupes multiplicatifs) de $\sh{M}_X^*$.
+\end{env}
+
+\begin{definition}[21.1.2]
+\label{IV.21.1.2}
+On appelle \emph{faisceau des diviseurs sur $X$} et on note $\sh{D}iv_X$ le faisceau quotient (de groupes commutatifs) $\sh{M}_X^*/\sh{O}_X^*$;
+les sections de ce faisceau au-dessus de $X$ se nomment les \emph{diviseurs sur $X$}; ils forment un groupe commutatif noté $\operatorname{Div}(X)$.
+Pour toute section $f$ de $\sh{M}_X^*$ au-dessus de $X$ (autrement dit, toute fonction méromorphe régulière sur $X$ \sref{IV.20.1.8}) on appelle \emph{diviseur de $f$} et on note $\operatorname{div}(f)$ (ou $\operatorname{div}_X(f)$) le diviseur sur $X$ image de $f$ par l'homomorphisme canonique
+\[
+  \Gamma(X,\sh{M}_X^*)\longrightarrow\Gamma(X,\sh{D}iv_X).
+\]
+\end{definition}
+
+\oldpage[IV-4]{256}
+
+Le \emph{support} d'un diviseur $D$ est l'ensemble fermé des $x\in X$ tels que $D_x\neq0$.
+On le note $\operatorname{Supp}(D)$.
+
+Pour tout ouvert $U$ de $X$, on a évidemment $\sh{M}_X^*|U=\sh{M}_U^*$, $\sh{O}_X^*|U=\sh{O}_U^*$, donc $\sh{D}iv_X|U=\sh{D}iv_U$, et par suite le faisceau $\sh{D}iv_X$ est égal au préfaisceau $U\mapsto\operatorname{Div}(U)$.
+
+Lorsque $X=\operatorname{Spec}(A)$ est affine, on écrit $\operatorname{Div}(A)$ au lieu de $\operatorname{Div}(\operatorname{Spec}(A))$.
+
+\begin{env}[21.1.3]
+\label{IV.21.1.3}
+Nous noterons toujours \emph{additivement} le groupe $\operatorname{Div}(X)$ des diviseurs sur $X$.
+Pour deux fonctions méromorphes régulières $f$, $g$ sur $X$, on a donc
+\[
+\label{IV.21.1.3.1}
+  \operatorname{div}(fg)=\operatorname{div}(f)+\operatorname{div}(g),
+  \tag{21.1.3.1}
+\]
+\[
+\label{IV.21.1.3.2}
+  \operatorname{div}(f^{-1})=-\operatorname{div}(f).
+  \tag{21.1.3.2}
+\]
+Par définition, pour toute fonction méromorphe régulière $f$ sur $X$, on a l'équivalence
+\[
+\label{IV.21.1.3.3}
+  \operatorname{div}(f)=0 \iff f\in\Gamma(X,\sh{O}_X^*),
+  \tag{21.1.3.3}
+\]
+d'où, pour deux fonctions méromorphes régulières $f$, $g$ sur $X$
+\[
+\label{IV.21.1.3.4}
+  \operatorname{div}(f)=\operatorname{div}(g) \iff fg^{-1}\in\Gamma(X,\sh{O}_X^*).
+  \tag{21.1.3.4}
+\]
+\end{env}
+
+\begin{env}[21.1.4]
+\label{IV.21.1.4}
+Soit maintenant $\sh{L}$ un $\sh{O}_X$-Module inversible, et soit $s$ une \emph{section méromorphe régulière} \sref{IV.20.1.8} de $\sh{L}$ au-dessus de $X$.
+Tout $x\in X$ possède un voisinage ouvert $U$ tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$, donc $\sh{M}_X(\sh{L})|U$ isomorphe à $\sh{M}_X|U$;
+par un de ces isomorphismes, $s|U$ correspond à une section $f\in\Gamma(U,\sh{M}_X^*)$, et puisque deux isomorphismes de $\sh{L}|U$ sur $\sh{O}_U$ ne diffèrent que par la multiplication par un élément de $\Gamma(U,\sh{O}_X^*)$ (\hyperref[0.5.4.3]{$\mathbf{0}_{\mathrm I}$, 5.4.3}), l'élément $\operatorname{div}_U(f)$ de $\Gamma(U,\sh{D}iv_X)$ est \emph{indépendant} de l'isomorphisme choisi;
+il est clair que ces éléments (pour $U$ variable) sont les restrictions d'une section de $\sh{D}iv_X$ au-dessus de $X$, que l'on appelle le \emph{diviseur de $s$} et que l'on note $\operatorname{div}(s)$ (un tel diviseur n'est pas nécessairement de la forme $\operatorname{div}(g)$ pour une fonction méromorphe régulière $g$ sur $X$; voir \sref{IV.21.2.9}).
+Pour $\sh{L}=\sh{O}_X$, la définition de $\operatorname{div}(s)$ coïncide avec celle de \sref{IV.21.1.2}.
+Si $\sh{L}$, $\sh{L}'$ sont deux $\sh{O}_X$-Modules inversibles, $s$ (resp. $s'$) une section méromorphe régulière de $\sh{L}$ (resp. $\sh{L}'$) au-dessus de $X$, il est immédiat que l'on a
+\[
+\label{IV.21.1.4.1}
+  \operatorname{div}(s\otimes s')=\operatorname{div}(s)+\operatorname{div}(s')
+  \tag{21.1.4.1}
+\]
+\[
+\label{IV.21.1.4.2}
+  \operatorname{div}(s^{\otimes n})=n.\operatorname{div}(s) \quad\text{pour tout}\quad n\in\mathbf{Z}
+  \tag{21.1.4.2}
+\]
+($s^{-1}$ étant la section méromorphe régulière de $\sh{L}^{-1}$ au-dessus de $X$ définie dans \sref{IV.20.1.10})
+et, pour deux sections méromorphes régulières $s$, $s'$ de $\sh{L}$ au-dessus de $X$, on a la relation
+\[
+\label{IV.21.1.4.3}
+  \operatorname{div}(s)=\operatorname{div}(s') \iff s'=ts \quad\text{avec}\quad t\in\Gamma(X,\sh{O}_X^*).
+  \tag{21.1.4.3}
+\]
+\end{env}
+
+\begin{env}[21.1.5]
+\label{IV.21.1.5}
+Le faisceau $\sh{S}(\sh{O}_X)$ \sref{IV.20.1.3} dont les sections au-dessus d'un ouvert $U$ de $X$ sont les éléments réguliers de $\Gamma(U,\sh{O}_X)$ est un \emph{sous-faisceau de monoïdes} de $\sh{M}_X^*$; on peut écrire
+\[
+\label{IV.21.1.5.1}
+  \sh{S}(\sh{O}_X)=\sh{O}_X\cap\sh{M}_X^*.
+  \tag{21.1.5.1}
+\]
+\end{env}
+
+\oldpage[IV-4]{257}
+
+Si on note $\sh{S}(\sh{O}_X)^{-1}$ le faisceau dont les sections au-dessus de $U$ sont les inverses dans $\Gamma(U,\sh{M}_X^*)$ des éléments de $\Gamma(U,\sh{S}(\sh{O}_X))$, il est clair que l'on a $\Gamma(U,\sh{S}(\sh{O}_X))\cap\Gamma(U,\sh{S}(\sh{O}_X)^{-1})=\Gamma(U,\sh{O}_X^*)$, donc
+\[
+\label{IV.21.1.5.2}
+  \sh{S}(\sh{O}_X)\cap\sh{S}(\sh{O}_X)^{-1}=\sh{O}_X^*.
+  \tag{21.1.5.2}
+\]
+
+\begin{definition}[21.1.6]
+\label{IV.21.1.6}
+Le sous-faisceau d'ensembles de $\sh{D}iv_X$, image canonique du sous-faisceau $\sh{S}(\sh{O}_X)$ de $\sh{M}_X^*$, est noté $\sh{D}iv_X^+$; ses sections au-dessus de $X$ sont appelées \emph{diviseurs positifs sur $X$}, et leur ensemble est noté $\operatorname{Div}^+(X)$.
+\end{definition}
+
+Puisque $\sh{S}(\sh{O}_X)$ est un faisceau de monoïdes (multiplicatifs), on a
+\[
+\label{IV.21.1.6.1}
+  \operatorname{Div}^+(X)+\operatorname{Div}^+(X)\subset\operatorname{Div}^+(X)
+  \tag{21.1.6.1}
+\]
+et d'autre part, en vertu de \sref{IV.21.1.5.2} et \sref{IV.21.1.3.3}
+\[
+\label{IV.21.1.6.2}
+  \operatorname{Div}^+(X)\cap(-\operatorname{Div}^+(X))=\{0\}.
+  \tag{21.1.6.2}
+\]
+Ces deux relations montrent que $\operatorname{Div}^+(X)$ est l'ensemble des éléments positifs pour une \emph{structure d'ordre} sur le groupe $\operatorname{Div}(X)$, compatible avec cette structure de groupe; on note cette relation d'ordre $D\leq D'$, autrement dit, on a
+\[
+\label{IV.21.1.6.3}
+  D\geq0 \iff D\in\operatorname{Div}^+(X).
+  \tag{21.1.6.3}
+\]
+
+Nous supposerons toujours dans ce qui suit que $\operatorname{Div}(X)$ est muni de cette structure d'ordre;
+il est clair que $\sh{D}iv_X^+|U=\sh{D}iv_U^+$, donc $\Gamma(U,\sh{D}iv_X^+)=\operatorname{Div}^+(U)$, et on peut donc dire que $\sh{D}iv_X^+$ définit sur $\sh{D}iv_X$ une structure de faisceau de groupes ordonnés.
+La fibre $(\sh{D}iv_X^+)_x$ en un point $x$ du faisceau $\sh{D}iv_X^+$ est un sous-monoïde du groupe $(\sh{D}iv_X)_x$, ensemble des éléments $\geq0$ pour une structure d'ordre compatible avec la structure de groupe;
+pour un diviseur $D$ sur $X$, il revient au même de dire que $D\geq0$ ou que $D_x\geq0$ pour tout $x\in X$.
+
+Par définition, pour toute fonction méromorphe régulière $f$ sur $X$, on a la relation
+\[
+\label{IV.21.1.6.4}
+  \operatorname{div}(f)\geq0 \iff f\in\Gamma(X,\sh{S}(\sh{O}_X))
+  \tag{21.1.6.4}
+\]
+autrement dit, $\operatorname{div}(f)\geq0$ signifie que $f$ est une \emph{section régulière} de $\sh{O}_X$, ou encore une section de $\sh{O}_X$ \emph{inversible dans} $M(X)$.
+
+Plus généralement, étant donné un diviseur $D$ sur $X$, la relation $\operatorname{div}(f)\geq D$ est équivalente à la suivante : pour tout ouvert $U$ de $X$ tel que $D|U=\operatorname{div}(g)$, où $g\in\Gamma(U,\sh{M}_X^*)$, il existe un élément régulier $t$ de $\Gamma(U,\sh{O}_X)$ tel que $f|U=tg$.
+
+\begin{env}[21.1.7]
+\label{IV.21.1.7}
+Soient $\sh{L}$ un $\sh{O}_X$-Module inversible, $s$ une section méromorphe régulière de $\sh{L}$ au-dessus de $X$; on a la relation
+\[
+\label{IV.21.1.7.1}
+  \operatorname{div}(s)\geq0 \iff s\in\Gamma(X,\sh{L})\cap\Gamma(X,(\sh{M}_X(\sh{L}))^*)
+  \tag{21.1.7.1}
+\]
+comme il résulte aussitôt des définitions \sref{IV.21.1.4} et \sref{IV.21.1.6}.
+\end{env}
+
+\begin{proposition}[21.1.8]
+\label{IV.21.1.8}
+Soient $X$ un préschéma localement noethérien, $D$ un diviseur sur $X$.
+Supposons que pour tout $x\in X$ tel que $\operatorname{prof}(\sh{O}_{X,x})=1$ on ait $D_x\geq0$ (resp. $D_x=0$).
+Alors on a $D\geq0$ (resp. $D=0$).
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$, on peut supposer que $D=\operatorname{div}(f)$, $f$ étant une
+\oldpage[IV-4]{258}
+fonction méromorphe régulière sur $X$;
+la relation $D_x\geq0$ équivaut à $x\in\operatorname{dom}(f)$, donc l'hypothèse signifie que si $T=X-\operatorname{dom}(f)$, on a $\operatorname{prof}(\sh{O}_{X,x})\geq2$ pour tout $x\in T$ (car $\operatorname{dom}(f)$ contient les points maximaux de $X$).
+Par suite \sref{IV.5.10.5} l'homomorphisme de restriction $\Gamma(X,\sh{O}_X)\to\Gamma(X-T,\sh{O}_X)$ est bijectif, ce qui montre qu'il existe une section $s$ de $\sh{O}_X$ au-dessus de $X$ telle que $f=s|(X-T)$.
+Mais par définition de $T$, cela entraîne $T=\varnothing$, donc $f=s$ et $D\geq0$.
+L'assertion relative à la relation $D_x=0$ s'en déduit aussitôt en appliquant ce qui précède à $-D$, en vertu de \sref{IV.21.1.6.2}.
+\end{proof}
+
+
+\begin{corollary}[21.1.9]
+\label{IV.21.1.9}
+Soient $X$ un préschéma localement noethérien, $D$ un diviseur sur $X$.
+Soit $S$ le support de $D$.
+Alors, pour tout point maximal $x$ de $S$, on a $\operatorname{prof}(\sh{O}_{X,x})=1$.
+\end{corollary}
+
+\begin{proof}
+Posons en effet $X_1=\operatorname{Spec}(\sh{O}_{X,x})$;
+compte tenu de \sref{IV.20.2.11} et \sref{IV.20.3.6}, le faisceau $\sh{M}_{X_1}^*$ est induit sur $X_1$ par $\sh{M}_X^*$, donc on peut se borner au cas où $X=X_1$, auquel cas, comme $x\in S$ et que $x$ est point maximal de $S$, on a nécessairement $S=\{x\}$.
+Si l'on avait alors $\operatorname{prof}(\sh{O}_{X,x})\neq1$, on en conclurait, en vertu de \sref{IV.21.1.8}, que $D=0$, ce qui contredit la définition de $S$.
+\end{proof}
+
+\begin{proposition}[21.1.10]
+\label{IV.21.1.10}
+Soit $A$ un anneau local noethérien;
+pour que $\operatorname{Div}(A)=0$, il faut et il suffit que $\operatorname{prof}(A)=0$ (autrement dit, que l'idéal maximal $\mathfrak{m}$ de $A$ soit associé à $A$ (\hyperref[0.16.4.6]{$\mathbf{0}$, 16.4.6})).
+\end{proposition}
+
+\begin{proof}
+En effet, dire que $\operatorname{Div}(A)=0$ signifie que dans $A$ tout élément régulier est inversible, ou encore que tous les éléments de $\mathfrak{m}$ sont diviseurs de zéro, ce qui signifie que $\mathfrak{m}\in\operatorname{Ass}(A)$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~1, n\textsuperscript{o}~1, cor.~3 de la prop.~2).
+\end{proof}
+
+\subsection{Diviseurs et Idéaux fractionnaires inversibles}
+\label{subsection:IV.21.2}
+
+\begin{env}[21.2.1]
+\label{IV.21.2.1}
+Soit $(X,\sh{O}_X)$ un espace annelé.
+On appelle \emph{Idéal fractionnaire sur $X$} un sous-$\sh{O}_X$-Module du $\sh{O}_X$-Module $\sh{M}_X$ des germes de fonctions méromorphes sur $X$.
+Un Idéal fractionnaire $\sh{J}$ sur $X$ qui est un $\sh{O}_X$-Module inversible est appelé \emph{Idéal fractionnaire inversible}.
+\end{env}
+
+\begin{proposition}[21.2.2]
+\label{IV.21.2.2}
+Pour qu'un Idéal fractionnaire $\sh{J}$ sur $X$ soit inversible, il faut et il suffit que pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ et une section $f\in\Gamma(U,\sh{M}_X^*)$ tels que $\sh{J}|U=\sh{O}_U.f$.
+\end{proposition}
+
+\begin{proof}
+La condition est évidemment suffisante, l'application $s\mapsto s(f|V)$ de $\Gamma(V,\sh{O}_X)$ dans $\Gamma(V,\sh{J})$ étant évidemment bijective pour tout ouvert $V\subset U$.
+Pour voir qu'elle est nécessaire, notons qu'il existe par hypothèse un voisinage ouvert $U$ de $x$ et un isomorphisme de $\sh{O}_X$-Modules $\sh{O}_U\xrightarrow{\sim}\sh{J}|U$.
+Si $f$ est l'image de la section $1\in\Gamma(U,\sh{O}_X)$ par cet isomorphisme, on peut supposer, en restreignant $U$, que l'on a $f=u/s$, où $u\in\Gamma(U,\sh{O}_X)$ et $s\in\Gamma(U,\sh{S}(\sh{O}_X))$, et l'isomorphisme considéré fait alors correspondre, à toute section $v\in\Gamma(V,\sh{O}_X)$ (où $V$ est un ouvert contenu dans $U$), la section $v(u|V)/(s|V)$;
+dire que l'application ainsi définie est bijective signifie que $u|V$ est un élément régulier de $\Gamma(V,\sh{O}_X)$, donc $f\in\Gamma(U,\sh{M}_X^*)$.
+\end{proof}
+
+On notera que pour tout ouvert $U$ de $X$ tel que $\sh{J}|U=\sh{O}_U.f$ avec $f\in\Gamma(U,\sh{M}_X^*)$, la section $f$ est déterminée \emph{à la multiplication près} par un élément de $\Gamma(U,\sh{O}_X^*)$, puisque la
+\oldpage[IV-4]{259}
+multiplication par ces éléments fournit tous les automorphismes du $\sh{O}_U$-Module $\sh{O}_U$ (\hyperref[0.5.4.3]{$\mathbf{0}_{\mathrm I}$, 5.4.3}).
+
+\begin{corollary}[21.2.3]
+\label{IV.21.2.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Soit $\sh{J}$ un Idéal fractionnaire inversible;
+  alors le $\sh{O}_X$-Module inversible $\sh{J}^{-1}$ s'identifie canoniquement à l'Idéal fractionnaire $\sh{J}'$ (\emph{transporteur} de $\sh{J}$ dans $\sh{O}_X$) défini de la façon suivante : pour tout ouvert $U$ de $X$ tel que $\sh{J}|U=\sh{O}_U.f$, où $f\in\Gamma(U,\sh{M}_X^*)$, on a $\sh{J}'|U=\sh{O}_U.f^{-1}$.
+  \item Si $\sh{J}_1$ et $\sh{J}_2$ sont deux Idéaux fractionnaires inversibles, l'application canonique $\sh{J}_1\otimes\sh{J}_2\to\sh{J}_1\sh{J}_2$ est un isomorphisme de $\sh{O}_X$-Modules.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+L'assertion (ii) résulte aussitôt de \sref{IV.21.2.2}.
+D'autre part, la remarque faite à la fin de \sref{IV.21.2.2} prouve qu'il existe bien un Idéal fractionnaire $\sh{J}'$ et un seul défini par la condition de l'énoncé;
+l'isomorphisme canonique de $\sh{J}'$ sur $\sh{J}^{-1}=\shHom_{\sh{O}_X}(\sh{J},\sh{O}_X)$ s'obtient en faisant correspondre à toute section $s(f^{-1}|V)$ de $\Gamma(V,\sh{J}')$ (où $V$ est un ouvert contenu dans $U$ et $s\in\Gamma(V,\sh{O}_X)$) l'homomorphisme $t(f|V)\mapsto st$ de $\Gamma(V,\sh{J})$ dans $\Gamma(V,\sh{O}_X)$.
+\end{proof}
+
+En vertu de \sref{IV.21.2.3},~(i), on identifiera généralement les $\sh{O}_X$-Modules inversibles $\sh{J}'$ et $\sh{J}^{-1}$, considérant donc $\sh{J}^{-1}$ comme un sous-$\sh{O}_X$-Module de $\sh{M}_X$.
+
+\begin{env}[21.2.4]
+\label{IV.21.2.4}
+Il résulte de \sref{IV.21.2.3} que l'ensemble $\operatorname{Id.inv}(X)$ des Idéaux fractionnaires inversibles sur $X$ est muni d'une structure de \emph{groupe commutatif} pour la loi de composition $(\sh{J}_1,\sh{J}_2)\mapsto\sh{J}_1\sh{J}_2$, l'élément neutre de ce groupe étant $\sh{O}_X$.
+Il est clair que pour tout ouvert $U$ de $X$, on a $(\sh{J}_1\sh{J}_2)|U=(\sh{J}_1|U)(\sh{J}_2|U)$, donc l'application de restriction $\sh{J}\mapsto\sh{J}|U$ est un homomorphisme de groupes $\operatorname{Id.inv}(X)\to\operatorname{Id.inv}(U)$;
+on définit donc ainsi un \emph{préfaisceau de groupes commutatifs} $U\mapsto\operatorname{Id.inv}(U)$;
+il est immédiat qu'en fait ce préfaisceau est un \emph{faisceau de groupes commutatifs}, que l'on note $\sh{J}d.inv_X$.
+\end{env}
+
+\begin{env}[21.2.5]
+\label{IV.21.2.5}
+Pour toute fonction méromorphe régulière $f\in\Gamma(X,\sh{M}_X^*)$, il résulte de \sref{IV.21.2.2} que $\sh{J}(f)=\sh{O}_X.f$ est un Idéal fractionnaire inversible, et on a évidemment $\sh{J}(f_1f_2)=\sh{J}(f_1)\sh{J}(f_2)$, autrement dit l'application $f\mapsto\sh{J}(f)$ est un homomorphisme du groupe commutatif $\Gamma(X,\sh{M}_X^*)$ dans le groupe commutatif $\operatorname{Id.inv}(X)$.
+Remplaçant $X$ par un ouvert quelconque $U$ de $X$ et notant que les homomorphismes obtenus sont compatibles avec les opérations de restriction, on obtient un homomorphisme canonique de faisceaux de groupes commutatifs :
+\[
+\label{IV.21.2.5.1}
+  I_0:\sh{M}_X^*\to\sh{J}d.inv_X.
+  \tag{21.2.5.1}
+\]
+Notons que si $f\in\Gamma(X,\sh{O}_X^*)$, on a $\sh{J}(f)=\sh{O}_X$;
+on en déduit aussitôt que l'homomorphisme $I_0$ se factorise en
+\[
+\label{IV.21.2.5.2}
+  \sh{M}_X^*\to\sh{M}_X^*/\sh{O}_X^*=\sh{D}iv_X\xrightarrow{I}\sh{J}d.inv_X
+  \tag{21.2.5.2}
+\]
+où $I$ est un homomorphisme du faisceau de groupes additifs $\sh{D}iv_X$ dans le faisceau de groupes multiplicatifs $\sh{J}d.inv_X$;
+on a donc pour tout ouvert $U$ de $X$ un homomorphisme $\sh{J}_U:\operatorname{Div}(U)\to\operatorname{Id.inv}(U)$ de groupes commutatifs, tel que, pour toute section $f\in\Gamma(U,\sh{M}_X^*)$, on ait
+\[
+\label{IV.21.2.5.3}
+  \sh{J}_U(\operatorname{div}_U(f))=\sh{O}_U.f.
+  \tag{21.2.5.3}
+\]
+
+\oldpage[IV-4]{260}
+
+On en conclut que $\sh{J}_X(D)$, pour tout diviseur $D\in\operatorname{Div}(X)$, est l'Idéal fractionnaire inversible défini de la façon suivante : pour tout ouvert $U$ de $X$ tel que $D|U=\operatorname{div}_U(f)$, où $f\in\Gamma(U,\sh{M}_X^*)$, $\sh{J}_X(D)|U$ est l'Idéal fractionnaire inversible $\sh{O}_U.f$.
+On a donc, en vertu de \sref{IV.21.1.6}, pour toute fonction méromorphe régulière $f\in\Gamma(X,\sh{M}_X^*)$, la relation
+\[
+\label{IV.21.2.5.4}
+  f\in\Gamma(X,\sh{J}_X(D)) \iff \operatorname{div}(f)\geq D.
+  \tag{21.2.5.4}
+\]
+\end{env}
+
+\begin{proposition}[21.2.6]
+\label{IV.21.2.6}
+L'homomorphisme $I:\sh{D}iv_X\to\sh{J}d.inv_X$ est bijectif.
+\end{proposition}
+
+\begin{proof}
+On définit en effet un homomorphisme $I_X'$ de $\operatorname{Id.inv}(X)$ dans $\operatorname{Div}(X)$ en faisant correspondre à tout Idéal fractionnaire inversible $\sh{J}$ sur $X$ le diviseur $I_X'(\sh{J})$ défini de la façon suivante : pour tout ouvert $U$ de $X$ tel que $\sh{J}|U=\sh{O}_U.f$, où $f\in\Gamma(U,\sh{M}_X^*)$ \sref{IV.21.2.2}, on prend $I_X'(\sh{J})|U=\operatorname{div}_U(f)$;
+en vertu de la remarque suivant \sref{IV.21.2.2}, cette définition est indépendante du générateur $f$ choisi dans $\sh{J}|U$, et détermine bien un diviseur sur $X$.
+En outre, cette définition montre aussitôt que les homomorphismes $\sh{J}_X$ et $I_X'$ sont réciproques l'un de l'autre.
+Remplaçant $X$ par un ouvert quelconque $U$, on en déduit la définition de l'isomorphisme $I':\sh{J}d.inv_X\to\sh{D}iv_X$ réciproque de $I$, d'où la proposition.
+On posera $I_X'(\sh{J})=\operatorname{div}(\sh{J})$, de sorte que l'on a, pour toute fonction méromorphe régulière $f$ sur $X$
+\[
+\label{IV.21.2.6.1}
+  \operatorname{div}(\sh{O}_X.f)=\operatorname{div}(f).
+  \tag{21.2.6.1}
+\]
+\end{proof}
+
+\begin{env}[21.2.7]
+\label{IV.21.2.7}
+On identifiera souvent les faisceaux $\sh{D}iv_X$ et $\sh{J}d.inv_X$ (resp. les groupes $\operatorname{Div}(X)$ et $\operatorname{Id.inv}(X)$) au moyen des isomorphismes $I$ et $I'$ (resp. $\sh{J}_X$ et $I_X'$) précédents.
+On notera que l'on a la relation
+\[
+\label{IV.21.2.7.1}
+  D\geq0 \iff \sh{J}_X(D)\subset\sh{O}_X \quad\text{pour}\quad D\in\operatorname{Div}(X)
+  \tag{21.2.7.1}
+\]
+comme il résulte aussitôt des définitions \sref{IV.21.1.6} et de \sref{IV.21.1.5.1};
+en d'autres termes, l'image $\sh{J}_X(\operatorname{Div}^+(X))$ est l'ensemble des \emph{Idéaux} de $\sh{O}_X$ (dits aussi parfois \emph{Idéaux entiers}) qui sont des $\sh{O}_X$-Modules inversibles : un tel Idéal $\sh{J}$ est encore caractérisé par le fait que pour tout $x\in X$, il y a un voisinage ouvert $U$ de $x$ dans $X$ tel que $\sh{J}|U=\sh{O}_U.f$, où $f$ est un élément régulier de $\Gamma(U,\sh{O}_X)$.
+L'ensemble $\sh{J}_X(\operatorname{Div}^+(X))$ de ces Idéaux est donc un sous-monoïde de $\operatorname{Id.inv}(X)$, égal à l'ensemble des éléments positifs pour une relation d'ordre compatible avec la structure de groupe de $\operatorname{Id.inv}(X)$, et il est immédiat que cette relation n'est autre que la relation \emph{opposée} à l'inclusion;
+autrement dit, on a
+\[
+\label{IV.21.2.7.2}
+  \sh{J}_1\subset\sh{J}_2 \iff \operatorname{div}(\sh{J}_1)\geq\operatorname{div}(\sh{J}_2)
+  \tag{21.2.7.2}
+\]
+pour $\sh{J}_1$, $\sh{J}_2$ dans $\operatorname{Id.inv}(X)$.
+\end{env}
+
+\begin{env}[21.2.8]
+\label{IV.21.2.8}
+Pour tout diviseur $D$ sur $X$, on pose
+\[
+\label{IV.21.2.8.1}
+  \sh{O}_X(D)=(\sh{J}_X(D))^{-1};
+  \tag{21.2.8.1}
+\]
+$\sh{O}_X(D)$ est donc un Idéal fractionnaire inversible, défini de la façon suivante : pour tout ouvert $U$ de $X$ tel que $D|U=\operatorname{div}_U(f)$, où $f\in\Gamma(U,\sh{M}_X^*)$, $\sh{O}_X(D)|U$ est l'Idéal
+\oldpage[IV-4]{261}
+fractionnaire inversible $\sh{O}_U.f^{-1}$;
+en vertu de \sref{IV.21.1.6}, pour toute fonction méromorphe régulière $f$, on a la relation
+\[
+\label{IV.21.2.8.2}
+  f\in\Gamma(X,\sh{O}_X(D)) \iff \operatorname{div}(f)\geq-D.
+  \tag{21.2.8.2}
+\]
+En outre, il est clair que l'on a des isomorphismes canoniques \sref{IV.21.2.3}
+\[
+\label{IV.21.2.8.3}
+  \left\{\begin{aligned}
+    &\sh{O}_X(0)=\sh{O}_X,\quad \sh{O}_X(D+D')=\sh{O}_X(D)\sh{O}_X(D')\xrightarrow{\sim}\sh{O}_X(D)\otimes\sh{O}_X(D')\\
+    &\sh{O}_X(nD)=(\sh{O}_X(D))^n\xrightarrow{\sim}(\sh{O}_X(D))^{\otimes n}
+  \end{aligned}\right.
+  \tag{21.2.8.3}
+\]
+pour tout entier $n\in\mathbf{Z}$, et pour deux diviseurs quelconques $D$, $D'$ sur $X$.
+\end{env}
+
+\begin{env}[21.2.9]
+\label{IV.21.2.9}
+Soit $\sh{J}$ un Idéal fractionnaire inversible sur $X$.
+L'injection canonique $\sh{J}\hookrightarrow\sh{M}_X$ définit par tensorisation un homomorphisme de $\sh{O}_X$-Modules
+\[
+\label{IV.21.2.9.1}
+  \sh{M}_X(\sh{J})=\sh{J}\otimes_{\sh{O}_X}\sh{M}_X\to\sh{M}_X\otimes_{\sh{O}_X}\sh{M}_X=\sh{M}_X
+  \tag{21.2.9.1}
+\]
+qui est un \emph{isomorphisme} : en effet, si $U$ est un ouvert de $X$ tel que $\sh{J}|U=\sh{O}_U.f$, où $f\in\Gamma(U,\sh{M}_X^*)$, l'homomorphisme \sref{IV.21.2.9.1} restreint à $U$ n'est autre que l'isomorphisme qui à toute section $t$ de $\sh{M}_X(\sh{J})|U=\sh{M}_X|U$ au-dessus de $V\subset U$, fait correspondre la section $t(f|V)^{-1}$ du même faisceau.
+Dans l'isomorphisme \sref{IV.21.2.9.1}, aux sections méromorphes régulières de $\sh{J}$ au-dessus de $X$ correspondent les fonctions méromorphes régulières sur $X$.
+
+Considérons en particulier le cas où $\sh{J}=\sh{O}_X(D)$, où $D$ est un diviseur sur $X$;
+on a alors un isomorphisme canonique
+\[
+\label{IV.21.2.9.2}
+  \sh{M}_X(\sh{O}_X(D))\xrightarrow{\sim}\sh{M}_X
+  \tag{21.2.9.2}
+\]
+et on désigne par $s_D$ la section méromorphe régulière de $\sh{O}_X(D)$ au-dessus de $X$ qui correspond par cet isomorphisme à la section $1$ de $\sh{M}_X$.
+Si $U$ est un ouvert de $X$ tel que $\sh{O}_X(D)|U=\sh{O}_U.f^{-1}$, où $f\in\Gamma(U,\sh{M}_X^*)$, on a $s_D|U=1$ dans $\Gamma(U,\sh{M}_X)$;
+comme alors on a $D|U=\operatorname{div}_U(f)$, on en déduit \sref{IV.21.1.4} que l'on a
+\[
+\label{IV.21.2.9.3}
+  \operatorname{div}(s_D)=D.
+  \tag{21.2.9.3}
+\]
+D'autre part, on déduit aussitôt des isomorphismes canoniques \sref{IV.21.2.8.3} les formules
+\[
+\label{IV.21.2.9.4}
+  s_0=1,\quad s_{D+D'}=s_D\otimes s_{D'},\quad s_{nD}=s_D^{\otimes n}\quad(n\in\mathbf{Z}).
+  \tag{21.2.9.4}
+\]
+\end{env}
+
+\begin{env}[21.2.10]
+\label{IV.21.2.10}
+Considérons, entre deux couples $(\sh{L},s)$, $(\sh{L}',s')$, où $\sh{L}$ et $\sh{L}'$ sont deux $\sh{O}_X$-Modules inversibles, $s$ (resp. $s'$) une section méromorphe régulière de $\sh{L}$ (resp. $\sh{L}'$) au-dessus de $X$, la relation : « il existe un isomorphisme $u:\sh{L}\xrightarrow{\sim}\sh{L}'$ tel que $\overline{u}(s)=s'$ », où $\overline{u}:\Gamma(X,\sh{M}_X(\sh{L}))\xrightarrow{\sim}\Gamma(X,\sh{M}_X(\sh{L}'))$ est l'isomorphisme déduit de $u$ (on notera que l'isomorphisme $u$ vérifiant cette condition est alors déterminé de façon unique).
+Il est clair que c'est une relation d'équivalence, et puisqu'il existe un ensemble de $\sh{O}_X$-Modules inversibles tel que tout $\sh{O}_X$-Module inversible soit isomorphe à un élément de cet ensemble (\hyperref[0.5.4.7]{$\mathbf{0}_{\mathrm I}$, 5.4.7}), on peut parler de l'ensemble $D(X)$ des classes d'équivalence des couples $(\sh{L},s)$ pour la relation précédente.
+Pour tout $\sh{O}_X$-Module inversible $\sh{L}$ et toute section
+\oldpage[IV-4]{262}
+méromorphe régulière $s$ de $\sh{L}$ au-dessus de $X$, on notera $\operatorname{cl}(\sh{L},s)$ l'élément de $D(X)$ correspondant au couple $(\sh{L},s)$.
+Il résulte de (\hyperref[0.5.4.3]{$\mathbf{0}_{\mathrm I}$, 5.4.3}) que si $s$, $s'$ sont deux sections méromorphes régulières de $\sh{L}$ au-dessus de $X$, la relation $\operatorname{cl}(\sh{L},s)=\operatorname{cl}(\sh{L},s')$ équivaut à l'existence d'une section $t\in\Gamma(X,\sh{O}_X^*)$ telle que $s'=ts$.
+
+Il est immédiat que si $(\sh{L},s)$ est équivalent à $(\sh{L}_1,s_1)$ et $(\sh{L}',s')$ à $(\sh{L}_1',s_1')$, les couples $(\sh{L}\otimes\sh{L}',s\otimes s')$ et $(\sh{L}_1\otimes\sh{L}_1',s_1\otimes s_1')$ sont équivalents;
+on définit donc dans $D(X)$ une loi de composition en posant
+\[
+\label{IV.21.2.10.1}
+  \operatorname{cl}(\sh{L},s)\operatorname{cl}(\sh{L}',s')=\operatorname{cl}(\sh{L}\otimes\sh{L}',s\otimes s');
+  \tag{21.2.10.1}
+\]
+il est immédiat que c'est une loi de groupe commutatif, dont l'élément neutre est $\operatorname{cl}(\sh{O}_X,1)$ et où l'inverse de $\operatorname{cl}(\sh{L},s)$ est $\operatorname{cl}(\sh{L}^{-1},s^{\otimes(-1)})$.
+\end{env}
+
+\begin{proposition}[21.2.11]
+\label{IV.21.2.11}
+Les applications
+\[
+\label{IV.21.2.11.1}
+  D\mapsto\operatorname{cl}(\sh{O}_X(D),s_D),\qquad \operatorname{cl}(\sh{L},s)\mapsto\operatorname{div}(s)
+  \tag{21.2.11.1}
+\]
+sont des isomorphismes réciproques de $\operatorname{Div}(X)$ sur $D(X)$ et de $D(X)$ sur $\operatorname{Div}(X)$ respectivement.
+\end{proposition}
+
+\begin{proof}
+Compte tenu de \sref{IV.21.2.8.3}, \sref{IV.21.2.9.4} et \sref{IV.21.2.10.1}, il suffit de voir que les composés de ces deux applications sont les identités dans $\operatorname{Div}(X)$ et $D(X)$ respectivement.
+La première assertion n'est autre que \sref{IV.21.2.9.3}.
+D'autre part, soit $D=\operatorname{div}(s)$, où $s$ est une section méromorphe régulière de $\sh{L}$ au-dessus de $X$, et soit $U$ un ouvert de $X$ tel qu'il existe un isomorphisme de $\sh{L}|U$ sur $\sh{O}_U$ transformant $s|U$ en $f\in\Gamma(U,\sh{M}_X^*)$, de sorte que $D|U=\operatorname{div}_U(f)$, $\sh{O}_X(D)|U=\sh{O}_U.f^{-1}$ et $s_D|U$ est l'élément unité de $\Gamma(U,\sh{M}_X)$.
+Il y a donc un isomorphisme $v_U:\sh{L}|U\to\sh{O}_U.f^{-1}=\sh{O}_X(D)|U$ tel que $\overline{v}_U$ (notation de \sref{IV.21.2.10}) transforme $s|U$ en $f.f^{-1}=1$;
+on voit aussitôt que ces isomorphismes sont compatibles avec les opérations de restriction, donc définissent un isomorphisme $v:\sh{L}\to\sh{O}_X(D)$ tel que $\overline{v}(s)=s_D$.
+\end{proof}
+
+On peut transporter par le premier des isomorphismes \sref{IV.21.2.11.1} la structure de groupe ordonné de $\operatorname{Div}(X)$ à $D(X)$;
+les éléments $\geq0$ de $D(X)$ sont donc les classes $\operatorname{cl}(\sh{L},s)$ telles que $\operatorname{div}(s)\geq0$, c'est-à-dire \sref{IV.21.1.7.1} telles que
+\[
+  s\in\Gamma(X,\sh{L})\cap\Gamma(X,(\sh{M}_X(\sh{L}))^*).
+\]
+
+\begin{env}[21.2.12]
+\label{IV.21.2.12}
+Soit $D$ un diviseur \emph{positif} sur un \emph{préschéma} $X$;
+l'Idéal fractionnaire $\sh{J}_X(D)$ est donc un Idéal de $\sh{O}_X$, qui est un $\sh{O}_X$-Module inversible;
+soit $Y(D)$ le sous-préschéma fermé de $X$ qu'il définit.
+Pour tout $x\in Y(D)$, il y a par hypothèse un voisinage ouvert $U$ de $x$ dans $X$ et une section régulière $t\in\Gamma(U,\sh{O}_X)$ telle que $\sh{J}_X(D)|U=\sh{O}_U.t$ \sref{IV.21.2.7};
+en d'autres termes, l'immersion canonique $Y(D)\to X$ est \emph{régulière et de codimension $1$} en tout point de $Y(D)$ \sref{IV.19.1.4}.
+Inversement, si $Y$ est un sous-préschéma fermé de $X$, régulièrement immergé dans $X$ et de codimension $1$ en tout point de $Y$, il existe un diviseur positif et un seul $D$ tel que $Y(D)=Y$, car pour tout $x\in Y$, il y a un voisinage $U$ de $x$ dans $X$ tel que $Y\cap U$ soit défini par un Idéal de $\sh{O}_U$ de la forme $\sh{O}_U.t$, où $t$ est régulier dans $\Gamma(U,\sh{O}_X)$.
+On notera que l'on a alors $\operatorname{Supp}(D)=Y(D)$, car dire que $D_x\neq0$ signifie que $t_x$ (avec les notations ci-dessus) n'est pas inversible, c'est-à-dire que $x\in Y(D)$.
+\end{env}
+
+\oldpage[IV-4]{263}
+
+\subsection{Équivalence linéaire des diviseurs}
+\label{subsection:IV.21.3}
+
+\begin{env}[21.3.1]
+\label{IV.21.3.1}
+On dit qu'un diviseur $D$ sur $X$ est \emph{principal} s'il est de la forme $\operatorname{div}(f)$, où $f$ est une fonction méromorphe régulière sur $X$;
+les fonctions méromorphes régulières $f'$ telles que $\operatorname{div}(f')=D$ sont alors toutes celles de la forme $tf$, où $t\in\Gamma(X,\sh{O}_X^*)$ \sref{IV.21.1.3.4}.
+L'ensemble des diviseurs principaux est un sous-groupe de $\operatorname{Div}(X)$, noté $\operatorname{Div.princ}(X)$, isomorphe à $\Gamma(X,\sh{M}_X^*)/\Gamma(X,\sh{O}_X^*)$.
+Deux diviseurs $D$, $D'$ sont dits \emph{linéairement équivalents} si $D-D'$ est un diviseur principal;
+les diviseurs principaux sont donc les diviseurs linéairement équivalents à $0$.
+\end{env}
+
+\begin{env}[21.3.2]
+\label{IV.21.3.2}
+Rappelons (\hyperref[0.5.4.7]{$\mathbf{0}_{\mathrm I}$, 5.4.7}) que l'on peut parler de l'ensemble des classes d'équivalence des $\sh{O}_X$-Modules inversibles pour la relation d'isomorphie;
+on désigne cet ensemble par $\operatorname{Pic}(X)$, et pour tout $\sh{O}_X$-Module inversible $\sh{L}$, on note $\operatorname{cl}(\sh{L})$ la classe d'équivalence des $\sh{O}_X$-Modules isomorphes à $\sh{L}$;
+en outre, $\operatorname{Pic}(X)$ est un groupe commutatif pour la multiplication définie par $\operatorname{cl}(\sh{L})\operatorname{cl}(\sh{L}')=\operatorname{cl}(\sh{L}\otimes\sh{L}')$.
+Il est clair que l'application
+\[
+\label{IV.21.3.2.1}
+  r:\operatorname{cl}(\sh{L},s)\mapsto\operatorname{cl}(\sh{L})
+  \tag{21.3.2.1}
+\]
+est un homomorphisme du groupe $D(X)$ \sref{IV.21.2.10} dans le groupe $\operatorname{Pic}(X)$.
+Par composition, on en déduit donc un homomorphisme
+\[
+\label{IV.21.3.2.2}
+  l:\operatorname{Div}(X)\xrightarrow{\sim}D(X)\xrightarrow{r}\operatorname{Pic}(X)
+  \tag{21.3.2.2}
+\]
+(aussi noté $l_X$) tel que, pour tout diviseur $D$, on ait
+\[
+\label{IV.21.3.2.3}
+  l(D)=\operatorname{cl}(\sh{O}_X(D)).
+  \tag{21.3.2.3}
+\]
+
+Notons enfin que, si $u:X'\to X$ est un morphisme d'espaces annelés, $\sh{L}_1$, $\sh{L}_2$ deux $\sh{O}_X$-Modules inversibles isomorphes, les $\sh{O}_{X'}$-Modules inversibles $u^*(\sh{L}_1)$ et $u^*(\sh{L}_2)$ (\hyperref[0.5.4.5]{$\mathbf{0}_{\mathrm I}$, 5.4.5}) sont isomorphes;
+comme d'autre part, pour deux $\sh{O}_X$-Modules inversibles quelconques $\sh{L}_1$, $\sh{L}_2$, on a $u^*(\sh{L}_1\otimes\sh{L}_2)=u^*(\sh{L}_1)\otimes u^*(\sh{L}_2)$ à isomorphisme canonique près (\hyperref[0.4.3.3]{$\mathbf{0}_{\mathrm I}$, 4.3.3}), on voit que le morphisme $u$ définit canoniquement un homomorphisme de groupes commutatifs
+\[
+\label{IV.21.3.2.4}
+  \operatorname{Pic}(u):\operatorname{Pic}(X)\to\operatorname{Pic}(X').
+  \tag{21.3.2.4}
+\]
+\end{env}
+
+\begin{proposition}[21.3.3]
+\label{IV.21.3.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Le noyau de l'homomorphisme canonique $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ est le sous-groupe $\operatorname{Div.princ}(X)$, autrement dit, pour que $\sh{O}_X(D)$ et $\sh{O}_X(D')$ soient isomorphes, il faut et il suffit que $D$ et $D'$ soient linéairement équivalents.
+  On a donc un homomorphisme injectif canonique
+  \[
+  \label{IV.21.3.3.1}
+    \operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\operatorname{Pic}(X)
+    \tag{21.3.3.1}
+  \]
+  déduit de $l$.
+  \item Pour qu'un $\sh{O}_X$-Module inversible $\sh{L}$ soit tel que $\operatorname{cl}(\sh{L})$ soit de la forme $l(D)$, ou encore pour que $\sh{L}$ soit isomorphe à un $\sh{O}_X$-Module de la forme $\sh{O}_X(D)$, il faut et il suffit qu'il existe une section méromorphe régulière de $\sh{L}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-4]{264}
+La proposition résulte aussitôt des définitions et de \sref{IV.21.2.10}.
+\end{proof}
+
+\begin{proposition}[21.3.4]
+\label{IV.21.3.4}
+Soit $X$ un préschéma vérifiant l'une des deux hypothèses suivantes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $X$ est localement noethérien et $\operatorname{Ass}(\sh{O}_X)$ est contenu dans un ouvert affine de $X$.
+  \item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.
+\end{enumerate}
+Alors l'homomorphisme canonique $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ est surjectif, et donne par passage au quotient un isomorphisme
+\[
+  \operatorname{Div}(X)/\operatorname{Div.princ}(X)\xrightarrow{\sim}\operatorname{Pic}(X).
+\]
+\end{proposition}
+
+\begin{proof}
+Il suffit de montrer que tout $\sh{O}_X$-Module inversible $\sh{L}$ admet une section méromorphe régulière au-dessus de $X$ \sref{IV.21.3.3}.
+Dans les deux cas, il suffira, grâce à \sref{IV.20.2.11},~(ii), de définir une section $s$ de $(\sh{M}_X(\sh{L}))^*$ au-dessus d'un ouvert schématiquement dense $U$ de $X$, ou encore dans le cas a), d'un ouvert $U$ contenant $\operatorname{Ass}(\sh{O}_X)$ \sref{IV.20.2.13},~(iv).
+En effet, soit alors $V$ un ouvert quelconque de $X$ tel que $\sh{L}|V$ soit isomorphe à $\sh{O}_V$, de sorte qu'il existe un isomorphisme de $\sh{M}_X(\sh{L})|V$ sur $\sh{M}_X|V$, transformant $s|(U\cap V)$ en une section $f_V$ de $\sh{M}_X^*$ au-dessus de $U\cap V$.
+Comme $U\cap V$ est schématiquement dense dans $V$, il résulte de \sref{IV.20.2.11} qu'il existe une fonction méromorphe régulière et une seule $g_V$ dans $V$ telle que $g_V|(U\cap V)=f_V$, et cette section correspond donc par l'isomorphisme considéré à une section méromorphe régulière $u_V$ de $\sh{L}$ au-dessus de $V$ telle que $u_V|(U\cap V)=s|(U\cap V)$.
+En outre, si $V'$ est un second ouvert de $X$ tel que $\sh{L}|V'$ soit isomorphe à $\sh{O}_{V'}$, les restrictions de $u_V$ et $u_{V'}$ à $V\cap V'$ sont égales, car elles correspondent par isomorphisme à deux fonctions méromorphes qui coïncident dans un ouvert schématiquement dense $U\cap V\cap V'$, et on conclut encore par \sref{IV.20.2.11};
+les $u_V$ sont donc bien les restrictions d'une section de $(\sh{M}_X(\sh{L}))^*$ au-dessus de $X$.
+
+Cela étant, dans le cas b), on prend pour chacun des points maximaux $x_\lambda$ de $X$ un ouvert $U_\lambda$ contenant $x_\lambda$, ne rencontrant aucune composante irréductible de $X$ distincte de $\overline{\{x_\lambda\}}$ et tel que $\sh{L}|U_\lambda$ soit isomorphe à $\sh{O}_{U_\lambda}$;
+on prendra pour $s$ la section telle que $s|U_\lambda$ soit la section de $\sh{L}|U_\lambda$ qui correspond par l'isomorphisme précédent à la section unité de $\sh{O}_{U_\lambda}$.
+
+Dans le cas a), on peut prendre pour $U$ par hypothèse un ouvert affine (donc noethérien), autrement dit, supposer que $X=\operatorname{Spec}(A)$, où $A$ est noethérien, et $\sh{L}=\widetilde{P}$, où $P$ est un $A$-module projectif de rang $1$.
+Si $S$ est l'ensemble des éléments réguliers de $A$, on a $\Gamma(X,\sh{M}_X)=S^{-1}A$ \sref{IV.20.2.12} et $\Gamma(X,\sh{M}_X(\sh{L}))=S^{-1}P$;
+or $S$ est l'ensemble des éléments n'appartenant à aucun des idéaux associés à $A$, donc $S^{-1}A$ est un anneau semi-local dont les idéaux maximaux proviennent des éléments maximaux de $\operatorname{Ass}(A)$, et $S^{-1}P$ est un $S^{-1}A$-module projectif de rang $1$, donc ici libre de rang $1$ (Bourbaki, \emph{Alg. comm.}, chap.~II, \textsection~5, n\textsuperscript{o}~3, prop.~5);
+un élément formant une base de ce $S^{-1}A$-module est par suite \sref{IV.20.1.8} une section méromorphe régulière de $\sh{L}$ au-dessus de $X$.
+\end{proof}
+
+\begin{corollary}[21.3.5]
+\label{IV.21.3.5}
+Si $X$ est un préschéma noethérien, tel qu'il existe un $\sh{O}_X$-Module inversible ample (\textbf{II}, 4.5.3) (par exemple un préschéma quasi-projectif sur un spectre d'anneau noethérien (\textbf{II}, 5.3.1 et 4.6.6)), l'homomorphisme canonique $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ est surjectif.
+\end{corollary}
+
+\begin{proof}
+\oldpage[IV-4]{265}
+En effet (\textbf{II}, 4.5.4), il existe alors un voisinage ouvert affine de l'ensemble fini $\operatorname{Ass}(\sh{O}_X)$.
+\end{proof}
+
+\begin{remark}[21.3.6]
+\label{IV.21.3.6}
+Rappelons (\hyperref[0.5.4.7]{$\mathbf{0}_{\mathrm I}$, 5.4.7}) que l'on a un isomorphisme canonique $\pi:\mathrm{H}^1(X,\sh{O}_X^*)\xrightarrow{\sim}\operatorname{Pic}(X)$ défini de la façon suivante.
+On part d'un $1$-cocycle $(c_{\alpha\beta})$ à valeurs dans $\sh{O}_X^*$ correspondant à un recouvrement ouvert $(U_\alpha)$ de $X$, $c_{\alpha\beta}$ étant un élément de $\Gamma(U_\alpha\cap U_\beta,\sh{O}_X^*)$, et on lui associe la classe du $\sh{O}_X$-Module inversible obtenu en recollant les $\sh{O}_{U_\alpha}$ suivant les isomorphismes $\sh{O}_{U_\alpha}|(U_\alpha\cap U_\beta)\xrightarrow{\sim}\sh{O}_{U_\beta}|(U_\alpha\cap U_\beta)$ définis par la multiplication par $c_{\alpha\beta}$.
+D'autre part, on déduit de la suite exacte de faisceaux de groupes commutatifs
+\[
+  1\to\sh{O}_X^*\to\sh{M}_X^*\to\sh{D}iv_X\to0
+\]
+l'homomorphisme bord de la suite exacte de cohomologie
+\[
+\label{IV.21.3.6.1}
+  \partial:\operatorname{Div}(X)\to\mathrm{H}^1(X,\sh{O}_X^*).
+  \tag{21.3.6.1}
+\]
+Montrons que l'homomorphisme composé
+\[
+  \operatorname{Div}(X)\xrightarrow{\partial}\mathrm{H}^1(X,\sh{O}_X^*)\xrightarrow{\pi}\operatorname{Pic}(X)
+\]
+n'est autre que l'homomorphisme $l$ défini dans \sref{IV.21.3.2.2}.
+En effet on doit partir d'un diviseur $D$ et d'un recouvrement ouvert $(U_\alpha)$ de $X$ tel que $D|U_\alpha=\operatorname{div}_{U_\alpha}(g_\alpha)$, où $g_\alpha$ est une fonction méromorphe régulière au-dessus de $U_\alpha$;
+$\partial(D)$ est la classe de cohomologie du cocycle $(c_{\alpha\beta})$, où $c_{\alpha\beta}=g_{\alpha|\beta}g_{\beta|\alpha}^{-1}$, $g_{\alpha|\beta}$ désignant la restriction de $g_\alpha$ à $U_\alpha\cap U_\beta$.
+Il est clair que l'image par $\pi$ de cette classe de cohomologie est la classe de l'Idéal fractionnaire inversible $\sh{L}$ tel que pour tout $\alpha$, $\sh{L}|U_\alpha=\sh{O}_{U_\alpha}.g_\alpha^{-1}$, qui n'est autre par définition que $\sh{O}_X(D)$ \sref{IV.21.2.8}.
+\end{remark}
+
+\subsection{Images réciproques de diviseurs}
+\label{subsection:IV.21.4}
+\label{IV.21.4}
+
+\begin{env}[21.4.1]
+\label{IV.21.4.1}
+Soit $f:X'\to X$ un morphisme d'espaces annelés;
+proposons-nous de donner des conditions permettant d'associer à un diviseur $D$ sur $X$ un diviseur $D'$ sur $X'$, \emph{image réciproque} de $D$ par $f$.
+Notons d'abord pour cela que pour toute section $t\in\Gamma(X,\sh{O}_X^*)$, l'image de $t$ par l'homomorphisme canonique $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ est encore inversible, autrement dit appartient à $\Gamma(X',\sh{O}_{X'}^*)$.
+Considérons alors $D$ comme donné par la classe d'équivalence d'un couple $(\sh{L},s)$, où $\sh{L}$ est un $\sh{O}_X$-Module inversible et $s$ une section méromorphe régulière de $\sh{L}$ au-dessus de $X$ \sref{IV.21.2.11}.
+Formons le $\sh{O}_{X'}$-Module inversible $f^*(\sh{L})=\sh{L}'$;
+dire que l'image réciproque $s\circ f$ de $s$ par $f$ existe \sref{IV.20.1.11} et est une section méromorphe régulière de $\sh{L}'$ au-dessus de $X'$ revient à dire que les images réciproques par $f$ de $s$ et de $s^{\otimes(-1)}$ existent, autrement dit que $s\in\Gamma(X,\sh{M}_f(\sh{L}))$ et $s^{\otimes(-1)}\in\Gamma(X,\sh{M}_f(\sh{L}^{-1}))$;
+la remarque faite ci-dessus montre alors que si $(\sh{L}_1,s_1)$ est un couple équivalent à $(\sh{L},s)$ au sens de \sref{IV.21.2.10}, l'image réciproque $s_1\circ f$ existe et est une section méromorphe régulière de $\sh{L}_1'=f^*(\sh{L}_1)$ au-dessus de $X'$, et les couples $(\sh{L}',s\circ f)$ et $(\sh{L}_1',s_1\circ f)$ sont équivalents.
+On peut donc poser la définition suivante :
+\end{env}
+
+\begin{definition}[21.4.2]
+\label{IV.21.4.2}
+Étant donné un morphisme $f:X'\to X$ d'espaces annelés, on dit que l'\emph{image réciproque par $f$} d'un diviseur $D$ sur $X$ existe si l'on a $s_D\in\Gamma(X,\sh{M}_f(\sh{O}_X(D)))$ et $s_{-D}\in\Gamma(X,\sh{M}_f(\sh{O}_X(-D)))$ (cf. \sref{IV.20.1.11}).
+On appelle alors \emph{image réciproque} de $D$ par $f$ et l'on note $f^*(D)$ le diviseur sur $X'$ qui correspond canoniquement \sref{IV.21.2.11} à la classe du couple $(f^*(\sh{O}_X(D)),s_D\circ f)$.
+\end{definition}
+
+Il résulte aussitôt de cette définition que si $D$ et $D'$ ont des images réciproques par $f$, il en est de même de $-D$ et de $D+D'$ (compte tenu de \sref{IV.21.2.9.4}) et que l'on a
+\oldpage[IV-4]{266}
+$f^*(D+D')=f^*(D)+f^*(D')$.
+Autrement dit, l'ensemble $\operatorname{Div}^f(X)$ des diviseurs sur $X$ dont l'image réciproque par $f$ existe est un sous-groupe de $\operatorname{Div}(X)$, et l'application $D\mapsto f^*(D)$ est un homomorphisme croissant du sous-groupe ordonné $\operatorname{Div}^f(X)$ dans le groupe ordonné $\operatorname{Div}(X')$, rendant commutatif le diagramme
+\[
+\label{IV.21.4.2.1}
+  \xymatrix{
+    \operatorname{Div}^f(X) \ar[r]^{l_X} \ar[d]_{f^*} & \operatorname{Pic}(X) \ar[d]^{\operatorname{Pic}(f)} \\
+    \operatorname{Div}(X') \ar[r]^{l_{X'}} & \operatorname{Pic}(X')
+  }
+  \tag{21.4.2.1}
+\]
+
+\begin{env}[21.4.3]
+\label{IV.21.4.3}
+La définition \sref{IV.21.4.2} montre aussitôt que, pour que $f^*(D)$ existe, il faut et il suffit que pour tout ouvert $U$ de $X$, l'image réciproque par $f^U:f^{-1}(U)\to U$ (restriction de $f$) de $D|U$ existe.
+Or, si $D=\operatorname{div}(g)$, où $g$ est une fonction méromorphe régulière sur $X$, dire que l'image réciproque de $s_D$ par $f$ existe et est une section méromorphe régulière de $f^*(\sh{O}_X(D))$ signifie \sref{IV.21.2.9} que l'image réciproque de $g$ par $f$ existe et est une fonction méromorphe régulière sur $X'$.
+On en déduit aussitôt une seconde description de $\operatorname{Div}^f(X)$ et de $f^*(D)$ : on considère le sous-faisceau de groupes de $\sh{M}_X^*$, noté $\sh{M}_f^*$, formé des germes de fonctions méromorphes régulières sur un ouvert de $X$ et dont l'image réciproque par $f$ existe et est régulière sur l'ouvert image réciproque \sref{IV.20.1.11}.
+Alors si $f=(\psi,\theta)$, l'homomorphisme canonique \sref{IV.20.1.11} $\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ donne par restriction un homomorphisme de faisceaux de groupes $\psi^*(\sh{M}_f^*)\to\sh{M}_{X'}^*$.
+Posant $\sh{D}iv_X'=\sh{M}_f^*/\sh{O}_X^*$, on a $\operatorname{Div}^f(X)=\Gamma(X,\sh{D}iv_X')$, et l'application $D\mapsto f^*(D)$ correspond à l'homomorphisme de faisceaux de groupes $\psi^*(\sh{M}_f^*)/\psi^*(\sh{O}_X^*)\to\sh{M}_{X'}^*/\sh{O}_{X'}^*=\sh{D}iv_{X'}$ déduit du précédent par passage aux quotients.
+\end{env}
+
+\begin{env}[21.4.4]
+\label{IV.21.4.4}
+Il résulte aussitôt des définitions précédentes que si $f':X''\to X'$ est un second morphisme d'espaces annelés, $D$ un diviseur sur $X$ tel que les images réciproques $f^*(D)$ et $f'^*(f^*(D))$ existent, alors $(f\circ f')^*(D)$ existe et est égal à $f'^*(f^*(D))$.
+\end{env}
+
+\begin{proposition}[21.4.5]
+\label{IV.21.4.5}
+Soit $f:X'\to X$ un morphisme d'espaces annelés.
+Dans chacun des trois cas suivants, l'image réciproque par $f$ de tout diviseur sur $X$ est définie :
+\begin{enumerate}[label=(\roman*)]
+  \item $f$ est plat.
+  \item $X$ et $X'$ sont des préschémas localement noethériens et l'on a $f(\operatorname{Ass}(\sh{O}_{X'}))\subset\operatorname{Ass}(\sh{O}_X)$.
+  \item $X$ et $X'$ sont des préschémas, l'ensemble des composantes irréductibles de $X$ est localement fini, $X'$ est réduit et toute composante irréductible de $X'$ domine une composante irréductible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il suffit en effet de montrer que dans les trois cas on a $\sh{M}_f=\sh{M}_X$;
+dans le cas (i), cela résulte de \sref{IV.20.1.12}.
+Dans le cas (iii), on peut se borner au cas où $X=\operatorname{Spec}(A)$ et $X'=\operatorname{Spec}(A')$ sont affines;
+si $s\in A$ est régulier, il n'appartient à aucun idéal premier minimal de $A$ \sref{IV.20.1.3.1}, donc l'hypothèse entraîne que son image dans $A'$ n'appartient à aucun idéal premier minimal de $A'$, et est par suite un élément régulier de $A'$ \sref{IV.20.1.3.1}.
+Dans le cas (ii) les fonctions méromorphes sur $X'$ s'identifient aux pseudo-fonctions sur $X'$ \sref{IV.20.2.11}, et l'hypothèse, jointe à \sref{IV.20.2.13},~(iv), assure que l'image réciproque
+\oldpage[IV-4]{267}
+par $f$ de tout ouvert schématiquement dense dans $X$ est un ouvert schématiquement dense dans $X'$;
+on conclut donc par \sref{IV.20.3.12}.
+\end{proof}
+
+\begin{corollary}[21.4.6]
+\label{IV.21.4.6}
+Soit $X$ un préschéma ayant l'une des propriétés suivantes :
+\begin{enumerate}[label=(\roman*)]
+  \item $X$ est localement noethérien.
+  \item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.
+\end{enumerate}
+Alors, pour tout $x\in X$, on a un isomorphisme canonique
+\[
+\label{IV.21.4.6.1}
+  (\sh{D}iv_X)_x\xrightarrow{\sim}\operatorname{Div}(\sh{O}_{X,x}).
+  \tag{21.4.6.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Cela résulte en effet de \sref{IV.20.2.11}, \sref{IV.20.3.7} et de ce que $(\sh{O}_X^*)_x$ s'identifie au groupe des éléments inversibles de l'anneau $\sh{O}_{X,x}$.
+\end{proof}
+
+\begin{env}[21.4.7]
+\label{IV.21.4.7}
+Soient $X$, $X'$ deux préschémas, $f:X'\to X$ un morphisme.
+Si $D$ est un diviseur \emph{positif} sur $X$ tel que l'image réciproque $f^*(D)$ soit définie \sref{IV.21.4.2}, alors le sous-préschéma fermé $Y(f^*(D))$ de $X'$ n'est autre que l'image réciproque $f^{-1}(Y(D))$;
+cela résulte aussitôt des définitions \sref{IV.21.4.2} et \sref{IV.21.2.12}.
+\end{env}
+
+\begin{proposition}[21.4.8]
+\label{IV.21.4.8}
+Soient $X$, $Y$ deux préschémas;
+$f:X\to Y$ un morphisme fidèlement plat.
+Alors, si un diviseur $D$ sur $Y$ est tel que $f^*(D)\geq0$ (l'existence de $f^*(D)$ résultant de \sref{IV.21.4.5}), on a $D\geq0$.
+En particulier, l'application $D\mapsto f^*(D)$ de $\operatorname{Div}(Y)$ dans $\operatorname{Div}(X)$ est injective.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut se borner au cas où $D=\operatorname{div}(w)$, avec $w=uv^{-1}$, $u$ et $v$ étant deux sections régulières de $\sh{O}_Y$ au-dessus de $Y$.
+Par hypothèse on a $u\sh{O}_X\subset v\sh{O}_X$, donc, pour tout $x\in X$, si l'on pose $y=f(x)$, on a $u_y\sh{O}_{X,x}\subset v_y\sh{O}_{X,x}$;
+on en conclut que $u_y\sh{O}_{Y,y}\subset v_y\sh{O}_{Y,y}$ en vertu de l'hypothèse que $\sh{O}_{X,x}$ est un $\sh{O}_{Y,y}$-module fidèlement plat et de Bourbaki, \emph{Alg. comm.}, chap.~I, \textsection~3, n\textsuperscript{o}~5, prop.~10,~(ii);
+d'où $u\sh{O}_Y\subset v\sh{O}_Y$, puisque $f$ est surjectif, et par suite $D\geq0$.
+\end{proof}
+
+\subsection{Images directes de diviseurs}
+\label{subsection:IV.21.5}
+\label{IV.21.5}
+
+\begin{env}[21.5.1]
+\label{IV.21.5.1}
+Soient $X$, $X'$ deux préschémas, $f:X'\to X$ un morphisme.
+Nous allons, dans ce numéro, donner des conditions suffisantes pour qu'on puisse associer à tout diviseur $D'$ sur $X'$ un diviseur $D$ sur $X$, \emph{image directe} de $D'$ par $f$.
+Nous nous bornerons au cas où $f$ est un morphisme \emph{fini} (pour des conditions plus générales, voir le chapitre de ce Traité consacré à la théorie des intersections).
+\end{env}
+
+\begin{lemma}[21.5.2]
+\label{IV.21.5.2}
+Soient $A$ un anneau, $E$ un $A$-module libre de rang fini.
+Pour qu'un endomorphisme $u$ de $E$ soit injectif, il faut et il suffit que $\det(u)$ soit un élément régulier de $A$.
+\end{lemma}
+
+\begin{proof}
+Cela est prouvé dans Bourbaki, \emph{Alg.}, chap.~III, 3\textsuperscript{e}~éd., \textsection~8, n\textsuperscript{o}~2, prop.~3.
+\end{proof}
+
+\begin{env}[21.5.3]
+\label{IV.21.5.3}
+Supposons maintenant que le morphisme $f:X'\to X$ soit fini, et en outre que $f$ vérifie l'une des deux propriétés suivantes :
+\begin{enumerate}[label=\Roman*)]
+  \item $f$ est un morphisme fini \emph{localement libre}, autrement dit \sref{IV.18.2.7} le $\sh{O}_X$-Module quasi-cohérent de type fini $f_*(\sh{O}_{X'})$ est localement libre.
+  \item $X$ est un préschéma localement noethérien réduit, le $\sh{R}(X)$-Module $f_*(\sh{O}_{X'})\otimes_{\sh{O}_X}\sh{R}(X)$ est localement libre, et pour toute section $s'\in\Gamma(f^{-1}(U),\sh{O}_{X'})$ ($U$ ouvert
+  \oldpage[IV-4]{268}
+  dans $X$), $\mathrm{N}_{f_*(\sh{O}_{X'})|\sh{O}_X}(s')$ est une section de $\sh{O}_X$ au-dessus de $U$ (cf. (\textbf{II}, 6.5.1)).
+  (On rappelle que la condition (II) est vérifiée pour tout morphisme fini $f$ lorsque $X$ est un préschéma localement noethérien normal (\emph{loc. cit.}).)
+\end{enumerate}
+
+On sait alors (\textbf{II}, 6.5.5) que pour tout $\sh{O}_{X'}$-Module inversible $\sh{L}'$ on définit la norme $\sh{L}=\mathrm{N}_{X'/X}(\sh{L}')$ (que nous écrirons aussi $\mathrm{N}(\sh{L}')$), qui est un $\sh{O}_X$-Module inversible.
+En outre, pour tout ouvert $U$ de $X$ et toute section régulière $s'\in\Gamma(f^{-1}(U),\sh{O}_{X'})$, la norme $\mathrm{N}_{X'/X}(s')=\mathrm{N}_{f_*(\sh{O}_{X'})|\sh{O}_X}(s')$ (que nous écrirons aussi $\mathrm{N}(s')$) est un élément régulier de $\Gamma(U,\sh{O}_X)$;
+on est en effet ramené aussitôt au cas où $U=X$ est affine, et alors la conclusion résulte de \sref{IV.21.5.2} dans l'hypothèse (I);
+d'autre part, dans l'hypothèse (II), le fait que $\sh{R}(X)$ soit un $\sh{O}_X$-Module plat entraîne que la section $s'\otimes1$ de $\Gamma(U,f_*(\sh{O}_{X'})\otimes_{\sh{O}_X}\sh{R}(X))$ est aussi régulière (\hyperref[0.6.1.2]{$\mathbf{0}_{\mathrm I}$, 6.1.2}), et la conclusion résulte encore de \sref{IV.21.5.2} appliqué à l'anneau $\Gamma(U,\sh{R}(X))$, compte tenu de la définition de la norme d'une section (\textbf{II}, 6.5.3).
+Cela étant, soit $u'$ une section méromorphe de $\sh{L}'$ au-dessus de $X'$;
+le morphisme $f$ étant affine, tout point $x\in X$ admet un voisinage ouvert $U$ tel que $u'|f^{-1}(U)$ soit de la forme $t'/s'$, où $t'\in\Gamma(f^{-1}(U),\sh{L}')$ et $s'$ est une section régulière dans $\Gamma(f^{-1}(U),\sh{O}_{X'})$;
+l'élément $\mathrm{N}(t')/\mathrm{N}(s')$ (où $\mathrm{N}(t')$ est la section de $\sh{L}$ définie dans (\textbf{II}, 6.5.3)) est alors une section méromorphe de $\sh{L}$ au-dessus de $U$ en vertu de ce qui précède, et il résulte des propriétés multiplicatives de la norme (\textbf{II}, 6.5.3.1) que cette section ne dépend que de $u'|f^{-1}(U)$ et non de son écriture sous la forme $t'/s'$;
+pour la même raison, lorsque $U$ varie, les sections méromorphes de $\sh{L}$ au-dessus de $U$ ainsi définies sont les restrictions d'une même section méromorphe de $\sh{L}$ au-dessus de $X$, que l'on appelle la \emph{norme} de $u'$ et que l'on note $\mathrm{N}_{X'/X}(u')$ (ou simplement $\mathrm{N}(u')$).
+L'application ainsi définie
+\[
+\label{IV.21.5.3.1}
+  \mathrm{N}_{X'/X}:\Gamma(X',\sh{M}_{X'}(\sh{L}'))\to\Gamma(X,\sh{M}_X(\mathrm{N}_{X'/X}(\sh{L}')))
+  \tag{21.5.3.1}
+\]
+prolonge la norme définie dans (\textbf{II}, 6.5.5.3);
+si $u'$ est une section méromorphe régulière de $\sh{L}'$ au-dessus de $X'$, il résulte aussitôt de ce qui précède que $\mathrm{N}(u')$ est une section méromorphe régulière de $\sh{L}$ au-dessus de $X$, car (avec les mêmes notations) $\mathrm{N}(t')$ est régulière si $t'$ l'est.
+Enfin, si $\sh{L}_1'$, $\sh{L}_2'$ sont deux $\sh{O}_{X'}$-Modules inversibles, $s_1'$ (resp. $s_2'$) une section méromorphe régulière de $\sh{L}_1'$ (resp. $\sh{L}_2'$) au-dessus de $X'$, on a, en vertu de ce qui précède et de (\textbf{II}, 6.5.3.1)
+\[
+\label{IV.21.5.3.2}
+  \mathrm{N}(s_1'\otimes s_2')=\mathrm{N}(s_1')\otimes\mathrm{N}(s_2').
+  \tag{21.5.3.2}
+\]
+\end{env}
+
+\begin{env}[21.5.4]
+\label{IV.21.5.4}
+Supposons toujours que $f$ vérifie l'une des hypothèses I), II) de \sref{IV.21.5.3}.
+Si $(\sh{L}_1',s_1')$, $(\sh{L}_2',s_2')$ sont deux couples formés chacun d'un $\sh{O}_{X'}$-Module inversible et d'une section méromorphe régulière de ce Module au-dessus de $X'$, qui en outre sont équivalents au sens de \sref{IV.21.2.10}, alors les couples $(\mathrm{N}(\sh{L}_1'),\mathrm{N}(s_1'))$ et $(\mathrm{N}(\sh{L}_2'),\mathrm{N}(s_2'))$ sont aussi équivalents, car un isomorphisme de $\sh{O}_{X'}$-Modules inversibles a pour norme un isomorphisme de leurs normes (\textbf{II}, 6.5.3), et on a vu plus haut que $\mathrm{N}_{X'/X}$ transforme les sections de $\Gamma(X',\sh{O}_{X'}^*)$ en celles de $\Gamma(X,\sh{O}_X^*)$.
+On peut donc poser la définition suivante :
+\end{env}
+
+\oldpage[IV-4]{269}
+
+\begin{definition}[21.5.5]
+\label{IV.21.5.5}
+Étant donné un morphisme fini $f:X'\to X$ de préschémas, vérifiant l'une des conditions I), II) de \sref{IV.21.5.3}, on appelle \emph{image directe} (ou \emph{norme}) d'un diviseur $D'$ sur $X'$ par $f$, et l'on note $f_*(D')$ (ou $\mathrm{N}_{X'/X}(D')$), le diviseur sur $X$ qui correspond canoniquement \sref{IV.21.2.11} à la classe du couple $(\mathrm{N}_{X'/X}(\sh{O}_{X'}(D')),\mathrm{N}_{X'/X}(s_{D'}))$.
+\end{definition}
+
+Il résulte aussitôt de cette définition, compte tenu de \sref{IV.21.2.9.4} et de \sref{IV.21.5.3.2}, que si $D_1'$, $D_2'$, $D'$ sont des diviseurs sur $X'$, on a
+\[
+\label{IV.21.5.5.1}
+  f_*(D_1'+D_2')=f_*(D_1')+f_*(D_2')
+  \tag{21.5.5.1}
+\]
+et $D'\geq0$ entraîne $f_*(D')\geq0$, autrement dit, $D'\mapsto f_*(D')$ est un homomorphisme croissant du groupe ordonné $\operatorname{Div}(X')$ dans le groupe ordonné $\operatorname{Div}(X)$.
+La définition \sref{IV.21.5.5} montre d'ailleurs aussitôt que pour tout ouvert $U$ de $X$, on a $f_*^U(D'|f^{-1}(U))=f_*(D')|U$ ($f^U$ étant la restriction $f^{-1}(U)\to U$ de $f$), et les homomorphismes $f_*^U$, pour $U$ variable, définissent donc un homomorphisme de faisceaux de groupes ordonnés
+\[
+\label{IV.21.5.5.2}
+  \mathrm{N}_{X'/X}:f_*(\sh{D}iv_{X'})\to\sh{D}iv_X.
+  \tag{21.5.5.2}
+\]
+En outre, pour tout ouvert $U$ de $X$, tout $\sh{O}_{X'}$-Module inversible $\sh{L}'$ et toute section méromorphe régulière $s'$ de $\sh{L}'$ au-dessus de $f^{-1}(U)$, on a, d'après les définitions précédentes et \sref{IV.21.1.4}
+\[
+\label{IV.21.5.5.3}
+  \operatorname{div}_U(\mathrm{N}(s'))=f_*^U(\operatorname{div}_{f^{-1}(U)}(s')).
+  \tag{21.5.5.3}
+\]
+
+\begin{proposition}[21.5.6]
+\label{IV.21.5.6}
+Soit $f:X'\to X$ un morphisme fini localement libre et supposons que $f_*(\sh{O}_{X'})$ soit de rang constant $n$.
+Alors, pour tout diviseur $D$ sur $X$, $f_*(D)$ est défini et l'on a
+\[
+\label{IV.21.5.6.1}
+  f_*(f^*(D))=nD.
+  \tag{21.5.6.1}
+\]
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de ce que $f$ est plat \sref{IV.21.4.5}, et la seconde est conséquence immédiate des définitions et de (\textbf{II}, 6.5.3.2).
+\end{proof}
+
+\begin{proposition}[21.5.7]
+\label{IV.21.5.7}
+Soient $f:X'\to X$ un morphisme fini vérifiant l'une des hypothèses I), II) de \sref{IV.21.5.3}, $f':X''\to X'$ un morphisme fini localement libre de rang constant $n$.
+Alors $f''=f\circ f':X''\to X$ vérifie la même hypothèse que $f$, et pour tout diviseur $D''$ sur $X''$, on a
+\[
+\label{IV.21.5.7.1}
+  f_*''(D'')=f_*(f_*'(D'')).
+  \tag{21.5.7.1}
+\]
+\end{proposition}
+
+Compte tenu de la définition \sref{IV.21.5.5}, il suffit de prouver le résultat suivant :
+
+\begin{lemma}[21.5.7.2]
+\label{IV.21.5.7.2}
+Sous les hypothèses de \sref{IV.21.5.7}, on a un isomorphisme fonctoriel
+\[
+\label{IV.21.5.7.3}
+  \mathrm{N}_{X''/X}(\sh{L}'')\xrightarrow{\sim}\mathrm{N}_{X'/X}(\mathrm{N}_{X''/X'}(\sh{L}''))
+  \tag{21.5.7.3}
+\]
+dans la catégorie des $\sh{O}_X$-Modules inversibles.
+\end{lemma}
+
+En effet, compte tenu de la définition de la norme d'une section de $\sh{L}''$ (\textbf{II}, 6.5.3) et de la définition \sref{IV.21.5.5}, on obtiendra aussitôt \sref{IV.21.5.7.1}.
+Pour prouver \sref{IV.21.5.7.2}, il suffit, compte tenu des définitions de (\textbf{II}, 6.5.2 et 6.5.3), de prouver que pour toute section $s$ de $f_*''(\sh{O}_{X''})=f_*(f_*'(\sh{O}_{X''}))$ au-dessus d'un ouvert $U$ de $X$, on a
+\[
+\label{IV.21.5.7.4}
+  \mathrm{N}_{f_*''(\sh{O}_{X''})|\sh{O}_X}(s)=\mathrm{N}_{f_*(\sh{O}_{X'})|\sh{O}_X}(\mathrm{N}_{f_*'(\sh{O}_{X''})|\sh{O}_{X'}}(s)).
+  \tag{21.5.7.4}
+\]
+
+\oldpage[IV-4]{270}
+
+La question est évidemment locale sur $X$, et on peut donc se borner au cas où $X=\operatorname{Spec}(A)$ est affine;
+on a alors $X'=\operatorname{Spec}(A')$ et $X''=\operatorname{Spec}(A'')$, et on peut supposer que $A''$ est un $A'$-module projectif de rang $n$.
+Lorsque $f$ est localement libre, on peut supposer que $A'$ est un $A$-module libre de rang $m$, et alors $A''$ est un $A$-module projectif de rang $mn$, et en restreignant $X$ à un ouvert convenable, on peut supposer que $A''$ est un $A$-module libre de rang $mn$;
+la formule \sref{IV.21.5.7.4} résulte alors de la transitivité de la norme (Bourbaki, \emph{Alg.}, chap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7).
+Lorsque $f$ vérifie l'hypothèse II), $A$ est noethérien réduit, et si $R$ est son anneau total de fractions, $A'\otimes_A R$ est un $R$-module libre de rang $m$, donc $A''\otimes_A R=A''\otimes_{A'}(A'\otimes_A R)$ est un $R$-module projectif de rang $mn$, et comme $R$ est alors un anneau semi-local, ce $R$-module est libre;
+la proposition résulte alors encore de la transitivité des normes.
+
+\begin{proposition}[21.5.8]
+\label{IV.21.5.8}
+Soient $f:X'\to X$ un morphisme fini, $g:Y\to X$ un morphisme;
+on pose $Y'=X'\times_XY$, $f'=f_{(Y)}:Y'\to Y$, $g'=g_{(X')}:Y'\to X'$.
+On suppose vérifiée l'une des conditions suivantes :
+\begin{enumerate}[label=(\roman*)]
+  \item $f$ est localement libre et $g$ est plat.
+  \item $f$ est localement libre, $X$ et $Y$ sont localement noethériens, $g(\operatorname{Ass}(\sh{O}_Y))\subset\operatorname{Ass}(\sh{O}_X)$ et $g'(\operatorname{Ass}(\sh{O}_{Y'}))\subset\operatorname{Ass}(\sh{O}_{X'})$.
+  \item $f$ vérifie l'hypothèse II) de \sref{IV.21.5.3}, $Y$ est localement noethérien, $Y$ et $Y'$ sont réduits et toute composante irréductible de $Y$ (resp. $Y'$) domine une composante irréductible de $X$ (resp. $X'$).
+\end{enumerate}
+Alors, pour tout diviseur $D'$ sur $X'$, $g'^*(D')$ est défini, $g^*(f_*(D'))$ est défini et l'on a
+\[
+\label{IV.21.5.8.1}
+  g^*(f_*(D'))=f_*'(g'^*(D')).
+  \tag{21.5.8.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, dans tous les cas, il résulte de (\textbf{II}, 6.5.8) que l'on a un isomorphisme fonctoriel
+\[
+  g^*(\mathrm{N}_{X'/X}(\sh{L}'))\xrightarrow{\sim}\mathrm{N}_{Y'/Y}(g'^*(\sh{L}'))
+\]
+dans la catégorie des $\sh{O}_Y$-Modules inversibles;
+en outre (\textbf{II}, 6.5.4), si $s'$ est une section de $\sh{O}_{X'}$ au-dessus de $f^{-1}(U)$, $s''$ la section correspondante de $\sh{O}_{Y'}$ au-dessus de $g'^{-1}(f^{-1}(U))$ ($U$ ouvert de $X$), $\mathrm{N}_{Y'/Y}(s'')$ est la section de $\sh{O}_Y$ au-dessus de $g^{-1}(U)$ qui correspond à la section $\mathrm{N}_{X'/X}(s')$ de $\sh{O}_X$ au-dessus de $U$.
+La formule \sref{IV.21.5.8.1} résultera donc des définitions si l'on prouve que $g'^*(D')$ et $g^*(D)$ sont définis, quels que soient les diviseurs $D'$ sur $X'$ et $D$ sur $X$.
+En ce qui concerne $D$, cela résulte des hypothèses faites et de \sref{IV.21.4.5}.
+En ce qui concerne $D'$, dans le cas (i) $g'$ est plat, donc dans tous les cas $g'^*(D')$ est défini en vertu de \sref{IV.21.4.5}.
+\end{proof}
