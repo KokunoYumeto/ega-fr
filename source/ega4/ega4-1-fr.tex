@@ -1,0 +1,2609 @@
+\cleardoublepage
+\markboth{CHAPITRE IV}{CHAPITRE IV}
+\oldpage[IV-1]{222}
+\thispagestyle{plain}
+
+\begin{center}
+{\Large CHAPITRE IV}
+
+\vspace{1.5cm}
+{\LARGE\bfseries ÉTUDE LOCALE DES SCHÉMAS\\[0.3em]
+ET DES MORPHISMES DE SCHÉMAS}
+
+\vspace{1.5cm}
+{\large\bfseries Sommaire}
+\end{center}
+
+\medskip
+\begin{tabular}{@{}r p{0.84\textwidth}}
+§ 1. & Conditions de finitude relatives. Ensembles constructibles dans les préschémas.\\
+§ 2. & Changement de base et platitude.\\
+§ 3. & Cycles premiers associés et décompositions primaires.\\
+§ 4. & Changement du corps de base dans les préschémas.\\
+§ 5. & Dimension et profondeur dans les préschémas.\\
+§ 6. & Morphismes plats de préschémas localement noethériens.\\
+§ 7. & Application aux relations entre un anneau local noethérien et son complété.
+Anneaux excellents.\\
+§ 8. & Limites projectives de préschémas.\\
+§ 9. & Propriétés constructibles.\\
+§ 10. & Préschémas de Jacobson.\\
+§ 11.\footnotemark[1] & Propriétés topologiques des morphismes plats de présentation finie.
+Critères locaux de platitude.\\
+§ 12. & Étude des fibres des morphismes plats de présentation finie.\\
+§ 13. & Morphismes équidimensionnels.\\
+§ 14. & Morphismes universellement ouverts.\\
+§ 15. & Étude des fibres d'un morphisme universellement ouvert.\\
+§ 16. & Invariants différentiels. Morphismes différentiellement lisses.\\
+§ 17. & Morphismes lisses, non ramifiés, étales.\\
+§ 18. & Compléments sur les morphismes étales. Anneaux locaux henséliens.\\
+§ 19. & Immersions régulières et transversalement régulières.\\
+§ 20. & Sections hyperplanes~; projections génériques.\\
+§ 21. & Prolongements infinitésimaux.\\
+\end{tabular}
+\footnotetext[1]{L'ordre et le contenu des §§ 11 à 21 ne sont donnés qu'à titre
+indicatif et pourront être modifiés avant leur publication.}
+
+\clearpage
+\oldpage[IV-1]{223}
+
+Les sujets traités dans ce Chapitre appellent les remarques suivantes~:
+
+\medskip
+\noindent
+\emph{a)} Leur caractère commun est d'être relatifs à des propriétés
+\emph{locales} de préschémas ou de morphismes, i.e. considérées en un point,
+ou aux points d'une fibre, ou dans un voisinage (non spécifié) d'un point ou
+d'une fibre. Ces propriétés sont généralement de nature \emph{topologique},
+\emph{différentielle} ou \emph{dimensionnelle} (i.e. faisant intervenir les
+notions de \emph{dimension} et de \emph{profondeur}) et sont liées aux
+propriétés des \emph{anneaux locaux} aux points considérés. Un problème type
+est de mettre en relation, pour un morphisme donné $f:X\to Y$ et un point
+$x\in X$, les propriétés de $X$ en $x$ avec celles de $Y$ en $y=f(x)$ et de
+la fibre $X_y=f^{-1}(y)$ en $x$. Un autre est de déterminer la nature
+topologique (par exemple la constructibilité, ou le fait d'être ouvert ou
+fermé) de l'ensemble des points $x\in X$ en lesquels $X$ possède une certaine
+propriété ou pour lesquels la fibre $X_{f(x)}$ passant par $x$ possède une
+certaine propriété en $x$. De même, on s'intéressera à la nature topologique
+de l'ensemble des points $y\in Y$ tels que $X$ ait une certaine propriété en
+tous les points de la fibre $X_y$, ou tels que cette fibre ait une certaine
+propriété.
+
+\medskip
+\noindent
+\emph{b)} Les notions les plus importantes pour les chapitres suivants sont
+celle de \emph{morphisme plat de présentation finie} et celles de
+\emph{morphisme lisse} et de \emph{morphisme étale}, qui en sont des cas
+particuliers. Leur étude détaillée (jointe à celle de questions connexes)
+commence à proprement parler au §~11.
+
+\medskip
+\noindent
+\emph{c)} Les §§~1 à 10 peuvent être considérés comme de nature préliminaire
+et développent trois types de techniques, utilisées non seulement dans les
+autres paragraphes du chapitre mais aussi bien entendu dans les chapitres
+suivants~:
+
+\medskip
+\noindent
+\emph{c 1)} Aux §§~1 à 4 sont envisagés divers aspects de la notion de
+\emph{changement de base}, surtout en relation avec des conditions de
+\emph{finitude} ou de \emph{platitude}~; on y amorce la technique de
+\emph{descente} sous ses aspects les plus élémentaires (les questions
+d'«~effectivité~» liées à cette technique seront étudiées dans le chap.~V).
+
+\medskip
+\noindent
+\emph{c 2)} Les §§~5 à 7 sont centrés sur ce que l'on peut appeler des
+\emph{techniques noethériennes}, les préschémas considérés étant toujours
+supposés localement noethériens, tandis qu'au contraire aucune condition de
+finitude n'est généralement imposée aux \emph{morphismes}~; cela tient
+essentiellement à ce que les notions de dimension et de profondeur ne sont
+guère maniables que pour les anneaux locaux noethériens. Rappelons que le §~7
+constitue une théorie «~fine~» des anneaux locaux noethériens, assez peu
+utilisée dans la suite du chapitre.
+
+\medskip
+\noindent
+\emph{c 3)} Les §§~8 à 10 donnent entre autres le moyen d'\emph{éliminer les
+hypothèses noethériennes} sur les préschémas étudiés, en leur substituant des
+hypothèses convenables de \emph{finitude} (la «~présentation finie~») sur les
+\emph{morphismes} considérés~: l'avantage de cette substitution est que ces
+dernières hypothèses sont \emph{stables par changement de base}, ce qui n'est
+pas le cas pour les hypothèses noethériennes sur les préschémas. La technique
+permettant ce passage repose, d'une part, sur l'utilisation de la notion de
+\emph{limite projective} de préschémas, grâce à laquelle on peut ramener une
+question à la même question sous des hypothèses \emph{noethériennes}~; d'autre
+part, sur l'emploi systématique des \emph{ensembles constructibles}, qui ont
+le double intérêt de se conserver par image réciproque (par un morphisme
+
+\oldpage[IV-1]{224}
+
+quelconque) et par image directe (par un morphisme de présentation finie), et
+d'avoir des propriétés topologiques maniables dans les préschémas localement
+noethériens. Les mêmes techniques permettent même souvent de se ramener à des
+anneaux noethériens plus particuliers, par exemple les
+$\mathbf Z$-\emph{algèbres de type fini}, et c'est là que les propriétés des
+anneaux «~excellents~» (étudiées au §~7) interviennent de façon décisive.
+Indépendamment d'ailleurs de la question de l'élimination des hypothèses
+noethériennes, les techniques des §§~8 à 10, de nature très élémentaire, sont
+d'usage constant dans presque toutes les applications.
+
+\setcounter{section}{0}
+
+\section{Conditions de finitude relatives. Ensembles constructibles dans les préschémas}
+\label{section:IV.1-fr}
+
+Nous allons, dans ce paragraphe, reprendre, en les complétant, l'exposé des
+«~conditions de finitude~» pour un morphisme de préschémas $f:X\to Y$, donné
+dans (I, 6.3 et 6.6). Il y a essentiellement deux notions de «~finitude~» de
+nature \emph{globale} sur $X$, celle de morphisme \emph{quasi-compact}
+(définie dans (I, 6.6.1)) et celle de morphisme \emph{quasi-séparé}~; il y a
+d'autre part deux notions de «~finitude~» de nature \emph{locale} sur $X$,
+celle de morphisme \emph{localement de type fini} (définie dans (I, 6.6.2))
+et celle de morphisme \emph{localement de présentation finie}. En combinant
+ces notions locales aux notions globales précédentes, on obtient les notions
+de morphisme \emph{de type fini} (définie dans (I, 6.3.1)) et de morphisme
+\emph{de présentation finie}. Pour la commodité du lecteur, nous donnerons de
+nouveau, dans ce paragraphe, les principales propriétés énoncées dans (I, 6.3
+et 6.6), en renvoyant bien entendu à ces numéros du chapitre I pour leurs
+démonstrations.
+
+Aux n\textsuperscript{os}~(1.8) et (1.9), nous complétons, dans le cadre des
+préschémas, et en faisant usage des notions de finitude précédentes, les
+résultats sur les ensembles constructibles donnés dans
+(0\textsubscript{III}, §~9).
+
+\subsection{Morphismes quasi-compacts}
+\label{subsection:IV.1.1-fr}
+
+\begin{definition}[1.1.1]
+\label{IV.1.1.1-fr}
+On dit qu'un morphisme de préschémas $f:X\to Y$ est \emph{quasi-compact} si
+l'application continue $f$ de l'espace topologique $X$ dans l'espace
+topologique $Y$ est quasi-compacte (0\textsubscript{III}, 9.1.1), autrement
+dit si l'image réciproque $f^{-1}(U)$ de tout ouvert quasi-compact $U$ de $Y$
+est quasi-compacte (cf. (I, 6.6.1)).
+\end{definition}
+
+Si $\mathfrak B$ est une base de la topologie de $Y$ formée d'ouverts
+affines, pour que $f$ soit quasi-compact, il faut et il suffit que pour tout
+$V\in\mathfrak B$, $f^{-1}(V)$ soit \emph{réunion finie d'ouverts affines}.
+Par exemple, si $Y$ est affine et $X$ quasi-compact, \emph{tout} morphisme
+$f:X\to Y$ est quasi-compact (I, 6.6.1).
+
+Si $f:X\to Y$ est un morphisme quasi-compact, il est clair que pour tout
+ouvert $V$ de $Y$, la restriction de $f$ à $f^{-1}(V)$ est un morphisme
+quasi-compact $f^{-1}(V)\to V$. Inversement, si $(U_\alpha)$ est un
+recouvrement ouvert de $Y$ et $f:X\to Y$ un morphisme tel que les restrictions
+$f^{-1}(U_\alpha)\to U_\alpha$ soient quasi-compactes, alors $f$ est
+quasi-compact. Par
+
+\oldpage[IV-1]{225}
+
+suite, si $f:X\to Y$ est un $S$-morphisme de $S$-préschémas, et s'il existe
+un recouvrement ouvert $(S_\lambda)$ de $S$ tel que les restrictions
+$g^{-1}(S_\lambda)\to h^{-1}(S_\lambda)$ de $f$ (où $g$ et $h$ sont les
+morphismes structuraux) soient quasi-compactes, alors $f$ est quasi-compact.
+
+\begin{proposition}[1.1.2]
+\label{IV.1.1.2-fr}
+\begin{enumerate}
+  \item[(i)] Une immersion $X\to Y$ est quasi-compacte si elle est fermée, ou si
+  l'espace sous-jacent à $Y$ est localement noethérien ou si l'espace
+  sous-jacent à $X$ est noethérien.
+  \item[(ii)] Le composé de deux morphismes quasi-compacts est quasi-compact.
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme quasi-compact, il en est de même de
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ pour toute extension $g:S'\to S$ du
+  préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+  quasi-compacts,
+  \[
+    f\times_S g:X\times_S Y\to X'\times_S Y'
+  \]
+  est quasi-compact.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes $f:X\to Y$, $g:Y\to Z$
+  est quasi-compact, et si $g$ est séparé, ou l'espace sous-jacent à $X$
+  localement noethérien, $f$ est quasi-compact.
+  \item[(vi)] Pour qu'un morphisme $f$ soit quasi-compact, il faut et il suffit que
+  $f_{\mathrm{red}}$ le soit.
+\end{enumerate}
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.6.4). On notera que l'assertion (vi) est
+aussi conséquence de la proposition plus générale~:
+
+\begin{proposition}[1.1.3]
+\label{IV.1.1.3-fr}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes. Si $g\circ f$ est
+quasi-compact et $f$ surjectif, $g$ est quasi-compact.
+\end{proposition}
+
+\begin{proof}
+En effet, si $V$ est un ouvert quasi-compact dans $Z$,
+$f^{-1}(g^{-1}(V))$ est quasi-compact par hypothèse, et l'on a
+$g^{-1}(V)=f(f^{-1}(g^{-1}(V)))$, puisque $f$ est surjectif~; donc
+$g^{-1}(V)$ est quasi-compact.
+\end{proof}
+
+\begin{corollary}[1.1.4]
+\label{IV.1.1.4-fr}
+Soient $f:X\to Y$, $g:Y'\to Y$ deux morphismes, $X'=X\times_Y Y'$,
+$f'=f_{(Y')}:X'\to Y'$~; supposons $g$ quasi-compact et surjectif (resp.
+surjectif). Alors, pour que $f$ soit quasi-compact (resp. dominant), il suffit
+que $f'$ le soit.
+\end{corollary}
+
+\begin{proof}
+Si $g':X'\to X$ est la projection canonique, $g'$ est un morphisme surjectif
+(I, 3.5.2), et l'on a $f\circ g'=g\circ f'$~; si $f'$ est quasi-compact
+(resp. dominant), il en est de même de $g\circ f'$ puisque $g$ est
+quasi-compact (1.1.2) (resp. surjectif)~; comme $f\circ g'$ est quasi-compact
+(resp. dominant) et que $g'$ est surjectif, on en déduit que $f$ est
+quasi-compact (1.1.3) (resp. dominant).
+\end{proof}
+
+\oldpage[IV-1]{226}
+
+Pour abréger, nous appellerons \emph{point maximal} d'un préschéma $X$ tout
+point générique d'une composante irréductible de $X$~; si
+$X=\operatorname{Spec}(A)$ est affine, les points maximaux de $X$ sont les
+\emph{idéaux premiers minimaux} de $A$.
+
+\begin{proposition}[1.1.5]
+\label{IV.1.1.5-fr}
+Soit $f:X\to Y$ un morphisme quasi-compact. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[a)] $f$ est dominant~;
+  \item[b)] pour tout point maximal $y$ de $Y$, on a
+  $f^{-1}(y)\neq\varnothing$~;
+  \item[c)] pour tout point maximal $y$ de $Y$, $f^{-1}(y)$ contient un point
+  maximal de $X$.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de \emph{a)} et \emph{c)} a été démontrée dans (I, 6.6.5). Il
+est clair que \emph{c)} entraîne \emph{b)}~; d'autre part, si $X'$ est une
+composante irréductible de $X$ rencontrant $f^{-1}(y)$, $f(X')$ est
+irréductible et contient $y$, donc est contenu dans la composante irréductible
+$Y'=\overline{\{y\}}$ de $Y$ (0\textsubscript{I}, 2.1.6)~; si $x$ est le
+point générique de $X'$, on a donc nécessairement $f(x)=y$
+(0\textsubscript{I}, 2.1.5)~; donc \emph{b)} entraîne \emph{c)}.
+
+\begin{proposition}[1.1.6]
+\label{IV.1.1.6-fr}
+Soient $f':X'\to Y$, $f'':X''\to Y$ deux morphismes, $X$ le préschéma somme
+$X'\coprod X''$, $f:X\to Y$ le morphisme égal à $f'$ dans $X'$ et à $f''$
+dans $X''$. Pour que $f$ soit quasi-compact, il faut et il suffit que $f'$ et
+$f''$ le soient.
+\end{proposition}
+
+Cela résulte aussitôt de la définition.
+
+\subsection{Morphismes quasi-séparés}
+\label{subsection:IV.1.2-fr}
+
+\begin{definition}[1.2.1]
+\label{IV.1.2.1-fr}
+Soient $X$, $Y$ deux préschémas. On dit qu'un morphisme $f:X\to Y$ est
+\emph{quasi-séparé} (ou que $X$ est \emph{quasi-séparé sur} $Y$) si le
+morphisme diagonal
+$\Delta_f=(1_X,1_X)_Y:X\to X\times_Y X$ est quasi-compact. On dit qu'un
+préschéma $X$ est \emph{quasi-séparé} s'il est quasi-séparé sur
+$\operatorname{Spec}(\mathbf Z)$.
+\end{definition}
+
+Par définition, tout morphisme séparé est quasi-séparé, $\Delta_f$ étant une
+immersion fermée (1.1.2, (i))~; un \emph{schéma} $X$ est un préschéma
+quasi-séparé, étant séparé sur $\operatorname{Spec}(\mathbf Z)$ (I, 5.4.1).
+
+\begin{proposition}[1.2.2]
+\label{IV.1.2.2-fr}
+\begin{enumerate}
+  \item[(i)] Tout monomorphisme de préschémas $f:X\to Y$ (en particulier toute
+  immersion) est quasi-séparé.
+  \item[(ii)] Si $f:X\to Y$ et $g:Y\to Z$ sont deux morphismes quasi-séparés,
+  $g\circ f:X\to Z$ est quasi-séparé.
+  \item[(iii)] Soient $X$, $Y$ deux $S$-préschémas, $f:X\to Y$ un $S$-morphisme
+  quasi-séparé. Alors, pour tout changement de base $g:S'\to S$, le morphisme
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ est quasi-séparé.
+  \item[(iv)] Si $f:X\to Y$, $f':X'\to Y'$ sont deux $S$-morphismes quasi-séparés,
+  alors
+  \[
+    f\times_S f':X\times_S X'\to Y\times_S Y'
+  \]
+  est quasi-séparé.
+  \item[(v)] Si $f:X\to Y$, $g:Y\to Z$ sont deux morphismes tels que $g\circ f$
+  soit quasi-séparé, alors $f$ est quasi-séparé.
+  \item[(vi)] Si $f:X\to Y$ est un morphisme quasi-séparé,
+  $f_{\mathrm{red}}:X_{\mathrm{red}}\to Y_{\mathrm{red}}$ est quasi-séparé.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En vertu de (I, 5.5.12), il suffit de démontrer (i), (ii) et (iii).
+
+L'assertion (i) est triviale, tout monomorphisme étant séparé (I, 5.5.1).
+Pour démontrer (iii), on se ramène aussitôt au cas où $Y=S$ (I, 3.3.11) et
+l'assertion résulte de ce que
+$\Delta_{f_{(S')}}=(\Delta_f)_{(S')}$ (I, 5.3.4) et de (1.1.2, (iii)). Pour
+démontrer (ii), considérons les projections $p$ et $q$ de $X\times_Y X$ sur
+$X$~; si $i=(p,q)_Z$, on sait que le diagramme
+\[
+\xymatrix{
+  X\times_Y X \ar[r]^-{i} \ar[d]_-{\pi} & X\times_Z X
+    \ar[d]^-{f\times_Z f} \\
+  Y \ar[r]_-{\Delta_g} & Y\times_Z Y
+}
+\]
+\oldpage[IV-1]{227}
+(où $\pi$ est le morphisme structural) est commutatif et identifie
+$X\times_Y X$ au produit des $(Y\times_Z Y)$-préschémas $Y$ et
+$X\times_Z X$ (I, 5.3.5). Si $g$ est quasi-séparé, $\Delta_g$ est
+quasi-compact, donc il en est de même de $i$ (1.1.2, (iii))~; si de plus $f$
+est quasi-séparé, $\Delta_f$ est quasi-compact, donc il en est de même de
+$i\circ\Delta_f$ (1.1.2, (ii)) qui est égal à $\Delta_{g\circ f}$.
+\end{proof}
+
+\begin{corollary}[1.2.3]
+\label{IV.1.2.3-fr}
+\begin{enumerate}
+  \item[(i)] Soit $X$ un préschéma quasi-séparé. Alors tout morphisme $f:X\to Y$
+  est quasi-séparé.
+  \item[(ii)] Soit $Y$ un préschéma quasi-séparé. Pour qu'un morphisme $f:X\to Y$
+  soit quasi-séparé, il faut et il suffit que le préschéma $X$ soit
+  quasi-séparé.
+\end{enumerate}
+\end{corollary}
+
+Cela résulte aussitôt de (1.2.2, (ii) et (v)) appliqué à $X$, $Y$ et
+$\operatorname{Spec}(\mathbf Z)$.
+
+\begin{proposition}[1.2.4]
+\label{IV.1.2.4-fr}
+Soient $f:X\to Y$ un morphisme, $g:Y\to Z$ un morphisme quasi-séparé. Si
+$g\circ f$ est quasi-compact, il en est de même de $f$.
+\end{proposition}
+
+\begin{proof}
+On sait que $f$ est le morphisme composé
+$X\xrightarrow{\Gamma_f}X\times_ZY\xrightarrow{\mathrm{pr}_2}Y$
+(I, 5.3.13)~; d'autre part, $\mathrm{pr}_2$ s'identifie à
+$(g\circ f)\times_Z1_Y$ (I, 3.3.4) et si $g\circ f$ est quasi-compact, il en
+est de même de $\mathrm{pr}_2$ (1.1.2, (iv)). Enfin, on a le diagramme
+commutatif
+\[
+\xymatrix{
+  X \ar[r]^-{\Gamma_f} \ar[d]_-{f} & X\times_ZY
+    \ar[d]^-{f\times 1_Y} \\
+  Y \ar[r]_-{\Delta_g} & Y\times_ZY
+}
+\tag{1.2.4.1}
+\label{IV.1.2.4.1-fr}
+\]
+qui identifie $X$ au produit des $(Y\times_ZY)$-préschémas $Y$ et
+$X\times_ZY$ (I, 5.3.7). Comme par hypothèse $\Delta_g$ est un morphisme
+quasi-compact, il en est de même de $\Gamma_f$ (1.1.2, (iii))~; la conclusion
+résulte donc de (1.1.2, (ii)).
+\end{proof}
+
+\begin{proposition}[1.2.5]
+\label{IV.1.2.5-fr}
+Soient $f:X\to Y$, $g:Y'\to Y$ deux morphismes,
+$X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Si $g$ est quasi-compact et
+surjectif et $f'$ quasi-séparé, alors $f$ est quasi-séparé.
+\end{proposition}
+
+\begin{proof}
+On a en effet $(X'\times_{Y'}X')=(X\times_YX)_{(Y')}$ et
+$\Delta_{f'}=(\Delta_f)_{(Y')}$ (I, 5.3.4)~; comme la projection
+$X'\times_{Y'}X'\to X\times_YX$ est quasi-compacte (1.1.2, (iii)) et
+surjective (I, 3.5.2), on peut, en vertu de (I, 3.3.11), appliquer (1.1.4),
+qui montre que puisque $\Delta_{f'}$ est un morphisme quasi-compact, il en est
+de même de $\Delta_f$.
+\end{proof}
+
+\begin{proposition}[1.2.6]
+\label{IV.1.2.6-fr}
+Soient $f:X\to Y$ un morphisme, $(U_\alpha)$ un recouvrement de $Y$ par des
+ouverts tels que les préschémas induits $U_\alpha$ soient quasi-séparés. Pour
+que $f$ soit quasi-séparé, il faut et il suffit que chacun des préschémas
+induits par $X$ sur les ouverts $f^{-1}(U_\alpha)$ soit quasi-séparé.
+\end{proposition}
+
+\begin{proof}
+L'image réciproque dans $X\times_YX$ de $U_\alpha$ est
+$X_\alpha\times_{U_\alpha}X_\alpha$, en posant
+$X_\alpha=f^{-1}(U_\alpha)$, et la restriction
+$X_\alpha\to X_\alpha\times_{U_\alpha}X_\alpha$ de $\Delta_f$ n'est autre
+que $\Delta_{f_\alpha}$, en désignant par $f_\alpha$ la restriction
+$X_\alpha\to U_\alpha$ de $f$~; en vertu de la définition (1.2.1) et du
+caractère local de la notion de morphisme quasi-compact (1.1.1), pour que $f$
+soit quasi-séparé, il faut et il suffit que chacun des morphismes $f_\alpha$
+le soit. Mais comme par hypothèse le morphisme
+$U_\alpha\to\operatorname{Spec}(\mathbf Z)$ est quasi-séparé, il revient au
+même de dire que $f_\alpha$ est quasi-séparé ou que le composé
+$X_\alpha\xrightarrow{f_\alpha}U_\alpha\to\operatorname{Spec}(\mathbf Z)$
+l'est (1.2.2, (ii) et (v)), d'où la proposition.
+\end{proof}
+
+\oldpage[IV-1]{228}
+
+Pour vérifier qu'un morphisme est quasi-séparé, on est donc ramené à donner
+des critères pour qu'un préschéma soit quasi-séparé~:
+
+\begin{proposition}[1.2.7]
+\label{IV.1.2.7-fr}
+Soient $X$ un préschéma, $(U_\alpha)$ un recouvrement de $X$ formé d'ouverts
+quasi-compacts. Les propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $X$ est quasi-séparé.
+  \item[b)] Pour tout ouvert quasi-compact $U$ de $X$, l'immersion canonique
+  $U\to X$ est quasi-compacte (autrement dit, $U$ est rétrocompact dans $X$).
+  \item[b')] L'intersection de deux ouverts quasi-compacts de $X$ est
+  quasi-compacte.
+  \item[c)] Pour tout couple d'indices $(\alpha,\beta)$, l'intersection
+  $U_\alpha\cap U_\beta$ est quasi-compacte.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Les propriétés \emph{b)} et \emph{b')} sont trivialement équivalentes par
+définition d'un morphisme quasi-compact. Comme un ouvert quasi-compact est
+réunion finie d'ouverts affines, pour deux ouverts quasi-compacts $U$, $V$ de
+$X$, $U\times_{\mathbf Z}V$ est un ouvert quasi-compact de
+$X\times_{\mathbf Z}X$ (I, 3.2.7), dont l'image réciproque par $\Delta_X$ est
+$U\cap V$, donc \emph{a)} entraîne \emph{b')}. Il est trivial que \emph{b')}
+entraîne \emph{c)}~; enfin, si \emph{c)} est vérifiée, les
+$U_\alpha\times_{\mathbf Z}U_\beta$ forment un recouvrement de
+$X\times_{\mathbf Z}X$ par des ouverts quasi-compacts, et l'on sait que pour
+que le morphisme $\Delta_X:X\to X\times_{\mathbf Z}X$ soit quasi-compact, il
+suffit que les images réciproques $U_\alpha\cap U_\beta$ des
+$U_\alpha\times_{\mathbf Z}U_\beta$ par $\Delta_X$ soient quasi-compactes
+(1.1.1)~; donc \emph{c)} entraîne \emph{a)}.
+\end{proof}
+
+\begin{corollary}[1.2.8]
+\label{IV.1.2.8-fr}
+Tout préschéma $X$ dont l'espace sous-jacent est localement noethérien (par
+exemple un préschéma localement noethérien) est quasi-séparé~; tout morphisme
+$f:X\to Y$ est alors quasi-séparé.
+\end{corollary}
+
+\begin{proposition}[1.2.9]
+\label{IV.1.2.9-fr}
+Soient $X'$, $X''$ deux préschémas, $X=X'\coprod X''$ leur somme,
+$f':X'\to Y$, $f'':X''\to Y$ deux morphismes, $f:X\to Y$ le morphisme qui
+coïncide avec $f'$ dans $X'$ et avec $f''$ dans $X''$. Pour que $f$ soit
+quasi-séparé il faut et il suffit que $f'$ et $f''$ le soient.
+\end{proposition}
+
+\begin{proof}
+En effet, $X\times_YX$ est somme des quatre préschémas
+$X'\times_YX'$, $X'\times_YX''$, $X''\times_YX'$ et $X''\times_YX''$, et
+$\Delta_f$ est le morphisme qui coïncide avec $\Delta_{f'}$ dans $X'$ et avec
+$\Delta_{f''}$ dans $X''$~; la proposition résulte donc aussitôt des
+définitions.
+\end{proof}
+
+\subsection{Morphismes localement de type fini}
+\label{subsection:IV.1.3-fr}
+
+\begin{env}[1.3.1]
+\label{IV.1.3.1-fr}
+Rappelons que si $A$ est un anneau, une $A$-algèbre (commutative) $B$ est dite
+\emph{de type fini} si elle est engendrée par un nombre fini d'éléments de
+$B$, ou, ce qui revient au même, si elle est isomorphe au quotient d'une
+algèbre de polynômes $A[T_1,\ldots,T_n]$ par un idéal de cette algèbre. Il est
+clair que pour toute $A$-algèbre (commutative) $A'$,
+$B\otimes_AA'$ est alors une $A'$-algèbre de type fini. Si $B$ est une
+$A$-algèbre de type fini et $C$ une $B$-algèbre de type fini, $C$ est une
+$A$-algèbre de type fini, car si $C$ est un quotient de
+$B[T_1,\ldots,T_n]$ et $B$ un quotient de $A[S_1,\ldots,S_m]$,
+$B[T_1,\ldots,T_n]=B\otimes_AA[T_1,\ldots,T_n]$ est un quotient de
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]$, donc il en est de même de $C$.
+\end{env}
+
+\begin{definition}[1.3.2]
+\label{IV.1.3.2-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $x$ un point de $X$,
+$y=f(x)$. On dit que $f$ est \emph{de type fini en $x$} s'il existe un
+voisinage ouvert affine $V$ de $y$ et un voisinage ouvert affine $U$ de $x$
+tels que $f(U)\subset V$ et que l'anneau $A(U)$ soit une $A(V)$-algèbre de
+type fini. On dit que $f$ est \emph{localement de type fini} s'il est de type
+fini en tout point de $X$.
+\end{definition}
+
+\oldpage[IV-1]{229}
+
+\begin{proposition}[1.3.3]
+\label{IV.1.3.3-fr}
+Si $Y$ est un préschéma localement noethérien et $f:X\to Y$ un morphisme
+localement de type fini, alors $X$ est localement noethérien.
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.3.7).
+
+\begin{proposition}[1.3.4]
+\label{IV.1.3.4-fr}
+\begin{enumerate}
+  \item[(i)] Toute immersion locale est localement de type fini.
+  \item[(ii)] Si deux morphismes $f:X\to Y$, $g:Y\to Z$ sont localement de
+  type fini, il en est de même de $g\circ f$.
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme localement de type fini,
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ est localement de type fini pour toute
+  extension $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+  localement de type fini, $f\times_Sg$ est localement de type fini.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est localement de
+  type fini, $f$ est localement de type fini.
+  \item[(vi)] Si un morphisme $f$ est localement de type fini, il en est de
+  même de $f_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.6.6).
+
+\begin{corollary}[1.3.5]
+\label{IV.1.3.5-fr}
+Soit $f:X\to Y$ un morphisme localement de type fini. Pour tout morphisme
+$Y'\to Y$ tel que $Y'$ soit localement noethérien, $X\times_YY'$ est
+localement noethérien.
+\end{corollary}
+
+\begin{proof}
+En effet, $f_{(Y')}:X\times_YY'\to Y'$ est localement de type fini par
+(1.3.4, (iii)), et il suffit d'appliquer (1.3.3).
+\end{proof}
+
+\begin{proposition}[1.3.6]
+\label{IV.1.3.6-fr}
+Soit $\varphi:A\to B$ un homomorphisme d'anneaux. Pour que le morphisme
+correspondant $f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ soit localement de type fini, il faut et
+il suffit que $B$ soit une $A$-algèbre de type fini.
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.3.3), en tenant compte de ce que $f$ est
+quasi-compact et de (I, 6.6.3).
+
+\begin{proposition}[1.3.7]
+\label{IV.1.3.7-fr}
+Pour qu'un morphisme localement de type fini $f:X\to Y$ soit surjectif, il
+faut et il suffit que, pour tout corps algébriquement clos $\Omega$,
+l'application $X(\Omega)\to Y(\Omega)$ correspondant à $f$ (I, 3.4.1) soit
+surjective.
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.3.10).
+
+\begin{env}[1.3.8]
+\label{IV.1.3.8-fr}
+Soit $A$ un anneau. On dit qu'une $A$-algèbre $B$ est \emph{essentiellement de
+type fini} si $B$ est $A$-isomorphe à une $A$-algèbre de la forme $S^{-1}C$,
+où $C$ est une $A$-algèbre \emph{de type fini} et $S$ une partie multiplicative
+de $C$.
+\end{env}
+
+\par\medskip\noindent
+\begin{proposition}[1.3.9]
+\label{IV.1.3.9-fr}
+\begin{enumerate}
+  \item[(i)] Si $B$ est une $A$-algèbre essentiellement de type fini et $C$
+  une $B$-algèbre essentiellement de type fini, alors $C$ est une
+  $A$-algèbre essentiellement de type fini.
+  \item[(ii)] Soient $B$ une $A$-algèbre essentiellement de type fini, $A'$
+  une $A$-algèbre~; alors $B'=B\otimes_AA'$ est une $A'$-algèbre
+  essentiellement de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Soient $B=S'^{-1}B'$ et $C=T'^{-1}C'$, où $B'$ (resp. $C'$) est
+  une $A$-algèbre (resp. une $B$-algèbre) de type fini et $S'$ (resp. $T'$)
+  une partie multiplicative de $B'$ (resp. $C'$)~; alors $C'$ est de la forme
+  $S'^{-1}C''$, où $C''$ est une $B'$-algèbre de type fini, donc $C$ est aussi
+  un anneau de fractions de $C''$~; comme $C''$ est une $A$-algèbre de type
+  fini, cela prouve notre assertion.
+  \item[(ii)] Si $B$ est anneau de fractions d'une $A$-algèbre de type fini
+  $C$, $B'$ est un anneau de fractions de la $A'$-algèbre de type fini
+  $C\otimes_AA'$, d'où (ii).
+\end{enumerate}
+\end{proof}
+
+\oldpage[IV-1]{230}
+
+\begin{env}[1.3.10]
+\label{IV.1.3.10-fr}
+Si $B$ est une $A$-algèbre \emph{locale} essentiellement de type fini, $B$ est
+de la forme $C_{\mathfrak q}$, où $C$ est une $A$-algèbre de type fini et
+$\mathfrak q$ un idéal premier de $C$ (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S~5, prop. 11). Soit $\mathfrak p$ l'image réciproque dans $A$ de l'idéal
+$\mathfrak q$~; si l'on pose $S=A-\mathfrak p$, $C_{\mathfrak q}$ est aussi un
+anneau local en un idéal premier de $S^{-1}C$~; comme $S^{-1}C$ est une
+algèbre de type fini sur $A_{\mathfrak p}=S^{-1}A$, on voit que $B$ est aussi
+une $A_{\mathfrak p}$-algèbre \emph{essentiellement de type fini}, et en outre
+l'homomorphisme $A_{\mathfrak p}\to B$ est \emph{local}.
+\end{env}
+
+\begin{proposition}[1.3.11]
+\label{IV.1.3.11-fr}
+Si $B$ est une $A$-algèbre locale essentiellement de type fini, $B$ est
+$A$-isomorphe à une $A$-algèbre quotient d'une $A$-algèbre de la forme
+$C_{\mathfrak q}$, où $C$ est une algèbre de polynômes
+$A[T_1,\ldots,T_n]$ et $\mathfrak q$ un idéal premier de $C$.
+\end{proposition}
+
+\begin{proof}
+En effet, par définition, $B$ est isomorphe à $C'_{\mathfrak q'}$, où $C'$ est
+une $A$-algèbre de type fini et $\mathfrak q'$ un idéal premier de $C'$~; mais
+$C'=C/\mathfrak b$, où $C=A[T_1,\ldots,T_n]$ et $\mathfrak b$ est un idéal de
+$C$~; donc $\mathfrak q'=\mathfrak q/\mathfrak b$, où $\mathfrak q$ est un
+idéal premier de $C$, et $C'_{\mathfrak q'}$ est isomorphe à
+$C_{\mathfrak q}/\mathfrak bC_{\mathfrak q}$.
+\end{proof}
+
+\subsection{Morphismes localement de présentation finie}
+\label{subsection:IV.1.4-fr}
+
+\begin{env}[1.4.1]
+\label{IV.1.4.1-fr}
+Étant donné un anneau $A$, nous dirons qu'une $A$-algèbre $B$ (commutative)
+est \emph{de présentation finie} si elle est isomorphe au quotient
+$A[T_1,\ldots,T_n]/\mathfrak a$ d'une algèbre de polynômes sur $A$ par un
+idéal \emph{de type fini} $\mathfrak a$ de $A[T_1,\ldots,T_n]$. Pour toute
+$A$-algèbre (commutative) $A'$, $B\otimes_AA'$ est alors une $A'$-algèbre de
+présentation finie, étant isomorphe au quotient de $A'[T_1,\ldots,T_n]$ par
+l'image canonique dans cet anneau de $\mathfrak a\otimes_AA'$, qui est
+évidemment un $A'[T_1,\ldots,T_n]$-module de type fini. Si $B$ est une
+$A$-algèbre de présentation finie et $C$ une $B$-algèbre de présentation
+finie, alors $C$ est une $A$-algèbre de présentation finie. En effet, soient
+$B=A[S_1,\ldots,S_m]/\mathfrak a$ et
+$C=B[T_1,\ldots,T_n]/\mathfrak b$, où $\mathfrak a$ (resp. $\mathfrak b$) est
+un idéal de type fini de $A[S_1,\ldots,S_m]$ (resp.
+$B[T_1,\ldots,T_n]$)~; l'anneau $B[T_1,\ldots,T_n]$ est isomorphe à
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]/\mathfrak a'$, où $\mathfrak a'$ est
+l'image canonique de
+$\mathfrak a\otimes_AA[T_1,\ldots,T_n]$, et est donc un idéal de type fini de
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]$~; l'idéal $\mathfrak b$ de
+$B[T_1,\ldots,T_n]$ est de la forme $\mathfrak b'/\mathfrak a'$, où
+$\mathfrak b'$ est un idéal de $A[S_1,\ldots,S_m,T_1,\ldots,T_n]$~; comme
+$\mathfrak a'$ et $\mathfrak b'/\mathfrak a'$ sont des modules de type fini
+sur $A[S_1,\ldots,S_m,T_1,\ldots,T_n]$, il en est de même de $\mathfrak b'$,
+et $C$, isomorphe à
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]/\mathfrak b'$, est donc bien une
+$A$-algèbre de présentation finie. Notons enfin que si $A$ est
+\emph{noethérien}, il en est de même de $A[T_1,\ldots,T_n]$, donc toute
+$A$-algèbre de type fini est alors de présentation finie.
+\end{env}
+
+\begin{definition}[1.4.2]
+\label{IV.1.4.2-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $x$ un point de $X$, $y=f(x)$.
+On dit que $f$ est \emph{de présentation finie en $x$} s'il existe un voisinage
+ouvert affine $V$ de $y$ et un voisinage ouvert affine $U$ de $x$ tels que
+$f(U)\subset V$ et que l'anneau $A(U)$ soit une $A(V)$-algèbre de présentation
+finie. On dit que $f$ est \emph{localement de présentation finie} s'il est de
+présentation finie en tout point de $X$.
+\end{definition}
+
+Si $Y$ est localement noethérien, il revient au même de dire que $f$ est
+localement de type fini ou localement de présentation finie.
+
+\begin{proposition}[1.4.3]
+\label{IV.1.4.3-fr}
+\begin{enumerate}
+  \item[(i)] Tout isomorphisme local est localement de présentation finie.
+  \item[(ii)] Si deux morphismes $f:X\to Y$, $g:Y\to Z$ sont localement de
+  présentation finie, il en est de même de $g\circ f$.
+
+\oldpage[IV-1]{231}
+
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme localement de présentation
+  finie, $f_{(S')}:X_{(S')}\to Y_{(S')}$ est localement de présentation finie
+  pour toute extension $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+  localement de présentation finie, $f\times_Sg$ est localement de
+  présentation finie.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est localement de
+  présentation finie et si $g$ est localement de type fini, alors $f$ est
+  localement de présentation finie.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'assertion (i) est triviale. Pour démontrer (iii), on peut se limiter au cas
+où $S=Y$ (I, 3.3.11)~; soient $x'$ un point de $X_{(S')}$, $s'$ et $x$ ses
+projections sur $S'$ et $X$ respectivement, $s$ la projection commune de $s'$
+et $x$ sur $S$. Par hypothèse, il y a un voisinage ouvert affine $V$ (resp.
+$U$) de $s$ (resp. $x$) tels que l'image de $U$ soit contenue dans $V$ et que
+$A(U)$ soit une $A(V)$-algèbre de présentation finie~; soit $V'$ un voisinage
+ouvert affine de $s'$ dont l'image dans $S$ soit contenue dans $V$~; alors
+$U\times_VV'$ est un voisinage ouvert affine de $x'$ dont l'image dans $S'$
+est contenue dans $V'$ et dont l'anneau $A(U)\otimes_{A(V)}A(V')$ est une
+$A(V')$-algèbre de présentation finie (1.4.1).
+
+Pour démontrer (ii), considérons un point $x\in X$, et soient $y=f(x)$,
+$z=g(f(x))$. Il y a par hypothèse un voisinage ouvert affine $W=\operatorname{Spec}(C)$
+(resp. $V=\operatorname{Spec}(B)$) de $z$ (resp. $y$) tels que $g(V)\subset W$ et que $B$
+soit une $C$-algèbre de présentation finie. D'autre part, il y a un voisinage
+ouvert affine $V'=\operatorname{Spec}(B')$ (resp. $U=\operatorname{Spec}(A)$) de $y$ (resp. $x$) tels que
+$f(U)\subset V'$ et que $A$ soit une $B'$-algèbre de présentation finie. Soit
+$s\in B$ tel que l'ouvert $D(s)=\operatorname{Spec}(B_s)$ dans $V$ soit un voisinage de $y$
+contenu dans $V'$, et soit $U'=f^{-1}(D(s))\subset U$~; on a
+$U'=\operatorname{Spec}(A\otimes_{B'}B_s)$, et $A\otimes_{B'}B_s$ est une $B_s$-algèbre de
+présentation finie (1.4.1)~; d'aute part $B_s=B[T]/(1-sT)$ est une
+$B$-algèbre de présentation finie par définition~; par suite (1.4.1),
+$A\otimes_{B'}B_s$ est une $C$-algèbre de présentation finie, ce qui prouve
+(ii).
+
+On sait que (iv) résulte de (i), (ii) et (iii) (I, 3.5.1). Pour prouver (v),
+considérons le diagramme commutatif
+\[
+\xymatrix{
+X \ar[r]^{\Gamma_f} \ar[d] & X\times_ZY \ar[d]^{f\times 1} \\
+Y \ar[r]_{\Delta_g} & Y\times_ZY
+}
+\]
+qui identifie $X$ au produit des $(Y\times_ZY)$-préschémas $Y$ et
+$X\times_ZY$ (I, 5.3.7, $\Delta_g$ étant le morphisme diagonal). Si l'on sait
+que $\Delta_g$ est localement de présentation finie, il en résultera par
+(iii) qu'il en est de même de $\Gamma_f$. D'autre part, on a la factorisation
+de $f$ en
+$X\xrightarrow{\Gamma_f}X\times_ZY\xrightarrow{p_2}Y$ (I, 5.3.13), où la
+projection $p_2$ est égale à $(g\circ f)\times_Z1_Y$~; comme $g\circ f$ est
+supposé localement de présentation finie, il en est de même de $p_2$ par
+(iv), et il résultera finalement de (ii) que $f$ est aussi localement de
+présentation finie. On voit donc qu'on est ramené à démontrer le
+\end{proof}
+
+\begin{corollary}[1.4.3.1]
+\label{IV.1.4.3.1-fr}
+Soit $g:Y\to Z$ un morphisme localement de type fini~; alors le morphisme
+diagonal $\Delta_g:Y\to Y\times_ZY$ est localement de présentation finie.
+\end{corollary}
+
+\oldpage[IV-1]{232}
+
+\begin{proof}
+On peut se borner au cas où $Z=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$, $B$ étant une
+$A$-algèbre de type fini~; le morphisme $\Delta_g$ correspond alors à
+l'\emph{homomorphisme d'augmentation} $\delta:B\otimes_AB\to B$ tel que
+$\delta(x\otimes y)=xy$. Compte tenu de la définition (1.4.2), il suffit de
+montrer que le noyau $\mathfrak J$ de $\delta$ est un idéal \emph{de type
+fini}, ce qui résulte de (0, 20.4.4).
+\end{proof}
+
+\begin{proposition}[1.4.4]
+\label{IV.1.4.4-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $B'$ une algèbre de polynômes
+$A[T_1,\ldots,T_n]$, $u:B'\to B$ un homomorphisme surjectif de
+$A$-algèbres. Pour que $B$ soit une $A$-algèbre de présentation finie, il faut
+et il suffit que le noyau $\mathfrak J$ de $u$ soit un idéal de type fini de
+$B'$.
+\end{proposition}
+
+\begin{proof}
+La condition est suffisante par définition (1.4.1). Pour voir qu'elle est
+nécessaire, remarquons que le morphisme $g:\operatorname{Spec}(B')\to\operatorname{Spec}(A)$ est
+localement de type fini~; si $B$ est une $A$-algèbre de présentation finie,
+le morphisme $f:\operatorname{Spec}(B)\to\operatorname{Spec}(B')$ correspondant à $u$ est tel que
+$g\circ f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ soit localement de présentation finie, donc il
+résulte de (1.4.3, (v)) que $f$ est aussi localement de présentation finie.
+Or, pour démontrer que l'idéal $\mathfrak J$ est de type fini, il suffit de
+prouver que $\widetilde{\mathfrak J}$ est un $\widetilde{B'}$-Module de type
+fini (II, 6.1.4.1). Revenant à la définition (1.4.2), on est finalement ramené
+à prouver le
+\end{proof}
+
+\begin{lemma}[1.4.4.1]
+\label{IV.1.4.4.1-fr}
+Soient $\mathfrak a$ un idéal d'un anneau $C$, $s$ un élément de $C$, tel que
+$C_s/\mathfrak a_s$ soit une $C$-algèbre de présentation finie~; alors
+$\mathfrak a_s$ est un idéal de type fini dans l'anneau $C_s$.
+\end{lemma}
+
+\begin{proof}
+Par hypothèse, il existe une $C$-algèbre de polynômes
+$C'=C[T_1,\ldots,T_n]$ et un $C$-homomorphisme surjectif
+$v:C'\to C_s/\mathfrak a_s$ dont le noyau $\mathfrak b$ est de type fini.
+Soit $p:C_s\to C_s/\mathfrak a_s$ l'homomorphisme canonique~; pour tout $i$,
+il y a un $t_i\in C$ tel que $p(t_i/s^k)=v(T_i)$ (on peut supposer que
+l'exposant $k$ est le même pour tous les indices $i$). Considérons alors la
+$C_s$-algèbre $D=C_s[T_1,\ldots,T_n]$, et l'homomorphisme de $C_s$-algèbres
+$w:D\to C_s$ tel que $w(T_i)=t_i/s^k$~; $w$ est évidemment surjectif, et il
+en est par suite de même de $v'=p\circ w:D\to C_s/\mathfrak a_s$. D'autre
+part, tout polynôme de $D$ peut s'écrire $P/s^m$, où
+$P\in C'=C[T_1,\ldots,T_n]$, et l'on a
+$v'(P/s^m)=(1/s^m)v(P)$~; comme $1/s$ est inversible dans $C_s$, la relation
+$v'(P/s^m)=0$ dans $C_s/\mathfrak a_s$ équivaut à $v(P)=0$, et par suite le
+noyau $\mathfrak b'$ de $v'$ est engendré par l'image canonique de
+$\mathfrak b$ dans $D$, et \emph{a fortiori} est de type fini dans l'anneau
+$D$. Mais
+$\mathfrak b'=v'^{-1}(0)=w^{-1}(p^{-1}(0))=w^{-1}(\mathfrak a_s)$, et comme
+$w$ est surjectif, $\mathfrak a_s=w(\mathfrak b')$, ce qui prouve que
+$\mathfrak a_s$ est un idéal de type fini de $C_s$.
+\end{proof}
+
+\begin{corollary}[1.4.5]
+\label{IV.1.4.5-fr}
+Soient $X$, $Y$ deux préschémas, $j:X\to Y$ une immersion, $U$ un ouvert de
+$Y$ tel que $j(X)$ soit fermé dans $U$, $\mathcal J$ l'idéal quasi-cohérent de
+$\mathcal O_U$ qui définit le sous-préschéma fermé de $Y$ associé à $j$. Pour
+que $j$ soit localement de présentation finie, il faut et il suffit que
+$\mathcal J$ soit un $\mathcal O_U$-Module de type fini.
+\end{corollary}
+
+\par\medskip\noindent
+\begin{proposition}[1.4.6]
+\label{IV.1.4.6-fr}
+Soit $\varphi:A\to B$ un homomorphisme d'anneaux. Pour que le morphisme
+correspondant $f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ soit localement de présentation finie,
+il faut et il suffit que $B$ soit une $A$-algèbre de présentation finie.
+\end{proposition}
+
+\begin{proof}
+La condition étant trivialement suffisante, il reste à prouver qu'elle est
+nécessaire. Si $f$ est localement de présentation finie, il résulte déjà de
+(1.3.6) que $B$ est une $A$-algèbre de type fini, donc il existe un
+homomorphisme surjectif $u:B'=A[T_1,\ldots,T_n]\to B$ de $A$-algèbres~; il
+résulte de (1.4.3, (v)) que l'immersion
+$j:\operatorname{Spec}(B)\to\operatorname{Spec}(B')$ est localement
+
+\oldpage[IV-1]{233}
+
+de présentation finie~; donc (1.4.5), si $\mathfrak J$ est le noyau de $u$,
+le $\widetilde{B'}$-Module $\widetilde{\mathfrak J}$ est de type fini, et par
+suite (II, 6.1.4.1) $\mathfrak J$ est un idéal de type fini.
+\end{proof}
+
+\begin{proposition}[1.4.7]
+\label{IV.1.4.7-fr}
+Soit $\rho:A\to B$ un homomorphisme d'anneaux faisant de $B$ une $A$-algèbre
+finie. Pour que $B$ soit une $A$-algèbre de présentation finie, il faut et il
+suffit que $B$ soit un $A$-module de présentation finie.
+\end{proposition}
+
+Nous utiliserons le
+
+\begin{lemma}[1.4.7.1]
+\label{IV.1.4.7.1-fr}
+Si $B$ est une $A$-algèbre finie, il existe un $A$-homomorphisme surjectif
+d'algèbres $u:B'\to B$, où $B'$ est une $A$-algèbre finie et de présentation
+finie qui est un $A$-module libre.
+\end{lemma}
+
+\begin{proof}
+En effet, il y a un système fini $(a_i)_{1\leq i\leq m}$ de générateurs de la
+$A$-algèbre $B$ tel que chaque $a_i$ vérifie une relation $F_i(a_i)=0$, où
+$F_i\in A[X]$ est un polynôme unitaire de degré $>0$~; la $A$-algèbre quotient
+$B'_i=A[X]/(F_i)$ est donc libre de rang fini sur $A$~; soit $c_i$ la classe de
+$X$ dans $B'_i$. Il existe un $A$-homomorphisme d'algèbres $u_i:B'_i\to B$
+tel que $u_i(c_i)=a_i$~; il suffit alors de prendre pour $B'$ le produit
+tensoriel $B'_1\otimes_AB'_2\otimes_A\cdots\otimes_AB'_m$ et de considérer
+l'homomorphisme $u_1\otimes u_2\otimes\cdots\otimes u_m:B'\to B$, qui est
+surjectif par construction. En outre, si $B''=A[T_1,\ldots,T_m]$ et si $b'_i$
+désigne l'image canonique de $c_i$ dans $B'$, le $A$-homomorphisme d'algèbres
+$v:B''\to B'$ tel que $v(T_i)=b'_i$ ($1\leq i\leq m$) est surjectif, et son
+noyau $\mathfrak b'$ est l'idéal de $B''$ engendré par les $F_i(T_i)$, donc de
+type fini~; ceci prouve que $B'$ est une $A$-algèbre de présentation finie.
+\end{proof}
+
+\begin{proof}
+Ce lemme étant démontré, gardons les mêmes notations, et soit
+$w=v\circ u:B''\to B$. Si $\mathfrak b$ (resp. $\mathfrak a$) est le noyau de
+$w$ (resp. $u$), on a $\mathfrak a=v(\mathfrak b)$ puisque $v$ est surjectif.
+Or (1.4.4), si $B$ est une $A$-algèbre de présentation finie, $\mathfrak b$
+est un idéal de type fini de $B''$, donc $\mathfrak a$ est un idéal de type
+fini de $B'$, donc un $A$-module de type fini puisque $B'$ est une $A$-algèbre
+finie~; comme $B'$ est un $A$-module libre, $B$ est un $A$-module de
+présentation finie. Inversement, si $B'$ est un $A$-module de présentation
+finie, $\mathfrak a$ est un $A$-module de type fini (Bourbaki,
+\emph{Alg. comm.}, chap. I, \S~2, n\textsuperscript{o}~8, lemme 9) et
+\emph{a fortiori} un idéal de type fini de $B'$~; par suite, $B$ est par
+définition une $B'$-algèbre de présentation finie, et comme $B'$ est une
+$A$-algèbre de présentation finie, $B$ est une $A$-algèbre de présentation
+finie.
+\end{proof}
+
+\subsection{Morphismes de type fini}
+\label{subsection:IV.1.5-fr}
+
+\begin{proposition}[1.5.1]
+\label{IV.1.5.1-fr}
+Soient $f:X\to Y$ un morphisme, $(U_\alpha)$ un recouvrement de $Y$ formé
+d'ouverts affines. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $f$ est localement de type fini et quasi-compact.
+  \item[b)] Pour tout $\alpha$, $f^{-1}(U_\alpha)$ est réunion finie d'ouverts
+  affines $V_{\alpha i}$ tels que chaque anneau $A(V_{\alpha i})$ soit une
+  $A(U_\alpha)$-algèbre de type fini.
+  \item[c)] Pour tout ouvert affine $U$ de $Y$, $f^{-1}(U)$ est réunion finie
+  d'ouverts affines $V_j$ tels que les anneaux $A(V_j)$ soient des
+  $A(U)$-algèbres de type fini.
+\end{enumerate}
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.3.2 et 6.6.3).
+
+\begin{definition}[1.5.2]
+\label{IV.1.5.2-fr}
+On dit qu'un morphisme $f$ est \emph{de type fini} s'il vérifie les conditions
+équivalentes de la proposition (1.5.1).
+\end{definition}
+
+\oldpage[IV-1]{234}
+
+\begin{proposition}[1.5.3]
+\label{IV.1.5.3-fr}
+Soit $f:X\to Y$ un morphisme de type fini~; si $Y$ est noethérien, il en est
+de même de $X$.
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.3.7).
+
+\begin{proposition}[1.5.4]
+\label{IV.1.5.4-fr}
+\begin{enumerate}
+  \item[(i)] Soit $j:X\to Y$ un morphisme d'immersion. Si $j$ est
+  quasi-compact (ce qui est le cas si $j$ est une immersion fermée, ou si
+  l'espace sous-jacent à $X$ est noethérien, ou si l'espace sous-jacent à $Y$
+  est localement noethérien), $j$ est de type fini.
+  \item[(ii)] Le composé de deux morphismes de type fini est de type fini.
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme de type fini,
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ est de type fini pour toute extension
+  $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes de type
+  fini, $f\times_Sg$ est de type fini.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est de type fini et
+  si $g$ est quasi-séparé ou si $X$ est noethérien, $f$ est de type fini.
+  \item[(vi)] Si un morphisme $f$ est de type fini, il en est de même de
+  $f_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+Cela résulte aussitôt (sauf le cas (v) où $X$ est noethérien, démontré dans
+(I, 6.3.6)) des définitions et de (1.1.2), (1.2.4) et (1.3.4).
+
+\begin{corollary}[1.5.5]
+\label{IV.1.5.5-fr}
+Soit $f:X\to Y$ un morphisme de type fini. Pour tout morphisme $Y'\to Y$ tel
+que $Y'$ soit noethérien, $X\times_YY'$ est noethérien.
+\end{corollary}
+
+Cela résulte de (1.5.4, (iii)) et de (1.5.3).
+
+\begin{corollary}[1.5.6]
+\label{IV.1.5.6-fr}
+Soit $X$ un préschéma de type fini sur un préschéma localement noethérien $S$.
+Alors tout $S$-morphisme $f:X\to Y$ est de type fini.
+\end{corollary}
+
+Pour la démonstration, voir (I, 6.3.9).
+
+\begin{proposition}[1.5.7]
+\label{IV.1.5.7-fr}
+Soit $\varphi:A\to B$ un homomorphisme d'anneaux. Pour que le morphisme
+correspondant $f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ soit de type fini, il faut et il suffit
+que $\varphi$ fasse de $B$ une $A$-algèbre de type fini.
+\end{proposition}
+
+Pour la démonstration, voir (I, 6.3.3).
+
+\subsection{Morphismes de présentation finie}
+\label{subsection:IV.1.6-fr}
+
+\begin{definition}[1.6.1]
+\label{IV.1.6.1-fr}
+Soient $X$, $Y$ deux préschémas. On dit qu'un morphisme $f:X\to Y$ est
+\emph{de présentation finie} s'il vérifie les trois conditions suivantes~:
+\begin{enumerate}
+  \item[(i)] $f$ est localement de présentation finie~;
+  \item[(ii)] $f$ est quasi-compact (ce qui, lorsque (i) est vérifiée,
+  équivaut à dire que $f$ est de type fini (1.5.2))~;
+  \item[(iii)] $f$ est quasi-séparé.
+\end{enumerate}
+On dit alors aussi que $X$ est \emph{de présentation finie sur $Y$}, ou un
+\emph{$Y$-préschéma de présentation finie}.
+\end{definition}
+
+La condition (iii) est automatiquement vérifiée si $f$ est séparé, ou si $X$
+est localement noethérien (1.2.8)~; lorsque $Y$ est localement noethérien, il
+revient au même de dire que $f$ est \emph{de présentation finie} ou que $f$
+est \emph{de type fini} (cette dernière condition entraînant que $X$ est
+localement noethérien (1.3.3)).
+
+\oldpage[IV-1]{235}
+
+\begin{proposition}[1.6.2]
+\label{IV.1.6.2-fr}
+\begin{enumerate}
+  \item[(i)] Toute immersion quasi-compacte et localement de présentation
+  finie (en particulier toute immersion ouverte quasi-compacte) est de
+  présentation finie.
+  \item[(ii)] Le composé de deux morphismes de présentation finie est de
+  présentation finie.
+  \item[(iii)] Soient $X$, $Y$ deux $S$-préschémas, $f:X\to Y$ un
+  $S$-morphisme de présentation finie. Alors, pour tout morphisme $S'\to S$,
+  le morphisme $f_{(S')}:X_{(S')}\to Y_{(S')}$ est de présentation finie.
+  \item[(iv)] Soient $f:X\to Y$, $f':X'\to Y'$ deux $S$-morphismes de
+  présentation finie~; alors
+  $f\times_Sf':X\times_SX'\to Y\times_SY'$ est de présentation finie.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est de présentation
+  finie et si $g$ est quasi-séparé et localement de présentation finie, $f$
+  est de présentation finie.
+\end{enumerate}
+\end{proposition}
+
+Cela résulte immédiatement de (1.1.2), (1.2.2), (1.2.4) et (1.4.3).
+
+Il résulte en particulier de (1.6.2, (iii)) que si $f$ est un morphisme de
+présentation finie et $U$ un ouvert de $Y$, la restriction
+$f^{-1}(U)\to U$ de $f$ est un morphisme de présentation finie. Inversement,
+soit $(U_\alpha)$ un recouvrement de $Y$ par des ouverts affines, et supposons
+que les restrictions $f^{-1}(U_\alpha)\to U_\alpha$ de $f$ soient des
+morphismes de présentation finie~; il en résulte alors que $f$ est de
+présentation finie, car $f$ est évidemment localement de présentation finie,
+quasi-compact en vertu de (1.1.1) et quasi-séparé en vertu de (1.2.6). On peut
+donc dire que la propriété pour un morphisme $f:X\to Y$ d'être de présentation
+finie est \emph{locale sur $Y$}.
+
+Si $X$ est un préschéma quasi-séparé, tout morphisme $f:X\to Y$ est
+quasi-séparé (1.2.3). Donc, si $f$ est quasi-compact et localement de
+présentation finie, $f$ est alors de présentation finie.
+
+En particulier~:
+
+\begin{corollary}[1.6.3]
+\label{IV.1.6.3-fr}
+Soit $\varphi:A\to B$ un homomorphisme d'anneaux. Pour que le morphisme
+correspondant $f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ soit de présentation finie, il faut et
+il suffit que $\varphi$ fasse de $B$ une $A$-algèbre de présentation finie.
+\end{corollary}
+
+La nécessité de la condition résulte en effet de (1.4.6).
+
+\begin{remark}[1.6.4]
+\label{IV.1.6.4-fr}
+Dans la définition (1.6.1), la condition (iii) n'est pas conséquence des deux
+autres. Soit par exemple $Y$ un schéma affine dont l'espace sous-jacent ne
+soit pas noethérien, et soit $U$ un ouvert non quasi-compact dans $Y$. Soit
+$X$ le préschéma obtenu en recollant deux préschémas $Y_1$, $Y_2$ isomorphes à
+$Y$ le long des ouverts $U_1$, $U_2$ correspondant à $U$ (0$_{\mathrm I}$,
+4.1.7), de sorte que $X$ est réunion de deux ouverts isomorphes respectivement
+à $Y_1$ et $Y_2$ (et que nous identifions à ces derniers), avec
+$Y_1\cap Y_2=U$. En outre, il y a un morphisme $f:X\to Y$ qui coïncide dans
+$Y_i$ avec l'isomorphisme donné $Y_i\to Y$ ($i=1,2$). Il est clair que $f$
+vérifie la condition (i) de (1.6.1), étant un isomorphisme local~; il vérifie
+aussi (ii), l'image réciproque d'un ouvert quasi-compact de $Y$ étant la
+réunion de ses images dans $Y_1$ et $Y_2$~; mais comme $Y_1\cap Y_2$ n'est pas
+quasi-compact, $f$ n'est pas quasi-séparé (1.2.7).
+\end{remark}
+
+\begin{proposition}[1.6.5]
+\label{IV.1.6.5-fr}
+Soient $X'$, $X''$ deux préschémas, $X=X'\amalg X''$ leur somme,
+$f':X'\to Y$, $f'':X''\to Y$ deux morphismes, $f:X\to Y$ le morphisme qui
+coïncide avec $f'$ dans $X'$ et avec $f''$ dans $X''$. Pour que $f$ soit de
+présentation finie, il faut et il suffit que $f'$ et $f''$ le soient.
+\end{proposition}
+
+\par\medskip\noindent
+\begin{proof}
+Il suffit de montrer que pour que $f$ possède une des trois propriétés de la
+définition
+
+\oldpage[IV-1]{236}
+
+(1.6.1), il faut et il suffit que $f'$ et $f''$ la possèdent~; c'est évident
+pour la propriété d'être localement de présentation finie, qui est locale sur
+$X$~; pour la propriété d'être quasi-compact, cela a été vu en (1.1.6) et pour
+la propriété d'être quasi-séparé, en (1.2.9).
+\end{proof}
+
+\subsection{Améliorations de résultats antérieurs}
+\label{subsection:IV.1.7-fr}
+
+Nous allons donner dans ce numéro une liste de propositions démontrées dans
+les chapitres précédents, dont l'énoncé peut être amélioré à l'aide des
+nouvelles conditions de finitude introduites ci-dessus.
+
+\begin{env}[1.7.1]
+\label{IV.1.7.1-fr}
+Dans les énoncés de (I, 6.4.2, 6.4.3 et 6.4.9), on peut, au lieu de supposer
+que $X$ et $Y$ sont de type fini sur le corps $K$, supposer seulement qu'ils
+sont \emph{localement de type fini} sur $K$~; pour (I, 6.4.2), il suffit
+d'observer que tout point d'un préschéma $X$ qui est fermé dans tout ouvert
+affine de $X$ est fermé dans $X$, et un schéma affine localement de type fini
+sur $K$ est \emph{ipso facto} de type fini (1.5.1). Pour (I, 6.4.9), on utilise
+(1.3.7) et (1.3.4, (v)).
+\end{env}
+
+\begin{env}[1.7.2]
+\label{IV.1.7.2-fr}
+Dans (I, 6.5.1, (ii)), on peut au lieu de supposer que $S$ est localement
+noethérien et $Y$ de type fini sur $S$, supposer seulement que $Y$ est
+\emph{localement de présentation finie} sur $S$, comme le montre aussitôt la
+démonstration (en appliquant la définition (1.4.2)). De même dans (I, 6.5.4,
+(ii)) et (I, 6.5.5, (ii)) il suffit de supposer que $f$ est un $S$-morphisme,
+$Y$ étant localement de présentation finie sur $S$.
+\end{env}
+
+\begin{env}[1.7.3]
+\label{IV.1.7.3-fr}
+Dans (I, 7.1.11), pour la deuxième assertion, au lieu de supposer $S$
+localement noethérien et $Y$ de type fini sur $S$, on peut seulement supposer
+$Y$ localement de présentation finie sur $S$ (la démonstration dépendant de
+(I, 6.5.1, (ii)))~; de même dans (I, 7.1.12 à 7.1.15).
+\end{env}
+
+\begin{env}[1.7.4]
+\label{IV.1.7.4-fr}
+Dans (I, 9.2.2), on peut remplacer les trois hypothèses par la seule hypothèse
+(entraînée par chacune des autres) que $f$ est \emph{quasi-compact et
+quasi-séparé}, en vertu de (1.2.6) et (1.2.7). On notera que dans (I, 9.2.1),
+l'hypothèse signifie exactement que $f$ est quasi-compact et quasi-séparé.
+\end{env}
+
+\begin{env}[1.7.5]
+\label{IV.1.7.5-fr}
+Dans (I, 9.3.1, 9.3.2 et 9.3.3), on peut remplacer les deux hypothèses sur $X$
+par l'hypothèse (moins forte) que $X$ est un préschéma \emph{quasi-compact et
+quasi-séparé}, la démonstration utilisant exactement ces deux propriétés (en
+vertu de (1.2.7)).
+\end{env}
+
+\begin{env}[1.7.6]
+\label{IV.1.7.6-fr}
+Dans (I, 9.3.4 et 9.3.5), il suffit de supposer $X$ quasi-compact,
+$\mathcal F$ et $\mathcal J$ quasi-cohérents et de type fini.
+\end{env}
+
+\begin{env}[1.7.7]
+\label{IV.1.7.7-fr}
+Dans (I, 9.4.7), on peut affaiblir l'hypothèse b) en supposant seulement $X$
+\emph{quasi-séparé}, puisqu'il suffit seulement que l'immersion canonique
+$U\to X$ soit quasi-compacte (1.2.7). On peut faire la même modification dans
+(I, 9.4.8, 9.4.9 et 9.4.10).
+\end{env}
+
+\begin{env}[1.7.8]
+\label{IV.1.7.8-fr}
+Dans (I, 9.5.1), les conditions indiquées entre parenthèses dans l'énoncé
+peuvent être remplacées par la condition que $f$ soit quasi-compact et
+quasi-séparé.
+\end{env}
+
+\begin{env}[1.7.9]
+\label{IV.1.7.9-fr}
+Dans (I, 9.6.5), on peut remplacer les hypothèses sur $X$ par l'hypothèse
+moins forte que $X$ est quasi-compact et quasi-séparé, comme le montre la
+démonstration,
+
+\oldpage[IV-1]{237}
+
+qui n'utilise que (I, 9.4.7). Dans (I, 9.6.6), l'hypothèse «~$X$ est un
+schéma quasi-compact~» peut être remplacée par «~$X$ est un préschéma
+quasi-compact et quasi-séparé~».
+\end{env}
+
+\begin{env}[1.7.10]
+\label{IV.1.7.10-fr}
+Dans (II, 1.7.15), on peut supposer seulement que $Y$ est quasi-compact et
+quasi-séparé, la démonstration n'utilisant que (I, 9.6.5).
+\end{env}
+
+\begin{env}[1.7.11]
+\label{IV.1.7.11-fr}
+Dans la seconde assertion de (II, 3.4.5), on peut substituer aux deux
+hypothèses sur $Y$ l'hypothèse plus faible que $Y$ est quasi-compact et
+quasi-séparé. De même dans (II, 3.4.8).
+\end{env}
+
+\begin{env}[1.7.12]
+\label{IV.1.7.12-fr}
+Dans (II, 3.8.5), on peut de même supposer seulement que $Y$ est quasi-compact
+et quasi-séparé, cette hypothèse intervenant par (I, 9.4.7).
+\end{env}
+
+\begin{env}[1.7.13]
+\label{IV.1.7.13-fr}
+Dans (II, 4.4.1, 4.4.6 et 4.4.7), il suffit de supposer que $Y$ est
+\emph{quasi-compact et quasi-séparé}, compte tenu de (1.2.3) dans la
+démonstration de (II, 4.4.7). De même, dans (II, 4.4.10.1), il suffit de
+supposer $Z$ quasi-compact et quasi-séparé.
+\end{env}
+
+\begin{env}[1.7.14]
+\label{IV.1.7.14-fr}
+Dans (II, 4.5.2) et (II, 4.5.5), il suffit de supposer $X$
+\emph{quasi-compact et quasi-séparé}, cette hypothèse intervenant par (I,
+9.3.1 et 9.3.2).
+\end{env}
+
+\begin{env}[1.7.15]
+\label{IV.1.7.15-fr}
+Dans (II, 4.6.8), il suffit encore de supposer $X$ \emph{quasi-compact et
+quasi-séparé}, cette hypothèse intervenant par (I, 9.4.7).
+\end{env}
+
+\begin{env}[1.7.16]
+\label{IV.1.7.16-fr}
+Dans (II, 5.1.2), il suffit de supposer que $X$ est quasi-compact et
+quasi-séparé (l'hypothèse intervenant par (II, 4.5.2 et 4.5.5)). De même dans
+(II, 5.1.9), où on utilise (I, 9.6.5).
+\end{env}
+
+\begin{env}[1.7.17]
+\label{IV.1.7.17-fr}
+Dans (II, 5.2.1), il suffit toujours de supposer $X$ quasi-compact et
+quasi-séparé (l'hypothèse intervenant par (II, 4.5.2)).
+\end{env}
+
+\begin{env}[1.7.18]
+\label{IV.1.7.18-fr}
+Dans (II, 5.2.2), il faut supposer $f$ quasi-compact et $X$ quasi-séparé~; la
+démonstration actuelle est en effet insuffisante (avec les hypothèses faites),
+car du fait que pour tout $\mathcal O_X$-Module quasi-cohérent $\mathcal F$ on
+a $\mathrm R^1f_*(\mathcal F)=0$, il ne s'ensuit pas nécessairement, pour un
+ouvert affine $U$ de $Y$, que la même propriété soit valable pour les
+$(\mathcal O_X|f^{-1}(U))$-Modules quasi-cohérents, si on ne sait pas qu'un tel
+Module est la \emph{restriction} d'un $\mathcal O_X$-Module quasi-cohérent (la
+même remarque s'appliquant aux conditions b) et c'))~; lorsque $f$ est
+quasi-compact et $X$ quasi-séparé, ce prolongement est possible en vertu de
+(I, 9.4.7), modifié plus haut (1.7.7).
+\end{env}
+
+\begin{env}[1.7.19]
+\label{IV.1.7.19-fr}
+Dans (II, 5.3.2), il suffit de supposer $Y$ \emph{quasi-compact et
+quasi-séparé} (ce qui intervient par (II, 4.4.6 et 4.4.7)). De même dans (II,
+5.5.3, (ii)).
+\end{env}
+
+\begin{env}[1.7.20]
+\label{IV.1.7.20-fr}
+Dans (III, 1.2.2, 1.2.3 et 1.2.4), on peut remplacer les deux hypothèses sur
+$X$ par l'hypothèse moins forte que $X$ est un préschéma \emph{quasi-compact
+et quasi-séparé}, la démonstration n'utilisant que (I, 9.3.3).
+\end{env}
+
+\begin{env}[1.7.21]
+\label{IV.1.7.21-fr}
+Dans (III, 1.4.10 à 1.4.14), on peut remplacer «~séparé~» par
+«~quasi-séparé~», cette hypothèse servant uniquement à pouvoir appliquer (I,
+9.2.2) (voir ci-dessus (1.7.4)). De même, dans (III, 1.4.15), il suffit de
+supposer que le morphisme $u$ est \emph{quasi-séparé et quasi-compact}.
+\end{env}
+
+\begin{env}[1.7.22]
+\label{IV.1.7.22-fr}
+Dans (III, 2.1.3), on peut encore remplacer les hypothèses par l'hypothèse
+moins forte que $X$ est un préschéma quasi-compact et quasi-séparé, le
+raisonnement étant le même que dans (III, 1.2.2).
+\end{env}
+
+\subsection{Morphismes de présentation finie et ensembles constructibles}
+\label{subsection:IV.1.8-fr}
+
+\oldpage[IV-1]{238}
+
+\begin{env}[1.8.1]
+\label{IV.1.8.1-fr}
+Soit $X$ un préschéma~; on sait que tout ouvert quasi-compact dans $X$ est
+réunion finie d'ouverts affines, et réciproquement. Pour qu'un ouvert $U$ de
+$X$ soit \emph{rétrocompact} dans $X$ (0\textsubscript{III}, 9.1.1), il faut
+et il suffit donc que pour tout \emph{ouvert affine} $V$ de $X$, $U\cap V$
+soit quasi-compact. Lorsque $X$ est \emph{quasi-séparé} (1.2.1), tout ouvert
+quasi-compact dans $X$ est rétrocompact dans $X$ (1.2.7), donc toute partie
+localement constructible de $X$ est rétrocompacte dans $X$
+(0\textsubscript{III}, 9.1.13)~; si \emph{de plus} $X$ est
+\emph{quasi-compact}, il y a identité entre parties constructibles et parties
+localement constructibles dans $X$ (0\textsubscript{III}, 9.1.12), et entre
+parties ouvertes constructibles et parties ouvertes quasi-compactes
+(0\textsubscript{III}, 9.1.5).
+\end{env}
+
+\begin{proposition}[1.8.2]
+\label{IV.1.8.2-fr}
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme. Pour toute partie
+constructible (resp. localement constructible) $Z$ de $Y$, $f^{-1}(Z)$ est
+une partie constructible (resp. localement constructible) de $X$.
+\end{proposition}
+
+\begin{proof}
+Supposons $Z$ localement constructible~; pour tout $x\in X$, il y aura un
+voisinage ouvert affine $V$ de $f(x)$ tel que $Z\cap V$ soit constructible
+dans $V$~; si la proposition est démontrée pour les parties constructibles,
+$f^{-1}(Z)\cap f^{-1}(V)$ sera constructible dans $f^{-1}(V)$, donc
+$f^{-1}(Z)$ sera localement constructible. Il suffit par suite de considérer
+le cas où $Z$ est constructible, et compte tenu de (0\textsubscript{III},
+9.1.3), on est ramené au cas où $Z$ est ouvert et \emph{rétrocompact} dans
+$Y$, autrement dit tel que l'injection canonique $Z\to Y$ soit un morphisme
+quasi-compact~; il suffit alors de voir que $f^{-1}(Z)$ est
+\emph{rétrocompact dans $X$}, autrement dit tel que l'injection canonique
+$f^{-1}(Z)\to X$ soit un morphisme quasi-compact~; mais cela résulte de
+(1.1.2, (iii)), puisque $f^{-1}(Z)=Z\times_YX$ (I, 4.4.1).
+\end{proof}
+
+\begin{lemma}[1.8.3]
+\label{IV.1.8.3-fr}
+Soient $X$ un préschéma quasi-compact et quasi-séparé, $Z$ une partie
+constructible de $X$. Il existe alors un schéma affine $X'$ et un morphisme
+de présentation finie $f:X'\to X$ tels que $f(X')=Z$.
+\end{lemma}
+
+\begin{proof}
+Comme $X$ est quasi-compact, il est réunion finie d'ouverts affines $X_i$
+($i\in I$), et comme $X$ est quasi-séparé, il résulte de (1.2.7) que chacune
+des immersions canoniques $g_i:X_i\to X$ est de présentation finie~; on en
+conclut que si $f_i:X'_i\to X_i$ est un morphisme de présentation finie, il
+en est de même de $g_i\circ f_i:X'_i\to X$ (1.6.2), et si $X'$ est le
+préschéma somme des $X'_i$, le morphisme $h:X'\to X$ qui coïncide avec
+$g_i\circ f_i$ dans chaque $X'_i$ est lui aussi de présentation finie
+(1.6.5). Comme $Z\cap X_i$ est constructible dans $X_i$
+(0\textsubscript{III}, 9.1.8), on voit qu'on est ramené à prouver le lemme
+lorsque $X_i$ est \emph{affine} d'anneau $A$. Comme $Z$ est alors réunion
+finie d'ensembles de la forme $U\cap\complement V$, où $U$ et $V$ sont des
+ouverts quasi-compacts (0\textsubscript{III}, 9.1.3), on voit, en considérant
+encore une somme convenable de préschémas, qu'on peut se ramener au cas où
+$Z=U\cap\complement V$~; comme d'ailleurs $U$ est réunion finie d'ouverts
+affines, on peut même se borner au cas où $U$ est \emph{affine}. Comme $V$
+est quasi-compact, il est réunion finie d'ouverts de la forme $X_{f_i}$, où
+$f_i\in A$~; soit $\mathfrak J$ l'idéal de $A$ engendré par les $f_i$, et
+soit $Z'$ le sous-schéma fermé affine de $X$ qu'il définit (et qui est par
+construction de présentation finie sur $X$)~; on a par définition
+$V=\complement Z'$, donc $U\cap\complement V=U\cap Z'$. Considérons le
+schéma affine $X'=Z'\times_XU$
+
+\oldpage[IV-1]{239}
+
+et soit $f:X'\to X$ le morphisme structural~; on vient de voir que
+l'immersion canonique $Z'\to X$ est de présentation finie, et il en est de
+même de l'immersion ouverte $U\to X$, qui est quasi-compacte puisque $U$ et
+$X$ sont affines~; on conclut donc de (1.6.2, (iv)) que $f$ est de
+présentation finie, et l'on a $f(X')=Z'\cap U$ (I, 3.4.8), ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{theorem}[1.8.4]
+\label{IV.1.8.4-fr}
+\textup{(Chevalley).} --- Soit $f:X\to Y$ un morphisme de présentation
+finie. Pour toute partie localement constructible $Z$ de $X$, $f(Z)$ est
+localement constructible dans $Y$.
+\end{theorem}
+
+\begin{proof}
+Soient $y\in Y$ et $V$ un voisinage ouvert affine de $y$~; comme $f$ est
+quasi-compact et quasi-séparé, il en est de même de sa restriction
+$f^{-1}(V)\to V$, donc $f^{-1}(V)$ est un préschéma quasi-compact et
+quasi-séparé (1.2.3)~; comme $Z\cap f^{-1}(V)$ est constructible dans
+$f^{-1}(V)$ (1.8.1), on voit qu'on peut se borner au cas où $Y$ est affine
+et $Z$ constructible~; $X$ est alors quasi-compact et quasi-séparé, donc
+(1.8.3), il existe un morphisme de présentation finie $g:X'\to X$ tel que
+$Z=g(X')$~; comme $f\circ g$ est de présentation finie, on voit qu'on est
+ramené au cas où $Z=X$~; autrement dit, il suffira de prouver le
+\end{proof}
+
+\begin{lemma}[1.8.4.1]
+\label{IV.1.8.4.1-fr}
+Soient $Y$ un schéma affine, $f:X\to Y$ un morphisme quasi-compact et
+localement de présentation finie~; alors $f(X)$ est une partie constructible
+de $Y$.
+\end{lemma}
+
+\begin{proof}
+Comme $X$ est quasi-compact, il est réunion finie d'ouverts affines~; on peut
+donc se borner au cas où $Y=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(B)$, $B$ étant une $A$-algèbre de présentation finie
+(1.4.6). Or, on a le
+\end{proof}
+
+\begin{lemma}[1.8.4.2]
+\label{IV.1.8.4.2-fr}
+Soient $A_0$ un anneau, $(A_\lambda)_{\lambda\in L}$ un système inductif de
+$A_0$-algèbres, $A=\varinjlim A_\lambda$~; si $B$ est une $A$-algèbre de
+présentation finie, il existe un $\lambda$ et une $A_\lambda$-algèbre de
+présentation finie $B_\lambda$ tels que $B$ soit isomorphe à
+$B_\lambda\otimes_{A_\lambda}A$.
+\end{lemma}
+
+\begin{proof}
+Par hypothèse, $B$ est isomorphe à une algèbre de la forme
+$A[T_1,\ldots,T_n]/\mathfrak J$, où les $T_i$ sont des indéterminées et
+$\mathfrak J$ un idéal de type fini~; soit $(F_j)$ ($1\leq j\leq m$) un
+système de générateurs de $\mathfrak J$. Soit
+$\varphi_\lambda:A_\lambda\to A$ l'homomorphisme canonique. Comme $L$ est
+filtrant, il existe $\lambda$ tel que chacun des coefficients de chacun des
+polynômes $F_j$ soit l'image par $\varphi_\lambda$ d'un élément de
+$A_\lambda$. Autrement dit, il existe un système de polynômes
+$(F_{j\lambda})_{1\leq j\leq m}$ de $A_\lambda[T_1,\ldots,T_n]$ tels que
+$F_j=\varphi_\lambda(F_{j\lambda})$ pour $1\leq j\leq m$. Si
+$\mathfrak J_\lambda$ est l'idéal de $A_\lambda[T_1,\ldots,T_n]$ engendré
+par les $F_{j\lambda}$, $\mathfrak J$ est l'image de
+$\mathfrak J_\lambda\otimes_{A_\lambda}A$ dans
+$A[T_1,\ldots,T_n]=A_\lambda[T_1,\ldots,T_n]\otimes_{A_\lambda}A$~;
+l'anneau $B_\lambda=A_\lambda[T_1,\ldots,T_n]/\mathfrak J_\lambda$ répond à
+la question.
+\end{proof}
+
+On appliquera ici ce lemme en considérant $A$ comme limite inductive de ses
+sous-$\mathbf Z$-algèbres \emph{de type fini}. On voit donc qu'il existe une
+telle sous-$\mathbf Z$-algèbre $A_0$ de $A$, et une $A_0$-algèbre de
+présentation finie $B_0$ telles que $B$ soit isomorphe à
+$B_0\otimes_{A_0}A$~; posons $X_0=\operatorname{Spec}(B_0)$,
+$Y_0=\operatorname{Spec}(A_0)$, de sorte que l'on a $X=X_0\times_{Y_0}Y$,
+$f$ étant la projection $X\to Y$~; soient $f_0:X_0\to Y_0$,
+$g_0:Y\to Y_0$ les morphismes structuraux~; il résulte de (I, 3.4.8) que
+l'on a $f(X)=g_0^{-1}(f_0(X_0))$~; compte tenu de (1.8.2), il suffit donc de
+montrer que $f_0(X_0)$ est constructible. Autrement dit, on est finalement
+ramené à démontrer le
+
+\begin{corollary}[1.8.5]
+\label{IV.1.8.5-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme de type fini.
+Pour toute partie constructible $Z$ de $X$, $f(Z)$ est une partie
+constructible de $Y$.
+\end{corollary}
+
+\oldpage[IV-1]{240}
+
+\begin{proof}
+On se ramène comme ci-dessus à prouver que $f(X)$ est constructible.
+Appliquons le critère (0\textsubscript{III}, 9.2.3)~: il faut prouver que pour
+toute partie fermée irréductible $T$ de $Y$, $T\cap f(X)=f(f^{-1}(T))$ est
+rare dans $T$ ou contient un ouvert non vide de $T$~; en prenant un
+sous-préschéma de $Y$ ayant $T$ pour espace sous-jacent (I, 5.2.1) et en
+considérant son image réciproque par $f$, on voit finalement (compte tenu de
+(1.5.4, (iii)) qu'on est ramené à prouver que si l'on suppose $Y$
+\emph{irréductible et $f$ dominant}, $f(X)$ contient un ouvert non vide de
+$Y$. On peut en outre supposer $Y$ affine~; alors $X$ est réunion finie
+d'ouverts affines $V_i$, et comme $f(X)$ est dense dans $Y$, il en est de
+même d'un au moins des $f(V_i)$. On peut donc aussi supposer $X$ affine~; si
+$(X_j)$ est la famille (finie) des composantes irréductibles de $X$, on voit
+comme ci-dessus qu'un au moins des $f(X_j)$ est dense dans $Y$~; on peut donc
+supposer $X$ irréductible. Enfin, en remplaçant $f$ par $f_{\mathrm{red}}$
+(1.5.4, (vi)) on peut supposer $X$ et $Y$ \emph{intègres}. Alors
+$X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, où $A$ est un
+anneau intègre noethérien, $B$ une $A$-algèbre intègre de type fini contenant
+$A$ (I, 1.2.7). Il suffit de montrer qu'il existe $g\in A$ tel que, pour tout
+$y\in D(g)$ (c'est-à-dire tel que $g\notin\mathfrak p_y$) l'idéal
+$\mathfrak p_y$ soit l'intersection de $A$ et d'un idéal premier de $B$, car
+cela montrera que $D(g)\subset f(X)$. Finalement il suffit de prouver le
+\end{proof}
+
+\begin{lemma}[1.8.5.1]
+\label{IV.1.8.5.1-fr}
+Soient $A$ un anneau intègre, $B$ une $A$-algèbre intègre de type fini. Il
+existe $g\in A$ tel que tout homomorphisme de $A$ dans un corps
+algébriquement clos $\Omega$, non nul en $g$, se prolonge en un homomorphisme
+de $B$ dans $\Omega$.
+\end{lemma}
+
+\begin{proof}
+Or c'est là un résultat classique d'algèbre commutative (Bourbaki,
+\emph{Alg. comm.}, chap. V, \S~3, n\textsuperscript{o}~1, cor. 3 du th. 1).
+\end{proof}
+
+\begin{corollary}[1.8.6]
+\label{IV.1.8.6-fr}
+Soient $Y$ un préschéma irréductible, $\eta$ son point générique,
+$f:X\to Y$ un morphisme localement de type fini. Si $f^{-1}(\eta)$ n'est pas
+vide, il existe un voisinage ouvert $U$ de $\eta$ dans $Y$ tel que
+$f^{-1}(y)$ soit non vide pour tout $y\in U$. Si $\mathscr F$ est un
+$\mathcal O_X$-Module quasi-cohérent de type fini, et si
+$\mathscr F_\eta=\mathscr F\otimes_{\mathcal O_Y}k(\eta)$ n'est pas nul,
+alors il existe un voisinage ouvert $U'$ de $\eta$ dans $Y$ tel que
+$\mathscr F_y=\mathscr F\otimes_{\mathcal O_Y}k(y)$ ne soit pas nul pour
+tout $y\in U'$.
+\end{corollary}
+
+\begin{proof}
+Si $p_y$ est la projection canonique de la fibre
+$f^{-1}(y)=X\times_Y\operatorname{Spec}(k(y))$ dans $X$, on a
+$\mathscr F_y=p_y^*(\mathscr F)$, donc
+$\operatorname{Supp}(\mathscr F_y)=p_y^{-1}(\operatorname{Supp}(\mathscr F))
+=\operatorname{Supp}(\mathscr F)\cap f^{-1}(y)$ en vertu de (I, 9.1.13.1) et
+(I, 3.6.1), puisque $\mathscr F$ est de type fini~; en outre
+$\operatorname{Supp}(\mathscr F)$ est fermé dans $X$ (0\textsubscript{I},
+5.2.2), et si $Z$ est un sous-préschéma fermé de $X$ ayant pour espace
+sous-jacent $\operatorname{Supp}(\mathscr F)$ (I, 5.2.1), et $j$ l'immersion
+canonique $Z\to X$, $f\circ j$ est localement de type fini (1.3.4)~; cela
+prouve que la première assertion entraîne la seconde. Pour prouver la
+première assertion, remarquons d'abord que l'on peut supposer $X$ et $Y$
+réduits (1.3.4, (vi)), autrement dit $Y$ intègre. Soit $\xi$ un point de
+$f^{-1}(\eta)$~; on peut remplacer $X$ et $Y$ par des voisinages ouverts
+affines de $\xi$ et $\eta$ respectivement, et par suite supposer que
+$X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, $B$ étant une
+$A$-algèbre de type fini. En outre, si $Z$ est le sous-préschéma fermé réduit
+de $X$ ayant $\overline{\{\xi\}}$ pour ensemble sous-jacent (I, 5.2.1), on
+peut, comme ci-dessus, remplacer $X$ par $Z$, autrement dit supposer $B$
+\emph{intègre} (I, 5.1.4). Comme le morphisme $f$ est alors dominant,
+l'homomorphisme correspondant $\varphi:A\to B$ est injectif (I, 1.2.7)~;
+donc le corollaire résulte finalement du lemme (1.8.5.1).
+\end{proof}
+
+\oldpage[IV-1]{241}
+
+\begin{proposition}[1.8.7]
+\label{IV.1.8.7-fr}
+Soient $S$ un préschéma, $g:X\to S$, $h:Y\to S$ deux morphismes de
+présentation finie, $f:X\to Y$ un $S$-morphisme. Pour tout $s\in S$, posons
+$X_s=g^{-1}(s)=X\times_S\operatorname{Spec}(k(s))$,
+$Y_s=h^{-1}(s)=Y\times_S\operatorname{Spec}(k(s))$,
+$f_s=f\times 1:X_s\to Y_s$. Alors l'ensemble des $s\in S$ tels que $f_s$
+soit surjectif (resp. radiciel) est localement constructible.
+\end{proposition}
+
+\begin{proof}
+Soit $E$ l'ensemble des $s\in S$ tels que $f_s$ soit surjectif~; l'ensemble
+$S-E$ est égal à $h(Y-f(X))$~; or $f$ est de présentation finie (1.6.2, (v))
+donc $f(X)$ est localement constructible dans $Y$ (1.8.4)~; comme $h$ est de
+présentation finie, $h(Y-f(X))$ est localement constructible dans $S$, donc
+aussi $E$.
+
+Pour montrer que l'ensemble $E'$ des $s\in S$ tels que $f_s$ soit radiciel
+est localement constructible, nous utiliserons le
+\end{proof}
+
+\begin{lemma}[1.8.7.1]
+\label{IV.1.8.7.1-fr}
+Soient $U$, $V$ deux préschémas~; pour qu'un morphisme $f:U\to V$ soit
+radiciel, il faut et il suffit que le morphisme diagonal
+$\Delta_f:U\to U\times_VU$ soit surjectif. Par suite, tout morphisme radiciel
+est séparé.
+\end{lemma}
+
+\begin{proof}
+En effet, $\Delta_f$ étant une immersion (I, 5.3.9), est un morphisme
+localement de type fini (1.3.4)~; dire que $\Delta_f$ est surjectif signifie
+donc que pour tout corps algébriquement clos $K$, l'application
+correspondante $U(K)\to(U\times_VU)(K)=U(K)\times_{V(K)}U(K)$ est surjective
+(1.3.7 et I, 3.4.2.1)~; mais par définition d'un produit fibré d'ensembles,
+cela signifie que l'application $U(K)\to V(K)$ correspondant à $f$ est
+injective, et cela équivaut à dire que $f$ est radiciel (I, 3.5.5).
+
+Cela étant, $\Delta_{f_s}$ se déduit de $\Delta_f:X\to X\times_YX$ par le
+changement de base $\operatorname{Spec}(k(s))\to S$ (I, 5.3.4). Comme $f$
+est de présentation finie, il en est de même du morphisme structural
+$X\times_YX\to Y$ (1.6.2, (iv)), donc aussi de $\Delta_f$ (1.6.2, (v))~; il
+suffit donc d'appliquer la première partie de la proposition à $\Delta_f$,
+en utilisant le lemme (1.8.7.1).
+\end{proof}
+
+\subsection{Ensembles pro-constructibles et ind-constructibles}
+\label{subsection:IV.1.9-fr}
+
+\begin{lemma}[1.9.1]
+\label{IV.1.9.1-fr}
+Soit $(A_\alpha)_{\alpha\in I}$ un système inductif d'anneaux dont l'ensemble
+d'indices $I$ est filtrant à droite, et soit $A=\varinjlim A_\alpha$. Pour que
+$A=0$, il faut et il suffit qu'il existe un indice $\gamma$ tel que
+$A_\gamma=0$ (et l'on a alors $A_\beta=0$ pour tout $\beta\geq\gamma$).
+\end{lemma}
+
+\begin{proof}
+En effet, pour tout $\alpha\in I$, l'homomorphisme canonique
+$\varphi_\alpha:A_\alpha\to A$ transforme l'élément unité en élément unité~;
+dire que $A=0$ signifie que $\varphi_\alpha(1)=0$, ou encore
+$\varphi_\alpha(1)=\varphi_\alpha(0)$~; on sait que cela équivaut à dire
+qu'il existe un indice $\gamma\geq\alpha$ tel que l'homomorphisme
+$\varphi_{\gamma\alpha}:A_\alpha\to A_\gamma$ soit tel que
+$\varphi_{\gamma\alpha}(1)=\varphi_{\gamma\alpha}(0)$, et cette dernière
+relation équivaut à $A_\gamma=0$, d'où le lemme.
+\end{proof}
+
+\begin{proposition}[1.9.2]
+\label{IV.1.9.2-fr}
+Soient $B$ un anneau, $(A_\alpha)_{\alpha\in I}$ un système inductif de
+$B$-algèbres dont l'ensemble d'indices $I$ est filtrant à droite, et soit
+$A=\varinjlim A_\alpha$~; posons $Y=\operatorname{Spec}(B)$,
+$X_\alpha=\operatorname{Spec}(A_\alpha)$, $X=\operatorname{Spec}(A)$, et
+soient $u:X\to Y$, $u_\alpha:X_\alpha\to Y$ les morphismes correspondant aux
+homomorphismes structuraux $B\to A$, $B\to A_\alpha$. Alors~:
+\end{proposition}
+
+\begin{env}[1.9.2.i]
+\label{IV.1.9.2.i-fr}
+\emph{Pour que $X=\varnothing$, il faut et il suffit qu'il existe un
+$\gamma\in I$ tel que $X_\gamma=\varnothing$, et l'on a alors
+$X_\alpha=\varnothing$ pour $\alpha\geq\gamma$.}
+\end{env}
+
+\oldpage[IV-1]{242}
+
+\begin{env}[1.9.2.ii]
+\label{IV.1.9.2.ii-fr}
+\emph{On a}
+\[
+  u(X)=\bigcap_{\alpha\in I}u_\alpha(X_\alpha). \tag{1.9.2.1}
+  \label{IV.1.9.2.1-fr}
+\]
+\end{env}
+
+L'assertion (i) n'est autre que la traduction de (1.9.1). Pour démontrer
+(ii), notons que, puisque $u$ se factorise en
+$X\to X_\alpha\xrightarrow{u_\alpha}Y$, le premier membre de (1.9.2.1) est
+contenu dans le second. Inversement, soit $y\in Y-u(X)$~; on a
+$u^{-1}(y)=\varnothing$, et $u^{-1}(y)$ est l'espace sous-jacent au
+$k(y)$-préschéma $\operatorname{Spec}(A\otimes_Bk(y))$~; comme dans la
+catégorie des $B$-modules le foncteur $\varinjlim$ commute au produit
+tensoriel, $A\otimes_Bk(y)$ est limite inductive du système inductif d'anneaux
+$A_\alpha\otimes_Bk(y)$~; le lemme (1.9.1) montre qu'il existe $\alpha$ tel
+que $A_\alpha\otimes_Bk(y)=0$, c'est-à-dire
+$u_\alpha^{-1}(y)=\varnothing$, donc $y\notin u_\alpha(X_\alpha)$. C.Q.F.D.
+
+\begin{proposition}[1.9.3]
+\label{IV.1.9.3-fr}
+Soient $X$ un préschéma quasi-compact et quasi-séparé, $E$ une partie de $X$,
+$(X_\alpha)_{\alpha\in I}$ un recouvrement ouvert affine de $X$, et pour
+tout $\alpha\in I$, posons $E_\alpha=E\cap X_\alpha$. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] Il existe un morphisme quasi-compact $f:X'\to X$ tel que
+  $E=f(X')$.
+  \item[a$'$)] Pour tout $\alpha$, il existe un morphisme quasi-compact
+  $f_\alpha:X'_\alpha\to X_\alpha$ tel que
+  $E_\alpha=f_\alpha(X'_\alpha)$.
+  \item[a$''$)] Pour tout $\alpha$, il existe un schéma affine $X''_\alpha$
+  et un morphisme $f'_\alpha:X''_\alpha\to X_\alpha$ tel que
+  $f'_\alpha(X''_\alpha)=E_\alpha$.
+  \item[b)] $E$ est intersection de parties constructibles de $X$.
+  \item[b$'$)] $F=X-E$ est réunion de parties constructibles de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que $b)$ et $b')$ sont équivalentes. La condition $a)$ entraîne
+$a')$ en prenant pour $X'_\alpha$ le préschéma induit sur l'ouvert
+$f^{-1}(X_\alpha)$ de $X'$ et pour $f_\alpha$ la restriction de $f$. Pour
+voir que $a')$ entraîne $a'')$, il suffit de remarquer que $X'_\alpha$ est
+réunion d'ouverts affines $X''_{\alpha\lambda}$ ($\lambda\in L$)~; soit
+$X''_\alpha$ le préschéma \emph{somme} des $X''_{\alpha\lambda}$
+($\lambda\in L$), qui est un schéma affine~; si
+$g_\alpha:X''_\alpha\to X'_\alpha$ est le morphisme coïncidant avec
+l'identité dans chacun des $X''_{\alpha\lambda}$, il est clair que si l'on
+pose $f'_\alpha=f_\alpha\circ g_\alpha$, on a
+$E_\alpha=f'_\alpha(X''_\alpha)$ puisque $g_\alpha$ est surjectif. Pour
+montrer que $a'')$ entraîne $a)$, notons qu'il y a une partie finie $J$ de
+$I$ telle que les $X_\alpha$ d'indices $\alpha\in J$ recouvrent $X$~; soit
+$X'$ le préschéma somme des $X''_\alpha$ pour $\alpha\in J$, et soit
+$f:X'\to X$ le morphisme coïncidant avec $j_\alpha\circ f'_\alpha$ pour tout
+$\alpha\in J$, où $j_\alpha:X_\alpha\to X$ est l'injection canonique. Comme
+$E$ est réunion des $E\cap X_\alpha$ pour $\alpha\in J$, on a bien
+$E=f(X')$ et il reste à voir que $f$ est un morphisme quasi-compact~; mais
+l'hypothèse que $X$ est quasi-séparé entraîne que $j_\alpha$ est
+quasi-compact (1.2.7), donc il en est de même de
+$j_\alpha\circ f'_\alpha$ (1.1.1 et 1.1.2) et finalement de $f$ (1.1.6).
+
+Reste donc à prouver l'équivalence de $a'')$ et de $b)$. Prouvons en premier
+lieu que $a'')$ entraîne $b)$~: considérons une partie finie $J$ de $I$ telle
+que les $X_\alpha$ pour $\alpha\in J$ recouvrent $X$~; il suffira de montrer
+que, pour tout $\alpha\in J$, $E_\alpha$ est intersection de parties
+constructibles $F_{\alpha\lambda}$ de $X_\alpha$ ($\lambda\in L_\alpha$)~;
+en effet, tout $F_{\alpha\lambda}$ est aussi une partie constructible de $X$
+en vertu de (0\textsubscript{III}, 9.1.8, (ii)), car l'hypothèse que $X$ est
+quasi-séparé entraîne que tout $X_\alpha$ est rétrocompact dans $X$ (1.2.7)~;
+$E$ étant réunion des $E_\alpha$ pour $\alpha\in J$, est intersection des
+réunions (finies) $\bigcup_{\alpha\in J}F_{\alpha,\lambda(\alpha)}$, pour
+tous les choix des $\lambda(\alpha)\in L_\alpha$~; ces réunions étant
+constructibles dans $X$, cela établit notre assertion. On peut donc se borner
+au cas
+
+\oldpage[IV-1]{243}
+
+où $X=\operatorname{Spec}(A)$ et où $E=f(X')$, où
+$X'=\operatorname{Spec}(A')$ est affine, $f:X'\to X$ un morphisme
+correspondant à un homomorphisme d'anneaux $A\to A'$. Notons maintenant que
+$A'$ est limite inductive de la famille $(A'_\lambda)$ de ses
+sous-$A$-algèbres \emph{de type fini}, ordonnée par inclusion~; si
+$X'_\lambda=\operatorname{Spec}(A'_\lambda)$, $f$ se factorise en
+$X'\to X'_\lambda\xrightarrow{f_\lambda}X$ et il résulte de (1.9.2, (ii))
+que l'on a $f(X')=\bigcap_\lambda f_\lambda(X'_\lambda)$~; si l'on démontre
+que $f_\lambda(X'_\lambda)$ est intersection de parties constructibles de
+$X$, il en sera de même de $f(X')$. On peut donc se borner au cas où $A'$ est
+une $A$-algèbre \emph{de type fini}. Or, on a le lemme suivant~:
+\end{proof}
+
+\begin{lemma}[1.9.3.1]
+\label{IV.1.9.3.1-fr}
+Soient $A$ un anneau, $A'$ une $A$-algèbre de type fini. Alors $A'$ est
+$A$-isomorphe à une limite inductive filtrante $\varinjlim A''_\mu$ où les
+$A''_\mu$ sont des $A$-algèbres de présentation finie (1.4.1).
+\end{lemma}
+
+\begin{proof}
+En effet, on peut écrire $A'=B/\mathfrak J$, avec
+$B=A[T_1,\ldots,T_n]$ et $\mathfrak J$ un idéal de $B$. Mais $\mathfrak J$
+est limite inductive des idéaux \emph{de type fini} $\mathfrak J'_\mu$ de
+$B$, contenus dans $\mathfrak J$, ordonnés par inclusion~; comme dans la
+catégorie des $B$-modules le foncteur $\varinjlim$ est exact, on en conclut
+que $A'=\varinjlim B/\mathfrak J'_\mu$ à un $A$-isomorphisme près.
+\end{proof}
+
+Le même raisonnement que ci-dessus permet alors de se ramener au cas où $A'$
+est une $A$-algèbre de présentation finie~; mais alors $f(X')$ est
+constructible dans $X$ en vertu du théorème de Chevalley (1.8.5), ce qui
+prouve $b)$.
+
+Démontrons enfin que $b)$ entraîne $a'')$. Si $E$ est intersection d'une
+famille $(G_\lambda)_{\lambda\in L}$ de parties constructibles de $X$,
+chaque $E_\alpha$ est intersection des $G_\lambda\cap X_\alpha$, qui sont
+constructibles dans $X_\alpha$ (0\textsubscript{III}, 9.1.8, (i)), donc on
+est ramené au cas où $X=\operatorname{Spec}(A)$ est affine.
+
+On sait alors (1.8.3) que pour tout $\lambda\in L$ il existe un morphisme
+$f_\lambda:X'_\lambda\to X$, où
+$X'_\lambda=\operatorname{Spec}(A'_\lambda)$ est affine, tel que
+$f_\lambda(X'_\lambda)=G_\lambda$. Il suffit donc de prouver le lemme
+suivant~:
+
+\begin{lemma}[1.9.3.2]
+\label{IV.1.9.3.2-fr}
+Soient $(A'_\lambda)_{\lambda\in L}$ une famille de $A$-algèbres,
+$X=\operatorname{Spec}(A)$, $X'_\lambda=\operatorname{Spec}(A'_\lambda)$,
+et soit $f_\lambda:X'_\lambda\to X$ le morphisme structural. Pour toute
+partie finie $J$ de $L$, posons
+$A'_J=\bigotimes_{\lambda\in J}A'_\lambda$ (produit tensoriel de
+$A$-algèbres), $X'_J=\operatorname{Spec}(A'_J)$, et soit $f_J:X'_J\to X$ le
+morphisme structural. On a alors
+$f_J(X'_J)=\bigcap_{\lambda\in J}f_\lambda(X'_\lambda)$. Si
+$A'=\varinjlim A'_J$, $J$ parcourant l'ensemble filtrant des parties finies
+de $L$, $X'=\operatorname{Spec}(A')$, et si $f:X'\to X$ est le morphisme
+structural, on a $f(X')=\bigcap_{\lambda\in L}f_\lambda(X'_\lambda)$.
+\end{lemma}
+
+\begin{proof}
+La première assertion résulte de (I, 3.4.7)~; la deuxième résulte de (1.9.2,
+(ii)), qui donne la relation $f(X')=\bigcap_Jf_J(X'_J)$.
+\end{proof}
+
+\begin{definition}[1.9.4]
+\label{IV.1.9.4-fr}
+Soit $X$ un espace topologique. On dit qu'une partie $E$ de $X$ est
+\emph{pro-constructible} (resp. \emph{ind-constructible}) dans $X$ si, pour
+tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que
+$E\cap U$ soit intersection (resp. réunion) de parties localement
+constructibles de $U$.
+\end{definition}
+
+Tenant compte de (1.2.7) et de (0\textsubscript{III}, 9.1.8 et 9.1.12), les
+conditions équivalentes de la proposition (1.9.3) s'expriment donc en disant
+que $E$ est \emph{pro-constructible} dans $X$, les ensembles localement
+constructibles dans $X$ étant identiques aux ensembles constructibles dans
+$X$ sous les hypothèses de (1.9.3).
+
+\oldpage[IV-1]{244}
+
+\begin{proposition}[1.9.5]
+\label{IV.1.9.5-fr}
+Soit $X$ un préschéma.
+\begin{enumerate}
+  \item[(i)] Pour qu'une partie $E$ de $X$ soit pro-constructible, il faut et
+  il suffit que $X-E$ soit ind-constructible.
+  \item[(ii)] Toute réunion finie et toute intersection de parties
+  pro-constructibles de $X$ sont pro-constructibles. Toute intersection
+  finie et toute réunion de parties ind-constructibles de $X$ sont
+  ind-constructibles.
+  \item[(iii)] Toute intersection (resp. réunion) de parties localement
+  constructibles de $X$ est pro-constructible (resp. ind-constructible).
+  Inversement, si $X$ est quasi-compact et quasi-séparé, toute partie
+  pro-constructible (resp. ind-constructible) de $X$ est intersection (resp.
+  réunion) de parties constructibles de $X$.
+  \item[(iv)] Soit $(U_\alpha)$ un recouvrement ouvert de $X$. Pour qu'une
+  partie $E$ de $X$ soit pro-constructible (resp. ind-constructible) dans
+  $X$, il faut et il suffit que pour tout $\alpha$, $E\cap U_\alpha$ soit
+  pro-constructible (rep. ind-constructible) dans $U_\alpha$.
+  \item[(v)] Toute partie pro-constructible $E$ de $X$ est rétrocompacte
+  dans $X$. Pour qu'une partie localement fermée $E$ de $X$ soit
+  rétrocompacte dans $X$, il faut et il suffit qu'elle soit
+  pro-constructible dans $X$.
+  \item[(vi)] Soit $f:X'\to X$ un morphisme de préschémas~; pour toute partie
+  pro-constructible (resp. ind-constructible) $E$ de $X$, $f^{-1}(E)$ est
+  pro-constructible (resp. ind-constructible) dans $X'$.
+  \item[(vii)] Soit $f:X'\to X$ un morphisme quasi-compact~; pour toute
+  partie pro-constructible $E'$ de $X'$, $f(E')$ est pro-constructible dans
+  $X$~; en particulier $f(X')$ est pro-constructible dans $X$.
+  \item[(viii)] Soit $f:X'\to X$ un morphisme localement de présentation
+  finie~; pour toute partie ind-constructible $E'$ de $X'$, $f(E')$ est
+  ind-constructible dans $X$~; en particulier $f(X')$ est ind-constructible
+  dans $X$.
+  \item[(ix)] Supposons que $X$ soit quasi-compact et quasi-séparé~; alors,
+  pour qu'une partie $E$ de $X$ soit pro-constructible, il faut et il suffit
+  qu'il existe un schéma affine $X'$ et un morphisme (nécessairement
+  quasi-compact) $f:X'\to X$ tels que $E=f(X')$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Les propriétés (i), (ii), (iv) et la première assertion de (iii) résultent
+de la définition (1.9.4) et sont valables pour un espace topologique
+quelconque, en utilisant la distributivité mutuelle de l'intersection et de
+la réunion et le fait que si $T$ est localement constructible dans $X$,
+$T\cap U$ est localement constructible dans $U$ pour tout ouvert $U$ de $X$.
+Si $X$ est quasi-compact et quasi-séparé et $E$ est pro-constructible dans
+$X$, il y a un recouvrement fini $(U_i)$ de $X$ formé d'ouverts affines tels
+que $E\cap U_i$ soit intersection de parties constructibles $M_{i\lambda}$
+de $U_i$ ($\lambda\in L_i$)~; les $M_{i\lambda}$ sont aussi constructibles
+dans $X$ en vertu de (1.2.7) et (0\textsubscript{III}, 9.1.8, (ii)) et $E$ est
+intersection des réunions finies $\bigcup_iM_{i,\lambda(i)}$ (où
+$\lambda(i)\in L_i$ pour tout $i$), qui sont des parties constructibles dans
+$X$~; cela démontre la seconde assertion de (iii). L'assertion (ix) résulte
+de (iii) et de (1.9.3). Pour démontrer la première assertion de (v), on peut
+se limiter au cas où $X$ est affine, et prouver alors que $E$ est
+quasi-compact (0\textsubscript{III}, 9.1.1)~; mais comme $X$ est alors
+quasi-séparé, il existe en vertu de (ix) un morphisme quasi-compact
+$f:X'\to X$ tel que $E=f(X')$~; comme $X'$ est quasi-compact, il en est de
+même de son image $E$ par une application continue.
+
+Pour prouver (vi), on peut se borner, en vertu de (iv), au cas où $X$ est
+affine~; la conclusion résulte alors de (iii) et de (1.8.2).
+
+\oldpage[IV-1]{245}
+
+De même, pour démontrer (vii), on peut se borner au cas où $X$ est affine~;
+alors $X'$ est réunion finie d'ouverts affines $X'_i$ et $f(E')$ est réunion
+des $f(E'\cap X'_i)$, si bien qu'on peut aussi supposer que $X'$ est affine,
+en vertu de (ii)~; mais alors $E'=g(X'')$, où $g:X''\to X'$ est un morphisme
+quasi-compact, en vertu de (ix), et l'on a $f(E')=f(g(X''))$, donc $f(E')$ est
+pro-constructible puisque $g\circ f$ est quasi-compact.
+
+On déduit de (vii) la démonstration de la seconde assertion de (v)~: en
+effet, soit $E$ une partie localement fermée et rétrocompacte dans $X$, et
+considérons un sous-préschéma de $X$ ayant $E$ pour espace sous-jacent (I,
+5.2.1)~; l'injection canonique $j:E\to X$ est alors par hypothèse un
+morphisme quasi-compact, et il résulte de (vii) que $E=j(E)$ est
+pro-constructible dans $X$.
+
+Enfin, pour prouver (viii), on peut encore supposer $X$ affine~; en outre, si
+$(X'_\alpha)$ est un recouvrement ouvert affine de $X'$ tel que
+$E'\cap X'_\alpha$ soit réunion de parties constructibles de $X'_\alpha$
+((iii) et (iv)), $f(E')$ est réunion des $f(E'\cap X'_\alpha)$ et, en vertu
+du théorème de Chevalley (1.8.4), chacune des $f(E'\cap X'_\alpha)$ est
+réunion de parties constructibles de $X$, d'où la conclusion.
+\end{proof}
+
+\begin{env}[1.9.6]
+\label{IV.1.9.6-fr}
+\textbf{Exemples} (1.9.6). --- Toute partie \emph{finie} d'un préschéma $X$
+est pro-constructible~: en effet, il suffit de considérer les parties
+$\{x\}$ réduites à un seul point (1.9.5, (ii)) et $\{x\}$ est l'image de
+$\operatorname{Spec}(k(x))$ par le morphisme canonique
+$\operatorname{Spec}(k(x))\to X$, qui est quasi-compact~; d'où la conclusion
+par (1.9.5, (vii)). Par contre, une partie $\{x\}$ réduite à un point n'est
+pas nécessairement ind-constructible~; par exemple, soit $A$ un anneau
+noethérien intègre ayant une infinité d'idéaux maximaux, et soit $x$ le point
+générique de $X=\operatorname{Spec}(A)$~; si $\{x\}$ était ind-constructible
+dans $X$, il serait constructible en vertu de (1.9.5, (iii)) et par suite
+contiendrait un ouvert non vide de $X$ (0\textsubscript{III}, 9.2.2)~; mais
+cela contredit l'hypothèse que $A$ possède une infinité d'idéaux maximaux, en
+vertu du théorème d'Artin-Tate (0, 16.3.3).
+
+Toute partie \emph{fermée} $Y$ d'un préschéma $X$ est pro-constructible, par
+(1.9.5, (v)). Toute partie ouverte de $X$ est donc ind-constructible, mais
+une partie ouverte $U$ de $X$ n'est pro-constructible que si elle est
+\emph{rétrocompacte}, en vertu encore de (1.9.5, (v)).
+
+Enfin, si $X$ est un préschéma \emph{noethérien}, donc quasi-séparé (1.2.8),
+il résulte de (1.9.5, (iii)) et de (0\textsubscript{III}, 9.1.7) que les
+parties ind-constructibles de $X$ sont les \emph{réunions de parties
+localement fermées de $X$}.
+\end{env}
+
+\begin{theorem}[1.9.7]
+\label{IV.1.9.7-fr}
+Soient $X$ un préschéma quasi-compact, $E$ une partie ind-constructible de
+$X$, $(F_\lambda)_{\lambda\in L}$ une famille de parties pro-constructibles
+de $X$ telle que $\bigcap_{\lambda\in L}F_\lambda\subset E$~; alors il existe
+une partie finie $J$ de $L$ telle que
+$\bigcap_{\lambda\in J}F_\lambda\subset E$.
+\end{theorem}
+
+\begin{proof}
+Notons que les ensembles $F=X-E$ et $F\cap F_\lambda$ sont
+pro-constructibles, donc on est ramené au
+\end{proof}
+
+\begin{corollary}[1.9.8]
+\label{IV.1.9.8-fr}
+Soient $X$ un préschéma quasi-compact, $(F_\lambda)_{\lambda\in L}$ une
+famille de parties pro-constructibles de $X$ dont l'intersection est vide~;
+alors il existe une sous-famille finie $(F_\lambda)_{\lambda\in J}$ dont
+l'intersection est vide.
+\end{corollary}
+
+\begin{proof}
+Recouvrant $X$ par un nombre fini d'ouverts affines, et utilisant (1.9.5,
+(iv)), on est ramené au cas où $X$ est affine~; en vertu de (1.9.5, (ix)), on
+a $F_\lambda=f_\lambda(X'_\lambda)$,
+
+\oldpage[IV-1]{246}
+
+où $X'_\lambda=\operatorname{Spec}(A'_\lambda)$ est affine, et $f_\lambda$
+est un morphisme $X'_\lambda\to X$~; alors, avec les notations de (1.9.3.2),
+on a par hypothèse $f(X')=\varnothing$, donc $X'=\varnothing$~; mais cela
+entraîne par (1.9.2, (i)) qu'il existe une partie finie $J$ de $L$ telle que
+$X'_J=\varnothing$, donc
+$f_J(X'_J)=\bigcap_{\lambda\in J}F_\lambda=\varnothing$.
+\end{proof}
+
+\begin{corollary}[1.9.9]
+\label{IV.1.9.9-fr}
+Soient $X$ un préschéma quasi-compact, $F$ une partie pro-constructible de
+$X$, $(E_\lambda)_{\lambda\in L}$ une famille de parties ind-constructibles
+de $X$ telle que $F\subset\bigcup_{\lambda\in L}E_\lambda$~; alors il existe
+une partie finie $J$ de $L$ telle que
+$F\subset\bigcup_{\lambda\in J}E_\lambda$. En particulier, de tout
+recouvrement de $X$ par des parties ind-constructibles, on peut extraire un
+recouvrement fini de $X$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de (1.9.7) par passage aux complémentaires.
+\end{proof}
+
+\begin{proposition}[1.9.10]
+\label{IV.1.9.10-fr}
+Soit $X$ un préschéma. Pour qu'une partie $E$ de $X$ soit
+ind-constructible, il est nécessaire que, pour tout $x\in X$, l'intersection
+$E\cap\overline{\{x\}}$ soit un voisinage de $x$ dans
+$\overline{\{x\}}$. Si $X$ est localement noethérien, cette condition est
+suffisante.
+\end{proposition}
+
+\begin{proof}
+Supposons $E$ ind-constructible, et soit $Y$ l'intersection de
+$\overline{\{x\}}$ et d'un ouvert affine dans $X$, contenant $x$~; il y a
+donc un sous-préschéma de $X$ ayant $Y$ pour espace sous-jacent (I, 5.2.1),
+et si $j:Y\to X$ est l'injection canonique,
+$E\cap Y=j^{-1}(E)$ est ind-constructible dans $Y$ (1.9.5, (vi)). Comme $Y$
+est quasi-compact et séparé, $E\cap Y$ est donc réunion de parties
+constructibles de $Y$ (1.9.5, (iii))~; par suite, il y a deux ouverts $U$,
+$V$ dans $Y$ tels que
+$x\in U\cap\complement V\subset E\cap Y$ (0\textsubscript{III}, 9.1.3).
+Mais comme $x$ est point générique de l'espace irréductible $Y$, $V$ est
+nécessairement vide et l'on a $U\subset E\cap Y$.
+
+Supposons maintenant $X$ localement noethérien, et soit $E$ une partie de
+$X$ vérifiant la condition de l'énoncé. En vertu de la définition (1.9.4),
+on peut se borner au cas où $X$ est noethérien. Alors, pour tout $x\in E$,
+$E\cap\overline{\{x\}}$ contient une partie non vide de la forme
+$U\cap\overline{\{x\}}$, où $U$ est ouvert dans $X$~; cela montre que $E$
+est réunion de parties localement fermées de $X$, donc est
+ind-constructible (1.9.6).
+\end{proof}
+
+\begin{proposition}[1.9.11]
+\label{IV.1.9.11-fr}
+Soient $X$ un préschéma, $E$ une partie de $X$. Les propriétés suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[a)] $E$ est localement constructible.
+  \item[b)] $E$ est ind-constructible et pro-constructible.
+  \item[c)] $E$ et $X-E$ sont pro-constructibles.
+  \item[d)] $E$ et $X-E$ sont ind-constructibles.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il suffit évidemment de prouver que $d)$ entraîne $a)$, et on peut se borner
+au cas où $X$ est affine. Alors (1.9.5, (iii)), $E$ (resp. $X-E$) est réunion
+d'une famille $(E_\lambda)$ (resp. $(E'_\mu)$) de parties constructibles de
+$X$~; comme les $E_\lambda$ et les $E'_\mu$ forment un recouvrement de $X$,
+il résulte de (1.9.9) qu'il y a des indices en nombre fini $\lambda_i$,
+$\mu_j$ tels que les $E_{\lambda_i}$ et les $E'_{\mu_j}$ forment un
+recouvrement de $X$~; cela implique que $E$ est réunion des
+$E_{\lambda_i}$, donc est constructible.
+\end{proof}
+
+\begin{corollary}[1.9.12]
+\label{IV.1.9.12-fr}
+Soit $f:X\to Y$ un morphisme surjectif, qui est, soit quasi-compact, soit
+localement de présentation finie. Pour qu'une partie $E$ de $Y$ soit
+localement constructible (resp. pro-constructible, resp. ind-constructible),
+il faut et il suffit que $f^{-1}(E)$ le soit dans $X$.
+\end{corollary}
+
+\oldpage[IV-1]{247}
+
+\begin{proof}
+On sait que la condition est nécessaire ((1.8.2) et (1.9.5, (vi)))~; pour
+montrer qu'elle est suffisante, on est ramené au cas où $X$ est affine, en
+vertu de (1.9.5, (iv))~; en outre, en vertu de (1.9.11), on peut se borner au
+cas où $f^{-1}(E)$ est pro-constructible, \emph{ou} au cas où $f^{-1}(E)$ est
+ind-constructible. Si $f$ est surjectif et quasi-compact, et $f^{-1}(E)$
+pro-constructible, il résulte de (1.9.5, (vii)) que
+$E=f(f^{-1}(E))$ est pro-constructible. Si $f$ est surjectif et localement de
+présentation finie, et $f^{-1}(E)$ ind-constructible,
+$E=f(f^{-1}(E))$ est ind-constructible par (1.9.5, (viii)), ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{env}[1.9.13]
+\label{IV.1.9.13-fr}
+Soient $X$ un préschéma, $\mathscr T$ sa topologie~; il résulte de (1.9.5,
+(i) et (ii)) que les parties ind-constructibles (resp. pro-constructibles) de
+$X$ sont les parties ouvertes (resp. fermées) pour une topologie sur $X$,
+appelée \emph{topologie constructible} et que nous noterons
+$\mathscr T^{\mathrm{cons}}$~; nous désignerons par $X^{\mathrm{cons}}$
+l'ensemble $X$ muni de la topologie $\mathscr T^{\mathrm{cons}}$.
+\end{env}
+
+\begin{proposition}[1.9.14]
+\label{IV.1.9.14-fr}
+Soient $X$ un préschéma, $\mathscr T$ sa topologie,
+$\mathscr T^{\mathrm{cons}}$ la topologie constructible sur $X$.
+\begin{enumerate}
+  \item[(i)] La topologie $\mathscr T^{\mathrm{cons}}$ est plus fine que
+  $\mathscr T$.
+  \item[(ii)] Les parties localement constructibles de $X$ sont identiques
+  aux parties à la fois ouvertes et fermées de l'espace $X^{\mathrm{cons}}$.
+  \item[(iii)] Pour tout morphisme $f:X\to Y$, l'application sous-jacente de
+  $X^{\mathrm{cons}}$ dans $Y^{\mathrm{cons}}$ est continue~; on la note
+  $f^{\mathrm{cons}}$.
+  \item[(iv)] Si le morphisme $f:X\to Y$ est quasi-compact,
+  $f^{\mathrm{cons}}$ est une application fermée~; en particulier, si $f$
+  est quasi-compact et bijectif, $f^{\mathrm{cons}}$ est un homéomorphisme.
+  \item[(v)] Si un morphisme $f:X\to Y$ est localement de présentation
+  finie, $f^{\mathrm{cons}}$ est une application ouverte~; en particulier,
+  si $f$ est bijectif et localement de présentation finie,
+  $f^{\mathrm{cons}}$ est un homéomorphisme.
+  \item[(vi)] Pour tout ouvert $U$ de $X$, la topologie induite par
+  $\mathscr T^{\mathrm{cons}}$ sur $U$ est identique à la topologie de
+  $U^{\mathrm{cons}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En effet, (i) résulte de ce que tout ouvert pour $\mathscr T$ est un ouvert
+pour $\mathscr T^{\mathrm{cons}}$ (1.9.6), et (ii) est une traduction de
+(1.9.11)~; (iii), (iv) et (v) traduisent respectivement (1.9.5), (vi), (vii)
+et (viii). Enfin pour démontrer (vi), il suffit de remarquer que l'injection
+canonique $j:U\to X$ est localement de présentation finie (1.4.3), donc
+$j^{\mathrm{cons}}:U^{\mathrm{cons}}\to X^{\mathrm{cons}}$ est une
+application continue ouverte.
+\end{proof}
+
+\begin{proposition}[1.9.15]
+\label{IV.1.9.15-fr}
+Soit $X$ un préschéma.
+\begin{enumerate}
+  \item[(i)] Pour que $X^{\mathrm{cons}}$ soit quasi-compact, il faut et il
+  suffit que $X$ soit quasi-compact.
+  \item[(ii)] Pour que $X^{\mathrm{cons}}$ soit séparé, il faut et il suffit
+  que $X$ soit quasi-séparé, et alors $X^{\mathrm{cons}}$ est localement
+  compact et totalement discontinu.
+  \item[(iii)] Pour que $X^{\mathrm{cons}}$ soit compact, il faut et il suffit
+  que $X$ soit quasi-compact et quasi-séparé.
+  \item[(iv)] Tout point de $X$ admet, pour la topologie
+  $\mathscr T^{\mathrm{cons}}$, un voisinage ouvert et compact.
+  \item[(v)] Pour qu'un morphisme $f:X\to Y$ soit quasi-compact, il faut et il
+  suffit que l'application continue
+  $f^{\mathrm{cons}}:X^{\mathrm{cons}}\to Y^{\mathrm{cons}}$ soit propre.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Comme $\mathscr T^{\mathrm{cons}}$ est plus fine que $\mathscr T$, il est
+clair que si $X^{\mathrm{cons}}$ est quasi-compact, il en est de même de $X$~;
+la réciproque résulte de (1.9.9).
+
+(ii) Supposons $X$ quasi-séparé, et montrons que $X^{\mathrm{cons}}$ est
+totalement discontinu~: en effet, si $x$, $y$ sont deux points distincts de
+$X$ et si par exemple $x\notin\overline{\{y\}}$, il existe un
+\oldpage[IV-1]{248}
+voisinage ouvert affine $U$ de $X$ ne contenant pas $y$~; comme $X$ est
+quasi-séparé, $U$ est rétrocompact dans $X$ (1.2.7), donc $U$ et $X-U$ sont
+localement constructibles dans $X$, et par suite ouverts dans
+$X^{\mathrm{cons}}$ en vertu de (1.9.11), d'où notre assertion. Comme sur tout
+ouvert affine $U$ de $X$, la topologie induite par $\mathscr T^{\mathrm{cons}}$
+est celle de $U^{\mathrm{cons}}$ en vertu de (1.9.14, (vi)), il résulte de ce
+qui précède que $X^{\mathrm{cons}}$ est localement compact, puisque $U$ est
+ouvert dans $X^{\mathrm{cons}}$ et que $U^{\mathrm{cons}}$ est compact. Reste à
+prouver que si $X^{\mathrm{cons}}$ est séparé, alors $X$ est quasi-séparé~;
+considérons en effet un ouvert affine $U$ de $X$~; la topologie induite sur
+$U$ par $\mathscr T^{\mathrm{cons}}$ est celle de $U^{\mathrm{cons}}$
+(1.9.14, (vi)), donc $U$ est compact pour cette topologie induite, puisque
+$U^{\mathrm{cons}}$ est compact par la première partie du raisonnement. Si
+$V$ est un second ouvert affine dans $X$, $U\cap V$ est donc une partie
+compacte de l'espace séparé $X^{\mathrm{cons}}$, étant intersection de deux
+parties compactes de cet espace~; comme la topologie induite par
+$\mathscr T^{\mathrm{cons}}$ sur $U\cap V$ est celle de
+$(U\cap V)^{\mathrm{cons}}$ (1.9.14, (vi)) et que l'application identique
+$(U\cap V)^{\mathrm{cons}}\to U\cap V$ est continue, on en conclut que
+$U\cap V$ est quasi-compact pour la topologie induite par $\mathscr T$~; $X$
+est par suite quasi-séparé en vertu de (1.2.7).
+
+(iii) est un corollaire immédiat de (i) et (ii).
+
+(iv) Pour tout $x\in X$, un voisinage ouvert affine $U$ de $x$ pour
+$\mathscr T$ est aussi un voisinage de $x$ pour $\mathscr T^{\mathrm{cons}}$
+et il est compact en vertu de (iii) et de (1.9.14, (vi)), la topologie induite
+sur $U$ par $\mathscr T^{\mathrm{cons}}$ étant identique à celle de
+$U^{\mathrm{cons}}$.
+
+(v) Supposons $f$ quasi-compact~; alors on sait déjà (1.9.14, (iv)) que
+$f^{\mathrm{cons}}$ est une application fermée. Soit d'autre part $y$ un
+point de $Y$, et posons
+\[
+  Z=f^{-1}(y)=X\times_Y\operatorname{Spec}(k(y));
+\]
+$Z$ est quasi-compact (1.1.2, (iii)) et comme le morphisme canonique
+$p:Z\to X$ est injectif, il résulte de (i) et de ce que l'application
+$p^{\mathrm{cons}}$ est continue, que la topologie induite sur $f^{-1}(y)$
+par celle de $X^{\mathrm{cons}}$ fait de $f^{-1}(y)$ un espace quasi-compact.
+Cela prouve que $f^{\mathrm{cons}}$ est une application propre (Bourbaki,
+\emph{Top. gén.}, chap. I\textsuperscript{er}, 3\textsuperscript{e} éd.,
+\S~10, n\textsuperscript{o}~2, th.~1). Inversement, supposons que
+l'application continue $f^{\mathrm{cons}}$ soit propre, et soit $V$ un ouvert
+quasi-compact de $Y$~; si $h:V\to Y$ est l'injection canonique,
+$h^{\mathrm{cons}}:V^{\mathrm{cons}}\to Y^{\mathrm{cons}}$ est continue et
+injective et $V^{\mathrm{cons}}$ est quasi-compact par (i), donc la topologie
+induite sur $V$ par celle de $Y^{\mathrm{cons}}$ fait de $V$ un espace
+quasi-compact. L'hypothèse que $f^{\mathrm{cons}}$ est propre entraîne alors
+que la topologie induite sur $f^{-1}(V)$ par celle de $X^{\mathrm{cons}}$ fait
+de $f^{-1}(V)$ un espace quasi-compact (\emph{loc. cit.}, prop.~6), donc
+$f^{-1}(V)$ est aussi un sous-espace quasi-compact de $X$, ce qui montre que
+le morphisme $f$ est quasi-compact.
+\end{proof}
+
+\begin{env}[1.9.16]
+\label{IV.1.9.16-fr}
+Nous montrerons plus tard comment on peut, pour tout préschéma $X$, munir
+l'espace $X^{\mathrm{cons}}$ d'un faisceau d'anneaux qui en fait un préschéma
+dont les anneaux locaux sont tous des corps, identiques aux corps résiduels aux
+points de $X$. De tels préschémas s'introduisent par exemple de façon naturelle
+dans la traduction, en langage des schémas, des constructions de
+Néron [32] dans sa théorie de la réduction des variétés abéliennes.
+\end{env}
+
+\oldpage[IV-1]{249}
+
+\subsection{Application aux morphismes ouverts}
+\label{subsection:IV.1.10-fr}
+
+\begin{theorem}[1.10.1]
+\label{IV.1.10.1-fr}
+Soient $X$ un préschéma, $E$ une partie ind-constructible de $X$ (1.9.4), $x$
+un point de $X$. Pour que $x$ soit intérieur à $E$, il faut et il suffit que
+toute générisation ($0_{\mathrm I}$, 2.1.2) $x'$ de $x$ appartienne à $E$,
+autrement dit (I, 2.4.2) que l'on ait
+$\operatorname{Spec}(\mathcal O_{X,x})\subset E$.
+\end{theorem}
+
+\begin{proof}
+La condition est évidemment nécessaire, tout voisinage de $x$ contenant les
+générisations de $x$. Pour voir qu'elle est suffisante, on peut évidemment se
+borner au cas où $X=\operatorname{Spec}(A)$ est affine, $x$ étant un idéal premier
+$\mathfrak p$ de $A$. On sait alors (1.9.5, (ix)) qu'il existe un schéma affine
+$X'=\operatorname{Spec}(A')$ et un morphisme $f:X'\to X$ tels que
+$f(X')=X-E$. Posons $Y=\operatorname{Spec}(\mathcal O_{X,x})$ et
+$Y'=X'\times_XY$~; l'hypothèse signifie (en
+vertu de (I, 3.6.5)) que l'on a $Y'=\varnothing$, autrement dit
+$A'\otimes_AA_{\mathfrak p}=0$. Comme
+$A_{\mathfrak p}=\varinjlim A_t$, où $t$ parcourt $A-\mathfrak p$
+($0_{\mathrm I}$, 1.4.5), on a $\varinjlim A_t'=0$, le foncteur
+$\varinjlim$ commutant au produit tensoriel. Par suite (1.9.1), il existe un
+$t\in A-\mathfrak p$ tel que $A_t'=0$, et $\mathrm D(t)$ est alors un
+voisinage ouvert de $x$ dans $X$ contenu dans $E$.
+\end{proof}
+
+\begin{corollary}[1.10.2]
+\label{IV.1.10.2-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, et soit
+$y\in Y$. Pour que $y$ soit intérieur à $f(X)$ il faut et il suffit que toute
+générisation $y'$ de $y$ appartienne à $f(X)$.
+\end{corollary}
+
+\begin{proof}
+On sait en effet (1.9.5, (viii)) que $f(X)$ est ind-constructible dans $Y$ et
+il suffit d'appliquer (1.10.1).
+\end{proof}
+
+Nous dirons qu'une application continue $f:X\to Y$ est \emph{ouverte en un
+point} $x\in X$ si l'image par $f$ de \emph{tout} voisinage de $x$ dans $X$
+est un voisinage de $f(x)$ dans $Y$.
+
+\begin{proposition}[1.10.3]
+\label{IV.1.10.3-fr}
+Soient $f:X\to Y$ un morphisme, $x$ un point de $X$, $y=f(x)$. Considérons
+les conditions suivantes~:
+\begin{enumerate}
+  \item[a)] $f$ est ouvert au point $x$.
+  \item[b)] Pour toute générisation $y'$ de $y$, il existe une générisation
+  $x'$ de $x$ telle que $f(x')=y'$.
+  \item[b')] L'image par $f$ de $\operatorname{Spec}(\mathcal O_{X,x})$ est
+  $\operatorname{Spec}(\mathcal O_{Y,y})$.
+  \item[c)] Pour toute partie fermée irréductible $Y'$ de $Y$ contenant $y$,
+  il existe une composante irréductible de $X'=f^{-1}(Y')$ contenant $x$ et
+  dominant $Y'$.
+\end{enumerate}
+Alors on a les implications
+$\mathrm{a)}\Rightarrow\mathrm{b)}\Leftrightarrow\mathrm{b')}
+\Leftrightarrow\mathrm{c)}$. Si en outre $f$ est localement de présentation
+finie, les quatre conditions sont équivalentes.
+\end{proposition}
+
+\begin{proof}
+Par définition d'une générisation, l'image par $f$ de
+$\operatorname{Spec}(\mathcal O_{X,x})$ est toujours contenue dans
+$\operatorname{Spec}(\mathcal O_{Y,y})$, donc b) et b') sont équivalentes. Il
+est immédiat
+que c) entraîne b), car si $y'$ est une générisation de $y$,
+$Y'=\overline{\{y'\}}$ est une partie irréductible de $Y$ contenant $y$~; si
+$x'$ est le point générique d'une composante irréductible de $f^{-1}(Y')$ qui
+contient $x$ et domine $Y'$, on a $f(x')=y'$ ($0_{\mathrm I}$, 2.1.5) et $x'$
+est une générisation de $x$. Inversement, b) entraîne c)~: en effet, soit
+$y'$ le point générique de $Y'$ et soit $x'$ une générisation de $x$ telle
+que $f(x')=y'$~; soit $Z'$ une composante irréductible de $f^{-1}(Y')$
+contenant $x'$ (donc $x$)~; comme $f(x')$ est déjà dense dans $Y'$, il en est
+ainsi \emph{a fortiori} de $f(Z')$.
+
+Pour voir que a) entraîne b'), on peut évidemment se borner au cas où
+$X=\operatorname{Spec}(B)$ et $Y=\operatorname{Spec}(A)$ sont affines, $x$
+étant un idéal premier
+$\mathfrak q$ de $B$, de sorte que
+$\mathcal O_{X,x}=B_{\mathfrak q}=\varinjlim B_t$,
+\oldpage[IV-1]{250}
+où $t$ parcourt $B-\mathfrak q$. On a, par suite (1.9.2),
+\[
+  f(\operatorname{Spec}(\mathcal O_{X,x}))
+  =\bigcap_t f(\operatorname{Spec}(B_t))=\bigcap_t f(\mathrm D(t)),
+\]
+et par hypothèse, pour tout $t\in B-\mathfrak q$, $y$ est intérieur à
+$f(\mathrm D(t))$, donc $f(\mathrm D(t))$ contient
+$\operatorname{Spec}(\mathcal O_{Y,y})$~; d'où
+$\operatorname{Spec}(\mathcal O_{Y,y})
+\subset f(\operatorname{Spec}(\mathcal O_{X,x}))$, ce qui établit
+notre assertion. Enfin, lorsque $f$ est localement de présentation finie, b)
+implique a) en vertu de (1.10.2) appliqué à la restriction $U\to Y$ de $f$ à
+un voisinage ouvert arbitraire $U$ de $x$.
+\end{proof}
+
+\begin{corollary}[1.10.4]
+\label{IV.1.10.4-fr}
+Soit $f:X\to Y$ un morphisme. Considérons les conditions suivantes~:
+\begin{enumerate}
+  \item[a)] $f$ est ouvert.
+  \item[b)] Pour tout $x\in X$ et toute générisation $y'$ de $y=f(x)$, il
+  existe une générisation $x'$ de $x$ telle que $f(x')=y'$.
+  \item[b')] Pour tout $x\in X$, l'image par $f$ de
+  $\operatorname{Spec}(\mathcal O_{X,x})$ est
+  $\operatorname{Spec}(\mathcal O_{Y,f(x)})$.
+  \item[c)] Pour toute partie fermée irréductible $Y'$ de $Y$, toute
+  composante irréductible de $f^{-1}(Y')$ domine $Y'$.
+\end{enumerate}
+Alors on a les implications
+$\mathrm{a)}\Rightarrow\mathrm{b)}\Leftrightarrow\mathrm{b')}
+\Leftrightarrow\mathrm{c)}$. Si en outre $f$ est localement de présentation
+finie, les quatre conditions sont équivalentes.
+\end{corollary}
+
+\begin{proof}
+Dire que $f$ est ouvert signifie que $f$ est ouvert en tout point $x\in X$,
+donc les implications
+$\mathrm{a)}\Rightarrow\mathrm{b)}\Leftrightarrow\mathrm{b')}$ résultent des
+implications analogues dans (1.10.3), ainsi que l'implication
+$\mathrm{b)}\Rightarrow\mathrm{a)}$ lorsque $f$ est localement de présentation
+finie. L'implication $\mathrm{c)}\Rightarrow\mathrm{b)}$ résulte aussi de
+l'implication analogue dans (1.10.3)~; prouvons enfin que b) entraîne c). En
+effet, soit $x'$ le point générique d'une composante
+irréductible de $f^{-1}(Y')$, et montrons que $y'=f(x')$ est le point générique
+de $Y'$. Soit $y''$ une générisation de $y'$~; il existe par hypothèse une
+générisation $x''$ de $x'$ telle que $f(x'')=y''$, et comme
+$x''\in f^{-1}(Y')$, on a nécessairement $x''=x'$, donc $y''=y'$, ce qui
+achève la démonstration.
+\end{proof}
+
+\begin{center}
+\emph{(A suivre.)}
+\end{center}
+
+\clearpage
+\oldpage[IV-1]{251}
+\phantomsection
+\addcontentsline{toc}{section}{Bibliographie (suite)}
+\section*{BIBLIOGRAPHIE (\emph{suite})}
+
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+[30] M.~Nagata, \emph{Local rings}, \emph{Interscience Tracts}, 13 (1962),
+Interscience, New York.
+
+[31] M.~Nagata, \emph{A Jacobian criterion of simple points},
+\emph{Ill. Journ. of Math.}, 1 (1957), p.~427--432.
+
+[32] A.~Néron, \emph{Modèles minimaux des variétés abéliennes sur les corps
+locaux et globaux}, \emph{Publ. Inst. Hautes Études Sci.}, n\textsuperscript{o}
+21 (1964).
+
+\clearpage
+\oldpage[IV-1]{252}
+\phantomsection
+\addcontentsline{toc}{section}{Index des notations}
+\section*{INDEX DES NOTATIONS}
+
+$\dim_c(X)$, $\dim(X)$ ($X$ espace topologique) : 0, 14.1.2.\par
+$\dim_x(X)$ ($X$ espace topologique, $x$ point de $X$) : 0, 14.1.2.\par
+$\operatorname{codim}(Y,X)$ ($X$ espace topologique, $Y$ partie fermée de $X$) : 0, 14.2.1.\par
+$\operatorname{codim}_x(Y,X)$ ($X$ espace topologique, $Y$ partie fermée de $X$, $x$ point de $X$) : 0, 14.2.4.\par
+$N[T_1,\ldots,T_n]$ ($N$ $A$-module) : 0, 15.1.1.\par
+$\dim(A)$ ($A$ anneau) : 0, 16.1.1.\par
+$\operatorname{ht}(\mathfrak a)$ ($\mathfrak a$ idéal) : 0, 16.1.3.\par
+$\dim_A(M)$, $\dim(M)$ ($M$ $A$-module) : 0, 16.1.7.\par
+$P_{\mathfrak q}(M,n)$ ($M$ module de type fini sur un anneau semi-local noethérien $A$, $\mathfrak q$ idéal de définition de $A$) : 0, 16.2.1.\par
+$\operatorname{prof}_A(M)$, $\operatorname{prof}(M)$ ($M$ $A$-module) : 0, 16.4.5.\par
+$\operatorname{coprof}_A(M)$, $\operatorname{coprof}(M)$ ($M$ $A$-module) : 0, 16.4.9.\par
+$\operatorname{dim.proj}_A(M)$, $\operatorname{dim.proj}(M)$,
+$\operatorname{dim.inj}_A(M)$, $\operatorname{dim.inj}(M)$ ($M$ $A$-module) : 0, 17.2.1.\par
+$\operatorname{dim.coh}(A)$ ($A$ anneau) : 0, 17.2.8.\par
+$\operatorname{dim.proj}(\mathscr F)$, $\operatorname{dim.inj}(\mathscr F)$
+($\mathscr F$ Module sur un espace annelé) : 0, 17.2.14.\par
+$\operatorname{dim.coh}(X)$ ($X$ espace annelé) : 0, 17.2.14.\par
+$E\times_B F$ ($B$, $E$, $F$ $A$-anneaux) : 0, 18.1.2.\par
+$D_B(L)$ ($B$ anneau, $L$ $B$-bimodule) : 0, 18.2.3.\par
+$Y\oplus_X Z$ ($X$, $Y$, $Z$ $A$-bimodules) : 0, 18.2.7.\par
+$\operatorname{Exan}_A(B,L)$ ($B$ $A$-anneau, $L$ $B$-bimodule) : 0, 18.3.4.\par
+$\operatorname{Exan}_{A/A'}(B,L)$ : 0, 18.3.7.\par
+$\operatorname{Exal}_A(B,L)$, $\operatorname{Exal}_{A/A'}(B,L)$ ($A$ anneau commutatif, $B$ $A$-algèbre, $L$ $B$-bimodule) : 0, 18.4.1.\par
+$\operatorname{Exalcom}_A(B,L)$, $\operatorname{Exalcom}_{A/A'}(B,L)$ ($A$ anneau commutatif, $B$ $A$-algèbre commutative, $L$ $B$-module) : 0, 18.4.2.\par
+$\mathrm H_A^2(B,L)$, $\mathrm H_A^2(B,L)^s$ : 0, 18.4.3.\par
+$\operatorname{Exantop}_A(B,L)$, $\operatorname{Exaltop}_A(B,L)$,
+$\operatorname{Exalcotop}_A(B,L)$ : 0, 18.5.1.\par
+$\operatorname{Exantop}_{A/A'}(B,L)$, $\operatorname{Exaltop}_{A/A'}(B,L)$,
+$\operatorname{Exalcotop}_{A/A'}(B,L)$ : 0, 18.5.2.\par
+$\operatorname{Hom.\ cont}_C(M,N)$ ($M$, $N$ $C$-bimodules topologiques) : 0, 18.5.3.\par
+$\operatorname{Dér}_A(B,L)$ ($B$ $A$-anneau, $L$ $B$-bimodule) : 0, 20.1.2.\par
+$\operatorname{Dér.\ cont}_A(B,L)$ : 0, 20.3.1.\par
+$p_{B/A}$, $\mathfrak J_{B/A}$ ($B$ $A$-algèbre topologique commutative) : 0, 20.4.1.\par
+$P^1_{B/A}$, $\varepsilon_{B/A}$ ($B$ $A$-algèbre topologique commutative) : 0, 20.4.2.\par
+$\Omega^1_{B/A}$, $\widehat{\Omega}^1_{B/A}$ ($B$ $A$-algèbre topologique commutative) : 0, 20.4.3.\par
+$\Omega^1_B$ ($B$ anneau topologique) : 0, 20.4.3.\par
+$d_{B/A}$, $d(x)$, $dx$, $d_B$ : 0, 20.4.6.\par
+$\Upsilon_{C/B/A}$, $\Upsilon_{C/B}$ ($A$, $B$, $C$ anneaux) : 0, 20.6.1.\par
+$\chi_E$ ($E$ $B$-extension $A$-triviale de $C$ par $L$) : 0, 20.6.8.\par
+
+\clearpage
+\oldpage[IV-1]{253}
+$\Upsilon^C_{B/A/\Lambda}$, $\Upsilon^C_{B/A}$ ($\Lambda$, $A$, $B$, $C$ anneaux) : 0, 20.6.14.\par
+$\chi_{B/A}$, $\chi_B$ ($B$ $A$-algèbre) : 0, 20.6.24.\par
+$\chi_E$ ($E$ $B$-algèbre topologique) : 0, 20.7.10.\par
+$F_A$, $A^p$, $A^{(p)}$, $E^{(p)}$ ($A$ anneau de caractéristique $p>0$, $E$ $A$-module) : 0, 21.1.4.\par
+$\pi_{B/A}$, $\Theta_{B/A}$, $\Xi_{B/A}$ ($A$, $B$ anneaux de caractéristique $p>0$) : 0, 21.3.2.\par
+$\Delta(L/K,k/k_0)$, $d(L/K,k/k_0)$, $\Delta(L/K,k)$, $d(L/K,k)$ ($k_0$, $k$, $K$, $L$ corps) : 0, 21.6.1.\par
+$\chi'_{B/A}$ ($A$, $B$ anneaux de caractéristique $p>0$) : 0, 22.4.6.\par
+$\mathscr T^{\mathrm{cons}}$, $X^{\mathrm{cons}}$ ($X$ préschéma, $\mathscr T$ topologie de $X$) : IV, 1.9.12.\par
+$f^{\mathrm{cons}}$ ($f$ morphisme de préschémas) : IV, 1.9.13.\par
+
+\clearpage
+\oldpage[IV-1]{254}
+\phantomsection
+\addcontentsline{toc}{section}{Index terminologique}
+\section*{INDEX TERMINOLOGIQUE}
+
+Algèbre augmentée des parties principales d'ordre 1 : 0, 20.4.2.\par
+$A$-algèbre de Cohen : 0, 19.8.1.\par
+Algèbre de présentation finie : IV, 1.4.1.\par
+$A$-algèbre essentiellement de type fini : IV, 1.3.8.\par
+$A$-anneau : 0, 18.1.1.\par
+$A$-anneau augmenté sur $B$ : 0, 18.1.4.\par
+Anneau biéquidimensionnel : 0, 16.1.4.\par
+Anneau caténaire : 0, 16.1.4.\par
+Anneau de caractéristique $p$ : 0, 21.1.1.\par
+Anneau de Cohen : 0, 19.8.4.\par
+Anneau de Cohen-Macaulay : 0, 16.5.1 et 16.5.13.\par
+Anneau équicodimensionnel, équidimensionnel : 0, 16.1.4.\par
+Anneau local géométriquement unibranche : 0, 23.1.7.\par
+Anneau japonais : 0, 23.1.1.\par
+Anneau local premier, anneau local complet premier : 0, 19.8.3.\par
+Anneau régulier : 0, 17.1.1 et 17.3.6.\par
+Anneau local unibranche : 0, 23.1.7.\par
+Anneau universellement japonais : 0, 23.1.1.\par
+Application ouverte en un point : IV, 1.10.2.\par
+Augmentation : 0, 18.1.4.\par
+
+Bimorphisme formel : 0, 19.1.2.\par
+
+Chaîne dans un ensemble ordonné, chaîne de parties fermées irréductibles d'un espace topologique : 0, 14.1.1.\par
+Chaîne saturée : 0, 14.3.1.\par
+Codimension combinatoire, codimension d'une partie fermée d'un espace topologique : 0, 14.2.1.\par
+Codimension en un point d'une partie fermée d'un espace topologique : 0, 14.2.4.\par
+Condition des chaînes : 0, 14.3.2.\par
+Coprofondeur d'un module sur un anneau local noethérien : 0, 16.4.9.\par
+Corps $k_0$-admissible, corps admissible pour une extension : 0, 21.6.1.\par
+Corps de multiplicité radicielle finie sur un sous-corps : 0, 19.6.6.\par
+
+Défaut de $k_0$-admissibilité d'une extension : 0, 21.6.1.\par
+Dérivation, $A$-dérivation : 0, 20.1.2.\par
+Différentielles, 1-différentielles, différentielles absolues : 0, 20.4.3.\par
+Différentielle extérieure : 0, 20.4.6.\par
+Dimension combinatoire, dimension d'un espace topologique : 0, 14.1.2.\par
+Dimension d'un espace topologique en un point : 0, 14.1.2.\par
+Dimension de Krull, dimension d'un anneau : 0, 16.1.1.\par
+Dimension d'un module : 0, 16.1.7.\par
+Dimension cohomologique, dimension cohomologique globale d'un anneau : 0, 17.2.8.\par
+Dimension cohomologique d'un espace annelé en un point, dimension cohomologique d'un espace annelé : 0, 17.2.14.\par
+
+\clearpage
+\oldpage[IV-1]{255}
+Dimension injective, dimension projective d'un module : 0, 17.2.1.\par
+Dimension injective en un point, dimension injective d'un faisceau : 0, 17.2.14.\par
+Dimension projective en un point, dimension projective d'un faisceau : 0, 17.2.14.\par
+
+Élément de $A$ non diviseur de 0 dans un $A$-module : 0, 15.1.1.\par
+Élément $M$-régulier, élément $M$-quasi-régulier : 0, 15.1.4.\par
+Ensemble ind-constructible, ensemble pro-constructible : IV, 1.9.4.\par
+Épimorphisme formel : 0, 19.1.2.\par
+$A$-équivalence de $A$-extensions : 0, 18.2.2.\par
+Espace biéquidimensionnel : 0, 14.3.3.\par
+Espace caténaire : 0, 14.3.2.\par
+Espace équicodimensionnel : 0, 14.2.1.\par
+Espace équidimensionnel : 0, 14.1.3.\par
+$A$-extension d'un $A$-anneau $B$ par un $B$-bimodule : 0, 18.2.2.\par
+Extension déduite d'une autre par un homomorphisme de bimodules : 0, 18.2.8.\par
+Extension de Hochschild : 0, 18.4.3.\par
+$B$-extension $A$-triviale : 0, 18.3.7.\par
+Extension triviale type : 0, 18.2.3.\par
+$A$-extensions $A$-équivalentes : 0, 18.2.2.\par
+
+Famille $p$-libre, famille absolument $p$-libre : 0, 21.1.9.\par
+Formellement étale (algèbre) : 0, 19.10.2.\par
+Formellement inversible à droite (homomorphisme) : 0, 19.1.15.\par
+Formellement inversible à gauche (homomorphisme) : 0, 19.1.5.\par
+Formellement non ramifiée (algèbre) : 0, 19.10.2.\par
+Formellement projectif (module) : 0, 19.2.1.\par
+Formellement lisse (algèbre) : 0, 19.3.1.\par
+Formellement lisse relativement à un anneau (algèbre) : 0, 19.9.1.\par
+
+Géométriquement régulier sur un corps (anneau local) : 0, 19.6.5.\par
+Groupe des classes de $A$-extensions : 0, 18.3.4.\par
+
+Hauteur d'un idéal : 0, 16.1.3.\par
+$A$-homomorphisme de $A$-anneaux : 0, 18.1.1.\par
+Homomorphisme caractéristique d'une $B$-extension $A$-triviale : 0, 20.6.8.\par
+Homomorphisme caractéristique d'une $A$-algèbre relativement à un anneau et à un idéal : 0, 20.6.24.\par
+Homomorphisme caractéristique d'une algèbre de caractéristique $p>0$ : 0, 22.4.6.\par
+
+Idéal d'augmentation : 0, 18.1.4.\par
+Image réciproque d'un anneau augmenté : 0, 18.1.5.\par
+Image réciproque d'une $A$-extension : 0, 18.2.5.\par
+
+Longueur d'une chaîne : 0, 14.1.1.\par
+
+Module biéquidimensionnel, caténaire, équicodimensionnel, équidimensionnel : 0, 16.1.7.\par
+Module de Cohen-Macaulay : 0, 16.5.1 et 16.5.13.\par
+Module d'imperfection : 0, 20.6.1.\par
+Monomorphisme formel : 0, 19.1.2.\par
+Morphisme de $A$-extensions : 0, 18.2.4.\par
+Morphisme de présentation finie en un point, morphisme localement de présentation finie : IV, 1.4.2.\par
+Morphisme de présentation finie : IV, 1.6.1.\par
+Morphisme quasi-séparé : IV, 1.2.1.\par
+
+$p$-anneau de Cohen : 0, 19.8.4.\par
+$p$-base, $p$-base absolue : 0, 21.1.9.\par
+Point maximal d'un préschéma : IV, 1.1.4.\par
+
+\clearpage
+\oldpage[IV-1]{256}
+Polynôme de Hilbert-Samuel : 0, 16.2.1.\par
+Préschéma de présentation finie sur un autre : IV, 1.6.1.\par
+Préschéma quasi-séparé : IV, 1.2.1.\par
+Produit fibré de $A$-anneaux : 0, 18.1.2.\par
+Profondeur d'un module : 0, 16.4.5.\par
+
+Somme amalgamée de bimodules : 0, 18.2.7.\par
+Strictement formellement projectif (module) : 0, 19.2.3.\par
+Suite $M$-régulière, suite $M$-quasi-régulière : 0, 15.1.7.\par
+Suite $\mathscr F$-régulière, suite $\mathscr F$-quasi-régulière : 0, 15.2.2.\par
+Système de paramètres pour un module sur un anneau semi-local noethérien : 0, 16.3.6.\par
+Système de $p$-générateurs, système absolu de $p$-générateurs : 0, 21.1.9.\par
+Système fondamental d'idéaux ouverts, de sous-modules ouverts : 0, 19.0.2.\par
+Système régulier de paramètres d'un anneau local régulier : 0, 17.1.6.\par
+
+Topologie constructible sur un préschéma : IV, 1.9.12.\par
+Topologie sur un $A$-module déduite de la topologie de $A$ : 0, 19.0.2.\par
+Trivial ($A$-anneau augmenté) : 0, 18.1.4.\par
+$A$-triviale (extension) : 0, 18.2.3 et 18.3.7.\par
+
+\clearpage
+\oldpage[IV-1]{257}
+\phantomsection
+\addcontentsline{toc}{section}{Table des matières}
+\section*{TABLE DES MATIÈRES}
+
+\newcommand{\ivonecontentsline}[3]{\noindent\makebox[17mm][l]{#1}\parbox[t]{0.77\linewidth}{#2\dotfill}\makebox[12mm][r]{#3}\par}
+\ivonecontentsline{Chapitre 0.}{\textbf{Préliminaires} (\emph{suite})}{5}
+\ivonecontentsline{\S~14.}{Dimension combinatoire d'un espace topologique}{6}
+\ivonecontentsline{14.1.}{Dimension combinatoire d'un espace topologique}{6}
+\ivonecontentsline{14.2.}{Codimension d'une partie fermée}{8}
+\ivonecontentsline{14.3.}{La condition des chaînes}{10}
+\ivonecontentsline{\S~15.}{Suites $M$-régulières et suites $\mathscr F$-régulières}{12}
+\ivonecontentsline{15.1.}{Suites $M$-régulières et suites $M$-quasi-régulières}{12}
+\ivonecontentsline{15.2.}{Suites $\mathscr F$-régulières}{20}
+\ivonecontentsline{\S~16.}{Dimension et profondeur dans les anneaux locaux noethériens}{22}
+\ivonecontentsline{16.1.}{Dimension d'un anneau}{22}
+\ivonecontentsline{16.2.}{Dimension d'un anneau semi-local noethérien}{25}
+\ivonecontentsline{16.3.}{Systèmes de paramètres dans un anneau local noethérien}{28}
+\ivonecontentsline{16.4.}{Profondeur et coprofondeur}{32}
+\ivonecontentsline{16.5.}{Modules de Cohen-Macaulay}{36}
+\ivonecontentsline{\S~17.}{Anneaux réguliers}{39}
+\ivonecontentsline{17.1.}{Définition des anneaux réguliers}{39}
+\ivonecontentsline{17.2.}{Rappels sur la dimension projective et la dimension injective des modules}{42}
+\ivonecontentsline{17.3.}{Théorie cohomologique des anneaux réguliers}{46}
+\ivonecontentsline{\S~18.}{Compléments sur les extensions d'algèbres}{51}
+\ivonecontentsline{18.1.}{Images réciproques d'anneaux augmentés}{51}
+\ivonecontentsline{18.2.}{Extensions d'un anneau par un bimodule}{54}
+\ivonecontentsline{18.3.}{Le groupe des classes de $A$-extensions}{59}
+\ivonecontentsline{18.4.}{Extensions d'algèbres}{64}
+\ivonecontentsline{18.5.}{Cas des anneaux topologiques}{66}
+\ivonecontentsline{\S~19.}{Algèbres formellement lisses et anneaux de Cohen}{69}
+\ivonecontentsline{19.0.}{Introduction}{69}
+\ivonecontentsline{19.1.}{Épimorphismes et monomorphismes formels}{71}
+\ivonecontentsline{19.2.}{Modules formellement projectifs}{78}
+
+\clearpage
+\oldpage[IV-1]{258}
+\ivonecontentsline{19.3.}{Algèbres formellement lisses}{79}
+\ivonecontentsline{19.4.}{Premiers critères de lissité formelle}{86}
+\ivonecontentsline{19.5.}{Lissité formelle et anneaux gradués associés}{90}
+\ivonecontentsline{19.6.}{Cas des algèbres sur un corps}{100}
+\ivonecontentsline{19.7.}{Cas des homomorphismes locaux : théorèmes d'existence et d'unicité}{104}
+\ivonecontentsline{19.8.}{Algèbres de Cohen et $p$-anneaux de Cohen; application à la structure des anneaux locaux complets}{109}
+\ivonecontentsline{19.9.}{Algèbres relativement formellement lisses}{114}
+\ivonecontentsline{19.10.}{Algèbres formellement non ramifiées et algèbres formellement étales}{115}
+\ivonecontentsline{\S~20.}{Dérivations et différentielles}{116}
+\ivonecontentsline{20.1.}{Dérivations et extensions d'algèbres}{117}
+\ivonecontentsline{20.2.}{Propriétés fonctorielles des dérivations}{119}
+\ivonecontentsline{20.3.}{Dérivations continues dans les anneaux topologiques}{121}
+\ivonecontentsline{20.4.}{Parties principales et différentielles}{123}
+\ivonecontentsline{20.5.}{Propriétés fonctorielles fondamentales de $\Omega^1_{B/A}$}{128}
+\ivonecontentsline{20.6.}{Modules d'imperfection et homomorphismes caractéristiques}{136}
+\ivonecontentsline{20.7.}{Généralisations aux anneaux topologiques}{147}
+\ivonecontentsline{\S~21.}{Différentielles dans les anneaux de caractéristique $p$}{153}
+\ivonecontentsline{21.1.}{Systèmes de $p$-générateurs et $p$-bases}{154}
+\ivonecontentsline{21.2.}{$p$-bases et lissité formelle}{157}
+\ivonecontentsline{21.3.}{$p$-bases et modules d'imperfection}{160}
+\ivonecontentsline{21.4.}{Cas des extensions de corps}{162}
+\ivonecontentsline{21.5.}{Application : critères de séparabilité}{164}
+\ivonecontentsline{21.6.}{Corps admissibles pour une extension}{167}
+\ivonecontentsline{21.7.}{L'égalité de Cartier}{169}
+\ivonecontentsline{21.8.}{Critères d'admissibilité}{171}
+\ivonecontentsline{21.9.}{Modules de différentielles complétés dans les anneaux de séries formelles}{176}
+\ivonecontentsline{\S~22.}{Critères différentiels de lissité formelle et de régularité}{182}
+\ivonecontentsline{22.1.}{Relèvement de la lissité formelle}{183}
+\ivonecontentsline{22.2.}{Caractérisation différentielle des algèbres locales formellement lisses sur un corps}{186}
+\ivonecontentsline{22.3.}{Application aux relations entre certains anneaux locaux et leurs complétés}{191}
+\ivonecontentsline{22.4.}{Résultats préliminaires sur les extensions finies d'anneaux locaux dont l'idéal maximal est de carré nul}{193}
+
+\clearpage
+\oldpage[IV-1]{259}
+\ivonecontentsline{22.5.}{Algèbres géométriquement régulières et algèbres formellement lisses}{201}
+\ivonecontentsline{22.6.}{Critère jacobien de Zariski}{205}
+\ivonecontentsline{22.7.}{Le critère jacobien de Nagata}{209}
+\ivonecontentsline{\S~23.}{Anneaux japonais}{213}
+\ivonecontentsline{23.1.}{Anneaux japonais}{213}
+\ivonecontentsline{23.2.}{Clôture intégrale d'un anneau local noethérien intègre}{217}
+\ivonecontentsline{}{\textsc{Chapitre IV.} --- \textbf{Étude locale des schémas et des morphismes de schémas}}{222}
+\ivonecontentsline{\S~1.}{Conditions de finitude relatives. Ensembles constructibles dans les préschémas}{224}
+\ivonecontentsline{1.1.}{Morphismes quasi-compacts}{224}
+\ivonecontentsline{1.2.}{Morphismes quasi-séparés}{226}
+\ivonecontentsline{1.3.}{Morphismes localement de type fini}{228}
+\ivonecontentsline{1.4.}{Morphismes localement de présentation finie}{230}
+\ivonecontentsline{1.5.}{Morphismes de type fini}{233}
+\ivonecontentsline{1.6.}{Morphismes de présentation finie}{234}
+\ivonecontentsline{1.7.}{Amélioration de résultats antérieurs}{236}
+\ivonecontentsline{1.8.}{Morphismes de présentation finie et ensembles constructibles}{238}
+\ivonecontentsline{1.9.}{Ensembles pro-constructibles et ind-constructibles}{241}
+\ivonecontentsline{1.10.}{Applications aux morphismes ouverts}{249}
+\ivonecontentsline{}{Bibliographie (\emph{suite})}{251}
+\ivonecontentsline{}{Index des notations}{252}
+\ivonecontentsline{}{Index terminologique}{254}
+
+\vspace{2em}
+\begin{flushright}
+\emph{Reçu le 15 mars 1963.}
+\end{flushright}
+\let\ivonecontentsline\relax
+\endgroup

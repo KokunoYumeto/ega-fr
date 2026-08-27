@@ -1,0 +1,934 @@
+\section{Morphismes équidimensionnels}
+\label{section:IV.13-fr}
+
+Ce paragraphe est consacré à l'étude de la variation de la \emph{dimension}
+des fibres d'un morphisme localement de type fini $f:X\to Y$ (qui est déjà
+intervenue à propos de la «~formule des dimensions~» dans 5.5 et 5.6). On
+prouve d'abord (13.1.3) que la fonction
+$x\mapsto\dim_x(f^{-1}(f(x)))$ est toujours \emph{semi-continue
+supérieurement} dans $X$ (théorème de semi-continuité de Chevalley). On étudie
+ensuite plus particulièrement les morphismes, dits «~équidimensionnels~», pour
+lesquels cette fonction est \emph{localement constante}.
+
+\oldpage[IV-3]{188}
+Malheureusement la notion de morphisme équidimensionnel n'est pas stable par
+changement de base~; c'est pourquoi dans de nombreuses questions il est plus
+commode de travailler avec la notion de morphisme universellement ouvert, dont
+l'étude fait l'objet des \S\S~14 et 15.
+
+\subsection{Le théorème de semi-continuité de Chevalley}
+\label{subsection:IV.13.1-fr}
+
+\begin{lemma}[13.1.1]
+\label{IV.13.1.1-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $X$ un préschéma
+irréductible, $f:X\to Y$ un morphisme dominant de type fini. Soit $\xi$
+(resp. $\eta$) le point générique de $X$ (resp. $Y$) et soit
+$e=\dim(f^{-1}(\eta))$. Alors, pour tout $x\in X$, toutes les composantes
+irréductibles de $f^{-1}(f(x))$ sont de dimension $\geq e$.
+\end{lemma}
+
+\begin{proof}
+La proposition est immédiate lorsque, pour tout $y\in f(X)$,
+$\mathcal O_y$ est un \emph{anneau universellement caténaire}~: en effet, si
+$x$ est point générique d'une composante irréductible $Z$ de $f^{-1}(y)$, il
+résulte de (5.6.5), joint à (5.2.1), que l'on a
+$e+\dim(\mathcal O_y)=\dim(Z)+\dim(\mathcal O_x)$~; mais en vertu de
+($\mathbf 0$, 16.3.9), on a $\dim(\mathcal O_x)\leq\dim(\mathcal O_y)$,
+d'où la conclusion dans ce cas.
+
+Nous allons ramener le cas général à ce cas particulier. La question est
+évidemment locale sur $Y$, et, compte tenu de (4.1.1.3), elle est aussi locale
+sur $X$~; on peut donc se borner au cas où $Y=\operatorname{Spec}(A)$ et
+$X=\operatorname{Spec}(B)$ sont affines et irréductibles, $B$ étant une
+$A$-algèbre de type fini. En outre (1.5.4), on peut supposer $X$ et $Y$
+réduits, donc $A$ et $B$ \emph{intègres} et, comme $f$ est dominant, $A$ est
+alors un \emph{sous-anneau} de $B$. Considérons $A$ comme limite inductive de
+ses sous-$\mathbf Z$-algèbres de type fini~; il résulte alors de (8.9.1) qu'il
+existe une telle sous-algèbre $A_0$ et une $A_0$-algèbre de type fini $B_0$
+telles que $B=B_0\otimes_{A_0}A$. Posons $Y_0=\operatorname{Spec}(A_0)$,
+$X_0=\operatorname{Spec}(B_0)$, et soit $f_0:X_0\to Y_0$ le morphisme
+correspondant à l'homomorphisme $A_0\to B_0$, de sorte que
+$f=f_0\times 1_Y$. Il n'est pas évident \emph{a priori} que le préschéma $X_0$
+soit intègre, mais nous allons voir qu'on peut se ramener à ce cas. Soit
+$\eta_0$ le point générique de $Y_0$, de sorte que si $g$ est le morphisme
+$Y\to Y_0$, on a $g(\eta)=\eta_0$~; par transitivité des fibres
+(\textbf{I}, 3.6.4), on a
+$f^{-1}(\eta)=f_0^{-1}(\eta_0)\otimes_{k(\eta_0)}k(\eta)$, et comme
+$f^{-1}(\eta)$ est irréductible par hypothèse, il en est de même de
+$f_0^{-1}(\eta_0)$ (4.4.1). Notre assertion résultera alors du lemme suivant~:
+
+\begin{lemma}[13.1.2]
+\label{IV.13.1.2-fr}
+Soient $Y_0$, $Y$ deux préschémas intègres de points génériques $\eta_0$,
+$\eta$, $g:Y\to Y_0$ un morphisme dominant, $f_0:X_0\to Y_0$ un morphisme
+dominant tel que $f_0^{-1}(\eta_0)$ soit irréductible. Soit $X'_0$ l'unique
+composante irréductible de $X_0$ rencontrant $f_0^{-1}(\eta_0)$
+($\mathbf 0_{\mathrm I}$, 2.1.8), et désignons encore par $X'_0$ le
+sous-préschéma fermé réduit de $X_0$ ayant $X'_0$ pour espace sous-jacent.
+Supposons que le préschéma $X=X_0\times_{Y_0}Y$ soit intègre~; alors $X$ est
+isomorphe à $X'_0\times_{Y_0}Y$.
+\end{lemma}
+
+En effet, si $j_0:X'_0\to X_0$ est l'injection canonique, qui est une immersion
+fermée, $j=j_0\times 1_Y:X'_0\times_{Y_0}Y\to X_0\times_{Y_0}Y=X$ est une
+immersion fermée. D'autre part, $X'_0$ contient la fibre
+$f_0^{-1}(\eta_0)$, donc $X'_0\times_{Y_0}Y$ contient $f^{-1}(\eta)$~;
+notons d'autre part que $f^{-1}(\eta)$ n'est pas vide (\textbf{I}, 3.4.7),
+donc contient le point générique de $X$~; par suite l'image de $j$ est
+nécessairement $X$ tout entier. Mais comme $X$ est intègre, le seul
+sous-préschéma fermé de $X$ ayant $X$ pour espace sous-jacent est $X$
+lui-même, donc $j$ est un isomorphisme.
+
+Ce lemme étant établi, on peut donc supposer que $X_0$ est intègre~; pour tout
+$y_0\in Y_0$, $\mathcal O_{y_0}$ est une $\mathbf Z$-algèbre essentiellement
+de type fini, donc un anneau universellement
+
+\oldpage[IV-3]{189}
+caténaire (5.6.4)~; par suite, pour tout $y_0\in f_0(X_0)$, toutes les
+composantes irréductibles de $f_0^{-1}(y)$ ont une dimension $\geq e$, car on
+sait que $\dim(f_0^{-1}(\eta_0))=e$ par transitivité des fibres (4.1.4). Pour
+tout $y\in f(X)$, on a alors $y_0=g(y)\in f_0(X_0)$ et par transitivité des
+fibres et (4.2.7), on achève la démonstration.
+\end{proof}
+
+\begin{theorem}[13.1.3]
+\label{IV.13.1.3-fr}
+\textnormal{(Chevalley).} --- Soit $f:X\to Y$ un morphisme localement de type
+fini. Pour tout entier $n$, l'ensemble $F_n(X)$ des $x\in X$ tels que
+$\dim_x(f^{-1}(f(x)))\geq n$ est fermé~; autrement dit, la fonction
+$x\mapsto\dim_x(f^{-1}(f(x)))$ est semi-continue supérieurement dans $X$.
+\end{theorem}
+
+\begin{proof}
+I) Supposons d'abord que $f$ soit localement de présentation finie.
+
+La question est évidemment locale sur $X$ et sur $Y$, et on peut donc supposer
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$ affines, $B$ étant une
+$A$-algèbre de présentation finie. On sait alors (8.9.1) qu'il y a un
+sous-anneau noethérien $A_0$ de $A$, et une $A_0$-algèbre de type fini $B_0$
+tels que si l'on pose $Y_0=\operatorname{Spec}(A_0)$,
+$X_0=\operatorname{Spec}(B_0)$, on ait
+
+\[
+  X=X_0\times_{Y_0}Y,\qquad f=f_0\times 1_Y,
+\]
+
+où $f_0:X_0\to Y_0$ correspond à l'homomorphisme $A_0\to B_0$. Soient
+$g:Y\to Y_0$ le morphisme correspondant à l'injection canonique $A_0\to A$,
+$y$ un point de $Y$, $y_0=g(y)$~; on sait que
+$f^{-1}(y)=f_0^{-1}(y_0)\otimes_{k(y_0)}k(y)$, et il résulte de (4.2.7) que
+si $p$ est la projection canonique $f^{-1}(y)\to f_0^{-1}(y_0)$, les
+composantes irréductibles de $f^{-1}(y)$ sont les composantes irréductibles des
+ensembles $p^{-1}(Z_0)$, où $Z_0$ parcourt l'ensemble des composantes
+irréductibles de $f_0^{-1}(y_0)$, et chacune des composantes irréductibles de
+$p^{-1}(Z_0)$ domine $Z_0$ et a une dimension égale à $\dim(Z_0)$. Tenant
+compte de ($\mathbf 0$, 14.1.5), on voit donc que si $g':X\to X_0$ est la
+projection canonique, $x$ un point de $X$ et $x_0=g'(x)$, on a
+$\dim_x(f^{-1}(f(x)))=\dim_{x_0}(f_0^{-1}(f_0(x_0)))$, d'où
+$F_n(X)=g'^{-1}(F_n(X_0))$, et on est par suite ramené à démontrer le théorème
+lorsque $Y$ est \emph{noethérien}, ce que nous supposerons désormais.
+
+On peut évidemment supposer $X$ et $Y$ réduits (1.5.4). En considérant
+l'ensemble des parties fermées $Y'$ de $Y$ telles que le théorème soit vrai
+pour le sous-préschéma fermé de $Y$ ayant $Y'$ pour espace sous-jacent et pour
+$X'=f^{-1}(Y')$, on peut raisonner par récurrence noethérienne
+($\mathbf 0_{\mathrm I}$, 2.2.2), et supposer que le théorème est vrai pour
+toute partie fermée $Y'\neq Y$ de $Y$. Si $X_i$ ($1\leq i\leq m$) sont les
+sous-préschémas fermés réduits de $X$ ayant pour espaces sous-jacents les
+composantes irréductibles de $X$, on a $F_n(X)=\bigcup_iF_n(X_i)$ en vertu de
+($\mathbf 0$, 14.1.5), et l'on peut donc se borner à démontrer le théorème pour
+chacun des $X_i$, autrement dit, on peut supposer $X$ irréductible. Si $Z$ est
+le sous-préschéma fermé de $Y$ ayant $\overline{f(X)}$ pour espace sous-jacent,
+$f$ se factorise en $X\xrightarrow{g}Z\xrightarrow{j}Y$, où $j$ est
+l'injection canonique (\textbf{I}, 5.2.2), et $g$ est de type fini (1.5.4),
+donc il suffit de démontrer le théorème pour $Z$ et $g$~; en vertu de
+l'hypothèse de récurrence, on est donc ramené à considérer seulement le cas où
+$Z=Y$, autrement dit où $Y$ est irréductible et $f$ dominant. Soit alors
+$\eta$ le point générique de $Y$ et posons $e=\dim(f^{-1}(\eta))$~; il résulte
+de (13.1.1) que pour $n\leq e$ on a $F_n(X)=X$, et par suite on peut se borner
+au cas où $n>e$. Mais alors (9.5.6), il y a un voisinage ouvert $U$ de $\eta$
+dans $Y$ tel que $F_n(X)\subset f^{-1}(Y-U)$~; comme $Y-U\neq Y$, l'hypothèse
+de récurrence entraîne que $F_n(X)$ est fermé.
+
+II) Passons maintenant au cas général, en supposant toujours
+$S=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ affines, $B$ étant
+une $A$-algèbre de type fini, donc de la forme
+
+\oldpage[IV-3]{190}
+$B=A[T_1,\ldots,T_n]/\mathfrak J$. Soit $(\mathfrak J_\lambda)$ la famille des
+idéaux de type fini de $A[T_1,\ldots,T_n]$ contenus dans $\mathfrak J$, de
+sorte que $\mathfrak J$ est la réunion filtrante des $\mathfrak J_\lambda$~;
+si $X$ et les
+$X_\lambda=\operatorname{Spec}(A[T_1,\ldots,T_n]/\mathfrak J_\lambda)$ sont
+considérés comme des sous-préschémas fermés de
+$Z=\operatorname{Spec}(A[T_1,\ldots,T_n])$, on a donc, pour les espaces
+sous-jacents, $X=\bigcap_\lambda X_\lambda$. Si $f_\lambda:X_\lambda\to S$ est
+le morphisme structural, on en déduit que
+$f^{-1}(s)=\bigcap_\lambda f_\lambda^{-1}(s)$ pour tout $s\in S$, et comme les
+ensembles $f_\lambda^{-1}(s)$ sont fermés dans l'espace noethérien $Z_s$, il
+existe un $\lambda$ (dépendant de $s$) tel que
+$f^{-1}(s)=f_\lambda^{-1}(s)$. Si alors, pour tout $x\in X$, on pose
+$d(x)=\dim_x(f^{-1}(f(x)))$, $d_\lambda(x)=\dim_x(f_\lambda^{-1}(f_\lambda(x)))$,
+ce qui précède prouve que l'on a $d(x)=\inf_\lambda d_\lambda(x)$~; les
+fonctions $d_\lambda$ étant semi-continues supérieurement d'après la première
+partie de la démonstration, il en est de même de $d$. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[13.1.4]
+\label{IV.13.1.4-fr}
+Sous les hypothèses de (13.1.3), l'ensemble des $x\in X$ tels que $x$ soit
+isolé dans $f^{-1}(f(x))$ est ouvert dans $X$.
+\end{corollary}
+
+\begin{proof}
+En effet, c'est le complémentaire de $F_1(X)$ ($\mathbf 0$, 14.1.10).
+\end{proof}
+
+On notera qu'on retrouve ainsi, sous des hypothèses plus générales, la
+conséquence (\textbf{III}, 4.4.10) du «~Main theorem~» de Zariski.
+
+\begin{corollary}[13.1.5]
+\label{IV.13.1.5-fr}
+Sous les hypothèses de (13.1.3), supposons en outre que $f$ soit un morphisme
+fermé. Alors, pour tout entier $n$, l'ensemble des $y\in Y$ tels que
+$\dim(f^{-1}(y))\geq n$ est fermé, autrement dit, l'application
+$y\mapsto\dim(f^{-1}(y))$ est semi-continue supérieurement~; en particulier,
+si $y$ est spécialisation de $y'$, on a
+$\dim(f^{-1}(y))\geq\dim(f^{-1}(y'))$.
+\end{corollary}
+
+\begin{proof}
+En effet, dire que $\dim(f^{-1}(y))\geq n$ signifie que $y\in f(F_n(X))$
+($\mathbf 0$, 14.1.6).
+\end{proof}
+
+\begin{corollary}[13.1.6]
+\label{IV.13.1.6-fr}
+Soient $X$, $Y$ deux préschémas irréductibles, $f:X\to Y$ un morphisme
+dominant localement de type fini. Soit $\xi$ (resp. $\eta$) le point générique
+de $X$ (resp. $Y$) et soit $e=\dim(f^{-1}(\eta))$. Alors, pour tout $x\in X$,
+on a $\dim_x(f^{-1}(f(x)))\geq e$.
+\end{corollary}
+
+\begin{proof}
+En effet, l'ensemble des $x$ tels que $\dim_x(f^{-1}(f(x)))<e$ est ouvert en
+vertu de (13.1.3), et comme il ne peut contenir $\xi$, il est vide.
+\end{proof}
+
+Notons enfin le résultat plus facile suivant~:
+
+\begin{proposition}[13.1.7]
+\label{IV.13.1.7-fr}
+Soient $Y$ un préschéma quasi-compact, $f:X\to Y$ un morphisme de type fini.
+Il existe un entier $n$ tel que, pour tout $y\in Y$, on ait
+$\dim(f^{-1}(y))\leq n$.
+\end{proposition}
+
+\begin{proof}
+Comme il y a un recouvrement ouvert affine fini $(V_i)$ de $Y$ tel que chaque
+$f^{-1}(V_i)$ soit réunion finie d'ouverts affines, on est aussitôt ramené au
+cas où $Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ sont affines,
+$B$ étant une $A$-algèbre de type fini. Si $B$ admet un système de $n$
+générateurs, alors, pour tout $y\in Y$, $B\otimes_Ak(y)$ est une
+$k(y)$-algèbre admettant $n$ générateurs, donc $\dim(f^{-1}(y))\leq n$ en
+vertu de (4.1.1).
+\end{proof}
+
+\subsection{Morphismes équidimensionnels : cas des morphismes dominants de préschémas irréductibles}
+\label{subsection:IV.13.2-fr}
+
+\begin{env}[13.2.1]
+\label{IV.13.2.1-fr}
+Soient $Y$ un préschéma irréductible, $X$ un préschéma irréductible,
+$f:X\to Y$ un morphisme dominant localement de type fini~; soit $\eta$ le
+point générique de $Y$. On sait (13.1.6) que pour tout $x\in X$, on a
+$\dim_x(f^{-1}(f(x)))\geq\dim(f^{-1}(\eta))$.
+\end{env}
+
+\oldpage[IV-3]{191}
+\begin{definition}[13.2.2]
+\label{IV.13.2.2-fr}
+Sous les hypothèses de (13.2.1), on dit que $f$ est équidimensionnel au point
+$x$ (ou que $X$ est équidimensionnel sur $Y$ au point $x$) si
+\[
+  \dim_x(f^{-1}(f(x)))=\dim(f^{-1}(\eta)).
+\]
+On dit que $f$ est équidimensionnel (ou que $X$ est équidimensionnel sur $Y$)
+si $f$ est équidimensionnel en tout point $x\in X$.
+\end{definition}
+
+Il résulte du théorème de Chevalley (13.1.3) que l'ensemble des $x\in X$ où
+$f$ est équidimensionnel est \emph{ouvert non vide}. En outre, si $f$ est
+équidimensionnel au point $x$, toutes les composantes irréductibles de
+$f^{-1}(f(x))$ qui contiennent $x$ ont \emph{même dimension}, car chacune
+d'elles a une dimension qui est $\geq\dim(f^{-1}(\eta))$ (13.1.6) et
+$\leq\dim_x(f^{-1}(f(x)))$ en vertu de ($\mathbf 0$, 14.1.5).
+
+\begin{proposition}[13.2.3]
+\label{IV.13.2.3-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $X$ un préschéma
+irréductible, $f:X\to Y$ un morphisme dominant localement de type fini~;
+soient $\eta$ le point générique de $Y$, $x$ un point de $X$, $y=f(x)$, et
+supposons que l'on ait
+\[
+\tag{13.2.3.1}
+\label{IV.13.2.3.1-fr}
+  \dim(\mathcal O_x)=\dim(\mathcal O_y)
+  +\dim(\mathcal O_x\otimes_{\mathcal O_y}k(y)).
+\]
+Alors $f$ est équidimensionnel au point $x$. La réciproque est vraie si les
+deux membres de l'inégalité (5.6.5.2) sont égaux, en particulier si
+$\mathcal O_y$ est universellement caténaire.
+\end{proposition}
+
+\begin{proof}
+Cela résulte aussitôt de (5.6.5.2) et de l'inégalité $\delta(x)\geq0$
+(13.1.1).
+\end{proof}
+
+\begin{env}[13.2.4]
+\label{IV.13.2.4-fr}
+Soient maintenant, de façon générale, $Y$ un préschéma localement noethérien,
+$f:X\to Y$ un morphisme de type fini, $x$ un point de $X$, $X'$ une partie
+fermée irréductible de $X$ contenant $x$, $y=f(x)$,
+$Y'=\overline{f(X')}$, $\eta'$ le point générique de $Y'$. Désignons encore
+par $X'$ et $Y'$ les sous-préschémas fermés réduits de $X$ et $Y$
+respectivement ayant $X'$ et $Y'$ pour espaces sous-jacents~; la restriction
+$X'\to Y$ de $f$ se factorise donc en
+$X'\xrightarrow{f'}Y'\xrightarrow{j}Y$, où $j$ est l'injection canonique
+(\textbf{I}, 5.2.2), et $f'$ est de type fini (1.5.4). Posons alors pour
+abréger
+\[
+\tag{13.2.4.1}
+\label{IV.13.2.4.1-fr}
+  A=\mathcal O_{Y,y},\quad B=\mathcal O_{X,x},\quad
+  A'=\mathcal O_{Y',y},\quad B'=\mathcal O_{X',x}.
+\]
+La formule (5.6.5.2) appliquée au morphisme dominant $f'$ et aux préschémas
+irréductibles $X'$, $Y'$, donne
+\[
+\tag{13.2.4.2}
+\label{IV.13.2.4.2-fr}
+  \dim(B')\leq\dim(A')+\dim(B'\otimes_{A'}k(y))
+  -(\dim_x(f'^{-1}(y))-\dim(f'^{-1}(\eta'))).
+\]
+D'autre part, l'anneau local $A'$ (resp. $B'$, $B'\otimes_{A'}k(y)$) est un
+anneau quotient de $A$ (resp. $B$, $B\otimes_Ak(y)$), donc
+($\mathbf 0$, 16.1.2.1) on a
+\[
+\tag{13.2.4.3}
+\label{IV.13.2.4.3-fr}
+  \dim(A')\leq\dim(A),\quad \dim(B')\leq\dim(B),\quad
+  \dim(B'\otimes_{A'}k(y))\leq\dim(B\otimes_Ak(y)).
+\]
+On déduit donc en premier lieu de (13.2.4.3) et ($\mathbf 0$, 16.3.9)
+\[
+\tag{13.2.4.4}
+\label{IV.13.2.4.4-fr}
+  \dim(B')\leq\dim(A')+\dim(B'\otimes_{A'}k(y))
+  \leq\dim(A)+\dim(B\otimes_Ak(y)).
+\]
+En outre, en vertu de ($\mathbf 0$, 16.3.9), on a aussi les inégalités
+\[
+\tag{13.2.4.5}
+\label{IV.13.2.4.5-fr}
+  \dim(B')\leq\dim(B)\leq\dim(A)+\dim(B\otimes_Ak(y)).
+\]
+\end{env}
+
+\oldpage[IV-3]{192}
+La comparaison de ces inégalités montre donc que~:
+
+\begin{lemma}[13.2.5]
+\label{IV.13.2.5-fr}
+Avec les notations de (13.2.4), les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $\dim(B')=\dim(A)+\dim(B\otimes_Ak(y))$.
+  \item On a simultanément les relations suivantes~:
+  \begin{enumerate}[label=(\roman*)]
+    \item $\dim(A')=\dim(A)$.
+    \item $\dim(B'\otimes_{A'}k(y))=\dim(B\otimes_Ak(y))$, autrement dit
+    \[
+      \dim_x(X'\cap f^{-1}(y))=\dim_x(f^{-1}(y)).
+    \]
+    \item $\dim_x(f'^{-1}(y))=\dim(f'^{-1}(\eta'))$, autrement dit
+    $f':X'\to Y'$ est équidimensionnel (13.2.2) au point $x$.
+    \item On a l'égalité
+    \[
+      \dim(B')=\dim(A')+\dim(B'\otimes_{A'}k(y))
+      -(\dim_x(f'^{-1}(y))-\dim(f'^{-1}(\eta')))
+    \]
+  \end{enumerate}
+  (relation qui est toujours vérifiée lorsque $A=\mathcal O_{Y,y}$ est un
+  anneau universellement caténaire, en vertu de (5.6.5)).
+  \item On a simultanément les relations suivantes~:
+  \begin{enumerate}[label=(\roman*)]
+    \item $\dim(B')=\dim(B)$.
+    \item $\dim(B)=\dim(A)+\dim(B\otimes_Ak(y))$.
+  \end{enumerate}
+\end{enumerate}
+\end{lemma}
+
+\begin{env}[13.2.6]
+\label{IV.13.2.6-fr}
+Rappelons maintenant que les composantes irréductibles $X_i$ de $X$ contenant
+$x$ sont en nombre fini et que l'on a ((5.1.2.1) et ($\mathbf 0$, 14.2.1.1))
+\[
+\tag{13.2.6.1}
+\label{IV.13.2.6.1-fr}
+  \dim(\mathcal O_{X,x})=\sup_i\dim(\mathcal O_{X_i,x}).
+\]
+L'équivalence des conditions $b)$ et $c)$ dans (13.2.5) implique par suite,
+compte tenu de ($\mathbf 0$, 16.3.9) et ($\mathbf 0$, 14.2.1)~:
+\end{env}
+
+\begin{proposition}[13.2.7]
+\label{IV.13.2.7-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme de type
+fini, $x$ un point de $X$, $f(x)=y$~; on a
+\[
+\tag{13.2.7.1}
+\label{IV.13.2.7.1-fr}
+  \dim(\mathcal O_{X,x})\leq\dim(\mathcal O_{Y,y})
+  +\dim(\mathcal O_{X,x}\otimes_{\mathcal O_{Y,y}}k(y)).
+\]
+Pour que les deux membres de (13.2.7.1) soient égaux, il faut et il suffit
+qu'il existe une partie fermée irréductible $X'$ de $X$ contenant $x$ et
+vérifiant simultanément les conditions suivantes~:
+\begin{enumerate}[label=(\roman*)]
+  \item Si $Y'=\overline{f(X')}$, on a
+  $\dim(\mathcal O_{Y',y})=\dim(\mathcal O_{Y,y})$.
+  \item $\dim_x(X'\cap f^{-1}(y))=\dim_x(f^{-1}(y))$ (autrement dit, $X'$
+  contient une des composantes irréductibles de $f^{-1}(y)$ contenant $x$, de
+  dimension maxima parmi toutes ces composantes). Il revient au même de dire
+  que
+  $\dim(\mathcal O_{X',x}\otimes_{\mathcal O_{Y',y}}k(y))
+  =\dim(\mathcal O_{X,x}\otimes_{\mathcal O_{Y,y}}k(y))$.
+  \item $X'$ est équidimensionnel sur $Y'$ au point $x$, autrement dit, on a
+  \[
+    \dim_x(X'\cap f^{-1}(y))=\dim(X'\cap f^{-1}(\eta')),
+  \]
+  où $\eta'$ est le point générique de $Y'$ (et par suite, toutes les
+  composantes irréductibles de $X'\cap f^{-1}(y)$ contenant $x$ ont même
+  dimension (13.2.2)).
+
+  \oldpage[IV-3]{193}
+  \item On a l'égalité
+  \[
+    \dim(\mathcal O_{X',x})=\dim(\mathcal O_{Y',y})
+    +\dim(\mathcal O_{X',x}\otimes_{\mathcal O_{Y',y}}k(y))
+  \]
+  (condition toujours impliquée par (iii) lorsque $\mathcal O_{Y,y}$ est un
+  anneau universellement caténaire).
+\end{enumerate}
+De plus, $X'$ est alors une composante irréductible de $X$ et $Y'$ une
+composante irréductible de $Y$.
+\end{proposition}
+
+Dans l'énoncé, les anneaux locaux $\mathcal O_{X',x}$ et
+$\mathcal O_{Y',y}$ sont relatifs aux sous-préschémas fermés réduits de $X$,
+$Y$ respectivement ayant $X'$ et $Y'$ pour espaces sous-jacents respectifs.
+
+En outre, cela prouve que
+
+\begin{corollary}[13.2.8]
+\label{IV.13.2.8-fr}
+Si les deux membres de (13.2.7.1) sont égaux, les parties fermées irréductibles
+$X'$ de $X$ contenant $x$ et vérifiant les conditions (i) à (iv) de (13.2.7)
+sont exactement celles pour lesquelles on a
+$\dim(\mathcal O_{X',x})=\dim(\mathcal O_{X,x})$ (ce qui implique
+nécessairement que $X'$ est une composante irréductible de $X$).
+\end{corollary}
+
+La proposition (13.2.7) entraîne~:
+
+\begin{corollary}[13.2.9]
+\label{IV.13.2.9-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme de type
+fini, $x$ un point de $X$, $f(x)=y$. Supposons que $\mathcal O_{Y,y}$ soit un
+anneau universellement caténaire. Alors les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Les deux membres de (13.2.7.1) sont égaux.
+  \item Il existe une composante irréductible $Z$ de $f^{-1}(y)$ contenant
+  $x$, de dimension $\dim_x(f^{-1}(y))$, telle que, pour tout $x'$ dans un
+  voisinage de $x$ dans $Z$, on ait
+  \[
+  \tag{13.2.9.1}
+  \label{IV.13.2.9.1-fr}
+    \dim(\mathcal O_{X,x'})=\dim(\mathcal O_{Y,y})
+    +\dim(\mathcal O_{X,x'}\otimes_{\mathcal O_{Y,y}}k(y)).
+  \]
+  \item Il existe une composante irréductible $Z$ de $f^{-1}(y)$ contenant
+  $x$, de dimension $\dim_x(f^{-1}(y))$, telle que pour le point générique $z$
+  de $Z$, on ait
+  \[
+  \tag{13.2.9.2}
+  \label{IV.13.2.9.2-fr}
+    \dim(\mathcal O_{X,z})=\dim(\mathcal O_{Y,y}).
+  \]
+\end{enumerate}
+\end{corollary}
+
+Montrons que $a)$ entraîne $b)$. Soit $\dim_x(f^{-1}(y))=n$~; en vertu de
+(13.2.7), il existe une composante irréductible $X'$ de $X$ vérifiant les
+conditions (i) à (iv) de (13.2.7)~; soit $Z$ une composante irréductible de
+dimension $n$ de $f^{-1}(y)$, contenant $x$ et contenue dans $X'$. Comme
+$f^{-1}(y)$ est localement noethérien, il existe un voisinage ouvert $U$ de
+$x$ dans $Z$ tel que $U$ ne rencontre aucune composante irréductible de
+$f^{-1}(y)$ autre que celles qui contiennent $x$, donc (4.1.1.3)
+$\dim_{x'}(f^{-1}(y))=n$ pour tout $x'\in U$~; il est clair alors que les
+conditions (i) à (iii) de (13.2.7) sont satisfaites quand on y remplace $x$
+par un point quelconque $x'\in U$, et il en est de même de la condition (iv)
+puisque $\mathcal O_{Y,y}$ est universellement caténaire~; d'où la conclusion
+par (13.2.7). La condition $b)$ entraîne trivialement $c)$ en vertu de
+(5.1.2). Enfin, si $c)$ est vérifiée et si $X''$ est une composante
+irréductible de $X$ contenant $Z$ et telle que les conditions (i) à (iv) de
+(13.2.7) soient vérifiées quand on y remplace $X'$ par $X''$ et $x$ par $z$,
+il est clair que ces conditions sont aussi vérifiées pour $X''$ et $x$ puisque
+$\mathcal O_{Y,y}$ est universellement caténaire, donc $c)$ implique $a)$.
+
+\begin{proposition}[13.2.10]
+\label{IV.13.2.10-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $\eta$ son point
+générique, $f:X\to Y$ un morphisme de type fini, $y$ un point de $f(X)$.
+Soient $Z_i$ les
+
+\oldpage[IV-3]{194}
+composantes irréductibles de $f^{-1}(y)$, $z_i$ le point générique de $Z_i$,
+et considérons les conditions suivantes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Pour tout $x\in f^{-1}(y)$, on a la relation
+  \[
+  \tag{13.2.10.1}
+  \label{IV.13.2.10.1-fr}
+    \dim(\mathcal O_{X,x})=\dim(\mathcal O_{Y,y})
+    +\dim(\mathcal O_{X,x}\otimes_{\mathcal O_{Y,y}}k(y)).
+  \]
+  \item Pour tout $i$, on a
+  \[
+  \tag{13.2.10.2}
+  \label{IV.13.2.10.2-fr}
+    \dim(\mathcal O_{X,z_i})=\dim(\mathcal O_{Y,y}).
+  \]
+  \item Pour tout $i$, il existe une composante irréductible $X_i$ de $X$
+  contenant $Z_i$ et telle que
+  $\dim(X_i\cap f^{-1}(\eta))=\dim(Z_i)$ (autrement dit, telle que le
+  \emph{sous-préschéma fermé réduit} $X_i$ de $X$ soit équidimensionnel sur $Y$
+  au point $z_i$).
+\end{enumerate}
+Alors $a)$ entraîne $b)$ et $b)$ entraîne $c)$~; en outre, si
+$\mathcal O_{Y,y}$ est universellement caténaire, les trois conditions $a)$,
+$b)$, $c)$ sont équivalentes.
+\end{proposition}
+
+L'anneau $\mathcal O_{X,z_i}\otimes_{\mathcal O_{Y,y}}k(y)$ étant de dimension
+$0$ (5.1.2), $a)$ entraîne évidemment $b)$~; $b)$ entraîne $c)$ en vertu de
+(13.2.7) appliqué au point $z_i$. Inversement, supposons que
+$\mathcal O_{Y,y}$ soit universellement caténaire~; comme la condition $c)$
+implique que $f(X_i)$ est dense dans $Y$, il résulte de $c)$ que les conditions
+(i) à (iv) de (13.2.7) sont vérifiées en remplaçant $X'$ par $X_i$ et $x$ par
+$z_i$, donc $c)$ implique $b)$~; enfin $b)$ implique $a)$ en vertu de
+(13.2.9).
+
+\begin{corollary}[13.2.11]
+\label{IV.13.2.11-fr}
+Les notations étant celles de (13.2.10), supposons que $\mathcal O_{Y,y}$ soit
+universellement caténaire. Pour tout $y'\in Y$, soit $E(y')$ l'ensemble des
+dimensions des composantes irréductibles de $f^{-1}(y')$ et posons
+$d(y')=\dim(f^{-1}(y'))=\sup(E(y'))$. Alors, si les conditions équivalentes
+$a)$, $b)$, $c)$ de (13.2.10) sont vérifiées, on a
+$E(y)\subset E(\eta)$, d'où $d(y)\leq d(\eta)$.
+\end{corollary}
+
+En effet, avec les notations de (13.2.10), $X_i\cap f^{-1}(\eta)$ n'est pas
+vide et est par suite une composante irréductible de $f^{-1}(\eta)$
+($\mathbf 0_{\mathrm I}$, 2.1.8).
+
+\begin{remarks}[13.2.12]
+\label{IV.13.2.12-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Rappelons (6.1.2) que la relation (13.2.10.1) est toujours vérifiée
+  lorsque le morphisme $f$ est \emph{plat} au point $x$.
+  \item Avec les notations de (13.2.10), supposons que $\mathcal O_{Y,y}$ soit
+  universellement caténaire et en outre que le morphisme $f$ soit \emph{propre}~;
+  alors, si les conditions équivalentes $a)$, $b)$, $c)$ de (13.2.10) sont
+  satisfaites, on a même $d(y)=d(\eta)$, car il résulte de (13.1.5) que l'on a
+  $d(y)\geq d(\eta)$.
+  \item Le morphisme de (12.2.3, (ii)) est \emph{propre} et \emph{plat} et tous
+  les anneaux locaux de $Y$ sont universellement caténaires~; en outre, les deux
+  composantes irréductibles $X_1$, $X_2$ de $X$ sont \emph{équidimensionnelles}
+  sur $Y$ en tout point~; mais $E(y)$ a \emph{deux} éléments pour tout
+  $y\neq y_0$, alors que $E(y_0)$ est réduit à un \emph{seul} élément, donc
+  $E(y)$ n'est \emph{pas constant} dans $Y$.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Morphismes équidimensionnels : cas général}
+\label{subsection:IV.13.3-fr}
+
+\begin{proposition}[13.3.1]
+\label{IV.13.3.1-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme localement de type fini,
+$x$ un point de $X$, $y=f(x)$. Désignons par $Y_\alpha$ les composantes
+irréductibles de $Y$ contenant $y$. Alors les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\oldpage[IV-3]{195}
+  \item Il existe un entier $e$ et un voisinage ouvert $U$ de $x$ tels que
+  l'image par $f$ de toute composante irréductible de $U$ soit dense dans un
+  $Y_\alpha$, et que, pour tout $x'\in U$, l'espace
+  $U\cap f^{-1}(f(x'))$ soit équidimensionnel et de dimension $e$.
+  \item[\emph{a$'$)}] Il existe un entier $e$ et un voisinage ouvert $U$ de
+  $x$ tels que l'image par $f$ de toute composante irréductible de $U$ soit
+  dense dans un $Y_\alpha$ et que, si on désigne par $y_\alpha$ le point
+  générique de $Y_\alpha$, toute composante irréductible des espaces
+  $U\cap f^{-1}(y)$, $U\cap f^{-1}(y_\alpha)$ soit de dimension $e$.
+  \item[\emph{a$''$)}] Il existe un entier $e$ et un voisinage ouvert $U$ de
+  $x$ tels que, pour chacune des composantes irréductibles $U_\lambda$ de
+  $U$, $f(U_\lambda)$ soit dense dans un $Y_\alpha$ et que, pour tout
+  $x'\in U_\lambda$, les composantes irréductibles de
+  $U_\lambda\cap f^{-1}(f(x'))$ soient toutes de dimension $e$.
+  \item Il existe un entier $e$, un voisinage ouvert $U$ de $x$ et un
+  $Y$-morphisme quasi-fini
+  \[
+    g:U\longrightarrow Y\otimes_{\mathbf Z}\mathbf Z[T_1,\ldots,T_e]
+  \]
+  (préschéma que nous noterons aussi $Y[T_1,\ldots,T_e]$ pour abréger) tels
+  que l'image par $g$ de toute composante irréductible de $U$ soit dense dans
+  une composante irréductible de $Y[T_1,\ldots,T_e]$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est immédiat que $a''$) entraîne $a$), car pour tout $x\in U$, les
+composantes irréductibles de $U\cap f^{-1}(f(x))$ sont chacune composante
+irréductible d'un des $U_\lambda\cap f^{-1}(f(x))$, d'où la conclusion par
+($\mathbf 0$, 14.1.4). La condition $a$) entraîne trivialement $a'$).
+Montrons ensuite que $a'$) entraîne $a''$)~; on peut se borner au cas où $f$
+est de type fini et $X$ et $Y$ réduits (1.5.4). Soit $U_\lambda$ une
+composante irréductible de $U$, et supposons que $f(U_\lambda)$ soit dense
+dans $Y_\alpha$~; alors la restriction de $f$ à $U_\lambda$ se factorise en
+$U_\lambda\xrightarrow{f_\alpha}Y_\alpha\to Y$, où $f_\alpha$ est de type
+fini et dominant (\textbf{I}, 5.2.2). Soit $x_\lambda$ le point générique de
+$U_\lambda$~; en vertu de ($\mathbf 0_{\mathrm I}$, 2.1.8),
+$U_\lambda\cap f_\alpha^{-1}(y_\alpha)$ est l'unique composante irréductible
+de $U\cap f^{-1}(y_\alpha)$ contenant $x_\lambda$ et est par hypothèse de
+dimension $e$, égale aux dimensions de toutes les composantes irréductibles
+de $U_\lambda\cap f^{-1}(y)$, en vertu de l'hypothèse et de (13.1.1). Mais en
+vertu du théorème de Chevalley (13.1.3) et de (13.1.1), l'ensemble $V_\lambda$
+des $x'\in U_\lambda$ tels que
+$\dim_{x'}(f_\lambda^{-1}(f_\lambda(x')))=e$ est ouvert et contient $x$, et il
+suffit de prendre la réunion des $V_\lambda$ pour obtenir un ensemble ouvert
+satisfaisant aux conditions de $a''$).
+
+Prouvons maintenant que $a$) entraîne $b$)~; on peut se limiter au cas où
+$Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ sont affines et où
+$U=X$. Prouvons d'abord le lemme suivant~:
+
+\begin{lemma}[13.3.1.1]
+\label{IV.13.3.1.1-fr}
+Soient $Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$ deux schémas
+affines, $f:X\to Y$ un morphisme de type fini, $y$ un point de $f(X)$, et
+posons $e=\dim(f^{-1}(y))$. Alors il existe un $Y$-morphisme
+$g:X\to Y[T_1,\ldots,T_e]$ tel que (si l'on pose
+$X_y=X\times_Y\operatorname{Spec}(k(y))$), le morphisme
+$g_y:X_y\to\operatorname{Spec}(k(y)[T_1,\ldots,T_e])$ soit fini. En outre,
+pour un tel morphisme $g$, $g_y$ est nécessairement surjectif et il existe un
+voisinage ouvert $U$ de $f^{-1}(y)$ dans $X$ tel que $g|U$ soit quasi-fini.
+\end{lemma}
+
+Soit $\mathfrak p=\mathfrak j_y$~; l'anneau $B\otimes_Ak(\mathfrak p)$ est une
+$k(\mathfrak p)$-algèbre de type fini, donc le lemme de normalisation
+(Bourbaki, \emph{Alg. comm.}, chap.~V, \S~3, n\textsuperscript{o}~1, th.~1)
+prouve qu'il y a dans $B\otimes_Ak(\mathfrak p)$ une suite finie
+$(t_i)_{1\leq i\leq r}$ d'éléments algébriquement indépendants sur
+$k(\mathfrak p)$ et tels que si l'on pose
+$C'=k(\mathfrak p)[t_1,\ldots,t_r]$, $B\otimes_Ak(\mathfrak p)$ soit une
+$C'$-algèbre \emph{finie}~; on a donc
+$\dim(B\otimes_Ak(\mathfrak p))=\dim(C')$ ($\mathbf 0$, 16.1.5) et comme
+$\dim(C')=r$ (5.2.1), on a $r=e$. Comme
+$B\otimes_Ak(\mathfrak p)=(B/\mathfrak pB)\otimes_{A/\mathfrak p}k(\mathfrak p)$,
+on peut, en multipliant les $t_i$ par un élément $\neq0$
+
+\oldpage[IV-3]{196}
+convenable de $A/\mathfrak p$, supposer que chaque $t_i$ est l'image canonique
+dans $B\otimes_Ak(\mathfrak p)$ d'un élément $s_i\in B$. Soit alors
+$u:A[T_1,\ldots,T_e]\to B$ l'homomorphisme tel que $u(T_i)=s_i$ pour tout
+$i$, et soit $g:X\to Y[T_1,\ldots,T_e]$ le morphisme correspondant. Il est
+clair qu'en raison du choix des $s_i$, $g_y$ est un morphisme fini. Pour tout
+morphisme $g:X\to Y[T_1,\ldots,T_e]$, tel que $g_y$ soit fini, il résulte de
+(5.4.2) et (4.1.2.1) que $g_y$ est nécessairement surjectif. D'autre part, en
+vertu de (13.1.4), l'ensemble $U$ des $x\in X$ qui sont isolés dans leur fibre
+$g^{-1}(g(x))$ est ouvert dans $X$ et contient $f^{-1}(y)$, et par définition
+la restriction $g|U$ est un morphisme quasi-fini.
+
+Ce lemme étant établi, pour prouver que $a$) implique $b$), il reste à voir
+que si $x_\lambda$ est un point maximal de $U$, $g(x_\lambda)=z_\lambda$ est
+un point maximal de $Z=Y[T_1,\ldots,T_e]$. En vertu de l'hypothèse $a$), on
+peut (en restreignant au besoin $U$), supposer que $f(x_\lambda)$ est l'un des
+points génériques $y_\alpha$ des composantes irréductibles de $Y$ contenant
+$y$~; si $p:Z\to Y$ est le morphisme structural, on a donc
+$p(z_\lambda)=y_\alpha$, et l'on déduit par suite de $g$ un
+$k(y_\alpha)$-morphisme quasi-fini
+\[
+  h:U\cap f^{-1}(y_\alpha)\longrightarrow p^{-1}(y_\alpha).
+\]
+Or $p^{-1}(y_\alpha)=\operatorname{Spec}(k(y_\alpha)[T_1,\ldots,T_e])$ est
+intègre et de dimension $e$~; si $z_\lambda$ n'était pas point maximal de
+$Z$, il ne serait pas point maximal de $p^{-1}(y_\alpha)$
+($\mathbf 0_{\mathrm I}$, 2.1.8) et son adhérence $Z'_\lambda$ dans
+$p^{-1}(y_\alpha)$ serait donc de dimension $<e$ (4.1.2.1). Mais comme $h$
+est quasi-fini, il résulte de (4.1.2) et de l'hypothèse $a$) que l'on a
+$\dim(Z'_\lambda)\geq e$ (la restriction de $h$ à
+$\overline{\{x_\lambda\}}$ se factorisant en
+\[
+  \overline{\{x_\lambda\}}\longrightarrow Z'_\lambda
+  \longrightarrow p^{-1}(y_\alpha)
+\]
+en vertu de (\textbf{I}, 5.2.2))~; on aboutit ainsi à une contradiction, ce
+qui montre que $a$) entraîne $b$).
+
+Prouvons finalement que $b$) implique $a$). Notons que le morphisme structural
+$p:Z=Y[T_1,\ldots,T_e]\to Y$ est fidèlement plat~; donc (2.3.4) les points
+maximaux de $Z$ ont pour images par $p$ les points maximaux de $Y$~; ceci
+prouve déjà que les $f(x_\lambda)$ sont points génériques des $Y_\alpha$. En
+outre, si $f(x_\lambda)=y_\alpha$, le $k(y_\alpha)$-morphisme
+$h:U\cap f^{-1}(y_\alpha)\to p^{-1}(y_\alpha)$ déduit de $g$ est dominant et
+quasi-fini par hypothèse~; on a donc
+$\dim(U_\lambda\cap f^{-1}(y_\alpha))=e$ en vertu de (4.1.2)
+($U_\lambda$ étant la composante irréductible de $U$ de point générique
+$x_\lambda$). De même, pour tout $x'\in U_\lambda$, le morphisme
+$U_\lambda\cap f^{-1}(f(x'))\to p^{-1}(f(x'))$ déduit de $g$ est un
+$k(f(x'))$-morphisme quasi-fini, donc (4.1.2) on a
+$\dim(f^{-1}(f(x'))\cap U_\lambda)\leq e$~; mais par ailleurs on sait (13.1.6)
+que toutes les composantes irréductibles de
+$U_\lambda\cap f^{-1}(f(x'))$ sont de dimension $\geq e$~; on voit ainsi que
+ces composantes sont exactement de dimension $e$, donc $b$) entraîne $a$).
+C.Q.F.D.
+\end{proof}
+
+\begin{definition}[13.3.2]
+\label{IV.13.3.2-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme localement de type fini, $x$
+un point de $X$. On dit que $f$ est équidimensionnel au point $x$ (ou que $X$
+est équidimensionnel sur $Y$ au point $x$) si les conditions équivalentes de
+(13.3.1) sont vérifiées. On dit que $f$ est équidimensionnel (ou que $X$ est
+équidimensionnel sur $Y$) si $f$ est équidimensionnel en tout point $x\in X$.
+\end{definition}
+
+Il est clair que, pour que $f$ soit équidimensionnel en un point $x$, il faut
+et il suffit que $f_{\mathrm{red}}$ le soit. En outre, les conditions de
+(13.3.1) montrent que l'ensemble des points où $f$ est équidimensionnel est
+\emph{ouvert} dans $X$.
+
+On notera que lorsque $X$ et $Y$ sont \emph{irréductibles}, dire que $f$ est
+équidimen-
+\oldpage[IV-3]{197}
+sionnel au point $x$ signifie, en vertu de (13.3.1, $a''$)), que $f$ est
+dominant et que
+$\dim_x(f^{-1}(f(x)))=\dim(f^{-1}(\eta))$ (où $\eta$ est le point générique de
+$Y$)~; la définition (13.3.2) coïncide donc dans ce cas avec la définition
+(13.2.2).
+
+\begin{proposition}[13.3.3]
+\label{IV.13.3.3-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+localement de type fini, $x$ un point de $X$, $X_j$ les composantes
+irréductibles de $X$ (en nombre fini) contenant $x$. Pour que $f$ soit
+équidimensionnel au point $x$, il faut et il suffit que, pour tout $j$,
+$Y_j=\overline{f(X_j)}$ soit une composante irréductible de $Y$ et, en
+désignant par $X_j$ et $Y_j$ les sous-préschémas fermés réduits de $X$ et $Y$
+d'espaces sous-jacents $X_j$ et $Y_j$, par $f_j:X_j\to Y_j$ le morphisme
+déduit de $f$ (\textbf{I}, 5.2.2), par $y_j$ le point générique de $Y_j$, que
+$f_j$ soit équidimensionnel au point $x$ et que tous les nombres
+$\dim(f_j^{-1}(y_j))$ soient égaux.
+\end{proposition}
+
+Cela résulte aussitôt de (13.3.1, $a'$)).
+
+\begin{corollary}[13.3.4]
+\label{IV.13.3.4-fr}
+Avec les notations de (13.3.3), posons $y=f(x)$. Si $\mathcal O_{Y,y}$ est un
+anneau universellement caténaire et si $f$ est équidimensionnel au point $x$,
+on a
+\[
+\tag{13.3.4.1}
+\label{IV.13.3.4.1-fr}
+  \dim(\mathcal O_{X_j,x})=\dim(\mathcal O_{Y_j,y})+e
+  -\deg.\operatorname{tr}_{k(y)}k(x)
+\]
+où $e$ est la valeur commune des nombres $\dim(f_j^{-1}(y_j))$.
+\end{corollary}
+
+Comme chacun des $\mathcal O_{Y_j,y}$, quotient de $\mathcal O_{Y,y}$, est un
+anneau universellement caténaire (5.6.1), l'égalité est conséquence de (5.6.5).
+
+\begin{corollary}[13.3.5]
+\label{IV.13.3.5-fr}
+Avec les notations de (13.3.4), supposons que $f$ soit équidimensionnel au
+point $x$ et que $\mathcal O_{Y,y}$ soit un anneau universellement caténaire.
+Si l'anneau $\mathcal O_{Y,y}$ est équidimensionnel, il en est de même de
+$\mathcal O_{X,x}$~; la réciproque est vraie si l'image par $f$ de la réunion
+des $X_j$ est dense dans un voisinage de $y$.
+\end{corollary}
+
+En effet, dire que $\mathcal O_{Y,y}$ est équidimensionnel signifie que les
+nombres $\dim(\mathcal O_{Y'_i,y})$ sont égaux pour toutes les composantes
+irréductibles $Y'_i$ de $Y$ contenant $y$, comme il résulte de (5.1.1.5)
+appliqué au schéma local $\operatorname{Spec}(\mathcal O_{Y,y})$~; comme on a
+la relation (13.3.4.1), il en résulte par le même raisonnement que
+$\mathcal O_{X,x}$ est alors équidimensionnel. Inversement, si
+$\mathcal O_{X,x}$ est équidimensionnel, tous les nombres
+$\mathcal O_{Y_j,y}$ sont égaux par (13.3.4.1)~; on en déduit que
+$\mathcal O_{Y,y}$ est équidimensionnel si les $Y_j$ sont \emph{toutes} les
+composantes irréductibles de $Y$ contenant $y$, ce qui résulte de l'hypothèse
+supplémentaire.
+
+\begin{proposition}[13.3.6]
+\label{IV.13.3.6-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+localement de type fini, $x$ un point de $X$, $y=f(x)$. Supposons que l'anneau
+$\mathcal O_y$ soit équidimensionnel. Alors, si $\mathcal O_x$ est
+équidimensionnel et si l'on a l'égalité
+\[
+\tag{13.3.6.1}
+\label{IV.13.3.6.1-fr}
+  \dim(\mathcal O_x)=\dim(\mathcal O_y)
+  +\dim(\mathcal O_x\otimes_{\mathcal O_y}k(y))
+\]
+(cf. (13.2.7.1)) $f$ est équidimensionnel au point $x$, et la réciproque est
+vraie si $\mathcal O_y$ est un anneau universellement caténaire.
+\end{proposition}
+
+Gardons les notations de (13.3.3)~; il résulte de (13.2.8) et de l'hypothèse
+que $\mathcal O_x$ est équidimensionnel, que chacun des $Y_j$ est une
+composante irréductible de $Y$ et que chacun des $f_j$ est équidimensionnel au
+point $x$~; en outre (13.2.8), on a (compte tenu de (5.6.5))
+\[
+  \dim(\mathcal O_{X_j,x})=\dim(\mathcal O_{Y_j,y})
+  +\dim_x(X_j\cap f^{-1}(y))-\deg.\operatorname{tr}_{k(y)}k(x).
+\]
+
+\oldpage[IV-3]{198}
+Or, comme $\mathcal O_y$ est supposé équidimensionnel, cette égalité s'écrit
+\[
+\tag{13.3.6.2}
+\label{IV.13.3.6.2-fr}
+  \dim_x(X_j\cap f^{-1}(y))=\dim(\mathcal O_{X,x})
+  -\dim(\mathcal O_{Y,y})+\deg.\operatorname{tr}_{k(y)}k(x).
+\]
+Le premier membre de (13.3.6.2) est donc indépendant de $j$~; mais comme $f_j$
+est équidimensionnel au point $x$, on a
+$\dim_x(X_j\cap f^{-1}(y))=\dim(f_j^{-1}(y_j))$, donc le critère (13.3.3)
+montre que $f$ est équidimensionnel au point $x$.
+
+Inversement, supposons que $\mathcal O_{Y,y}$ soit un anneau universellement
+caténaire et que $f$ soit équidimensionnel au point $x$~; alors (13.3.5)
+$\mathcal O_{X,x}$ est équidimensionnel, et il résulte alors de (13.3.4) que
+l'on a la relation
+\[
+  \dim(\mathcal O_{X,x})=\dim(\mathcal O_{Y,y})+e
+  -\deg.\operatorname{tr}_{k(y)}k(x)
+\]
+où $e$ est la valeur commune des nombres
+$\dim(f_j^{-1}(y_j))=\dim_x(X_j\cap f^{-1}(y))$~; mais par définition $e$ est
+aussi égal à $\dim_x(f^{-1}(y))$, d'où la relation (13.3.6.1), compte tenu de
+(5.6.5.2).
+
+\begin{proposition}[13.3.7]
+\label{IV.13.3.7-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme localement de type fini et
+équidimensionnel, $Z$ une partie fermée de $X$. Alors la fonction
+\[
+\tag{13.3.7.1}
+\label{IV.13.3.7.1-fr}
+  x\longmapsto\operatorname{codim}_x
+  (Z\cap f^{-1}(f(x)),f^{-1}(f(x)))
+\]
+est semi-continue inférieurement dans $X$.
+\end{proposition}
+
+Comme toutes les composantes irréductibles de $f^{-1}(f(x))$ contenant $x$
+ont par hypothèse la même dimension (13.3.1), on a, en vertu de (5.2.1),
+\[
+  \operatorname{codim}_x(Z\cap f^{-1}(f(x)),f^{-1}(f(x)))
+  =\dim_x(f^{-1}(f(x)))-\dim_x(Z\cap f^{-1}(f(x))).
+\]
+Mais par hypothèse le premier terme du second membre est fonction
+\emph{continue} de $x$ (13.3.1) et le second est fonction semi-continue
+supérieurement de $x$ en vertu de (13.3.3)~; d'où la conclusion.
+
+\begin{proposition}[13.3.8]
+\label{IV.13.3.8-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme localement de type fini, $x$
+un point de $X$. Soient $Y'$ un préschéma, $g:Y'\to Y$ un morphisme plat,
+$X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$~; si $f$ est équidimensionnel au
+point $x$, alors $f'$ est équidimensionnel en tout point $x'\in X'$ au-dessus
+de $x$.
+\end{proposition}
+
+La question étant locale sur $X$ et $Y$, on peut se borner au cas où toute
+composante irréductible de $X$ (resp. $Y$) contient $x$ (resp. $y$)~; comme
+l'image par $f$ de toute composante irréductible de $X$ est alors dense dans
+une composante irréductible de $Y$ (13.3.1), on sait (2.3.5) que l'image par
+$f'$ de toute composante irréductible de $X'$ est dense dans une composante
+irréductible de $Y'$. D'autre part, par transitivité des fibres
+(\textbf{I}, 3.6.4), il résulte de (4.2.8) et de (13.3.1) que, pour tout
+$z'\in X'$, l'ensemble des dimensions des composantes irréductibles de
+${f'}^{-1}(f'(z'))$ est le même que l'ensemble des dimensions des composantes
+irréductibles de $f^{-1}(f(z))$, où $z$ est la projection de $z'$ dans $X$~;
+d'où la conclusion en vertu de (13.3.1, $a$)).
+
+\begin{remark}[13.3.9]
+\label{IV.13.3.9-fr}
+La propriété d'équidimensionnalité d'un morphisme $f:X\to Y$ n'est \emph{pas}
+stable par changement de base quelconque $g:Y'\to Y$, même lorsque $g$ est
+l'injection canonique d'une composante irréductible $Y'$ de $Y$ dans $Y$
+($Y'$ étant
+
+\oldpage[IV-3]{199}
+considérée comme sous-préschéma fermé réduit de $Y$). Par exemple, soient $k$
+un corps, $A_0=k[S,T]$ l'anneau de polynômes à deux indéterminées,
+$\mathfrak a=\mathfrak p_1\mathfrak p_2$, où $\mathfrak p_1$ et
+$\mathfrak p_2$ sont les idéaux premiers $A_0S$ et $A_0T$ de $A_0$~; soient
+$A=A_0/\mathfrak a$ et $Y=\operatorname{Spec}(A)$, qui a deux composantes
+irréductibles $Y_1=\operatorname{Spec}(A/\mathfrak p_1)$,
+$Y_2=\operatorname{Spec}(A/\mathfrak p_2)$~; prenons $X=Y_1$,
+$f:X\to Y$ étant l'injection canonique, qui est évidemment un morphisme
+équidimensionnel. Prenons d'autre part $Y'=Y_2$, $g:Y'\to Y$ étant l'injection
+canonique~; alors on a
+$X'=X\times_Y Y'=\operatorname{Spec}((A/\mathfrak p_1)\otimes_A
+(A/\mathfrak p_2))=\operatorname{Spec}(A/(\mathfrak p_1+\mathfrak p_2))$,
+et $\mathfrak p_1+\mathfrak p_2$ est un idéal maximal de $A$, donc $X'$ est
+réduit à un point, et le morphisme $f':X'\to Y'$ n'est \emph{pas dominant},
+l'image par $f'$ de l'unique point de $X'$ étant un point fermé de $Y'$~;
+donc $f'$ n'est pas équidimensionnel.
+
+On peut aussi donner un contre-exemple où $X$ et $Y$ sont \emph{intègres}, $f$
+\emph{fini} et \emph{birationnel} (et \emph{a fortiori} équidimensionnel par
+(13.3.1, $b$)), $g:Y'\to Y$ \emph{fini et dominant}. Soient $A$ et
+$\overline A$ les anneaux locaux définis dans (\textbf{II}, 7.5), et prenons
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(\overline A)$~; d'autre
+part, avec les notations de (\textbf{II}, 7.5), prenons
+$Y'=\operatorname{Spec}(\overline B)$~; alors
+$X'=\operatorname{Spec}(\overline A\otimes_A\overline B)
+=\operatorname{Spec}(\overline B\otimes_B\overline B)$~; mais on vérifie
+aussitôt que $\overline B\otimes_B\overline B$ est composé direct des anneaux
+$B/\mathfrak p'$, $B/\mathfrak p''$ et de deux anneaux isomorphes à
+$B/\mathfrak n$, dont les spectres sont donc réduits à un point~; comme les
+projections de ces points sont des points fermés de $Y'$, ici encore on voit
+que $f'$ ne transforme pas une composante irréductible de $X'$ en une partie
+partout dense d'une composante irréductible de $Y'$, donc $f'$ n'est pas
+équidimensionnel.
+
+Dans cet exemple, l'anneau $A$ n'est pas géométriquement unibranche~; nous
+allons voir au paragraphe suivant (14.4.6) que de tels phénomènes ne peuvent se
+produire lorsque les points de $Y$ sont \emph{géométriquement unibranches}. Le
+manque de stabilité de la notion de morphisme équidimensionnel restreint
+grandement son intérêt, au profit de la notion de morphisme universellement
+ouvert, qui va être étudiée en détail au paragraphe suivant.
+\end{remark}
+
+% IV3_B28_P199_END_BEFORE_SECTION_14

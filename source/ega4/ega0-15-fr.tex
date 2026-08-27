@@ -1,0 +1,865 @@
+\section{Suites \texorpdfstring{$M$}{M}-régulières et suites
+\texorpdfstring{$\mathscr F$}{F}-régulières}
+\label{section:0.15-fr}
+
+\subsection{Suites \texorpdfstring{$M$}{M}-régulières et suites
+\texorpdfstring{$M$}{M}-quasi-régulières}
+\label{subsection:0.15.1-fr}
+\label{0.15.1-fr}
+
+\begin{env}[15.1.1]
+\label{0.15.1.1-fr}
+\oldpage[0\textsubscript{IV-1}]{12}
+Soient $A$ un anneau, $N$ un $A$-module~; dans ce qui suit, nous noterons
+$N[T_1,\ldots,T_n]$, pour abréger, le $A$-module gradué
+$N\otimes_A A[T_1,\ldots,T_n]$ ($T_i$ indéterminées), où $N$ est gradué par la
+graduation triviale et $A[T_1,\ldots,T_n]$ par le degré total.
+
+Soient $M$ un $A$-module, $f_i$ ($1\leq i\leq n$) des éléments de $A$,
+$\mathfrak{J}=\sum_{i=1}^n f_iA$ l'idéal de $A$ engendré par les $f_i$, et
+munissons $M$ de la filtration $\mathfrak{J}$-préadique~; on définit alors un
+\emph{homomorphisme gradué surjectif de $A$-modules gradués}, de degré $0$,
+\[
+  \varphi : (\gr_0(M))[T_1,\ldots,T_n]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.1.1}\label{0.15.1.1.1-fr}
+\]
+de la façon suivante~: si $\xi\in\gr_0(M)$ est la classe mod.
+$\mathfrak{J}M$ d'un élément $x\in M$, au couple formé de $\xi$ et d'un
+polynôme $P[T_1,\ldots,T_n]$ homogène de degré $k$, on fait correspondre la
+classe mod. $\mathfrak{J}^{k+1}M$ de $P(f_1,\ldots,f_n)x$~; il est immédiat
+que cette classe
+\oldpage[0\textsubscript{IV-1}]{13}
+ne dépend que de $\xi$ et de $P$, et si $S_k$ est l'ensemble des polynômes
+homogènes de degré $k$ dans $A[T_1,\ldots,T_n]$, on a ainsi défini une
+application $A$-linéaire
+\[
+  \varphi_k:\gr_0(M)\otimes_A S_k\longrightarrow\gr_k(M),
+\]
+qui est surjective par définition de $\mathfrak{J}^kM$.
+
+Nous dirons dans ce qui suit qu'un élément $f\in A$ est \emph{non diviseur de
+zéro dans un $A$-module $M$} si l'homothétie $f_M:x\mapsto fx$ de $M$ est
+\emph{injective}.
+\end{env}
+
+\begin{lemma}[15.1.2]
+\label{0.15.1.2-fr}
+Soient $M$ un $A$-module, $f$ un élément de $A$, et munissons $M$ de la
+filtration $(fA)$-préadique. Si $f$ est non diviseur de zéro dans $M$,
+l'homomorphisme canonique défini dans (15.1.1)~:
+\[
+  \varphi:(M/fM)[T]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.2.1}\label{0.15.1.2.1-fr}
+\]
+est bijectif. La réciproque est vraie si $M$ est séparé pour la topologie
+$(fA)$-préadique.
+\end{lemma}
+
+\begin{proof}
+On a ici $\gr_k(M)=f^kM/f^{k+1}M$~; dire que $\varphi$ est injective signifie
+que pour tout $x\in M$ et tout $k$, la relation $f^kx\in f^{k+1}M$ implique
+$x\in fM$~; il est clair qu'il en est bien ainsi si $f$ est non diviseur de
+zéro dans $M$. Inversement, remarquons que l'homothétie
+$f_M:x\mapsto fx$ définit par passage aux quotients, des homomorphismes
+$\gr_k(M)\to\gr_{k+1}(M)$, donc un homomorphisme gradué $g$ de degré $1$ de
+$\gr_\bullet(M)$ dans lui-même~; et dire que $\varphi$ est injectif exprime
+encore que $g$ est injectif. Si on suppose la filtration de $M$ séparée, il en
+résulte que $f_M$ est injective (Bourbaki, \emph{Alg.~comm.}, chap.~III,
+\S~2, no~8, cor.~1 du th.~1).
+\end{proof}
+
+\begin{corollary}[15.1.3]
+\label{0.15.1.3-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini. Pour que $f$
+soit non diviseur de zéro dans $M$, il faut et il suffit que $\varphi$ soit
+bijectif.
+\end{corollary}
+
+\begin{proof}
+On doit seulement démontrer que la condition est suffisante~; pour prouver
+que $f_M$ est injective, il suffit de montrer que pour tout idéal premier
+$\mathfrak p$ de $A$, l'homothétie de rapport
+$f'=f/1\in A'=A_{\mathfrak p}$ dans le $A_{\mathfrak p}$-module
+$M_{\mathfrak p}=M'$ est injective (Bourbaki, \emph{Alg.~comm.}, chap.~II,
+\S~3, no~4, th.~1). Or on a
+$f'^kM'/f'^{k+1}M'=(f^kM/f^{k+1}M)\otimes_A A'$, et il est immédiat que
+l'homomorphisme canonique
+$\varphi':(M'/f'M')[T]\to\gr_\bullet(M')$ est égal à
+$\varphi\otimes 1_{A'}$~; si $\varphi$ est injectif, il en est donc de même de
+$\varphi'$ ($0_{\mathrm I}$, 1.3.2). On est donc ramené au cas où $A$ est un
+anneau noethérien \emph{local}, dont nous désignerons par $\mathfrak m$
+l'idéal maximal. Si $f\notin\mathfrak m$, alors $f$ est inversible et il n'y a
+rien à démontrer. Si $f\in\mathfrak m$, on sait que $M$ est séparé pour la
+topologie $(fA)$-préadique ($0_{\mathrm I}$, 7.3.5), et il suffit donc
+d'appliquer (15.1.2).
+\end{proof}
+
+\begin{definition}[15.1.4]
+\label{0.15.1.4-fr}
+Soient $A$ un anneau, $M$ un $A$-module. On dit qu'un élément $f\in A$ est
+\emph{$M$-régulier} (resp. \emph{$M$-quasi-régulier}) si $f$ est non diviseur
+de zéro dans $M$ (resp. si l'homomorphisme (15.1.2.1) est bijectif).
+\end{definition}
+
+Nous venons donc de démontrer que tout élément $M$-régulier est
+$M$-quasi-régulier, et que la réciproque est vraie si $A$ est noethérien et
+$M$ un $A$-module de type fini. Lorsqu'on ne suppose plus $M$ de type fini,
+cette réciproque peut être en défaut~: par exemple, si $A$ est un anneau
+principal qui n'est pas un corps, $K$ son corps des fractions et $M$ le
+$A$-module $K/A$, on a $fM=M$ pour tout $f\neq0$ dans $A$, donc les deux
+membres de (15.1.2.1) sont réduits à $0$, mais $f$ est alors diviseur de zéro
+dans $M$.
+
+\begin{env}[15.1.5]
+\label{0.15.1.5-fr}
+\oldpage[0\textsubscript{IV-1}]{14}
+Supposons maintenant $M$ muni d'une \emph{filtration} $(M_k)$ telle que
+$M_0=M$, et désignons par
+$\gr_\bullet(M)=\bigoplus_{k\geq0}M_k/M_{k+1}$ le $A$-module gradué associé.
+Les notations étant celles de (15.1.1), posons, pour tout $k\geq0$,
+\[
+  M'_k=M_k+\mathfrak{J}M_{k-1}+\cdots+
+  \mathfrak{J}^{k-1}M_1+\mathfrak{J}^kM_0.
+  \tag{15.1.5.1}\label{0.15.1.5.1-fr}
+\]
+Il est clair que $(M'_k)$ est une filtration sur $M$. Lorsque
+$M_k=\mathfrak{Q}^kM$, où $\mathfrak Q$ est un idéal de $A$, la filtration
+$(M'_k)$ n'est autre que la filtration
+$(\mathfrak{J}+\mathfrak{Q})$-préadique. Nous noterons
+$\gr'_\bullet(M)$ le $A$-module gradué associé à $(M'_k)$. Notons encore
+\[
+  (\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))[T_1,\ldots,T_n]
+\]
+le produit tensoriel de $A$-modules gradués ($\mathrm{II}$, 2.1.2)
+\[
+  (\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))
+  \otimes_A A[T_1,\ldots,T_n].
+\]
+On définit un \emph{homomorphisme gradué surjectif de $A$-modules gradués}, de
+degré $0$,
+\[
+  \psi:(\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))[T_1,\ldots,T_n]
+  \longrightarrow\gr'_\bullet(M)
+  \tag{15.1.5.2}\label{0.15.1.5.2-fr}
+\]
+de la façon suivante~: si $\alpha\in A/\mathfrak{J}$ est la classe d'un
+élément $a\in A$, $\xi\in M_k/M_{k+1}$ la classe d'un élément $x\in M_k$ et
+$P[T_1,\ldots,T_n]$ un polynôme homogène de degré $h$, on fait correspondre au
+triplet $(\alpha,\xi,P)$ la classe mod. $M'_{h+k+1}$ de
+$P(f_1,\ldots,f_n)ax$~; on vérifie encore aussitôt que cet élément ne dépend
+bien que de $\xi$, $\alpha$ et $P$, et cela définit l'homomorphisme gradué
+(15.1.5.2), qui est surjectif en vertu de la définition (15.1.5.1). On
+retrouve l'homomorphisme (15.1.1.1) en considérant la filtration sur $M$ telle
+que $M_1=0$.
+\end{env}
+
+\begin{lemma}[15.1.6]
+\label{0.15.1.6-fr}
+On garde les notations de (15.1.5) et on suppose $n=1$, en posant $f=f_1$. Si
+$f$ est $\gr_\bullet(M)$-régulier, l'homomorphisme (15.1.5.2) est bijectif.
+\end{lemma}
+
+\begin{proof}
+Soit $Q_k$ (resp. $Q'_k$) le sous-$A$-module des termes de degré $k$ au
+premier (resp. second) membre de (15.1.5.2). Munissons $Q_k$ de la filtration
+\[
+  (Q_k)_i=\sum_{j\leq k-i}
+  (\gr_{k-j}(M)\otimes_A(A/fA))T^j
+  \tag{15.1.6.1}\label{0.15.1.6.1-fr}
+\]
+de sorte que $(Q_k)_0=Q_k$ et $(Q_k)_{k+1}=0$, et pour cette filtration, on a
+\[
+  \gr_i(Q_k)=(\gr_i(M)\otimes_A(A/fA))T^{k-i}.
+\]
+Munissons $Q'_k$ de la filtration formée des
+$\psi((Q_k)_i)=(Q'_k)_i$. Comme ces filtrations sont \emph{finies}, il suffit
+de prouver que les homomorphismes
+$\psi_{ki}:\gr_i(Q_k)\to\gr_i(Q'_k)$ déduits de $\psi_k$ sont injectifs
+(Bourbaki, \emph{Alg.~comm.}, chap.~III, \S~3, no~8, cor.~1 du th.~1). Or on
+a
+\[
+  \gr_i(Q_k)=((M_i/M_{i+1})\otimes_A(A/fA))T^{k-i}~;
+\]
+d'autre part, $(Q'_k)_{i+1}$ est l'image de
+\[
+  M_k+fM_{k-1}+\cdots+f^{k-i-1}M_{i+1}
+\]
+\oldpage[0\textsubscript{IV-1}]{15}
+dans $M'_k/M'_{k+1}$. On est donc ramené à écrire que, pour $x\in M_i$, la
+relation
+\[
+  f^{k-i}x\in M_k+fM_{k-1}+\cdots+
+  f^{k-i-1}M_{i+1}+M'_{k+1}
+  \tag{15.1.6.2}\label{0.15.1.6.2-fr}
+\]
+implique $x\in fM_i+M_{i+1}$. Or, le second membre de (15.1.6.2) est contenu
+dans $M_{i+1}+M'_{k+1}$, et en vertu de (15.1.5.1), $M'_{k+1}$ est contenu
+dans $M_{i+1}+f^{k+1-i}M$. L'hypothèse sur $f$ entraîne que $f$ est non
+diviseur de zéro dans $M/M_h$ pour tout $h$ (Bourbaki, \emph{loc.~cit.}). La
+relation $f^{k-i}x\in f^{k+1-i}M+M_{i+1}$ entraîne donc (en raisonnant dans
+$M/M_{i+1}$) l'existence d'un $y\in M$ tel que $x-fy\in M_{i+1}$, et comme
+$x\in M_i$, on a $fy\in M_i$, d'où (en raisonnant dans $M/M_i$), $y\in M_i$,
+et finalement $x\in fM_i+M_{i+1}$. C.Q.F.D.
+\end{proof}
+
+\begin{definition}[15.1.7]
+\label{0.15.1.7-fr}
+Soit $(f_i)_{1\leq i\leq n}$ une suite d'éléments de $A$. On dit qu'elle est
+\emph{$M$-régulière} si, pour $1\leq i\leq n$, $f_i$ est
+$\left(M/(\sum_{1\leq j\leq i-1}f_jM)\right)$-régulier. On dit que la suite
+$(f_i)$ est \emph{$M$-quasi-régulière} si
+l'homomorphisme canonique $\varphi$ défini dans (15.1.1.1) est bijectif.
+
+Lorsque $M=A$, on dit simplement «~suite régulière~» et
+«~suite quasi-régulière~».
+\end{definition}
+
+\begin{proposition}[15.1.8]
+\label{0.15.1.8-fr}
+Les notations étant celles de (15.1.5), on suppose que la suite
+$(f_i)_{1\leq i\leq n}$ est $\gr_\bullet(M)$-régulière. Alors
+l'homomorphisme canonique (15.1.5.2) est bijectif.
+\end{proposition}
+
+\begin{proof}
+La proposition n'est autre que (15.1.6) pour $n=1$~; raisonnons par récurrence
+sur $n$. Posons
+\[
+  \mathfrak{J}''=\sum_{i=1}^{n-1}f_iA,
+\]
+de sorte que $\mathfrak{J}=\mathfrak{J}''+f_nA$, et soit
+\[
+  M''_k=M_k+\mathfrak{J}''M_{k-1}+\cdots+
+  \mathfrak{J}''^{k-1}M_1+\mathfrak{J}''^kM_0~;
+\]
+on peut donc écrire
+\[
+  M'_k=M''_k+f_nM''_{k-1}+\cdots+f_n^{k-1}M''_1+f_n^kM''_0.
+\]
+Notons $\gr''_\bullet(M)$ le $A$-module gradué associé à la filtration
+$(M''_k)$ de $M$. On peut écrire, à des isomorphismes canoniques près
+\[
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}))\otimes_A A[T_1,\ldots,T_n]
+  =
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}''))[T_1,\ldots,T_{n-1}]
+  \otimes(A/f_nA)\otimes_A A[T_n]
+\]
+et par suite (15.1.5.2) se factorise en
+\[
+  (\gr''_\bullet(M)\otimes(A/f_nA))[T_n]\longrightarrow\gr'_\bullet(M)
+  \tag{15.1.8.1}\label{0.15.1.8.1-fr}
+\]
+et
+\[
+  ((\gr_\bullet(M)\otimes(A/\mathfrak{J}''))[T_1,\ldots,T_{n-1}])
+  \otimes(A/f_nA)\otimes_A A[T_n]
+  \xrightarrow{\psi'\otimes1}
+  \gr''_\bullet(M)\otimes(A/f_nA)\otimes_A A[T_n]
+\]
+$\psi'$ étant l'application (15.1.5.2) où l'on remplace $n$ par $n-1$,
+$\mathfrak{J}$ par $\mathfrak{J}''$ et $\gr'_\bullet(M)$ par
+$\gr''_\bullet(M)$. L'hypothèse de récurrence entraîne que $\psi'$ est
+bijective et il reste donc à voir qu'il en est de même de (15.1.8.1). En
+appliquant (15.1.6), il suffit de montrer que $f_n$ est
+$\gr''_\bullet(M)$-régulier. Mais $\gr''_\bullet(M)$ s'identifie à
+\[
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}''))
+  [T_1,\ldots,T_{n-1}]~;
+\]
+par hypothèse, l'homothétie de rapport $f_n$ dans
+$\gr_\bullet(M)\otimes(A/\mathfrak{J}'')$ est bijective~; il en est par suite
+de même de l'homothétie de rapport $f_n$ dans $\gr''_\bullet(M)$, puisque
+$A[T_1,\ldots,T_{n-1}]$ est un $A$-module libre.
+\end{proof}
+
+\begin{proposition}[15.1.9]
+\label{0.15.1.9-fr}
+Soient $M$ un $A$-module, $(f_i)_{1\leq i\leq n}$ une suite d'éléments de $A$.
+Si la suite $(f_i)$ est $M$-régulière, elle est $M$-quasi-régulière. La
+réciproque est vraie lorsqu'on suppose en outre que les $A$-modules
+\[
+  M,\quad M/f_1M,\quad\ldots,\quad
+  M/\left(\sum_{1\leq j\leq n-1}f_jM\right)
+\]
+sont séparés pour la topologie $\mathfrak{J}$-préadique (où
+$\mathfrak{J}=\sum_{i=1}^n f_iA$).
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de (15.1.8), où l'on prend $M_1=0$, et par suite
+l'homomorphisme (15.1.5.2) se réduit à (15.1.1.1). Inversement, supposons que
+l'homomorphisme $\varphi$ de (15.1.1.1) soit bijectif. Notons que si on pose
+\[
+  \mathfrak{J}''=\sum_{i=1}^{n-1}f_iA,
+\]
+\oldpage[0\textsubscript{IV-1}]{16}
+et si on désigne par $\gr''_\bullet(M)$ le $A$-module gradué associé à $M$
+filtré par la filtration $\mathfrak{J}''$-préadique, $\varphi$ se factorise en
+\[
+  (\gr''_\bullet(M)\otimes(A/f_nA))[T_n]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.9.1}\label{0.15.1.9.1-fr}
+\]
+et en $\varphi'\otimes1$, où $\varphi'$ est l'homomorphisme canonique
+\[
+  (\gr''_0(M))[T_1,\ldots,T_{n-1}]
+  \longrightarrow\gr''_\bullet(M).
+\]
+Comme ces deux homomorphismes sont surjectifs, ils sont bijectifs si
+$\varphi$ est supposé bijectif, donc $\varphi'$ est nécessairement injectif,
+et par suite bijectif puisqu'il est surjectif. On peut alors raisonner par
+récurrence sur $n$ (le cas $n=1$ résultant de (15.1.2)), car sur
+\[
+  M,\quad M/f_1M,\quad\ldots,\quad
+  M/\left(\sum_{j=1}^{n-2}f_jM\right)
+\]
+la topologie $\mathfrak{J}''$-préadique est plus fine que la topologie
+$\mathfrak{J}$-préadique, et par suite est séparée. On voit donc que la suite
+$(f_i)_{1\leq i\leq n-1}$ est $M$-régulière. D'autre part, montrons que
+l'hypothèse entraîne que si $y\in M/\mathfrak{J}''M$ est tel que
+\[
+  f_n^ky\in f_n^{k+1}(M/\mathfrak{J}''M),
+\]
+alors on a $y\in f_n(M/\mathfrak{J}''M)$. En effet, si $x$ est un représentant
+de $y$, montrons que l'on a $f_n^kx\in\mathfrak{J}^{k+1}M$~; notre assertion
+résultera alors du fait que (15.1.9.1) est injectif. L'hypothèse entraîne
+\[
+  f_n^kx\in f_n^{k+1}M+\mathfrak{J}''M\subset\mathfrak{J}M,
+\]
+d'où, puisque $\varphi$ est injectif,
+$f_n^{k-1}x\in\mathfrak{J}^kM$~; par récurrence, on obtient ainsi
+$x\in\mathfrak{J}M$, d'où finalement
+$f_n^kx\in\mathfrak{J}^{k+1}M$. On termine le raisonnement comme dans
+(15.1.2)~: sur $M/\mathfrak{J}''M$, la filtration
+$\mathfrak{J}$-préadique est identique à la filtration
+$(f_nA)$-préadique, donc est séparée par hypothèse, et on conclut que
+l'homothétie de rapport $f_n$ dans $M/\mathfrak{J}''M$ est injective, ce qui
+achève de montrer que la suite $(f_i)_{1\leq i\leq n}$ est $M$-régulière.
+\end{proof}
+
+\begin{corollary}[15.1.10]
+\label{0.15.1.10-fr}
+Avec les notations de (15.1.9), supposons que pour tout $A$-module $N$ de type
+fini, $M\otimes_A N$ soit séparé pour la topologie
+$\mathfrak{J}$-préadique. Alors, pour que la suite $(f_i)$ soit
+$M$-régulière, il faut et il suffit qu'elle soit $M$-quasi-régulière.
+\end{corollary}
+
+On notera que l'hypothèse de (15.1.10) entraîne que, si la suite
+$(f_i)_{1\leq i\leq n}$ est $M$-régulière, il en est de même de la suite
+$(f_{\sigma(i)})$ pour toute permutation $\sigma$ de l'intervalle $[1,n]$.
+
+\begin{corollary}[15.1.11]
+\label{0.15.1.11-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini,
+$(f_i)_{1\leq i\leq n}$ une suite finie d'éléments contenus dans le radical de
+$A$. Alors, pour que la suite $(f_i)$ soit $M$-régulière, il faut et il suffit
+qu'elle soit $M$-quasi-régulière.
+\end{corollary}
+
+\begin{proof}
+C'est un cas particulier de (15.1.10), puisque tout $A$-module de type fini
+est alors séparé pour la topologie $\mathfrak{J}$-préadique
+($0_{\mathrm I}$, 7.3.5).
+\end{proof}
+
+\begin{remarks}[15.1.12]
+\label{0.15.1.12-fr}
+\mbox{}
+\begin{enumerate}
+  \item[(i)] Lorsque $A$ est un anneau local noethérien, $M$ un $A$-module de
+  type fini, et lorsque les $f_i$ sont contenus dans l'idéal maximal de $A$,
+  la notion de suite $M$-régulière a été introduite par J.-P.~Serre sous le
+  nom de $M$-\emph{suite} [17].
+  \item[(ii)] Même si $A$ est noethérien et $M=A$, une suite $(f,g)$ de deux
+  éléments de $A$ qui est quasi-régulière n'est pas nécessairement régulière.
+  Par exemple, la suite $(0,1)$ est quasi-régulière, puisqu'alors
+  $\mathfrak{J}=fA+gA=A$, donc $\gr_\bullet(A)=0$~; mais si $A\neq0$ elle
+  n'est pas régulière~; on notera toutefois que dans ce cas la suite $(1,0)$
+  est régulière, car $1$ n'est pas diviseur de $0$ dans $A$, et comme
+  $A/A=0$, $0$ n'est pas diviseur de zéro dans ce module (cf. (15.1.1)).
+  \item[(iii)]
+  \oldpage[0\textsubscript{IV-1}]{17}
+  Dans (15.1.6), on ne peut en général remplacer l'hypothèse que $f$ est
+  $\gr_\bullet(M)$-régulier par l'hypothèse qu'il est
+  $\gr_\bullet(M)$-quasi-régulier. Pour le voir, reprenons l'exemple (15.1.4)
+  où $A$ est un anneau principal de corps des fractions $K\neq A$ et prenons
+  $M=K$, la filtration $(M_k)$ de $M$ étant définie par
+  $M_0=M=K$, $M_1=A$, $M_k=0$ pour $k\geq2$, d'où
+  $\gr_0(M)=K/A$, $\gr_1(M)=A$, $\gr_k(M)=0$ pour $k\geq2$. Si $f\neq0$ dans
+  $A$, on a vu que $f$ n'est pas $\gr_\bullet(M)$-régulier, mais comme on a
+  \[
+    f^k\gr_\bullet(M)/f^{k+1}\gr_\bullet(M)=f^kA/f^{k+1}A,
+  \]
+  il est immédiat que l'homomorphisme (15.1.2.1) (où $M$ est remplacé par
+  $\gr_\bullet(M)$) est injectif, donc $f$ est
+  $\gr_\bullet(M)$-quasi-régulier. Mais avec les notations de (15.1.6), on a
+  alors $M'_k=K$ pour tout $k\geq0$, donc $\gr'_\bullet(M)=0$, tandis que le
+  premier membre de (15.1.5.2) n'est pas réduit à $0$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[15.1.13]
+\label{0.15.1.13-fr}
+Soient $A$ un anneau, $M$, $N$ deux $A$-modules, $(f_i)_{1\leq i\leq n}$ une
+suite d'éléments de $A$. Si la suite $(f_i)$ est $M$-régulière et si $N$ est
+un $A$-module plat, alors la suite $(f_i)$ est
+$M\otimes_A N$-régulière. La réciproque est vraie si $N$ est un $A$-module
+fidèlement plat.
+\end{proposition}
+
+\begin{proof}
+En effet (sans hypothèse sur $N$),
+\[
+  (M\otimes_A N)/
+  \left(\sum_{j=1}^{i-1}f_j(M\otimes_A N)\right)
+\]
+est isomorphe à
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A N~;
+\]
+il suffit alors d'appliquer ($0_{\mathrm I}$, 6.1.1) et
+($0_{\mathrm I}$, 6.4.1) à l'homothétie de rapport $f_i$ dans
+$M/(\sum_{j=1}^{i-1}f_jM)$.
+\end{proof}
+
+\begin{corollary}[15.1.14]
+\label{0.15.1.14-fr}
+Soient $A$ un anneau, $M$ un $A$-module, $(f_i)_{1\leq i\leq n}$ une suite
+finie d'éléments de $A$. Soient $\rho:A\to B$ un homomorphisme d'anneaux,
+$M'=M_{(B)}=M\otimes_A B$, $f'_i=\rho(f_i)$ pour $1\leq i\leq n$. Si $B$ est
+un $A$-module plat et si la suite $(f_i)$ est $M$-régulière, alors la suite
+$(f'_i)$ est $M'$-régulière~; la réciproque est vraie si $B$ est un
+$A$-module fidèlement plat.
+\end{corollary}
+
+\begin{proof}
+En effet,
+\[
+  M'/\left(\sum_{j=1}^{i-1}f'_jM'\right)
+\]
+s'identifie à
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A B,
+\]
+et l'homothétie de rapport $f'_i$ dans le $B$-module
+$M'/(\sum_{j=1}^{i-1}f'_jM')$ à l'homothétie de rapport $f_i$ dans le
+$A$-module
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A B~;
+\]
+l'assertion résulte donc de (15.1.13).
+\end{proof}
+
+\begin{proposition}[15.1.15]
+\label{0.15.1.15-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre commutative,
+$(f_i)_{1\leq i\leq n}$ une suite finie d'éléments de $B$, $M$ un
+$B$-module. Supposons que la suite $(f_i)$ soit $M$-régulière et que chacun
+des $A$-modules
+\[
+  M/\left(\sum_{j=1}^{i-1}f_jM\right)\quad(1\leq i\leq n)
+\]
+soit plat. Alors, pour tout homomorphisme d'anneaux $\rho:A\to A'$, si l'on
+pose $B'=B\otimes_A A'$, $M'=M\otimes_A A'$ et $f'_i=f_i\otimes1$
+($1\leq i\leq n$), la suite $(f'_i)$ est $M'$-régulière et les
+$A'$-modules
+\[
+  M'/\left(\sum_{j=1}^{i-1}f'_jM'\right)\quad(1\leq i\leq n)
+\]
+sont plats.
+\end{proposition}
+
+\begin{proof}
+Considérons la suite (exacte par hypothèse)
+\[
+  0\longrightarrow M\xrightarrow{f_1}M\longrightarrow M/f_1M
+  \longrightarrow0
+\]
+(la flèche $M\xrightarrow{f_1}M$ étant l'homothétie de rapport $f_1$ dans
+$M$). L'hypothèse que $M/f_1M$ est $A$-plat entraîne que la suite
+\[
+  0\longrightarrow M\otimes_A A'
+  \xrightarrow{f_1\otimes1}M\otimes_A A'
+  \longrightarrow(M/f_1M)\otimes_A A'\longrightarrow0
+\]
+\oldpage[0\textsubscript{IV-1}]{18}
+est exacte ($0_{\mathrm I}$, 6.1.2). Cela montre que l'homothétie de rapport
+$f'_1$ dans $M'$ est injective.
+
+Posons ensuite, pour $1\leq i\leq n-1$,
+\[
+  M_i=M/\left(\sum_{j=1}^i f_jM\right),\qquad
+  M'_i=M'/\left(\sum_{j=1}^i f'_jM'\right)~;
+\]
+on a $M'_i=M_i\otimes_A A'$, $M_i/f_{i+1}M_i=M_{i+1}$,
+$M'_i/f'_{i+1}M'_i=M'_{i+1}$~; il suffit de remplacer dans le raisonnement
+précédent $M$ et $f_1$ par $M_i$ et $f_{i+1}$ pour conclure que l'homothétie
+de rapport $f'_{i+1}$ dans $M'_i$ est injective, en raison de la platitude de
+$M_i/f_{i+1}M_i$. La dernière assertion résulte de ($0_{\mathrm I}$, 6.2.1).
+\end{proof}
+
+\begin{proposition}[15.1.16]
+\label{0.15.1.16-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $k$ le corps résiduel de
+$A$, $\varphi:A\to B$ un homomorphisme local, $M$ un $B$-module de type fini.
+Soit $(f_i)_{1\leq i\leq n}$ une suite d'éléments de l'idéal maximal de $B$,
+et pour tout $i$, soit $g_i$ l'image de $f_i$ dans $B\otimes_A k$. Les
+conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\rm(a)] La suite $(f_i)$ est $M$-régulière et les quotients
+  \[
+    M_i=M/\left(\sum_{j=1}^i f_jM\right)
+  \]
+  sont des $A$-modules plats pour $1\leq i\leq n$.
+  \item[\rm(b)] La suite $(f_i)$ est $M$-régulière et le $A$-module $M_n$ est
+  plat.
+  \item[\rm(c)] Le $A$-module $M$ est plat et la suite
+  $(g_i)_{1\leq i\leq n}$ est $(M\otimes_A k)$-régulière.
+  \item[\rm(d)] Le $A$-module $M$ est plat, et pour tout homomorphisme
+  d'anneaux $\rho:A\to A'$, si on pose $B'=B\otimes_A A'$,
+  $M'=M\otimes_A A'$, $f'_i=f_i\otimes1$ ($1\leq i\leq n$), la suite
+  $(f'_i)$ est $M'$-régulière.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que a) entraîne b)~; pour montrer que b) entraîne d), il suffit,
+en vertu de (15.1.15), de montrer que b) entraîne que les $M_i$ sont des
+$A$-modules plats pour $0\leq i\leq n-1$ (en posant $M_0=M$). Comme
+$M_{i+1}=M_i/f_{i+1}M_i$, on est ramené, par récurrence descendante, à prouver
+que si $h$ est un élément de l'idéal maximal de $B$ tel que l'homothétie de
+rapport $h$ dans $M$ soit injective et que $M/hM$ soit un $A$-module plat,
+alors $M$ est un $A$-module plat~; mais cela n'est autre que
+($0_{\mathrm{III}}$, 10.2.7). Il est clair que c) est le cas particulier de
+d) obtenu en prenant $A'=k$. Reste donc à prouver que c) entraîne a). Comme
+$M$ est un $A$-module plat et un $B$-module de type fini, il résulte de c) et
+de ($0_{\mathrm{III}}$, 10.2.4) que l'homothétie de rapport $f_1$ dans $M$
+est injective et que son conoyau $M/f_1M=M_1$ est un $A$-module plat.
+Raisonnons par récurrence sur $i$ et supposons démontré que $M_i$ est un
+$A$-module plat~; comme l'homothétie de rapport $g_{i+1}$ dans
+$M_i\otimes_A k$ est injective par hypothèse, il résulte encore de
+($0_{\mathrm{III}}$, 10.2.4) que l'homothétie de rapport $f_{i+1}$ dans
+$M_i$ est injective et que $M_i/f_{i+1}M_i=M_{i+1}$ est un $A$-module plat,
+ce qui achève la démonstration. On notera que la démonstration du fait que c)
+entraîne a) n'utilise pas le fait que les $f_i$ appartiennent à l'idéal
+maximal de $B$.
+\end{proof}
+
+\begin{corollary}[15.1.17]
+\label{0.15.1.17-fr}
+Les hypothèses sur $A$ et $B$ étant celles de (15.1.16), soient $M$ un
+$B$-module de type fini, plat sur $A$, $R$ un sous-$B$-module de $M$ tel que
+$N=M/R$ soit un $A$-module plat. Soit $(f_i)_{1\leq i\leq n}$ une suite
+d'éléments de l'idéal maximal de $B$ ayant les propriétés suivantes~:
+\begin{enumerate}
+  \item[(i)] $f_iM\subset R$ pour $1\leq i\leq n$.
+  \item[(ii)] Si $g_i$ est l'image de $f_i$ dans $B\otimes_A k$, la suite
+  $(g_i)_{1\leq i\leq n}$ est $(M\otimes_A k)$-régulière.
+  \item[(iii)] La somme des sous-$(B\otimes_A k)$-modules
+  $g_i(M\otimes_A k)$ de $M\otimes_A k$ est l'image canonique de
+  $R\otimes_A k$ dans $M\otimes_A k$ (égale au noyau de l'homomorphisme
+  canonique $M\otimes_A k\to N\otimes_A k$).
+\end{enumerate}
+Alors la suite $(f_i)$ est $M$-régulière et l'on a
+$R=\sum_{i=1}^n f_iM$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{19}
+Comme $N$ est un $A$-module plat, il résulte de l'exactitude de la suite
+$0\to R\to M\to N\to0$ que la suite
+\[
+  0\longrightarrow R\otimes_A k\longrightarrow M\otimes_A k
+  \longrightarrow N\otimes_A k\longrightarrow0
+\]
+est exacte ($0_{\mathrm I}$, 6.1.2)~; on a donc
+$R\otimes_A k=\sum_i g_i(M\otimes_A k)$. Comme $M$ est un $B$-module de type
+fini et que $B$ est noethérien, $R$ est aussi un $B$-module de type fini,
+d'où $R=\sum_i f_iM$ en vertu du lemme de Nakayama, les $f_i$ appartenant à
+l'idéal maximal de $B$.
+\end{proof}
+
+\begin{lemma}[15.1.18]
+\label{0.15.1.18-fr}
+Soient $A$ un anneau, $M$ un $A$-module muni d'une filtration séparée et
+exhaustive $(M_k)_{k\geq0}$, et soit $f\in A$ un élément
+$\gr_\bullet(M)$-régulier. Alors~:
+\begin{enumerate}
+  \item[(i)] $f$ est $M$-régulier.
+  \item[(ii)] Pour tout $k$, on a $M_k\cap fM=fM_k$, et l'image canonique
+  $M'_k$ de $M_k$ dans $M'=M/fM$ est donc canoniquement isomorphe à
+  $M_k/fM_k$.
+  \item[(iii)] La suite
+  \[
+    0\longrightarrow M_{k+1}/fM_{k+1}\longrightarrow M_k/fM_k
+    \longrightarrow\gr_k(M)/f\cdot\gr_k(M)\longrightarrow0
+  \]
+  est exacte, et si l'on munit $M'$ de la filtration quotient $(M'_k)$,
+  $\gr_\bullet(M')$ est donc canoniquement isomorphe à
+  $\gr_\bullet(M)/f\cdot\gr_\bullet(M)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+L'assertion (i) résulte de l'hypothèse sur $f$ et de Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~2, no~8, cor.~1 du th.~1. Comme
+$\gr_\bullet(M/M_k)$ est facteur direct de $\gr_\bullet(M)$, $f$ est
+$\gr_\bullet(M/M_k)$-régulier pour tout $k$, donc $(M/M_k)$-régulier par
+(i), ce qui établit (ii). Pour prouver (iii), il suffit de voir que
+l'application $M_{k+1}/fM_{k+1}\to M_k/fM_k$ est injective~: or, si
+$x\in M_{k+1}$ est tel que $x\in fM_k$, il résulte de (ii) que
+$x\in fM_{k+1}$, ce qui achève de prouver le lemme.
+\end{proof}
+
+\begin{proposition}[15.1.19]
+\label{0.15.1.19-fr}
+Soient $A$ un anneau, $M$ un $A$-module muni d'une filtration
+$(M_k)_{k\geq0}$ telle que $M_0=M$, $(f_i)_{1\leq i\leq n}$ une suite
+$\gr_\bullet(M)$-régulière d'éléments de $A$. Supposons en outre que pour
+$0\leq i\leq n-1$, la filtration quotient de $(M_k)$ sur
+\[
+  M/\left(\sum_{j\leq i}f_jM\right)
+\]
+soit séparée. Alors la suite $(f_i)$ est $M$-régulière, et si l'on pose
+\[
+  M'=M/\left(\sum_{i\leq n}f_iM\right)
+\]
+et que l'on munit $M'$ de la filtration quotient de $(M_k)$,
+$\gr_\bullet(M')$ est canoniquement isomorphe à
+\[
+  \gr_\bullet(M)/
+  \left(\sum_{i\leq n}f_i\gr_\bullet(M)\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Pour $n=1$, la proposition résulte du lemme (15.1.18). Raisonnons par
+récurrence sur $n$, en posant
+\[
+  N=M/\left(\sum_{i\leq n-1}f_iM\right)
+\]
+et en désignant par $(N_k)$ la filtration quotient de $(M_k)$ sur $N$, qui
+est séparée par hypothèse~; en outre $\gr_\bullet(N)$ est isomorphe à
+\[
+  \gr_\bullet(M)/
+  \left(\sum_{i\leq n-1}f_i\gr_\bullet(M)\right).
+\]
+Par hypothèse $f_n$ est donc $\gr_\bullet(N)$-régulier, et il résulte donc du
+lemme (15.1.18) appliqué à $N$ que $f_n$ est $N$-régulier et
+$\gr_\bullet(M')$ isomorphe à
+$\gr_\bullet(N)/f_n\gr_\bullet(N)$, ce qui démontre la proposition.
+\end{proof}
+
+La proposition (15.1.19) s'appliquera en particulier pour les filtrations
+vérifiant l'une ou l'autre hypothèse suivante~:
+\begin{enumerate}
+  \item[$1^\circ$] La filtration $(M_k)$ est finie et séparée (puisque cela
+  entraîne $M_k=0$ pour $k$ assez grand)~;
+  \item[$2^\circ$] $A$ est un anneau noethérien, $\mathfrak{J}$ un idéal
+  contenu dans le radical de $A$, $M$ un $A$-module de type fini et $(M_k)$
+  la filtration $\mathfrak{J}$-préadique ($0_{\mathrm I}$, 7.3.5).
+\end{enumerate}
+
+\begin{corollary}[15.1.20]
+\label{0.15.1.20-fr}
+\oldpage[0\textsubscript{IV-1}]{20}
+Soient $A$ un anneau, $M$ un $A$-module, $(f_i)_{1\leq i\leq n}$ une suite
+$M$-régulière d'éléments de $A$. Alors, quels que soient les entiers
+$\nu_i\geq1$, la suite $(f_i^{\nu_i})$ est $M$-régulière et
+$M/(\sum_{i\leq n}f_i^{\nu_i}M)$ a une suite de composition dont les
+quotients sont isomorphes à $M/(\sum_{i\leq n}f_iM)$.
+\end{corollary}
+
+\begin{proof}
+Raisonnons par récurrence sur $n$~; pour $n=1$ les assertions sont immédiates
+puisque $f^jM/f^{j+1}M$ est isomorphe à $M/fM$, l'homothétie de rapport $f$
+dans $M$ étant injective par hypothèse. Posons alors
+\[
+  N=M/\left(\sum_{i\leq n-1}f_i^{\nu_i}M\right)~;
+\]
+par l'hypothèse de récurrence, $N$ admet une filtration finie $(N_k)$ pour
+laquelle les $\gr_k(N)$ sont isomorphes à
+$M/(\sum_{i\leq n-1}f_iM)$~; par hypothèse $f_n$ est donc
+$\gr_\bullet(N)$-régulier~; il résulte par suite de (15.1.19) que $f_n$ est
+$N$-régulier. Appliquant le cas $n=1$ démontré au début, on en conclut que
+$f_n^{\nu_n}$ est $N$-régulier et que $N/f_n^{\nu_n}N$ admet une suite de
+composition dont les quotients sont isomorphes à $N/f_nN$~; mais pour la
+filtration de $N/f_nN$ quotient de la filtration $(N_k)$,
+$\gr_k(N/f_nN)$ est isomorphe à $\gr_k(N)/f_n\gr_k(N)$ par (15.1.19) pour
+tout $k$, donc à $M/(\sum_{i\leq n}f_iM)$, ce qui prouve le corollaire.
+\end{proof}
+
+\begin{proposition}[15.1.21]
+\label{0.15.1.21-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $\varphi:A\to B$ un
+homomorphisme local, $M$ un $B$-module de type fini, $(f_i)_{1\leq i\leq n}$
+une suite $A$-régulière formée d'éléments de l'idéal maximal de $A$. Les
+propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $M$ est un $A$-module plat.
+  \item[b)] Si $\mathfrak{J}$ est l'idéal $\sum_{i\leq n}f_iA$,
+  $M/\mathfrak{J}M$ est un $A/\mathfrak{J}$-module plat et la suite $(f_i)$
+  est $M$-régulière.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Le fait que a) entraîne b) résulte de (15.1.13) et de
+($0_{\mathrm{III}}$, 10.2.2). Inversement, si la suite $(f_i)$ est
+$M$-régulière, elle est $M$-quasi-régulière (15.1.9), donc l'homomorphisme
+(15.1.1.1) est bijectif. Mais comme la suite $(f_i)_{1\leq i\leq n}$ est aussi
+supposée $A$-régulière, elle est $A$-quasi-régulière (15.1.9), et
+l'homomorphisme canonique (15.1.1.1) correspondant
+$(A/\mathfrak{J})[T_1,\ldots,T_n]\to\gr_\bullet(A)$ est bijectif. On en
+conclut que l'homomorphisme canonique ($0_{\mathrm{III}}$, 10.1.1.2)
+\[
+  \gr_0(M)\otimes_{A/\mathfrak{J}}\gr_\bullet(A)
+  \longrightarrow\gr_\bullet(M)
+\]
+est bijectif. La conclusion résulte alors de ($0_{\mathrm{III}}$, 10.2.2),
+les $f_i$ étant dans l'idéal maximal de $A$ et l'homomorphisme $\varphi$ étant
+local.
+\end{proof}
+
+\subsection{Suites \texorpdfstring{$\mathscr{F}$}{F}-régulières}
+\label{subsection:0.15.2-fr}
+
+\begin{env}[15.2.1]
+\label{0.15.2.1-fr}
+Soient $X$ un espace annelé, $\mathscr{F}$ un $\mathcal{O}_X$-Module,
+$f_i$ ($1\leq i\leq n$) une suite de sections de $\mathcal{O}_X$ au-dessus
+de $X$, $\mathscr{J}$ l'Idéal de $\mathcal{O}_X$ engendré par les $f_i$
+(image de $\mathcal{O}_X^n$ par l'homomorphisme
+$\mathcal{O}_X^n\to\mathcal{O}_X$ défini canoniquement par les $f_i$
+($0_{\mathrm I}$, 5.1.1)). Les sous-$\mathcal{O}_X$-Modules
+$\mathscr{J}^k\mathscr{F}$ définissent sur $\mathscr{F}$ une filtration, et
+on pose encore
+$\gr_k(\mathscr{F})=\mathscr{J}^k\mathscr{F}/\mathscr{J}^{k+1}\mathscr{F}$~;
+si $S_k$ est l'ensemble des polynômes homogènes de degré total $k$ dans
+l'anneau $\mathbb{Z}[T_1,\ldots,T_n]$, $S_k$ peut être considéré comme un
+faisceau simple sur $X$, et on définit comme dans (15.1.1) un homomorphisme
+canonique
+\[
+\label{0.15.2.1.1-fr}
+  \varphi_k:\gr_0(\mathscr{F})\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\mathscr{F}).
+\tag{15.2.1.1}
+\]
+\oldpage[0\textsubscript{IV-1}]{21}
+de la façon suivante~: pour tout ouvert $U$ de $X$ (ou d'une base de la
+topologie de $X$), on considère l'homomorphisme (15.1.1.1)
+\[
+  \varphi_{k,U}:\gr_0(\Gamma(U,\mathscr{F}))\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\Gamma(U,\mathscr{F}))
+\]
+défini par les $n$ sections $f_i|U\in\Gamma(U,\mathcal{O}_X)$, le
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\mathscr{F})$ étant filtré par les
+sous-modules $(\Gamma(U,\mathscr{J}))^k\Gamma(U,\mathscr{F})$. Le
+$\mathcal{O}_X$-Module $\gr_k(\mathscr{F})$ étant associé au préfaisceau
+$U\mapsto\gr_k(\Gamma(U,\mathscr{F}))$ pour tout $k$, les $\varphi_{k,U}$
+définissent un homomorphisme de $\mathcal{O}_X$-Modules (15.2.1.1). En vertu
+des propriétés d'exactitude des limites inductives de modules et de leur
+commutation aux produits tensoriels, il résulte de ce qui précède que pour
+tout $x\in X$, l'homomorphisme $(\varphi_k)_x$ des fibres des deux membres de
+(15.2.1.1) au point $x$ s'identifie à l'homomorphisme de (15.1.1)
+\[
+\label{0.15.2.1.2-fr}
+  \gr_0(\mathscr{F}_x)\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\mathscr{F}_x)
+\tag{15.2.1.2}
+\]
+défini par la suite $((f_i)_x)_{1\leq i\leq n}$ d'éléments de
+$\mathcal{O}_x$.
+\end{env}
+
+\begin{env}[15.2.2]
+\label{0.15.2.2-fr}
+Les notations étant celles de (15.2.1), nous dirons que la suite
+$(f_i)_{1\leq i\leq n}$ est $\mathscr{F}$-régulière si, en désignant par
+$f_j\mathscr{F}$ le sous-$\mathcal{O}_X$-Module de $\mathscr{F}$ image de
+l'endomorphisme de $\mathscr{F}$ défini par $f_j$, l'endomorphisme de
+$\mathscr{F}/(\sum_{j=1}^{i-1}f_j\mathscr{F})$ défini par $f_i$ est injectif
+pour $1\leq i\leq n$~; nous dirons que la suite $(f_i)$ est
+$\mathscr{F}$-quasi-régulière si les homomorphismes (15.2.1.1) sont injectifs.
+Il résulte de ces définitions et des remarques de (15.2.1) que pour que la
+suite $(f_i)$ soit $\mathscr{F}$-régulière (resp.
+$\mathscr{F}$-quasi-régulière), il faut et il suffit que, pour tout $x\in X$,
+la suite $((f_i)_x)_{1\leq i\leq n}$ soit $\mathscr{F}_x$-régulière (resp.
+$\mathscr{F}_x$-quasi-régulière). Toute suite $\mathscr{F}$-régulière est donc
+$\mathscr{F}$-quasi-régulière (15.1.9)~; la réciproque est vraie si
+$\mathscr{F}$ est un $\mathcal{O}_X$-Module de type fini, si les
+$\mathcal{O}_x$ sont des anneaux noethériens pour tout $x\in X$ et si en outre
+les $(f_i)_x$ appartiennent au radical de $\mathcal{O}_x$ pour tout $x\in X$
+(15.1.11).
+
+Si $X=\operatorname{Spec}(A)$ est un schéma affine, et
+$\mathscr{F}=\widetilde{M}$, il
+résulte de (I, 1.3) que pour que la suite $(f_i)$ soit
+$\mathscr{F}$-régulière (resp. $\mathscr{F}$-quasi-régulière), il faut et il
+suffit qu'elle soit $M$-régulière (resp. $M$-quasi-régulière).
+
+Lorsque $\mathscr{F}=\mathcal{O}_X$, on supprimera la mention de
+$\mathscr{F}$ dans les définitions précédentes.
+\end{env}
+
+\begin{remark}[15.2.3]
+\label{0.15.2.3-fr}
+Lorsque $X=\operatorname{Spec}(A)$ et
+$\mathfrak{J}=\sum_{i=1}^n f_iA$, la suite $(f_j)$ est
+quasi-régulière pour tout $A$-module $M$ dans tout ouvert $U$ ne rencontrant
+pas $V(\mathfrak{J})$, car en tout point $x\in U$, on a
+$\mathfrak{J}_x=\mathcal{O}_x$ et les deux membres de (15.2.1.2) sont nuls. La
+notion de suite $\widetilde{M}$-régulière n'a donc d'intérêt qu'au voisinage
+des points de $V(\mathfrak{J})$.
+\end{remark}
+
+\begin{proposition}[15.2.4]
+\label{0.15.2.4-fr}
+Soient $X$ un espace annelé, $\mathscr{F}$ un $\mathcal{O}_X$-Module cohérent,
+$x$ un point de $X$, $(f_i)_{1\leq i\leq n}$ une suite d'éléments de
+$\Gamma(X,\mathcal{O}_X)$. Si la suite $((f_i)_x)_{1\leq i\leq n}$ est
+$\mathscr{F}_x$-régulière, il existe un voisinage ouvert $U$ de $x$ tel que la
+suite $(f_i|U)_{1\leq i\leq n}$ soit $(\mathscr{F}|U)$-régulière.
+\end{proposition}
+
+\begin{proof}
+En effet, pour $1\leq i\leq n$, le $\mathcal{O}_X$-Module
+$\mathscr{F}/(\sum_{j=1}^{i-1}f_j\mathscr{F})$ est cohérent
+($0_{\mathrm I}$, 5.3.4), donc il en est de même du noyau de
+l'endomorphisme de ce $\mathcal{O}_X$-Module défini par $f_i$
+($0_{\mathrm I}$, 5.3.4)~; comme la fibre au point $x$ de ce noyau est nulle,
+il en est de même de sa restriction à un voisinage de $x$
+($0_{\mathrm I}$, 5.2.2).
+\end{proof}
+
+\begin{proposition}[15.2.5]
+\label{0.15.2.5-fr}
+\oldpage[0\textsubscript{IV-1}]{22}
+Soit $u=(\psi,\theta):X\to Y$ un morphisme plat d'espaces annelés
+($0_{\mathrm I}$, 6.7.1)~; soient $\mathscr{F}$ un
+$\mathcal{O}_Y$-Module, $\mathscr{G}=u^*(\mathscr{F})$,
+$(f_i)_{1\leq i\leq n}$ une suite d'éléments de
+$\Gamma(Y,\mathcal{O}_Y)$, $(g_i)_{1\leq i\leq n}$ la suite de leurs images
+$g_i=\theta(f_i)\in\Gamma(Y,u_*(\mathcal{O}_X))=\Gamma(X,\mathcal{O}_X)$. Si
+la suite $(f_i)$ est $\mathscr{F}$-régulière, la suite $(g_i)$ est
+$\mathscr{G}$-régulière. La réciproque est vraie si $u$ est un morphisme
+fidèlement plat ($0_{\mathrm I}$, 6.7.8).
+\end{proposition}
+
+\begin{proof}
+Soient $x$ un point de $X$, $y=u(x)=\psi(x)$~; on a
+\[
+  \mathscr{G}_x=\psi_x^*(\mathscr{F}_y)
+  \otimes_{\psi_x^*(\mathcal{O}_y)}\mathcal{O}_x,
+  \qquad\text{et}\qquad
+  (g_i)_x=\theta_x^\#(\psi_x^*((f_i)_y))~;
+\]
+comme par hypothèse
+$\theta_x^\#:\psi_x^*(\mathcal{O}_y)\to\mathcal{O}_x$ fait de
+$\mathcal{O}_x$ un $\psi_x^*(\mathcal{O}_y)$-module plat, et que le foncteur
+$\psi^*$ est exact, la première assertion résulte de l'assertion correspondante
+de (15.1.14)~; il en est de même de la seconde, compte tenu de ce que
+l'hypothèse que $u$ est fidèlement plat signifie que $\psi$ est surjectif et
+que $\theta_x^\#$ fait de $\mathcal{O}_x$ un
+$\psi_x^*(\mathcal{O}_y)$-module fidèlement plat.
+\end{proof}

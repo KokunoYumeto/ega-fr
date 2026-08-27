@@ -1,0 +1,2234 @@
+\subsection{Factorialité des anneaux locaux réguliers}
+\label{subsection:IV.21.11}
+\label{IV.21.11}
+
+\begin{theorem}[21.11.1]
+\label{IV.21.11.1}
+\textup{(Auslander-Buchsbaum)} ---
+Un anneau local noethérien régulier est factoriel.
+\end{theorem}
+
+\begin{proof}
+La démonstration qui suit est due à I.~Kaplansky.
+
+Soit $A$ un anneau local noethérien régulier de dimension $n$; nous allons raisonner
+par récurrence sur $n$. Pour $n=0$, $A$ est un corps et pour $n=1$, un anneau de
+valuation discrète, donc principal (et \emph{a fortiori} factoriel). Supposons donc
+$n\geq2$ et le théorème démontré pour des anneaux réguliers de dimension $<n$.
+Posons $X=\operatorname{Spec}(A)$, désignons par $a$ le point fermé de $X$ et posons
+$U=X-\{a\}$. En tout point $y\in U$, on a
+$\dim(\mathcal O_{X,y})\leq n-1$, et puisque $A$ est régulier, les anneaux
+$\mathcal O_{X,y}$ le sont aussi $(\mathbf 0, 17.3.2)$, donc l'hypothèse de
+récurrence entraîne qu'ils sont factoriels. De plus on a
+$\operatorname{prof}(A)=\dim(A)\geq2$ puisque $A$ est régulier, donc de
+Cohen--Macaulay $(\mathbf 0, 17.1.3)$.
+\oldpage[IV-4]{303}
+Utilisant (21.6.14), on est ramené à prouver que $\operatorname{Pic}(U)=0$.
+Considérons donc un $\mathcal O_U$-Module inversible $\mathscr L$, et prouvons qu'il
+est isomorphe à $\mathcal O_U$. Il résulte de $(\mathbf I, 9.4.5)$ qu'il existe un
+$\mathcal O_X$-Module \emph{cohérent} $\mathscr F$ tel que
+$\mathscr F|U=\mathscr L$. Comme $A$ est régulier, donc de dimension cohomologique
+finie $(\mathbf 0, 17.3.1)$, il existe une résolution gauche \emph{finie} de
+$\mathscr F$ :
+\[
+  0\leftarrow\mathscr F\leftarrow\mathcal O_X^{n_1}
+  \leftarrow\mathcal O_X^{n_2}\leftarrow\cdots
+  \leftarrow\mathcal O_X^{n_h}\leftarrow0
+\]
+$(\mathbf 0, 17.2.8$ et $\mathbf 0, 17.2.2$, (iii)). Par restriction à $U$, on a
+donc une résolution finie
+\[
+\label{IV.21.11.1.1}
+  0\leftarrow\mathscr L\leftarrow\mathcal O_U^{n_1}
+  \leftarrow\mathcal O_U^{n_2}\leftarrow\cdots
+  \leftarrow\mathcal O_U^{n_h}\leftarrow0.
+  \tag{21.11.1.1}
+\]
+\end{proof}
+
+Le théorème résultera alors des considérations générales suivantes. Sur un espace
+annelé $X$, soit $\mathscr E$ un $\mathcal O_X$-Module localement libre de rang fini;
+on désignera par $\Lambda^{\max}\mathscr E$ le $\mathcal O_X$-Module inversible qui,
+au voisinage de chaque point de $X$, est égal à $\Lambda^p\mathscr E$, en désignant
+par $p$ le rang de $\mathscr E$ dans ce voisinage (qui peut varier avec la composante
+connexe de $X$). Avec cette notation, on a le
+
+\begin{lemma}[21.11.1.2]
+\label{IV.21.11.1.2}
+Soient $X$ un espace annelé en anneaux locaux, et
+\[
+  0\leftarrow\mathscr E_0\xleftarrow{u_0}\mathscr E_1
+  \leftarrow\cdots\leftarrow\mathscr E_h\leftarrow0
+\]
+une suite exacte de $\mathcal O_X$-Modules localement libres de rang fini; alors le
+$\mathcal O_X$-Module inversible
+\[
+  \bigotimes_{0\leq i\leq h}
+  (\Lambda^{\max}\mathscr E_i)^{\otimes(-1)^i}
+\]
+est isomorphe à $\mathcal O_X$.
+\end{lemma}
+
+\begin{proof}
+Montrons comment ce lemme permettra de conclure la preuve de (21.11.1). Il suffit de
+noter pour cela que, pour tout entier $n$,
+$\Lambda^{\max}(\mathcal O_U^n)=\Lambda^n\mathcal O_U^n$ est isomorphe à
+$\mathcal O_U$, ainsi que $\mathcal O_U^{\otimes(-1)}$. Comme d'autre part
+$\Lambda^{\max}\mathscr L=\mathscr L$ pour tout $\mathcal O_U$-Module inversible
+$\mathscr L$, le lemme (21.11.1.2), appliqué à la suite exacte (21.11.1.1) montre
+que $\mathscr L$ est isomorphe à $\mathcal O_U$.
+
+Reste à prouver (21.11.1.2); on procède par récurrence sur $h$, le lemme étant trivial
+pour $h=1$. Pour $h>1$, $\mathscr N=\operatorname{Ker}(u_0)$ est un
+$\mathcal O_X$-Module localement libre de rang fini $(\mathbf 0_{\mathrm I}, 5.5.5)$,
+et on a les deux suites exactes
+\[
+  0\leftarrow\mathscr E_0\leftarrow\mathscr E_1
+  \leftarrow\mathscr N\leftarrow0
+\]
+\[
+  0\leftarrow\mathscr N\leftarrow\mathscr E_2
+  \leftarrow\cdots\leftarrow\mathscr E_h\leftarrow0.
+\]
+En vertu de l'hypothèse de récurrence,
+$(\Lambda^{\max}\mathscr N)\otimes
+(\bigotimes_{2\leq i\leq h}(\Lambda^{\max}\mathscr E_i)^{\otimes(-1)^{i-1}})$
+est isomorphe à $\mathcal O_X$; il suffira donc de définir un isomorphisme canonique
+\[
+  (\Lambda^{\max}\mathscr N)\otimes(\Lambda^{\max}\mathscr E_0)
+  \xrightarrow{\sim}\Lambda^{\max}\mathscr E_1
+\]
+pour achever la démonstration. Or, il existe un recouvrement ouvert $(U_\alpha)$ de
+$X$ tel que dans tout $U_\alpha$, $\mathscr E_1|U_\alpha$ soit somme directe de
+$\mathscr N|U_\alpha$ et d'un $\mathcal O_{U_\alpha}$-Module localement libre
+$\mathscr M_\alpha$ $(\mathbf 0_{\mathrm I}, 5.5.5)$, d'où un isomorphisme canonique
+$v_\alpha:\mathscr M_\alpha\xrightarrow{\sim}\mathscr E_0|U_\alpha$.
+Comme on a un isomorphisme canonique
+\[
+  r_\alpha:(\Lambda^{\max}\mathscr N|U_\alpha)
+  \otimes(\Lambda^{\max}\mathscr M_\alpha)
+  \xrightarrow{\sim}(\Lambda^{\max}\mathscr E_1)|U_\alpha,
+\]
+on en déduit au moyen de $v_\alpha$ un isomorphisme
+\[
+  u_\alpha:(\Lambda^{\max}\mathscr N|U_\alpha)
+  \otimes(\Lambda^{\max}\mathscr E_0|U_\alpha)
+  \xrightarrow{\sim}\Lambda^{\max}\mathscr E_1|U_\alpha.
+\]
+\oldpage[IV-4]{304}
+Et il s'agit de montrer que $u_\alpha$ et $u_\beta$ coïncident dans
+$U_\alpha\cap U_\beta$ pour deux indices quelconques $\alpha$, $\beta$. Or, si
+$v'_\alpha$ et $v'_\beta$ sont les restrictions à $U_\alpha\cap U_\beta$ de
+$v_\alpha$ et $v_\beta$ respectivement, on a
+$v'_\alpha=v'_\beta\circ w_{\beta\alpha}$, où
+\[
+  w_{\beta\alpha}:\mathscr M_\alpha|(U_\alpha\cap U_\beta)
+  \xrightarrow{\sim}\mathscr M_\beta|(U_\alpha\cap U_\beta)
+\]
+est la « projection parallèle à $\mathscr N$ » telle que pour toute section
+$s\in\Gamma(U_\alpha\cap U_\beta,\mathscr M_\alpha)$,
+$w_{\beta\alpha}(s)=s+t$ avec
+$t\in\Gamma(U_\alpha\cap U_\beta,\mathscr N)$; l'identité de $u_\alpha$ et de
+$u_\beta$ résulte aussitôt de ce fait et de la définition de l'isomorphisme canonique
+$r_\alpha$ (Bourbaki, \emph{Alg.}, chap.~III, 3\textsuperscript{e} éd.).
+\end{proof}
+
+\subsection{Le théorème de pureté de Van der Waerden pour l'ensemble de
+ramification d'un morphisme birationnel}
+\label{subsection:IV.21.12}
+\label{IV.21.12}
+
+\begin{env}[21.12.1]
+\label{IV.21.12.1}
+Soient $X$ et $U$ deux préschémas, $f:U\to X$ un morphisme quasi-compact et
+quasi-séparé, de sorte que $f_*(\mathcal O_U)$ est une $\mathcal O_X$-Algèbre
+quasi-cohérente (1.7.4). On appelle \emph{enveloppe affine} du $X$-préschéma $U$ le
+$X$-préschéma affine sur $X$
+\[
+  U^0=\operatorname{Aff}(U/X)=\operatorname{Spec}(f_*(\mathcal O_U))
+  =\operatorname{Spec}(\mathscr A(U))\qquad(\mathbf{II}, 1.1.1).
+\]
+Si $f^0:U^0\to X$ est le morphisme structural, on a donc par définition
+\[
+  \mathscr A(U^0)=f^0_*(\mathcal O_{U^0})=f_*(\mathcal O_U)=\mathscr A(U),
+\]
+et à l'isomorphisme identique de $f_*(\mathcal O_U)$ il correspond par
+$(\mathbf{II}, 1.2.7)$ un $X$-morphisme canonique
+\[
+\label{IV.21.12.1.1}
+  i_U:U\to U^0.
+  \tag{21.12.1.1}
+\]
+
+Pour que $i_U$ soit un \emph{isomorphisme}, il faut et il suffit évidemment que le
+morphisme $f:U\to X$ soit \emph{affine}. Pour tout $X$-préschéma $V$ \emph{affine sur
+$X$}, l'application $u\mapsto u\circ i_U$ est une \emph{bijection}
+\[
+  \operatorname{Hom}_X(U^0,V)\xrightarrow{\sim}\operatorname{Hom}_X(U,V)
+\]
+fonctorielle en $V$: cela résulte de l'existence des bijections canoniques
+\[
+  \operatorname{Hom}_X(U,V)\xrightarrow{\sim}
+  \operatorname{Hom}_{\mathcal O_X}(\mathscr A(V),\mathscr A(U))
+\]
+et
+$\operatorname{Hom}_X(U^0,V)\xrightarrow{\sim}
+\operatorname{Hom}_{\mathcal O_X}(\mathscr A(V),\mathscr A(U^0))$
+$(\mathbf{II}, 1.2.7)$.
+
+On peut donc dire que $U^0$ \emph{représente} le foncteur covariant
+$V\mapsto\operatorname{Hom}_X(U,V)$ dans la catégorie des $X$-préschémas affines sur
+$X$ $(\mathbf 0_{\mathrm{III}}, 8.1.11)$. On en déduit
+$(\mathbf 0_{\mathrm{III}}, 8.1.7)$ que pour $X$ fixé,
+$U\mapsto\operatorname{Aff}(U/X)$ est un foncteur covariant de la catégorie des
+$X$-préschémas quasi-compacts et quasi-séparés sur $X$, dans la catégorie des
+$X$-préschémas affines sur $X$; de façon plus précise, si $U_1$, $U_2$ sont deux
+$X$-préschémas quasi-compacts et quasi-séparés sur $X$, à tout $X$-morphisme
+$g:U_1\to U_2$ correspond l'unique $X$-morphisme $g^0:U_1^0\to U_2^0$ rendant
+commutatif le diagramme
+\[
+  \xymatrix{
+    U_1 \ar[r]^g \ar[d]_{i_{U_1}} & U_2 \ar[d]^{i_{U_2}} \\
+    U_1^0 \ar[r]_{g^0} & U_2^0.
+  }
+\]
+\end{env}
+
+\oldpage[IV-4]{305}
+Plus généralement, considérons un diagramme commutatif
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_f & U' \ar[d]^{f'} \\
+    X \ar[r]_u & X'
+  }
+\]
+où les morphismes $f$, $f'$ sont quasi-compacts et quasi-séparés et le morphisme $u$
+\emph{affine}. Si l'on pose $h=u\circ f$, on a
+$h_*(\mathcal O_U)=u_*(f_*(\mathcal O_U))=u_*(f^0_*(\mathcal O_{U^0}))$ et
+$u\circ f^0$ est un morphisme affine; on a par suite
+$U^0=\operatorname{Aff}(U/X')$ (relativement au morphisme $h$), d'où un unique
+$X'$-morphisme $v^0:U^0\to U'^0$ rendant commutatif le diagramme
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_{i_U} & U' \ar[d]^{i_{U'}} \\
+    U^0 \ar[r]_{v^0} & U'^0.
+  }
+\]
+
+\begin{proposition}[21.12.2]
+\label{IV.21.12.2}
+Soient $f:U\to X$ un morphisme quasi-compact et quasi-séparé,
+$h:X'\to X$ un morphisme plat; on pose $U'=U\times_X X'$,
+$f'=f_{\{X'\}}:U'\to X'$. Alors on a un $X'$-isomorphisme canonique
+\[
+\label{IV.21.12.2.1}
+  \operatorname{Aff}(U'/X')\xrightarrow{\sim}
+  \operatorname{Aff}(U/X)\times_X X'.
+  \tag{21.12.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, on a
+$\operatorname{Aff}(U'/X')=\operatorname{Spec}(f'_*(\mathcal O_{U'}))$, et
+$\operatorname{Aff}(U/X)\times_X X'=\operatorname{Spec}(h^*(f_*(\mathcal O_U)))$
+$(\mathbf{II}, 1.5.1)$; l'isomorphisme de l'énoncé provient de l'isomorphisme canonique
+$h^*(f_*(\mathcal O_U))\xrightarrow{\sim}f'_*(\mathcal O_{U'})$ (2.3.1).
+\end{proof}
+
+\begin{corollary}[21.12.3]
+\label{IV.21.12.3}
+Pour tout morphisme quasi-compact et quasi-séparé $f:U\to X$ et tout $x\in X$, on a,
+à un isomorphisme canonique près
+\[
+  U^0\times_X\operatorname{Spec}(\mathcal O_{X,x})
+  =(U\times_X\operatorname{Spec}(\mathcal O_{X,x}))^0.
+\]
+\end{corollary}
+
+Il résulte aussi de (21.12.2) que l'on a, à un isomorphisme canonique près, pour tout
+ouvert $V$ de $X$
+\[
+\label{IV.21.12.4}
+  (f^{-1}(V))^0=(f^0)^{-1}(V).
+  \tag{21.12.4}
+\]
+
+\begin{env}[21.12.5]
+\label{IV.21.12.5}
+Nous allons considérer en particulier le cas où $f:U\to X$ est une \emph{immersion
+ouverte}, $U$ s'identifiant donc à un préschéma induit sur un ouvert de $X$. Comme le
+morphisme $f^{-1}(U)\to U$ est l'identité, il résulte de (21.12.4) que le morphisme
+$(f^0)^{-1}(U)\to U$ restriction de $f^0$ est un isomorphisme, $i_U:U\to U^0$ étant
+donc une \emph{immersion ouverte} permettant d'identifier $U$ à un préschéma induit
+sur un ouvert de $U^0$.
+
+Plus généralement, pour un ouvert $V$ de $X$, la restriction $(f^0)^{-1}(V)\to V$ de
+$f^0$ est un isomorphisme de $(f^0)^{-1}(V)$ sur le préschéma induit sur l'ouvert
+$V\cap U$ si et seulement si l'immersion ouverte $U\cap V\to V$ est un morphisme
+\emph{affine}. Il est clair $(\mathbf{II}, 1.2.1)$
+\oldpage[IV-4]{306}
+que la réunion de ces ouverts $V$ est le \emph{plus grand} d'entre eux, $U_1$, qui
+contient $U$; en vertu de ce qui précède, $U_1$ est aussi le plus grand ouvert ne
+rencontrant pas l'ensemble
+\[
+  \operatorname{Daf}(U/X)=f^0(U^0)-U
+\]
+(« défaut d'affinité » de l'ouvert $U$ relativement à $X$, qui est vide si et seulement
+si $U$ est affine sur $X$); autrement dit, l'ensemble fermé $Z=X-U_1$ est
+l'\emph{adhérence} de l'ensemble $\operatorname{Daf}(U/X)$.
+
+On notera que pour tout morphisme \emph{plat} $h:X'\to X$, si l'on pose
+$U'=h^{-1}(U)$, on a
+\[
+\label{IV.21.12.5.1}
+  \operatorname{Daf}(U'/X')=h^{-1}(\operatorname{Daf}(U/X))
+  \tag{21.12.5.1}
+\]
+comme il résulte aussitôt de (21.12.2.1) et de $(\mathbf I, 3.4.8)$. En particulier,
+pour tout ouvert $V$ de $X$, on a
+\[
+\label{IV.21.12.5.2}
+  \operatorname{Daf}((U\cap V)/V)=\operatorname{Daf}(U/X)\cap V
+  \tag{21.12.5.2}
+\]
+et pour tout $x\in X$,
+\[
+\label{IV.21.12.5.3}
+  \operatorname{Daf}((U\cap\operatorname{Spec}(\mathcal O_{X,x}))
+  /\operatorname{Spec}(\mathcal O_{X,x}))
+  =\operatorname{Daf}(U/X)\cap\operatorname{Spec}(\mathcal O_{X,x}).
+  \tag{21.12.5.3}
+\]
+\end{env}
+
+Nous allons, lorsque $X$ est localement noethérien, donner des précisions sur la nature
+de l'ensemble $\operatorname{Daf}(U/X)$, qui montreront par exemple que lorsque $U$ est
+partout dense dans $X$, $\operatorname{Daf}(U/X)$ n'est pas un ensemble fermé rare
+quelconque :
+
+\begin{theorem}[21.12.6]
+\label{IV.21.12.6}
+Soient $X$ un préschéma localement noethérien, $U$ un ouvert non vide de $X$,
+$f:U\to X$ l'injection canonique. Alors :
+\begin{enumerate}[label=(\roman*)]
+  \item L'adhérence $Z=X-U_1$ de $\operatorname{Daf}(U/X)$ est de codimension
+  $\geq2$ dans $X$.
+  \item Si $T=X-U\supset Z$ est de codimension $\geq2$, le morphisme
+  $f^0:U^0\to X$ est surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Montrons d'abord que pour tout point $x\in\operatorname{Daf}(U/X)$ on a
+nécessairement $\dim(\mathcal O_{X,x})>1$. En effet, $x$ ne peut évidemment être point
+maximal de $X$, étant contenu dans $\overline U-U$; il s'agit donc de voir que l'on ne
+peut avoir $\dim(\mathcal O_{X,x})=1$. Or, cette relation entraînerait, par (21.12.5.3),
+$x\in\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))$, où
+$U^{(x)}=U\cap\operatorname{Spec}(\mathcal O_{X,x})$. Mais les seuls ouverts de
+$\operatorname{Spec}(\mathcal O_{X,x})$ sont $\operatorname{Spec}(\mathcal O_{X,x})$
+lui-même et les parties de l'ensemble (fini) des points maximaux de
+$\operatorname{Spec}(\mathcal O_{X,x})$. Or, l'ensemble ouvert réduit à un point maximal
+de $\operatorname{Spec}(\mathcal O_{X,x})$ est affine, par définition des préschémas; on
+en conclut que \emph{tous} les ensembles ouverts dans
+$\operatorname{Spec}(\mathcal O_{X,x})$ sont affines, donc
+$\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))=\varnothing$
+contrairement à l'hypothèse faite.
+
+Pour prouver (i) il faut montrer davantage, savoir que si $x\in X$ est tel que
+$\dim(\mathcal O_{X,x})=1$, il existe un voisinage ouvert $W$ de $x$ dans $X$ tel que
+$W$ ne rencontre pas $\operatorname{Daf}(U/X)$, c'est-à-dire tel que l'injection
+canonique $f_W:U\cap W\to W$ soit affine. Mais, avec les mêmes notations que ci-dessus,
+on vient de voir que l'injection canonique
+$f^{(x)}:U^{(x)}\to\operatorname{Spec}(\mathcal O_{X,x})$ est affine. On peut
+évidemment se borner au cas où $X$ est noethérien; comme le morphisme $f$ est de
+présentation finie, la conclusion résulte de (8.10.5, (viii)) appliqué suivant la
+méthode de (8.1.2, a)).
+
+\oldpage[IV-4]{307}
+(ii) Il s'agit de prouver que pour tout point $x\in T$, on a $x\in f^0(U^0)$; nous
+allons montrer d'abord qu'on peut se réduire au cas où $X=\operatorname{Spec}(A)$, où
+$A$ est un anneau local noethérien \emph{complet}, et $x$ le point fermé de $X$. Pour
+cela, il suffit de faire le changement de base
+$h:X'=\operatorname{Spec}(\widehat{\mathcal O}_{X,x})\to X$; si l'on pose
+$U'=h^{-1}(U)$, $f'=f_{\{X'\}}$ est l'injection canonique $U'\to X'$, et puisque le
+morphisme $h$ est plat, il résulte de (21.12.2) que si l'on prouve que $x$ appartient à
+$f'^{,0}(U'^{,0})$, on en déduira que $x\in f^0(U^0)$. En vertu de (6.1.1), on a
+bien opéré la réduction cherchée.
+
+Soit alors $X_1$ un sous-préschéma fermé réduit de $X$ ayant pour espace sous-jacent
+une composante irréductible de $X$, de dimension \emph{maximale}, parmi celles qui
+contiennent une composante irréductible de $T$, et posons
+$U_1=U\cap X_1$, $T_1=T\cap X_1=X_1-U_1$; on a donc
+$\operatorname{codim}(T_1,X_1)\geq2$ $(\mathbf 0, 14.2.1)$, et le couple $(U_1,X_1)$
+vérifie donc les mêmes hypothèses que le couple $(U,X)$ ($X_1$ étant spectre d'un
+anneau quotient de $A$, donc local noethérien et complet). On a par ailleurs un
+diagramme commutatif
+\[
+  \xymatrix{
+    U_1 \ar[r]^j \ar[d]_{f_1} & U \ar[d]^f \\
+    X_1 \ar[r]_i & X
+  }
+\]
+où $i$ et $j$ sont les injections canoniques, $i$ étant donc un morphisme affine; on en
+déduit (21.12.1) l'existence d'un morphisme $j^0:U_1^0\to U^0$ rendant commutatif le
+diagramme
+\[
+  \xymatrix{
+    U_1^0 \ar[r]^{j^0} \ar[d]_{f_1^0} & U^0 \ar[d]^{f^0} \\
+    X_1 \ar[r]_i & X
+  }
+\]
+et par suite, pour prouver que $x\in f^0(U^0)$, il suffit de prouver que
+$x\in f_1^0(U_1^0)$. On peut donc remplacer $X$ par $X_1$, et on peut par suite
+supposer que l'anneau $A$ est en outre \emph{intègre}. Mais $A$ est quotient d'un
+anneau noethérien régulier en vertu du théorème de Cohen $(\mathbf 0, 19.8.8$, (i)) et
+puisqu'il est intègre, on peut appliquer (5.11.1) avec la famille $(x_\alpha)$ réduite au
+seul point maximal de $X$; comme $\operatorname{codim}(T,X)\geq2$ par hypothèse, on
+voit que $f_*(\mathcal O_U)$ est un $\mathcal O_X$-Module \emph{cohérent}, donc le
+morphisme $f^0:U^0\to X$ est fini; comme ce morphisme est dominant ($U$ étant partout
+dense), il est surjectif $(\mathbf{II}, 6.1.10)$, et par suite $x\in f^0(U^0)$. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[21.12.7]
+\label{IV.21.12.7}
+Soient $X$ un préschéma localement noethérien, $U$ un sous-préschéma induit sur un
+ouvert de $X$, $j:U\to X$ l'immersion canonique; supposons que $j$ soit un morphisme
+affine. Alors toute composante irréductible de $T=X-U$ est de codimension $\leq1$
+(et par suite de codimension $1$ si $U$ est partout dense).
+\end{corollary}
+
+\begin{proof}
+Supposons en effet qu'une des composantes irréductibles $T_1$ de $T$ soit de
+codimension $\geq2$ dans $X$. Remplaçant au besoin $X$ par un voisinage ouvert du
+point générique de $T_1$, on peut supposer $T$ irréductible et de codimension $\geq2$.
+Mais alors l'hypothèse
+\oldpage[IV-4]{308}
+que $j:U\to X$ est affine implique que $U^0$ s'identifie à $U$ et $j^0$ à $j$,
+autrement dit que $j^0(U^0)=U$; or, cela contredit la conclusion de (21.12.6) qui,
+sous l'hypothèse de dimension faite implique que $j^0$ doit être surjectif.
+\end{proof}
+
+\begin{env}[21.12.8]
+\label{IV.21.12.8}
+Soient $A$ un anneau local noethérien, $Y=\operatorname{Spec}(A)$, $y$ l'unique point
+fermé de $Y$, $Y'=Y-\{y\}$. Considérons la condition suivante :
+\begin{itemize}
+  \item[\textup{(W)}] \emph{Pour tout ouvert $U$ de $Y$ contenu dans $Y'$, ne
+  contenant aucune composante irréductible de $Y'$ et tel que l'immersion canonique
+  $U\to Y'$ soit affine, $U$ est lui-même un ouvert affine.}
+\end{itemize}
+Cette condition est entraînée par la suivante :
+\begin{itemize}
+  \item[\textup{(W')}] \emph{Pour toute partie fermée $T$ de $Y$ dont toute composante
+  irréductible est de codimension $1$ dans $Y$, et tel que pour toute composante
+  irréductible $Y_i$ de $Y$, on ait $Y_i\cap T\ne\{y\}$, l'ouvert $U=Y-T$ est affine.}
+\end{itemize}
+En effet, si (W') est vérifiée et si l'ouvert $U$ de $Y$ vérifie l'hypothèse de (W), il
+résulte de (21.12.7) qu'aucune composante irréductible de $T=Y-U$ ne peut être de
+codimension $\geq2$; comme par ailleurs $U$ ne contient aucune des composantes
+irréductibles $Y_i-\{y\}$ de $Y'$, la condition (W') montre que $U$ est affine.
+
+On notera que la condition (W') se simplifie lorsque $Y$ est \emph{irréductible} et est
+alors équivalente à la suivante :
+\begin{itemize}
+  \item[\textup{(W'')}] \emph{Pour toute partie fermée irréductible $T$ de $Y$, de
+  codimension $1$ dans $Y$, $Y-T$ est un ouvert affine.}
+\end{itemize}
+En effet, il est clair que (W') entraîne (W'') lorsque $Y$ est irréductible, et la
+réciproque est vraie en considérant les composantes irréductibles de $T$ et en notant
+que l'intersection d'un nombre fini d'ouverts affines est un ouvert affine
+$(\mathbf I, 5.5.6)$.
+\end{env}
+
+\begin{env}[21.12.9]
+\label{IV.21.12.9}
+\emph{Exemples}. ---
+Si $A$ est un anneau local noethérien \emph{factoriel}, il vérifie (W') (et
+\emph{a fortiori} (W)), puisque tout idéal premier de hauteur $1$ est principal
+$(\mathbf I, 1.3.6)$. Mais il y a des anneaux locaux noethériens non factoriels
+vérifiant (W''), par exemple ceux de dimension $\leq1$: en effet, on a remarqué dans la
+démonstration de (21.12.6, (i)) que \emph{tous} les ouverts de $Y$ sont alors affines.
+On peut d'autre part prouver en utilisant la théorie de la dualité locale (chap.~III,
+3\textsuperscript{e} partie) que tout anneau local noethérien de dimension $2$ vérifie
+(W').
+\end{env}
+
+L'intérêt de la condition (W) réside dans le résultat suivant :
+
+\begin{proposition}[21.12.10]
+\label{IV.21.12.10}
+Soient $X$, $Y$ deux préschémas localement noethériens, $g:X\to Y$ un morphisme,
+$y$ un point fermé de $Y$, $Y'=Y-\{y\}$, $X'=g^{-1}(Y')$; supposons que le morphisme
+$g':X'\to Y'$ restriction de $g$ soit une immersion ouverte, et que l'anneau local
+$\mathcal O_{Y,y}$ vérifie la condition (W) (21.12.8). Alors, pour toute composante
+irréductible $Z$ de $X_y=g^{-1}(y)$, ou bien $Z$ est de codimension $\leq1$ dans $X$,
+ou bien son point générique est isolé dans $Z$. Si $Z$ est localement de type fini sur
+$k(y)$, la seconde alternative implique que $Z$ est réduit à un seul point.
+\end{proposition}
+
+\begin{proof}
+La dernière assertion de l'énoncé résulte de ce que $Z$ est alors un préschéma de
+Jacobson (10.4.7), et comme l'ensemble des points fermés de $Z$ est alors dense dans
+$Z$, le point générique de $Z$ ne peut être isolé dans $Z$ que si $Z$ est réduit à un
+seul point.
+
+\oldpage[IV-4]{309}
+Supposons qu'il existe dans $X_y$ une composante irréductible $Z$ dont le point
+générique $z$ n'est pas isolé dans $Z$, et telle que $\operatorname{codim}(Z,X)\geq2$.
+La question étant locale sur $X$ et $Y$ puisque $z$ est non isolé dans $Z$, on peut, en
+remplaçant $X$ par un voisinage ouvert de $z$ dans $X$, supposer $X$ et $Y$ affines,
+$X_y=Z$ irréductible, non réduit à un point et telle que
+$\operatorname{codim}(X_y,X)\geq2$. L'image $g(X-X_y)=U$ est un ouvert de $Y'$
+isomorphe à $X-X_y$ par hypothèse; montrons qu'en remplaçant au besoin $X$ par un
+voisinage ouvert de $z$ dans $X$, on peut supposer que $U$ ne contient aucune des
+composantes irréductibles de $Y'$ dont l'adhérence contient $y$.
+
+En effet, on peut tout d'abord supposer que tous les points maximaux de $X$ sont des
+générisations de $z$, l'ensemble de ces points étant fini; donc l'ensemble des points
+maximaux de $U$ est l'ensemble des images $y_i$ par $g$ des points maximaux $x_i$ de
+$X$ (aucun point maximal de $X$ ne pouvant par hypothèse être contenu dans $X_y$,
+puisque $\dim(\mathcal O_{X,z})\geq2$). Posons $X_i=\overline{\{x_i\}}$. Par
+hypothèse, on a $z\in X_i$ et puisque $z$ n'est pas isolé dans $X_y$, il existe dans
+$X_y$ un point $x\ne z$. Comme $X_i\ne Z$, il existe dans $X_i$ un point $t_i$ tel
+que si l'on pose $T_i=\overline{\{t_i\}}$, on ait $\dim(\mathcal O_{T_i,x})=1$
+(10.5.9); cela entraîne par hypothèse $t_i\notin Z$, donc $t_i$ n'est pas une
+générisation de $z$. Remplaçant $X$ par $X'=X-\bigcup_iT_i$, on voit que l'image par
+$g$ de $X'-X_y$ ne contient pas les images $g(t_i)$, donc ne contient aucune des
+composantes irréductibles de $Y'$ dont l'adhérence contient $y$.
+
+Cela étant, comme $X$ et $Y$ sont affines, le morphisme $g:X\to Y$ est affine, donc il
+en est de même de la restriction $g':X'\to Y'$; puisque $g'$ est une immersion ouverte,
+l'immersion canonique $U\to Y'$ est affine. Posons
+$Y_1=\operatorname{Spec}(\mathcal O_{Y,y})$, $Y'_1=Y_1-\{y\}=Y'\cap Y_1$,
+$U_1=U\cap Y_1$. Ce qui précède prouve que l'immersion canonique $U_1\to Y'_1$ est
+affine, donc $U_1$ est un ouvert affine dans $Y_1$ en vertu de (W), en d'autres termes
+l'immersion canonique $U_1\to Y_1$ est affine. Mais puisque cette immersion est de
+présentation finie (1.6.2), il résulte de (8.10.5, (viii)) appliqué suivant la méthode de
+(8.1.2, a)) qu'en restreignant au besoin $Y$ à un voisinage ouvert affine de $y$, on peut
+supposer que l'immersion $U\to Y$ est affine. On en conclurait que l'ouvert $X-X_y$ de
+$X$, isomorphe à $U$, serait affine, ce qui contredirait (21.12.7); la proposition est
+ainsi démontrée.
+\end{proof}
+
+\begin{corollary}[21.12.11]
+\label{IV.21.12.11}
+Soient $X$, $Y$ deux préschémas localement noethériens, $X$ étant supposé
+irréductible; soit $g:X\to Y$ un morphisme localement de type fini, et soit $V$ le plus
+grand ouvert de $X$ tel que la restriction $g|V:V\to Y$ soit un isomorphisme local.
+Supposons que pour tout point $y\in Y$, l'anneau local $\mathcal O_{Y,y}$ vérifie la
+condition (W) (21.12.8). Alors toute composante irréductible de $T=X-V$ est, ou bien
+de codimension $\leq1$, ou bien telle que son point générique $z$ soit isolé dans
+$g^{-1}(g(z))$.
+\end{corollary}
+
+\begin{proof}
+Posons $g(z)=y$. La question ne dépendant que de la fibre $g^{-1}(y)$ et de l'anneau
+$\mathcal O_{Y,y}$, on peut par changement de base se borner au cas où
+$Y=\operatorname{Spec}(\mathcal O_{Y,y})$ et où $X$ est affine
+$((\mathbf I, 3.6.5)$ et $(\mathbf I, 4.5.5))$; remplaçant éventuellement $X$ par un
+voisinage ouvert de $z$ dans $X$, on peut supposer que $T$ est irréductible; en outre on
+peut se borner au cas où $V$ est non vide. Le morphisme $g$ peut donc être supposé
+séparé et $y$ fermé dans $Y$; puisque la restriction $g|V:V\to Y$ est un isomorphisme
+local et que l'ouvert non vide $V$ de $X$ est irréductible, il résulte de
+$(\mathbf I, 8.2.8)$ que $g|V:V\to Y$ est une immersion ouverte. La restriction
+$g|(V\cap X_y):V\cap X_y\to\{y\}=\operatorname{Spec}(k(y))$ est donc aussi une
+immersion ouverte, ce qui montre que $V\cap X_y$ est, soit vide, soit réduit à un point
+$x$ rationnel
+\oldpage[IV-4]{310}
+sur $k(y)$, donc fermé dans $X_y$ $(\mathbf I, 6.4.2)$. Remplaçant encore
+éventuellement $X$ par un voisinage ouvert plus petit de $z$ dans $X$, on peut donc se
+borner au cas où $V\cap X_y=\varnothing$, autrement dit $T\supset X_y$; comme d'autre
+part $z\in X_y$ est le point générique de $T$, on a
+$g(T)\subset\overline{\{y\}}=\{y\}$, autrement dit $T=X_y$. On est alors exactement
+dans les conditions d'application de (21.12.10), d'où la conclusion.
+\end{proof}
+
+\begin{theorem}[21.12.12]
+\label{IV.21.12.12}
+\textup{(van der Waerden)}. ---
+Soient $X$, $Y$ deux préschémas localement noethériens intègres, $g:X\to Y$ un
+morphisme birationnel et localement de type fini. On suppose en outre que $Y$ est
+normal et que pour tout $y\in Y$, l'anneau $\mathcal O_{Y,y}$ vérifie la condition (W)
+de (21.12.8) (conditions remplies en particulier lorsque $Y$ est localement factoriel
+(21.12.9)). Si $V$ est le plus grand ouvert de $X$ tel que la restriction
+$g|V:V\to Y$ soit un isomorphisme local, toutes les composantes irréductibles de
+$T=X-V$ sont de codimension $1$ dans $X$.
+\end{theorem}
+
+\begin{proof}
+On notera que puisque $g$ est birationnel, l'ensemble ouvert $V$ n'est pas vide; il
+suffit donc de prouver qu'un point maximal $z$ de $T$ ne peut être isolé dans $X_y$,
+où $y=g(z)$. Mais, quitte à se restreindre à un voisinage ouvert de $z$, on peut se
+borner au cas où $T=X_y$; alors toutes les fibres $g^{-1}(y')$ ($y'\in Y$) seraient
+vides ou réduites à un point et il résulterait du « Main theorem » (8.12.10) que $g$
+serait un isomorphisme local, contrairement à l'hypothèse $z\in T$.
+\end{proof}
+
+\begin{corollary}[21.12.13]
+\label{IV.21.12.13}
+Supposons vérifiées les hypothèses de (21.12.12) et en outre, supposons que $g$ soit
+quasi-fini en chacun des points de $X^{(1)}$ (on rappelle que ce sont les points où
+$\dim(\mathcal O_{X,x})=1$); alors $g$ est un isomorphisme local, et si de plus $g$ est
+séparé, $g$ est une immersion ouverte.
+\end{corollary}
+
+\begin{proof}
+Il suffit de prouver la première assertion, la seconde étant une conséquence de la
+première et de $(\mathbf I, 8.2.8)$. Tout revient à prouver, avec les notations de
+(21.12.12), que $T=\varnothing$; dans le cas contraire, un point générique $z$ d'une
+composante irréductible de $T$ appartiendrait à $X^{(1)}$ en vertu de (21.12.12), et par
+hypothèse il serait isolé dans $X_y$ avec $y=g(z)$; mais on a vu dans la démonstration
+de (21.12.12) que cela n'est pas possible.
+\end{proof}
+
+\begin{remarks}[21.12.14]
+\label{IV.21.12.14}
+(i) La conclusion de (21.12.12) s'applique lorsque $Y$ est régulier et intègre et $X$
+intègre, car en vertu du théorème d'Auslander--Buchsbaum (21.11.1), $Y$ est alors
+localement factoriel. Par contre, on connaît des exemples où $X$ et $Y$ sont des schémas
+algébriques normaux de dimension $3$, sur un corps algébriquement clos de
+caractéristique quelconque, et où la conclusion de (21.12.12) n'est plus valable.
+
+(ii) L'ensemble $T$ de (21.12.12) est aussi l'ensemble des points où $g$ est
+\emph{ramifié}. En effet, si $g$ est non ramifié en un point $x\in X$, il est aussi non
+ramifié dans un voisinage ouvert affine $U$ de $x$ (17.3.7), donc $g|U$ est un morphisme
+séparé, quasi-fini et birationnel (17.4.3). Puisque $Y$ est normal, on conclut du « Main
+theorem » $(\mathbf{III}, 4.4.9)$ que $g$ est un isomorphisme local au point $x$, donc
+$x\in X-T$. Réciproquement, $g$ est évidemment non ramifié en tout point où il est un
+isomorphisme local. Ceci justifie le titre donné à cette section.
+
+\oldpage[IV-4]{311}
+(iii) Sans supposer que $Y$ soit localement factoriel, mais en supposant par contre que
+$X$ est intersection complète relativement à $Y$ (chap.~V), nous verrons au chap.~V
+qu'on a un résultat plus précis que (21.12.12), en exprimant $T$ comme cycle
+1-codimensionnel d'une section d'un $\mathcal O_X$-Module inversible, canoniquement
+associée à $g$. Ceci s'appliquera notamment quand $X$ et $Y$ sont tous deux réguliers,
+ou lorsque $g$ est un $S$-morphisme, $X$ et $Y$ étant des préschémas lisses sur $S$.
+
+(iv) On peut se demander si (21.12.10) admet une réciproque; autrement dit, pour un
+anneau local noethérien donné $A$, si l'on pose $Y=\operatorname{Spec}(A)$, $y$
+désignant le point fermé de $Y$, et si, pour tout préschéma localement noethérien $X$ et
+tout morphisme $g:X\to Y$ tel que $g':X'\to Y'$ soit une immersion ouverte, toute
+composante irréductible de $X_y$ est de codimension $\leq1$ dans $X$ ou est réduite à
+un point, alors est-il vrai que $A$ vérifie la condition (W) de (21.12.8)?
+
+(v) Soient $Y$ un préschéma intègre \emph{régulier}, $X$ un préschéma localement
+noethérien \emph{normal}, $g:X\to Y$ un morphisme localement de type fini; supposons
+en outre que, si $\eta$ est le point générique de $Y$, la fibre $X_\eta$ soit \emph{étale}
+sur $k(\eta)$, et soit $T'$ le complémentaire du plus grand ouvert $V'$ de $X$ tel que
+$g|V':V'\to Y$ soit étale; est-il vrai alors que toutes les composantes irréductibles de
+$T'$ soient de codimension $1$? Il en est bien ainsi lorsqu'on suppose en outre que $g$
+est \emph{localement quasi-fini} (« théorème de pureté » de Zariski--Nagata). On peut
+montrer que la conjecture précédente serait conséquence de la suivante (et lui serait
+même équivalente si la conjecture de (iv) était vérifiée): pour un anneau local régulier
+$A$ contenu dans un anneau local intègre et intégralement clos $B$, tel que $B$ soit un
+$A$-module fini, l'ouvert $U$ des points de $\operatorname{Spec}(B)$ en lesquels
+$\operatorname{Spec}(B)$ est non ramifié sur $\operatorname{Spec}(A)$ (ou, ce qui
+revient au même par (18.10.1), étale sur $\operatorname{Spec}(A)$) est affine.
+\end{remarks}
+
+\begin{proposition}[21.12.15]
+\label{IV.21.12.15}
+Soient $S$ un préschéma, $g:X\to S$ un morphisme plat et localement de présentation
+finie, dont les fibres $X_s=g^{-1}(s)$ sont géométriquement irréductibles (4.5.2),
+$h:Y\to S$ un morphisme lisse; on note $Y_s=h^{-1}(s)$ les fibres de ce morphisme.
+Soit $f:X\to Y$ un $S$-morphisme propre tel que, pour tout point maximal $\eta$ de
+$S$, le morphisme $f_\eta:X_\eta\to Y_\eta$ soit un isomorphisme. Alors $f$ est un
+isomorphisme.
+\end{proposition}
+
+\begin{proof}
+Puisque $h$ est plat, tout point maximal de $Y$ est au-dessus d'un point maximal de $S$
+(2.3.4), donc la réunion des $Y_\eta$, lorsque $\eta$ parcourt l'ensemble des points
+maximaux de $S$, est dense dans $Y$; comme les $f_\eta$ sont des isomorphismes, $f$
+est dominant et par suite \emph{surjectif} puisqu'il est propre. Il suffit donc de montrer
+que $f$ est une \emph{immersion ouverte}. Compte tenu de (17.9.5), il suffit de prouver
+que pour tout $s\in S$, $f_s:X_s\to Y_s$ est une immersion ouverte.
+
+Comme tout $s\in S$ est générisation d'un point maximal $\eta$, on peut déjà, en
+faisant le changement de base $\operatorname{Spec}(\mathcal O_{S',s})\to S$, où $S'$
+est le sous-préschéma réduit de $S$ ayant $\overline{\{\eta\}}$ comme espace
+sous-jacent, se ramener au cas où $S$ est un schéma local et intègre de point fermé $s$:
+les fibres aux points $\eta$ et $s$ ne sont en effet pas changées et les propriétés des
+morphismes $g$, $h$ et $f$ se conservent par changement de base. En outre, la question
+est locale sur $Y$; remplaçant $Y$ par un voisinage ouvert affine $U$ dans $Y$ d'un point
+de $Y_s$, et $X$ par $f^{-1}(U)$, qui est quasi-compact puisque $f$ est propre, on voit
+qu'on peut supposer en outre que $X$ et $Y$ sont de présentation finie sur $S$.
+
+Il existe alors un sous-anneau local noethérien $A_0$ de
+$A=\mathcal O_{S,s}$ tel que $A_0\to A$ soit un homomorphisme local, deux morphismes
+de type fini $g_0:X_0\to S_0=\operatorname{Spec}(A_0)$,
+$h_0:Y_0\to S_0$ et un $S_0$-morphisme
+\oldpage[IV-4]{312}
+$f_0:X_0\to Y_0$ tels que $g$, $h$ et $f$ se déduisent de $g_0$, $h_0$, $f_0$ par le
+changement de base $S\to S_0$ ((8.9.1) et (5.13.3)); on peut en outre supposer $g_0$
+plat (11.2.7), $h_0$ lisse (17.7.9) et $f_0$ propre (8.10.5, (xii)). D'autre part, la
+projection sur $S_0$ du point générique $\eta$ de $S$ est le point générique $\eta_0$ de
+$S_0$ et il résulte de (2.7.1, (viii)) que le morphisme
+$(f_0)_{\eta_0}:(X_0)_{\eta_0}\to(Y_0)_{\eta_0}$ est un isomorphisme; enfin le point
+fermé $s$ de $S$ est au-dessus du point fermé $s_0$ de $S_0$, donc la fibre
+$(X_0)_{s_0}$ de $g_0$ est géométriquement irréductible (4.5.6).
+
+On voit donc qu'on peut se borner au cas où $S$ est le spectre d'un anneau local intègre
+noethérien, de point fermé $s$, affaiblir l'hypothèse sur les fibres en supposant seulement
+que $X_s$ et $X_\eta$ sont géométriquement irréductibles, et prouver que sous ces
+hypothèses $f_s$ est une immersion ouverte. Il y a alors un anneau de valuation discrète
+$A'$ et un morphisme $S'=\operatorname{Spec}(A')\to S$ qui transforme le point fermé
+$a$ de $S'$ en $s$ et le point générique $b$ de $S'$ en $\eta$ $(\mathbf{II}, 7.1.9)$;
+soient $g':X'\to S'$, $h':Y'\to S'$, $f':X'\to Y'$ les morphismes déduits de $g$,
+$h$, $f$ par le changement de base $S'\to S$, qui vérifient de nouveau les hypothèses
+vérifiées par $g$, $h$, et $f$ dans l'énoncé (21.12.15); si l'on prouve que
+$f'_a:X'_a\to Y'_a$ est une immersion ouverte, il résultera de (2.7.1, (x)) qu'il en
+sera de même de $f_s:X_s\to Y_s$. On peut donc finalement se borner au cas où $S$ est
+le \emph{spectre d'un anneau de valuation discrète}.
+
+Alors, puisque $h:Y\to S$ est lisse, $Y$ est régulier (17.5.8), et puisque la question
+est locale sur $Y$, on peut se borner au cas où $Y$ est intègre. Comme $g:X\to S$ est
+plat, les points maximaux de $X$ sont contenus dans $X_\eta$ (2.3.4) et puisque
+$f_\eta$ est un isomorphisme, $X$ est irréductible et l'anneau local en son point
+générique est un corps; de plus, par platitude (3.3.2), on voit que $X$ n'a pas de cycles
+premiers immergés, donc $X$ est réduit (3.2.1) et par suite intègre et $f$ est un
+morphisme birationnel et séparé. Pour prouver que $f$ est une immersion ouverte, on peut
+donc appliquer le critère (21.12.13); pour voir que $f$ est quasi-fini aux points de
+$X^{(1)}$, on remarque que l'assertion est évidente en ceux de ces points qui
+appartiennent à $X_\eta$; le seul point de $X^{(1)}$ appartenant à $X_s$ est le point
+générique $x$ de $X_s$, en vertu de (6.1.1). Or, il résulte de (2.4.6) et de (14.2.2)
+que les morphismes $g$ et $h$ sont équidimensionnels; comme $X_\eta$ et $Y_\eta$ sont
+isomorphes, les composantes irréductibles de $X_s$ et de $Y_s$ ont toutes même
+dimension. Mais par hypothèse $X_s$ est irréductible et on a vu que $f$ est surjectif,
+donc il en est de même de $f_s:X_s\to Y_s$, ce qui entraîne que $Y_s$ est aussi
+irréductible; si $y$ est le point générique de $Y_s$, on a donc $f(x)=y$, et la relation
+$\dim(X_s)=\dim(Y_s)$ entraîne alors, en vertu de (5.6.6), que
+$\dim(f_s^{-1}(y))=0$, autrement dit $f_s$ (et par suite aussi $f$) est bien quasi-fini
+au point $x$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{corollary}[21.12.16]
+\label{IV.21.12.16}
+Soient $g:X\to S$ un morphisme propre, plat et de présentation finie, $h:Y\to S$ un
+morphisme lisse, propre et de présentation finie, $f:X\to Y$ un $S$-morphisme. On
+suppose que les fibres $X_s=g^{-1}(s)$ de $g$ sont géométriquement irréductibles. Soit
+$U$ l'ensemble des $s\in S$ tels que $f_s:X_s\to Y_s$ soit un isomorphisme. Alors
+$U$ est ouvert et fermé dans $S$, et le morphisme $g^{-1}(U)\to h^{-1}(U)$,
+restriction de $f$, est un isomorphisme.
+\end{corollary}
+
+\begin{proof}
+La dernière assertion résultera de la première et de (17.9.5). On sait déjà (9.6.1,
+(xi)) que $U$ est localement constructible dans $S$. En vertu de (1.10.1), il suffit de
+prouver que $U$ est stable par \emph{spécialisation} et par \emph{générisation}. Pour
+démontrer ces assertions on
+\oldpage[IV-4]{313}
+peut, par un changement de base $\operatorname{Spec}(\mathcal O_{S,s})\to S$, se
+ramener au cas où $S$ est un schéma local de point fermé $s$ et de point générique
+$\eta$, et il faut montrer que, pour que $f_s$ soit un isomorphisme, il faut et il suffit
+que $f_\eta$ le soit. Or, la suffisance de cette condition résulte de (21.12.15). Pour
+montrer qu'elle est nécessaire, on raisonne comme dans la démonstration de (21.12.15)
+(en remarquant, avec les mêmes notations, que la projection du point fermé de $S$ est le
+point fermé de $S_0$) pour se ramener au cas où en outre $S$ est \emph{noethérien};
+mais alors la conclusion résulte de $(\mathbf{III}, 4.6.7$, (ii)).
+\end{proof}
+
+\begin{remarks}[21.12.17]
+\label{IV.21.12.17}
+(i) La conclusion de la proposition (21.12.15) n'est plus valable si on élimine
+l'hypothèse que les fibres $X_s$ sont irréductibles. Prenons en effet
+$S=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation discrète,
+$Y=\mathbb P^1_S$, qui est propre et lisse sur $S$ (17.3.9). Notons encore $s$ et
+$\eta$ le point fermé et le point générique de $S$; soit $z$ un point fermé de $Y_s$,
+par exemple un point rationnel sur $k=k(s)$, et soit $X$ le $Y$-préschéma obtenu en
+faisant éclater le point $z$. Comme l'anneau de polynômes $A[T]$ est régulier
+$(\mathbf 0, 17.3.7)$ et de dimension $2$, on voit comme dans la démonstration de
+(15.1.1.6) que, si $f:X\to Y$ est le morphisme structural, $f^{-1}(z)$ est isomorphe
+à $\mathbb P^1_k$, et d'autre part, le complémentaire de $f^{-1}(z)$ dans $X_s$ est
+isomorphe à $Y_s-\{z\}$, donc $Z_1=f^{-1}(z)$ et $Z_2$, adhérence dans $X_s$ du
+complémentaire de $Z_1$, sont les deux composantes irréductibles de $X_s$. Par
+ailleurs, $f$ est évidemment propre et $g=h\circ f$ est plat, car $X$ est intègre
+$(\mathbf{II}, 8.1.4)$ et pour tout ouvert affine $U$ de $X$, l'homomorphisme
+$A\to\Gamma(U,\mathcal O_X)$ est injectif $(\mathbf I, 1.2.7)$, donc
+$\Gamma(U,\mathcal O_X)$ est un $A$-module sans torsion, et par suite plat puisque $A$
+est un anneau de valuation discrète $(\mathbf 0_{\mathrm I}, 6.3.4)$. Il est clair que
+$f_\eta:X_\eta\to Y_\eta$ est un isomorphisme, bien que
+$f_s:X_s\to Y_s$ n'en soit pas un.
+
+(ii) La conclusion de (21.12.15) tombe aussi en défaut si, dans les hypothèses, on
+supprime l'hypothèse que $f$ est \emph{propre}. Il suffit pour le voir de définir $S$ et
+$Y$ comme dans (i), mais de remplacer $X$ par le complémentaire $X'$ de $Z_2$ dans le
+préschéma $X$ défini dans (i), $f$ par la restriction $f':X'\to Y$ de $f$; le morphisme
+$g':X'\to S$, restriction de $g$, est encore plat, et cette fois $X'_s$ est
+géométriquement irréductible; $X'_s$ est d'ailleurs isomorphe au complémentaire d'un
+point fermé dans $\mathbb P^1_k$, donc est un schéma affine isomorphe à $\mathbb A^1_k$;
+comme son image dans $Y_s$ est réduite au point fermé $z$, $f'$ n'est pas propre
+$(\mathbf{III}, 4.4.2)$ et $f'_s$ n'est pas un isomorphisme, bien que $f'_\eta$ en soit
+un.
+
+(iii) Il se peut que l'énoncé de la proposition (21.12.15) reste valable quand on y
+remplace le mot « isomorphisme » par « morphisme étale » (cf. (21.12.14, (v))). Il en
+sera alors encore de même de (21.12.16).
+\end{remarks}
+\subsection{Couples parafactoriels. Anneaux locaux parafactoriels}
+\label{subsection:IV.21.13}
+\label{IV.21.13}
+
+\begin{definition}[21.13.1]
+\label{IV.21.13.1}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$, $U=X-Y$.
+On dit que le couple $(X,Y)$ est \emph{parafactoriel} si, pour tout ouvert $V$ de $X$,
+le foncteur restriction
+$\mathscr L\mapsto\mathscr L|(U\cap V)$, de la catégorie des
+$\mathcal O_V$-Modules inversibles dans celle des $\mathcal O_{U\cap V}$-Modules
+inversibles, est une \emph{équivalence de catégories}.
+\end{definition}
+
+Dire que le couple $(X,Y)$ est parafactoriel signifie donc que, pour tout ouvert $V$
+de $X$, les conditions suivantes sont vérifiées :
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item le foncteur $\mathscr L\mapsto\mathscr L|(U\cap V)$ est \emph{pleinement
+  fidèle}, autrement dit, pour deux $\mathcal O_V$-Modules inversibles $\mathscr L$,
+  $\mathscr L'$, l'application de restriction
+  \[
+    \operatorname{Hom}_{\mathcal O_V}(\mathscr L,\mathscr L')
+    \longrightarrow
+    \operatorname{Hom}_{\mathcal O_{U\cap V}}
+    (\mathscr L|(U\cap V),\mathscr L'|(U\cap V))
+  \]
+  est \emph{bijective};
+  \item le foncteur $\mathscr L\mapsto\mathscr L|(U\cap V)$ est
+  \emph{essentiellement surjectif}, autrement dit, pour tout
+  $\mathcal O_{U\cap V}$-Module inversible $\mathscr L_0$, il existe un
+  $\mathcal O_V$-Module inversible $\mathscr L$ tel que $\mathscr L_0$ soit
+  \oldpage[IV-4]{314}
+  isomorphe à $\mathscr L|(U\cap V)$; cela s'exprime encore en disant que
+  l'homomorphisme canonique (21.3.2.4)
+  \[
+    \operatorname{Pic}(V)\longrightarrow\operatorname{Pic}(U\cap V)
+  \]
+  est \emph{surjectif}.
+\end{enumerate}
+
+\begin{lemma}[21.13.2]
+\label{IV.21.13.2}
+Soit $f:X'\to X$ un morphisme d'espaces annelés; pour tout ouvert $V$ de $X$, on
+note $f_V:f^{-1}(V)\to V$ la restriction de $f$. Les conditions suivantes sont
+équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Pour tout ouvert $V$ de $X$, le foncteur
+  $\mathscr E\mapsto f_V^*(\mathscr E)$ de la catégorie des $\mathcal O_V$-Modules
+  localement libres de rang fini dans la catégorie des
+  $\mathcal O_{f^{-1}(V)}$-Modules localement libres de rang fini, est fidèle
+  (resp.\ pleinement fidèle).
+  \item[\emph{a')}] Pour tout ouvert $V$ de $X$, le foncteur
+  $\mathscr L\mapsto f_V^*(\mathscr L)$ de la catégorie des $\mathcal O_V$-Modules
+  localement libres de rang $1$ dans la catégorie des
+  $\mathcal O_{f^{-1}(V)}$-Modules localement libres de rang $1$ est fidèle
+  (resp.\ pleinement fidèle).
+  \item Pour tout ouvert $V$ de $X$, l'homomorphisme canonique
+  $(\mathbf 0_{\mathrm I}, 4.4.3.2)$
+  $\mathscr E\to(f_V)_*(f_V^*(\mathscr E))$ est un monomorphisme
+  (resp.\ un isomorphisme) pour tout $\mathcal O_V$-Module localement libre
+  $\mathscr E$ de rang fini.
+  \item[\emph{b')}] L'homomorphisme canonique
+  $\mathcal O_X\to f_*(\mathcal O_{X'})$ est un monomorphisme
+  (resp.\ un isomorphisme).
+\end{enumerate}
+
+Supposons que l'homomorphisme canonique $\mathcal O_X\to f_*(\mathcal O_{X'})$ soit
+bijectif; alors, pour qu'un $\mathcal O_{X'}$-Module localement libre de rang fini
+$\mathscr E'$ soit isomorphe à un $\mathcal O_{X'}$-Module de la forme
+$f^*(\mathscr E)$, où $\mathscr E$ est un $\mathcal O_X$-Module localement libre de
+rang fini, il faut et il suffit que les deux conditions suivantes soient remplies :
+\begin{enumerate}[label=(\roman*)]
+  \item $f_*(\mathscr E')$ est un $\mathcal O_X$-Module localement libre;
+  \item l'homomorphisme canonique $(\mathbf 0_{\mathrm I}, 4.4.3.3)$
+  $f^*(f_*(\mathscr E'))\to\mathscr E'$ est un isomorphisme.
+\end{enumerate}
+Lorsque ces deux conditions sont remplies, $\mathscr E$ est isomorphe à
+$f_*(\mathscr E')$.
+\end{lemma}
+
+\begin{proof}
+Dire que le foncteur $\mathscr E\mapsto f_V^*(\mathscr E)$ est fidèle
+(resp.\ pleinement fidèle) signifie que pour deux $\mathcal O_V$-Modules localement
+libres de rang fini $\mathscr E_1$, $\mathscr E_2$, l'application
+\[
+  \operatorname{Hom}_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)
+  \longrightarrow
+  \operatorname{Hom}_{\mathcal O_{f^{-1}(V)}}
+  (f_V^*(\mathscr E_1),f_V^*(\mathscr E_2))
+\]
+est injective (resp.\ bijective); comme ceci doit avoir lieu en remplaçant $V$ par un
+ouvert $W\subset V$ et $\mathscr E_1$, $\mathscr E_2$ par $\mathscr E_1|W$,
+$\mathscr E_2|W$, et que
+\[
+  \operatorname{Hom}_{\mathcal O_W}(\mathscr E_1|W,\mathscr E_2|W)
+  =\Gamma(W,\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)),
+\]
+la condition signifie encore que l'homomorphisme canonique de faisceaux
+\[
+\label{IV.21.13.2.1}
+  \mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)
+  \longrightarrow
+  (f_V)_*(f_V^*(\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)))
+  \tag{21.13.2.1}
+\]
+est injectif (resp.\ bijectif). Mais puisque $\mathscr E_1$ et $\mathscr E_2$ sont
+localement libres de rang fini,
+$\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)$, isomorphe à
+$\mathscr E_1^\vee\otimes_{\mathcal O_V}\mathscr E_2$
+$(\mathbf 0_{\mathrm I}, 5.4.2)$, est aussi localement libre de rang fini; cela montre
+déjà que $b)$ entraîne $a)$, et inversement $b)$ est un cas particulier de $a)$,
+compte tenu de l'isomorphisme
+$\mathscr E\xrightarrow{\sim}\mathscr Hom_{\mathcal O_V}(\mathcal O_V,\mathscr E)$.
+Il est clair que $a')$ est un cas particulier de $a)$ et $b')$ un cas particulier de
+$a')$. Inversement, comme $b)$ est une propriété locale, on peut, pour la vérifier,
+se borner au cas où $\mathscr E=\mathcal O_V^n$, et cela montre que $b')$ entraîne
+$b)$.
+
+Si l'homomorphisme canonique $\mathcal O_X\to f_*(\mathcal O_{X'})$ est bijectif,
+et si les conditions (i) et (ii) sont remplies, il est clair que
+$\mathscr E'=f^*(\mathscr E)$ avec $\mathscr E=f_*(\mathscr E')$, à un isomorphisme
+près.
+\oldpage[IV-4]{315}
+Inversement, supposons que $\mathscr E'=f^*(\mathscr E)$, avec $\mathscr E$ localement
+libre; la question étant locale sur $X$, on peut supposer que
+$\mathscr E=\mathcal O_X^n$, d'où $\mathscr E'=\mathcal O_{X'}^n$, et les conditions
+(i) et (ii) résultent de l'hypothèse que
+$\mathcal O_X\to f_*(\mathcal O_{X'})$ est un isomorphisme.
+\end{proof}
+
+Dans ce numéro, nous appliquerons le lemme précédent à une injection canonique
+$j:U\to X$, où $U$ est l'espace annelé induit par $X$ sur un \emph{ouvert} de $X$.
+Avec ces notations, (21.13.2) se traduit en :
+
+\begin{corollary}[21.13.3]
+\label{IV.21.13.3}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$, $U=X-Y$,
+$j:U\to X$ l'injection canonique. Les conditions suivantes sont équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Pour tout ouvert $V$ de $X$, le foncteur restriction
+  $\mathscr E\mapsto\mathscr E|(U\cap V)$ de la catégorie des
+  $\mathcal O_V$-Modules localement libres de rang fini dans la catégorie des
+  $\mathcal O_{U\cap V}$-Modules localement libres de rang fini est fidèle
+  (resp.\ pleinement fidèle).
+  \item[\emph{a')}] Pour tout ouvert $V$ de $X$, le foncteur restriction
+  $\mathscr L\mapsto\mathscr L|(U\cap V)$ de la catégorie des
+  $\mathcal O_V$-Modules localement libres de rang $1$ dans la catégorie des
+  $\mathcal O_{U\cap V}$-Modules localement libres de rang $1$ est fidèle
+  (resp.\ pleinement fidèle).
+  \item Pour tout ouvert $V$ de $X$, l'homomorphisme canonique
+  $\mathscr E\to(j_V)_*(\mathscr E|(U\cap V))$ est injectif (resp.\ bijectif) pour
+  tout $\mathcal O_V$-Module localement libre de rang fini $\mathscr E$.
+  \item[\emph{b')}] L'homomorphisme canonique
+  $\mathcal O_X\to j_*(\mathcal O_U)$ est injectif (resp.\ bijectif).
+\end{enumerate}
+
+Supposons que l'homomorphisme canonique $\mathcal O_X\to j_*(\mathcal O_U)$ soit
+bijectif. Alors, pour qu'un $\mathcal O_U$-Module localement libre de rang fini
+$\mathscr F$ soit de la forme $\mathscr E|U$, où $\mathscr E$ est un
+$\mathcal O_X$-Module localement libre de rang fini, il faut et il suffit que
+$j_*(\mathscr F)$ soit un $\mathcal O_X$-Module localement libre, et dans ce cas, on
+peut prendre $\mathscr E=j_*(\mathscr F)$.
+\end{corollary}
+
+\begin{lemma}[21.13.4]
+\label{IV.21.13.4}
+Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$,
+$U=X-Y$, $j:U\to X$ l'injection canonique. Pour que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ soit injectif (resp.\ bijectif), il faut et il
+suffit que $\operatorname{prof}_Y(\mathcal O_X)\geq1$
+(resp.\ $\operatorname{prof}_Y(\mathcal O_X)\geq2$) (autrement dit, que
+$\operatorname{prof}(\mathcal O_{X,x})\geq1$
+(resp.\ $\operatorname{prof}(\mathcal O_{X,x})\geq2$) pour tout $x\in Y$).
+\end{lemma}
+
+\begin{proof}
+Ces assertions sont en effet des cas particuliers de (5.10.2) et (5.10.5).
+\end{proof}
+
+\begin{proposition}[21.13.5]
+\label{IV.21.13.5}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$, $U=X-Y$,
+$j:U\to X$ l'injection canonique. Pour que le couple $(X,Y)$ soit parafactoriel, il
+faut et il suffit que l'homomorphisme canonique $\mathcal O_X\to j_*(\mathcal O_U)$
+soit bijectif, et que pour tout ouvert $V$ de $X$ et tout
+$\mathcal O_{U\cap V}$-Module inversible $\mathscr L$, $(j_V)_*(\mathscr L)$ soit un
+$\mathcal O_V$-Module inversible (notation de (21.13.3)).
+\end{proposition}
+
+\begin{proof}
+C'est une conséquence immédiate de la définition (21.13.1) et de (21.13.3).
+\end{proof}
+
+\begin{corollary}[21.13.6]
+\label{IV.21.13.6}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$.
+\begin{enumerate}[label=(\roman*)]
+  \item Si le couple $(X,Y)$ est parafactoriel, il en est de même de
+  $(W,Y\cap W)$ pour tout ouvert $W$ de $X$. Inversement, si $(W_\alpha)$ est un
+  recouvrement ouvert de $X$ tel que chacun des couples
+  $(W_\alpha,Y\cap W_\alpha)$ soit parafactoriel, alors le couple $(X,Y)$ est
+  parafactoriel.
+  \item Si le couple $(X,Y)$ est parafactoriel, il en est de même de $(X,Y')$ pour
+  toute partie fermée $Y'$ de $Y$.
+  \item Supposons que $X$ soit un préschéma, et soient $X'$ un préschéma,
+  $f:X'\to X$ un morphisme fidèlement plat et quasi-compact; posons
+  $Y'=f^{-1}(Y)$. Supposons que le couple $(X',Y')$ soit parafactoriel et que
+  l'ouvert $U=X-Y$ soit rétrocompact dans $X$ $(\mathbf 0_{\mathrm{III}}, 9.1.1)$.
+  Alors le couple $(X,Y)$ est parafactoriel.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\oldpage[IV-4]{316}
+(i) Comme le fait que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ soit bijectif est une propriété locale sur $X$,
+tout revient à voir (en vertu de (21.13.5)), en désignant par
+$j_\alpha:U\cap W_\alpha\to W_\alpha$ l'injection canonique, que l'on a la propriété
+suivante : si, pour tout $\alpha$ et pour tout $\mathcal O_U$-Module inversible
+$\mathscr L$, $(j_\alpha)_*(\mathscr L|(U\cap W_\alpha))$ est un
+$\mathcal O_{W_\alpha}$-Module inversible, alors $j_*(\mathscr L)$ est un
+$\mathcal O_X$-Module inversible. Mais la propriété d'être un $\mathcal O_X$-Module
+inversible est locale sur $X$, et $(W_\alpha)$ est un recouvrement ouvert de $X$;
+comme on a
+\[
+  j_*(\mathscr L)|W_\alpha
+  =(j_\alpha)_*(\mathscr L|(U\cap W_\alpha)),
+\]
+cela prouve notre assertion.
+
+(ii) Posons $U'=X-Y'$, et soit $j':U'\to X$ l'injection canonique. Dire que
+l'homomorphisme $\mathcal O_X\to j'_*(\mathcal O_{U'})$ est bijectif revient à dire
+que pour tout ouvert $V$ de $X$, l'homomorphisme
+$\Gamma(V,\mathcal O_X)\to\Gamma(V\cap U',\mathcal O_X)$ est bijectif; mais
+l'homomorphisme composé
+\[
+  \Gamma(V,\mathcal O_X)\longrightarrow\Gamma(V\cap U',\mathcal O_X)
+  \longrightarrow\Gamma(V\cap U,\mathcal O_X)
+\]
+est bijectif par hypothèse (21.13.5), et en remplaçant $V$ par $V\cap U'$, on voit que
+$\Gamma(V\cap U',\mathcal O_X)\to\Gamma(V\cap U,\mathcal O_X)$ est bijectif, donc
+$\Gamma(V,\mathcal O_X)\to\Gamma(V\cap U',\mathcal O_X)$ est bijectif. Notons ensuite
+que si $j'':U\to U'$ est l'injection canonique et si $\mathscr L'$ est un
+$\mathcal O_{U'}$-Module inversible, $\mathscr L'|U$ est un $\mathcal O_U$-Module
+inversible, donc
+$j_*(\mathscr L'|U)=j'_*(j''_*(\mathscr L'|U))$ est par hypothèse un
+$\mathcal O_X$-Module inversible. Comme le couple $(U',U'\cap Y)$ est parafactoriel
+en vertu de (i), on a $j''_*(\mathscr L'|U)\cong\mathscr L'$, donc
+$j'_*(\mathscr L')$ est un $\mathcal O_X$-Module inversible. Il suffit alors pour
+conclure de remplacer dans le raisonnement précédent $X$, $U$ et $U'$ par $V$,
+$V\cap U$ et $V\cap U'$, où $V$ est un ouvert de $X$.
+
+(iii) Posons $U'=X'-Y'=f^{-1}(U)$ et notons que puisqu'il s'agit de préschémas, on
+peut écrire $U'=U\times_X X'$; soit $f_U:f^{-1}(U)\to U$ la restriction de $f$ et
+soit $j':U'\to X'$ l'injection canonique, qui s'écrit aussi $j_{(X')}$. Montrons
+d'abord que l'homomorphisme canonique
+$\rho:\mathcal O_X\to j_*(\mathcal O_U)$ est bijectif; pour cela, notons que par
+hypothèse l'homomorphisme canonique
+$\mathcal O_{X'}\to j'_*(\mathcal O_{U'})$ est bijectif; mais puisque le morphisme
+$j$ est quasi-compact et séparé par hypothèse, et le morphisme $f$ plat,
+$j'_*(\mathcal O_{U'})=j'_*(f_U^*(\mathcal O_U))$ s'identifie canoniquement à
+$f^*(j_*(\mathcal O_U))$ en vertu de (2.3.1); comme
+$\mathcal O_{X'}=f^*(\mathcal O_X)$, on voit que l'homomorphisme
+$f^*(\rho):f^*(\mathcal O_X)\to f^*(j_*(\mathcal O_U))$ est bijectif; on en conclut
+que $\rho$ est bijectif puisque $f$ est fidèlement plat (2.2.7). Considérons ensuite
+un $\mathcal O_U$-Module inversible $\mathscr L$, et soit
+$\mathscr L'=f_U^*(\mathscr L)$, qui est un $\mathcal O_{U'}$-Module inversible. Par
+hypothèse $j'_*(f_U^*(\mathscr L))$ est un $\mathcal O_{X'}$-Module inversible, qui
+est isomorphe à $f^*(j_*(\mathscr L))$ par (2.3.1) comme ci-dessus. Mais puisque $f$
+est fidèlement plat et quasi-compact, cela entraîne que $j_*(\mathscr L)$ est un
+$\mathcal O_X$-Module localement libre (2.5.2). Pour achever la démonstration, il
+suffit de remplacer $X$ par un ouvert $V$ et $X'$ par $f^{-1}(V)$ dans ce qui
+précède.
+\end{proof}
+
+\begin{definition}[21.13.7]
+\label{IV.21.13.7}
+On dit qu'un anneau local $A$ est \emph{parafactoriel} si, posant
+$X=\operatorname{Spec}(A)$ et désignant par $a$ le point fermé de $X$, le couple
+$(X,\{a\})$ est parafactoriel.
+\end{definition}
+
+\begin{proposition}[21.13.8]
+\label{IV.21.13.8}
+Les notations étant celles de (21.13.7), on pose $U=X-\{a\}$. Pour que $A$ soit
+parafactoriel, il faut et il suffit qu'il vérifie les conditions suivantes :
+\begin{enumerate}[label=(\roman*)]
+  \item L'homomorphisme canonique
+  $A=\Gamma(X,\mathcal O_X)\to\Gamma(U,\mathcal O_X)$ est bijectif.
+  \item $\operatorname{Pic}(U)=0$.
+\end{enumerate}
+\oldpage[IV-4]{317}
+Si en outre $A$ est noethérien, la condition (i) équivaut à
+\begin{enumerate}
+  \item[\textup{(i bis)}] $\operatorname{prof}(A)\geq2$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En effet, le seul ouvert de $X$ contenant $a$ est $X$ lui-même, et par suite tout
+$\mathcal O_X$-Module inversible est isomorphe à $\mathcal O_X$, autrement dit
+$\operatorname{Pic}(X)=0$; la première assertion résulte donc de la définition
+(21.13.1) et de (21.13.3). La seconde assertion n'est autre qu'un cas particulier de
+(21.13.4).
+\end{proof}
+
+\begin{env}[21.13.9]
+\label{IV.21.13.9}
+\emph{Exemples}. ---
+
+(i) Un anneau local noethérien parafactoriel est nécessairement de dimension
+$\geq2$ en vertu de (21.13.8); en d'autres termes un anneau local noethérien de
+dimension $\leq1$ n'est pas parafactoriel.
+
+(ii) Un anneau local noethérien \emph{factoriel} $A$ de dimension $\geq2$ est
+parafactoriel, comme il résulte de (21.13.8) et de (21.6.14).
+
+(iii) Si $A$ est un anneau local noethérien de dimension $\geq3$ et parafactoriel, il
+n'est pas nécessairement normal ni même réduit. Considérons un anneau local régulier
+$B$ de dimension $\geq3$, et soit $A=D_B(B)$ $(\mathbf 0, 18.2.3)$, isomorphe à
+$B[T]/(T^2)$; on voit aussitôt que l'on a
+$\operatorname{prof}(A)=\operatorname{prof}(B)=\dim(B)\geq3$. Pour montrer que $A$
+est parafactoriel, il suffit donc, avec les notations de (21.13.8), de prouver que
+$\operatorname{Pic}(U)=0$. Soit $\mathfrak J$ le noyau de l'augmentation $A\to B$,
+qui est tel que $\mathfrak J^2=0$ et qui, en tant que $B$-module, est isomorphe à $B$.
+Comme $B=A/\mathfrak J$, $X=\operatorname{Spec}(A)$ et
+$X_0=\operatorname{Spec}(B)$ ont même espace sous-jacent; si
+$\mathscr J=\widetilde{\mathfrak J}$, $X_0$ est le sous-schéma défini par
+$\mathscr J$; nous noterons $U_0$ le sous-préschéma induit par $X_0$ sur l'ouvert
+$U$. Pour tout $z\in\mathfrak J$, posons $\varphi(z)=1+z$; puisque
+$(1+z)(1-z)=1$, $1+z$ est inversible dans $A$ et $\varphi(\mathfrak J)$ est le noyau
+de l'homomorphisme surjectif canonique de groupes multiplicatifs $A^*\to B^*$; en
+d'autres termes, on a une suite exacte de groupes commutatifs
+\[
+  0\longrightarrow\mathfrak J\xrightarrow{\varphi}A^*\longrightarrow B^*
+  \longrightarrow1
+\]
+(les trois derniers groupes étant multiplicatifs, les deux premiers additifs). Pour la
+même raison, pour tout $t\in A$, on a la suite exacte
+\[
+  0\longrightarrow\mathfrak J_t\xrightarrow{\varphi_t}(A_t)^*
+  \longrightarrow(B_{t_0})^*\longrightarrow1
+\]
+en désignant par $t_0$ l'image de $t$ dans $B$, puisque
+$B_{t_0}=A_t/\mathfrak J_t$; autrement dit, on a une suite exacte de faisceaux de
+groupes commutatifs sur l'espace topologique $X$
+\[
+  0\longrightarrow\mathscr J\xrightarrow{u}\mathcal O_X^*
+  \longrightarrow\mathcal O_{X_0}^*\longrightarrow1
+\]
+d'où par restriction à l'ouvert $U$, une suite exacte
+\[
+  0\longrightarrow\mathscr J|U\longrightarrow\mathcal O_U^*
+  \longrightarrow\mathcal O_{U_0}^*\longrightarrow1.
+\]
+Par la suite exacte de cohomologie, on en déduit une suite exacte
+\[
+\label{IV.21.13.9.1}
+  \mathrm H^1(U,\mathscr J)\longrightarrow\mathrm H^1(U,\mathcal O_U^*)
+  \xrightarrow{u_1}\mathrm H^1(U,\mathcal O_{U_0}^*)
+  \tag{21.13.9.1}
+\]
+Mais puisque $\mathfrak J$ est un $B$-module isomorphe à $B$, on a
+$\mathrm H^1(U,\mathscr J)=\mathrm H^1(U_0,\mathcal O_{U_0})$, et il résulte du
+chap.~III, 3\textsuperscript{e} partie (voir aussi [41, III, Exemple III-1]) que l'on a
+\oldpage[IV-4]{318}
+$\mathrm H^1(U_0,\mathcal O_{U_0})=0$ en raison de la relation
+$\operatorname{prof}(B)\geq3$. Par ailleurs, comme $B$ est factoriel, on a
+$\mathrm H^1(U,\mathcal O_{U_0}^*)=\operatorname{Pic}(U_0)=0$; on tire donc bien de
+la suite exacte précédente que
+$\operatorname{Pic}(U)=\mathrm H^1(U,\mathcal O_U^*)=0$.
+
+(iv) Il existe aussi des anneaux locaux noethériens de dimension $3$ qui sont
+intègres, intégralement clos et parafactoriels, mais non factoriels. Soit en effet $B$
+un anneau local noethérien, complet, intègre et intégralement clos, de dimension
+$\geq2$ et non factoriel (par exemple le complété de l'anneau localisé de l'algèbre
+intègre $k[U,V,W]/(W^2-UV)$ en l'idéal image de $(U)+(V)+(W)$). Alors il résulte de
+ce que l'on verra plus bas (21.14.2) que l'anneau local $A=B[[T]]$ des séries formelles
+en $T$ sur $B$ est parafactoriel, mais il n'est pas factoriel, sans quoi $B$ le serait
+en vertu de (21.13.12) ci-dessous.
+
+(v) On peut montrer qu'un anneau local d'intersection complète absolue (19.3.1) de
+dimension $\geq4$, est parafactoriel (cf. [41, XI, 3.13 (i)]).
+
+(vi) On a vu (Remarque (ii)) que tout anneau local noethérien factoriel $A$ de
+dimension $2$ est parafactoriel. Mais il y a des anneaux locaux noethériens de
+dimension $2$ qui sont parafactoriels et non factoriels. On peut montrer que, pour
+qu'un anneau local noethérien $A$ de dimension $2$ soit parafactoriel et non
+factoriel, il faut et il suffit qu'il satisfasse aux trois conditions suivantes :
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item $A$ est un anneau de Cohen--Macaulay (autrement dit
+  $\operatorname{prof}(A)=2$).
+  \item $A$ est intègre et si $A'$ est sa clôture intégrale, $A'$ est factoriel et est
+  une $A$-algèbre finie.
+  \item Soit $\mathfrak J$ le conducteur de $A$ dans $A'$ (annulateur du $A$-module
+  $A'/A$, ou encore le plus grand idéal de $A'$ contenu dans $A$); posons
+  $B=A/\mathfrak J$, $B'=A'/\mathfrak J$; alors $\dim(B)=1$ (ce qui implique
+  $A'\neq A$, autrement dit $A$ n'est pas intégralement clos), et l'application
+  canonique $\operatorname{Div}(B)\to\operatorname{Div}(B')$ (21.4.5) est
+  \emph{surjective}.
+\end{enumerate}
+On peut montrer en outre que ces conditions entraînent la propriété suivante :
+
+$4^{\mathrm o}$ L'anneau $B'$ (et \emph{a fortiori} $B\subset B'$) est réduit, et le
+morphisme $\operatorname{Spec}(B')\to\operatorname{Spec}(B)$ est bijectif.
+
+Si l'on pose $X=\operatorname{Spec}(A)$, $X'=\operatorname{Spec}(A')$,
+$Y=\operatorname{Spec}(B)$, $Y'=\operatorname{Spec}(B')$, de sorte que $Y$
+(resp.\ $Y'$) est défini par l'idéal $\mathfrak J$ de $A$ (resp.\ $A'$), le morphisme
+structural $f:X'\to X$ est un isomorphisme de $X'-Y'$ sur $X-Y$ (Bourbaki,
+\emph{Alg. comm.}, chap.~V, \S1, n\textsuperscript{o}~5, cor.~5 de la prop.~16). On
+voit donc en vertu de $4^{\mathrm o}$ que $f$ est un morphisme \emph{bijectif}; en
+d'autres termes, $X$ est un préschéma \emph{unibranche} (6.15.1) (et en particulier
+$A'$ est un anneau local noethérien); en général $X$ n'est pas géométriquement
+unibranche. L'espace $Y$, de dimension $1$, est constitué par le point fermé $x$ de
+$X$ et les points maximaux $y_i$ ($1\leq i\leq r$) de $Y$, et l'unique point $y_i'$
+de $Y'$ au-dessus de $y_i$ est aussi un point maximal de $Y'$; comme $B$ et $B'$ sont
+réduits, on en déduit que l'on a
+\[
+  \mathfrak m_{y_i}\mathcal O_{X',y_i'}=\mathfrak m_{y_i'}.
+\]
+Pour $z=y_i$ et $z'=y_i'$, cette relation est aussi vérifiée de façon évidente pour
+$z\notin Y$ et $z'$ l'unique point de $f^{-1}(z)$, donc pour tout
+$z\in U=X-\{x\}$ et $z'$ l'unique point de $f^{-1}(z)$. En particulier, si l'anneau
+$A$ est de caractéristique $0$ (0, 21.1.1) on voit que $U'$ est \emph{non ramifié} sur
+$U$ (mais non étale en général).
+
+Nous nous bornerons ici à démontrer que les conditions $1^{\mathrm o}$,
+$2^{\mathrm o}$, $3^{\mathrm o}$ ci-dessus sont \emph{suffisantes} pour que $A$ soit
+parafactoriel. Or, en vertu de la condition $1^{\mathrm o}$ et de (21.13.8), il suffit
+de démontrer que $\operatorname{Pic}(U)=0$. Puisque $A'$ est factoriel en vertu de
+$2^{\mathrm o}$, on a $\operatorname{Pic}(U')=0$, et on déduit de (21.8.5, (ii)) une
+suite exacte
+\[
+  1\longrightarrow
+  \left(\prod_{i=1}^r
+  \mathcal O_{U',y_i'}^*/\mathcal O_{U,y_i}^*\right)
+  \big/\operatorname{Im}\Gamma(U',\mathcal O_{U'}^*)
+  \longrightarrow\operatorname{Pic}(U)\longrightarrow\operatorname{Pic}(U')
+  \longrightarrow0
+\]
+et il s'agit donc de montrer que le second terme de cette suite est réduit à l'élément
+neutre, en prenant pour $S$ l'ensemble des $y_i$ ($1\leq i\leq r$) et en notant
+qu'ici $f_*(\mathcal O_{X'})$ est la $\mathcal O_X$-Algèbre $\widetilde{A'}$. Soient
+$\mathfrak p_i$, $\mathfrak p_i'$ les idéaux premiers de $A$ et $A'$ correspondant
+aux points $y_i$, $y_i'$, et remarquons que $\mathfrak p_i'\cap A=\mathfrak p_i$;
+donnons-nous pour chaque $i$ un élément inversible $a_i'/s_i$ de
+$A'_{\mathfrak p_i'}$, avec $a_i'\in A'$, $s_i\notin\mathfrak p_i'$; comme nous
+n'avons à examiner que les groupes quotients
+$(A'_{\mathfrak p_i'})^*/(A_{\mathfrak p_i})^*$, on peut supposer $s_i=1$ pour tout
+$i$; soit $b_i'\in B'=A'/\mathfrak J$ l'image canonique de $a_i'$, de sorte que
+$b_i'/1$ est un élément non nul de $k(y_i')=\mathcal O_{Y',y_i'}$. L'ensemble
+$U\cap Y$ formé par les $y_i$ est un ouvert affine de la forme $D(t)$ dans $Y$, avec
+$t\in\mathfrak m$, idéal maximal de $A$; il existe donc un élément inversible
+$b'\in B'_t$ dont les $b_i'/1$ sont les images canoniques, et comme $t$ est régulier
+dans l'anneau intègre $A'$, on peut supposer $b'$ de la forme $b''/t^m$, où
+$b''\in B'$ est inversible. Soit $a''$ un élément de $A'$ dans la classe $b''$, qui
+est donc nécessairement inversible; $a'=a''/t^m$ est inversible dans $A'_t$ et pour
+tout $i$, on a
+\[
+  u_i=a''-a_i't^m\in\mathfrak J,
+  \qquad
+  t^m a_i'=a''-u_i=a''(1-a''^{-1}u_i);
+\]
+mais $a''^{-1}u_i\in\mathfrak J\subset\mathfrak m$, donc $1-a''^{-1}u_i$ est un
+élément inversible de $A$, et les classes de $a'$ et $a_i'$ dans
+$(A'_{\mathfrak p_i'})^*/(A_{\mathfrak p_i})^*$ sont les mêmes, ce qui achève la
+démonstration.
+
+\oldpage[IV-4]{319}
+Pour avoir un exemple explicite d'anneau parafactoriel de dimension $2$ obtenu de
+cette manière et \emph{non factoriel}, considérons l'anneau
+\[
+  E=\mathbb R[[U,V]]/(U^2+V^2),
+\]
+dont la clôture intégrale $E'$ s'identifie à $\mathbb C[[U]]$ (6.15.11). Si l'on pose
+$A=E[[T]]$, la clôture intégrale de $A$ est l'anneau $A'=E'[[T]]$ (Bourbaki,
+\emph{Alg. comm.}, chap.~V, \S1, n\textsuperscript{o}~4, prop.~14); on vérifie
+aussitôt que le conducteur de $E$ dans $E'$ est l'idéal maximal $\mathfrak n$ de
+$E$, donc le conducteur $\mathfrak J$ de $A$ dans $A'$ est $\mathfrak n[[T]]$, et on
+a $B=A/\mathfrak J\cong\mathbb R[[T]]$, $B'=A'/\mathfrak J\cong\mathbb C[[T]]$.
+Il est alors immédiat que les conditions $1^{\mathrm o}$, $2^{\mathrm o}$ et
+$3^{\mathrm o}$ énoncées ci-dessus sont bien vérifiées, mais $A$ n'est même pas
+intégralement clos.
+
+On peut varier cet exemple, et le lecteur verra sans peine que si $k$ est un corps
+algébriquement clos, l'anneau $A$, localisé de l'anneau
+$k[U,V,W]/(U^2-WV^2)$ en l'idéal maximal engendré par les images de $U$, $V$ et $W$,
+vérifie aussi les conditions $1^{\mathrm o}$, $2^{\mathrm o}$ et $3^{\mathrm o}$
+ci-dessus.
+
+Il se pourrait que ces trois conditions impliquent même que chacun des anneaux
+$B'/\mathfrak p_i'$ soit un anneau de valuation discrète, ce qui entraînerait que
+$A'$ est même un anneau \emph{régulier}.
+\end{env}
+
+\begin{proposition}[21.13.10]
+\label{IV.21.13.10}
+Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$. Pour que
+le couple $(X,Y)$ soit parafactoriel il faut et il suffit que, pour tout $y\in Y$,
+l'anneau local $\mathcal O_{X,y}$ soit parafactoriel.
+\end{proposition}
+
+\begin{proof}
+Posons $U=X-Y$ et soit $j:U\to X$ l'injection canonique.
+
+En vertu de (21.13.4), dire que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ soit bijectif équivaut à dire que chacun des
+anneaux locaux $\mathcal O_{X,y}$ pour $y\in Y$ satisfait à la condition (i bis) de
+(21.13.8).
+
+Montrons d'abord que si le couple $(X,Y)$ est parafactoriel, chacun des anneaux
+$\mathcal O_{X,y}$ ($y\in Y$) est parafactoriel. Compte tenu de la remarque
+précédente, tout revient à voir que, si l'on pose
+$T_y=\operatorname{Spec}(\mathcal O_{X,y})$ et $U_y=T_y-\{y\}$, tout
+$\mathcal O_{U_y}$-Module inversible $\mathscr L_0$ est isomorphe à
+$\mathcal O_{U_y}$. Or, lorsque $V$ parcourt l'ensemble des voisinages ouverts
+affines de $y$ dans $X$, il résulte de (8.2.13) et $(\mathbf I, 2.4.2)$ que le
+préschéma $U_y$ est limite projective des préschémas induits par $X$ sur les ouverts
+$V-(V\cap\overline{\{y\}})$, qui sont quasi-compacts puisque $X$ est localement
+noethérien. Comme les $V-(V\cap\overline{\{y\}})$ sont séparés, il résulte alors de
+(8.5.2, (ii)) et (8.5.5) qu'il y a un voisinage ouvert affine $V$ de $y$ dans $X$ et
+un $\mathcal O_{U_V}$-Module inversible $\mathscr L'_V$ tel que $\mathscr L_0$ soit le
+faisceau induit par $\mathscr L'_V$ sur $U_y$. Mais l'hypothèse entraîne, en vertu de
+(21.13.6, (i) et (iii)), que le couple $(V,V\cap\overline{\{y\}})$ est parafactoriel;
+on en conclut par définition (21.13.1) qu'il existe un $\mathcal O_V$-Module inversible
+$\mathscr L_V$ induisant $\mathscr L'_V$ sur $U_V$. Remplaçant au besoin $V$ par un
+voisinage ouvert plus petit de $y$, on peut supposer que $\mathscr L_V$ est isomorphe
+à $\mathcal O_V$, d'où on conclut que $\mathscr L_0$ est isomorphe à
+$\mathcal O_{U_y}$.
+
+Inversement, prouvons que si tous les $\mathcal O_{X,y}$ ($y\in Y$) sont
+parafactoriels le couple $(X,Y)$ est parafactoriel. On est évidemment ramené, compte
+tenu de la remarque du début, à montrer que pour tout $\mathcal O_U$-Module inversible
+$\mathscr L$, $j_*(\mathscr L)$ est un $\mathcal O_X$-Module inversible (21.13.5).
+La question étant locale sur $X$, on peut supposer $X$ noethérien. L'ensemble $V$ des
+$x\in X$ tels que la restriction de $j_*(\mathscr L)$ à un voisinage ouvert de $x$
+dans $X$ soit inversible est évidemment ouvert dans $X$; il s'agit de montrer que
+$V=X$. Pour cela, supposons le contraire et posons $Z=X-V\neq\varnothing$. Soit $y$
+un point \emph{maximal} de $Z$; puisque $Z\subset Y$ par définition,
+$\mathcal O_{X,y}$ est par hypothèse un anneau parafactoriel. Remplaçant au besoin
+$X$ par un voisinage ouvert de $y$ dans $X$, on peut supposer que la restriction de
+$j_*(\mathscr L)$
+\oldpage[IV-4]{320}
+à $V-(V\cap\overline{\{y\}})$ est inversible; donc, avec les notations introduites
+ci-dessus, le $\mathcal O_{U_y}$-Module $\mathscr L_0$ induit par $j_*(\mathscr L)$
+sur $U_y$ est inversible. Puisque $\mathcal O_{X,y}$ est parafactoriel,
+$\mathscr L_0$ est induit par un $\mathcal O_{T_y}$-Module inversible $\mathscr L'$;
+mais comme $T_y$ est limite projective des voisinages ouverts $W$ de $y$ dans $X$,
+on peut de nouveau appliquer (8.5.2, (ii)) et (8.5.5), prouvant l'existence d'un tel
+voisinage $W$ et d'un $\mathcal O_W$-Module inversible $\mathscr L''$ induisant
+$\mathscr L'$ sur $T_y$, donc induisant $\mathscr L_0$ sur $U_y$; appliquant cette
+fois (8.5.2.5) et (8.5.2, (i)), on en déduit qu'en remplaçant au besoin $W$ par un
+voisinage ouvert plus petit de $y$, on peut supposer que les restrictions de
+$j_*(\mathscr L)$ et de $\mathscr L''$ à
+$W-(W\cap\overline{\{y\}})$ soient égales. Si l'on pose alors $V_1=V\cup W$ et si
+l'on désigne par $\mathscr L_1$ le $\mathcal O_{V_1}$-Module inversible égal à
+$\mathscr L''$ dans $W$, à $j_*(\mathscr L)|V$ dans $V$, on a $U\subset V_1$ et
+$\mathscr L_1|U=\mathscr L$. On conclut alors du fait que l'homomorphisme
+$\mathcal O_X\to j_*(\mathcal O_U)$ est bijectif et de (21.13.2, $b$)) que
+$j_*(\mathscr L)|V_1$ est isomorphe à $\mathscr L_1$, donc inversible. Mais cela
+contredit la définition de $V$, et conclut donc la démonstration de (21.13.10).
+\end{proof}
+
+\begin{corollary}[21.13.11]
+\label{IV.21.13.11}
+Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$,
+$U=X-Y$. Supposons que le couple $(X,Y)$ soit parafactoriel et que $U$ soit
+localement factoriel; en d'autres termes (21.13.10), pour tout $x\in X$, l'anneau
+$\mathcal O_{X,x}$ est : $1^{\mathrm o}$ parafactoriel si $x\in Y$;
+$2^{\mathrm o}$ factoriel si $x\notin Y$. Alors $X$ est localement factoriel
+(autrement dit, $\mathcal O_{X,x}$ est en fait factoriel pour tout $x\in X$).
+\end{corollary}
+
+\begin{proof}
+Supposons en effet le contraire, et soit $y$ un point de $Y$ tel que
+$\mathcal O_{X,y}$ ne soit pas factoriel et ait une dimension \emph{minima} parmi
+tous les points de $Y$ ayant cette propriété. Alors, si l'on pose
+$T_y=\operatorname{Spec}(\mathcal O_{X,y})$, $U_y=T_y-\{y\}$, l'hypothèse que
+$\mathcal O_{X,y}$ est parafactoriel entraîne $\operatorname{Pic}(U_y)=0$ et
+$\operatorname{prof}(\mathcal O_{X,y})\geq2$ (21.13.8); de plus le choix de $y$
+entraîne que $U_y$ est localement factoriel. Mais alors (21.6.14) prouve que
+$\mathcal O_{X,y}$ est factoriel, contrairement à l'hypothèse.
+\end{proof}
+
+\begin{proposition}[21.13.12]
+\label{IV.21.13.12}
+Soient $A$, $B$ deux anneaux locaux noethériens,
+$\rho:A\to B$ un homomorphisme local faisant de $B$ un $A$-module plat. Alors, si
+$B$ est factoriel, il en est de même de $A$.
+\end{proposition}
+
+\begin{proof}
+On sait déjà que $A$ est intègre et intégralement clos (6.5.4), donc on peut se borner
+au cas où $\dim(A)\geq2$, et raisonner par récurrence sur $n=\dim(A)$. Soient
+$X=\operatorname{Spec}(A)$, $a$ le point fermé de $X$,
+$X'=\operatorname{Spec}(B)$, $f:X'\to X$ le morphisme structural,
+$U=X-\{a\}$, $U'=f^{-1}(U)$.
+
+Les anneaux locaux $\mathcal O_{X',x'}$ aux points $x'\in f^{-1}(a)$ sont factoriels
+et de dimension $\geq2$ (6.1.2), donc parafactoriels (21.13.9, (ii)); on en conclut
+(21.13.10) que le couple $(X',f^{-1}(a))$ est parafactoriel. En vertu de (21.13.6,
+(iii)), cela montre que l'anneau $A$ est parafactoriel, donc
+$\operatorname{prof}(A)\geq2$ et $\operatorname{Pic}(U)=0$ (21.13.8). Enfin, les
+anneaux locaux de $U$ étant de dimension $<n$, l'hypothèse de récurrence prouve que
+$U$ est \emph{localement factoriel}; la conclusion résulte alors de (21.6.14).
+\end{proof}
+
+\begin{env}[21.13.12.1]
+\label{IV.21.13.12.1}
+On notera que l'énoncé (21.13.12) où on remplace « factoriel » par « parafactoriel »
+n'est plus exact, comme le montre l'exemple où $A=k$ est un corps et $B$ l'anneau
+local factoriel $k[[T_1,T_2]]$. Cependant, il résulte de (21.13.6, (iii)) que, sous
+les conditions de (21.13.12), si $\mathfrak m$ désigne l'idéal maximal de $A$ et si
+$\mathfrak mB$ est un \emph{idéal}
+\oldpage[IV-4]{321}
+\emph{de définition} de $B$ (autrement dit, si $\dim(B/\mathfrak mB)=0$), alors,
+lorsque $B$ est parafactoriel, il en est de même de $A$. En particulier, si le
+complété $\widehat A$ d'un anneau local noethérien est parafactoriel, il en est de
+même de $A$.
+\end{env}
+
+\begin{remark}[21.13.13]
+\label{IV.21.13.13}
+Une partie des définitions et résultats précédents se rattache à des considérations
+plus générales sur la cohomologie des faisceaux de groupes commutatifs sur un espace
+topologique, développées au chap.~III, 3\textsuperscript{e} partie, et nous n'en avons
+donné ici un exposé indépendant que pour la commodité du lecteur. En effet, si $X$
+est un espace annelé, on a une \emph{équivalence} canonique entre la catégorie des
+$\mathcal O_X$-Modules inversibles et celle des \emph{faisceaux principaux homogènes
+sous le faisceau de groupes} $\mathcal O_X^*$ (16.5.15). Cette équivalence se définit
+en faisant correspondre à tout $\mathcal O_X$-Module inversible $\mathscr L$ le
+faisceau $\mathscr L^*=\mathscr Isom_{\mathcal O_X}(\mathcal O_X,\mathscr L)$ des
+germes d'isomorphismes de $\mathcal O_X$ sur $\mathscr L$; il est immédiat que
+$\mathscr L^*$ est canoniquement muni d'une structure de faisceau principal homogène
+sous $\mathcal O_X^*\cong\mathscr Isom_{\mathcal O_X}(\mathcal O_X,\mathcal O_X)$.
+La vérification du fait que le foncteur $\mathscr L\mapsto\mathscr L^*$ est une
+équivalence de catégories est immédiate.
+
+Cela étant, considérons de façon générale un espace topologique $X$ et un faisceau de
+groupes $\mathscr G$ sur $X$; soit $Y$ une partie fermée de $X$, posons $U=X-Y$, et
+soit $i$ un entier tel que $0\leq i\leq2$; on dira que le couple $(X,Y)$ est
+\emph{$i$-pur pour $\mathscr G$} si, pour tout ouvert $V$ de $X$, le foncteur
+restriction $\mathscr P\mapsto\mathscr P|(U\cap V)$, de la catégorie de faisceaux
+principaux homogènes sous le faisceau de groupes $\mathscr G|V$, dans la catégorie
+analogue sous le faisceau de groupes $\mathscr G|(U\cap V)$, est \emph{fidèle}
+($i=0$), resp.\ \emph{pleinement fidèle} ($i=1$), resp.\ une \emph{équivalence de
+catégories} ($i=2$). Dans le cas où $X$ est un espace annelé et
+$\mathscr G=\mathcal O_X^*$, dire que $(X,Y)$ est $i$-pur signifie donc pour $i=0$,
+que l'homomorphisme $\mathcal O_X\to j_*(\mathcal O_U)$ est \emph{injectif}; pour
+$i=1$, que cet homomorphisme est \emph{bijectif}; et enfin, pour $i=2$, que le couple
+$(X,Y)$ est \emph{parafactoriel} (21.13.3).
+
+Revenant au cas général, rappelons que les morphismes de la catégorie des faisceaux
+principaux sous $\mathscr G$ sont par définition les isomorphismes. Dire que le couple
+$(X,Y)$ est $0$-pur signifie donc que pour tout ouvert $V$ de $X$, l'homomorphisme
+canonique $\mathrm H^0(V,\mathscr G)\to\mathrm H^0(U\cap V,\mathscr G)$ est injectif;
+dire que le couple $(X,Y)$ est $1$-pur signifie que l'homomorphisme canonique
+$\mathrm H^0(V,\mathscr G)\to\mathrm H^0(U\cap V,\mathscr G)$ est bijectif (et alors
+l'homomorphisme canonique
+$\mathrm H^1(V,\mathscr G)\to\mathrm H^1(U\cap V,\mathscr G)$ est injectif); enfin,
+on peut montrer que pour que le couple $(X,Y)$ soit $2$-pur, il faut et il suffit que
+les homomorphismes
+$\mathrm H^i(V,\mathscr G)\to\mathrm H^i(U\cap V,\mathscr G)$ soient bijectifs pour
+$i=0$ et $i=1$. Lorsque $\mathscr G$ est un faisceau de groupes commutatifs, en
+introduisant les faisceaux de cohomologie $\mathscr H_Y^p(\mathscr G)$ définis au
+chap.~III, 3\textsuperscript{e} partie, dire que $(X,Y)$ est $i$-pur pour $i\leq2$
+signifie que $\mathscr H_Y^p(\mathscr G)=0$ pour $p\leq i$; sous cette forme, la
+notion se généralise donc aussitôt pour tout entier $i$.
+\end{remark}
+
+\begin{proposition}[21.13.14]
+\label{IV.21.13.14}
+Soient $X$ un préschéma localement noethérien \emph{normal},
+$(U_\lambda)_{\lambda\in L}$ une famille filtrante décroissante d'ouverts de $X$. Les
+conditions suivantes sont équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Tout cycle $1$-codimensionnel $Z$ sur $X$ tel qu'il existe un indice
+  $\lambda$ pour lequel $Z|U_\lambda$ soit localement principal (21.6.7), est
+  localement principal.
+  \item Pour tout $x\in X$ tel que $\dim(\mathcal O_{X,x})\geq2$ et que $x$
+  n'appartienne pas à $\bigcap_{\lambda\in L}U_\lambda$, l'anneau
+  $\mathcal O_{X,x}$ est parafactoriel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-4]{322}
+La condition $b)$ peut encore s'exprimer de la façon suivante :
+
+\emph{$b')$ Pour toute partie fermée $Y$ de $X$ telle que
+$\operatorname{codim}(Y,X)\geq2$ et telle qu'il existe $\lambda$ pour lequel
+$Y\subset X-U_\lambda$, le couple $(X,Y)$ est parafactoriel.}
+
+La propriété $a)$ peut encore s'exprimer de la façon suivante : si l'ensemble fermé
+$N$ des points $x\in X$ où $Z$ n'est pas principal est contenu dans l'un des
+$X-U_\lambda$, alors $Z$ est localement principal. Comme $X$ est normal, la condition
+$\dim(\mathcal O_{X,x})\leq1$ entraîne que $\mathcal O_{X,x}$ est un corps ou un
+anneau de valuation discrète, donc $Z_x$ est principal; en d'autres termes, on a
+nécessairement $\operatorname{codim}(N,X)\geq2$ (5.1.3). La propriété $a)$ est donc
+équivalente à la suivante :
+
+\emph{$a')$ S'il existe un ensemble fermé $Y$ contenu dans un des $X-U_\lambda$, tel
+que $\operatorname{codim}(Y,X)\geq2$ et que $Z|(X-Y)$ soit localement principal,
+alors $Z$ est localement principal.}
+
+Notons d'autre part que $b)$ implique $b')$ en vertu de (21.13.10); inversement, si
+$b')$ est vérifiée et si $x\notin U_\lambda$, alors $Y=\{x\}$ est contenue dans
+$X-U_\lambda$ et on a $\operatorname{codim}(Y,X)\geq2$, donc il résulte encore de
+(21.13.10) que $\mathcal O_{X,x}$ est parafactoriel, ce qui prouve l'équivalence de
+$b)$ et $b')$. On est ainsi ramené à prouver l'équivalence de $a')$ et de $b')$.
+Notons que puisque $X$ est normal, on a, pour toute partie fermée $Y$ de $X$ telle que
+$\operatorname{codim}(Y,X)\geq2$, $\operatorname{prof}_Y(\mathcal O_X)\geq2$
+(5.8.6); si l'on pose $U=X-Y$, l'homomorphisme
+$\mathcal O_X\to j_*(\mathcal O_U)$ est donc bijectif (21.13.4); comme les conditions
+$a')$ et $b')$ sont locales, on voit qu'il suffit de montrer l'équivalence des
+conditions suivantes, lorsque $X$ est noethérien et normal et $Y$ fermé dans $X$ et
+tel que $\operatorname{codim}(Y,X)\geq2$ :
+
+\emph{$a'')$ Pour tout cycle $1$-codimensionnel $Z$ sur $X$, l'hypothèse que $Z|U$
+(où $U=X-Y$) est localement principal entraîne que $Z$ lui-même est localement
+principal.}
+
+\emph{$b'')$ L'homomorphisme canonique
+$\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ est surjectif.}
+
+Prouvons d'abord que $a'')$ entraîne $b'')$; un élément
+$\zeta_0\in\operatorname{Pic}(U)$ a pour image dans $\mathfrak{Cl}(U)$ (21.6.11) la
+classe d'un cycle $1$-codimensionnel $Z_0$ sur $U$, qui est localement principal.
+L'hypothèse $\operatorname{codim}(Y,X)\geq2$ entraîne que l'homomorphisme de
+restriction $\mathscr Z^1(X)\to\mathscr Z^1(U)$ est bijectif, donc $Z_0=Z|U$, où $Z$
+est un cycle $1$-codimensionnel sur $X$; puisque $Z_0$ est localement principal, il en
+est de même de $Z$ en vertu de $a'')$; il résulte de (21.6.11) que l'image de $Z$ dans
+$\mathfrak{Cl}(X)$ est l'image d'un unique élément $\zeta\in\operatorname{Pic}(X)$,
+et il est clair alors que $\zeta_0$ est l'image de $\zeta$.
+
+Inversement, prouvons que $b'')$ entraîne $a'')$. Soit donc $Z$ un cycle
+$1$-codimensionnel sur $X$ tel que $Z|U$ soit localement principal; l'image de $Z|U$
+dans $\mathfrak{Cl}(U)$ est donc l'image d'un unique élément
+$\zeta_0\in\operatorname{Pic}(U)$ (21.6.11). Par hypothèse il existe
+$\zeta\in\operatorname{Pic}(X)$ dont l'image dans $\operatorname{Pic}(U)$ est
+$\zeta_0$; l'image de $\zeta$ dans $\mathfrak{Cl}(X)$ est donc la classe d'un cycle
+$1$-codimensionnel $Z'$ sur $X$ tel que $Z|U$ et $Z'|U$ soient linéairement
+équivalents. Mais puisque $U$ est schématiquement dense dans $X$ l'image de
+$\mathscr Z^1_{\mathrm{princ}}(X)$ par l'isomorphisme
+$\mathscr Z^1(X)\to\mathscr Z^1(U)$ est $\mathscr Z^1_{\mathrm{princ}}(U)$, donc $Z$
+et $Z'$ sont linéairement équivalents, et puisque $Z'$ est localement principal, il
+en est de même de $Z$.
+\end{proof}
+
+\begin{corollary}[21.13.15]
+\label{IV.21.13.15}
+Soient $X$ un préschéma localement noethérien et normal, $S$ une partie de $X$. Les
+conditions suivantes sont équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Tout cycle $1$-codimensionnel sur $X$ qui est principal aux points de $S$ est
+  localement principal.
+  \oldpage[IV-4]{323}
+  \item Pour tout $x\in X$ qui n'est pas générisation d'un point de $S$ (autrement
+  dit, tel que $\overline{\{x\}}\cap S=\varnothing$) et qui est tel que
+  $\dim(\mathcal O_{X,x})\geq2$, l'anneau $\mathcal O_{X,x}$ est parafactoriel.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que l'ensemble $S'$ des points de $X$ générisations de points de $S$ est
+l'intersection des voisinages ouverts de $S$. On peut se borner au cas où $X$ est
+noethérien (les propriétés $a)$ et $b)$ étant locales sur $X$); comme tout cycle
+$1$-codimensionnel sur $X$ qui est principal aux points de $S$ l'est aussi aux points
+d'un voisinage ouvert de $S$, on voit que la condition $a)$ de (21.13.15) équivaut à
+la condition $a)$ de (21.13.14) appliquée à la famille $(U_\lambda)$ des voisinages
+ouverts de $S$. Le corollaire résulte alors de l'équivalence de $a)$ et $b)$ dans
+(21.13.14).
+\end{proof}
+
+\begin{remark}[21.13.16]
+\label{IV.21.13.16}
+Sous les conditions générales de (21.13.14), supposons de plus que l'on ait
+$\varinjlim\operatorname{Pic}(U_\lambda)=0$. Alors la condition $a)$ de (21.13.14)
+est aussi équivalente à la suivante :
+\begin{enumerate}
+  \item[c)] \emph{Tout cycle $1$-codimensionnel sur $X$ dont le support est contenu
+  dans un des ensembles $X-U_\lambda$ est localement principal.}
+\end{enumerate}
+
+On peut se borner au cas où $X$ est irréductible et tous les $U_\lambda$ sont non
+vides. Il est clair que $a)$ entraîne $c)$, car si le cycle $1$-codimensionnel $Z$ sur
+$X$ a son support dans $X-U_\lambda$, $Z|U_\lambda=0$, donc $Z|U_\lambda$ est
+localement principal. Inversement $c)$ entraîne $a)$ : soit en effet $Z$ un cycle
+$1$-codimensionnel sur $X$ tel que $Z|U_\lambda$ soit localement principal; comme $X$
+est normal, $Z|U_\lambda=\operatorname{cyc}(D_\lambda)$, où $D_\lambda$ est un
+diviseur sur $U_\lambda$ (21.6.10, (ii)), et l'hypothèse implique (en vertu de
+(21.3.4)) qu'il y a un ensemble $U_\mu\subset U_\lambda$ tel que
+$D_\mu=D_\lambda|U_\mu$ soit équivalent à $0$. Si
+$D_\mu=\operatorname{div}(f_\mu)$, où $f_\mu$ est une fonction rationnelle régulière
+sur $U_\mu$, $f_\mu$ peut être considérée comme une fonction rationnelle régulière
+sur $X$. Si $Z'=\operatorname{cyc}(\operatorname{div}(f_\mu))$, on voit donc que
+$Z''=Z-Z'$ a son support dans $X-U_\mu$; en vertu de l'hypothèse, $Z''$ est
+localement principal, d'où la conclusion.
+
+La condition $\varinjlim\operatorname{Pic}(U_\lambda)=0$ sera en particulier remplie
+si $(U_\lambda)$ est la famille des voisinages ouverts d'un \emph{point} $z\in X$,
+car pour tout $\mathcal O_{U_\lambda}$-Module inversible $\mathscr L_\lambda$, il
+existe par définition un $U_\mu\subset U_\lambda$ tel que
+$\mathscr L_\lambda|U_\mu$ soit isomorphe à $\mathcal O_{U_\mu}$. On voit donc que,
+dans l'énoncé de (21.13.15), si $S=\{z\}$, les conditions $a)$ et $b)$ équivalent
+aussi à la suivante :
+\begin{enumerate}
+  \item[c)] \emph{Tout cycle $1$-codimensionnel sur $X$ dont le support ne contient
+  pas $z$ est localement principal.}
+\end{enumerate}
+Si de plus $\operatorname{Pic}(X)=0$, on en conclura que cette condition entraîne que
+tout cycle $1$-codimensionnel dont le support ne contient pas $z$ est principal.
+\end{remark}
+
+\subsection{Le théorème de Ramanujam--Samuel}
+\label{subsection:IV.21.14}
+\label{IV.21.14}
+
+\begin{theorem}[21.14.1]
+\label{IV.21.14.1}
+\textup{(Ramanujam--Samuel)}. ---
+Soit $A$ un anneau local noethérien d'idéal maximal $\mathfrak m$, tel que son complété
+$\widehat A$ soit intègre et intégralement clos. Soient $B$ un anneau local noethérien
+tel que $\dim(B)\geq\dim(A)$, $\rho:A\to B$ un homomorphisme local faisant de $B$
+une $A$-algèbre formellement lisse (pour les topologies préadiques
+$(\mathbf 0, 19.3.1)$) et tel que le corps résiduel de $B$ soit fini sur celui de $A$.
+Alors tout cycle $1$-codimensionnel sur $\operatorname{Spec}(B)$ qui est principal au
+point $\mathfrak p=\mathfrak mB$, est un cycle $1$-codimensionnel principal.
+\end{theorem}
+
+\begin{proof}
+Si $k=A/\mathfrak m$ est le corps résiduel de $A$, $B/\mathfrak mB$ est une
+$k$-algèbre formellement lisse (pour sa topologie préadique) $(\mathbf 0, 19.3.5)$,
+\oldpage[IV-4]{324}
+donc régulière, et en particulier intègre, autrement dit
+$\mathfrak p=\mathfrak mB$ est bien un idéal premier de $B$, ce qui justifie
+l'énoncé. Tout revient évidemment à prouver que tout idéal premier $\mathfrak q$ de
+$B$ non contenu dans $\mathfrak p$ est \emph{principal}.
+
+Soient $\widehat A$, $\widehat B$ les complétés de $A$ et $B$ respectivement, de
+sorte que l'idéal maximal de $\widehat A$ est $\mathfrak m\widehat A$; on sait
+$(\mathbf 0, 19.3.6)$ que $\widehat B$ est une $\widehat A$-algèbre formellement
+lisse pour les topologies adiques. Soit $k'$ le corps résiduel de $\widehat B$,
+extension finie de $k$; il existe un homomorphisme local $\widehat A\to C$, où $C$
+est un anneau local noethérien qui est un $\widehat A$-module \emph{fini} et
+\emph{plat} (donc libre) et est tel que $C/\mathfrak mC$ soit isomorphe à $k'$
+$(\mathbf 0_{\mathrm{III}}, 10.3.1)$; on en déduit que $C$ est \emph{complet}, et il
+résulte alors de (7.5.1), (7.5.3) et (6.5.4, (ii)) que $C$ est \emph{intègre et
+intégralement clos}. En outre,
+\[
+  D=\widehat B\widehat\otimes_{\widehat A}C
+\]
+est un anneau semi-local complet, composé direct d'anneaux locaux complets dont l'un,
+$D_0$, a pour corps résiduel $k'$ (puisque $k'\otimes_k k'$ est composé direct
+d'anneaux locaux dont l'un est isomorphe à $k'$). Comme $D$ est formellement lisse
+sur $C$, il en est de même de $D_0$; par suite $D_0/\mathfrak mD_0$ est une
+$k'$-algèbre formellement lisse, de corps résiduel $k'$, ce qui entraîne qu'elle est
+$k'$-isomorphe à une algèbre de séries formelles
+$k'[[T_1,\ldots,T_n]]$ $(\mathbf 0, 19.6.4)$; on en conclut, par
+$(\mathbf 0, 19.7.1.5)$, que $D_0$ est $C$-isomorphe à
+$C[[T_1,\ldots,T_n]]$, et par suite \emph{intègre et intégralement clos} (Bourbaki,
+\emph{Alg. comm.}, chap.~V, \S1, n\textsuperscript{o}~4, prop.~14). Comme les
+morphismes $\operatorname{Spec}(D_0)\to\operatorname{Spec}(\widehat B)$ et
+$\operatorname{Spec}(D_0)\to\operatorname{Spec}(B)$ sont fidèlement plats, on en
+déduit que $B$ et $\widehat B$ sont aussi \emph{intègres et intégralement clos}
+(2.1.13). Cela prouve que l'idéal $\mathfrak qD_0$ est divisoriel (Bourbaki,
+\emph{Alg. comm.}, chap.~VII, \S1, n\textsuperscript{o}~10, prop.~15) et non contenu
+dans $\mathfrak mD_0$, sans quoi on aurait
+\[
+  \mathfrak q=(\mathfrak qD_0)\cap B
+  \subset(\mathfrak mD_0)\cap B=\mathfrak mB=\mathfrak p
+\]
+par fidèle platitude $(\mathbf 0_{\mathrm I}, 6.5.1)$. On en conclut qu'aucun des
+idéaux premiers $\mathfrak r_h$ de hauteur $1$ dans $D_0$ qui contiennent
+$\mathfrak qD_0$ ne peut être contenu dans $\mathfrak mD_0$; si l'on prouve que ces
+idéaux sont principaux, il en résultera que $\mathfrak qD_0$ est principal, les
+diviseurs (au sens de Bourbaki) de $\mathfrak qD_0$ et d'un produit de puissances des
+$\mathfrak r_h$ étant égaux (Bourbaki, \emph{Alg. comm.}, chap.~VII, \S1,
+n\textsuperscript{o}~4, prop.~5). Comme $\mathfrak qD_0\cap B=\mathfrak q$, on en
+déduit par fidèle platitude que $\mathfrak q$ est principal (2.5.2), en utilisant le
+fait que $B$ est un anneau local.
+
+On est ainsi ramené à prouver le théorème dans le cas particulier où $A$ est
+\emph{complet} et $B=A[[T_1,\ldots,T_n]]$. Montrons d'abord qu'on peut se ramener au
+cas où $n=1$. En effet, procédons par récurrence sur $n$, et soit
+$f\in\mathfrak q$ un élément n'appartenant pas à $\mathfrak p=\mathfrak mB$; il
+suffira de montrer qu'il existe un $A$-automorphisme $\sigma$ de $B$ tel que
+$\sigma(f)$ n'appartienne pas à l'idéal
+\[
+  \mathfrak p'=\mathfrak p+BT_1+\cdots+BT_{n-1};
+\]
+en effet, si $B'=A[[T_1,\ldots,T_{n-1}]]$, $B'$ est complet et a pour idéal maximal
+$\mathfrak mB'+B'T_1+\cdots+B'T_{n-1}=\mathfrak m'$. Comme on a
+$B=B'[[T_n]]$ et $\mathfrak p'=\mathfrak m'B$, il résultera de l'hypothèse de
+récurrence (compte tenu de ce que $B'$ est intègre et intégralement clos) que l'idéal
+$\sigma(\mathfrak q)$ est principal dans $B$, donc aussi $\mathfrak q$. Or, si
+$\overline f\in k[[T_1,\ldots,T_n]]$ est l'image de $f$ (« série réduite » de $f$),
+on sait (Bourbaki, \emph{Alg. comm.}, chap.~VII, \S3, n\textsuperscript{o}~7,
+lemme~3) qu'il y a un $A$-automorphisme $\sigma$ de $B$ tel que
+$(\overline{\sigma(f)})(0,\ldots,0,T_n)\neq0$, ce qui implique évidemment
+$\sigma(f)\notin\mathfrak p'$.
+
+Supposons donc $n=1$ et écrivons $T$ au lieu de $T_1$, de sorte que $B=A[[T]]$. Il
+suffit de montrer que dans l'anneau de polynômes $A[T]$, l'idéal
+$\mathfrak q\cap A[T]$ est principal;
+\oldpage[IV-4]{325}
+en effet, soit $f_0$ un élément de $\mathfrak q$ n'appartenant pas à $\mathfrak mB$;
+c'est une série formelle dont la série réduite $\overline f_0$ n'est pas nulle; donc,
+en vertu du théorème de préparation (Bourbaki, \emph{Alg. comm.}, chap.~VII, \S3,
+n\textsuperscript{o}~8, prop.~5), pour tout $f\in\mathfrak q$, il existe $g\in B$ et
+un polynôme $r\in A[T]$ tels que $f=gf_0+r$ et on a donc
+$r\in\mathfrak q\cap A[T]$; d'autre part (\emph{loc. cit.}, prop.~6) il existe un
+polynôme distingué non constant $F_0\in A[T]$ et un élément inversible $u\in B$ tels
+que $f_0=uF_0$, donc on a aussi $F_0\in\mathfrak q\cap A[T]$, ce qui prouve que
+$\mathfrak q$ est engendré par $\mathfrak q\cap A[T]=\mathfrak q_1$. Puisque $B$
+est plat sur $A[T]$ $(\mathbf 0_{\mathrm I}, 7.3.3)$, il résulte de Bourbaki,
+\emph{Alg. comm.}, chap.~VII, \S1, n\textsuperscript{o}~10, prop.~15, que
+$\mathfrak q_1$ est un idéal premier de hauteur $1$ dans $A[T]$.
+
+En outre, on a nécessairement $\mathfrak q_1\cap A=0$; sinon,
+$\mathfrak q_1\cap A$ serait nécessairement de hauteur $\geq1$, et il résulterait de
+(5.5.3) que l'on aurait $\mathfrak q_1=(\mathfrak q_1\cap A)A[T]$. Mais alors,
+puisque $\mathfrak q_1\cap A\subset\mathfrak m$, on aurait
+$\mathfrak q_1\subset\mathfrak mA[T]$ contrairement à l'hypothèse sur
+$\mathfrak q$. Si $K$ est le corps des fractions de $A$, $\mathfrak q_1K[T]$ est
+donc un idéal premier distinct de $0$ et de $K[T]$ dans $K[T]$, donc de la forme
+$hK[T]$, où
+\[
+  h(T)=T^m+a_1T^{m-1}+\cdots+a_m,
+  \qquad m\geq1,
+\]
+avec les $a_i\in K$, $h$ étant irréductible dans $K[T]$. Mais on a vu plus haut qu'il
+existe dans $\mathfrak q_1$ un polynôme distingué non constant $F_0\in A[T]$. Si $t$
+est la classe de $T$ dans $K[T]/\mathfrak q_1K[T]$, $t$ est donc racine du polynôme
+$F_0$ dans une extension de $K$ et par suite $h$ divise $F_0$ dans $K[T]$; mais
+puisque $h$ et $F_0$ sont unitaires, cela entraîne que les coefficients $a_i$ de $h$
+sont entiers sur $A$ (Bourbaki, \emph{Alg. comm.}, chap.~V, \S1,
+n\textsuperscript{o}~3, prop.~11), donc appartiennent à $A$ puisque $A$ est
+intégralement clos. Autrement dit, on a
+\[
+  h\in A[T]\cap\mathfrak q_1K[T]=\mathfrak q_1
+\]
+(Bourbaki, \emph{Alg. comm.}, chap.~II, \S1, n\textsuperscript{o}~5, prop.~11);
+comme tout polynôme $g\in\mathfrak q_1$ est divisible par $h$ dans $K[T]$ et que $h$
+est unitaire, les coefficients de $g/h$ appartiennent à $A$, donc
+$\mathfrak q_1=hA[T]$. C.Q.F.D.
+\end{proof}
+
+L'énoncé (21.14.1) est \emph{équivalent} au suivant :
+
+\begin{corollary}[21.14.2]
+\label{IV.21.14.2}
+Sous les hypothèses de (21.14.1) sur $A$, $B$ et $\rho$ pour tout idéal premier
+$\mathfrak q$ de $B$ non contenu dans $\mathfrak p=\mathfrak mB$ et tel que
+$\dim(B_\mathfrak q)\geq2$, l'anneau $B_\mathfrak q$ est parafactoriel. En
+particulier, si $\dim(B\otimes_A k)>0$ (\emph{i.e.} $\dim B>\dim A$
+$((\mathbf 0, 19.7.1)$ et $(\mathbf 0, 6.1.1)))$, l'anneau $B$ est parafactoriel.
+\end{corollary}
+
+\begin{proof}
+En effet, on a vu dans la démonstration de (21.14.1) que les conditions de l'énoncé
+entraînent que $B$ est intègre et intégralement clos; l'équivalence des énoncés
+(21.14.1) et (21.14.2) résulte alors de (21.13.15) appliqué à
+$X=\operatorname{Spec}(B)$ et $S=\{\mathfrak p\}$.
+\end{proof}
+
+\begin{proposition}[21.14.3]
+\label{IV.21.14.3}
+Soient $S$ un préschéma normal, $f:X\to S$ un morphisme lisse.
+\begin{enumerate}[label=(\roman*)]
+  \item Si $S$ est localement noethérien (donc aussi $X$), alors, pour tout $x\in X$
+  tel que $\dim(\mathcal O_{X,x})\geq2$ et que $x$ ne soit pas point maximal de sa
+  fibre $f^{-1}(f(x))$, l'anneau $\mathcal O_{X,x}$ est parafactoriel. Tout cycle
+  $1$-codimensionnel $Z$ sur $X$ tel que $\operatorname{Supp}(Z)$ ne contienne aucune
+  composante irréductible d'une fibre $f^{-1}(s)=X_s$, est localement principal.
+  \item Soit $Y$ une partie fermée de $X$ ne contenant aucune composante irréductible
+  d'une fibre $X_s$, et telle que, pour tout point maximal $\eta$ de $S$,
+  $Y_\eta=Y\cap X_\eta$ soit de codimension $\geq2$ dans $X_\eta$. Alors le couple
+  $(X,Y)$ est parafactoriel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On notera que les conditions de (ii) sont remplies si $Y$ est une partie fermée de $X$
+telle que, pour tout $s\in S$, $Y_s=Y\cap X_s$ soit de codimension $\geq2$ dans
+$X_s$.
+
+Pour prouver (21.14.3), notons d'abord que sous les hypothèses de (i), si l'on pose
+$Y=\overline{\{x\}}$, il existe un voisinage ouvert $V$ de $x$ dans $X$ tel que
+$Y\cap V$ et $V$ vérifient les conditions de (ii) : en effet, il résulte de l'hypothèse
+et de (9.5.3) que l'on peut prendre $V$ tel que $V\cap Y$ ne contienne aucune
+composante irréductible d'un $X_s$; d'autre part, pour tout point maximal $\eta$ de
+$S$ tel que $Y\cap X_\eta\neq\varnothing$, les points de $Y\cap X_\eta$ sont des
+spécialisations de $x$, donc en un tel point $z$ on a
+$\dim(\mathcal O_{X,z})\geq2$, et comme
+$\mathcal O_{X,z}=\mathcal O_{X_\eta,z}$ ($S$ étant réduit au point $\eta$ en vertu
+de (2.1.13)), $Y\cap X_\eta$ est bien de codimension $\geq2$ dans $X_\eta$. Comme le
+couple $(V,Y\cap V)$ est alors parafactoriel en vertu de (ii), on conclut de (21.13.10)
+que l'anneau $\mathcal O_{X,x}$ est parafactoriel, c'est-à-dire la première assertion
+de (i). Pour prouver la seconde, on peut se borner au cas où
+$Z=\overline{\{z\}}$, où $z\in X^{(1)}$; comme $\mathcal O_{X,z}$ est un anneau local
+intégralement clos et de dimension $1$, c'est un anneau de valuation discrète et $Z$
+est donc principal au point $z$; pour tout autre point $x$ de
+$\operatorname{Supp}(Z)$, on a donc $\dim(\mathcal O_{X,x})\geq2$ et $x$ n'est pas
+point maximal de sa fibre par hypothèse, donc $\mathcal O_{X,x}$ est parafactoriel.
+Appliquons alors (21.13.15) en prenant pour $S$ l'ensemble formé de $z$ et des points
+maximaux des fibres de $f$; il est clair que $Z$ est principal aux points de $S$
+puisque $z$ est le seul point de $S$ appartenant à $\operatorname{Supp}(Z)$; comme
+d'autre part la condition $b)$ de (21.13.15) est évidemment remplie, on en conclut que
+$Z$ est localement principal.
+
+On est donc ramené à prouver (ii). Posons $U=X-Y$ et soit $j:U\to X$ l'injection
+canonique.
+\oldpage[IV-4]{326}
+Comme les hypothèses et la conclusion sont locales sur $S$ et sur $X$ en vertu de
+(21.13.6, (i)), on peut se borner au cas où $S$ et $X$ sont affines, $f$ étant donc de
+présentation finie. Puisque les fibres de $f$ sont régulières, l'hypothèse sur $Y$
+entraîne que, pour tout point $x\in Y$, on a
+\[
+  \operatorname{prof}(\mathcal O_{X_{f(x)},x})
+  =\dim(\mathcal O_{X_{f(x)},x})\geq1;
+\]
+il résulte de (19.9.8) que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ est \emph{injectif}. De plus, remplaçant $Y$ par
+une partie fermée plus grande suivant la méthode de la démonstration de (19.9.8), et
+utilisant (21.13.6, (ii)), on peut supposer que $Y$ est défini par un idéal \emph{de
+type fini} de l'anneau de $X$, donc l'ouvert $U=X-Y$ est \emph{quasi-compact et
+quasi-séparé} et l'ensemble fermé $Y$ est \emph{constructible}.
+
+Pour prouver (ii), il suffit, pour tout $\mathcal O_U$-Module inversible $\mathscr L$
+et tout point $x\in Y$ donnés, d'établir l'existence d'un voisinage ouvert $V$ de $x$
+dans $X$ tel que : $1^{\mathrm o}$ l'homomorphisme canonique
+$\mathcal O_V\to(j_V)_*(\mathcal O_{U\cap V})$ est surjectif;
+$2^{\mathrm o}$ il existe un $\mathcal O_V$-Module inversible $\mathscr L'_V$ tel que
+$\mathscr L'_V|(U\cap V)=\mathscr L|(U\cap V)$ ((21.13.5) et (21.13.3)).
+
+Posons $s=f(x)$; nous allons voir qu'on peut se borner au cas où
+$S=S_0=\operatorname{Spec}(\mathcal O_{S,s})$. Soit en effet $(S_\nu)$ un système
+fondamental de voisinages ouverts affines de $s$ dans $S$, et posons
+$X_\nu=f^{-1}(S_\nu)$, $Y_\nu=Y\cap X_\nu$, $U_\nu=X_\nu-Y_\nu$,
+$j_\nu:U_\nu\to X_\nu$ étant l'injection canonique; $X_0=X\times_S S_0$ est alors
+limite projective des $X_\nu$ (8.1.2, $a$)); supposons la proposition vraie pour le
+morphisme $f_0:X_0\to S_0$ et pour $Y_0=Y\cap X_0$, et posons $U_0=X_0-Y_0$,
+$j_0:U_0\to X_0$ étant l'injection canonique. La projection
+$p_\nu:X_0\to X_\nu$ étant un morphisme affine, on a
+\[
+  (j_0)_*(\mathcal O_{U_0})
+  =p_\nu^*((j_\nu)_*(\mathcal O_{U_\nu}))
+  \qquad(\mathbf{II}, 1.5.2)
+\]
+et l'homomorphisme canonique
+$\rho_0:\mathcal O_{X_0}\to(j_0)_*(\mathcal O_{U_0})$ n'est autre que
+$p_\nu^*(\rho_\nu)$, où
+$\rho_\nu:\mathcal O_{X_\nu}\to(j_\nu)_*(\mathcal O_{U_\nu})$ est l'homomorphisme
+canonique; comme par hypothèse $\rho_0$ est surjectif, il en est de même de $\rho_\nu$
+pour $\nu$ assez grand (8.5.7). Soit d'autre part $\mathscr L_0$ le
+$\mathcal O_{U_0}$-Module inversible restriction de $\mathscr L$, et notons que les
+$X_\nu$ sont affines, donc quasi-compacts et quasi-séparés; puisque par hypothèse il
+existe un $\mathcal O_{X_0}$-Module inversible $\mathscr L'_0$ tel que
+$\mathscr L'_0|U_0=\mathscr L_0$, il existe un $\nu$ assez grand et un
+$\mathcal O_{X_\nu}$-Module quasi-cohérent $\mathscr L'_\nu$ de présentation finie
+tels que $\mathscr L'_0$ soit isomorphe à $p_\nu^*(\mathscr L'_\nu)$ (8.5.2, (ii));
+de plus (8.5.5) on peut supposer que $\mathscr L'_\nu$ est inversible. Enfin, comme
+les $U_\nu$ sont quasi-compacts et quasi-séparés et que
+$\mathscr L'_0|U_0=\mathscr L_0$, il existe $\nu$ assez grand tel que
+$\mathscr L'_\nu|U_\nu$ et $\mathscr L|U_\nu$ soient isomorphes (8.5.2.5).
+
+\oldpage[IV-4]{327}
+On est ainsi ramené au cas où $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(B)$, où $A$ est un anneau \emph{local}; puisque $X$ est
+normal et $f$ lisse, $S$ est normal (17.5.7), donc $A$ est \emph{intègre et
+intégralement clos}. Considérons alors $A$ comme limite inductive de ses
+\emph{sous-$\mathbb Z$-algèbres de type fini}; comme la clôture intégrale d'une telle
+sous-$\mathbb Z$-algèbre est un sous-anneau de $A$ et est aussi une
+$\mathbb Z$-algèbre de type fini (7.8.3, (ii), (iii) et (vi)), $A$ est limite inductive
+filtrante des sous-$\mathbb Z$-algèbres de type fini $A_\lambda$ de $A$ qui sont des
+anneaux \emph{intégralement clos}. En vertu de (1.8.4.2), il existe un indice
+$\lambda$ et une $A_\lambda$-algèbre de type fini $B_\lambda$ tels que
+\[
+  B=B_\lambda\otimes_{A_\lambda}A
+\]
+à un $A$-isomorphisme près. Posons $S_\lambda=\operatorname{Spec}(A_\lambda)$,
+$X_\lambda=\operatorname{Spec}(B_\lambda)$; si $p_\lambda:X\to X_\lambda$ est la
+projection canonique, on peut en outre supposer (puisque $Y$ est
+\emph{constructible}) que $Y=p_\lambda^{-1}(Y_\lambda)$, où $Y_\lambda$ est une
+partie fermée de $X_\lambda$ (8.3.11). Soit $f_\lambda$ le morphisme
+$X_\lambda\to S_\lambda$; en vertu de la transitivité des fibres et de (4.2.6),
+$Y_\lambda$ ne contient aucune composante irréductible des fibres
+$f_\lambda^{-1}(s_\lambda)$ pour aucun $s_\lambda\in S_\lambda$. Puisque $f$ est
+lisse, on peut aussi supposer que $f_\lambda$ est lisse (17.7.8); enfin, l'image du
+point générique $\eta$ de $S$ dans $S_\lambda$ est le point générique $\eta_\lambda$
+de $S_\lambda$, et on a
+\[
+  \operatorname{codim}((Y_\lambda)_{\eta_\lambda},
+  (X_\lambda)_{\eta_\lambda})
+  =\operatorname{codim}(Y_\eta,X_\eta)\geq2
+\]
+en vertu de (6.1.4). On voit donc que $S_\lambda$, $X_\lambda$ et $Y_\lambda$
+vérifient toutes les hypothèses de (ii), et en posant
+$X_\mu=X_\lambda\times_{S_\lambda}S_\mu$ pour $\lambda\leq\mu$, il en est de même de
+$S_\mu$, $X_\mu$ et $Y_\mu$. Montrons que si l'on prouve que le couple
+$(X_\mu,Y_\mu)$ est parafactoriel pour tout $\mu\gg\lambda$, il en est de même de
+$(X,Y)$. En effet, soient $U=X-Y$, $U_\mu=X_\mu-Y_\mu$, $j:U\to X$,
+$j_\mu:U_\mu\to X_\mu$ les injections canoniques; la projection
+$p_\mu:X\to X_\mu$ étant un morphisme affine, on a
+\[
+  j_*(\mathcal O_U)=p_\mu^*((j_\mu)_*(\mathcal O_{U_\mu}))
+  \qquad(\mathbf{II}, 1.5.2),
+\]
+et par suite l'homomorphisme canonique
+$\rho:\mathcal O_X\to j_*(\mathcal O_U)$ n'est autre que $p_\mu^*(\rho_\mu)$, où
+$\rho_\mu:\mathcal O_{X_\mu}\to(j_\mu)_*(\mathcal O_{U_\mu})$ est l'homomorphisme
+canonique; ce dernier étant par hypothèse bijectif, il en est de même de $\rho$.
+D'autre part, pour tout $\mathcal O_U$-Module inversible $\mathscr L$, il existe un
+$\mu\gg\lambda$ et un $\mathcal O_{U_\mu}$-Module inversible $\mathscr L_\mu$ tels
+que $\mathscr L=p_\mu'^*(\mathscr L_\mu)$ (en désignant par
+$p_\mu':U\to U_\mu$ la restriction de $p_\mu$) (8.5.2 et 8.5.5), $U_\lambda$ étant
+quasi-compact puisque $X_\lambda$ est noethérien. Par hypothèse, il existe un
+$\mathcal O_{X_\mu}$-Module inversible $\mathscr L'_\mu$ tel que
+$\mathscr L'_\mu|U_\mu$ soit isomorphe à $\mathscr L_\mu$;
+$\mathscr L'=p_\mu^*(\mathscr L'_\mu)$ est alors un $\mathcal O_X$-Module
+inversible tel que $\mathscr L'|U$ soit isomorphe à $\mathscr L$, ce qui prouve notre
+assertion.
+
+On est ainsi ramené à prouver (ii) lorsque l'anneau $A$ est une
+$\mathbb Z$-algèbre de type fini intégralement close; comme les anneaux locaux
+$\mathcal O_{S,s}$ de $S$ sont alors des anneaux excellents intégralement clos, leurs
+\emph{complétés} sont aussi intégralement clos (7.8.3, (ii), (iii) et (vii)). Pour
+prouver que le couple $(X,Y)$ est parafactoriel, il suffit de montrer que pour tout
+$x\in Y$, l'anneau $\mathcal O_{X,x}$ est parafactoriel (21.13.10). Soit $y$ un point
+fermé de $Y_{f(x)}$, qui soit spécialisation de $x$ (5.1.11); si l'on pose
+$s=f(x)=f(y)$, $\mathcal O_{S,s}$ a un
+\oldpage[IV-4]{328}
+complété intégralement clos, et $\mathcal O_{X,y}$ est une
+$\mathcal O_{S,s}$-algèbre formellement lisse pour les topologies préadiques
+(17.5.3); puisque $Y$ ne contient aucune composante irréductible de $X_s$, on a
+$\dim(\mathcal O_{X,y})>\dim(\mathcal O_{S,s})$ (17.5.8). Si $s\neq\eta$, on a
+$\dim(\mathcal O_{S,s})\geq1$; si au contraire $s=\eta$, on a par hypothèse
+$\dim(\mathcal O_{X,x})\geq2$; donc dans tous les cas
+$\dim(\mathcal O_{X,y})\geq2$. En outre, l'idéal premier de $\mathcal O_{X,y}$
+correspondant au point $x$ n'est pas contenu dans
+$\mathfrak m_s\mathcal O_{X,y}$, puisque $Y$ ne contient aucune composante
+irréductible de $X_s$. Enfin, puisque $y$ est fermé dans $X_s$, $k(y)$ est extension
+finie de $k(s)$ $(\mathbf I, 6.4.2)$. Dans tous les cas, on peut appliquer à
+$A=\mathcal O_{S,s}$, $B=\mathcal O_{X,y}$ et
+$B_\mathfrak q=\mathcal O_{X,x}$ le résultat de (21.14.2), ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{env}[21.14.4]
+\label{IV.21.14.4}
+\emph{Remarques}. ---
+
+(i) Il se peut que les énoncés (21.14.1) et (21.14.2) restent valables \emph{sans
+hypothèse} sur le corps résiduel de $B$. Énoncé avec cette généralité, le résultat
+équivaudrait, en vertu de (21.13.15) et (21.13.12.1) au suivant : Soient $A$ un
+anneau local noethérien complet, intègre et intégralement clos, $B$ un anneau local
+noethérien qui est une $A$-algèbre formellement lisse, tel que
+$\dim(B)>\dim(A)$; alors $B$ est parafactoriel.
+
+(ii) Nous verrons au chap.~VI, en employant une technique de « descente finie »
+appliquée au morphisme $Y'\to Y=\operatorname{Spec}(A)$, où $Y'$ est le normalisé de
+$Y$, que la conclusion de (21.14.1) (ou de (21.14.2)) reste valable en remplaçant
+l'hypothèse que $\widehat A$ est intégralement clos par l'hypothèse que
+$\widehat A$ est \emph{réduit}, pourvu que $\dim B\geq\dim A+2$. Si on remplace cette
+dernière condition par $\dim B\geq\dim A+3$, on peut même supprimer l'hypothèse que
+$\widehat A$ est réduit. De même, la conclusion de (21.14.3) reste valable en
+remplaçant l'hypothèse que $X$ est normal par l'hypothèse que $X$ est réduit, pourvu
+que $\dim(\mathcal O_{X,x})\geq\dim(\mathcal O_{S,f(x)})+2$.
+
+(iii) Au chap.~III, 3\textsuperscript{e} partie, on prouve que si $f:X\to S$ est un
+morphisme lisse, $Y$ une partie fermée localement constructible de $X$ telle que,
+pour tout $s\in S$, on ait (avec les notations de (21.14.3))
+$\operatorname{codim}(Y_s,X_s)\geq3$, alors le couple $(X,Y)$ est parafactoriel
+([41], XII, 4.8). Cette conclusion n'est plus valable lorsqu'on suppose seulement que
+$\operatorname{codim}(Y_s,X_s)\geq2$ pour tout $s\in S$ et lorsqu'on ne suppose plus
+$X$ réduit. Par exemple, soient $k$ un corps, $A=k[T]/(T^2)$, algèbre des nombres
+duaux sur $k$, $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(A[T_1,T_2])$ ($T_1$, $T_2$ indéterminées), de sorte que
+$X=\mathbb V_S^2$, $Y$ étant la « section nulle » de ce fibré; si $s$ est l'unique
+point fermé de $S$, on a $X_s=\mathbb V_k^2$ et $Y_s$ est la « section nulle » de
+$X_s$. Pour voir que le couple $(X,Y)$ n'est pas parafactoriel, il suffit de montrer
+que l'anneau $B=A[T_1,T_2]_\mathfrak m$, où $\mathfrak m$ est l'idéal
+$(T_1)+(T_2)$ qui définit $Y$, n'est pas parafactoriel (21.13.10). Soit
+$B_0=B_{\mathrm{red}}$, et notons $U$ et $U_0$ les complémentaires du point fermé
+dans $\operatorname{Spec}(B)$ et $\operatorname{Spec}(B_0)$; en raisonnant comme
+dans (21.13.9), on a la suite exacte, extension de (21.13.9.1)
+\[
+  \Gamma(U,\mathcal O_U)^*\longrightarrow\Gamma(U_0,\mathcal O_{U_0})^*
+  \longrightarrow\mathrm H^1(U_0,\mathcal O_{U_0})
+  \longrightarrow\operatorname{Pic}(U)\longrightarrow\operatorname{Pic}(U_0).
+\]
+Or, on a $\Gamma(U,\mathcal O_U)=B$, $\Gamma(U_0,\mathcal O_{U_0})=B_0$ puisque
+$\operatorname{prof}(B)=\operatorname{prof}(B_0)=2$ (5.10.5). Par ailleurs
+$\operatorname{Pic}(U_0)=0$ puisque $B_0$ est factoriel, et
+$\mathrm H^1(U_0,\mathcal O_{U_0})\neq0$ [41, 3, Exemple III-1]; comme
+l'homomorphisme $B^*\to B_0^*$ est surjectif, on en conclut que
+$\operatorname{Pic}(U)\neq0$, donc que $B$ n'est pas parafactoriel.
+\oldpage[IV-4]{329}
+(iv) Le résultat (21.14.3) a d'abord été démontré par C.~Seshadri [44] dans le cas
+particulier où $S$ est un schéma algébrique normal sur un corps algébriquement clos
+$k$ et $X=S\times_k T$, où $T$ est un $k$-préschéma algébrique lisse sur $k$. La
+démonstration de Seshadri [44, p.~188--189] est de nature globale et utilise la
+théorie des schémas de Picard. Elle donne en outre (\emph{loc. cit.}) des résultats
+tels que le suivant (pour lequel on ne possède pas à l'heure actuelle de démonstration
+par voie locale). Soient $S$, $T$ deux préschémas localement de type fini sur un
+corps $k$, $X=S\times_k T$, $Z$ un cycle $1$-codimensionnel sur $X$ (considéré comme
+$S$-préschéma); supposons vérifiées les conditions suivantes :
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item $S$ et $T$ sont géométriquement normaux sur $k$ (6.7.6);
+  \item Pour tout point maximal $\eta$ de $S$, le cycle $1$-codimensionnel $Z_\eta$
+  sur la fibre $X_\eta$, ayant même multiplicité que $Z$ en tout point de
+  $X^{(1)}\cap X_\eta$, est localement principal (autrement dit, est l'image d'un
+  diviseur de $X_\eta$, puisque $X_\eta$ est normal);
+  \item Pour tout $s\in S$, $Z$ est principal aux points maximaux de la fibre $X_s$.
+\end{enumerate}
+Alors $Z$ est localement principal. En d'autres termes, $X$ étant normal (6.14.1),
+pour tout $x\in X$ qui n'est pas maximal dans sa fibre $X_s$ et qui n'appartient à
+aucune des « fibres génériques » $X_\eta$ (ce qui implique
+$\dim(\mathcal O_{X,x})\geq2$ en vertu de (6.1.1)), l'anneau local
+$\mathcal O_{X,x}$ est parafactoriel, en vertu de (21.12.15).
+\footnote{En fait, dans l'article précité, Seshadri suppose que $k$ est algébriquement
+clos, $T$ séparé et « semi-complet » (i.e.\ tel que
+$\Gamma(T,\mathcal O_T)$ soit $k$-isomorphe à $k$) et remplace l'hypothèse
+$3^{\mathrm o}$ par l'hypothèse plus forte que $\operatorname{Supp}(Z)$ ne contient
+aucune des fibres $X_s$ pour $s\in S$. Mais comme l'énoncé est local sur $S$, on en
+conclut aussitôt qu'il suffit de faire l'hypothèse $3^{\mathrm o}$, et cela prouve que
+la conclusion (interprétée comme ci-dessus en termes de propriété de parafactorialité
+des anneaux $\mathcal O_{X,x}$) est locale sur $S$ et sur $T$, ce qui permet
+d'éliminer complètement l'hypothèse que $T$ est « semi-complet » et que $k$ est
+algébriquement clos, puisque (quitte à passer d'abord à la clôture algébrique de $k$)
+on peut supposer d'abord $T$ affine, ce qui permet de le plonger comme ouvert d'un
+schéma projectif et normal sur $k$, auquel le résultat de Seshadri s'applique. Notons
+aussi que, grâce à cette réduction, il suffit de faire la démonstration de Seshadri dans
+le cas où $T$ est \emph{projectif} (et non seulement « semi-complet »), cas où la
+théorie du schéma de Picard utilisée par Seshadri est contenue dans celle qui sera
+développée au chap.~VI de notre Traité.}
+\end{env}
+
+\subsection{Diviseurs relatifs}
+\label{subsection:IV.21.15}
+\label{IV.21.15}
+
+\begin{env}[21.15.1]
+\label{IV.21.15.1}
+Soient $S$ un préschéma, $f:X\to S$ un morphisme \emph{plat et localement de
+présentation finie}. On a défini dans (20.6.1) le faisceau d'anneaux
+$\mathscr M_{X/S}$ des \emph{germes de fonctions méromorphes sur $X$ relatives à
+$S$}, sous-faisceau de $\mathscr M_X$; il est clair que l'injection canonique
+$\mathcal O_X\to\mathscr M_X$ (20.1.4.1) applique $\mathcal O_X$ sur un
+sous-faisceau de $\mathscr M_{X/S}$, avec lequel on l'identifie. Soit
+$\mathscr M_{X/S}^*$ le faisceau (en groupes multiplicatifs) des germes de sections
+inversibles de $\mathscr M_{X/S}$ qui est donc un sous-faisceau de $\mathscr M_X^*$
+et contient $\mathcal O_X^*$ comme sous-faisceau.
+\end{env}
+
+\begin{definition}[21.15.2]
+\label{IV.21.15.2}
+On appelle \emph{faisceau des diviseurs sur $X$ relativement à $S$}, ou
+\emph{faisceau des diviseurs sur $X$ transversaux à $f$}, et on note
+$\mathscr{D}iv_{X/S}$ le faisceau quotient (de groupes commutatifs)
+$\mathscr M_{X/S}^*/\mathcal O_X^*$; les sections de ce faisceau au-dessus de $X$ se
+nomment \emph{diviseurs sur $X$ relatifs à $S$}, ou \emph{diviseurs sur $X$
+transversaux à $f$}; ils forment un groupe commutatif noté $\operatorname{Div}(X/S)$.
+\end{definition}
+
+Il est clair que $\mathscr{D}iv_{X/S}$ s'identifie canoniquement à un sous-faisceau de
+$\mathscr{D}iv_X$, et par suite $\operatorname{Div}(X/S)$ à un sous-groupe de
+$\operatorname{Div}(X)$, que l'on note encore \emph{additivement}. Pour
+\oldpage[IV-4]{330}
+tout ouvert $U$ de $X$, on a
+$\mathscr M_{X/S}^*|U=\mathscr M_{U/S}^*$, donc
+$\mathscr{D}iv_{X/S}|U=\mathscr{D}iv_{U/S}$, et le faisceau
+$\mathscr{D}iv_{X/S}$ est donc égal au préfaisceau
+$U\mapsto\operatorname{Div}(U/S)$.
+
+Puisque $\mathscr M_{X/S}^*$ est un sous-faisceau de $\mathscr M_X^*$, les
+définitions, notations et formules relatives aux diviseurs des sections de
+$\mathscr M_X^*$ au-dessus de $X$ (21.1.3) s'appliquent sans changement aux sections
+de $\mathscr M_{X/S}^*$ au-dessus de $X$.
+
+\begin{env}[21.15.3]
+\label{IV.21.15.3}
+La structure de faisceau de groupes ordonnés sur $\mathscr{D}iv_X$ (21.1.6) induit
+sur le sous-faisceau $\mathscr{D}iv_{X/S}$ une structure de faisceau de groupes
+ordonnés, pour laquelle le faisceau de monoïdes des germes de sections positives est
+$\mathscr{D}iv_X^+\cap\mathscr{D}iv_{X/S}$, que l'on note
+$\mathscr{D}iv_{X/S}^+$. On a
+$\Gamma(X,\mathscr{D}iv_{X/S}^+)=\operatorname{Div}^+(X)\cap
+\operatorname{Div}(X/S)$; on note ce sous-monoïde de $\operatorname{Div}(X/S)$ par
+$\operatorname{Div}^+(X/S)$, et il est formé des éléments $\geq0$ pour une structure
+de groupe ordonné sur $\operatorname{Div}(X/S)$. Il résulte de (21.1.5.1) que
+$\mathscr{D}iv_{X/S}^+$ est l'image dans $\mathscr{D}iv_{X/S}$ du sous-faisceau de
+monoïdes
+\[
+\label{IV.21.15.3.1}
+  \mathcal O_{X/S}^{\mathrm{reg}}=\mathcal O_X\cap\mathscr M_{X/S}^*.
+  \tag{21.15.3.1}
+\]
+\end{env}
+
+Pour tout ouvert $U$ de $X$, $\Gamma(U,\mathcal O_{X/S}^{\mathrm{reg}})$ est
+l'ensemble des sections $t$ de $\mathcal O_X$ au-dessus de $U$ telles que $t$ soit
+régulière et que $1/t$ appartienne à $\Gamma(U,\mathscr M_{X/S})$, ce qui signifie,
+avec les notations de (20.6.1), que $t\in\mathscr T_{X/S}(U)$, de sorte que le faisceau
+$\mathcal O_{X/S}^{\mathrm{reg}}$ n'est autre que le faisceau noté $\mathscr T_{X/S}$
+dans (20.6.1). On peut donc écrire
+\[
+\label{IV.21.15.3.2}
+  \mathscr{D}iv_{X/S}^+=\mathcal O_{X/S}^{\mathrm{reg}}/\mathcal O_X^*
+  \tag{21.15.3.2}
+\]
+à un isomorphisme canonique près.
+
+\begin{env}[21.15.3.3]
+\label{IV.21.15.3.3}
+Soit $D\in\operatorname{Div}^+(X/S)$ et considérons le sous-préschéma fermé $Y(D)$
+de $X$ défini par l'Idéal $\mathscr J_X(D)$ de $\mathcal O_X$ (21.6.5); en vertu de
+ce qui précède, pour tout $x\in Y(D)$, il y a un voisinage ouvert $U$ de $x$ dans $X$
+et une section $t\in\mathscr T_{X/S}(U)$ telle que
+$\mathscr J_X(D)|U=\mathcal O_U\cdot t$; puisque $x\in Y(D)$, l'image $t_{f(x)}$ de
+$t$ dans $\Gamma(U\cap X_{f(x)},\mathcal O_{X_{f(x)}})$ appartient à l'idéal maximal
+de $\mathcal O_{X_{f(x)},x}$ et en outre, par définition, pour tout $s\in S$, l'image
+$t_s$ de $t$ dans $\Gamma(U\cap X_s,\mathcal O_{X_s})$ est une section
+\emph{régulière}. On déduit donc de (11.3.8) et (19.2.4) que l'immersion canonique
+$Y(D)\to X$ est \emph{transversalement régulière relativement à $S$ et de
+codimension $1$} au point $x$. La réciproque étant immédiate, on voit qu'on peut
+\emph{identifier canoniquement} les diviseurs positifs sur $X$ relatifs à $S$ aux
+sous-préschémas fermés $Y$ de $X$ tels que l'injection canonique $Y\to X$ soit une
+immersion transversalement régulière relativement à $S$ et de codimension $1$. Nous
+ferons d'ordinaire cette identification.
+\end{env}
+
+\begin{proposition}[21.15.4]
+\label{IV.21.15.4}
+Soient $D$ un diviseur sur $X$, $\mathscr J_X(D)$ l'Idéal fractionnaire inversible
+correspondant (21.2.5). Pour que $D\in\operatorname{Div}(X/S)$, il faut et il suffit
+que, pour tout $x\in X$, on ait
+$(\mathscr J_X(D)\cap\mathscr M_{X/S}^*)_x\ne0$ (ou, ce qui revient au même, que
+l'on ait $\mathscr J_X(D)\subset\mathscr M_{X/S}$ et
+$\mathscr J_X(D)^{-1}\subset\mathscr M_{X/S}$).
+\end{proposition}
+
+\begin{proof}
+En effet, dire que $D\in\operatorname{Div}(X/S)$ signifie que pour tout $x\in X$, il
+existe un voisinage ouvert $U$ de $x$ et une section
+$f\in\Gamma(U,\mathscr M_{X/S}^*)$ tels que $D|U=\operatorname{div}_U(f)$; comme
+$\mathscr J_X(D)|U$ est l'Idéal fractionnaire inversible $\mathcal O_Uf$, la
+proposition en résulte aussitôt.
+\end{proof}
+
+\oldpage[IV-4]{331}
+\begin{proposition}[21.15.5]
+\label{IV.21.15.5}
+Soient $D$ un diviseur sur $X$, $\mathcal O_X(D)$ l'Idéal fractionnaire inversible et
+$s_D$ la section méromorphe régulière de $\mathcal O_X(D)$ définis canoniquement par
+$D$ (21.2.8 et 21.2.9). Pour que $D\in\operatorname{Div}(X/S)$, il faut et il suffit
+que $s_D\in\Gamma(X,\mathscr M_{X/S}(\mathcal O_X(D)))$.
+\end{proposition}
+
+\begin{proof}
+En effet, si $U$ est un ouvert de $X$ tel que $D|U=\operatorname{div}_U(f)$, où
+$f\in\Gamma(U,\mathscr M_X^*)$, dire que
+$s_D\in\Gamma(U,\mathscr M_{X/S}(\mathcal O_X(D)))$ signifie, en vertu des
+définitions (20.6.2), que $f^{-1}\in\Gamma(U,\mathscr M_{X/S})$, d'où la
+proposition.
+\end{proof}
+
+L'interprétation des diviseurs sur $X$ à l'aide des classes
+$\operatorname{cl}(\mathscr L,s)$ (21.2.11) permet donc d'interpréter les éléments de
+$\operatorname{Div}(X/S)$ comme les couples (à isomorphisme près) $(\mathscr L,s)$
+tels que $\mathscr L$ soit un $\mathcal O_X$-Module inversible et que $s$ soit une
+section méromorphe de $\mathscr L$ au-dessus de $X$, \emph{régulière relativement à
+$S$} (20.6.5, (iii)).
+
+\begin{proposition}[21.15.6]
+\label{IV.21.15.6}
+Soit $D$ un diviseur sur $X$ relatif à $S$, et supposons que pour tout $x\in X$ tel
+que $\operatorname{prof}(\mathcal O_{X_{f(x)},x})=1$, on ait $D_x\geq0$
+(resp. $D_x=0$). Alors on a $D\geq0$ (resp. $D=0$).
+\end{proposition}
+
+\begin{proof}
+Comme dans (21.1.8), on peut se borner au cas où $D=\operatorname{div}(\varphi)$, où
+$\varphi$ est une fonction méromorphe régulière relative à $S$, et tout revient à voir
+que si $D_x\geq0$ en tout point $x\in X$ tel que
+$\operatorname{prof}(\mathcal O_{X_{f(x)},x})=1$, $\varphi$ est partout définie dans
+$X$. Mais cette hypothèse signifie que, si $T=X-\operatorname{dom}(\varphi)$, on a
+$\operatorname{prof}(\mathcal O_{X_{f(x)},x})\geq2$ pour tout $x\in T$, et il suffit
+pour conclure d'appliquer (20.6.6).
+\end{proof}
+
+\begin{env}[21.15.7]
+\label{IV.21.15.7}
+Soit $X'$ un second $S$-préschéma plat et localement de présentation finie sur $S$, et
+soit $g:X'\to X$ un $S$-morphisme. Si le $S$-morphisme $g$ est \emph{plat}, on sait
+(21.4.5) que l'image réciproque par $g$ de tout diviseur sur $X$ est définie; si de
+plus $D\in\operatorname{Div}(X/S)$, il résulte de la définition (21.15.2) et de
+(20.6.8) que l'on a alors $g^*(D)\in\operatorname{Div}(X'/S)$.
+\end{env}
+
+\begin{env}[21.15.8]
+\label{IV.21.15.8}
+Soit $X'$ un second $S$-préschéma plat et localement de présentation finie sur $S$, et
+soit $g:X'\to X$ un $S$-morphisme \emph{fini et plat}. Notons que $g$ est alors
+nécessairement de présentation finie (1.4.3, 1.4.6 et 1.6.3), donc
+$g_*(\mathcal O_{X'})$ est un $\mathcal O_X$-Module plat et de présentation finie, et
+par suite \emph{localement libre} (2.1.12), autrement dit $g$ est un morphisme
+localement libre (18.2.7); pour tout $s\in S$, le morphisme correspondant
+$g_s:X'_s\to X_s$ est donc aussi fini et localement libre. On déduit alors de (21.5.2)
+et (20.6.1) que pour tout ouvert $U$ de $X$ et toute section
+$t'\in\Gamma(g^{-1}(U),\mathscr T_{X'/S})$, la norme $N_{X'/X}(t')$ appartient à
+$\Gamma(U,\mathscr T_{X/S})$; le raisonnement de (21.5.3) prouve ensuite que pour tout
+$\mathcal O_{X'}$-Module inversible $\mathscr L'$ et toute section méromorphe $u'$ de
+$\mathscr L'$ au-dessus de $X'$, \emph{régulière relativement à $S$}, la norme
+$N_{X'/X}(u')$ est une section méromorphe de
+$\mathscr L=N_{X'/X}(\mathscr L')$ au-dessus de $X$, régulière relativement à $S$.
+L'interprétation des diviseurs relatifs à $S$ donnée dans (21.15.5) et la définition de
+l'image directe d'un diviseur (21.5.5) prouvent alors que \emph{pour tout diviseur}
+$D'\in\operatorname{Div}(X'/S)$, on a $g_*(D')\in\operatorname{Div}(X/S)$.
+\end{env}
+
+\begin{env}[21.15.9]
+\label{IV.21.15.9}
+Considérons enfin un morphisme quelconque $S'\to S$, et (sous les hypothèses de
+(21.15.1)) posons $X'=X\times_S S'$, qui est plat et localement de présentation finie
+sur $S'$; si $p:X'\to X$ est la projection canonique, on a vu (20.6.9) qu'on a un
+homomorphisme canonique
+$p^*(\mathscr M_{X/S})\to\mathscr M_{X'/S'}$, qui transforme évidemment toute
+section de $\mathscr M_{X/S}$ au-dessus d'un ouvert $U$, \emph{régulière relativement
+à $S$}, en une section de $\mathscr M_{X'/S'}$ au-dessus de $p^{-1}(U)$, régulière
+relativement à $S$ (20.6.5, (iii)); on conclut alors de la
+\oldpage[IV-4]{332}
+définition (21.15.2) et de l'exactitude à droite du foncteur $p^*$, que
+l'homomorphisme précédent définit par passage aux quotients un homomorphisme canonique
+\[
+\label{IV.21.15.9.1}
+  \operatorname{Div}(X/S)\longrightarrow\operatorname{Div}(X'/S')
+  \tag{21.15.9.1}
+\]
+qui transforme évidemment les éléments de $\operatorname{Div}^+(X/S)$ en éléments de
+$\operatorname{Div}^+(X'/S')$. On pose encore
+$\operatorname{Div}(X'/S')=\operatorname{Div}_{X/S}(S')$ (resp.
+$\operatorname{Div}^+(X'/S')=\operatorname{Div}_{X/S}^+(S')$), et on voit aussitôt
+qu'on a ainsi défini deux foncteurs contravariants
+\[
+  \operatorname{Div}_{X/S}:\mathbf{Sch}_{/S}\longrightarrow\mathbf{Ab},\qquad
+  \operatorname{Div}_{X/S}^+:\mathbf{Sch}_{/S}\longrightarrow\mathbf{Ens}
+\]
+de la catégorie des $S$-préschémas dans celle des groupes commutatifs (resp. des
+ensembles). On verra plus loin (chap.~VI) des cas importants où le foncteur
+$\operatorname{Div}_{X/S}^+$ est \emph{représentable} $(\mathbf 0_{\mathrm{III}},
+8.1.8)$.
+
+Pour tout diviseur $D\in\operatorname{Div}(X/S)$, l'image de $D$ par
+l'homomorphisme (21.15.9.1) n'est autre d'ailleurs que l'\emph{image réciproque}
+$p^*(D)$ (au sens de (21.4.2)) : l'existence de cette image réciproque et l'assertion
+précédente sont en effet des conséquences immédiates de (20.6.5, (iii)) et (20.6.9).
+
+Les éléments de $\operatorname{Div}(X'/S')$ s'appellent souvent, par abus de langage,
+« \emph{familles de diviseurs sur $X$ relatifs à $S$, paramétrées par le
+$S$-préschéma $S'$} »; on utilise surtout cette terminologie lorsqu'il s'agit de
+diviseurs \emph{positifs}.
+\end{env}

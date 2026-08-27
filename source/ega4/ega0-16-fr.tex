@@ -1,0 +1,1617 @@
+\section{Dimension et profondeur dans les anneaux locaux noethériens}
+\label{section:0.16-fr}
+
+\subsection{Dimension d'un anneau}
+\label{subsection:0.16.1-fr}
+
+\begin{env}[16.1.1]
+\label{0.16.1.1-fr}
+On appelle dimension (ou dimension de Krull) d'un anneau $A$ et on note
+$\dim A$ la dimension (combinatoire) de son spectre
+$\operatorname{Spec}(A)$ (14.2.1)~; comme les parties fermées irréductibles de
+$\operatorname{Spec}(A)$ sont les
+$V(\mathfrak{p})$, où $\mathfrak{p}$ est un idéal premier de $A$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~4, no~3, cor.~1 de la prop.~14), il revient au
+même de dire que $\dim(A)$ est la borne supérieure des longueurs des chaînes
+(14.1.1)
+\[
+  \mathfrak{p}_0\subset\mathfrak{p}_1\subset\cdots\subset\mathfrak{p}_n
+\]
+d'idéaux premiers de $A$. Si $A\neq0$, on a $\dim A\geq0$. Un anneau artinien
+$\neq0$ (en particulier un corps) est de dimension 0 (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~2, no~5, prop.~7)~; un anneau de Dedekind qui
+n'est pas un corps (en particulier $\mathbb{Z}$ ou un anneau $k[T]$ de
+polynômes à une indéterminée sur un corps $k$) est de dimension 1 (Bourbaki,
+\emph{Alg.~comm.}, chap.~VII, \S~2). Un anneau noethérien n'est pas
+nécessairement de dimension finie [30].
+
+Si $(\mathfrak{p}_\alpha)$ est la famille des idéaux premiers minimaux de $A$,
+on a (14.1.2.1)
+\[
+\label{0.16.1.1.1-fr}
+  \dim(A)=\sup_\alpha(\dim(A/\mathfrak{p}_\alpha)).
+\tag{16.1.1.1}
+\]
+\end{env}
+
+\begin{env}[16.1.2]
+\label{0.16.1.2-fr}
+Pour tout idéal $\mathfrak{a}$ de $A$, les idéaux premiers de
+$A/\mathfrak{a}$ correspondent biunivoquement aux idéaux premiers de $A$
+contenant $\mathfrak{a}$, donc
+\[
+\label{0.16.1.2.1-fr}
+  \dim(A/\mathfrak{a})\leq\dim(A).
+\tag{16.1.2.1}
+\]
+Si en outre $\mathfrak{a}$ n'est contenu dans aucun idéal premier minimal
+$\mathfrak{p}_\alpha$ de $A$, toute chaîne d'idéaux premiers de $A$ contenant
+$\mathfrak{a}$ peut être complétée par un des $\mathfrak{p}_\alpha$, donc on a
+\[
+\label{0.16.1.2.2-fr}
+  1+\dim(A/\mathfrak{a})\leq\dim(A).
+\tag{16.1.2.2}
+\]
+\end{env}
+
+\begin{env}[16.1.3]
+\label{0.16.1.3-fr}
+\oldpage[0\textsubscript{IV-1}]{23}
+Si $S$ est une partie multiplicative de $A$, les idéaux premiers de $S^{-1}A$
+correspondent biunivoquement aux idéaux premiers de $A$ ne rencontrant pas
+$S$, donc on a
+\[
+\label{0.16.1.3.1-fr}
+  \dim(S^{-1}A)\leq\dim(A).
+\tag{16.1.3.1}
+\]
+Pour tout idéal premier $\mathfrak{p}$ de $A$, on a, par définition (14.2.1)
+\[
+\label{0.16.1.3.2-fr}
+  \dim(A_{\mathfrak{p}})
+  =\operatorname{codim}(V(\mathfrak{p}),\operatorname{Spec}(A)).
+\tag{16.1.3.2}
+\]
+Ce nombre est encore appelé hauteur de l'idéal premier $\mathfrak{p}$ et noté
+$\operatorname{ht}(\mathfrak{p})$. Plus généralement, pour tout idéal
+$\mathfrak{a}$ de $A$, on appelle hauteur de $\mathfrak{a}$ le nombre
+\[
+\label{0.16.1.3.3-fr}
+  \operatorname{ht}(\mathfrak{a})
+  =\operatorname{codim}(V(\mathfrak{a}),\operatorname{Spec}(A)).
+\tag{16.1.3.3}
+\]
+Si $(\mathfrak{p}_\lambda)$ est la famille des idéaux premiers minimaux parmi
+ceux qui contiennent $\mathfrak{a}$, on a donc (14.2.1)
+\[
+\label{0.16.1.3.4-fr}
+  \operatorname{ht}(\mathfrak{a})
+  =\inf_\lambda(\operatorname{ht}(\mathfrak{p}_\lambda)).
+\tag{16.1.3.4}
+\]
+On a évidemment
+\[
+\label{0.16.1.3.5-fr}
+  \dim(A)=\sup_{\mathfrak{m}}(\dim(A_{\mathfrak{m}}))
+\tag{16.1.3.5}
+\]
+où $\mathfrak{m}$ parcourt l'ensemble des idéaux maximaux de $A$.
+\end{env}
+
+\begin{env}[16.1.4]
+\label{0.16.1.4-fr}
+Pour tout idéal premier $\mathfrak{p}$ de $A$, on a (14.2.2.2)
+\[
+\label{0.16.1.4.1-fr}
+  \dim(A_{\mathfrak{p}})+\dim(A/\mathfrak{p})\leq\dim A.
+\tag{16.1.4.1}
+\]
+On dit que $A$ est caténaire (resp. équidimensionnel, équicodimensionnel,
+biéquidimensionnel) lorsque $\operatorname{Spec}(A)$ est caténaire (resp.
+équidimensionnel,
+équicodimensionnel, biéquidimensionnel). Lorsque $A$ est noethérien et
+biéquidimensionnel, les deux membres de (16.1.4.1) sont égaux pour tout idéal
+premier de $A$ (14.3.5).
+
+Pour tout idéal $\mathfrak{a}$ de $A$, les idéaux premiers de
+$A/\mathfrak{a}$ correspondent biunivoquement aux idéaux premiers de $A$
+contenant $\mathfrak{a}$, donc, si $A$ est caténaire, il en est de même de
+$A/\mathfrak{a}$. De même, pour toute partie multiplicative $S$ de $A$, les
+idéaux premiers de $S^{-1}A$ correspondent biunivoquement aux idéaux premiers
+de $A$ ne rencontrant pas $S$, donc si $A$ est caténaire, il en est de même de
+$S^{-1}A$.
+
+En outre, comme les idéaux premiers de $A$ contenus dans un idéal premier
+$\mathfrak{p}$ correspondent biunivoquement aux idéaux premiers de
+$A_{\mathfrak{p}}$, pour que $A$ soit caténaire, il faut et il suffit que
+$A_{\mathfrak{p}}$ le soit pour tout $\mathfrak{p}$. Dire que $A$ est
+caténaire signifie donc ((14.3.2) et (16.1.3.2)) que pour tout couple d'idéaux
+premiers $\mathfrak{p}$, $\mathfrak{q}$ de $A$ tels que
+$\mathfrak{q}\subset\mathfrak{p}$, on a
+\[
+\label{0.16.1.4.2-fr}
+  \dim(A_{\mathfrak{q}})
+  +\dim(A_{\mathfrak{p}}/\mathfrak{q}A_{\mathfrak{p}})
+  =\dim(A_{\mathfrak{p}}).
+\tag{16.1.4.2}
+\]
+Si $A$ est biéquidimensionnel, il en est de même de $A_{\mathfrak{p}}$ pour
+tout idéal premier $\mathfrak{p}$ de $A$.
+\end{env}
+
+\begin{proposition}[16.1.5]
+\label{0.16.1.5-fr}
+Soit $\rho:A\to B$ un homomorphisme d'anneaux faisant de $B$ une $A$-algèbre
+entière. Alors on a $\dim(B)\leq\dim(A)$~; si de plus $\rho$ est injectif, on a
+$\dim(B)=\dim(A)$.
+\end{proposition}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{24}
+Si $\mathfrak{n}$ est le noyau de $\rho$, $\rho(A)$ est isomorphe à
+$A/\mathfrak{n}$, donc $\dim\rho(A)\leq\dim(A)$ par (16.1.2.1), et comme $B$
+est entier sur $\rho(A)$, on peut se borner à démontrer la seconde assertion
+lorsque $A\subset B$. Si
+$\mathfrak{p}'_0\subset\mathfrak{p}'_1\subset\cdots\subset\mathfrak{p}'_n$
+est une chaîne d'idéaux premiers de $B$, les $\mathfrak{p}'_i\cap A$ sont
+alors des idéaux premiers distincts dans $A$ (Bourbaki, \emph{Alg.~comm.},
+chap.~V, \S~2, no~1, cor.~1 de la prop.~1), donc forment une chaîne d'idéaux
+premiers. Inversement, pour toute chaîne
+$\mathfrak{p}_0\subset\mathfrak{p}_1\subset\cdots\subset\mathfrak{p}_m$
+d'idéaux premiers de $A$, on sait qu'il existe pour chaque $i$ un idéal
+premier $\mathfrak{p}'_i$ de $B$ tel que
+$\mathfrak{p}'_i\cap A=\mathfrak{p}_i$ et que
+$\mathfrak{p}'_i\subset\mathfrak{p}'_{i+1}$ pour $0\leq i\leq m-1$
+(\emph{loc.~cit.}, cor.~2 du th.~1). D'où la conclusion.
+\end{proof}
+
+\begin{proposition}[16.1.6]
+\label{0.16.1.6-fr}
+Soient $B$ un anneau intègre, $A$ un sous-anneau local de $B$,
+$\mathfrak{m}$ son idéal maximal. Supposons que $A$ soit intégralement clos et
+que $B$ soit entier sur $A$~; alors, pour tout idéal maximal $\mathfrak{n}$ de
+$B$, on a $\dim(B_{\mathfrak{n}})=\dim(A)$.
+\end{proposition}
+
+\begin{proof}
+La première partie du raisonnement de (16.1.5) montre que
+$\dim(B_{\mathfrak{n}})\leq\dim(A)$. Inversement, considérons une chaîne
+d'idéaux premiers
+$\mathfrak{p}_0\subset\mathfrak{p}_1\subset\cdots\subset
+\mathfrak{p}_k=\mathfrak{m}$ de $A$~; on sait que
+$\mathfrak{n}\cap A=\mathfrak{m}$ (Bourbaki, \emph{Alg.~comm.}, chap.~V,
+\S~2, no~1, prop.~1) et en vertu des hypothèses faites, on peut appliquer le
+second théorème de Cohen-Seidenberg (Bourbaki, \emph{Alg.~comm.}, chap.~V,
+\S~2, no~4, th.~3), qui prouve l'existence d'une chaîne d'idéaux premiers
+$\mathfrak{p}'_0\subset\mathfrak{p}'_1\subset\cdots\subset
+\mathfrak{p}'_k=\mathfrak{n}$ de $B$ telle que
+$\mathfrak{p}'_i\cap A=\mathfrak{p}_i$ pour tout $i$~; on en déduit aussitôt
+$\dim(B_{\mathfrak{n}})\geq\dim(A)$, d'où la proposition.
+\end{proof}
+
+\begin{env}[16.1.7]
+\label{0.16.1.7-fr}
+Soit $M$ un $A$-module~; on appelle dimension de $M$ et on note
+$\dim_A(M)$ ou $\dim(M)$ la dimension de l'anneau $A/\operatorname{Ann}(M)$
+(isomorphe à l'anneau des homothéties $A_M$ de $M$). On a donc
+$\dim(M^k)=\dim(M)$ pour tout $k>0$. Si $M$ est de type fini, les idéaux
+premiers de $A$ contenant $\operatorname{Ann}(M)$ sont exactement ceux qui
+appartiennent à $\operatorname{Supp}(M)$ ($0_{\mathrm I}$, 1.7.4) et ce
+dernier est fermé dans $\operatorname{Spec}(A)$, donc on a alors
+\[
+\label{0.16.1.7.1-fr}
+  \dim(M)=\dim(\operatorname{Supp}(M))\leq\dim(A).
+\tag{16.1.7.1}
+\]
+Si $M$, $N$ sont deux $A$-modules tels que $N\subset M$, on a
+\[
+\label{0.16.1.7.2-fr}
+  \dim(N)\leq\dim(M),\qquad \dim(M/N)\leq\dim(M).
+\tag{16.1.7.2}
+\]
+Si $S$ est une partie multiplicative de $A$ et si $M$ est de type fini, on a
+\[
+\label{0.16.1.7.3-fr}
+  \dim_{S^{-1}A}(S^{-1}M)\leq\dim_A(M).
+\tag{16.1.7.3}
+\]
+En effet, on a
+$\operatorname{Ann}(S^{-1}M)=S^{-1}\operatorname{Ann}(M)$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~2, no~4) et
+$S^{-1}A/S^{-1}\operatorname{Ann}(M)=S^{-1}(A/\operatorname{Ann}(M))$.
+
+Par ailleurs, toute chaîne maximale d'idéaux premiers contenant
+$\operatorname{Ann}(M)$ se termine par un idéal maximal $\mathfrak{m}$, donc
+sa longueur est égale à celle de la chaîne des idéaux premiers correspondants
+de $A_{\mathfrak{m}}$ (qui contiennent
+$\operatorname{Ann}(M_{\mathfrak{m}})=(\operatorname{Ann}(M))_{\mathfrak{m}}$)~;
+de cette remarque et de (16.1.7.3), on tire
+\[
+\label{0.16.1.7.4-fr}
+  \dim_A(M)=\sup_{\mathfrak{m}}
+  (\dim_{A_{\mathfrak{m}}}(M_{\mathfrak{m}}))
+\tag{16.1.7.4}
+\]
+où $\mathfrak{m}$ parcourt l'ensemble des idéaux maximaux de $A$.
+
+On dit que $M$ est caténaire (resp. équidimensionnel, équicodimensionnel,
+biéquidimensionnel) lorsque $A/\operatorname{Ann}(M)$ l'est.
+\end{env}
+
+\begin{proposition}[16.1.8]
+\label{0.16.1.8-fr}
+\oldpage[0\textsubscript{IV-1}]{25}
+Soient $A$ un anneau, $M$ un $A$-module de type fini, $\mathfrak{p}$ un idéal
+premier de $A$. On a alors
+\[
+\label{0.16.1.8.1-fr}
+  \dim_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+  +\dim_A(M/\mathfrak{p}M)\leq\dim_A(M).
+\tag{16.1.8.1}
+\]
+\end{proposition}
+
+\begin{proof}
+On a
+$\operatorname{Ann}(M_{\mathfrak{p}})=(\operatorname{Ann}(M))_{\mathfrak{p}}$,
+donc les idéaux premiers de $A_{\mathfrak{p}}$ contenant
+$\operatorname{Ann}(M_{\mathfrak{p}})$ correspondent biunivoquement aux
+idéaux premiers de $A$ contenant $\operatorname{Ann}(M)$ et contenus dans
+$\mathfrak{p}$. D'autre part, si $\operatorname{Ann}(M)=\mathfrak{n}$,
+$V(\operatorname{Ann}(M/\mathfrak{p}M))=V(\mathfrak{p}+\mathfrak{n})$
+($0_{\mathrm I}$, 1.7.5), donc les idéaux premiers de $A$ contenant
+$\operatorname{Ann}(M/\mathfrak{p}M)$ contiennent
+$\mathfrak{p}+\mathfrak{n}$~; d'où la conclusion.
+
+Cette dernière remarque montre en outre que l'on a
+\[
+\label{0.16.1.8.2-fr}
+  \dim_{A/\mathfrak{p}}(M/\mathfrak{p}M)=\dim_A(M/\mathfrak{p}M).
+\tag{16.1.8.2}
+\]
+\end{proof}
+
+\begin{proposition}[16.1.9]
+\label{0.16.1.9-fr}
+Soient $A$ un anneau noethérien, $\rho:A\to B$ un homomorphisme d'anneaux,
+$M$ un $B$-module tel que $M_{[\rho]}$ soit un $A$-module de type fini. Alors
+on a
+\[
+\label{0.16.1.9.1-fr}
+  \dim_A(M_{[\rho]})=\dim_B(M).
+\tag{16.1.9.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, l'anneau $B_M$ des homothéties du $B$-module $M$ s'identifie à un
+sous-anneau de $C=\operatorname{End}_A(M_{[\rho]})$, et $C$ est un $A$-module
+de type fini (Bourbaki, \emph{Alg.~comm.}, chap.~III, \S~3, no~1, lemme~2),
+donc il en est de même de $B_M$~; d'ailleurs l'anneau $A_M$ des homothéties du
+$A$-module $M_{[\rho]}$ est un sous-anneau de $B_M$, image canonique de $A$
+dans $C$, donc $B_M$ est fini sur $A_M$~; la conclusion résulte donc de
+(16.1.5).
+\end{proof}
+
+\begin{env}[16.1.10]
+\label{0.16.1.10-fr}
+Soit $A$ un anneau noethérien~; si $M$ est un $A$-module de longueur finie, on
+sait (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~2, no~5, prop.~7 et cor.~1 de
+la prop.~7) que $\operatorname{Supp}(M)$ est un espace fini discret, donc
+$\dim(M)=0$ si $M\neq0$~; réciproquement, si $M$ est un $A$-module de type
+fini tel que $\dim(M)=0$, tout point de $\operatorname{Supp}(M)$ est fermé,
+autrement dit est un idéal maximal de $A$, donc (\emph{loc.~cit.}, prop.~7)
+$M$ est de longueur finie.
+\end{env}
+
+\subsection[Dimension d'un anneau semi-local noethérien]{Dimension d'un
+anneau semi-local noethérien\protect\footnote{Ce numéro reproduit l'exposé
+donné par Serre dans un cours au Collège de France en 1958.}}
+\label{subsection:0.16.2-fr}
+
+\begin{env}[16.2.1]
+\label{0.16.2.1-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical~;
+rappelons qu'un idéal de définition $\mathfrak{q}$ de $A$ est un idéal tel que
+$\mathfrak{q}\subset\mathfrak{r}$ et que $\mathfrak{q}$ contienne une
+puissance de $\mathfrak{r}$~; il revient au même de dire que les seuls idéaux
+premiers contenant $\mathfrak{q}$ sont maximaux, ou que $A/\mathfrak{q}$ est
+un anneau artinien. Soit $M$ un $A$-module de type fini~; pour tout entier
+$n>0$, $M/\mathfrak{q}^nM$ est un $A$-module de longueur finie, égale à
+$\sum_{i=0}^{n-1}\operatorname{long}(\gr_i(M))$, où $\gr_\bullet(M)$ est le
+$(A/\mathfrak{q})$-module gradué associé à $M$ muni de la filtration
+$\mathfrak{q}$-préadique. On sait qu'il existe un polynôme $Q(n)$ à
+coefficients rationnels tel que $\operatorname{long}(\gr_n(M))=Q(n)$ pour $n$
+assez grand (III, 2.5.4)~; on en déduit aussitôt qu'il existe un polynôme
+$P_{\mathfrak{q}}(M,n)$ en $n$, à coefficients rationnels, tel que
+\[
+  \operatorname{long}(M/\mathfrak{q}^nM)=P_{\mathfrak{q}}(M,n)
+\]
+pour $n$ assez grand~; il est clair que ce polynôme est unique et que son
+coefficient dominant est $>0$ si $M\neq0$~; on dit que c'est le polynôme de
+Hilbert-Samuel de $M$ pour la filtration $\mathfrak{q}$-préadique.
+\end{env}
+
+\begin{lemma}[16.2.2.1]
+\label{0.16.2.2.1-fr}
+\oldpage[0\textsubscript{IV-1}]{26}
+Soit $(M_n)$ une filtration $\mathfrak{q}$-bonne de $M$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~3, no~1)~; alors
+$\operatorname{long}(M/M_n)$ est égal, pour $n$ grand, à un polynôme en $n$
+dont le degré et le coefficient dominant sont les mêmes que ceux de
+$P_{\mathfrak{q}}(M,n)$.
+\end{lemma}
+
+\begin{proof}
+En effet, il existe $n_0$ tel que $M_{n+1}=\mathfrak{q}M_n$ pour $n\geq n_0$,
+d'où les inclusions
+$\mathfrak{q}^{n+n_0}M\subset M_{n+n_0}=\mathfrak{q}^nM_{n_0}
+\subset\mathfrak{q}^nM\subset M_n$ pour $n$ grand, ce qui entraîne
+\[
+  P_{\mathfrak{q}}(M,n+n_0)\geq
+  \operatorname{long}(M/M_{n+n_0})\geq
+  P_{\mathfrak{q}}(M,n)\geq\operatorname{long}(M/M_n)
+\]
+et par suite la conclusion.
+\end{proof}
+
+Si $\mathfrak{q}'$ est un second idéal de définition, on a
+$\mathfrak{q}'\supset\mathfrak{q}^m$ pour un entier $m$, donc
+$P_{\mathfrak{q}'}(M,n)\leq P_{\mathfrak{q}}(M,mn)$~; par suite le degré de
+$P_{\mathfrak{q}}(M,n)$ ne dépend pas de l'idéal de définition
+$\mathfrak{q}$ considéré~; on le note $d(M)$.
+
+\begin{lemma}[16.2.2.2]
+\label{0.16.2.2.2-fr}
+Soit $0\to M'\to M\to M''\to0$ une suite exacte de $A$-modules de type
+fini. Alors le polynôme
+\[
+  P_{\mathfrak{q}}(M,n)-P_{\mathfrak{q}}(M',n)
+  -P_{\mathfrak{q}}(M'',n)
+\]
+a un degré $\leq d(M')-1\leq d(M)-1$.
+\end{lemma}
+
+\begin{proof}
+En effet, la filtration des
+$M'_n=M'\cap\mathfrak{q}^nM'$ est $\mathfrak{q}$-bonne (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~3, no~1, prop.~1)~; comme
+\[
+  \operatorname{long}(M/\mathfrak{q}^nM)
+  =\operatorname{long}(M''/\mathfrak{q}^nM'')
+  +\operatorname{long}(M'/M'_n),
+\]
+le lemme résulte aussitôt de (16.2.2.1) appliqué à $M'$.
+\end{proof}
+
+\begin{theorem}[16.2.3]
+\label{0.16.2.3-fr}
+\textup{(Krull-Chevalley-Samuel).}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical,
+$M\neq0$ un $A$-module de type fini, $d(M)$ le degré du polynôme de
+Hilbert-Samuel de $M$ (pour un idéal de définition quelconque de $A$)~; soit
+d'autre part $s(M)$ la borne inférieure des entiers $n$ tels qu'il existe des
+éléments $x_1,\ldots,x_n$ de $\mathfrak{r}$ pour lesquels
+$M/(x_1M+\cdots+x_nM)$ soit de longueur finie. Alors on a
+\[
+  d(M)=s(M)=\dim(M).
+\]
+\end{theorem}
+
+\begin{lemma}[16.2.3.1]
+\label{0.16.2.3.1-fr}
+Pour tout $x\in\mathfrak{r}$, soit ${}_xM$ le sous-module de $M$ formé des
+éléments annulés par $x$. Alors~:
+\begin{enumerate}
+  \item[\rm{(i)}] On a $s(M)\leq s(M/xM)+1$.
+  \item[\rm{(ii)}] Soient $\mathfrak{p}_i$ les idéaux premiers appartenant à
+  $\operatorname{Supp}(M)$ et tels que
+  \[
+    \dim(A/\mathfrak{p}_i)=\dim(M)\quad(1\leq i\leq m).
+  \]
+\end{enumerate}
+Si $x\notin\mathfrak{p}_i$ pour tout $i$, on a
+$\dim(M/xM)\leq\dim(M)-1$.
+\begin{enumerate}
+  \item[\rm{(iii)}] Si $\mathfrak{q}$ est un idéal de définition de $A$, le
+  polynôme
+  \[
+    P_{\mathfrak{q}}({}_xM,n)-P_{\mathfrak{q}}(M/xM,n)
+  \]
+  est de degré $\leq d(M)-1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+L'assertion (i) est triviale, car si $(x_i)_{1\leq i\leq m}$ est tel que pour
+le module $N=M/xM$, $N/(x_1N+\cdots+x_mN)$ soit de longueur finie, il suffit
+d'observer que ce module est isomorphe à
+$M/(xM+x_1M+\cdots+x_mM)$.
+
+Pour prouver (ii), on remarque que, si $\mathfrak{a}$ est l'annulateur de
+$M$, les idéaux premiers qui contiennent l'annulateur de $M/xM$ sont ceux qui
+contiennent $\mathfrak{a}+Ax$ ($0_{\mathrm I}$, 1.7.5)~; aucun des
+$\mathfrak{p}_i$ ne peut donc contenir $\mathfrak{a}+Ax$ et par définition de
+$\dim(M)$ (16.1.7) toute chaîne d'idéaux premiers contenant
+$\mathfrak{a}+Ax$ a donc une longueur $\leq\dim(M)-1$.
+
+\oldpage[0\textsubscript{IV-1}]{27}
+
+Enfin, pour démontrer (iii), on note que l'on a deux suites exactes
+\[
+  0\to{}_xM\to M\xrightarrow{x}xM\to0,\qquad
+  0\to xM\to M\to M/xM\to0,
+\]
+et l'assertion découle aussitôt du lemme (16.2.2.2).
+\end{proof}
+
+La démonstration de (16.2.3) se fait en trois étapes~:
+
+\begin{env}[16.2.3.2]
+\label{0.16.2.3.2-fr}
+On a $\dim(M)\leq d(M)$.
+\end{env}
+
+Raisonnons par récurrence sur $d(M)$, le cas $d(M)=0$ étant trivial.
+Supposons donc $d(M)\geq1$, et soit $\mathfrak{p}_0\in\operatorname{Supp}(M)$
+tel que $\dim(A/\mathfrak{p}_0)=\dim(M)$. Cela entraîne que
+$\mathfrak{p}_0$ est un élément \emph{minimal} de $\operatorname{Supp}(M)$,
+donc il est associé à $M$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1,
+no~4, th.~2) et $M$ contient par suite un sous-module $N$ isomorphe à
+$A/\mathfrak{p}_0$ (\emph{loc.~cit.}, \S~1, no~1)~; comme $d(M)\geq d(N)$
+par (16.2.2.2), on est ramené à prouver que $\dim(N)\leq d(N)$. Soit donc
+$\mathfrak{p}_0\subset\mathfrak{p}_1\subset\cdots\subset\mathfrak{p}_n$ une
+chaîne d'idéaux premiers distincts dans $A$, et montrons que $n\leq d(N)$.
+C'est évident si $n=0$. Sinon, il existe
+$x\in\mathfrak{p}_1\cap\mathfrak{r}$ tel que $x\notin\mathfrak{p}_0$, car la
+relation $\mathfrak{p}_0\supset\mathfrak{p}_1\cap\mathfrak{r}$ entraînerait
+$\mathfrak{p}_0\supset\mathfrak{r}$ puisque $\mathfrak{p}_0$ ne contient pas
+$\mathfrak{p}_1$, donc $\mathfrak{p}_0$ serait maximal, ce qui est absurde.
+On a $\mathfrak{p}_i\in\operatorname{Supp}(N/xN)$, pour $i\geq1$, donc
+$n-1\leq\dim(N/xN)$ (16.1.7). Comme ${}_xN=0$ en vertu du choix de $x$, on a
+$d(N/xN)\leq d(N)-1$ par (16.2.3.1, (iii)). L'hypothèse de récurrence implique
+alors $d(N/xN)=\dim(N/xN)\geq n-1$, donc $n-1\leq d(N)-1$.
+
+\begin{env}[16.2.3.3]
+\label{0.16.2.3.3-fr}
+On a $d(M)\leq s(M)$.
+\end{env}
+
+Soit en effet $(x_i)_{1\leq i\leq n}$ une famille d'éléments de
+$\mathfrak{r}$ telle que, si l'on pose
+$\mathfrak{a}=x_1A+\cdots+x_nA$, $M/\mathfrak{a}M$ soit de longueur finie.
+Les idéaux associés à $M/\mathfrak{a}M$ sont alors maximaux (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~2, no~5, prop.~7) et comme ce sont les seuls
+idéaux premiers contenant
+$\mathfrak{q}=\mathfrak{a}+(\mathfrak{r}\cap\operatorname{Ann}(M))$,
+$A/\mathfrak{q}$ est artinien (\emph{loc.~cit.}, prop.~9) et $\mathfrak{q}$
+est un idéal de définition de $A$. Mais on a
+$\mathfrak{q}^mM/\mathfrak{q}^{m+1}M=
+\mathfrak{a}^mM/\mathfrak{a}^{m+1}M$, et si $M$ est engendré par $r$ éléments
+$z_j$, $\mathfrak{a}^mM/\mathfrak{a}^{m+1}M$ est un $(A/\mathfrak{q})$-module
+engendré par les images canoniques des
+$x_1^{\nu_1}x_2^{\nu_2}\cdots x_n^{\nu_n}z_j$ où
+$\sum_i\nu_i=m$, donc par $r\binom{m+n-1}{n-1}$ éléments~; sa longueur est
+par suite $\leq ar\binom{m+n-1}{n-1}$, où $a$ est une constante, et on en
+déduit aussitôt que le degré de $P_{\mathfrak{q}}(M,n)$ est $\leq n$~; d'où
+$d(M)\leq s(M)$.
+
+\begin{env}[16.2.3.4]
+\label{0.16.2.3.4-fr}
+On a $s(M)\leq\dim(M)$.
+\end{env}
+
+Notons d'abord que $n=\dim(M)$ est fini par (16.2.3.2). Raisonnons par
+récurrence sur $n$~; la proposition est évidente pour $n=0$, puisque $M$ est
+alors de longueur finie (16.1.10). Supposons $n\geq1$, et soient
+$\mathfrak{p}_i$ $(1\leq i\leq m)$ les idéaux premiers de
+$\operatorname{Supp}(M)$ tels que $\dim(A/\mathfrak{p}_i)=n$~; la définition
+des $\mathfrak{p}_i$ montre que ce sont des éléments minimaux de
+$\operatorname{Supp}(M)$, donc en nombre fini (Bourbaki, \emph{Alg.~comm.},
+chap.~IV, \S~1, no~4, th.~2). Comme $n\geq1$, les $\mathfrak{p}_i$ ne sont pas
+maximaux, et il existe donc $x\in\mathfrak{r}$ tel que
+$x\notin\mathfrak{p}_i$ pour tout $i$ (Bourbaki, \emph{Alg.~comm.}, chap.~II,
+\S~1, no~1, prop.~2). En vertu de (16.2.3.1), on a
+$s(M)\leq s(M/xM)+1$ et $\dim(M)\geq\dim(M/xM)+1$~; l'hypothèse de récurrence
+entraîne que $s(M/xM)\leq\dim(M/xM)$, d'où la conclusion.
+
+\begin{corollary}[16.2.4]
+\label{0.16.2.4-fr}
+Sous les hypothèses de (16.2.3), on a
+\begin{equation}
+\label{0.16.2.4.1-fr}
+\tag{16.2.4.1}
+  \dim_{\widehat{A}}(\widehat{M})=\dim_A(M).
+\end{equation}
+\end{corollary}
+
+\oldpage[0\textsubscript{IV-1}]{28}
+
+\begin{proof}
+En effet, $M/\mathfrak{r}^nM$ et
+$\widehat{M}/\mathfrak{r}^n\widehat{M}$ sont isomorphes, donc
+$d(\widehat{M})=d(M)$.
+\end{proof}
+
+\begin{corollary}[16.2.5]
+\label{0.16.2.5-fr}
+La dimension d'un anneau semi-local noethérien $A$ est finie et égale au
+nombre minimum d'éléments du radical de $A$ engendrant un idéal de définition.
+\end{corollary}
+
+\begin{proof}
+C'est l'égalité $s(M)=\dim(M)$ pour $M=A$.
+\end{proof}
+
+En particulier~:
+
+\begin{corollary}[16.2.6]
+\label{0.16.2.6-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel~; on a
+\begin{equation}
+\label{0.16.2.6.1-fr}
+\tag{16.2.6.1}
+  \dim(A)\leq\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En effet, on sait que si les $x_i$ $(1\leq i\leq n)$ sont des éléments de
+$\mathfrak{m}$ dont les classes mod.~$\mathfrak{m}^2$ forment une base du
+$k$-espace vectoriel $\mathfrak{m}/\mathfrak{m}^2$, les $x_i$ engendrent
+$\mathfrak{m}$ (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~3, no~2, cor.~2 de
+la prop.~4).
+\end{proof}
+
+\begin{proposition}[16.2.7]
+\label{0.16.2.7-fr}
+Soient $k$ un corps, $B$ une $k$-algèbre graduée de type fini à degrés
+positifs engendrée par ses éléments homogènes de degré 1 et telle que $B_0=k$~;
+soit $E$ un $B$-module gradué de type fini, de sorte (III, 2.5.4) que, pour $n$
+assez grand, $\operatorname{rg}_k(E_n)=r(n)$ est de la forme
+$\Phi(n)-\Phi(n-1)$, où $\Phi$ est un polynôme en $n$ de degré $d$. Alors il
+existe dans $B$ une famille $(t_i)_{1\leq i\leq d}$ de $d$ éléments homogènes
+de degrés $\geq1$ tels que $E/(\sum_i t_iE)$ soit de rang fini sur $k$.
+\end{proposition}
+
+\begin{proof}
+Soit $\mathfrak{q}$ l'idéal maximal $\bigoplus_{n\geq1}B_n$ de $B$, et, pour
+tout $n$, soit $E'_n$ le sous-$B$-module $\bigoplus_{h\geq n+1}E_h$ de $E$.
+Tout élément de $B-\mathfrak{q}$ détermine une homothétie injective dans le
+$B$-module artinien $E/E'_n$, et cette homothétie est donc bijective
+(Bourbaki, \emph{Alg.}, chap.~VIII, \S~2, no~2, lemme~3), ce qui entraîne que
+$(E/E'_n)_{\mathfrak{q}}$ s'identifie à $E/E'_n$~; comme le corps résiduel de
+$B_{\mathfrak{q}}$ est $k$, on déduit de l'hypothèse que
+$\operatorname{long}_{B_{\mathfrak{q}}}((E/E'_n)_{\mathfrak{q}})$ est un
+polynôme en $n$ de degré $d$. D'autre part, comme $E$ est un $B$-module de
+type fini et que $B$ est engendré par ses éléments homogènes de degré 1, la
+filtration $(E'_n)$ sur $E$ est $\mathfrak{q}$-bonne (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~1, no~3, lemme~1), donc la filtration
+$((E'_n)_{\mathfrak{q}})$ sur $E_{\mathfrak{q}}$ est
+$\mathfrak{q}B_{\mathfrak{q}}$-bonne. Puisque $B_{\mathfrak{q}}$ est un anneau
+local noethérien, on conclut de (16.2.3) et de (16.2.2.1) que l'on a
+$\dim(E_{\mathfrak{q}})=d$. Raisonnons alors par récurrence sur $d$, le lemme
+étant évident si $d=0$. Supposons $d\geq1$, et observons que les idéaux premiers
+minimaux $\mathfrak{p}_i$ $(1\leq i\leq r)$ dans
+$\operatorname{Ass}(E)$ sont \emph{gradués} (Bourbaki, \emph{Alg.~comm.},
+chap.~IV, \S~3, no~1, prop.~1), et que $\mathfrak{q}$ est distinct de la
+réunion des $\mathfrak{p}_i$ puisque $d\geq1$~; il y a donc un élément
+\emph{homogène} $t_1\in\mathfrak{q}$ n'appartenant à aucun des
+$\mathfrak{p}_i$ (Bourbaki, \emph{Alg.~comm.}, chap.~III, \S~1, no~4,
+prop.~8). Comme les idéaux premiers $(\mathfrak{p}_i)_{\mathfrak{q}}$ sont les
+éléments minimaux de $\operatorname{Ass}(E_{\mathfrak{q}})$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~2, prop.~5), on a
+$\dim(E_{\mathfrak{q}}/t_1E_{\mathfrak{q}})=d-1$ (16.3.4). Il suffit alors
+d'appliquer l'hypothèse de récurrence au $B$-module gradué $E/t_1E$ pour
+obtenir la conclusion.
+\end{proof}
+
+\subsection{Systèmes de paramètres dans un anneau local noethérien}
+\label{subsection:0.16.3-fr}
+
+\begin{proposition}[16.3.1]
+\label{0.16.3.1-fr}
+Soient $A$ un anneau noethérien, $\mathfrak{p}$ un idéal premier de $A$, $n$ un
+entier. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[$a)$] $\operatorname{ht}(\mathfrak{p})=
+  \dim(A_{\mathfrak{p}})\leq n$~;
+  \item[$b)$] Il existe $n$ éléments $x_i$ de $A$ $(1\leq i\leq n)$ tels que
+  $\mathfrak{p}$ soit minimal dans l'ensemble des idéaux premiers contenant
+  l'idéal $\mathfrak{a}$ engendré par les $x_i$ (autrement dit
+  $V(\mathfrak{p})$ est une composante irréductible de $V(\mathfrak{a})$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La condition $b)$ entraîne que $\mathfrak{a}A_{\mathfrak{p}}$ est un idéal de
+définition de $A_{\mathfrak{p}}$, d'où $a)$ en vertu de (16.2.5).
+Inversement, si $a)$ est vérifiée, il existe un idéal de définition
+$\mathfrak{b}$ de $A_{\mathfrak{p}}$, engendré par $n$ éléments $x_i/s$, avec
+$s\in A-\mathfrak{p}$. En vertu de la correspondance biunivoque entre idéaux
+premiers de $A_{\mathfrak{p}}$ et idéaux premiers de $A$ contenus dans
+$\mathfrak{p}$, l'idéal $\mathfrak{a}$ de $A$ engendré par les $x_i$ vérifie
+$b)$.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{29}
+
+Pour $n=1$, on obtient le cas particulier~:
+
+\begin{corollary}[16.3.2]
+\label{0.16.3.2-fr}
+\textup{(``Hauptidealsatz'').}
+Pour qu'un idéal premier dans un anneau noethérien soit de hauteur $\leq1$, il
+faut et il suffit qu'il soit minimal dans l'ensemble des idéaux premiers
+contenant un idéal principal convenable.
+\end{corollary}
+
+\begin{corollary}[16.3.3]
+\label{0.16.3.3-fr}
+\textup{(Artin-Tate).}
+Soit $A$ un anneau intègre noethérien. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[$a)$] $A$ est un anneau semi-local de dimension $\leq1$.
+  \item[$b)$] Il existe $f\neq0$ dans $A$ tel que $A_f$ soit un corps.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La condition $a)$ équivaut à dire que $A$ n'a qu'un nombre fini d'idéaux
+premiers $\mathfrak{m}_i\neq0$, et que ces idéaux sont tous maximaux ($0$ étant
+un idéal premier). Comme le produit des $\mathfrak{m}_i$ n'est pas nul, puisque
+$A$ est intègre, un élément $f\neq0$ de ce produit appartient à tous les
+$\mathfrak{m}_i$, donc $(0)$ est le seul idéal premier de l'anneau intègre
+$A_f$, autrement dit $A_f$ est un corps. (On notera que cette partie de la
+démonstration n'utilise pas le fait que $A$ est noethérien.) Prouvons
+maintenant que $b)$ entraîne $a)$~; l'hypothèse $b)$ signifie que tout idéal
+premier $\mathfrak{p}\neq0$ de $A$ contient $f$. Soient $\mathfrak{p}_i$
+$(1\leq i\leq n)$ les idéaux premiers minimaux parmi ceux qui contiennent $f$
+(qui sont en nombre fini puisque $A/fA$ est noethérien)~; il suffit de prouver
+que les $\mathfrak{p}_i$ sont des idéaux \emph{maximaux}, car alors tout idéal
+premier $\neq0$ contient nécessairement un des $\mathfrak{p}_i$, donc lui est
+égal. Supposons donc qu'il existe un idéal maximal $\mathfrak{m}$ contenant un
+des $\mathfrak{p}_i$ et distinct des $\mathfrak{p}_i$~; $\mathfrak{m}$ n'est
+donc pas contenu dans la réunion des $\mathfrak{p}_i$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2), autrement dit il existe
+$g\in\mathfrak{m}$ n'appartenant à aucun des $\mathfrak{p}_i$. Soit
+$\mathfrak{q}$ un des idéaux premiers minimaux parmi ceux qui contiennent
+$g$~; il résulte du ``Hauptidealsatz'' (16.3.2) que $\mathfrak{q}$ est de
+hauteur 1, donc $\neq0$~; il contient par suite $f$, donc aussi un des
+$\mathfrak{p}_i$, et comme $g\in\mathfrak{q}$ et que $g$ n'appartient à aucun
+des $\mathfrak{p}_i$, $\mathfrak{q}$ est distinct des $\mathfrak{p}_i$~; il
+serait donc de hauteur $\geq2$, ce qui est contradictoire.
+\end{proof}
+
+\begin{proposition}[16.3.4]
+\label{0.16.3.4-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical, $M$ un
+$A$-module de type fini, $\mathfrak{p}_i$ les éléments de
+$\operatorname{Supp}(M)$ tels que
+$\dim(A/\mathfrak{p}_i)=\dim(M)$. Alors les $\mathfrak{p}_i$ sont des éléments
+minimaux de $\operatorname{Ass}(M)$, et l'on a
+$\dim(M/\mathfrak{p}_iM)=\dim(M)$. Pour tout $x\in\mathfrak{r}$, on a
+\begin{equation}
+\label{0.16.3.4.1-fr}
+\tag{16.3.4.1}
+  \dim(M/xM)\geq\dim(M)-1.
+\end{equation}
+En outre, pour que les deux membres de (16.3.4.1) soient égaux, il faut et il
+suffit que $x$ n'appartienne à aucun des $\mathfrak{p}_i$.
+\end{proposition}
+
+\begin{proof}
+La première assertion est immédiate, car les $\mathfrak{p}_i$ sont par
+définition des éléments minimaux de $\operatorname{Supp}(M)$ (16.1.6), et ces
+derniers sont aussi éléments minimaux de $\operatorname{Ass}(M)$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~4, th.~2). En outre,
+$\operatorname{Supp}(M/\mathfrak{p}_iM)$ est l'ensemble des idéaux premiers
+contenant $\mathfrak{p}_i$ ($0_{\mathrm I}$, 1.7.5), donc
+$\dim(M/\mathfrak{p}_iM)=\dim(A/\mathfrak{p}_i)=\dim(M)$.
+
+Posons $N=M/xM$. Si $x_1,\ldots,x_n$ sont des éléments de $\mathfrak{r}$ tels
+que $N/(x_1N+\cdots+x_nN)$ soit de longueur finie, cela signifie que
+$M/(xM+x_1M+\cdots+x_nM)$ est de longueur finie, d'où l'inégalité (16.3.4.1)
+en vertu de (16.2.3).
+
+Le fait que les deux membres de (16.3.4.1) soient égaux lorsque $x$
+n'appartient à aucun des $\mathfrak{p}_i$ résulte de (16.3.4.1) et de
+(16.2.3.1). Inversement, si
+\oldpage[0\textsubscript{IV-1}]{30}
+$\dim(M/xM)=\dim(M)-1$, aucun des $\mathfrak{p}_i$ ne peut appartenir à
+$\operatorname{Supp}(M/xM)$, et les idéaux premiers de ce support sont ceux
+qui contiennent $\operatorname{Ann}(M)+Ax$~; comme les $\mathfrak{p}_i$
+contiennent $\operatorname{Ann}(M)$, ils ne peuvent contenir $x$.
+\end{proof}
+
+\begin{corollary}[16.3.5]
+\label{0.16.3.5-fr}
+Avec les notations de (16.3.4), pour tout idéal
+$\mathfrak{a}\subset\mathfrak{p}_i$, on a
+$\dim(M/\mathfrak{a}M)=\dim(M)$ et si l'on pose
+$N=M/\mathfrak{a}M$, la relation $\dim(M/xM)=\dim(M)-1$ entraîne
+$\dim(N/xN)=\dim(N)-1$.
+\end{corollary}
+
+\begin{proof}
+En effet, $\operatorname{Supp}(N)$ est l'ensemble des idéaux premiers
+contenant $\mathfrak{a}+\operatorname{Ann}(M)$, donc $\mathfrak{p}_i$
+appartient à $\operatorname{Supp}(N)$ et comme
+$\dim(N)\leq\dim(M)=\dim(A/\mathfrak{p}_i)$, on a
+$\dim(A/\mathfrak{p}_i)=\dim(N)$~; en outre les idéaux premiers
+$\mathfrak{q}\in\operatorname{Supp}(N)$ tels que
+$\dim(A/\mathfrak{q})=\dim(N)$ sont certains des $\mathfrak{p}_j$~; si $x$
+n'appartient à aucun des $\mathfrak{p}_j$, on a donc
+$\dim(N/xN)=\dim(N)-1$ en vertu de (16.3.4).
+\end{proof}
+
+\begin{definition}[16.3.6]
+\label{0.16.3.6-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical, $M$ un
+$A$-module de type fini, et posons $n=\dim(M)$. On appelle \emph{système de
+paramètres pour $M$} tout système $(x_i)_{1\leq i\leq n}$ de $n$ éléments de
+$\mathfrak{r}$ tel que $M/(x_1M+\cdots+x_nM)$ soit de longueur finie.
+\end{definition}
+
+On a vu (16.2.3) qu'il existe toujours de tels systèmes.
+
+On a vu au cours de la démonstration de (16.2.3.3) que si
+$\mathfrak{J}=\sum_{i=1}^n x_iA$ est tel que $M/\mathfrak{J}M$ soit de
+longueur finie, $\mathfrak{q}=\mathfrak{J}+\operatorname{Ann}(M)$ est un
+\emph{idéal de définition} de $A$, et réciproquement, s'il en est ainsi,
+$M/\mathfrak{J}M$ est un module de type fini sur l'anneau artinien
+$A/\mathfrak{q}$, donc est de longueur finie. Il revient donc au même de dire
+que $(x_i)_{1\leq i\leq n}$ est un système de paramètres \emph{pour $M$} ou
+\emph{pour $A/\operatorname{Ann}(M)$} (ou encore que leurs images dans
+$A/\operatorname{Ann}(M)$ forment un système de paramètres pour cet anneau).
+Si $(x_i)_{1\leq i\leq n}$ est un système de paramètres pour $M$, il en est de
+même de $(x_i^k)$ pour tout entier $k\geq1$, car on peut se borner, en vertu de
+ce qui précède, au cas où $M=A$, et si $\mathfrak{J}$ est un idéal de
+définition de $A$, l'idéal $\sum_{i=1}^n x_i^kA$ contient
+$\mathfrak{J}^{kn}$, donc est aussi un idéal de définition.
+
+\begin{proposition}[16.3.7]
+\label{0.16.3.7-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical,
+$x_1,\ldots,x_k$ des éléments de $\mathfrak{r}$, $M$ un $A$-module de type
+fini. On a alors
+\begin{equation}
+\label{0.16.3.7.1-fr}
+\tag{16.3.7.1}
+  \dim(M/(x_1M+\cdots+x_kM))\geq\dim(M)-k.
+\end{equation}
+En outre, pour que les deux membres de (16.3.7.1) soient égaux, il faut et il
+suffit qu'il existe des éléments $x_i$
+$(k+1\leq i\leq n=\dim(M))$ de $\mathfrak{r}$ tels que
+$(x_i)_{1\leq i\leq n}$ soit un système de paramètres pour $M$.
+\end{proposition}
+
+\begin{proof}
+L'inégalité (16.3.7.1) résulte de (16.3.4.1) par récurrence sur $k$. Si les
+deux membres de (16.3.7.1) sont égaux, et si $x_{k+1},\ldots,x_n$ est un
+système de paramètres pour $M/(x_1M+\cdots+x_kM)$, il est clair que
+$M/(x_1M+\cdots+x_kM+x_{k+1}M+\cdots+x_nM)$ est de longueur finie, donc
+$(x_i)_{1\leq i\leq n}$ est un système de paramètres pour $M$~;
+réciproquement, s'il existe des $x_i$ $(k+1\leq i\leq n)$ ayant cette
+propriété et si l'on pose $N=M/(x_1M+\cdots+x_kM)$, il est clair que
+$N/(x_{k+1}N+\cdots+x_nN)$ est de longueur finie, donc
+$\dim(N)\leq n-k$, et les deux membres sont égaux en vertu de (16.3.7.1).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{31}
+
+\begin{proposition}[16.3.8]
+\label{0.16.3.8-fr}
+Soient $A$ un anneau semi-local noethérien, $X=\operatorname{Spec}(A)$ son
+spectre, $\mathfrak{a}$ un idéal de $A$ distinct de $A$ tel que
+$\operatorname{codim}(V(\mathfrak{a}),X)=r>0$. Il existe alors $r$ éléments
+$x_1,\ldots,x_r$ de $\mathfrak{a}$, faisant partie d'un système de paramètres
+de $A$, tels que
+\[
+  \operatorname{codim}(V(\mathfrak{a}),
+  V(Ax_1+\cdots+Ax_r))=0.
+\]
+\end{proposition}
+
+\begin{proof}
+Soient $\mathfrak{p}_i$ $(1\leq i\leq m)$ les idéaux premiers minimaux de
+l'anneau $A$, $\mathfrak{q}_j$ $(1\leq j\leq n)$ les idéaux premiers minimaux
+parmi ceux qui contiennent $\mathfrak{a}$~; on a (14.2.1)
+\[
+  \operatorname{codim}(V(\mathfrak{a}),X)
+  =\inf_j(\operatorname{codim}(V(\mathfrak{q}_j),X))
+  =\inf_j(\dim(A_{\mathfrak{q}_j}))
+\]
+(16.1.3.2). L'hypothèse $r>0$ entraîne que $\mathfrak{a}$ n'est contenu dans
+aucun des $\mathfrak{p}_i$~; par suite il existe $x\in\mathfrak{a}$ qui
+n'appartient à aucun des $\mathfrak{p}_i$ (Bourbaki, \emph{Alg.~comm.},
+chap.~II, \S~1, no~1, prop.~2). On a comme ci-dessus
+\[
+  \operatorname{codim}(V(\mathfrak{a}),V(Ax))
+  =\inf_j(\dim((A/Ax)_{\mathfrak{q}_j/Ax}))
+  =\inf_j(\dim(A_{\mathfrak{q}_j}/A_{\mathfrak{q}_j}x))~;
+\]
+mais comme $x/1$ n'est contenu dans aucun des idéaux premiers minimaux de
+$A_{\mathfrak{q}_j}$, on a
+$\dim(A_{\mathfrak{q}_j}/A_{\mathfrak{q}_j}x)
+=\dim(A_{\mathfrak{q}_j})-1$ (16.3.4), d'où
+$\operatorname{codim}(V(\mathfrak{a}),V(Ax))=r-1$. Pour la même raison, on a
+$\dim(A/Ax)=\dim(A)-1$. Raisonnons maintenant par récurrence sur $r$~; si
+$r>1$, il existe $r-1$ éléments $x'_i$ $(2\leq i\leq r)$ de $A'=A/Ax$,
+faisant partie d'un système de paramètres de cet anneau, appartenant à
+$\mathfrak{a}/Ax$ et tels que
+\[
+  \operatorname{codim}(V(\mathfrak{a}/Ax),
+  V(A'x'_2+\cdots+A'x'_r))=0.
+\]
+Soit $(x'_i)_{r+1\leq i\leq s}$ un système d'éléments de $A'$ tel que
+$(x'_i)_{2\leq i\leq s}$ soit un système de paramètres de $A'$~; pour tout
+$i$ tel que $2\leq i\leq s$, soit $x_i$ un élément de la classe $x'_i$ dans
+$A$, avec $x_i\in\mathfrak{a}$ pour $2\leq i\leq r$~; il est immédiat que
+$A/(Ax+Ax_2+\cdots+Ax_s)$ est de longueur finie, et comme $\dim(A)=s$, on voit
+que $x_1=x$ et les $x_i$ d'indices $i\geq2$ répondent aux conditions de
+l'énoncé.
+\end{proof}
+
+\begin{proposition}[16.3.9]
+\label{0.16.3.9-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $\mathfrak{m}$ l'idéal maximal
+de $A$, $k$ son corps résiduel, $\varphi:A\to B$ un homomorphisme local.
+\begin{enumerate}
+  \item[\rm{(i)}] On a
+  \begin{equation}
+  \label{0.16.3.9.1-fr}
+  \tag{16.3.9.1}
+    \dim(B)\leq\dim(A)+\dim(B\otimes_A k).
+  \end{equation}
+  \item[\rm{(ii)}] Soient $M\neq0$ un $A$-module de type fini, $N\neq0$ un
+  $B$-module de type fini. On a
+  \begin{equation}
+  \label{0.16.3.9.2-fr}
+  \tag{16.3.9.2}
+    \dim_B(M\otimes_A N)
+    \leq\dim_A(M)+\dim_{B\otimes_A k}(N\otimes_A k).
+  \end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Soient $m$ la dimension de $A$, $(s_i)_{1\leq i\leq m}$ un système de
+paramètres de $A$ (16.3.6), de sorte que si
+$\mathfrak{a}=\sum_i s_iA$, $A/\mathfrak{a}$ est un $A$-module de longueur
+finie. Alors l'anneau $A/\mathfrak{a}$ est artinien, donc l'idéal maximal
+$\mathfrak{m}/\mathfrak{a}$ de cet anneau est nilpotent~; l'idéal
+$\mathfrak{m}B/\mathfrak{a}B$ de $B/\mathfrak{a}B$, image de
+$(\mathfrak{m}/\mathfrak{a})\otimes_A B$, est donc lui aussi nilpotent, et par
+suite on a
+$\dim(B/\mathfrak{a}B)=\dim(B/\mathfrak{m}B)$ (les spectres de ces deux
+anneaux ayant même espace sous-jacent). D'autre part,
+$B/\mathfrak{a}B=B/(s_1B+\cdots+s_mB)$, et les images des $s_i$ dans $B$
+appartiennent à l'idéal maximal de $B$. Par suite (16.3.7), on a
+\[
+  \dim(B)\leq m+\dim(B\otimes_A k),
+\]
+ce qui n'est autre que (16.3.9.1).
+
+Pour prouver (16.3.9.2), notons que si $\mathfrak{r}$ (resp.~$\mathfrak{s}$)
+est l'annulateur de $M$ (resp.~$N$)
+\oldpage[0\textsubscript{IV-1}]{32}
+dans $A$ (resp.~$B$), on a
+$\dim_A(M)=\dim(A/\mathfrak{r})$, $\dim_B(N)=\dim(B/\mathfrak{s})$ par
+définition (16.1.7)~; d'autre part, $\operatorname{Supp}(M\otimes_A N)$ est un
+sous-ensemble fermé de $\operatorname{Spec}(B)$ qui s'identifie (I, 9.1.13) à
+\[
+  \operatorname{Supp}(M)\times_{\operatorname{Spec}(A)}\operatorname{Supp}(N)
+  =\operatorname{Spec}((B/\mathfrak{s})\otimes_A(A/\mathfrak{r}))
+  =\operatorname{Spec}(B/(\mathfrak{s}+\mathfrak{r}B)).
+\]
+Comme $N\otimes_A k$ est un $B$-module de type fini, on a
+$\dim_{B\otimes_A k}(N\otimes_A k)=\dim_B(N\otimes_A k)$ (16.1.9), et
+$\operatorname{Supp}(N\otimes_A k)$ est égal à
+$\operatorname{Spec}(B/(\mathfrak{s}+\mathfrak{m}B))$ par le même raisonnement
+que ci-dessus. Appliquant (16.3.9.1) à $A/\mathfrak{r}$ et à
+$B/(\mathfrak{s}+\mathfrak{r}B)$ il vient
+\[
+  \dim(B/(\mathfrak{s}+\mathfrak{r}B))
+  \leq\dim(A/\mathfrak{r})+
+  \dim(B/(\mathfrak{s}+\mathfrak{m}B)),
+\]
+ce qui n'est autre que (16.3.9.2).
+\end{proof}
+
+\begin{corollary}[16.3.10]
+\label{0.16.3.10-fr}
+Sous les hypothèses de (16.3.9), si $\mathfrak{m}B$ est un idéal de définition
+de $B$, on a $\dim(B)\leq\dim(A)$~; si de plus $A$ est intègre et
+$\dim(A)=\dim(B)$, $\varphi$ est injectif.
+\end{corollary}
+
+\begin{proof}
+La première assertion résulte de (16.3.9) puisque alors
+$\dim(B/\mathfrak{m}B)=0$. On peut d'ailleurs remplacer $A$ par
+$\varphi(A)$, donc $\dim(B)\leq\dim(\varphi(A))$~; si
+$\mathfrak{a}=\operatorname{Ker}(\varphi)\neq0$, et si $A$ est intègre, on a
+$\dim(\varphi(A))=\dim(A/\mathfrak{a})<\dim(A)$ (16.1.2.2), donc on ne peut
+alors avoir $\dim(A)=\dim(B)$ que si $\mathfrak{a}=0$.
+\end{proof}
+
+\subsection[Profondeur et coprofondeur]{Profondeur et
+coprofondeur\protect\footnote{Dans la 3e partie du chap.~III, nous développons
+la notion de profondeur du point de vue cohomologique et dans un cadre plus
+général.}}
+\label{subsection:0.16.4-fr}
+
+\begin{proposition}[16.4.1]
+\label{0.16.4.1-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$ un
+$A$-module de type fini. Alors toute suite $M$-régulière
+$(x_i)_{1\leq i\leq r}$ (15.1.7) formée d'éléments de $\mathfrak{m}$, fait
+partie d'un système de paramètres pour $M$.
+\end{proposition}
+
+\begin{proof}
+Raisonnons par récurrence sur $r$~; considérons le $A$-module
+\[
+  N=M/(x_1M+\cdots+x_{r-1}M)~;
+\]
+par hypothèse $x_1,\ldots,x_{r-1}$ font partie d'un système de paramètres pour
+$M$, donc $\dim(N)=\dim(M)-(r-1)$ (16.3.7). Comme par hypothèse l'homothétie
+de rapport $x_r$ dans $N$ est injective, $x_r$ n'appartient à aucun des idéaux
+premiers associés à $N$, donc (16.3.4) on a
+$\dim(N/x_rN)=\dim(N)-1$, ce qui s'écrit aussi
+\[
+  \dim(M/(x_1M+\cdots+x_rM))=\dim(M)-r~;
+\]
+la conclusion résulte donc de (16.3.7).
+\end{proof}
+
+Pour un $A$-module $M\neq0$, une suite $M$-régulière d'éléments de
+$\mathfrak{m}$ a donc \emph{au plus} $\dim(M)$ éléments.
+
+\begin{lemma}[16.4.2]
+\label{0.16.4.2-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel, $M$ un $A$-module. Pour qu'une suite
+$M$-régulière $(x_i)_{1\leq i\leq n}$ d'éléments de $\mathfrak{m}$ soit
+maximale, il faut et il suffit que l'on ait
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_nM))\neq0.
+\]
+\end{lemma}
+
+\begin{proof}
+Dire que $(x_i)$ est maximale signifie que, pour aucun $x\in\mathfrak{m}$,
+l'homothétie de rapport $x$ dans $N=M/(x_1M+\cdots+x_nM)$ n'est injective, ou
+encore que $\mathfrak{m}$ est contenu dans la réunion des idéaux premiers
+associés à $N$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1, cor.~2 de
+la prop.~2), donc égal à un de ces derniers, puisque c'est un idéal
+\oldpage[0\textsubscript{IV-1}]{33}
+maximal (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2)~;
+autrement dit, il y a un élément $z\in N$ dont l'annulateur est
+$\mathfrak{m}$, et par suite le sous-module $Az$ de $N$ est isomorphe à
+$A/\mathfrak{m}=k$~; d'où le lemme.
+\end{proof}
+
+\begin{lemma}[16.4.3]
+\label{0.16.4.3-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel, $M$ un $A$-module,
+$(x_i)_{1\leq i\leq n}$ une suite $M$-régulière d'éléments de
+$\mathfrak{m}$. Alors les $A$-modules
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_nM))
+  \quad\text{et}\quad \operatorname{Ext}^n_A(k,M)
+\]
+sont isomorphes, et pour $n\geq1$, ils sont aussi isomorphes à
+$\operatorname{Ext}^{n-1}_A(k,M/x_1M)$.
+\end{lemma}
+
+\begin{proof}
+Raisonnons par récurrence sur $n$, la proposition étant évidente pour $n=0$.
+Posons $N=M/x_1M$~; la suite $(x_i)_{2\leq i\leq n}$ est $N$-régulière, donc
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_nM))
+  =\operatorname{Hom}_A(k,N/(x_2N+\cdots+x_nN))
+\]
+est isomorphe à $\operatorname{Ext}^{n-1}_A(k,N)$ en vertu de l'hypothèse de
+récurrence. Considérons alors la suite exacte
+$0\to M\xrightarrow{x_1}M\to M/x_1M=N\to0$~; on en déduit la suite exacte des
+Ext
+\begin{equation}
+\label{0.16.4.3.1-fr}
+\tag{16.4.3.1}
+  \operatorname{Ext}^{n-1}_A(k,M)
+  \to\operatorname{Ext}^{n-1}_A(k,N)
+  \to\operatorname{Ext}^n_A(k,M)
+  \xrightarrow{x_1}\operatorname{Ext}^n_A(k,M).
+\end{equation}
+En vertu de l'hypothèse de récurrence, $\operatorname{Ext}^{n-1}_A(k,M)$ est
+isomorphe à
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_{n-1}M)),
+\]
+qui est nul, puisque $(x_i)_{1\leq i\leq n-1}$ n'est pas une suite
+$M$-régulière maximale (16.4.2). D'autre part, comme
+$x_1\in\mathfrak{m}$, l'homothétie de rapport $x_1$ dans le $A$-module
+$\operatorname{Hom}_A(k,T)$ est nulle pour tout $A$-module $T$, donc il en est
+de même de l'homothétie de rapport $x_1$ dans tout $A$-module
+$\operatorname{Ext}^n_A(k,T)$~; les assertions du lemme découlent donc
+aussitôt de la suite exacte (16.4.3.1).
+\end{proof}
+
+\begin{corollary}[16.4.4]
+\label{0.16.4.4-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel, $M$ un $A$-module de type fini
+$\neq0$. Toutes les suites $M$-régulières maximales d'éléments de
+$\mathfrak{m}$ ont le même nombre d'éléments, qui est le plus petit entier $n$
+tel que $\operatorname{Ext}^n_A(k,M)\neq0$.
+\end{corollary}
+
+\begin{definition}[16.4.5]
+\label{0.16.4.5-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$ un
+$A$-module de type fini. On appelle \emph{profondeur} de $M$, et l'on note
+$\operatorname{prof}_A M$ ou $\operatorname{prof}(M)$ la borne supérieure du
+nombre d'éléments d'une suite $M$-régulière formée d'éléments de
+$\mathfrak{m}$. On a donc $\operatorname{prof}(M)=+\infty$ si et seulement si
+$M=0$, et, par (16.4.1)
+\begin{equation}
+\label{0.16.4.5.1-fr}
+\tag{16.4.5.1}
+  \operatorname{prof}(M)\leq\dim(M)\quad\text{si}\quad M\neq0.
+\end{equation}
+On a évidemment $\operatorname{prof}(M^k)=\operatorname{prof}(M)$ pour tout
+$k>0$.
+\end{definition}
+
+\begin{proposition}[16.4.6]
+\label{0.16.4.6-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$ un
+$A$-module de type fini.
+\begin{enumerate}
+  \item[\rm{(i)}] Pour que $\operatorname{prof}(M)=0$, il faut et il suffit que
+  $\mathfrak{m}\in\operatorname{Ass}(M)$ (ou encore qu'il existe un sous-module
+  de $M$ isomorphe au corps résiduel $k=A/\mathfrak{m}$ de $A$).
+  \item[\rm{(ii)}] Pour tout élément $M$-régulier $x$ appartenant à
+  $\mathfrak{m}$, on a
+  \begin{equation}
+  \label{0.16.4.6.1-fr}
+  \tag{16.4.6.1}
+    \operatorname{prof}(M/xM)=\operatorname{prof}(M)-1.
+  \end{equation}
+  \item[\rm{(iii)}] Si $M\neq0$, on a
+  \begin{equation}
+  \label{0.16.4.6.2-fr}
+  \tag{16.4.6.2}
+    \operatorname{prof}(M)
+    \leq\inf_{\mathfrak{p}\in\operatorname{Ass}(M)}\dim(A/\mathfrak{p})
+    \leq\dim(M).
+  \end{equation}
+  \oldpage[0\textsubscript{IV-1}]{34}
+  \item[\rm{(iv)}] On a
+  $\operatorname{prof}_A(M)=
+  \operatorname{prof}_{\widehat{A}}(\widehat{M})$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Dire que $\operatorname{prof}(M)=0$ signifie qu'il n'existe aucun
+$x\in\mathfrak{m}$ tel que l'homothétie de rapport $x$ dans $M$ soit
+injective, autrement dit que tout $x\in\mathfrak{m}$ appartient à un idéal
+premier associé à $M$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1,
+cor.~2 de la prop.~2)~; mais $\mathfrak{m}$ ne peut être réunion des idéaux
+premiers associés à $M$ que s'il est égal à l'un d'eux (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2).
+
+(ii) Si $(x_i)_{1\leq i\leq m}$ est une suite $(M/xM)$-régulière formée
+d'éléments de $\mathfrak{m}$, la suite formée de $x$ et des $x_i$ est
+$M$-régulière, et il résulte de la définition qu'elle est maximale lorsque la
+suite $(x_i)_{1\leq i\leq m}$ est une suite $(M/xM)$-régulière maximale, d'où
+la conclusion.
+
+(iii) Raisonnons par récurrence sur $n=\operatorname{prof}(M)$, l'assertion
+étant évidente pour $n=0$. Nous utiliserons le lemme suivant~:
+\end{proof}
+
+\begin{lemma}[16.4.6.3]
+\label{0.16.4.6.3-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini, $t\in A$ un
+élément $M$-régulier. Alors, pour tout
+$\mathfrak{p}\in\operatorname{Ass}(M)$, tout idéal premier minimal parmi ceux
+qui contiennent $\mathfrak{p}+At$ est associé à $M/tM$.
+\end{lemma}
+
+\begin{proof}
+On sait qu'il existe une suite exacte
+\[
+  0\to M'\to M\to M''\to0
+\]
+telle que $\operatorname{Ass}(M')=\{\mathfrak{p}\}$,
+$\operatorname{Ass}(M'')=\operatorname{Ass}(M)-\{\mathfrak{p}\}$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~1, prop.~4)~; comme $t$ est
+$M$-régulier, il est aussi $M'$-régulier et $M''$-régulier
+(\emph{loc.~cit.}, \S~1, no~1, cor.~2 de la prop.~2). On en déduit que la
+suite
+\[
+  0\to M'/tM'\to M/tM\to M''/tM''\to0
+\]
+est exacte (15.1.18). Par suite, on a
+$\operatorname{Ass}(M'/tM')\subset\operatorname{Ass}(M/tM)$. Mais les idéaux
+premiers de $A$ contenant $\mathfrak{p}$ sont les points de
+$\operatorname{Supp}(M')$ (\emph{loc.~cit.}, \S~1, no~3, prop.~7), donc les
+idéaux premiers contenant $\mathfrak{p}+At$ sont les points du support de
+$M'/tM'=M'\otimes_A(A/tA)$ ($0_{\mathrm I}$, 1.7.5)~; un élément minimal de
+l'ensemble de ces idéaux premiers appartient donc à
+$\operatorname{Ass}(M'/tM')$ (Bourbaki, \emph{loc.~cit.}, \S~1, no~3,
+cor.~1 de la prop.~7), et \emph{a fortiori} à
+$\operatorname{Ass}(M/tM)$.
+\end{proof}
+
+\begin{proof}[Suite de la démonstration de (16.4.6)]
+Ce lemme étant établi, revenons à la démonstration de (iii). Soit
+$x\in\mathfrak{m}$ un élément $M$-régulier, de sorte que
+$\operatorname{prof}(M/xM)=n-1$ par (ii)~; pour tout
+$\mathfrak{p}\in\operatorname{Ass}(M)$, il résulte du lemme qu'il y a un idéal
+$\mathfrak{p}'$ associé à $M/xM$ et contenant $\mathfrak{p}+xA$~; mais comme
+$x$ est $M$-régulier, on a $x\notin\mathfrak{p}$, d'où
+$\mathfrak{p}'\neq\mathfrak{p}$ et par suite
+$\dim(A/\mathfrak{p}')\leq\dim(A/\mathfrak{p})-1$. Or l'hypothèse de
+récurrence montre que $n-1\leq\dim(A/\mathfrak{p}')$~; on en conclut que
+$n\leq\dim(A/\mathfrak{p})$ pour tout
+$\mathfrak{p}\in\operatorname{Ass}(M)$.
+
+(iv) On peut se borner au cas où $M\neq0$. Rappelons que
+$\widehat{M}=M\otimes_A\widehat{A}$ à un isomorphisme canonique près
+($0_{\mathrm I}$, 7.3.3)~; comme $\widehat{A}$ est un $A$-module plat, on a des
+isomorphismes canoniques
+\[
+  \operatorname{Ext}^i_A(k,M)\otimes_A\widehat{A}
+  \xrightarrow{\sim}
+  \operatorname{Ext}^i_{\widehat{A}}
+  (k,M\otimes_A\widehat{A})
+\]
+puisque $k=k\otimes_A\widehat{A}$ à un isomorphisme canonique près
+($0_{\mathrm{III}}$, 12.3.5). L'assertion (iv) résulte donc de (16.4.4) et du
+fait que $\widehat{A}$ est un $A$-module fidèlement plat
+($0_{\mathrm I}$, 7.3.5).
+\end{proof}
+
+\begin{env}[16.4.6.4]
+\label{0.16.4.6.4-fr}
+On notera que si $\mathfrak{p}$ est un idéal premier de $A$, on peut avoir
+aussi bien
+$\operatorname{prof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+<\operatorname{prof}_A(M)$ que
+$\operatorname{prof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+>\operatorname{prof}_A(M)$~; pour un exemple du premier cas,
+\oldpage[0\textsubscript{IV-1}]{35}
+il suffit de prendre pour $A$ un anneau local intègre de dimension $\geq1$~; on a
+$\operatorname{prof}(A)\geq1$ mais $\operatorname{prof}(K)=0$ pour le corps
+des fractions $K$ de $A$. Pour un exemple du second cas, considérons un
+anneau local noethérien intègre $A_0$ de dimension $\geq2$, d'idéal maximal
+$\mathfrak{m}_0$ et soit $k=A_0/\mathfrak{m}_0$ son corps résiduel~; soit
+$A=A_0\oplus\mathfrak{J}$ l'extension triviale de $A_0$ par le $A_0$-module
+$k$ (18.2.3), l'idéal $\mathfrak{J}$ étant $A_0$-isomorphe à $k$ (de sorte
+que la multiplication dans $A$ est donnée par
+$(x,z)(x',z')=(xx',xz'+x'z)$). Il est clair que $\mathfrak{J}$ est le
+nilradical de $A$ et $A/\mathfrak{J}$ est isomorphe à $A_0$, de sorte que
+tout idéal premier $\mathfrak{p}$ de $A$ est de la forme
+$\mathfrak{p}_0\oplus\mathfrak{J}$, où $\mathfrak{p}_0$ est un idéal premier
+de $A_0$~; en particulier $\mathfrak{m}=\mathfrak{m}_0\oplus\mathfrak{J}$
+est l'unique idéal maximal de $A$. Comme tout élément de $\mathfrak{m}_0$
+annule $\mathfrak{J}$, on a
+$\operatorname{prof}(A)=\operatorname{prof}(A_{\mathfrak{m}})=0$~; au
+contraire, si $\mathfrak{p}_0\neq\mathfrak{m}_0$, les éléments de
+$\mathfrak{J}$ sont annulés par ceux de
+$\mathfrak{m}_0-\mathfrak{p}_0$, donc $A_{\mathfrak{p}}$ est canoniquement
+isomorphe à $(A_0)_{\mathfrak{p}_0}$, et comme $A_0$ est intègre,
+$\operatorname{prof}(A_{\mathfrak{p}})
+=\operatorname{prof}((A_0)_{\mathfrak{p}_0})\geq1$ si
+$\mathfrak{p}_0\neq0$.
+\end{env}
+
+\begin{corollary}[16.4.7]
+\label{0.16.4.7-fr}
+Pour qu'un anneau local noethérien réduit $A$ soit de profondeur $0$, il faut
+et il suffit que $A$ soit un corps.
+\end{corollary}
+
+\begin{proof}
+En effet, comme l'intersection des idéaux premiers minimaux de $A$ est $0$,
+$A$ n'a pas d'idéaux premiers associés immergés~; en vertu de (16.4.6, (i)),
+si $\operatorname{prof}(A)=0$, l'idéal maximal $\mathfrak{m}$ de $A$ est
+aussi idéal premier minimal, donc c'est le seul idéal premier de $A$, et
+comme $A$ est réduit, $\mathfrak{m}=0$.
+\end{proof}
+
+\begin{proposition}[16.4.8]
+\label{0.16.4.8-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens,
+$\rho:A\to B$ un homomorphisme local, $M$ un $B$-module tel que
+$M_{[\rho]}$ soit un $A$-module de type fini. Alors on a
+\begin{equation}
+\label{0.16.4.8.1-fr}
+\tag{16.4.8.1}
+  \operatorname{prof}_A(M_{[\rho]})=\operatorname{prof}_B(M).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On peut se borner au cas $M\neq0$~; supposons que
+$\operatorname{prof}_A(M_{[\rho]})=n$. Si $(x_i)_{1\leq i\leq n}$ est une
+suite $(M_{[\rho]})$-régulière maximale formée d'éléments de l'idéal maximal
+de $A$, les $\rho(x_i)$ constituent une suite $M$-régulière formée d'éléments
+de l'idéal maximal de $B$, et on a donc, en posant
+$N=M/(\rho(x_1)M+\cdots+\rho(x_n)M)$,
+$\operatorname{prof}_B(N)=\operatorname{prof}_B(M)-n$ (16.4.6, (ii))~; de
+même
+$N_{[\rho]}=M_{[\rho]}/(x_1M_{[\rho]}+\cdots+x_nM_{[\rho]})$ et
+$\operatorname{prof}_A(N_{[\rho]})=0$~; on est ainsi ramené à démontrer la
+proposition lorsque $n=0$. Soit $k$ le corps résiduel de $A$~; comme $k$ est
+un quotient de $A$, le $A$-module
+$P=\operatorname{Hom}_A(k,M_{[\rho]})$ est un sous-module de
+$\operatorname{Hom}_A(A,M_{[\rho]})=M_{[\rho]}$ et l'hypothèse entraîne que
+$P\neq0$ (16.4.6, (i))~; en outre, $P$ est un $A$-module de type fini
+(puisque $M_{[\rho]}$ est un $A$-module de type fini), donc un $k$-espace
+vectoriel de type fini, étant annulé par l'idéal maximal de $A$, et finalement
+un $A$-module de longueur finie. D'autre part, $P$ est aussi un sous-module du
+$B$-module $M$, et puisqu'il est de longueur finie en tant que $A$-module, il
+l'est \emph{a fortiori} en tant que $B$-module. Comme il est $\neq0$, il
+contient un sous-$B$-module simple, c'est-à-dire isomorphe au corps résiduel de
+$B$~; on conclut alors de (16.4.6, (i)) que l'on a bien
+$\operatorname{prof}_B(M)=0$.
+\end{proof}
+
+\begin{definition}[16.4.9]
+\label{0.16.4.9-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini. Si
+$M\neq0$, on appelle \emph{coprofondeur} de $M$ et on note
+$\operatorname{coprof}_A(M)$ ou $\operatorname{coprof}(M)$, l'entier fini
+$\dim_A(M)-\operatorname{prof}_A(M)\geq0$ (16.4.5.1). Si $M=0$, on pose
+$\operatorname{coprof}(M)=0$.
+
+On a $\operatorname{coprof}(M^k)=\operatorname{coprof}(M)$ pour tout $k>0$.
+\end{definition}
+
+\begin{proposition}[16.4.10]
+\label{0.16.4.10-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini.
+\oldpage[0\textsubscript{IV-1}]{36}
+\begin{enumerate}
+  \item[(i)] Pour tout élément $M$-régulier $x$ appartenant à l'idéal maximal
+  de $A$, on a
+  $\operatorname{coprof}(M/xM)=\operatorname{coprof}(M)$.
+  \item[(ii)] On a
+  $\operatorname{coprof}_A(M)=\operatorname{coprof}_{\widehat A}(\widehat M)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En effet, (i) résulte de (16.3.4) et (16.4.6, (ii)), et (ii) de (16.2.4) et
+(16.4.6, (iv)).
+\end{proof}
+
+Nous montrerons plus tard (IV, 6.11.5) que pour tout idéal premier
+$\mathfrak{p}$ de $A$, on a
+$\operatorname{coprof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+\leq\operatorname{coprof}_A(M)$.
+
+\begin{proposition}[16.4.11]
+\label{0.16.4.11-fr}
+Sous les hypothèses de (16.4.8), on a
+\begin{equation}
+\label{0.16.4.11.1-fr}
+\tag{16.4.11.1}
+  \operatorname{coprof}_A(M_{[\rho]})=\operatorname{coprof}_B(M).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Cela résulte de (16.1.9) et (16.4.8).
+\end{proof}
+
+\subsection{Modules de Cohen-Macaulay}
+\label{subsection:0.16.5-fr}
+
+\begin{definition}[16.5.1]
+\label{0.16.5.1-fr}
+Soit $A$ un anneau local noethérien. On dit qu'un $A$-module de type fini $M$
+est un \emph{module de Cohen-Macaulay} si
+$\operatorname{coprof}(M)=0$, autrement dit si $M=0$ ou si $M\neq0$ et
+$\dim(M)=\operatorname{prof}(M)$. On dit que $A$ est un
+\emph{anneau de Cohen-Macaulay} si le $A$-module $A$ est un module de
+Cohen-Macaulay.
+\end{definition}
+
+Un $A$-module de longueur finie est un module de Cohen-Macaulay puisqu'il est
+de dimension $0$ (16.1.10). Un anneau local réduit $A$ de dimension $1$ est un
+anneau de Cohen-Macaulay, car alors son idéal maximal $\mathfrak{m}$ ne peut
+être associé à $A$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~2, no~5,
+prop.~10), donc $\operatorname{prof}(A)=1$ en vertu de (16.4.6, (i)). Si $A$
+est un \emph{anneau local intègre et intégralement clos de dimension $\geq2$},
+on a $\operatorname{prof}(A)\geq2$~: en effet, si $x\neq0$ est un élément de
+$\mathfrak{m}$, on sait (Bourbaki, \emph{Alg.~comm.}, chap.~VII, \S~1, no~4,
+prop.~8) que les idéaux premiers associés à $A/xA$ sont de hauteur $1$, donc
+distincts de $\mathfrak{m}$, et leur réunion est par suite distincte de
+$\mathfrak{m}$ (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2)~;
+il existe donc des suites $(x,y)$ qui sont $A$-régulières et formées
+d'éléments de $\mathfrak{m}$, d'où notre assertion. On en conclut qu'un anneau
+local intégralement clos de dimension $2$ est un anneau de Cohen-Macaulay.
+
+\begin{proposition}[16.5.2]
+\label{0.16.5.2-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini. Pour que
+$M$ soit un module de Cohen-Macaulay, il faut et il suffit que $\widehat M$
+soit un $\widehat A$-module de Cohen-Macaulay.
+\end{proposition}
+
+\begin{proof}
+Cela résulte aussitôt de (16.4.10, (ii)).
+\end{proof}
+
+\begin{proposition}[16.5.3]
+\label{0.16.5.3-fr}
+Sous les hypothèses de (16.4.8), pour que $M$ soit un $B$-module de
+Cohen-Macaulay, il faut et il suffit que $M_{[\rho]}$ soit un $A$-module de
+Cohen-Macaulay.
+\end{proposition}
+
+\begin{proof}
+Cela résulte de (16.4.11).
+\end{proof}
+
+\begin{proposition}[16.5.4]
+\label{0.16.5.4-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini $\neq0$.
+Si $M$ est un $A$-module de Cohen-Macaulay, on a
+$\dim(A/\mathfrak{p})=\dim(M)$ pour tout idéal premier
+$\mathfrak{p}\in\operatorname{Ass}(M)$~; en particulier aucun idéal premier
+associé à $M$ n'est immergé.
+\end{proposition}
+
+\begin{proof}
+Cela résulte aussitôt des inégalités (16.4.6.2).
+\end{proof}
+
+On peut encore dire que $M$ (ou $\operatorname{Supp}(M)$) est
+\emph{équidimensionnel} (16.1.7).
+
+\oldpage[0\textsubscript{IV-1}]{37}
+
+\begin{proposition}[16.5.5]
+\label{0.16.5.5-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$
+un $A$-module de type fini $\neq0$, $x$ un élément de $\mathfrak{m}$.
+Supposons que $M$ soit un module de Cohen-Macaulay~; alors les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $x$ est $M$-régulier~;
+  \item[b)] $\dim(M/xM)=\dim(M)-1$~;
+  \item[c)] $x$ n'appartient à aucun élément minimal de
+  $\operatorname{Supp}(M)$.
+\end{enumerate}
+En outre, $M/xM$ est alors un module de Cohen-Macaulay.
+\end{proposition}
+
+\begin{proof}
+On a vu (16.5.4) que tous les éléments $\mathfrak{p}$ de
+$\operatorname{Ass}(M)$ sont minimaux dans $\operatorname{Supp}(M)$ et que
+$\dim(A/\mathfrak{p})=\dim(M)$~; l'équivalence de a) et c) résulte donc de
+Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1, cor.~2 de la prop.~2~;
+l'équivalence de b) et c) résulte de (16.3.4). Le fait que $M/xM$ soit un
+module de Cohen-Macaulay résulte enfin de (16.4.10, (i)).
+\end{proof}
+
+\begin{corollary}[16.5.6]
+\label{0.16.5.6-fr}
+Sous les hypothèses de (16.5.5), soit $(x_i)_{1\leq i\leq r}$ une suite
+d'éléments de $\mathfrak{m}$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] La suite $(x_i)$ est $M$-régulière.
+  \item[b)] On a
+  $\dim(M/(x_1M+\cdots+x_rM))=\dim(M)-r$.
+  \item[c)] Les $x_i$ font partie d'un système de paramètres de $M$.
+\end{enumerate}
+En outre, lorsque ces conditions sont satisfaites,
+$N=M/(x_1M+\cdots+x_rM)$ est un module de Cohen-Macaulay, donc, pour tout
+idéal $\mathfrak{p}\in\operatorname{Ass}(N)$, on a
+$\dim(A/\mathfrak{p})=\dim(M)-r$.
+\end{corollary}
+
+\begin{proof}
+On sait déjà que b) et c) sont équivalentes (16.3.6) et que a) entraîne c)
+(16.4.1) sans hypothèse sur $M$. Pour voir que c) implique a) et prouver la
+dernière assertion de l'énoncé, raisonnons par récurrence sur $r$, l'assertion
+étant triviale pour $r=0$. Puisque $x_1$ fait partie d'un système de
+paramètres, $\dim(M/x_1M)=\dim(M)-1$ (16.3.6), donc $x_1$ est $M$-régulier et
+$M/x_1M$ est un module de Cohen-Macaulay par (16.5.5). Comme la suite
+$(x_i)_{2\leq i\leq r}$ fait partie d'un système de paramètres pour
+$P=M/x_1M$, l'hypothèse de récurrence montre que $(x_i)_{2\leq i\leq r}$ est
+une suite $P$-régulière et que
+$P/(x_2P+\cdots+x_rP)=N$ est un module de Cohen-Macaulay~; en outre
+$(x_i)_{1\leq i\leq r}$ est $M$-régulière.
+\end{proof}
+
+\begin{remark}[16.5.7]
+\label{0.16.5.7-fr}
+Il résulte de (16.5.6) qu'il y a identité entre les \emph{systèmes de
+paramètres pour $M$} et les \emph{suites $M$-régulières maximales d'éléments de
+$\mathfrak{m}$} lorsque $M$ est un module de Cohen-Macaulay. Inversement, il
+résulte de (16.4.1) que si un $A$-module de type fini non nul est tel qu'il y
+ait une suite $M$-régulière qui soit un système de paramètres pour $M$, alors
+$M$ est un module de Cohen-Macaulay. La dernière propriété énoncée dans
+(16.5.6) \emph{caractérise aussi} les modules de Cohen-Macaulay~:
+\end{remark}
+
+\begin{proposition}[16.5.8]
+\label{0.16.5.8-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini. On
+suppose que pour toute suite $(x_i)_{1\leq i\leq r}$ d'éléments de $A$
+faisant partie d'un système de paramètres pour $M$, et tout idéal premier
+$\mathfrak{p}$ associé à
+$N=M/(x_1M+\cdots+x_rM)$, on ait
+$\dim(A/\mathfrak{p})=\dim(N)$. Alors $M$ est un module de Cohen-Macaulay.
+\end{proposition}
+
+\begin{proof}
+Soit $(y_i)_{1\leq i\leq n}$ un système de paramètres pour $M$~; il suffit de
+montrer que la suite $(y_i)$ est $M$-régulière. Raisonnons par récurrence sur
+$n=\dim(M)$, la proposition étant triviale pour $n=0$. Par hypothèse
+(appliquée avec $r=0$) les idéaux premiers $\mathfrak{p}_j$ associés à $M$
+sont tous tels que $\dim(A/\mathfrak{p}_j)=\dim(M)$~; comme $y_1$ fait partie
+d'un système de paramètres
+\oldpage[0\textsubscript{IV-1}]{38}
+pour $M$, il résulte de (16.3.7) et (16.3.4) que $y_1$ n'appartient à aucun
+des $\mathfrak{p}_j$, donc est $M$-régulier. Si on pose $P=M/y_1M$,
+$(y_i)_{2\leq i\leq n}$ est un système de paramètres pour $P$, et il est
+immédiat que $P$ vérifie l'hypothèse de l'énoncé~; appliquant l'hypothèse de
+récurrence, on voit donc que $(y_i)_{2\leq i\leq n}$ est une suite
+$P$-régulière, ce qui démontre la proposition.
+\end{proof}
+
+\begin{proposition}[16.5.9]
+\label{0.16.5.9-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini~; on
+suppose que $M$ soit un module de Cohen-Macaulay. Soit
+$\mathfrak{p}\in\operatorname{Supp}(M)$, et posons
+$r=\dim(M)-\dim(M/\mathfrak{p}M)$. Alors il existe une suite $M$-régulière
+$(x_i)_{1\leq i\leq r}$ formée d'éléments de $\mathfrak{p}$~; pour toute
+suite ayant ces propriétés, on a
+\[
+  \dim(M/(x_1M+\cdots+x_rM))
+  =\dim(M/\mathfrak{p}M)=\dim(A/\mathfrak{p}),
+\]
+et $\mathfrak{p}$ est un élément minimal de
+$\operatorname{Ass}(M/(x_1M+\cdots+x_rM))$.
+\end{proposition}
+
+\begin{proof}
+Prouvons d'abord l'existence des $x_i$~; il n'y a rien à démontrer pour
+$r=0$. Pour $r>0$, procédons par récurrence sur $r$. Comme pour tout idéal
+premier $\mathfrak{q}_i$ associé à $M$ on a
+$\dim(A/\mathfrak{q}_i)=\dim(M)$ (16.5.4), l'hypothèse
+$\dim(M/\mathfrak{p}M)<\dim(M)$ entraîne que $\mathfrak{p}$ ne peut être
+contenu dans un des $\mathfrak{q}_i$, ces derniers étant les idéaux premiers
+minimaux parmi ceux qui contiennent $\operatorname{Ann}(M)$ (16.1.2.2 et
+16.1.7)~; on en conclut que $\mathfrak{p}$ n'est pas non plus contenu dans la
+réunion des $\mathfrak{q}_i$ (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~1,
+no~1, prop.~2), et par suite il existe un $x_1\in\mathfrak{p}$ qui est
+$M$-régulier (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1, cor.~2 de
+la prop.~2). On déduit donc de (16.5.5) que $N=M/x_1M$ est un module de
+Cohen-Macaulay, de dimension $\dim(M)-1$~; comme $x_1\in\mathfrak{p}$, on a
+d'ailleurs $N/\mathfrak{p}N=M/\mathfrak{p}M$, d'où
+$\dim(N)-\dim(N/\mathfrak{p}N)=r-1$~; on peut par suite appliquer à $N$
+l'hypothèse de récurrence, et si $(x_i)_{2\leq i\leq r}$ est une suite
+$N$-régulière formée d'éléments de $\mathfrak{p}$, il est clair que
+$(x_i)_{1\leq i\leq r}$ est une suite $M$-régulière formée d'éléments de
+$\mathfrak{p}$.
+
+Si on pose $P=M/(x_1M+\cdots+x_rM)$, on a
+$P/\mathfrak{p}P=M/\mathfrak{p}M$ puisque les $x_i$ sont dans
+$\mathfrak{p}$, et $\dim(P)=\dim(P/\mathfrak{p}P)$ par (16.5.6)~; mais comme
+$P$ est un module de Cohen-Macaulay, on a aussi
+$\dim(P)=\dim(A/\mathfrak{p}')$ pour tout
+$\mathfrak{p}'\in\operatorname{Ass}(P)$ (16.5.4). Comme
+$\mathfrak{p}\in\operatorname{Supp}(P)$ ($0_{\mathrm I}$, 1.7.5),
+$\mathfrak{p}$ contient un des idéaux
+$\mathfrak{p}'\in\operatorname{Ass}(P)$ (Bourbaki, \emph{Alg.~comm.},
+chap.~IV, \S~1, no~4, th.~2), et comme
+\[
+  \dim(P)=\dim(P/\mathfrak{p}P)
+  \leq\dim(A/\mathfrak{p})
+  \leq\dim(A/\mathfrak{p}')=\dim(P),
+\]
+on a nécessairement $\mathfrak{p}=\mathfrak{p}'$ (16.1.2.2), ce qui achève
+la démonstration.
+\end{proof}
+
+\begin{corollary}[16.5.10]
+\label{0.16.5.10-fr}
+Sous les mêmes hypothèses que dans (16.5.9)~:
+\begin{enumerate}
+  \item[(i)] $M_{\mathfrak{p}}$ est un $A_{\mathfrak{p}}$-module de
+  Cohen-Macaulay.
+  \item[(ii)] On a
+  \begin{equation}
+  \label{0.16.5.10.1-fr}
+  \tag{16.5.10.1}
+    \dim(M)=\dim_A(M/\mathfrak{p}M)
+    +\dim_{A_{\mathfrak{p}}}(M_{\mathfrak{p}}).
+  \end{equation}
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Avec les notations de (16.5.9), soient $x_i'$ les images canoniques des $x_i$
+dans $A_{\mathfrak{p}}$ $(1\leq i\leq r)$~; comme les $x_i'$ appartiennent à
+l'idéal maximal de $A_{\mathfrak{p}}$ et forment une suite
+$M_{\mathfrak{p}}$-régulière par platitude (15.1.14), on a
+\[
+  \operatorname{prof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+  \geq r=\dim(M)-\dim(M/\mathfrak{p}M)
+  \geq\dim_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+\]
+(en vertu de (16.1.8.1)). Mais compte tenu de (16.4.5.1), les trois termes de
+cette inégalité sont nécessairement égaux, d'où le corollaire.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{39}
+
+\begin{corollary}[16.5.11]
+\label{0.16.5.11-fr}
+Soit $A$ un anneau local noethérien~; supposons qu'il existe un $A$-module de
+type fini $M$ de support $\operatorname{Spec}(A)$, qui soit un module de
+Cohen-Macaulay. Alors, pour tout idéal premier $\mathfrak{p}$ de $A$ on a
+\begin{equation}
+\label{0.16.5.11.1-fr}
+\tag{16.5.11.1}
+  \dim(A)=\dim(A/\mathfrak{p})+\dim(A_{\mathfrak{p}}).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En effet, $\operatorname{Supp}(M/\mathfrak{p}M)
+=\operatorname{Spec}(A/\mathfrak{p})$ ($0_{\mathrm I}$, 1.7.5) et
+$\operatorname{Supp}(M_{\mathfrak{p}})
+=\operatorname{Spec}(A_{\mathfrak{p}})$~; la relation (16.5.11.1) est donc un
+cas particulier de (16.5.10.1).
+\end{proof}
+
+\begin{corollary}[16.5.12]
+\label{0.16.5.12-fr}
+Tout anneau quotient d'un anneau local noethérien $A$ vérifiant les conditions
+de (16.5.11) (en particulier tout anneau quotient d'un anneau local de
+Cohen-Macaulay) est \emph{caténaire}.
+\end{corollary}
+
+\begin{proof}
+Il suffit évidemment de prouver que $A$ lui-même est caténaire c'est-à-dire
+que, pour deux idéaux premiers $\mathfrak{p}\subset\mathfrak{q}$ de $A$, on a
+(16.1.4.2)
+\[
+  \dim(A_{\mathfrak{q}})
+  =\dim(A_{\mathfrak{p}})
+  +\dim(A_{\mathfrak{q}}/\mathfrak{p}A_{\mathfrak{q}}).
+\]
+Or, en vertu de (16.5.10, (i)) $A_{\mathfrak{q}}$ vérifie les mêmes
+hypothèses que $A$, et la relation précédente n'est donc autre que
+(16.5.11.1) appliquée à $A_{\mathfrak{q}}$ et à l'idéal premier
+$\mathfrak{p}A_{\mathfrak{q}}$ de $A_{\mathfrak{q}}$.
+\end{proof}
+
+\begin{env}[16.5.13]
+\label{0.16.5.13-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini. On dit que
+$M$ est un \emph{$A$-module de Cohen-Macaulay} si, pour tout idéal premier
+$\mathfrak{p}$ de $A$, $M_{\mathfrak{p}}$ est un $A_{\mathfrak{p}}$-module
+de Cohen-Macaulay~; en vertu de (16.5.10) cette définition coïncide avec
+(16.5.1) lorsque $A$ est \emph{local}. On dit que $A$ est un
+\emph{anneau de Cohen-Macaulay} si tous les $A_{\mathfrak{p}}$ le sont. Il est
+clair que si $M$ (resp. $A$) est un $A$-module de Cohen-Macaulay (resp. un
+anneau de Cohen-Macaulay), $S^{-1}M$ est un $S^{-1}A$-module de Cohen-Macaulay
+(resp. $S^{-1}A$ est un anneau de Cohen-Macaulay) pour toute partie
+multiplicative $S$ de $A$.
+\end{env}

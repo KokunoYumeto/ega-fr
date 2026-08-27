@@ -1,0 +1,1331 @@
+\section{Compléments sur les extensions d'algèbres}
+\label{section:0.18-fr}
+
+Ce paragraphe rassemble un certain nombre de constructions fonctorielles sur
+les anneaux, qui seront utilisées de façon répétée aux \S\S~19 et 20~; il ne
+contient aucun résultat non trivial.
+
+\subsection{Images réciproques d'anneaux augmentés}
+\label{subsection:0.18.1-fr}
+
+\begin{env}[18.1.1]
+\label{0.18.1.1-fr}
+Étant donné un anneau $A$ (non nécessairement commutatif), la catégorie des
+\emph{$A$-anneaux} a pour objets les couples $(B,\rho)$ formés d'un anneau
+$B$ et d'un homomorphisme d'anneaux $\rho:A\to B$, pour morphismes (dits aussi
+\emph{$A$-homomorphismes}) les homomorphismes d'anneaux $u:B\to C$ tels que,
+si $\rho:A\to B$ et $\sigma:A\to C$ sont les homomorphismes (dits
+\emph{structuraux}) définissant la structure de $A$-anneau sur $B$ et $C$
+respectivement, le diagramme
+\begin{equation}
+\label{0.18.1.1.1-fr}
+\tag{18.1.1.1}
+  \xymatrix{
+    B\ar[r]^u & C\\
+    & A\ar[lu]^\rho\ar[u]_\sigma
+  }
+\end{equation}
+soit commutatif. Le \emph{noyau} $\mathfrak{J}$ de $u$ est un idéal bilatère
+qui est un $A$-\emph{bimodule} (pour $\rho$).
+
+Si $f:A'\to A$ est un homomorphisme d'anneaux, pour tout $A$-anneau
+$(B,\rho)$, $(B,\rho\circ f)$ est un $A'$-anneau, et si $u:B\to C$ est un
+$A$-homomorphisme du $A$-anneau $(B,\rho)$
+\oldpage[0\textsubscript{IV-1}]{52}
+dans le $A$-anneau $(C,\sigma)$, c'est aussi un $A'$-homomorphisme du
+$A'$-anneau $(B,\rho\circ f)$ dans le $A'$-anneau $(C,\sigma\circ f)$~; on
+définit ainsi un foncteur canonique de la catégorie des $A$-anneaux dans celle
+des $A'$-anneaux.
+\end{env}
+
+\begin{env}[18.1.2]
+\label{0.18.1.2-fr}
+Soient $B$, $E$, $F$ trois $A$-anneaux, $f:E\to B$, $g:F\to B$ deux
+$A$-homomorphismes. Rappelons que l'on appelle \emph{produit fibré} de $E$ et
+$F$ sur $B$ (pour les $A$-homomorphismes $f$ et $g$) et que l'on note
+$E\times_BF$ le sous-anneau $G$ de l'anneau produit $E\times F$, formé des
+couples $(x,y)$ tels que $f(x)=g(y)$~; les restrictions $p_1:G\to E$,
+$p_2:G\to F$ des projections $\operatorname{pr}_1$ et
+$\operatorname{pr}_2$ à $G$ sont encore appelées les \emph{projections
+canoniques}~; la structure de $A$-anneau de $G$ est définie par
+l'homomorphisme $\alpha\mapsto(\rho(\alpha),\sigma(\alpha))$ (où
+$\rho:A\to E$ et $\sigma:A\to F$ sont les homomorphismes structuraux), qui
+applique effectivement $A$ dans $G$ en vertu de (18.1.1). La propriété
+caractéristique de $E\times_BF$ est que, pour tout couple de
+$A$-homomorphismes $u:C\to E$, $v:C\to F$ tels que
+$f\circ u=g\circ v$, il existe un $A$-homomorphisme et un seul $w:C\to G$
+tel que $u=p_1\circ w$, $v=p_2\circ w$. On peut encore dire que
+$E\times_BF$ est \emph{limite projective} du système projectif formé de $B$,
+$E$, $F$ et des $A$-homomorphismes $f$, $g$, dans la catégorie des
+$A$-anneaux ($0_{\mathrm{III}}$, 8.1.9).
+\end{env}
+
+\begin{env}[18.1.3]
+\label{0.18.1.3-fr}
+Soit $\mathfrak{J}$ l'idéal bilatère de $E$, noyau de $f$~; il est immédiat
+que le noyau $\mathfrak{J}'$ de $p_2:G\to F$ est l'idéal formé des éléments
+$(x,0)$ où $x\in\mathfrak{J}$~; la restriction
+$i_1:\mathfrak{J}'\to\mathfrak{J}$ de $p_1$ est donc un
+\emph{isomorphisme} d'anneau \emph{sans élément unité}, et aussi un
+isomorphisme de $A$-bimodules. De même, si $\mathfrak{R}$ est le noyau de
+$g$, le noyau $\mathfrak{R}'$ de $p_1:G\to E$ est l'idéal des éléments
+$(0,y)$ où $y\in\mathfrak{R}$, et la restriction
+$i_2:\mathfrak{R}'\to\mathfrak{R}$ de $p_2$ est un isomorphisme (au même
+sens). Enfin, il est clair que le noyau du $A$-homomorphisme
+$q=f\circ p_1=g\circ p_2$ de $E\times_BF$ dans $B$ est
+$\mathfrak{J}\times\mathfrak{R}=\mathfrak{J}'\oplus\mathfrak{R}'$, de sorte
+que l'on a le diagramme commutatif
+\begin{equation}
+\label{0.18.1.3.1-fr}
+\tag{18.1.3.1}
+  \xymatrix@C=2.2pc@R=1.8pc{
+    0\ar[dr] & & 0\ar[d] & 0\ar[d]\\
+    & \mathfrak{J}'\oplus\mathfrak{R}'\ar[r]\ar[d]\ar[dr]
+      & \mathfrak{R}'\ar[r]^{i_2}_{\sim}\ar[d]^j
+      & \mathfrak{R}\ar[d]^{p_2}\\
+    0\ar[r] & \mathfrak{J}'\ar[r]\ar[d]^{i_1}_{\sim}
+      & G\ar[r]\ar[d]^{p_1}\ar[dr]^q & F\ar[d]^g\\
+    0\ar[r] & \mathfrak{J}\ar[r] & E\ar[r]_f & B
+  }
+\end{equation}
+
+Les définitions et résultats de (18.1.2) et (18.1.3) s'étendent aussitôt au
+produit fibré d'une \emph{famille} quelconque $(E_\lambda)_{\lambda\in I}$ de
+$A$-anneaux défini par une famille de $A$-homomorphismes
+$f_\lambda:E_\lambda\to B$. Nous laissons la formulation de ces résultats au
+lecteur.
+\end{env}
+
+\begin{env}[18.1.4]
+\label{0.18.1.4-fr}
+Conformément à la terminologie de (M, VIII), nous appellerons
+\emph{$A$-anneau augmenté sur $B$} un $A$-anneau $E$ muni d'un
+$A$-homomorphisme \emph{surjectif} (dit \emph{augmentation} de $E$),
+$f:E\to B$~; le noyau $\mathfrak{J}$ de $f$ est appelé
+\emph{l'idéal d'augmentation}. On dit que le $A$-anneau augmenté $E$ est
+\emph{trivial} s'il existe un $A$-homomorphisme de $A$-anneaux $s:B\to E$
+qui est \emph{inverse à droite} de l'augmentation $f:E\to B$ (autrement dit
+$f\circ s=1_B$). La suite exacte de $A$-bimodules
+\[
+  0\longrightarrow\mathfrak{J}\longrightarrow E
+  \xrightarrow{f}B\longrightarrow0
+\]
+\oldpage[0\textsubscript{IV-1}]{53}
+est alors \emph{scindée}~; autrement dit, on peut identifier le $A$-bimodule
+$E$ à $B\times\mathfrak{J}$, et la multiplication dans $E$ est alors donnée
+par
+\[
+  (b,z)(b',z')=(bb',bz'+zb'+zz'),
+\]
+$\mathfrak{J}$ étant considéré comme $B$-bimodule au moyen de $s:B\to E$.
+\end{env}
+
+\begin{env}[18.1.5]
+\label{0.18.1.5-fr}
+Avec les notations de (18.1.2), supposons que le $A$-homomorphisme $f$ soit
+\emph{surjectif}, autrement dit fasse de $E$ un $A$-anneau \emph{augmenté sur
+$B$}. Alors il est clair que $p_2:G\to F$ est aussi \emph{surjectif},
+autrement dit définit sur $G$ une structure de $A$-anneau \emph{augmenté sur
+$F$}, que l'on appelle \emph{l'image réciproque} par $g:F\to B$ de l'anneau
+augmenté $E$.
+\end{env}
+
+\begin{proposition}[18.1.6]
+\label{0.18.1.6-fr}
+Pour que l'image réciproque $G=E\times_BF$ par $g:F\to B$ du $A$-anneau
+augmenté $E$ soit un $A$-anneau augmenté trivial, il faut et il suffit qu'il
+existe un $A$-homomorphisme $u:F\to E$ rendant commutatif le diagramme
+\[
+  \xymatrix{
+    & F\ar[ld]_u\ar[d]^g\\
+    E\ar[r]_f & B
+  }
+\]
+\end{proposition}
+
+\begin{proof}
+La condition est évidemment nécessaire, en prenant $u=p_1\circ s$, où
+$s:F\to G$ est un $A$-homomorphisme inverse à droite de $p_2$. Inversement,
+s'il existe un $A$-homomorphisme $u$ vérifiant la condition de l'énoncé,
+l'existence de l'inverse à droite $s$ de $p_2$ résulte de la propriété
+universelle du produit fibré (18.1.2) appliquée aux $A$-homomorphismes
+$u:F\to E$ et $1_F:F\to F$.
+
+Ce résultat entraîne en particulier que si $E$ est un anneau augmenté
+\emph{trivial}, il en est de même de toutes ses images réciproques.
+\end{proof}
+
+\begin{env}[18.1.7]
+\label{0.18.1.7-fr}
+Reprenons la situation décrite en (18.1.2) et (18.1.3)~; on a évidemment sur
+$\mathfrak{R}$ une structure de $G$-bimodule, provenant de sa structure de
+$F$-bimodule et de l'homomorphisme d'anneaux $p_2:G\to F$. Comme $i_2$ est
+bijectif on a en outre une injection
+$\theta=j\circ i_2^{-1}:\mathfrak{R}\to G$, qui est un homomorphisme de
+$G$-bimodules. Nous allons voir inversement que, lorsqu'on suppose en outre
+que $f$ et $g$ sont \emph{surjectifs}, autrement dit que $E$ et $F$ sont des
+$A$-anneaux \emph{augmentés} sur $B$, la donnée d'un tel homomorphisme
+$\theta$ permet de reconstituer l'anneau augmenté $E$ (sur $B$) à partir de
+l'anneau augmenté $G$ (sur $F$).
+
+De façon précise, donnons-nous un $A$-anneau $F$ augmenté sur $B$ et un
+$A$-anneau $G$ augmenté sur $F$, les idéaux d'augmentation étant notés
+$\mathfrak{R}$ et $\mathfrak{J}'$ respectivement~:
+\begin{equation}
+\label{0.18.1.7.1-fr}
+\tag{18.1.7.1}
+  \xymatrix@C=2pc@R=1.5pc{
+    & & 0\ar[d] & & \\
+    & & \mathfrak{R}\ar[ld]^\theta\ar[d] & & \\
+    0\ar[r] & \mathfrak{J}'\ar[r] & G\ar[r]_h & F\ar[r]\ar[d]^g & 0\\
+    & & & B\ar[d] & \\
+    & & & 0 &
+  }
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{54}
+L'homomorphisme $h$ définit sur tous les idéaux de $F$ (et en particulier sur
+$\mathfrak{R}$) une structure de $G$-bimodule. Soit
+$\theta:\mathfrak{R}\to G$ un homomorphisme de $G$-bimodules rendant
+commutatif le diagramme (18.1.7.1)~; cela implique que $\theta$ est
+\emph{injectif} et que $\mathfrak{J}'\cap\theta(\mathfrak{R})=0$~; comme
+$\theta(\mathfrak{R})$ est un idéal bilatère de $G$, et que
+$h(\theta(\mathfrak{R}))=\mathfrak{R}$, l'homomorphisme composé
+$g\circ h:G\to B$ se factorise en
+$G\xrightarrow{q}G/\theta(\mathfrak{R})\xrightarrow{f}B$, où $f$ est
+surjectif~; en outre l'image $\mathfrak{J}$ de $\mathfrak{J}'$ dans
+$E=G/\theta(\mathfrak{R})$ est le noyau de $f$ (celui de $g\circ h$ étant
+$\mathfrak{J}'\oplus\theta(\mathfrak{R})$), et la restriction à
+$\mathfrak{J}'$ de l'homomorphisme canonique $q:G\to E$ est injective. On
+peut donc former le \emph{produit fibré} $G'=E\times_BF$, et comme les deux
+$A$-homomorphismes $q:G\to E$ et $h:G\to F$ sont tels que
+$f\circ q=g\circ h$, ils définissent un unique $A$-homomorphisme $u:G'\to G$
+par la propriété universelle de $G'$ (18.1.2)~; nous allons voir que $u$ est
+\emph{bijectif}. Il suffit de le prouver lorsque $u$ est considéré comme
+homomorphisme de $A$-bimodules~; mais on notera alors que $u$ est compatible
+avec les filtrations finies sur $G'$ et $G$ formées respectivement par $G'$
+et $\mathfrak{J}''=\operatorname{Ker}(G'\to F)$, et par $G$ et
+$\mathfrak{J}'$~; en outre, on a vu (18.1.3) que
+$\operatorname{gr}_0u:F\to F$ est l'identité et que
+$\operatorname{gr}_1u:\mathfrak{J}''\to\mathfrak{J}'$ est bijectif, donc $u$
+lui-même est bijectif (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~2,
+n\textsuperscript{o}~8, cor.~3 du th.~1).
+\end{env}
+
+\subsection{Extensions d'un anneau par un bimodule}
+\label{subsection:0.18.2-fr}
+
+\begin{env}[18.2.1]
+\label{0.18.2.1-fr}
+Soient $E$ un $A$-anneau augmenté sur $B$, $f:E\to B$ l'augmentation,
+$\mathfrak{J}=\operatorname{Ker}(f)$ l'idéal d'augmentation. Si l'on a
+$\mathfrak{J}^2=0$, $\mathfrak{J}$ est non seulement un $E$-bimodule mais
+aussi un $B$-\emph{bimodule} puisque $B$ est isomorphe à
+$E/\mathfrak{J}$~; de façon précise, tout $b\in B$ est de la forme $f(x)$
+avec $x\in E$, et si $z,z'$ sont dans $\mathfrak{J}$ on a
+$(x+z)z'=xz'$ (resp. $z'(x+z)=z'x$) de sorte que la valeur de $xz'$ (resp.
+$z'x$) ne dépend pas de l'élément $x$ de $f^{-1}(b)$, et peut s'écrire $bz'$
+(resp. $z'b$) ce qui définit la structure de $B$-bimodule considérée.
+Inversement, si $\mathfrak{J}$ est muni d'une structure de $B$-bimodule telle
+que $xz'=f(x)z'$ et $z'x=z'f(x)$ pour $x\in E$ et
+$z'\in\mathfrak{J}$, il est clair que $\mathfrak{J}^2=0$.
+\end{env}
+
+\begin{env}[18.2.2]
+\label{0.18.2.2-fr}
+On appelle \emph{$A$-extension d'un $A$-anneau $B$ par un $B$-bimodule $L$}
+une \emph{suite exacte} d'homomorphismes de $A$-bimodules
+\[
+  0\longrightarrow L\xrightarrow{j}E\xrightarrow{f}B\longrightarrow0
+\]
+où $E$ est un $A$-anneau, $f$ un $A$-homomorphisme d'anneaux et l'on a, pour
+$x\in E$ et $z\in L$,
+\[
+  j(f(x)z)=xj(z),\qquad j(zf(x))=j(z)x
+\]
+d'où résulte (18.2.1) que $j(L)$ est un idéal bilatère de carré nul de $E$.
+Par abus de langage on dira aussi que $E$ est une extension de $B$ par $L$.
+On dit que deux $A$-extensions $E$, $E'$ de $B$ par $L$ sont
+\emph{$A$-équivalentes} s'il existe un isomorphisme de $A$-anneaux
+$u:E\xrightarrow{\sim}E'$ (dit aussi \emph{$A$-équivalence de
+$A$-extensions}) rendant commutatif le diagramme
+\begin{equation}
+\label{0.18.2.2.1-fr}
+\tag{18.2.2.1}
+  \xymatrix@C=2.1pc@R=1.2pc{
+    & & E\ar[dr]\ar[dd]_u\ar@{}[dd]|{\wr} & & \\
+    0\ar[r] & L\ar[ur]\ar[dr] & & B\ar[r] & 0\\
+    & & E'\ar[ur] & &
+  }
+\end{equation}
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{55}
+
+\begin{env}[18.2.3]
+\label{0.18.2.3-fr}
+On dit qu'une $A$-extension $E$ de $B$ par un $B$-bimodule $L$ est
+\emph{$A$-triviale} si $E$ est un $A$-anneau augmenté (sur $B$) trivial
+(18.1.4). On définit sur le $A$-bimodule produit $B\times L$ une structure de
+$A$-anneau en posant $(x,s)(y,t)=(xy,xt+sy)$, comme on le vérifie aussitôt,
+et il est immédiat que les applications canoniques $j:L\to B\times L$ et
+$f:B\times L\to B$ définissent une $A$-extension de $B$ par $L$ qui est
+$A$-triviale, l'application canonique $g:B\to B\times L$ étant un
+$A$-homomorphisme inverse à droite de $f$. On dit que cette extension est
+\emph{l'extension triviale type} de $B$ par $L$ et on la note $D_B(L)$~; il
+est immédiat que toute $A$-extension $A$-triviale de $B$ par $L$ est
+$A$-équivalente à $D_B(L)$.
+
+On notera que toute extension du $A$-anneau $A$ lui-même par un $A$-bimodule
+est nécessairement $A$-triviale.
+\end{env}
+
+\begin{env}[18.2.4]
+\label{0.18.2.4-fr}
+Étant données deux $A$-extensions
+$L\xrightarrow{j}E\xrightarrow{f}B$,
+$L'\xrightarrow{j'}E'\xrightarrow{f'}B'$, un \emph{morphisme} de la première
+dans la seconde est par définition un triplet d'homomorphismes de
+$A$-bimodules $(u,v,w)$ tel que le diagramme
+\begin{equation}
+\label{0.18.2.4.1-fr}
+\tag{18.2.4.1}
+  \xymatrix{
+    0\ar[r] & L\ar[r]^j\ar[d]_w & E\ar[r]^f\ar[d]_u
+      & B\ar[r]\ar[d]_v & 0\\
+    0\ar[r] & L'\ar[r]_{j'} & E'\ar[r]_{f'} & B'\ar[r] & 0
+  }
+\end{equation}
+soit commutatif, $u$ et $v$ étant des $A$-homomorphismes \emph{d'anneaux} et
+$w$ étant tel que $w(bz)=v(b)w(z)$ et $w(zb)=w(z)v(b)$ pour $z\in L$ et
+$b\in B$ (en d'autres termes, le couple $(v,w)$ constitue un
+\emph{di-homomorphisme} du $B$-bimodule $L$ dans le $B'$-bimodule $L'$)~; il
+est clair que si $(u',v',w')$ est un morphisme de
+$L'\to E'\to B'$ dans une $A$-extension $L''\to E''\to B''$,
+$(u'\circ u,v'\circ v,w'\circ w)$ est encore un morphisme, ce qui justifie la
+terminologie.
+
+La considération des deux carrés commutatifs du diagramme (18.2.4.1) va nous
+conduire à deux opérations sur les extensions de $A$-anneaux.
+\end{env}
+
+\begin{env}[18.2.5]
+\label{0.18.2.5-fr}
+En premier lieu, considérons une $A$-extension $E'$ de $B'$ par $L'$
+\[
+  0\longrightarrow L'\xrightarrow{j'}E'\xrightarrow{f'}B'\longrightarrow0
+\]
+et un $A$-homomorphisme d'anneaux $v:B\to B'$, et soit
+$F=E'\times_{B'}B$ \emph{l'image réciproque} par $v$ du $A$-anneau augmenté
+$E'$ (18.1.5), de sorte que l'on a un diagramme commutatif
+\[
+  \xymatrix{
+    0\ar[r] & L_0\ar[r]\ar[d]^i\ar@{}[d]|{\wr} & F\ar[r]^{p_2}\ar[d]^{p_1}
+      & B\ar[r]\ar[d]^v & 0\\
+    0\ar[r] & L'\ar[r]_{j'} & E'\ar[r]_{f'} & B'\ar[r] & 0
+  }
+\]
+dont les lignes sont exactes, $p_1$ et $p_2$ étant les homomorphismes
+canoniques~; on a vu (18.1.3) que $i$ est bijectif et il résulte aussi de la
+définition (18.1.2) que $L_0^2=0$, de sorte que l'on peut considérer que $F$
+est une $A$-extension de $B$ par $L'$, que l'on appelle \emph{image
+réciproque par $v$} de l'extension $E'$ de $B'$ par $L'$ ($L'$ étant
+naturellement considéré comme $B$-bimodule au moyen de l'homomorphisme
+d'anneaux $v$). Le caractère fonctoriel
+\oldpage[0\textsubscript{IV-1}]{56}
+du produit fibré vis-à-vis de chacun des facteurs montre en outre que si l'on
+a un morphisme de deux extensions de $B'$
+\[
+  \xymatrix{
+    0\ar[r] & L'_1\ar[r]\ar[d]^h & E'_1\ar[r]\ar[d]^g
+      & B'\ar[r]\ar[d]^{1_{B'}} & 0\\
+    0\ar[r] & L'_2\ar[r] & E'_2\ar[r] & B'\ar[r] & 0
+  }
+\]
+on en déduit un morphisme \emph{image réciproque par $v$}
+\[
+  \xymatrix{
+    0\ar[r] & L'_1\ar[r]\ar[d]^h & E'_1\times_{B'}B\ar[r]
+      \ar[d]^{g\times_{B'}1_B} & B\ar[r]\ar[d]^{1_B} & 0\\
+    0\ar[r] & L'_2\ar[r] & E'_2\times_{B'}B\ar[r] & B\ar[r] & 0.
+  }
+\]
+En particulier, si $E'_1$ et $E'_2$ sont des $A$-extensions
+$A$-équivalentes de $B'$ par $L'$, leurs images réciproques par $v$ sont des
+$A$-extensions $A$-équivalentes de $B$ par $L'$.
+
+La définition du produit fibré montre que lorsque l'on a un morphisme
+(18.2.4.1) de $A$-extensions, il se \emph{factorise à travers} l'image
+réciproque de $E'$ par $v$~; de façon précise, il existe un
+$A$-homomorphisme unique $u_0:E\to F=E'\times_{B'}B$ rendant commutatif le
+diagramme
+\[
+  \xymatrix{
+    0\ar[r] & L\ar[r]^j\ar[d]^{w_0} & E\ar[r]^f\ar[d]^{u_0}
+      & B\ar[r]\ar[d]^{1_B} & 0\\
+    0\ar[r] & L_0\ar[r]\ar[d]^i\ar@{}[d]|{\wr} & F\ar[r]^{p_2}\ar[d]^{p_1}
+      & B\ar[r]\ar[d]^v & 0\\
+    0\ar[r] & L'\ar[r]_{j'} & E'\ar[r]_{f'} & B'\ar[r] & 0
+  }
+\]
+où $w_0$ est la restriction de $u_0$ à $L$ et
+$p_1\circ u_0=u$, $i\circ w_0=w$.
+\end{env}
+
+\begin{env}[18.2.6]
+\label{0.18.2.6-fr}
+Étudions en particulier les images réciproques d'extensions par des
+$A$-homomorphismes \emph{surjectifs}. Considérons un $A$-homomorphisme
+surjectif $v:B\to B'$, une $A$-extension $F$ de $B$ par un $B$-bimodule $L$,
+et l'idéal bilatère $\mathfrak{R}$ de $B$, noyau de $v$ (qui peut être
+considéré comme $F$-bimodule au moyen de l'augmentation $F\to B$)~; on a vu
+(18.1.7) que tout homomorphisme de $F$-bimodules
+$\theta:\mathfrak{R}\to F$ rendant commutatif le diagramme
+\[
+  \xymatrix{
+    & \mathfrak{R}\ar[ld]^\theta\ar[d]\\
+    F\ar[r] & B
+  }
+\]
+détermine une extension $E'$ de $B'=B/\mathfrak{R}$ par $L$ dont l'image
+réciproque par $v:B\to B'$ est équivalente à $F$, et que toute $A$-extension
+$E'$ de $B'$ par $L$ ayant cette dernière propriété s'obtient ainsi (à une
+$A$-équivalence près). En outre, pour que deux homomorphismes
+$\theta_1,\theta_2$ de $F$-bimodules de $\mathfrak{R}$ dans $F$ donnent deux
+  $A$-extensions $A$-équivalentes de $B$ par $L$, il faut et il suffit qu'il
+existe une $A$-équivalence $u$ de la $A$-extension $F$ sur elle-même telle que
+\oldpage[0\textsubscript{IV-1}]{57}
+$\theta_2=u\circ\theta_1$~; cela résulte aussitôt de ce qu'on a vu dans
+(18.2.5) et de la définition de la bijection canonique de $F$ sur le produit
+fibré $E'\times_{B'}B$ (18.1.7).
+\end{env}
+
+\begin{env}[18.2.7]
+\label{0.18.2.7-fr}
+Considérons maintenant le carré de gauche de (18.2.4.1), et rappelons d'abord
+la notion de \emph{somme amalgamée} dans la catégorie des $A$-bimodules~:
+étant donnés trois $A$-bimodules $X$, $Y$, $Z$ et deux $A$-homomorphismes
+$f:X\to Y$, $g:X\to Z$, la somme amalgamée $Y\oplus_XZ$ est \emph{limite
+inductive} du système inductif formé par $X$, $Y$, $Z$ et les
+$A$-homomorphismes $f$, $g$ dans la catégorie des $A$-bimodules
+($0_{\mathrm{III}}$, 8.1.11). On définit ce $A$-bimodule comme quotient du
+produit $Y\times Z$ par le sous-$A$-bimodule $M$ image de $X$ par
+l'homomorphisme $x\mapsto(f(x),-g(x))$. Sa propriété caractéristique est que,
+pour tout couple d'homomorphismes de $A$-bimodules $u:Y\to T$, $v:Z\to T$
+tels que $u\circ f=v\circ g$, il existe un homomorphisme et un seul
+$w:Y\oplus_XZ\to T$ tel que $u=w\circ j_1$ et $v=w\circ j_2$, où
+$j_1:Y\to Y\oplus_XZ$ et $j_2:Z\to Y\oplus_XZ$ sont les applications
+canoniques.
+\end{env}
+
+\begin{env}[18.2.8]
+\label{0.18.2.8-fr}
+Considérons maintenant une $A$-extension $E$ de $B$ par un $B$-bimodule
+$L$~:
+\[
+  0\longrightarrow L\xrightarrow{j}E\xrightarrow{f}B\longrightarrow0
+\]
+et soit d'autre part $w:L\to L'$ un homomorphisme de $B$-bimodules. Soit $H$
+le $A$-bimodule somme amalgamée $E\oplus_LL'$~; montrons comment on peut munir
+ce $A$-bimodule d'une structure de $A$-anneau et définir une $A$-extension
+\[
+  0\longrightarrow L'\longrightarrow H\longrightarrow B\longrightarrow0.
+\]
+
+Notons pour cela que $L'$ est muni d'une structure de $E$-\emph{bimodule} au
+moyen de l'homomorphisme d'augmentation $E\to B$~; on peut donc former la
+$A$-extension triviale type $G=D_E(L')$ (18.2.3). Considérons alors
+l'application $\theta:z\mapsto(j(z),-w(z))$ de $L$ dans $G$~; c'est un
+homomorphisme de $G$-bimodules ($L$ étant considéré comme $G$-bimodule au
+moyen de l'homomorphisme canonique $\rho:G\to E$). En effet, pour
+$(x,z')\in G$ et $z\in L$, on a
+$(j(z),-w(z))(x,z')=(j(z)x,j(z)z'-w(z)f(x))$~; or
+$j(z)z'=f(j(z))z'=0$ par définition de la structure de $E$-bimodule sur
+$L'$, et $w(z)f(x)=w(zf(x))$ par définition de la structure de $B$-bimodule
+sur $L'$~; on vérifie de même que $\theta$ est un homomorphisme de
+$G$-module à gauche. On peut alors appliquer au diagramme commutatif
+\[
+  \xymatrix@C=2pc@R=1.4pc{
+    & & 0\ar[d] & & \\
+    & & L\ar[ld]^\theta\ar[d]^j & & \\
+    0\ar[r] & L'\ar[r] & G\ar[r]_p & E\ar[r]\ar[d]^f & 0\\
+    & & & B\ar[d] & \\
+    & & & 0 &
+  }
+\]
+le résultat de (18.1.7). Comme $H=G/\theta(L)$ par définition, notre
+assertion est une conséquence immédiate de (18.1.7).
+
+\oldpage[0\textsubscript{IV-1}]{58}
+
+On dit que la $A$-extension $H$ de $B$ par $L'$ est \emph{déduite de $E$ au
+moyen de l'homomorphisme} $w:L\to L'$. Le caractère fonctoriel de la somme
+amalgamée en chacun des sommandes montre en outre que si l'on a un morphisme
+d'extensions
+\[
+  \xymatrix{
+    0\ar[r] & L\ar[r]\ar[d]^{1_L}\ar@{}[d]|{\wr}
+      & E_1\ar[r]\ar[d]^g & B_1\ar[r]\ar[d]^h & 0\\
+    0\ar[r] & L\ar[r] & E_2\ar[r] & B_2\ar[r] & 0
+  }
+\]
+on en déduit canoniquement un morphisme d'extensions
+\[
+  \xymatrix{
+    0\ar[r] & L'\ar[r]\ar[d]^{1_{L'}}\ar@{}[d]|{\wr}
+      & E_1\oplus_LL'\ar[r]\ar[d]^{g\oplus_L1_{L'}}
+      & B_1\ar[r]\ar[d]^h & 0\\
+    0\ar[r] & L'\ar[r] & E_2\oplus_LL'\ar[r] & B_2\ar[r] & 0.
+  }
+\]
+En particulier, si $E_1$ et $E_2$ sont des $A$-extensions $A$-équivalentes de
+$B$ par $L$, les extensions de $B$ par $L'$ qu'on en déduit au moyen de $w$
+sont $A$-équivalentes.
+
+Lorsque l'on a un morphisme (18.2.4.1) de $A$-extensions, il se \emph{factorise
+à travers} la $A$-extension $H$ de $B$ par $L'$ déduite de $E$ au moyen de
+l'homomorphisme $w:L\to L'$ ($L'$ étant considéré comme $B$-bimodule au moyen
+de l'homomorphisme $v:B\to B'$)~: en effet, la définition de la somme amalgamée
+montre qu'il existe un $A$-homomorphisme unique $u_0:H\to E'$ de
+$A$-bimodules, rendant commutatif le diagramme
+\[
+  \xymatrix{
+    0\ar[r] & L\ar[r]^j\ar[d]^{w_0} & E\ar[r]^f\ar[d]^{j_1}
+      & B\ar[r]\ar[d]^{1_B}\ar@{}[d]|{\wr} & 0\\
+    0\ar[r] & L'_0\ar[r]^{j_2}\ar[d]^{j_0}\ar@{}[d]|{\wr}
+      & H\ar[r]^{f_0}\ar[d]^{u_0} & B\ar[r]\ar[d]^v & 0\\
+    0\ar[r] & L'\ar[r]_{j'} & E'\ar[r]_{f'} & B'\ar[r] & 0
+  }
+\]
+avec $u=u_0\circ j_1$, $w=j_0\circ w_0$, $j_1$ et $j_2$ étant les
+homomorphismes canoniques~; on vérifie immédiatement que $u_0$ est aussi un
+homomorphisme d'anneaux.
+
+Notons enfin les propriétés fonctorielles relatives aux extensions triviales~:
+\end{env}
+
+\begin{proposition}[18.2.9]
+\label{0.18.2.9-fr}
+Soient $B$, $B'$ deux $A$-anneaux, $L$ un $B$-bimodule, $L'$ un
+$B'$-bimodule, $v:B\to B'$ un $A$-homomorphisme d'anneaux, $w:L\to L'$ un
+homomorphisme de $A$-bimodules tel que $(v,w)$ soit un di-homomorphisme de
+bimodules. Alors, il existe un $A$-homomorphisme unique d'anneaux
+$u:D_B(L)\to D_{B'}(L')$ rendant commutatif les diagrammes
+\[
+  \xymatrix@C=2.2pc@R=1.6pc{
+    D_B(L)\ar[r]^u & D_{B'}(L') & & D_B(L)\ar[r]^u & D_{B'}(L')\\
+    B\ar[u]\ar[r]_v & B'\ar[u] & & L\ar[u]\ar[r]_w & L'\ar[u]
+  }
+\]
+où les flèches verticales sont les injections canoniques.
+\end{proposition}
+
+\oldpage[0\textsubscript{IV-1}]{59}
+
+\begin{proof}
+En effet, $u$ ne peut être que l'application
+$(x,s)\mapsto(v(x),w(s))$ et il reste à vérifier que c'est un
+$A$-homomorphisme d'anneaux, ce qui résulte trivialement de la définition
+(18.2.3). On notera que $u$ rend aussi commutatif le diagramme
+\[
+  \xymatrix@C=2.2pc@R=1.5pc{
+    D_B(L)\ar[r]^u\ar[d] & D_{B'}(L')\ar[d]\\
+    B\ar[r]_v & B'
+  }
+\]
+où cette fois les flèches verticales sont les augmentations.
+\end{proof}
+
+\begin{proposition}[18.2.10]
+\label{0.18.2.10-fr}
+Soient $B$ un $A$-anneau, $L$ un $B$-bimodule, $E$ une $A$-extension de $B$
+par $L$. On définit une application bijective de l'ensemble $G$ des
+homomorphismes de $B$-anneaux de $B$ dans $E$ (autrement dit, l'ensemble des
+$A$-homomorphismes inverses à droite de l'augmentation $E\to B$) sur
+l'ensemble $G'$ des $A$-équivalences de $D_B(L)$ sur $E$ en faisant
+correspondre à tout $g\in G$ la $A$-équivalence
+$g':(x,s)\mapsto g(x)+s$~; l'application réciproque fait correspondre à tout
+$g'\in G'$ le $B$-homomorphisme $x\mapsto g'(x,0)$.
+\end{proposition}
+
+\begin{proof}
+Ceci résulte aussitôt des définitions.
+\end{proof}
+
+\subsection{Le groupe des classes de $A$-extensions}
+\label{subsection:0.18.3-fr}
+
+\begin{env}[18.3.1]
+\label{0.18.3.1-fr}
+Considérons un $A$-anneau $B$ et un $B$-bimodule $L$ fixés~; alors la relation
+«~$E$ et $E'$ sont $A$-équivalentes~» entre $A$-extensions $E$, $E'$ de $B$
+par $L$ est une relation d'équivalence, et pour cette relation on peut parler
+de l'\emph{ensemble} des classes de $A$-extensions $A$-équivalentes de $B$ par
+$L$. Il suffit pour le voir de remarquer que si, pour tout $x\in B$, $c_x$ est
+un élément de $E$ dont l'image dans $B$ est $x$, tout $z\in E$ s'écrit d'une
+manière et d'une seule sous la forme $c_x+t$, où $t\in L$, et l'on peut écrire
+\[
+  c_{x+y}=c_x+c_y+\varphi(x,y),\qquad
+  c_{xy}=c_xc_y+\psi(x,y),
+\]
+où $\varphi(x,y)$ et $\psi(x,y)$ sont des éléments de $L$, les applications
+$\varphi$ et $\psi$ de $B\times B$ dans $L$ devant vérifier des conditions
+exprimant que $E$ est un $A$-anneau, qu'il est inutile d'écrire ici. Toute
+$A$-extension de $B$ par $L$ est donc $A$-équivalente à une $A$-extension dont
+$B\times L$ est l'ensemble sous-jacent, d'où on tire aussitôt notre conclusion.
+\end{env}
+
+\begin{env}[18.3.2]
+\label{0.18.3.2-fr}
+Le $A$-anneau $B$ étant fixé, désignons provisoirement par $T(L)$ l'ensemble
+des classes de $A$-extensions de $B$ par $L$. Pour tout $B$-homomorphisme
+$w:L\to L'$ de $B$-bimodules, on définit canoniquement une application
+$T(w):T(L)\to T(L')$ en faisant correspondre à la classe d'une $A$-extension
+$E$ de $B$ par $L$ la classe de la $A$-extension $E\oplus_LL'$ déduite de $E$
+par $w$, en vertu de (18.2.8). Si $w':L'\to L''$ est un second homomorphisme
+de $B$-bimodules, on a en outre
+\begin{equation}
+\label{0.18.3.2.1-fr}
+\tag{18.3.2.1}
+  T(w'\circ w)=T(w')\circ T(w).
+\end{equation}
+En effet, on sait qu'il existe un isomorphisme canonique de $A$-bimodules
+\[
+  E\oplus_LL''\xrightarrow{\sim}(E\oplus_LL')\oplus_{L'}L''
+\]
+en vertu des propriétés générales de limites inductives (cf. par exemple
+($\mathrm{I}$, 3.3.9)), et il est immédiat de vérifier que c'est bien une
+$A$-équivalence de $A$-extensions, d'où
+
+\oldpage[0\textsubscript{IV-1}]{60}
+
+la relation (18.3.2.1). Si $\mathbf C_B$ désigne la catégorie des
+$B$-bimodules, on voit qu'on a ainsi défini un \emph{foncteur covariant}
+$T:\mathbf C_B\to\mathbf{Ens}$.
+\end{env}
+
+\begin{env}[18.3.3]
+\label{0.18.3.3-fr}
+Considérons maintenant une famille $(L_\alpha)_{\alpha\in I}$ de
+$B$-bimodules et leur produit $L=\prod_{\alpha\in I}L_\alpha$~; les
+projections $\operatorname{pr}_\alpha:L\to L_\alpha$ définissent des
+applications
+\[
+  T(\operatorname{pr}_\alpha):T(L)\to T(L_\alpha),
+\]
+d'où une application canonique
+\begin{equation}
+\label{0.18.3.3.1-fr}
+\tag{18.3.3.1}
+  \prod_\alpha T(\operatorname{pr}_\alpha):T(L)
+  \longrightarrow\prod_{\alpha\in I}T(L_\alpha).
+\end{equation}
+Nous allons voir que cette application est \emph{bijective}. En effet, pour
+tout $\alpha\in I$, soit $E_\alpha$ une $A$-extension de $B$ par $L_\alpha$,
+et soit $F$ le \emph{produit fibré} des $E_\alpha$ sur $B$ (18.1.3)~; il est
+immédiat que $F$ est une $A$-extension de $B$ par
+$L=\prod_{\alpha\in I}L_\alpha$ et que si l'on remplace chaque $E_\alpha$ par
+une $A$-extension $A$-équivalente $E'_\alpha$, le produit fibré $F'$ des
+$E'_\alpha$ sur $B$ est $A$-équivalente à $F$. On a ainsi défini une
+application $\prod_{\alpha\in I}T(L_\alpha)\to T(L)$ et il est clair que cette
+application est réciproque de (18.3.3.1), d'où notre assertion. On identifiera
+canoniquement $T(L)$ à $\prod_{\alpha\in I}T(L_\alpha)$ par l'application
+(18.3.3.1). On vérifie en outre immédiatement que si
+$(L'_\alpha)_{\alpha\in I}$ est une seconde famille de $B$-bimodules et, pour
+chaque $\alpha$, $w_\alpha:L_\alpha\to L'_\alpha$ un homomorphisme de
+$B$-bimodules, alors, en posant
+$w=\prod_\alpha w_\alpha:L\to L'=\prod_{\alpha\in I}L'_\alpha$, $T(w)$
+s'identifie à $\prod_{\alpha\in I}T(w_\alpha)$ quand on fait l'identification
+précédente.
+\end{env}
+
+\begin{env}[18.3.4]
+\label{0.18.3.4-fr}
+Cela étant, pour un $B$-bimodule $L$, l'addition est un homomorphisme
+$s:L\times L\to L$ de $B$-bimodules, et il en est de même de la symétrie
+$t:L\to L$ de la loi additive de $L$. On en déduit une loi de composition
+\[
+  T(s):T(L)\times T(L)\longrightarrow T(L)
+\]
+dans $T(L)$ en vertu de (18.3.3), et cette loi est une loi de \emph{groupe
+commutatif} dont $T(t)$ est la symétrie, comme il résulte de la définition d'un
+objet en groupes au moyen de diagrammes commutatifs
+($\mathbf 0_{\mathrm{III}}$, 8.2.5 et 8.2.6). Nous désignerons par
+$\operatorname{Exan}_A(B,L)$ le groupe commutatif ainsi défini et nous dirons
+que c'est le \emph{groupe des classes de $A$-extensions de $B$ par $L$}.
+\end{env}
+
+\begin{env}[18.3.5]
+\label{0.18.3.5-fr}
+Désignons par $\mathbf K$ la catégorie dont les objets sont les triplets
+$(A,B,L)$ où $A$ est un anneau, $B$ un $A$-anneau et $L$ un $B$-bimodule~;
+les \emph{morphismes} de cette catégorie sont les triplets $(u,v,w)$ où
+$u:A'\to A$ et $v:B'\to B$ sont deux homomorphismes d'anneaux rendant
+commutatif le carré de gauche du diagramme
+\[
+  \xymatrix@C=2pc@R=1.5pc{
+    A\ar[r] & B & L\ar[d]^w\\
+    A'\ar[u]^u\ar[r] & B'\ar[u]^v & L'
+  }
+\]
+où les flèches horizontales sont les homomorphismes structuraux~; enfin
+$w:L\to L'$ est un homomorphisme de groupes commutatifs tel que l'on ait
+$w(v(b')z)=b'w(z)$ et
+
+\oldpage[0\textsubscript{IV-1}]{61}
+
+$w(zv(b'))=w(z)b'$ quels que soient $z\in L$ et $b'\in B'$ (en d'autres
+termes, $w$ est un homomorphisme de $B'$-bimodules lorsqu'on munit $L$ de la
+structure de $B'$-bimodule définie par $v$). La composition des morphismes est
+définie par
+$(u',v',w')\circ(u,v,w)=(u\circ u',v\circ v',w'\circ w)$, qui se justifie
+aussitôt. Nous nous proposons de montrer que
+\begin{equation}
+\label{0.18.3.5.1-fr}
+\tag{18.3.5.1}
+  (A,B,L)\longmapsto\operatorname{Exan}_A(B,L)
+\end{equation}
+est un \emph{foncteur covariant} de la catégorie $\mathbf K$ dans la catégorie
+$\mathbf{Ab}$ des groupes commutatifs. Il s'agit donc pour tout triplet
+$(u,v,w)$ comme ci-dessus, de définir un homomorphisme de groupes commutatifs
+\[
+  (u,v,w)_*:\operatorname{Exan}_A(B,L)
+  \longrightarrow\operatorname{Exan}_{A'}(B',L').
+\]
+En vertu de la définition des morphismes dans $\mathbf K$, on peut écrire
+\[
+  (u,v,w)=(1_{A'},1_{B'},w)\circ(1_{A'},v,1_L)
+  \circ(u,1_B,1_L)
+\]
+où, dans le premier facteur, $L$ est muni de sa structure de $B'$-bimodule
+définie par $v$~; nous définirons donc d'abord $(u,v,w)_*$ lorsque deux des
+homomorphismes $u$, $v$, $w$ sont réduits à l'identité.
+\end{env}
+
+\begin{env}[18.3.6]
+\label{0.18.3.6-fr}
+Nous prendrons d'abord pour $(1_A,1_B,w)_*$ l'application
+\begin{equation}
+\label{0.18.3.6.1-fr}
+\tag{18.3.6.1}
+  w_*:\operatorname{Exan}_A(B,L)\longrightarrow
+  \operatorname{Exan}_A(B,L')
+\end{equation}
+notée $T(w)$ dans (18.3.2)~; il est immédiat de vérifier que c'est un
+homomorphisme de groupes, cette propriété s'exprimant par la commutativité de
+diagrammes, transformés par $T$ de diagrammes analogues pour $L$ et $L'$.
+
+L'application $(1_A,v,1_L)_*$ est l'application
+\begin{equation}
+\label{0.18.3.6.2-fr}
+\tag{18.3.6.2}
+  v^*:\operatorname{Exan}_A(B,L)\longrightarrow
+  \operatorname{Exan}_A(B',L)
+\end{equation}
+définie de la façon suivante~: si $E$ est une $A$-extension de $B$ par $L$,
+on a vu que $E\times_BB'$ est une $A$-extension de $B'$ par $L$ (18.2.5) et
+que si l'on remplace $E$ par une $A$-extension $A$-équivalente $E'$,
+$E'\times_BB'$ est $A$-équivalente à $E\times_BB'$~; l'image par $v^*$ de la
+classe de $E$ est la classe de $E\times_BB'$. On vérifie aussitôt que si
+$w:L\to L'$ est un homomorphisme de $B$-bimodules, le diagramme
+\begin{equation}
+\label{0.18.3.6.3-fr}
+\tag{18.3.6.3}
+  \xymatrix@C=3pc@R=2.4pc{
+    \operatorname{Exan}_A(B,L)\ar[r]^{v^*}\ar[d]_{w_*}
+      & \operatorname{Exan}_A(B',L)\ar[d]^{w_*}\\
+    \operatorname{Exan}_A(B,L')\ar[r]_{v^*}
+      & \operatorname{Exan}_A(B',L')
+  }
+\end{equation}
+est commutatif, $L$ et $L'$ étant considérés comme $B'$-bimodules au moyen
+de $v$ dans la colonne de droite. Remplaçant $L$ et $L'$ respectivement par
+$L\times L$ et $L$, et $w$ par l'addition $s$ dans $L$, on en conclut que
+$v^*$ est bien un \emph{homomorphisme de groupes}.
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{62}
+
+\begin{env}[18.3.6.4]
+\label{0.18.3.6.4-fr}
+Enfin, l'application $(u,1_B,1_L)_*$ est l'application
+\[
+  u^*:\operatorname{Exan}_A(B,L)\longrightarrow
+  \operatorname{Exan}_{A'}(B,L)
+\]
+qui s'obtient en faisant correspondre à une $A$-extension $E$ de $B$ par $L$
+l'anneau $E$ considéré comme $A'$-\emph{anneau} au moyen de $u$ (18.1.1), qui
+est évidemment une $A'$-extension de $B$ par $L$, $B$ étant aussi considéré
+comme $A'$-anneau au moyen de $u$~; il est clair qu'une $A$-équivalence est
+aussi une $A'$-équivalence, d'où l'application (18.3.6.4), qui, pour tout
+homomorphisme $w:L\to L'$ de $B$-bimodules, rend encore commutatif le diagramme
+\begin{equation}
+\label{0.18.3.6.5-fr}
+\tag{18.3.6.5}
+  \xymatrix@C=3pc@R=2.4pc{
+    \operatorname{Exan}_A(B,L)\ar[r]^{u^*}\ar[d]_{w_*}
+      & \operatorname{Exan}_{A'}(B,L)\ar[d]^{w_*}\\
+    \operatorname{Exan}_A(B,L')\ar[r]_{u^*}
+      & \operatorname{Exan}_{A'}(B,L')
+  }
+\end{equation}
+d'où l'on conclut comme ci-dessus que $u^*$ est un homomorphisme de groupes.
+
+Cela étant, on pose
+$(u,v,w)_*=(1_{A'},1_{B'},w)_*\circ(1_{A'},v,1_L)_*
+\circ(u,1_B,1_L)_*$ et l'on vérifie facilement, en raison de la commutativité
+des diagrammes (18.3.6.3) et (18.3.6.5), que l'on a
+\[
+  (u\circ u',v\circ v',w'\circ w)_*
+  =(u',v',w')_*\circ(u,v,w)_*,
+\]
+ce qui achève de prouver que (18.3.4.1) est un foncteur.
+
+L'existence de l'homomorphisme de groupes (18.3.6.1) montre en particulier
+que si $E$ est une $A$-extension \emph{triviale} de $B$ par $L$, l'extension
+$E\oplus_LL'$ de $B$ par $L'$ définie dans (18.2.8) est aussi triviale, ce que
+l'on vérifie d'ailleurs sans peine de façon directe.
+
+D'autre part, pour tout élément $z$ du \emph{centre} $Z$ de $B$, l'homothétie
+$h_z:y\mapsto yz=zy$ est un endomorphisme du $B$-bimodule $L$, donc $(h_z)_*$
+est un endomorphisme du groupe commutatif $\operatorname{Exan}_A(B,L)$, et par
+fonctorialité, ces endomorphismes définissent sur
+$\operatorname{Exan}_A(B,L)$ une structure canonique de $Z$-\emph{module}.
+\end{env}
+
+\begin{env}[18.3.7]
+\label{0.18.3.7-fr}
+Soient $A$, $A'$ deux anneaux, $u:A'\to A$ un homomorphisme, $B$ un
+$A$-anneau et $L$ un $B$-bimodule. Le \emph{noyau} de l'homomorphisme de
+groupes
+\[
+  u^*:\operatorname{Exan}_A(B,L)\longrightarrow
+  \operatorname{Exan}_{A'}(B,L)
+\]
+est formé par définition des classes de $A$-extensions de $B$ par $L$ qui
+sont $A'$-\emph{triviales} quand on les considère comme $A'$-extensions au
+moyen de $u$. On désigne ce noyau par la notation
+$\operatorname{Exan}_{A/A'}(B,L)$ quand cela ne prête pas à confusion.
+
+Si $\Lambda$ est un anneau, et si on a un diagramme commutatif de
+$\Lambda$-\emph{homomorphismes} de $\Lambda$-anneaux
+\begin{equation}
+\label{0.18.3.7.1-fr}
+\tag{18.3.7.1}
+  \xymatrix@C=2pc@R=1.5pc{
+    B'\ar[r] & B\\
+    A'\ar[u]\ar[r] & A\ar[u]
+  }
+\end{equation}
+
+\oldpage[0\textsubscript{IV-1}]{63}
+
+on en déduit canoniquement des homomorphismes
+\begin{equation}
+\label{0.18.3.7.2-fr}
+\tag{18.3.7.2}
+  \operatorname{Exan}_{A/\Lambda}(B,L)\longrightarrow
+  \operatorname{Exan}_{A'/\Lambda}(B,L)\longrightarrow
+  \operatorname{Exan}_{A'/\Lambda}(B',L)
+\end{equation}
+qui proviennent de la commutativité du diagramme
+\[
+  \xymatrix@C=2.8pc@R=2.3pc{
+    \operatorname{Exan}_A(B,L)\ar[r]\ar[d]
+      & \operatorname{Exan}_{A'}(B,L)\ar[r]\ar[d]
+      & \operatorname{Exan}_{A'}(B',L)\ar[d]\\
+    \operatorname{Exan}_{\Lambda}(B,L)\ar[r]
+      & \operatorname{Exan}_{\Lambda}(B,L)\ar[r]
+      & \operatorname{Exan}_{\Lambda}(B',L)
+  }
+\]
+où les flèches sont déduites de celles de (18.3.7.1) par fonctorialité.
+\end{env}
+
+\begin{proposition}[18.3.8]
+\label{0.18.3.8-fr}
+Soient $B$ un anneau, $\mathfrak J$ un idéal bilatère de $B$,
+$C=B/\mathfrak J$ l'anneau quotient~; $\mathfrak J/\mathfrak J^2$ est alors
+canoniquement muni d'une structure de $C$-bimodule. Pour tout $C$-bimodule
+$L$, soit $\operatorname{Hom}_C(\mathfrak J/\mathfrak J^2,L)$ le groupe
+additif des homomorphismes de $C$-bimodules de $\mathfrak J/\mathfrak J^2$
+dans $L$. On définit alors un isomorphisme canonique de groupes commutatifs
+\begin{equation}
+\label{0.18.3.8.1-fr}
+\tag{18.3.8.1}
+  \eta_L:\operatorname{Hom}_C(\mathfrak J/\mathfrak J^2,L)
+  \xrightarrow{\sim}\operatorname{Exan}_B(C,L)
+\end{equation}
+en faisant correspondre à tout $C$-homomorphisme
+$w:\mathfrak J/\mathfrak J^2\to L$ (qui est \emph{a fortiori} un
+$B$-homomorphisme) la classe de l'extension
+$(B/\mathfrak J^2)\oplus_{(\mathfrak J/\mathfrak J^2)}L$ déduite de
+l'extension $B/\mathfrak J^2$ de $C$ par $\mathfrak J/\mathfrak J^2$ au moyen
+de $w$~; l'isomorphisme réciproque fait correspondre à la classe d'une
+$B$-extension $E$ de $C$ par $L$ l'homomorphisme $w$ tel que le composé
+$\mathfrak J\to\mathfrak J/\mathfrak J^2\xrightarrow{w}L$ soit la restriction
+à $\mathfrak J$ de l'homomorphisme structural $B\to E$.
+\end{proposition}
+
+\begin{proof}
+Soit $F=B/\mathfrak J^2$, qui est une $B$-extension de $C$ par
+$\mathfrak J/\mathfrak J^2$. Pour toute $B$-extension
+\[
+  0\longrightarrow L\xrightarrow{j}E\xrightarrow{p}C\longrightarrow0
+\]
+de $C$ par $L$, l'homomorphisme structural $f:B\to E$ est tel que le composé
+$B\xrightarrow{f}E\xrightarrow{p}C$ soit l'homomorphisme canonique
+$B\to B/\mathfrak J=C$. Comme l'image de $\mathfrak J$ par $p\circ f$ est
+nulle, $f(\mathfrak J)$ est contenu dans le noyau de $p$, c'est-à-dire
+$j(L)$, et comme $j(L)$ est de carré nul, on a $f(\mathfrak J^2)=0$~; donc
+$f$ se factorise en
+$B\to B/\mathfrak J^2=F\xrightarrow{u}E$, et si $w$ est la restriction de
+$u$ à $\mathfrak J/\mathfrak J^2$, on a un diagramme commutatif
+\[
+  \xymatrix@C=2pc@R=1.5pc{
+    0\ar[r] & \mathfrak J/\mathfrak J^2\ar[r]\ar[d]^w
+      & F\ar[r]^g\ar[d]^u
+      & C\ar[r]\ar[d]^{1_C}\ar@{}[d]|{\wr} & 0\\
+    0\ar[r] & L\ar[r]_j & E\ar[r]_p & C\ar[r] & 0
+  }
+\]
+
+autrement dit $(u,1_C,w)$ est un morphisme d'extensions (18.2.4). On en
+déduit un morphisme d'extensions
+\[
+  \xymatrix@C=2pc@R=1.5pc{
+    0\ar[r] & L\ar[r]\ar[d]^{1_L}\ar@{}[d]|{\wr}
+      & E'\ar[r]\ar[d]^{u'}
+      & C\ar[r]\ar[d]^{1_C}\ar@{}[d]|{\wr} & 0\\
+    0\ar[r] & L\ar[r]_j & E\ar[r]_p & C\ar[r] & 0
+  }
+\]
+
+\oldpage[0\textsubscript{IV-1}]{64}
+
+où $E'=F\oplus_{(\mathfrak J/\mathfrak J^2)}L$ (18.2.8)~; il s'agit de
+prouver que $u'$ est une $B$-\emph{équivalence}, ce qui établira que $\eta_L$
+est bijectif. En vertu de la construction faite dans (18.2.8), tout revient à
+prouver (compte tenu de (18.1.7)) que l'image réciproque $G$ de l'extension
+$E$ de $C$ par l'homomorphisme canonique $g:F\to C$ est $F$-triviale, ce qui
+est évident puisque $g$ se factorise en
+$F\xrightarrow{u}E\xrightarrow{p}C$ (18.1.6).
+
+Il reste à voir que $\eta_L$ est un homomorphisme de \emph{groupes}~; or, pour
+tout $B$-homomorphisme $h:L\to L'$, il est immédiat que le diagramme
+\[
+  \xymatrix@C=3pc@R=2.4pc{
+    \operatorname{Hom}_C(\mathfrak J/\mathfrak J^2,L)
+      \ar[r]^{\eta_L}\ar[d]_{\operatorname{Hom}(1,h)}
+      & \operatorname{Exan}_B(C,L)\ar[d]^{h_*}\\
+    \operatorname{Hom}_C(\mathfrak J/\mathfrak J^2,L')
+      \ar[r]_{\eta_{L'}}^{\sim}
+      & \operatorname{Exan}_B(C,L')
+  }
+\]
+est commutatif. Il suffit d'appliquer cette remarque à l'homomorphisme
+$L\times L\to L$ définissant l'addition pour conclure.
+\end{proof}
+
+\subsection{Extensions d'algèbres}
+\label{subsection:0.18.4-fr}
+
+\begin{env}[18.4.1]
+\label{0.18.4.1-fr}
+Soit $A$ un anneau \emph{commutatif}. La catégorie des $A$-\emph{algèbres} est
+alors une sous-catégorie pleine de celle des $A$-anneaux, caractérisée par le
+fait que les homomorphismes structuraux $\rho:A\to B$ sont \emph{centraux}.
+
+Si $B$ est une $A$-algèbre, $L$ un $B$-bimodule, il est immédiat que la
+$A$-extension triviale type $D_B(L)$ est une $A$-algèbre. De même, dans la
+construction de (18.2.5) (resp. de (18.2.8)), si $B$, $B'$ et $E'$ (resp.
+$B$ et $E$) sont des $A$-algèbres, il en est de même de
+$E'\times_{B'}B$ (resp. de $E\oplus_LL'$). Enfin, il est clair que si $B$ est
+une $A$-algèbre et $E$ une $A$-extension de $B$ par un $B$-bimodule $L$ qui
+est une $A$-algèbre, toute $A$-extension de $B$ par $L$, $A$-\emph{équivalente}
+à $E$, est aussi une $A$-algèbre. On déduit alors aussitôt de la définition
+(18.3.4) que les classes de $A$-extensions équivalentes de $B$ par $L$ qui
+sont des $A$-\emph{algèbres} forment un \emph{sous-groupe}, noté
+$\operatorname{Exal}_A(B,L)$, de $\operatorname{Exan}_A(B,L)$. Soit
+$\mathbf K'$ la sous-catégorie pleine de la catégorie $\mathbf K$ définie dans
+(18.3.5), dont les objets $(A,B,L)$ sont tels que $A$ soit commutatif et $B$
+une $A$-algèbre. Alors ce qui précède montre que
+\[
+  (A,B,L)\longmapsto\operatorname{Exal}_A(B,L)
+\]
+est un \emph{foncteur covariant} de $\mathbf K'$ dans $\mathbf{Ab}$. Les
+résultats de (18.3.7) sont inchangés lorsqu'on remplace partout
+$\operatorname{Exan}$ par $\operatorname{Exal}$.
+\end{env}
+
+\begin{env}[18.4.2]
+\label{0.18.4.2-fr}
+Supposons toujours l'anneau $A$ commutatif. Les remarques de (18.4.1) restent
+valables lorsque l'on remplace «~algèbre~» par «~algèbre commutative~» et
+«~bimodule~» par «~module~». Si $B$ est une $A$-algèbre commutative et $L$ un
+$B$-module,
+
+\oldpage[0\textsubscript{IV-1}]{65}
+
+les classes de $A$-extensions équivalentes de $B$ par $L$ qui sont des
+$A$-\emph{algèbres commutatives} (ou, ce qui revient au même, des
+$A$-\emph{anneaux commutatifs}) forment un \emph{sous-groupe} de
+$\operatorname{Exal}_A(B,L)$, noté $\operatorname{Exalcom}_A(B,L)$. Si
+$\mathbf K''$ est la sous-catégorie pleine de $\mathbf K'$ formée des triplets
+$(A,B,L)$ où $A$ et $B$ sont commutatifs et $L$ un $B$-module,
+\[
+  (A,B,L)\longmapsto\operatorname{Exalcom}_A(B,L)
+\]
+est encore un \emph{foncteur covariant} de $\mathbf K''$ dans $\mathbf{Ab}$. On
+peut aussi dans (18.3.7) remplacer partout $\operatorname{Exan}$ par
+$\operatorname{Exalcom}$. Enfin, si dans (18.3.8), on suppose que $B$ soit un
+anneau \emph{commutatif} et que $L$ soit un $C$-\emph{module}, le même
+raisonnement donne un isomorphisme canonique
+\begin{equation}
+\label{0.18.4.2.1-fr}
+\tag{18.4.2.1}
+  \operatorname{Hom}_C(\mathfrak J/\mathfrak J^2,L)
+  \xrightarrow{\sim}\operatorname{Exalcom}_B(C,L)
+\end{equation}
+où le premier membre est le groupe des homomorphismes de $C$-\emph{module}.
+\end{env}
+
+\begin{env}[18.4.3]
+\label{0.18.4.3-fr}
+Soit $A$ un anneau commutatif. Un cas important d'extensions de
+$A$-algèbres est formé des $A$-algèbres $E$, extensions d'une $A$-algèbre $B$
+par un $B$-bimodule $L$ telles que $E$, en tant que $A$-\emph{module}, soit une
+extension \emph{triviale} du $A$-module $B$ par le $A$-module $L$~; autrement
+dit, la suite exacte de $A$-\emph{modules}
+$0\to L\to E\to B\to0$ est \emph{scindée}. On dit alors que $E$ est une
+\emph{extension de Hochschild} de $B$ par $L$. Ce sera toujours le cas lorsque
+$B$ est un $A$-module \emph{projectif}, et en particulier lorsque $A$ est un
+\emph{corps} commutatif. En tant que $A$-module, on peut identifier $E$ à
+$B\times L$, la multiplication dans $E$ étant donnée par
+$(x,s)(y,t)=(xy,xt+sy+f(x,y))$ avec $f(x,y)\in L$. Si l'on écrit que cette
+multiplication définit sur $B\times L$ une structure de $A$-algèbre, on trouve
+(M, XIV, 2) que $f$ doit être une application $A$-\emph{bilinéaire} de
+$B\times B$ dans $L$, telle que
+\begin{equation}
+\label{0.18.4.3.1-fr}
+\tag{18.4.3.1}
+  f(xy,z)+f(x,y)z=xf(y,z)+f(x,yz),
+\end{equation}
+autrement dit, $f$ est un $2$-\emph{cocycle} sur $B$ à valeurs dans $L$, au
+sens de Hochschild~; pour que l'extension $E$ soit $A$-triviale, il faut et il
+suffit que l'on ait
+\begin{equation}
+\label{0.18.4.3.2-fr}
+\tag{18.4.3.2}
+  f(x,y)=xg(y)-g(xy)+g(x)y,
+\end{equation}
+où $g$ est une application $A$-\emph{linéaire} de $B$ dans $L$, autrement dit
+$f$ doit être un $2$-\emph{cobord} au sens de Hochschild. On en déduit aussitôt
+que les classes d'extensions de Hochschild de $B$ par $L$ forment un
+sous-groupe de $\operatorname{Exal}_A(B,L)$, isomorphe au \emph{groupe de
+cohomologie} de Hochschild $\mathrm H_A^2(B,L)$.
+
+Si $B$ est une $A$-algèbre \emph{commutative}, et $L$ un $B$-module, les
+extensions de Hochschild \emph{commutatives} de $B$ par $L$ correspondent aux
+$2$-cocycles \emph{symétriques}, c'est-à-dire tels que $f(y,x)=f(x,y)$. Les
+classes d'extensions de Hochschild commutatives de $B$ par $L$ forment donc un
+sous-groupe de $\operatorname{Exalcom}_A(B,L)$, isomorphe au sous-groupe de
+$\mathrm H_A^2(B,L)$ image du groupe des $2$-cocycles symétriques, que nous
+noterons $\mathrm H_A^2(B,L)^s$.
+\end{env}
+
+\begin{env}[18.4.4]
+\label{0.18.4.4-fr}
+Bornons-nous au cas où $A$ et $B$ sont \emph{commutatifs} et $L$ un
+$B$-module, et rappelons dans ce cas la définition équivalente des groupes de
+Hochschild $\mathrm H_A^i(B,L)$ (M, IX, 6). On considère un complexe
+$\mathbf P_\bullet=(\mathbf P_n)_{n\geqslant0}$ de $B$-modules, où
+$\mathbf P_n=B^{\otimes(n+1)}=B\otimes_A B\otimes_A\cdots\otimes_A B$
+($n+1$ fois), la structure de $B$-module étant définie
+
+\oldpage[0\textsubscript{IV-1}]{66}
+
+par
+\[
+  x(y_1\otimes y_2\otimes\cdots\otimes y_{n+1})
+  =(xy_1)\otimes y_2\otimes\cdots\otimes y_{n+1}\,;
+\]
+la dérivation, de degré $-1$, $d_n:\mathbf P_n\to\mathbf P_{n-1}$, est
+définie par
+\begin{align*}
+  d_n(x_1\otimes x_2\otimes\cdots\otimes x_{n+1})
+    &=(x_1x_2)\otimes x_3\otimes\cdots\otimes x_{n+1}
+      -x_1\otimes(x_2x_3)\otimes\cdots\otimes x_{n+1}+\cdots\\
+    &\quad+(-1)^{n-1}x_1\otimes x_2\otimes\cdots\otimes x_{n-1}
+      \otimes(x_nx_{n+1})
+      +(-1)^n(x_{n+1}x_1)\otimes x_2\otimes\cdots\otimes x_n,
+\end{align*}
+qui est bien $B$-linéaire puisque $B$ est commutatif.
+
+Un $2$-cocycle de ce complexe à valeurs dans $L$ est une application
+$B$-linéaire $h$ de $B\otimes B\otimes B$ dans $L$ telle que
+$h(d_3(x\otimes y\otimes z\otimes t))=0$~; mais comme
+$h(x\otimes y\otimes z)=xh(1\otimes y\otimes z)$, le cocycle $h$ est déterminé
+par l'application $A$-bilinéaire
+$(y,z)\longmapsto f(y,z)=h(1\otimes y\otimes z)$ de $B\times B$ dans $L$, et,
+en écrivant la condition précédente pour $h$, on retrouve pour $f$ la
+condition (18.4.3.1). De même, un $2$-cobord sera une application de la forme
+$x\otimes y\otimes z\longmapsto h'(d_2(x\otimes y\otimes z))$, où
+$h':B\otimes_A B\to L$ est linéaire, et ici encore $h'$ est déterminé par
+l'application $B$-linéaire $g:y\longmapsto h'(1\otimes y)$ de $B$ dans $L$~;
+on obtient alors
+$h'(d_2(1\otimes x\otimes y))=xg(y)-g(xy)+yg(x)$, ce qui redonne (18.4.3.2).
+On procède de même pour tout $i$, et l'on voit ainsi que l'on a
+\begin{equation}
+\label{0.18.4.4.1-fr}
+\tag{18.4.4.1}
+  \mathrm H_A^i(B,L)=\mathrm H^i(\operatorname{Hom}_B(\mathbf P_\bullet,L)).
+\end{equation}
+\end{env}
+
+\begin{env}[18.4.5]
+\label{0.18.4.5-fr}
+Sous les conditions de (18.4.4), on peut interpréter de la même façon le
+groupe $\mathrm H_A^2(B,L)^s$ (18.4.3). Pour cela, modifions le complexe
+$\mathbf P_\bullet$ en degré $3$, en considérant un nouveau complexe
+\[
+  \mathbf P'_\bullet:\mathbf P'_3\xrightarrow{d'_3}\mathbf P_2
+  \xrightarrow{d_2}\mathbf P_1\,;
+\]
+nous prendrons
+$\mathbf P'_3=\mathbf P_3\oplus(B\otimes_A B\otimes_A B)$, $d'_3$ coïncidant
+avec $d_3$ sur $\mathbf P_3$, et étant donné dans $B\otimes_A B\otimes_A B$
+par
+\[
+  d'_3(x\otimes y\otimes z)=x\otimes y\otimes z-x\otimes z\otimes y.
+\]
+
+La relation $d_2d'_3=0$ résulte de la commutativité de $B$. Avec les notations
+introduites ci-dessus, un $2$-cocycle de $\mathbf P'_\bullet$ correspond
+maintenant à une application $A$-bilinéaire $f:B\times B\to L$ qui est
+\emph{symétrique} et vérifie (18.4.3.1)~; par suite, on a
+\[
+  \mathrm H_A^2(B,L)^s
+  =\mathrm H^2(\operatorname{Hom}_B(\mathbf P'_\bullet,L)).
+\]
+\end{env}
+
+\begin{env}[18.4.6]
+\label{0.18.4.6-fr}
+Dans le cas particulier où l'on considère un \emph{corps} commutatif $k$, une
+\emph{extension} $K$ de $k$, on a $\operatorname{Ext}_K^1(M,L)=0$ quels que
+soient les $K$-espaces vectoriels $L$, $M$, et par suite (M, VI, 3.3 $a$)), on
+a un isomorphisme canonique
+\begin{equation}
+\label{0.18.4.6.1-fr}
+\tag{18.4.6.1}
+  \mathrm H_k^i(K,L)\xrightarrow{\sim}
+  \operatorname{Hom}_K(\mathrm H_i(\mathbf P_\bullet),L)
+\end{equation}
+et de même
+\begin{equation}
+\label{0.18.4.6.2-fr}
+\tag{18.4.6.2}
+  \mathrm H_k^2(K,L)^s\xrightarrow{\sim}
+  \operatorname{Hom}_K(\mathrm H_2(\mathbf P'_\bullet),L).
+\end{equation}
+\end{env}
+
+\subsection{Cas des anneaux topologiques}
+\label{subsection:0.18.5-fr}
+
+\begin{env}[18.5.1]
+\label{0.18.5.1-fr}
+Soient $A$, $B$ deux anneaux \emph{topologiques} dont la topologie est
+\emph{linéaire}, $\rho:A\to B$ un homomorphisme continu, $L$ un $B$-bimodule
+topologique, et supposons qu'il existe un idéal bilatère \emph{ouvert}
+$\mathfrak R_0$ de $B$ tel que
+$\mathfrak R_0.L=L.\mathfrak R_0=0$, de sorte que $L$ peut être
+
+\oldpage[0\textsubscript{IV-1}]{67}
+
+considéré comme un $(B/\mathfrak R)$-bimodule pour tout idéal ouvert
+$\mathfrak R\subset\mathfrak R_0$. Soient alors
+$\mathfrak R\subset\mathfrak R_0$ un idéal bilatère ouvert de $B$,
+$\mathfrak J$ un idéal bilatère ouvert de $A$ tel que
+$\rho(\mathfrak J)\subset\mathfrak R$, de sorte que $B/\mathfrak R$ peut être
+considéré comme un $(A/\mathfrak J)$-anneau discret. La remarque précédente
+prouve que le groupe
+$\operatorname{Exan}_{A/\mathfrak J}(B/\mathfrak R,L)$ est défini~; en outre,
+si $\mathfrak R'\subset\mathfrak R$, $\mathfrak J'\subset\mathfrak J$ sont
+deux idéaux bilatères ouverts de $A$ et $B$ respectivement tels que
+$\rho(\mathfrak J')\subset\mathfrak R'$, on a par (18.3.5.1) un homomorphisme
+canonique
+\begin{equation}
+\label{0.18.5.1.1-fr}
+\tag{18.5.1.1}
+  \operatorname{Exan}_{A/\mathfrak J}(B/\mathfrak R,L)
+  \longrightarrow
+  \operatorname{Exan}_{A/\mathfrak J'}(B/\mathfrak R',L).
+\end{equation}
+
+L'ensemble des couples d'idéaux ouverts $(\mathfrak J,\mathfrak R)$ tels que
+$\rho(\mathfrak J)\subset\mathfrak R\subset\mathfrak R_0$ est évidemment
+ordonné filtrant à droite pour la relation «~$\mathfrak J\supset\mathfrak J'$
+et $\mathfrak R\supset\mathfrak R'$~» et les applications (18.5.1.1)
+définissent un \emph{système inductif} de groupes additifs ayant cet ensemble
+pour ensemble d'indices. On pose, par abus de notation (car il ne s'agit plus
+d'un groupe en correspondance biunivoque naturelle avec un ensemble
+d'extensions)
+\begin{equation}
+\label{0.18.5.1.2-fr}
+\tag{18.5.1.2}
+  \operatorname{Exantop}_A(B,L)
+  =\varinjlim\operatorname{Exan}_{A/\mathfrak J}(B/\mathfrak R,L).
+\end{equation}
+
+Dire que le second membre de (18.5.1.2) est \emph{nul} signifie donc que, pour
+tout couple d'idéaux ouverts $\mathfrak J\subset A$, $\mathfrak R\subset B$
+tels que $\rho(\mathfrak J)\subset\mathfrak R\subset\mathfrak R_0$ et toute
+$(A/\mathfrak J)$-extension $E$ de $B/\mathfrak R$ par $L$, il existe deux
+idéaux ouverts $\mathfrak J'\subset\mathfrak J$,
+$\mathfrak R'\subset\mathfrak R$ tels que
+$\rho(\mathfrak J')\subset\mathfrak R'$ et que l'image réciproque par
+l'homomorphisme $B/\mathfrak R'\to B/\mathfrak R$ de $E$ soit \emph{triviale}.
+
+Nous laissons au lecteur la définition analogue des limites inductives
+$\operatorname{Exaltop}_A(B,L)$, $\operatorname{Exalcotop}_A(B,L)$ à partir de
+$\operatorname{Exal}_{A/\mathfrak J}(B/\mathfrak R,L)$ et de
+$\operatorname{Exalcom}_{A/\mathfrak J}(B/\mathfrak R,L)$ pour le cas où $A$
+est commutatif et $B$ une $A$-algèbre (resp. une $A$-algèbre commutative)
+topologique.
+\end{env}
+
+\begin{env}[18.5.2]
+\label{0.18.5.2-fr}
+Si l'on a un diagramme commutatif d'homomorphismes continus d'anneaux
+\[
+  \xymatrix@C=3pc@R=2pc{
+    B'\ar[r] & B\\
+    A'\ar[u]\ar[r] & A\ar[u]
+  }
+\]
+on en déduit canoniquement deux homomorphismes de groupes additifs
+\[
+  \operatorname{Exantop}_A(B,L)
+  \longrightarrow\operatorname{Exantop}_{A'}(B,L)
+  \longrightarrow\operatorname{Exantop}_{A'}(B',L)
+\]
+par passage à la limite inductive à partir de (18.3.5.1).
+
+En vertu de l'exactitude du foncteur $\varinjlim$ dans la catégorie des groupes
+commutatifs, le noyau de l'homomorphisme
+\[
+  \operatorname{Exantop}_A(B,L)
+  \longrightarrow\operatorname{Exantop}_{A'}(B,L)
+\]
+est la limite inductive des noyaux des homomorphismes
+\[
+  \operatorname{Exan}_{A/\mathfrak J}(B/\mathfrak R,L)
+  \longrightarrow
+  \operatorname{Exan}_{A'/\mathfrak J'}(B/\mathfrak R,L)
+\]
+où on a pris pour $\mathfrak J'$ l'image réciproque de $\mathfrak J$~; on note
+ce noyau $\operatorname{Exantop}_{A/A'}(B,L)$. On définit de même
+$\operatorname{Exaltop}_{A/A'}(B,L)$ et
+$\operatorname{Exalcotop}_{A/A'}(B,L)$. Enfin, si on a un homomorphisme
+
+\oldpage[0\textsubscript{IV-1}]{68}
+
+continu de $B$-bimodules $L\to L'$, on en déduit canoniquement un
+homomorphisme de groupes additifs
+\[
+  \operatorname{Exantop}_A(B,L)\longrightarrow
+  \operatorname{Exantop}_A(B,L')
+\]
+par passage à la limite inductive à partir de (18.3.6.1).
+\end{env}
+
+\begin{env}[18.5.3]
+\label{0.18.5.3-fr}
+Étant donnés un anneau topologique $C$ et deux $C$-bimodules topologiques
+$M$, $N$,\linebreak on note $\operatorname{Hom.\ cont}_C(M,N)$ le groupe additif des
+$C$-homomorphismes \emph{continus} de $M$ dans $N$.
+\end{env}
+
+\begin{lemma}[18.5.3.1]
+\label{0.18.5.3.1-fr}
+Soient $C$ un anneau topologique, $E$, $L$ deux $C$-bimodules topologiques~;
+on suppose que les topologies sont linéaires, que $L$ est discret et annulé
+par un idéal bilatère ouvert de $C$. Alors on a un isomorphisme canonique
+\begin{equation}
+\label{0.18.5.3.2-fr}
+\tag{18.5.3.2}
+  \varinjlim\operatorname{Hom}_{C/\mathfrak R}(E/V,L)
+  \xrightarrow{\sim}\operatorname{Hom.\ cont}_C(E,L)
+\end{equation}
+où dans le premier membre la limite inductive est prise suivant l'ensemble
+ordonné filtrant des couples $(\mathfrak R,V)$ tels que $\mathfrak R$ soit un
+idéal bilatère ouvert de $C$, $V$ un sous-$C$-bimodule ouvert de $E$, tels que
+$\mathfrak R.L=L.\mathfrak R=0$, $\mathfrak R.E\subset V$,
+$E.\mathfrak R\subset V$.
+\end{lemma}
+
+\begin{proof}
+Comme $C/\mathfrak R$ et $E/V$ sont discrets, on a des homomorphismes
+canoniques
+\[
+  w_{\mathfrak R,V}:\operatorname{Hom}_{C/\mathfrak R}(E/V,L)
+  \longrightarrow\operatorname{Hom.\ cont}_C(E,L)
+\]
+formant un système inductif, d'où un homomorphisme (18.5.3.2) par passage à la
+limite inductive. Comme l'homomorphisme $E/V'\to E/V$ est surjectif pour
+$V'\subset V$, il résulte aussitôt de la définition que l'homomorphisme
+\[
+  \operatorname{Hom}_{C/\mathfrak R}(E/V,L)
+  \longrightarrow\operatorname{Hom}_{C/\mathfrak R}(E/V',L)
+\]
+(avec $\mathfrak R.L=L.\mathfrak R=0$, $\mathfrak R.E\subset V'$,
+$E.\mathfrak R\subset V'$) est injectif, et il en est évidemment de même de
+l'homomorphisme
+\[
+  \operatorname{Hom}_{C/\mathfrak R}(E/V,L)
+  \longrightarrow\operatorname{Hom}_{C/\mathfrak R'}(E/V,L)
+\]
+pour $\mathfrak R'\subset\mathfrak R$~; on en conclut que l'homomorphisme
+(18.5.3.2) est injectif. D'autre part, si $u$ est un $C$-homomorphisme continu
+de $E$ dans $L$, son noyau est un sous-bimodule ouvert $V_0$ de $E$, et si
+$\mathfrak R_0$ est un idéal bilatère ouvert de $C$ tel que
+$\mathfrak R_0.L=L.\mathfrak R_0=0$ et $\mathfrak R_0.E\subset V_0$,
+$E.\mathfrak R_0\subset V_0$, il est clair que $u$ est l'image canonique d'un
+$(C/\mathfrak R_0)$-homomorphisme de $E/V_0$ dans $L$, donc (18.5.3.2) est
+surjectif.
+\end{proof}
+
+Cela étant, la proposition (18.3.8) se généralise comme suit aux anneaux
+topologiques~:
+
+\begin{proposition}[18.5.4]
+\label{0.18.5.4-fr}
+Soient $B$ un anneau topologique linéairement topologisé, $\mathfrak J$ un
+idéal bilatère de $B$, $C=B/\mathfrak J$ l'anneau topologique quotient~;
+$\mathfrak J/\mathfrak J^2$ (où $\mathfrak J$ est muni de la topologie induite
+par celle de $B$ et $\mathfrak J/\mathfrak J^2$ de la topologie quotient de
+celle de $\mathfrak J$) est alors canoniquement muni d'une structure de
+$C$-bimodule topologique. Pour tout $C$-bimodule discret $L$ annulé par un
+idéal ouvert de $C$, il existe alors un isomorphisme canonique
+\begin{equation}
+\label{0.18.5.4.1-fr}
+\tag{18.5.4.1}
+  \operatorname{Hom.\ cont}_C(\mathfrak J/\mathfrak J^2,L)
+  \xrightarrow{\sim}\operatorname{Exantop}_B(C,L).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+En effet, pour tout idéal ouvert $\mathfrak R$ de $B$ tel que
+$(\mathfrak J+\mathfrak R)/\mathfrak J$ annule $L$, on a, d'après (18.3.9),
+un isomorphisme canonique
+\[
+  \operatorname{Hom}_{B/(\mathfrak J+\mathfrak R)}
+    ((\mathfrak J+\mathfrak R)/(\mathfrak J^2+\mathfrak R),L)
+  \xrightarrow{\sim}
+  \operatorname{Exan}_{B/\mathfrak R}(B/(\mathfrak J+\mathfrak R),L)
+\]
+et il suffit de passer à la limite inductive, en tenant compte de (18.5.3.1).
+\end{proof}

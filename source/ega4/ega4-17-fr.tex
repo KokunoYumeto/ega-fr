@@ -1,0 +1,1833 @@
+\section[Morphismes lisses, morphismes non ramifiés (ou nets) morphismes étales]{Morphismes lisses, morphismes non ramifiés (ou nets)\\morphismes étales}
+\label{section:IV.17}
+
+Dans le présent paragraphe, nous reprenons les notions étudiées dans (0, 19), exprimées à l'aide du langage géométrique des schémas et du point de vue global, pour les préschémas localement de présentation finie sur un préschéma de base donné. La plupart des résultats (à l'exception des n\textsuperscript{os} 17.7, 17.8, 17.9, 17.13 et 17.16) se réduisent d'ailleurs à des variantes de propriétés déjà rencontrées dans (0, 19). Pour des résultats plus spéciaux sur les morphismes étales, le lecteur consultera le § 18.
+
+\subsection{Morphismes formellement lisses, morphismes formellement non ramifiés, morphismes formellement étales}
+\label{subsection:IV.17.1}
+
+\begin{definition}[17.1.1]
+\label{IV.17.1.1}
+Soit $f:X\to Y$ un morphisme de préschémas. On dit que $f$ est \emph{formellement lisse} (resp. \emph{formellement non ramifié} ou \emph{formellement net}, resp. \emph{formellement étale}) si, pour tout schéma affine $Y'$, tout sous-schéma fermé $Y'_0$ de $Y'$ défini par un Idéal nilpotent $\sh{J}$ de $\sh{O}_{Y'}$, et tout morphisme $Y'\to Y$, l'application
+\[
+\label{IV.17.1.1.1}
+  \Hom_Y(Y',X)\longrightarrow\Hom_Y(Y'_0,X)
+  \tag{17.1.1.1}
+\]
+déduite de l'injection canonique $Y'_0\to Y'$, est \emph{surjective} (resp. \emph{injective}, resp. \emph{bijective}).
+\end{definition}
+
+On dit encore alors que $X$ est \emph{formellement lisse} (resp. \emph{formellement non ramifié} ou \emph{formellement net}, resp. \emph{formellement étale}) sur $Y$.
+
+Il est clair que dire que $f$ est formellement étale signifie qu'il est \emph{à la fois} formellement lisse et formellement non ramifié.
+
+\begin{remarks}[17.1.2]
+\label{IV.17.1.2}
+\begin{enumerate}
+  \item[(i)] Supposons que $Y=\Spec(A)$ et $X=\Spec(B)$ soient affines, de sorte que $f$ provient d'un homomorphisme d'anneaux $\varphi:A\to B$. En vertu de (0, 19.3.1 et 0, 19.10.1), dire que $f$ est formellement lisse (resp. formellement non ramifié, resp. formellement étale) signifie que $\varphi$ fait de $B$ une $A$-algèbre \emph{formellement lisse} (resp. \emph{formellement non ramifiée}, resp. \emph{formellement étale}) pour les topologies \emph{discrètes} sur $A$ et $B$.
+  \item[(ii)] Pour vérifier que $f$ est formellement lisse (resp. formellement non ramifié, resp. formellement étale), on peut, dans la définition (17.1.1) se borner au cas où $\sh{J}^2=0$. En effet, si $f$ vérifie la condition correspondante de la définition (17.1.1) dans ce cas particulier, et si l'on a $\sh{J}^n=0$, on considère le sous-schéma fermé $Y'_j$ de $Y'$ défini par l'Idéal $\sh{J}^{j+1}$ pour $0\leq j\leq n-1$, de sorte que $Y'_j$ est un sous-schéma fermé de $Y'_{j+1}$ défini par un Idéal de carré nul; l'hypothèse entraîne que chacune des applications
+  \[
+    \Hom_Y(Y'_{j+1},X)\longrightarrow\Hom_Y(Y'_j,X)qquad(0\leq j\leq n-1)
+  \]
+  \oldpage[IV-4]{57}
+  est surjective (resp. injective, resp. bijective); par composition, on en conclut qu'il en est de même de (17.1.1.1).
+  \item[(iii)] On notera que les propriétés du morphisme $f$ définies dans (17.1.1) sont des propriétés du \emph{foncteur représentable} $(0_{\mathrm{III}}, 8.1.8)$
+  \[
+    Y'\longmapsto\Hom_Y(Y',X)
+  \]
+  de la catégorie des $Y$-préschémas dans la catégorie des ensembles; elles gardent un sens pour \emph{n'importe quel} foncteur contravariant ayant mêmes catégories de départ et d'arrivée, représentable ou non.
+  \item[(iv)] Supposons que le morphisme $f$ soit formellement non ramifié (resp. formellement étale); considérons un $Y$-préschéma \emph{quelconque} $Z$ et un sous-préschéma fermé $Z_0$ de $Z$ défini par un Idéal \emph{localement nilpotent} $\sh{J}$ de $\sh{O}_Z$. Alors l'application
+  \[
+  \label{IV.17.1.2.1}
+    \Hom_Y(Z,X)\longrightarrow\Hom_Y(Z_0,X)
+    \tag{17.1.2.1}
+  \]
+  déduite de l'injection canonique $Z_0\to Z$, est encore injective (resp. bijective). En effet, soit $(U_\alpha)$ un recouvrement ouvert affine de $Z$ tel que les Idéaux $\sh{J}|U_\alpha$ soient nilpotents, et pour tout $\alpha$, soit $U^0_\alpha$ l'image réciproque de $U_\alpha$ dans $Z_0$, qui est le sous-schéma fermé de $U_\alpha$ défini par $\sh{J}|U_\alpha$. Soit $f_0:Z_0\to X$ un $Y$-morphisme; par hypothèse, pour tout $\alpha$, il y a au plus un (resp. un et un seul) $Y$-morphisme $f_\alpha:U_\alpha\to X$ dont la restriction à $U^0_\alpha$ soit égale à $f_0|U^0_\alpha$. On en conclut aussitôt que si $f_\alpha$ et $f_\beta$ sont définis, alors, pour tout ouvert affine $V\subset U_\alpha\cap U_\beta$, on a $f_\alpha|V=f_\beta|V$, puisque les restrictions de ces morphismes à l'image réciproque $V_0$ de $V$ dans $Z_0$ coïncident. Il y a donc au plus un (resp. un et un seul) $Y$-morphisme $f:Z\to X$ dont la restriction à $Z_0$ coïncide avec $f_0$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[17.1.3]
+\label{IV.17.1.3}
+\begin{enumerate}
+  \item[(i)] Un monomorphisme de préschémas est formellement non ramifié; une immersion ouverte est formellement étale.
+  \item[(ii)] Le composé de deux morphismes formellement lisses (resp. formellement non ramifiés, resp. formellement étales) est formellement lisse (resp. formellement non ramifié, resp. formellement étale).
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme formellement lisse (resp. formellement non ramifié, resp. formellement étale), il en est de même de $f_{(S')}:X_{(S')}\to Y_{(S')}$ pour toute extension $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes formellement lisses (resp. formellement non ramifiés, resp. formellement étales), il en est de même de $f\times_S g:X\times_S Y\to X'\times_S Y'$.
+  \item[(v)] Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes; si $g\circ f$ est formellement non ramifié, il en est de même de $f$.
+  \item[(vi)] Si $f:X\to Y$ est un morphisme formellement non ramifié, il en est de même de $f_{\mathrm{red}}:X_{\mathrm{red}}\to Y_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+En vertu de (I, 5.5.12), il suffit de prouver (i), (ii) et (iii). Les deux assertions de (i) sont triviales. Pour prouver (ii), considérons deux morphismes $f:X\to Y$, $g:Y\to Z$, un schéma affine $Z'$, un sous-schéma fermé $Z'_0$ de $Z'$ défini par un Idéal nilpotent et un morphisme $Z'\to Z$. Supposons $f$ et $g$ formellement lisses, et considérons un
+\oldpage[IV-4]{58}
+$Z$-morphisme $u_0:Z'_0\to X$; l'hypothèse sur $g$ entraîne qu'il existe un $Z$-morphisme $v:Z'\to Y$ tel que $f\circ u_0=v\circ j$ (où $j:Z'_0\to Z'$ est l'injection canonique); l'hypothèse sur $f$ entraîne alors qu'il existe un morphisme $u:Z'\to X$ tel que $f\circ u=v$ et $u\circ j=u_0$, donc $(g\circ f)\circ u$ est égal au morphisme donné $Z'\to Z$ et $u\circ j=u_0$, ce qui prouve que $g\circ f$ est formellement lisse; on raisonne de même lorsque l'on suppose $f$ et $g$ formellement non ramifiés.
+
+Enfin, pour démontrer (iii), posons $X'=X_{(S')}$, $Y'=Y_{(S')}$, $f'=f_{(S')}$; considérons un schéma affine $Y''$, un sous-schéma fermé $Y''_0$ de $Y''$ défini par un Idéal nilpotent et un morphisme $g:Y''\to Y'$ faisant de $Y''$ un $Y'$-préschéma; on sait alors (I, 3.3.8) que $\Hom_{Y'}(Y'',X')$ s'identifie canoniquement à $\Hom_Y(Y'',X)$ et $\Hom_{Y'}(Y''_0,X')$ à $\Hom_Y(Y''_0,X)$, et la conclusion résulte alors immédiatement de la définition (17.1.1).
+
+On notera qu'une \emph{immersion fermée} n'est pas nécessairement un morphisme formellement lisse.
+
+\begin{proposition}[17.1.4]
+\label{IV.17.1.4}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes, et supposons $g$ formellement non ramifié. Alors, si $g\circ f$ est formellement lisse (resp. formellement étale), il en est de même de $f$.
+\end{proposition}
+
+En effet, soient $Y'$ un schéma affine, $Y'_0$ un sous-schéma fermé de $Y'$ défini par un Idéal nilpotent, $h:Y'\to Y$ un morphisme, $j:Y'_0\to Y'$ l'injection canonique, $u_0:Y'_0\to X$ un $Y$-morphisme, donc tel que $f\circ u_0=h\circ j$. Supposons $g\circ f$ formellement lisse; alors il existe un morphisme $u:Y'\to X$ tel que $u\circ j=u_0$ et $(g\circ f)\circ u=g\circ h$. Mais ces relations entraînent que $f\circ u$ et $h$ sont deux $Z$-morphismes de $Y'$ dans $Y$ tels que $(f\circ u)\circ j=h\circ j$; en vertu de l'hypothèse que $g$ est formellement non ramifié, on en tire que $f\circ u=h$, autrement dit $u$ est un $Y$-morphisme; donc $f$ est formellement lisse. Compte tenu de (17.1.3, (v)), cela démontre la proposition.
+
+\begin{corollary}[17.1.5]
+\label{IV.17.1.5}
+Supposons $g$ formellement étale; alors, pour que $g\circ f$ soit formellement lisse (resp. formellement non ramifié, resp. formellement étale), il faut et il suffit que $f$ le soit.
+\end{corollary}
+
+Cela résulte de (17.1.4) et de (17.1.3, (ii) et (v)).
+
+\begin{proposition}[17.1.6]
+\label{IV.17.1.6}
+Soit $f:X\to Y$ un morphisme de préschémas.
+\begin{enumerate}
+  \item[(i)] Soit $(U_\alpha)$ un recouvrement ouvert de $X$ et, pour tout $\alpha$, soit $i_\alpha:U_\alpha\to X$ l'injection canonique. Pour que $f$ soit formellement lisse (resp. formellement non ramifié, resp. formellement étale), il faut et il suffit que chacun des morphismes $f\circ i_\alpha$ le soit.
+  \item[(ii)] Soit $(V_\lambda)$ un recouvrement ouvert de $Y$. Pour que $f$ soit formellement lisse (resp. formellement non ramifié, resp. formellement étale), il faut et il suffit que chacune des restrictions $f^{-1}(V_\lambda)\to V_\lambda$ de $f$ le soit.
+\end{enumerate}
+\end{proposition}
+
+Notons d'abord que (ii) est conséquence de (i): en effet, si $j_\lambda:V_\lambda\to Y$ et $i_\lambda:f^{-1}(V_\lambda)\to X$ sont les injections canoniques, la restriction $f_\lambda:f^{-1}(V_\lambda)\to V_\lambda$ de $f$ est telle que $j_\lambda\circ f_\lambda=f\circ i_\lambda$; si $f$ est formellement lisse (resp. formellement non ramifié), il en est de même de $f\circ i_\lambda$ puisque $i_\lambda$ est formellement étale (17.1.3); mais comme $j_\lambda$ est formellement étale, cela entraîne que $f_\lambda$ est formellement lisse (resp. formellement non ramifié) en vertu de (17.1.5). Inversement, si tous les $f_\lambda$ sont formellement lisses (resp. formellement non ramifiés), il en est de même des $j_\lambda\circ f_\lambda$ (17.1.3), donc aussi de $f$ en vertu de (i).
+
+\oldpage[IV-4]{59}
+Si l'on tient compte de ce que les $i_\alpha$ sont formellement étales, tout revient donc à prouver que si les $f\circ i_\alpha$ sont formellement lisses (resp. formellement non ramifiés), il en est de même de $f$.
+
+Soient donc $Y'$ un schéma affine, $Y'_0$ un sous-schéma fermé de $Y'$ défini par un Idéal nilpotent $\sh{J}$, que l'on peut supposer tel que $\sh{J}^2=0$ (17.1.2, (ii)), et enfin soit $g:Y'\to Y$ un morphisme. Supposons donné un $Y$-morphisme $u_0:Y'_0\to X$; désignons par $W_\alpha$ (resp. $W^0_\alpha$) le préschéma induit par $Y'$ (resp. $Y'_0$) sur l'ouvert $u_0^{-1}(U_\alpha)$ (on rappelle que $Y'$ et $Y'_0$ ont \emph{même espace topologique sous-jacent}). Supposons d'abord que les $f\circ i_\alpha$ soient \emph{formellement non ramifiés}, et montrons que, si $u'$ et $u''$ sont deux $Y$-morphismes de $Y'$ dans $X$ dont les restrictions à $Y'_0$ coïncident, alors on a $u'=u''$. En effet, compte tenu de (17.1.2, (iv)), l'hypothèse que les $f\circ i_\alpha$ sont non ramifiés entraîne que pour tout $\alpha$, on a $u'|W_\alpha=u''|W_\alpha$, puisque les restrictions de ces deux $Y$-morphismes à $W^0_\alpha$ coïncident. D'où la conclusion dans ce cas.
+
+Supposons maintenant tous les $f\circ i_\alpha$ \emph{formellement lisses} et prouvons qu'il existe un $Y$-morphisme $u:Y'\to X$ dont $u_0$ est la restriction à $Y'_0$. Or, puisque $Y'$ est un \emph{schéma affine}, on peut appliquer (16.5.17) dont les hypothèses sont satisfaites, et dont la conclusion démontre précisément l'existence de $u$.
+
+On peut donc dire que les notions introduites dans (17.1.1) sont \emph{locales} sur $X$ et sur $Y$, ce qui permet toujours, en vertu de (17.1.2, (i)), de se ramener à l'étude des \emph{algèbres} formellement lisses (resp. formellement non ramifiées, resp. formellement étales).
+
+\subsection{Propriétés différentielles générales}
+\label{subsection:IV.17.2}
+
+\begin{proposition}[17.2.1]
+\label{IV.17.2.1}
+Pour qu'un morphisme $f:X\to Y$ soit formellement non ramifié, il faut et il suffit que $\Omega_f^1=0$ (ce qu'on écrit encore $\Omega_{X/Y}^1=0$ (16.3.1)).
+\end{proposition}
+
+Compte tenu de (17.1.6), on est ramené au cas où $Y=\Spec(A)$ et $X=\Spec(B)$ sont affines, et la conclusion résulte alors de (0, 20.7.4) et de l'interprétation de $\Omega_{X/Y}^1$ dans ce cas (16.3.7).
+
+\begin{corollary}[17.2.2]
+\label{IV.17.2.2}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes. Pour que $f$ soit formellement non ramifié, il faut et il suffit que l'homomorphisme canonique (16.4.19)
+\[
+  f^*(\Omega_{Y/Z}^1)\longrightarrow\Omega_{X/Z}^1
+\]
+soit surjectif.
+\end{corollary}
+
+C'est une conséquence immédiate de (17.2.1) et de la suite exacte (16.4.19.1).
+
+\begin{proposition}[17.2.3]
+\label{IV.17.2.3}
+Soit $f:X\to Y$ un morphisme formellement lisse.
+\begin{enumerate}
+  \item[(i)] Le $\sh{O}_X$-Module $\Omega_{X/Y}^1$ est localement projectif (16.10.1). Si $f$ est localement de type fini, $\Omega_{X/Y}^1$ est localement libre de type fini.
+  \item[(ii)] Pour tout morphisme $g:Y\to Z$, la suite (16.4.19) de $\sh{O}_X$-Modules
+  \[
+  \label{IV.17.2.3.1}
+    0\longrightarrow f^*(\Omega_{Y/Z}^1)\longrightarrow\Omega_{X/Z}^1\longrightarrow\Omega_{X/Y}^1\longrightarrow0
+    \tag{17.2.3.1}
+  \]
+  est exacte; en outre, pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ tel que les restrictions à $U$ des homomorphismes de (17.2.3.1) forment une suite exacte et scindée.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-4]{60}
+\begin{enumerate}
+  \item[(i)] On sait (16.3.9) que si $f$ est localement de type fini, $\Omega_f^1$ est un $\sh{O}_X$-Module de type fini. Pour prouver que, dans tous les cas, il est localement projectif, on peut se borner, en vertu de (17.1.6), au cas où $Y=\Spec(A)$ et $X=\Spec(B)$ sont affines, et cela résulte de l'hypothèse sur $f$ et de (0, 20.4.9 et 0, 19.2.1).
+  \item[(ii)] Ici encore, on peut se borner au cas où $X$, $Y$ et $Z$ sont affines (17.1.6) et la conclusion résulte dans ce cas de l'interprétation des Modules figurant dans la suite (17.2.3.1) et de (0, 20.5.7).
+\end{enumerate}
+
+\begin{corollary}[17.2.4]
+\label{IV.17.2.4}
+Si $f:X\to Y$ est un morphisme formellement étale, alors, pour tout morphisme $g:Y\to Z$, l'homomorphisme canonique de $\sh{O}_X$-Modules
+\[
+  f^*(\Omega_{Y/Z}^1)\longrightarrow\Omega_{X/Z}^1
+\]
+est bijectif.
+\end{corollary}
+
+Cela résulte de l'exactitude de la suite (17.2.3.1) et du fait que l'on a alors $\Omega_{X/Y}^1=0$ (17.2.1).
+
+\begin{proposition}[17.2.5]
+\label{IV.17.2.5}
+Soient $f:X\to Y$ un morphisme, $X'$ un sous-préschéma de $X$ tel que le morphisme composé $X'\xrightarrow{j}X\to Y$ (où $j$ est l'injection canonique) soit formellement lisse. Alors la suite de $\sh{O}_{X'}$-Modules (16.4.21)
+\[
+\label{IV.17.2.5.1}
+  0\longrightarrow\mathcal{N}_{X'/X}\longrightarrow\Omega_{X/Y}^1\otimes_{\sh{O}_X}\sh{O}_{X'}\longrightarrow\Omega_{X'/Y}^1\longrightarrow0
+  \tag{17.2.5.1}
+\]
+est exacte; en outre, pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ tel que les restrictions à $U$ des homomorphismes de (17.2.5.1) forment une suite exacte et scindée.
+\end{proposition}
+
+Toujours en vertu de (17.1.6), on peut se borner au cas où $Y=\Spec(A)$ et $X=\Spec(B)$ sont affines, et $X'=\Spec(B/\mathfrak{J})$, où $\mathfrak{J}$ est un idéal de $B$. Alors le faisceau conormal $\mathcal{N}_{X'/X}$ correspond au $B$-module $\mathfrak{J}/\mathfrak{J}^2$ (16.1.3), et la conclusion découle de (0, 20.5.14).
+
+\begin{proposition}[17.2.6]
+\label{IV.17.2.6}
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme localement de type fini. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est un monomorphisme.
+  \item[b)] $f$ est radiciel et formellement non ramifié.
+  \item[c)] Pour tout $y\in Y$, la fibre $f^{-1}(y)$ est vide ou $k(y)$-isomorphe à $\Spec(k(y))$ (autrement dit, est réduite à un seul point $z$ tel que $k(y)\to\sh{O}_z/\mathfrak{m}_y\sh{O}_z$ soit un isomorphisme).
+\end{enumerate}
+\end{proposition}
+
+Le fait que a) entraîne c) résulte de (8.11.5.1). Il est clair que c) entraîne que $f$ est radiciel; montrons qu'il résulte aussi de c) que $\Omega_{X/Y}^1=0$, ce qui prouvera que c) entraîne b) (17.2.1). Notons que le $\sh{O}_X$-Module $\Omega_{X/Y}^1$ est quasi-cohérent de type fini (16.3.9). Il résulte donc de (I, 9.1.13.1) que, pour que $(\Omega_{X/Y}^1)_x=0$, il faut et il suffit que si l'on pose $Y_1=\Spec(k(y))$, $X_1=f^{-1}(y)=X\times_Y Y_1$, on ait $(\Omega_{X_1/Y_1}^1)_x=0$; mais comme le morphisme $f_1:X_1\to Y_1$ déduit de $f$ est formellement non ramifié en vertu de l'hypothèse c) (17.1.3), la conclusion résulte de (17.2.1). Prouvons enfin que b) entraîne a); pour cela, considérons le morphisme diagonal $g=\Delta_f:X\to X\times_Y X$; puisque $f$ est radiciel, $g$ est surjectif (I, 8.7.1); d'autre part, $\Omega_{X/Y}^1$ est par définition le faisceau conormal $\mathop{Gr}\nolimits_1(g)$ de l'immersion $g$ (16.3.1), et dire que $f$ est formellement non ramifié signifie donc que
+
+\oldpage[IV-4]{61}
+$\mathop{Gr}\nolimits_1(g)=0$ (17.2.1). En outre, $g$ est localement de présentation finie (I, 4.3.1); donc l'hypothèse $\mathop{Gr}\nolimits_1(g)=0$ entraîne que $g$ est une immersion ouverte (16.1.10); étant surjective, cette immersion est un isomorphisme, donc $f$ est un monomorphisme (I, 5.3.8).
+
+\subsection{Morphismes lisses, morphismes non ramifiés, morphismes étales}
+\label{subsection:IV.17.3}
+
+\begin{definition}[17.3.1]
+\label{IV.17.3.1}
+On dit qu'un morphisme $f:X\to Y$ est \emph{lisse} (resp. \emph{non ramifié}, ou \emph{net}\footnote{Les mots « net » et « formellement net » paraissent bien préférables à la terminologie consacrée de « non ramifié » (resp. « formellement non ramifié ») et seront employés à peu près exclusivement à partir du chap. V. Dans ce chapitre, nous avons conservé l'ancienne terminologie afin de ne pas entrer en conflit avec (0, 19.10).}, resp. \emph{étale}) s'il est localement de présentation finie et formellement lisse (resp. formellement non ramifié, resp. formellement étale).
+\end{definition}
+
+On dit encore alors que $X$ est \emph{lisse} (resp. \emph{non ramifié} ou \emph{net}, resp. \emph{étale}) sur $Y$.
+
+Nous verrons plus loin (17.5.2) que cette définition d'un morphisme lisse coïncide avec celle déjà donnée dans (6.8.1); jusque-là, c'est la définition de (17.3.1) que nous utiliserons exclusivement.
+
+Il est clair que dire que $f$ est étale signifie qu'il est \emph{à la fois} lisse et non ramifié.
+
+\begin{remarks}[17.3.2]
+\label{IV.17.3.2}
+\begin{enumerate}
+  \item[(i)] On notera que la définition (17.3.1) peut s'exprimer uniquement à l'aide du foncteur
+  \[
+    Y'\longmapsto\Hom_Y(Y',X)
+  \]
+  considéré dans (17.1.2, (iii)), car dire que $f$ est localement de présentation finie équivaut à dire que le foncteur précédent \emph{commute aux limites projectives de schémas affines} (8.14.2).
+  \item[(ii)] Soient $A$ un anneau, $B$ une $A$-algèbre. On dit que $B$ est une $A$-algèbre \emph{lisse} (resp. \emph{non ramifiée}, resp. \emph{étale}) si le morphisme correspondant $\Spec(B)\to\Spec(A)$ est lisse (resp. non ramifié, resp. étale). Il revient au même de dire que $B$ est une $A$-algèbre \emph{de présentation finie} (I, 4.4.6) et formellement lisse (resp. formellement non ramifiée, resp. formellement étale) pour les topologies discrètes.
+  \item[(iii)] Il résulte de (17.1.6) et de la définition d'un morphisme localement de présentation finie (I, 4.4.2) que les notions de morphisme lisse, non ramifié et étale sont \emph{locales sur $X$ et sur $Y$}.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[17.3.3]
+\label{IV.17.3.3}
+\begin{enumerate}
+  \item[(i)] Une immersion ouverte est étale. Pour qu'une immersion soit non ramifiée, il faut et il suffit qu'elle soit localement de présentation finie.
+  \item[(ii)] Le composé de deux morphismes lisses (resp. non ramifiés, resp. étales) est lisse (resp. non ramifié, resp. étale).
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme lisse (resp. non ramifié, resp. étale), il en est de même de $f_{(S')}:X_{(S')}\to Y_{(S')}$ pour toute extension $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes lisses (resp. non ramifiés, resp. étales), il en est de même de $f\times_S g:X\times_S Y\to X'\times_S Y'$.
+\end{enumerate}
+
+\oldpage[IV-4]{62}
+
+\begin{enumerate}
+  \item[(v)] Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes; si $g$ est localement de type fini et si $g\circ f$ est non ramifié, alors $f$ est non ramifié.
+\end{enumerate}
+\end{proposition}
+
+Cela résulte aussitôt de (I, 4.3) et de (17.1.3).
+
+\begin{proposition}[17.3.4]
+\label{IV.17.3.4}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes, et supposons $g$ non ramifié. Alors, si $g\circ f$ est lisse (resp. non ramifié, resp. étale), il en est de même de $f$.
+\end{proposition}
+
+En effet, comme $g$ et $g\circ f$ sont localement de présentation finie, il en est de même de $f$ (I, 4.4.3, (v)); la conclusion résulte donc de (17.1.4) et (17.1.3, (v)).
+
+\begin{corollary}[17.3.5]
+\label{IV.17.3.5}
+Supposons $g$ étale; alors, pour que $f$ soit lisse (resp. non ramifié, resp. étale), il faut et il suffit que $g\circ f$ le soit.
+\end{corollary}
+
+Cela résulte de (17.3.4) et de (17.3.3, (iii)).
+
+\begin{proposition}[17.3.6]
+\label{IV.17.3.6}
+Soient $g:Y\to S$, $h:X\to S$ deux morphismes localement de présentation finie. Pour qu'un $S$-morphisme $f:X\to Y$ soit non ramifié, il faut et il suffit que l'homomorphisme canonique (16.4.19)
+\[
+  f^*(\Omega_{Y/S}^1)\longrightarrow\Omega_{X/S}^1
+\]
+soit surjectif.
+\end{proposition}
+
+Comme $f$ est alors localement de présentation finie (I, 4.4.3, (v)), la proposition résulte aussitôt de (17.2.2).
+
+\begin{definition}[17.3.7]
+\label{IV.17.3.7}
+Soit $f:X\to Y$ un morphisme. On dit que $f$ est \emph{lisse} (resp. \emph{non ramifié}, resp. \emph{étale}) \emph{en un point} $x\in X$ s'il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que la restriction $f|U$ soit un morphisme lisse (resp. non ramifié, resp. étale) de $U$ dans $Y$.
+\end{definition}
+
+On dit encore alors que $X$ est lisse (resp. non ramifié, resp. étale) sur $Y$ au point $x$.
+
+Compte tenu de la remarque (17.3.2, (iii)), il revient au même de dire que $f$ est un morphisme lisse (resp. non ramifié, resp. étale) ou qu'il est lisse (resp. non ramifié, resp. étale) en chaque point de $X$.
+
+Il est clair que l'ensemble des points de $X$ où un morphisme $f:X\to Y$ est lisse (resp. non ramifié, resp. étale) est \emph{ouvert} dans $X$.
+
+\begin{proposition}[17.3.8]
+\label{IV.17.3.8}
+Pour tout préschéma $Y$ et tout $\sh{O}_Y$-Module localement libre $\sh{E}$ de type fini, le préschéma fibré vectoriel $\mathbf{V}(\sh{E})$ (II, 1.7.8) est un $Y$-préschéma lisse.
+\end{proposition}
+
+En effet (17.3.2, (iii)), on peut se borner au cas où $Y=\Spec(A)$ est affine et $\mathbf{V}(\sh{E})=\Spec(A[T_1,\ldots,T_r])$; comme $A[T_1,\ldots,T_r]$ est une $A$-algèbre formellement lisse pour les topologies discrètes (0, 19.3.2) et de présentation finie, cela démontre la proposition (17.3.2, (ii)).
+
+\begin{corollary}[17.3.9]
+\label{IV.17.3.9}
+Sous les hypothèses de (17.3.8), le préschéma fibré projectif $\mathbf{P}(\sh{E})$ (II, 4.1.1) est un $Y$-préschéma lisse.
+\end{corollary}
+
+On peut encore se borner au cas où $Y=\Spec(A)$ est affine et $\mathbf{P}(\sh{E})=\mathbf{P}^r_Y$. On sait alors (II, 2.3.14) qu'on a un recouvrement ouvert fini de $\mathbf{P}^r_A$ en prenant les $D_+(T_i)$ ($0\leq i\leq r$), égaux respectivement aux spectres des anneaux $S_{(f)}$, où l'on remplace $S$ par $A[T_0,T_1,\ldots,T_r]$ et $f$ par $T_i$; mais il résulte aussitôt de la définition de $S_{(f)}$ (II, 2.2.1) que cet anneau, dans le cas considéré, est isomorphe à $A[T_0,\ldots,T_{i-1},T_{i+1},\ldots,T_r]$; donc le corollaire résulte de (17.3.8).
+
+\oldpage[IV-4]{63}
+
+\subsection{Caractérisations des morphismes non ramifiés}
+\label{subsection:IV.17.4}
+
+\begin{theorem}[17.4.1]
+\label{IV.17.4.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$. Les propriétés suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est non ramifié au point $x$.
+  \item[b)] Le morphisme diagonal $\Delta_f:X\to X\times_Y X$ est un isomorphisme local au point $x$.
+  \item[b')] Si l'on pose $\Delta_f=(\psi,\theta)$, $Z=X\times_Y X$ et $z=\psi(x)$, l'homomorphisme $\theta_z^\#:\sh{O}_{Z,z}\to\sh{O}_{X,x}$ est bijectif.
+  \item[b'')] Pour tout morphisme $g:Y'\to Y$, et tout point $y'\in Y'$ au-dessus de $y=f(x)$, toute $Y'$-section $s'$ de $X'=X\times_Y Y'$ telle que $x'=s'(y')$ soit au-dessus de $x$ est un isomorphisme local au point $y'$.
+  \item[c)] On a $(\Omega^1_{X/Y})_x=0$.
+  \item[d)] Le $k(y)$-préschéma $f^{-1}(y)$ est non ramifié sur $k(y)$ au point $x$.
+  \item[d')] Le point $x$ est isolé dans $X_y=f^{-1}(y)$ (autrement dit (Err$_{\mathrm{III}}$, 20), le morphisme $f$ est quasi-fini au point $x$) et l'anneau $\sh{O}_{X_y,x}$ est un corps, extension séparable de $k(y)$.
+  \item[d'')] L'anneau $\sh{O}_{X_y,x}=\sh{O}_{X,x}/\mathfrak{m}_y\sh{O}_{X,x}$ est un corps, extension finie séparable de $k(y)$.
+  \item[e)] L'anneau $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement non ramifiée pour les topologies discrètes.
+\end{enumerate}
+\end{theorem}
+
+Comme $f$ est localement de type fini, le $\sh{O}_X$-Module $\Omega^1_{X/Y}$ est de type fini (16.3.9), donc il revient au même de dire que $(\Omega^1_{X/Y})_x=0$ ou qu'il existe un voisinage ouvert $U$ de $x$ tel que $\Omega^1_{X/Y}|U=0$. Compte tenu de (17.2.1), cela prouve l'équivalence de a) et c). D'autre part, si l'on pose $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, on a $(\Omega^1_{X/Y})_x=\Omega^1_{B/A}$ (16.4.15), et l'équivalence de c) et e) résulte donc de (0, 20.7.4).
+
+Comme d') ne fait intervenir que des propriétés du morphisme $X_y\to\Spec(k(y))$, l'équivalence de a) et d') entraînera \emph{ipso facto} celle de d) et d'). D'autre part d') et d'') sont équivalentes, car il revient au même de dire que $\sh{O}_{X_y,x}$ est une $k(y)$-algèbre \emph{finie} ou que $x$ est un point isolé de $X_y$, puisque $X_y$ est un $k(y)$-préschéma localement de type fini (I, 6.4.4).
+
+Prouvons maintenant l'équivalence de b) et b'). On peut se limiter au cas où $Y=\Spec(R)$ et $X=\Spec(S)$ sont affines et $f$ de présentation finie; alors on a $Z=\Spec(S\otimes_R S)$ et $\Delta_f$ correspond à l'homomorphisme canonique surjectif $S\otimes_R S\to S$, dont on sait que le noyau $\mathfrak{J}$ est un idéal de type fini (0, 20.4.4). Si l'on pose $\sh{J}=\widetilde{\mathfrak{J}}$, le $\sh{O}_Z$-Module $\psi_*(\sh{O}_X)=\sh{O}_Z/\sh{J}$ est donc de présentation finie, et l'hypothèse que l'homomorphisme $\theta_z^\#: \sh{O}_{Z,z}\to(\psi_*(\sh{O}_X))_z$ est bijectif entraîne qu'en remplaçant au besoin $X$ par un voisinage ouvert de $x$, l'homomorphisme $\theta:\sh{O}_Z\to\psi_*(\sh{O}_X)$ est lui-même bijectif ($0_{\mathrm I}$, 5.2.7). Cela montre donc que b') entraîne b); la réciproque est évidente.
+
+D'autre part, l'équivalence de b) et b'') résulte de (I, 5.3.7) sans hypothèse de finitude sur $f$: la donnée d'une $Y'$-section $s':Y'\to X'$ équivaut en effet à celle d'un
+
+\oldpage[IV-4]{64}
+$Y$-morphisme $h=g'\circ s':Y'\to X$ (où $g':X'\to X$ est la projection canonique), de sorte que $s'=(1_{Y'},h)_X$, et alors le diagramme
+\[
+\tag{17.4.1.1}
+\label{IV.17.4.1.1}
+\xymatrix{
+Y' \ar[r]^{s'} \ar[d]_h & X'=Y'\times_Y X \ar[d]^{h\times 1_X}\\
+X \ar[r]_{\Delta_f} & X\times_Y X
+}
+\]
+identifie $Y'$ au produit des $(X\times_Y X)$-préschémas $X$ et $X'$. Par suite (I, 4.3.2) si $\Delta_f$ est un isomorphisme local au point $x$, $s'$ est un isomorphisme local au point $y'$ (puisque $x=h(y')$), ce qui prouve que b) implique b''). La réciproque s'obtient en appliquant b'') au cas où l'on prend $Y'=X$, $y'=x$, $g=f$ et $s'=\Delta_f$.
+
+Pour achever la démonstration de (17.4.1), il suffit de prouver les implications
+\[
+d'')\Rightarrow c)\Rightarrow b)\Rightarrow d'').
+\]
+
+$d'')\Rightarrow c)$: Comme $\Omega^1_{X/Y}$ est un $\sh{O}_X$-Module de type fini, il résulte du lemme de Nakayama que la condition c) équivaut à $(\Omega^1_{X/Y})_x/\mathfrak{m}_y(\Omega^1_{X/Y})_x=0$, c'est-à-dire (16.4.5) à $(\Omega^1_{X_y/\Spec(k(y))})_x=0$. On est donc ramené au cas où $Y$ est le spectre d'un corps $k$ et $X$ un $k$-préschéma algébrique. L'hypothèse que $\sh{O}_{X,x}$ est un corps $k'$, extension finie de $k$, entraîne d'abord que $x$ est \emph{fermé} dans $X$ (I, 6.4.2), puis que $x$ est point \emph{maximal} du préschéma noethérien $X$, donc est un point isolé de $X$. Remplaçant $X$ par l'ouvert $\{x\}$ de $X$, on peut donc supposer que $X=\Spec(k')$; mais alors l'hypothèse que $k'$ est extension \emph{finie séparable} de $k$ entraîne $\Omega^1_{k'/k}=0$ (0, 20.6.20), ce qui prouve c).
+
+$c)\Rightarrow b)$: On a vu plus haut que l'on a alors $\Omega^1_{X/Y}|U=0$ pour un voisinage ouvert $U$ de $x$ dans $X$; l'assertion b) résulte alors de la définition de $\Omega^1_{X/Y}$ (16.3.1) et de (16.1.9).
+
+$b)\Rightarrow d'')$: Remplaçant $X$ par un voisinage ouvert de $x$, on peut supposer que $\Delta_f$ est une immersion ouverte; si l'on désigne par $f_y:X_y\to\Spec(k(y))$ le morphisme déduit de $f$ par changement de base, $\Delta_{f_y}$ est alors aussi une immersion ouverte (I, 5.3.4), et comme la condition d'') ne concerne que le préschéma $X_y$, on voit qu'on peut se borner au cas où $Y$ est le spectre d'un corps $k$, $X$ le spectre d'une $k$-algèbre $A$ de type fini; la propriété d'') sera établie si l'on prouve que $A$ est une $k$-algèbre \emph{finie et séparable}, une telle algèbre étant composée directe d'extensions finies séparables de $k$. Si $K$ est une extension algébriquement close de $k$, il revient au même de dire que $A\otimes_k K$ est une $K$-algèbre finie et séparable (4.6.1), donc on voit qu'on peut se borner au cas où $k$ est algébriquement clos. Montrons d'abord que $A$ est une $k$-algèbre \emph{finie}: il suffira de montrer que tout point \emph{fermé} $x$ de $X$ est isolé, car alors l'ensemble de ces points est ouvert dans $X$ et discret, donc fini puisqu'il est quasi-compact ($X$ étant noethérien), ce qui établira notre assertion en vertu de (I, 6.4.4). Or, on a alors $k(x)=k$ puisque $k$ est algébriquement clos (I, 6.4.3), donc il y a une $Y$-section $s$ de $X$ telle que $s(Y)=\{x\}$, et en vertu de (17.4.1.1), $\{x\}$ est l'image réciproque de la diagonale $\Delta_X(X)$ par un morphisme $X\to X\times_Y X$, donc $\{x\}$ est ouvert dans $X$ en vertu de l'hypothèse b). On a ainsi montré que $A$ est une
+
+\oldpage[IV-4]{65}
+$k$-algèbre \emph{finie}, composée directe de $k$-algèbres finies locales. Pour exprimer que $\Delta_f$ est une immersion ouverte, on peut donc se borner au cas où $A$ est une $k$-algèbre locale finie, $X=\Spec(A)$ étant donc réduit à un seul point; le corps résiduel de $A$, étant une extension finie de $k$, est nécessairement identique à $k$, et par suite (I, 3.4.9) $X\times_k X$ est réduit à un seul point et $\Delta_f$ est donc nécessairement un \emph{isomorphisme}. Or, puisque $A$ est une $k$-algèbre, l'homomorphisme canonique $A\otimes_k A\to A$ ne peut être bijectif que si $A=k$. C.Q.F.D.
+
+\begin{remark}[17.4.1.2]
+\label{IV.17.4.1.2}
+Supposons seulement que $f$ soit \emph{localement de type fini}. Alors $\Omega^1_{X/Y}$ est encore un $\sh{O}_X$-Module de type fini (16.3.9), et $\Delta_f$ un morphisme localement de présentation finie (I, 4.3.1). Toute la démonstration de (17.4.1) est donc valable, à condition de remplacer a) par: \emph{la restriction de $f$ à un voisinage convenable de $x$ est un morphisme formellement non ramifié}. On voit en outre que dans ce cas la restriction de $f$ à un voisinage convenable de $x$ est un morphisme \emph{localement quasi-fini}.
+\end{remark}
+
+\begin{corollary}[17.4.2]
+\label{IV.17.4.2}
+Soit $f:X\to Y$ un morphisme localement de présentation finie. Les propriétés suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est non ramifié.
+  \item[b)] Le morphisme diagonal $\Delta_f:X\to X\times_Y X$ est une immersion ouverte.
+  \item[b')] Pour tout morphisme $Y'\to Y$, toute $Y'$-section de $X'=X\times_Y Y'$ est une immersion ouverte.
+  \item[c)] On a $\Omega^1_{X/Y}=0$.
+  \item[d)] Pour tout $y\in Y$, le $k(y)$-préschéma $f^{-1}(y)$ est non ramifié sur $k(y)$.
+  \item[d')] Pour tout $y\in Y$, le $k(y)$-préschéma $f^{-1}(y)$ est isomorphe à un préschéma de la forme $\coprod_{\lambda\in L}\Spec(K_\lambda)$, où, pour tout $\lambda\in L$, $K_\lambda$ est une extension finie et séparable de $k(y)$.
+  \item[e)] Pour tout $x\in X$, l'anneau $\sh{O}_{X,x}$ est une $\sh{O}_{Y,f(x)}$-algèbre formellement non ramifiée pour les topologies discrètes.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}[17.4.3]
+\label{IV.17.4.3}
+Si $f:X\to Y$ est non ramifié, alors $f$ est localement quasi-fini (Err$_{\mathrm{III}}$, 20).
+\end{corollary}
+
+\begin{proposition}[17.4.4]
+\label{IV.17.4.4}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Posons $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, qui sont des anneaux locaux noethériens, et soit $k$ le corps résiduel de $A$. Alors les conditions équivalentes a) à e) du théorème (17.4.1) sont aussi équivalentes à chacune des suivantes:
+\begin{enumerate}
+  \item[f)] $\widehat{B}\otimes_{\widehat{A}}k$ est un corps, extension finie séparable de $k$ (ce qui entraîne que $\widehat{B}$ est une $\widehat{A}$-algèbre finie).
+  \item[f')] $\widehat{B}$ est une $\widehat{A}$-algèbre formellement non ramifiée pour les topologies adiques.
+\end{enumerate}
+Si de plus $k(x)=k(y)$, ou si $k$ est séparablement clos, ces conditions équivalent aussi à:
+\begin{enumerate}
+  \item[f'')] L'homomorphisme $\widehat{A}\to\widehat{B}$ est surjectif.
+\end{enumerate}
+\end{proposition}
+
+Notons d'abord, par le même raisonnement que dans (0, 19.3.6), qu'il revient au même de dire que $B$ est une $A$-algèbre formellement non ramifiée pour les topologies préadiques, ou que $\widehat{B}$ est une $\widehat{A}$-algèbre formellement non ramifiée pour les topologies adiques. D'autre part, l'hypothèse que $f$ est localement de type fini entraîne que $\Omega^1_{B/A}$
+
+\oldpage[IV-4]{66}
+est un $B$-module de type fini (16.3.9), donc \emph{séparé} pour la topologie $\mathfrak n$-préadique (où $\mathfrak n$ est l'idéal maximal de $B$) ($0_{\mathrm I}$, 7.3.5); il revient par suite au même de dire que $\Omega^1_{B/A}=0$ ou que $\widehat{\Omega}^1_{B/A}=0$; donc (0, 20.7.4), il revient au même de dire que $B$ est une $A$-Algèbre formellement non ramifiée pour les topologies \emph{discrètes}, ou pour les topologies \emph{préadiques}. Ceci prouve l'équivalence des conditions e) et f'). Si $\mathfrak m$ est l'idéal maximal de $A$, on a
+\[
+k=A/\mathfrak m=\widehat A/\mathfrak m\widehat A,
+\qquad
+\widehat B\otimes_{\widehat A}k=\widehat B/\mathfrak m\widehat B
+=\widehat B\otimes_B(B/\mathfrak m B),
+\]
+et par suite ($0_{\mathrm I}$, 7.3.5) $\widehat B/\mathfrak m\widehat B$ est le complété de $B/\mathfrak m B=B\otimes_A k$ pour la topologie $\mathfrak n$-préadique; ceci prouve l'équivalence de d'') et de f). Enfin, lorsque $k(x)=k(y)$ ou lorsque $k$ est séparablement clos, la condition f) entraîne que l'homomorphisme $\widehat A/\mathfrak m\widehat A\to\widehat B/\mathfrak m\widehat B$ est bijectif; la condition f) implique d'autre part que $\widehat B$ est une $\widehat A$-algèbre \emph{quasi-finie} ($0_{\mathrm I}$, 7.4.4), donc \emph{finie} puisque $\widehat A$ est complet et $\widehat B$ séparé pour la topologie $\mathfrak m$-préadique, $\mathfrak m\widehat B$ étant un idéal de définition de $\widehat B$ ($0_{\mathrm I}$, 7.4.1). L'homomorphisme $\widehat A\to\widehat B$ est donc surjectif en vertu du lemme de Nakayama. Donc f) entraîne alors f''), et la réciproque est évidente.
+
+\begin{env}[17.4.5]
+\label{IV.17.4.5}
+Étant donnés un $S$-préschéma $Y$ et deux $S$-morphismes $f:X\to Y$, $g:X\to Y$, on en déduit canoniquement un $S$-morphisme $(f,g)_S:X\to Y\times_S Y$. Nous appellerons \emph{préschéma des coïncidences} de $f$ et $g$ l'image réciproque par $(f,g)_S$ de la diagonale $\Delta_{Y|S}$; c'est donc un sous-préschéma de $X$, qui est \emph{fermé} lorsque $Y$ est un $S$-schéma (I, 5.4.1).
+\end{env}
+
+\begin{proposition}[17.4.6]
+\label{IV.17.4.6}
+Soient $h:Y\to S$ un morphisme non ramifiée, et soient $f:X\to Y$, $g:X\to Y$ deux $S$-morphismes. Alors le préschéma $C$ des coïncidences de $f$ et $g$ est un sous-préschéma induit sur un ouvert de $X$; si de plus $Y$ est un $S$-schéma (I, 5.4.1), $C$ est un sous-préschéma fermé de $X$.
+\end{proposition}
+
+En effet, puisque $\Delta_h:Y\to Y\times_S Y$ est une immersion ouverte (17.4.2), l'image réciproque par $(f,g)_S$ de $\Delta_{Y|S}$ est un sous-préschéma induit sur un ouvert de $X$ (I, 4.4.1). La dernière assertion résulte de (17.4.5).
+
+\begin{corollary}[17.4.7]
+\label{IV.17.4.7}
+Sous les hypothèses de (17.4.6), soit $x$ un point de $X$ tel que les deux morphismes composés $\Spec(k(x))\to X\xrightarrow{f}Y$ et $\Spec(k(x))\to X\xrightarrow{g}Y$ soient égaux. Alors il existe un voisinage ouvert $U$ de $x$ tel que $f|U=g|U$. Si de plus $Y$ est un $S$-schéma, il existe un voisinage ouvert et fermé $X'$ de $x$ dans $X$ tel que $f|X'=g|X'$. Si enfin on suppose en outre que $X$ est connexe, on a $f=g$.
+\end{corollary}
+
+Cela résulte de (17.4.6) et de (I, 5.3.17).
+
+\begin{corollary}[17.4.8]
+\label{IV.17.4.8}
+Sous les hypothèses de (17.4.6), supposons que le morphisme structural $\varphi=h\circ f=h\circ g$ de $X$ dans $S$ soit fermé. Soit $s$ un point de $S$; soit $X_s$ le $k(s)$-préschéma $\varphi^{-1}(s)$ et supposons que les deux morphismes composés $X_s\to X\xrightarrow{f}Y$ et $X_s\to X\xrightarrow{g}Y$ soient égaux. Alors il existe un voisinage ouvert $V$ de $s$ dans $S$ tel que $f|\varphi^{-1}(V)=g|\varphi^{-1}(V)$. Si de plus $Y$ est un $S$-schéma et si $\varphi$ est ouvert, on peut prendre $V$ ouvert et fermé. Si enfin on suppose de plus $S$ connexe, on a $f=g$.
+\end{corollary}
+
+Il résulte de (17.4.7) que le préschéma $C$ des coïncidences de $f$ et $g$ est induit sur un ouvert de $X$ et contient $X_s$. Comme $\varphi$ est fermé, il existe un voisinage ouvert $V$ de $s$ tel que $\varphi^{-1}(V)\subset C$. Si de plus $Y$ est un $S$-schéma, $C$ est fermé, donc $\varphi(X-C)$ est à la
+
+\oldpage[IV-4]{67}
+fois ouvert et fermé dans $S$, et son complémentaire $V$ dans $S$ est donc un voisinage ouvert et fermé de $s$ tel que $\varphi^{-1}(V)\subset C$.
+
+\begin{proposition}[17.4.9]
+\label{IV.17.4.9}
+Soient $Y$ un préschéma connexe, $f:X\to Y$ un morphisme non ramifié et séparé. Alors toute $Y$-section $g$ de $X$ est un isomorphisme de $Y$ sur une composante connexe ouverte de $X$, et l'application $g\mapsto g(Y)$ est une bijection de $\Gamma(X/Y)$ sur l'ensemble des composantes connexes $Z$ de $X$ (nécessairement ouvertes dans $X$) telles que la restriction de $f$ à $Z$ soit un isomorphisme de $Z$ sur $Y$. En particulier, si $g'$ et $g''$ sont deux $Y$-sections de $X$ telles que $g'(y)=g''(y)$ pour un $y\in Y$, on a $g'=g''$.
+\end{proposition}
+
+Il résulte en effet de (17.4.1, b'')) qu'une $Y$-section $s$ de $X$ est une immersion ouverte, et comme $X$ est un $Y$-schéma, $s$ est aussi une immersion fermée (I, 5.4.7); il en résulte que $s$ est un isomorphisme de $Y$ sur un sous-préschéma de $X$ induit sur une partie ouverte et fermée de $X$, et comme $s(Y)$ est connexe, c'est nécessairement une composante connexe de $X$. Le reste de la proposition est immédiat.
+
+\begin{remark}[17.4.10]
+\label{IV.17.4.10}
+Compte tenu de la remarque (17.4.1.2), on voit que, dans les énoncés (17.4.6) à (17.4.9), on peut remplacer partout les mots « non ramifié » par « formellement non ramifié et localement de type fini ».
+\end{remark}
+
+\subsection{Caractérisations des morphismes lisses}
+\label{subsection:IV.17.5}
+
+\begin{theorem}[17.5.1]
+\label{IV.17.5.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est lisse au point $x$.
+  \item[b)] $f$ est plat au point $x$ et le $k(y)$-préschéma $f^{-1}(y)$ est lisse sur $k(y)$ au point $x$.
+  \item[b')] $f$ est régulier au point $x$ (6.8.1).
+  \item[c)] L'anneau $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement lisse pour les topologies discrètes.
+\end{enumerate}
+\end{theorem}
+
+On peut se borner au cas où $Y=\Spec(A)$, $X=\Spec(C)$, où $C=B/\mathfrak{J}$, $B=A[T_1,\ldots,T_n]$ étant une algèbre de polynômes et $\mathfrak{J}$ un idéal de $B$ de type fini. L'équivalence de a) et c) résulte alors de l'équivalence de a) et c) dans (0, 22.6.4). D'autre part, appliquant ce résultat au morphisme localement de type fini $f^{-1}(y)\to\Spec(k(y))$, on voit que l'équivalence de b) et b') résulte de l'équivalence de a) et b) dans (6.8.6). Reste donc à démontrer l'équivalence de a) et b).
+
+Montrons d'abord que a) entraîne b); notons $\mathfrak p$ l'idéal premier $\mathfrak i_x$ dans $C$, $\mathfrak r$ l'idéal premier $\mathfrak i_y$ dans $A$; on a $\mathfrak p=\mathfrak q/\mathfrak J$, où $\mathfrak q$ est un idéal premier de $B$ et $\mathfrak r$ est l'image réciproque de $\mathfrak q$ dans $A$. L'hypothèse a) entraîne d'abord que $f^{-1}(y)$ est lisse sur $k(y)$ au point $x$ par (17.3.3), et il s'agit de montrer en outre que $C_{\mathfrak p}=\sh{O}_{X,x}$ est un $A_{\mathfrak r}$-module \emph{plat}. Comme $C_{\mathfrak p}$ est une $A_{\mathfrak r}$-algèbre formellement lisse et que $B$ est une $A$-algèbre formellement lisse (pour les topologies discrètes), le critère jacobien (0, 22.6.4), joint à (0, 19.1.12), entraîne qu'il existe dans $\mathfrak J$ un système de $r$ polynômes $u_i$ ($1\leq i\leq r$) et $r$ indices $j_i$ ($1\leq i\leq r$) tels que les images des $u_i$ dans $\mathfrak J_{\mathfrak q}/\mathfrak J_{\mathfrak q}^2$ engendrent ce $B_{\mathfrak q}$-module et que l'on ait
+\[
+\label{IV.17.5.1.1}
+\det(\partial u_i/\partial T_{j_k})\notin\mathfrak q.
+\tag{17.5.1.1}
+\]
+
+\oldpage[IV-4]{68}
+Notons maintenant que si $g:\Spec(B)\to\Spec(A)$ est le morphisme structural, la fibre $g^{-1}(y)$ est le spectre de l'anneau régulier $k(y)[T_1,\ldots,T_n]$ (0, 17.3.7), donc l'anneau local noethérien $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ en un point de cette fibre est régulier. Or, la condition (17.5.1.1) entraîne que les images canoniques $v_i$ des $u_i$ dans l'idéal maximal $\mathfrak m$ de $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ sont \emph{linéairement indépendantes} mod. $\mathfrak m^2$: sinon, en effet, il existerait des polynômes $w_i\in B$ ($1\leq i\leq r$) n'appartenant pas tous à $\mathfrak q$ et tels que $\sum_{i=1}^r w_i u_i\in\mathfrak q^2$. En dérivant par rapport aux $T_{j_k}$, on en conclurait que $\sum_{i=1}^r w_i(\partial u_i/\partial T_{j_k})\in\mathfrak q$ pour $1\leq k\leq r$, ce qui contredirait (17.5.1.1) puisque $\mathfrak q$ est premier. On conclut donc de (0, 17.1.7) que $(v_i)$ est une \emph{suite régulière} dans $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$. Mais comme le morphisme $g$ est localement de présentation finie et que $B$ est un $A$-module plat, il résulte de (11.3.8) que les images canoniques $u'_i$ des $u_i$ dans $B_{\mathfrak q}$ forment aussi une \emph{suite régulière} et que $B_{\mathfrak q}/(\sum_i u'_iB_{\mathfrak q})$ est un $A_{\mathfrak r}$-module \emph{plat}. Comme les images des $u'_i$ dans $\mathfrak J_{\mathfrak q}/\mathfrak J_{\mathfrak q}^2$ engendrent ce $B_{\mathfrak q}$-module, il résulte du lemme de Nakayama que l'on a $\sum_i u'_iB_{\mathfrak q}=\mathfrak J_{\mathfrak q}$, et $C_{\mathfrak p}=B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ est donc bien un $A_{\mathfrak r}$-module plat.
+
+Prouvons enfin que b) implique a). Avec les mêmes notations, l'hypothèse que $B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ est un $A_{\mathfrak r}$-module plat entraîne que l'homomorphisme canonique $\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q}\to B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ est \emph{injectif} ($0_{\mathrm I}$, 6.1.2), de sorte que $\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q}$ est identifié à un idéal de $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$. Comme $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ est une $A_{\mathfrak r}$-algèbre formellement lisse pour les topologies discrètes, on peut appliquer à $C_{\mathfrak p}=(B_{\mathfrak q}/\mathfrak rB_{\mathfrak q})/(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})$, le critère jacobien (0, 22.6.4); joint à (0, 19.1.12), ce dernier prouve, en vertu de l'hypothèse b), l'existence de $r$ polynômes $v_i\in k(y)[T_1,\ldots,T_n]$ tels que leurs images dans $(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})/(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})^2$ engendrent ce $(B_{\mathfrak q}/\mathfrak rB_{\mathfrak q})$-module et que l'on ait
+\[
+\label{IV.17.5.1.2}
+\det(\partial v_i/\partial T_{j_k})\notin\mathfrak qB_{\mathfrak q}/\mathfrak rB_{\mathfrak q}.
+\tag{17.5.1.2}
+\]
+Si, pour tout $i$, on désigne alors par $u_i$ un élément de $\mathfrak J$ dont $v_i$ est l'image canonique, il résulte de (17.5.1.2) que les $u_i$ vérifient la condition (17.5.1.1); d'autre part, en vertu du lemme de Nakayama, les images $u'_i$ des $u_i$ dans $\mathfrak J_{\mathfrak q}$ engendrent ce $B_{\mathfrak q}$-module. Le critère jacobien (0, 22.6.4) joint à (0, 19.1.12), prouve alors que $C_{\mathfrak p}=B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ est une $A_{\mathfrak r}$-algèbre formellement lisse pour les topologies discrètes. C.Q.F.D.
+
+\begin{corollary}[17.5.2]
+\label{IV.17.5.2}
+Soit $f:X\to Y$ un morphisme localement de présentation finie. Pour que $f$ soit lisse (au sens de (17.3.1)), il faut et il suffit que $f$ soit régulier (6.8.1), autrement dit que $f$ soit plat et que pour tout $y\in Y$, $f^{-1}(y)$ soit un $k(y)$-préschéma géométriquement régulier (6.7.6).
+\end{corollary}
+
+On a ainsi établi l'équivalence des deux définitions de « morphisme lisse » données dans (6.8.1) et (17.3.1).
+
+\begin{proposition}[17.5.3]
+\label{IV.17.5.3}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Posons $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, qui sont des anneaux locaux noethériens. Alors les conditions équivalentes a) à c) de (17.5.1) sont aussi équivalentes à chacune des suivantes:
+\begin{enumerate}
+  \item[d)] $B$ est une $A$-algèbre formellement lisse pour les topologies préadiques.
+  \item[d')] $\widehat B$ est une $\widehat A$-algèbre formellement lisse pour les topologies adiques.
+\end{enumerate}
+Si de plus $k(x)=k(y)$, ces conditions équivalent aussi à:
+\begin{enumerate}
+  \item[d'')] $\widehat B$ est une $\widehat A$-algèbre isomorphe à une algèbre de séries formelles $\widehat A[[T_1,\ldots,T_n]]$.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-4]{69}
+L'équivalence de la condition c) de (17.5.1) et de d) résulte de l'équivalence de a) et d) dans le critère jacobien (0, 22.6.4), et l'équivalence de d) et d') résulte de (0, 19.3.6). D'autre part, d'') implique d') sans hypothèse sur les corps résiduels (0, 19.3.4). Enfin, si $\mathfrak m$ désigne l'idéal maximal de $\widehat A$, l'hypothèse d') entraîne que $\widehat B/\mathfrak m\widehat B$ est une $k(y)$-algèbre locale noethérienne complète, formellement lisse pour sa topologie adique (0, 19.3.5); l'hypothèse $k(y)=k(x)$ entraîne donc que $\widehat B/\mathfrak m\widehat B$ est $k(y)$-isomorphe à une algèbre de séries formelles $k(y)[[T_1,\ldots,T_n]]$ (0, 19.6.4). Comme d'autre part, $\widehat A[[T_1,\ldots,T_n]]$ est un $\widehat A$-module plat et une $\widehat A$-algèbre locale noethérienne complète, on conclut de (0, 19.7.1.5) que cette algèbre est isomorphe à $\widehat B$. Donc d') entraîne d'') sous l'hypothèse additionnelle $k(x)=k(y)$.
+
+\begin{remark}[17.5.4]
+\label{IV.17.5.4}
+Supposons que $Y$ soit un préschéma localement noethérien, et $f:X\to Y$ un morphisme localement de type fini. Le critère (17.5.3, d)), joint à (0, 22.1.4) montre que pour démontrer que $f$ est lisse, on peut appliquer la définition (17.1.1), en se restreignant au cas où le schéma affine $Y'$ est le spectre d'un anneau local artinien.
+\end{remark}
+
+\begin{proposition}[17.5.5]
+\label{IV.17.5.5}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Supposons que $Y$ soit réduit au point $y$. Alors, pour que $f$ soit lisse au point $x$, il faut et il suffit que $f$ soit universellement ouvert dans un voisinage de $x$ dans $f^{-1}(y)$ et que $f^{-1}(y)$ soit un $k(y)$-préschéma géométriquement régulier au point $x$.
+\end{proposition}
+
+Compte tenu de (17.5.1), tout revient à voir que, si $f^{-1}(y)$ est un $k(y)$-préschéma géométriquement régulier au point $x$, il est équivalent de dire que $f$ est plat au point $x$ ou universellement ouvert dans un voisinage de $x$ dans $f^{-1}(y)$. Or, si $f$ est plat au point $x$, il l'est dans un voisinage de $x$ dans $X$ (11.1.1) et par suite est universellement ouvert dans ce voisinage (2.4.6). Réciproquement, l'hypothèse que $f$ est universellement ouvert dans un voisinage de $x$ dans $f^{-1}(y)$ et que $f^{-1}(y)$ est un $k(y)$-préschéma géométriquement régulier au point $x$ entraîne que $f$ est plat au point $x$, puisque $\sh{O}_{Y,y}$ est réduit (15.2.2).
+
+\begin{corollary}[17.5.6]
+\label{IV.17.5.6}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. On suppose que $Y$ soit réduit et géométriquement unibranche (6.15.1) au point $y$. Alors, pour que $f$ soit lisse au point $x$, il faut et il suffit que $f$ soit équidimensionnel au point $x$ et que $f^{-1}(y)$ soit un $k(y)$-préschéma géométriquement régulier au point $x$.
+\end{corollary}
+
+En remarquant que l'ensemble des points où $f$ est équidimensionnel est ouvert (13.3.2), on voit que le corollaire résulte de (17.5.5) et du critère de Chevalley (14.4.4).
+
+Le fait que $f$ soit un morphisme lisse en un point entraîne en particulier que $f$ vérifie
+
+\oldpage[IV-4]{70}
+en ce point toutes les propriétés définies dans (6.8.1). On a donc les propriétés suivantes, que nous rappelons pour la commodité des références:
+
+\begin{proposition}[17.5.7]
+\label{IV.17.5.7}
+Soit $f:X\to Y$ un morphisme localement de présentation finie, lisse en un point $x\in X$; posons $y=f(x)$. Alors, pour que l'anneau $\sh{O}_{X,x}$ soit réduit (resp. intégralement clos, resp. géométriquement unibranche), il faut et il suffit que $\sh{O}_{Y,y}$ le soit.
+\end{proposition}
+
+Cela a en effet été prouvé dans (11.3.13) et (11.3.14) complété par Err$_{\mathrm{IV}}$, 30.
+
+\begin{proposition}[17.5.8]
+\label{IV.17.5.8}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, lisse en un point $x\in X$; posons $y=f(x)$. Alors:
+\begin{enumerate}
+  \item[(i)] On a $\dim(\sh{O}_{X,x})=\dim(\sh{O}_{Y,y})+\dim(\sh{O}_{X,x}\otimes_{\sh{O}_{Y,y}}k(y))$.
+  \item[(ii)] On a $\operatorname{coprof}(\sh{O}_{X,x})=\operatorname{coprof}(\sh{O}_{Y,y})$.
+  \item[(iii)] Pour que l'anneau $\sh{O}_{X,x}$ possède la propriété $(S_n)$ (5.7.2) (resp. $(R_n)$ (5.8.2)), il faut et il suffit que l'anneau $\sh{O}_{Y,y}$ la possède. En particulier, pour que $\sh{O}_{X,x}$ soit régulier, il faut et il suffit que $\sh{O}_{Y,y}$ le soit.
+\end{enumerate}
+\end{proposition}
+
+Ce sont des cas particuliers de (6.1.2), (6.3.2), (6.4.1) et (6.5.3).
+
+\subsection{Caractérisations des morphismes étales}
+\label{subsection:IV.17.6}
+
+\begin{theorem}[17.6.1]
+\label{IV.17.6.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est étale au point $x$.
+  \item[a')] $f$ est lisse au point $x$ et non ramifié au point $x$.
+  \item[b)] $f$ est lisse au point $x$ et quasi-fini au point $x$ (Err$_{\mathrm{III}}$, 20).
+  \item[c)] $f$ est plat au point $x$ et non ramifié au point $x$.
+  \item[c')] $f$ est plat au point $x$ et l'anneau $\sh{O}_{X,x}/\mathfrak m_y\sh{O}_{X,x}$ est un corps, extension finie séparable de $k(y)$.
+  \item[d)] L'anneau $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement étale pour les topologies discrètes.
+\end{enumerate}
+\end{theorem}
+
+L'équivalence de a) et a') résulte aussitôt des définitions; celle de a) et d) résulte de l'équivalence de a) et e) dans (17.4.1) et de l'équivalence de a) et d) dans (17.5.1). L'équivalence de c) et c') résulte de l'équivalence de a) et d') dans (17.4.1). Le fait que a') implique c') découle de (17.5.1); inversement, si c') est vérifiée, $f$ est régulier (donc lisse par (17.5.1)) au point $x$, car si $K$ est une extension finie séparable d'un corps $k$, alors, pour toute extension $k'$ de $k$, $\Spec(K\otimes_k k')$ est régulier, étant somme d'un nombre fini de spectres de corps. Le fait que a') implique b) résulte de (17.4.1, d')) et de (17.5.1, b)). Il reste donc à voir que b) entraîne c), et comme on sait déjà que $f$ est plat au point $x$, par (17.5.1), il suffit de montrer que $f^{-1}(y)$ est un $k(y)$-préschéma non ramifié sur $k(y)$; autrement dit, on est ramené à prouver que b) entraîne c) lorsque $Y=\Spec(k)$ est le spectre d'un corps $k$. Comme la question est locale sur $X$, on peut se borner au cas où $X=\Spec(A)$, où $A$ est une $k$-algèbre finie et locale ($0_{\mathrm I}$, 7.4.1). En vertu de l'hypothèse b), $A$ est une $k$-algèbre formellement lisse pour les topologies discrètes, qui coïncident ici avec les topologies préadiques; donc (0, 19.6.5), $A$ est un anneau local régulier, donc
+
+\oldpage[IV-4]{71}
+un corps puisqu'il est artinien, et il résulte alors de (0, 19.6.5.1) que $A$ doit être une extension finie et séparable de $k$, ce qui achève la démonstration (17.4.1).
+
+\begin{corollary}[17.6.2]
+\label{IV.17.6.2}
+Soit $f:X\to Y$ un morphisme localement de présentation finie. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est étale.
+  \item[a')] $f$ est lisse et non ramifié.
+  \item[b)] $f$ est lisse et localement quasi-fini (Err$_{\mathrm{III}}$, 20).
+  \item[c)] $f$ est plat et non ramifié.
+  \item[c')] $f$ est plat, et toute fibre $f^{-1}(y)$ est un $k(y)$-schéma somme de spectres de corps, extensions finies et séparables de $k(y)$.
+  \item[c'')] $f$ est plat, et pour tout $y\in Y$ et toute extension algébriquement close $k'$ de $k(y)$, la « fibre géométrique » $f^{-1}(y)\otimes_{k(y)}k'$ est somme de spectres de corps isomorphes à $k'$.
+\end{enumerate}
+\end{corollary}
+
+Le seul point qui reste à démontrer est l'équivalence de c') et c''). Il est clair que c') entraîne c'') par changement de base (17.3.3). D'autre part, comme le morphisme projection $f^{-1}(y)\otimes_{k(y)}k'\to f^{-1}(y)$ est ouvert (2.4.10), l'hypothèse c'') entraîne que l'espace $f^{-1}(y)$ est discret, donc, pour tout point $x\in X_y=f^{-1}(y)$, l'anneau local $\sh{O}_{X_y,x}=A$ est une $k(y)$-algèbre finie, donc un anneau local artinien; en outre il résulte de c'') que $\Spec(A\otimes_{k(y)}k')$ est somme de spectres de corps isomorphes à $k'$, ce qui n'est possible que si $A$ est un corps, extension finie séparable de $k(y)$ (4.6.1).
+
+\begin{proposition}[17.6.3]
+\label{IV.17.6.3}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Posons $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, qui sont des anneaux locaux noethériens, et soit $k$ le corps résiduel de $A$. Alors les conditions équivalentes a) à d) de (17.6.1) sont aussi équivalentes à chacune des suivantes:
+\begin{enumerate}
+  \item[e)] $\widehat B$ est une $\widehat A$-algèbre formellement étale pour les topologies adiques.
+  \item[e')] $\widehat B$ est un $\widehat A$-module libre et $\widehat B\otimes_{\widehat A}k$ est un corps, extension finie et séparable de $k$ (ce qui entraîne que $\widehat B$ est une $\widehat A$-algèbre finie).
+\end{enumerate}
+Si de plus $k(x)=k(y)$, ou si $k$ est séparablement clos, ces conditions équivalent aussi à:
+\begin{enumerate}
+  \item[e'')] L'homomorphisme canonique $\widehat A\to\widehat B$ est bijectif.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de e) et de chacune des conditions de (17.6.1) résulte aussitôt de (17.4.4, f')) et (17.5.3, d')). Le fait que e) entraîne e') résulte de (17.4.4, f)) et de (0, 19.7.1), compte tenu de ce que $\widehat B$ est alors une $\widehat A$-algèbre finie (17.4.4) et qu'il revient donc au même de dire que $\widehat B$ est un $\widehat A$-module plat ou un $\widehat A$-module libre ($0_{\mathrm{III}}$, 10.1.3). Inversement, le fait que e') entraîne e) résulte de (17.4.4) et de (0, 19.7.1). Enfin, e') entraîne que l'homomorphisme $\widehat A\to\widehat B$ est injectif, et si $k(x)=k(y)$ ou si $k$ est séparablement clos, cet homomorphisme est surjectif par (17.4.4). La réciproque est immédiate.
+
+\begin{proposition}[17.6.4]
+\label{IV.17.6.4}
+Sous les hypothèses de (17.6.3), si $f$ est étale au point $x$, on a $\dim(\sh{O}_{X,x})=\dim(\sh{O}_{Y,y})$.
+\end{proposition}
+
+C'est un cas particulier de (17.5.8, (i)) puisque $x$ est isolé dans sa fibre $f^{-1}(y)$.
+
+\oldpage[IV-4]{72}
+
+\subsection{Propriétés de descente, de passage à la limite et de constructibilité}
+\label{subsection:IV.17.7}
+\label{IV.17.7}
+
+\begin{proposition}[17.7.1]
+\label{IV.17.7.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $g:Y'\to Y$ un morphisme, $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$ et $g':X'\to X$ les projections canoniques. Soit $x'$ un point de $X'$ et posons $x=g'(x')$, $y'=f'(x')$.
+\begin{enumerate}
+  \item[(i)] Si $f'$ est non ramifié au point $x'$, alors $f$ est non ramifié au point $x$.
+  \item[(ii)] Supposons de plus que $g$ soit plat au point $y'$. Alors, si $f'$ est lisse (resp. étale) au point $x'$, $f$ est lisse (resp. étale) au point $x$.
+\end{enumerate}
+\end{proposition}
+
+Posons $y=f(x)=g(y')$, de sorte que l'on a $f'^{-1}(y')=f^{-1}(y)\otimes_{k(y)}k(y')$; notons que $f'$ est localement de présentation finie.
+
+(i) Comme la propriété pour un morphisme (localement de présentation finie) d'être non ramifié en un point ne fait intervenir que la fibre du morphisme en ce point (17.4.1, $d$)), on peut se borner au cas où $Y$ et $Y'$ sont des spectres de corps. Mais alors il revient au même de dire que $f$ (resp. $f'$) est non ramifié en $x$ (resp. $x'$) ou qu'il est étale en ce point (17.6.1, $c$)), donc (i) est une conséquence de (ii).
+
+(ii) Comme $f'$ est plat au point $x'$ (17.5.1), l'hypothèse que $g$ est plat au point $y'$ entraîne que $f$ est plat au point $x$, car la projection $g':X'\to X$ est un morphisme plat au point $x'$, et $f\circ g'=g\circ f'$ est un morphisme plat au point $X'$, d'où la conclusion (2.2.11, (iv)). Le fait que $f$ soit lisse (resp. étale) au point $x$ ne fait plus alors intervenir que la fibre $f^{-1}(y)$ (17.5.1 et 17.6.1), et on est donc encore ramené au cas où $Y=\Spec(k)$ et $Y'=\Spec(k')$ sont des spectres de corps. Dire que $f'$ est lisse au point $x'$ signifie alors (17.5.1) que $X'$ est un $k'$-préschéma géométriquement régulier au point $x'$, et cela entraîne (6.7.8) que $X$ est un $k$-préschéma géométriquement régulier au point $x$, donc que $f$ est lisse au point $x$. Supposons de plus que $f'$ soit étale au point $x'$, de sorte que $x'$ est isolé dans $f'^{-1}(y')$ (17.6.1); comme la projection $f'^{-1}(y')\to f^{-1}(y)$ est un morphisme ouvert (2.4.10), $x$ est isolé dans $f^{-1}(y)$; comme on sait déjà que $f$ est lisse au point $x$, il est étale en ce point (17.6.1).
+
+\begin{corollary}[17.7.2]
+\label{IV.17.7.2}
+\begin{enumerate}
+  \item[(i)] Avec les notations de (17.7.1), soit $U$ (resp. $U'$) l'ensemble des points de $X$ (resp. $X'$) où $f$ (resp. $f'$) est non ramifié; alors on a $U'=g'^{-1}(U)$.
+  \item[(ii)] Supposons de plus que $g$ soit plat, et soit $V$ (resp. $V'$) l'ensemble des points de $X$ où $f$ (resp. $f'$) est lisse; alors $V'=g'^{-1}(V)$.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}[17.7.3]
+\label{IV.17.7.3}
+\begin{enumerate}
+  \item[(i)] Supposons $g$ surjectif; alors, pour que $f$ soit non ramifié, il faut et il suffit que $f'$ le soit.
+  \item[(ii)] Soient $f:X\to Y$ un $S$-morphisme, $g:S'\to S$ un morphisme fidèlement plat. Supposons que $f$ soit localement de présentation finie, ou que $g$ soit quasi-compact. Alors, pour que $f$ soit lisse (resp. non ramifié, resp. étale), il faut et il suffit que $f'$ le soit.
+\end{enumerate}
+\end{corollary}
+
+Dans (ii), le cas où $f$ est localement de présentation finie résulte de (17.7.1). Si $g$ est quasi-compact et $f'$ lisse (resp. non ramifié, resp. étale), $f'$ est localement de présentation finie par (2.7.1, (iv)) et on est ramené au premier cas.
+
+\begin{proposition}[17.7.4]
+\label{IV.17.7.4}
+Soient $f:X\to Y$ un morphisme, $g:Y'\to Y$ un morphisme plat et localement de présentation finie, $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$ et $g':X'\to X$ les
+
+\oldpage[IV-4]{73}
+
+projections canoniques. Soit $V$ (resp. $V'$) l'ensemble des $x\in X$ (resp. $x'\in X'$) où $f$ possède l'une des propriétés suivantes (resp. où $f'$ possède la même propriété): être:
+\begin{enumerate}
+  \item[(i)] localement de type fini;
+  \item[(ii)] localement de présentation finie;
+  \item[(iii)] plat;
+  \item[(iv)] non ramifié;
+  \item[(v)] lisse;
+  \item[(vi)] étale.
+\end{enumerate}
+Alors on a $V'=g'^{-1}(V)$ (autrement dit, pour que $f'$ ait la propriété considérée en un point $x'$, il faut et il suffit que $f$ ait cette propriété au point $x$).
+\end{proposition}
+
+La propriété (iii) n'est mise que pour mémoire, et ne nécessite pas l'hypothèse que $g$ soit localement de présentation finie ((2.2.11, (iv)), compte tenu du fait que la projection $g':X'\to X$ est un morphisme plat). En vertu de (17.7.2), les assertions relatives aux propriétés (iv), (v) et (vi) sont des conséquences de l'assertion relative à (ii). Il suffit donc de considérer les cas (i) et (ii). Il est clair que $V'\supset g'^{-1}(V)$; reste donc à montrer que $V'\subset g'^{-1}(V)$; notons que les ensembles $V$ et $V'$ sont ouverts, et $W=g'(V')$ est aussi ouvert dans $X$ en vertu de (2.4.6). Il s'agit donc de prouver que le morphisme $f|W:W\to Y$ est localement de type fini (resp. localement de présentation finie); comme par hypothèse le composé
+\[
+V'\xrightarrow{g''}W\xrightarrow{f|W}Y
+\]
+(où $g''$ est la restriction de $g'$), égal à $V'\xrightarrow{f'}Y'\xrightarrow{g}Y$, est localement de type fini (resp. localement de présentation finie) et que $g''$ est surjectif (donc fidèlement plat), on est ramené à prouver le lemme suivant, qui améliore (11.3.16):
+
+\begin{lemma}[17.7.5]
+\label{IV.17.7.5}
+Soient $f:X\to Y$ un morphisme fidèlement plat et localement de présentation finie, $g:Y\to Z$ un morphisme tel que $g\circ f:X\to Z$ ait l'une des propriétés suivantes: être:
+\begin{enumerate}
+  \item[(i)] localement de type fini;
+  \item[(ii)] localement de présentation finie;
+  \item[(iii)] de type fini.
+\end{enumerate}
+Alors $g$ a la même propriété. Si en outre $f$ est quasi-compact ou $g$ quasi-séparé, la même conclusion est valable pour la propriété:
+\begin{enumerate}
+  \item[(iv)] être de présentation finie.
+\end{enumerate}
+\end{lemma}
+
+Dans les cas (i) et (ii), il s'agit de voir que pour tout $y\in Y$, il y a un voisinage ouvert affine $V$ de $y$ dans $Y$ et un voisinage ouvert affine $W$ de $z=g(y)$ dans $Z$ contenant $g(V)$, tels que le morphisme $V\to W$, restriction de $g$, soit de type fini (resp. de présentation finie). Or, il existe par hypothèse un $x\in X$ tel que $f(x)=y$, un voisinage ouvert affine $U$ de $x$ dans $X$, un voisinage ouvert affine $V'$ de $y$ dans $Y$ contenant $f(U)$ et un voisinage ouvert affine $W$ de $z$ dans $Z$ contenant $g(V')$ tels que le morphisme $f_1:U\to V'$, restriction de $f$ soit plat et de présentation finie, et le morphisme $g_1:V'\to W$ restriction de $g$, tel que $g_1\circ f_1$ soit de type fini (resp. de présentation finie). Alors $f(U)$ est ouvert dans $Y$ (2.4.6), et si $V\subset f(U)$ est un voisinage affine de $y$, le morphisme $f_2:f_1^{-1}(V)\to V$,
+
+\oldpage[IV-4]{74}
+
+restriction de $f_1$, est encore de présentation finie et est en outre fidèlement plat; de plus, si $g_2=g_1|V$, $g_2\circ f_2$ est de type fini (resp. de présentation finie), l'ouvert $f_1^{-1}(V)$ étant quasi-compact (resp. quasi-compact et quasi-séparé). On est alors ramené aux hypothèses de (11.3.16), d'où l'on conclut que $g_2$ est un morphisme de type fini (resp. de présentation finie).
+
+Dans le cas (iii) la question est locale sur $Z$, donc on peut supposer $Z$ affine, et il en résulte alors que $X$ est quasi-compact, donc aussi $Y=f(X)$. Le cas (iii) est donc conséquence de (i).
+
+Dans le cas (iv) (avec les hypothèses supplémentaires sur $f$ ou $g$), on peut aussi supposer $Z$ affine, donc $X$ et $Y$ quasi-compacts; on sait en outre déjà que $g$ est localement de présentation finie et quasi-compact (1.1.3), donc tout revient à voir que $g$ est quasi-séparé, et il suffit donc de montrer que cette propriété est vraie lorsque l'on suppose $f$ quasi-compact. Or, puisque $g\circ f$ est quasi-séparé, il en est de même de $f$ (1.2.2, (v)); comme $f$ est quasi-compact et localement de présentation finie, il est de présentation finie (1.6.1); il suffit alors de répéter le raisonnement du premier alinéa de la démonstration de (11.3.16).
+
+\begin{remark}[17.7.6]
+\label{IV.17.7.6}
+Dans l'assertion relative à la propriété (iv), on ne peut supprimer l'hypothèse que $f$ est quasi-compact; sans quoi, cela impliquerait que tout morphisme $g:Y\to Z$ quasi-compact et localement de présentation finie serait de présentation finie, conclusion que l'on sait être erronée (1.6.4). En effet, on peut se borner au cas où $Z$ est affine, donc $Y$ quasi-compact; il y a par suite un recouvrement fini $(U_i)$ de $Y$ par des ouverts affines tels que les restrictions $g|U_i$ soient de présentation finie; il suffirait alors de prendre pour $X$ le préschéma \emph{somme} des $U_i$, pour $f:X\to Y$ le morphisme canonique, qui est évidemment fidèlement plat et localement de présentation finie (1.4.3); $g\circ f$ serait de présentation finie en vertu du choix des $U_i$ et de (1.6.5), d'où notre assertion.
+\end{remark}
+
+\begin{proposition}[17.7.7]
+\label{IV.17.7.7}
+Soient $f:Y\to S$ et $h:X\to S$ deux morphismes localement de présentation finie, $g:X\to Y$ un $S$-morphisme, $x$ un point de $X$, $y=g(x)$. Supposons que $g$ soit plat au point $x$. Alors, si $h$ est lisse (resp. non ramifié, resp. étale) au point $x$, $f$ est lisse (resp. non ramifié, resp. étale) au point $y$.
+\end{proposition}
+
+Posons $s=h(x)=f(y)$. Dire que $h$ est non ramifié au point $x$ (resp. que $f$ est non ramifié au point $y$) équivaut à dire que $h^{-1}(s)$ est étale sur $k(s)$ au point $x$ (resp. que $f^{-1}(s)$ est étale sur $k(s)$ au point $y$) (17.4.1 et 17.6.1); comme le morphisme $g_s:h^{-1}(s)\to f^{-1}(s)$ déduit de $g$ est plat au point $x$, on voit que l'on peut se borner à prouver la proposition lorsque $h$ est lisse ou étale au point $x$. En outre, comme $h$ est alors plat au point $x$ (17.5.1), $f$ est plat au point $y$, comme il résulte de (2.2.11, (iv)). Il revient donc au même (17.5.1) de dire que $f$ est lisse (resp. étale) au point $y$, ou que $f^{-1}(s)$ est lisse (resp. étale) sur $k(s)$ au point $x$. On est ainsi ramené au cas où $S=\Spec(k)$ est le spectre d'un corps.
+
+(i) \emph{Cas des morphismes lisses}. Comme $g$ est un morphisme localement de présentation finie (1.4.3, (v)), il y a un voisinage ouvert $U$ de $x$ dans $X$ dans lequel $g$ est plat (11.3.1) et $h$ lisse. En outre $g(U)$ est un voisinage ouvert de $y$ dans $Y$ (2.4.6); remplaçant $X$ par $U$ et $Y$ par $g(U)$, on peut donc supposer que $g$ est \emph{fidèlement plat} et que $h$ est lisse, et on est ramené à prouver que $f$ est alors lisse. Si $k'$ est une extension algébriquement
+
+\oldpage[IV-4]{75}
+
+close de $k$, $X\otimes_k k'$ est alors lisse sur $k'$, et en vertu de (17.7.3, (ii)), il suffit de prouver que $Y\otimes_k k'$ est lisse sur $k'$ (puisque $\Spec(k')\to\Spec(k)$ est fidèlement plat); on peut donc se borner au cas où $k$ est \emph{algébriquement clos}. Comme l'ensemble des points de $Y$ rationnels sur $k$ est alors très dense dans $Y$ (10.4.8) et comme l'ensemble des points de $Y$ où $Y$ est lisse sur $k$ est ouvert, on voit qu'il suffit de prouver que $Y$ est lisse sur $k$ en tout point rationnel sur $k$. Mais en un tel point $y$, dire que $Y$ est lisse sur $k$ en ce point équivaut à dire que $Y$ est \emph{régulier} en $y$ (17.5.1 et 6.7.8). Or on a $y=g(x)$ pour un $x\in X$ et par hypothèse (17.5.1) $X$ est régulier au point $x$; comme $X$ et $Y$ sont alors localement noethériens et que $g$ est plat, $Y$ est bien régulier au point $y$ (6.5.1, (i)).
+
+(ii) \emph{Cas des morphismes étales}. Par (i) on sait déjà que $f$ est lisse au point $y$; en vertu de (17.6.1), il suffit donc de montrer que $f$ est quasi-fini au point $y$, ou encore que $\sh{O}_{Y,y}$ est une $k$-algèbre finie. Or, comme $\sh{O}_{X,x}$ est un $\sh{O}_{Y,y}$-module fidèlement plat ($0_{\mathrm I}$, 6.6.2), $\sh{O}_{Y,y}$ s'identifie à un sous-$k$-module de $\sh{O}_{X,x}$ et comme $\sh{O}_{X,x}$ est par hypothèse une $k$-algèbre finie, il en est de même de $\sh{O}_{Y,y}$.
+
+\begin{proposition}[17.7.8]
+\label{IV.17.7.8}
+Les notations étant celles de (8.8.1), on suppose $X_\alpha$ et $Y_\alpha$ localement de présentation finie sur $S_\alpha$. Soient $f_\alpha:X_\alpha\to Y_\alpha$ un $S_\alpha$-morphisme, $f:X\to Y$ le $S$-morphisme correspondant.
+\begin{enumerate}
+  \item[(i)] Soient $x$ un point de $X$, $x_\lambda$ sa projection canonique dans $X_\lambda$. Pour que $f$ soit lisse (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit qu'il existe $\lambda\geq\alpha$ tel que $f_\lambda$ soit lisse (resp. non ramifié, resp. étale) au point $x_\lambda$.
+  \item[(ii)] Supposons de plus $X_\alpha$ quasi-compact. Pour que $f$ soit lisse (resp. non ramifié, resp. étale), il faut et il suffit qu'il existe $\lambda\geq\alpha$ tel que $f_\lambda$ soit lisse (resp. non ramifié, resp. étale).
+\end{enumerate}
+\end{proposition}
+
+(i) Si $y=f(x)$, $y_\lambda=f_\lambda(x_\lambda)$ est la projection canonique de $y$ dans $Y_\lambda$, et l'on a $f^{-1}(y)=f_\lambda^{-1}(y_\lambda)\otimes_{k(y_\lambda)}k(y)$; la partie de l'énoncé concernant les morphismes non ramifiés résulte donc de (17.7.1, (i)), et il suffit donc de considérer le cas des morphismes lisses. Comme $f$ et $f_\lambda$ sont localement de présentation finie, il revient au même de dire que $f^{-1}(y)$ est géométriquement régulier au point $x$ ou que $f_\lambda^{-1}(y_\lambda)$ est géométriquement régulier au point $x_\lambda$ (6.7.8). La proposition résulte donc de (17.5.1) et de (11.2.6).
+
+(ii) Pour tout $\lambda$, soit $U_\lambda$ l'ensemble ouvert des $x_\lambda\in X_\lambda$ tels que $f_\lambda$ soit lisse (resp. non ramifié, resp. étale) au point $x_\lambda$; soit $V_\lambda$ son image réciproque dans $X$. Comme, par hypothèse, pour tout $x\in X$ il existe, en vertu de (i), un $\lambda$ tel que $f_\lambda$ soit lisse (resp. non ramifié, resp. étale) au point $x_\lambda$, $X$ est réunion des $V_\lambda$. D'ailleurs (17.3.3), pour $\lambda\leq\mu$ on a $V_\lambda\subset V_\mu$, donc, comme $X$ est quasi-compact, il existe un indice $\mu$ tel que $X=V_\mu$. Comme les $X_\lambda$ sont quasi-compacts, il résulte alors de (8.3.4) qu'il existe un indice $\nu\geq\mu$ tel que l'image réciproque de $U_\mu$ dans $X_\nu$ soit $X_\nu$ tout entier, ce qui signifie que $f_\nu$ est lisse (resp. non ramifié, resp. étale) par (17.3.3).
+
+\begin{corollary}[17.7.9]
+\label{IV.17.7.9}
+Soient $S=\Spec(A)$ un schéma affine, $f:X\to S$ un morphisme. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est un morphisme de présentation finie et lisse (resp. non ramifié, resp. étale).
+
+  \oldpage[IV-4]{76}
+
+  \item[b)] Il existe un schéma affine noethérien $S_0=\Spec(A_0)$, un morphisme de type fini $f_0:X_0\to S_0$, et un morphisme $S\to S_0$ tels que le $S$-préschéma $X_0\otimes_{S_0}S$ soit $S$-isomorphe à $X$ et que $f_0$ soit lisse (resp. non ramifié, resp. étale).
+  \item[c)] Les conditions de b) sont vérifiées, et en outre $A_0$ est une sous-$\mathbb{Z}$-algèbre de type fini de $A$, le morphisme $S\to S_0$ correspondant à l'injection canonique $A_0\to A$.
+\end{enumerate}
+\end{corollary}
+
+La démonstration à partir de (17.7.8) est la même que celle de (11.2.7) à partir de (11.2.6).
+
+\begin{proposition}[17.7.10]
+\label{IV.17.7.10}
+Soient $f:Y\to S$, $h:X\to S$ deux morphismes localement de présentation finie, $g:X\to Y$ un $S$-morphisme, $x$ un point de $X$, $y=g(x)$. Supposons que $h$ soit plat au point $x$ et que $f$ soit non ramifié au point $y$. Alors $f$ est étale au point $y$ et $g$ est plat au point $x$.
+\end{proposition}
+
+(On verra plus loin (18.4.9) que l'on peut en fait se dispenser de l'hypothèse que $h$ est localement de présentation finie).
+
+La question étant locale sur $S$, $X$ et $Y$, on peut supposer que $S$, $X$ et $Y$ sont affines, $f,g,h$ des morphismes de présentation finie, $h$ plat et $f$ non ramifié. Compte tenu de (11.2.7) et (17.7.9), on peut supposer en outre que $S$, $X$ et $Y$ sont noethériens; enfin on peut se borner au cas où $S=\Spec(\sh{O}_{S,s})$ (où $s=f(y)=h(x)$). L'anneau $A=\sh{O}_{S,s}$ étant un anneau local noethérien, il existe un anneau local noethérien $B$ complet, de corps résiduel algébriquement clos et un homomorphisme local $A\to B$ faisant de $B$ un $A$-module fidèlement plat ($0_{\mathrm{III}}$, 10.3.1). Remplaçant $X$ et $Y$ par $X\times_S\Spec(B)$ et $Y\times_S\Spec(B)$, on conclut par (2.5.1) et (17.7.1) qu'on peut se borner au cas où $A$ est complet et a un corps résiduel algébriquement clos. L'hypothèse que $f$ est non ramifié au point $y$ entraîne alors (17.4.4) que $\sh{O}_{Y,y}$ est une $\sh{O}_{S,s}$-algèbre finie et un anneau local noethérien complet ($0_{\mathrm I}$, 7.4.2), et comme le corps résiduel de $\sh{O}_{S,s}$ est algébriquement clos, l'homomorphisme $\sh{O}_{S,s}\to\sh{O}_{Y,y}$ est surjectif (17.4.4). Mais, d'autre part, l'hypothèse que $h$ est plat au point $x$ entraîne que l'homomorphisme composé $\sh{O}_{S,s}\to\sh{O}_{Y,y}\to\sh{O}_{X,x}$ est injectif ($0_{\mathrm I}$, 6.5.1), donc l'homomorphisme $\sh{O}_{S,s}\to\sh{O}_{Y,y}$ est bijectif, ce qui montre que $f$ est étale au point $y$ (17.6.3); en outre, $\sh{O}_{X,x}$ est un $\sh{O}_{Y,y}$-module plat, donc $g$ est plat au point $x$.
+
+\begin{proposition}[17.7.11]
+\label{IV.17.7.11}
+Soient $S$ un préschéma, $X$, $Y$ deux $S$-préschémas localement de présentation finie sur $S$, $f:X\to Y$ un $S$-morphisme. Pour tout $s\in S$, on note $X_s$, $Y_s$, $f_s$ les préschémas et le morphisme déduits de $X$, $Y$, $f$ par le changement de base $\Spec(k(s))\to S$. Alors:
+\begin{enumerate}
+  \item[(i)] L'ensemble des $x\in X$ tels que, si $s$ est l'image de $x$ dans $S$, $f_s:X_s\to Y_s$ soit lisse (resp. non ramifié, resp. étale, resp. différentiellement lisse) au point $x$, est localement constructible.
+  \item[(ii)] Supposons $f$ de présentation finie. L'ensemble des $y\in Y$ tels que, si $s$ est l'image de $y$ dans $S$, $f_s$ soit lisse (resp. non ramifié, resp. étale, resp. différentiellement lisse) en tous les points de $f_s^{-1}(y)$, est localement constructible.
+  \item[(iii)] Supposons $X$ et $Y$ de présentation finie sur $S$. L'ensemble des $s\in S$ tels que $f_s$ soit lisse (resp. non ramifié, resp. étale, resp. différentiellement lisse) est localement constructible.
+\end{enumerate}
+\end{proposition}
+
+Soit $E$ l'ensemble des $x\in X$ vérifiant la propriété considérée dans (i). Alors l'ensemble $F$ des $y\in Y$ vérifiant la propriété correspondante considérée dans (ii) n'est
+
+\oldpage[IV-4]{77}
+
+autre que $Y-f(X-E)$, donc (ii) résulte de (i) et du théorème de Chevalley lorsque $f$ est de présentation finie (1.8.4). De même, si $h:Y\to S$ est le morphisme structural, l'ensemble des $s\in S$ vérifiant la propriété correspondante considérée dans (iii) est $S-h(Y-F)$, donc (iii) découle encore de (ii) et du théorème de Chevalley lorsque $f$ et $h$ sont de présentation finie. Il suffit donc de prouver les assertions de (i).
+
+Prouvons d'abord (i) lorsqu'il s'agit de la propriété d'être \emph{lisse}. La question étant locale sur $X$, on peut se borner au cas où $S=\Spec(A)$, $X=\Spec(B)$ et $Y=\Spec(C)$ sont affines, $B$ et $C$ étant des $A$-algèbres de présentation finie. Raisonnant comme au début de (9.9.1) et utilisant (17.7.2, (ii)), on se ramène au cas où $A$ est noethérien. En vertu de ($0_{\mathrm{III}}$, 9.2.3), on est ramené à voir que si $x\in E$ (resp. si $x\notin E$), il existe un voisinage $V$ de $x$ dans $\overline{\{x\}}$ contenu dans $E$ (resp. dans $X-E$). Désignant par $g:X\to S$ et $h:Y\to S$ les morphismes structuraux, on peut d'abord remplacer $S$ par le sous-préschéma réduit $S'$ de $S$ ayant $\overline{\{g(x)\}}$ pour espace sous-jacent, $X$ par $g^{-1}(S')$, $Y$ par $h^{-1}(S')$, les fibres de $X$ et $X'$ (resp. $Y$ et $Y'$) aux points de $S'$ étant les mêmes. Autrement dit on peut se borner au cas où $S$ est \emph{intègre} et où $\eta=g(x)=h(y)$ (où $y=f(x)$) est son point générique.
+
+$1^\circ$ Supposons d'abord que $x\in E$. Les anneaux locaux $\sh{O}_{X_\eta,x}$ et $\sh{O}_{Y_\eta,y}$ sont respectivement égaux à $\sh{O}_{X,x}$ et $\sh{O}_{Y,y}$; comme la propriété de lissité d'un morphisme de présentation finie en un point ne dépend que de l'anneau local de ce point et de l'anneau local de son image (17.5.1), on voit que l'hypothèse $x\in E$ revient à dire que le morphisme $f$ est lisse au point $x$; il possède alors encore cette propriété aux points d'un voisinage ouvert de $x$ dans $X$, et il suffit d'appliquer (17.3.3, (iii)) pour obtenir alors la conclusion.
+
+$2^\circ$ Supposons en second lieu que $x\in X-E$, et que le morphisme $f_\eta$ ne soit pas plat au point $x$. La conclusion résulte alors du lemme suivant qui précise (11.2.8):
+
+\begin{lemma}[17.7.11.1]
+\label{IV.17.7.11.1}
+Soient $g:X\to S$, $h:Y\to S$ deux morphismes localement de présentation finie, $f:X\to Y$ un $S$-morphisme, $\sh{F}$ un $\sh{O}_X$-module quasi-cohérent de présentation finie. Alors l'ensemble $E$ des $x\in X$ tels que $\sh{F}_{g(x)}$ soit $f_{g(x)}$-plat au point $x$ est localement constructible.
+\end{lemma}
+
+Raisonnant encore comme au début de (9.9.1) et utilisant (2.5.1), on se ramène au cas où $S$, $X$ et $Y$ sont noethériens; puis on se ramène comme ci-dessus au cas où $S$ est intègre, où $\eta=g(x)=h(f(x))$ est son point générique, et il s'agit de montrer que si $x\in E$ (resp. $x\notin E$) il y a un voisinage $V$ de $x$ dans $\overline{\{x\}}$ contenu dans $E$ (resp. dans $X-E$). Le cas où $x\in E$ est conséquence immédiate de (11.1.1). Pour traiter le cas où $x\notin E$, on raisonne comme dans (9.4.7.1), dont nous conservons les notations, de sorte que l'on peut supposer, en remplaçant éventuellement $Y$ et $X$ par des voisinages de $f(x)$ et $x$ respectivement, qu'il existe deux $\sh{O}_Y$-modules cohérents $\sh{G}$, $\sh{H}$ et un $\sh{O}_Y$-homomorphisme $u:\sh{G}\to\sh{H}$ tels que pour tout $s\in S$, $u_s:\sh{G}_s\to\sh{H}_s$ soit injectif, mais que l'homomorphisme $1\otimes u_\eta:\sh{F}_\eta\otimes_{\sh{O}_{Y_\eta}}\sh{G}_\eta\to\sh{F}_\eta\otimes_{\sh{O}_{Y_\eta}}\sh{H}_\eta$ ne soit pas injectif au point $x$, autrement dit $x\in\operatorname{Supp}(\operatorname{Ker}(1\otimes u_\eta))$; si l'on pose $T=\overline{\{x\}}$, on a donc $\operatorname{Supp}(\operatorname{Ker}(1\otimes u_\eta))\supset T_\eta$. Mais on peut supposer que pour tout $s\in S$, on a $\operatorname{Ker}(1\otimes u_s)=(\operatorname{Ker}(1\otimes u))_s$ (9.4.2), donc
+
+\oldpage[IV-4]{78}
+
+$\operatorname{Supp}(\operatorname{Ker}(1\otimes u_s))=(\operatorname{Supp}(\operatorname{Ker}(1\otimes u)))_s$ (I, 9.1.13.1); il résulte enfin de (9.5.2) que pour $s$ dans un voisinage de $\eta$, on a $(\operatorname{Supp}(\operatorname{Ker}(1\otimes u)))_s\supset T_s$, ce qui établit le lemme.
+
+$3^\circ$ Supposons maintenant que $x\in X-E$, que le morphisme $f_\eta$ soit plat au point $x$, mais que $f_\eta$ ne soit pas lisse au point $x$. Remarquons que dire que $f_\eta$ est plat au point $x$ équivaut à dire que $f$ lui-même est plat au point $x$ et en remplaçant $X$ par un voisinage de $x$, on peut supposer que $f$ est plat (11.1.1); on en conclut qu'il en est de même de $f_s$ pour tout $s\in S$, et comme pour tout $y\in Y$, $f^{-1}(y)=f_{h(y)}^{-1}(y)$, il revient au même de dire que $f_{g(x')}$ est lisse au point $x'$ ou de dire que $f$ est lisse au point $x'$. Mais l'ensemble des $x'\in X$ où $f$ est lisse est \emph{ouvert} dans $X$ (12.1.7), donc l'ensemble des $x'\in X$ où $f$ n'est pas lisse est fermé, et puisqu'il contient $x$ par hypothèse, il contient aussi $\overline{\{x\}}$, ce qui achève la démonstration pour la première propriété considérée dans (i).
+
+Prouvons en second lieu (i) lorsqu'il s'agit de la propriété d'être \emph{étale}. Notons pour cela que cette propriété pour $f_s$ au point $x$ équivaut à dire que $f_s$ est à la fois lisse et quasi-fini au point $x$ (17.6.1). Or, il revient au même de dire que $f_{g(x)}$ est quasi-fini au point $x$ ou que $f$ est lui-même quasi-fini en ce point; il résulte donc de (13.1.4) que l'ensemble des points $x$ tels que $f_{g(x)}$ soit quasi-fini au point $x$ est ouvert dans $X$, et \emph{a fortiori} localement constructible; la conclusion résulte donc de ce que l'ensemble des $x$ tels que $f_{g(x)}$ soit lisse au point $x$ est lui aussi localement constructible.
+
+Passons à la preuve de (i) lorsqu'il s'agit de la propriété d'être \emph{différentiellement lisse}. Soit $p:X\times_Y X\to X$ la seconde projection canonique; la seconde projection $X_s\times_{Y_s}X_s\to X_s$ n'est autre que $p_s$ pour tout $s\in S$, et il résulte donc de (17.12.5.1)\footnote{Le lecteur vérifiera que le résultat de (17.7.11) n'est pas utilisé dans la suite du § 17 et qu'il n'y a donc pas de cercle vicieux.} que pour que $f_{g(x)}$ soit différentiellement lisse au point $x$, il faut et il suffit que $p_{g(x)}$ soit lisse au point $\Delta_f(x)$. Comme $p$ est localement de présentation finie, l'ensemble des points $z\in X\times_Y X$ tels que $p_{g(p(z))}$ soit lisse au point $z$ est localement constructible, et l'intersection de cet ensemble avec l'ensemble localement fermé $\Delta_f(X)$ est donc aussi localement constructible dans $\Delta_f(X)$ (1.8.2); la restriction de $p$ à $\Delta_f(X)$ étant un isomorphisme sur $X$, on voit que l'ensemble des $x\in X$ tels que $f_{g(x)}$ soit différentiellement lisse au point $x$ est localement constructible.
+
+Considérons enfin la propriété d'être non ramifié; notons que le morphisme diagonal $\Delta_f:X\to X\times_Y X$ est une immersion localement de présentation finie (1.4.3.1) et pour tout $s\in S$, le morphisme diagonal $\Delta_{f_s}:X_s\to X_s\times_{Y_s}X_s$ n'est autre que $(\Delta_f)_s$; dire que $f_{g(x)}$ est non ramifié au point $x$ équivaut à dire que $(\Delta_f)_{g(x)}$ est un isomorphisme local au point $x$ (17.4.1), et puisque c'est une immersion localement de présentation finie, il revient au même (17.9.1)\footnote{Le lecteur vérifiera que le résultat de (17.7.11) n'est pas utilisé dans le reste du § 17 et qu'il n'y a donc pas de cercle vicieux.} de dire que $(\Delta_f)_{g(x)}$ est étale au point $x$; il suffit donc d'appliquer ce qui a été vu plus haut pour la propriété d'être étale.
+
+\oldpage[IV-4]{79}
+
+\subsection{Critères de lissité et non-ramification par fibres}
+\label{subsection:IV.17.8}
+\label{IV.17.8}
+
+\begin{proposition}[17.8.1]
+\label{IV.17.8.1}
+Soient $g:Y\to S$, $h:X\to S$ deux morphismes localement de présentation finie. Pour qu'un $S$-morphisme $f:X\to Y$ soit non ramifié, il faut et il suffit que pour tout $s\in S$, le morphisme $f_s:h^{-1}(s)\to g^{-1}(s)$ déduit de $f$ par le changement de base $\Spec(k(s))\to S$, soit non ramifié.
+\end{proposition}
+
+Cela résulte aussitôt du fait que, pour un morphisme localement de présentation finie, le fait d'être non ramifié est une propriété des \emph{fibres} de ce morphisme (17.4.1, $d$)), et de ce que, pour tout $y\in Y$, on a $f^{-1}(y)=f_s^{-1}(y)$ si $s=g(y)$.
+
+\begin{proposition}[17.8.2]
+\label{IV.17.8.2}
+Soient $g:Y\to S$, $h:X\to S$ deux morphismes localement de présentation finie; on suppose en outre que $h$ est plat. Pour qu'un $S$-morphisme $f:X\to Y$ soit lisse (resp. étale), il faut et il suffit que, pour tout $s\in S$, le morphisme $f_s:h^{-1}(s)\to g^{-1}(s)$ déduit de $f$ par le changement de base $\Spec(k(s))\to S$ soit lisse (resp. étale). Lorsqu'il en est ainsi, le morphisme $g$ est plat aux points de $f(X)$.
+\end{proposition}
+
+On sait en effet (11.3.10) que pour que $f$ soit plat, il faut et il suffit que $f_s$ le soit pour tout $s\in S$, et qu'alors $g$ est plat aux points de $f(X)$. Mais pour un morphisme plat localement de présentation finie, le fait d'être lisse est une propriété des fibres de ce morphisme (17.5.1, $b$)), et pour tout $y\in Y$, on a $f^{-1}(y)=f_s^{-1}(y)$ si $s=g(y)$.
+
+\begin{remark}[17.8.3]
+\label{IV.17.8.3}
+Les démonstrations précédentes montrent (compte tenu de (11.3.10)) que si les hypothèses sur $g$ et $h$ sont les mêmes que ci-dessus, alors, pour que $f$ soit non ramifié (resp. lisse, resp. étale) \emph{en un point} $x\in X$, il suffit que, si l'on pose $s=h(x)$, $f_s$ soit non ramifié (resp. lisse, resp. étale) au point $x$.
+\end{remark}
+
+\subsection{Morphismes étales et immersions ouvertes}
+\label{subsection:IV.17.9}
+\label{IV.17.9}
+
+\begin{theorem}[17.9.1]
+\label{IV.17.9.1}
+Soit $f:X\to Y$ un morphisme. Les propriétés suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est une immersion ouverte.
+  \item[b)] $f$ est un monomorphisme plat localement de présentation finie.
+  \item[c)] $f$ est étale et radiciel.
+\end{enumerate}
+\end{theorem}
+
+Il résulte de (1.4.3, (i)) que a) implique b). La condition b) implique que pour tout $y\in Y$, la fibre $f^{-1}(y)$ est vide ou isomorphe à $\Spec(k(y))$ (8.11.5.1), donc b) entraîne c), en vertu de (17.6.2, $c$)). Reste à voir que c) implique a).
+
+La question étant locale sur $X$ et sur $Y$ (puisque $f$ est injectif), on peut se borner au cas où $Y$ est affine et $f$ de présentation finie. Comme $f$ est plat, c'est un morphisme \emph{ouvert} (2.4.6), donc, en remplaçant $Y$ par $f(X)$, on peut supposer que $f$ est \emph{surjectif}. Pour tout morphisme $Y'\to Y$, $f'=f_{(Y')}:X_{(Y')}\to Y'$ est encore étale, radiciel, surjectif et de présentation finie, donc ouvert, et par suite un homéomorphisme; autrement dit $f$ est un \emph{homéomorphisme universel}, et étant de type fini et séparé (1.8.7.1), $f$ est \emph{propre}. L'hypothèse que $f$ est radiciel et de type fini entraîne alors que $f$ est quasi-fini; donc (8.11.1) $f$ est un morphisme \emph{fini}. Pour prouver que $f$ est un isomorphisme, on peut se borner au cas
+
+\oldpage[IV-4]{80}
+
+où $Y=\Spec(A)$, $A$ étant un anneau local. Comme $f$ est de présentation finie, on a $X=\Spec(B)$, où $B$ est un $A$-module plat de présentation finie (1.4.7), donc \emph{libre} (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 2, cor. 2 du th. 1). En outre, si $\mathfrak m$ est l'idéal maximal de $A$ et $k$ son corps résiduel, $B/\mathfrak mB$ est par hypothèse un corps, à la fois extension radicielle et extension finie séparable de $k$, puisque $f$ est étale et radiciel (17.6.1); donc $B/\mathfrak mB$ est isomorphe à $k$, et comme $B$ est un $A$-module libre, $B$ est isomorphe à $A$. C.Q.F.D.
+
+\begin{corollary}[17.9.2]
+\label{IV.17.9.2}
+Soit $X$ un préschéma connexe; si $f:X\to Y$ est une immersion fermée étale, alors $f$ est un isomorphisme de $X$ sur une composante connexe ouverte de $Y$.
+\end{corollary}
+
+En effet $f$ est étale et radiciel, donc un isomorphisme de $X$ sur un préschéma induit sur une partie ouverte de $Y$; mais par hypothèse $f(X)$ est fermé dans $Y$, donc à la fois ouvert et fermé, et puisque $f(X)$ est connexe, c'est une composante connexe de $Y$.
+
+\begin{corollary}[17.9.3]
+\label{IV.17.9.3}
+Soit $f:X\to Y$ un morphisme étale (resp. étale et séparé). Alors toute $Y$-section $g:Y\to X$ de $X$ est une immersion ouverte (resp. ouverte et fermée); en outre l'application $g\mapsto g(Y)$ est une bijection de l'ensemble $\Gamma(X/Y)$ des $Y$-sections de $X$ sur l'ensemble des parties ouvertes $Z$ (resp. ouvertes et fermées) de $X$ telles que la restriction de $f$ à $Z$ soit un morphisme surjectif et radiciel de $Z$ sur $Y$.
+\end{corollary}
+
+En effet, le fait que $g$ soit une immersion ouverte résulte déjà de ce que $f$ est non ramifié (17.4.1, $b''$)), et la restriction de $f$ à l'ouvert $g(Y)$ de $X$ est un isomorphisme. Inversement, si $Z$ est un ouvert de $X$ tel que $f|Z$ soit un morphisme surjectif et radiciel de $Z$ sur $Y$, $f|Z$ est un isomorphisme en vertu de (17.9.1), puisqu'il est étale. Si $f$ est en outre séparé, on sait que $g$ est une immersion fermée (1, 5.4.6), ce qui achève de prouver le corollaire.
+
+\begin{corollary}[17.9.4]
+\label{IV.17.9.4}
+Soient $Y$ un préschéma connexe, $f:X\to Y$ un morphisme étale et séparé. Alors toute $Y$-section $g$ de $X$ est un isomorphisme de $Y$ sur une composante connexe ouverte de $X$, et l'application $g\mapsto g(Y)$ est une bijection de $\Gamma(X/Y)$ sur l'ensemble des composantes connexes ouvertes $Z$ de $X$ telles que la restriction de $f$ à $Z$ soit un morphisme surjectif et radiciel de $Z$ sur $Y$.
+\end{corollary}
+
+\begin{corollary}[17.9.5]
+\label{IV.17.9.5}
+Soient $g:Y\to S$, $h:X\to S$ deux morphismes localement de présentation finie; on suppose en outre que $h$ est plat. Pour qu'un $S$-morphisme $f:X\to Y$ soit une immersion ouverte (resp. un isomorphisme), il faut et il suffit que, pour tout $s\in S$, le morphisme $f_s:h^{-1}(s)\to g^{-1}(s)$ déduit de $f$ par le changement de base $\Spec(k(s))\to S$, soit une immersion ouverte (resp. un isomorphisme).
+\end{corollary}
+
+En effet, si $f_s$ est une immersion ouverte pour tout $s\in S$, il résulte de (17.8.3) que $f$ est un morphisme étale; comme pour tout $y\in Y$, on a $f^{-1}(y)=f_s^{-1}(y)$ avec $s=g(y)$, $f$ est radiciel; donc $f$ est une immersion ouverte en vertu de (17.9.1). Si de plus $f_s$ est surjectif pour tout $s\in S$, $f$ est surjectif, donc un isomorphisme.
+
+La proposition suivante précise (10.4.11):
+
+\begin{proposition}[17.9.6]
+\label{IV.17.9.6}
+Soient $S$ un préschéma, $X$ un $S$-préschéma de présentation finie. Tout $S$-endomorphisme de $X$ qui est un monomorphisme est un automorphisme de $X$.
+\end{proposition}
+
+Soient $f:X\to S$ le morphisme structural, $g$ le $S$-endomorphisme considéré. La question est locale sur $S$, et on peut par suite supposer que $S$ est affine. Utilisant (8.9.1) et (8.10.5, (i \emph{bis})), on est ramené au cas où $S=\Spec(A)$, où $A$ est une $\mathbb{Z}$-algèbre de type fini, et par suite $X$ est un $\mathbb{Z}$-préschéma de type fini. Il résulte déjà de (10.4.11) que $g$ est un morphisme bijectif, puisqu'un monomorphisme est radiciel (8.11.5.1); il suffira donc de montrer
+
+\oldpage[IV-4]{81}
+
+que $g$ est une immersion ouverte, et puisque $g$ est radiciel, il suffira, en vertu de (17.9.1), de prouver que $g$ est étale. En outre, comme l'ensemble des points où $g$ est étale est ouvert et que $X$ est un préschéma de Jacobson (10.4.7), il suffira de montrer que $g$ est étale en tout point \emph{fermé} $z$ de $X$ (10.3.1). Posons $z'=g(z)$; il résulte de (10.4.11.1, (i)) que $z'$ est aussi un point fermé de $X$ et puisque $g$ est un monomorphisme, l'application $k(z')\to k(z)$ déduite de $g$ est un \emph{isomorphisme}. Pour que $g$ soit étale au point $z$, il faut et il suffit donc que l'homomorphisme canonique $\widehat{\sh{O}}_{X,z'}\to\widehat{\sh{O}}_{X,z}$ soit bijectif (17.6.3, $e''$)). Nous allons pour cela prouver que pour tout entier $n$, l'homomorphisme canonique $\sh{O}_{X,z'}/\mathfrak m_{z'}^{n+1}\to\sh{O}_{X,z}/\mathfrak m_z^{n+1}$ est bijectif, d'où résultera aussitôt la conclusion. On peut supposer que $z$ appartient à l'ensemble fini $T_{p,d}$ des points fermés $t$ de $X$ tels que $k(t)$ soit une extension de $\mathbb{F}_p$ dont le degré divise $d$; auquel cas il en est de même de $z'$. Désignons par $\sh{J}$ l'idéal cohérent de $\sh{O}_X$ tel que $\sh{J}_x=\sh{O}_x$ pour $x\notin T_{p,d}$, et $\sh{J}_x=\mathfrak m_x^{n+1}$ pour $x\in T_{p,d}$. Soient $T_{p,d,n}$ le sous-préschéma fermé de $X$ défini par $\sh{J}$, $j:T_{p,d,n}\to X$ l'injection canonique; le morphisme composé $g\circ j:T_{p,d,n}\to X$ applique l'ensemble $T_{p,d}$ dans lui-même, et pour tout $x\in T_{p,d}$, l'homomorphisme $\sh{O}_{X,g(x)}\to\sh{O}_{X,x}/\mathfrak m_x^{n+1}$ se factorise en
+\[
+\sh{O}_{X,g(x)}\to\sh{O}_{X,g(x)}/\mathfrak m_{g(x)}^{n+1}\to\sh{O}_{X,x}/\mathfrak m_x^{n+1}.
+\]
+Donc (I, 4.9), il existe un unique endomorphisme $g'$ de $T_{p,d,n}$ tel que $j\circ g'=g\circ j$. Comme $j$ est un monomorphisme, et qu'il en est de même de $g$ par hypothèse, on en déduit que $g'$ est aussi un monomorphisme, et la proposition sera prouvée si l'on montre que $g'$ est un \emph{automorphisme} de $T_{p,d,n}$. Or, pour tout $x\in T_{p,d,n}$, on a vu que $k(x)$ est un corps fini, et comme $\sh{O}_{X,x}$ est noethérien, chacun des $\mathfrak m_x^h/\mathfrak m_x^{h+1}$ est un $k(x)$-espace vectoriel de rang fini; d'où l'on conclut aussitôt que l'anneau local $\sh{O}_{X,x}/\mathfrak m_x^{n+1}$ de $T_{p,d,n}$ au point $x$ a un nombre \emph{fini} d'éléments, et \emph{a fortiori} est un $\mathbb{Z}$-module de type fini. Comme $T_{p,d,n}$ est somme des préschémas $\Spec(\sh{O}_{X,x}/\mathfrak m_x^{n+1})$ en nombre fini, c'est un $\mathbb{Z}$-préschéma \emph{fini}; l'endomorphisme $g'$ est donc lui aussi \emph{fini} (II, 6.1.5, (v)), donc propre. Mais un monomorphisme propre est une \emph{immersion fermée} (8.11.5); si $T_{p,d,n}=\Spec(B)$, $g'$ correspond donc à un endomorphisme surjectif $\varphi:B\to B$ de l'anneau $B$. Or, l'ensemble $B$ est fini, donc $\varphi$ est nécessairement bijectif. C.Q.F.D.
+
+\subsection{Dimension relative d'un préschéma lisse sur un autre}
+\label{subsection:IV.17.10}
+
+\begin{definition}[17.10.1]
+\label{IV.17.10.1}
+Soit $f:X\to Y$ un morphisme localement de type fini. On appelle \emph{dimension relative de $f$ au point $x\in X$} (ou \emph{dimension relative de $X$ sur $Y$ au point $x$}) et l'on note $\dim_x f$ l'entier positif $\dim_x(f^{-1}(f(x)))$.
+\end{definition}
+
+Dire que $f$ est \emph{quasi-fini} au point $x$ (Err$_{\mathrm{III}}$, 20) équivaut donc à dire que $\dim_x f=0$. On a vu (13.1.3) que la fonction $x\mapsto\dim_x f$ est semi-continue supérieurement. On notera que, même lorsque le morphisme $f$ a la propriété $(S_1)$ (autrement dit (6.8.1) est plat et tel que ses fibres n'aient pas de cycle premier associé immergé), la fonction $x\mapsto\dim_x f$ n'est pas nécessairement continue, comme le montre l'exemple où $Y=\Spec(k)$, où $k$ est un corps, et $X=\Spec(k[U,V,W]/\mathfrak p\mathfrak q)$, où $\mathfrak p=(W)$ et $\mathfrak q=(U)+(V-W)$, idéaux premiers de $k[U,V,W]$ ($X$ étant donc la réunion, dans l'espace à 3 dimensions, d'un plan et d'une droite non parallèle à ce plan).
+
+Dire qu'un morphisme localement de présentation finie $f:X\to Y$ est étale au point $x\in X$ signifie encore que $f$ est lisse au point $x$ et que $\dim_x f=0$ (17.6.1).
+
+\begin{proposition}[17.10.2]
+\label{IV.17.10.2}
+Soit $f:X\to Y$ un morphisme lisse. Pour tout $x\in X$, le $\sh{O}_X$-Module localement libre $\Omega_f^1$ (17.2.3) a un rang en $x$ égal à $\dim_x f$ (ce qui entraîne que $x\mapsto\dim_x f$ est une fonction continue dans $X$).
+\end{proposition}
+
+En effet, si $y=f(x)$, $X_y=f^{-1}(y)$ est lisse sur $k(y)$, et si $f_y:X_y\to\Spec(k(y))$ est le morphisme structural, on a $\Omega_{f_y}^1=\Omega_f^1\otimes_{\sh{O}_X}\sh{O}_{X_y}$ (16.4.5); on peut donc se borner au cas où $Y=\Spec(k)$ est le spectre d'un corps; en outre, en vertu de (16.4.5) et (17.7.1), on peut remplacer $k$ par une extension algébriquement close, autrement dit
+
+\oldpage[IV-4]{82}
+
+supposer $k$ algébriquement clos. L'ensemble des points de $X$ rationnels sur $k$ étant alors dense dans $X$ (10.4.8), on peut se borner au cas où $x$ est rationnel sur $k$. Or (16.4.12) $(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)$ est alors $k$-isomorphe à $\mathfrak m_x/\mathfrak m_x^2$, et puisque $\sh{O}_x$ est un anneau local régulier (17.5.1), $\operatorname{rg}_{k(x)}(\mathfrak m_x/\mathfrak m_x^2)=\dim(\sh{O}_x)$ (0, 17.1.1); donc $\operatorname{rg}_{\sh{O}_x}(\Omega^1_{X/k})_x=\dim(\sh{O}_x)$. Mais puisque $k(x)=k$, on a $\dim_x f=\dim(\sh{O}_x)$ (5.2.3). C.Q.F.D.
+
+Nous démontrerons plus loin une réciproque de ce résultat (17.15.5).
+
+\begin{corollary}[17.10.3]
+\label{IV.17.10.3}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes lisses. Alors, pour tout $x\in X$, on a
+\begin{equation}
+\label{IV.17.10.3.1}
+\tag{17.10.3.1}
+\dim_x(g\circ f)=\dim_x f+\dim_{f(x)}g.
+\end{equation}
+\end{corollary}
+
+En effet, $g\circ f$ est lisse (17.3.3), donc les trois $\sh{O}_X$-Modules $\Omega^1_{X/Y}$, $\Omega^1_{X/Z}$ et $f^*(\Omega^1_{Y/Z})$ sont localement libres (17.2.3 et $0_{\mathrm I}$, 5.4.5); en outre le rang en $x$ de $f^*(\Omega^1_{Y/Z})$ est égal au rang en $y=f(x)$ de $\Omega^1_{Y/Z}$. L'égalité (17.10.3.1) est donc conséquence de (17.10.2) et de l'exactitude de la suite (17.2.3.1).
+
+\begin{corollary}[17.10.4]
+\label{IV.17.10.4}
+Soient $f:X\to Y$ un morphisme lisse, $X'$ un sous-préschéma de $X$ tel que le morphisme composé $X'\xrightarrow{j}X\xrightarrow{f}Y$ (où $j$ est l'injection canonique) soit lisse. Alors le faisceau conormal $\sh{N}_{X'/X}$ est un $\sh{O}_{X'}$-Module localement libre, et pour tout $x\in X'$, on a
+\begin{equation}
+\label{IV.17.10.4.1}
+\tag{17.10.4.1}
+\dim_x f=\dim_x(f\circ j)+\operatorname{rg}_{\sh{O}_{X',x}}(\sh{N}_{X'/X})_x.
+\end{equation}
+\end{corollary}
+
+En effet, $\Omega^1_{X/Y}\otimes_{\sh{O}_X}\sh{O}_{X'}$ et $\Omega^1_{X'/Y}$ sont alors localement libres et la suite exacte (17.2.5.1) est scindée dans un voisinage convenable de chaque point de $X'$, donc $\sh{N}_{X'/X}$ est localement libre (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 2, th. 1), et la relation (17.10.4.1) résulte aussitôt de l'exactitude de la suite (17.2.5.1).
+
+\subsection{Morphismes lisses de préschémas lisses}
+\label{subsection:IV.17.11}
+
+\begin{theorem}[17.11.1]
+\label{IV.17.11.1}
+Soient $f:Y\to S$ et $h:X\to S$ deux morphismes localement de présentation finie, $g:X\to Y$ un $S$-morphisme, $x$ un point de $X$; posons $y=g(x)$, $s=f(y)=h(x)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est lisse au point $y$ et $g$ est lisse au point $x$.
+  \item[b)] $g$ et $h$ sont lisses au point $x$.
+  \item[c)] $h$ est lisse au point $x$, et l'homomorphisme canonique (16.4.18)
+  \begin{equation}
+  \label{IV.17.11.1.1}
+  \tag{17.11.1.1}
+  (g^*(\Omega^1_{Y/S}))_x\to(\Omega^1_{X/S})_x
+  \end{equation}
+  est inversible à gauche (autrement dit est un isomorphisme sur un \emph{facteur direct} de $(\Omega^1_{X/S})_x$).
+  \item[c')] $h$ est lisse au point $x$, et l'homomorphisme canonique
+  \begin{equation}
+  \label{IV.17.11.1.2}
+  \tag{17.11.1.2}
+  ((\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y))\otimes_{k(y)}k(x)\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \end{equation}
+  est injectif.
+\end{enumerate}
+Supposons en outre que l'homomorphisme $k(y)\to k(x)$ soit bijectif. Alors les conditions précédentes sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[d)] $h$ est lisse au point $x$, et l'application canonique $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ de l'espace vectoriel tangent en $x$ à $X$ dans l'espace vectoriel tangent en $y$ à $Y$ (16.5.12) est surjective.
+\end{enumerate}
+\end{theorem}
+
+Le fait que a) entraîne b) résulte trivialement de (17.3.3, (iii)); b) entraîne c) par application de (17.2.3, (ii)). Pour voir que c) est équivalente à c'), notons qu'en vertu de (17.2.3, (i)), $\Omega^1_{X/S}$ est un $\sh{O}_X$-Module localement libre de type fini; il suffit alors d'appliquer (0, 19.1.12) à l'anneau local $\sh{O}_{X,x}$ et à l'homomorphisme (17.11.1.1) de $\sh{O}_{X,x}$-modules de type fini. Lorsque $k(x)=k(y)$, l'application linéaire tangente $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ est transposée de (17.11.1.2), par (16.5.12), ce qui établit dans ce cas l'équivalence de c') et d).
+
+\oldpage[IV-4]{83}
+
+Il reste donc à prouver que c) entraîne a). On peut se borner au cas où $S=\Spec(A)$, $Y=\Spec(B)$, $X=\Spec(C)$ sont affines. L'hypothèse implique (17.2.3, (i)) que $(\Omega^1_{X/S})_x=\Omega^1_{C_{\mathfrak m}/A_{\mathfrak s}}$ est un $C_{\mathfrak m}$-module libre: en effet (16.10.6) il existe des éléments $t_i$ ($1\leq i\leq r$) de $B_{\mathfrak p}=\sh{O}_{Y,y}$ tels que les différentielles $d_{B_{\mathfrak p}/A_{\mathfrak s}}(t_i)$ engendrent le $B_{\mathfrak p}$-module $\Omega^1_{B_{\mathfrak p}/A_{\mathfrak s}}$ et que leurs images dans $\Omega^1_{C_{\mathfrak m}/A_{\mathfrak s}}$ fassent partie d'une base de ce $C_{\mathfrak m}$-module libre. Comme $\Omega^1_{Y/S}$ (resp. $\Omega^1_{X/S}$) est un $\sh{O}_Y$-Module (resp. un $\sh{O}_X$-Module) de présentation finie (16.4.22), on peut, en remplaçant au besoin $X$ et $Y$ par des voisinages ouverts affines convenables de $x$ et $y$ respectivement, supposer que $\Omega^1_{C/A}$ est un $C$-module libre et que les $t_i$ sont les images d'éléments $s_i$ ($1\leq i\leq r$) de $B$ tels que les $d_{B/A}(s_i)$ engendrent le $B$-module $\Omega^1_{B/A}$ et que leurs images dans $\Omega^1_{C/A}$ fassent partie d'une base de ce $C$-module (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 1, prop. 2). Soit $\varphi$ le $A$-homomorphisme de $B'=A[T_1,\ldots,T_r]$ dans $B$ tel que $\varphi(T_i)=s_i$ pour tout $i$; le di-homomorphisme correspondant $\Omega^1_{B'/A}\to\Omega^1_{B/A}$ (0, 20.5.2) transforme les $d_{B'/A}(T_i)$, qui forment une base de $\Omega^1_{B'/A}$ (0, 20.4.13), en les $d_{B/A}(s_i)$ et est par suite \emph{surjectif}; si $Y'=\Spec(B')$, et si $u:Y\to Y'$ est le $S$-morphisme correspondant à $\varphi$, on conclut de (17.2.2) que $u$ est \emph{non ramifié}. Si l'on prouve que le morphisme composé $u\circ g:X\to Y'$ est lisse au point $x$, il résultera donc de (17.7.10) que $u$ est étale au point $y$, puis de (17.3.5) que $g$ est lisse au point $x$; enfin, comme le morphisme structural $f':Y'\to S$ est lisse (17.3.8), $f=f'\circ u$ sera lisse au point $y$. Comme les images canoniques des $d_{B'/A}(T_i)$ dans $\Omega^1_{C/A}$ sont celles des $d_{B/A}(s_i)$, elles font partie d'une base de $\Omega^1_{C/A}$. On voit ainsi que pour prouver que c) implique a), on peut se borner au cas où $Y'=Y$, et par suite supposer que $f$ est un morphisme \emph{lisse}.
+
+En vertu de (17.8.2), on peut alors se borner au cas où $S=\Spec(k)$ est le spectre d'un corps; de plus, grâce à (17.7.1, (ii)), on peut supposer que $k$ est algébriquement clos; enfin, remplaçant au besoin $X$ et $Y$ par des voisinages ouverts de $x$ et $y$ respectivement, on peut supposer que $f$ et $h$ sont tous deux lisses, et que l'homomorphisme canonique
+\[
+g^*(\Omega^1_{Y/S})\to\Omega^1_{X/S}
+\]
+est inversible à gauche (0, 19.1.12). Alors l'ensemble des points de $X$ rationnels sur $k$ est très dense dans $X$ (10.4.8), donc, pour prouver que $g$ est lisse, il suffit de prouver que $g$ est lisse en tout point $x\in X$ rationnel sur $k$, ou encore qu'en un tel point, $\sh{O}_{X,x}$ est un $\sh{O}_{Y,y}$-module plat et $\sh{O}_{X,x}/\mathfrak m_y\sh{O}_{X,x}$ un anneau régulier (17.5.1). Or, $y=g(x)$ est
+
+\oldpage[IV-4]{84}
+
+\emph{a fortiori} rationnel sur $k$, et comme $\sh{O}_{Y,y}$ est alors une $k$-algèbre formellement lisse pour les topologies discrètes et que $\sh{O}_{Y,y}/\mathfrak m_y=k$, il résulte de (0, 20.5.14) que l'homomorphisme canonique $\mathfrak m_y/\mathfrak m_y^2\to(\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y)$ est bijectif; de même, l'homomorphisme canonique $\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)$ est bijectif. L'hypothèse c'), équivalente à c), signifie donc ici que l'homomorphisme canonique
+\[
+(\mathfrak m_y/\mathfrak m_y^2)\otimes_{k(y)}k(x)\to\mathfrak m_x/\mathfrak m_x^2
+\]
+est injectif. Comme l'anneau $\sh{O}_{X,x}$ est régulier, la conclusion résulte de (0, 17.3.3). C.Q.F.D.
+
+\begin{corollary}[17.11.2]
+\label{IV.17.11.2}
+Sous les hypothèses générales de (17.11.1), les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est lisse au point $y$ et $g$ est étale au point $x$.
+  \item[b)] $h$ est lisse au point $x$ et $g$ est étale au point $x$.
+  \item[c)] $h$ est lisse au point $x$, et l'homomorphisme canonique
+  \[
+  (g^*(\Omega^1_{Y/S}))_x\to(\Omega^1_{X/S})_x
+  \]
+  est bijectif.
+  \item[c')] $h$ est lisse au point $x$, et l'homomorphisme canonique
+  \[
+  ((\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y))\otimes_{k(y)}k(x)\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \]
+  est bijectif.
+\end{enumerate}
+Supposons en outre que l'homomorphisme $k(y)\to k(x)$ soit bijectif. Alors les conditions précédentes sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[d)] $h$ est lisse au point $x$, et l'application canonique $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ (16.5.12) est bijective.
+\end{enumerate}
+\end{corollary}
+
+Chacune des conditions a), b), c) de (17.11.2) est équivalente à la conjonction de la condition correspondante de (17.11.1) et du fait que $g$ est non ramifié au point $x$, compte tenu de (17.2.2) en ce qui concerne la condition c); d'où l'équivalence de a), b) et c). L'équivalence de c) et c') résulte de l'équivalence des conditions correspondantes de (17.11.1) et du lemme de Nakayama; l'équivalence de c') et d) lorsque $k(x)=k(y)$ est immédiate par transposition (16.5.12).
+
+\begin{corollary}[17.11.3]
+\label{IV.17.11.3}
+Soient $h:X\to S$ un morphisme lisse, $s_i$ ($1\leq i\leq r$) des sections de $\sh{O}_X$ au-dessus de $X$ (qui sont aussi des sections de $h_*(\sh{O}_X)$ au-dessus de $S$), $g:X\to S[T_1,\ldots,T_r]=\mathbf{V}_S^r$ le $S$-morphisme correspondant à l'homomorphisme de $\sh{O}_S$-Modules $\sh{O}_S^r\to h_*(\sh{O}_X)$ défini par ces sections (II, 1.2.7). Pour que $g$ soit lisse (resp. étale) en un point $x\in X$ il faut et il suffit que les $(d_{X/S}(s_i))_x$ fassent partie d'une base (resp. constituent une base) du $\sh{O}_{X,x}$-module $(\Omega^1_{X/S})_x$.
+\end{corollary}
+
+Il suffit d'appliquer (17.11.1) (resp. (17.11.2)) en prenant pour $f$ le morphisme structural $S[T_1,\ldots,T_r]\to S$.
+
+\begin{corollary}[17.11.4]
+\label{IV.17.11.4}
+Pour qu'un morphisme $h:X\to S$ soit lisse en un point $x\in X$, il faut et il suffit qu'il existe un voisinage ouvert $U$ de $x$, un entier $r$, et un $S$-morphisme étale $U\to S[T_1,\ldots,T_r]$.
+\end{corollary}
+
+\oldpage[IV-4]{85}
+
+La condition est évidemment suffisante puisque le morphisme structural $S[T_1,\ldots,T_r]\to S$ est lisse (17.3.8). Pour montrer qu'elle est nécessaire, notons que puisque $h$ est lisse au point $x$, il existe un voisinage ouvert $U$ de $x$ tel que $\Omega^1_{X/S}|U$ soit localement libre (17.2.3); il suffit alors d'utiliser (16.10.6) pour obtenir (en restreignant au besoin $U$) des sections $s_i$ de $\sh{O}_X$ au-dessus de $U$ telles que les $d_{X/S}(s_i)$ forment une base de $\Omega^1_{X/S}|U$; on conclut en appliquant (17.11.3).
+
+\begin{proposition}[17.11.5]
+\label{IV.17.11.5}
+Soient $f:Y\to S$, $h:X\to S$ deux morphismes lisses. Pour qu'un $S$-morphisme $g:X\to Y$ soit une immersion ouverte, il faut et il suffit que $g$ soit un monomorphisme de préschémas et que pour tout $x\in X$, si l'on pose $y=g(x)$, on ait $\dim_y(f)=\dim_x(h)$ (pour une généralisation de cette proposition, voir (18.10.5)).
+\end{proposition}
+
+La condition est évidemment nécessaire; prouvons qu'elle est suffisante.
+
+En vertu de (17.9.5), on est aussitôt ramené au cas où $S=\Spec(k)$ est le spectre d'un corps, et en vertu de (2.7.1, (x)), on peut supposer $k$ algébriquement clos. Compte tenu de (17.9.1), il suffit alors de prouver que $g$ est étale, et comme l'ensemble des points où $g$ est étale est ouvert, il suffit de montrer que $g$ est étale aux points \emph{fermés} (ou encore, rationnels sur $k$) de $X$ (10.4.8). Soit donc $x$ un tel point, et posons $y=g(x)$, qui est aussi rationnel sur $k$; par hypothèse, l'anneau $A=\sh{O}_{Y,y}$ est régulier et de corps résiduel $k$; soient $d=\dim(A)$ et $(t_i)_{1\leq i\leq d}$ un système régulier de paramètres pour $A$. Posons $B=\sh{O}_{X,x}$, $C=B/\mathfrak m_yB$. Comme $g$ est un monomorphisme, il en est de même du morphisme $\Spec(C)\to\Spec(k(y))=\Spec(k)$ déduit de $g$ par changement de base (I, 3.3.12); mais cela signifie que l'homomorphisme correspondant $u:k\to C$ est \emph{surjectif} (donc bijectif), car $u$ admet un inverse à gauche $v:C\to k$, et $u\circ v$ et l'identité de $C$, composés avec $u$, donnent le même morphisme $u:k\to C$. Comme par hypothèse $B$ est un anneau régulier de dimension $d$, les images des $t_i$ dans $B$ forment un système régulier de paramètres pour $B$ (0, 17.1.7); la condition (17.6.3, $e''$) est donc vérifiée par $g$ au point $x$ (0, 17.1.1 et Bourbaki, \emph{Alg. comm.}, chap. III, § 2, n\textsuperscript{o} 8, cor. 3 du th. 1), ce qui achève la démonstration.
+
+\subsection{Sous-préschémas lisses d'un préschéma lisse. Morphismes lisses et morphismes différentiellement lisses}
+\label{subsection:IV.17.12}
+
+\begin{theorem}[17.12.1]
+\label{IV.17.12.1}
+Soient $f:X\to S$, $h:Y\to S$ deux morphismes localement de présentation finie, $j:Y\to X$ une immersion, $y$ un point de $Y$, $x=j(y)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $h$ est lisse au point $y$ et $f$ est lisse au point $x$.
+  \item[b)] $f$ est lisse au point $x$, et l'homomorphisme canonique (16.4.21)
+  \[
+  (\sh{N}_{Y/X})_y\to(j^*(\Omega^1_{X/S}))_y
+  \]
+  est inversible à gauche.
+  \item[c)] $h$ est lisse au point $y$ et il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que $j|U:U\to X$ soit une immersion régulière (16.9.2).
+
+\oldpage[IV-4]{86}
+
+  \item[c')] $h$ est lisse au point $y$ et il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que $j|U:U\to X$ soit une immersion quasi-régulière (autrement dit (16.9.8), il existe un voisinage $U$ de $y$ dans $Y$ dans lequel $\sh{N}_{Y/X}$ est un $\sh{O}_Y$-Module localement libre et l'homomorphisme canonique
+  \[
+  \mathbf{S}_{\sh{O}_Y}(\sh{N}_{Y/X})\to\operatorname{gr}^{\bullet}(j)
+  \]
+  est bijectif).
+\end{enumerate}
+\end{theorem}
+
+Pour démontrer l'équivalence de a) et b), on peut se borner au cas où $S=\Spec(A)$ et $X=\Spec(B)$ sont affines, avec $Y=\Spec(B/\mathfrak J)$, où $\mathfrak J$ est un idéal de type fini de $B$, et $B$ est une $A$-algèbre lisse (17.3.2, (ii)). Il suffit alors d'appliquer le critère jacobien (0, 22.6.1) ainsi que (0, 19.1.14), compte tenu de ce que $\Omega^1_{X/S}$ est un $\sh{O}_X$-Module localement libre dans un voisinage de $x$ et $\sh{N}_{Y/X}$ un $\sh{O}_Y$-Module de type fini (16.1.6).
+
+En second lieu, prouvons que a) entraîne c'). On peut encore se borner au cas où $S$, $X$, $Y$ sont affines, $B$ et $B/\mathfrak J$ des $A$-algèbres lisses, et il résulte alors de (17.7.9) et (8.10.5, (iv)) qu'il existe un sous-anneau noethérien $A'$ de $A$, une $A'$-algèbre de type fini $B'$ et un idéal $\mathfrak J'$ de $B'$ tels que $B=B'\otimes_{A'}A$, $\mathfrak J=\mathfrak J'B$ et que $B'$ et $B'/\mathfrak J'$ soient des $A'$-algèbres lisses. Notons que, d'après (0, 19.3.8), $B'$ est encore une $A'$-algèbre formellement lisse lorsqu'on munit $A'$ de la topologie discrète et $B'$ de la topologie $\mathfrak J'$-préadique. Par suite (0, 19.5.4), $\mathfrak J'/\mathfrak J'^2$ est un $(B'/\mathfrak J')$-module projectif et l'homomorphisme canonique
+\[
+\mathbf{S}_{B'/\mathfrak J'}(\mathfrak J'/\mathfrak J'^2)\to\operatorname{gr}_{\mathfrak J'}^{\bullet}(B')
+\]
+est bijectif. En d'autres termes (16.9.8), l'immersion $\Spec(B'/\mathfrak J')\to\Spec(B')$ est quasi-régulière, donc régulière puisque $B'$ est noethérien (16.9.10). Mais comme par hypothèse $B'/\mathfrak J'$ est un $A'$-module plat (17.5.1) et $B'$ une $A'$-algèbre de présentation finie, on peut appliquer (11.3.8) en remplaçant $\sh{F}$ par $\widetilde{\mathfrak J'}$, et on voit donc (par changement de base) que $j$ est une immersion régulière, et \emph{a fortiori} quasi-régulière. Le fait que $B$ est une $A$-algèbre de présentation finie et un $A$-module plat montre d'ailleurs, en vertu de (11.3.8), que les conditions c') et c) sont équivalentes, et sont stables par changement de base.
+
+Montrons enfin que c) entraîne a). Du fait que, dans (11.3.8), la condition b) entraîne c), on voit déjà que si c) est vérifiée, $f$ est \emph{plat} au point $x$; en vertu de (17.5.1), tout revient donc à voir que sous l'hypothèse c), $f^{-1}(s)$ est lisse sur $k(s)$ au point $x$, en posant $s=h(x)$; comme on a remarqué que la condition c) est stable par changement de base, on voit qu'on est ramené au cas où $S=\Spec(k)$ est le spectre d'un corps, et compte tenu de (17.7.1, (ii)) on peut supposer que $k$ est \emph{algébriquement clos}. Il suffit alors de prouver que $\sh{O}_{X,x}$ est un anneau \emph{régulier} (17.5.1). Or, par hypothèse on a $\sh{O}_{Y,y}=\sh{O}_{X,x}/\mathfrak J_x$, où $\mathfrak J_x$ est un idéal engendré par une suite $\sh{O}_{X,x}$-régulière $(t_i)$, et $\sh{O}_{Y,y}$ est un anneau régulier; comme les $t_i$ font partie d'un système de paramètres pour $\sh{O}_{X,x}$ (0, 16.4.1), la conclusion résulte de (0, 17.1.7).
+
+\begin{corollary}[17.12.2]
+\label{IV.17.12.2}
+Avec les notations de (17.12.1), supposons que $f$ soit lisse au point $x$, et soit $Y$ un sous-préschéma fermé de $X$ défini par un Idéal $\sh{J}$ de $\sh{O}_X$, et $S$-lisse au point $x$. Soient $(g_i)_{1\leq i\leq r}$ des sections de $\sh{J}$ au-dessus de $X$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] Les $(g_i)_x$ forment un système de générateurs du $\sh{O}_{X,x}$-module $\sh{J}_x$ dont le nombre d'éléments est le plus petit possible.
+  \item[b)] Si $g_i'$ est l'image canonique de $g_i$ dans $\Gamma(X,\sh{J}/\sh{J}^2)$, les $(g_i')_x$ forment une base du $(\sh{O}_{X,x}/\sh{J}_x)$-module $\sh{J}_x/\sh{J}_x^2$.
+
+\oldpage[IV-4]{87}
+
+  \item[c)] Les images des $d_{X/S}g_i$ dans $(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)$ sont des éléments linéairement indépendants sur $k(x)$, et les $(g_i)_x$ engendrent $\sh{J}_x$.
+  \item[d)] Il existe un voisinage ouvert $U$ de $x$ dans $X$ et des sections $g_j$ ($r+1\leq j\leq n$) de $\sh{O}_X$ au-dessus de $U$ telles que le $S$-morphisme $u:U\to S[T_1,\ldots,T_n]$ correspondant à l'homomorphisme $\sh{O}_S^n\to f_*(\sh{O}_U)$ défini par les sections $g_i|U$ ($1\leq i\leq r$) et $g_j$ ($r+1\leq j\leq n$) (II, 1.2.7) soit un morphisme étale, et que l'image réciproque du sous-préschéma $Y'=S[T_{r+1},\ldots,T_n]$ par ce morphisme soit le préschéma induit par $j(Y)$ sur l'ouvert $U\cap j(Y)$.
+\end{enumerate}
+\end{corollary}
+
+Comme $(g_i')_x$ est l'image canonique de $(g_i)_x$, l'équivalence de a) et b) résulte du lemme de Nakayama, $\sh{J}_x$ étant de type fini et $\sh{J}_x/\sh{J}_x^2$ un $(\sh{O}_{X,x}/\sh{J}_x)$-module libre (17.10.4) (Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, prop. 5). En vertu de (17.12.1, b)), $\sh{J}_x/\sh{J}_x^2$ s'identifie canoniquement à un facteur direct du $(\sh{O}_{X,x}/\sh{J}_x)$-module libre de rang $n$, $(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}(\sh{O}_{X,x}/\sh{J}_x)$, et l'équivalence de b) et c) résulte de Bourbaki, \emph{loc. cit.} En outre, si a) est vérifiée, $(g_i')_x$ est ainsi identifié à $(d_{X/S}g_i)_x\otimes1$ pour $1\leq i\leq r$; le $\sh{O}_{X,x}$-module $(\Omega^1_{X/S})_x$ étant libre de rang $n$, il résulte encore de Bourbaki, \emph{loc. cit.}, qu'en remplaçant au besoin $X$ par un voisinage ouvert de $x$, on peut supposer qu'il existe $n-r$ sections $g_i$ ($r+1\leq i\leq n$) de $\sh{O}_X$ au-dessus de $X$, telles que les $(d_{X/S}g_i)_x$ pour $1\leq i\leq n$ forment une base de $(\Omega^1_{X/S})_x$; le fait que le morphisme correspondant $u$ soit étale au point $x$ résulte alors de (17.11.3); pour la même raison, le morphisme $u^{-1}(Y')\to Y'$, restriction de $u$, est étale au point $x$; en remplaçant $X$ par un voisinage de $x$, on peut supposer ces deux morphismes étales. En outre, il est immédiat que $Y$ (identifié, pour simplifier, au sous-préschéma fermé $j(Y)$ de $X$) est un sous-préschéma fermé de $u^{-1}(Y')$, et en vertu du choix des $g_i$ pour $i>r$ et de (17.2.5) et (17.11.2), la restriction à $Y$ de $u$ peut encore être supposée étale. On en déduit que pour tout $y'\in Y'$, l'immersion $Y\cap u^{-1}(y')\to u^{-1}(y')$ est ouverte, d'où l'on conclut à l'aide de (17.9.6) que $Y\to u^{-1}(Y')$ est une immersion ouverte; cela prouve que a) entraîne d). La réciproque découle aussitôt de (17.11.3).
+
+\begin{corollary}[17.12.3]
+\label{IV.17.12.3}
+Soient $f:X\to S$ un morphisme localement de présentation finie, $u:S\to X$ une $S$-section de $X$. Pour que $f$ soit lisse en un point $x\in X$, il faut et il suffit que $u$ soit une immersion quasi-régulière dans un voisinage de $s=f(x)$.
+\end{corollary}
+
+La conclusion résulte de (17.12.1), puisque $f\circ u=1_S$ est lisse.
+
+\begin{proposition}[17.12.4]
+\label{IV.17.12.4}
+Tout morphisme lisse $f:X\to S$ est différentiellement lisse (autrement dit (16.10.5) $\Delta_f:X\to X\times_SX$ est une immersion quasi-régulière). \emph{En particulier, les $\sh{P}_f^n=\sh{P}_{X/S}^n$ et les $\operatorname{gr}_n(\sh{P}_{X/S})$ sont des $\sh{O}_X$-Modules localement libres de type fini.}
+\end{proposition}
+
+Il suffit de remarquer que le morphisme structural $p_1:X\times_SX\to X$ est lisse (17.3.3, (iii)) et que $\Delta_f$ est une $X$-section pour $p_1$; la conclusion résulte de (17.12.3).
+
+\begin{proposition}[17.12.5]
+\label{IV.17.12.5}
+Soit $f:X\to Y$ un morphisme localement de présentation finie. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est différentiellement lisse.
+  \item[b)] Pour tout morphisme $g:Y'\to Y$, si l'on pose $X'=X\times_Y Y'$ et $f'=f_{(Y')}:X'\to Y'$, alors, pour toute $Y'$-section $s'$ de $X'$, $f'$ est lisse en tous les points de $s'(Y')$.
+  \item[c)] La seconde projection $p_2:X\times_YX\to X$ est lisse en tous les points de la diagonale $\Delta_f(X)$.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-4]{88}
+
+La condition c) est un cas particulier de b): il suffit en effet de prendre $Y'=X$ et $g=f$ dans b), car alors $f'$ n'est autre que la seconde projection $p_2$, et $\Delta_f$ est une $X$-section de $X\times_YX$. En second lieu, c) entraîne a), car $p_2$ est un morphisme localement de présentation finie, et si $p_2$ est lisse aux points de $\Delta_f(X)$, $\Delta_f$ est une immersion quasi-régulière (17.12.3), donc $f$ est différentiellement lisse. Enfin, montrons que a) entraîne b); si $\Delta_f$ est une immersion quasi-régulière, $p_2$ est lisse en tous les points de $\Delta_f(X)$ (17.12.3).
+
+Or, si $g':X'\to X$ est la projection canonique, et $v=(g',g')_Y:X'\to X\times_YX$, on vérifie aussitôt que le diagramme
+\[
+\xymatrix{
+  X\times_Y X \ar[d]_{p_2} & X' \ar[l]_-v \ar[d]^{f'}\\
+  X & Y' \ar[l]^{h=g'\circ s'}
+}
+\]
+est commutatif et identifie $X'$ au produit $(X\times_YX)\times_XY'$ (I, 3.3.9); tenant compte de ce que le diagramme (17.4.1.1) identifie $Y'$ au produit des $(X\times_YX)$-préschémas $X$ et $X'$, on conclut, de ce que $p_2$ est lisse en tout point de $\Delta_f(X)$, que $f'$ est lisse en tout point de $s'(Y')$ (17.3.3, (iii)).
+
+\begin{corollary}[17.12.6]
+\label{IV.17.12.6}
+Les notations étant celles de (8.8.1), on suppose $X_\alpha$ quasi-compact, et $f_\alpha:X_\alpha\to S_\alpha$ localement de présentation finie. Pour que $f:X\to S$ soit différentiellement lisse, il faut et il suffit qu'il existe $\lambda\geq\alpha$ tel que $f_\lambda:X_\lambda\to S_\lambda$ soit différentiellement lisse (auquel cas $f_\mu:X_\mu\to S_\mu$ est différentiellement lisse pour $\mu\geq\lambda$).
+\end{corollary}
+
+La suffisance de la condition et la dernière assertion résultent de (16.10.4). Pour prouver que la condition est nécessaire, notons que $\Delta_f:X\to X\times_SX$ et $p_2:X\times_SX\to X$ se déduisent par changement de base de $\Delta_{f_\lambda}:X_\lambda\to X_\lambda\times_{S_\lambda}X_\lambda$ et $p_{2,\lambda}:X_\lambda\times_{S_\lambda}X_\lambda\to X_\lambda$. En vertu de (17.12.5), pour tout $z\in\Delta_f(X)$, il existe un voisinage ouvert affine $U(z)$ de $z$ dans $X\times_SX$ tel que $p_2$ soit lisse dans $U(z)$; en vertu de (8.2.11) et (17.7.8), il existe un indice $\lambda(z)$ et un voisinage $U_{\lambda(z)}$ de la projection de $z$ dans $X_{\lambda(z)}\times_{S_{\lambda(z)}}X_{\lambda(z)}$ tels que $U(z)$ soit l'image réciproque de $U_{\lambda(z)}$, et que $p_{2,\lambda(z)}$ soit lisse dans $U_{\lambda(z)}$. Comme $X$ est quasi-compact, on peut recouvrir $\Delta_f(X)$ par un nombre fini de voisinages $U(z_i)$; en vertu de (8.3.4), il existe un $\lambda$ supérieur à tous les $\lambda(z_i)$ tels que les images réciproques des $U_{\lambda(z_i)}$ dans $X_\lambda\times_{S_\lambda}X_\lambda$ forment un recouvrement de $\Delta_{f_\lambda}(X_\lambda)$; il résulte alors de (17.12.5) que cet indice $\lambda$ répond à la question.
+
+\begin{examples}[17.12.7]
+\label{IV.17.12.7}
+Soient $S$ un préschéma, $G$ un $S$-\emph{préschéma en groupes}, localement de présentation finie sur $S$. Alors, pour que $G$ soit différentiellement lisse, il faut et il suffit que $G$ soit lisse sur $S$ aux points de la « section unité » $e$ de $G$. La condition est en effet nécessaire par (17.12.5). Inversement, supposons-la remplie; pour tout morphisme $S'\to S$, $G'=G\times_SS'$ est alors un $S'$-préschéma en groupes localement de présentation finie sur $S'$; on peut donc, en vertu de (17.12.5), se borner à prouver que pour toute $S$-section $s$ de $G$, $f$ est lisse aux points de $s(S)$. Or, si $m:G\times_SG\to G$ est le morphisme qui définit la structure de préschéma en groupes de $G$, $m\circ(s\times1_G):S\times_SG\to G\times_SG\to G$ est un
+
+\oldpage[IV-4]{89}
+
+$S$-isomorphisme du préschéma $G$, la « translation à gauche » $\tau_s$, transformant les points de la section unité de $G$ en les points de $s(S)$; on en conclut que $G$ est lisse sur $S$ aux points de $s(S)$.
+\end{examples}
+
+\begin{remark}[17.12.8]
+\label{IV.17.12.8}
+Un $S$-préschéma en groupes $G$, de type fini (et même fini) sur un préschéma localement noethérien $S$, peut être différentiellement lisse sur $S$ sans être lisse (ni même \emph{plat}) sur $S$. Prenons par exemple pour $S$ le spectre de l'algèbre des nombres duaux $D=k[T]/T^2k[T]$ sur un corps $k$, pour $G$ le spectre de la $D$-algèbre composée directe $E=D\oplus k$. On définit sur $G$ une structure de $S$-schéma en groupes en définissant une « application diagonale » $\delta$, homomorphisme de $E$ dans $E\otimes_DE$: si $e'$, $e''$ sont les idempotents, images canoniques de l'unité $1$ de $D$ dans les facteurs $D$ et $k$ de $E$, on vérifie sans peine qu'on obtient une telle application diagonale en prenant
+\[
+\delta(e')=e'\otimes e'+e''\otimes e'',\qquad
+\delta(e'')=e'\otimes e''+e''\otimes e'.
+\]
+La section unité du schéma en groupes $G$ correspond à l'homomorphisme $E\to D$ qui est l'identité dans $D$ et $0$ dans $k$; c'est un isomorphisme de $S$ sur une composante connexe de $G$, et \emph{a fortiori} $G$ est différentiellement lisse sur $S$ (17.12.6), mais il est clair que $G$ n'est pas $S$-plat.
+\end{remark}
+
+\subsection{Morphismes transversaux.}
+\label{subsection:IV.17.13}
+\label{IV.17.13}
+
+\begin{env}[17.13.1]
+\label{IV.17.13.1}
+Soient $S$ un préschéma, $X$, $Y$, $X'$ trois $S$-préschémas, $i:Y\to X$ une $S$-immersion, $f:X'\to X$ un $S$-morphisme. Posons $Y'=Y\times_XX'$, et soient $g:Y'\to Y$, $j:Y'\to X'$ les projections canoniques, de sorte qu'on a le diagramme commutatif
+\[
+\label{IV.17.13.1.1}
+\tag{17.13.1.1}
+\xymatrix{
+  Y \ar[d]_i & Y' \ar[l]_g \ar[d]^j\\
+  X & X' \ar[l]^f
+}
+\]
+et que $j$ est une $S$-immersion. On a alors un diagramme commutatif de $\sh{O}_{Y'}$-Modules quasi-cohérents
+\[
+\label{IV.17.13.1.2}
+\tag{17.13.1.2}
+\begin{tikzcd}
+  g^*(\sh{N}_{Y/X}) \ar{r} \ar{d}{\operatorname{gr}_1(g)} & f^*(\Omega^1_{X/S})\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} \ar{d} & g^*(\Omega^1_{Y/S}) \ar{r} \ar{d} & 0\\
+  \sh{N}_{Y'/X'} \ar{r} & \Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} & \Omega^1_{Y'/S} \ar{r} & 0
+\end{tikzcd}
+\]
+où la ligne inférieure est la suite exacte (16.4.21) appliquée à $j$, la ligne supérieure provient de la même suite exacte pour $i$, par application du foncteur exact à droite $g^*$ (qui la laisse donc exacte); $\operatorname{gr}_1(g)$ est défini en (16.2.1), et la commutativité des deux carrés résulte de (0, 20.5.7.3) et (0, 20.5.11.3).
+
+\oldpage[IV-4]{90}
+
+On a vu en outre (16.2.2, (iii)) que $\operatorname{gr}_1(g)$ est ici surjectif, donc on déduit de (17.13.1.2) la suite exacte
+\[
+\label{IV.17.13.1.3}
+\tag{17.13.1.3}
+g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0.
+\]
+\end{env}
+
+\begin{proposition}[17.13.2]
+\label{IV.17.13.2}
+Les notations étant celles de (17.13.1), soit $x'$ un point de $Y'$, $x=g(x')$ son image dans $Y$; supposons $X$ et $Y$ lisses sur $S$ au point $x$, $X'$ lisse sur $S$ au point $x'$. Soient $m$, $m-c$ les dimensions relatives de $X$ et $Y$ sur $S$ au point $x$ (17.10.1), $n$ celle de $X'$ sur $S$ au point $x'$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $Y'$ est lisse sur $S$ au point $x'$ et de dimension relative $n-c$.
+  \item[b)] L'homomorphisme $\alpha\otimes1:g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}k(x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')$ déduit de l'homomorphisme $\alpha$ de (17.13.1.3) est injectif.
+\end{enumerate}
+Soit $s$ l'image canonique de $x$ dans $S$, et supposons que $x'$ soit rationnel sur $k(s)$. Alors les conditions a) et b) sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[b')] L'homomorphisme transposé de $\alpha\otimes1$
+  \[
+  \mathrm{T}_{X'/S}(x')\to(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x'))^\vee=\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)
+  \]
+  (cf. (16.5.12)) est surjectif.
+\end{enumerate}
+De plus, lorsque les conditions a) et b) sont vérifiées en $x'$, elles le sont dans un voisinage de $x'$ dans $Y'$; en remplaçant au besoin $X'$ par un voisinage de $x'$, l'homomorphisme
+\[
+\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}
+\]
+est bijectif, et la suite
+\[
+\label{IV.17.13.2.1}
+\tag{17.13.2.1}
+0\to g^*(\sh{N}_{Y/X})\xrightarrow{\alpha}\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+\]
+obtenue en ajoutant un $0$ à (17.13.1.3), est exacte.
+\end{proposition}
+
+Le fait que si les conditions équivalentes a) et b) sont vérifiées au point $x'$, elles le sont aussi au voisinage de $x'$ dans $Y'$, résulte de ce que l'ensemble des points où un morphisme est lisse est ouvert (17.3.7) et de (17.10.2).
+
+En vertu de (17.12.1) appliqué à $X'$ et $Y'$, dire que $Y'$ est lisse sur $S$ au point $x'$ équivaut à dire que l'homomorphisme
+\[
+\delta\otimes1:\sh{N}_{Y'/X'}\otimes_{\sh{O}_{Y'}}k(x')\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}k(x')
+\]
+est injectif, compte tenu de (0, 19.1.12) et de ce que $\Omega^1_{X'/S}$ est un $\sh{O}_{X'}$-Module localement libre au point $x'$ (17.2.3); comme alors $\Omega^1_{Y'/S}$ est aussi un $\sh{O}_{Y'}$-Module localement libre au voisinage de $x'$ et que la suite
+\[
+\label{IV.17.13.2.2}
+\tag{17.13.2.2}
+0\to\sh{N}_{Y'/X'}\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}\to\Omega^1_{Y'/S}\to0
+\]
+est exacte (17.2.5), dire que $Y'$ est de dimension relative $n-c$ sur $S$ au point $x'$ signifie, par (17.10.2), que $\sh{N}_{Y'/X'}$ (qui est localement libre au voisinage de $x'$) est de rang $c$ au point $x'$. Mais en vertu des hypothèses sur $X$ et $Y$ au point $x$, et par le même raisonnement, $\sh{N}_{Y/X}$ est localement libre et de rang $c$ au point $x$, donc $g^*(\sh{N}_{Y/X})$ est aussi localement libre et de rang $c$ au point $x'$. Comme l'homomorphisme $\operatorname{gr}_1(g):g^*(\sh{N}_{Y/X})\to\sh{N}_{Y'/X'}$ est surjectif, les conditions précédentes équivalent à dire que cet homomorphisme est
+
+\oldpage[IV-4]{91}
+
+bijectif au point $x'$ (Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6), donc aussi dans un voisinage de $x'$ (0$_{\mathrm I}$, 5.2.7); cela entraîne évidemment b), ainsi que la dernière assertion de l'énoncé, en vertu de l'exactitude de (17.13.2.2). Inversement, comme $\alpha\otimes1$ se factorise en
+\[
+g^*(\sh{N}_{Y/X})\otimes k(x')\xrightarrow{\operatorname{gr}_1(g)\otimes1}\sh{N}_{Y'/X'}\otimes k(x')\xrightarrow{\delta\otimes1}\Omega^1_{X'/S}\otimes k(x')
+\]
+et que $\operatorname{gr}_1(g)$ est surjectif, dire que $\alpha\otimes1$ est injectif entraîne que $\delta\otimes1$ l'est et que $\operatorname{gr}_1(g)\otimes1$ est bijectif. On en conclut (17.12.1) que $Y'$ est lisse sur $S$ au point $x'$, et que $\operatorname{gr}_1(g)$ est bijectif dans un voisinage de $x'$ (Bourbaki, \emph{loc. cit.}). En outre, comme la suite (17.13.2.2) est alors exacte, et que $\sh{N}_{Y'/X'}$, isomorphe à $g^*(\sh{N}_{Y/X})$, est de rang $c$ au point $x'$, $\Omega^1_{Y'/S}$ est de rang $n-c$ en ce point, ce qui achève de prouver l'équivalence de a) et b), en vertu de (17.10.2).
+
+Reste à montrer l'équivalence de b) et b') lorsque $x'$ est rationnel sur $k(s)$ (ce qui implique qu'il en est de même de $x$); alors $g^*(\sh{N}_{Y/X})\otimes_{\sh{O}_{Y'}}k(x')$ s'identifie à $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x')$, et puisque la suite
+\[
+0\to\sh{N}_{Y/X}\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_Y\to\Omega^1_{Y/S}\to0
+\]
+est exacte au point $x$ et formée de $\sh{O}_Y$-Modules localement libres, le dual de $\sh{N}_{Y/X}\otimes_{\sh{O}_Y}k(x)$ s'identifie à l'espace quotient $\mathrm{T}_{X/S}(x)/\mathrm{T}_{Y/S}(x)$ (16.5.12); d'où l'équivalence de b) et b').
+
+\begin{definition}[17.13.3]
+\label{IV.17.13.3}
+Avec les notations de (17.13.1), on dit que le morphisme $f$ est \emph{transversal} à $Y$ au point $x'$, relativement à $S$, si $X$ et $Y$ sont lisses sur $S$ au point $x$, $X'$ lisse sur $S$ au point $x'$, et si les conditions équivalentes a), b) de (17.13.2) sont satisfaites.
+\end{definition}
+
+Lorsque aucune confusion n'est à craindre, on supprime la mention du préschéma $S$ et on dit simplement que $f$ est transversal à $Y$ au point $x'$.
+
+\begin{remarks}[17.13.4]
+\label{IV.17.13.4}
+(i) Supposons que $X$, $Y$ et $X'$ soient \emph{plats et localement de présentation finie} sur $S$. Pour tout $s\in S$, notons $X_s$, $Y_s$, $X'_s$, $Y'_s$ les fibres de $X$, $Y$, $X'$, $Y'$ au point $s$, $f_s:X'_s\to X_s$ le morphisme déduit de $f$ par changement de base. Il résulte alors de (17.5.9) que pour que $f$ soit un morphisme transversal à $Y$ au point $x'$, il faut et il suffit que, si $s$ est l'image de $x$ dans $S$, $f_s$ soit transversal à $Y_s$ au point $x'$, relativement à $k(s)$.
+
+(ii) On a vu dans (17.13.2) que l'ensemble des points $x'\in Y'$ où $f$ est transversal à $Y$ est \emph{ouvert} dans $Y'$; si $Y'$ est de plus \emph{propre} sur $S$, on en déduit que l'ensemble des $s\in S$ tels que $f$ soit transversal à $Y$ en tous les points de $Y'_s$, relativement à $S$, est \emph{ouvert} dans $S$.
+
+Lorsque $X$, $Y$ et $X'$ sont plats et localement de présentation finie sur $S$, il résulte de (i) que l'ensemble des $x'\in Y'$ tels que $f_s$ soit transversal à $Y_s$ au point $x'$ ($s$ image de $x'$ dans $S$), relativement à $k(s)$, est \emph{ouvert} dans $Y'$. Si de plus $Y'$ est propre sur $S$, l'ensemble des $s\in S$ tels que $f_s$ soit transversal à $Y_s$ en tous les points de $Y'_s$ (relativement à $k(s)$) est \emph{ouvert} dans $S$.
+
+(iii) La propriété d'être lisse sur $S$, ainsi que la notion de dimension relative à $S$ en un point, étant stables par tout changement de base $S'\to S$ ((17.3.3) et (4.2.7)), il en est de même de la propriété pour un morphisme $f:X'\to X$ d'être transversal à un sous-préschéma de $X$ en un point, relativement à $S$.
+
+\oldpage[IV-4]{92}
+
+(iv) La condition b) de (17.13.2) exprime encore que l'homomorphisme $\alpha:g^*(\sh{N}_{Y/X})\to\Omega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'}$ est \emph{universellement injectif} relativement à $Y'$ (II, 9.18).
+\end{remarks}
+
+\begin{env}[17.13.5]
+\label{IV.17.13.5}
+Considérons maintenant un préschéma $S$, trois $S$-préschémas $X$, $Y$, $Z$, deux $S$-morphismes $f:Y\to X$, $g:Z\to X$; posons $T=Y\times_XZ$; on sait alors (I, 5.3.5) qu'on a un diagramme commutatif
+\[
+\label{IV.17.13.5.1}
+\tag{17.13.5.1}
+\xymatrix{
+  X \ar[d]^{\Delta} & T=Y\times_X Z \ar[l] \ar[d]^{j}\\
+  X\times_S X & Y\times_S Z \ar[l]^{u}
+}
+\]
+faisant de $T$ le produit des $(X\times_SX)$-préschémas $X$ et $Y\times_SZ$, où $u=f\times_Sg$. Comme $\Delta$ est une $S$-immersion (I, 5.3.9), on est dans la situation du diagramme (17.13.1.1); ce qui correspond à $\Omega^1_{X'/S}$ dans (17.13.1) est alors $(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_{Y\times_SZ})\oplus(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_{Y\times_SZ})$ en vertu de (16.4.23). D'autre part, ce qui correspond au $\sh{O}_Y$-Module $\sh{N}_{Y/X}$ dans (17.13.1) est ici par définition $\Omega^1_{X/S}$ (16.3.1); il correspond donc à (17.13.1.3) une suite exacte
+\[
+\label{IV.17.13.5.2}
+\tag{17.13.5.2}
+\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+\]
+où il reste à préciser les homomorphismes $\rho$ et $\sigma$. Tenant compte d'abord de (16.4.23) et de (0, 20.5.2), on voit que si $p:T\to Y$, $q:T\to Z$ sont les projections canoniques, on a, avec les notations de (16.4.19),
+\[
+\label{IV.17.13.5.3}
+\tag{17.13.5.3}
+\sigma=p_{T/Y/S}+q_{T/Z/S}.
+\]
+D'autre part, pour évaluer $\rho$, utilisons la commutativité du carré de gauche dans (17.13.1.2), ce qui, dans le cas présent, ramène d'abord à expliciter l'homomorphisme canonique
+\[
+\rho':\Omega^1_{X/S}\to\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X
+\]
+défini dans (16.4.21) appliqué à l'immersion $\Delta$. On peut se borner au cas où $S=\Spec(A)$, $X=\Spec(B)$ sont affines, et alors $\rho'$ correspond à l'homomorphisme $\delta$ de (0, 20.5.11.2), où il faut remplacer $B$ par $B\otimes_AB$ et $C$ par $B=(B\otimes_AB)/\mathfrak J_{B/A}$. On voit alors que $\delta$ fait correspondre à la classe de $x\otimes1-1\otimes x\pmod{\mathfrak J_{B/A}^2}$ (pour un $x\in B$) l'image de
+\[
+(x\otimes1-1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1-1\otimes x)
+\]
+dans $\Omega^1_{(B\otimes_AB)/A}\otimes_{B\otimes_AB}B$; mais l'élément précédent peut s'écrire
+\[
+\begin{split}
+&((x\otimes1)\otimes(1\otimes1)-(1\otimes1)\otimes(x\otimes1))\\
+&\quad-((1\otimes x)\otimes(1\otimes1)-(1\otimes1)\otimes(1\otimes x))
+\end{split}
+\]
+et on voit donc que $\rho'$ est la différence des deux homomorphismes $\pi^{(1)}$ et $\pi^{(2)}$ de $\Omega^1_{X/S}$ dans $\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_X$, correspondant respectivement à la première et à la seconde projection de $X\times_SX$ dans $X$, par (16.4.3.3). Pour obtenir $\rho$, il faut d'abord considérer l'homomorphisme
+\[
+\rho'':\Omega^1_{(X\times_SX)/S}\otimes_{\sh{O}_{X\times_SX}}\sh{O}_{Y\times_SZ}\to\Omega^1_{(Y\times_SZ)/S}
+\]
+correspondant par (16.4.3.3) au morphisme $u$ de (17.13.5.1), puis, après tensorisation par $\sh{O}_T$, former le composé $(\rho''\otimes1)\circ(\rho'\otimes1)$; il résulte de ce qui précède que l'on a, avec les notations de (16.4.18),
+\[
+\label{IV.17.13.5.4}
+\tag{17.13.5.4}
+\rho=(f_{Y/X/S}\otimes1_{\sh{O}_T})\oplus(-g_{Z/X/S}\otimes1_{\sh{O}_T}).
+\]
+
+\oldpage[IV-4]{93}
+
+Ceci dit, l'application de (17.13.2) à la situation du diagramme (17.13.5.1) (compte tenu de (17.3.3, (iv)), qui implique que $X\times_SX$ est lisse sur $S$ en $x$ si $X$ l'est) donne le corollaire suivant.
+\end{env}
+
+\begin{corollary}[17.13.6]
+\label{IV.17.13.6}
+Soient $S$ un préschéma, $X$, $Y$, $Z$ trois $S$-préschémas, $f:Y\to X$, $g:Z\to X$ deux $S$-morphismes; posons $T=Y\times_XZ$, et soient $p:T\to Y$, $q:T\to Z$ les projections canoniques. Soient $t$ un point de $T$, $y=p(t)$, $z=q(t)$, $x=f(y)=g(z)$. Supposons que $X$ soit lisse sur $S$ au point $x$, de dimension relative $m$, $Y$ (resp. $Z$) lisse sur $S$ au point $y$ (resp. $z$), de dimension relative $m+a$ (resp. $m+b$), $a$ et $b$ étant positifs ou négatifs. Alors les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $T$ est lisse sur $S$ au point $t$, de dimension relative $m+a+b$.
+  \item[b)] L'homomorphisme
+  \[
+  \rho\otimes1:\Omega^1_{X/S}\otimes_{\sh{O}_X}k(t)\to
+  (\Omega^1_{Y/S}\otimes_{\sh{O}_Y}k(t))\oplus
+  (\Omega^1_{Z/S}\otimes_{\sh{O}_Z}k(t))
+  \]
+  où $\rho$ est donné par (17.13.5.4), est injectif.
+  \item[c)] Le morphisme $T=Y\times_SZ\to X\times_SX$ est transversal à la diagonale de $X\times_SX$ au point $t$.
+\end{enumerate}
+Si $t$ est rationnel sur le corps résiduel de son image $s$ dans $S$, ces conditions sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[b')] L'homomorphisme
+  \[
+  \label{IV.17.13.6.1}
+  \tag{17.13.6.1}
+  \mathrm{T}_y(f)-\mathrm{T}_z(g):\mathrm{T}_{Y/S}(y)\oplus\mathrm{T}_{Z/S}(z)\to\mathrm{T}_{X/S}(x)
+  \]
+  (cf. (16.5.12.5)) est surjectif.
+\end{enumerate}
+De plus, lorsque les conditions a) et b) sont vérifiées en $t$, elles le sont dans un voisinage de $t$ dans $T$, et en restreignant $T$ à un tel voisinage, la suite
+\[
+\label{IV.17.13.6.2}
+\tag{17.13.6.2}
+0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\rho}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\sigma}\Omega^1_{T/S}\to0
+\]
+(où $\sigma$ est donné par (17.13.5.3)) est exacte.
+
+Le seul point qui reste à prouver dans (17.13.6) concerne b'), et résulte de ce que, sous l'hypothèse que $t$ est rationnel sur $k(s)$, l'homomorphisme $\rho\otimes1$ est \emph{transposé} de $\mathrm{T}_y(f)-\mathrm{T}_z(g)$, en vertu de (17.13.5.4).
+
+Lorsque les conditions équivalentes de (17.13.6) sont satisfaites, on dit que $f$ et $g$ forment un \emph{couple de morphismes transversaux au point $t$, relativement} à $S$; ici encore, on supprime souvent la mention de $S$.
+\end{corollary}
+
+\begin{env}[17.13.7]
+\label{IV.17.13.7}
+Considérons en particulier le cas où $Y$ et $Z$ sont des \emph{sous-préschémas} de $X$, $f$ et $g$ étant les injections canoniques; $T$ est alors le sous-préschéma « intersection »
+
+\oldpage[IV-4]{94}
+
+$\inf(Y,Z)$ de $X$ (I, 4.4.3), et l'on a $t=y=z=x$. Au lieu de dire que le couple $(f,g)$ est transversal au point $x$, on dit alors que $Y$ et $Z$ \emph{se coupent transversalement au point $x$} (relativement à $S$). Notant $X_s$, $Y_s$, $Z_s$, $T_s$ les fibres de $X$, $Y$, $Z$, $T$ au point $s$, image de $x$ dans $S$, et tenant compte de (5.2.3), (5.1.9) et (0, 16.5.12), on voit que pour qu'il en soit ainsi (lorsque $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$), il faut et il suffit que $T$ soit lisse sur $S$ au point $x$, et que l'on ait la relation
+\[
+\label{IV.17.13.7.1}
+\tag{17.13.7.1}
+\operatorname{codim}_x(T_s,X_s)=\operatorname{codim}_x(Y_s,X_s)+\operatorname{codim}_x(Z_s,X_s).
+\]
+\end{env}
+
+\begin{proposition}[17.13.8]
+\label{IV.17.13.8}
+Soient $S$ un préschéma, $X$ un $S$-préschéma localement de présentation finie sur $S$, $Y$, $Z$ deux sous-préschémas de $X$, $T=\inf(Y,Z)$ le sous-préschéma « intersection » de $Y$ et $Z$, $x$ un point de $T$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] L'injection canonique $i:Y\to X$ est un morphisme transversal à $Z$ au point $x$, relativement à $S$ (17.13.3).
+  \item[a')] L'injection canonique $j:Z\to X$ est un morphisme transversal à $Y$ au point $x$, relativement à $S$.
+  \item[a'')] $Y$ et $Z$ se coupent transversalement au point $x$, relativement à $S$.
+  \item[b)] $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$, et l'homomorphisme $\rho$ (17.13.5.4) est tel que
+  \[
+  \rho\otimes1:\Omega^1_{X/S}\otimes_{\sh{O}_X}k(x)\to
+  (\Omega^1_{Y/S}\otimes_{\sh{O}_Y}k(x))\oplus
+  (\Omega^1_{Z/S}\otimes_{\sh{O}_Z}k(x))
+  \]
+  est injectif.
+\end{enumerate}
+Lorsque $x$ est rationnel sur $k(s)$ ($s$ image de $x$ dans $S$) ces conditions sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[b')] L'homomorphisme
+  \[
+  \mathrm{T}_x(i)-\mathrm{T}_x(j):\mathrm{T}_{Y/S}(x)\oplus\mathrm{T}_{Z/S}(x)\to\mathrm{T}_{X/S}(x)
+  \]
+  est surjectif.
+\end{enumerate}
+En outre, lorsque les conditions équivalentes a) à b) sont vérifiées au point $x$, elles le sont dans un voisinage de $x$ dans $T$, et en restreignant $X$ à un voisinage de $x$, la suite (17.13.6.2) est exacte, et l'on a un isomorphisme canonique
+\[
+\label{IV.17.13.8.1}
+\tag{17.13.8.1}
+\sh{N}_{T/X}\xrightarrow{\sim}
+(\sh{N}_{Y/X}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\sh{N}_{Z/X}\otimes_{\sh{O}_Z}\sh{O}_T).
+\]
+\end{proposition}
+
+Les conditions a), a'), a'') impliquent toutes que $X$, $Y$, $Z$ sont lisses sur $S$ au point $x$. Soient en outre, $m$, $m-a$, $m-b$ les dimensions relatives de $X$, $Y$, $Z$ sur $S$ au point $x$. Il résulte alors de (17.13.2) appliqué en remplaçant $X'$ par $Z$ et $Y'$ par $T=Y\times_XZ$, que les conditions a), a') équivalent toutes deux à dire que $T$ est lisse sur $S$ au point $x$ et de dimension relative $m-a-b$ en ce point; mais en vertu de (17.13.7), cela signifie précisément que la condition a'') est vérifiée, d'où l'équivalence de a), a') et a''). L'équivalence de a'') et de b) (ou b') lorsque $x$ est rationnel sur $k(s)$) a été prouvée dans (17.13.6), ainsi que le fait que si ces conditions sont satisfaites au point $x$, elles le sont dans un voisinage de $x$, et l'exactitude de la suite (17.13.6.2) dans un tel voisinage. Reste à définir l'isomorphisme canonique (17.13.8.1).
+
+\oldpage[IV-4]{95}
+
+Notons $\alpha$ et $-\beta$ les homomorphismes figurant au second membre de (17.13.5.4), $\gamma$ et $\delta$ ceux figurant au second membre de (17.13.5.2). Dire que la suite (17.13.6.2)
+\[
+0\to\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T
+\xrightarrow{\alpha\oplus(-\beta)}
+(\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T)\oplus
+(\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T)
+\xrightarrow{\gamma+\delta}\Omega^1_{T/S}\to0
+\]
+est exacte signifie que, dans la catégorie des $\sh{O}_T$-Modules, $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ s'identifie canoniquement au \emph{produit fibré} de $\Omega^1_{Y/S}\otimes_{\sh{O}_Y}\sh{O}_T$ et $\Omega^1_{Z/S}\otimes_{\sh{O}_Z}\sh{O}_T$ sur $\Omega^1_{T/S}$, pour les homomorphismes $\gamma$ et $\delta$. Le même raisonnement que dans (0, 18.1.2 et 18.1.3), où l'on remplace anneaux et idéaux bilatères respectivement par Modules et sous-Modules, fournit un diagramme commutatif
+{\scriptsize
+\[
+\begin{tikzcd}[column sep=small,row sep=large]
+0 \ar[dr] & & 0 \ar[d] & 0 \ar[d] & \\
+& (\sh{N}_{Y/X}\otimes\sh{O}_T)\oplus(\sh{N}_{Z/X}\otimes\sh{O}_T)
+  \ar[r] \ar[d] \ar[dr,"\iota" description]
+& \sh{N}_{Z/X}\otimes\sh{O}_T \ar[r,"\sim"] \ar[d]
+& \sh{N}_{T/Y} \ar[d] & \\
+0 \ar[r] & \sh{N}_{Y/X}\otimes\sh{O}_T \ar[r] \ar[d]
+& \Omega^1_{X/S}\otimes\sh{O}_T \ar[r,"\alpha"] \ar[d,"\beta"] \ar[dr,"\varepsilon" description]
+& \Omega^1_{Y/S}\otimes\sh{O}_T \ar[r] \ar[d,"\gamma"] & 0\\
+0 \ar[r] & \sh{N}_{T/Z} \ar[r]
+& \Omega^1_{Z/S}\otimes\sh{O}_T \ar[r,"\delta"] \ar[d]
+& \Omega^1_{T/S} \ar[r] \ar[d] \ar[dr] & 0\\
+& & 0 & 0 & 0
+\end{tikzcd}
+\]
+}
+où les 3\textsuperscript{e} et 4\textsuperscript{e} lignes et colonnes sont exactes en vertu des hypothèses de lissité. Le fait que l'homomorphisme composé $\varepsilon=\gamma\circ\alpha=\delta\circ\beta$ soit l'homomorphisme correspondant à l'injection canonique $T\to X$ résulte de (0, 20.5.2.7). Comme la diagonale du diagramme précédent est exacte, $\operatorname{Ker}(\varepsilon)$ s'identifie canoniquement avec $\sh{N}_{T/X}$, compte tenu de ce que $T$ est lisse sur $S$ (17.2.5); donc on a un isomorphisme canonique (17.13.8.1) réciproque de $\iota$.
+
+\begin{env}[17.13.9]
+\label{IV.17.13.9}
+On peut généraliser les résultats de (17.13.5) et (17.13.6) à un nombre fini quelconque de $S$-morphismes $f_i:Y_i\to X$ ($i\in I$, $I$ ensemble fini). Pour cela, notons $X^I$ le produit de la famille $(X_i)_{i\in I}$ de $S$-préschémas tous identiques à $X$ (I, 3.3.5), et soient $p_i$ ($i\in I$) les projections canoniques. Le \emph{morphisme diagonal} $\Delta:X\to X^I$ est défini (comme dans (I, 5.3.1)) comme l'unique $S$-morphisme tel que $p_i\circ\Delta=1_X$ pour tout $i\in I$. C'est une $X$-section de $X^I$ pour le morphisme $p_1$, donc (I, 5.3.11) une \emph{immersion}.
+
+\oldpage[IV-4]{96}
+
+Soit alors $Y$ le produit des $S$-préschémas $Y_i$ (pour les morphismes composés $Y_i\xrightarrow{f_i}X\to S$), $T$ le produit des $X$-préschémas $Y_i$ (pour les morphismes $f_i$). On prouve comme dans (I, 5.3.5) que l'on a un diagramme commutatif
+\[
+\label{IV.17.13.9.1}
+\tag{17.13.9.1}
+\xymatrix{
+  X \ar[d]^{\Delta} & T \ar[l]_-v \ar[d]^{j}\\
+  X^I & Y \ar[l]^{u}
+}
+\]
+(où $u$ est le produit (sur $S$) des $f_i$), qui fait de $T$ le produit des $X^I$-préschémas $X$ et $Y$.
+
+Par récurrence sur le nombre d'éléments de $I$, il résulte de (16.4.23) que $\Omega^1_{X^I/S}$ (resp. $\Omega^1_{Y/S}$) s'identifie canoniquement à la somme directe des $p_i^*(\Omega^1_{X/S})$ (resp. des $q_i^*(\Omega^1_{Y_i/S})$, si $q_i:Y\to Y_i$ sont les projections canoniques).
+
+Supposons maintenant que $X$ soit \emph{lisse} sur $S$ en un point $x$ (donc dans un voisinage de ce point). Il en est alors de même de $X^I$ en ce point (17.3.3, (iv)), et restreignant $X$ à un voisinage de $x$, on a donc (17.2.5) une suite exacte de $\sh{O}_X$-Modules localement libres
+\[
+0\to\operatorname{gr}_1(\Delta)\to(\Omega^1_{X/S})^I\to\Omega^1_{X/S}\to0.
+\]
+Posons $\sh{J}=\operatorname{gr}_1(\Delta)$; on déduit de la suite précédente une suite exacte de $\sh{O}_T$-Modules localement libres
+\[
+\label{IV.17.13.9.1-seq}
+\tag{17.13.9.1}
+0\to\sh{J}\otimes_{\sh{O}_X}\sh{O}_T\to(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+\]
+qui correspond à la première ligne du diagramme (17.13.1.2), et où $\sigma$ n'est autre que l'homomorphisme canonique qui, à chaque famille de sections $(t_i)_{i\in I}$ de $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus d'un ouvert de $T$, fait correspondre sa \emph{somme}.
+
+D'autre part, ce qui correspond ici à la seconde flèche verticale du diagramme (17.13.1.2) est l'homomorphisme
+\[
+\label{IV.17.13.9.2}
+\tag{17.13.9.2}
+\tau:(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)
+\]
+qui, à toute famille $(t'_i\otimes1)_{i\in I}$, où ici les $t'_i$ sont des sections au-dessus d'un ouvert de $X$ de $\Omega^1_{X/S}$, associe la somme des $((f_i)_{Y_i/X/S}(t'_i))\otimes1$, avec la notation de (16.4.18). L'homomorphisme $\rho$ qui correspond à l'homomorphisme $\alpha$ de (17.13.1.3) est donc la \emph{restriction} à $\sh{J}\otimes_{\sh{O}_X}\sh{O}_T$ de l'homomorphisme $\tau$ précédent.
+
+Ces hypothèses et notations étant précisées, on peut appliquer à la situation de (17.13.9.1) la prop. (17.13.2), ce qui donne le
+\end{env}
+
+\begin{corollary}[17.13.10]
+\label{IV.17.13.10}
+Sous les hypothèses générales de (17.13.9), soit $t$ un point de $T$, $y_i$ ($i\in I$) ses projections dans les $Y_i$, $x$ le point de $X$ égal à chacun des $f_i(y_i)$. Supposons que $X$ soit lisse sur $S$ au point $x$ et de dimension relative $d$, et que chacun des $Y_i$ soit lisse sur $S$ au point $y_i$; soit $d+c_i$ ($c_i$ entier positif ou négatif) la dimension relative de $Y_i$ au point $y_i$. Alors les conditions suivantes sont équivalentes:
+
+\oldpage[IV-4]{97}
+
+\begin{enumerate}
+  \item[a)] $T$ est lisse sur $S$ au point $t$, de dimension relative $d+\sum_{i\in I}c_i$.
+  \item[b)] L'homomorphisme
+  \[
+  \rho\otimes1:\sh{J}\otimes_{\sh{O}_X}k(t)\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}k(t))
+  \]
+  est injectif.
+\end{enumerate}
+Lorsque $t$ est rationnel sur le corps $k(s)$ (où $s$ est l'image de $t$ dans $S$), ces conditions sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[b')] L'homomorphisme transposé de $\rho\otimes1$
+  \[
+  \bigoplus_{i\in I}\mathrm{T}_{Y_i/X}(y_i)\to(\mathrm{T}_{X/S}(x))^I/\delta(\mathrm{T}_{X/S}(x))
+  \]
+  (où $\delta$ est l'application diagonale) est surjectif.
+\end{enumerate}
+Il suffit de remarquer que $X^I$ est lisse sur $S$ et de dimension relative $d\cdot\operatorname{Card}(I)$, et $Y$ lisse sur $S$ de dimension relative $d\cdot\operatorname{Card}(I)+\sum_{i\in I}c_i$.
+
+Lorsque les conditions équivalentes de (17.13.10) sont vérifiées, on dit encore que les $f_i$ forment une \emph{famille de morphismes transversaux au point $t$, relativement} à $S$. On voit encore que l'ensemble des points $t\in T$ où cela a lieu est \emph{ouvert} dans $T$. La remarque (17.13.4, (iii)) montre alors que si $X$ et les $Y_i$ sont plats et localement de présentation finie sur $S$, et de plus si $T$ est \emph{propre} sur $S$, l'ensemble des $s\in S$ tels que les $f_i$ forment une famille de morphismes transversaux en \emph{tous} les points de $T_s$, relativement à $S$, est \emph{ouvert} dans $S$.
+\end{corollary}
+
+\begin{env}[17.13.11]
+\label{IV.17.13.11}
+Considérons en particulier le cas, généralisant (17.13.7), où les $Y_i$ ($i\in I$) sont des \emph{sous-préschémas} de $X$, les $f_i$ étant les injections canoniques, de sorte que $T=\inf_{i\in I}(Y_i)$ est encore le sous-préschéma « intersection » des $Y_i$, et $t=y_i=x$ pour tout $i$; au lieu de dire que les $f_i$ forment une famille de morphismes transversaux au point $x$, on dit encore que \emph{les $Y_i$ se coupent transversalement au point $x$} (relativement à $S$). La condition a) de (17.13.10) s'exprime encore en la relation qui généralise (17.13.7.1)
+\[
+\label{IV.17.13.11.1}
+\tag{17.13.11.1}
+\operatorname{codim}_x(T_s,X_s)=\sum_{i\in I}\operatorname{codim}_x((Y_i)_s,X_s).
+\]
+En outre, on a la propriété suivante, qui étend (17.13.8.1), et en donne une autre démonstration quand $I$ a 2 éléments:
+\end{env}
+
+\begin{corollary}[17.13.12]
+\label{IV.17.13.12}
+Lorsque les $Y_i$ se coupent transversalement au point $x$, on a un isomorphisme canonique
+\[
+\label{IV.17.13.12.1}
+\tag{17.13.12.1}
+\sh{N}_{T/X}\xrightarrow{\sim}\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T).
+\]
+\end{corollary}
+
+On peut se borner au cas où les $Y_i$ sont des sous-préschémas fermés de $X$, définis par des Idéaux quasi-cohérents $\sh{J}_i$, de sorte que $T$ est défini par l'Idéal $\sh{J}=\sum_i\sh{J}_i$. Par définition du faisceau conormal à une immersion (16.1.3), l'homomorphisme canonique $\bigoplus_i\sh{J}_i\to\sh{J}$ donne, par passage aux quotients, un homomorphisme \emph{surjectif}
+\[
+\label{IV.17.13.12.2}
+\tag{17.13.12.2}
+\bigoplus_{i\in I}(\sh{N}_{Y_i/X}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)\to\sh{N}_{T/X}.
+\]
+
+\oldpage[IV-4]{98}
+
+Mais ici les $\sh{O}_T$-Modules des deux membres de (17.13.12.2) sont localement libres et \emph{de même rang} $\sum_i c_i$ (si $c_i$ est le rang de $\sh{N}_{Y_i/X}$), en vertu de (17.2.5) et de la condition a) de (17.13.10); on conclut donc de Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6, que (17.13.12.2) est bijectif, et (17.13.12.1) est l'isomorphisme réciproque.
+
+\subsection{Caractérisations locales et infinitésimales des morphismes lisses, des morphismes non ramifiés et des morphismes étales.}
+\label{subsection:IV.17.14}
+
+\begin{proposition}[17.14.1]
+\label{IV.17.14.1}
+Soit $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit que la condition suivante soit vérifiée:
+
+Pour tout schéma local $Y'=\operatorname{Spec}(A')$ de point fermé $y'$, tout morphisme $h:Y'\to Y$ tel que $h(y')=y$, tout sous-schéma fermé $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, où l'idéal $\mathfrak{J}'$ est de carré nul, et tout $Y$-morphisme $g_0:Y'_0\to X$ tel que $g_0(y')=x$, il existe au moins un (resp. au plus un, resp. un et un seul) $Y$-morphisme $g:Y'\to X$ dont $g_0$ soit la restriction à $Y'_0$.
+\end{proposition}
+
+Compte tenu des définitions (17.1.1 et 17.3.1), il s'agit de montrer que la condition de l'énoncé est \emph{suffisante} pour que $f$ soit lisse (resp. non ramifié) au point $x$.
+
+\emph{(i) Cas des morphismes lisses.} On peut se borner au cas où $Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(C)$ sont affines, avec $C=B/\mathfrak{R}$, où $B=A[T_1,\ldots,T_n]$ est une $A$-algèbre de polynômes et $\mathfrak{R}$ un idéal de type fini de $B$. Pour prouver que $f$ est lisse au point $x$, il suffit d'établir que $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement lisse pour les topologies discrètes (17.5.1). Or on a $\sh{O}_{X,x}=B_{\mathfrak q}/\mathfrak{R}B_{\mathfrak q}$, où $\mathfrak q$ est un idéal premier de $B$, et si $\mathfrak p$ est l'image réciproque de $\mathfrak q$ dans $A$, $B_{\mathfrak q}$ est une $A_{\mathfrak p}$-algèbre formellement lisse pour les topologies discrètes (0, 19.3.2 et 19.3.5). Par application du critère jacobien (0, 22.6.1 et 20.5.12) il suffit donc de voir que $B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ est une extension $A_{\mathfrak p}$-triviale de $B_{\mathfrak q}/\mathfrak{R}B_{\mathfrak q}$ par $\mathfrak{R}B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$. Mais cela résulte précisément de l'hypothèse appliquée à $A'=B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ et $\mathfrak{J}'=\mathfrak{R}B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ et au morphisme $g_0$ correspondant à l'automorphisme identique de $A'/\mathfrak{J}'=\sh{O}_{X,x}$.
+
+\emph{(ii) Cas des morphismes non ramifiés.} Posons ici $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, et notons qu'en vertu de (17.4.1, c')), il suffit de montrer que $\Omega^1_{B/A}=(\Omega^1_{X/Y})_x=0$. Or, avec les notations de (0, 20.4.1), l'anneau $C=\sh{P}^1_{B/A}=(B\otimes_A B)/\mathfrak{J}^2$ est local puisqu'il en est ainsi de $C/(\mathfrak{J}/\mathfrak{J}^2)$ isomorphe à $B$. L'hypothèse appliquée à $A'=C$ et $\mathfrak{J}'=\mathfrak{J}/\mathfrak{J}^2$ montre par définition que l'application $d_{B/A}:B\to\Omega^1_{B/A}$ est nulle (0, 20.4.6), donc que $\Omega^1_{B/A}=0$ par (0, 20.4.7).
+
+\begin{proposition}[17.14.2]
+\label{IV.17.14.2}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit qu'il vérifie la condition de (17.14.1) où l'on suppose de plus que l'anneau local $A'$ est artinien, que $\mathfrak m'\mathfrak{J}'=0$, où $\mathfrak m'$ est l'idéal maximal de $A'$, et que le corps résiduel $A'/\mathfrak m'$ de $A'$ est égal à $k(x)$.
+\end{proposition}
+
+Il s'agit encore de montrer que ces conditions sont suffisantes dans le cas des morphismes lisses et le cas des morphismes non ramifiés.
+
+\oldpage[IV-4]{99}
+
+\emph{(i) Cas des morphismes lisses.} Si l'on pose $A=\sh{O}_{Y,y}$ et $B=\sh{O}_{X,x}$, il s'agit ici de prouver, compte tenu de (17.5.3), que $B$ est une $A$-algèbre formellement lisse pour les topologies préadiques. Or, en vertu de (0, 22.1.4), cela découle de l'hypothèse lorsqu'on remplace dans celle-ci la condition $\mathfrak m'\mathfrak{J}'=0$ par $\mathfrak{J}'\subset\mathfrak m'$. Mais comme $\mathfrak m'$ est nilpotent, on voit que la condition de l'énoncé est déjà suffisante en considérant les anneaux $A'/\mathfrak m'^{,j}\mathfrak{J}'$ et en raisonnant par récurrence sur $j$ comme dans (0, 19.4.3).
+
+\emph{(ii) Cas des morphismes non ramifiés.} Reprenons les notations de la démonstration de (17.14.1, (ii)); pour prouver que l'idéal $\mathfrak{J}/\mathfrak{J}^2$ de $C$ est nul, notons que $C$ est alors un anneau local noethérien, étant anneau local de l'anneau d'un ouvert affine d'un sous-préschéma de $X\times_YX$, qui est localement de type fini sur $X$, donc aussi sur $Y$. Si $\mathfrak r$ est l'idéal maximal de $C$, il suffit donc de vérifier que l'on a $\mathfrak{J}/\mathfrak{J}^2\subset\mathfrak r^n$ pour tout $n$ (0$_{\mathrm I}$, 7.3.5), ou encore que $\mathfrak r^n=\mathfrak r^n+(\mathfrak{J}/\mathfrak{J}^2)$. Avec les notations de (0, 20.4.6), cela signifie encore que pour tout $n$, les deux applications composées $B\xrightarrow{p_1}C\to C/\mathfrak r^n$ et $B\xrightarrow{p_2}C\to C/\mathfrak r^n$ sont identiques; mais comme $C/\mathfrak r^n$ est artinien, cette identité résulte de l'hypothèse appliquée, par récurrence sur $n$, à $A'=C/\mathfrak r^n$ et $\mathfrak{J}'=(\mathfrak r^n+(\mathfrak{J}/\mathfrak{J}^2))/\mathfrak r^n$.
+
+\begin{remark}[17.14.3]
+\label{IV.17.14.3}
+On notera que, sous les hypothèses de (17.14.2), si de plus le corps $k(x)$ est une extension \emph{finie} de $k(y)$, alors les $A'$-modules $\mathfrak m'^{,j}/\mathfrak m'^{,j+1}$ sont des $k(y)$-espaces vectoriels de rang fini, donc \emph{a fortiori} $A'$ est une $\sh{O}_{Y,y}$-algèbre finie.
+\end{remark}
+
+\subsection{Cas des préschémas sur un corps de base.}
+\label{subsection:IV.17.15}
+
+Rappelons d'abord (6.7.7, 6.7.8 et 6.8.1) la
+
+\begin{proposition}[17.15.1]
+\label{IV.17.15.1}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$. Pour que $X$ soit lisse en un point $x$, il faut et il suffit que pour toute extension radicielle $k'$ de $k$ (ou seulement pour toute extension finie radicielle de $k$), l'anneau local $\sh{O}_{X,x}\otimes_k k'$ soit régulier. Si $k(x)$ est une extension séparable de $k$ (en particulier si $k$ est parfait), il revient au même de dire que $\sh{O}_{X,x}$ est régulier.
+\end{proposition}
+
+\begin{corollary}[17.15.2]
+\label{IV.17.15.2}
+Sous les conditions de (17.15.1), pour que $X$ soit lisse sur $k$, il faut et il suffit que $X$ soit géométriquement régulier sur $k$ (6.7.6), ce qui entraîne que $X$ est régulier. Si $k$ est parfait, alors $X$ est lisse sur $k$ si et seulement si $X$ est régulier.
+\end{corollary}
+
+\begin{proposition}[17.15.3]
+\label{IV.17.15.3}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$, $n=\dim_x(X)$. Soit $(g_i)_{1\leq i\leq n}$ une famille de $n$ sections de $\sh{O}_X$ au-dessus de $X$, et soit $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ le morphisme correspondant au $k$-homomorphisme $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$ (I, 2.2.4). Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ et par suite régulier au point $x$):
+\begin{enumerate}
+  \item[a)] $f$ est étale au point $x$.
+  \item[b)] Les images des $d_{X/k}g_i$ forment une base du $\sh{O}_{X,x}$-module $(\Omega^1_{X/k})_x$.
+  \item[c)] Les images des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x}$-module $(\Omega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$, $X$ est lisse sur $k$ au point $x$ puisque $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ est lisse sur $k$ (17.3.8); le fait que a) entraîne b) est donc un cas particulier de (17.11.3). Comme b) entraîne trivialement c), il reste à voir que c) implique a). Notons d'abord
+
+\oldpage[IV-4]{100}
+
+que l'hypothèse entraîne que l'homomorphisme $(f^*(\Omega^1_{Y/k}))_x\to(\Omega^1_{X/k})_x$ est surjectif, donc, en remplaçant $X$ par un voisinage ouvert de $x$, on peut supposer que l'homomorphisme $f^*(\Omega^1_{Y/k})\to\Omega^1_{X/k}$ est surjectif (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 1, prop. 2); par suite $f$ est \emph{non ramifié} (17.2.2). Nous allons voir d'abord qu'on peut se borner au cas où $x$ est \emph{rationnel sur $k$}. En effet, si l'on pose $k'=k(x)$, et $X'=X\otimes_k k'$, $Y'=Y\otimes_k k'=\operatorname{Spec}(k'[T_1,\ldots,T_n])$, il existe un point $x'\in X'$ au-dessus de $x$, tel que $k(x')=k'$. Pour prouver que $f$ est étale au point $x$, il suffit de montrer que $f'=f_{(k')}:X'\to Y'$ est étale au point $x'$ (17.7.1, (ii)); d'ailleurs $f'$ est non ramifié (17.3.3, (iii)) et l'on a $\dim_{x'}(X')=n$ (4.2.7). De la même manière on peut, en remplaçant $k'$ par une extension algébriquement close de $k'$, supposer que $k$ est \emph{algébriquement clos}. Posons alors $y=f(x)$, $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$; comme le corps résiduel de $B$ est égal à $k$, il en est de même de celui de $A$, donc $x$ (resp. $y$) est un point fermé de $X$ (resp. $Y$) (I, 6.4.2) et l'on a par suite $\dim(A)=\dim(B)=n$. Puisque $f$ est non ramifié, l'homomorphisme $\widehat A\to\widehat B$ est surjectif (17.4.4, f'')); mais comme $\dim(\widehat A)=\dim(\widehat B)=n$, et que $\widehat A$, étant un anneau régulier, est intègre, l'homomorphisme $\widehat A\to\widehat B$ est aussi injectif (0, 16.3.10). Cet homomorphisme est donc bijectif, ce qui achève de prouver que $f$ est étale au point $x$ (17.6.3, e'')).
+
+\begin{corollary}[17.15.4]
+\label{IV.17.15.4}
+Sous les hypothèses générales de (17.15.3), supposons en outre que $k(x)$ soit une extension finie et séparable de $k$ et que les germes $(g_i)_x$ appartiennent à $\mathfrak m_x$. Alors les conditions a), b), c) de (17.15.3) équivalent aussi à chacune des suivantes:
+\begin{enumerate}
+  \item[d)] Les $n$ germes $(g_i)_x$ engendrent l'idéal maximal $\mathfrak m_x$ de $\sh{O}_{X,x}$.
+  \item[d')] L'anneau $\sh{O}_{X,x}$ est régulier et les $(g_i)_x$ forment un système régulier de paramètres pour cet anneau (0, 17.1.6).
+\end{enumerate}
+\end{corollary}
+
+En effet, d') entraîne trivialement d). D'autre part, comme $k(x)$ est une extension finie et séparable de $k$, on a $\Omega^1_{k(x)/k}=0$ (0, 20.6.20) et $k(x)=\sh{O}_{X,x}/\mathfrak m_x$ est une $k$-algèbre formellement lisse pour les topologies discrètes (0, 19.6.1), donc la suite exacte (0, 20.5.14.1) s'applique à $A=k$, $B=\sh{O}_{X,x}$, $\mathfrak{R}=\mathfrak m_x$, et fournit un isomorphisme canonique
+\[
+\delta:\mathfrak m_x/\mathfrak m_x^2\xrightarrow{\sim}(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x).
+\]
+De là on déduit d'abord l'équivalence des conditions c) et d), compte tenu du lemme de Nakayama. D'autre part, si $f$ est étale au point $x$, l'anneau $\sh{O}_{X,x}$ est régulier et de dimension $n$, puisque $x$ est un point fermé de $X$ (I, 6.4.2), et $n$ éléments de $\mathfrak m_x$ qui engendrent cet idéal maximal forment alors nécessairement un système régulier de paramètres pour $\sh{O}_{X,x}$ (0, 17.1.6), ce qui prouve que a) entraîne d').
+
+\begin{proposition}[17.15.5]
+\label{IV.17.15.5}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$, $n=\dim_x(X)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $X$ est lisse sur $k$ au point $x$.
+  \item[b)] $X$ est différentiellement lisse sur $k$ au point $x$.
+  \item[c)] $(\Omega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module libre de rang $n$.
+  \item[d)] $(\Omega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module admettant un système de $n$ générateurs.
+
+\oldpage[IV-4]{101}
+
+  \item[e)] Il existe une extension parfaite $k'$ de $k$ et un voisinage ouvert $U$ de $x$ dans $X$ tels que le préschéma $U\otimes_k k'$ soit régulier.
+\end{enumerate}
+\end{proposition}
+
+Le fait que $X$ soit lisse sur $k$ au point $x$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ qui est lisse sur $k$, donc $U\otimes_k k'$ est régulier pour toute extension $k'$ de $k$ (17.15.2), ce qui prouve que a) implique e). Inversement e) implique a), car alors $U\otimes_k k'$ est lisse sur $k'$ (17.15.2), donc $U$ est lisse sur $k$ (17.7.1, (ii)).
+
+On a déjà prouvé que a) entraîne c) (17.10.2); c) implique d) trivialement et le fait que d) implique a) résulte de (0, 20.4.7) et (17.15.3, c)).
+
+Enfin, on a déjà vu que a) implique b) (17.12.4). Inversement, pour prouver que b) entraîne a), on peut se borner au cas où $x$ est rationnel sur $k$, en considérant, comme dans la démonstration de (17.15.3), un point $x'$ de $X'=X\otimes_k k'$ au-dessus de $x$ et tel que $k(x')=k'=k(x)$, utilisant encore (17.7.1, (ii)) et le fait que si $X$ est différentiellement lisse au point $x$, $X'$ est différentiellement lisse au point $x'$ (16.10.4). Supposant donc $x$ rationnel sur $k$, le fait que $f$ soit lisse en $x$ résulte alors de l'hypothèse b) et de (17.12.5) appliqué à la $k$-section $u:\operatorname{Spec}(k)\to X$ telle que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Soit $X$ un préschéma de type fini sur un corps $k$. Pour que $X$ soit lisse sur $k$, il faut et il suffit que le $\sh{O}_X$-Module $\Omega^1_{X/k}$ soit localement libre, et que les anneaux locaux aux points maximaux de $X$ soient des corps, extensions séparables de $k$ (cette dernière condition étant automatiquement vérifiée si $k$ est un corps parfait et $X$ un préschéma réduit).
+\end{corollary}
+
+Les conditions sont nécessaires, car si $X$ est lisse sur $k$, il résulte de (17.10.2) que $\Omega^1_{X/k}$ est localement libre; d'autre part, $X$ est régulier, donc \emph{a fortiori} réduit, donc en tout point maximal $x$ de $X$, $\sh{O}_{X,x}$ est un corps, qui doit être une $k$-algèbre formellement lisse pour les topologies discrètes (17.5.1), donc une extension séparable de $k$ (0, 19.6.1).
+
+Les conditions sont suffisantes. On peut en effet se borner au cas où $X$ est connexe, donc $\Omega^1_{X/k}$ localement libre de rang constant $n$. Pour tout point maximal $x$ de $X$, on a alors $\operatorname{rg}_{k(x)}\Omega^1_{k(x)/k}=n$ puisque $\sh{O}_{X,x}=k(x)$; comme par hypothèse $k(x)$ est une extension séparable de $k$, on a $\Upsilon_{k(x)/k}=0$ (0, 20.6.3), donc $\deg.\operatorname{tr}_k k(x)=n$ par l'égalité de Cartier (0, 21.7.1). Toutes les composantes irréductibles de $X$ ont donc même dimension $n$ (5.2.1), et l'on conclut que $X$ est lisse sur $k$ en tout point en vertu de ce que c) entraîne a) dans (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique 0, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\Omega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cela résulte de (16.12.2) et de l'équivalence de b) et a) dans (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$; posons $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$, de sorte que $n-r=\deg.\operatorname{tr}_k k(x)$ (5.2.3). Soit $(g_i)_{1\leq i\leq n}$ une famille de $n$ sections de $\sh{O}_X$ au-dessus de $X$, telles que $(g_i)_x\in\mathfrak m_x$ pour $1\leq i\leq r$; soit $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ le morphisme correspondant au $k$-homomorphisme $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$. Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ et que $k(x)$ est une extension séparable de $k$):
+\begin{enumerate}
+  \item[a)] $f$ est étale au point $x$.
+
+\oldpage[IV-4]{102}
+
+  \item[b)] Les $(g_i)_x$ tels que $1\leq i\leq r$ engendrent $\mathfrak m_x$ (et par suite forment un système régulier de paramètres pour $\sh{O}_{X,x}$ (0, 17.1.6)) et les images dans $\Omega^1_{k(x)/k}$ des éléments $(d_{X/k}g_i)_x$ pour $r+1\leq i\leq n$ engendrent $\Omega^1_{k(x)/k}$.
+\end{enumerate}
+\end{proposition}
+
+On a en effet (0, 20.5.12.1) la suite exacte de $k(x)$-modules
+\[
+\label{IV.17.15.8.1}
+\tag{17.15.8.1}
+\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)\to\Omega^1_{k(x)/k}\to0
+\]
+et la condition b) entraîne par suite que les $(d_{X/k}g_i)_x$ engendrent $(\Omega^1_{X/k})_x$ compte tenu du lemme de Nakayama; le fait que b) implique a) résulte donc de (17.15.3). Inversement, si a) est vérifiée, les $(d_{X/k}g_i)_x$ pour $1\leq i\leq n$ forment une base de $(\Omega^1_{X/k})_x$ en vertu de (17.15.3). Si $t_i$ ($1\leq i\leq n$) est l'image de $(g_i)_x$ dans $k(x)$, on conclut de ce qui précède que les $dt_i$ engendrent $\Omega^1_{k(x)/k}$ pour $1\leq i\leq n$, et comme par hypothèse $t_i=0$ pour $1\leq i\leq r$, les $dt_i$ pour $r+1\leq i\leq n$ engendrent déjà $\Omega^1_{k(x)/k}$. Comme $\deg.\operatorname{tr}_k k(x)=n-r$, il suit de l'égalité de Cartier (0, 21.7.1) que $\Upsilon_{k(x)/k}=0$, donc $k(x)$ est une extension séparable de $k$ (0, 20.6.3), et la suite de $k(x)$-espaces vectoriels
+\[
+\label{IV.17.15.8.2}
+\tag{17.15.8.2}
+0\to\mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)\to\Omega^1_{k(x)/k}\to0
+\]
+est exacte ((0, 20.5.14) et (0, 19.6.1)); en outre les $dt_i$ pour $r+1\leq i\leq n$ forment une base de $\Omega^1_{k(x)/k}$, donc aucun des $t_i$ tels que $r+1\leq i\leq n$ ne peut être nul. Cela montre que les images des $(g_i)_x$ dans $\mathfrak m_x/\mathfrak m_x^2$ pour $1\leq i\leq r$ engendrent nécessairement $\mathfrak m_x/\mathfrak m_x^2$, donc les $(g_i)_x$ pour $1\leq i\leq r$ engendrent $\mathfrak m_x$ en vertu du lemme de Nakayama, ce qui achève de prouver que a) implique b).
+
+\begin{corollary}[17.15.9]
+\label{IV.17.15.9}
+Soient $X$ un préschéma localement de type fini sur un corps $k$, $x$ un point de $X$ et posons $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] L'anneau $\sh{O}_{X,x}$ est régulier et $k(x)$ est une extension séparable de $k$.
+  \item[b)] $X$ est lisse sur $k$ au point $x$, et l'homomorphisme canonique
+  \[
+  \mathfrak m_x/\mathfrak m_x^2\to(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \]
+  est injectif.
+  \item[c)] Il existe $n$ sections $g_i$ de $\sh{O}_X$ au-dessus d'un voisinage ouvert $U$ de $x$ telles que $(g_i)_x\in\mathfrak m_x$ pour $1\leq i\leq r$ et que le morphisme $U\to\operatorname{Spec}(k[T_1,\ldots,T_n])$ correspondant aux $g_i$ (cf. (17.15.8)) soit étale au point $x$.
+  \item[d)] Il existe $n$ sections $g_i$ ($1\leq i\leq n$) de $\sh{O}_X$ au-dessus d'un voisinage ouvert $U$ de $x$, telles que les $(g_i)_x$ pour $1\leq i\leq r$ engendrent $\mathfrak m_x$ et que les images dans $\Omega^1_{k(x)/k}$ des $(d_{U/k}g_i)_x$ pour $r+1\leq i\leq n$ engendrent $\Omega^1_{k(x)/k}$.
+\end{enumerate}
+\end{corollary}
+
+L'équivalence de c) et d) résulte de (17.15.8). De plus, on a vu dans la démonstration de (17.15.8) que la condition c) entraîne que $X$ est lisse sur $k$ au point $x$ et que la suite (17.15.8.2) est exacte, donc c) entraîne b). La condition b) entraîne que l'anneau $\sh{O}_{X,x}$ est régulier, donc $\mathfrak m_x/\mathfrak m_x^2$ est de rang $r$; en outre, $(\Omega^1_{X/k})_x$ est alors un $\sh{O}_{X,x}$-module libre de rang $n$ (17.10.2); comme la suite (17.15.7.2) est exacte par hypothèse, $\Omega^1_{k(x)/k}$ est de rang $n-r=\deg.\operatorname{tr}_k k(x)$ et l'égalité de Cartier montre que $\Upsilon_{k(x)/k}=0$, donc $k(x)$ est séparable sur $k$ (0, 20.6.3); ainsi b) entraîne a). Enfin, si a)
+
+\oldpage[IV-4]{103}
+
+est vérifiée, on déduit encore de l'égalité de Cartier que $\Omega^1_{k(x)/k}$ est de rang $n-r$. Comme d'autre part l'anneau $\sh{O}_{X,x}$ est régulier, l'existence des $g_i$ vérifiant les conditions de d) est immédiate.
+
+\begin{remarks}[17.15.10]
+\label{IV.17.15.10}
+\begin{enumerate}
+  \item[(i)] Pour qu'un préschéma de type fini $X$ sur $k$ soit lisse sur $k$, il ne suffit pas que $\Omega^1_{X/k}$ soit localement libre, comme le montre l'exemple où $X=\operatorname{Spec}(K)$, $K$ étant une extension finie non séparable de $k$.
+  \item[(ii)] Lorsque $k$ n'est pas parfait, il peut se faire que $X$ soit lisse sur $k$ sans que $k(x)$ soit séparable sur $k$. On en a un exemple en prenant $X=\operatorname{Spec}(k[T])$ et pour $x$ le point correspondant à l'idéal premier principal $(T^p-\lambda)$ ($p>0$ caractéristique de $k$, $\lambda\in k-k^p$).
+  \item[(iii)] Toutefois, si $X$ est un préschéma lisse sur $k$, l'ensemble des points fermés de $X$ tels que $k(x)$ soit séparable (et fini) sur $k$ est dense dans $X$. En effet, soit $f:X\to\operatorname{Spec}(k)$ le morphisme structural; pour tout $x_0\in X$, il y a un voisinage ouvert $U$ de $x_0$ dans $X$ et une factorisation de $f|U:U\xrightarrow{g}\operatorname{Spec}(k[T_1,\ldots,T_n])\xrightarrow{h}\operatorname{Spec}(k)$ où $g$ est étale (17.11.4). Comme on peut se borner au cas où $k$ est non parfait, donc infini, l'ensemble des points de l'ouvert $g(U)$ qui sont rationnels sur $k$ est non vide; si $y$ est un tel point et $x\in U$ un point au-dessus de $y$, $x$ est fermé dans $X$ et $k(x)$ est séparable sur $k(y)=k$ (17.6.2).
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[17.15.11]
+\label{IV.17.15.11}
+Soit $X$ un préschéma de type fini sur un corps $k$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $X$ est étale sur $k$.
+  \item[b)] $X$ est non ramifié sur $k$.
+  \item[c)] $X$ est isomorphe à $\operatorname{Spec}(A)$, où $A$ est une $k$-algèbre finie et séparable.
+\end{enumerate}
+\end{proposition}
+
+Cela résulte de (17.6.2) et (17.4.2), compte tenu de ce que la condition b) implique ici que $X$ est fini sur $k$.
+
+\begin{proposition}[17.15.12]
+\label{IV.17.15.12}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$. Pour qu'il existe un ouvert partout dense $U$ de $X$ qui soit lisse sur $k$, il faut et il suffit que pour tout point maximal $x$ de $X$, $X$ soit réduit en ce point et que $k(x)$ soit une extension séparable de $k$. Pour qu'il existe un ouvert partout dense $U$ de $X$ tel que $U_{\mathrm{red}}$ soit lisse sur $k$, il faut et il suffit que pour tout point maximal $x$ de $X$, $k(x)$ soit une extension séparable de $k$.
+\end{proposition}
+
+La seconde assertion résulte évidemment de la première. Dire qu'il existe un ouvert partout dense $U$ lisse sur $k$ signifie que $X$ est lisse sur $k$ en chacun de ses points maximaux $x$. Il est nécessaire pour cela que $\sh{O}_{X,x}$ soit régulier (17.15.1) et \emph{a fortiori} réduit, donc un corps, égal à $k(x)$; en outre (17.15.1), $k(x)\otimes_k k'$ doit être régulier pour toute extension radicielle $k'$ de $k$, donc $k(x)$ doit être une extension séparable de $k$ (4.3.5); la réciproque est immédiate, en vertu de (17.15.1).
+
+\begin{corollary}[17.15.13]
+\label{IV.17.15.13}
+Soit $X$ un préschéma algébrique sur un corps $k$. Alors il existe un ouvert partout dense $U$ dans $X$ et une extension finie radicielle $k'$ de $k$ tels que $(U_{(k')})_{\mathrm{red}}$ soit lisse sur $k'$.
+\end{corollary}
+
+En effet, il y a une telle extension $k'$ telle que $(X_{(k')})_{\mathrm{red}}$ soit géométriquement réduit sur $k'$ (4.6.6), ce qui équivaut à dire (4.6.1) que pour tout point maximal $x'$ de $X_{(k')}$, $k(x')$ est une extension séparable de $k'$. On conclut donc de (17.15.12) qu'il y a un ouvert partout dense $U'$ de $X_{(k')}$ tel que $U'_{\mathrm{red}}$ soit lisse sur $k'$. Mais le \oldpage[IV-4]{104}morphisme $X_{(k')}\to X$ est un homéomorphisme (2.4.5), donc $U'$ est de la forme $U_{(k')}$, où $U$ est un ouvert partout dense dans $X$.
+
+\begin{proposition}[17.15.14]
+\label{IV.17.15.14}
+Soit $X$ un préschéma algébrique sur $k$, de dimension $\leq1$. Alors il existe une extension finie radicielle $k'$ de $k$ telle que le normalisé (II, 6.3.8) de $(X_{(k')})_{\mathrm{red}}$ soit lisse sur $k'$.
+\end{proposition}
+
+Démontrons d'abord les deux lemmes suivants:
+
+\begin{lemma}[17.15.14.1]
+\label{IV.17.15.14.1}
+Soient $X$ un préschéma réduit dont l'ensemble des composantes irréductibles est localement fini, $f:Y\to X$ un morphisme. Pour que $Y$ soit $X$-isomorphe au normalisé $X'$ de $X$ (II, 6.3.8), il faut et il suffit que les conditions suivantes soient vérifiées:
+\begin{enumerate}
+  \item[(i)] $Y$ est normal;
+  \item[(ii)] $f$ est un morphisme entier et birationnel.
+\end{enumerate}
+Lorsqu'il existe dans $X$ un ouvert dense et normal (ce qui est toujours le cas lorsque $X$ est excellent (7.8.3), en particulier lorsque $X$ est localement de type fini sur un corps), on peut remplacer la condition (ii) par la suivante:
+\begin{enumerate}
+  \item[(ii bis)] $f$ est entier et il existe un ouvert dense $U$ dans $X$ tel que $f^{-1}(U)$ soit dense dans $Y$ et que la restriction $f^{-1}(U)\to U$ de $f$ soit un isomorphisme.
+\end{enumerate}
+\end{lemma}
+
+La question étant locale sur $X$, on peut supposer que $X$ n'a qu'un nombre fini de composantes irréductibles; soient $X_i$ ($1\leq i\leq m$) les sous-préschémas réduits de $X$ ayant ces composantes pour espaces sous-jacents. On sait (II, 6.3.6) que $X'$ est somme des normalisés $X'_i$ des $X_i$; chacun des morphismes structuraux $f_i:X'_i\to X_i$ est donc entier et birationnel, donc $f$ est entier et birationnel; il est immédiat que (ii) entraîne (ii bis) lorsqu'il existe un ouvert $V$ dense et normal dans $X$, en prenant $U=V$. Inversement, si les conditions (i) et (ii) sont remplies, $Y$ n'a qu'un nombre fini de composantes irréductibles $Y_i$ ($1\leq i\leq m$), $Y_i$ dominant $X_i$ pour chaque indice $i$ (6.15.4); $Y$ est somme des $Y_i$ puisqu'il est normal, et le morphisme $g_i:Y_i\to X_i$ en lequel se factorise la restriction $Y_i\to X$ de $f$ (I, 5.2.2) est birationnel; comme $X_i$ et $Y_i$ sont intègres, il résulte alors du fait que $g_i$ est entier et $Y_i$ normal que, pour tout ouvert affine $V$ de $X_i$, $\Gamma(g_i^{-1}(V),\sh{O}_{Y_i})$ est la clôture intégrale de $\Gamma(V,\sh{O}_{X_i})$, donc $Y$ s'identifie canoniquement à $X'$ (II, 6.3.4). Enfin, si l'on suppose vérifiée la condition (ii bis), on peut se borner au cas où $U$ est réunion d'ouverts irréductibles disjoints $U_i$ ($1\leq i\leq m$), donc $f^{-1}(U)$ réunion disjointe des $V_i=f^{-1}(U_i)$. Comme les $V_i$ sont irréductibles et $f^{-1}(U)$ dense dans $Y$, les $\overline{V_i}$ sont les composantes irréductibles de $Y$ et par suite $f$ est birationnel.
+
+\begin{lemma}[17.15.14.2]
+\label{IV.17.15.14.2}
+Soient $k$ un corps, $X$ un préschéma algébrique sur $k$. Alors il existe une extension finie radicielle $k'$ de $k$ telle que $(X_{(k')})_{\mathrm{red}}$ soit géométriquement réduit sur $k'$ et que son normalisé soit géométriquement normal sur $k'$.
+\end{lemma}
+
+Compte tenu de (4.6.6) et de (I, 5.1.8), on peut se borner au cas où $X$ est déjà géométriquement réduit sur $k$. Soient $p$ l'exposant caractéristique de $k$ et $k_1=k^{p^{-\infty}}$ la plus petite extension parfaite de $k$; $k_1$ est donc limite inductive des extensions finies radicielles de $k$. Posons $X_1=X_{(k_1)}$, qui est réduit par hypothèse, et soit $Y_1$ son normalisé; si $f_1:Y_1\to X_1$ est le morphisme structural, $f_1$ est donc fini (7.8.3, (vi)) et surjectif, et il existe un ouvert dense $U_1$ dans $X_1$ tel que $f_1^{-1}(U_1)=V_1$ soit dense dans $Y_1$ et que \oldpage[IV-4]{105}le morphisme $V_1\to U_1$ restriction de $f_1$ soit un isomorphisme (17.15.14.1). Appliquant (8.9.1) et (8.10.5, (vi) et (x)), on voit donc d'abord qu'il existe une extension finie radicielle $k''$ de $k$ et un morphisme fini surjectif $Y''\to X''=X_{(k'')}$ tels que $Y_1=Y''\times_{X''}X_1=Y''\otimes_{k''}k_1$; puisque $Y_1$ est normal et $k_1$ parfait, il résulte de (6.7.7) que $Y''$ est géométriquement normal sur $k''$. Comme les projections $X_1\to X''$ et $Y_1\to Y''$ sont des morphismes entiers, surjectifs et radiciels, ce sont des homéomorphismes (2.4.5), et si $U''$ et $V''$ sont les images de $U_1$ et $V_1$ dans $X''$ et $Y''$ respectivement, ce sont des ouverts denses dans $X''$ et $Y''$ respectivement tels que $V''=f''^{-1}(U'')$, où $f'':Y''\to X''$ est le morphisme structural. Comme on a $U_1=U''\otimes_{k''}k_1$, il résulte de (8.10.5, (i)) qu'il existe une extension finie radicielle $k'$ de $k''$ telle que si l'on pose $X'=X\otimes_k k'=X''\otimes_{k''}k'$, $Y'=Y''\otimes_{k''}k'$, $f'=f''_{(k')}:Y'\to X'$, et si $U'$ et $V'$ sont les images de $U''$ et $V''$ dans $X'$ et $Y'$ respectivement, la restriction $V'\to U'$ de $f'$ soit un isomorphisme. Comme $Y'$ est normal et $f'$ entier et birationnel, on conclut de (17.15.14.1) que $Y'$ est isomorphe au normalisé de $X'$, ce qui prouve le lemme puisque $Y'$ est géométriquement normal.
+
+Revenons maintenant à la démonstration de (17.15.14), et appliquons à $k$ et $X$ le lemme (17.15.14.2); puisque $\dim(X)\leq1$, on a aussi $\dim(X_{(k')})\leq1$ (4.1.4), et le normalisé $Y'$ de $X_{(k')}$ est aussi de dimension $\leq1$ (5.4.2 et II, 7.4.6). Dire que $Y'$ est géométriquement normal sur $k'$ revient alors à dire, en vertu des définitions et de (II, 7.4.5), que $Y'$ est géométriquement régulier sur $k'$, donc lisse sur $k'$ (17.5.1), ce qui prouve (17.15.14).
+
+\begin{proposition}[17.15.15]
+\label{IV.17.15.15}
+Soit $f:X\to Y$ un morphisme localement de présentation finie. Pour que $f$ soit lisse en un point $x\in X$, il faut et il suffit que $f$ soit plat au point $x$ et que $\Omega^1_f$ soit un $\sh{O}_X$-Module localement libre dans un voisinage de $x$, de rang en $x$ égal à $\dim_x f$.
+\end{proposition}
+
+La nécessité des conditions résulte de (17.5.1) et (17.10.2). Inversement, si ces conditions sont vérifiées, et si $y=f(x)$, il suffit de montrer (17.5.1) que $f^{-1}(y)$ est lisse sur $k(y)$ au point $x$; mais cela résulte de la définition de $\dim_x f$ (17.10.1), de (16.4.5) et de (17.15.5).
+
+\subsection{Quasi-sections de morphismes plats ou lisses.}
+\label{subsection:IV.17.16}
+
+Les énoncés de ce numéro complètent ceux de (14.5), moyennant des hypothèses de platitude.
+
+\begin{proposition}[17.16.1]
+\label{IV.17.16.1}
+Soit $f:X\to S$ un morphisme plat localement de présentation finie. Soient $s\in S$, $x$ un point fermé de $X_s$ tel que $\sh{O}_{X_s,x}$ soit un anneau de Cohen--Macaulay; alors il existe un voisinage ouvert $U$ de $s$ dans $S$ et un sous-préschéma $X'\subset f^{-1}(U)$ de $X$ tel que $x\in X'$ et que le morphisme $X'\to U$, restriction de $f$, soit plat, quasi-fini et de présentation finie.
+\end{proposition}
+
+La question étant locale sur $X$ et $Y$, on peut supposer $f$ de présentation finie. Soit $(t_i)_{1\leq i\leq m}$ un système de paramètres de l'anneau local $\sh{O}_{X_s,x}$; il existe un voisinage ouvert affine $V=\Spec(A)$ de $x$ dans $X$ et $m$ sections $g_i$ de $\sh{O}_X$ au-dessus de $V$ telles que
+
+\oldpage[IV-4]{106}
+
+les images des $(g_i)_x\in\sh{O}_{X,x}$ dans $\sh{O}_{X_s,x}=\sh{O}_{X,x}/\mathfrak m_s\sh{O}_{X,x}$ soient égales aux $t_i$. Soit $X'$ le sous-préschéma fermé de $V$ défini par l'idéal de $A$ engendré par les $g_i$; la suite $(t_i)$ étant par hypothèse régulière (0, 16.5.7) il résulte de (11.3.8) qu'en remplaçant au besoin $V$ par un voisinage ouvert plus petit, on peut supposer que le morphisme $X'\to S$, restriction de $f$, est plat et de présentation finie. D'autre part, puisque les $t_i$ forment un système de paramètres de $\sh{O}_{X_s,x}$, l'anneau $\sh{O}_{X'_s,x}$ est par définition artinien, et comme $x$ est fermé dans $X'_s$, on en conclut qu'il est isolé dans $X'_s$. En remplaçant $V$ au besoin par un voisinage plus petit de $x$, on en conclut, grâce à (13.1.4) que le morphisme $X'\to S$ est quasi-fini.
+
+\begin{corollary}[17.16.2]
+\label{IV.17.16.2}
+Soit $f:X\to S$ un morphisme fidèlement plat et localement de présentation finie. Alors il existe un morphisme $g:S'\to S$, fidèlement plat, localement de présentation finie et localement quasi-fini, tel qu'il existe un $S$-morphisme $S'\to X$ (autrement dit, tel qu'il existe une $S'$-section de $X'=X\times_S S'$ (I, 3.3.14)). Si $S$ est quasi-compact (resp. quasi-compact et quasi-séparé), on peut supposer $S'$ affine (resp. $S'$ affine et le morphisme $g$ quasi-fini).
+\end{corollary}
+
+Pour tout $s\in S$, la fibre $X_s$ est non vide par hypothèse et est un préschéma localement de type fini sur $k(s)$; l'ensemble $U_s$ des points $x$ de $X_s$ où $\sh{O}_{X_s,x}$ est un anneau de Cohen--Macaulay est ouvert dans $X_s$ (6.11.3) et est non vide, puisqu'il contient les points maximaux de $X_s$ (0, 16.5.1); il contient par suite un point $x_s$ fermé dans $X_s$ (10.4.7). Soit $X'(s)$ un sous-préschéma affine de $X$ contenant $x_s$ et vérifiant les conditions de (17.16.1). Pour obtenir un préschéma $S'$ vérifiant les conditions de l'énoncé, il suffit de prendre la somme des $X'(s)$, où $s$ parcourt $S$. Puisque le morphisme $X'(s)\to S$ est plat et localement de présentation finie, l'image $U(s)$ de $X'(s)$ est ouverte dans $S$ (2.4.6); lorsque $S$ est quasi-compact, on peut donc recouvrir $S$ par un nombre fini de $U(s_i)$ et le préschéma $S'$ somme des $X'(s_i)$ répond encore à la question et est affine. Si de plus $S$ est quasi-séparé, on peut supposer les immersions ouvertes $U(s_i)\to S$ quasi-compactes (I, 2.7), donc de présentation finie (I, 6.2), et alors les morphismes $X'(s_i)\to S$ sont de présentation finie (I, 6.2) et il en est par suite de même du morphisme $S'\to S$.
+
+\begin{corollary}[17.16.3]
+\label{IV.17.16.3}
+\begin{enumerate}
+  \item[(i)] Soit $f:X\to S$ un morphisme lisse. Soient $s\in S$, $x$ un point fermé de $X_s$ tel que le corps résiduel $k(x)$ soit séparable sur $k(s)$; alors, dans la conclusion de (17.16.1), on peut prendre $X'$ tel que le morphisme $X'\to U$, restriction de $f$, soit étale.
+  \item[(ii)] Soit $f:X\to S$ un morphisme lisse surjectif. Alors, dans les conclusions de (17.16.2), on peut supposer en outre que $g:S'\to S$ soit étale.
+\end{enumerate}
+\end{corollary}
+
+Il est clair que (ii) se déduit de (i) comme (17.16.2) de (17.16.1), compte tenu de ce que, pour tout $s\in S$, comme $X_s$ est non vide et lisse sur $k(s)$, il existe un point fermé $x\in X_s$ tel que $k(x)$ soit séparable sur $k(s)$ (17.15.10, (iii)). Il suffit donc de prouver (i). On notera que l'anneau $\sh{O}_{X_s,x}$ est alors régulier; si l'on répète la construction faite dans (17.16.1) en prenant pour $(t_i)$ un système régulier de paramètres de $\sh{O}_{X_s,x}$, l'anneau $\sh{O}_{X'_s,x}$ est un corps isomorphe à $k(x)$, donc séparable sur $k(s)$ par hypothèse. La conclusion résulte alors de (17.6.1, $c'$)).
+
+\begin{proposition}[17.16.4]
+\label{IV.17.16.4}
+Soient $S$ un préschéma quasi-compact et quasi-séparé, $f:X\to S$ un morphisme surjectif localement de présentation finie. Alors il existe une famille finie $(S_i)_{i\in I}$
+
+\oldpage[IV-4]{107}
+
+de sous-préschémas affines de $S$, de présentation finie sur $S$, deux à deux disjoints, de réunion $S$, et ayant la propriété suivante: pour chaque $i\in I$, il existe deux morphismes finis de présentation finie et surjectifs
+\[
+  S_i''\xrightarrow{g_i}S_i'\xrightarrow{h_i}S_i,
+\]
+où $h_i$ est étale et $g_i$ plat et radiciel, et un $S$-morphisme $S_i''\to X$ (autrement dit une $S_i''$-section de $X_i''=X\times_S S_i''$).
+\end{proposition}
+
+Il y a un recouvrement fini $(U_i)_{1\leq i\leq n}$ de $S$ par des ouverts affines; pour tout $i$, l'intersection
+\[
+  W_i=U_i\cap\left(\bigcup_{j<i}U_j\right)
+\]
+est quasi-compacte (I, 2.7) donc il existe un sous-préschéma fermé $V_i$ de $U_i$ ayant pour espace sous-jacent $U_i-W_i$ et défini par un idéal de type fini de l'anneau de $U_i$; donc $V_i$ est un sous-préschéma affine de $S$ qui est de présentation finie sur $S$ (I, 6.2). Il est clair qu'on peut se borner à prouver la proposition en y remplaçant $S$ par $V_i$ et $X$ par $X\times_S V_i$. Autrement dit, on peut déjà supposer $S$ affine. D'autre part, $X$ est réunion d'ouverts affines $W_\alpha$ et les $f(W_\alpha)$ sont constructibles dans $S$ (I, 8.4) et forment un recouvrement de $S$; par suite (I, 9.9) il existe une sous-famille finie $(W_{\alpha_j})_{1\leq j\leq m}$ telle que les $f(W_{\alpha_j})$ forment déjà un recouvrement de $S$. Soit alors $X'$ le préschéma somme des sous-préschémas induits sur les ouverts $W_{\alpha_j}$ de $X$; il est immédiat qu'il suffit de prouver la proposition en remplaçant $X$ par $X'$ puisqu'un $S$-morphisme $S_i''\to X'$ donne par composition un $S$-morphisme $S_i''\to X'\to X$.
+
+On peut donc supposer $X$ affine et $f$ de présentation finie. On peut alors (8.9.1) écrire $X$ sous la forme $X_0\times_{S_0}S$, où $S_0$ est noethérien, $X_0\to S_0$ un morphisme de type fini, qu'on peut supposer surjectif (8.10.5, (vi)). Si la proposition est prouvée pour ce morphisme, elle en résultera aussitôt pour $X$ par changement de base $S\to S_0$. On peut donc supposer de plus $S$ noethérien et $f$ de type fini.
+
+Soient $s_h$ $(1\leq h\leq r)$ les points maximaux de $S$. Montrons qu'il suffit de prouver l'énoncé en remplaçant $S$ par un voisinage ouvert assez petit $U_h$ de chacun des $s_h$, $X$ par l'image réciproque de $U_h$ dans $X$. En effet, supposons la proposition établie dans ce cas, et raisonnons par récurrence noethérienne ($0_{\mathrm I}$, 2.2.2) en supposant l'énoncé établi pour tout sous-préschéma fermé de $S$ ayant un espace sous-jacent $\neq S$. On peut supposer les $U_h$ deux à deux sans point commun; si $T$ est un sous-préschéma fermé ayant pour espace sous-jacent $S-(\bigcup_h U_h)$, l'hypothèse de récurrence entraîne que l'énoncé est vrai pour $T$; comme il est vrai aussi pour chacun des $U_h$, il l'est évidemment pour $S$.
+
+Comme on peut évidemment (en remplaçant $S$ par $S_{\mathrm{red}}$ et $X$ par $X\times_S S_{\mathrm{red}}$) supposer $S$ réduit, chacun des $\sh{O}_{S,s_h}$ est un corps $k(s_h)$. Supposons que l'on ait prouvé la proposition lorsque $S$ est le spectre d'un corps et $f$ est de type fini. Alors l'existence des $U_h$ résulte de la méthode de (8.1.2, $a$)) et de (8.8.2, (i) et (ii)), (8.10.5, (vi), (vii) et (x)), (11.2.6, (ii)) et (17.7.8, (ii)).
+
+Supposons donc $S=\Spec(k)$, où $k$ est un corps, $X$ étant de type fini sur $k$ et $X\neq\varnothing$. Comme $X$ est noethérien, il existe dans $X$ un point fermé $x$ ($0_{\mathrm I}$, 2.1.3), donc $k(x)$ est une extension finie de $k$ (I, 6.4.2). Il y a par suite une extension finie séparable $k'$ de $k$ telle que $k''=k(x)$ soit extension finie radicielle de $k'$. On répond alors à la question en prenant $I$ réduit à un élément, $S_i'=\Spec(k')$, $S_i''=\Spec(k'')$.
+
+\oldpage[IV-4]{108}
+
+\begin{corollary}[17.16.5]
+\label{IV.17.16.5}
+Soit $f:X\to S$ un morphisme surjectif localement de présentation finie. Alors il existe un morphisme $g:S'\to S$ surjectif, localement de présentation finie et localement quasi-fini, tel qu'il existe un $S$-morphisme $S'\to X$ (autrement dit tel qu'il existe une $S'$-section de $X'=X\times_S S'$). Si $S$ est quasi-compact (resp. quasi-compact et quasi-séparé), on peut supposer $S'$ affine (resp. $S'$ affine et le morphisme $g$ de présentation finie et quasi-fini).
+\end{corollary}
+
+Il suffit de prouver le corollaire en supposant $S$ affine: $S$ est en effet réunion d'une famille $(S_\alpha)$ d'ouverts affines, et si pour chaque $\alpha$, $S'_\alpha$ est affine et le morphisme $g_\alpha:S'_\alpha\to S_\alpha$ répond à la question et est de présentation finie et quasi-fini, alors en prenant pour $S'$ le préschéma somme des $S'_\alpha$, $g:S'\to S$ coïncidant avec $g_\alpha$ dans chacun des $S'_\alpha$, ce morphisme répond à la question; en outre, si $S$ est quasi-compact, on peut supposer la famille $(S_\alpha)$ finie, donc $S'$ affine; si de plus $S$ est quasi-séparé, les immersions $S_\alpha\to S$ sont de présentation finie (I, 6.2), donc il en est de même de $g$.
+
+Considérons donc le cas où $S$ est affine: on forme alors les morphismes finis et de présentation finie $S_i''\to S_i$ de (17.16.4); comme les immersions $S_i\to S$ sont de présentation finie (les $S_i$ étant affines), les morphismes $g_i'':S_i''\to S_i\to S$ sont de présentation finie et quasi-finis, et on répond à la question en prenant $S'$ égal à la somme des $S_i''$ et $g$ coïncidant avec $g_i''$ dans chacun des $S_i''$.
+
+\begin{proposition}[17.16.6]
+\label{IV.17.16.6}
+Soient $S$ un préschéma quasi-compact et quasi-séparé, $f:X\to S$ un morphisme de présentation finie tel que, pour tout $s\in S$, $X_s=f^{-1}(s)$ soit un préschéma propre sur $k(s)$. Alors il existe une famille finie $(S_i)_{i\in I}$ de sous-préschémas affines de $S$, de présentation finie sur $S$, deux à deux disjoints, de réunion $S$ et tels que, pour tout $i$, le morphisme $X_i=X\times_S S_i\to S_i$ soit propre et plat. Si de plus, pour tout $s\in S$, $X_s$ est fini sur $k(s)$, on peut prendre les $S_i$ tels que chacun des morphismes $X_i\to S_i$ se factorise en
+\[
+  X_i\xrightarrow{u_i}X_i'\xrightarrow{h_i}S_i
+\]
+où $u_i$ et $h_i$ sont finis et localement libres (18.2.7), $h_i$ est étale, $u_i$ est radiciel et surjectif.
+\end{proposition}
+
+On suit une marche analogue à celle de (17.16.4). On se ramène d'abord au cas où $S$ est affine et où $f$ est plat, en utilisant le théorème de platitude générique (8.9.5) (on observera que les sous-préschémas $S_i'$ définis dans la démonstration de (8.9.5) sont affines). Puisque $f$ est de présentation finie, on peut ensuite écrire $X=X_0\times_{S_0}S$, où $S_0$ est noethérien, $X_0\to S_0$ un morphisme de type fini et plat (11.2.7); en outre chaque fibre $(X_0)_{s_0}$ est encore propre sur $k(s_0)$, comme il résulte de (2.7.1, (vii)) et on est donc ramené au cas où $S$ est noethérien. Par récurrence noethérienne et application du procédé de (8.1.2, $a$)) (en utilisant aussi cette fois (8.10.5, (xii))), on est finalement ramené, pour prouver la première assertion, au cas où $S$ est le spectre d'un corps, qui résulte trivialement de l'hypothèse (avec $S_i=S$). On traite de même le cas où $X_s$ est supposé fini sur $k(s)$ pour tout $s\in S$ (il faut cette fois utiliser (2.7.1, (xv)), (8.10.5, (x), (iv), (vi) et (vii)), (17.7.8) et (2.1.12)), et on est ramené à prouver la dernière assertion de l'énoncé lorsque $S=\Spec(k)$ est le spectre d'un corps. Mais alors $X=\Spec(A)$, où $A$ est une $k$-algèbre finie (I, 6.4.4); donc $A$ est composée directe de $k$-algèbres finies $A_j$ qui sont des anneaux locaux $(1\leq j\leq m)$; puisque $A_j$ est un anneau artinien et une
+
+\oldpage[IV-4]{109}
+
+$k$-algèbre, il contient un sous-corps $K'_j$ isomorphe canoniquement au corps résiduel de $A_j$ (0, 19.6.2). On prend alors $X_i=X$, $X'_i$ somme des $\Spec(K'_j)$ et il est clair que l'on répond ainsi à la question puisque pour tout $j$ on a deux homomorphismes $K'_j\to A_j\to k(A_j)$ dont le composé est un isomorphisme.

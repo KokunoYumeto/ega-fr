@@ -1,0 +1,2309 @@
+\section{Différentielles dans les anneaux de caractéristique p}
+Les résultats du présent paragraphe, de nature plus spéciale et technique que
+ceux des §§19, 20 et 22, ne serviront qu'exceptionnellement dans le cours du
+chap. IV. Leur rôle principal est ici dans la démonstration de trois théorèmes
+du §22 (22.3.3, 22.5.8 et 22.7.3), dont le premier et le dernier interviennent
+de façon essentielle dans la théorie «fine» des anneaux locaux noethériens du
+chap. IV, §7.
+\oldpage[0\textsubscript{IV-1}]{154}
+\subsection{Systèmes de $p$-générateurs et $p$-bases}
+\label{0.21.1-fr}
+
+\begin{env}[21.1.1]
+\label{0.21.1.1-fr}
+Étant donné un nombre $p$ qui est, soit $0$, soit un nombre premier, nous
+dirons qu'un anneau $A$ est de caractéristique $p$ s'il existe un homomorphisme
+d'anneaux $P\to A$, où $P$ est le corps premier de caractéristique $p$~; on
+notera que cet homomorphisme est alors unique, le composé
+$\mathbf Z\to P\to A$ étant l'unique homomorphisme de $\mathbf Z$ dans $A$.
+Si $A\neq0$, il revient au même de dire que $A$ contient un corps de
+caractéristique $p$, l'image de $P$ étant nécessairement un corps isomorphe à
+$P$ (et d'ailleurs le seul sous-corps de $A$ isomorphe à $P$).
+\end{env}
+
+\begin{env}[21.1.2]
+\label{0.21.1.2-fr}
+Si $p>0$, dire que $A$ est de caractéristique $p$ équivaut à dire que, dans
+$A$, on a $p\cdot1=0$, ou encore $pA=0$. Si $p=0$, dire que $A$ est de
+caractéristique $p$ équivaut à dire que pour tout entier $n\neq0$, $n\cdot1$
+est inversible dans $A$. Si $A\neq0$, il ne peut exister qu'un seul $p$
+(premier ou $0$) tel que $A$ soit de caractéristique $p$~; cela résulte de
+l'identité de Bézout $ap+bq=1$ pour deux nombres premiers distincts $p,q$.
+Par contre, l'anneau réduit à $0$ est de caractéristique $p$ pour tout $p$.
+\end{env}
+
+\begin{env}[21.1.3]
+\label{0.21.1.3-fr}
+Si $A$ est de caractéristique $p$, il en est de même de toute algèbre sur
+$A$. En particulier, pour tout idéal premier $\mathfrak p$ de $A$, le corps
+résiduel de $A$ en $\mathfrak p$ est de caractéristique $p$. Réciproquement,
+si $p=0$ et si, pour tout idéal maximal $\mathfrak m$ de $A$, le corps
+résiduel de $A$ en $\mathfrak m$ est de caractéristique $0$, il en est de même
+de $A$, car pour tout entier $n\neq0$, $n\cdot1$ est alors inversible dans
+tous les $A_{\mathfrak m}$, donc aussi dans $A$. Par contre, si $p>0$, un
+anneau local peut avoir son corps résiduel de caractéristique $p$ sans être
+lui-même de caractéristique $p$, comme le montre l'exemple de l'anneau
+premier $\mathbf Z_{p\mathbf Z}$ (19.8.3) ou de l'anneau local artinien
+$\mathbf Z/p^n\mathbf Z$ pour $n\geq2$, qui ne contiennent pas de corps.
+
+Notons enfin que, pour un anneau (même réduit), les corps résiduels en ses
+idéaux premiers peuvent avoir des caractéristiques différentes, comme le
+montre l'exemple de $\mathbf Z$.
+\end{env}
+
+\begin{env}[21.1.4]
+\label{0.21.1.4-fr}
+Dans toute la suite de ce paragraphe, nous supposons fixé un nombre premier
+$p$ et tous les anneaux seront supposés de caractéristique $p$, sauf mention
+expresse du contraire. Pour un tel anneau $A$, l'application $x\mapsto x^p$
+est un endomorphisme de $A$, que l'on note $F_A$~; si $A$ est réduit, $F_A$
+est injectif. On pose $A^p=F_A(A)$ (sous-anneau de $A$ formé des $x^p$,
+$x\in A$)~; on peut naturellement considérer $A$ comme une $A^p$-algèbre.
+
+On peut aussi considérer $A$ comme une $A$-algèbre au moyen de
+l'homomorphisme $F_A:x\mapsto x^p$ de $A$ dans $A$~; autrement dit, il
+s'agit de l'algèbre $A^{(p)}$ pour laquelle le produit $\lambda\cdot x$ de
+$x\in A$ par un scalaire $\lambda\in A$ est le produit $\lambda^p x$ dans
+l'anneau $A$. Il est clair que, pour tout homomorphisme d'anneaux $u:A\to B$,
+le couple $(u,u)$ est un di-homomorphisme d'algèbres $A^{(p)}\to B^{(p)}$.
+Pour tout $A$-module $E$, on pose $E^{(p)}=E\otimes_A A^{(p)}$, où
+$A^{(p)}$ est considéré comme un $(A,A)$-bimodule, la structure de
+$A$-module à gauche étant celle qu'on vient de définir et la structure de
+$A$-module à droite définie par la multiplication dans $A$~; ainsi, pour
+$x\in E$, $\alpha,\beta\in A$, on a
+\[
+  \alpha(x\otimes\beta)=x\otimes(\alpha\beta),\qquad
+  (\alpha x)\otimes\beta=x\otimes\alpha^p\beta.
+\]
+\end{env}
+
+\oldpage[0\textsubscript{IV-1}]{155}
+Posant $x^{(p)}=x\otimes1$, on a donc $(\alpha x)^{(p)}=\alpha^p x^{(p)}$.
+Lorsque $F_A$ est injectif, on peut identifier $A^{(p)}$ à l'anneau $A$
+considéré comme algèbre sur son sous-anneau $A^p$.
+
+\begin{proposition}[21.1.5]
+\label{0.21.1.5-fr}
+Soient $A$, $B$ deux anneaux, $u:A\to B$ un homomorphisme.
+\begin{enumerate}
+  \item[(i)] Toute $A$-dérivation de $B$ dans un $B$-module $L$ est nulle
+  dans $A[B^p]$ (donc est une $A[B^p]$-dérivation).
+  \item[(ii)] Pour toute sous-$A$-algèbre $A'$ de $A[B^p]$, si
+  $j:A'\to B$ est l'injection canonique, l'homomorphisme canonique
+  \[
+  j_{B/A'/A}:\Omega^1_{B/A}\longrightarrow\Omega^1_{B/A'}
+  \]
+  est bijectif.
+  \item[(iii)] Supposons qu'il existe un entier $s\geq0$ tel que
+  $u(A)\supset B^{p^s}$. Alors, dans l'anneau $B\otimes_A B$,
+  $\mathfrak J_{B/A}$ est un nilidéal.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Par récurrence à partir de (20.1.1.1), on déduit, pour toute
+$A$-dérivation $D:B\to L$, que $D(x^n)=nx^{n-1}D(x)$, d'où en particulier
+$D(x^p)=0$.
+
+(ii) Vu (20.4.8), l'assertion (ii) n'est qu'une traduction de (i), cette
+dernière s'écrivant $\operatorname{Der}_{A[B^p]}(B,L)=\operatorname{Der}_A(B,L)$
+pour tout $B$-module $L$.
+
+(iii) Pour tout $x\in B$, on a
+$(x\otimes1-1\otimes x)^{p^s}=x^{p^s}\otimes1-1\otimes x^{p^s}=0$,
+puisque $x^{p^s}\in u(A)$. La conclusion résulte de ce que les éléments
+$1\otimes x-x\otimes1$ engendrent $\mathfrak J_{B/A}$ (20.4.4).
+\end{proof}
+
+Il résulte aussitôt de (21.1.5) que, pour tout couple d'homomorphismes
+d'anneaux $A\to B\to C$, on a
+\begin{equation}
+\tag{21.1.5.1}
+\label{0.21.1.5.1-fr}
+\Upsilon_{C/B/A}=\Upsilon_{C/B/A'}
+\end{equation}
+pour toute sous-$A$-algèbre $A'\subset A[B^p]$ de $B$.
+
+D'autre part, (21.1.5) montre en particulier que, pour les modules de
+différentielles «absolues»,
+\begin{equation}
+\tag{21.1.5.2}
+\label{0.21.1.5.2-fr}
+\Omega^1_A=\Omega^1_{A/A^p}.
+\end{equation}
+
+\begin{corollary}[21.1.6]
+\label{0.21.1.6-fr}
+Supposons que $B$ soit une $A$-algèbre de type fini et qu'il existe un
+entier $s\geq0$ tel que $u(A)\supset B^{p^s}$. Si $\Omega^1_{B/A}=0$,
+$u$ est surjectif.
+\end{corollary}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{156}
+D'après (21.1.5, (iii)), $\mathfrak J_{B/A}$ est un nilidéal~; en outre,
+en vertu de (20.4.4) et de l'hypothèse, $\mathfrak J_{B/A}$ est un idéal de
+type fini, donc il est nilpotent~; comme la relation $\Omega^1_{B/A}=0$
+signifie que $\mathfrak J_{B/A}=\mathfrak J_{B/A}^2$, on en conclut que
+$\mathfrak J_{B/A}=0$, ou encore que $\pi:B\otimes_A B\to B$ est bijectif.
+Par ailleurs, tout élément de $B$ ayant sa puissance $p^s$-ième dans $u(A)$,
+$B$ est entier sur $A$, et étant de type fini, c'est une $A$-algèbre finie.
+On est ainsi ramené à prouver le lemme suivant (où l'on ne suppose pas que
+les anneaux considérés sont de caractéristique $p$) :
+\end{proof}
+
+\begin{lemma}[21.1.6.1]
+\label{0.21.1.6.1-fr}
+Soient $R$ un anneau, $S$ une $R$-algèbre finie~; si l'homomorphisme
+canonique $\pi:S\otimes_R S\to S$ est bijectif, alors l'homomorphisme
+structural $u:R\to S$ est surjectif.
+\end{lemma}
+
+\begin{proof}
+Il suffit de montrer que, pour tout idéal maximal $\mathfrak m$ de $R$, si
+l'on pose $T=R-\mathfrak m$, l'homomorphisme
+$u_{\mathfrak m}:R_{\mathfrak m}\to T^{-1}S$ est surjectif (Bourbaki,
+\emph{Alg. comm.}, chap.~II, §~3, n$^\circ$~3, th.~1)~; or l'hypothèse
+entraîne que l'homomorphisme
+$(T^{-1}S)\otimes_{R_{\mathfrak m}}(S/\mathfrak mS)\to T^{-1}S$
+est bijectif (0$_I$, 1.3.4), et comme $T^{-1}S$ est une
+$R_{\mathfrak m}$-algèbre finie, on voit qu'on peut se borner au cas où
+$R$ est un anneau local.
+
+Désignant encore par $\mathfrak m$ son idéal maximal, il suffit de prouver que
+$u\otimes1:R/\mathfrak m\to S/\mathfrak mS$ est surjectif, en vertu du
+lemme de Nakayama ($S$ étant un $R$-module de type fini)~; comme
+l'homomorphisme canonique
+$(S/\mathfrak mS)\otimes_{R/\mathfrak m}(S/\mathfrak mS)\to S/\mathfrak mS$
+est bijectif et que $S/\mathfrak mS$ est une $(R/\mathfrak m)$-algèbre finie,
+on est finalement ramené au cas où $R$ est un corps~; mais alors les rangs de
+$S\otimes_R S$ et de $S$ sur $R$ ne peuvent être égaux que si $S$ est de rang
+$0$ ou $1$, donc si $u:R\to S$ est surjectif.
+\end{proof}
+
+\begin{proposition}[21.1.7]
+\label{0.21.1.7-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $(x_\alpha)_{\alpha\in I}$ une
+famille d'éléments de $B$. Considérons les propriétés suivantes~:
+\begin{enumerate}
+  \item[a)] $B=A[B^p,(x_\alpha)]$, autrement dit la $A[B^p]$-algèbre
+  $B$ est engendrée par la famille $(x_\alpha)_{\alpha\in I}$.
+  \item[b)] Le $A[B^p]$-module $B$ est engendré par les monômes
+  $\prod_\alpha x_\alpha^{n(\alpha)}$, où $(n(\alpha))_{\alpha\in I}$ est
+  une famille d'entiers à support fini telle que $0\leq n(\alpha)<p$ pour
+  tout $\alpha\in I$.
+  \item[c)] Le $B$-module $\Omega^1_{B/A}$ est engendré par les
+  $d_{B/A}(x_\alpha)$ $(\alpha\in I)$.
+\end{enumerate}
+Alors les propriétés a) et b) sont équivalentes et entraînent c)~; si, en
+outre, $B$ est une $A[B^p]$-algèbre de type fini, c) est équivalente à a) et b).
+\end{proposition}
+
+\begin{proof}
+Il est clair que b) entraîne a), et inversement a) entraîne b), car tout
+monôme $\prod_\alpha x_\alpha^{m(\alpha)}$, où les $m(\alpha)$ sont des
+entiers $\geq0$ (formant une famille à support fini), peut s'écrire
+$(\prod_\alpha x_\alpha^{q(\alpha)})^p\prod_\alpha x_\alpha^{r(\alpha)}$,
+en divisant chaque $m(\alpha)$ par $p$, ce qui donne
+$m(\alpha)=p q(\alpha)+r(\alpha)$ avec $0\leq r(\alpha)<p$.
+Le fait que a) entraîne c) résulte de (21.1.5, (ii)) et de (20.4.7).
+
+Supposons inversement c) vérifiée et que $B$ soit une $A[B^p]$-algèbre de
+type fini~; soit $B'$ la sous-$A[B^p]$-algèbre de $B$ engendrée par les
+$x_\alpha$~; dans la suite exacte (20.5.7.1)
+\[
+\Omega^1_{B'/A[B^p]}\otimes_{B'}B\longrightarrow
+\Omega^1_{B/A[B^p]}\longrightarrow\Omega^1_{B/B'}\longrightarrow0
+\]
+l'hypothèse entraîne que la flèche de gauche est surjective (compte tenu de
+(21.1.5, (ii)))~; on a donc $\Omega^1_{B/B'}=0$, et comme
+$B^p\subset B'\subset B$ et que $B$ est une $B'$-algèbre de type fini,
+on a nécessairement $B'=B$ par (21.1.6).
+\end{proof}
+
+\begin{remark}[21.1.8]
+\label{0.21.1.8-fr}
+Lorsque $B$ est un corps, nous démontrerons l'équivalence des propriétés a),
+b) et c) sans hypothèse de finitude (21.4.5).
+\end{remark}
+
+\begin{definition}[21.1.9]
+\label{0.21.1.9-fr}
+Soient $A$ un anneau (de caractéristique $p$), $B$ une $A$-algèbre. On dit
+qu'une famille $(x_\alpha)_{\alpha\in I}$ d'éléments de $B$ est $p$-libre sur
+$A$ (resp. un système de $p$-générateurs de $B$ sur $A$, resp. une $p$-base
+de $B$ sur $A$) si la famille des monômes
+$\prod_\alpha x_\alpha^{n(\alpha)}$ ($0\leq n(\alpha)<p$,
+$(n(\alpha))_{\alpha\in I}$ à support fini) est une famille libre (resp. un
+système de générateurs, resp. une base) dans le $A[B^p]$-module $B$.
+\end{definition}
+
+On a des définitions correspondantes pour un ensemble $M$ d'éléments de $B$,
+en considérant la famille définie par l'injection canonique $M\to B$.
+Lorsqu'on prend pour $A$ le corps premier $\mathbf F_p$ (auquel cas
+$A[B^p]=B^p$), on omet la mention de $A$ dans la définition précédente (ou
+l'on dit encore qu'une famille est «absolument» $p$-libre, resp. un système
+«absolu» de $p$-générateurs, resp. une $p$-base «absolue»).
+
+\oldpage[0\textsubscript{IV-1}]{157}
+\begin{lemma}[21.1.10]
+\label{0.21.1.10-fr}
+Soient $C$ une sous-$A$-algèbre de $B$ telle que $B^p\subset C$, $M$ une
+partie de $C$, $N$ une partie de $B$.
+\begin{enumerate}
+  \item[(i)] Si $M$ est un système de $p$-générateurs de $C$ sur $A$ et $N$
+  un système de $p$-générateurs de $B$ sur $C$, alors $M\cup N$ est un système
+  de $p$-générateurs de $B$ sur $A$.
+  \item[(ii)] Supposons que $M$ soit une $p$-base de $C$ sur $A$~; alors,
+  pour que $N$ soit $p$-libre sur $C$, il faut et il suffit que $M\cup N$
+  soit $p$-libre sur $A$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+On peut se borner au cas où $B^p\subset A\subset C\subset B$. Alors (i)
+est un cas particulier du fait que si $P$ (resp. $Q$) est un système de
+générateurs du $A$-module $C$ (resp. du $C$-module $B$), l'ensemble des
+produits $xy$, où $x\in P$ et $y\in Q$, est un système de générateurs du
+$A$-module $B$.
+
+Conservant les mêmes notations, si $P$ est une base du $A$-module $C$,
+dire que $Q$ est une famille libre sur $C$ signifie que la relation
+$\sum_{\lambda,\mu}a_{\lambda\mu}x_\lambda y_\mu=0$, où
+$a_{\lambda\mu}\in A$, $x_\lambda\in P$, $y_\mu\in Q$ (les $x_\lambda$
+(resp. les $y_\mu$) étant deux à deux distincts) équivaut à
+$a_{\lambda\mu}=0$ pour tout couple $(\lambda,\mu)$, ou encore à
+$\sum_\lambda a_{\lambda\mu}x_\lambda=0$ pour tout $\mu$~; d'où
+l'assertion (ii).
+\end{proof}
+
+\subsection{$p$-bases et lissité formelle}
+\label{0.21.2-fr}
+
+\begin{theorem}[21.2.1]
+\label{0.21.2.1-fr}
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$.
+Soient $E$ une $A$-algèbre, $u:A\to E$ l'homomorphisme structural,
+$q:E\to B$ un $A$-homomorphisme surjectif, $\mathfrak R$ son noyau, et
+supposons que $\mathfrak R^p=0$. Alors~:
+\begin{enumerate}
+  \item[(i)] Pour qu'il existe un $A$-homomorphisme $v:B\to E$ inverse à
+  droite de l'homomorphisme $q:E\to B$, il faut et il suffit que
+  $u(q(z)^p)=z^p$ pour tout $z\in E$.
+  \item[(ii)] Lorsque la condition de (i) est satisfaite, pour toute famille
+  $(z_\alpha)_{\alpha\in I}$ d'éléments de $E$ telle que
+  $q(z_\alpha)=x_\alpha$ pour tout $\alpha\in I$, il existe un
+  $A$-homomorphisme $v:B\to E$ et un seul tel que $v(x_\alpha)=z_\alpha$
+  pour tout $\alpha\in I$, et $v$ est inverse à droite de $q$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{158}
+Considérons d'abord le cas où $E$ est discret, donc $\mathfrak R$ est
+nilpotent~; le raisonnement de (19.4.3) permet en outre de supposer
+$\mathfrak R^2=0$ et par suite $\mathfrak R^p=0$. Enfin, en considérant
+l'image réciproque de l'extension $E$ de $C$ par $\mathfrak R$, on peut se
+borner au cas où $C=B$ et où $v$ est l'identité (19.4.4).
+
+Comme l'homomorphisme d'anneaux $F_B:z\mapsto z^p$ s'annule dans
+$\mathfrak R$, il se factorise en $E\xrightarrow q B\xrightarrow{F'}E^{(p)}$,
+et $F'$, considéré comme homomorphisme de $B$ dans $E^{(p)}$, est un
+$A$-homomorphisme par définition de la structure de $A$-algèbre de $E^{(p)}$
+à l'aide de l'homomorphisme composé $A\xrightarrow rE\xrightarrow{F_E}E^{(p)}$,
+où $r:A\to E$ est l'homomorphisme structural de l'algèbre $E$~; d'ailleurs,
+$r:A^{(p)}\to E^{(p)}$ est aussi un $A$-homomorphisme.
+Il y a donc un unique $A$-homomorphisme
+$f:A^{(p)}\otimes_A B\to E^{(p)}$ tel que les composés de $f$ et des
+homomorphismes canoniques $A^{(p)}\to A^{(p)}\otimes_A B$ et
+$B\to A^{(p)}\otimes_A B$ soient respectivement $r$ et $F'$.
+
+Or, par hypothèse, on peut identifier $A^{(p)}\otimes_A B$ à $A[B^p]$,
+les homomorphismes canoniques s'identifiant respectivement à $u$ et à $F_B$.
+On peut donc considérer $E$ comme une $A[B^p]$-algèbre au moyen de $f$~;
+par construction, on a $f(q(z)^p)=z^p$ pour tout $z\in E$~; on est donc
+dans les conditions d'application de (21.2.1), d'où le théorème dans ce cas.
+
+Pour passer au cas général, considérons un système fondamental
+$(\mathfrak J_\lambda)$ d'idéaux ouverts de $E$, et posons
+$E_\lambda=E/\mathfrak J_\lambda$, $\mathfrak R_\lambda=(\mathfrak R+\mathfrak J_\lambda)/\mathfrak J_\lambda$,
+$C_\lambda=E_\lambda/\mathfrak R_\lambda=E/(\mathfrak R+\mathfrak J_\lambda)$~;
+comme $E=\varprojlim E_\lambda$ (0$_I$, 7.2.2). Pour tout couple
+$(\alpha,\lambda)$, désignons par $z_{\alpha\lambda}$ l'image canonique de
+$z_\alpha$ dans $E_\lambda$, et par $p_\lambda:C\to C_\lambda$ et
+$q_\lambda:E_\lambda\to C_\lambda$ les homomorphismes canoniques. Comme
+par hypothèse $\mathfrak R_\lambda$ est nilpotent dans $E_\lambda$, la
+première partie de la démonstration prouve l'existence et l'unicité d'un
+$A$-homomorphisme $w_\lambda:B\to E_\lambda$ tel que
+$p_\lambda\circ v=q_\lambda\circ w_\lambda$ et
+$w_\lambda(x_\alpha)=z_{\alpha\lambda}$ pour tout $\alpha$. L'unicité des
+$w_\lambda$ montre alors aussitôt que $(w_\lambda)$ est un système projectif
+d'homomorphismes, et $w=\varprojlim w_\lambda$ répond à la question.
+\end{proof}
+
+\begin{corollary}[21.2.2]
+\label{0.21.2.2-fr}
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$.
+S'il existe une $p$-base de $B$ sur $A$, $B$ est une $A$-algèbre formellement
+lisse relativement à $B^p$ (pour les topologies discrètes).
+\end{corollary}
+
+\begin{proof}
+Soient $E$ une $A$-extension de $B$ par un $B$-module $L$, $q:E\to B$
+l'augmentation, $u:A\to E$ l'homomorphisme structural. Dire que $E$ est
+$B^p$-triviale signifie qu'il existe un homomorphisme d'anneaux $v:B\to E$
+tel que $q(v(b))=b$ et $v(b^p)=u(b^p)$ pour tout $b\in B$. On en déduit,
+pour $z\in E$, que $u(q(z)^p)=v(q(z)^p)=(v(q(z)))^p$~; mais, en vertu de
+la relation $L^2=0$, on a aussi $L^p=0$, et comme $v(q(z))-z\in L$, on a
+$(v(q(z)))^p=z^p$. La condition de (21.2.1), (i), est donc satisfaite et
+$E$ est $B^p$-triviale.
+\end{proof}
+
+\begin{corollary}[21.2.3]
+\label{0.21.2.3-fr}
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$,
+et $\left(x_\alpha\right)_{\alpha\in I}$ une $p$-base de $B$ sur $A$. Soit
+$L$ un $B$-module. Alors~:
+\begin{enumerate}
+  \item[(i)] Pour qu'une dérivation $D$ de $A$ dans $L$ se prolonge en une
+  dérivation de $B$ dans $L$, il faut et il suffit que $D$ s'annule dans $B^p$.
+  \item[(ii)] Si $D$ s'annule dans $B^p$, alors, pour toute famille
+  $(y_\alpha)_{\alpha\in I}$ d'éléments de $L$, il existe une dérivation
+  $D'$ de $B$ dans $L$ et une seule prolongeant $D$ et telle que
+  $D'(x_\alpha)=y_\alpha$ pour tout $\alpha\in I$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Étant donnée une dérivation $D$ de $A$ dans $L$, considérons l'anneau
+$E=D_B(L)$ et l'homomorphisme $u:A\to E$ défini par $u(a)=(a,D(a))$~; un
+$A$-homomorphisme $v:B\to E$ inverse à droite de l'homomorphisme canonique
+$q:E\to B$ est alors de la forme $x\mapsto(x,D'(x))$, où $D'$ est une
+dérivation de $B$ dans $L$ prolongeant $D$ (20.1.5)~; comme
+$u(q(z)^p)=(q(z)^p,D(q(z)^p))$ pour $z\in E$, le corollaire résulte aussitôt
+de (21.2.1) appliqué à $E$.
+\end{proof}
+
+Il résulte de (21.2.3) que la suite
+\begin{equation}
+\tag{21.2.3.1}
+\label{0.21.2.3.1-fr}
+0\to\operatorname{Der}_A(B,L)\to\operatorname{Der}_{B^p}(B,L)
+\to\operatorname{Der}_{B^p}(A,L)\to0
+\end{equation}
+(cf. (20.2.2.1)) est exacte, et que l'application
+\begin{equation}
+\tag{21.2.3.2}
+\label{0.21.2.3.2-fr}
+D'\longmapsto(D'(x_\alpha))_{\alpha\in I}
+\end{equation}
+est un isomorphisme du $B$-module $\operatorname{Der}_A(B,L)$ sur le
+$B$-module produit $L^I$ (en faisant $D=0$ dans (21.2.3)).
+
+\begin{corollary}[21.2.4]
+\label{0.21.2.4-fr}
+Sous les hypothèses de (21.2.3), la suite
+\begin{equation}
+\tag{21.2.4.1}
+\label{0.21.2.4.1-fr}
+0\to\Omega^1_{A/B^p}\otimes_A B\to\Omega^1_{B/B^p}
+\to\Omega^1_{B/A}\to0
+\end{equation}
+est exacte et scindée, et la famille $(d_{B/A}(x_\alpha))_{\alpha\in I}$ est
+une base du $B$-module $\Omega^1_{B/A}$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte aussitôt de (21.2.3) et de la formule
+$\operatorname{Der}_A(B,L)=\operatorname{Hom}_B(\Omega^1_{B/A},L)$ (20.4.8).
+\end{proof}
+
+\begin{corollary}[21.2.5]
+\label{0.21.2.5-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $(x_\alpha)_{\alpha\in I}$ une
+$p$-base de $B$ sur $A$. Alors $(d_{B/A}(x_\alpha))_{\alpha\in I}$ est une
+base du $B$-module $\Omega^1_{B/A}$.
+\end{corollary}
+
+\begin{proof}
+En utilisant (21.1.5), (ii), on se ramène au cas où $A=A[B^p]$ et il suffit
+alors d'appliquer (21.2.4).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{159}
+\begin{env}[21.2.6]
+\label{0.21.2.6-fr}
+Soient $A$, $B$ deux anneaux, $u:A\to B$ un homomorphisme d'anneaux~; on a
+(avec les notations de (21.1.4)) le diagramme commutatif
+\begin{equation}
+\tag{21.2.6.1}
+\label{0.21.2.6.1-fr}
+\xymatrix{
+ A^{(p)} \ar[r]^{u} & B^{(p)}\\
+ A \ar[u]^{F_A} \ar[r]^{u} & B \ar[u]_{F_B}
+}
+\end{equation}
+On en déduit canoniquement un homomorphisme de $B$-algèbres
+\begin{equation}
+\tag{21.2.6.2}
+\label{0.21.2.6.2-fr}
+u\otimes1:A^{(p)}\otimes_A B\longrightarrow B^{(p)}
+\end{equation}
+dont l'image est l'anneau $A[B^p]$ (qui est une $B$-algèbre pour
+l'homomorphisme $F_B:B\to B^p$).
+\end{env}
+
+\begin{theorem}[21.2.7]
+\label{0.21.2.7-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $u:A\to B$ l'homomorphisme
+structural. On suppose vérifiées les conditions suivantes~:
+\begin{enumerate}
+  \item[(i)] L'homomorphisme (21.2.6.2) déduit de $u$ est injectif.
+  \item[(ii)] $B$ admet une $p$-base $(x_\alpha)_{\alpha\in I}$ par rapport à $A$.
+\end{enumerate}
+Alors $B$ est une $A$-algèbre formellement lisse (pour les topologies
+discrètes). De façon plus précise, munissons $A$ et $B$ des topologies
+discrètes~; soient $E$ une $A$-algèbre topologique admissible
+(0$_I$, 7.1.2), $\mathfrak R$ un idéal de définition de $E$, $C=E/\mathfrak R$,
+$v:B\to C$ un $A$-homomorphisme, $q:E\to C$ l'augmentation. Alors, pour
+toute famille $(z_\alpha)_{\alpha\in I}$ d'éléments de $E$ telle que
+$q(z_\alpha)=v(x_\alpha)$ pour tout $\alpha\in I$, il existe un
+$A$-homomorphisme $w:B\to E$ et un seul tel que $v=q\circ w$ et
+$w(x_\alpha)=z_\alpha$ pour tout $\alpha\in I$.
+\end{theorem}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{160}
+Considérons d'abord le cas où $E$ est discret, donc $\mathfrak R$ nilpotent.
+On peut se borner au cas où $v$ est surjectif~; en outre, le raisonnement de
+(19.4.3) permet de supposer $\mathfrak R^2=0$ et par suite $\mathfrak R^p=0$.
+Enfin, en considérant l'image réciproque par $v$ de l'extension $E$ de $C$
+par $\mathfrak R$, on peut se borner au cas où $C=B$ et où $v$ est l'identité
+(19.4.4). Comme l'homomorphisme d'anneaux $F_B:B\to B^{(p)}$ s'annule
+dans $\mathfrak R$, il se factorise en $E\to B\to B^{(p)}$.
+L'homomorphisme $F'$ de $B$ dans $E^{(p)}$ est un $A$-homomorphisme par
+définition de la structure de $A$-algèbre de $E^{(p)}$ à l'aide du composé
+$A\to E\to E^{(p)}$, et l'homomorphisme $A^{(p)}\to E^{(p)}$ est également
+un $A$-homomorphisme. Il existe donc un unique $A$-homomorphisme
+$f:A^{(p)}\otimes_A B\to E^{(p)}$ dont les restrictions aux deux facteurs
+canoniques sont respectivement l'homomorphisme structural et $F'$.
+Par (21.2.6.2), on identifie $A^{(p)}\otimes_A B$ à $A[B^p]$~; on peut
+donc considérer $E$ comme une $A[B^p]$-algèbre au moyen de $f$, et par
+construction $f(q(z)^p)=z^p$ pour tout $z\in E$. La condition (i) de
+(21.2.1) est satisfaite, d'où le théorème dans ce cas.
+
+Pour passer au cas général, considérons un système fondamental
+$(\mathfrak J_\lambda)$ d'idéaux ouverts de $E$, et posons
+$E_\lambda=E/\mathfrak J_\lambda$, $\mathfrak R_\lambda=(\mathfrak R+\mathfrak J_\lambda)/\mathfrak J_\lambda$,
+$C_\lambda=E_\lambda/\mathfrak R_\lambda=E/(\mathfrak R+\mathfrak J_\lambda)$~;
+comme $E=\varprojlim E_\lambda$ (0$_I$, 7.2.2). Pour tout couple
+$(\alpha,\lambda)$, désignons par $z_{\alpha\lambda}$ l'image canonique de
+$z_\alpha$ dans $E_\lambda$, par $p_\lambda:C\to C_\lambda$ l'homomorphisme
+canonique et par $q_\lambda:E_\lambda\to C_\lambda$ l'homomorphisme canonique.
+Comme par hypothèse $\mathfrak R_\lambda$ est nilpotent dans $E_\lambda$, la
+première partie de la démonstration prouve l'existence et l'unicité d'un
+$A$-homomorphisme $w_\lambda:B\to E_\lambda$ tel que
+$p_\lambda\circ v=q_\lambda\circ w_\lambda$ et
+$w_\lambda(x_\alpha)=z_{\alpha\lambda}$ pour tout $\alpha$. L'unicité des
+$w_\lambda$ montre alors aussitôt que $(w_\lambda)$ est un système projectif
+d'homomorphismes, et $w=\varprojlim w_\lambda$ répond à la question.
+\end{proof}
+
+\begin{remark}[21.2.8]
+\label{0.21.2.8-fr}
+La vérification de l'existence et de l'unicité de l'homomorphisme $w:B\to E$
+tel que $w(x_\alpha)=z_\alpha$ pour tout $\alpha$ peut se déduire directement
+du fait que $B$ est une $A$-algèbre formellement lisse et que les
+$d_{B/A}(x_\alpha)$ forment une base du $B$-module $\Omega^1_{B/A}$ (21.2.4),
+sans faire intervenir le fait qu'il s'agit d'une $p$-base (de sorte que le
+résultat est valable sans supposer les anneaux de caractéristique $p$).
+En effet, on peut se borner au cas où $\mathfrak R^2=0$~; comme
+$\operatorname{Der}_A(B,\mathfrak R)=\operatorname{Hom}_B(\Omega^1_{B/A},\mathfrak R)$
+(20.4.8), il existe une $A$-dérivation $D$, et une seule, de $B$ dans
+$\mathfrak R$ telle que $D(x_\alpha)=z'_\alpha$ pour toute famille
+$(z'_\alpha)$ d'éléments de $\mathfrak R$~; la conclusion résulte de (20.1.1).
+\end{remark}
+
+\subsection{$p$-bases et modules d'imperfection}
+\label{0.21.3-fr}
+
+\begin{env}[21.3.1]
+\label{0.21.3.1-fr}
+Soient $A$, $B$ deux anneaux (de caractéristique $p$), $i:A\to B$,
+$j:B\to A$ deux homomorphismes d'anneaux tels que
+\begin{align}
+\tag{21.3.1.1}\label{0.21.3.1.1-fr}
+j(i(a))&=a^p\quad\text{pour tout }a\in A,\\
+\tag{21.3.1.2}\label{0.21.3.1.2-fr}
+i(j(b))&=b^p\quad\text{pour tout }b\in B.
+\end{align}
+Le plus souvent, $i$ sera injectif, de sorte que $A$ s'identifiera par
+$i:A\to B$ à un sous-anneau de $B$~; une fois cette identification faite,
+l'existence de $j$ implique que $B^p\subset A$, et $j$ s'identifie alors à $F_B$.
+\end{env}
+
+\begin{env}[21.3.2]
+\label{0.21.3.2-fr}
+Si $h:A^p\to A$ est l'injection canonique, on a, d'après (21.3.1.1) et
+(21.3.1.2), un diagramme commutatif
+\begin{equation}
+\tag{21.3.2.1}\label{0.21.3.2.1-fr}
+\xymatrix{
+ B \ar[r]^{j} & A\\
+ A \ar[u]^{i} \ar[r]^{F_A} & A^p \ar[u]_{h}
+}
+\end{equation}
+si bien que le couple $(j,F_A)$ peut être considéré comme un di-homomorphisme
+de la $A$-algèbre $B$ (pour $i$) dans la $A^p$-algèbre $A$ (pour $h$).
+On en déduit un homomorphisme canonique de $A$-modules
+\begin{equation}
+\tag{21.3.2.2}\label{0.21.3.2.2-fr}
+\pi_{B/A}:\Omega^1_{B/A}\otimes_B A_{[j]}\longrightarrow
+\Omega^1_{A/A^p}=\Omega^1_A
+\end{equation}
+(cf. (20.5.4)~; l'identification de $\Omega^1_{A/A^p}$ et du module des
+différentielles absolues $\Omega^1_A$ provient de (21.1.5), (ii)).
+\begin{align}
+\tag{21.3.2.3}\label{0.21.3.2.3-fr}
+\Theta_{B/A}&=\Omega^1_{B/A}\otimes_B A_{[j]},\\
+\tag{21.3.2.4}\label{0.21.3.2.4-fr}
+\Xi_{B/A}&=\operatorname{Ker}(\pi_{B/A}).
+\end{align}
+\oldpage[0\textsubscript{IV-1}]{161}
+De sorte que l'on a la suite exacte
+\begin{equation}
+\tag{21.3.2.5}\label{0.21.3.2.5-fr}
+0\to\Xi_{B/A}\to\Theta_{B/A}\xrightarrow{\pi_{B/A}}\Omega^1_A
+\end{equation}
+(on remarquera que ces notations peuvent prêter à confusion puisque
+$\Theta_{B/A}$ et $\Xi_{B/A}$ dépendent non seulement de $A$ et de $B$,
+mais aussi de $i$ et de $j$).
+\end{env}
+
+\begin{env}[21.3.3]
+\label{0.21.3.3-fr}
+Comme, en vertu de (21.3.1.2), on a $F_B=i\circ j$, on peut écrire pour
+tout $B$-module $M$ (cf. (21.1.4))
+\begin{equation}
+\tag{21.3.3.1}\label{0.21.3.3.1-fr}
+M^{(p)}=M\otimes_B B^{(p)}=(M\otimes_B A_{[j]})\otimes_A B_{[i]},
+\end{equation}
+d'où en particulier
+\begin{equation}
+\tag{21.3.3.2}\label{0.21.3.3.2-fr}
+(\Omega^1_{B/A})^{(p)}=\Theta_{B/A}\otimes_A B_{[i]},
+\end{equation}
+et l'on déduit donc de (21.3.2.2) un homomorphisme canonique de $B$-modules
+\begin{equation}
+\tag{21.3.3.3}\label{0.21.3.3.3-fr}
+\pi_{B/A}\otimes1_B:(\Omega^1_{B/A})^{(p)}\longrightarrow
+\Omega^1_A\otimes_A B_{[i]}.
+\end{equation}
+Compte tenu de (20.5.4.2), l'image de cet homomorphisme est le $B$-module
+engendré par les éléments $d_A(j(b))\otimes1$ pour $b\in B$. Leur image
+par l'homomorphisme canonique $i_{B/A}:\Omega^1_A\otimes_A B\to\Omega^1_B$
+déduit de $i$ (20.5.2) est donc dans le sous-$B$-module de $\Omega^1_B$
+engendré par les $d_B(i(j(b)))$ pour $b\in B$~; en vertu de (21.3.1.2),
+cette image est nulle. Autrement dit, on a une suite d'homomorphismes
+\begin{equation}
+\tag{21.3.3.4}\label{0.21.3.3.4-fr}
+0\to\Xi_{B/A}\otimes_A B_{[i]}\to(\Omega^1_{B/A})^{(p)}
+\to\Upsilon_{B/A}
+\end{equation}
+qui n'est pas nécessairement exacte, mais où le composé de deux
+homomorphismes consécutifs est nul.
+\end{env}
+
+\begin{proposition}[21.3.4]
+\label{0.21.3.4-fr}
+Si $B$ est un $A$-module plat (pour $i$), la suite (21.3.3.4) est exacte.
+\end{proposition}
+\begin{proof}
+Cela résulte de la définition de la platitude. La proposition s'applique en
+particulier lorsque $B^p\subset A\subset B$, $i$ et $j$ étant respectivement
+l'injection canonique et $F_B$, et que $B$ admet une $p$-base sur $A$ (de sorte
+que $B$ est alors un $A$-module libre). Mais même dans ce cas le noyau
+$\Xi_{B/A}$ n'est pas nécessairement nul. Toutefois~:
+\end{proof}
+
+\begin{proposition}[21.3.5]
+\label{0.21.3.5-fr}
+Soient $B$ un anneau réduit, $A$ un sous-anneau de $B$ tel que
+$B^p\subset A\subset B$. Supposons qu'il existe une $p$-base
+$(x_\lambda)_{\lambda\in L}$ de $B$ sur $A$ et une $p$-base
+$(y_\mu)_{\mu\in M}$ de $A$ sur $B^p$~; alors l'homomorphisme canonique
+(21.3.3.4)
+\begin{equation}
+\tag{21.3.5.1}\label{0.21.3.5.1-fr}
+(\Omega^1_{B/A})^{(p)}\longrightarrow\Upsilon_{B/A}
+\end{equation}
+est bijectif, et les éléments $d_A(x_\lambda^p)\otimes1$ forment une base
+du $B$-module $\Upsilon_{B/A}$.
+\end{proposition}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{162}
+Comme $B$ est réduit, $x\mapsto x^p$ est un isomorphisme de structure de
+$B$ sur $B^p$~; par transport de structure au moyen de cet isomorphisme,
+on voit que $(x_\lambda^p)_{\lambda\in L}$ et les $y_\mu$ forment une $p$-base
+de $B^p$ sur $A^p$ (21.1.10)~; on en conclut par (21.1.5), (ii), et (21.2.5)
+que les $d_A(x_\lambda^p)$ et les $d_A(y_\mu)$ forment une base du
+$A$-module $\Omega^1_A$. Or l'image de $d_A(x_\lambda^p)\otimes1$ par
+$i_{B/A}$ est $d_B(x_\lambda^p)=0$~; d'autre part, l'image de $d_A(y_\mu)$
+par $i_{B/A}$ est $d_B(i(y_\mu))$, et comme les $y_\mu$ et les $x_\lambda$
+forment une $p$-base de $B$ sur $B^p$ (21.1.10), les $d_B(y_\mu)$ sont une
+partie d'une base de $\Omega^1_B$ (21.2.5), donc sont linéairement indépendants
+sur $B$. On en déduit que le noyau de $i_{B/A}$ a pour base les
+$d_A(x_\lambda^p)\otimes1$~; comme ce sont les images par (21.3.5.1) des
+éléments correspondants de $(\Omega^1_{B/A})^{(p)}$, et que ces derniers
+forment une base du $B$-module $(\Omega^1_{B/A})^{(p)}$ (21.2.5),
+l'homomorphisme (21.3.5.1) de $B$-modules est bijectif.
+\end{proof}
+
+\begin{remarks}[21.3.6]
+\label{0.21.3.6-fr}
+\begin{enumerate}
+  \item[(i)] Soient $A'$, $B'$ deux anneaux de caractéristique $p$, et
+  supposons donnés deux homomorphismes $i':A'\to B'$, $j':B'\to A'$ vérifiant
+  (21.3.1.1) et (21.3.1.2), ainsi que des homomorphismes d'anneaux
+  $f:A\to A'$, $g:B\to B'$ rendant commutatif le diagramme
+  \[
+  \xymatrix{
+  A'\ar[r]^{i'}&B'\ar[r]^{j'}&A'\\
+  A\ar[u]^f\ar[r]^i&B\ar[u]^g\ar[r]^j&A\ar[u]^f
+  }
+  \]
+  Alors l'homomorphisme canonique $\Omega^1_{B/A}\to\Omega^1_{B'/A'}$
+  (20.5.4.3) donne un di-homomorphisme canonique
+  $\Theta_{B/A}\to\Theta_{B'/A'}$ rendant commutatif le diagramme
+  \[
+  \xymatrix{
+  0\ar[r]&\Xi_{B/A}\ar[r]\ar[d]&\Theta_{B/A}\ar[r]^{\pi_{B/A}}\ar[d]&\Omega^1_A\ar[d]\\
+  0\ar[r]&\Xi_{B'/A'}\ar[r]&\Theta_{B'/A'}\ar[r]^{\pi_{B'/A'}}&\Omega^1_{A'}
+  }
+  \]
+  \item[(ii)] Soit $A'$ une $A$-algèbre quelconque et posons
+  $B'=B\otimes_A A'$~; alors $i'=i\otimes1:A'\to B'$ et
+  $j'=j\otimes1:B'\to A'$ vérifient (21.3.1.1) et (21.3.1.2), et l'on a
+  $\Omega^1_{B'/A'}=\Omega^1_{B/A}\otimes_A A'=\Omega^1_{B/A}\otimes_B B'$
+  (20.5.5)~; on en déduit un $A'$-isomorphisme canonique
+  \begin{equation}
+  \tag{21.3.6.1}\label{0.21.3.6.1-fr}
+  \Theta_{B/A}\otimes_A A'\xrightarrow{\sim}\Theta_{B'/A'}
+  \end{equation}
+  et aussi un $B'$-homomorphisme canonique
+  \begin{equation}
+  \tag{21.3.6.2}\label{0.21.3.6.2-fr}
+  (\Omega^1_{B/A})^{(p)}\otimes_B B'\xrightarrow{\sim}
+  (\Omega^1_{B'/A'})^{(p)}.
+  \end{equation}
+\end{enumerate}
+\end{remarks}
+
+\subsection{Cas des extensions de corps}
+\label{0.21.4-fr}
+
+\begin{env}[21.4.0]
+\label{0.21.4.0-fr}
+Soient $K$ un corps de caractéristique $p>0$, $k$ un sous-corps de $K$~;
+alors l'anneau $k[K^p]$ est égal au corps $k(K^p)$ puisque $k$ est algébrique
+sur $K^p$. On pourra donc appliquer les résultats des numéros précédents en
+remplaçant partout $A$, $B$ et $A[B^p]$ par $k$, $K$ et $k(K^p)$.
+\end{env}
+
+\begin{lemma}[21.4.1]
+\label{0.21.4.1-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$.
+Pour qu'un élément $x\in K$ soit $p$-libre sur $k$, il faut et il suffit que
+$x\notin k(K^p)$.
+\end{lemma}
+
+\begin{proof}
+En effet, $x$ est racine du polynôme $X^p-x^p$ de $k(K^p)[X]$, et l'on sait
+(Bourbaki, \emph{Alg.}, chap.~V, §~8, n$^\circ$~1, prop.~1) que si
+$x\notin k(K^p)$ ce polynôme est irréductible, de sorte que les éléments
+$1,x,\ldots,x^{p-1}$ forment une base du $k(K^p)$-module $k(K^p)(x)$.
+\end{proof}
+
+\begin{theorem}[21.4.2]
+\label{0.21.4.2-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$,
+$S$ un système de $p$-générateurs de $K$ sur $k$, $L\subset S$ une partie
+$p$-libre sur $k$. Il existe alors une $p$-base $B$ de $K$ sur $k$ telle que
+$L\subset B\subset S$. En particulier, toute extension de $k$ admet une
+$p$-base sur $k$.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $K^p\subset k$. En vertu du théorème de Zorn,
+il existe dans $K$ une partie $B$ telle que $L\subset B\subset S$, $p$-libre
+sur $k$ et maximale parmi les parties de $S$ ayant ces propriétés. Il suffit
+de voir que le sous-corps $K'$ de $K$ engendré par $k$ et $B$ est égal à $K$.
+Dans le cas contraire, il existerait $x\in S$ non dans $K'$~; comme
+$K^p\subset k$, on a $K'=K'(K^p)$~; donc $x$ serait $p$-libre sur $K'$
+(21.4.1), et par suite $B\cup\{x\}$ serait $p$-libre sur $k$ (21.1.10),
+contrairement à la définition de $B$. La dernière assertion de (21.4.2)
+s'obtient en prenant $L=\varnothing$, $S=K$.
+\end{proof}
+
+\begin{corollary}[21.4.3]
+\label{0.21.4.3-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$.
+Pour qu'une famille $(x_\alpha)$ d'éléments de $K$ soit $p$-libre sur $k$,
+il faut et il suffit que, pour tout $\alpha$, $x_\alpha$ n'appartienne pas au
+corps $K_\alpha$ engendré par $k(K^p)$ et par les $x_\beta$ d'indice
+$\beta\neq\alpha$.
+\end{corollary}
+
+\begin{proof}
+La condition est nécessaire en vertu de (21.1.10). Inversement, supposons-la
+remplie~; on peut se borner au cas où $(x_\alpha)$ est un système de
+$p$-générateurs de $K$. Il existe alors une sous-famille de $(x_\alpha)$ qui
+est une $p$-base de $K$ (21.4.2), mais cette famille ne peut être distincte de
+$(x_\alpha)$, sans quoi, en vertu de l'hypothèse, ce ne serait pas une famille
+de $p$-générateurs de $K$.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{163}
+\begin{corollary}[21.4.4]
+\label{0.21.4.4-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$.
+Pour que $\Omega^1_{K/k}=0$, il faut et il suffit que $K=k(K^p)$.
+En particulier, pour que $\Omega^1_K=0$, il faut et il suffit que $K$ soit
+un corps parfait.
+\end{corollary}
+
+\begin{proof}
+En effet, si $(x_\alpha)$ est une $p$-base de $K$ sur $k$, les
+$d_{K/k}(x_\alpha)$ forment une base de l'espace vectoriel $\Omega^1_{K/k}$
+(21.2.5).
+\end{proof}
+
+\begin{theorem}[21.4.5]
+\label{0.21.4.5-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$,
+$(x_\alpha)$ une famille d'éléments de $K$. Pour que $(x_\alpha)$ soit
+$p$-libre sur $k$ (resp. une famille de $p$-générateurs de $K$ sur $k$,
+resp. une $p$-base de $K$ sur $k$), il faut et il suffit que la famille
+$(d_{K/k}(x_\alpha))$ soit une famille libre (resp. un système de
+générateurs, resp. une base) dans l'espace vectoriel $\Omega^1_{K/k}$.
+\end{theorem}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{164}
+Soit $K'$ le sous-corps (égal au sous-anneau) de $K$ engendré par
+$k(K^p)$ et les $x_\alpha$~; compte tenu de (21.4.3), il suffit de voir que,
+pour chaque $\alpha$, $x_\alpha$ n'appartient pas à $K_\alpha$. Or, dans la
+suite exacte
+\[
+\Omega^1_{K_\alpha/k(K^p)}\otimes_{K_\alpha}K\longrightarrow
+\Omega^1_{K/k(K^p)}\longrightarrow\Omega^1_{K/K_\alpha}\longrightarrow0,
+\]
+les images par la flèche de gauche des $d_{K_\alpha/k}(x_\beta)$ pour
+$\beta\neq\alpha$ sont les $d_{K/k}(x_\beta)$, donc engendrent un sous-espace
+vectoriel de $\Omega^1_{K/k(K^p)}$ ne contenant pas $d_{K/k}(x_\alpha)$~; comme
+ce sous-espace est le noyau de la flèche de droite, on voit que
+$d_{K/K_\alpha}(x_\alpha)\neq0$, donc $x_\alpha\notin K_\alpha$.
+
+Si maintenant $(x_\alpha)$ est une famille $p$-libre, elle est une sous-famille
+d'une $p$-base de $K$ sur $k$ (21.4.2)~; les $d_{K/k}(x_\alpha)$ font donc
+partie d'une base de l'espace vectoriel $\Omega^1_{K/k}$ (21.2.5), et sont
+par suite linéairement indépendants sur $K$. Réciproquement, si les
+$d_{K/k}(x_\alpha)$ sont linéairement indépendants sur $K$, les deux
+paragraphes précédents montrent que $(x_\alpha)$ est $p$-libre sur $k$.
+\end{proof}
+
+\begin{corollary}[21.4.6]
+\label{0.21.4.6-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$,
+$x$ un élément de $K$. Les trois conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $x\notin k(K^p)$.
+  \item[b)] $d_{K/k}(x)\neq0$.
+  \item[c)] L'élément $x$ est $p$-libre sur $k$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proposition}[21.4.7]
+\label{0.21.4.7-fr}
+Soient $L$ un corps de caractéristique $p>0$, $K$ un sous-corps de $L$ tel
+que $L^p\subset K\subset L$. Alors la suite d'espaces vectoriels sur $L$
+\begin{equation}
+\tag{21.4.7.1}\label{0.21.4.7.1-fr}
+0\to\Omega^1_{K/L^p}\otimes_KL\to\Omega^1_{L/L^p}
+\to\Omega^1_{L/K}\to0
+\end{equation}
+est exacte~; en d'autres termes, on a $\Upsilon_{L/K/L^p}=0$.
+\end{proposition}
+\begin{proof}
+C'est un cas particulier de (21.2.4), compte tenu de (21.4.2).
+\end{proof}
+
+\begin{proposition}[21.4.8]
+\label{0.21.4.8-fr}
+Sous les hypothèses de (21.4.7), l'homomorphisme canonique
+\begin{equation}
+\tag{21.4.8.1}\label{0.21.4.8.1-fr}
+(\Omega^1_{L/K})^{(p)}\longrightarrow\Upsilon_{L/K}
+\end{equation}
+est bijectif~; si $(x_\lambda)$ est une $p$-base de $L$ sur $K$, les éléments
+$d_K(x_\lambda^p)\otimes1$ forment une base de l'espace vectoriel $\Upsilon_{L/K}$.
+\end{proposition}
+\begin{proof}
+C'est un cas particulier de (21.3.5).
+\end{proof}
+
+\subsection{Application~: critères de séparabilité}
+\label{0.21.5-fr}
+
+Dans ce numéro et les deux suivants, on ne suppose plus que les anneaux
+considérés soient de caractéristique $p>0$.
+
+\begin{env}[21.5.1]
+\label{0.21.5.1-fr}
+Notons d'abord que le critère (21.2.7) permet de démontrer une partie du
+théorème de Cohen sur les extensions séparables (19.6.1), savoir que si $k$
+est de caractéristique $p>0$ et si $K$ est une extension séparable de $k$,
+alors $K$ est une $k$-algèbre formellement lisse. En effet, $K$ admet une
+$p$-base sur $k$ (21.4.2), et d'autre part, il résulte du critère de MacLane
+(Bourbaki, \emph{Alg.}, chap.~V, §~8, n$^\circ$~2, prop.~3) que, dans une
+clôture algébrique de $K$, $k^{p^{-1}}$ et $K$ sont linéairement disjoints sur
+$k$, et par suite que l'homomorphisme canonique
+$k^{p^{-1}}\otimes_k K\to k^{p^{-1}}(K)$ est bijectif, ce qui est précisément
+la condition (i) de (21.2.7), après transport de structure par
+l'isomorphisme $x\mapsto x^p$.
+\end{env}
+\begin{proposition}[21.5.2]
+\label{0.21.5.2-fr}
+\textnormal{(MacLane).}
+Soient $A$, $B$ deux anneaux de valuation discrète complets, $\mathfrak m$,
+$\mathfrak n$ leurs idéaux maximaux respectifs, $K=A/\mathfrak m$ et
+$L=B/\mathfrak n$ leurs corps résiduels, $u:A\to B$ un homomorphisme tel que
+$Bu(\mathfrak m)=\mathfrak n$, $u_0=u\otimes 1:K\to L$ l'homomorphisme
+correspondant pour les corps résiduels. On considère les conditions suivantes~:
+\begin{enumerate}
+  \item[\rm a)] $L$ est une extension séparable de $K$ (pour $u_0$).
+  \item[\rm b)] Pour tout anneau de valuation discrète complet $B'$ d'idéal
+  maximal $\mathfrak n'$ et de corps résiduel $L'$,
+\oldpage[0\textsubscript{IV-1}]{165}
+  tout homomorphisme
+  $u':A\to B'$ tel que $B'u'(\mathfrak m)=\mathfrak n'$ et tout
+  $K$-isomorphisme $\sigma:L\to L'$ (relatif à $u_0$ et
+  $u'_0=u'\otimes1:K\to L'$), il existe un isomorphisme $w:B\to B'$ tel que
+  $u'=w\circ u$ et que $w_0=w\otimes1:L\to L'$ soit égal à $\sigma$.
+  \item[\rm b$'$)] Pour tout homomorphisme $u':A\to B$ tel que
+  $Bu'(\mathfrak m)=\mathfrak n$ et tel que $u'_0=u'\otimes1:K\to L$ soit égal
+  à $u_0$, il existe un automorphisme $w$ de $B$ tel que $u'=w\circ u$ et que
+  $w_0=w\otimes1:L\to L$ soit l'identité.
+  \item[\rm c)] Désignant par $u_1:A/\mathfrak m^2\to B/\mathfrak n^2$
+  l'homomorphisme déduit de $u$ par passage aux quotients, alors, pour tout
+  homomorphisme local $u'_1:A/\mathfrak m^2\to B/\mathfrak n^2$ tel que
+  $\operatorname{gr}_0(u'_1)=\operatorname{gr}_0(u_1)(=u_0)$, il existe un
+  automorphisme $w_1$ de $B/\mathfrak n^2$ tel que
+  $\operatorname{gr}_0(w_1)$ soit l'identité et que $u'_1=w_1\circ u_1$.
+  \item[\rm c$'$)] Pour tout homomorphisme local $u'_1:A/\mathfrak m^2\to
+  B/\mathfrak n^2$ tel que $\operatorname{gr}_0(u'_1)=\operatorname{gr}_0(u_1)$
+  et $\operatorname{gr}_1(u'_1)=\operatorname{gr}_1(u_1)$
+  (homomorphisme de $\mathfrak m/\mathfrak m^2$ dans
+  $\mathfrak n/\mathfrak n^2$), il existe un automorphisme $w_1$ de
+  $B/\mathfrak n^2$ tel que $\operatorname{gr}_0(w_1)$ soit l'identité et que
+  $u'_1=w_1\circ u_1$.
+\end{enumerate}
+ Alors on a les implications $c)\Leftrightarrow c')\Leftrightarrow a)\Rightarrow b)
+ \Rightarrow b')$. Si de plus $A$ est un anneau de Cohen, les cinq conditions
+précédentes sont équivalentes.
+
+\end{proposition}
+\begin{proof}
+Les implications $b)\Rightarrow b')$ et $c)\Rightarrow c')$ sont triviales.
+Montrons que $a)$ implique $b)$.
+L'homomorphisme $u$ fait de $B$ un $A$-module sans torsion, puisqu'il
+transforme par hypothèse une uniformisante de $A$ en une uniformisante de $B$~;
+il en résulte que $B$ est un $A$-module plat (0$_{\rm I}$, 6.3.4), donc une
+$A$-algèbre de Cohen (19.8.1)~; le fait que $a)$ implique $b)$ est alors
+ conséquence de (19.8.2, (i)) appliquée à $G=B'$, $\mathfrak J=\mathfrak n'$,
+ $B'$ étant considéré comme $A$-algèbre pour $u'$ et l'homomorphisme
+$B\to B'/\mathfrak n'$ étant le composé
+$B\to B/\mathfrak n\to B'/\mathfrak n'$, qui est un $A$-homomorphisme en
+ vertu de l'hypothèse $u'_0=\sigma\circ u_0$. Le même raisonnement prouve que
+$a)$ entraîne $c)$, en prenant cette fois $G=B/\mathfrak n^2$,
+$\mathfrak J=\mathfrak n/\mathfrak n^2$, $G$ étant considéré comme
+$A$-algèbre pour $u'_1$.
+Prouvons en second lieu que $c')$ implique $a)$. Les deux homomorphismes
+$u_1$ et $u'_1$ sont tels que $u'_1=u_1+D$, où $D$ est une dérivation de
+$A/\mathfrak m^2$ dans $\mathfrak n/\mathfrak n^2$ (20.1.1)~; d'ailleurs,
+l'hypothèse $\operatorname{gr}_1(u'_1)=\operatorname{gr}_1(u_1)$ signifie
+que $D$ est nulle dans $\mathfrak m/\mathfrak m^2$, et peut par suite être
+considérée comme une dérivation de $K=A/\mathfrak m$ dans
+$\mathfrak n/\mathfrak n^2$, et $\mathfrak n/\mathfrak n^2$ s'identifie
+(par choix d'une uniformisante de $B$) au $K$-module $L$ (pour $u_0$).
+D'autre part, les conditions imposées à $w_1$ entraînent que
+ $\operatorname{gr}_1(w_1)$ est aussi l'identité (puisque
+ $u_1(\mathfrak m/\mathfrak m^2)$ engendre
+$\mathfrak n/\mathfrak n^2$)~; $w_1$ est donc de la forme
+$x\mapsto x+D'(x)$, où $D'$ est cette fois une dérivation de
+$B/\mathfrak n^2$ dans le $(B/\mathfrak n^2)$-module
+$\mathfrak n/\mathfrak n^2$~; comme $w_1$ est l'identité dans
+$\mathfrak n/\mathfrak n^2$, $D'$ peut encore (par l'identification
+précédente de $\mathfrak n/\mathfrak n^2$ et de $L$) être considérée comme
+une dérivation de $L$ dans $L$~; enfin, la relation $u'_1=w_1\circ u_1$
+signifie que $D'$ prolonge $D$. Notons d'autre part que toute dérivation $D$
+de $K$ dans $L$ correspond à un homomorphisme $u'_1$ vérifiant les conditions
+de $c')$ (20.1.1)~; la condition $c')$ signifie donc que toute dérivation de
+$K$ dans $L$ se prolonge en une dérivation de $L$ dans lui-même, c'est-à-dire
+(20.6.5) que $L$ est séparable sur $K$.
+Prouvons enfin que, lorsque $A$ est un anneau de Cohen, $b')$ entraîne $c')$.
+Prouvons d'abord que sous les hypothèses de $c')$, il existe un homomorphisme
+$u':A\to B$ qui vérifie les hypothèses de $b')$ et qui, par passage aux quotients,
+donne $u'_1:A/\mathfrak m^2\to B/\mathfrak n^2$. En effet, cela résulte de
+(19.8.6, (i)) appliqué à l'homomorphisme composé
+$v':A\to A/\mathfrak m^2\xrightarrow{u'_1}B/\mathfrak n^2$~;
+\oldpage[0\textsubscript{IV-1}]{166}
+ce dernier se factorise donc en $A\xrightarrow{u'}B\to B/\mathfrak n^2$ et
+les hypothèses sur $\operatorname{gr}_0(u'_1)$ et
+$\operatorname{gr}_1(u'_1)$ entraînent
+$\operatorname{gr}_0(u')=\operatorname{gr}_0(u)=u_0$ et
+$\operatorname{gr}_1(u')=\operatorname{gr}_1(u)$, donc l'image par $u'$ d'une
+uniformisante de $A$ est une uniformisante de $B$, et l'on a par suite
+$Bu'(\mathfrak m)=\mathfrak n$. Il suffit alors, pour obtenir un automorphisme
+$w_1$ répondant à la question, de prendre l'automorphisme déduit par passage
+aux quotients de l'automorphisme $w$ de $B$ fourni par l'application de $b')$
+à l'homomorphisme $u'$.
+\end{proof}
+\begin{remarks}[21.5.3]
+\label{0.21.5.3-fr}
+\begin{enumerate}
+  \item[(i)] Les propriétés différentielles des corps permettent de résoudre la
+  question de l'unicité du corps de représentants dans un anneau local
+  noethérien complet $C$ (19.8.7, (ii)). Soient $\mathfrak J$ l'idéal maximal
+  de $C$, $K=C/\mathfrak J$ le corps résiduel de $C$~; on peut se borner au
+  cas $\mathfrak J\ne0$. Supposons qu'il existe un homomorphisme $u:K\to C$
+  qui, composé avec l'augmentation $C\to K$, donne l'identité~; alors, pour
+  que cet homomorphisme soit unique, il faut et il suffit que
+  $\Omega^1_K=0$. En effet, la condition $\Omega^1_K=0$ entraîne que $K$ est
+  formellement non ramifié sur son corps premier (20.7.4)~; s'il existait un
+  second homomorphisme $v\ne u$ répondant à la question, il y aurait un plus
+  grand entier $n$ tel que $\mathfrak J^n$ contienne l'ensemble des
+  $u(x)-v(x)$ pour $x\in K$~; par passage au quotient, $u$ et $v$ donneraient
+  deux homomorphismes distincts $u_1,v_1$ de $K$ dans
+  $C/\mathfrak J^{n+1}$, dont les composés avec
+  $C/\mathfrak J^{n+1}\to C/\mathfrak J^n$ seraient égaux, ce qui contredit
+  la définition (19.10.2). Inversement, supposons que $\Omega^1_K\ne0$~; il
+  existe alors une dérivation $D\ne0$ de $K$ dans
+  $\mathfrak J/\mathfrak J^2$ (20.4.8), donc un homomorphisme
+  $v_1:K\to C/\mathfrak J^2$ tel que, si $u_1:K\to C/\mathfrak J^2$ est
+  obtenu par passage au quotient à partir de $u$, on ait $v_1=u_1+D$
+  (20.1.1). Si $k$ est le corps premier de $K$, $C$ est une $k$-algèbre et
+  $K$ une $k$-algèbre formellement lisse (19.6.1), et les restrictions de
+  $u_1$ et $v_1$ à $k$ coïncident, donc $v_1$ se factorise en
+  $K\xrightarrow{v}C\to C/\mathfrak J^2$ et l'on a $v\ne u$.
+  Rappelons ((20.6.20) et (21.4.4)) que la condition $\Omega^1_K=0$ signifie
+  que $K$ est parfait s'il est de caractéristique $\ne0$, et extension
+  algébrique de $\mathbf Q$ s'il est de caractéristique $0$.
+  \item[(ii)] De la même manière, soient $W$ un anneau de Cohen, $C$ un anneau
+  local noethérien complet, soit $\mathfrak J\ne0$ un idéal de $C$ contenu dans
+  l'idéal maximal~; pour que la factorisation $W\to C\to C/\mathfrak J$
+  dans (19.8.6, (i)) soit unique, il faut et il suffit que le corps résiduel
+  $K$ de l'anneau de Cohen $W$ soit tel que $\Omega^1_K=0$. En effet, si
+  $\Omega^1_K\ne0$ et si $\mathfrak m$ désigne l'idéal maximal de $W$, il
+  suffit de composer une dérivation $D\ne0$ de $K$ dans
+  $\mathfrak J/\mathfrak m\mathfrak J$ avec l'augmentation $W\to K$ pour
+  obtenir une dérivation $D'\ne0$ de $W$ dans
+  $\mathfrak J/\mathfrak m\mathfrak J$ et l'on termine le raisonnement comme
+  dans (i) en formant à l'aide de $D'$ un homomorphisme
+  $v_1:W\to C/\mathfrak m\mathfrak J$ distinct de l'homomorphisme
+  $u_1:W\to C/\mathfrak m\mathfrak J$ déduit de $u$ par passage au quotient~;
+  on achève le raisonnement en invoquant cette fois (19.8.6, (i)). Si au
+  contraire $\Omega^1_K=0$, l'unicité de $v$ résulte déjà de (i) lorsque
+  $W=K$ est un corps de caractéristique $0$. Dans le cas contraire, on a
+  $\widehat{\Omega}^1_W=0$~; en effet, on a alors $\mathfrak m=pW$, $p$ étant
+  la caractéristique de $K$ (19.8.5), et l'homomorphisme canonique
+  $\mathfrak m/\mathfrak m^2\to\Omega^1_W/\mathfrak m\Omega^1_W$ (20.5.11.2)
+  est par suite nul. La suite exacte (20.5.12.1) appliquée à $W$ et à
+  $K=W/\mathfrak m$ entraîne alors que $\Omega^1_W=\mathfrak m\Omega^1_W$,
+  d'où notre assertion. Mais alors (20.7.4) $W$ est formellement non ramifié
+  (pour sa topologie adique) sur $\mathbf Z$, et l'unicité de $v$ se prouve
+  comme dans (i).
+\end{enumerate}
+\end{remarks}
+
+\oldpage[0\textsubscript{IV-1}]{167}
+\subsection{Corps admissibles pour une extension}
+\label{section:0.21.6-fr}
+
+\begin{env}[21.6.1]
+\label{0.21.6.1-fr}
+Étant donnés quatre corps $k_0\subset k\subset K\subset L$, il résulte de
+(20.6.16) et (20.6.17) que l'on a une suite exacte
+\begin{equation}
+\tag{21.6.1.1}
+\label{0.21.6.1.1-fr}
+0\to\Upsilon_{K/k/k_0}\otimes_KL\xrightarrow{v}\Upsilon_{L/k/k_0}
+\xrightarrow{u}\Upsilon_{L/K/k_0}\xrightarrow{s}\Upsilon_{L/K/k}\to0.
+\end{equation}
+
+Lorsqu'on laisse fixes $k_0$, $K$ et $L$ et qu'on fait «varier» le corps
+intermédiaire $k$ entre $k_0$ et $K$, on a évidemment
+$\Upsilon_{L/K/k_0}=\Upsilon_{L/K/k}$ lorsque $k=k_0$. Lorsque
+l'homomorphisme canonique $s$ de (21.6.1.1) est encore bijectif, on dit que
+$k$ est un corps $k_0$-admissible pour l'extension $L$ de $K$. L'intérêt de
+l'existence, sous certaines conditions, de tels corps $k$, qui soient pourtant
+«suffisamment proches» de $K$ (par exemple tels que $[K:k]$ soit fini), est
+qu'ils permettent de remplacer dans certaines questions les modules de
+différentielles $\Omega^1_{K/k_0}$ et $\Omega^1_{L/k_0}$ (qui peuvent être
+«trop grands», par exemple lorsque $k_0$ est le corps premier) par
+$\Omega^1_{K/k}$ et $\Omega^1_{L/k}$, plus aisément maniables.
+
+Lorsque $k_0$ est le \emph{corps premier}, on dira «corps admissible» au lieu
+de «corps $k_0$-admissible».
+ 
+On posera
+\end{env}
+
+\begin{env}[21.6.1.2]
+\label{0.21.6.1.2-fr}
+\[
+\Delta(L/K,k/k_0)=\operatorname{Coker}
+(\Upsilon_{K/k/k_0}\otimes_KL\to\Upsilon_{L/k/k_0})
+\simeq\operatorname{Ker}(\Upsilon_{L/K/k_0}\to\Upsilon_{L/K/k})
+\]
+(espace vectoriel sur $L$)~; son rang sera noté $d(L/K,k/k_0)$ et appelé
+\emph{défaut de $k_0$-admissibilité de $k$ pour l'extension $L$ de $K$}
+(il est évidemment nul si et seulement si $k$ est $k_0$-admissible pour cette
+extension). Lorsque $k_0$ est le corps premier, on écrira
+$\Delta(L/K,k)$ et $d(L/K,k)$ au lieu de $\Delta(L/K,k/k_0)$ et
+$d(L/K,k/k_0)$.
+\end{env}
+
+\begin{proposition}[21.6.2]
+\label{0.21.6.2-fr}
+Soient $k_0\subset k\subset K\subset L$ quatre corps.
+\begin{enumerate}
+  \item[\rm (i)] Les conditions suivantes sont équivalentes~:
+  \begin{enumerate}
+    \item[\rm a)] Le corps $k$ est $k_0$-admissible pour l'extension $L$ de $K$
+    (autrement dit, l'homomorphisme $\Upsilon_{L/K/k_0}\to
+    \Upsilon_{L/K/k}$ est injectif, donc bijectif).
+    \item[\rm b)] L'homomorphisme canonique
+    $u:\Upsilon_{K/k/k_0}\to\Upsilon_{L/k/k_0}$ est nul.
+    \item[\rm c)] L'homomorphisme canonique
+    $v:\Upsilon_{K/k/k_0}\otimes_KL\to\Upsilon_{L/k/k_0}$ est surjectif
+    (donc bijectif).
+    \item[\rm d)] On a $d(L/K,k/k_0)=0$ (ou
+    $\Delta(L/K,k/k_0)=0$).
+  \end{enumerate}
+  \item[\rm (ii)] Les conditions équivalentes de (i) sont vérifiées lorsque
+  l'on est dans l'un des cas suivants~: $\alpha)$ $L$ est séparable sur $k$~;
+  $\beta)$ $L$ est séparable sur $K$~; $\gamma)$ on a
+  $k\subset k_0(K^p)$, en désignant par $p$ l'exposant caractéristique de $k_0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Les assertions résultent trivialement de l'exactitude de la suite
+  (21.6.1.1).
+  \item[(ii)] Si $L$ est séparable sur $k$, on a
+  $\Upsilon_{L/K/k_0}=0$ (20.6.19), donc la condition b) de (i) est remplie~;
+  si $L$ est séparable sur $K$, on a
+  $\Upsilon_{L/K/k_0}=0$ (20.6.19), donc la condition a) de (i) est remplie~;
+  enfin, si l'on a $k\subset k_0(K^p)$, il en résulte que
+  $\Upsilon_{L/K/k_0}=\Upsilon_{L/K/k}$ en vertu de (21.1.5.1), et la
+  condition a) de (i) est vérifiée.
+\end{enumerate}
+\end{proof}
+\oldpage[0\textsubscript{IV-1}]{168}
+\begin{env}[21.6.3]
+\label{0.21.6.3-fr}
+Supposons que l'on ait un diagramme commutatif de monomorphismes de corps
+\[
+\xymatrix{
+ k'_0\ar[r]&k'\ar[r]&K'\ar[r]&L'\\
+ k_0\ar[u]\ar[r]&k\ar[u]\ar[r]&K\ar[u]\ar[r]&L\ar[u]
+}
+\]
+Il résulte alors de (20.6.17, (ii)) que l'on a un homomorphisme canonique
+\begin{equation}
+\tag{21.6.3.1}
+\label{0.21.6.3.1-fr}
+\Delta(L/K,k/k_0)\longrightarrow\Delta(L'/K',k'/k'_0)
+\end{equation}
+avec une propriété de transitivité évidente, de sorte que l'on peut dire que
+$\Delta(L/K,k/k_0)$ est un \emph{foncteur} en le quadruplet
+$(k_0,k,K,L)$.
+\end{env}
+
+\begin{proposition}[21.6.4]
+\label{0.21.6.4-fr}
+\begin{enumerate}
+  \item[\rm (i)] Soient $k\subset k'\subset k''\subset K\subset L$ cinq corps.
+  On a une suite exacte d'homomorphismes canoniques
+\begin{equation}
+\tag{21.6.4.1}
+\label{0.21.6.4.1-fr}
+0\to\Delta(L/K,k'/k)\to\Delta(L/K,k''/k)\to\Delta(L/K,k''/k')\to0
+\end{equation}
+et par suite l'égalité
+\begin{equation}
+\tag{21.6.4.2}
+\label{0.21.6.4.2-fr}
+d(L/K,k''/k)=d(L/K,k''/k')+d(L/K,k'/k).
+\end{equation}
+  \item[\rm (ii)] Soient $k_0\subset k\subset K\subset L\subset M$ cinq corps.
+  On a une suite exacte d'homomorphismes canoniques
+\begin{equation}
+\tag{21.6.4.3}
+\label{0.21.6.4.3-fr}
+0\to\Delta(L/K,k/k_0)\otimes_LM\to\Delta(M/K,k/k_0)
+\to\Delta(M/L,k/k_0)\to0
+\end{equation}
+et par suite l'égalité
+\begin{equation}
+\tag{21.6.4.4}
+\label{0.21.6.4.4-fr}
+d(M/K,k/k_0)=d(M/L,k/k_0)+d(L/K,k/k_0).
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Considérons le diagramme commutatif
+\[
+\xymatrix{
+0\ar[r]&\Upsilon_{K/k'/k}\otimes_KL\ar[r]\ar[d]&
+\Upsilon_{K/k''/k}\otimes_KL\ar[r]\ar[d]&
+\Upsilon_{K/k''/k'}\otimes_KL\ar[r]\ar[d]&0\\
+0\ar[r]&\Upsilon_{L/k'/k}\ar[r]\ar[d]&
+\Upsilon_{L/k''/k}\ar[r]\ar[d]&
+\Upsilon_{L/k''/k'}\ar[r]\ar[d]&0\\
+0\ar[r]&\Delta(L/K,k'/k)\ar[r]&\Delta(L/K,k''/k)\ar[r]&
+\Delta(L/K,k''/k')\ar[r]&0
+}
+\]
+où l'on peut considérer les trois lignes comme des \emph{complexes}
+$T_1,T_2,T_3$ respectivement~; la suite exacte (21.6.1.1) et la définition
+de $\Delta$ (21.6.1.2) montrent que l'on a une suite exacte de complexes
+$0\to T_1\to T_2\to T_3\to0$~; appliquons-lui la suite exacte de
+\oldpage[0\textsubscript{IV-1}]{169}
+cohomologie, et notons que, en vertu de l'exactitude de (21.6.1.1), la
+cohomologie de $T_1$ et celle de $T_2$ sont nulles sauf en un seul et même
+degré, pour lequel les modules de cohomologie sont tous deux égaux à
+$\Upsilon_{k''/k'/k}\otimes_{k''}L$~; comme $T_1$ et $T_2$ ont ainsi même
+cohomologie, celle de $T_3$ est nécessairement nulle, ce qui prouve (i).
+  \item[(ii)] Considérons de même le diagramme commutatif
+\[
+\xymatrix{
+0\ar[r]&\Delta(L/K,k/k_0)\otimes_LM\ar[r]\ar[d]&
+\Delta(M/K,k/k_0)\ar[r]\ar[d]&\Delta(M/L,k/k_0)\ar[r]&0\\
+0\ar[r]&\Upsilon_{L/K/k_0}\otimes_LM\ar[r]\ar[d]&
+\Upsilon_{M/K/k_0}\ar[r]\ar[d]&\Upsilon_{M/L/k_0}\ar[r]&0\\
+0\ar[r]&\Upsilon_{L/K/k}\otimes_LM\ar[r]&
+\Upsilon_{M/K/k}\ar[r]&\Upsilon_{M/L/k}\ar[r]&0
+}
+\]
+où de nouveau on considère les trois lignes comme des \emph{complexes}
+$T'_1,T'_2,T'_3$~; la suite exacte (21.6.1.1) et la définition de $\Delta$
+(21.6.1.2) donnent ici une suite exacte de complexes
+$0\to T'_1\to T'_2\to T'_3\to0$ à laquelle on applique encore la suite exacte
+de cohomologie~; cette fois, en vertu de l'exactitude de (21.6.1.1), la
+cohomologie de $T'_2$ et celle de $T'_3$ sont nulles sauf en un seul et même
+degré, pour lequel les modules de cohomologie sont tous deux égaux à
+$\Upsilon_{M/L/k_0}$~; on conclut donc ici que la cohomologie de $T'_1$ est
+nulle, ce qui établit (ii).
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[21.6.5]
+\label{0.21.6.5-fr}
+\begin{enumerate}
+  \item[(i)] Étant donnés cinq corps $k\subset k'\subset k''\subset K\subset L$,
+  pour que $k''$ soit $k$-admissible pour l'extension $L$ de $K$, il faut et
+  il suffit que $k'$ soit $k$-admissible et que $k''$ soit $k'$-admissible
+  pour l'extension $L$ de $K$.
+  \item[(ii)] Étant donnés cinq corps
+  $k_0\subset k\subset K\subset L\subset M$, pour que $k$ soit
+  $k_0$-admissible pour l'extension $M$ de $K$, il faut et il suffit qu'il le
+  soit pour l'extension $L$ de $K$ et pour l'extension $M$ de $L$.
+\end{enumerate}
+
+Cela résulte aussitôt des relations (21.6.4.2) et (21.6.4.4), les valeurs de
+$d$ étant $\geqslant0$.
+\end{corollary}
+
+\begin{corollary}[21.6.6]
+\label{0.21.6.6-fr}
+Soient $k_0\subset k\subset K\subset L$ quatre corps, et supposons que $k$
+soit $k_0$-admissible pour l'extension $L$ de $K$. Alors, si $k'_0$, $k'$,
+$K'$, $L'$ sont quatre corps tels que
+$k_0\subset k'_0\subset k'\subset k\subset K\subset K'\subset L'\subset L$,
+$k'$ est $k'_0$-admissible pour l'extension $L'$ de $K'$.
+\end{corollary}
+
+\subsection{L'égalité de Cartier}
+\label{subsection:0.21.7-fr}
+
+Le résultat suivant traduit en termes de différentielles un théorème de
+MacLane sur les dérivations~:
+
+\oldpage[0\textsubscript{IV-1}]{170}
+\begin{theorem}[21.7.1]
+\label{0.21.7.1-fr}
+\textnormal{(Cartier).}
+Soient $K$ un corps, $L$ une extension de type fini de $K$. Alors
+$\Omega^1_{L/K}$ et $\Upsilon_{L/K}$ sont des $L$-espaces vectoriels de rang
+fini, et l'on a
+\begin{equation}
+\tag{21.7.1.1}
+\label{0.21.7.1.1-fr}
+\operatorname{rg}\Omega^1_{L/K}-\operatorname{rg}\Upsilon_{L/K}
+=\deg.\operatorname{tr}_K L.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Si $L'$ est un corps tel que $K\subset L'\subset L$, on a la suite exacte
+(20.6.15.1) (appliquée à $\Lambda=P$, corps premier de $K$, $A=K$,
+$B=L'$, $C=L$)
+\[
+0\to\Upsilon_{L'/K}\otimes_{L'}L\to\Upsilon_{L/K}
+\to\Omega^1_{L'/K}\otimes_{L'}L\to\Omega^1_{L/K}
+\to\Omega^1_{L/L'}\to0
+\]
+d'où (0$_{\rm III}$, 11.10.2)
+\[
+\operatorname{rg}_L\Omega^1_{L/K}-\operatorname{rg}_L\Upsilon_{L/K}
+=(\operatorname{rg}_{L'}\Omega^1_{L/L'}-\operatorname{rg}_{L'}\Upsilon_{L/L'})
++(\operatorname{rg}_{L'}\Omega^1_{L'/K}-\operatorname{rg}_{L'}\Upsilon_{L'/K}).
+\]
+Comme par ailleurs $\deg.\operatorname{tr}_K L=\deg.\operatorname{tr}_K L'
++\deg.\operatorname{tr}_{L'}L$, on voit, par récurrence sur le nombre de
+générateurs de l'extension $L$, que l'on est ramené à prouver (21.7.1.1)
+lorsque $L=K(x)$. Distinguons alors trois cas~:
+\begin{enumerate}
+  \item[\rm a)] $x$ est transcendant sur $K$~; comme $L$ est séparable sur
+  $K$, on a alors $\Upsilon_{L/K}=0$ (20.6.3)~; d'autre part, (20.5.9) et
+  (20.4.13) montrent que $\Omega^1_{L/K}$ est de rang $1$, d'où
+  (21.7.1.1) dans ce cas.
+  \item[\rm b)] $L$ est une extension algébrique séparable de $K$, de sorte
+  que l'on a encore $\Upsilon_{L/K}=0$ (20.6.3). D'autre part, on a
+  $\Omega^1_{L/K}=0$ par (20.6.20), d'où encore (21.7.1.1).
+  \item[\rm c)] $L$ est une extension algébrique inséparable de $K$~; le
+  raisonnement du début montre que l'on peut se borner au cas où $L^p\subset K$~;
+  il résulte donc de (21.4.8) que l'on a
+  $\operatorname{rg}_L\Upsilon_{L/K}=\operatorname{rg}_L\Omega^1_{L/K}$,
+  d'où encore (21.7.1.1).
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[21.7.2]
+\label{0.21.7.2-fr}
+Soient $K$ un corps, $L$ une extension de type fini de $K$, $k$ un sous-corps
+de $K$. Alors $\Omega^1_{L/K}$ et $\Upsilon_{L/K/k}$ sont des espaces
+vectoriels de rang fini sur $L$, et l'on a
+\begin{equation}
+\tag{21.7.2.1}
+\label{0.21.7.2.1-fr}
+\operatorname{rg}\Omega^1_{L/K}-\operatorname{rg}\Upsilon_{L/K/k}
+=\deg.\operatorname{tr}_K L+d(L/K,k).
+\end{equation}
+Par suite, on a l'inégalité
+\begin{equation}
+\tag{21.7.2.2}
+\label{0.21.7.2.2-fr}
+\operatorname{rg}\Omega^1_{L/K}-\operatorname{rg}\Upsilon_{L/K/k}
+\geqslant\deg.\operatorname{tr}_K L.
+\end{equation}
+En outre, pour que les deux membres de (21.7.2.2) soient égaux, il faut et
+il suffit que $k$ soit un corps admissible pour l'extension $L$ de $K$.
+\end{corollary}
+
+\begin{proof}
+En effet, comme l'homomorphisme
+$\Upsilon_{L/K}\to\Upsilon_{L/K/k}$ est surjectif, on a par définition
+(21.6.1.2)
+$\operatorname{rg}\Upsilon_{L/K}-\operatorname{rg}\Upsilon_{L/K/k}
+=d(L/K,k)$, et le corollaire résulte donc aussitôt de (21.7.1) et de
+(21.6.2).
+\end{proof}
+
+\begin{corollary}[21.7.3]
+\label{0.21.7.3-fr}
+Soient $k\subset K\subset L$ trois corps tels que $L$ soit une extension de
+type fini de $k$. Alors on a
+\begin{equation}
+\tag{21.7.3.1}
+\label{0.21.7.3.1-fr}
+\operatorname{rg}_L\Omega^1_{L/k}-\operatorname{rg}_K\Omega^1_{K/k}
+=\deg.\operatorname{tr}_K L+d(L/K,k).
+\end{equation}
+\oldpage[0\textsubscript{IV-1}]{171}
+Par suite, on a l'inégalité
+\begin{equation}
+\tag{21.7.3.2}
+\label{0.21.7.3.2-fr}
+\operatorname{rg}_L\Omega^1_{L/k}-\operatorname{rg}_K\Omega^1_{K/k}
+\geqslant\deg.\operatorname{tr}_K L.
+\end{equation}
+L'égalité étant atteinte si et seulement si $k$ est un corps admissible pour
+l'extension $L$ de $K$.
+\end{corollary}
+
+\begin{proof}
+On a en effet la suite exacte (20.6.1.1)
+\[
+0\to\Upsilon_{L/K/k}\to\Omega^1_{K/k}\otimes_KL\to\Omega^1_{L/k}
+\to\Omega^1_{L/K}\to0
+\]
+donc le premier membre de (21.7.3.1) est égal à
+\[
+\operatorname{rg}_L\Omega^1_{L/k}-\operatorname{rg}_L\Upsilon_{L/K/k}
+\]
+et il suffit d'appliquer (21.7.2).
+\end{proof}
+
+L'intérêt de ce dernier corollaire est qu'il ne fait intervenir que des
+modules de différentielles, à l'exclusion de modules d'imperfection. Nous
+verrons d'ailleurs plus bas (21.8.6) que pour toute extension de type fini
+$L$ de $K$, il existe un sous-corps $k$ de $K$ tel que $[K:k]$ soit fini et
+qui est admissible pour l'extension $L$ de $K$, de sorte que les deux membres
+de (21.7.3.2) sont alors égaux.
+
+\begin{corollary}[21.7.4]
+\label{0.21.7.4-fr}
+Soit $K$ une extension de type fini d'un corps $k$. Les conditions suivantes
+sont équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $K$ est une extension finie séparable de $k$.
+  \item[\rm b)] $K$ est une $k$-algèbre formellement non ramifiée (19.10.2).
+  \item[\rm c)] $K$ est une $k$-algèbre formellement étale (19.10.2).
+  \item[\rm d)] On a $\Omega^1_{K/k}=0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+En effet, on sait (les topologies étant discrètes) que les conditions b) et
+d) sont équivalentes (20.7.4) et que a) entraîne que $K$ est une
+$k$-algèbre formellement lisse (19.6.1), donc la conjonction de a) et b)
+équivaut à c). Tout revient à voir que d) entraîne a). Or, en vertu de
+(21.7.1.1), la relation $\Omega^1_{K/k}=0$ entraîne que $K$ est algébrique
+(donc fini) sur $k$ et que $\Upsilon_{K/k}=0$, c'est-à-dire (20.6.3) que
+$K$ est séparable sur $k$.
+\end{proof}
+
+\begin{remark}[21.7.5]
+\label{0.21.7.5-fr}
+En vertu de (20.6.3.2) et de (0$_{\rm III}$, 11.10.2), le premier membre de
+(21.7.1.1) n'est autre que la \emph{caractéristique d'Euler-Poincaré} du
+complexe $K_\bullet(C/B/A)$ introduit dans (20.6.3), pour $C=L$, $B=K$ et
+$A=P$ (corps premier de $K$). Dans le chapitre consacré à la théorie des
+intersections et au théorème de Riemann--Roch, un rôle important sera joué
+également par les caractéristiques d'Euler-Poincaré généralisées (à valeurs
+dans des groupes de classes de $\mathcal O_X$-Modules) de complexes
+généralisant les complexes $F_\bullet(C/A)$ considérés dans (20.6.22).
+\end{remark}
+
+\subsection{Critères d'admissibilité}
+\label{subsection:0.21.8-fr}
+
+Nous revenons à nos conventions antérieures et supposons donc que tous les
+corps considérés dans ce numéro sont de caractéristique $p>0$.
+
+\begin{lemma}[21.8.1]
+\label{0.21.8.1-fr}
+Soient $K$ un corps, $k$ un sous-corps de $K$, $(k_\alpha)_{\alpha\in I}$ une
+famille filtrante décroissante de sous-corps de $K$ telle que
+$k=\bigcap_{\alpha\in I}k_\alpha$. Soient $V$ un espace vectoriel sur $K$,
+$(a_i)_{1\leqslant i\leqslant n}$ une famille finie de vecteurs de $V$~; si la
+famille $(a_i)$ est libre sur $k$, il existe un indice $\gamma$ tel qu'elle
+soit aussi libre sur $k_\gamma$.
+\end{lemma}
+
+\oldpage[0\textsubscript{IV-1}]{172}
+\begin{proof}
+Soit $r$ le rang de la famille $(a_i)_{1\leqslant i\leqslant n}$ sur $K$, et
+raisonnons par récurrence sur $n-r$~; la proposition est évidente pour $n=r$,
+car alors la famille $(a_i)_{1\leqslant i\leqslant r}$ est libre sur $K$, donc
+sur tout sous-corps de $K$. Supposons par exemple que
+$(a_i)_{1\leqslant i\leqslant r}$ soit libre sur $K$, et écrivons
+$a_{r+1}=\sum_{i=1}^r\lambda_i a_i$ avec $\lambda_i\in K$~; la famille
+$(a_i)_{1\leqslant i\leqslant r+1}$ étant libre sur $k$, les $\lambda_i$ ne
+peuvent tous appartenir à $k$~; supposons par exemple que
+$\lambda_{i_0}\notin k$. Alors il existe un indice $\beta$ tel que
+$\lambda_{i_0}\notin k_\beta$~; on en conclut que la famille $(a_i)_{1\leqslant i\leqslant r+1}$ est libre sur $k_\beta$~; en effet, comme la
+famille $(a_i)_{1\leqslant i\leqslant r}$ est libre sur tout sous-corps de
+$K$, si la famille $(a_i)_{1\leqslant i\leqslant r+1}$ n'était pas libre sur
+$k_\beta$, $a_{r+1}$ serait égal à une combinaison linéaire des $a_i$ à
+coefficients dans $k_\beta$, et comme ces coefficients sont nécessairement
+les $\lambda_i$, on aboutit à une contradiction. Il suffit maintenant
+d'appliquer l'hypothèse de récurrence en remplaçant $K$ par $k_\beta$ et la
+famille $(k_\alpha)_{\alpha\in I}$ par la sous-famille des $k_\alpha$
+contenus dans $k_\beta$.
+\end{proof}
+
+\begin{lemma}[21.8.2]
+\label{0.21.8.2-fr}
+Soient $K$ un corps, $p$ son exposant caractéristique, $k_0$ un sous-corps de
+$K$, $(k_\alpha)_{\alpha\in I}$ une famille filtrante décroissante de
+sous-corps de $K$ telle que $\bigcap_{\alpha\in I}k_\alpha(K^p)=k_0(K^p)$.
+Si $(x_i)_{1\leqslant i\leqslant n}$ est une famille finie d'éléments de $K$
+qui est $p$-libre sur $k_0$, il existe un indice $\alpha$ tel que $(x_i)$ soit
+$p$-libre sur $k_\alpha$.
+
+En effet, dire que la famille $(x_i)$ est $p$-libre sur un sous-corps $k$
+de $K$ signifie que la famille finie des monômes
+$\prod_{i=0}^n x_i^{m(i)}$ avec $0\leqslant m(i)<p$ est libre sur $k(K^p)$~;
+il suffit donc d'appliquer le lemme (21.8.1) à cette famille de monômes dans
+l'espace vectoriel $V=K$, et aux sous-corps $k_\alpha(K^p)$ et $k_0(K^p)$
+de $K$.
+\end{lemma}
+
+\begin{theorem}[21.8.3]
+\label{0.21.8.3-fr}
+Soient $K$ un corps de caractéristique $p>0$, $k_0$ un sous-corps de $K$,
+$(k_\alpha)_{\alpha\in I}$ une famille filtrante décroissante de sous-corps
+de $K$ contenant $k_0$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $\bigcap_{\alpha\in I}k_\alpha(K^p)=k_0(K^p)$.
+  \item[\rm b)] Pour toute extension $L$ de $K$ telle que
+  $\Upsilon_{L/K/k_\alpha}$ soit un $L$-espace vectoriel de rang fini
+  (ce qui a lieu en particulier si $L$ est une extension de type fini en
+  vertu de (21.7.2)), il existe $\alpha\in I$ tel que $k_\alpha$ soit
+  $k_0$-admissible pour l'extension $L$ de $K$.
+  \item[\rm b$'$)] Pour toute extension $L=K(x)$ de $K$, avec $x^p\in K$,
+  il existe $\alpha\in I$ tel que $k_\alpha$ soit $k_0$-admissible pour
+  l'extension $L$ de $K$.
+  \item[\rm c)] L'application canonique
+\begin{equation}
+\tag{21.8.3.1}
+\label{0.21.8.3.1-fr}
+\Omega^1_{K/k_0}\longrightarrow\varprojlim_{\alpha}\Omega^1_{K/k_\alpha}
+\end{equation}
+est injective.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+L'application canonique (21.8.3.1) est bien entendu obtenue par passage à la
+limite projective dans le système projectif d'homomorphismes
+$\Omega^1_{K/k_0}\to\Omega^1_{K/k_\alpha}$ (20.5.3.3). Nous allons prouver
+le théorème suivant le schéma logique $c)\Rightarrow b)\Rightarrow b')
+\Rightarrow a)\Rightarrow c)$.
+
+Dire que $k_\alpha$ est $k_0$-admissible pour l'extension $L$ de $K$ signifie
+que l'homomorphisme
+\oldpage[0\textsubscript{IV-1}]{173}
+canonique $\Upsilon_{L/K/k_0}\to\Upsilon_{L/K/k_\alpha}$ est injectif~; or,
+si $N_\alpha$ est le noyau de cet homomorphisme, les $N_\alpha$ forment un
+système filtrant décroissant de sous-espaces vectoriels de
+$\Upsilon_{L/K/k_0}$, et comme $\Upsilon_{L/K/k_0}$ est par hypothèse de rang
+fini, il revient au même de dire que l'un des $N_\alpha$ est nul ou que leur
+intersection est nulle. Mais cette intersection n'est autre que le noyau de
+l'homomorphisme limite projective
+$\Upsilon_{L/K/k_0}\to\varprojlim_\alpha\Upsilon_{L/K/k_\alpha}$. Or, on a
+le diagramme commutatif
+\[
+\xymatrix{
+\Upsilon_{L/K/k_0}\ar[r]\ar[d]&\varprojlim\Upsilon_{L/K/k_\alpha}\ar[d]\\
+\Omega^1_{K/k_0}\otimes_KL\ar[r]&
+\varprojlim(\Omega^1_{K/k_\alpha}\otimes_KL)
+}
+\]
+où la flèche verticale de gauche est injective par définition. Pour prouver
+que $c)$ entraîne $b)$, il suffit donc de montrer que l'application canonique
+\begin{equation}
+\tag{21.8.3.2}
+\label{0.21.8.3.2-fr}
+\Omega^1_{K/k_0}\otimes_KV\longrightarrow
+\varprojlim_{\alpha}(\Omega^1_{K/k_\alpha}\otimes_KV)
+\end{equation}
+est injective pour tout espace vectoriel $V$ sur $K$ (et en particulier pour
+$V=L$). Or cela est évident si $V=K^n$ puisque alors
+$W\otimes_KV=W^n$ pour tout espace vectoriel $W$ sur $K$ et que les produits
+et limites projectives commutent. D'autre part, pour tout élément $z$ du
+premier membre de (21.8.3.2), il existe un sous-espace $V'$ de $V$ de rang
+fini tel que $z\in\Omega^1_{K/k_0}\otimes_KV'$ (identifié canoniquement à un
+sous-espace de $\Omega^1_{K/k_0}\otimes_KV$)~; si $z\ne0$, son image dans
+$\varprojlim_\alpha(\Omega^1_{K/k_\alpha}\otimes_KV')$ n'est donc pas nulle~;
+comme le foncteur $\varprojlim$ est exact à gauche, l'image de $z$ dans le
+second membre de (21.8.3.2) est donc aussi $\ne0$, ce qui achève de montrer
+que $c)$ implique $b)$.
+
+Il est trivial que $b)$ entraîne $b')$~; montrons que $b')$ entraîne $a)$.
+Avec les notations de $b')$, on peut supposer que $L\ne K$. Il résulte alors
+de (21.4.7) que l'on a $\operatorname{rg}\Upsilon_{L/K}\leqslant1$. Si
+$\Upsilon_{L/K/k_\alpha}=0$, il n'y a rien à démontrer en vertu de
+(21.6.1.1). Sinon, $\Upsilon_{L/K/k_\alpha}$ s'identifie canoniquement à
+$\Upsilon_{L/K}$ et, si l'on pose $a=x^p$, $\Upsilon_{L/K}$ a une base
+formée du seul élément $d_K(a)\otimes1$ (21.4.7)~;
+$\Upsilon_{L/K/k_\alpha}$ a donc une base formée du seul élément
+$d_{K/k_\alpha}(a)\otimes1$, et dire qu'un sous-corps $k_\alpha$ est
+$k_0$-admissible pour l'extension $L$ de $K$ signifie que l'on a
+$d_{K/k_\alpha}(a)\ne0$, ou encore (21.4.5) que
+$a\notin k_\alpha(K^p)$. Or, pour tout $a\notin k_0(K^p)$, on a
+$d_{K/k_0}(a)\ne0$ et $K(a^{1/p})\ne K$, donc on peut appliquer $b')$, qui
+prouve l'existence d'un $\alpha$ tel que $a\notin k_\alpha(K^p)$~;
+autrement dit $b')$ implique $a)$.
+
+Reste à montrer que $a)$ implique $c)$. Soit $(x_\mu)_{\mu\in M}$ une
+$p$-base de $K$ sur $k_0$~; alors, les $d_{K/k_0}(x_\mu)$ forment une base du
+$K$-espace vectoriel $\Omega^1_{K/k_0}$ (21.4.5), et la condition $c)$
+signifie que pour toute partie finie $J$ de l'ensemble d'indices $M$, il
+existe un $\alpha\in I$ tel que les $d_{K/k_\alpha}(x_\mu)$ pour $\mu\in J$
+soient linéairement indépendants dans $\Omega^1_{K/k_\alpha}$~; mais cela
+signifie aussi (21.4.5) que les $x_\mu$ pour $\mu\in J$ forment une famille
+$p$-libre sur $k_\alpha$, et l'existence d'un $\alpha$ ayant cette propriété
+découle de (21.8.2) et de l'hypothèse $a)$.
+\end{proof}
+\oldpage[0\textsubscript{IV-1}]{174}
+
+\begin{corollary}[21.8.4]
+\label{0.21.8.4-fr}
+Soient $K$ un corps de caractéristique $p>0$, $k_0$ un sous-corps de $K$,
+$(k_\alpha)_{\alpha\in I}$ une famille filtrante décroissante de sous-corps
+de $K$, contenant $k_0$, telle que
+\[
+  \bigcap_{\alpha\in I}k_\alpha(K^p)=k_0(K^p).
+\]
+Soient $L$ une extension de $K$ telle que $\Upsilon_{L/K/k_0}$ soit un
+$L$-espace vectoriel de rang fini~; alors, pour tout corps $K'$ tel que
+$K\subset K'\subset L$, il existe $\alpha\in I$ tel que $k_\alpha$ soit
+$k_0$-admissible pour l'extension $L$ de $K'$.
+\end{corollary}
+
+\begin{proof}
+Il suffit d'appliquer (21.8.3) et (21.6.6).
+\end{proof}
+
+\begin{corollary}[21.8.5]
+\label{0.21.8.5-fr}
+Soient $K$ un corps de caractéristique $p>0$, $k_0$ un sous-corps de $K$,
+$(k_\alpha)_{\alpha\in I}$ une famille filtrante décroissante de sous-corps
+de $K$ contenant $k_0$, telle que
+\[
+  \bigcap_{\alpha\in I}k_\alpha(K^p)=k_0(K^p).
+\]
+Alors, pour toute extension $L$ de $K$ telle que $\Upsilon_{L/K/k_0}$ soit
+un $L$-espace vectoriel de rang fini, on a
+\[
+  \bigcap_{\alpha\in I}k_\alpha(L^p)=k_0(L^p).
+\]
+\end{corollary}
+
+\begin{proof}
+Supposons en effet que $M$ soit une extension de $L$ telle que
+$\Upsilon_{M/L/k_0}$ soit un $M$-espace vectoriel de rang fini. La suite
+exacte (21.6.1.1)
+\[
+  0\longrightarrow \Upsilon_{L/K/k_0}\otimes_L M
+  \longrightarrow \Upsilon_{M/K/k_0}
+  \longrightarrow \Upsilon_{M/L/k_0}
+\]
+et l'hypothèse montrent alors que $\Upsilon_{M/K/k_0}$ est aussi un
+$M$-espace vectoriel de rang fini. Il existe donc un indice $\alpha$ tel que
+$k_\alpha$ soit $k_0$-admissible pour l'extension $M$ de $K$ (21.8.3), donc
+aussi pour l'extension $M$ de $L$ (21.6.6)~; cela ayant lieu pour toute
+extension $M$ de $L$ telle que $\Upsilon_{M/L/k_0}$ soit de rang fini, le
+corollaire résulte de l'équivalence de $a)$ et $b)$ dans (21.8.3).
+\end{proof}
+
+\begin{corollary}[21.8.6]
+\label{0.21.8.6-fr}
+Soient $K$ un corps, $p$ son exposant caractéristique, $k_0$ un sous-corps de
+$K$. Si $L$ est une extension de $K$ telle que $\Upsilon_{L/K/k_0}$ soit un
+$L$-espace vectoriel de rang fini, il existe un sous-corps $k$ de $K$,
+contenant $k_0(K^p)$, tel que $[K:k]$ soit fini, et qui soit
+$k_0$-admissible pour l'extension $L$ de $K$.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet, en vertu de (21.8.3), de construire une famille filtrante
+décroissante $(k_\alpha)_{\alpha\in I}$ de sous-corps de $K$, contenant
+$K^p$ et $k_0$, pour lesquels $[K:k_\alpha]<+\infty$ et
+$\bigcap_\alpha k_\alpha=k_0(K^p)$. Pour cela on considère une $p$-base
+$(x_\lambda)_{\lambda\in J}$ de $K$ sur $k_0$ et, pour toute partie finie
+$H$ de $J$, on considère le sous-corps $k_H$ de $K$ engendré par $k_0(K^p)$
+et les $x_\lambda$ d'indice $\lambda\in J-H$~; il résulte de cette définition
+que $(x_\lambda)_{\lambda\in H}$ est une $p$-base de $K$ sur $k_H$, et on en
+conclut aussitôt que les $k_H$ vérifient les conditions voulues.
+\end{proof}
+
+\begin{remarks}[21.8.7]
+\label{0.21.8.7-fr}
+\begin{enumerate}
+  \item[(i)] On a déjà vu (21.7.2) que si $L$ est une extension de
+  \emph{type fini} de $K$, $\Upsilon_{L/K/k_0}$ est de rang fini pour tout
+  sous-corps $k_0$ de $K$. Il en est de même si $L$ est une extension
+  \emph{séparable} de $K$, car en vertu de (20.6.19), on a
+  $\Upsilon_{L/K/k_0}=0$. Enfin, si $L$ est une \emph{extension de type fini
+  d'une extension séparable $L_0$ de $K$}, le même raisonnement que dans
+  (21.8.5) montre que $\Upsilon_{L/K/k_0}$ est encore de rang fini (et en fait
+  est isomorphe à un sous-espace de $\Upsilon_{L/L_0/k_0}$).
+
+  \oldpage[0\textsubscript{IV-1}]{175}
+  \item[(ii)] Dans l'énoncé de (21.8.5), et par suite aussi dans celui de
+  (21.8.3, $b)$), on ne peut omettre l'hypothèse que $\Upsilon_{L/K/k_0}$ est
+  de rang fini sur $L$. Prenons pour $k_0$ le corps premier $\mathbf F_p$,
+  pour $K$ un corps tel que $[K:K^p]$ soit infini dénombrable (par exemple le
+  corps de fractions rationnelles $\mathbf F_p(X_1,\ldots,X_n,\ldots)$ à une
+  infinité d'indéterminées)~; le procédé de construction de (21.8.6) montre
+  aussitôt qu'il existe une suite infinie strictement décroissante $(K_n)$ de
+  sous-corps de $K$ telle que $K_0=K$ et $\bigcap_nK_n=K^p$. Nous allons
+  construire une suite croissante d'extensions finies $M_n$ de $K$, telle que
+  si $M$ est la réunion des $M_n$, l'extension $L=M^{1/p}$ de $K$ mette
+  (21.8.5) en défaut. Pour cela, soit $x$ un élément de $K-K^p$, posons
+  $M_0=K^p$, et $M_n=K^p(a_1x,a_2x,\ldots,a_nx)$ pour $n\geqslant1$, où les
+  $a_n$ sont construits par récurrence de façon que $a_n\in K_n$ et
+  $a_{n+1}\notin M_n(x)$ pour tout $n$~: cela est possible, car $M_n(x)$ est
+  de degré fini sur $K^p$, tandis qu'il n'en est pas de même de $K_n$. On en
+  conclut aussitôt que $x\notin M=L^p$, mais comme
+  $x=(a_nx)a_n^{-1}$, on a $x\in K_n(M)=K_n(L^p)$ pour tout $n$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[21.8.8]
+\label{0.21.8.8-fr}
+Soit $k$ un corps de caractéristique $p>0$, et soient
+$A=k[[T_1,\ldots,T_r]]$ l'anneau des séries formelles à $r$ indéterminées sur
+$k$, $K=k((T_1,\ldots,T_r))$ son corps des fractions. Alors il existe une
+famille filtrante décroissante $(A_\alpha)$ de sous-anneaux noethériens de $A$
+telle que $A$ soit un $A_\alpha$-module libre de type fini pour tout $\alpha$
+et que, si $K_\alpha$ est le corps des fractions de $A_\alpha$, on ait
+$\bigcap_\alpha K_\alpha=K^p$.
+\end{proposition}
+
+\begin{proof}
+On peut écrire $K^p=k^p((T_1^p,\ldots,T_r^p))$~; on a vu dans la démonstration
+de (21.8.6) qu'il existe une famille décroissante $(k_\alpha)$ de sous-corps
+de $k$ telle que $[k:k_\alpha]$ soit fini pour tout $\alpha$ et
+$\bigcap_\alpha k_\alpha=k^p$~; il est clair que si l'on pose
+$A_\alpha=k_\alpha[[T_1^p,\ldots,T_r^p]]$, $A$ est un $A_\alpha$-module
+libre de type fini~; tout revient donc à prouver la relation
+\begin{equation}
+\tag{21.8.8.1}
+\label{0.21.8.8.1-fr}
+  \bigcap_\alpha k_\alpha((T_1^p,\ldots,T_r^p))
+  =k^p((T_1^p,\ldots,T_r^p)).
+\end{equation}
+Comme $\bigcap_\alpha k_\alpha=k^p$, cela va résulter des deux lemmes suivants.
+\end{proof}
+
+\begin{lemma}[21.8.8.2]
+\label{0.21.8.8.2-fr}
+Si $k'$ est une extension d'un corps $k$, on a
+\[
+  k'[[T_1,\ldots,T_r]]\cap k((T_1,\ldots,T_r))=k[[T_1,\ldots,T_r]].
+\]
+\end{lemma}
+
+\begin{proof}
+En effet, posons $C=k[[T_1,\ldots,T_r]]$, $D=k'[[T_1,\ldots,T_r]]$~; comme
+$k((T_1,\ldots,T_r))$ est le corps des fractions de $C$, il suffira de
+prouver que $D$ est un $C$-module \emph{fidèlement plat} (Bourbaki,
+\emph{Alg. comm.}, chap.~I, \S~3, n\textsuperscript{o}~5, prop.~10). Or, $C$
+et $D$ sont des anneaux locaux noethériens, et si $\mathfrak m$ est l'idéal
+maximal de $C$, on a
+$D/\mathfrak m^jD=(C/\mathfrak m^j)\otimes_k k'$, donc
+$D/\mathfrak m^jD$ est un $(C/\mathfrak m^j)$-module plat~; il suffit donc
+d'appliquer ($\mathbf 0_{\mathrm{III}}$, 10.2.1) et
+($\mathbf 0_{\mathrm I}$, 6.6.2).
+\end{proof}
+
+\begin{lemma}[21.8.8.3]
+\label{0.21.8.8.3-fr}
+Soient $k$ un corps, $(k_\alpha)$ une famille filtrante décroissante de
+sous-corps de $k$, et posons $k_0=\bigcap_\alpha k_\alpha$. On suppose qu'il
+existe une puissance $q$ de l'exposant caractéristique de $k$ telle que
+$k^q\subset k_0$. Alors on a
+\begin{equation}
+\tag{21.8.8.4}
+\label{0.21.8.8.4-fr}
+  \bigcap_\alpha k_\alpha((T_1,\ldots,T_r))=k_0((T_1,\ldots,T_r)).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+\oldpage[0\textsubscript{IV-1}]{176}
+Il suffit de prouver qu'un élément $f\ne0$ du premier membre de (21.8.8.4)
+appartient au second membre. Soient $\gamma$ un indice,
+$g\in k_\gamma[[T_1,\ldots,T_r]]$ tel que
+$gf\in k_\gamma[[T_1,\ldots,T_r]]$~; quitte à remplacer $g$ par $g^q$, on
+peut supposer que $g\in k_0[[T_1,\ldots,T_r]]$. Alors, pour tout
+$\alpha\geqslant\gamma$, on a
+\[
+  gf\in k_\gamma[[T_1,\ldots,T_r]]\cap k_\alpha((T_1,\ldots,T_r))
+  =k_\alpha[[T_1,\ldots,T_r]]
+\]
+en vertu du lemme (21.8.8.2). Mais il est clair que l'intersection des
+anneaux $k_\alpha[[T_1,\ldots,T_r]]$ n'est autre que
+$k_0[[T_1,\ldots,T_r]]$, et l'on a donc bien
+$f\in k_0((T_1,\ldots,T_r))$.
+\end{proof}
+
+\subsection{Modules de différentielles complétés dans les anneaux de séries formelles}
+\label{subsection:0.21.9-fr}
+
+Dans ce numéro, les corps ne sont plus nécessairement supposés être de
+caractéristique $>0$.
+
+\begin{lemma}[21.9.1]
+\label{0.21.9.1-fr}
+Soient $k$ un corps, $A$ un anneau local noethérien complet qui est une
+$k$-algèbre, $K$ le corps résiduel de $A$. Si $K$ est une extension de type
+fini de $k$, le $A$-module $\widehat\Omega^1_{A/k}$ est de type fini.
+\end{lemma}
+
+\begin{proof}
+En vertu de (20.7.15), il suffit de prouver que $\Omega^1_{K/k}$ est un
+$K$-espace vectoriel de rang fini. Or, par hypothèse, $K$ est le corps des
+fractions d'une $k$-algèbre de type fini $B$~; comme $\Omega^1_{B/k}$ est un
+$B$-module de type fini en vertu de (20.4.7), la conclusion résulte de
+(20.5.9).
+\end{proof}
+
+\begin{proposition}[21.9.2]
+\label{0.21.9.2-fr}
+Soient $k_0$ un corps, $A$ un anneau local noethérien complet qui est une
+$k_0$-algèbre formellement lisse, $\mathfrak m$ son idéal maximal,
+$K=A/\mathfrak m$ son corps résiduel (de sorte qu'en tant qu'anneau $A$ est
+isomorphe à un anneau de séries formelles $K[[T_1,\ldots,T_r]]$ (19.6.5)).
+Si $K$ est une extension de type fini de $k_0$, alors
+$\widehat\Omega^1_{A/k_0}$ est un $A$-module libre de rang égal à
+$\dim(A)+\deg.\operatorname{tr}_{k_0}K$. En outre, pour tout sous-corps $k$
+de $k_0$ tel que $\Omega^1_{k_0/k}$ soit de rang fini,
+$\widehat\Omega^1_{A/k}$ est un $A$-module libre de rang égal à
+\[
+  \dim(A)+\deg.\operatorname{tr}_{k_0}K
+  +\operatorname{rg}_{k_0}(\Omega^1_{k_0/k}).
+\]
+\end{proposition}
+
+\begin{proof}
+Il est clair que, si $P$ est le sous-corps premier de $k_0$, $K$ est une
+$P$-algèbre formellement lisse (19.6.1). Notons d'autre part que l'on a
+$\Upsilon^K_{A/k_0/P}=0$~: en effet, cela revient à voir que l'homomorphisme
+\[
+  u_{A/k_0/P}\otimes1_K:
+  \Omega^1_{k_0/P}\otimes_{k_0}K
+  \longrightarrow \Omega^1_{A/P}\otimes_A K
+\]
+est injectif (20.6.14.5), $u$ désignant l'homomorphisme structural
+$k_0\to A$. Mais comme $A$ est une $k_0$-algèbre formellement lisse par
+hypothèse, il résulte de (20.7.2) que $u_{A/k_0/P}$ est formellement
+inversible à gauche, donc (19.1.7) $u_{A/k_0/P}\otimes1_K$ est inversible à
+gauche et \emph{a fortiori} injectif, ce qui prouve notre assertion.
+Appliquant la suite exacte (20.6.22.1), où $\Lambda,A,B,C$ sont remplacés par
+$P,k_0,A,K$, il vient la suite exacte
+\[
+  0\longrightarrow \Upsilon^K_{A/k_0}
+  \longrightarrow \mathfrak m/\mathfrak m^2
+  \longrightarrow \Omega^1_{A/k_0}\otimes_A K
+  \longrightarrow \Omega^1_{K/k_0}\longrightarrow0,
+\]
+de sorte que l'on a
+\[
+\begin{split}
+  \operatorname{rg}_K(\Omega^1_{A/k_0}\otimes_AK)
+  &={\operatorname{rg}}_K(\mathfrak m/\mathfrak m^2)
+    +\bigl(\operatorname{rg}_K(\Omega^1_{K/k_0})
+    -\operatorname{rg}_K(\Upsilon_{K/k_0})\bigr)\\
+  &={\operatorname{rg}}_K(\mathfrak m/\mathfrak m^2)
+    +\deg.\operatorname{tr}_{k_0}K
+\end{split}
+\]
+en vertu de (21.7.1). D'autre part, $\widehat\Omega^1_{A/k_0}$ est un
+$A$-module formellement projectif (20.4.9), et comme sa topologie est la
+topologie $\mathfrak m$-préadique (20.4.5),
+$\widehat\Omega^1_{A/k_0}/\mathfrak m^{j+1}\widehat\Omega^1_{A/k_0}$ est un
+$(A/\mathfrak m^{j+1})$-module projectif pour tout $j$ (19.2.4), donc libre
+($\mathbf 0_{\mathrm{III}}$, 10.1.2) et de rang
+
+\oldpage[0\textsubscript{IV-1}]{177}
+$n=\operatorname{rg}_K(\Omega^1_{A/k_0}\otimes_AK)$. En vertu de (21.9.1),
+$\widehat\Omega^1_{A/k_0}$ est un $A$-module de type fini, et en outre ce
+$A$-module est plat en vertu de ($\mathbf 0_{\mathrm{III}}$, 10.2.1)~; il est
+donc libre ($\mathbf 0_{\mathrm{III}}$, 10.1.3) de rang $n$, d'où la première
+assertion.
+
+Comme par hypothèse $\Omega^1_{k_0/k}$ est de rang fini sur $k_0$, le produit
+tensoriel complété
+$\Omega^1_{k_0/k}\widehat\otimes_{k_0}A$ s'identifie à
+$\Omega^1_{k_0/k}\otimes_{k_0}A$~; comme $A$ est une $k_0$-algèbre
+formellement lisse, il résulte de (20.7.18) que l'homomorphisme
+\[
+  \widehat u_{A/k_0/k}:
+  \Omega^1_{k_0/k}\otimes_{k_0}A
+  \longrightarrow\widehat\Omega^1_{A/k}
+\]
+admet un inverse à gauche qui est un $A$-homomorphisme continu, ce qui
+implique en particulier que son image est fermée dans
+$\widehat\Omega^1_{A/k}$~; la suite exacte
+\[
+  0\longrightarrow \Omega^1_{k_0/k}\otimes_{k_0}A
+  \xrightarrow{\widehat u_{A/k_0/k}}\widehat\Omega^1_{A/k}
+  \longrightarrow\widehat\Omega^1_{A/k_0}\longrightarrow0
+\]
+est donc exacte et scindée en vertu de (20.7.17) et de ce qui précède~; ce
+qui achève de prouver la proposition.
+\end{proof}
+
+\begin{corollary}[21.9.3]
+\label{0.21.9.3-fr}
+Soient $k$ un corps, $A$ l'anneau de séries formelles
+$k[[T_1,\ldots,T_r]]$, muni de sa structure usuelle de $k$-algèbre. Alors
+$\widehat\Omega^1_{A/k}$ est un $A$-module libre de rang $r=\dim(A)$.
+\end{corollary}
+
+\begin{proof}
+Il suffit de noter que $A$ est une $k$-algèbre formellement lisse (19.3.4),
+et d'appliquer (21.9.2) avec $k_0=k=K$.
+\end{proof}
+
+\begin{lemma}[21.9.4]
+\label{0.21.9.4-fr}
+Soient $k$ un corps de caractéristique $p>0$, $A$ une $k$-algèbre qui est un
+anneau local noethérien complet, $B$ une sous-$k$-algèbre de $A$ isomorphe à
+une $k$-algèbre topologique de la forme $k[[T_1,\ldots,T_r]]$ et telle que
+$A$ soit une $B$-algèbre de type fini. Si $B_1$ est la sous-algèbre
+$k[[T_1^p,\ldots,T_r^p]]$ de $B$, $\widehat\Omega^1_{A/k}$ s'identifie
+canoniquement à $\Omega^1_{A/B_1}$.
+\end{lemma}
+
+\begin{proof}
+Toute dérivation continue de $B_1$ dans un $A$-module topologique $P$, qui
+est restriction d'une $k$-dérivation continue de $A$ dans $P$, est \emph{nulle},
+car elle l'est dans le sous-anneau $k[T_1^p,\ldots,T_r^p]$ des polynômes, et
+ce dernier est dense dans $B_1$. La suite exacte (20.3.7.1) montre donc que
+l'homomorphisme canonique
+\[
+  \operatorname{D\acute{e}r.\,cont}_{B_1}(A,P)
+  \longrightarrow \operatorname{D\acute{e}r.\,cont}_k(A,P)
+\]
+est bijectif~; la conclusion résulte de (20.7.14.4), compte tenu de ce que
+$\Omega^1_{A/B_1}$ est un $A$-module de type fini (20.4.7), donc séparé et
+complet puisque $A$ est un anneau local noethérien complet.
+\end{proof}
+
+\begin{proposition}[21.9.5]
+\label{0.21.9.5-fr}
+Soient $A$ un anneau local noethérien complet intègre, $A_0$ un sous-anneau
+de $A$ isomorphe à un anneau de séries formelles $k[[T_1,\ldots,T_r]]$ sur
+un corps $k$, tel que $A$ soit une $A_0$-algèbre finie et que le corps des
+fractions $E$ de $A$ soit une extension séparable du corps des fractions
+$L_0$ de $A_0$. Alors on a
+\begin{equation}
+\tag{21.9.5.1}
+\label{0.21.9.5.1-fr}
+  \operatorname{rg}_A\widehat\Omega^1_{A/k}
+  =\operatorname{rg}_E(\widehat\Omega^1_{A/k}\otimes_AE)=\dim(A).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Notons que si $\mathfrak m_0$ est l'idéal maximal de $A_0$, la topologie de
+$A$ est la topologie $\mathfrak m_0$-adique puisque $A$ est une
+$A_0$-algèbre finie (Bourbaki, \emph{Alg. comm.}, chap.~IV, \S~2,
+n\textsuperscript{o}~5, cor.~3 de la prop.~9) et induit sur $A_0$ la topologie
+$\mathfrak m_0$-adique (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~3,
+n\textsuperscript{o}~4, th.~3). On sait (21.9.1) que
+$\widehat\Omega^1_{A/k}$ est un $A$-module de type fini et,
+
+\oldpage[0\textsubscript{IV-1}]{178}
+en vertu de (21.9.3) $\widehat\Omega^1_{A_0/k}$ est un $A_0$-module libre de
+rang $r=\dim(A_0)=\dim(A)$ (16.1.5)~; le produit tensoriel
+$\widehat\Omega^1_{A_0/k}\otimes_{A_0}A$ est donc un $A$-module libre de rang
+$r$ identique à son séparé complété~; enfin $\widehat\Omega^1_{A/A_0}$ est
+un $A$-module de type fini (20.4.7), donc identique à son séparé complété
+($\mathbf 0_{\mathrm I}$, 7.3.6). Cela étant, dans la suite d'homomorphismes
+\begin{equation}
+\tag{21.9.5.2}
+\label{0.21.9.5.2-fr}
+  \widehat\Omega^1_{A_0/k}\otimes_{A_0}A
+  \xrightarrow{u}\widehat\Omega^1_{A/k}
+  \xrightarrow{v}\widehat\Omega^1_{A/A_0}\longrightarrow0
+\end{equation}
+on sait que $v$ est surjectif et que $\operatorname{Im}(u)$ est dense dans
+$\operatorname{Ker}(v)$ (20.7.17)~; mais tout sous-$A_0$-module de
+$\widehat\Omega^1_{A/k}$ est fermé pour la topologie $\mathfrak m_0$-adique
+($\mathbf 0_{\mathrm I}$, 7.3.5), donc la suite (21.9.5.2) est exacte. Notons
+d'autre part que puisque $A$ est entier sur $A_0$, $A_0$ intégralement clos
+et $E$ séparable sur $L_0$, $\widehat\Omega^1_{A/A_0}$ est un $A$-module de
+torsion (20.4.13, (iv))~; tensorisant la suite exacte (21.9.5.2) par $E$, il
+vient une suite exacte
+\[
+  \widehat\Omega^1_{A_0/k}\otimes_{A_0}E
+  \longrightarrow \widehat\Omega^1_{A/k}\otimes_AE\longrightarrow0
+\]
+d'où $\operatorname{rg}_E(\widehat\Omega^1_{A/k}\otimes_AE)\leqslant r$. Il
+reste donc à montrer qu'il existe, dans $\widehat\Omega^1_{A/k}\otimes_AE$,
+$r$ éléments linéairement indépendants sur $E$. Or, soient
+$D_i=\partial/\partial T_i$ les dérivations canoniques de $A_0$ dans lui-même
+$(1\leqslant i\leqslant r)$~; elles se prolongent de façon unique en des
+dérivations (encore notées $D_i$) de $E$ dans lui-même, puisque $E$ est
+extension séparable finie de $L_0$~; par restriction à $A$, ces dérivations
+donnent des dérivations de $A$ dans $E$, et il est immédiat que ces
+dérivations prennent leurs valeurs dans un même sous-$A$-module de type fini
+de $E$~; comme elles sont continues dans $A_0$ et que la topologie de $A$ est
+la topologie $\mathfrak m_0$-adique, on a ainsi formé $r$ dérivations
+continues de $A$ dans un $A$-module topologique, qui sont évidemment
+linéairement indépendantes puisque $D_i(T_j)=\delta_{ij}$~; ceci achève de
+prouver la proposition.
+\end{proof}
+
+La proposition suivante est un analogue «~formel~» de (21.7.3)~:
+
+\begin{proposition}[21.9.6]
+\label{0.21.9.6-fr}
+Soient $k_0\subset k\subset K_0$ trois corps de caractéristique $p>0$, tels
+que $[K_0:k]<+\infty$~; on pose
+\[
+  L_0=K_0((T_1,\ldots,T_r)),\qquad
+  M_0=K_0((T_1^p,\ldots,T_r^p)),
+\]
+\[
+  L=k((T_1,\ldots,T_r)),\qquad
+  M=k((T_1^p,\ldots,T_r^p)),\qquad
+  N=k((T_1^{p^2},\ldots,T_r^{p^2})).
+\]
+Soit $E$ une extension de type fini de $L_0$.
+\begin{enumerate}
+  \item[(i)] Si $\Upsilon_{K_0/k_0}$ est de rang fini, on a
+  \begin{equation}
+  \tag{21.9.6.1}
+  \label{0.21.9.6.1-fr}
+    \operatorname{rg}_E\Omega^1_{E/M}
+    -\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+    =(r+\deg.\operatorname{tr}_{L_0}E)
+      +d(E/K_0,k_0)+d(E/M_0,N/k_0)
+  \end{equation}
+  (notations de (21.6.1)), et en particulier on a
+  \begin{equation}
+  \tag{21.9.6.2}
+  \label{0.21.9.6.2-fr}
+    \operatorname{rg}_E\Omega^1_{E/M}
+    -\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+    \geqslant r+\deg.\operatorname{tr}_{L_0}E+d(E/K_0,k_0).
+  \end{equation}
+  En outre, si les deux membres de (21.9.6.2) sont égaux, ils le restent
+  lorsqu'on remplace $k$ par un corps $k'$ tel que $k_0\subset k'\subset k$.
+
+  \item[(ii)] On suppose en outre que $[k_0:k_0^p]<+\infty$. Soit
+  $(k_\alpha)$ une famille filtrante décroissante de sous-corps de $K_0$
+  contenant $k_0$, tels que $[K_0:k_\alpha]<+\infty$ pour tout $\alpha$ et
+  que
+  $\bigcap_\alpha k_\alpha(K_0^p)=k_0(K_0^p)$~; alors il existe un $\alpha$
+  tel que, pour $k=k_\alpha$, les deux membres de (21.9.6.2) soient égaux.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \oldpage[0\textsubscript{IV-1}]{179}
+  \item[(i)] On sait (21.1.5, (ii)) que
+  $\operatorname{rg}_E\Omega^1_{E/M}$ ne change pas quand on remplace $M$ par
+  $M(L_0^p)$~; comme
+  $L_0^p=K_0^p((T_1^p,\ldots,T_r^p))$ et que
+  $[k(K_0^p):k]<+\infty$, on a
+  \[
+    M(L_0^p)=k(K_0^p)((T_1^p,\ldots,T_r^p))~;
+  \]
+  de même $\Omega^1_{K_0/k}$ ne change pas quand on y remplace $k$ par
+  $k(K_0^p)$, si bien que l'on peut \emph{supposer que $K_0^p\subset k$}, ce
+  que nous ferons dans toute la suite. Nous introduirons aussi les corps
+  \[
+    k'_0=k_0(K_0^p),\qquad
+    N'=k'_0((T_1^{p^2},\ldots,T_r^{p^2}))
+  \]
+  de sorte que l'on a le diagramme de corps
+  \[
+    \xymatrix{
+      K_0\ar[r] & M_0\ar[r] & L_0\ar[r] & E\\
+      k\ar[u]\ar[r] & N\ar[u]\ar[r] & M\ar[u]\ar[r] & L\ar[u]\\
+      k_0\ar[u]\ar[r] & k'_0\ar[u]\ar[r] & N'\ar[u] &
+    }
+  \]
+
+  Nous nous proposons d'évaluer la différence $\delta$ du premier et du
+  second membre de (21.9.6.2).
+
+  Il résulte de (21.7.3) que l'on a
+  \[
+    \operatorname{rg}_E\Omega^1_{E/M}
+    -\operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+    =\deg.\operatorname{tr}_{M_0}E+d(E/M_0,M)
+  \]
+  et comme $L_0$ est une extension finie de $M_0$, on a
+  $\deg.\operatorname{tr}_{L_0}E=\deg.\operatorname{tr}_{M_0}E$. D'autre
+  part, une $p$-base de $K_0$ sur $k=k(K_0^p)$ est aussi une $p$-base de
+  $M_0$ sur $M$, donc (21.4.5), on a
+  \[
+    \operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+    =\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+  \]
+  si bien que l'on a
+  \begin{equation}
+  \tag{21.9.6.3}
+  \label{0.21.9.6.3-fr}
+    \delta=d(E/M_0,M)-d(E/K_0,k_0)-r.
+  \end{equation}
+
+  Notons maintenant le lemme classique~:
+
+  \begin{lemma}[21.9.6.4]
+  \label{0.21.9.6.4-fr}
+  Pour tout corps $k$, le corps de séries formelles
+  $K=k((T_1,\ldots,T_r))$ est une extension séparable de $k$.
+  \end{lemma}
+
+  \begin{proof}
+  Rappelons rapidement la démonstration de ce lemme pour être complet. Il
+  suffit (Bourbaki, \emph{Alg.}, chap.~VIII, \S~7,
+  n\textsuperscript{o}~3, démonstration du th.~1) de prouver que pour toute
+  extension finie $k'$ de $k$, $K\otimes_k k'$ est sans élément nilpotent~;
+  mais si l'on pose $A=k[[T_1,\ldots,T_r]]$ et $S=A-\{0\}$,
+  $K\otimes_k k'$ est égal à $S^{-1}(A\otimes_k k')$, et
+  $A\otimes_k k'$ s'identifie canoniquement à l'anneau intègre
+  $A'=k'[[T_1,\ldots,T_r]]$ et $A$ à un sous-anneau de $A'$, d'où la
+  conclusion.
+  \end{proof}
+
+  Utilisant ce lemme et (21.6.2, (ii)), on a $d(L_0/K_0,k_0)=0$, et la
+  formule (21.6.4.4) donne donc
+  \[
+    d(E/K_0,k_0)=d(E/L_0,k_0).
+  \]
+
+  \oldpage[0\textsubscript{IV-1}]{180}
+  Les formules (21.6.4.4) et (21.6.4.2) donnent d'autre part
+  \[
+    d(E/M_0,M)=d(E/L_0,M)+d(L_0/M_0,M),
+  \]
+  \[
+    d(L_0/M_0,M)=d(L_0/M_0,M/N)+d(L_0/M_0,N),
+  \]
+  d'où
+  \[
+    \delta=d(E/L_0,M)+d(L_0/M_0,N)-d(E/L_0,k_0)
+    +d(L_0/M_0,M/N)-r.
+  \]
+
+  Nous allons montrer que l'on a la relation
+  \begin{equation}
+  \tag{21.9.6.5}
+  \label{0.21.9.6.5-fr}
+    d(L_0/M_0,M/N)=r.
+  \end{equation}
+  Pour cela, remarquons que, par définition, on a
+  \[
+    d(L_0/M_0,M/N)
+    =\operatorname{rg}_{L_0}\Upsilon_{L_0/M/N}
+    -\operatorname{rg}_{M_0}\Upsilon_{M_0/M/N}.
+  \]
+  Compte tenu des deux suites exactes
+  \[
+  \begin{aligned}
+    0&\longrightarrow\Upsilon_{L_0/M/N}
+      \longrightarrow\Omega^1_{M/N}\otimes_ML_0
+      \longrightarrow\Omega^1_{L_0/N}
+      \longrightarrow\Omega^1_{L_0/M}\longrightarrow0,\\
+    0&\longrightarrow\Upsilon_{M_0/M/N}
+      \longrightarrow\Omega^1_{M/N}\otimes_MM_0
+      \longrightarrow\Omega^1_{M_0/N}
+      \longrightarrow\Omega^1_{M_0/M}\longrightarrow0,
+  \end{aligned}
+  \]
+  il vient
+  \[
+  \begin{split}
+    d(L_0/M_0,M/N)={}&\operatorname{rg}_{L_0}\Omega^1_{L_0/M}
+      -\operatorname{rg}_{L_0}\Omega^1_{L_0/N}\\
+      &-\operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+      +\operatorname{rg}_{M_0}\Omega^1_{M_0/N}.
+  \end{split}
+  \]
+  Or, on a $N(L_0^p)\supset M$, donc
+  $\Omega^1_{L_0/N}=\Omega^1_{L_0/M}$ (21.1.5, (ii)). D'autre part, les
+  $T_i^p$ $(1\leqslant i\leqslant r)$ forment une $p$-base de $M$ sur $N$,
+  et une $p$-base de $K_0$ sur $k$ est aussi une $p$-base de $M_0$ sur $M$,
+  donc, comme $M_0^p\subset N$,
+  \[
+    \operatorname{rg}_{M_0}\Omega^1_{M_0/N}
+    =r+\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+    =r+\operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+  \]
+  en vertu de (21.4.5) et (21.1.10), ce qui prouve (21.9.6.5).
+
+  On a encore, par (21.6.4.2),
+  \[
+    d(E/L_0,M)=d(E/L_0,k_0)+d(E/L_0,M/k_0)
+  \]
+  et
+  \[
+    d(L_0/M_0,N)=d(L_0/M_0,N/k)+d(L_0/M_0,k).
+  \]
+  Mais comme $L_0$ est séparable sur $K_0$ (21.9.6.4), on a
+  $d(L_0/K_0,k)=0$, et par suite aussi $d(L_0/M_0,k)=0$ ((21.6.2) et
+  (21.6.4)). Il vient donc
+  \[
+    \delta=d(E/L_0,M/k_0)+d(L_0/M_0,N/k).
+  \]
+  Appliquons encore deux fois (21.6.4.2) au premier terme du second membre de
+  cette formule~; on obtient
+  \[
+    d(E/L_0,M/k_0)=d(E/L_0,M/N)+d(E/L_0,N/k)+d(E/L_0,k/k_0).
+  \]
+  Comme $M\subset N(L_0^p)$, on a $d(E/L_0,M/N)=0$ (21.6.2), donc (par
+  (21.6.4.4))
+  \[
+    \delta=d(E/L_0,k/k_0)+d(E/M_0,N/k).
+  \]
+  Mais $M_0$ et $L_0$ sont des extensions séparables de $K_0$ (21.9.6.4),
+  donc
+  \[
+    d(L_0/K_0,k/k_0)=d(M_0/K_0,k/k_0)=0
+  \]
+  (21.6.2), et appliquant encore deux fois (21.6.4.4),
+
+  \oldpage[0\textsubscript{IV-1}]{181}
+  on a
+  \[
+    d(E/L_0,k/k_0)=d(E/K_0,k/k_0)=d(E/M_0,k/k_0),
+  \]
+  d'où, par une dernière application de (21.6.4.2),
+  \[
+    \delta=d(E/M_0,N/k_0),
+  \]
+  ce qui prouve (21.9.6.1). En outre, lorsque $k$ est remplacé par une
+  sous-extension $k'$ de $k_0$, $N$ est remplacé par une sous-extension $N'$,
+  donc $d(E/M_0,N'/k_0)\leqslant d(E/M_0,N/k_0)$ (21.6.4.2), ce qui démontre
+  la dernière assertion de (i).
+
+  \item[(ii)] Pour tout $\alpha$, posons
+  $N_\alpha=k_\alpha((T_1^{p^2},\ldots,T_r^{p^2}))$. En vertu de (21.9.6.1)
+  et de (21.8.3), il s'agit de montrer (compte tenu de ce que
+  $K_0^p\subset k_\alpha$ et de ce que $E$ est une extension de type fini de
+  $M_0$) que l'on a
+  \[
+    \bigcap_\alpha N_\alpha=k_0(M_0^p).
+  \]
+  Or, on a
+  \begin{equation}
+  \tag{21.9.6.6}
+  \label{0.21.9.6.6-fr}
+    \bigcap_\alpha N_\alpha=N'
+    =(k_0(K_0^p))((T_1^{p^2},\ldots,T_r^{p^2}))
+  \end{equation}
+  en vertu de (21.8.8.3) et de la relation
+  $\bigcap_\alpha k_\alpha=k_0(K_0^p)$ (21.8.6). D'autre part, on a
+  $k_0(M_0^p)=k_0(K_0^p((T_1^{p^2},\ldots,T_r^{p^2})))$. Pour achever la
+  démonstration de (21.9.6, (ii)), il reste donc à prouver le
+
+  \begin{lemma}[21.9.6.7]
+  \label{0.21.9.6.7-fr}
+  Soient $k_0$ un corps de caractéristique $p>0$ tel que
+  $[k_0:k_0^p]<+\infty$, $K_0$ une extension de $k_0$. Alors on a
+  \begin{equation}
+  \tag{21.9.6.8}
+  \label{0.21.9.6.8-fr}
+    (k_0(K_0^p))((T_1,\ldots,T_r))
+    =k_0\bigl(K_0^p((T_1,\ldots,T_r))\bigr).
+  \end{equation}
+  \end{lemma}
+
+  \begin{proof}
+  Comme $k_0^p\subset K_0^p$, on a
+  \[
+    k_0^p\bigl(K_0^p((T_1,\ldots,T_r))\bigr)
+    =K_0^p((T_1,\ldots,T_r)).
+  \]
+  Si $(c_i)_{1\leqslant i\leqslant n}$ est une base de $k_0$ sur $k_0^p$,
+  il est immédiat que $(c_i)$ est aussi un système de générateurs de chacun
+  des deux membres de (21.9.6.8) sur $K_0^p((T_1,\ldots,T_r))$.
+  \end{proof}
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[21.9.7]
+\label{0.21.9.7-fr}
+L'assertion de (21.9.6, (ii)) \emph{ne s'étend pas} au cas où
+$[k_0:k_0^p]$ est infini. Prenons en effet pour $k_0$ le corps
+$\mathbf F_p(X_n)_{n\geqslant0}$ des fractions rationnelles à une infinité
+d'indéterminées, de sorte que les $X_n$ forment une $p$-base de $k_0$ sur
+$\mathbf F_p$, et par suite $[k_0:k_0^p]=+\infty$. Dans l'énoncé de (21.9.6),
+prenons $K_0=k_0$ (donc nécessairement $k=k_0$), $L_0=k_0((T))$, pour $E$
+l'extension $L_0(y)$, où $y$ est racine du polynôme
+\[
+  Y^p-\sum_{n=0}^{\infty}X_nT^{np}
+\]
+de $L_0[Y]$. Alors la différence $\delta$ des deux membres de (21.9.6.2) est
+\emph{non nulle}. En effet, $E$ est \emph{séparable} sur $k_0$, sans quoi
+$y^p$ serait élément de $k_0(L_0^p)$, et l'on voit aussitôt que cela n'est
+pas possible (dû au fait qu'il y a une infinité de $X_n$ algébriquement
+indépendants)~; on a donc $d(E/K_0,k_0)=0$, la formule (21.9.6.3) se réduit à
+$\delta=d(E/M_0,M_0)-1$, et il est clair que
+$d(E/M_0,M_0)=\operatorname{rg}_E\Upsilon_{E/M_0}$. Tout revient à vérifier
+que ce rang est $2$. Or on a $E^p\subset M_0$, une $p$-base de $E$ sur $L_0$
+est formée du seul élément $y$, et $L_0$ a évidemment une $p$-base sur $M_0$
+formée du seul élément $T$~; donc, puisque $E$ est extension algébrique de
+$M_0$, notre assertion résulte de (21.7.1) et (21.4.5).
+\end{remark}
+
+\begin{proposition}[21.9.8]
+\label{0.21.9.8-fr}
+Soient $k_0$ un corps (de caractéristique quelconque), $K_0$ une extension
+séparable de $k_0$, $A$ un anneau local noethérien complet, qui est une
+$k_0$-algèbre et dont le corps résiduel
+
+\oldpage[0\textsubscript{IV-1}]{182}
+est une extension finie de $K_0$. Pour tout idéal premier $\mathfrak p$ de
+$A$, soit $k(\mathfrak p)$ le corps résiduel de $A$ en $\mathfrak p$. Alors,
+pour tout corps $k$ tel que $k_0\subset k\subset K_0$ et tel que
+$[K_0:k]<+\infty$, on a
+\begin{equation}
+\tag{21.9.8.1}
+\label{0.21.9.8.1-fr}
+\begin{split}
+  &\operatorname{rg}_{k(\mathfrak p)}
+    \bigl(\widehat\Omega^1_{(A/\mathfrak p)/k}
+      \otimes_{A/\mathfrak p}k(\mathfrak p)\bigr)
+    -\operatorname{rg}_{K_0}\Omega^1_{K_0/k}\\
+  &\hspace{35mm}\geqslant
+    \dim(A/\mathfrak p)
+    +\operatorname{rg}_{k(\mathfrak p)}\Upsilon_{k(\mathfrak p)/k_0}.
+\end{split}
+\end{equation}
+Supposons en outre que $[k_0:k_0^p]<+\infty$ (où $p$ est l'exposant
+caractéristique de $k_0$). Alors on peut trouver un corps $k$ tel que
+$k_0(K_0^p)\subset k\subset K_0$ et $[K_0:k]<+\infty$, pour lequel les deux
+membres de (21.9.8.1) sont égaux.
+\end{proposition}
+
+\begin{proof}
+Comme $A/\mathfrak p$ a même corps résiduel $K$ que $A$ et est complet, on
+peut se borner au cas où $A$ est intègre et $\mathfrak p=0$~; on posera
+alors $E=k(\mathfrak p)$, corps des fractions de $A$. Comme $K_0$ est
+formellement lisse sur $k_0$ (19.6.1), il existe un $k_0$-monomorphisme
+$K_0\to A$ faisant de $A$ une $K_0$-algèbre~; on sait en outre qu'il existe
+une sous-$K_0$-algèbre $A_0$ de $A$, $K_0$-isomorphe à une algèbre de séries
+formelles $K_0[[T_1,\ldots,T_r]]$ et telle que $A$ soit une $A_0$-algèbre
+\emph{finie} (19.8.9), ce qui entraîne que $E$ est une extension finie du
+corps des fractions $L_0=K_0((T_1,\ldots,T_r))$ de $A_0$. On a alors
+$\Upsilon_{K_0/k_0}=0$ puisque $K_0$ est séparable sur $k_0$, et
+$\deg.\operatorname{tr}_{L_0}E=0$~; en outre, comme $A$ est une
+$A_0$-algèbre finie on a $\dim(A)=\dim(A_0)$ (16.1.5).
+
+Si $p=1$, on a
+$\operatorname{rg}_E(\widehat\Omega^1_{A/k}\otimes_AE)=r$ par (21.9.5) et
+(17.1.4, (iii)), et $\Omega^1_{K_0/k}=0$ puisque $K_0$ est extension finie
+séparable de $k$ (21.7.4)~; d'autre part $\Upsilon_{E/k_0}=0$, $E$ étant
+extension séparable de $k_0$~; les deux membres de (21.9.8.1) sont donc égaux
+dans ce cas.
+
+Supposons maintenant que $p>1$~; si $B=k[[T_1,\ldots,T_r]]$, $A$ est une
+$B$-algèbre finie, donc, en posant $B_1=k[[T_1^p,\ldots,T_r^p]]$,
+$\widehat\Omega^1_{A/k}$ s'identifie à $\Omega^1_{A/B_1}$ (21.9.4), et en
+désignant par $M$ le corps des fractions $k((T_1^p,\ldots,T_r^p))$, il
+résulte de (20.5.9) que $\widehat\Omega^1_{A/k}\otimes_AE$ s'identifie à
+$\Omega^1_{E/M}$~; l'inégalité (21.9.8.1) n'est autre alors que (21.9.6.2),
+et la dernière assertion du corollaire résulte de (21.9.6, (ii)).
+\end{proof}
