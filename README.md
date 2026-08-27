@@ -3,7 +3,7 @@
 [Lire l’édition française cumulative complète](reader/00_EGA_FR_CUMULATIVE_LINKED_READER.pdf)
 
 - Stable concept DOI: https://doi.org/10.5281/zenodo.21921588
-- Immutable polished release DOI: https://doi.org/10.5281/zenodo.22131644
+- Immutable polished release DOI: https://doi.org/10.5281/zenodo.22132090
 
 ## Étendue complète
 
@@ -11,7 +11,7 @@ EGA I (chapitre 0 compris), EGA II, EGA III-1, EGA III-2 et EGA IV-1 à IV-4.
 
 Le français imprimé est conservé diplomatiquement. Les réparations de fidélité, les errata publiés et les défauts mathématiques vérifiés sont consignés explicitement dans la provenance.
 
-Le PDF cumulatif comporte **1,245 pages physiques** : une couverture éditoriale, puis le corps complet de l’édition. Il pèse 13,174,636 octets ; SHA-256 `E85C9328F066F8A5FB8051FFF97A621C36B1B9D8C2FF2FEC09636E9746940B64`.
+Le PDF cumulatif comporte **1,245 pages physiques** : une couverture éditoriale, puis le corps complet de l’édition. Il pèse 12,937,487 octets ; SHA-256 `B4D0928A0CA2337B1A98D8EB3789C476506E036944B1E8D4A533ADB5A637563C`. Les huit étiquettes de fascicules sur la couverture sont des liens internes vers leurs ouvertures exactes.
 
 ## Contenu vérifiable
 
