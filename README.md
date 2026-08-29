@@ -1,5 +1,7 @@
 # Éléments de géométrie algébrique (EGA) — édition française diplomatique cumulative
 
+> **Atlas des traductions :** parcourez les éditions EGA, FGA et SGA par œuvre et par langue dans le [Grothendieck Translation Atlas](https://github.com/KokunoYumeto/ega-fga-sga).
+
 [Lire l’édition française cumulative complète](reader/00_EGA_FR_CUMULATIVE_LINKED_READER.pdf)
 
 - Stable concept DOI: https://doi.org/10.5281/zenodo.21921588
