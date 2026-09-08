@@ -282,7 +282,8 @@ l'assertion (ii).
 
 \begin{theorem}[21.2.1]
 \label{0.21.2.1-fr}
-Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$.
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$,
+$(x_\alpha)_{\alpha\in I}$ une $p$-base de $B$ sur $A$.
 Soient $E$ une $A$-algèbre, $u:A\to E$ l'homomorphisme structural,
 $q:E\to B$ un $A$-homomorphisme surjectif, $\mathfrak R$ son noyau, et
 supposons que $\mathfrak R^p=0$. Alors~:
@@ -299,46 +300,30 @@ supposons que $\mathfrak R^p=0$. Alors~:
 \end{theorem}
 
 \begin{proof}
+S'il existe un $A$-homomorphisme $v:B\to E$, on doit avoir $v(a)=u(a)$ pour
+tout $a\in A\subset B$, donc $v(q(z)^p)=u(q(z)^p)$ pour tout $z\in E$,
+puisque $B^p\subset A$. Mais on a $v(q(z)^p)=(v(q(z)))^p$ et, par définition,
+$v(q(z))\equiv z\pmod{\mathfrak R}$ si $q\circ v=1_B$, donc
+$(v(q(z)))^p=z^p$ puisque $\mathfrak R^p=0$~; d'où la nécessité de (i).
+La suffisance de la condition (i) résultera de (ii).
+
+Or, sous les hypothèses de (ii), l'unicité de $v$ est évidente puisque les
+monômes $\prod_\alpha x_\alpha^{n(\alpha)}$ engendrent le $A$-module $B$~;
+comme ces monômes forment en outre une \emph{base} du $A$-module $B$, il existe
+une application $A$-\emph{linéaire} $v$ de $B$ dans $E$ telle que
+$v(\prod_\alpha x_\alpha^{n(\alpha)})=\prod_\alpha z_\alpha^{n(\alpha)}$
+pour toute famille $(n(\alpha))_{\alpha\in I}$ à support fini avec
+$0\leq n(\alpha)<p$ pour tout $\alpha$. Reste à voir que $v$ est un
+homomorphisme d'anneaux. Or, on peut écrire
+$(\prod_\alpha x_\alpha^{m(\alpha)})(\prod_\alpha x_\alpha^{n(\alpha)})
+=a\prod_\alpha x_\alpha^{r(\alpha)}$, où
+$r(\alpha)=m(\alpha)+n(\alpha)$ si $m(\alpha)+n(\alpha)<p$,
+$r(\alpha)=m(\alpha)+n(\alpha)-p$ dans le cas contraire, et $a\in A$
 \oldpage[0\textsubscript{IV-1}]{158}
-Considérons d'abord le cas où $E$ est discret, donc $\mathfrak R$ est
-nilpotent~; le raisonnement de (19.4.3) permet en outre de supposer
-$\mathfrak R^2=0$ et par suite $\mathfrak R^p=0$. Enfin, en considérant
-l'image réciproque de l'extension $E$ de $C$ par $\mathfrak R$, on peut se
-borner au cas où $C=B$ et où $v$ est l'identité (19.4.4).
-
-Comme l'homomorphisme d'anneaux $F_B:z\mapsto z^p$ s'annule dans
-$\mathfrak R$, il se factorise en $E\xrightarrow q B\xrightarrow{F'}E^{(p)}$,
-et $F'$, considéré comme homomorphisme de $B$ dans $E^{(p)}$, est un
-$A$-homomorphisme par définition de la structure de $A$-algèbre de $E^{(p)}$
-à l'aide de l'homomorphisme composé $A\xrightarrow rE\xrightarrow{F_E}E^{(p)}$,
-où $r:A\to E$ est l'homomorphisme structural de l'algèbre $E$~; d'ailleurs,
-$r:A^{(p)}\to E^{(p)}$ est aussi un $A$-homomorphisme.
-Il y a donc un unique $A$-homomorphisme
-$f:A^{(p)}\otimes_A B\to E^{(p)}$ tel que les composés de $f$ et des
-homomorphismes canoniques $A^{(p)}\to A^{(p)}\otimes_A B$ et
-$B\to A^{(p)}\otimes_A B$ soient respectivement $r$ et $F'$.
-
-Or, par hypothèse, on peut identifier $A^{(p)}\otimes_A B$ à $A[B^p]$,
-les homomorphismes canoniques s'identifiant respectivement à $u$ et à $F_B$.
-On peut donc considérer $E$ comme une $A[B^p]$-algèbre au moyen de $f$~;
-par construction, on a $f(q(z)^p)=z^p$ pour tout $z\in E$~; on est donc
-dans les conditions d'application de (21.2.1), d'où le théorème dans ce cas.
-
-Pour passer au cas général, considérons un système fondamental
-$(\mathfrak J_\lambda)$ d'idéaux ouverts de $E$, et posons
-$E_\lambda=E/\mathfrak J_\lambda$, $\mathfrak R_\lambda=(\mathfrak R+\mathfrak J_\lambda)/\mathfrak J_\lambda$,
-$C_\lambda=E_\lambda/\mathfrak R_\lambda=E/(\mathfrak R+\mathfrak J_\lambda)$~;
-comme $E=\varprojlim E_\lambda$ (0$_I$, 7.2.2). Pour tout couple
-$(\alpha,\lambda)$, désignons par $z_{\alpha\lambda}$ l'image canonique de
-$z_\alpha$ dans $E_\lambda$, et par $p_\lambda:C\to C_\lambda$ et
-$q_\lambda:E_\lambda\to C_\lambda$ les homomorphismes canoniques. Comme
-par hypothèse $\mathfrak R_\lambda$ est nilpotent dans $E_\lambda$, la
-première partie de la démonstration prouve l'existence et l'unicité d'un
-$A$-homomorphisme $w_\lambda:B\to E_\lambda$ tel que
-$p_\lambda\circ v=q_\lambda\circ w_\lambda$ et
-$w_\lambda(x_\alpha)=z_{\alpha\lambda}$ pour tout $\alpha$. L'unicité des
-$w_\lambda$ montre alors aussitôt que $(w_\lambda)$ est un système projectif
-d'homomorphismes, et $w=\varprojlim w_\lambda$ répond à la question.
+est le produit des $x_\alpha^p$ pour les $\alpha\in I$ tels que
+$m(\alpha)+n(\alpha)\geq p$~; il s'agit de voir que
+$u(a)=\prod_\alpha z_\alpha^p$~; mais comme $x_\alpha=q(z_\alpha)$, cela
+résulte de l'hypothèse.
 \end{proof}
 
 \begin{corollary}[21.2.2]
@@ -479,8 +464,8 @@ On peut se borner au cas où $v$ est surjectif~; en outre, le raisonnement de
 (19.4.3) permet de supposer $\mathfrak R^2=0$ et par suite $\mathfrak R^p=0$.
 Enfin, en considérant l'image réciproque par $v$ de l'extension $E$ de $C$
 par $\mathfrak R$, on peut se borner au cas où $C=B$ et où $v$ est l'identité
-(19.4.4). Comme l'homomorphisme d'anneaux $F_B:B\to B^{(p)}$ s'annule
-dans $\mathfrak R$, il se factorise en $E\to B\to B^{(p)}$.
+(19.4.4). Comme l'homomorphisme d'anneaux $F_E:E\to E^{(p)}$ s'annule
+dans $\mathfrak R$, il se factorise en $E\xrightarrow q B\xrightarrow{F'}E^{(p)}$.
 L'homomorphisme $F'$ de $B$ dans $E^{(p)}$ est un $A$-homomorphisme par
 définition de la structure de $A$-algèbre de $E^{(p)}$ à l'aide du composé
 $A\to E\to E^{(p)}$, et l'homomorphisme $A^{(p)}\to E^{(p)}$ est également
@@ -496,7 +481,8 @@ Pour passer au cas général, considérons un système fondamental
 $(\mathfrak J_\lambda)$ d'idéaux ouverts de $E$, et posons
 $E_\lambda=E/\mathfrak J_\lambda$, $\mathfrak R_\lambda=(\mathfrak R+\mathfrak J_\lambda)/\mathfrak J_\lambda$,
 $C_\lambda=E_\lambda/\mathfrak R_\lambda=E/(\mathfrak R+\mathfrak J_\lambda)$~;
-comme $E=\varprojlim E_\lambda$ (0$_I$, 7.2.2). Pour tout couple
+comme $E$ est admissible, on a $E=\varprojlim E_\lambda$ (0$_I$, 7.2.2).
+Pour tout couple
 $(\alpha,\lambda)$, désignons par $z_{\alpha\lambda}$ l'image canonique de
 $z_\alpha$ dans $E_\lambda$, par $p_\lambda:C\to C_\lambda$ l'homomorphisme
 canonique et par $q_\lambda:E_\lambda\to C_\lambda$ l'homomorphisme canonique.
