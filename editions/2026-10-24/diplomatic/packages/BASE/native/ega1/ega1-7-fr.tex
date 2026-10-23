@@ -1,0 +1,786 @@
+\section{Applications rationnelles}
+\label{section:I.7-fr}
+
+\subsection{Applications rationnelles et fonctions rationnelles.}
+\label{subsection:I.7.1-fr}
+
+\begin{env}[7.1.1]
+\label{I.7.1.1-fr}
+Soient $X$, $Y$ deux préschémas, $U$, $V$, deux ouverts denses dans $X$, $f$
+(resp. $g$) un morphisme de $U$ (resp. $V$) dans $Y$~; nous dirons que $f$ et
+$g$ sont
+\emph{équivalents} s'ils coïncident dans un ouvert dense dans $U\cap V$.
+Comme une intersection finie d'ouverts denses dans $X$ est un ouvert dense
+dans $X$, il est clair que cette relation est une
+\emph{relation d'équivalence}.
+\end{env}
+
+\begin{definition}[7.1.2]
+\label{I.7.1.2-fr}
+Étant donnés deux préschémas $X$, $Y$, on appelle
+\emph{application rationnelle de $X$ dans $Y$} une classe d'équivalence de
+morphismes de parties ouvertes denses de $X$ dans $Y$, pour la relation
+définie dans (\hyperref[I.7.1.1-fr]{7.1.1}). Si $X$ et $Y$ sont des
+$S$-préschémas, on dit qu'une telle classe est une
+\emph{$S$-application rationnelle} s'il existe un représentant de cette classe
+qui est un $S$-morphisme. On appelle
+\emph{$S$-section rationnelle de $X$} toute $S$-application rationnelle de $S$
+dans $X$. On appelle
+\emph{fonction rationnelle sur un préschéma $X$} toute $X$-section rationnelle
+du $X$-préschéma $X\otimes_{\mathbf{Z}}\mathbf{Z}[T]$ (où $T$ est une
+indéterminée).
+
+Par abus de langage, lorsqu'il ne sera question que de $S$-préschémas, on dira
+«~application rationnelle~» au lieu de «~$S$-application rationnelle~» si
+aucune confusion ne peut en résulter.
+
+Soient $f$ une application rationnelle de $X$ dans $Y$, $U$ un ouvert de
+$X$~; si $f_1$, $f_2$ sont des morphismes appartenant à la classe $f$, définis
+respectivement dans des ouverts denses $V$, $W$ de $X$, les restrictions
+$f_1|(U\cap V)$, $f_2|(U\cap W)$ coïncident dans $U\cap V\cap W$ qui est dense
+dans $U$~; la classe de morphismes $f$ définit donc une application rationnelle
+de $U$ dans $Y$, appelée
+\emph{restriction de $f$ à $U$} et notée $f|U$.
+
+Si, à tout $S$-morphisme $f:X\to Y$, on fait correspondre la $S$-application
+rationnelle
+\oldpage[I]{156}
+à laquelle appartient $f$, on définit une application canonique de
+$\operatorname{Hom}_S(X,Y)$ dans l'ensemble des $S$-applications rationnelles
+de $X$ dans $Y$. On désigne par $\Gamma_{\mathrm{rat}}(X/Y)$ l'ensemble des
+$Y$-sections rationnelles de $X$, et on a donc une application canonique
+$\Gamma(X/Y)\to\Gamma_{\mathrm{rat}}(X/Y)$. Il est clair en outre que si $X$ et
+$Y$ sont deux $S$-préschémas, l'ensemble des $S$-applications rationnelles de
+$X$ dans $Y$ s'identifie canoniquement à
+$\Gamma_{\mathrm{rat}}((X\times_S Y)/X)$
+(\hyperref[I.3.3.14-fr]{3.3.14}).
+\end{definition}
+
+\begin{env}[7.1.3]
+\label{I.7.1.3-fr}
+Il résulte aussitôt de (\hyperref[I.7.1.2-fr]{7.1.2}) et de
+(\hyperref[I.3.3.14-fr]{3.3.14}) que les fonctions rationnelles sur $X$
+s'identifient canoniquement aux
+\emph{classes d'équivalence des sections du faisceau structural
+$\mathscr{O}_X$} au-dessus d'ouverts partout denses de $X$, deux telles
+sections étant équivalentes si elles coïncident dans un ouvert partout dense
+contenu dans l'intersection de leurs ensembles de définition. Il en résulte en
+particulier que les fonctions rationnelles sur $X$ forment un
+\emph{anneau} $R(X)$.
+\end{env}
+
+\begin{env}[7.1.4]
+\label{I.7.1.4-fr}
+Lorsque $X$ est un préschéma \emph{irréductible}, tout ouvert non vide est dense
+dans $X$~; on peut encore dire que les ouverts non vides de $X$ sont les
+\emph{voisinages ouverts du point générique $x$} de $X$. Dire que deux
+morphismes de parties ouvertes non vides de $X$ dans $Y$ sont équivalents
+signifie donc dans ce cas qu'ils ont \emph{même germe} au point $x$. Autrement
+dit, les applications rationnelles (resp. $S$-applications rationnelles)
+$X\to Y$ s'identifient aux \emph{germes de morphismes} (resp. de
+$S$-morphismes) de parties ouvertes non vides de $X$ dans $Y$ au point
+générique $x$ de $X$. En particulier~:
+\end{env}
+
+\begin{proposition}[7.1.5]
+\label{I.7.1.5-fr}
+Si $X$ est un préschéma irréductible, l'anneau $R(X)$ des fonctions rationnelles
+sur $X$ s'identifie canoniquement à l'anneau local $\mathscr{O}_x$ du point
+générique $x$ de $X$. C'est un anneau local de dimension 0, et par suite un
+anneau local artinien lorsque $X$ est noethérien~; c'est un corps lorsque $X$
+est intègre, et il s'identifie au corps des fractions de $A(X)$ lorsqu'en outre
+$X$ est un schéma affine.
+\end{proposition}
+
+Vu ce qui précède et l'identification des fonctions rationnelles aux sections
+de $\mathscr{O}_X$ au-dessus d'un ouvert partout dense, la première assertion
+n'est autre que la définition de la fibre d'un faisceau en un point. Pour les
+autres assertions, on peut se borner au cas où $X$ est affine d'anneau $A$~;
+alors $\mathfrak{j}_x$ est le nilradical de $A$, et $\mathscr{O}_x$ est donc de
+dimension 0~; si $A$ est intègre, $\mathfrak{j}_x=(0)$, et $\mathscr{O}_x$ est
+donc le corps des fractions de $A$. Enfin, si $A$ est noethérien, on sait
+(\cite{I-11}, p.~127, cor.~4) que $\mathfrak{j}_x$ est nilpotent et
+$\mathscr{O}_x=A_{\mathfrak{j}_x}$ artinien.
+
+Si $X$ est \emph{intègre}, l'anneau $\mathscr{O}_z$ est intègre pour tout
+$z\in X$~; tout ouvert affine $U$ contenant $z$ contient aussi $x$, et $R(U)$,
+égal au corps des fractions de $A(U)$, s'identifie donc à $R(X)$~; on en
+conclut que $R(X)$ s'identifie aussi au
+\emph{corps des fractions de $\mathscr{O}_z$}~: l'identification canonique de
+$\mathscr{O}_z$ à un sous-anneau de $R(X)$ consiste à faire correspondre à tout
+germe de section $s\in\mathscr{O}_z$ l'unique fonction rationnelle sur $X$,
+classe d'une section de $\mathscr{O}_X$ (nécessairement définie sur un ouvert
+partout dense) ayant pour germe $s$ au point $z$.
+
+\begin{env}[7.1.6]
+\label{I.7.1.6-fr}
+Supposons maintenant que $X$ ait un nombre \emph{fini} de composantes
+irréductibles $X_i$ ($1\leq i\leq n$) (ce qui est le cas lorsque l'espace
+sous-jacent à $X$ est \emph{noethérien})~; soit $X'_i$ l'ouvert de $X$,
+complémentaire par rapport à $X_i$ de la réunion des $X_j\cap X_i$ pour
+$j\neq i$~; $X'_i$ est irréductible, son point générique $x_i$ est le point
+générique de $X_i$, et les $X'_i$ sont deux à deux disjoints, leur réunion
+étant dense dans $X$ (\hyperref[0.2.1.6-fr]{0, 2.1.6}). Pour
+\oldpage[I]{157}
+tout ouvert partout dense $U$ de $X$, $U_i=U\cap X'_i$ est un ouvert non vide
+dense dans $X'_i$, les $U_i$ étant deux à deux sans point commun, donc
+$U'=\bigcup_i U_i$ est dense dans $X$. Se donner un morphisme de $U'$ dans $Y$
+revient à se donner (arbitrairement) un morphisme de chacun des $U_i$ dans $Y$.
+Donc~:
+\end{env}
+
+\begin{proposition}[7.1.7]
+\label{I.7.1.7-fr}
+Soient $X$, $Y$ deux préschémas (resp. $S$-préschémas) tels que $X$ ait un
+nombre fini de composantes irréductibles $X_i$, de points génériques $x_i$
+($1\leq i\leq n$). Si $R_i$ est l'ensemble des germes de morphismes (resp.
+$S$-morphismes) de parties ouvertes de $X$ dans $Y$ au point $x_i$, l'ensemble
+des applications rationnelles (resp. $S$-applications rationnelles) de $X$
+dans $Y$ s'identifie au produit des $R_i$ ($1\leq i\leq n$).
+\end{proposition}
+
+\begin{corollary}[7.1.8]
+\label{I.7.1.8-fr}
+Soit $X$ un préschéma noethérien. L'anneau des fonctions rationnelles sur $X$
+est un anneau artinien, dont les composants locaux sont les anneaux
+$\mathscr{O}_{x_i}$ des points génériques $x_i$ des composantes irréductibles
+de $X$.
+\end{corollary}
+
+\begin{corollary}[7.1.9]
+\label{I.7.1.9-fr}
+Soient $A$ un anneau noethérien, et soit $X=\operatorname{Spec}(A)$. Si $Q$ est
+le complémentaire de la réunion des idéaux premiers minimaux de $A$, l'anneau
+des fonctions rationnelles sur $X$ s'identifie canoniquement à l'anneau de
+fractions $Q^{-1}A$.
+\end{corollary}
+
+Cela résultera du lemme suivant~:
+
+\begin{lemma}[7.1.9.1]
+\label{I.7.1.9.1-fr}
+Pour qu'un élément $f\in A$ soit tel que $D(f)$ soit partout dense dans $X$, il
+faut et il suffit que $f\in Q$~; tout ouvert dense dans $X$ contient un ouvert
+de la forme $D(f)$, où $f\in Q$.
+\end{lemma}
+
+En effet, supposons ce lemme démontré~; l'anneau des sections
+$\Gamma(D(f),\mathscr{O}_X)$ s'identifiant à $A_f$
+(\hyperref[I.1.3.6-fr]{1.3.6} et \hyperref[I.1.3.7-fr]{1.3.7}), il résulte du
+fait que les $D(f)$ avec $f\in Q$ forment un ensemble cofinal dans l'ensemble
+ordonné (pour $\supset$) des ouverts denses dans $X$, et de la déf.
+(\hyperref[I.7.1.1-fr]{7.1.1}) que l'anneau des fonctions rationnelles sur $X$
+s'identifie à la limite inductive des $A_f$ pour $f\in Q$ (pour la relation de
+préordre «~$g$ est multiple de $f$~»), c'est-à-dire à $Q^{-1}A$
+(\hyperref[0.1.4.5-fr]{0, 1.4.5}).
+
+Pour démontrer (\hyperref[I.7.1.9.1-fr]{7.1.9.1}), désignons encore par $X_i$
+les composantes irréductibles de $X$ ($1\leq i\leq n$)~; si $D(f)$ est dense
+dans $X$, $D(f)\cap X_i\neq\varnothing$ pour $1\leq i\leq n$ et
+réciproquement~; mais cela signifie que $f\notin\mathfrak{p}_i$ pour
+$1\leq i\leq n$, en posant $\mathfrak{p}_i=\mathfrak{j}(X_i)$, et comme les
+$\mathfrak{p}_i$ sont les idéaux premiers minimaux de $A$
+(\hyperref[I.1.1.14-fr]{1.1.14}), les relations
+$f\notin\mathfrak{p}_i$ ($1\leq i\leq n$) équivalent à $f\in Q$, d'où la
+première assertion du lemme. D'autre part, si $U$ est un ouvert dense dans $X$,
+le complémentaire de $U$ est un ensemble de la forme $V(\mathfrak{a})$, où
+$\mathfrak{a}$ est un idéal qui n'est contenu dans aucun des $\mathfrak{p}_i$~;
+il n'est donc pas contenu dans leur réunion (\cite{I-10}, p.~13), et il existe
+donc un $f\in\mathfrak{a}$ appartenant à $Q$~; d'où $D(f)\subset U$, ce qui
+achève la démonstration.
+
+\begin{env}[7.1.10]
+\label{I.7.1.10-fr}
+Supposons de nouveau $X$ irréductible, de point générique $x$. Comme tout
+ouvert non vide $U$ de $X$ contient $x$, et par suite contient aussi tout
+$z\in X$ tel que $x\in\overline{\{z\}}$, tout morphisme $U\to Y$ peut se
+composer avec le morphisme canonique $\operatorname{Spec}(\mathscr{O}_x)\to X$
+(\hyperref[I.2.4.1-fr]{2.4.1})~; et deux morphismes dans $Y$ de deux parties
+ouvertes non vides de $X$, qui coïncident dans une partie ouverte non vide de
+$X$ donnent par composition le même morphisme
+$\operatorname{Spec}(\mathscr{O}_x)\to Y$. Autrement dit, à toute application
+rationnelle de $X$ dans $Y$ correspond ainsi un morphisme
+$\operatorname{Spec}(\mathscr{O}_x)\to Y$ bien déterminé.
+\end{env}
+
+\oldpage[I]{158}
+\begin{proposition}[7.1.11]
+\label{I.7.1.11-fr}
+Soient $X$, $Y$ deux $S$-préschémas~; on suppose $X$ irréductible, de point
+générique $x$, et $Y$ de type fini sur $S$. Deux $S$-applications rationnelles
+de $X$ dans $Y$, auxquelles correspond le même $S$-morphisme
+$\operatorname{Spec}(\mathscr{O}_x)\to Y$ sont identiques. Si on suppose de
+plus $S$ localement noethérien, tout $S$-morphisme de
+$\operatorname{Spec}(\mathscr{O}_x)$ dans $Y$ correspond à une $S$-application
+rationnelle (et une seule) de $X$ dans $Y$.
+\end{proposition}
+
+Compte tenu de ce que tout ouvert non vide de $X$ est partout dense, cela
+résulte aussitôt de (\hyperref[I.6.5.1-fr]{6.5.1}).
+
+\begin{corollary}[7.1.12]
+\label{I.7.1.12-fr}
+On suppose $S$ localement noethérien, et les autres hypothèses de
+(\hyperref[I.7.1.11-fr]{7.1.11}) satisfaites. Les $S$-applications rationnelles
+de $X$ dans $Y$ s'identifient alors aux points du $S$-préschéma $Y$, à valeurs
+dans le $S$-préschéma $\operatorname{Spec}(\mathscr{O}_x)$.
+\end{corollary}
+
+Cela n'est autre que (\hyperref[I.7.1.11-fr]{7.1.11}), avec la terminologie
+introduite dans (\hyperref[I.3.4.1-fr]{3.4.1}).
+
+\begin{corollary}[7.1.13]
+\label{I.7.1.13-fr}
+On suppose remplies les conditions de (\hyperref[I.7.1.12-fr]{7.1.12}). Soit
+$s$ l'image de $x$ dans $S$. La donnée d'une $S$-application rationnelle de
+$X$ dans $Y$ équivaut à la donnée d'un point $y$ de $Y$ au-dessus de $s$, et
+d'un $\mathscr{O}_s$-homomorphisme local
+$\mathscr{O}_y\to\mathscr{O}_x=R(X)$.
+\end{corollary}
+
+Cela résulte de (\hyperref[I.7.1.11-fr]{7.1.11}) et de
+(\hyperref[I.2.4.4-fr]{2.4.4}).
+
+En particulier~:
+
+\begin{corollary}[7.1.14]
+\label{I.7.1.14-fr}
+Sous les conditions de (\hyperref[I.7.1.12-fr]{7.1.12}), les $S$-applications
+rationnelles de $X$ dans $Y$ ne dépendent (pour $Y$ donné) que du
+$S$-préschéma $\operatorname{Spec}(\mathscr{O}_x)$ et en particulier restent
+les mêmes lorsqu'on remplace $X$ par
+$\operatorname{Spec}(\mathscr{O}_z)$, pour tout $z\in X$.
+\end{corollary}
+
+En effet, comme $z\in\overline{\{x\}}$, $x$ est le point générique de
+$Z=\operatorname{Spec}(\mathscr{O}_z)$, et
+$\mathscr{O}_{X,x}=\mathscr{O}_{Z,x}$.
+
+Lorsque $X$ est intègre, $R(X)=\mathscr{O}_x=k(x)$ est un corps
+(\hyperref[I.7.1.5-fr]{7.1.5})~; les corollaires précédents se spécialisent
+alors en~:
+
+\begin{corollary}[7.1.15]
+\label{I.7.1.15-fr}
+On suppose vérifiées les conditions de (\hyperref[I.7.1.12-fr]{7.1.12}) et en
+outre que $X$ est intègre. Soit $s$ l'image de $x$ dans $S$. Alors les
+$S$-applications rationnelles de $X$ dans $Y$ s'identifient aux points
+géométriques de $Y\otimes_S k(s)$ à valeurs dans l'extension $R(X)$ de $k(s)$,
+autrement dit chacune d'elles équivaut à la donnée d'un point $y\in Y$
+au-dessus de $s$ et d'un $k(s)$-monomorphisme de $k(y)$ dans
+$k(x)=R(X)$.
+\end{corollary}
+
+Les points de $Y$ au-dessus de $s$ s'identifient en effet à ceux de
+$Y\otimes_S k(s)$ (\hyperref[I.3.6.3-fr]{3.6.3}) et les
+$\mathscr{O}_s$-homomorphismes locaux $\mathscr{O}_y\to R(X)$ aux
+$k(s)$-monomorphismes $k(y)\to R(X)$.
+
+Plus particulièrement~:
+
+\begin{corollary}[7.1.16]
+\label{I.7.1.16-fr}
+Soient $k$ un corps, $X$, $Y$ deux préschémas algébriques
+(\hyperref[I.6.4.1-fr]{6.4.1}) sur $k$~; on suppose en outre $X$ intègre. Alors
+les $k$-applications rationnelles de $X$ dans $Y$ s'identifient aux points
+géométriques de $Y$ à valeurs dans l'extension $R(X)$ de $k$
+(\hyperref[I.3.4.4-fr]{3.4.4}).
+\end{corollary}
+
+\subsection{Domaine de définition d'une application rationnelle.}
+\label{subsection:I.7.2-fr}
+
+\begin{env}[7.2.1]
+\label{I.7.2.1-fr}
+Soient $X$, $Y$ deux préschémas, $f$ une application rationnelle de $X$ dans
+$Y$. On dit que $f$ est \emph{définie en un point $x\in X$} s'il existe un
+ensemble ouvert partout dense $U$ contenant $x$ et un morphisme $U\to Y$
+appartenant à la classe d'équivalence $f$. L'ensemble des points $x\in X$ où
+$f$ est définie est appelé le \emph{domaine de définition de $f$}~; il est
+clair que c'est un ouvert partout dense dans $X$.
+\end{env}
+
+\oldpage[I]{159}
+\begin{proposition}[7.2.2]
+\label{I.7.2.2-fr}
+Soient $X$, $Y$ deux $S$-préschémas, tels que $X$ soit réduit et $Y$ séparé
+sur $S$. Soit $f$ une $S$-application rationnelle de $X$ dans $Y$, $U_0$ son
+domaine de définition. Il existe alors un $S$-morphisme et un seul $U_0\to Y$
+appartenant à la classe $f$.
+\end{proposition}
+
+Comme pour tout morphisme $U\to Y$ appartenant à la classe $f$, on a
+nécessairement $U\subset U_0$, il est clair que la proposition sera
+conséquence du
+
+\begin{lemma}[7.2.2.1]
+\label{I.7.2.2.1-fr}
+Sous les hypothèses de (\hyperref[I.7.2.2-fr]{7.2.2}), soient $U_1$, $U_2$
+deux ouverts partout denses de $X$, $f_i:U_i\to Y$ ($i=1,2$) deux
+$S$-morphismes tels qu'il existe un ouvert $V\subset U_1\cap U_2$, dense dans
+$X$ et dans lequel $f_1$ et $f_2$ coïncident. Alors $f_1$ et $f_2$ coïncident
+dans $U_1\cap U_2$.
+\end{lemma}
+
+On peut évidemment se borner au cas où $X=U_1=U_2$. Comme $X$ (donc $V$)
+est réduit, $X$ est le plus petit sous-préschéma fermé de $X$ majorant $V$
+(\hyperref[I.5.2.2-fr]{5.2.2}). Soit
+$g=(f_1,f_2)_S:X\to Y\times_S Y$~; comme par hypothèse la diagonale
+$T=\Delta_Y(Y)$ est un sous-préschéma fermé de $Y\times_S Y$,
+$Z=g^{-1}(T)$ est un sous-préschéma fermé de $X$
+(\hyperref[I.4.4.1-fr]{4.4.1}). Si $h:V\to Y$ est la restriction commune de
+$f_1$ et $f_2$ à $V$, la restriction de $g$ à $V$ est $g'=(h,h)_S$, qui se
+factorise en $g'=\Delta_Y\circ h$~; comme $\Delta_Y^{-1}(T)=Y$, on a
+$g'^{-1}(T)=V$, et par suite $Z$ est un sous-préschéma fermé de $X$ induisant
+$V$, donc majorant $V$, ce qui entraîne $Z=X$. De la relation
+$g^{-1}(T)=X$, on déduit (\hyperref[I.4.4.1-fr]{4.4.1}) que $g$ se factorise
+en $\Delta_Y\circ f$, où $f$ est un morphisme $X\to Y$, ce qui entraîne par
+définition du morphisme diagonal que $f_1=f_2=f$.
+
+Il est clair que le morphisme $U_0\to Y$ défini dans
+(\hyperref[I.7.2.2-fr]{7.2.2}) est l'unique morphisme de la classe $f$ qui
+\emph{ne puisse être prolongé} à un morphisme d'une partie ouverte de $X$
+contenant strictement $U_0$. \emph{Sous les hypothèses de
+(\hyperref[I.7.2.2-fr]{7.2.2})}, on peut donc \emph{identifier} les
+applications rationnelles de $X$ dans $Y$ aux morphismes \emph{non
+prolongeables} (à des ouverts strictement plus grands) d'ouverts partout
+denses de $X$ dans $Y$. Avec cette identification, la prop.
+(\hyperref[I.7.2.2-fr]{7.2.2}) entraîne~:
+
+\begin{corollary}[7.2.3]
+\label{I.7.2.3-fr}
+Les hypothèses sur $X$ et $Y$ étant celles de
+(\hyperref[I.7.2.2-fr]{7.2.2}), soit $U$ un ouvert partout dense de $X$. Il
+existe une correspondance biunivoque canonique entre les $S$-morphismes de
+$U$ dans $Y$ et les $S$-applications rationnelles de $X$ dans $Y$ définies
+en tous les points de $U$.
+\end{corollary}
+
+En vertu de (\hyperref[I.7.2.2-fr]{7.2.2}), pour tout $S$-morphisme $f$ de
+$U$ dans $Y$, il existe en effet une $S$-application rationnelle et une seule
+$\overline f$ de $X$ dans $Y$ qui prolonge $f$.
+
+\begin{corollary}[7.2.4]
+\label{I.7.2.4-fr}
+Soient $S$ un schéma, $X$ un $S$-préschéma réduit, $Y$ un $S$-schéma,
+$f:U\to Y$ un $S$-morphisme d'un ouvert dense $U$ de $X$ dans $Y$. Si
+$\overline f$ est la $\mathbf{Z}$-application rationnelle de $X$ dans $Y$ qui
+prolonge $f$, $\overline f$ est un $S$-morphisme (et est par suite la
+$S$-application rationnelle de $X$ dans $Y$ prolongeant $f$).
+\end{corollary}
+
+En effet, si $\varphi:X\to S$, $\psi:Y\to S$ sont les morphismes structuraux,
+$U_0$ le domaine de définition de $\overline f$, $j$ l'injection $U_0\to X$,
+il suffit de prouver que $\psi\circ\overline f=\varphi\circ j$, ce qui résulte
+aussitôt de (\hyperref[I.7.2.2.1-fr]{7.2.2.1}), puisque $f$ est un
+$S$-morphisme.
+
+\begin{corollary}[7.2.5]
+\label{I.7.2.5-fr}
+Soient $X$, $Y$ deux $S$-préschémas~; on suppose $X$ réduit, $X$ et $Y$
+séparés sur $S$. Soient $p:Y\to X$ un $S$-morphisme (faisant de $Y$ un
+$X$-préschéma), $U$ un ouvert partout dense de $X$, $f$ une $U$-section de
+$Y$~; alors l'application rationnelle $\overline f$ de $X$ dans $Y$
+prolongeant $f$ est une $X$-section rationnelle de $Y$.
+\end{corollary}
+
+\oldpage[I]{160}
+Il faut prouver que $p\circ\overline f$ est l'identité dans le domaine de
+définition de $\overline f$~; puisque $X$ est séparé sur $S$, cela résulte
+encore de (\hyperref[I.7.2.2.1-fr]{7.2.2.1}).
+
+\begin{corollary}[7.2.6]
+\label{I.7.2.6-fr}
+Soient $X$ un préschéma réduit, $U$ un ouvert partout dense de $X$. Il y a
+correspondance biunivoque canonique entre les sections de $\mathscr{O}_X$ au-dessus
+de $U$ et les fonctions rationnelles $f$ sur $X$ définies en tout point de $U$.
+\end{corollary}
+
+Compte tenu de (\hyperref[I.7.2.3-fr]{7.2.3}),
+(\hyperref[I.7.1.2-fr]{7.1.2}) et (\hyperref[I.7.1.3-fr]{7.1.3}), il suffit de
+remarquer que le $X$-préschéma $X\otimes_{\mathbf Z}\mathbf Z[T]$ est séparé
+au-dessus de $X$ (\hyperref[I.5.5.1-fr]{5.5.1, (iv)}).
+
+\begin{corollary}[7.2.7]
+\label{I.7.2.7-fr}
+Soient $Y$ un préschéma réduit, $f:X\to Y$ un morphisme séparé, $U$ un ouvert
+partout dense de $Y$, $g:U\to f^{-1}(U)$ une $U$-section de $f^{-1}(U)$, $Z$
+le sous-préschéma réduit de $X$ ayant $\overline{g(U)}$ pour espace sous-jacent
+(\hyperref[I.5.2.1-fr]{5.2.1}). Pour que $g$ soit restriction d'une
+$Y$-section de $X$ (autrement dit (\hyperref[I.7.2.5-fr]{7.2.5}) pour que
+l'application rationnelle de $Y$ dans $X$ prolongeant $g$ soit partout
+définie), il faut et il suffit que la restriction de $f$ à $Z$ soit un
+isomorphisme de $Z$ sur $Y$.
+\end{corollary}
+
+La restriction de $f$ à $f^{-1}(U)$ est un morphisme séparé
+(\hyperref[I.5.5.1-fr]{5.5.1, (i)}), donc $g$ est une immersion fermée
+(\hyperref[I.5.4.6-fr]{5.4.6}), et par suite
+$g(U)=Z\cap f^{-1}(U)$ et le sous-préschéma induit par $Z$ sur l'ouvert
+$g(U)$ de $Z$ est identique au sous-préschéma fermé de $f^{-1}(U)$ associé à
+$g$ (\hyperref[I.5.2.1-fr]{5.2.1}). Il est clair alors que la condition de
+l'énoncé est suffisante, car si elle est remplie et si $f_Z:Z\to Y$ est la
+restriction de $f$ à $Z$ et $\overline g:Y\to Z$ l'isomorphisme réciproque,
+$\overline g$ prolonge $g$. Inversement, si $g$ est restriction à $U$ d'une
+$Y$-section $h$ de $X$, $h$ est une immersion fermée
+(\hyperref[I.5.4.6-fr]{5.4.6}), donc $h(Y)$ est fermé, et comme il est contenu
+dans $Z$, il est égal à $Z$, et il résulte de
+(\hyperref[I.5.2.1-fr]{5.2.1}) que $h$ est nécessairement un isomorphisme de
+$Y$ sur le sous-préschéma fermé $Z$ de $X$.
+
+\begin{env}[7.2.8]
+\label{I.7.2.8-fr}
+Soient $X$, $Y$ deux $S$-préschémas, $X$ étant supposé réduit et $Y$ séparé
+sur $S$. Soit $f$ une $S$-application rationnelle de $X$ dans $Y$, et soit
+$x$ un point de $X$~; on peut composer $f$ avec le $S$-morphisme canonique
+$\operatorname{Spec}(\mathscr{O}_x)\to X$
+(\hyperref[I.2.4.1-fr]{2.4.1}) pourvu que la trace sur
+$\operatorname{Spec}(\mathscr{O}_x)$ du domaine de définition de $f$ soit
+dense dans $\operatorname{Spec}(\mathscr{O}_x)$ (identifié à l'ensemble des
+$z\in X$ tels que $x\in\overline{\{z\}}$
+(\hyperref[I.2.4.2-fr]{2.4.2})). Ceci aura lieu dans les cas suivants~:
+\begin{enumerate}
+  \item[1\textsuperscript{o}] $X$ est irréductible (donc intègre), car alors
+    le point générique $\xi$ de $X$ est le point générique de
+    $\operatorname{Spec}(\mathscr{O}_x)$~; comme le domaine de définition $U$
+    de $f$ contient $\xi$, $U\cap\operatorname{Spec}(\mathscr{O}_x)$ contient
+    $\xi$, donc est dense dans $\operatorname{Spec}(\mathscr{O}_x)$.
+  \item[2\textsuperscript{o}] $X$ est localement noethérien~; notre assertion
+    résulte en effet alors du
+\end{enumerate}
+\end{env}
+
+\begin{lemma}[7.2.8.1]
+\label{I.7.2.8.1-fr}
+Soient $X$ un préschéma dont l'espace sous-jacent est localement noethérien,
+$x$ un point de $X$. Les composantes irréductibles de
+$\operatorname{Spec}(\mathscr{O}_x)$ sont les traces sur
+$\operatorname{Spec}(\mathscr{O}_x)$ des composantes irréductibles de $X$
+contenant $x$. Pour qu'un ouvert $U\subset X$ soit tel que
+$U\cap\operatorname{Spec}(\mathscr{O}_x)$ soit dense dans
+$\operatorname{Spec}(\mathscr{O}_x)$, il faut et il suffit qu'il rencontre les
+composantes irréductibles de $X$ contenant $x$ (ce qui a lieu en particulier
+si $U$ est dense dans $X$).
+\end{lemma}
+
+La seconde assertion résulte évidemment de la première, et il suffit donc de
+démontrer celle-ci. Comme $\operatorname{Spec}(\mathscr{O}_x)$ est contenu
+dans tout ouvert affine $U$ contenant $x$, et que les composantes
+irréductibles de $U$ contenant $x$ sont les traces sur $U$ des composantes
+irréductibles de $X$ contenant $x$
+(\hyperref[0.2.1.6-fr]{0, 2.1.6}), on peut supposer $X$ affine d'anneau $A$.
+Comme les idéaux premiers de $A_x$ correspondent biunivoquement aux idéaux
+premiers
+\oldpage[I]{161}
+de $A$ contenus dans $\mathfrak{j}_x$
+(\hyperref[0.1.2.6-fr]{0, 1.2.6}), les idéaux premiers minimaux de $A_x$
+correspondent aux idéaux premiers minimaux de $A$ contenus dans
+$\mathfrak{j}_x$, d'où le lemme (\hyperref[I.1.1.14-fr]{1.1.14}).
+
+Cela étant, supposons que l'on soit dans l'un des deux cas précités. Si $U$
+est le domaine de définition de la $S$-application rationnelle $f$, désignons
+par $f'$ l'application rationnelle de $\operatorname{Spec}(\mathscr{O}_x)$
+dans $Y$ qui coïncide (compte tenu de (\hyperref[I.2.4.2-fr]{2.4.2})) avec
+$f$ dans $U\cap\operatorname{Spec}(\mathscr{O}_x)$~; nous dirons que cette
+application rationnelle est \emph{induite par $f$}.
+
+\begin{proposition}[7.2.9]
+\label{I.7.2.9-fr}
+Soient $S$ un préschéma localement noethérien, $X$ un $S$-préschéma réduit,
+$Y$ un $S$-schéma de type fini. On suppose en outre $X$ irréductible ou
+localement noethérien. Soient alors $f$ une $S$-application rationnelle de
+$X$ dans $Y$, $x$ un point de $X$. Pour que $f$ soit définie au point $x$,
+il faut et il suffit que l'application rationnelle $f'$ de
+$\operatorname{Spec}(\mathscr{O}_x)$ dans $Y$, induite par $f$
+(\hyperref[I.7.2.8-fr]{7.2.8}), soit un morphisme.
+\end{proposition}
+
+La condition étant évidemment nécessaire (puisque
+$\operatorname{Spec}(\mathscr{O}_x)$ est contenu dans tout ouvert contenant
+$x$), prouvons qu'elle est suffisante. En vertu de
+(\hyperref[I.6.5.1-fr]{6.5.1}), il existe un voisinage ouvert $U$ de $x$ dans
+$X$ et un $S$-morphisme $g$ de $U$ dans $Y$, induisant $f'$ sur
+$\operatorname{Spec}(\mathscr{O}_x)$. Si $X$ est irréductible, $U$ est dense
+dans $X$, et en vertu de (\hyperref[I.7.2.3-fr]{7.2.3}) on peut supposer que
+$g$ est une $S$-application rationnelle. En outre, le point générique de $X$
+appartient à $\operatorname{Spec}(\mathscr{O}_x)$ et au domaine de définition
+de $f$, donc $f$ et $g$ coïncident en ce point, et par suite dans un ensemble
+ouvert non vide de $X$ (\hyperref[I.6.5.1-fr]{6.5.1}). Mais comme $f$ et $g$
+sont des $S$-applications rationnelles, elles sont identiques
+(\hyperref[I.7.2.3-fr]{7.2.3}), donc $f$ est définie en $x$.
+
+Si maintenant on suppose $X$ localement noethérien, on peut supposer $U$
+noethérien~; il n'y a alors qu'un nombre fini de composantes irréductibles
+$X_i$ de $X$ contenant $x$ (\hyperref[I.7.2.8.1-fr]{7.2.8.1}), et on peut
+supposer que ce sont les seules rencontrant $U$, en remplaçant au besoin $U$
+par un ouvert plus petit (puisqu'il n'y a qu'un nombre fini de composantes
+irréductibles de $X$ rencontrant $U$, $U$ étant noethérien). On voit alors
+comme ci-dessus que $f$ et $g$ coïncident dans un ouvert non vide de chacun
+des $X_i$. Tenant compte du fait que chacun des $X_i$ est contenu dans
+$\overline U$, considérons alors le morphisme $f_1$, défini dans un ouvert
+dense de $U\cup(X-\overline U)$, égal à $g$ dans $U$ et à $f$ dans
+l'intersection de $X-\overline U$ et du domaine de définition de $f$. Comme
+$U\cup(X-\overline U)$ est dense dans $X$, $f_1$ et $f$ coïncident dans un
+ouvert dense de $X$, et comme $f$ est une application rationnelle, $f$ est
+une extension de $f_1$ (\hyperref[I.7.2.3-fr]{7.2.3}), donc est définie au
+point $x$.
+
+\subsection{Faisceau des fonctions rationnelles.}
+\label{subsection:I.7.3-fr}
+
+\begin{env}[7.3.1]
+\label{I.7.3.1-fr}
+Soit $X$ un préschéma. Pour tout ouvert $U\subset X$, désignons par $R(U)$
+l'anneau des fonctions rationnelles sur $U$
+(\hyperref[I.7.1.3-fr]{7.1.3})~; c'est une
+$\Gamma(U,\mathscr{O}_X)$-algèbre. En outre, si $V\subset U$ est un second
+ouvert de $X$, toute section de $\mathscr{O}_X$ au-dessus d'une partie
+ouverte partout dense de $U$ donne par restriction à $V$ une section
+au-dessus d'une partie ouverte partout dense de $V$, et si deux sections
+coïncident au-dessus d'une partie ouverte partout dense de $U$, leurs
+restrictions à $V$ coïncident au-dessus d'une partie ouverte partout dense de
+$V$. On définit donc ainsi un di-homomorphisme d'algèbres
+$\rho_{V,U}:R(U)\to R(V)$, et il est clair que si $U\supset V\supset W$ sont
+trois ouverts de $X$, on a
+$\rho_{W,U}=\rho_{W,V}\circ\rho_{V,U}$~; les $R(U)$ définissent donc un
+\emph{préfaisceau} d'algèbres sur $X$.
+\end{env}
+
+\oldpage[I]{162}
+\begin{definition}[7.3.2]
+\label{I.7.3.2-fr}
+On appelle \emph{faisceau des fonctions rationnelles} sur un préschéma $X$
+et on désigne par $\mathscr{R}(X)$ la $\mathscr{O}_X$-Algèbre associée au
+préfaisceau formé des $R(U)$.
+\end{definition}
+
+Pour tout préschéma $X$ et tout ouvert $U\subset X$, il est clair que le
+faisceau induit $\mathscr{R}(X)|U$ n'est autre que $\mathscr{R}(U)$.
+
+\begin{proposition}[7.3.3]
+\label{I.7.3.3-fr}
+Soit $X$ un préschéma tel que la famille $(X_\lambda)$ de ses composantes
+irréductibles soit localement finie (ce qui est en particulier le cas lorsque
+l'espace sous-jacent à $X$ est localement noethérien). Alors le
+$\mathscr{O}_X$-Module $\mathscr{R}(X)$ est quasi-cohérent, et pour tout
+ouvert $U$ de $X$ ne rencontrant qu'un nombre fini de composantes $X_\lambda$,
+$R(U)$ est égal à $\Gamma(U,\mathscr{R}(X))$ et s'identifie canoniquement au
+composé direct des anneaux locaux des points génériques des $X_\lambda$ telles
+que $U\cap X_\lambda\neq\varnothing$.
+\end{proposition}
+
+On peut évidemment se limiter au cas où $X$ n'a qu'un nombre fini de
+composantes irréductibles $X_i$, de points génériques $x_i$
+($1\leq i\leq n$). Le fait que $R(U)$ est canoniquement identifié au composé
+direct des $\mathscr{O}_{x_i}=R(X_i)$ tels que
+$U\cap X_i\neq\varnothing$ résulte alors de
+(\hyperref[I.7.1.7-fr]{7.1.7}). Montrons en outre que le préfaisceau
+$U\to R(U)$ vérifie les axiomes des faisceaux, ce qui prouvera que
+$R(U)=\Gamma(U,\mathscr{R}(X))$. En effet, il vérifie (F 1) d'après ce qui
+précède. Pour voir qu'il satisfait à (F 2), considérons un recouvrement d'un
+ouvert $U$ de $X$ par des ouverts $V_\alpha\subset U$~; si les
+$s_\alpha\in R(V_\alpha)$ sont telles que les restrictions de $s_\alpha$ et
+$s_\beta$ à $V_\alpha\cap V_\beta$ coïncident pour tout couple d'indices, on
+en conclut que pour tout indice $i$ tel que $U\cap X_i\neq\varnothing$, les
+composantes dans $R(X_i)$ de toutes les $s_\alpha$ telles que
+$V_\alpha\cap X_i\neq\varnothing$ sont les mêmes~; désignant par $t_i$ cette
+composante, il est clair que l'élément de $R(U)$ ayant les $t_i$ pour
+composantes a pour restriction $s_\alpha$ à chaque $V_\alpha$. Enfin, pour
+voir que $\mathscr{R}(X)$ est quasi-cohérent, on peut se limiter au cas où
+$X=\operatorname{Spec}(A)$ est affine~; en prenant pour $U$ les ouverts
+affines de la forme $D(f)$, où $f\in A$, il résulte de ce qui précède et de la
+définition (\hyperref[I.1.3.4-fr]{1.3.4}) que l'on a
+$\mathscr{R}(X)=\widetilde M$, où $M$ est somme directe des $A$-modules
+$A_{x_i}$.
+
+\begin{corollary}[7.3.4]
+\label{I.7.3.4-fr}
+Soit $X$ un préschéma réduit n'ayant qu'un nombre fini de composantes
+irréductibles, et soient $X_i$ ($1\leq i\leq n$) les sous-préschémas fermés
+réduits de $X$ ayant pour espaces sous-jacents les composantes irréductibles de
+$X$ (\hyperref[I.5.2.1-fr]{5.2.1}). Si $h_i$ est l'injection canonique
+$X_i\to X$, $\mathscr{R}(X)$ est alors composée directe des
+$\mathscr{O}_X$-Algèbres $(h_i)_*(\mathscr{R}(X_i))$.
+\end{corollary}
+
+\begin{corollary}[7.3.5]
+\label{I.7.3.5-fr}
+Si $X$ est irréductible, tout $\mathscr{R}(X)$-Module quasi-cohérent
+$\mathscr{F}$ est un faisceau simple.
+\end{corollary}
+
+Il suffit de montrer que tout $x\in X$ admet un voisinage $U$ tel que
+$\mathscr{F}|U$ soit un faisceau simple
+(\hyperref[0.3.6.2-fr]{0, 3.6.2}), autrement dit on est ramené au cas où $X$
+est affine~; on peut en outre supposer que $\mathscr{F}$ est le conoyau d'un
+homomorphisme
+$(\mathscr{R}(X))^{(I)}\to(\mathscr{R}(X))^{(J)}$
+(\hyperref[0.5.1.3-fr]{0, 5.1.3}), et tout revient à voir que
+$\mathscr{R}(X)$ est un faisceau simple~; mais cela est évident puisque
+$\Gamma(U,\mathscr{R}(X))=R(X)$ pour tout ouvert non vide $U$, $U$ contenant
+le point générique de $X$.
+
+\begin{corollary}[7.3.6]
+\label{I.7.3.6-fr}
+Si $X$ est irréductible, pour tout $\mathscr{O}_X$-Module quasi-cohérent
+$\mathscr{F}$, $\mathscr{F}\otimes_{\mathscr{O}_X}\mathscr{R}(X)$ est un
+faisceau simple~; si en outre $X$ est réduit (donc intègre),
+$\mathscr{F}\otimes_{\mathscr{O}_X}\mathscr{R}(X)$ est isomorphe à un
+faisceau de la forme $(\mathscr{R}(X))^{(I)}$.
+\end{corollary}
+
+La seconde assertion résulte de ce que $R(X)$ est alors un corps.
+
+\begin{proposition}[7.3.7]
+\label{I.7.3.7-fr}
+Supposons que le préschéma $X$ soit localement intègre ou localement
+\oldpage[I]{163}
+noethérien. Alors $\mathscr{R}(X)$ est une $\mathscr{O}_X$-Algèbre
+quasi-cohérente~; si en outre $X$ est réduit (ce qui est le cas lorsque $X$
+est localement intègre), l'homomorphisme canonique
+$\mathscr{O}_X\to\mathscr{R}(X)$ est injectif.
+\end{proposition}
+
+La question étant locale, la première assertion résulte de
+(\hyperref[I.7.3.3-fr]{7.3.3})~; la seconde résulte aussitôt de
+(\hyperref[I.7.2.3-fr]{7.2.3}).
+
+\begin{env}[7.3.8]
+\label{I.7.3.8-fr}
+Soient $X$, $Y$ deux préschémas ayant chacun un nombre fini de composantes
+irréductibles, et soit $f:X\to Y$ un morphisme dont la restriction à
+l'ensemble des points génériques des composantes irréductibles de $X$ est une
+surjection sur l'ensemble des points génériques des composantes irréductibles
+de $Y$. Alors on a
+\[
+  f^*(\mathscr{R}(Y))=\mathscr{R}(X).
+  \tag{7.3.8.1}\label{I.7.3.8.1-fr}
+\]
+\end{env}
+
+En effet, on est ramené (en vertu de
+(\hyperref[I.7.3.3-fr]{7.3.3})) au cas où $X$ et $Y$ sont irréductibles, de
+points génériques $x$, $y$, avec $f(x)=y$~; donc
+\[
+  (f^*(\mathscr{R}(Y)))_x
+  =\mathscr{O}_y\otimes_{\mathscr{O}_y}\mathscr{O}_x
+  =\mathscr{O}_x
+\]
+(\hyperref[0.4.3.1-fr]{0, 4.3.1}), ce qui démontre (7.3.8.1) en vertu de
+(\hyperref[I.7.3.5-fr]{7.3.5}).
+
+\subsection{Faisceaux de torsion et faisceaux sans torsion.}
+\label{subsection:I.7.4-fr}
+
+\begin{env}[7.4.1]
+\label{I.7.4.1-fr}
+Soit $X$ un préschéma \emph{intègre}. Pour tout $\mathscr{O}_X$-Module
+$\mathscr{F}$, l'homomorphisme canonique
+$\mathscr{O}_X\to\mathscr{R}(X)$ définit par tensorisation un homomorphisme
+(dit encore \emph{canonique})
+\[
+  \mathscr{F}\to
+  \mathscr{F}\otimes_{\mathscr{O}_X}\mathscr{R}(X)
+\]
+qui, sur chaque fibre, n'est autre que l'homomorphisme $z\to z\otimes 1$ de
+$\mathscr{F}_x$ dans
+$\mathscr{F}_x\otimes_{\mathscr{O}_x}R(X)$. Le \emph{noyau $\mathscr{T}$}
+de cet homomorphisme est un sous-$\mathscr{O}_X$-Module de $\mathscr{F}$,
+appelé \emph{faisceau de torsion de $\mathscr{F}$}~; il est quasi-cohérent si
+$\mathscr{F}$ est quasi-cohérent
+(\hyperref[I.4.1.1-fr]{4.1.1} et \hyperref[I.7.3.6-fr]{7.3.6}). On dit que
+$\mathscr{F}$ est \emph{sans torsion} si $\mathscr{T}=0$ et que
+$\mathscr{F}$ est un \emph{faisceau de torsion} si
+$\mathscr{T}=\mathscr{F}$. Pour tout $\mathscr{O}_X$-Module $\mathscr{F}$,
+$\mathscr{F}/\mathscr{T}$ est sans torsion. On déduit de
+(\hyperref[I.7.3.5-fr]{7.3.5}) que~:
+\end{env}
+
+\begin{proposition}[7.4.2]
+\label{I.7.4.2-fr}
+Si $X$ est un préschéma intègre, tout $\mathscr{O}_X$-Module quasi-cohérent
+sans torsion $\mathscr{F}$ est isomorphe à un sous-faisceau $\mathscr{G}$
+d'un faisceau simple de la forme $(\mathscr{R}(X))^{(I)}$, engendré (en tant
+que $\mathscr{R}(X)$-Module) par $\mathscr{G}$.
+\end{proposition}
+
+Le cardinal de $I$ est appelé le \emph{rang de $\mathscr{F}$}~; pour tout
+ouvert affine non vide $U$ de $X$, le rang de $\mathscr{F}$ est égal au rang
+de $\Gamma(U,\mathscr{F})$ en tant que $\Gamma(U,\mathscr{O}_X)$-module,
+comme on le voit aussitôt en considérant le point générique de $X$, contenu
+dans $U$. En particulier~:
+
+\begin{corollary}[7.4.3]
+\label{I.7.4.3-fr}
+Sur un préschéma intègre $X$, tout $\mathscr{O}_X$-Module quasi-cohérent sans
+torsion et de rang $1$ (en particulier tout $\mathscr{O}_X$-Module
+inversible) est isomorphe à un sous-$\mathscr{O}_X$-Module de
+$\mathscr{R}(X)$, et réciproquement.
+\end{corollary}
+
+\begin{corollary}[7.4.4]
+\label{I.7.4.4-fr}
+Soient $X$ un préschéma intègre, $\mathscr{L}$, $\mathscr{L}'$ deux
+$\mathscr{O}_X$-Modules sans torsion, $f$ (resp. $f'$) une section de
+$\mathscr{L}$ (resp. $\mathscr{L}'$) au-dessus de $X$. Pour que
+$f\otimes f'=0$, il faut et il suffit que l'une des sections $f$, $f'$ soit
+nulle.
+\end{corollary}
+
+Soit $x$ le point générique de $X$~; on a par hypothèse
+$(f\otimes f')_x=f_x\otimes f'_x=0$. Comme $\mathscr{L}_x$ et
+$\mathscr{L}'_x$ s'identifient à des sous-$\mathscr{O}_x$-Modules du corps
+$\mathscr{O}_x$, la relation précédente entraîne $f_x=0$ ou $f'_x=0$, et par
+suite $f=0$ ou $f'=0$ puisque $\mathscr{L}$ et $\mathscr{L}'$ sont sans
+torsion (\hyperref[I.7.3.5-fr]{7.3.5}).
+
+\begin{proposition}[7.4.5]
+\label{I.7.4.5-fr}
+Soient $X$, $Y$ deux préschémas intègres, $f:X\to Y$ un morphisme dominant.
+Pour tout $\mathscr{O}_X$-Module quasi-cohérent sans torsion $\mathscr{F}$,
+$f_*(\mathscr{F})$ est un $\mathscr{O}_Y$-Module sans torsion.
+\end{proposition}
+
+\oldpage[I]{164}
+\begin{proof}
+Comme $f_*$ est exact à gauche
+(\hyperref[0.4.2.1-fr]{0, 4.2.1}), il suffit, en vertu de
+(\hyperref[I.7.4.2-fr]{7.4.2}), de prouver la proposition lorsque
+$\mathscr{F}=(\mathscr{R}(X))^{(I)}$. Or, tout ouvert non vide $U$ de $Y$
+contient le point générique de $Y$, donc $f^{-1}(U)$ contient le point
+générique de $X$ (\hyperref[0.2.1.5-fr]{0, 2.1.5}), donc on a alors
+\[
+  \Gamma(U,f_*(\mathscr{F}))
+  =\Gamma(f^{-1}(U),\mathscr{F})=(R(X))^{(I)}~;
+\]
+autrement dit, $f_*(\mathscr{F})$ est le faisceau simple de fibre
+$(R(X))^{(I)}$, considéré comme $\mathscr{R}(Y)$-Module, et il est évidemment
+sans torsion.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+\label{I.7.4.6-fr}
+Soient $X$ un préschéma intègre, $x$ son point générique. Pour tout
+$\mathscr{O}_X$-Module quasi-cohérent de type fini $\mathscr{F}$, les
+conditions suivantes sont équivalentes~: a) $\mathscr{F}$ est un faisceau de
+torsion~; b) $\mathscr{F}_x=0$~; c)
+$\operatorname{Supp}(\mathscr{F})\neq X$.
+\end{proposition}
+
+En vertu de (\hyperref[I.7.3.5-fr]{7.3.5}) et de
+(\hyperref[I.7.4.1-fr]{7.4.1}), les relations $\mathscr{F}_x=0$ et
+$\mathscr{F}\otimes_{\mathscr{O}_X}\mathscr{R}(X)=0$ sont équivalentes, donc
+a) et b) sont équivalentes~; d'autre part,
+$\operatorname{Supp}(\mathscr{F})$ est fermé dans $X$
+(\hyperref[0.5.2.2-fr]{0, 5.2.2}), et comme tout ouvert non vide de $X$
+contient $x$, b) et c) sont équivalentes.
+
+\begin{env}[7.4.7]
+\label{I.7.4.7-fr}
+On étend (par abus de langage) les définitions de
+(\hyperref[I.7.4.1-fr]{7.4.1}) au cas où $X$ est un préschéma
+\emph{réduit} n'ayant qu'un nombre \emph{fini} de composantes irréductibles~;
+il résulte alors de (\hyperref[I.7.3.4-fr]{7.3.4}) que l'équivalence de a) et
+c) dans (\hyperref[I.7.4.6-fr]{7.4.6}) est encore valable pour un tel
+préschéma.
+\end{env}
