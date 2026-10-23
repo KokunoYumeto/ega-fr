@@ -76,17 +76,19 @@ def assemble(paths, cover, legacy, output, metadata):
     require(output.resolve() not in paths+[cover],'Output aliases an input')
     before=[identity(p) for p in paths+[cover]]
     front=PdfReader(cover,strict=True)
-    require(len(front.pages)==1,'Exactly one cover page required')
+    front_pages=len(front.pages)
+    require(front_pages>0,'At least one frontmatter page required')
     require(not front.outline and not front.named_destinations,'Cover must not inject names or outlines')
-    expected=model(paths,legacy,1)
+    expected=model(paths,legacy,front_pages)
     writer=PdfWriter()
-    writer.add_page(front.pages[0])
+    for page in front.pages:
+        writer.add_page(page)
     materialized=[]
     for component,reader,local in zip(IDS,expected['readers'],expected['names'],strict=True):
         materialized.append(old._materialize(reader,local))
         old._install_namespace(reader,local,component)
         writer.append(reader,import_outline=True)
-    restored=navigation.restore_outline_metadata(writer,expected['readers'],shift=1)
+    restored=navigation.restore_outline_metadata(writer,expected['readers'],shift=front_pages)
     for row in sorted(legacy['aliases'],key=lambda r:r['name']):
         name=row['name']; i=IDS.index(row['component'])
         destination=expected['names'][i][row.get('target_name',name)].dest_array
@@ -95,7 +97,7 @@ def assemble(paths, cover, legacy, output, metadata):
     cross_spec=json.loads(Path(__file__).with_name('CROSS_COMPONENT_LINKS.json').read_bytes())
     cross_result=crosslinks.rebind(writer,expected['expected'],cross_spec)
     writer.add_outline_item('Couverture de l’édition complète',0)
-    writer.add_outline_item('Lecteur cumulatif français',1)
+    writer.add_outline_item('Lecteur cumulatif français',front_pages)
     writer.root_object[NameObject('/PageMode')]=NameObject('/UseOutlines')
     require(metadata.get('/Title')==TITLE,'Incorrect French edition title')
     require(metadata.get('/Author')=='Alexandre Grothendieck et Jean Dieudonné','Incorrect author attribution')
@@ -104,19 +106,21 @@ def assemble(paths, cover, legacy, output, metadata):
     with output.open('xb') as f:
         writer.write(f)
     extra=old.default_cover_outline_signatures()
+    extra[1]['page']=front_pages
     nav=validate(output,expected,extra)
-    body=integrity.check_segments(paths,output,None,integrity,shift=1,annotation_transform=lambda a: crosslinks.expected_annotations(a,expected['expected'],cross_spec))
+    body=integrity.check_segments(paths,output,None,integrity,shift=front_pages,annotation_transform=lambda a: crosslinks.expected_annotations(a,expected['expected'],cross_spec))
     # Cover text/paint is preserved separately; its external URI annotations are
     # checked in the same exact raw representation as the body annotations.
     import fitz
     import pikepdf
     a=integrity.RawAnnotationPDF(cover);b=integrity.RawAnnotationPDF(output)
     with fitz.open(cover) as first,fitz.open(output) as final,pikepdf.open(cover) as ap,pikepdf.open(output) as bp:
-        require(integrity.streams(first,0)==integrity.streams(final,0),'Cover streams changed')
-        require(first[0].get_text()==final[0].get_text(),'Cover text changed')
-        require(list(first[0].mediabox)==list(final[0].mediabox) and list(first[0].cropbox)==list(final[0].cropbox) and first[0].rotation==final[0].rotation,'Cover geometry changed')
-        require(integrity.PaintResources(ap).page(0)==integrity.PaintResources(bp).page(0),'Cover resources changed')
-        require(a.annotations(0)==b.annotations(0),'Cover annotations changed')
+        for page in range(front_pages):
+            require(integrity.streams(first,page)==integrity.streams(final,page),'Cover streams changed')
+            require(first[page].get_text()==final[page].get_text(),'Cover text changed')
+            require(list(first[page].mediabox)==list(final[page].mediabox) and list(first[page].cropbox)==list(final[page].cropbox) and first[page].rotation==final[page].rotation,'Cover geometry changed')
+            require(integrity.PaintResources(ap).page(page)==integrity.PaintResources(bp).page(page),'Cover resources changed')
+            require(a.annotations(page)==b.annotations(page),'Cover annotations changed')
     require([identity(p) for p in paths+[cover]]==before,'Input changed during assembly')
     return dict(status='PASS_ASSEMBLY_INTEGRITY__CONTENT_AND_VISUAL_RELEASE_QA_SEPARATE',
         output=identity(output),inputs=before,navigation=nav,body_integrity=body,
