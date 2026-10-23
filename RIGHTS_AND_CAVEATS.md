@@ -1,16 +1,9 @@
-# Rights, attribution, and caveats
+# Droits, disponibilité et attribution
 
-The original EGA publications by Alexander Grothendieck and Jean Dieudonné are
-reproduced and studied from the public NUMDAM authority. This release makes no
-exclusive claim over the original works.
+Les droits sur les œuvres originales et sur toute contribution protégée à ces traductions et transcriptions dérivées restent ceux de leurs titulaires respectifs. Ce projet ne place pas ces œuvres ou contributions dans le domaine public et n'accorde aucune licence sur elles. Les mentions de droits de tiers et les autorisations déjà accordées restent applicables.
 
-The Zenodo license field is left unspecified because this fr-language
-release bundles original scholarship, modern TeX typesetting, translation or
-editorial work, and machine-generated provenance with distinct histories. The
-files are provided openly for reading, verification, correction, and scholarly
-reuse. Applicable attribution and source authority must be preserved.
+Ces éditions sont mises à disposition gratuitement, à des fins non commerciales et exclusivement pédagogiques, dans la présomption que les titulaires de droits ne s'opposeraient pas à la libre disponibilité de ces traductions et transcriptions aux côtés des originaux français sur [NUMDAM](https://www.numdam.org/journals/PMIHES/). Cette présomption ne signifie pas qu'une autorisation a été obtenue ; le libre accès aux originaux n'autorise pas, à lui seul, leur traduction, leur adaptation ou leur republication.
 
-No human-review or institutional-certification claim is made. This is unofficial
-AI-assisted typesetting and translation work and is not endorsed by the authors,
-IHES, NUMDAM, or an upstream Stacks maintainer. Open items are disclosed in the
-evidence package and may be corrected in later versions of the same concept DOI.
+Si vous détenez des droits sur un élément présenté ici et vous opposez à sa disponibilité, veuillez [ouvrir une demande sur GitHub](https://github.com/KokunoYumeto/ega-fr/issues). Le responsable de la publication retirera l'élément concerné à la demande du titulaire des droits.
+
+La transcription moderne, les corrections, la composition et les notes mathématiques sont produites par IA. Les travaux documentés comprennent ceux d'OpenAI Codex, GPT-6 Astra, effort Ultra. Les indications de provenance des contributions antérieures restent applicables. Les textes originaux restent l'œuvre d'Alexandre Grothendieck et Jean Dieudonné ; ils ne sont pas attribués à l'IA. Cette édition n'est approuvée ni par les auteurs, ni par l'IHÉS, ni par NUMDAM.
