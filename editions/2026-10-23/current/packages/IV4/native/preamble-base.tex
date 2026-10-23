@@ -1,0 +1,72 @@
+% Notation of the EGA editions: the abbreviations the transcription uses for alphabets, symbols, operators and
+% arrows. Written for these editions and dedicated to the public domain under CC0 1.0.
+\makeatletter
+% a command that may or may not exist already is (re)defined in one step
+\newcommand{\ega@define}[2]{\providecommand{#1}{}\renewcommand{#1}{#2}}
+\newcommand{\ega@operator}[2]{\providecommand{#1}{}\renewcommand{#1}{\operatorname{#2}}}
+
+% alphabets: sheaves, bold letters, categories
+\ega@define{\sh}{\mathcal}
+\ega@define{\bb}{\mathbf}
+\ega@define{\cat}{\mathtt}
+\ega@define{\C}{\cat{C}}
+\ega@define{\Set}{\cat{Set}}
+\ega@define{\CHom}{\cat{Hom}}
+\ega@define{\op}{^{\cat{op}}}
+\ega@define{\GL}{\bb{GL}}
+\ega@define{\bbGamma}{\boldsymbol{\Gamma}}
+
+% letters and symbols
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\ega@define{\setmin}{-}
+\ega@define{\emp}{\varnothing}
+\ega@define{\vphi}{\phi}
+\ega@define{\kres}{k}
+\ega@define{\rad}{\mathfrak{r}}
+\ega@define{\nilrad}{\mathfrak{N}}
+\ega@define{\HH}{\mathrm{H}}
+\ega@define{\CHH}{\check{\mathrm{H}}}
+\ega@define{\RR}{\mathrm{R}}
+\ega@define{\LL}{\mathrm{L}}
+\ega@define{\red}{\mathrm{red}}
+\providecommand{\dual}{}\renewcommand{\dual}[1]{{#1}^{\vee}}
+% the tilde of the sheaf associated with a module, written after it: M\supertilde
+\ega@define{\supertilde}{{\,\widetilde{\,}\,}}
+
+% operators
+\ega@operator{\rg}{rg}
+\ega@operator{\gr}{gr}
+\ega@operator{\Gr}{Gr}
+\ega@operator{\Hom}{Hom}
+\ega@operator{\Proj}{Proj}
+\ega@operator{\Tor}{Tor}
+\ega@operator{\Ext}{Ext}
+\ega@operator{\Supp}{Supp}
+\ega@operator{\Ker}{Ker}
+\ega@operator{\Im}{Im}
+\ega@operator{\Coker}{Coker}
+\ega@operator{\Spec}{Spec}
+\ega@operator{\Spm}{Spm}
+\ega@operator{\Spf}{Spf}
+\ega@operator{\grad}{grad}
+\ega@operator{\dimc}{dimc}
+\ega@operator{\codim}{codim}
+\ega@operator{\id}{id}
+\ega@operator{\Der}{Der}
+\ega@operator{\Diff}{Diff}
+\ega@operator{\Hyp}{Hyp}
+\ega@operator{\Tr}{Tr}
+
+% arrows: long in displays, short in text, scripts and subscripts
+\let\ega@shortmapsto\mapsto
+\renewcommand{\to}{\mathchoice{\longrightarrow}{\rightarrow}{\rightarrow}{\rightarrow}}
+\providecommand{\from}{}\renewcommand{\from}{\mathchoice{\longleftarrow}{\leftarrow}{\leftarrow}{\leftarrow}}
+\renewcommand{\mapsto}{\mathchoice{\longmapsto}{\ega@shortmapsto}{\ega@shortmapsto}{\ega@shortmapsto}}
+\ega@define{\isoto}{\simeq}
+\ega@define{\simto}{\xrightarrow{\sim}}
+
+% wide accents
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\makeatother
