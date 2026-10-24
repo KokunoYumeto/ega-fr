@@ -1,0 +1,468 @@
+\oldpage[0\textsubscript{IV-1}]{111}
+
+\begin{definition}[19.8.4]
+\label{0.19.8.4-fr}
+Soient $A$ un anneau local, $P\to A$ l'unique homomorphisme d'un anneau local
+premier $P$ dans $A$, $p$ la caractéristique des corps résiduels de $P$ et
+$A$. On dit que $A$ est un \emph{anneau de Cohen} si c'est une $P$-algèbre de
+Cohen, c'est-à-dire (19.8.1) si~:
+\begin{enumerate}
+  \item[$1^{\mathrm o}$] $A$ est noethérien et complet.
+  \item[$2^{\mathrm o}$] $A$ est un $P$-module plat (ce qui revient aussi à
+  dire que $A$ est un $\widehat P$-module plat (Bourbaki, \emph{Alg. comm.},
+  chap.~III, §~5, n\textsuperscript{o}~4, prop.~4)).
+  \item[$3^{\mathrm o}$] $A/pA$ est un corps (nécessairement séparable sur le
+  corps résiduel de $P$, ce corps étant premier).
+\end{enumerate}
+\end{definition}
+
+Si $p=0$, ces conditions équivalent à dire que $A$ est un \emph{corps de
+caractéristique $0$}. Si $p>0$, on a nécessairement $pA\neq0$~; la condition
+$3^{\mathrm o}$ signifie que $pA$ est l'idéal maximal $\mathfrak m$ de $A$~;
+la condition $2^{\mathrm o}$ signifie que $p$ est $A$-régulier, puisque $P$
+est un anneau de valuation discrète ($\mathbf 0_{\mathrm I}$, 6.3.4). Donc $A$
+est un anneau régulier (17.1.1, $d)$) de dimension $1$, et par suite un anneau
+de valuation discrète, complet en vertu de $1^{\mathrm o}$~; en résumé~:
+
+\begin{proposition}[19.8.5]
+\label{0.19.8.5-fr}
+Les anneaux de Cohen sont les corps de caractéristique $0$ et les anneaux de
+valuation discrète complets, dont le corps résiduel a une caractéristique
+$p>0$, et dont l'idéal maximal est engendré par $p\cdot1$ ($1$ étant l'unité de
+l'anneau).
+\end{proposition}
+
+On notera que dans le second cas, $p\cdot1\neq0$ puisque $p$ est $A$-régulier,
+donc on peut identifier $p\cdot1$ à l'entier $p$~; l'homomorphisme canonique
+$\mathbf Z_p\to A$ est injectif, et on identifie $p\cdot1$ à l'élément $p$ de
+$\mathbf Z_p$~; on dit dans ce cas que $A$ est un \emph{$p$-anneau de Cohen}.
+
+\begin{theorem}[19.8.6]
+\label{0.19.8.6-fr}
+\textup{(Cohen).} ---
+\begin{enumerate}
+  \item[(i)] Soient $W$ un anneau de Cohen, $C$ un anneau local noethérien
+  complet, $\mathfrak J$ un idéal de $C$ distinct de $C$. Alors tout
+  homomorphisme local $u:W\to C/\mathfrak J$ se factorise en
+  $W\xrightarrow{v}C\to C/\mathfrak J$, où $v$ est un homomorphisme local.
+  \item[(ii)] Soit $K$ un corps. Il existe un anneau de Cohen $W$ dont le corps
+  résiduel est isomorphe à $K$. Si $W'$ est un second anneau de Cohen, $K'$ son
+  corps résiduel, tout isomorphisme $u:K\xrightarrow{\sim}K'$ provient par
+  passage aux quotients d'un isomorphisme $v:W\xrightarrow{\sim}W'$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Cela n'est autre que (19.8.2) appliqué au cas où $A$ est un anneau local
+premier.
+\end{proof}
+
+\begin{remarks}[19.8.7]
+\label{0.19.8.7-fr}
+\begin{enumerate}
+  \item[(i)] Lorsque $K$ est de caractéristique $0$, la partie (ii) de (19.8.6)
+  devient triviale.
+  \item[(ii)] L'homomorphisme $v$ de (19.8.6, (i)) \emph{n'est pas
+  nécessairement déterminé de façon unique par $u$}, comme le montre déjà le
+  cas où $W$ est un corps de caractéristique $0$, $\mathfrak J^2=0$ et $u$ est
+  un isomorphisme (cf.~(21.5.5)). De même, dans (19.8.6, (ii)) l'isomorphisme
+  $v$ \emph{n'est pas nécessairement déterminé de façon unique par $u$}
+  (cf.~(21.5.5)).
+
+  Toutefois, lorsque $K$ est \emph{parfait} et de caractéristique $p>0$, on
+  verra (21.5.5) que dans (19.8.6, (ii)) l'isomorphisme $v$ est unique. On verra
+  aussi plus tard que dans ce cas $W$ s'identifie à l'anneau $W_\infty(K)$ des
+  \emph{vecteurs de Witt de longueur infinie} sur $K$.
+  \item[(iii)] Dans (19.8.6, (i)), on peut affaiblir les hypothèses sur $C$ en
+  utilisant (19.3.10) et (19.3.12).
+\end{enumerate}
+\end{remarks}
+
+\begin{theorem}[19.8.8]
+\label{0.19.8.8-fr}
+\textup{(Cohen).} --- Soient $A$ un anneau local noethérien complet, $k$ son
+corps résiduel.
+
+\oldpage[0\textsubscript{IV-1}]{112}
+
+\begin{enumerate}
+  \item[(i)] Il existe un anneau de Cohen $W$ tel que $A$ soit isomorphe à un
+  anneau quotient d'un anneau de séries formelles
+  $W[[T_1,\ldots,T_n]]$ (et en particulier $A$ est isomorphe à un quotient d'un
+  anneau local régulier complet (17.3.8)). Si $A$ contient un corps, il est
+  isomorphe à un anneau quotient de $k[[T_1,\ldots,T_n]]$.
+  \item[(ii)] Supposons en outre $A$ intègre. Alors il existe un sous-anneau
+  $B$ de $A$, tel que~: $1^{\mathrm o}$ $B$ est isomorphe à un anneau de séries
+  formelles sur un anneau $C$ qui est un corps ou un anneau de Cohen (ce qui
+  entraîne que $B$ est un anneau local régulier et complet (17.3.8))~;
+  $2^{\mathrm o}$ $B$ a même corps résiduel que $A$ et l'injection $B\to A$ est
+  un homomorphisme local~; $3^{\mathrm o}$ $A$ est une $B$-algèbre finie.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Soit $\mathfrak m$ l'idéal maximal de $A$. Il existe un anneau de Cohen $W$ dont
+le corps résiduel est isomorphe à $k$ (19.8.6, (ii))~; on a donc un
+homomorphisme local $W\to A/\mathfrak m$, qui par suite se factorise en
+$W\xrightarrow{u}A\to A/\mathfrak m$, où $u$ est un homomorphisme local
+(19.8.6, (i)). Pour toute famille finie $(x_i)_{1\leq i\leq n}$ d'éléments de
+$\mathfrak m$, il existe alors un homomorphisme local
+$v:W[[T_1,\ldots,T_n]]\to A$ prolongeant $u$ et tel que $v(T_i)=x_i$ pour tout
+$i$ (Bourbaki, \emph{Alg. comm.}, chap.~III, §~4, n\textsuperscript{o}~5,
+prop.~6). Lorsque $A$ contient un corps, il contient un corps premier $P$, dont
+$k$ est une extension (nécessairement séparable), et par suite $A$ contient un
+corps isomorphe à $k$ (19.6.2)~; on peut alors remplacer $W$ par $k$ dans la
+définition précédente de $v$.
+
+\medskip
+\noindent(i)\enspace
+Prenons d'abord pour les $x_i$ un système de générateurs de $\mathfrak m$. Comme
+$W$ a même corps résiduel que $A$, et que les classes des $x_i$ dans l'anneau
+gradué $\gr_\bullet(A)$ engendrent $\gr_\bullet(A)$ en tant que $k$-algèbre,
+$\gr(v):\gr_\bullet(W[[T_1,\ldots,T_n]])\to\gr_\bullet(A)$ est surjectif~; on
+en déduit que $v$ est lui-même surjectif (Bourbaki, \emph{Alg. comm.},
+chap.~III, §~2, n\textsuperscript{o}~8, cor.~2 du th.~1). Rappelons que le cas
+où $A$ contient un corps a déjà été vu et ne figure ici que pour mémoire
+(19.6.3).
+
+\medskip
+\noindent(ii)\enspace
+Si $A$ contient un corps, il contient un corps $k'$ isomorphe à $k$ comme on
+l'a vu~; on considère alors un système de paramètres
+$(y_j)_{1\leq j\leq m}$ de $A$ (16.3.6), on prend
+$B=k[[T_1,\ldots,T_m]]$ et on considère l'homomorphisme local $w:B\to A$ qui
+coïncide dans $k$ avec un isomorphisme $k\to k'$ et qui est tel que
+$w(T_j)=y_j$ pour $1\leq j\leq m$. Si $A$ ne contient pas de corps, l'unique
+homomorphisme $\mathbf Z_{p\mathbf Z}\to A$ (19.8.3) est nécessairement
+injectif (sans quoi, comme $A$ est intègre, son noyau serait l'idéal maximal de
+$\mathbf Z_{p\mathbf Z}$ et son image isomorphe à un corps)~; en outre, on a
+alors $p>0$ par hypothèse, $\mathbf Z_{p\mathbf Z}$ étant un corps si $p=0$.
+L'élément $p\cdot1$ de $A$ (identifié à $p$) est non diviseur de zéro dans $A$,
+et est contenu dans $\mathfrak m$, donc (16.3.4 et 16.3.7) il existe une famille
+$(z_i)_{1\leq i\leq m-1}$ qui, avec $p$, forme un système de paramètres de $A$.
+L'anneau de Cohen $W$ considéré au début de la démonstration est alors un
+anneau de valuation discrète de corps résiduel $k$, dans lequel $p$ engendre
+l'idéal maximal (19.8.5), et l'homomorphisme unique $u:W\to A$ défini au début
+applique $p$ sur lui-même. On prend alors $B=W[[T_1,\ldots,T_{m-1}]]$ et on
+considère l'homomorphisme local $w:B\to A$ qui coïncide avec $u$ dans $W$ et
+est tel que $w(T_i)=z_i$ pour $1\leq i\leq m-1$. Dans les deux cas, si
+$\mathfrak n$ est l'idéal maximal de $B$, il est clair que $\mathfrak nA$ est
+un idéal de définition de $A$~; comme en outre $B/\mathfrak n$ et
+$A/\mathfrak m$ sont isomorphes, $A$ est un $B$-module quasi-fini
+($\mathbf 0_{\mathrm I}$, 7.4.4), donc un $A$-module de type fini puisque $B$
+est complet et $A$ séparé pour les topologies $\mathfrak n$-préadiques
+($\mathbf 0_{\mathrm I}$, 7.4.1). D'autre part,
+
+\oldpage[0\textsubscript{IV-1}]{113}
+
+dans les deux cas, on a $\dim(B)=\dim(A)=m$~; dans le premier cas, cela résulte
+de (17.1.4, (iii))~; dans le second, on voit directement que $p$ et les $T_i$
+($1\leq i\leq m-1$) forment une suite $B$-régulière engendrant $\mathfrak n$,
+ou on peut aussi utiliser le fait que ces éléments engendrent $\mathfrak n$ et
+que l'on a $\dim(B)\geq\dim(A)$ par (16.3.10). Comme $A$ et $B$ sont intègres,
+on tire finalement de (16.3.10) que $w$ est injectif, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[19.8.9]
+\label{0.19.8.9-fr}
+Soit $A$ un anneau local noethérien intègre complet contenant un corps $k_0$~;
+soit $k$ le corps résiduel de $A$, et supposons que $k$ soit fini sur $k_0$.
+Alors, dans la conclusion de (19.8.8, (ii)), on peut remplacer $1^{\mathrm o}$
+et $2^{\mathrm o}$ par la condition que $B$ est de la forme
+$k_0[[T_1,\ldots,T_n]]$, l'injection canonique $B\to A$ étant un
+$k_0$-homomorphisme local (pour la structure usuelle de $k_0$-algèbre de $B$).
+\end{corollary}
+
+\begin{proof}
+En effet, en reprenant la démonstration de (19.8.8, (ii)), on définit cette fois
+$w:k_0[[T_1,\ldots,T_n]]\to A$ comme coïncidant dans $k_0$ avec l'identité et
+appliquant $T_j$ sur $y_j$ pour $1\leq j\leq n$. L'hypothèse que $k$ est de
+degré fini sur $k_0$ entraîne encore que $A$ est un $B$-module quasi-fini, donc
+de type fini par ($\mathbf 0_{\mathrm I}$, 7.4.1), et on conclut comme dans
+(19.8.8).
+\end{proof}
+
+\begin{corollary}[19.8.10]
+\label{0.19.8.10-fr}
+Soit $A$ un anneau local artinien dont l'idéal maximal $\mathfrak m$ est de
+carré nul~; il existe alors un anneau local noethérien régulier $B$, d'idéal
+maximal $\mathfrak n$, tel que $A$ soit isomorphe à $B/\mathfrak n^2$.
+\end{corollary}
+
+\begin{proof}
+Soient $K$ le corps résiduel $A/\mathfrak m$ de $A$, $n$ le rang de
+$\mathfrak m/\mathfrak m^2=\mathfrak m$ sur $K$. Si $A$ contient un corps, il
+résulte de (19.6.3) que $A$ est isomorphe à $B/\mathfrak b$, où
+$B=K[[T_1,\ldots,T_n]]$ et $\mathfrak b$ est contenu dans le carré de l'idéal
+maximal $\mathfrak n$ de $B$~; mais comme
+$\operatorname{long}(B/\mathfrak n^2)=n+1=\operatorname{long}(A)$, on a
+nécessairement $\mathfrak b=\mathfrak n^2$.
+
+Supposons ensuite que $A$ ne contienne pas de corps~; cela entraîne que $K$ est
+de caractéristique $p>0$ et que $p\cdot1\neq0$ dans $A$ (19.6.3)~; donc
+$p\cdot1$ est un élément de $\mathfrak m$, et il y a par suite $n-1$ autres
+éléments $x_i$ ($2\leq i\leq n$) de $\mathfrak m$ formant avec $p\cdot1$ une
+base de $\mathfrak m$ sur $K$. Soit $W$ un anneau de Cohen dont le corps
+résiduel est isomorphe à $K$~; $W$ est un anneau de valuation discrète dont $p$
+engendre l'idéal maximal~; on a vu dans la démonstration de (19.8.8) qu'il y a
+un homomorphisme $u:W\to A$ appliquant $p$ sur lui-même et qui par passage aux
+quotients donne l'identité sur $K$. On prend $B=W[[T_2,\ldots,T_n]]$ et l'on
+considère l'homomorphisme local $w:B\to A$ qui coïncide avec $u$ dans $W$ et
+est tel que $w(T_i)=x_i$ pour $2\leq i\leq n$. Il est clair que $w$ est
+surjectif et que son noyau $\mathfrak b$ est contenu dans le carré de l'idéal
+maximal $\mathfrak n=pB+BT_2+\cdots+BT_n$ de $B$~; comme
+$\operatorname{long}(B/\mathfrak n^2)=n+1=\operatorname{long}(A)$, on a encore
+$\mathfrak b=\mathfrak n^2$.
+\end{proof}
+
+\begin{proposition}[19.8.11]
+\label{0.19.8.11-fr}
+Soient $A$ un anneau local artinien, $\mathfrak m$ son idéal maximal, $k$ son
+corps résiduel. Pour que $A$ soit isomorphe à un anneau quotient d'un anneau de
+Cohen, il faut et il suffit que $\mathfrak m$ soit engendré par $p\cdot1$, où
+$p$ est la caractéristique de $k$.
+\end{proposition}
+
+\begin{proof}
+La condition est évidemment nécessaire (19.8.5). Pour voir qu'elle est
+suffisante, on observe, comme au début de la démonstration de (19.8.8), qu'il
+existe un anneau de Cohen $W$ dont le corps résiduel est isomorphe à $k$ et un
+homomorphisme local $u:W\to A$. En outre, si l'on considère l'homomorphisme
+composé $\mathbf Z_{p\mathbf Z}\to W\xrightarrow{u}A$ (qui est nécessairement
+l'unique homomorphisme de $\mathbf Z_{p\mathbf Z}$ dans $A$), on voit que
+l'image
+
+\oldpage[0\textsubscript{IV-1}]{114}
+
+par $u$ de l'élément $p\cdot1$ de $W$ est l'élément $p\cdot1$ de $A$~; comme
+l'élément $p\cdot1$ de $W$ engendre l'idéal maximal de cet anneau, on déduit
+aussitôt de l'hypothèse que
+$\gr(u):\gr_\bullet(W)\to\gr_\bullet(A)$ est surjectif, et par suite il en est
+de même de $u$ (Bourbaki, \emph{Alg. comm.}, chap.~III, §~2,
+n\textsuperscript{o}~8, cor.~2 du th.~1).
+\end{proof}
+
+\subsection{Algèbres relativement formellement lisses}
+\label{subsection:0.19.9-fr}
+
+\begin{definition}[19.9.1]
+\label{0.19.9.1-fr}
+Soient $\Lambda$ un anneau topologique, $A$ une $\Lambda$-algèbre topologique,
+$B$ une $A$-algèbre topologique. On dit que $B$ est une $A$-algèbre
+\emph{formellement lisse relativement à $\Lambda$} si, pour toute $A$-algèbre
+topologique discrète $C$, et tout idéal nilpotent $\mathfrak J$ de $C$, tout
+$A$-homomorphisme continu $u_0:B\to C/\mathfrak J$ qui se factorise en
+$B\xrightarrow{u}C\to C/\mathfrak J$, où $u$ est un $\Lambda$-homomorphisme
+continu, se factorise aussi en $B\xrightarrow{v}C\to C/\mathfrak J$, où $v$
+est un $A$-homomorphisme continu.
+\end{definition}
+
+Il résulte de cette définition que si $B$ est une $A$-algèbre \emph{formellement
+lisse}, alors $B$ est aussi \emph{formellement lisse relativement à
+$\Lambda$}, pour toute structure de $\Lambda$-algèbre topologique définie sur
+$A$ (autrement dit, tout homomorphisme continu d'anneaux $\Lambda\to A$).
+
+\begin{proposition}[19.9.2]
+\label{0.19.9.2-fr}
+Soient $\Lambda$ un anneau topologique, $A$ une $\Lambda$-algèbre topologique.
+\begin{enumerate}
+  \item[(i)] $A$ est une $\Lambda$-algèbre formellement lisse relativement à
+  $\Lambda$.
+  \item[(ii)] Si $B$ est une $A$-algèbre formellement lisse relativement à
+  $\Lambda$ et $C$ une $B$-algèbre formellement lisse relativement à
+  $\Lambda$, alors $C$ est une $A$-algèbre formellement lisse relativement à
+  $\Lambda$.
+  \item[(iii)] Soient $B$ une $A$-algèbre formellement lisse relativement à
+  $\Lambda$, $A'$ une $A$-algèbre topologique, alors la $A'$-algèbre
+  topologique $B\otimes_A A'$ est formellement lisse relativement à $\Lambda$.
+  \item[(iv)] Soient $B$ une $A$-algèbre topologique, $S$ (resp. $T$) une
+  partie multiplicative de $A$ (resp. $B$) telle que l'image canonique de $S$
+  dans $B$ soit contenue dans $T$. Si $B$ est une $A$-algèbre formellement
+  lisse relativement à $\Lambda$, alors $T^{-1}B$ est une $S^{-1}A$-algèbre
+  formellement lisse relativement à $\Lambda$.
+  \item[(v)] Soient $B_i$ ($1\leq i\leq n$) des $A$-algèbres topologiques.
+  Pour que $\prod_{i=1}^n B_i$ soit une $A$-algèbre formellement lisse
+  relativement à $\Lambda$, il faut et il suffit que chacune des $B_i$ le
+  soit.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'assertion (i) est triviale, et la démonstration des autres est étroitement
+calquée sur les démonstrations de (19.3.5)~; elle est donc laissée au lecteur.
+\end{proof}
+
+\begin{corollary}[19.9.3]
+\label{0.19.9.3-fr}
+Soient $A$ un anneau topologique, $A'$ et $B$ deux $A$-algèbres topologiques.
+Alors la $A$-algèbre topologique $B'=B\otimes_A A'$ est une $B$-algèbre
+formellement lisse relativement à $A$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de (19.9.2, (i) et (iii)).
+\end{proof}
+
+\begin{proposition}[19.9.4]
+\label{0.19.9.4-fr}
+Soient $\Lambda$ un anneau topologique, $A$ une $\Lambda$-algèbre topologique,
+$B$ une $A$-algèbre topologique. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $B$ est une $A$-algèbre formellement lisse relativement à
+  $\Lambda$.
+  \item[b)] $\widehat B$ est une $A$-algèbre formellement lisse relativement à
+  $\Lambda$.
+  \item[c)] $\widehat B$ est une $\widehat A$-algèbre formellement lisse
+  relativement à $\Lambda$.
+  \item[d)] $\widehat B$ est une $\widehat A$-algèbre formellement lisse
+  relativement à $\widehat\Lambda$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On laisse encore au lecteur la démonstration, calquée sur celle de (19.3.6).
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{115}
+
+\begin{env}[19.9.5]
+\label{0.19.9.5-fr}
+De même, l'énoncé (19.3.8) est encore valable (avec la même démonstration) quand
+on y remplace «~formellement lisse~» par «~formellement lisse relativement à
+$\Lambda$~». Si dans l'énoncé de (19.3.10) on remplace «~formellement lisse~»
+par «~formellement lisse relativement à $\Lambda$~» la conclusion est remplacée
+par la suivante (la démonstration restant essentiellement inchangée)~: \emph{tout
+$A$-homomorphisme continu $u_0:B\to C/\mathfrak J$ qui se factorise en
+$B\xrightarrow{u}C\to C/\mathfrak J$, où $u$ est un $\Lambda$-homomorphisme
+continu, se factorise aussi en $B\xrightarrow{v}C\to C/\mathfrak J$, où $v$
+est un $A$-homomorphisme continu}.
+\end{env}
+
+\begin{env}[19.9.6]
+\label{0.19.9.6-fr}
+Les critères de lissité formelle (19.4.1) et (19.4.2) sont valables lorsqu'on y
+remplace «~formellement lisse~» par «~formellement lisse relativement à
+$\Lambda$~», les démonstrations restant pratiquement inchangées.
+\end{env}
+
+\begin{proposition}[19.9.7]
+\label{0.19.9.7-fr}
+Soient $\Lambda$ un anneau topologique, $A$ une $\Lambda$-algèbre topologique,
+$B$ une $A$-algèbre topologique. Supposons que pour toute $A$-algèbre discrète
+$C$ et tout idéal $\mathfrak J$ de $C$ tel que $\mathfrak J^2=0$, tout
+$A$-homomorphisme continu $u_0:B\to C/\mathfrak J$ qui se factorise en
+$B\xrightarrow{u}C\to C/\mathfrak J$, où $u$ est un $\Lambda$-homomorphisme
+continu, se factorise aussi en $B\xrightarrow{v}C\to C/\mathfrak J$, où $v$
+est un $A$-homomorphisme continu. Alors $B$ est une $A$-algèbre formellement
+lisse relativement à $\Lambda$.
+\end{proposition}
+
+\begin{proof}
+La démonstration de (19.4.3) se transcrit aussitôt.
+\end{proof}
+
+\begin{proposition}[19.9.8]
+\label{0.19.9.8-fr}
+Soient $\Lambda$ un anneau topologique, $A$ une $\Lambda$-algèbre topologique,
+$B$ une $A$-algèbre topologique. Pour que $B$ soit une $A$-algèbre
+formellement lisse relativement à $\Lambda$, il faut et il suffit que pour tout
+$B$-module topologique discret $L$, annulé par un idéal ouvert de $B$, on ait
+(cf.~18.4.2)
+\[
+  \operatorname{Exalcotop}_{A/\Lambda}(B,L)=0.
+\]
+\end{proposition}
+
+\begin{proof}
+Avec les notations de la démonstration de (19.4.4), il suffit de noter ici que
+l'on peut supposer que l'extension $E_\Lambda$ de $B_\Lambda$ est
+$\Lambda$-triviale~; le reste de la démonstration est alors inchangé.
+\end{proof}
+
+Lorsque $\Lambda$, $A$ et $B$ sont des anneaux discrets, le critère (19.9.8) se
+réduit à
+\begin{equation}
+\tag{19.9.8.1}
+\label{0.19.9.8.1-fr}
+  \operatorname{Exalcom}_{A/\Lambda}(B,L)=0
+  \quad\text{pour tout $B$-module $L$}~;
+\end{equation}
+autrement dit, \emph{toute $A$-extension commutative de $B$ par un $B$-module,
+qui est $\Lambda$-triviale, est aussi $A$-triviale}.
+
+\subsection{Algèbres formellement non ramifiées et algèbres formellement
+étales}
+\label{subsection:0.19.10-fr}
+\label{0.19.10-fr}
+
+\begin{env}[19.10.1]
+\label{0.19.10.1-fr}
+Nous aurons aussi à utiliser deux notions voisines de la notion d'algèbre
+formellement lisse.
+\end{env}
+
+\begin{definition}[19.10.2]
+\label{0.19.10.2-fr}
+Soient $A$ un anneau topologique, $B$ une $A$-algèbre topologique. On dit que
+$B$ est une $A$-algèbre \emph{formellement non ramifiée} si, pour tout
+$A$-homomorphisme $p:E\to C$ de $A$-algèbres discrètes, dont le noyau est
+nilpotent, et tout $A$-homomorphisme continu $u:B\to C$, il existe \emph{au plus
+un} $A$-homomorphisme continu $v:B\to E$ tel que $u$ se factorise en
+$B\xrightarrow{v}E\xrightarrow{p}C$. On dit que $B$ est une $A$-algèbre
+\emph{formellement étale} si elle est formellement lisse et formellement non
+ramifiée, autrement dit, si, pour tout $A$-homomorphisme surjectif $p:E\to C$
+de $A$-algèbres discrètes, dont le noyau est nilpotent, et pour tout
+$A$-homomorphisme continu $u:B\to C$, il existe \emph{un et un seul}
+$A$-homomorphisme continu $v:B\to E$ tel que $u$ se factorise en
+$B\xrightarrow{v}E\xrightarrow{p}C$.
+\end{definition}
+
+\oldpage[0\textsubscript{IV-1}]{116}
+
+\begin{examples}[19.10.3]
+\label{0.19.10.3-fr}
+Nous nous bornerons aux anneaux \emph{discrets}.
+\begin{enumerate}
+  \item[(i)] Si l'homomorphisme structural $\rho:A\to B$ est \emph{surjectif},
+  $B$ est une $A$-algèbre \emph{formellement non ramifiée}, car avec les
+  notations de (19.10.2), l'homomorphisme composé
+  $A\xrightarrow{j}B\xrightarrow{v}E$ doit être l'homomorphisme structural,
+  donc $v$ est unique (s'il existe). Par contre, $B$ n'est formellement lisse
+  que si $\rho$ est \emph{bijectif}.
+  \item[(ii)] Soient $A$ un anneau, $S$ une partie multiplicative de $A$~;
+  alors $B=S^{-1}A$ est une $A$-algèbre \emph{formellement étale}. En effet,
+  soient $j:A\to B$ l'homomorphisme canonique, $\rho:A\to E$ un homomorphisme
+  d'anneaux, $\mathfrak J$ un idéal nilpotent de $E$,
+  $p:E\to C=E/\mathfrak J$ l'homomorphisme canonique. Si $u:B\to C$ est un
+  $A$-homomorphisme, $u(s/1)$ est inversible dans $C$ pour $s\in S$ puisque
+  $s/1$ est inversible dans $B$~; mais $u(s/1)=p(\rho(s))$, et comme
+  $\mathfrak J$ est nilpotent, le fait que l'image de $\rho(s)$ dans
+  $E/\mathfrak J$ soit inversible entraîne que $\rho(s)$ lui-même est
+  inversible dans $E$ ($\mathbf 0_{\mathrm I}$, 7.1.12)~; on en conclut que
+  $\rho$ se factorise d'une seule manière en
+  $A\xrightarrow{j}B\xrightarrow{v}E$, et l'on a évidemment
+  $u\circ j=(p\circ v)\circ j$, d'où $u=p\circ v$, ce qui prouve notre
+  assertion.
+  \item[(iii)] Une extension finie séparable $k'$ d'un corps $k$ est une
+  $k$-algèbre formellement lisse (19.6.1)~; nous verrons plus loin que pour
+  qu'une extension de \emph{type fini} $K$ d'un corps $k$ soit une $k$-algèbre
+  formellement étale, il faut et il suffit qu'elle soit formellement non
+  ramifiée, et cela équivaut aussi au fait que $K$ est une extension finie et
+  séparable de $k$ (21.7.4).
+  \item[(iv)] Une algèbre de polynômes $A[X_\alpha]_{\alpha\in I}$ sur un
+  anneau $A$ est \emph{formellement lisse} sur $A$ (19.3.3) mais \emph{non
+  formellement étale} si $I$ n'est pas vide, comme il résulte aussitôt des
+  définitions.
+\end{enumerate}
+\end{examples}
+
+\begin{remark}[19.10.4]
+\label{0.19.10.4-fr}
+Le même raisonnement que dans (19.4.3) montre que pour vérifier qu'une
+$A$-algèbre topologique $B$ est formellement non ramifiée, on peut, dans la
+définition (19.10.2), se borner au cas où le noyau de $p:E\to C$ est de
+\emph{carré nul}~; on peut en outre se borner au cas où $u(B)\subset p(E)$
+(sans quoi il n'y a aucun $v$ factorisant $u$) et, en remplaçant $C$ par $u(B)$
+et $E$ par $p^{-1}(u(B))$, supposer $u$ et $p$ surjectifs.
+\end{remark}

@@ -1,0 +1,158 @@
+\subsection{II : algèbres graduées et degrés}
+\label{note:base2-graded}
+La propriété universelle de l'algèbre symétrique en 1.7.4 a pour
+but une algèbre commutative $B$. Dans 2.3.2, $f^rx$ appartient
+à l'idéal homogène $J$ pour tout $r\geq0$ ; c'est l'inégalité
+$m+rd\geq n$ qui demande $r$ assez grand et autorise alors
+le passage à l'idéal premier. La somme de 3.1.8 comporte
+$\mathcal O_Y$ en degré zéro et les $S_n$ pour $n>0$.
+Dans 3.2.6, $\lambda,\mu$ sont des homomorphismes ; la construction
+ne donne pas à elle seule des isomorphismes. Le module de 3.3.2
+est $M$.
+
+La relation tensorielle de 4.2.1 est
+$(x/1)\otimes1=(f/1)\otimes\omega(x/f)$.
+Les puissances amples de 4.4.1 sont des puissances d'exposant
+strictement positif. Pour la condition sur les radicaux de 8.2.10, voir la
+discussion de la section~\ref{note:base2-positive-radical}.
+Le terme de l'algèbre $T$ en 8.2.14 est $T_n$ ; la somme homogène
+de 8.7.4 utilise $J_n$ dans son terme d'indice $n$.
+Le morphisme de séries formelles en 8.10.1 est déterminé par
+$T\mapsto t$.
+En 8.13.3, le faisceau associé au module $N$ est $\widetilde N$.
+Dans 8.14.7, la composante du morphisme est
+$\alpha_{nd}(f^n)$ : si $f$ est de degré $d$, sa puissance
+$n$-ième est de degré $nd$.
+
+\subsection{II, 8.2.10 : radicaux et degrés positifs}
+\label{note:base2-positive-radical}
+
+Soit $S=\bigoplus_{d\geq0}S_d$ un anneau gradué. Posons
+$S_{[n]}=\bigoplus_{d\geq n}S_d$ et
+$S^\natural=\bigoplus_{n\geq0}S_{[n]}$ ; en particulier,
+$(S^\natural)_0=S$. Pour des éléments homogènes
+$f_\alpha\in S_+$, notons $I=(f_\alpha)\subset S$ et
+$J=(f_\alpha^\natural)\subset S^\natural$.
+La condition de II, 8.2.10(iv) peut s'écrire
+\[
+ S_+\subseteq\sqrt I,
+ \qquad\text{et elle entraîne}\qquad
+ (S^\natural)_+\subseteq\sqrt J.
+\]
+Autrement dit, l'intersection de chaque radical avec la partie
+de degré strictement positif est cette partie tout entière.
+C'est le sens de la racine dans $S_+$ définie en II, 2.1.10.
+Le radical dans l'anneau total peut aussi contenir des éléments
+de degré zéro.
+
+Pour démontrer l'implication, considérons $g\in S_{k+h}$,
+avec $k>0$ et $h\geq0$, comme élément de degré $k$ de
+$S^\natural$. Il suffit de traiter ces éléments, qui engendrent
+additivement $(S^\natural)_+$. L'hypothèse donne une identité
+$g^{m_0}=\sum_\alpha c_{\alpha,m_0}f_\alpha$ comportant un
+nombre fini d'indices. En multipliant par les puissances de $g$,
+on obtient, pour tout $m\geq m_0$, une expression de $g^m$
+utilisant les mêmes indices. Par projection sur la composante
+homogène de degré $m(k+h)$, on peut prendre
+\[
+ \deg(c_{\alpha,m})=m(k+h)-\deg(f_\alpha)
+\]
+pour chaque coefficient non nul. Choisissons $m$ assez grand
+pour que $km>\deg(f_\alpha)$ pour tous les indices considérés.
+Alors $c_{\alpha,m}\in S_{[km-\deg(f_\alpha)]}$ peut être
+considéré comme un élément de degré $km-\deg(f_\alpha)>0$
+de $S^\natural$. La même identité exprime la $m$-ième
+puissance de $g$, placé en degré $k$, comme élément de $J$.
+Le radical d'un idéal étant un idéal, le résultat s'étend aux
+sommes finies et donne l'inclusion annoncée.
+
+On ne peut remplacer cette inclusion par l'égalité avec le
+radical total. Prenons $S=k[e]/(e^2)$, où $k$ est un corps,
+$\deg(e)=1$ et $f=e$. On a $S_+=(e)=\sqrt{(e)}$ dans $S$.
+Mais
+\[
+ S^\natural\simeq k[e_0,e_1]/(e_0^2,e_0e_1,e_1^2),
+ \qquad \deg(e_0)=0,\quad\deg(e_1)=1.
+\]
+Ainsi $f^\natural=e_1$, $(S^\natural)_+=(e_1)$ et
+$\sqrt{(e_1)}=(e_0,e_1)$. L'élément non nul $e_0$, de carré
+nul et de degré zéro, appartient au second idéal mais pas au
+premier.
+
+\noindent\emph{Référence :} A. Grothendieck, avec la collaboration
+de J. Dieudonné, \emph{Éléments de géométrie algébrique II},
+Publications Mathématiques de l'IHÉS 8 (1961), 2.1.10,
+8.2.6 et 8.2.10, pp.~23 et 158--160.
+
+
+\subsection{II, 4--5 : fibrés projectifs et finitude locale}
+\label{note:base2-projective}
+Pour la décomposition du groupe de Picard en 4.2.7, la base est
+connexe non vide et le module localement libre $\mathcal E$ a
+rang au moins deux. Sur chaque fibre de dimension positive,
+$\mathcal O(m)$ détermine l'entier $m$ ; la connexité le rend
+constant. En rang un, $\mathbf P(\mathcal E)\simeq Y$ et
+$\mathcal O(1)$ provient déjà de $Y$, si bien que l'entier ne serait
+pas unique. Sur la base vide, il n'est pas non plus déterminé.
+
+Avec $\mathcal L=p^*\mathcal L'\otimes\mathcal O(m)$,
+le calcul de III, 2.1.15 et la formule de projection donnent
+$p_*\mathcal L=\mathcal L'\otimes S_m(\mathcal E)$ pour $m\geq0$,
+et zéro pour $m<0$. Le morphisme adjoint $\psi^\sharp$ est un
+morphisme de modules sur $\mathbf P(\mathcal E)$.
+Dans 4.4.6 et 4.6.8, les prolongements utilisés sont
+quasi-cohérents de type fini ; la cohérence demanderait des
+hypothèses supplémentaires sur l'anneau de base.
+Le schéma projectif de 4.5.2 est $P=\operatorname{Proj}(S)$.
+L'ouvert de 4.5.3 est quasi-compact, ce qui permet un choix fini
+dans l'argument. Les ouverts de 5.6.1 portent l'indice $U''_k$
+fixé par leur définition.
+
+\subsection{II, 5.6 et 8.11 : propreté et contraction}
+\label{note:base2-proper}
+Dans 5.6.3, la factorisation de $j$ est
+$j=q_2\circ(f\times1)\circ\Gamma_j$.
+Le graphe est une immersion fermée parce que $P$ est séparé sur
+$S$ ; cette factorisation permet d'utiliser les propriétés de
+stabilité des morphismes propres.
+
+La proposition 8.11.7 porte sur une contraction
+$q:\mathbf V(\mathcal L)\to C$ propre et qui est un isomorphisme
+hors de la section nulle, vers $C-\varepsilon(Y)$.
+Ces conditions sont celles qui permettent de comparer cette
+contraction au spectre de l'algèbre des sections des puissances
+de $\mathcal L$. La seule commutativité du diagramme ne les
+remplace pas : elle autoriserait par exemple une application
+entièrement contenue dans la section $\varepsilon(Y)$.
+
+\subsection{II, 8.3.9 : somme directe de faisceaux}
+\label{note:base2-sheafsum}
+Une section d'une somme directe de faisceaux a localement un
+nombre fini de composantes non nulles. Cette finitude ne doit
+pas être imposée globalement sur un ouvert arbitraire.
+Sur la réunion disjointe d'une infinité de points, on peut
+prendre une section dont la $n$-ième composante vaut un au
+$n$-ième point et zéro ailleurs. Au voisinage de chaque point
+une seule composante intervient, mais aucune famille finie
+d'indices ne suffit sur l'espace entier.
+La condition de 8.3.9 se formule donc après restriction à un
+voisinage de chaque point de $U$.
+
+\subsection{II : domaines des morphismes}
+\label{note:base2-domains}
+En 7.2.1, les points correspondants vérifient $f(x')=y'$.
+Le morphisme de cônes en 8.7.4 va de $C_X$ vers $C''_X$ ;
+les deux lignes du diagramme ont cette même direction.
+Dans l'addendum à I, 1.8.3, le morphisme est
+$Y\to\operatorname{Spec}(A)$. Dans l'index des notations,
+$f$ est une section de la $A$-algèbre $B$, ce qui fixe
+l'anneau dans lequel elle est évaluée.
+
+\subsection{II : renvois}
+\label{note:base2-refs}
+Les résultats invoqués en 2.3.2, 3.1.7 et 4.4.6 sont
+respectivement 2.1.8, 3.1.4 et I, 9.5.10.
+La formule de 8.3.9 est 8.2.6.2 ; le renvoi de l'addendum
+I, 1.8.10 est 1.8.9.1. L'entrée de l'index sur les algèbres
+graduées se rapporte à 8.3.1.
+\par

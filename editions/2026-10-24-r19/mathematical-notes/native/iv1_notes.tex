@@ -1,0 +1,133 @@
+\subsection{Régularité et homothéties : 15.1.8}
+\label{note:iv1-1}
+La régularité d'un élément sur un module signifie que l'homothétie
+correspondante est injective. Une extension polynomiale est, comme module
+sur l'anneau de base, une somme directe de copies du module initial ; elle
+conserve donc cette injectivité. La surjectivité n'est pas requise.
+Par exemple, pour $A=k[x,y]$, $M=A$, avec la filtration $M_0=M$ et
+$M_i=0$ pour $i\geq1$, la suite $(x,y)$ est régulière. Sur
+$M/xM=k[y]$, la multiplication par $y$ est injective, mais $1$ n'est
+pas dans son image. C'est donc l'injectivité qui intervient dans
+l'argument sur $\operatorname{gr}_\bullet(M)\otimes_A(A/\mathfrak J'')$.
+
+\subsection{Dimension d'un quotient : 16.3.4}
+\label{note:iv1-2}
+Dans les hypothèses de 16.3.4, soit $N=M/xM$. Le nombre d'éléments
+choisis dans le radical est le minimum $s(N)$ pour lequel le quotient
+de $N$ est de longueur finie. L'égalité de 16.2.3 donne
+$n=s(N)=\dim(N)$. Si les éléments choisis sont $x_1,\ldots,x_n$,
+le quotient
+\[
+ M/(xM+x_1M+\cdots+x_nM)
+\]
+est de longueur finie. Ainsi $s(M)\leq n+1$ et
+$\dim(M)\leq\dim(N)+1$. Un choix de $n$ non minimal ne suffirait
+pas, à lui seul, à donner la dernière inégalité.
+
+\subsection{Cochaines de Hochschild : 18.4.4}
+\label{note:iv1-3}
+La structure de $B$-module sur $B\otimes_A B$ porte sur le premier
+facteur. Si $h':B\otimes_A B\to L$ est $B$-linéaire, l'application
+$g(y)=h'(1\otimes y)$ est $A$-linéaire. Réciproquement, toute
+application $A$-linéaire $g:B\to L$ définit un tel $h'$ par
+$h'(x\otimes y)=xg(y)$ : la relation tensorielle est respectée parce
+que $g(ay)=ag(y)$ pour $a\in A$.
+Il n'en résulte pas que $g$ soit $B$-linéaire. Pour
+$A=\mathbf Q$, $B=L=\mathbf Q[t]$, l'application $g=d/dt$ fournit
+un exemple : $g(1)=0$ et $g(t)=1$.
+La formule du cobord est donc bien
+\[
+ h'(d_2(1\otimes x\otimes y))=xg(y)-g(xy)+yg(x)
+\]
+avec $g$ simplement $A$-linéaire.
+
+\subsection{Idéaux ouverts des deux anneaux : 18.5.1}
+\label{note:iv1-4}
+Pour l'homomorphisme continu $\rho:A\to B$, les quotients considérés
+sont $A/\mathfrak J$ et $B/\mathfrak R$, avec
+$\mathfrak J\subset A$, $\mathfrak R\subset B$ et
+$\rho(\mathfrak J)\subset\mathfrak R$.
+Les raffinements satisfont par conséquent
+$\mathfrak J'\subset\mathfrak J\subset A$ et
+$\mathfrak R'\subset\mathfrak R\subset B$.
+Dans l'ordre $(\mathfrak R',\mathfrak J')$, les anneaux ambiants sont
+respectivement $B$ et $A$. Ces inclusions donnent les homomorphismes
+entre quotients nécessaires au système inductif de 18.5.1.1.
+
+\subsection{Réduction et relèvement d'une base : 19.1.10}
+\label{note:iv1-5}
+La réduction d'un homomorphisme $u:M\to N$ modulo l'idéal maximal
+$\mathfrak J_0$ a pour but $N/\mathfrak J_0N$.
+Dans la partie locale de la preuve, poser
+$r=\dim_{A/\mathfrak J}(M/\mathfrak JM)$ permet de choisir
+$L=A^r$. Les images réciproques d'une base de $M/\mathfrak JM$
+définissent $f:L\to M$, dont la réduction est un isomorphisme.
+Le module $L$ est ainsi libre de type fini. Cette liberté est utilisée
+dans l'argument du déterminant appliqué à la réduction de $u\circ f$ ;
+la seule finitude de $L$ ne justifierait pas cette étape.
+
+\subsection{Dénominateurs d'un inverse local : 19.1.12}
+\label{note:iv1-6}
+Après la réduction de la preuve au cas où $N$ est libre de type fini,
+un homomorphisme
+$w_{\mathfrak p}:N_{\mathfrak p}\to M_{\mathfrak p}$ s'écrit
+\[
+ w_{\mathfrak p}=w\otimes(1/f)1_{A_{\mathfrak p}},
+ \qquad w:N\to M,\quad f\notin\mathfrak p.
+\]
+Si $w_{\mathfrak p}u_{\mathfrak p}=1$, alors
+$(wu)_{\mathfrak p}=f\,1_{M_{\mathfrak p}}$.
+La finitude de $M$ permet de choisir un même $g\notin\mathfrak p$
+annulant $wu-f1_M$ sur tous ses générateurs. Après localisation en
+$fg$, la multiplication par $f$ est inversible et
+$f^{-1}w$ donne l'inverse à gauche voulu. C'est bien l'homomorphisme
+local $w_{\mathfrak p}$, et non $w$, qui est représenté par cette fraction.
+
+\subsection{Prolongement au complété : 19.3.6}
+\label{note:iv1-7}
+Le prolongement canonique $B\to\widehat B\to C$ utilise un
+homomorphisme \emph{continu} de $B$ vers l'algèbre discrète $C$.
+Un groupe topologique discret est séparé et complet ; la continuité
+donne le prolongement au séparé complété, et la densité de l'image de
+$B$ en assure l'unicité. La multiplicativité et la compatibilité avec
+l'action de $A$ se prolongent avec les opérations continues. Cette
+propriété universelle ne porte pas sur les homomorphismes abstraits
+sans hypothèse de continuité.
+
+\subsection{Module de l'extension infinitésimale : 19.4.4}
+\label{note:iv1-8}
+Pour $\mathfrak J^2=0$ dans $C$, le produit fibré
+\[
+ E_\lambda=B_\lambda\mathbin{\times}_{C/\mathfrak J}C
+\]
+est une extension de $B_\lambda$ par $\mathfrak J$.
+L'action de $B$ sur ce noyau passe par
+$B\to B_\lambda\to C/\mathfrak J$ ; en particulier le noyau est
+annulé par l'idéal ouvert définissant $B_\lambda$.
+Le groupe dont l'annulation trivialise cette extension après
+raffinement est donc
+$\operatorname{Exalcotop}_A(B,\mathfrak J)$.
+L'hypothèse de 19.4.4 s'applique précisément à ce module discret.
+
+\subsection{Préliminaires IV, 19--20 : restrictions des homomorphismes}
+\label{note:iv1-domains}
+Dans 19.6.3, l'homomorphisme $u$ restreint au sous-corps $k$
+coïncide avec $f$. Dans 19.6.5, le critère est appliqué aux
+localisations de $A'$ en ses idéaux maximaux.
+Une dérivation relative à $A$ s'annule sur l'image de $A$
+(20.1.1). Dans 20.1.4, la restriction à $L$ est nulle.
+Pour la composition $A\to B\to C$, les dérivations de $C$
+relatives à $B$ sont celles qui s'annulent sur $v(B)$ (20.2.2).
+Ces prépositions expriment des restrictions à un sous-anneau
+ou à un sous-module, et non un changement du module but.
+\par
+
+\subsection{0, 20.6.25 : les deux homomorphismes d'extensions}
+Dans 20.6.25, $u^1$ est l'homomorphisme de restriction des scalaires
+défini en 18.3.6.4, tandis que $v^1$ provient de l'image réciproque
+des extensions définie en 18.3.6.2. Ce sont les deux homomorphismes
+explicitement nommés dans l'énoncé, page~146 d'EGA~IV, première
+partie. Le dernier paragraphe de la démonstration identifie ces
+mêmes homomorphismes au moyen de 20.6.6.4 ; ses références
+pertinentes sont donc 18.3.6.4 et 18.3.6.2, respectivement,
+au lieu du renvoi imprimé 18.3.4.2.
