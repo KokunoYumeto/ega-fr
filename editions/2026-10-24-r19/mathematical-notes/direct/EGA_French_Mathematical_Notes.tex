@@ -1,0 +1,1203 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern,amsmath,amssymb,mathrsfs}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{microtype}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\hypersetup{pdftitle={Notes mathématiques sur l'édition française corrigée des Éléments de géométrie algébrique},pdfauthor={},pdfsubject={Hypothèses, interprétations et arguments mathématiques}}
+\setlength{\emergencystretch}{2em}
+\title{Notes mathématiques sur l'édition française corrigée\protect\\des Éléments de géométrie algébrique}
+\author{}
+\date{}
+\begin{document}
+% BEGIN RIGHTS AND AI TRANSCRIPTION NOTICE
+\clearpage
+\begingroup
+\small
+\noindent\textbf{Droits, disponibilité et provenance}
+
+Les droits sur les œuvres originales et sur toute contribution protégée à ces traductions et transcriptions dérivées restent ceux de leurs titulaires respectifs. Ce projet ne place pas ces œuvres ou contributions dans le domaine public et n'accorde aucune licence sur elles. Les mentions de droits de tiers et les autorisations déjà accordées restent applicables.
+
+Ces éditions sont mises à disposition gratuitement, à des fins non commerciales et exclusivement pédagogiques, dans la présomption que les titulaires de droits ne s'opposeraient pas à la libre disponibilité de ces traductions et transcriptions aux côtés des originaux français sur NUMDAM (www.numdam.org/journals/PMIHES/). Cette présomption ne signifie pas qu'une autorisation a été obtenue ; le libre accès aux originaux n'autorise pas, à lui seul, leur traduction, leur adaptation ou leur republication.
+
+Si vous détenez des droits sur un élément présenté ici et vous opposez à sa disponibilité, veuillez ouvrir une demande sur GitHub (github.com/KokunoYumeto/ega-fr/issues). Le responsable de la publication retirera l'élément concerné à la demande du titulaire des droits.
+
+La transcription moderne, les corrections, la composition et les notes mathématiques sont produites par IA. Les travaux documentés comprennent ceux d'OpenAI Codex, GPT-6 Astra, effort Ultra. Les indications de provenance des contributions antérieures restent applicables. Les textes originaux restent l'œuvre d'Alexandre Grothendieck et Jean Dieudonné ; ils ne sont pas attribués à l'IA. Cette édition n'est approuvée ni par les auteurs, ni par l'IHÉS, ni par NUMDAM.
+\par
+\endgroup
+\clearpage
+% END RIGHTS AND AI TRANSCRIPTION NOTICE
+
+\maketitle
+Ces notes expliquent les hypothèses, les notations et les arguments
+retenus dans l'édition française corrigée des \emph{Éléments de
+géométrie algébrique} d'A.~Grothendieck, rédigés avec la collaboration
+de J.~Dieudonné. Les numéros de propositions et de formules renvoient
+aux fascicules originaux indiqués dans les références.
+Les pages citées dans le texte sont les numéros imprimés dans le
+corps de l'ouvrage, qui peuvent différer de la pagination du fascicule
+et de la position dans le fichier numérique.
+
+Les errata publiés par les auteurs sont cités comme tels.
+Les autres arguments sont des précisions éditoriales aux loci indiqués.
+L'édition diplomatique constitue un témoin distinct des lectures
+imprimées ; les présentes notes accompagnent l'édition corrigée.
+\tableofcontents
+\clearpage
+\section{Préliminaires du chapitre I}
+\label{part:base0}
+Référence : \cite{EGAI}.
+\subsection{Préliminaires I, 3--5 : restrictions et types des morphismes}
+\label{note:base0-sheaves}
+Une section en 3.1.6 est prise sur $V$ ; la base de 3.2.2 est une base
+de la topologie de l'ouvert $U$. Pour le morphisme d'espaces annelés de
+4.1.1, l'homomorphisme structural porte sur les faisceaux d'anneaux
+$\mathcal B\to\mathcal A$. En 4.4.8, le second morphisme de modules
+est $v'$. Ces domaines déterminent les compositions considérées.
+
+La présentation locale de 5.1.3 se déroule sur un seul ouvert $U$ :
+le conoyau et les deux modules libres sont tous restreints à $U$.
+En 5.2.4, l'exactitude à droite est celle du foncteur d'image réciproque
+$f_U^*$, qui comporte un produit tensoriel. Le voisinage de 5.3.9
+est un voisinage du point $x$.
+En 5.4.5, $\mathcal L$ désigne le module localement libre ; en 5.4.7,
+l'expression dans une trivialisation sur $U$ concerne les germes $x\in U$.
+Dans 5.5.4, le faisceau est $\mathcal F$, et les zéros de la section sur
+$U$ sont des points de $U$. Les bases et voisinages de 5.5.5 sont
+également considérés dans cet ouvert $U$.
+
+\subsection{Préliminaires I, 5.4 : modules inversibles}
+\label{note:base0-invertible}
+L'homomorphisme par homothéties
+$\mathcal O_X\to\mathcal H\!om(\mathcal F,\mathcal F)$ existe pour
+tout module $\mathcal F$. Il n'est pas généralement un isomorphisme :
+pour $\mathcal F=\mathcal O_X^2$, les endomorphismes sont des matrices,
+et les homothéties sont seulement les matrices scalaires.
+Pour un module inversible $\mathcal L$, on se ramène localement à
+$\mathcal L=\mathcal O_X$, et l'homomorphisme devient un isomorphisme.
+C'est cette distinction qu'utilise 5.4.3.
+
+Les changements de trivialisation d'un module inversible sont des
+unités. Le groupe de cocycles de 5.4.7 est donc
+$H^1(\mathfrak U,\mathcal O_X^*)$, avec le groupe multiplicatif des
+unités, et non avec le faisceau additif $\mathcal O_X$.
+En 5.4.8, le foncteur $f^*$ est restreint à la catégorie des modules
+inversibles ; il définit ainsi l'application sur leurs classes
+d'isomorphisme.
+
+\subsection{Préliminaires I, 7 : gradués et complétions}
+\label{note:base0-completion}
+Dans 7.2.9, les générateurs initiaux sont considérés modulo le premier
+terme positif $M^{(1)}$ de la filtration. Avec la convention
+$M_n=M/\mathfrak J^{n+1}M$, le noyau correspondant à
+$\mathfrak J^nM$ est celui de $M\to M_{n-1}$.
+L'indice de la limite projective de 7.3.1 est $n$.
+En 7.5.1, la composante $y_\mu$ appartient à $B_\mu$ ; le morphisme
+de coefficients qui lui est appliqué est donc $\varphi_{\mu,\alpha}$.
+La notation $\mathfrak J_\lambda$ au but conserve sa convention
+d'image dans le quotient considéré.
+
+Dans 7.5.5, les $c_i$ relèvent des générateurs du quotient, tandis
+que les $a_j$ engendrent le noyau de carré nul. Leur réunion engendre
+l'algèbre : on exprime d'abord l'image d'un élément dans le quotient,
+puis la différence dans le noyau. Les seuls produits $c_ia_j$
+resteraient dans le noyau et ne pourraient engendrer le quotient.
+Dans la preuve de 7.6.11(ii), le système des anneaux localisés
+vérifie les conditions de 7.2.7 et son quotient initial est noethérien.
+Le corollaire 7.2.8 donne alors la noethérianité de la limite ; la
+proposition ainsi démontrée est 7.6.11. Le renvoi à 7.2.8 désigne le
+critère invoqué. Voir EGA I, préliminaires, p.~74.
+
+La propriété universelle de 7.7.6 comporte bien existence et unicité
+de l'homomorphisme continu vers l'algèbre séparée complète : existence
+par prolongement, unicité par densité.
+\par
+
+\section{Le langage des schémas}
+\label{part:base1}
+Référence : \cite{EGAI}.
+\subsection{I : objets, variance et domaines}
+\label{note:base1-functorial}
+Le spectre est contravariant (1.2.3) : à une composition
+$A\to B\to C$ correspond $\operatorname{Spec}(C)\to
+\operatorname{Spec}(B)\to\operatorname{Spec}(A)$.
+Dans la preuve de 1.1.15, l'idéal $\mathfrak a$ est propre :
+l'idéal unité n'est contenu dans aucun idéal maximal et son fermé
+$V(A)$ est vide. Pour montrer que tout voisinage de $V(\mathfrak J)$
+est le spectre entier, il suffit de rencontrer chaque fermé non vide,
+donc de considérer les idéaux $\mathfrak a\ne A$.
+
+Pour $\varphi:A'\to A$, le noyau est un idéal de $A'$.
+La densité de l'image dans $X'=\operatorname{Spec}(A')$ équivaut en
+1.2.7 à $V(\ker\varphi)=X'$, donc à l'inclusion du noyau dans le
+nilradical de $A'$. L'homomorphisme des corps résiduels de 1.2.1
+s'écrit $k({}^a\varphi(x))\to k(x)$.
+Ces notations de 1.2.1 et 1.2.7 sont celles des errata publiés par
+les auteurs dans EGA II, p.~217, liste~1 ; les passages originaux
+figurent dans EGA I, pp.~83--84.
+
+Le point générique de 2.1.5 est celui de $Y$.
+En 2.5.5, l'objet est un $S$-préschéma ; en 3.3.8, la flèche considérée
+est $g$. Le but du changement de base de 3.3.12 est $X'$.
+En 3.3.15, le morphisme vers l'espace affine a le sens
+$X\to\operatorname{Spec}(\mathbf Z[T])$.
+En 3.7.2, l'adhérence contient $X'$.
+
+Pour une immersion en 4.2.2, le morphisme de faisceaux d'anneaux est
+la surjection $\psi^*\mathcal O_X\to\mathcal O_Y$ ; l'application sur
+les sections de 4.2.3 provient de $\theta$.
+L'extension de l'idéal $K\subset B$ à $A$ en 4.4.5 utilise la structure
+de $B$-algèbre de $A$. L'argument sur les corps résiduels de 4.5.5
+se fait pour un point $z$ et son image $z'$.
+La restriction de 5.1.9.2 est $\mathcal F|V$.
+Le complément employé dans l'ouvert $U$ en 6.1.8 doit être intersecté
+avec $U$. Les voisinages de 6.6.2 et 6.6.3 sont ceux des points images
+$f(x)$ et $y$ respectivement. En 9.5.11, le schéma considéré après
+changement de base est $Y'$.
+
+\subsection{I, 3--4 : produits, sommes et quotients}
+\label{note:base1-categorical}
+Les propriétés universelles des produits de 3.3 s'interprètent dans
+une catégorie où ces produits existent. L'assertion de 3.3.10 sur
+les sommes exige cependant une propriété supplémentaire de la
+catégorie. Dans les ensembles pointés, si $A$ a deux éléments et
+$*=\{*\}$, alors $A\times(*\vee*)=A$ a deux éléments, tandis que
+$(A\times*)\vee(A\times*)$ en a trois. Le produit ne distribue
+donc pas toujours les sommes. Cette assertion appartient aux
+exceptions énumérées en 3.3.1.
+
+En 3.4.9, le morphisme d'un produit tensoriel vers un corps résiduel
+n'est pas nécessairement injectif. La multiplication
+$\mathbf C\otimes_{\mathbf R}\mathbf C\to\mathbf C$ fournit
+un exemple : $i\otimes1-1\otimes i$ est non nul et a une image nulle.
+En 4.3.1, pour des idéaux $\mathfrak b\subset B$ et
+$\mathfrak c\subset C$, le noyau du morphisme vers
+$(B/\mathfrak b)\otimes_A(C/\mathfrak c)$ est
+\[
+ \mathfrak b(B\otimes_A C)+\mathfrak c(B\otimes_A C).
+\]
+Les images de $\mathfrak b$ et $\mathfrak c$ engendrent ces idéaux ;
+leurs simples images additives ne constituent pas nécessairement
+des idéaux du produit tensoriel.
+
+\subsection{I, 5.3 et 6.1 : diagonale et non-vacuité}
+\label{note:base1-diagonal}
+Dans 5.3.5, le morphisme structural de $Y$ est $g:Y\to S$.
+Pour un sous-foncteur du foncteur final, chaque ensemble de points
+contient \emph{au plus} un élément (5.3.8) : l'injection dans un
+singleton permet aussi l'ensemble vide.
+
+La preuve de 5.3.9 est fondée sur l'erratum des auteurs publié dans
+III, seconde partie, p.~220, Errata III, no~10.
+Pour la vérification locale, on choisit un ouvert affine $V\subset S$
+et un ouvert affine $U\subset f^{-1}(V)$. Alors
+$U\times_S U=U\times_V U$ est affine, et la diagonale y correspond
+à la surjection $A\otimes_B A\to A$, $a\otimes a'\mapsto aa'$.
+Elle est donc une immersion fermée sur cet ouvert. Ces ouverts
+couvrent l'image de la diagonale ; le critère local de I, 4.2.4(a)
+donne l'immersion. Le choix explicite de $V$ précise le cadre affine
+de l'argument des auteurs.
+
+Dans 6.1.12, la caractérisation de l'intégrité exige un espace
+connexe \emph{non vide} en plus des conditions sur ses anneaux locaux.
+L'espace vide satisferait sinon vacuement les conditions locales.
+
+\subsection{I, 7 : applications rationnelles et rang générique}
+\label{note:base1-rational}
+Deux représentants d'une même application rationnelle coïncident
+sur un ouvert dense commun. En 7.1.2, la comparaison des trois
+représentants utilise donc un ouvert dense de $U\cap V\cap W$,
+sans affirmer leur égalité sur toute cette intersection.
+
+Pour I, 7.3.8, la lecture est celle de l'erratum des auteurs publié
+dans II, pp.~221--222. Pour $X,Y$ intègres et $f:X\to Y$ dominant,
+on dispose du morphisme canonique
+$\tau:f^*\mathscr R(Y)\to\mathscr R(X)$, qui est un isomorphisme
+au point générique de $X$. Il ne s'agit pas d'un isomorphisme global
+en général : pour $X=\mathbb A^1_k$ et $Y=\operatorname{Spec}(k)$,
+le morphisme est l'inclusion $\mathcal O_X\to k(t)$.
+
+Le sens réciproque de 7.4.3 porte sur un sous-module
+\emph{quasi-cohérent non nul} de $\mathscr R(X)$.
+Il est sans torsion et son germe générique est un sous-espace non nul
+du corps des fonctions, donc de dimension un sur ce corps.
+Le sous-module nul aurait rang zéro ; la quasi-cohérence ne résulte
+pas de la seule inclusion dans un faisceau.
+En 7.4.4, les germes génériques sont des espaces vectoriels sur
+le corps des fonctions : le produit tensoriel de deux vecteurs
+non nuls y est non nul. En 7.4.7, pour un espace réductible, la
+condition sur le support exclut \emph{chaque} composante irréductible,
+ce qui exprime l'annulation à chacun des points génériques.
+
+\subsection{I, 9.4--9.5 : recollement et fermeture schématique}
+\label{note:base1-transfinite}
+Pour le recouvrement bien ordonné de 9.4.6, soit $\kappa$ son type
+d'ordre, avec les ouverts $V_\mu$ pour $\mu<\kappa$.
+On pose $U_\lambda=U\cup\bigcup_{\mu<\lambda}V_\mu$ pour
+$0\leq\lambda\leq\kappa$. L'étape initiale est le module donné
+$\mathcal G$ sur $U_0=U$. Une étape successeur étend le module
+à l'ouvert suivant par l'argument local de la proposition.
+À un ordinal limite, les modules compatibles se recollent sur
+la réunion ; la quasi-cohérence et le type fini sont des propriétés
+locales. L'étape $\kappa$ est indispensable, y compris lorsque le
+recouvrement a un dernier indice, car $U_\kappa=X$.
+On obtient ainsi le module voulu sur tout $X$ sous les hypothèses
+de la proposition.
+
+Dans 9.5.1, la fermeture schématique est le plus petit
+\emph{sous-schéma fermé} ayant la propriété considérée.
+La condition de fermeture est partie intégrante de cette
+caractérisation par un idéal quasi-cohérent.
+
+\subsection{I, 10 : schémas formels, idéaux et adjonction}
+\label{note:base1-formal}
+Pour un idéal ouvert $J$ de $A$, le spectre formel de $A/J$ s'identifie
+au fermé $V(J)$ de $\operatorname{Spf}(A)$ en 10.3.2.
+Ce fermé n'est pas nécessairement l'espace entier : pour $k[t]$ discret
+et $J=(t)$, il est le point $(t)$. Pour un idéal de définition,
+le fermé contient tous les premiers ouverts et est l'espace entier.
+
+La section $h$ de 10.9.4 appartient à $\Gamma(X,\mathcal O_X)$.
+Les rangs des modules libres dans 10.10.5 sont $p,q$.
+La correspondance de 10.14.2 concerne les idéaux cohérents : le
+quotient par un idéal est une algèbre et définit un sous-schéma fermé.
+En 10.14.4, hors de l'image fermée, l'idéal est égal à $\mathcal O_X$ ;
+c'est le quotient par cet idéal qui a le support fermé annoncé.
+La factorisation est $f=j\circ g$, dans l'ordre des domaines.
+Enfin, le morphisme $u$ de 10.14.6 est l'adjoint de $f_*(\rho)$,
+où $\rho:\mathcal F\to p_*p^*\mathcal F$ est l'unité d'adjonction.
+Les deux homomorphismes appartiennent à des groupes Hom différents,
+identifiés par l'adjonction ; ils ne sont pas littéralement la même flèche.
+
+\subsection{I, 10.9.9 : l’objet formel}
+\label{note:base1-formalname}
+Le complété $X_{/X'}$ est un préschéma formel.
+Cette qualification indique la catégorie dans laquelle est pris
+le diagramme de 10.9.9 et la structure topologique de ses anneaux.
+
+\subsection{I : repères des critères locaux et des compositions}
+\label{note:base1-refs}
+La définition invoquée dans 10.5.1 est 10.3.7.
+Le résultat sur la composition des immersions, utilisé dans 4.5.5
+et 5.3.13, est 4.2.5. Le renvoi de 5.1.4 est 2.1.8 ; celui de
+5.4.8 est 5.4.4. En particulier le critère local d'immersion
+de 4.2.4 et sa stabilité par composition en 4.2.5 ont des rôles distincts.
+\par
+
+\section{Étude globale des morphismes}
+\label{part:base2}
+Référence : \cite{EGAII}.
+\subsection{II : algèbres graduées et degrés}
+\label{note:base2-graded}
+La propriété universelle de l'algèbre symétrique en 1.7.4 a pour
+but une algèbre commutative $B$. Dans 2.3.2, $f^rx$ appartient
+à l'idéal homogène $J$ pour tout $r\geq0$ ; c'est l'inégalité
+$m+rd\geq n$ qui demande $r$ assez grand et autorise alors
+le passage à l'idéal premier. La somme de 3.1.8 comporte
+$\mathcal O_Y$ en degré zéro et les $S_n$ pour $n>0$.
+Dans 3.2.6, $\lambda,\mu$ sont des homomorphismes ; la construction
+ne donne pas à elle seule des isomorphismes. Le module de 3.3.2
+est $M$.
+
+La relation tensorielle de 4.2.1 est
+$(x/1)\otimes1=(f/1)\otimes\omega(x/f)$.
+Les puissances amples de 4.4.1 sont des puissances d'exposant
+strictement positif. Pour la condition sur les radicaux de 8.2.10, voir la
+discussion de la section~\ref{note:base2-positive-radical}.
+Le terme de l'algèbre $T$ en 8.2.14 est $T_n$ ; la somme homogène
+de 8.7.4 utilise $J_n$ dans son terme d'indice $n$.
+Le morphisme de séries formelles en 8.10.1 est déterminé par
+$T\mapsto t$.
+En 8.13.3, le faisceau associé au module $N$ est $\widetilde N$.
+Dans 8.14.7, la composante du morphisme est
+$\alpha_{nd}(f^n)$ : si $f$ est de degré $d$, sa puissance
+$n$-ième est de degré $nd$.
+
+\subsection{II, 8.2.10 : radicaux et degrés positifs}
+\label{note:base2-positive-radical}
+
+Soit $S=\bigoplus_{d\geq0}S_d$ un anneau gradué. Posons
+$S_{[n]}=\bigoplus_{d\geq n}S_d$ et
+$S^\natural=\bigoplus_{n\geq0}S_{[n]}$ ; en particulier,
+$(S^\natural)_0=S$. Pour des éléments homogènes
+$f_\alpha\in S_+$, notons $I=(f_\alpha)\subset S$ et
+$J=(f_\alpha^\natural)\subset S^\natural$.
+La condition de II, 8.2.10(iv) peut s'écrire
+\[
+ S_+\subseteq\sqrt I,
+ \qquad\text{et elle entraîne}\qquad
+ (S^\natural)_+\subseteq\sqrt J.
+\]
+Autrement dit, l'intersection de chaque radical avec la partie
+de degré strictement positif est cette partie tout entière.
+C'est le sens de la racine dans $S_+$ définie en II, 2.1.10.
+Le radical dans l'anneau total peut aussi contenir des éléments
+de degré zéro.
+
+Pour démontrer l'implication, considérons $g\in S_{k+h}$,
+avec $k>0$ et $h\geq0$, comme élément de degré $k$ de
+$S^\natural$. Il suffit de traiter ces éléments, qui engendrent
+additivement $(S^\natural)_+$. L'hypothèse donne une identité
+$g^{m_0}=\sum_\alpha c_{\alpha,m_0}f_\alpha$ comportant un
+nombre fini d'indices. En multipliant par les puissances de $g$,
+on obtient, pour tout $m\geq m_0$, une expression de $g^m$
+utilisant les mêmes indices. Par projection sur la composante
+homogène de degré $m(k+h)$, on peut prendre
+\[
+ \deg(c_{\alpha,m})=m(k+h)-\deg(f_\alpha)
+\]
+pour chaque coefficient non nul. Choisissons $m$ assez grand
+pour que $km>\deg(f_\alpha)$ pour tous les indices considérés.
+Alors $c_{\alpha,m}\in S_{[km-\deg(f_\alpha)]}$ peut être
+considéré comme un élément de degré $km-\deg(f_\alpha)>0$
+de $S^\natural$. La même identité exprime la $m$-ième
+puissance de $g$, placé en degré $k$, comme élément de $J$.
+Le radical d'un idéal étant un idéal, le résultat s'étend aux
+sommes finies et donne l'inclusion annoncée.
+
+On ne peut remplacer cette inclusion par l'égalité avec le
+radical total. Prenons $S=k[e]/(e^2)$, où $k$ est un corps,
+$\deg(e)=1$ et $f=e$. On a $S_+=(e)=\sqrt{(e)}$ dans $S$.
+Mais
+\[
+ S^\natural\simeq k[e_0,e_1]/(e_0^2,e_0e_1,e_1^2),
+ \qquad \deg(e_0)=0,\quad\deg(e_1)=1.
+\]
+Ainsi $f^\natural=e_1$, $(S^\natural)_+=(e_1)$ et
+$\sqrt{(e_1)}=(e_0,e_1)$. L'élément non nul $e_0$, de carré
+nul et de degré zéro, appartient au second idéal mais pas au
+premier.
+
+\noindent\emph{Référence :} A. Grothendieck, avec la collaboration
+de J. Dieudonné, \emph{Éléments de géométrie algébrique II},
+Publications Mathématiques de l'IHÉS 8 (1961), 2.1.10,
+8.2.6 et 8.2.10, pp.~23 et 158--160.
+
+
+\subsection{II, 4--5 : fibrés projectifs et finitude locale}
+\label{note:base2-projective}
+Pour la décomposition du groupe de Picard en 4.2.7, la base est
+connexe non vide et le module localement libre $\mathcal E$ a
+rang au moins deux. Sur chaque fibre de dimension positive,
+$\mathcal O(m)$ détermine l'entier $m$ ; la connexité le rend
+constant. En rang un, $\mathbf P(\mathcal E)\simeq Y$ et
+$\mathcal O(1)$ provient déjà de $Y$, si bien que l'entier ne serait
+pas unique. Sur la base vide, il n'est pas non plus déterminé.
+
+Avec $\mathcal L=p^*\mathcal L'\otimes\mathcal O(m)$,
+le calcul de III, 2.1.15 et la formule de projection donnent
+$p_*\mathcal L=\mathcal L'\otimes S_m(\mathcal E)$ pour $m\geq0$,
+et zéro pour $m<0$. Le morphisme adjoint $\psi^\sharp$ est un
+morphisme de modules sur $\mathbf P(\mathcal E)$.
+Dans 4.4.6 et 4.6.8, les prolongements utilisés sont
+quasi-cohérents de type fini ; la cohérence demanderait des
+hypothèses supplémentaires sur l'anneau de base.
+Le schéma projectif de 4.5.2 est $P=\operatorname{Proj}(S)$.
+L'ouvert de 4.5.3 est quasi-compact, ce qui permet un choix fini
+dans l'argument. Les ouverts de 5.6.1 portent l'indice $U''_k$
+fixé par leur définition.
+
+\subsection{II, 5.6 et 8.11 : propreté et contraction}
+\label{note:base2-proper}
+Dans 5.6.3, la factorisation de $j$ est
+$j=q_2\circ(f\times1)\circ\Gamma_j$.
+Le graphe est une immersion fermée parce que $P$ est séparé sur
+$S$ ; cette factorisation permet d'utiliser les propriétés de
+stabilité des morphismes propres.
+
+La proposition 8.11.7 porte sur une contraction
+$q:\mathbf V(\mathcal L)\to C$ propre et qui est un isomorphisme
+hors de la section nulle, vers $C-\varepsilon(Y)$.
+Ces conditions sont celles qui permettent de comparer cette
+contraction au spectre de l'algèbre des sections des puissances
+de $\mathcal L$. La seule commutativité du diagramme ne les
+remplace pas : elle autoriserait par exemple une application
+entièrement contenue dans la section $\varepsilon(Y)$.
+
+\subsection{II, 8.3.9 : somme directe de faisceaux}
+\label{note:base2-sheafsum}
+Une section d'une somme directe de faisceaux a localement un
+nombre fini de composantes non nulles. Cette finitude ne doit
+pas être imposée globalement sur un ouvert arbitraire.
+Sur la réunion disjointe d'une infinité de points, on peut
+prendre une section dont la $n$-ième composante vaut un au
+$n$-ième point et zéro ailleurs. Au voisinage de chaque point
+une seule composante intervient, mais aucune famille finie
+d'indices ne suffit sur l'espace entier.
+La condition de 8.3.9 se formule donc après restriction à un
+voisinage de chaque point de $U$.
+
+\subsection{II : domaines des morphismes}
+\label{note:base2-domains}
+En 7.2.1, les points correspondants vérifient $f(x')=y'$.
+Le morphisme de cônes en 8.7.4 va de $C_X$ vers $C''_X$ ;
+les deux lignes du diagramme ont cette même direction.
+Dans l'addendum à I, 1.8.3, le morphisme est
+$Y\to\operatorname{Spec}(A)$. Dans l'index des notations,
+$f$ est une section de la $A$-algèbre $B$, ce qui fixe
+l'anneau dans lequel elle est évaluée.
+
+\subsection{II : renvois}
+\label{note:base2-refs}
+Les résultats invoqués en 2.3.2, 3.1.7 et 4.4.6 sont
+respectivement 2.1.8, 3.1.4 et I, 9.5.10.
+La formule de 8.3.9 est 8.2.6.2 ; le renvoi de l'addendum
+I, 1.8.10 est 1.8.9.1. L'entrée de l'index sur les algèbres
+graduées se rapporte à 8.3.1.
+\par
+
+\section{Préliminaires du chapitre III et cohomologie}
+\label{part:base3}
+Référence : \cite{EGAIII1}.
+\subsection{Préliminaires III : variance, complexes et limites}
+\label{note:base3-complexes}
+Un foncteur contravariant vérifie $F(vu)=F(u)F(v)$ (8.1.3).
+La famille booléenne de parties constructibles en 9.1.2 contient
+$X$. L'ouvert non vide contenu dans la partie localement fermée
+de 9.2.3 est un ouvert de $X$, pas seulement un ouvert relatif
+de cette partie. Le morphisme du complété en 10.2.6 est
+$\widehat v$ ; en 10.2.8 le morphisme local induit l'application
+des corps résiduels $k\to k_i$.
+
+Dans 11.1.6, le terme $E_r^{n-q(n),q(n)}$ appartient au gradué
+d'indice $n-q(n)$ de $E^n$. L'inégalité
+$p-r+1+j_0<n=p+q$ de 11.3.3 équivaut à $r>j_0-q+1$.
+En 11.4.1, les termes du complexe de cochaînes portent les
+indices supérieurs $L^i$ ; les limites de 11.4.6 sont prises
+dans la catégorie but $\mathcal C''$.
+Les flèches de 11.5.2 ont le terme $f'^{i+1}$ correspondant
+au premier complexe. Les troncatures de 11.5.4 approchent le
+complexe lorsque $r$ tend vers moins l'infini : c'est
+$-r$ qui est assez grand pour un degré total fixé.
+
+Les cobords de degré $n$ en 13.2.3 sont un sous-groupe de
+$K^n$. Les foncteurs dérivés de 13.2.4 concernent la limite
+projective. Enfin, l'opérateur de 13.6.6 a bidegré $(j,-j)$,
+qui conserve le degré total et indique exactement le déplacement
+dans la filtration.
+
+\subsection{Préliminaires III, 11 et III, 1.1 : signes et degrés homologiques}
+\label{note:base3-signs}
+La mise en ordre des sommets d'un simplexe en 11.8.1 porte le
+signe $\varepsilon_\pi$ de la permutation. C'est la relation
+d'alternance qui rend cette opération compatible avec les bords.
+Dans 11.8.2, le signe $(-1)^{h+1}$ dépend du degré $h$ du
+simplexe ; le nombre de sommets distincts peut être moindre
+lorsque des sommets se répètent. En 11.8.6, les groupes du
+complexe de chaînes sont $H_q$. Les modules de 11.9.3 sont
+des modules à droite, conformément à la catégorie utilisée
+dans la résolution.
+
+L'identité de III, 1.1.7,
+$i_{\mathbf f}e_{\mathbf g}+e_{\mathbf g}i_{\mathbf f}
+=\langle\mathbf g,\mathbf f\rangle1$, est une identité
+d'endomorphismes de $\bigwedge(A^r)$. Les opérateurs contraction
+et multiplication extérieure parcourent ses différents degrés ;
+l'identité ne se limite pas à son terme $A^r$ de degré un.
+
+\subsection{Préliminaires III, 12 : Ext local et changement de base}
+\label{note:base3-ext}
+Une restriction des sections va de l'ouvert $V$ vers l'ouvert
+$V'\subset V$ (12.2.2). Dans 12.3.3, le voisinage est celui du
+point $x$. Pour un module localement libre $\mathcal L$, c'est
+le faisceau $\mathcal E\!xt^i(\mathcal L,\mathcal G)$ qui
+s'annule pour $i>0$ : localement le foncteur Hom d'un module
+libre est exact. Les groupes Ext globaux peuvent rester non
+nuls, puisqu'ils comportent la cohomologie de
+$\mathcal H\!om(\mathcal L,\mathcal G)$.
+
+Le changement de base plat de 12.3.4 fournit le morphisme
+$f^*\mathcal E\!xt^\bullet(\mathcal F,\mathcal G)
+\to\mathcal E\!xt^\bullet(f^*\mathcal F,f^*\mathcal G)$.
+L'énoncé général n'affirme pas que ce soit un isomorphisme.
+Dès le degré zéro, commuter Hom à une extension plate de
+scalaires demande des hypothèses de finitude sur son premier
+argument ; celles-ci ne figurent pas dans cette assertion générale.
+
+\subsection{III, 1--3 : sections, supports et twists}
+\label{note:base3-sections}
+Les $g_i$ de 1.2.4 sont des fonctions régulières sur $U$,
+donc des éléments de $\Gamma(U,\mathcal O_X)$ ; l'application
+de degré zéro est $\Gamma(X,\mathcal G)\to H^0(\mathfrak U,\mathcal G)$.
+Dans 1.4.15, la quasi-compacité donne un recouvrement affine
+\emph{fini}, et la séparation est l'autre hypothèse utilisée.
+La finitude du morphisme structurel n'est pas requise pour ce choix.
+Le morphisme examiné dans 1.4.17 est $d_1$.
+Si $s$ prolonge déjà $f^ns'$ dans cette preuve, la section
+obtenue est $f^nt+u(s)$ : appliquer une nouvelle fois $f^n$
+à $s$ compterait deux fois ce facteur.
+
+Le twist de III, 2.1.16 donne le terme symétrique d'indice
+$-n-r-1$ dans $f_*(\boldsymbol\omega(-n))$.
+En 2.2.5(ii), l'obstruction à l'annulation est
+$H^r(X,\mathcal O_X)\ne0$ ; elle n'exige pas d'identifier
+ce groupe à l'anneau de base. Les annulations de 2.4.1
+concernent les degrés $p>0$, pas les sections de degré zéro.
+Dans le dévissage de 3.1.2, le module test $\mathcal G$ a
+support exactement $Y$ et germe générique de dimension un.
+Le contrôle du support permet de réduire ensuite la différence
+à un fermé propre de $Y$ ; la seule condition au point générique
+ne contrôle pas d'éventuels supports supplémentaires ailleurs.
+
+\subsection{III, 2.2.4--2.2.5 : exactitude et support propre}
+\label{note:base3-propersupport}
+Les lectures de III, 2.2.4 et 2.2.5(iii) sont celles des
+errata des auteurs publiés dans III, seconde partie, pp.~221--222,
+Errata III, nos~26--27.
+
+Sous les hypothèses de III, 2.2.4, posons
+$\mathcal G_1=\operatorname{Im}(\mathcal F\to\mathcal G)
+=\ker(\mathcal G\to\mathcal H)$.
+La condition pertinente est la propreté du support de
+$\mathcal G_1$. L'exactitude à gauche de $f_*$ ramène alors
+l'énoncé à la surjectivité éventuelle de
+$f_*\mathcal F(n)\to f_*\mathcal G_1(n)$.
+
+Dans la compactification projective $i:X\hookrightarrow Z$
+de la démonstration, un faisceau cohérent $\mathcal G$ de
+support propre se prolonge en $i_*\mathcal G$, cohérent et
+de même support. Un prolongement cohérent $\mathcal F'$ de
+$\mathcal F$ existe par I, 9.4.3. La surjection sur $X$
+se recolle avec l'application nulle hors du support de
+$\mathcal G$ : elle donne $\mathcal F'\to i_*\mathcal G$.
+Pour la base affine, l'annulation de Serre sur $Z$ donne
+la surjectivité sur les sections pour les twists assez grands.
+La restriction des sections de $i_*\mathcal G(n)$ à $X$
+est bijective, d'où la surjectivité désirée sur $X$.
+
+Le même argument sur le support propre donne
+$R^if_*\mathcal H(n)=0$ pour $i>0$ et $n$ assez grand.
+Si $u:\mathcal F\to\mathcal G$ a noyau et conoyau de supports
+propres, on applique les suites longues aux deux suites courtes
+définies par son image. Pour le conoyau, la surjectivité
+$f_*\mathcal G(n)\to f_*\operatorname{Coker}(u)(n)$ découle
+en outre de 2.2.4. Cette surjectivité traite aussi le degré un,
+et l'on obtient les isomorphismes
+$R^if_*\mathcal F(n)\simeq R^if_*\mathcal G(n)$ pour tout $i>0$.
+
+\subsection{III, 3.4.4 : gradué associé et multiplication}
+\label{note:base3-associatedgraded}
+Les classes de produits donnent des surjections
+\[
+ (\mathfrak J^k/\mathfrak J^{k+1})\otimes_{A_0}N_0
+ \longrightarrow \mathfrak J^kN/\mathfrak J^{k+1}N,
+ \qquad \bar a\otimes\bar n\longmapsto\overline{an},
+\]
+où $N_0=N/\mathfrak JN$. La surjectivité résulte de la définition
+de $\mathfrak J^kN$ par les sommes de produits.
+Elle ne donne pas une injectivité sans hypothèse supplémentaire.
+Pour $A=k[[t]]$, $\mathfrak J=(t)$ et $N=A/(t)$, le terme
+de gauche en degré un est $k$, tandis que celui de droite est zéro.
+
+De même, la multiplication donne une surjection de
+$\mathcal O_{X_0}\otimes_{A_0}\operatorname{gr}_{\mathfrak J}(A)$
+vers $\operatorname{gr}(\mathcal O_{\mathfrak X})$.
+Le module gradué effectivement associé à $N$ est
+$M'=\bigoplus_k\mathfrak J^kN/\mathfrak J^{k+1}N$.
+Il est quotient de $S'\otimes_{B_0}N_0$ ; la finitude de $N_0$
+implique donc sa finitude sur $S'$. La conclusion de la preuve
+utilise cette surjection, sans identification injustifiée des gradués.
+
+\subsection{III, 3--4 : bases, corps de fonctions et immersion ouverte}
+\label{note:base3-localgeometry}
+Dans 3.4.1, le morphisme est $f_n:X_n\to S_n$.
+La filtration de 3.4.2 porte l'indice $N_{n,k}$ dans l'ordre
+défini. L'image directe de 4.1.5 est un module sur
+$\mathcal O_{\widehat Y}$, et la flèche plate de 4.3.4 est $h$.
+Dans 4.3.7, la fermeture algébrique du corps $R(Y)$ dans
+$R(X)$ est considérée comme une extension de $R(Y)$ ; la
+radicialité porte donc sur ce corps de base.
+En 4.3.12, la finitude sur $\mathcal O_y$ rend les éléments
+algébriques sur son corps des fractions $R(Y)$.
+Avec l'hypothèse sur la fermeture algébrique et la normalité
+de $\mathcal O_y$, l'inclusion obtenue est une égalité.
+
+Conformément à l’erratum des auteurs (III, seconde partie, p.~222, Errata III, no~28), pour 4.4.9, $X,Y$ sont intègres et localement noethériens,
+$Y$ est normal, et $f$ est séparé, localement de type fini et
+birationnel, avec fibres finies. Une fibre localement de type
+fini sur un corps et finie comme espace topologique est discrète
+dans cette situation ; le critère local de 4.4.8 s'applique
+aux anneaux locaux de même corps des fractions.
+Il donne l'isomorphisme local requis, et la séparation permet
+l'immersion ouverte de l'énoncé. Si $f$ est aussi fermé, son
+image est ouverte et fermée, non vide et dense dans $Y$
+intègre, donc égale à $Y$ ; $f$ est alors un isomorphisme.
+Dans l'index final, l'argument du foncteur $h_w$ est l'objet
+$Y$ ; $w$ indique le morphisme structural.
+
+\subsection{Préliminaires III et III : renvois}
+\label{note:base3-refs}
+Le résultat utilisé en 0, 11.8.9 est 11.8.5 ; le morphisme
+de 0, 12.1.4 porte le numéro 12.1.4.1 ; la formule de
+0, 13.5 est 13.5.5.3. Les renvois de III, 1.4 et 2.3--2.5
+concernent respectivement 1.4.15, 2.3.1 et 2.5.2.
+Dans III, 3.3, la formule est 3.3.2.1 et le théorème invoqué
+est 3.3.1 ; ce dernier est également celui utilisé en 3.4.4.
+Les formules de III, 4.1 auxquelles renvoient les preuves
+sont 4.1.7.8 et 4.1.3.5.
+
+\subsection{III, 3.4.3 : la base formelle}
+\label{note:base3-formalbase}
+La base affine dans 3.4.3 est le schéma formel $\mathfrak Y$.
+Cette notation distingue la base formelle des schémas obtenus
+par réduction modulo les puissances de son idéal de définition.
+\par
+
+\section{Préliminaires du chapitre IV}
+\label{part:iv1}
+Référence : \cite{EGAIV1}.
+\subsection{Régularité et homothéties : 15.1.8}
+\label{note:iv1-1}
+La régularité d'un élément sur un module signifie que l'homothétie
+correspondante est injective. Une extension polynomiale est, comme module
+sur l'anneau de base, une somme directe de copies du module initial ; elle
+conserve donc cette injectivité. La surjectivité n'est pas requise.
+Par exemple, pour $A=k[x,y]$, $M=A$, avec la filtration $M_0=M$ et
+$M_i=0$ pour $i\geq1$, la suite $(x,y)$ est régulière. Sur
+$M/xM=k[y]$, la multiplication par $y$ est injective, mais $1$ n'est
+pas dans son image. C'est donc l'injectivité qui intervient dans
+l'argument sur $\operatorname{gr}_\bullet(M)\otimes_A(A/\mathfrak J'')$.
+
+\subsection{Dimension d'un quotient : 16.3.4}
+\label{note:iv1-2}
+Dans les hypothèses de 16.3.4, soit $N=M/xM$. Le nombre d'éléments
+choisis dans le radical est le minimum $s(N)$ pour lequel le quotient
+de $N$ est de longueur finie. L'égalité de 16.2.3 donne
+$n=s(N)=\dim(N)$. Si les éléments choisis sont $x_1,\ldots,x_n$,
+le quotient
+\[
+ M/(xM+x_1M+\cdots+x_nM)
+\]
+est de longueur finie. Ainsi $s(M)\leq n+1$ et
+$\dim(M)\leq\dim(N)+1$. Un choix de $n$ non minimal ne suffirait
+pas, à lui seul, à donner la dernière inégalité.
+
+\subsection{Cochaines de Hochschild : 18.4.4}
+\label{note:iv1-3}
+La structure de $B$-module sur $B\otimes_A B$ porte sur le premier
+facteur. Si $h':B\otimes_A B\to L$ est $B$-linéaire, l'application
+$g(y)=h'(1\otimes y)$ est $A$-linéaire. Réciproquement, toute
+application $A$-linéaire $g:B\to L$ définit un tel $h'$ par
+$h'(x\otimes y)=xg(y)$ : la relation tensorielle est respectée parce
+que $g(ay)=ag(y)$ pour $a\in A$.
+Il n'en résulte pas que $g$ soit $B$-linéaire. Pour
+$A=\mathbf Q$, $B=L=\mathbf Q[t]$, l'application $g=d/dt$ fournit
+un exemple : $g(1)=0$ et $g(t)=1$.
+La formule du cobord est donc bien
+\[
+ h'(d_2(1\otimes x\otimes y))=xg(y)-g(xy)+yg(x)
+\]
+avec $g$ simplement $A$-linéaire.
+
+\subsection{Idéaux ouverts des deux anneaux : 18.5.1}
+\label{note:iv1-4}
+Pour l'homomorphisme continu $\rho:A\to B$, les quotients considérés
+sont $A/\mathfrak J$ et $B/\mathfrak R$, avec
+$\mathfrak J\subset A$, $\mathfrak R\subset B$ et
+$\rho(\mathfrak J)\subset\mathfrak R$.
+Les raffinements satisfont par conséquent
+$\mathfrak J'\subset\mathfrak J\subset A$ et
+$\mathfrak R'\subset\mathfrak R\subset B$.
+Dans l'ordre $(\mathfrak R',\mathfrak J')$, les anneaux ambiants sont
+respectivement $B$ et $A$. Ces inclusions donnent les homomorphismes
+entre quotients nécessaires au système inductif de 18.5.1.1.
+
+\subsection{Réduction et relèvement d'une base : 19.1.10}
+\label{note:iv1-5}
+La réduction d'un homomorphisme $u:M\to N$ modulo l'idéal maximal
+$\mathfrak J_0$ a pour but $N/\mathfrak J_0N$.
+Dans la partie locale de la preuve, poser
+$r=\dim_{A/\mathfrak J}(M/\mathfrak JM)$ permet de choisir
+$L=A^r$. Les images réciproques d'une base de $M/\mathfrak JM$
+définissent $f:L\to M$, dont la réduction est un isomorphisme.
+Le module $L$ est ainsi libre de type fini. Cette liberté est utilisée
+dans l'argument du déterminant appliqué à la réduction de $u\circ f$ ;
+la seule finitude de $L$ ne justifierait pas cette étape.
+
+\subsection{Dénominateurs d'un inverse local : 19.1.12}
+\label{note:iv1-6}
+Après la réduction de la preuve au cas où $N$ est libre de type fini,
+un homomorphisme
+$w_{\mathfrak p}:N_{\mathfrak p}\to M_{\mathfrak p}$ s'écrit
+\[
+ w_{\mathfrak p}=w\otimes(1/f)1_{A_{\mathfrak p}},
+ \qquad w:N\to M,\quad f\notin\mathfrak p.
+\]
+Si $w_{\mathfrak p}u_{\mathfrak p}=1$, alors
+$(wu)_{\mathfrak p}=f\,1_{M_{\mathfrak p}}$.
+La finitude de $M$ permet de choisir un même $g\notin\mathfrak p$
+annulant $wu-f1_M$ sur tous ses générateurs. Après localisation en
+$fg$, la multiplication par $f$ est inversible et
+$f^{-1}w$ donne l'inverse à gauche voulu. C'est bien l'homomorphisme
+local $w_{\mathfrak p}$, et non $w$, qui est représenté par cette fraction.
+
+\subsection{Prolongement au complété : 19.3.6}
+\label{note:iv1-7}
+Le prolongement canonique $B\to\widehat B\to C$ utilise un
+homomorphisme \emph{continu} de $B$ vers l'algèbre discrète $C$.
+Un groupe topologique discret est séparé et complet ; la continuité
+donne le prolongement au séparé complété, et la densité de l'image de
+$B$ en assure l'unicité. La multiplicativité et la compatibilité avec
+l'action de $A$ se prolongent avec les opérations continues. Cette
+propriété universelle ne porte pas sur les homomorphismes abstraits
+sans hypothèse de continuité.
+
+\subsection{Module de l'extension infinitésimale : 19.4.4}
+\label{note:iv1-8}
+Pour $\mathfrak J^2=0$ dans $C$, le produit fibré
+\[
+ E_\lambda=B_\lambda\mathbin{\times}_{C/\mathfrak J}C
+\]
+est une extension de $B_\lambda$ par $\mathfrak J$.
+L'action de $B$ sur ce noyau passe par
+$B\to B_\lambda\to C/\mathfrak J$ ; en particulier le noyau est
+annulé par l'idéal ouvert définissant $B_\lambda$.
+Le groupe dont l'annulation trivialise cette extension après
+raffinement est donc
+$\operatorname{Exalcotop}_A(B,\mathfrak J)$.
+L'hypothèse de 19.4.4 s'applique précisément à ce module discret.
+
+\subsection{Préliminaires IV, 19--20 : restrictions des homomorphismes}
+\label{note:iv1-domains}
+Dans 19.6.3, l'homomorphisme $u$ restreint au sous-corps $k$
+coïncide avec $f$. Dans 19.6.5, le critère est appliqué aux
+localisations de $A'$ en ses idéaux maximaux.
+Une dérivation relative à $A$ s'annule sur l'image de $A$
+(20.1.1). Dans 20.1.4, la restriction à $L$ est nulle.
+Pour la composition $A\to B\to C$, les dérivations de $C$
+relatives à $B$ sont celles qui s'annulent sur $v(B)$ (20.2.2).
+Ces prépositions expriment des restrictions à un sous-anneau
+ou à un sous-module, et non un changement du module but.
+\par
+
+\subsection{0, 20.6.25 : les deux homomorphismes d'extensions}
+Dans 20.6.25, $u^1$ est l'homomorphisme de restriction des scalaires
+défini en 18.3.6.4, tandis que $v^1$ provient de l'image réciproque
+des extensions définie en 18.3.6.2. Ce sont les deux homomorphismes
+explicitement nommés dans l'énoncé, page~146 d'EGA~IV, première
+partie. Le dernier paragraphe de la démonstration identifie ces
+mêmes homomorphismes au moyen de 20.6.6.4 ; ses références
+pertinentes sont donc 18.3.6.4 et 18.3.6.2, respectivement,
+au lieu du renvoi imprimé 18.3.4.2.
+
+\section{Étude locale : deuxième partie}
+\label{part:iv2}
+Référence : \cite{EGAIV2}.
+\subsection{IV, seconde partie : domaines, points et supports}
+\label{note:iv2-domains}
+En 3.1.3, l'idéal considéré au point $x$ est $\mathfrak j_x$, avec la
+notation de 3.1.2. En 4.8.8, le changement de scalaires de $v'$ vers
+$K$ s'écrit $v'\otimes1_K$. En 4.9.5, l'identification avec le corps
+intermédiaire est $K=K_1$ ; c'est alors l'extension $K'/K$ qui est
+algébrique. En 5.2.5, l'anneau dont le spectre a les deux points annoncés
+est $B$.
+
+L'ensemble des zéros de $g$ en 5.3.1 est $X\setminus X_g$ : la notation
+$X_g$ désigne l'ouvert où $g$ est inversible. En 5.6.10, un idéal maximal
+de l'algèbre finie $B$ est au-dessus de l'idéal maximal de $A$ ; l'extension
+algébrique qui intervient dans la formule des dimensions est donc celle
+des \emph{corps résiduels}. En 5.6.11, les idéaux de la chaîne sont contenus
+dans l'idéal $\mathfrak K$. En 5.7.4, l'inégalité de coprofondeur se lit
+au point $z$ considéré, donc sur $\mathscr F_z$.
+
+Les ouverts utilisés pour prolonger les sections à travers $Z$ contiennent
+le complément de $Z$ : en 5.9.8 ils contiennent $V\cap(X-Z)$, et en 5.10.12
+ils contiennent $X-Z$. La propriété du germe en 5.9.11 est d'être
+$Z$-clos, conformément à 5.9.9. Le recouvrement de 5.10.8 comprend aussi
+$U_0=X_0\cap U$. Enfin, pour appliquer 5.11.6(c), le faisceau est
+$\mathcal G=(A/\mathfrak q)^\sim|U$ et le fermé est $T=V(\mathfrak J)$,
+qui sont les objets désignés dans cette condition.
+
+\subsection{IV, seconde partie : hypothèses algébriques}
+\label{note:iv2-flatness}
+Dans 6.8.5, les morphismes structuraux d'un produit sur un corps sont
+plats : les espaces vectoriels sont plats et la platitude est stable par
+changement de base. La fidélité n'est pas nécessaire à cet argument et
+ne serait pas assurée pour un facteur vide. En 6.10.5, le nombre $r(n)$
+est le \emph{rang} du module libre ; sa longueur dépend aussi de celle
+de l'anneau de base. En 6.14.1, l'inclusion utilisée est
+$\mathfrak a\cap\mathfrak b\subset\mathfrak a\cap\mathfrak c$.
+
+Dans 6.15.10, les propriétés d'intégralité, de birationalité et de
+radicialité concernent le morphisme $l$ et son changement de base $l'$.
+En 7.1.8, on choisit d'abord le premier $\mathfrak p'$ au-dessus de
+$\mathfrak p$ ; sa contraction à $A'$ est ensuite l'idéal maximal
+$\mathfrak mA'$. Le choix au-dessus de ce dernier idéal seul ne fixe pas
+la contraction intermédiaire.
+
+Les anneaux de 7.3.13 et 7.6.4 sont semi-locaux : la complétion peut
+concerner plusieurs idéaux maximaux. L'hypothèse employée en 7.7.2 porte
+sur tout quotient intègre de $A_{\mathfrak p}$ ; c'est à ces anneaux
+intègres que s'applique la propriété d'être japonais.
+
+Pour le faisceau sans torsion de 7.8.3, la non-nullité assure que le
+germe générique n'est pas nul et que l'ensemble des points associés
+contient le point générique. Le faisceau nul a un ensemble de points
+associés vide. Enfin, en 7.9.1, un anneau local noethérien normal de
+dimension au plus un est soit un corps, soit un anneau de valuation
+discrète. Ces deux cas donnent la régularité ; le point générique
+appartient au premier cas.
+
+\subsection{IV, 6.15.2 : le localisé de la normalisation}
+\label{note:iv2-normalization}
+On conserve les notations de l'exemple et son hypothèse que $2$ est
+inversible dans $K$. Les relations $t^2=u^2-w^2$ et $v=tu/(u+w)$
+donnent l'extension quadratique $K(u,w)(\sqrt{u^2-w^2})$.
+Posons $a=t-v$ et $C_2=K[t,v,w]$. Puisque $a=tw/(u+w)$,
+on a $u=vw/a$ dans le corps des fractions. En substituant dans
+$t^2=u^2-w^2$, on obtient
+\[
+ t a^2=w^2(2v-t),\qquad t(a^2-w^2)=-2aw^2.
+\]
+Dans $(C_2)_a$, cette dernière identité implique
+\[
+ \left(1-\frac{t}{2a}\right)(a^2-w^2)=a^2.
+\]
+Ainsi $a^2-w^2$ est une unité, et les expressions
+$t=-2aw^2/(a^2-w^2)$, $v=t-a$ donnent
+\[
+ (C_2)_a=K[a,w,a^{-1},(a^2-w^2)^{-1}].
+\]
+Les identités précédentes donnent aussi $K(a,w)=K(u,v,w)$.
+Ce corps est de degré de transcendance deux sur $K$ ; $a,w$ sont donc
+algébriquement indépendants. Le membre de droite est un localisé d'un
+anneau de polynômes, donc est intégralement clos. C'est précisément le
+localisé utilisé dans l'intersection de 6.15.2. La preuve n'exige pas
+que l'anneau $C_2$ lui-même soit intégralement clos.
+
+\subsection{IV, seconde partie : repères des résultats invoqués}
+\label{note:iv2-refs}
+Les définitions de 4.6.21 sont celles de 4.6.17 et 4.6.19 ; le critère
+local de réduction géométrique invoqué en 4.6.22 est 4.6.13.
+Les formules utilisées en 5.5.3, 5.5.7 et 5.9.4 sont respectivement
+5.5.1.1, 5.5.7.1 et 5.9.4.1.
+La propriété $(\mathrm P'_{\mathrm I})$ en 7.3.11 renvoie à 7.3.5(iii).
+Pour 7.4.4(i), le renvoi est 7.4.3(i) ; pour l'équivalence des conditions
+$a)$ et $b)$ en 7.4.5, il est 7.4.4(i).
+Les propriétés d'excellence et de localisation utilisées en 7.8.4 et dans 7.9.7 renvoient respectivement à 7.8.3(iv) et 7.8.3(ii).
+La référence bibliographique [36] est le travail de S.~Abhyankar,
+\emph{Local uniformization on algebraic surfaces over ground fields of
+characteristic $p\ne0$}, publié dans les \emph{Annals of Mathematics}.
+\par
+
+\section{Étude locale : troisième partie}
+\label{part:iv3}
+Référence : \cite{EGAIV3}.
+\subsection{IV, troisième partie : images, degrés et platitude relative}
+\label{note:iv3-geometry}
+Dans la preuve de 10.2, l'image directe par $Y_0\to X_0$ est un
+faisceau sur $X_0$, et le fermé obtenu dans $X$ est $Y$.
+En 10.4.11, les points dont le corps résiduel a un degré divisant $d$
+sont les noyaux des homomorphismes vers $\mathbf F_{p^d}$. Un même noyau
+peut correspondre à plusieurs plongements du corps résiduel : pour
+$\mathbf F_{p^e}$, $e\mid d$, il y a $e$ plongements, permutés par
+Frobenius. L'identification porte donc sur les noyaux, sans affirmer une
+bijection avec les homomorphismes.
+
+Les générateurs homogènes de 11.2.9 sont de degré zéro. En 11.3.9,
+la platitude est relative à $f_\lambda$ ; une platitude sur la base
+n'implique pas la platitude comme module sur $\mathcal O_{X_\lambda}$.
+L'homomorphisme descendu est $h_\mu:\mathcal F_\mu\to\mathcal G_\mu$.
+La démonstration de 11.3.10 se rapporte à cette proposition elle-même.
+En 11.3.16, la propriété du morphisme composé $g\circ f$ est celle
+utilisée pour les ouverts considérés. En 11.3.17, la finitude qui
+permet le choix d'un étage est celle de $C$ comme $A$-algèbre ; la
+finitude comme $B$-algèbre seule ne fournit pas ce choix sur $A$.
+
+\subsection{IV, 11.4.2 : une obstruction explicite à la platitude}
+\label{note:iv3-nonflat}
+Dans l'exemple, $\mathfrak J K=0$ et
+$\mathfrak J\otimes_A K\simeq K\ne0$.
+L'inclusion $\mathfrak J\hookrightarrow A$, tensorisée par $K$, devient
+donc l'application nulle $K\to K$. Elle n'est pas injective.
+Un module plat préserve l'injectivité par tensorisation ; cette
+application fournit directement l'obstruction requise.
+Cet argument ne suppose pas qu'un module plat arbitraire soit libre.
+
+\subsection{IV, troisième partie : calculs locaux et dimensions}
+\label{note:iv3-modules}
+Les deux produits de 11.7.5 ont pour valeurs $2ue'$ et $2ue''$ ; le
+facteur deux provient de la somme des deux termes croisés.
+Dans 11.9.10, l'idéal $\mathfrak J'_h$ est engendré par
+$s_1^m,\ldots,s_h^m$ ; aucun générateur $s_0$ n'intervient.
+En 11.9.11, c'est le quotient
+$\mathcal F/\mathfrak m_x^n\mathcal F$ qui a le support annoncé.
+Un sous-module $\mathfrak m_x^n\mathcal F$ ne possède pas, en général,
+ce support : il peut rester non nul loin de $x$.
+
+La condition de dimension plate au plus $i$ de 12.3.2 est
+$\operatorname{Tor}^B_j(M,N)=0$ pour $j>i$ et tout $N$.
+Pour $i=0$, exiger aussi l'annulation de $\operatorname{Tor}_0$
+forcerait $M=0$, alors qu'un module libre non nul est plat.
+En 13.3.5, les nombres comparés sont
+$\dim(\mathcal O_{Y_j,y})$, et non les anneaux locaux eux-mêmes.
+Le point considéré en 14.5.8 est $x'$.
+
+Dans le diagramme de 14.5.11.1, la section $s:S\to Y$ d'un
+morphisme $g:Y\to S$ induit $s':X\to X\times_S Y$ ; la projection
+$p_1:X\times_S Y\to X$ vérifie $p_1s'=1_X$.
+Ces domaines déterminent les quatre flèches horizontales.
+En 15.4.3, le morphisme de la fibre a pour source $U_y$,
+ouvert auquel l'argument a été restreint.
+
+\subsection{IV, troisième partie : renvois}
+\label{note:iv3-refs}
+La proposition dont l'application est discutée en 11.9.8 est 11.9.7.
+Le lemme utilisé à la fin de 11.9.16 est 11.9.12.
+La remarque invoquée au début de 15.3.4 est 15.2.4(v).
+\par
+
+\subsection{IV, 8.9.3 : descente d'un module de présentation finie}
+L'énoncé de descente pertinent est le théorème 8.5.2(ii), énoncé à la
+page~20 d'EGA~IV, troisième partie, et démontré à la page~22. Dans le
+cas affine, il résulte aussi directement d'une présentation finie :
+si $M$ est le conoyau d'une matrice sur $A$, ses coefficients, en
+nombre fini, appartiennent à une sous-$\mathbf Z$-algèbre $A_0$ de
+type fini. Le conoyau $M_0$ de la même matrice sur $A_0$ vérifie
+$M_0\otimes_{A_0}A\simeq M$.
+Le renvoi imprimé « 8.5.2.6 » de la page~35 ne correspond à aucun
+énoncé numéroté de cette sous-section. La lecture éditoriale 8.5.2(ii)
+désigne l'assertion de descente utilisée dans ce raisonnement.
+
+\subsection{IV, 10.4.11 : endomorphismes qui sont des monomorphismes}
+La proposition 17.9.6 d'EGA~IV, quatrième partie, page~80, affirme
+que tout $S$-endomorphisme d'un $S$-préschéma $X$ de présentation
+finie qui est un monomorphisme est un automorphisme. C'est l'assertion
+annoncée à la fin de 10.4.11. Les errata des auteurs, dans la quatrième
+partie, page~346, prescrivent expressément le renvoi 17.9.6 au lieu
+du renvoi imprimé 17.9.7 en ce point (troisième partie, page~104,
+dixième ligne du bas).
+
+\subsection{IV, 8.8.2(ii) : descente des ouverts quasi-compacts}
+Le corollaire 8.2.11 (EGA~IV, troisième partie, page~11) fournit
+un modèle de chaque ouvert quasi-compact $Z_{rs}$ dans le système
+projectif basé en $Z_{r\lambda}$. Les couples $(r,s)$ sont en nombre
+fini ; le caractère filtrant de l'ensemble d'indices permet donc
+de choisir un même indice $\mu$ pour tous ces ouverts.
+Le renvoi imprimé 8.8.2.5 dans cette étape (page~32) concerne la
+descente d'isomorphismes entre modèles de présentation finie déjà
+spécifiés ; il ne fournit pas l'ouvert que l'on construit ici.
+Le renvoi pertinent pour cette étape est 8.2.11.
+
+\section{Étude locale : quatrième partie}
+\label{part:iv4}
+Référence : \cite{EGAIV4}.
+\subsection{IV, 18.3--18.4 : algèbres étales et structures d’algèbre}
+\label{note:iv4-unramified}
+Dans 18.3.1, $B$ est déjà une $A$-algèbre de présentation finie.
+Si $R=B\otimes_A B$ et $J=\ker(R\to B)$, le caractère non ramifié
+équivaut à ce que la diagonale soit ouverte et fermée, donc à ce que
+$J$ soit un facteur direct de $R$. Cela équivaut à la projectivité
+de $B=R/J$ comme $R$-module. Aucune finitude de $B$ comme $A$-module
+ne fait partie de cette équivalence. Par exemple $\mathbf Z[1/2]$
+est une $\mathbf Z$-algèbre étale de présentation finie, mais n'est
+pas un $\mathbf Z$-module de type fini.
+
+Dans 18.3.2, la compatibilité $x_{in}\mapsto x_{i,n-1}$ concerne
+$n\geq1$ ; la famille d'indice zéro est le choix initial.
+La structure d'algèbre algébrisée en 18.3.4 comprend à la fois
+l'unité $\mathcal O_X\to\mathcal B$ et la multiplication
+$\mathcal B\otimes\mathcal B\to\mathcal B$. Les diagrammes d'unité,
+d'associativité et de commutativité sont les identités nécessaires
+pour obtenir une algèbre commutative unitaire.
+
+Le cas local de 18.4.6 est celui d'une algèbre formellement
+\emph{non ramifiée}. Dans le cas étale, $B'=A[T]/FA[T]$ est un
+anneau ; le schéma correspondant est $\operatorname{Spec}(B')$.
+La partie de 18.4.6 utilisée deux fois dans 18.4.7 est (i), qui fournit
+la surjection locale. Dans 18.4.8, les applications du recouvrement
+sont $g'_\alpha$.
+
+Pour le changement de base de 18.4.14, l'identité des différentielles est
+\[
+ \Omega^1_{(B\otimes_A k)/k}
+   \simeq \Omega^1_{B/A}\otimes_B(B\otimes_A k)
+   \simeq \Omega^1_{B/A}/\mathfrak m\Omega^1_{B/A}.
+\]
+Le corps $k=A/\mathfrak m$ n'a pas, à lui seul, de structure canonique
+de $B$-module. C'est le module sur $B/\mathfrak mB$ qui intervient.
+La finitude de $\Omega^1_{B/A}$ et l'inclusion de $\mathfrak mB$ dans
+le radical de $B$ permettent alors l'application de Nakayama.
+
+\subsection{IV, 18.10--18.12 : base et parenthèses des arguments}
+\label{note:iv4-normalization}
+En 18.10.14, après extension de $K$ à $K'$, la fermeture intégrale
+est prise sur $Y'$ dans $L\otimes_K K'$. La décomposition de cette
+algèbre en facteurs donne notamment la fermeture de $Y'$ dans
+$L_1$ ; le résultat applicable est 18.10.13.
+En 18.11.2, le module de type fini est $\Omega^1_{C/k}$,
+identifié à son module complété ; 18.11.1 est la référence qui
+fournit la finitude. La référence à 0, 20.6.21(i) appartient à la
+parenthèse sur la suite exacte des trois corps.
+Dans 18.12.15, la comparaison avec 6.14.4, partie II, se rapporte
+au passage à une sous-algèbre de type fini.
+
+\subsection{IV, 19.1--19.3 et 19.7--19.9 : immersions et fibres}
+\label{note:iv4-immersions}
+Le module conormal $J/J^2$ est naturellement un module sur $A/J$,
+puisque $J$ l'annule. C'est sur cet anneau qu'il est libre en 19.1.4,
+de rang égal à la codimension transversale. Ses puissances graduées
+ont alors les rangs binomiaux utilisés dans le calcul de Hilbert--Samuel.
+En 19.1.7, les propriétés des immersions sont celles de 19.1.5(i)--(iv) ;
+la seconde assertion visée est celle de (ii).
+
+Le critère de régularité relative utilisé à la fin de 19.2.4 est
+0, 15.1.16. Pour une immersion ouverte dans 19.2.7(i), l'idéal est nul,
+mais la régularité transversale relative exige encore la platitude
+de la source sur $S$. L'identité d'un $S$-schéma non plat est déjà
+un exemple qui montre la nécessité de cette condition.
+En 19.3.4, les immersions sont $X\to Y$ et $X'\to Y'$ :
+le spectre de l'algèbre quotient est le sous-schéma du spectre de
+l'algèbre de polynômes.
+
+En 19.7.5(ii), l'hypothèse sur $X$ fournit la régularité de la suite
+sur $\operatorname{gr}_{\mathcal K_z}(\mathcal O_{X,z})$.
+Elle ne fournit pas directement cette régularité sur le gradué
+d'un module arbitraire $\mathcal F_z$ ; c'est ensuite le critère
+19.7.1 qui porte sur ce module. Dans 19.9.8, les deux cas du
+raisonnement utilisent respectivement les bornes de profondeur
+$1$ et $2$ dans la définition de $Z'_\lambda$.
+
+\subsection{IV, 19.4.6 : platitude et changement de base d’un éclatement}
+\label{note:iv4-blowups}
+Travaillons sur $S=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$,
+avec un idéal $J\subset B$. Posons
+$Q_m=B/J^m$ pour $m\geq1$ et $G_r=J^r/J^{r+1}$ pour $r\geq0$.
+La platitude de $\bigoplus_rG_r$ équivaut à celle de tous ses termes.
+Puisque $Q_1=G_0$, les suites
+\[
+ 0\longrightarrow G_r\longrightarrow Q_{r+1}
+   \longrightarrow Q_r\longrightarrow0
+\]
+montrent que cette condition équivaut à la platitude de tous les $Q_m$.
+On utilise dans un sens la stabilité de la platitude par extension,
+et dans l'autre la platitude du noyau d'une surjection entre modules plats.
+
+Si $Q_m$ est plat, la suite des Tor associée à
+$0\to J^m\to B\to Q_m\to0$ donne l'injectivité de
+$J^m\otimes_A A'\to B\otimes_A A'$ pour toute $A$-algèbre $A'$.
+Pour la réciproque, supposons en plus $B$ plat sur $A$.
+La même suite donne alors $\operatorname{Tor}_1^A(Q_m,A')=0$.
+Prendre l'algèbre à idéal de carré nul $A'=A\oplus M$, pour un
+$A$-module arbitraire $M$, donne
+$\operatorname{Tor}_1^A(Q_m,M)=0$, donc la platitude de $Q_m$.
+Sans la platitude de $B$, cette réciproque est fausse : pour $J=0$,
+les applications sur les puissances positives de $J$ sont injectives
+quel que soit $B$, y compris lorsque $B$ n'est pas plat.
+
+Les conclusions sur l'éclatement et son diviseur exceptionnel se
+prennent sous la platitude des $Q_m$, ou de manière équivalente du
+gradué. L'injectivité précédente identifie chaque $J^m\otimes_A A'$
+à la puissance de l'idéal image dans $B\otimes_A A'$.
+L'algèbre de Rees commute donc à ce changement de base ; la propriété
+correspondante de $\operatorname{Proj}$ donne l'isomorphisme des
+éclatements annoncé dans l'énoncé.
+
+\subsection{IV, 19.7.1 : relations de Koszul et filtration}
+\label{note:iv4-koszul}
+Posons $Q=\mathfrak R^a/\mathfrak R^{a+1}$ et $I=(f_1,\ldots,f_n)$.
+La suite $\mathbf f$ est $Q$-régulière. Une relation
+$\sum_i a_if_i=0$ dans $Q$ ne force pas la nullité de chaque $a_i$ :
+la relation $(f_2,-f_1)$ pour deux éléments est l'exemple élémentaire.
+Il faut modifier les coefficients par une relation de Koszul.
+
+Voici le contrôle de l'ordre des coefficients. Soit
+$u\in I^sK_1(\mathbf f;Q)$ un cycle, où $s=b-1\geq1$.
+L'exactitude du complexe de Koszul donne $u=\delta_2C$.
+La quasi-régularité donne
+$\operatorname{gr}_I(Q)\simeq(Q/IQ)[T_1,\ldots,T_n]$.
+Le complexe de Koszul des indéterminées est exact en degrés positifs
+sur ce module polynomial.
+
+Si $C\in I^dK_2$ et $d<s-1$, le terme initial de $C$ est un cycle,
+car $\delta_2C\in I^sK_1$ et la différentielle augmente de un le
+degré des coefficients. Pour $d=0$, ce cycle est nul : une préimage
+dans $K_3$ devrait avoir un degré de coefficient négatif. Pour
+$d\geq1$, il est le bord d'une classe de degré $d-1$ ; en relevant
+cette classe en $D\in I^{d-1}K_3$, on remplace $C$ par
+$C-\delta_3D\in I^{d+1}K_2$, sans changer $\delta_2C$.
+Cette procédure finie donne $C\in I^{s-1}K_2$.
+
+Les coefficients de $C$ se relèvent en
+$c_{ij}\in\mathfrak R^a I^{b-2}$ avec
+$c_{ij}=-c_{ji}$ et $c_{ii}=0$. Remplacer $a_i$ par
+$a_i-\sum_jc_{ij}f_j$ conserve $\sum_i a_if_i$, puisque les termes
+antisymétriques s'annulent. Les nouveaux coefficients appartiennent
+à $\mathfrak R^a I^{b-1}\cap\mathfrak R^{a+1}$, comme requis
+pour la récurrence de 19.7.1.16. Pour $b=1$, la relation considérée
+est immédiate. Aucun passage à une filtration complétée n'intervient.
+
+\subsection{IV, 21.10.16 : longueurs après changement de base}
+\label{note:iv4-lengths}
+Avec les anneaux locaux de la démonstration, posons
+$A'_1=A'\otimes_A A_1$ et $M=A'_1/\mathfrak m_{x'}A'_1$.
+La décomposition d'un module de longueur finie sur l'algèbre
+semi-locale finie $A'_1$ donne
+\[
+ \operatorname{long}_{A_1}(M)
+ =\sum_{x'_1}\operatorname{long}_{(A'_1)_{x'_1}}(M_{x'_1})
+       [k(x'_1):k(x_1)].
+\]
+Chaque facteur simple au point $x'_1$ est le corps résiduel $k(x'_1)$,
+dont la longueur sur $A_1$ est son degré sur $k(x_1)$.
+Le membre de droite est donc le premier membre de 21.10.16.2.
+
+Comme $A_1$ est plat sur $A$ et
+$M=(A'/\mathfrak m_{x'}A')\otimes_A A_1$, une suite de composition
+sur $A$ reste exacte après tensorisation. Elle donne
+\[
+ \operatorname{long}_{A_1}(M)
+ =[k(x'):k(x)]\,
+   \operatorname{long}_{A_1}(A_1/\mathfrak m_xA_1).
+\]
+C'est l'égalité voulue. Elle ne requiert pas que l'extension
+$k(x_1)/k(x)$ soit finie et n'utilise aucun quotient de degrés
+qui pourrait ne pas être défini.
+\par
+
+\nocite{EGAIII2}
+
+\begin{thebibliography}{IV.4}
+\bibitem[I]{EGAI} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, I. Le langage des schémas},
+Publications mathématiques de l'IHÉS \textbf{4} (1960).
+\href{https://numdam.org/item/PMIHES_1960__4__5_0/}{Exemplaire NUMDAM}.
+\bibitem[II]{EGAII} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, II. Étude globale élémentaire
+de quelques classes de morphismes}, Publications mathématiques de
+l'IHÉS \textbf{8} (1961).
+\href{https://www.numdam.org/item/PMIHES_1961__8__5_0.pdf}{Exemplaire NUMDAM}.
+\bibitem[III.1]{EGAIII1} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, III. Étude cohomologique des
+faisceaux cohérents, première partie}, Publications mathématiques de
+l'IHÉS \textbf{11} (1961).
+\href{https://www.numdam.org/articles/10.1007/BF02684273/}{Exemplaire NUMDAM}.
+\bibitem[III.2]{EGAIII2} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, III. Étude cohomologique des
+faisceaux cohérents, seconde partie}, Publications mathématiques de
+l'IHÉS \textbf{17} (1963).
+\href{https://numdam.org/articles/10.1007/BF02684890/}{Exemplaire NUMDAM}.
+\bibitem[IV.1]{EGAIV1} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, IV. Étude locale des schémas et
+des morphismes de schémas, première partie}, Publications mathématiques
+de l'IHÉS \textbf{20} (1964).
+\href{https://numdam.org/articles/10.1007/BF02684747/}{Exemplaire NUMDAM}.
+\bibitem[IV.2]{EGAIV2} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, IV. Étude locale des schémas et
+des morphismes de schémas, seconde partie}, Publications mathématiques
+de l'IHÉS \textbf{24} (1965).
+\href{https://numdam.org/articles/10.1007/BF02684322/}{Exemplaire NUMDAM}.
+\bibitem[IV.3]{EGAIV3} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, IV. Étude locale des schémas et
+des morphismes de schémas, troisième partie}, Publications mathématiques
+de l'IHÉS \textbf{28} (1966).
+\href{https://numdam.org/articles/10.1007/BF02684343/}{Exemplaire NUMDAM}.
+\bibitem[IV.4]{EGAIV4} A.~Grothendieck, avec la collaboration de J.~Dieudonné,
+\emph{Éléments de géométrie algébrique, IV. Étude locale des schémas et
+des morphismes de schémas, quatrième partie}, Publications mathématiques
+de l'IHÉS \textbf{32} (1967).
+\href{https://numdam.org/articles/10.1007/BF02732123/}{Exemplaire NUMDAM}.
+\end{thebibliography}
+\end{document}
