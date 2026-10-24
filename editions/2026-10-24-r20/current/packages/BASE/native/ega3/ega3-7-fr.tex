@@ -1,0 +1,4479 @@
+\section{Étude du changement de base dans les foncteurs homologiques covariants de Modules}
+\label{section:III.7.fr}
+
+\subsection{Foncteurs de $A$-modules}
+\label{subsection:III.7.1.fr}
+
+\begin{env}[7.1.1]
+Étant donné un anneau $A$ (non nécessairement commutatif), nous noterons
+$\mathbf{Ab}_A$ la catégorie des $A$-modules à gauche, et nous noterons
+simplement $\mathbf{Ab}$ la catégorie des $\mathbf Z$-modules, identiques aux
+groupes commutatifs. Soit
+\[
+  T:\mathbf{Ab}_A\longrightarrow\mathbf{Ab}
+\]
+un foncteur covariant additif, et soit $M$ un $(A,A)$-bimodule; $T(M)$ est
+alors muni de façon naturelle d'une structure de $A$-module à droite. En
+effet, pour tout $a\in A$, notons $h_{a,M}$ (ou simplement $h_a$)
+l'endomorphisme $x\mapsto xa$ du $A$-module à gauche $M$. Par hypothèse,
+$T(h_a)$ est un endomorphisme du $\mathbf Z$-module $T(M)$; en outre, comme
+$T$ est un foncteur covariant additif, on a, pour $a\in A$, $b\in A$,
+\[
+  T(h_{ab})
+  =
+  T(h_b\circ h_a)
+  =
+  T(h_b)\circ T(h_a),
+  \qquad\text{et}\qquad
+  T(h_{a+b})
+  =
+  T(h_a+h_b)
+  =
+  T(h_a)+T(h_b);
+\]
+cela prouve que l'application
+\[
+  (a,y)\longmapsto T(h_a)(y)
+\]
+est une loi externe de $A$-module à droite sur $T(M)$. En particulier,
+$T(A_s)$ est un $A$-module à droite.
+\end{env}
+
+\begin{env}[7.1.2]
+Lorsque $A$ est un anneau commutatif, il résulte de (7.1.1) que pour tout
+$A$-module $M$, $T(M)$ est naturellement muni d'une structure de $A$-module;
+en outre, si $u:M\to N$ est un homomorphisme de $A$-modules, on a, pour tout
+$a\in A$,
+\[
+  u\circ h_{a,M}=h_{a,N}\circ u,
+\]
+d'où
+\[
+  T(u)\circ T(h_{a,M})
+  =
+  T(h_{a,N})\circ T(u),
+\]
+ce qui prouve que $T(u):T(M)\to T(N)$ est un homomorphisme de $A$-modules; on
+voit donc que $T$ peut être considéré comme un foncteur covariant additif de
+la catégorie $\mathbf{Ab}_A$ dans elle-même. De façon précise, on a ainsi
+défini une équivalence canonique entre la catégorie des foncteurs covariants
+additifs $\mathbf{Ab}_A\to\mathbf{Ab}$ et la catégorie des foncteurs
+covariants $A$-linéaires
+\[
+  T:\mathbf{Ab}_A\longrightarrow\mathbf{Ab}_A,
+\]
+c'est-à-dire tels que
+\[
+  T(h_{a,M})=h_{a,T(M)}
+  \qquad\text{pour tout }a\in A.
+\]
+Comme le foncteur d'inclusion
+\[
+  I:\mathbf{Ab}_A\longrightarrow\mathbf{Ab},
+\]
+faisant correspondre à tout $A$-module le $\mathbf Z$-module sous-jacent, est
+exact et fidèle, les propriétés d'exactitude des deux foncteurs associés par
+l'équivalence précédente sont les mêmes.
+\end{env}
+
+\begin{env}[7.1.3]
+L'anneau $A$ étant toujours supposé commutatif, soit $B$ une $A$-algèbre (non
+nécessairement commutative), et soit $\rho:A\to B$ l'homomorphisme d'anneaux
+correspondant à cette structure d'algèbre; cet homomorphisme définit un
+foncteur covariant
+\oldpage[III]{176}
+additif
+\[
+  \rho_*:M\longmapsto M_{[\rho]}
+\]
+de la catégorie $\mathbf{Ab}_B$ des $B$-modules à gauche dans la catégorie
+$\mathbf{Ab}_A$ des $A$-modules. Par composition, on en déduit un foncteur
+\[
+  T_{(B)}:
+  \mathbf{Ab}_B
+  \xrightarrow{\rho_*}
+  \mathbf{Ab}_A
+  \xrightarrow{T}
+  \mathbf{Ab},
+\]
+évidemment covariant et additif, que nous noterons aussi $T^{(B)}$ (pour des
+raisons typographiques) ou $T\otimes_A B$, et que nous dirons obtenu à partir
+de $T$ par extension des scalaires de $A$ à $B$. Bien entendu, si $B$ est
+commutative, on peut considérer $T_{(B)}$ comme un foncteur de
+$\mathbf{Ab}_B$ dans elle-même (7.1.2). Lorsque $B$ est commutative, et $C$
+une $B$-algèbre, on voit aussitôt que
+\[
+  T_{(C)}=(T_{(B)})_{(C)};
+\]
+il est immédiat que l'extension des scalaires est fonctorielle et additive en
+$T$; en outre, lorsque $T$ commute aux limites inductives ou aux sommes
+directes (resp. est exact à gauche, exact à droite, exact), il en est de même
+de $T_{(B)}$: en effet, $\rho_*$ est exact et commute aux limites inductives
+et aux sommes directes.
+\end{env}
+
+\begin{env}[7.1.4]
+Supposons toujours $A$ commutatif, et soit
+$T:\mathbf{Ab}_A\to\mathbf{Ab}_A$ un foncteur covariant additif
+$A$-linéaire, commutant aux limites inductives. Alors, pour toute partie
+multiplicative $S$ de $A$ et tout $A$-module $M$, on a un isomorphisme
+canonique fonctoriel de $A$-modules
+\[
+  T(S^{-1}M)\xrightarrow{\sim}S^{-1}T(M).
+  \tag{7.1.4.1}\label{III.7.1.4.1.fr}
+\]
+Supposons en effet d'abord que $S$ soit l'ensemble des puissances $f^n$
+$(n\geqslant0)$ d'un élément $f\in A$. On sait alors que
+\[
+  M_f=\varinjlim M_n,
+\]
+où $(M_n,\varphi_{nm})$ est le système inductif des $A$-modules $M_n=M$,
+avec
+\[
+  \varphi_{nm}:z\longmapsto f^{\,n-m}z
+  \qquad(0_{\mathrm I}, 1.6.1);
+\]
+d'où dans ce cas l'isomorphisme (7.1.4.1) en vertu de l'hypothèse sur $T$; si
+ensuite $S$ est quelconque, $S^{-1}M$ est limite inductive des $M_f$, pour
+$f\in S$ ($0_{\mathrm I}$, 1.4.5) et l'on conclut de la même façon. En outre,
+la fonctorialité de l'isomorphisme (7.1.4.1) montre que c'est un isomorphisme
+de $S^{-1}A$-modules, et qu'on peut donc écrire, à un isomorphisme canonique
+près
+\[
+  T_{(S^{-1}A)}(S^{-1}M)
+  =
+  S^{-1}T(M)
+  =
+  T(S^{-1}M).
+  \tag{7.1.4.2}\label{III.7.1.4.2.fr}
+\]
+Lorsque $S=A-\mathfrak p$ est le complémentaire d'un idéal premier
+$\mathfrak p$ de $A$, on écrit $T_{\mathfrak p}$ au lieu de
+$T_{(A_{\mathfrak p})}$.
+\end{env}
+
+\begin{proposition}[7.1.5]
+Sous les hypothèses de (7.1.4), si $T_{\mathfrak m}$ est exact à gauche
+(resp. exact à droite, exact) pour tout idéal maximal $\mathfrak m$ de $A$,
+$T$ est exact à gauche (resp. exact à droite, exact).
+\end{proposition}
+
+\begin{proof}
+On sait en effet que lorsque deux sous-modules $N$, $P$ d'un $A$-module $M$
+sont tels que $N_{\mathfrak m}=P_{\mathfrak m}$ pour tout idéal maximal
+$\mathfrak m$ de $A$, on a $N=P$ (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S~3, no~3, th.~1).
+\end{proof}
+
+\subsection{Caractérisations du foncteur produit tensoriel}
+\label{subsection:III.7.2.fr}
+
+\begin{env}[7.2.1]
+Soient $A$ un anneau (non nécessairement commutatif), $M$ (resp. $N$) un
+$A$-module à gauche (resp. à droite), $P$ un $\mathbf Z$-module. Rappelons
+que la donnée d'un $\mathbf Z$-homomorphisme
+\[
+  v:N\otimes_A M\longrightarrow P
+\]
+équivaut à la donnée d'une application $\mathbf Z$-bilinéaire
+\[
+  u:N\times M\longrightarrow P
+\]
+telle que
+\[
+  u(ta,x)=u(t,ax)
+  \qquad\text{pour }a\in A,\ t\in N,\ x\in M,
+\]
+les deux applications étant reliées par $v(t\otimes x)=u(t,x)$. D'autre part,
+la donnée de $u$ équivaut à celle d'un
+\oldpage[III]{177}
+$\mathbf Z$-homomorphisme $x\mapsto f_x$ de $M$ dans
+$\operatorname{Hom}_{\mathbf Z}(N,P)$ tel que
+\[
+  f_{ax}(t)=f_x(ta)
+  \qquad\text{pour }a\in A,\ t\in N,\ x\in M,
+\]
+les deux applications étant reliées par $u(t,x)=f_x(t)$.
+\end{env}
+
+\begin{env}[7.2.2]
+Soit $T:\mathbf{Ab}_A\to\mathbf{Ab}$ un foncteur covariant additif. Nous
+allons définir pour tout $A$-module à gauche $M$, un homomorphisme canonique
+fonctoriel en $M$, de $\mathbf Z$-modules
+\[
+  t_M:T(A_s)\otimes_A M\longrightarrow T(M).
+  \tag{7.2.2.1}\label{III.7.2.2.1.fr}
+\]
+Il suffira pour cela, en vertu de (7.2.1), de définir un
+$\mathbf Z$-homomorphisme $x\mapsto t'_M(x)$ de $M$ dans
+$\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$, tel que l'on ait
+\[
+  t'_M(ax)(y)=t'_M(x)(ya)
+  \qquad\text{pour }a\in A,\ x\in M,\ y\in T(A_s).
+\]
+Notons pour cela que
+$\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$ est canoniquement muni d'une
+structure de $A$-module à gauche provenant de la structure de $A$-module à
+droite de $T(A_s)$, la loi externe étant telle que si
+$a\in A$, $v\in\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$,
+\[
+  (a\cdot v)(y)=v(ya)
+  \qquad\text{pour }y\in T(A_s).
+\]
+Cela étant, nous définirons $t'_M$ comme composé des deux homomorphismes
+canoniques
+\[
+  M\xrightarrow{\sim}\operatorname{Hom}_A(A_s,M)
+  \xrightarrow{T}
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(M)),
+\]
+la seconde flèche étant l'application $u\mapsto T(u)$, la première
+l'isomorphisme canonique de $A$-modules $x\mapsto\theta_x$ tel que
+$\theta_x(\xi)=\xi x$ pour $\xi\in A$, $x\in M$. On a
+$\theta_{ax}=\theta_x\circ h_a$, donc
+\[
+  T(\theta_{ax})
+  =
+  T(\theta_x\circ h_a)
+  =
+  T(\theta_x)\circ T(h_a)
+\]
+et par suite, pour $y\in T(A_s)$,
+\[
+  T(\theta_{ax})(y)
+  =
+  T(\theta_x)(T(h_a)(y))
+  =
+  T(\theta_x)(ya)
+\]
+par définition de la loi externe sur $T(A_s)$, ce qui prouve l'existence de
+$t_M$; il est immédiat de vérifier que cet homomorphisme est fonctoriel en
+$M$, c'est-à-dire que pour tout homomorphisme $w:M\to M'$ de $A$-modules à
+gauche, le diagramme
+\[
+\xymatrix@C=30pt@R=30pt{
+  T(A_s)\otimes_A M
+  \ar[r]^-{t_M}\ar[d]_{1\otimes w}
+  &
+  T(M)\ar[d]^{T(w)}
+  \\
+  T(A_s)\otimes_A M'
+  \ar[r]_-{t_{M'}}
+  &
+  T(M')
+}
+\tag{7.2.2.2}\label{III.7.2.2.2.fr}
+\]
+est commutatif.
+
+La fonctorialité de l'homomorphisme (7.2.2.1) montre que lorsque $A$ est
+commutatif, c'est un homomorphisme de $A$-modules (cf. (7.1.2)).
+\end{env}
+
+\begin{env}[7.2.3]
+Lorsque $A$ est commutatif, on peut plus généralement définir un
+homomorphisme canonique de $A$-modules
+\[
+  T(N)\otimes_A M\longrightarrow T(N\otimes_A M)
+  \tag{7.2.3.1}\label{III.7.2.3.1.fr}
+\]
+pour tout $A$-module $N$; il suffit dans la construction de (7.2.2) de
+remplacer l'homomorphisme $\theta_x$ par l'homomorphisme de $A$-modules
+\[
+  N\longrightarrow N\otimes_A M
+\]
+qui à tout $y\in N$ fait correspondre $y\otimes x$. Il est immédiat que cet
+homomorphisme est fonctoriel en $M$ et $N$.
+
+\oldpage[III]{178}
+En particulier, si $B$ est une $A$-algèbre (non nécessairement commutative),
+on a un homomorphisme fonctoriel en $M$
+\[
+  (T(M))_{(B)}
+  =
+  T(M)\otimes_A B
+  \longrightarrow
+  T(M\otimes_A B)
+  =
+  T_{(B)}(M_{(B)})
+  \tag{7.2.3.2}\label{III.7.2.3.2.fr}
+\]
+qui, en vertu de la fonctorialité de (7.2.3.1) en $M$, est un homomorphisme
+de $B$-modules.
+
+On a en outre le diagramme commutatif
+\[
+\xymatrix@C=30pt@R=30pt{
+  T(A)\otimes_A M
+  \ar[r]^-{t_M}\ar[d]
+  &
+  T(M)\ar[d]
+  \\
+  T_{(B)}(B_s)\otimes_B M_{(B)}
+  \ar[r]_-{t_{M_{(B)}}}
+  &
+  T_{(B)}(M_{(B)})
+}
+\tag{7.2.3.3}\label{III.7.2.3.3.fr}
+\]
+où la flèche verticale de droite est l'homomorphisme composé
+\[
+  T(M)
+  \longrightarrow
+  T(M)\otimes_A B
+  \longrightarrow
+  T(M\otimes_A B)
+  =
+  T_{(B)}(M_{(B)})
+\]
+de (7.2.3.2) et de l'homomorphisme canonique; quant à la flèche verticale de
+gauche de (7.2.3.3), c'est l'homomorphisme
+\[
+  T(A)\otimes_A M
+  \longrightarrow
+  T_{(B)}(B_s)\otimes_B(B\otimes_A M)
+  =
+  T_{(B)}(B_s)\otimes_A M
+\]
+où
+\[
+  T(A)\longrightarrow T_{(B)}(B_s)=T(B)
+\]
+est $T(\rho)$, $\rho$ étant considéré comme homomorphisme de $A$-modules
+$A\to B_{[\rho]}$.
+\end{env}
+
+\begin{lemma}[7.2.4]
+Si $T$ est un foncteur covariant additif de $\mathbf{Ab}_A$ dans
+$\mathbf{Ab}$, commutant avec les sommes directes, l'homomorphisme canonique
+$t_L$ (7.2.2.1) est un isomorphisme pour tout $A$-module libre $L$.
+\end{lemma}
+
+\begin{proof}
+En effet, on a
+\[
+  L=\bigoplus_{\alpha\in I}L_\alpha
+\]
+où $L_\alpha$ est isomorphe à $A_s$ pour tout $\alpha\in I$; la définition de
+$t_M$ donnée dans (7.2.2) montre que
+\[
+  t_L=\bigoplus_{\alpha\in I}t_{L_\alpha},
+\]
+puisque
+\[
+  T:
+  \operatorname{Hom}_A(A_s,L)
+  \longrightarrow
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(L))
+\]
+est somme directe des applications $\mathbf Z$-linéaires
+\[
+  T_\alpha:
+  \operatorname{Hom}_A(A_s,L_\alpha)
+  \longrightarrow
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(L_\alpha))
+\]
+en vertu de l'hypothèse sur $T$. On est donc ramené à prouver le lemme pour
+$L=A_s$; mais $t_L$ n'est autre alors que l'isomorphisme canonique
+\[
+  T(A_s)\otimes_A A_s\xrightarrow{\sim}T(A_s)
+\]
+valable pour tout $A$-module à droite.
+\end{proof}
+
+\begin{proposition}[7.2.5]
+Soit $T$ un foncteur covariant additif de $\mathbf{Ab}_A$ dans
+$\mathbf{Ab}$, commutant aux sommes directes. Les conditions suivantes sont
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T$ est exact à droite.
+  \item[b)] L'homomorphisme canonique $t_M$ (7.2.2.1) est un isomorphisme pour
+    tout $A$-module à gauche $M$.
+  \item[$b'$)] $T$ est semi-exact et l'homomorphisme $t_M$ est surjectif pour
+    tout $A$-module à gauche $M$.
+  \item[c)] $T$ est isomorphe à un foncteur en $M$ de la forme
+    $N\otimes_A M$, où $N$ est un $A$-module à droite.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que $b)$ implique $c)$ et que $c)$ implique $a)$; montrons que
+$a)$ implique $b)$.
+\oldpage[III]{179}
+Posons
+\[
+  T'(M)=T(A_s)\otimes_A M
+\]
+pour tout $A$-module à gauche $M$. Il existe une suite exacte
+\[
+  L'\longrightarrow L\longrightarrow M\longrightarrow0,
+\]
+où $L$ et $L'$ sont deux $A$-modules à gauche libres; comme $T$ et $T'$ sont
+exacts à droite, on a donc le diagramme commutatif
+\[
+\xymatrix@C=22pt@R=25pt{
+  T'(L')\ar[r]\ar[d]^{t_{L'}}
+  &
+  T'(L)\ar[r]\ar[d]^{t_L}
+  &
+  T'(M)\ar[r]\ar[d]^{t_M}
+  &
+  0
+  \\
+  T(L')\ar[r]
+  &
+  T(L)\ar[r]
+  &
+  T(M)\ar[r]
+  &
+  0
+}
+\]
+où les deux lignes sont exactes; comme $t_L$ et $t_{L'}$ sont des
+isomorphismes en vertu de (7.2.4), il en est de même de $t_M$ par le lemme des
+cinq. Enfin, il est clair que $b)$ entraîne $b')$. Pour montrer que $b')$
+entraîne $a)$, il suffit de prouver le lemme suivant.
+\end{proof}
+
+\begin{lemma}[7.2.5.1]
+Soient $\mathcal K$, $\mathcal K'$ deux catégories abéliennes, $F$, $G$ deux
+foncteurs covariants additifs de $\mathcal K$ dans $\mathcal K'$,
+$f:F\to G$ un morphisme fonctoriel (T, I, 1.2) tel que, pour tout objet $E$
+de la catégorie $\mathcal K$,
+\[
+  f_E:F(E)\longrightarrow G(E)
+\]
+soit un épimorphisme. Alors, si $F$ est exact à droite et $G$ semi-exact,
+$G$ est exact à droite.
+\end{lemma}
+
+\begin{proof}
+Tout revient en effet à démontrer que pour tout épimorphisme
+$v:E'\to E$ dans $\mathcal K$,
+\[
+  G(v):G(E')\longrightarrow G(E)
+\]
+est un épimorphisme; or, on a le diagramme commutatif
+\[
+\xymatrix@C=35pt@R=30pt{
+  F(E')\ar[r]^{F(v)}\ar[d]_{f_{E'}}
+  &
+  F(E)\ar[d]^{f_E}
+  \\
+  G(E')\ar[r]_{G(v)}
+  &
+  G(E)
+}
+\]
+dans lequel $F(v)$, $f_{E'}$ et $f_E$ sont des épimorphismes; il en est donc
+de même de $G(v)$.
+\end{proof}
+
+\begin{remark}[7.2.6]
+Pour tout $A$-module à droite $N$, posons
+\[
+  T_N(M)=N\otimes_A M
+\]
+pour tout $A$-module à gauche $M$, de sorte que $T_N$ est un foncteur
+covariant additif de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$, exact à droite et
+commutant aux sommes directes. Si on identifie canoniquement $T_N(A_s)$ à
+$N$, on vérifie aussitôt que l'homomorphisme correspondant (7.2.2.1) devient
+l'identité. On en conclut que le $A$-module à droite $N$ de l'énoncé de
+(7.2.5, $c)$) est déterminé à un isomorphisme unique près et est
+canoniquement isomorphe à $T(A_s)$. On peut encore dire que les morphismes
+fonctoriels
+\[
+  T\longmapsto T(A_s),
+  \qquad
+  N\longmapsto T_N
+\]
+constituent une équivalence (T, I, 1.2) de la catégorie des $A$-modules à
+droite et de la catégorie des foncteurs covariants additifs
+$\mathbf{Ab}_A\to\mathbf{Ab}$ qui sont exacts à droite et commutent aux
+sommes directes.
+\end{remark}
+
+\begin{proposition}[7.2.7]
+Soient $A$ un anneau artinien à gauche, dont le quotient par son radical
+$\mathfrak m$ est un corps $k$. Soit $T$ un foncteur covariant additif de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. Les
+conditions de (7.2.5) sont alors aussi équivalentes à
+\begin{enumerate}
+  \item[d)] $T$ est semi-exact et l'homomorphisme
+    \[
+      T(\varepsilon):T(A_s)\longrightarrow T(k)
+    \]
+    déduit de l'homomorphisme canonique $\varepsilon:A_s\to k$ est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\oldpage[III]{180}
+Il est clair que la condition $b')$ de (7.2.5) entraîne $d)$; prouvons que
+$d)$ entraîne $b')$.
+
+Il existe un entier $n$ tel que $\mathfrak m^n=0$; posons, pour tout
+$A$-module $M$, $M_h=\mathfrak m^hM$; nous prouverons par récurrence
+descendante sur $h$ que $t_{M_h}$ est surjectif. La proposition est évidente
+pour $h=n$; pour $h<n$, on a une suite exacte
+\[
+  0\longrightarrow M_{h+1}
+  \longrightarrow M_h
+  \longrightarrow M_h/M_{h+1}
+  \longrightarrow 0
+\]
+et l'hypothèse de récurrence entraîne que $t_{M_{h+1}}$ est surjectif.
+D'autre part, $M_h/M_{h+1}$ est annulé par $\mathfrak m$ et est donc un
+$(A/\mathfrak m)$-module, autrement dit est somme directe de $A$-modules
+isomorphes à $k$. Pour prouver que $t_{M_h/M_{h+1}}$ est surjectif, il suffit
+donc de prouver que $t_k$ l'est, puisque $T$ commute aux sommes directes. Or,
+en vertu de la commutativité du diagramme
+\[
+\xymatrix@C=35pt@R=30pt{
+  T(A_s)\otimes_A A_s
+  \ar[r]^-{t_{A_s}}\ar[d]_{1\otimes\varepsilon}
+  &
+  T(A_s)\ar[d]^{T(\varepsilon)}
+  \\
+  T(A_s)\otimes_A k
+  \ar[r]_-{t_k}
+  &
+  T(k)
+}
+\]
+et de (7.2.4), l'hypothèse $d)$ entraîne que $t_k$ est bien surjectif. Pour
+terminer la démonstration, il suffira de prouver que si l'on a une suite
+exacte
+\[
+  0\longrightarrow M'
+  \longrightarrow M
+  \xrightarrow{v}M''
+  \longrightarrow 0
+\]
+de $A$-modules, telle que $t_{M'}$ et $t_{M''}$ sont surjectifs, alors $t_M$
+est surjectif. Or, on a un diagramme commutatif
+\[
+\xymatrix@C=27pt@R=30pt{
+  T'(M')\ar[r]\ar[d]_{t_{M'}}
+  &
+  T'(M)\ar[r]\ar[d]_{t_M}
+  &
+  T'(M'')\ar[r]\ar[d]_{t_{M''}}
+  &
+  0\ar[d]
+  \\
+  T(M')\ar[r]
+  &
+  T(M)\ar[r]_-{T(v)}
+  &
+  T(M'')\ar[r]
+  &
+  \operatorname{Coker}(T(v))
+}
+\]
+dans lequel les deux lignes sont exactes, en vertu de l'hypothèse que $T$ est
+semi-exact. Comme par l'hypothèse de récurrence $t_{M'}$ et $t_{M''}$ sont
+des épimorphismes et que la dernière flèche verticale est un monomorphisme,
+le lemme des cinq (M, I, 1.1) montre que $t_M$ est un épimorphisme.
+\end{proof}
+
+\subsection{Critères d'exactitude des foncteurs homologiques de modules}
+\label{subsection:III.7.3.fr}
+
+\begin{proposition}[7.3.1]
+Soient $A$ un anneau (non nécessairement commutatif), $T_\bullet$ un foncteur
+homologique covariant (T, II, 2.1) de la catégorie $\mathbf{Ab}_A$ dans la
+catégorie $\mathbf{Ab}$, commutant aux sommes directes. Soit $p$ un entier tel
+que $T_p$ et $T_{p-1}$ soient définis. Les conditions suivantes sont
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à droite.
+  \item[b)] $T_{p-1}$ est exact à gauche.
+  \oldpage[III]{181}
+  \item[c)] Pour tout $A$-module à gauche $M$, l'homomorphisme fonctoriel
+    canonique (7.2.2.1)
+    \[
+      T_p(A_s)\otimes_A M\longrightarrow T_p(M)
+      \tag{7.3.1.1}\label{III.7.3.1.1.fr}
+    \]
+    est un isomorphisme.
+  \item[d)] Pour tout $A$-module à gauche $M$, l'homomorphisme (7.3.1.1) est
+    un épimorphisme.
+  \item[e)] $T_p$ est isomorphe à un foncteur
+    $M\mapsto N\otimes_A M$, où $N$ est un $A$-module à droite.
+\end{enumerate}
+Si en outre les conditions de (7.2.7) sur $A$ et $\mathfrak m$ sont vérifiées,
+les conditions précédentes sont aussi équivalentes à
+\begin{enumerate}
+  \item[f)] L'homomorphisme canonique
+    \[
+      T_p(\varepsilon):T_p(A_s)\longrightarrow T_p(k)
+    \]
+    est un épimorphisme.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme par définition d'un foncteur homologique, $T_i$ est semi-exact pour tous
+les $i$ tels que $T_i$ soit défini, et que, pour toute suite exacte
+\[
+  0\longrightarrow M'\xrightarrow{u}M\xrightarrow{v}M''\longrightarrow0,
+\]
+on a
+\[
+  \operatorname{Ker}(T_{i-1}(u))
+  =
+  \operatorname{Coker}(T_i(v)),
+\]
+il est clair que $a)$ et $b)$ sont équivalentes et les autres assertions
+résultent trivialement de (7.2.5) et (7.2.7).
+\end{proof}
+
+\begin{corollary}[7.3.2]
+Soit $A$ un anneau commutatif. Avec les notations de (7.3.1), supposons $T_p$
+exact à droite. Si $f\in A$ n'appartient à l'annulateur d'aucun élément
+$\ne0$ d'un $A$-module $M$, alors $f$ n'appartient à l'annulateur d'aucun
+élément $\ne0$ de $T_{p-1}(M)$. En particulier, si $A$ est intègre, le
+$A$-module $T_{p-1}(A)$ est sans torsion.
+\end{corollary}
+
+\begin{proof}
+En effet, si $h_f$ désigne l'homothétie $x\mapsto fx$ de $M$, l'hypothèse
+signifie que $h_f$ est injectif; il en est donc de même de $T_{p-1}(h_f)$ par
+la condition $b)$ de (7.3.1).
+\end{proof}
+
+\begin{proposition}[7.3.3]
+Soient $A$ un anneau, $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. Soit $p$ un
+entier tel que $T_{p-1}$, $T_p$ et $T_{p+1}$ soient définis. Les conditions
+suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact.
+  \item[b)] $T_{p+1}$ et $T_p$ sont exacts à droite.
+  \item[c)] $T_p$ et $T_{p-1}$ sont exacts à gauche.
+  \item[d)] $T_{p+1}$ est exact à droite et $T_{p-1}$ est exact à gauche.
+  \item[e)] Pour tout $A$-module $M$, les homomorphismes canoniques
+    \[
+      T_i(A_s)\otimes_A M\longrightarrow T_i(M)
+      \tag{7.3.3.1}\label{III.7.3.3.1.fr}
+    \]
+    sont des isomorphismes pour $i=p$ et $i=p+1$.
+  \item[$e'$)] Pour tout $A$-module $M$, les homomorphismes canoniques
+    (7.3.3.1) sont des épimorphismes pour $i=p$ et $i=p+1$.
+  \item[f)] Pour tout $A$-module $M$, l'homomorphisme (7.3.3.1) est un
+    isomorphisme pour $i=p$ et $T_p(A_s)$ est un $A$-module à droite plat.
+  \item[$f'$)] Pour tout $A$-module $M$, l'homomorphisme (7.3.3.1) est un
+    épimorphisme pour $i=p$ et $T_p(A_s)$ est un $A$-module à droite plat.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence des conditions $a)$, $b)$, $c)$, $d)$ résulte de l'équivalence
+des conditions $a)$ et $b)$ de (7.3.1). L'équivalence de $b)$, $e)$ et $e')$
+résulte de l'équivalence de $a)$, $c)$ et $d)$ dans (7.3.1). Enfin, dire que
+$T_p(A_s)$ est plat signifie que le foncteur
+\[
+  M\mapsto T_p(A_s)\otimes_A M
+\]
+est exact à gauche; l'équivalence de $a)$, $f)$ et $f')$ résulte encore de
+l'équivalence de $a)$, $c)$, $d)$ dans (7.3.1).
+\end{proof}
+
+\oldpage[III]{182}
+
+\begin{corollary}[7.3.4]
+Supposons $A$ commutatif, $T_p$ exact et supposons en outre que $T_p(A)$ soit
+un $A$-module de présentation finie. Alors la fonction
+\[
+  x\mapsto\operatorname{rang}_{\kappa(x)}(T_p(\kappa(x)))
+\]
+est localement constante dans $X=\operatorname{Spec}(A)$, donc constante si
+$\operatorname{Spec}(A)$ est connexe.
+\end{corollary}
+
+\begin{proof}
+En effet, comme $T_p(A)$ est un $A$-module plat en vertu de (7.3.3, $f)$), il
+est projectif de type fini, et $\bigl(T_p(A)\bigr)^{\sim}$ est donc un
+$\mathscr O_X$-Module localement libre (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S 5, n\textsuperscript{o} 2, th. 1); on a en outre
+\[
+  T_p(\kappa(x))=T_p(A)\otimes_A\kappa(x)
+\]
+(7.3.3, $e)$) et l'on sait que le rang au point $x$ du $A$-module $T_p(A)$ est
+localement constant (\emph{loc. cit.}), d'où le corollaire.
+\end{proof}
+
+\begin{proposition}[7.3.5]
+Supposons que $A$ soit un anneau artinien à gauche dont le quotient par son
+radical $\mathfrak m$ est un corps $k$. Alors les conditions de (7.3.3) sont
+encore équivalentes à chacune des suivantes :
+\begin{enumerate}
+  \item[g)] L'homomorphisme canonique
+    \[
+      T_i(\varepsilon):T_i(A_s)\longrightarrow T_i(k)
+    \]
+    est un épimorphisme pour $i=p$ et $i=p+1$.
+  \item[h)] $T_p(\varepsilon)$ est un épimorphisme et $T_p(A_s)$ est un
+    $A$-module à droite plat (ou, ce qui revient au même (Bourbaki,
+    \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la
+    prop. 5) un $A$-module libre).
+\end{enumerate}
+Supposons en outre que $A$ soit commutatif et le $A$-module $T_p(k)$ de
+longueur finie $d$. Alors les conditions précédentes équivalent aussi à
+chacune des suivantes :
+\begin{enumerate}
+  \item[i)] Pour tout $A$-module $M$ de longueur finie, on a
+    \[
+      \operatorname{long}(T_p(M))=d\mathbin{.}\operatorname{long}(M).
+      \tag{7.3.5.1}\label{III.7.3.5.1.fr}
+    \]
+  \item[j)] On a
+    \[
+      \operatorname{long}(T_p(A))=d\mathbin{.}\operatorname{long}(A).
+      \tag{7.3.5.2}\label{III.7.3.5.2.fr}
+    \]
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de $g)$ et $h)$ avec les conditions de (7.3.3) découle aussitôt
+de (7.2.7). Pour démontrer les autres assertions, nous utiliserons le lemme
+suivant :
+
+\begin{lemma}[7.3.5.3]
+Soient $\mathcal K$, $\mathcal K'$ deux catégories abéliennes,
+$F:\mathcal K\to\mathcal K'$ un foncteur
+covariant additif; on suppose que $F$ soit semi-exact, et que, pour tout objet
+simple $S$ de $\mathcal K$, $F(S)$ soit un objet de longueur finie dans
+$\mathcal K'$. Alors, pour tout objet $E$ de longueur finie dans $\mathcal K$,
+$F(E)$ est de longueur finie dans $\mathcal K'$. Pour toute suite exacte
+\[
+  0\longrightarrow E'\xrightarrow{u}E\xrightarrow{v}E''\longrightarrow0
+\]
+d'objets de longueur finie dans $\mathcal K$, on a
+\[
+  \operatorname{long}F(E)
+  \leq
+  \operatorname{long}F(E')+\operatorname{long}F(E'')
+  \tag{7.3.5.4}\label{III.7.3.5.4.fr}
+\]
+et pour que les deux membres de (7.3.5.4) soient égaux, il faut et il suffit
+que la suite
+\[
+  0\longrightarrow F(E')\longrightarrow F(E)\longrightarrow F(E'')
+  \longrightarrow0
+\]
+soit exacte.
+\end{lemma}
+
+\begin{proof}
+En effet, la suite
+\[
+  F(E')\xrightarrow{F(u)}F(E)\xrightarrow{F(v)}F(E'')
+\]
+est exacte par hypothèse; si l'on suppose $F(E')$ et $F(E'')$ de longueur
+finie, il en est de même de $\operatorname{Im}(F(u))$ et de
+$\operatorname{Im}(F(v))$ et comme
+$\operatorname{Ker}(F(v))=\operatorname{Im}(F(u))$, $F(E)$ est de longueur
+finie et l'on a
+\[
+  \operatorname{long}F(E)
+  =
+  \operatorname{long}\operatorname{Im}(F(u))
+  +
+  \operatorname{long}\operatorname{Im}(F(v))
+  \leq
+  \operatorname{long}F(E')+\operatorname{long}F(E'').
+  \tag{7.3.5.5}\label{III.7.3.5.5.fr}
+\]
+\oldpage[III]{183}
+Par récurrence sur la longueur de $E$, cela prouve déjà la première assertion;
+en outre, les deux membres de (7.3.5.5) ne peuvent être égaux que si
+\[
+  \operatorname{long}\operatorname{Im}(F(u))=\operatorname{long}F(E')
+\]
+(ce qui équivaut à
+$\operatorname{long}\operatorname{Ker}(F(u))=0$, ou
+$\operatorname{Ker}(F(u))=0$) et
+\[
+  \operatorname{long}\operatorname{Im}(F(v))=\operatorname{long}F(E'')
+\]
+(ce qui équivaut à
+$\operatorname{long}\operatorname{Coker}(F(v))=0$, ou
+$\operatorname{Coker}(F(v))=0$).
+\end{proof}
+
+Notons maintenant que si $M$ est un $A$-module de longueur finie ($A$ étant
+commutatif), les quotients d'une suite de Jordan-Hölder de $M$ sont
+nécessairement isomorphes au $A$-module $k$, donc on déduit de (7.3.5.4), par
+récurrence sur la longueur de $M$
+\[
+  \operatorname{long}T_p(M)\leq d\mathbin{.}\operatorname{long}(M).
+  \tag{7.3.5.6}\label{III.7.3.5.6.fr}
+\]
+En outre, il résulte de (7.3.5.3) que si $T_p$ est exact, on a l'égalité
+(7.3.5.1); donc la condition $a)$ de (7.3.3) entraîne $i)$; il est clair que
+$i)$ entraîne $j)$, et il reste à prouver le
+
+\begin{lemma}[7.3.5.7]
+La relation
+\[
+  \operatorname{long}T_p(A)=d\mathbin{.}\operatorname{long}A
+\]
+entraîne que $T_p(\varepsilon)$ est un épimorphisme et que $T_p(A)$ est un
+$A$-module plat.
+\end{lemma}
+
+\begin{proof}
+En effet, partant de la suite exacte
+\[
+  0\longrightarrow\mathfrak m\longrightarrow A\longrightarrow k
+  \longrightarrow0,
+\]
+il résulte de (7.3.5.4) et (7.3.5.6) que l'on a
+\[
+  \operatorname{long}T_p(A)
+  \leq
+  \operatorname{long}T_p(\mathfrak m)+\operatorname{long}T_p(k)
+  \leq
+  d\bigl(\operatorname{long}\mathfrak m+\operatorname{long}k\bigr)
+  =d\mathbin{.}\operatorname{long}A
+\]
+et que l'égalité ne peut avoir lieu (7.3.5.3) que si la suite
+\[
+  0\longrightarrow T_p(\mathfrak m)\longrightarrow T_p(A)
+  \longrightarrow T_p(k)\longrightarrow0
+  \tag{7.3.5.8}\label{III.7.3.5.8.fr}
+\]
+est exacte. En vertu de (7.2.7) et (7.2.5), $T_p$ est isomorphe à un foncteur
+$M\mapsto N\otimes_A M$, et l'exactitude de la suite (7.3.5.8) montre, en vertu
+de la suite exacte des $\operatorname{Tor}$, que l'on a
+$\operatorname{Tor}_1^A(N,k)=0$. On en conclut que $N=T_p(A)$ est un
+$A$-module plat (0, 10.1.3).
+\end{proof}
+
+\begin{lemma}[7.3.6]
+Soient $A$ un anneau, $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. Supposons
+$T_p$ et $T_{p+1}$ définis, et $T_p$ exact à gauche. Pour que $T_{p+1}$ soit
+exact, il faut et il suffit que $T_{p+1}(A_s)$ soit un $A$-module à droite
+plat.
+\end{lemma}
+
+\begin{proof}
+En effet, on sait d'après (7.3.1) que l'homomorphisme canonique
+\[
+  T_{p+1}(A_s)\otimes_A M\longrightarrow T_{p+1}(M)
+\]
+est un isomorphisme de foncteurs; il suffit d'appliquer la définition d'un
+$A$-module plat.
+\end{proof}
+
+\begin{proposition}[7.3.7]
+Soient $A$ un anneau, $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. On suppose
+qu'il existe $i_0$ tel que $T_i$ soit exact pour $i\leq i_0$. Alors, pour tout
+entier $p>i_0$, les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_q$ est exact pour $q\leq p$.
+  \item[b)] $T_q(A_s)$ est un $A$-module à droite plat pour $q\leq p$.
+  \item[c)] Pour tout $A$-module $M$, l'homomorphisme canonique
+    \[
+      T_q(A_s)\otimes_A M\longrightarrow T_q(M)
+    \]
+    est surjectif pour $q\leq p+1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence de $a)$ et $b)$ résulte de (7.3.6) par récurrence sur $q$,
+puisque $T_{i_0}$ est exact par hypothèse; l'équivalence de $a)$ et $c)$
+résulte de l'équivalence des conditions $a)$ et $e')$ dans (7.3.3).
+\end{proof}
+
+\oldpage[III]{184}
+
+\begin{env}[7.3.8]
+Si $A$ est un anneau commutatif, $B$ une $A$-algèbre (non nécessairement
+commutative), $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, il résulte des définitions (7.1.3) que le
+foncteur de $\mathbf{Ab}_B$ dans $\mathbf{Ab}$ obtenu par extension des
+scalaires de $A$ à $B$, et que nous noterons
+\[
+  T_\bullet^{(B)}=(T_i^{(B)}),
+\]
+est encore un foncteur homologique.
+\end{env}
+
+\begin{corollary}[7.3.9]
+Supposons que $T_\bullet$ vérifie les conditions générales de (7.3.7) et
+commute aux limites inductives, et en outre que $A$ soit un anneau intègre et
+tous les $T_n(A)$ des $A$-modules de présentation finie. Alors, pour tout
+entier $N$, il existe un $f\in A-\{0\}$ tel que le foncteur
+\[
+  T_p^{(A_f)}:\mathbf{Ab}_{A_f}\longrightarrow\mathbf{Ab}
+\]
+soit exact pour $p\leq N$.
+\end{corollary}
+
+\begin{proof}
+Par hypothèse, $T_i$ est exact pour $i\leq i_0$, donc $T_i(A)$ est plat pour
+ces valeurs de $i$. En vertu de (7.3.7, $b)$), il suffit de prendre $f$ tel que
+\[
+  T_p^{(A_f)}(A_f)=T_p(A_f)
+\]
+soit un $A_f$-module libre pour $i_0<p\leq N$. Or, on a
+$T_p(A_f)=(T_p(A))_f$ puisque $T_p$ commute aux limites inductives (7.1.4). Si
+$x$ est le point générique de $\operatorname{Spec}(A)$, $(T_p(A))_x$ est un
+espace vectoriel de dimension finie sur le corps des fractions de $A$. Comme
+chaque $T_p(A)$ est de présentation finie, il existe bien un $f$ ayant la
+propriété voulue (Bourbaki, \emph{Alg. comm.}, chap. II, \S 5,
+n\textsuperscript{o} 1, cor. de la prop. 2).
+
+On notera que s'il n'y a qu'un nombre fini d'indices $i$ tels que $T_i\ne0$,
+il existe $f\in A-\{0\}$ tel que tous les $T_p^{(A_f)}$ soient exacts.
+\end{proof}
+
+\begin{corollary}[7.3.10]
+Supposons que $T_\bullet$ vérifie les conditions générales de (7.3.7) et
+commute aux limites inductives, que $A$ soit commutatif et noethérien et les
+$T_n(A)$ des $A$-modules de type fini. Alors, pour tout entier $N$, il existe
+un ouvert dense $U$ de $\operatorname{Spec}(A)$ tel que, pour tout $p\leq N$,
+la fonction
+\[
+  x\mapsto\operatorname{rang}_{\kappa(x)}(T_p(\kappa(x)))
+\]
+soit constante dans $U$.
+\end{corollary}
+
+\begin{proof}
+Soit $\mathfrak p$ un idéal premier minimal de $A$; par hypothèse, l'anneau
+$B=A/\mathfrak p$ est intègre et $\operatorname{Spec}(B)$ s'identifie à une
+composante irréductible de l'espace topologique $\operatorname{Spec}(A)$. Nous
+allons montrer, par récurrence sur $p\leq N$ qu'il existe
+$f_p\in B-\{0\}$ tel que si on pose $B'=B_{f_p}$, $T_i^{(B')}$ soit exact et
+les $T_i(B')$ des $B'$-modules de type fini pour $i\leq p$. La proposition est
+vraie pour $p\leq i_0$ en vertu de l'hypothèse, en prenant $f_p=1$ (donc
+$B'=B=A/\mathfrak p$) car $T_p$ étant alors exact, $T_p(B)$ est isomorphe à
+$T_p(A)/T_p(\mathfrak p)$, donc est un $A$-module (et \emph{a fortiori} un
+$B$-module) de type fini. Raisonnons par récurrence sur $p$; $f_p$ est l'image
+canonique dans $B$ d'un élément $g_p\in A$, et si l'on pose $A'=A_{g_p}$, on a
+$B'=A'/\mathfrak p'$ où $\mathfrak p'$ est un idéal premier minimal de $A'$,
+égal à $\mathfrak p_{g_p}$. Comme on a
+\[
+  T_i(A_{g_p})=(T_i(A))_{g_p},
+\]
+les $T_i(A')$ sont des $A'$-modules de type fini, donc le foncteur
+$T_\bullet^{(A')}$ vérifie les mêmes hypothèses que $T_\bullet$, mais en
+remplaçant $i_0$ par $p$. On peut donc se borner au cas où $A'=A$, et où $T_p$
+est exact; la suite exacte
+\[
+  0\longrightarrow\mathfrak p\longrightarrow A\longrightarrow A/\mathfrak p
+  \longrightarrow0
+\]
+donne alors la suite exacte
+\[
+  T_{p+1}(A)\longrightarrow T_{p+1}(A/\mathfrak p)
+  \xrightarrow{\partial}T_p(\mathfrak p)\longrightarrow T_p(A),
+\]
+et comme $T_p$ est exact, la dernière flèche de droite est injective, donc
+$T_{p+1}(A/\mathfrak p)$ est un quotient de $T_{p+1}(A)$ et est par suite de
+type fini. Notons maintenant que le raisonnement de (7.3.9) n'a utilisé le fait
+que les $T_p(A)$ sont de type fini que pour $p\leq N$; on peut donc l'appliquer
+à l'anneau intègre $B$, au foncteur $T_\bullet^{(B)}$ et à $N=p+1$, ce qui
+achève le raisonnement par récurrence. Cela étant, il y a un
+$f_N\in B-\{0\}$ tel que $\operatorname{Spec}(B_{f_N})$ soit un ouvert $V$
+partout dense dans $\operatorname{Spec}(B)$ ne rencontrant aucune autre
+composante irréductible de $\operatorname{Spec}(A)$. Si la proposition est
+\oldpage[III]{185}
+démontrée pour $B_{f_N}$, on aura un ouvert $W$ partout dense dans $V$ dans
+lequel les fonctions de l'énoncé seront constantes, puisque
+$A_x=(B_{f_N})_x$ pour tout $x\in W$. En faisant le même raisonnement pour
+toute composante irréductible de $\operatorname{Spec}(A)$, le corollaire sera
+démontré. On peut donc se borner au cas où $A$ est intègre; le raisonnement de
+(7.3.9) prouve alors l'existence d'un $f\in A-\{0\}$ tel que les $T_p(A_f)$
+soient des $A_f$-modules libres de type fini pour $p\leq N$, ce qui entraîne
+la conclusion de (7.3.10) en vertu de (7.3.4).
+\end{proof}
+
+\begin{proposition}[7.3.11]
+Soient $A$ un anneau commutatif local, $k$ son corps résiduel, $T_\bullet$ un
+foncteur homologique covariant de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$,
+commutant aux sommes directes. On suppose qu'il existe $i_0$ tel que $T_i$ soit
+exact pour $i\leq i_0$, et que tous les $T_n(A)$ soient des $A$-modules de
+présentation finie. Alors les conditions équivalentes $a)$, $b)$, $c)$ de
+(7.3.7) impliquent les deux suivantes, et leur sont équivalentes lorsque
+l'anneau est en outre réduit :
+\begin{enumerate}
+  \item[d)] Pour tout $x\in\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\kappa(x)}T_q(\kappa(x))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+  \item[$d'$)] Pour tout point générique $x_j$ d'une composante irréductible
+    de $\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\kappa(x_j)}T_q(\kappa(x_j))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $T_q(A)$ est un $A$-module de présentation finie, la condition $b)$ de
+(7.3.7) équivaut à dire que $T_q(A)$ est un $A$-module libre pour $q\leq p$
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5); la condition $c)$ implique que
+\[
+  T_q(\kappa(x))=T_q(A)\otimes_A\kappa(x)
+  \quad\text{pour }q\leq p,
+\]
+donc les conditions équivalentes de (7.3.7) impliquent $d)$, et il est trivial
+que $d)$ entraîne $d')$. Reste à prouver que $d')$ implique $a)$ lorsque $A$
+est réduit. Raisonnons par récurrence sur $q\leq p$, puisque $T_q$ est exact
+pour $q\leq i_0$. Supposons donc $T_k$ exact pour $k\leq q<p$ et montrons que
+$T_{q+1}(A)$ est un $A$-module libre. En vertu de l'hypothèse de récurrence,
+$T_{q+1}(A)\otimes_A M$ est isomorphe à $T_{q+1}(M)$ pour tout $A$-module $M$,
+par la condition $c)$ de (7.3.7) et (7.3.3); appliquant cette propriété à
+$M=\kappa(x_j)$ et $M=k$, on trouve, en vertu de l'hypothèse $d')$, que
+\[
+  \operatorname{rang}_{\kappa(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\kappa(x_j)\bigr)
+  =
+  \operatorname{rang}_kT_{q+1}(k)
+\]
+pour tout $i$; mais cela implique que $T_{q+1}(A)$ est libre (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, prop. 7), ce qui
+achève la démonstration.
+\end{proof}
+
+Les résultats précédents seront considérablement améliorés pour les foncteurs
+homologiques de type particulier que nous allons étudier dans (7.4); on
+obtiendra en effet des critères d'exactitude ne faisant intervenir qu'un seul
+des $T_p$.
+
+\subsection{Critères d'exactitude pour les foncteurs
+$H_\bullet(P_\bullet\otimes_A M)$}
+\label{subsection:III.7.4.fr}
+
+\begin{env}[7.4.1]
+Soient $A$ un anneau (non nécessairement commutatif), $P_\bullet$ un complexe
+de $A$-modules à droite plats. Comme le foncteur
+$M\mapsto P_k\otimes_A M$ est alors exact dans $\mathbf{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]
+\oldpage[III]{186}
+est un foncteur homologique de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$,
+évidemment $A$-linéaire lorsque $A$ est commutatif (7.1.2), et commutant aux
+limites inductives.
+
+Si $A$ est commutatif, alors, pour toute $A$-algèbre $B$, le foncteur
+homologique $T_\bullet^{(B)}$ (7.3.8) est donné par définition par
+\[
+  T_\bullet^{(B)}(N)
+  =
+  H_\bullet(P_\bullet\otimes_A N_{[\rho]})
+  \tag{7.4.1.2}\label{III.7.4.1.2.fr}
+\]
+où $\rho:A\to B$ est l'homomorphisme définissant la structure d'algèbre de
+$B$; comme on peut aussi écrire
+\[
+  P_\bullet\otimes_A N_{[\rho]}
+  =P_\bullet\otimes_A(B\otimes_B N)_{[\rho]}
+  =(P_\bullet\otimes_A B)\otimes_B N,
+\]
+on voit que l'on a
+\[
+  T_\bullet^{(B)}(N)=H_\bullet(P'_\bullet\otimes_B N)
+  \tag{7.4.1.3}\label{III.7.4.1.3.fr}
+\]
+pour tout $B$-module $N$, $P'_\bullet$ étant le complexe
+$P_\bullet\otimes_A B$ de $B$-modules plats (0\textsubscript{I}, 6.2.1).
+\end{env}
+
+\begin{proposition}[7.4.2]
+Sous les conditions générales de (7.4.1), et pour un entier $p\in\mathbf Z$
+donné, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à gauche (ou, ce qui revient au même, $T_{p+1}$
+    est exact à droite).
+  \item[b)]
+    \[
+      Z'_p(P_\bullet)
+      =
+      \operatorname{Coker}(P_{p+1}\longrightarrow P_p)
+    \]
+    est un $A$-module à droite plat.
+  \item[c)] Il existe un complexe $P'_\bullet$ de $A$-modules à droite plats
+    tel que la différentielle
+    \[
+      d'_{p+1}:P'_{p+1}\longrightarrow P'_p
+    \]
+    soit nulle, et un isomorphisme de foncteurs homologiques de
+    $H_\bullet(P_\bullet\otimes_A M)$ sur
+    $H_\bullet(P'_\bullet\otimes_A M)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Par définition, on a une suite exacte fonctorielle en $M$
+\[
+  0\longrightarrow T_p(M)
+  \longrightarrow Z'_p(P_\bullet\otimes M)
+  \longrightarrow P_{p-1}\otimes M
+\]
+où
+\[
+  Z'_p(P_\bullet\otimes M)
+  =
+  \operatorname{Coker}(P_{p+1}\otimes M\longrightarrow P_p\otimes M)
+  =
+  Z'_p(P_\bullet)\otimes M
+\]
+en vertu de l'exactitude à droite du produit tensoriel. Pour tout homomorphisme
+$f:M\to N$, on a donc un diagramme commutatif
+\[
+\xymatrix@C=30pt@R=38pt{
+  0\ar[r]
+  &T_p(M)\ar[r]\ar[d]_u
+  &Z'_p(P_\bullet)\otimes M\ar[r]\ar[d]_v
+  &P_{p-1}\otimes M\ar[d]_w
+  \\
+  0\ar[r]
+  &T_p(N)\ar[r]
+  &Z'_p(P_\bullet)\otimes N\ar[r]
+  &P_{p-1}\otimes N
+}
+\tag{7.4.2.1}\label{III.7.4.2.1.fr}
+\]
+dont les lignes sont exactes. Si $f$ est un monomorphisme, il en est de même
+de $w$ puisque $P_{p-1}$ est plat; si $T_p$ est exact à gauche, $u$ est lui
+aussi un monomorphisme; on en conclut que $v$ est un monomorphisme, ce qui
+entraîne que $Z'_p(P_\bullet)$ est plat. Inversement, s'il en est ainsi, $v$
+est un monomorphisme pour tout monomorphisme $f:M\to N$, donc le diagramme
+(7.4.2.1) montre que $u$ est un monomorphisme, et par suite $T_p$ (qui est déjà
+semi-exact) est exact à gauche. Ainsi $a)$ et $b)$ sont équivalentes. Il est
+immédiat que $c)$ entraîne $a)$, car si
+$d'_{p+1}:P'_{p+1}\to P'_p$ est nulle, et
+$0\to M'\to M\to M''\to0$ est une suite exacte de $A$-modules, l'opérateur
+bord dans la suite exacte
+\[
+  H_{p+1}(P'_\bullet\otimes M'')
+  \xrightarrow{\partial}H_p(P'_\bullet\otimes M')
+  \longrightarrow H_p(P'_\bullet\otimes M)
+\]
+\oldpage[III]{187}
+est nul par définition (M, IV, 1), donc $T_p$ est exact à gauche. Montrons
+inversement que $b)$ implique $c)$. Si
+\[
+  Z_{p+1}(P_\bullet)=\operatorname{Ker}(P_{p+1}\longrightarrow P_p),
+\]
+on a une suite exacte
+\[
+  0\longrightarrow Z_{p+1}(P_\bullet)\longrightarrow P_{p+1}
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0
+\]
+dans laquelle $P_{p+1}$ et $Z'_p(P_\bullet)$ sont plats, donc
+$Z_{p+1}(P_\bullet)$ est plat ($0_{\mathrm I}$, 6.1.2). On va prendre
+\[
+  P'_i=P_i\quad\text{pour }i\ne p\text{ et }i\ne p+1,
+  \qquad
+  P'_p=Z'_p(P_\bullet),
+  \qquad
+  P'_{p+1}=Z_{p+1}(P_\bullet);
+\]
+pour différentielle $d'_i:P'_i\to P'_{i-1}$, on prendra celle du complexe
+$P_\bullet$ pour $i\ne p$ et $i\ne p+1$, $0$ pour $i=p+1$ et pour $i=p$
+l'homomorphisme $Z'_p(P_\bullet)\to P_{p-1}$ déduit de $d_p$ par passage au
+quotient. Comme les $P_i$ sont plats, on a
+\[
+  Z'_i(P_\bullet\otimes M)=Z'_i(P_\bullet)\otimes M,
+  \qquad
+  Z_i(P_\bullet\otimes M)=Z_i(P_\bullet)\otimes M
+\]
+et
+\[
+  B_i(P_\bullet\otimes M)=B_i(P_\bullet)\otimes M
+\]
+(en posant $B_i(P_\bullet)=\operatorname{Im}(P_{i+1}\to P_i)$); on en conclut
+aussitôt pour tout $M$ des isomorphismes fonctoriels
+\[
+  H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)
+\]
+pour tout $i$, et la vérification du fait qu'il s'agit d'un isomorphisme de
+$\partial$-foncteurs découle sans peine de la définition de $\partial$
+(M, IV, 1).
+\end{proof}
+
+On remarquera que les conditions de (7.4.2) impliquent aussi que
+$B_p(P_\bullet)$ est plat, car on a une suite exacte
+\[
+  0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0,
+\]
+dans laquelle $P_p$ et $Z'_p(P_\bullet)$ sont plats ($0_{\mathrm I}$, 6.1.2).
+
+\begin{corollary}[7.4.3]
+Supposons que $A$ soit un anneau noethérien régulier de dimension $1$
+(autrement dit un produit d'anneaux de Dedekind
+($0_{\mathrm{IV}}$, 17.1.3 et 17.3.7), par exemple un anneau principal). Alors,
+pour que $T_p$ soit exact à gauche, il faut et il suffit que $T_p(A)$ soit un
+$A$-module plat. Pour que $T_p$ soit exact, il faut et il suffit que $T_p(A)$
+et $T_{p-1}(A)$ soient des $A$-modules plats.
+\end{corollary}
+
+\begin{proof}
+Rappelons que pour un module $M$ sur un anneau de Dedekind, il revient au même
+de dire que $M$ est plat ou qu'il est sans torsion ($0_{\mathrm I}$, 6.3.3 et
+6.3.4); sous les hypothèses de (7.4.3), tout sous-module d'un $A$-module plat
+est donc plat.
+
+La seconde assertion de (7.4.3) résulte de la première, puisque dire que $T_p$
+est exact signifie que $T_p$ et $T_{p-1}$ sont exacts à gauche. Pour démontrer
+la première assertion, notons que l'on a une suite exacte
+\[
+  0\longrightarrow H_p(P_\bullet)\longrightarrow Z'_p(P_\bullet)
+  \longrightarrow B_{p-1}(P_\bullet)\longrightarrow0
+\]
+dans laquelle $B_{p-1}(P_\bullet)$ est un $A$-module plat, en tant que
+sous-module du $A$-module plat $P_{p-1}$. Il est donc équivalent de dire que
+$H_p(P_\bullet)$ est plat ou que $Z'_p(P_\bullet)$ est plat
+($0_{\mathrm I}$, 6.1.2).
+\end{proof}
+
+Les applications les plus importantes de (7.4.2) sont les suivantes :
+
+\begin{proposition}[7.4.4]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats;
+on suppose, soit que les $P_i$ sont de type fini, soit que les
+$H_i(P_\bullet)$ sont des $A$-modules de type fini et qu'il existe $i_0$ tel
+que $H_i(P_\bullet)=0$ pour $i<i_0$. Soit $T$ le foncteur homologique défini
+par (7.4.1.1). Alors l'ensemble $U$ des
+$y\in\operatorname{Spec}(A)$ tels que $(T_p)_y$ (7.1.4) soit exact à droite
+(resp. exact à gauche, exact) est ouvert dans $\operatorname{Spec}(A)$.
+\end{proposition}
+
+\begin{proof}
+Dans la seconde hypothèse sur $P_\bullet$, on peut remplacer $P_\bullet$ par
+un complexe $P'_\bullet$ de
+\oldpage[III]{188}
+$A$-modules libres de type fini pour lequel le foncteur
+$H_\bullet(P'_\bullet\otimes_A M)$ est isomorphe (en tant que
+$\partial$-foncteur) à $T_\bullet(M)$ (0, 11.9.3). On peut donc toujours se
+ramener à la première hypothèse et dans ce cas les $Z'_i(P_\bullet)$ sont de
+type fini; en outre, on peut se borner à démontrer les assertions relatives à
+l'exactitude à gauche (cf. (7.4.2, $a)$). Cela étant, soit $x\in U$; comme le
+foncteur $M\mapsto M_x$ est exact, on a
+\[
+  (Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x),
+\]
+et (en tenant compte de (7.4.1.3)) l'hypothèse entraîne, en vertu de
+(7.4.2, $b)$) que $(Z'_p(P_\bullet))_x$ est un $A_x$-module plat, donc libre
+puisqu'il est de type fini et que $A_x$ est un anneau local noethérien
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5). On en conclut qu'il y a un $f\in A$ tel que
+$(Z'_p(P_\bullet))_f$ soit libre sur $A_f$ (Bourbaki, \emph{Alg. comm.},
+chap. II, \S 5, n\textsuperscript{o} 1, cor. de la prop. 2), et \emph{a
+fortiori} $(Z'_p(P_\bullet))_y$ est libre sur $A_y$ pour tout $y\in D(f)$, ce
+qui achève la démonstration en vertu de (7.4.2, $b)$).
+\end{proof}
+
+\begin{corollary}[7.4.5]
+Sous les hypothèses de (7.4.4), supposons en outre que $A$ soit intègre. Alors
+l'ensemble $U$ des $x\in\operatorname{Spec}(A)$ tels que $(T_p)_x$ soit exact
+est ouvert non vide.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet de prouver que $(T_p)_x$ est exact pour le point générique
+$x$ de $\operatorname{Spec}(A)$, ce qui est immédiat puisque $A_x$ est un
+corps, donc tout foncteur additif sur $\mathbf{Ab}_{A_x}$ est exact.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+Sous les hypothèses générales de (7.4.4), les conditions $a)$, $b)$ et $c)$ de
+(7.4.2) sont aussi équivalentes à :
+\begin{enumerate}
+  \item[d)] Il existe un $A$-module $Q$ et un isomorphisme fonctoriel
+    \[
+      T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M).
+      \tag{7.4.6.1}\label{III.7.4.6.1.fr}
+    \]
+    En outre, le $A$-module $Q$ est déterminé à isomorphisme unique près par
+    cette propriété, et il est de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'unicité de $Q$ est un cas particulier de l'unicité d'un objet représentatif
+d'un foncteur représentable (0, 8.1.5). Il est clair que le second membre de
+(7.4.6.1) est exact à gauche. Inversement, pour démontrer l'existence de $Q$,
+lorsque $T_p$ est exact à gauche, on peut d'abord, comme dans (7.4.4), se
+ramener au cas où les $P_i$ sont plats et de type fini, donc (puisque $A$ est
+noethérien) projectifs de type fini (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S 5, n\textsuperscript{o} 2, cor. du th. 1). Le dual $\check P_i$ de $P_i$
+est alors aussi un $A$-module projectif de type fini, $P_i$ est canoniquement
+isomorphe au dual de $\check P_i$, et l'homomorphisme canonique
+\[
+  P_i\otimes_A M\longrightarrow\operatorname{Hom}_A(\check P_i,M)
+\]
+est bijectif (Bourbaki, \emph{Alg.}, chap. II, 3\textsuperscript{e} éd.,
+\S 4, n\textsuperscript{o} 2, prop. 2). On sait d'autre part (7.4.2, $c)$)
+qu'on peut supposer que $d_{p+1}:P_{p+1}\to P_p$ est nulle, donc que l'on a une
+suite exacte
+\[
+  0\longrightarrow T_p(M)\xrightarrow{u}P_p\otimes M
+  \xrightarrow{v}P_{p-1}\otimes M
+\]
+où $v=d_p\otimes1$. Posons alors $Q'=\operatorname{Ker}(d_p)$, de sorte qu'on
+a la suite exacte
+\[
+  0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1},
+\]
+d'où, par transposition, la suite exacte
+\[
+  \check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+  \xrightarrow{{}^t w}\check Q'\longrightarrow0.
+\]
+Nous allons voir que
+\[
+  Q=\check Q'=\operatorname{Coker}({}^t d_p)
+\]
+répond à la question. En effet, on a la suite exacte
+\[
+  0\longrightarrow\operatorname{Hom}_A(Q,M)
+  \longrightarrow\operatorname{Hom}_A(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}_A(\check P_{p-1},M)
+\]
+\oldpage[III]{189}
+où $v'=\operatorname{Hom}({}^t d_p,1)$; lorsqu'on identifie canoniquement
+$P_i\otimes M$ à $\operatorname{Hom}(\check P_i,M)$, $v'$ s'identifie donc à
+$v=d_p\otimes1$, et l'on a par suite l'isomorphisme fonctoriel
+\[
+  T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M)
+\]
+cherché. En outre, $Q$, étant un quotient de $\check P_p$, est de type fini.
+\end{proof}
+
+\begin{proposition}[7.4.7]
+Supposons vérifiées les conditions générales de (7.4.4). Alors, pour tout
+$A$-module $M$ de type fini :
+\begin{enumerate}
+  \item[(i)] Les $T_i(M)$ sont des $A$-modules de type fini.
+  \item[(ii)] Pour tout idéal $\mathfrak m$ de $A$, l'homomorphisme canonique
+    \[
+      \widehat{T_i(M)}
+      \longrightarrow
+      \varprojlim_n T_i\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+      \tag{7.4.7.1}\label{III.7.4.7.1.fr}
+    \]
+    (où le premier membre est le séparé complété de $T_i(M)$ pour la topologie
+    $\mathfrak m$-préadique) est bijectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme dans (7.4.4), on se ramène d'abord au cas où les $P_i$ sont de type fini;
+$A$ étant noethérien, les sous-modules des $P_i\otimes_A M$ sont de type fini,
+d'où trivialement l'assertion (i). Quant à l'assertion (ii), elle résulte plus
+généralement du lemme suivant :
+\end{proof}
+
+\begin{lemma}[7.4.7.2]
+Soient $A$ un anneau noethérien, $u:E\to F$ un homomorphisme de $A$-modules de
+type fini. Pour tout $A$-module de type fini, posons
+\[
+  K(M)=\operatorname{Ker}(u\otimes1_M),
+  \qquad
+  C(M)=\operatorname{Coker}(u\otimes1_M);
+\]
+alors les homomorphismes canoniques
+\[
+  \widehat{K(M)}\longrightarrow\varprojlim_n K(M_n),
+  \qquad
+  \widehat{C(M)}\longrightarrow\varprojlim_n C(M_n)
+  \tag{7.4.7.3}\label{III.7.4.7.3.fr}
+\]
+(où l'on a posé
+$M_n=M\otimes_A(A/\mathfrak m^{n+1})=M/\mathfrak m^{n+1}M$) sont bijectifs
+pour tout idéal $\mathfrak m$ de $A$.
+\end{lemma}
+
+\begin{proof}
+Comme $E\otimes M$ et $F\otimes M$ sont de type fini, et que le foncteur
+$M\mapsto\widehat M$ est exact dans la catégorie des $A$-modules de type fini
+($0_{\mathrm I}$, 7.3.3), $\widehat{K(M)}$ et $\widehat{C(M)}$ sont
+respectivement le noyau et le conoyau de
+\[
+  \widehat{(u\otimes1)}:
+  \widehat{(E\otimes M)}\longrightarrow\widehat{(F\otimes M)}.
+\]
+L'exactitude à gauche du foncteur $\varprojlim$ montre donc que
+$\widehat{K(M)}=\varprojlim_n K(M_n)$; d'autre part, l'exactitude à droite du
+produit tensoriel prouve que
+$C(M_n)=C(M)\otimes_A(A/\mathfrak m^{n+1})$, donc
+$\widehat{C(M)}=\varprojlim_n C(M_n)$ par définition.
+\end{proof}
+
+\begin{remark}[7.4.8]
+Compte tenu de (6.10.5) et (6.10.6), on voit que, moyennant une hypothèse de
+platitude supplémentaire, (7.4.7) redonne le fait que (4.1.7.1) est un
+isomorphisme, c'est-à-dire l'essentiel du « premier théorème de comparaison »
+pour les morphismes propres; en outre, l'énoncé s'applique non plus seulement
+à un $\mathscr O_X$-Module cohérent, mais à un complexe de tels Modules. Il
+serait intéressant d'obtenir un énoncé comprenant à la fois (7.4.7) et
+(4.1.7.1) comme cas particuliers. On notera que lorsque les $P_i$ sont de type
+fini, la démonstration de (7.4.7) n'utilise pas le fait que ce sont des modules
+plats; il y aurait lieu d'examiner si la conclusion de (7.4.7) est encore
+valable lorsque les $P_i$ ne sont pas supposés plats ni de type fini, mais que
+les $H_i(P_\bullet)$ sont supposés de type fini pour tout $i$ et nuls pour
+$i<i_0$. Est-il alors possible de remplacer $P_\bullet$ par un complexe
+$P'_\bullet$ de $A$-modules de type fini tel que les foncteurs
+$H_\bullet(P_\bullet\otimes M)$ et $H_\bullet(P'_\bullet\otimes M)$ (qui ne
+sont plus homologiques) soient encore isomorphes ?
+\end{remark}
+
+\oldpage[III]{190}
+\subsection{Cas des anneaux locaux noethériens}
+\label{subsection:III.7.5.fr}
+
+\begin{env}[7.5.1]
+Soient $A$ un anneau local noethérien, $\mathfrak m$ son idéal maximal, et pour
+tout $A$-module $M$, désignons par $\widehat M$ son séparé complété pour la
+topologie $\mathfrak m$-préadique, isomorphe à
+\[
+  \varprojlim_n\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+  =
+  \varprojlim_n\bigl(M/\mathfrak m^{n+1}M\bigr).
+\]
+Soit $T$ un foncteur covariant additif de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$;
+les homomorphismes canoniques (7.2.3.1)
+\[
+  T(M)\otimes_A(A/\mathfrak m^{n+1})
+  \longrightarrow
+  T\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+\]
+forment évidemment un système projectif de $A$-homomorphismes, qui donnent donc
+à la limite un $\widehat A$-homomorphisme fonctoriel en $M$
+\[
+  \widehat{T(M)}
+  \longrightarrow
+  \varprojlim_n T(M_n)
+  \tag{7.5.1.1}\label{III.7.5.1.1.fr}
+\]
+où l'on a posé
+\[
+  M_n=M\otimes_A(A/\mathfrak m^{n+1}),
+  \qquad
+  A_n=A/\mathfrak m^{n+1}.
+\]
+\end{env}
+
+\begin{proposition}[7.5.2]
+Soient $A$ un anneau local noethérien d'idéal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ son corps résiduel, $T$ un foncteur covariant additif de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, semi-exact et commutant aux limites
+inductives. On suppose en outre que pour tout $A$-module de type fini $M$,
+$T(M)$ est un $A$-module de type fini et que l'homomorphisme canonique
+(7.5.1.1) est un isomorphisme. Sous ces conditions, les propriétés suivantes
+sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T$ est exact à droite.
+  \item[b)] Pour tout $n$, le foncteur $N\mapsto T(N)$ est exact à droite dans
+    la catégorie des $A_n$-modules de type fini (ce qui revient à dire que $T$
+    est exact à droite dans la catégorie des $A$-modules de longueur finie).
+  \item[c)] L'homomorphisme canonique
+    \[
+      T(\varepsilon):T(A)\longrightarrow T(k)
+    \]
+    est surjectif.
+  \item[d)] Pour tout $n$ assez grand, l'homomorphisme canonique
+    \[
+      T(A_n)\longrightarrow T(k)
+    \]
+    est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que a) entraîne b). Montrons que b) entraîne a), c'est-à-dire que
+si $u:M\to N$ est un épimorphisme de $A$-modules, $T(u)$ est un épimorphisme.
+Comme $T$ commute aux limites inductives et que le foncteur $\varinjlim$ est
+exact dans la catégorie des modules (pour des ensembles d'indices filtrants),
+on peut se borner au cas où $M$ et $N$ sont de type fini. Comme $T(M)$ et
+$T(N)$ sont alors de type fini, et que $A$ est un anneau local noethérien, il
+suffit de montrer que
+\[
+  \widehat{T(u)}:
+  \widehat{T(M)}
+  \longrightarrow
+  \widehat{T(N)}
+\]
+est surjectif ($0_{\mathrm I}$, 7.3.5 et $0_{\mathrm I}$, 6.4.1). Par hypothèse,
+$\widehat{T(M)}$ et $\widehat{T(N)}$ sont respectivement $\varprojlim_n T(M_n)$
+et $\varprojlim_n T(N_n)$, donc $\widehat{T(u)}$ est limite du système projectif
+d'homomorphismes
+\[
+  T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n).
+\]
+Or, b) signifie que ces homomorphismes sont surjectifs; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau artinien par hypothèse; on
+en conclut que $\widehat{T(u)}$ est surjectif ($0_{\mathrm I}$, 13.1.2 et
+13.2.2). Il est clair que a) entraîne c), et comme $T(\varepsilon)$ se factorise
+en
+\[
+  T(A)\longrightarrow T(A_n)\longrightarrow T(k),
+\]
+c) implique d); enfin, il résulte de (7.2.7) que b) et d) sont équivalentes
+puisque $T$ est semi-exact dans $\mathbf{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de (7.5.2), si $T(k)=0$, alors $T(M)=0$ pour tout
+$A$-module $M$.
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{191}
+Comme $k$ est le seul $A$-module simple, on déduit de (7.3.5.4) que $T(E)=0$
+pour tout $A$-module de longueur finie $E$. Si maintenant $M$ est de type fini,
+$\widehat{T(M)}$ est isomorphe à $\varprojlim_n T(M_n)$, et comme les $M_n$ sont
+de longueur finie, on a $\widehat{T(M)}=0$; comme $T(M)$ est de type fini par
+hypothèse, il est isomorphe à un sous-module de $\widehat{T(M)}$
+($0_{\mathrm I}$, 7.3.5), donc on a $T(M)=0$. Enfin, pour un $A$-module $M$
+quelconque, $T(M)$ est limite inductive des $T(N_\alpha)$ pour les sous-modules
+de type fini $N_\alpha$ de $M$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[7.5.4]
+Soient $A$ un anneau local noethérien d'idéal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ son corps résiduel, $T_\bullet$ un foncteur homologique de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux limites inductives. On suppose
+en outre que pour tout $i$ et tout $A$-module $M$ de type fini, $T_i(M)$ est de
+type fini et l'homomorphisme canonique
+\[
+  \widehat{T_i(M)}
+  \longrightarrow
+  \varprojlim_n T_i(M_n)
+\]
+est bijectif. Pour un entier $p$ donné, les conditions suivantes sont alors
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact.
+  \item[b)] $T_p$ est exact à droite, et $T_p(A)$ est un $A$-module libre.
+  \item[c)] Les homomorphismes canoniques
+    \[
+      T_{p+1}(A)\longrightarrow T_{p+1}(k)
+      \quad\text{et}\quad
+      T_p(A)\longrightarrow T_p(k)
+    \]
+    sont surjectifs.
+  \item[d)] Pour tout $n$, les homomorphismes canoniques
+    \[
+      T_{p+1}(A_n)\longrightarrow T_{p+1}(k)
+      \quad\text{et}\quad
+      T_p(A_n)\longrightarrow T_p(k)
+    \]
+    sont surjectifs.
+  \item[e)] Pour tout $n$, le foncteur $N\mapsto T_p(N)$ est exact dans la
+    catégorie des $A_n$-modules de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On sait (7.3.3) que a) équivaut à dire que $T_{p+1}$ et $T_p$ sont exacts à
+droite; comme $T_\bullet$ est un foncteur homologique dans la catégorie
+$\mathbf{Ab}_{A_n}$, le même raisonnement que dans (7.3.1) montre que e)
+équivaut à dire que $T_p$ et $T_{p+1}$ sont exacts à droite dans la catégorie
+des $A_n$-modules de type fini. On déduit donc de (7.5.2) que a) et e) sont
+équivalentes; l'équivalence de a), c) et d) résulte aussi de (7.5.2). Enfin, on
+sait que tout $A$-module plat de type fini est libre (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5); l'équivalence de a) et b) résulte alors de (7.3.1) et (7.3.3).
+\end{proof}
+
+\begin{corollary}[7.5.5]
+Supposons vérifiées les conditions générales de (7.5.4).
+\begin{enumerate}
+  \item[(i)] Si $T_p(k)=0$, on a $T_p=0$, $T_{p+1}$ est exact à droite et
+    $T_{p-1}$ est exact à gauche.
+  \item[(ii)] Si $T_{p-1}(k)=T_{p+1}(k)=0$, $T_p$ est exact,
+    l'homomorphisme canonique
+    \[
+      T_p(A)\otimes_A M\longrightarrow T_p(M)
+    \]
+    est bijectif et $T_p(A)$ est un $A$-module libre.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) découle aussitôt de (7.5.3) puisque $T_p$ est semi-exact, la dernière
+assertion résultant de la définition d'un foncteur homologique. On conclut
+aussitôt de (i) les deux premières assertions de (ii), compte tenu de (7.3.3);
+le fait que $T_p(A)$ soit libre résulte de (7.5.4).
+\end{proof}
+
+\begin{corollary}[7.5.6]
+Supposons vérifiées les hypothèses générales de (7.5.4), et supposons de plus
+que $A$ soit un anneau de valuation discrète.
+\begin{enumerate}
+  \item[(i)] Pour que $T_p$ soit exact à droite, il faut et il suffit que
+    $T_{p-1}(A)$ soit un $A$-module libre.
+  \item[(ii)] Pour que $T_p$ soit exact, il faut et il suffit que $T_p(A)$ et
+    $T_{p-1}(A)$ soient des $A$-modules libres.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\oldpage[III]{192}
+Il est clair que (i) implique (ii) (cf. (7.3.3)). Pour prouver (i), remarquons
+que si $f$ est un générateur de l'idéal maximal de $A$ (« uniformisante » de
+$A$), pour qu'un $A$-module de type fini $M$ soit libre (ou plat, ce qui revient
+au même), il faut et il suffit que l'homothétie $h_f:x\mapsto fx$ de $M$ soit
+injective, car cela équivaut ici à dire que $M$ est sans torsion
+($0_{\mathrm I}$, 6.3.4). Considérons alors la suite exacte
+\[
+  0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0,
+\]
+qui fournit la suite exacte d'homologie
+\[
+  T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow T_{p-1}(A)
+  \xrightarrow{h_f}T_{p-1}(A).
+\]
+On voit que $T_{p-1}(A)$ est libre si et seulement si
+$T_p(A)\to T_p(k)$ est surjectif; la conclusion résulte alors de (7.5.2).
+\end{proof}
+
+\begin{remark}[7.5.7]
+On notera que, en vertu de (7.4.7), les hypothèses générales de (7.4.4)
+entraînent que le foncteur homologique $T_\bullet$ défini par (7.4.1.1)
+satisfait aux hypothèses générales de (7.5.4). Dans ce cas, (7.5.6) est donc
+contenu dans (7.4.3).
+\end{remark}
+
+\subsection{Descente des propriétés d'exactitude. Théorème de semi-continuité
+et critère d'exactitude de Grauert}
+\label{subsection:III.7.6.fr}
+
+\begin{proposition}[7.6.1]
+Sous les conditions de (7.4.1), soit $B$ une $A$-algèbre commutative. Si $T_p$
+est exact à droite (resp. exact à gauche, exact) il en est de même de
+$T_p^{(B)}$; la réciproque est vraie lorsque $B$ est un $A$-module fidèlement
+plat.
+\end{proposition}
+
+\begin{proof}
+La première assertion est un cas particulier d'une assertion triviale de
+(7.1.3). Inversement, supposons d'abord que $B$ soit un $A$-module plat. On a
+alors, pour tout $A$-module $M$,
+\[
+  H_\bullet\bigl(P_\bullet\otimes_A(M\otimes_A B)\bigr)
+  =
+  \bigl(H_\bullet(P_\bullet\otimes_A M)\bigr)\otimes_A B,
+\]
+ce qui s'écrit aussi, pour tout $p$,
+\[
+  T_p(M)\otimes_A B
+  =
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1.fr}
+\]
+à un isomorphisme canonique près. Supposons $T_p^{(B)}$ exact à droite (resp.
+exact à gauche, exact); comme $M\mapsto M_{(B)}$ est un foncteur exact, le
+premier membre de (7.6.1.1) est un foncteur exact à droite (resp. exact à
+gauche, exact) en $M$; si maintenant $B$ est fidèlement plat sur $A$, on en
+déduit que $T_p$ a la même propriété d'exactitude ($0_{\mathrm I}$, 6.4.1).
+\end{proof}
+
+\begin{proposition}[7.6.2]
+Sous les conditions de (7.4.1), on suppose en outre que $A$ soit un anneau
+noethérien réduit et que les $P_i$ soient des $A$-modules de type fini. Pour que
+$T_p$ soit exact à droite (resp. exact à gauche, exact), il faut et il suffit
+que, pour toute $A$-algèbre $B$ qui est un anneau de valuation discrète,
+$T_p^{(B)}$ le soit.
+\end{proposition}
+
+\begin{proof}
+En vertu de (7.3.1) et (7.3.3), on peut se borner à considérer l'exactitude à
+droite, et il n'y a naturellement qu'à prouver la suffisance de la condition
+(7.6.1). En vertu de (7.4.2), il suffit de montrer que
+$Z'_{p-1}(P_\bullet)$ est un $A$-module plat; comme $P_{p-1}$ est de type fini,
+$Z'_{p-1}(P_\bullet)$ est aussi de type fini; le critère ($0$, 10.2.8) montre
+qu'il suffit alors que $Z'_{p-1}(P_\bullet)\otimes_A B$ soit un $B$-module plat
+pour toute $A$-algèbre $B$ qui est un anneau de valuation discrète. Or, comme
+$P_\bullet$ est un complexe de $A$-modules plats, on a
+\[
+  Z'_{p-1}(P_\bullet)\otimes_A B
+  =
+  Z'_{p-1}(P_\bullet\otimes_A B);
+\]
+\oldpage[III]{193}
+$P_\bullet\otimes_A B$ est un complexe de $B$-modules plats
+($0_{\mathrm I}$, 6.2.1), et pour tout $B$-module $N$, on a
+\[
+  H_\bullet(P_\bullet\otimes_A N)
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr),
+\]
+donc
+\[
+  T_p^{(B)}(N)
+  =
+  H_p\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr);
+\]
+appliquant (7.4.2) à $T_p^{(B)}$, on voit que l'hypothèse que $T_p^{(B)}$ est
+exact à droite est équivalente au fait que $Z'_{p-1}(P_\bullet\otimes_A B)$ est
+un $B$-module plat.
+
+Le critère précédent amène à étudier de plus près le cas des anneaux de
+valuation discrète :
+\end{proof}
+
+\begin{proposition}[7.6.3]
+Sous les conditions de (7.4.1), supposons que $A$ soit un anneau noethérien
+régulier de dimension 1 (autrement dit, que $A$ est noethérien et que, pour tout
+$x\in\operatorname{Spec}(A)$, $A_x$ est un corps ou un anneau de valuation
+discrète). Alors, pour tout entier $p$ et tout $A$-module $M$, on a une suite
+exacte canonique fonctorielle en $M$
+\[
+  0
+  \longrightarrow T_p(A)\otimes_A M
+  \xrightarrow{t_M}T_p(M)
+  \longrightarrow \operatorname{Tor}_1^A\bigl(T_{p-1}(A),M\bigr)
+  \longrightarrow0.
+  \tag{7.6.3.1}\label{III.7.6.3.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Dans ce qui suit, nous supprimerons pour simplifier la mention du complexe
+$P_\bullet$ dans les notations homologiques usuelles $H_p(P_\bullet)$,
+$B_p(P_\bullet)$, $Z_p(P_\bullet)$ et $Z'_p(P_\bullet)$. On a les trois suites
+exactes
+\begin{gather*}
+  0\longrightarrow H_p\longrightarrow Z'_p\longrightarrow B_{p-1}
+  \longrightarrow0,\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}\longrightarrow H_{p-1}
+  \longrightarrow0,\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}\longrightarrow B_{p-2}
+  \longrightarrow0.
+\end{gather*}
+Comme $P_{p-1}$ et $P_{p-2}$ sont plats, il en est de même de leurs
+sous-modules respectifs $B_{p-1}$, $Z_{p-1}$ et $B_{p-2}$ puisqu'il y a
+identité entre $A_x$-modules plats et $A_x$-modules sans torsion (pour tout
+$x\in\operatorname{Spec}(A)$); par tensorisation avec $M$, on a donc les suites
+exactes
+\[
+  0=\operatorname{Tor}_1^A(B_{p-1},M)
+  \longrightarrow H_p\otimes M
+  \longrightarrow Z'_p\otimes M
+  \xrightarrow{u}B_{p-1}\otimes M
+  \longrightarrow0
+  \tag{7.6.3.2}\label{III.7.6.3.2.fr}
+\]
+\[
+  0=\operatorname{Tor}_1^A(Z_{p-1},M)
+  \longrightarrow\operatorname{Tor}_1^A(H_{p-1},M)
+  \longrightarrow B_{p-1}\otimes M
+  \xrightarrow{v}Z_{p-1}\otimes M
+  \tag{7.6.3.3}\label{III.7.6.3.3.fr}
+\]
+\[
+  0=\operatorname{Tor}_1^A(B_{p-2},M)
+  \longrightarrow Z_{p-1}\otimes M
+  \xrightarrow{w}P_{p-1}\otimes M.
+  \tag{7.6.3.4}\label{III.7.6.3.4.fr}
+\]
+Par définition,
+$T_p(M)=\operatorname{Ker}(d_p\otimes1)/\operatorname{Im}(d_{p+1}\otimes1)$;
+c'est donc le noyau de l'homomorphisme
+\[
+  (P_p\otimes M)/\operatorname{Im}(d_{p+1}\otimes1)
+  \longrightarrow P_{p-1}\otimes M
+\]
+obtenu à partir de $d_p\otimes1$ par passage au quotient, homomorphisme qui
+s'écrit aussi $Z'_p\otimes M\to P_{p-1}\otimes M$ par définition de
+$Z'_p=P_p/B_p$; or, cet homomorphisme peut être considéré comme le composé
+\[
+  Z'_p\otimes M
+  \xrightarrow{u}B_{p-1}\otimes M
+  \xrightarrow{v}Z_{p-1}\otimes M
+  \xrightarrow{w}P_{p-1}\otimes M.
+\]
+Comme $w$ est injectif d'après (7.6.3.4), on a une suite exacte
+\[
+  0\longrightarrow\operatorname{Ker}u
+  \longrightarrow T_p(M)
+  \longrightarrow\operatorname{Ker}v
+  \longrightarrow0,
+\]
+qui n'est autre que (7.6.3.1), compte tenu de (7.6.3.2) et (7.6.3.3) et de ce
+que $H_p=T_p(A)$ par définition.
+\end{proof}
+
+\begin{remarks}[7.6.4]
+\begin{enumerate}
+  \item[(i)] $H_\bullet(P_\bullet\otimes_A M)$ est l'homologie du bicomplexe
+    $P_\bullet\otimes_A M$, où $M$ est considéré comme un complexe réduit à son
+    terme de degré 0; elle est par suite (6.3.6 et 6.3.2) l'aboutissement de la
+    suite spectrale régulière dont le terme $E_2$ est
+    \[
+      E^2_{pq}
+      =
+      \operatorname{Tor}_p^A\bigl(H_q(P_\bullet),M\bigr)
+      =
+      \operatorname{Tor}_p^A\bigl(T_q(A),M\bigr).
+    \]
+    \oldpage[III]{194}
+    Or, l'hypothèse sur l'anneau $A$ entraîne que
+    $\operatorname{Tor}_p^A(E,F)=0$ pour $p\geq2$ et pour des $A$-modules
+    quelconques ($0_{\mathrm{IV}}$, 17.2.2); on sait (M, XV) que cela entraîne
+    l'exactitude de la suite
+    \[
+      0\longrightarrow E^2_{0,q}
+      \longrightarrow H_q(P_\bullet\otimes_A M)
+      \longrightarrow E^2_{1,q-1}
+      \longrightarrow0
+    \]
+    qui n'est autre que (7.6.3.1).
+  \item[(ii)] Compte tenu de (7.3.1), la suite exacte (7.6.3.1) redonne comme
+    cas particulier le résultat de (7.4.3).
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[7.6.5]
+Sous les conditions de (7.4.1), supposons que $A$ soit un anneau de valuation
+discrète, de corps des fractions $K$, de corps résiduel $k$, et que les $T_i(A)$
+soient des $A$-modules de type fini. On a alors
+\[
+  \operatorname{rang}_k T_p(k)
+  \geq
+  \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rang}_A T_p(A)
+  =
+  \operatorname{rang}_K T_p(K).
+  \tag{7.6.5.1}\label{III.7.6.5.1.fr}
+\]
+En outre, pour que les termes extrêmes de cette inégalité soient égaux, il faut
+et il suffit que $T_p$ soit exact, ou encore que $T_p(A)$ et $T_{p-1}(A)$ soient
+des $A$-modules libres.
+\end{corollary}
+
+\begin{proof}
+Faisons en effet $M=k$ dans la suite exacte (7.6.3.1); il vient, puisqu'il
+s'agit d'espaces vectoriels sur $k$
+\[
+  \operatorname{rang}_k T_p(k)
+  =
+  \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+  +
+  \operatorname{rang}_k\bigl(\operatorname{Tor}_1^A(T_{p-1}(A),k)\bigr).
+\]
+D'autre part, comme $T_p(A)$ est un module de type fini sur l'anneau local
+intègre $A$, on a (Bourbaki, \emph{Alg. comm.}, chap. II, \S 3,
+n\textsuperscript{o} 2, cor. 1 de la prop. 4)
+\[
+  \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rang}_A T_p(A)
+  =
+  \operatorname{rang}_K\bigl(T_p(A)\otimes_A K\bigr)
+  \tag{7.6.5.2}\label{III.7.6.5.2.fr}
+\]
+et en outre les deux membres de (7.6.5.2) sont égaux si et seulement si $T_p(A)$
+est un $A$-module libre (\emph{loc. cit.}, prop. 7). On notera d'ailleurs que
+puisque $K$ est un $A$-module plat, on a par définition
+\[
+  T_p(A)\otimes_A K
+  =
+  H_p(P_\bullet)\otimes_A K
+  =
+  H_p(P_\bullet\otimes_A K)
+  =
+  T_p(K).
+\]
+On a donc bien l'inégalité (7.6.5.1) et on voit en outre que l'égalité n'est
+possible que si : 1\textsuperscript{o} $T_p(A)$ est libre;
+2\textsuperscript{o} $\operatorname{Tor}_1^A(T_{p-1}(A),k)=0$, condition qui
+équivaut, comme on sait ($0$, 10.1.3), au fait que $T_{p-1}(A)$ est un
+$A$-module libre. Enfin, comme les $T_i(A)$ sont des $A$-modules de type fini,
+il revient au même de dire qu'ils sont plats ou libres (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5), et on conclut par (7.4.3).
+\end{proof}
+
+\begin{env}[7.6.6]
+Les hypothèses étant toujours celles de (7.4.1), nous poserons, pour tout
+$x\in\operatorname{Spec}(A)$,
+\[
+  d_p(x)=d_p^T(x)=\operatorname{rang}_{\kappa(x)}T_p(\kappa(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1.fr}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+Soit $\varphi:A\to A'$ un homomorphisme d'anneaux, et soit
+\[
+  f={}^a\!\varphi:
+  \operatorname{Spec}(A')\longrightarrow\operatorname{Spec}(A)
+\]
+l'application correspondante (I, 1.2.1). Si l'on pose
+$T'_\bullet=T_\bullet^{(A')}$ (7.1.3), on a
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1.fr}
+\]
+\end{lemma}
+
+\begin{proof}
+\oldpage[III]{195}
+En effet, pour tout $x'\in\operatorname{Spec}(A')$, on a, en posant
+$x=f(x')$,
+\[
+  H_\bullet(P_\bullet\otimes_A\kappa(x'))
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A\kappa(x))
+    \otimes_{\kappa(x)}\kappa(x')\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A\kappa(x))
+    \otimes_{\kappa(x)}\kappa(x'),
+\]
+puisque $\kappa(x')$ est plat sur $\kappa(x)$, d'où la relation (7.6.7.1).
+\end{proof}
+
+\begin{lemma}[7.6.8]
+Si l'anneau $A$ est noethérien et le complexe $P_\bullet$ formé de $A$-modules
+de type fini, la fonction $x\mapsto d_p^T(x)$ sur $\operatorname{Spec}(A)$ est
+constructible.
+\end{lemma}
+
+\begin{proof}
+Il faut prouver que pour toute partie fermée irréductible $Y$ de
+$X=\operatorname{Spec}(A)$, il existe un ouvert non vide $U$ de $Y$ dans lequel
+$d_p$ est constante ($0$, 9.2.2); comme
+$Y=\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a$ est un idéal de $A$ tel
+que $A/\mathfrak a$ soit réduit, on peut, en vertu de (7.6.7), se borner au cas
+où $Y=X$ et où $A$ est un anneau noethérien intègre; mais alors l'assertion
+résulte de (7.4.5).
+\end{proof}
+
+\begin{theorem}[7.6.9]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats de
+type fini, $T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)$ le foncteur homologique
+défini par $P_\bullet$; pour tout $x\in\operatorname{Spec}(A)$, soit
+\[
+  d_p(x)=\operatorname{rang}_{\kappa(x)}T_p(\kappa(x)).
+\]
+Alors :
+\begin{enumerate}
+  \item[(i)] La fonction $d_p$ est constructible et semi-continue
+    supérieurement dans $\operatorname{Spec}(A)$.
+  \item[(ii)] Si $T_p$ est exact, $d_p$ est continue (donc localement constante)
+    dans $\operatorname{Spec}(A)$; la réciproque est vraie lorsque l'anneau $A$
+    est réduit.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] La première assertion a été démontrée dans (7.6.8). Pour prouver
+    la seconde, il suffit donc ($0$, 9.2.4) de montrer que si $x'\ne x$ est une
+    générisation de $x$ dans $\operatorname{Spec}(A)$, on a
+    $d_p(x')\leq d_p(x)$. Or, il existe alors un anneau de valuation discrète
+    $B$ et un morphisme
+    \[
+      f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)
+    \]
+    tels que, si $a$ désigne le point fermé de $\operatorname{Spec}(B)$ et $b$
+    son point générique, on ait $f(a)=x$ et $f(b)=y$ (II, 7.1.9). En vertu de
+    la formule (7.6.7.1), on voit qu'on est ramené à démontrer l'inégalité
+    $d_p(a)\geq d_p(b)$ dans $\operatorname{Spec}(B)$; mais cela n'est autre que
+    l'inégalité (7.6.5.1)\footnote{Le principe de démonstration de (i) par
+    réduction au cas d'un anneau de valuation discrète nous a été communiqué
+    oralement par Hironaka.}.
+  \item[(ii)] La première assertion a déjà été démontrée (7.3.4). Pour démontrer
+    la réciproque, utilisons le critère valuatif (7.6.2); compte tenu de la
+    formule (7.6.7.1), on est donc ramené au cas où $A$ est un anneau de
+    valuation discrète; mais comme $\operatorname{Spec}(A)$ ne comporte alors
+    que deux points, l'hypothèse que $d_p$ est constante implique bien que $T_p$
+    est exact, en vertu de (7.6.5).
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[7.6.10]
+Soient $A$ un anneau noethérien, $\mathfrak p_i$ $(1\leq i\leq r)$ ses idéaux
+premiers minimaux, $k_i$ le corps résiduel de $A_{\mathfrak p_i}$
+$(1\leq i\leq r)$.
+\begin{enumerate}
+  \item[(i)] Pour tout $x\in\operatorname{Spec}(A)$, il existe un indice $i$
+    tel que
+    \[
+      d_p(x)\geq\operatorname{rang}_{k_i}T_p(k_i).
+      \tag{7.6.10.1}\label{III.7.6.10.1.fr}
+    \]
+\end{enumerate}
+En particulier, si $A$ est intègre et si $K$ est son corps des fractions, on a
+\[
+  d_p(x)\geq\operatorname{rang}_K T_p(K)
+  \tag{7.6.10.2}\label{III.7.6.10.2.fr}
+\]
+pour tout $x\in\operatorname{Spec}(A)$.
+\oldpage[III]{196}
+\begin{enumerate}
+  \item[(ii)] Supposons en outre que $A$ soit local et réduit, et soit $k$ son
+    corps résiduel. Alors, pour que $T_p$ soit exact, il faut et il suffit que
+    l'on ait
+    \[
+      \operatorname{rang}_k T_p(k)
+      =
+      \operatorname{rang}_{k_i}T_p(k_i)
+      \qquad\text{pour }1\leq i\leq r.
+      \tag{7.6.10.3}\label{III.7.6.10.3.fr}
+    \]
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) est immédiat puisque tout voisinage de $x$ contient un des $\mathfrak p_i$,
+et il suffit d'appliquer la définition de la semi-continuité. D'autre part, si
+$A$ est local, le seul voisinage dans $\operatorname{Spec}(A)$ de l'idéal
+maximal $\mathfrak m$ est $\operatorname{Spec}(A)$ tout entier, donc on a
+\[
+  d_p(x)\leq\operatorname{rang}_k T_p(k)
+\]
+pour tout $x\in\operatorname{Spec}(A)$; cette relation, jointe à (i), montre que
+la condition (7.6.10.3) entraîne que $d_p(x)$ est constante dans
+$\operatorname{Spec}(A)$, et par suite que $T_p$ est exact en vertu de
+(7.6.9, (ii)); la réciproque est évidente en vertu de (7.6.9, (ii)).
+\end{proof}
+
+\begin{remark}[7.6.11]
+On peut se demander si l'assertion de (7.6.9, (i)) ne peut être renforcée par
+l'inégalité
+\[
+  \operatorname{rang}_{\kappa(x)}T_p(\kappa(x))
+  \geq
+  \operatorname{rang}_{\kappa(x)}
+    \bigl(T_p(A)\otimes_A\kappa(x)\bigr)
+  \tag{7.6.11.1}\label{III.7.6.11.1.fr}
+\]
+pour tout $x\in\operatorname{Spec}(A)$, qui a lieu effectivement lorsque $A$
+est un anneau de valuation discrète et $x$ son idéal maximal (7.6.5).
+Bornons-nous au cas où $A$ est un anneau local noethérien, d'idéal maximal
+$\mathfrak m$ et de corps résiduel $k$. Alors, les conditions suivantes sont
+équivalentes :
+\begin{enumerate}
+  \item[a)] Pour tout complexe $P_\bullet$ de $A$-modules plats de type fini,
+    on a
+    \[
+      \operatorname{rang}_k T_p(k)
+      \geq
+      \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+      \quad\text{pour tout entier }p.
+      \tag{7.6.11.2}\label{III.7.6.11.2.fr}
+    \]
+  \item[b)] Pour tout $A$-module $M$ de type fini, on a
+    \[
+      \operatorname{rang}_k(M\otimes_A k)
+      \geq
+      \operatorname{rang}_k(\check M\otimes_A k).
+      \tag{7.6.11.3}\label{III.7.6.11.3.fr}
+    \]
+  \item[c)] Pour tout $A$-module $N$ de type fini, on a
+    \[
+      \operatorname{rang}_k\bigl(\operatorname{Tor}_1^A(N,k)\bigr)
+      \geq
+      \operatorname{rang}_k\bigl(\operatorname{Tor}_2^A(N,k)\bigr).
+      \tag{7.6.11.4}\label{III.7.6.11.4.fr}
+    \]
+\end{enumerate}
+On notera qu'il revient au même, par décalage (M, V, 7.2), de dire que l'on a,
+pour tout $i\geq1$,
+\[
+  \operatorname{rang}_k\bigl(\operatorname{Tor}_i^A(N,k)\bigr)
+  \geq
+  \operatorname{rang}_k\bigl(\operatorname{Tor}_{i+1}^A(N,k)\bigr).
+  \tag{7.6.11.5}\label{III.7.6.11.5.fr}
+\]
+Donnons rapidement quelques indications sur la démonstration. Pour voir que a)
+entraîne b), on considère une suite exacte
+\[
+  L_1\xrightarrow{d}L_0\longrightarrow M\longrightarrow0
+\]
+où $L_0$ et $L_1$ sont libres de type fini, et on applique a) au complexe
+\[
+  P_1\xrightarrow{{}^t d}P_0,
+  \qquad
+  P_0=\check L_1,
+  \quad
+  P_1=\check L_0,
+\]
+les autres termes étant nuls; on a alors $T_1(A)=\check M$ et
+\[
+  T_1(k)
+  =
+  \operatorname{Hom}_A(M,k)
+  =
+  \operatorname{Hom}_k(M/\mathfrak mM,k),
+\]
+autrement dit $T_1(k)$ est le dual de l'espace vectoriel $M\otimes_A k$, et a
+donc même rang que ce dernier. Pour prouver que b) entraîne c), nous établissons
+d'abord le lemme suivant :
+
+\begin{lemma}[7.6.11.6]
+Étant donné un complexe
+\[
+  \cdots\longrightarrow0\longrightarrow
+  P_1\xrightarrow{d}P_0
+  \longrightarrow0\longrightarrow\cdots
+\]
+de $A$-modules plats, on a une suite exacte
+\[
+  0\longrightarrow\operatorname{Tor}_2^A(Z'_0,k)
+  \longrightarrow T_1(A)\otimes_A k
+  \longrightarrow T_1(k)
+  \longrightarrow\operatorname{Tor}_1^A(Z'_0,k)
+  \longrightarrow0.
+  \tag{7.6.11.7}\label{III.7.6.11.7.fr}
+\]
+\end{lemma}
+
+\begin{proof}
+\oldpage[III]{197}
+En effet, partant de la suite exacte
+$0\to Z_1\to P_1\to B_0\to0$, on en tire la suite exacte
+\[
+  0\longrightarrow\operatorname{Tor}_1^A(B_0,k)
+  \longrightarrow Z_1\otimes k
+  \longrightarrow P_1\otimes k
+  \xrightarrow{u}B_0\otimes k
+  \longrightarrow0.
+\]
+De la suite exacte $0\to B_0\to Z_0\to Z'_0\to0$, on tire, puisque $Z_0=P_0$
+est plat,
+$\operatorname{Tor}_1^A(B_0,k)=\operatorname{Tor}_2^A(Z'_0,k)$; par définition,
+on a $Z_1=T_1(A)$; enfin, on a $T_1(k)=\operatorname{Ker}(d\otimes1)$, et
+$d\otimes1$ se factorise en
+\[
+  P_1\otimes k
+  \xrightarrow{u}B_0\otimes k
+  \xrightarrow{v}Z_0\otimes k
+  =P_0\otimes k;
+\]
+on a $T_1(k)=u^{-1}(R)$, où $R=\operatorname{Ker}v$, et comme $u$ est
+surjectif, $R=u(T_1(k))$; enfin,
+$R=\operatorname{Tor}_1^A(Z'_0,k)$ par définition de $v$, ce qui achève
+d'établir la suite exacte (7.6.11.7).
+\end{proof}
+
+Pour déduire alors c) de b), on considère une suite exacte
+\[
+  L_1\xrightarrow{d}L_0\longrightarrow N\longrightarrow0,
+\]
+où $L_0$ et $L_1$ sont des modules libres de type fini; considérons le foncteur
+$T$ associé au complexe formé de $L_1$ et $L_0$; comme $L_0$ et $L_1$ sont
+libres, ils s'identifient à leurs biduals; donc si
+\[
+  M=\operatorname{Coker}({}^t d),
+  \qquad
+  T_1(A)=\operatorname{Ker}(d)=\check M;
+\]
+par ailleurs, $M\otimes_A k=\operatorname{Coker}({}^t d\otimes1_k)$ a même rang
+sur $k$ que $\operatorname{Ker}(d\otimes1_k)$. L'hypothèse b) entraîne par suite
+que
+\[
+  \operatorname{rang}_k\bigl(T_1(A)\otimes_A k\bigr)
+  \leq
+  \operatorname{rang}_k\bigl(T_1(k)\bigr);
+\]
+comme $Z'_0=N$, l'inégalité (7.6.11.4) résulte donc de la suite exacte
+(7.6.11.7).
+
+Enfin, pour prouver que c) entraîne a), appliquons (7.6.11.6) en remplaçant
+$P_0$ et $P_1$ par $P_p$ et $P_{p-1}$; l'hypothèse c) appliquée au module
+$Z'_p$ donne $\operatorname{rang}_kR\geq\operatorname{rang}_kS$, où
+\[
+  R=\operatorname{Ker}(P_p\otimes k\longrightarrow P_{p-1}\otimes k)
+  \quad\text{et}\quad
+  S=Z_p\otimes k.
+\]
+Or, si l'on factorise $d_{p+1}:P_{p+1}\to P_p$ en
+\[
+  P_{p+1}\xrightarrow{v}Z_p\xrightarrow{j}P_p,
+\]
+on a
+\[
+  \operatorname{Im}(d_{p+1}\otimes1)
+  =
+  (j\otimes1)\bigl(\operatorname{Im}(v\otimes1)\bigr).
+\]
+Comme
+\[
+  T_p(A)\otimes_A k
+  =(Z_p/B_p)\otimes_A k
+  =(Z_p\otimes k)/\operatorname{Im}(v\otimes1),
+\]
+et
+\[
+  T_p(k)=R/\operatorname{Im}(d_{p+1}\otimes1),
+\]
+on en conclut bien l'inégalité (7.6.11.2).
+
+Cela étant, supposons que l'anneau local $A$ soit régulier de dimension $n$;
+on sait alors [17] que le $A$-module
+$\operatorname{Tor}_i^A(k,k)$ est isomorphe à la puissance extérieure
+\[
+  \bigwedge\nolimits^i(\mathfrak m/\mathfrak m^2);
+\]
+on voit donc que la condition (7.6.11.4) n'est pas vérifiée pour $N=k$, dès que
+$n\geq4$.
+
+Par contre, si l'anneau local intègre $A$ est tel que tout $A$-module réflexif
+de type fini soit libre (ce qui est le cas lorsque $A$ est un anneau régulier
+de dimension 2), la condition (7.6.11.3) est vérifiée : en effet, on sait que le
+dual $\check M$ d'un $A$-module $M$ de type fini est réflexif, donc libre, et
+par suite
+\[
+  \operatorname{rang}_k(\check M\otimes_A k)
+  =
+  \operatorname{rang}_K(\check M)
+  =
+  \operatorname{rang}_K(M),
+\]
+($K$ corps des fractions de $A$); par ailleurs, on sait que toute base sur $k$
+de $M\otimes_A k$ est formée d'images d'un système de générateurs de $M$
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de
+la prop. 4), donc
+$\operatorname{rang}_K(M)\leq\operatorname{rang}_k(M\otimes_A k)$, ce qui
+prouve notre assertion.
+\end{remark}
+
+\subsection{Application aux morphismes propres : I. La propriété d'échange}
+\label{subsection:III.7.7.fr}
+
+Les trois numéros qui suivent sont, pour l'essentiel, des traductions, dans le
+langage des morphismes de préschémas, des résultats des numéros précédents.
+
+\begin{env}[7.7.1]
+Soit $f:X\to Y$ un morphisme quasi-compact et séparé de préschémas, et soit
+$\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules quasi-cohérents, dont
+l'opérateur de dérivation est de degré $-1$; supposons en outre que les
+$\mathscr O_X$-Modules $\mathscr P_i$ sont $Y$-plats ($0_{\mathrm I}$, 6.7.1).
+\oldpage[III]{198}
+Nous allons considérer le $\partial$-foncteur
+$\mathscr M\mapsto\mathscr T_\bullet(\mathscr M)$ (aussi noté
+$\mathscr T_\bullet(\mathscr P_\bullet,\mathscr M)$) dans la catégorie des
+$\mathscr O_Y$-Modules quasi-cohérents, à valeurs dans la catégorie des
+$\mathscr O_Y$-Modules quasi-cohérents (en vertu de (6.2.3)), défini par
+\[
+  \mathscr T_n(\mathscr P_\bullet,\mathscr M)
+  =\mathscr T_n(\mathscr M)
+  =\mathscr H^{-n}
+    \bigl(f,\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M\bigr)
+  \qquad\text{pour }n\in\mathbf Z,
+  \tag{7.7.1.1}\label{III.7.7.1.1.fr}
+\]
+où $\mathscr P^\bullet$ est le complexe dont le terme de degré $j$ est
+$\mathscr P_{-j}$, l'opérateur de dérivation étant donc alors de degré $+1$. Le foncteur
+$\mathscr T_\bullet$ ainsi défini est un \emph{foncteur homologique} en
+$\mathscr M$ (6.2.6).
+\end{env}
+
+\begin{env}[7.7.2]
+Soit $g:Y'\to Y$ un morphisme, et posons
+\[
+  X'=X_{(Y')}=X\times_Y Y',
+  \qquad
+  f'=f_{(Y')}:X'\longrightarrow Y',
+\]
+qui est un morphisme quasi-compact et séparé; soit d'autre part
+\[
+  \mathscr P'_\bullet
+  =\mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr O_{Y'};
+\]
+c'est un complexe de $\mathscr O_{X'}$-Modules quasi-cohérents qui sont
+$Y'$-plats en vertu de (I, 9.1.12) et ($0_{\mathrm I}$, 6.2.1). Nous poserons
+(avec les mêmes conventions sur les degrés)
+\[
+  \mathscr T^{Y'}_\bullet(\mathscr M')
+  =\mathscr H^\bullet
+    \bigl(f',\mathscr P'^\bullet\otimes_{\mathscr O_{Y'}}\mathscr M'\bigr)
+  =\mathscr H^\bullet
+    \bigl(f',\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M'\bigr)
+  \tag{7.7.2.1}\label{III.7.7.2.1.fr}
+\]
+qui est un foncteur homologique en le $\mathscr O_{Y'}$-Module quasi-cohérent
+$\mathscr M'$. Lorsque $Y'$ est un schéma affine d'anneau $A'$, on écrira
+$\mathscr T^{A'}_\bullet$ au lieu de $\mathscr T^{Y'}_\bullet$; pour tout
+$A'$-module $M'$, on a alors
+\[
+  \mathscr T^{A'}_\bullet(\widetilde{M'})
+  =\bigl(\Gamma(Y',\mathscr T^{Y'}_\bullet(\widetilde{M'}))\bigr)^\sim;
+\]
+on posera
+\[
+  T^{A'}_\bullet(M')
+  =\Gamma(Y',\mathscr T^{Y'}_\bullet(\widetilde{M'})),
+\]
+qui est un foncteur homologique de $A'$-modules, à valeurs dans la catégorie des
+$A'$-modules.
+
+On observera que si $Y=\operatorname{Spec}(A)$ est aussi affine, le foncteur de
+$A'$-modules $T^{A'}_\bullet$ coïncide avec le foncteur obtenu par extension des
+scalaires de $A$ à $A'$ à partir du foncteur homologique de $A$-modules
+$T^A_\bullet$ (7.1.3) : en effet, soit $g:Y'\to Y$ le morphisme correspondant à
+l'homomorphisme d'anneaux $A\to A'$, et soit $g':X'\to X$ le morphisme
+correspondant qui est affine (II, 1.6.2); si $\mathfrak U$ est un recouvrement
+ouvert affine de $X$, $\mathfrak U'=g'^{-1}(\mathfrak U)$ est un recouvrement
+ouvert affine de $X'$; en vertu de (6.2.2), tout revient à voir que
+\[
+  C^\bullet
+    \bigl(\mathfrak U,
+      \mathscr P_\bullet\otimes_{\mathscr O_Y}g_*(\mathscr M')\bigr)
+  =C^\bullet
+    \bigl(\mathfrak U',
+      \mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr M'\bigr),
+\]
+et finalement, que pour tout ouvert affine $U$ de $X$, en posant
+$U'=g'^{-1}(U)$, on a
+\[
+  \Gamma
+    \bigl(U,\mathscr P_\bullet\otimes_{\mathscr O_Y}g_*(\mathscr M')\bigr)
+  =\Gamma
+    \bigl(U',\mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr M'\bigr),
+\]
+ce qui est trivial (I, 1.3 et 3.2).
+
+En particulier, si $U$ est un ouvert de $Y$, on a, pour tout
+$\mathscr O_Y$-Module quasi-cohérent $\mathscr M$
+\[
+  \mathscr T^U_\bullet(\mathscr M|U)
+  =\bigl(\mathscr T_\bullet(\mathscr M)\bigr)|U.
+  \tag{7.7.2.2}\label{III.7.7.2.2.fr}
+\]
+\end{env}
+
+\begin{env}[7.7.3]
+Pour tout $\mathscr O_Y$-Module quasi-cohérent $\mathscr M$, on a un
+homomorphisme canonique, fonctoriel en $\mathscr M$ :
+\[
+  \mathscr T_p(\mathscr O_Y)\otimes_{\mathscr O_Y}\mathscr M
+  \longrightarrow
+  \mathscr T_p(\mathscr M).
+  \tag{7.7.3.1}\label{III.7.7.3.1.fr}
+\]
+En effet, si $Y$ est affine, cet homomorphisme a été défini en (7.2.2); cette
+définition s'étend sans peine au cas général, en remarquant que si $U$, $V$ sont
+deux ouverts affines de $Y$ tels que $V\subset U$, le diagramme
+\oldpage[III]{199}
+\[
+\xymatrix@C=18pt@R=32pt{
+  {\begin{gathered}
+    \bigl(\mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr M\bigr)|U\\
+    =\mathscr T^U_p(\mathscr O_Y|U)
+      \otimes_{\mathscr O_Y|U}(\mathscr M|U)
+  \end{gathered}}
+  \ar[r]\ar[d]
+  &
+  {\begin{gathered}
+    \mathscr T^U_p(\mathscr M|U)\\
+    =\bigl(\mathscr T_p(\mathscr M)\bigr)|U
+  \end{gathered}}
+  \ar[d]
+  \\
+  {\begin{gathered}
+    \bigl(\mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr M\bigr)|V\\
+    =\mathscr T^V_p(\mathscr O_Y|V)
+      \otimes_{\mathscr O_Y|V}(\mathscr M|V)
+  \end{gathered}}
+  \ar[r]
+  &
+  {\begin{gathered}
+    \mathscr T^V_p(\mathscr M|V)\\
+    =\bigl(\mathscr T_p(\mathscr M)\bigr)|V
+  \end{gathered}}
+}
+\]
+est commutatif par (7.2.3.3).
+
+Pour tout morphisme $g:Y'\to Y$ on a un homomorphisme canonique
+\[
+  \mathscr T_p(\mathscr O_Y)\otimes_{\mathscr O_Y}\mathscr O_{Y'}
+  \longrightarrow
+  \mathscr T^{Y'}_p(\mathscr O_{Y'}),
+  \tag{7.7.3.2}\label{III.7.7.3.2.fr}
+\]
+qui n'est autre que le cas particulier de (6.7.11.2) (pour les aboutissements)
+dans le cas où $S=Y$, $v_1=f$, $v_2=1_Y$, $\mathscr P^{(2)}_\bullet$ réduit au
+seul terme $\mathscr M$ de degré 0.
+
+Lorsque $Y=\operatorname{Spec}(A)$, $Y'=\operatorname{Spec}(A')$ sont affines,
+(7.7.3.2) n'est autre que l'homomorphisme de faisceaux correspondant à
+l'homomorphisme canonique de $A'$-modules défini dans (7.2.2)
+\[
+  T^A_p(A)\otimes_A A'
+  \longrightarrow
+  T^{A'}_p(A')=T^A_p(A')
+\]
+comme il résulte aisément de (6.7.11) (car dans le cas envisagé, on peut prendre
+$\mathfrak U'^{(i)}=u_i^{-1}(\mathfrak U^{(i)})$ dans (6.7.11)).
+\end{env}
+
+\begin{env}[7.7.4]
+Lorsque $f$ est un morphisme \emph{propre}, $Y=\operatorname{Spec}(A)$ un schéma
+affine noethérien et $\mathscr P_\bullet$ un complexe de
+$\mathscr O_X$-Modules cohérents et $Y$-plats \emph{limité inférieurement}, on a
+vu (6.10.5) que l'on peut écrire à un isomorphisme près,
+\[
+  \mathscr T_p(\mathscr M)
+  =\mathscr H_p
+    \bigl(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M\bigr),
+  \qquad
+  \mathscr L_\bullet=\widetilde{L_\bullet},
+\]
+où $L_\bullet$ est un complexe de $A$-modules \emph{libres de type fini limité
+inférieurement}; le foncteur $\mathscr T_\bullet$ est donc du type qui a été
+étudié en détail dans (7.4) et (7.6). Nous allons traduire les résultats de cette
+étude :
+\end{env}
+
+\begin{theorem}[7.7.5]
+Soient $Y$ un préschéma localement noethérien, $(U_\alpha)$ un recouvrement de
+$Y$ formé d'ouverts affines, $f:X\to Y$ un morphisme propre,
+$\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules cohérents et $Y$-plats
+limité inférieurement. Le foncteur homologique $\mathscr T_\bullet(\mathscr M)$
+défini par (7.7.1.1) possède alors les propriétés suivantes :
+
+\medskip
+\noindent
+\textnormal{I) (La propriété de semi-continuité).}\footnote{Un cas particulier de
+ce théorème se trouve déjà dans la note [3] de Chow-Igusa. La propriété de
+semi-continuité a été découverte, dans le cadre des espaces analytiques (et sous
+des hypothèses assez particulières), par Kodaira-Spencer (« On the variations of
+almost-complex structures », \emph{Algebraic Geometry and Topology, A Symposium in
+honor of S. Lefschetz}, Princeton Series n\textsuperscript{o} 12, p. 139--150,
+Princeton, 1957) et la version générale démontrée par Grauert [5].}
+\emph{La fonction}
+\[
+  y\longmapsto
+  d_p(y)
+  =
+  \operatorname{rang}_{\kappa(y)}
+    \mathscr T_p^{\kappa(y)}(\kappa(y))
+  \tag{7.7.5.1}\label{III.7.7.5.1.fr}
+\]
+\emph{est semi-continue supérieurement.}
+
+\oldpage[III]{200}
+\medskip
+\noindent
+\textnormal{II) (La propriété d'échange).}
+\emph{Pour un entier $p$ donné, les conditions suivantes sont équivalentes :}
+\begin{enumerate}
+  \item[a)] $\mathscr T_p$ est exact à droite.
+
+  \item[a$'$)] $\mathscr T_p(\mathscr M)$ est isomorphe à un foncteur de la forme
+    $\mathscr N\otimes_{\mathscr O_Y}\mathscr M$, $\mathscr N$ étant nécessairement
+    isomorphe à
+    \[
+      \mathscr T_p(\mathscr O_Y)
+      =
+      \mathscr H^{-p}(f,\mathscr P^\bullet).
+    \]
+
+  \item[a$''$)] L'homomorphisme canonique fonctoriel (7.7.3.1) est un
+    isomorphisme.
+
+  \item[b)] $\mathscr T_{p-1}$ est exact à gauche.
+
+  \item[b$'$)] Il existe un $\mathscr O_Y$-Module $\mathscr Q$ (nécessairement
+    cohérent, et déterminé à un isomorphisme unique près) et un isomorphisme de
+    foncteurs
+    \[
+      \mathscr T_{p-1}(\mathscr M)
+      \xrightarrow{\sim}
+      \mathscr{H}\!om_{\mathscr O_Y}(\mathscr Q,\mathscr M).
+      \tag{7.7.5.2}\label{III.7.7.5.2.fr}
+    \]
+
+  \item[c)] En désignant par $A_\alpha$ l'anneau de l'ouvert affine $U_\alpha$,
+    pour tout indice $\alpha$ le foncteur de $A_\alpha$-modules
+    $T_p^{A_\alpha}$ est exact à droite.
+
+  \item[d)] Pour tout morphisme $g:Y'\to Y$, l'homomorphisme canonique
+    \[
+      \mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr O_{Y'}
+      \longrightarrow
+      \mathscr T_p^{Y'}(\mathscr O_{Y'})
+      \tag{7.7.5.3}\label{III.7.7.5.3.fr}
+    \]
+    est un isomorphisme.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+La propriété de semi-continuité est locale sur $Y$ et résulte donc de la
+remarque (7.7.4) et de (7.6.9). Il est clair que a$''$) entraîne a$'$) et que
+a$'$) entraîne a). L'équivalence de a), a$''$), b) et b$'$) a été démontrée
+dans (7.3.1) et (7.4.6), compte tenu de la remarque (7.7.4), lorsque $Y$ est
+affine. Pour passer au cas général, prouvons d'abord que a) est équivalent à c),
+ce qui prouvera le caractère local sur $Y$ de la propriété a) ; la démonstration
+s'appliquera également pour prouver le caractère local de a$''$) et b). Comme il
+est clair que c) entraîne a), tout revient à prouver la réciproque. Il suffit
+évidemment de montrer que pour tout ouvert affine $U$ de $Y$ et toute suite
+exacte
+\[
+  0\longrightarrow\mathscr F'
+  \longrightarrow\mathscr F
+  \longrightarrow\mathscr F''
+  \longrightarrow0
+\]
+de $(\mathscr O_Y|U)$-Modules quasi-cohérents, il existe une suite exacte
+\[
+  0\longrightarrow\mathscr G'
+  \longrightarrow\mathscr G
+  \longrightarrow\mathscr G''
+  \longrightarrow0
+\]
+de $\mathscr O_Y$-Modules quasi-cohérents telle que
+\[
+  \mathscr F'=\mathscr G'|U,
+  \qquad
+  \mathscr F=\mathscr G|U,
+  \qquad
+  \mathscr F''=\mathscr G''|U;
+\]
+or, cela résulte aussitôt de l'hypothèse que $Y$ est localement noethérien, et
+de (I, 9.4.2) : on prolonge en effet $\mathscr F$ en un $\mathscr O_Y$-Module
+quasi-cohérent $\mathscr G$, $\mathscr F'$ en un sous-$\mathscr O_Y$-Module
+$\mathscr G'$ de $\mathscr G$, et il suffit de prendre
+$\mathscr G''=\mathscr G/\mathscr G'$.
+
+Pour démontrer l'équivalence de b) et b$'$) dans le cas général, remarquons que
+lorsque $Y$ est affine, on sait que $\mathscr Q$ est déterminé à un isomorphisme
+unique près ; si alors $U$ est un ouvert affine du schéma affine $Y$, on en
+déduit qu'il existe un isomorphisme fonctoriel
+\[
+  \mathscr T_{p-1}^{U}(\mathscr M|U)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y|U}
+    (\mathscr Q|U,\mathscr M|U).
+\]
+Dans le cas général, pour tout ouvert affine $U$ de $Y$, il y a un
+$(\mathscr O_Y|U)$-Module cohérent $\mathscr Q_U$ et un isomorphisme fonctoriel
+\[
+  \mathscr T_{p-1}^{U}(\mathscr M|U)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y|U}
+    (\mathscr Q_U,\mathscr M|U);
+\]
+la remarque précédente montre que si $V$ est un ouvert affine contenu dans $U$,
+on a $\mathscr Q_U|V=\mathscr Q_V$ ; d'où l'existence et l'unicité du
+$\mathscr O_Y$-Module $\mathscr Q$ vérifiant (7.7.5.2).
+
+Reste enfin à montrer l'équivalence de a) et d) ; il est clair que d) est de
+caractère local sur $Y$, et l'on a vu ci-dessus qu'il en est de même de a) ; en
+outre, d) est aussi local sur $Y'$. Or, lorsque $Y=\operatorname{Spec}(A)$,
+$Y'=\operatorname{Spec}(A')$, on a vu que $T_\bullet^{A'}$ est le foncteur obtenu
+
+\oldpage[III]{201}
+à partir de $T_\bullet^A$ par extension des scalaires à $A'$, et il est clair
+alors que a$'$) entraîne que (7.7.5.3) est un isomorphisme. Inversement, supposons
+toujours $Y=\operatorname{Spec}(A)$ affine et soit $A'$ la $A$-algèbre
+$A\oplus M$, où $M$ est un $A$-module quelconque, la multiplication dans $A'$
+étant donnée par
+\[
+  (a_1,m_1)(a_2,m_2)
+  =
+  (a_1a_2,a_1m_2+a_2m_1);
+\]
+alors
+\[
+  T_p^{A'}(A')
+  =
+  T_p(A\oplus M)
+  =
+  T_p(A)\oplus T_p(M),
+\]
+et l'hypothèse que (7.7.5.3) soit bijectif entraîne qu'il en est de même de
+l'application canonique
+\[
+  T_p(A)\otimes_A M\longrightarrow T_p(M),
+\]
+autrement dit d) entraîne a$''$), ce qui achève la démonstration.
+\end{proof}
+
+\begin{theorem}[7.7.6]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr F$ un $\mathscr O_X$-Module cohérent et $Y$-plat. Il existe alors un
+$\mathscr O_Y$-Module cohérent $\mathscr Q$ (déterminé à isomorphisme unique près)
+et un isomorphisme de foncteurs en le $\mathscr O_Y$-Module quasi-cohérent
+$\mathscr M$ :
+\[
+  f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr Q,\mathscr M)
+  \tag{7.7.6.1}\label{III.7.7.6.1.fr}
+\]
+(d'où un isomorphisme de foncteurs
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M)).
+  \tag{7.7.6.2}\label{III.7.7.6.2.fr}
+\]
+\end{theorem}
+
+\begin{proof}
+En effet, comme $\mathscr M\mapsto\mathscr F\otimes_{\mathscr O_Y}\mathscr M$ est
+exact (0\textsubscript{I}, 6.7.4) et $f_*$ exact à gauche, le foncteur
+$\mathscr M\mapsto f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$ est exact à
+gauche. Il suffit alors d'appliquer l'équivalence de (7.7.5, b)) et (7.7.5,
+b$'$)) pour $p=1$.
+\end{proof}
+
+\begin{corollary}[7.7.7]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr F$, $\mathscr F'$ deux $\mathscr O_X$-Modules cohérents et $Y$-plats,
+$u:\mathscr F\to\mathscr F'$ un homomorphisme. Considérons les deux foncteurs en
+le $\mathscr O_Y$-Module quasi-cohérent $\mathscr M$ :
+\begin{align*}
+  \mathscr T(\mathscr M)
+  &=
+  \operatorname{Ker}
+  \bigl(
+    f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    f_*(\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr),\\
+  T(\mathscr M)
+  &=
+  \Gamma(Y,\mathscr T(\mathscr M))\\
+  &=
+  \operatorname{Ker}
+  \bigl(
+    \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr).
+\end{align*}
+Alors il existe un $\mathscr O_Y$-Module cohérent $\mathscr R$ (déterminé à
+isomorphisme unique près) et des isomorphismes de foncteurs
+\[
+  \mathscr T(\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr R,\mathscr M)
+  \tag{7.7.7.1}\label{III.7.7.7.1.fr}
+\]
+\[
+  T(\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr R,\mathscr M).
+  \tag{7.7.7.2}\label{III.7.7.7.2.fr}
+\]
+\end{corollary}
+
+\begin{proof}
+On peut se borner à démontrer (7.7.7.2) ; cela prouvera en effet (7.7.7.1)
+dans le cas où $Y$ est affine, et on passera de là au cas général en raisonnant
+comme dans la démonstration de l'équivalence de (7.7.5, b) et b$'$)), grâce à
+l'unicité à isomorphisme unique près d'un représentant d'un foncteur
+représentable (0, 8.1.8). Il résulte de (7.7.6) qu'il existe deux
+$\mathscr O_Y$-Modules cohérents $\mathscr Q$, $\mathscr Q'$ définissant des
+isomorphismes fonctoriels
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M),
+  \qquad
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q',\mathscr M).
+\]
+Or, $u:\mathscr F\to\mathscr F'$ définit canoniquement un morphisme de foncteurs
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \longrightarrow
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M);
+\]
+
+\oldpage[III]{202}
+il correspond à ce dernier un homomorphisme unique
+$v:\mathscr Q'\to\mathscr Q$ de $\mathscr O_Y$-Modules tel que le diagramme
+\[
+\xymatrix@C=42pt@R=28pt{
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \ar[r]\ar[d]_-{\sim}
+  &
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+    \ar[d]^-{\sim}
+  \\
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M)
+    \ar[r]
+  &
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q',\mathscr M)
+}
+\]
+soit commutatif (0, 8.1.4). Comme le foncteur contravariant
+$\mathscr N\mapsto\operatorname{Hom}_{\mathscr O_Y}(\mathscr N,\mathscr M)$ est
+exact à gauche dans la catégorie des $\mathscr O_Y$-Modules, il suffit de prendre
+$\mathscr R=\operatorname{Coker}(v)$ pour obtenir l'isomorphisme (7.7.7.2)
+cherché.
+\end{proof}
+
+\begin{corollary}[7.7.8]
+Sous les hypothèses de (7.7.6) relatives à $X$, $Y$ et $f$, soient $\mathscr F$,
+$\mathscr G$ deux $\mathscr O_X$-Modules cohérents vérifiant les conditions
+suivantes : (i) $\mathscr F$ est $Y$-plat ; (ii) $\mathscr G$ est isomorphe au
+conoyau d'un homomorphisme de $\mathscr O_X$-Modules localement libres de type
+fini $\mathscr E_1\to\mathscr E_0$. Considérons les deux foncteurs en le
+$\mathscr O_Y$-Module quasi-cohérent $\mathscr M$ :
+\begin{align*}
+  \mathscr T(\mathscr M)
+  &=
+  f_*
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr),\\
+  T(\mathscr M)
+  &=
+  \Gamma(Y,\mathscr T(\mathscr M))
+  =
+  \operatorname{Hom}_{\mathscr O_X}
+    (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M).
+\end{align*}
+Alors il existe un $\mathscr O_Y$-Module cohérent $\mathscr N$ (déterminé à
+isomorphisme unique près) et des isomorphismes de foncteurs
+\[
+  \mathscr T(\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr N,\mathscr M)
+  \tag{7.7.8.1}\label{III.7.7.8.1.fr}
+\]
+\[
+  T(\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr N,\mathscr M).
+  \tag{7.7.8.2}\label{III.7.7.8.2.fr}
+\]
+\end{corollary}
+
+\begin{proof}
+En vertu de l'isomorphisme fonctoriel ($0_{\mathrm I}$, 5.4.2.1), on a des
+isomorphismes fonctoriels en $\mathscr M$
+\begin{align*}
+  \mathscr{H}\!om_{\mathscr O_X}
+    (\mathscr E_i,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  &\xrightarrow{\sim}
+  \check{\mathscr E}_i
+    \otimes_{\mathscr O_X}
+    (\mathscr F\otimes_{\mathscr O_Y}\mathscr M)\\
+  &\xrightarrow{\sim}
+  (\check{\mathscr E}_i\otimes_{\mathscr O_X}\mathscr F)
+    \otimes_{\mathscr O_Y}\mathscr M\\
+  &\xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_X}(\mathscr E_i,\mathscr F)
+    \otimes_{\mathscr O_Y}\mathscr M
+\end{align*}
+pour $i=0,1$. Posons
+$\mathscr F_i=\mathscr{H}\!om_{\mathscr O_X}(\mathscr E_i,\mathscr F)$ pour
+$i=0,1$ ; ce sont des $\mathscr O_X$-Modules cohérents ($0_{\mathrm I}$, 5.3.5)
+et $Y$-plats ($0_{\mathrm I}$, 5.4.2) ; soit
+$u=\mathscr{H}\!om(v,1_{\mathscr F}):\mathscr F_0\to\mathscr F_1$. En vertu de
+l'exactitude à gauche du foncteur
+$\mathscr H\mapsto\mathscr{H}\!om_{\mathscr O_X}
+(\mathscr H,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$, on a des isomorphismes
+fonctoriels en $\mathscr M$
+\begin{align*}
+  \mathscr{H}\!om_{\mathscr O_X}
+    (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  &\xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr E_0,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr E_1,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)\\
+  &\xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    \mathscr F_0\otimes_{\mathscr O_Y}\mathscr M
+    \longrightarrow
+    \mathscr F_1\otimes_{\mathscr O_Y}\mathscr M
+  \bigr).
+\end{align*}
+Puisque $f_*$ est exact à gauche, on en déduit un isomorphisme fonctoriel
+\[
+  f_*
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)
+  \xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    f_*(\mathscr F_0\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    f_*(\mathscr F_1\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)
+\]
+et il suffit alors d'appliquer (7.7.7).
+\end{proof}
+
+\oldpage[III]{203}
+\begin{remarks}[7.7.9]
+\textnormal{(i)} Dans (7.7.6), (7.7.7), (7.7.8), la formation des
+$\mathscr O_Y$-Modules $\mathscr Q$, $\mathscr R$, $\mathscr N$ \emph{permute aux
+changements de base}. Par exemple (gardant les notations de (7.7.2)), dans le
+cas (7.7.6), on a, pour tout $\mathscr O_{Y'}$-Module quasi-cohérent
+$\mathscr M'$, l'isomorphisme
+\[
+  f'_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M')
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_{Y'}}(g^*(\mathscr Q),\mathscr M')
+\]
+car en vertu de la remarque faite dans (7.7.2), tout revient à voir que l'on a
+\[
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,g_*(\mathscr M'))
+  =
+  \operatorname{Hom}_{\mathscr O_{Y'}}(g^*(\mathscr Q),\mathscr M')
+\]
+ce qui n'est autre que ($0_{\mathrm I}$, 4.4.3.1). De même, quand dans (7.7.7)
+on remplace $Y$, $f$, $\mathscr M$, $\mathscr F$, $\mathscr F'$ par $Y'$, $f'$,
+$\mathscr M'$, $\mathscr F\otimes_{\mathscr O_X}\mathscr O_{X'}$,
+$\mathscr F'\otimes_{\mathscr O_X}\mathscr O_{X'}$, il faut remplacer
+$\mathscr R$ par $g^*(\mathscr R)$. Enfin, dans (7.7.8), lorsqu'on remplace $X$,
+$Y$, $f$, $\mathscr M$, $\mathscr F$ par $X'$, $Y'$, $f'$, $\mathscr M'$,
+$\mathscr F\otimes_{\mathscr O_X}\mathscr O_{X'}$, et $\mathscr G$ par
+$\mathscr G'=\mathscr G\otimes_{\mathscr O_Y}\mathscr O_{X'}$, il faut remplacer
+$\mathscr N$ par $g^*(\mathscr N)$ : cela résulte de ce que l'on a encore une
+suite exacte
+\[
+  \mathscr E'_1\longrightarrow
+  \mathscr E'_0\longrightarrow
+  \mathscr G'\longrightarrow0
+  \qquad\text{avec}\qquad
+  \mathscr E'_i=\mathscr E_i\otimes_{\mathscr O_Y}\mathscr O_{X'}
+\]
+et de ce que
+\[
+  \check{\mathscr E}'_i
+  \otimes_{\mathscr O_{X'}}
+  (\mathscr F\otimes_{\mathscr O_Y}\mathscr M')
+  =
+  \check{\mathscr E}_i
+  \otimes_{\mathscr O_X}
+  (\mathscr F\otimes_{\mathscr O_Y}\mathscr M')
+  \qquad(i=0,1).
+\]
+
+\medskip
+\textnormal{(ii)} La condition (ii) de l'énoncé de (7.7.8) relative à
+$\mathscr G$ est toujours satisfaite pour un $\mathscr O_X$-Module cohérent
+$\mathscr G$ quelconque lorsqu'il existe un $\mathscr O_X$-Module inversible
+$Y$-ample, par exemple lorsque $Y$ est affine et $f:X\to Y$ est un morphisme
+projectif. Il suffit alors de noter (compte tenu de (II, 5.5.1)) qu'il existe un
+$\mathscr O_X$-Module localement libre de type fini $\mathscr E_0$ tel que
+$\mathscr G$ soit isomorphe à un quotient de $\mathscr E_0$ (II, 2.7.10) ; comme
+$\mathscr E_0$ et $\mathscr G$ sont cohérents, il en est de même du noyau
+$\mathscr G_1$ de $\mathscr E_0\to\mathscr G$, et en appliquant le même résultat
+à $\mathscr G_1$, on obtient bien une suite exacte
+$\mathscr E_1\to\mathscr E_0\to\mathscr G\to0$ où $\mathscr E_0$ et
+$\mathscr E_1$ sont localement libres de type fini.
+
+\medskip
+\textnormal{(iii)} Nous prouverons au chap. V que, dans (7.7.8), l'hypothèse
+restrictive (ii) est \emph{surabondante}.
+\end{remarks}
+
+\begin{proposition}[7.7.10]
+\textnormal{(Critères locaux pour la propriété d'échange).} Sous les conditions
+générales de (7.7.5), soient $y$ un point de $Y$, $p$ un entier. Les propriétés
+suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] Le foncteur $T_p^{\mathscr O_y}$ est exact à droite.
+
+  \item[b)] L'homomorphisme canonique
+    \[
+      T_p^{\mathscr O_y}(\mathscr O_y)
+      \longrightarrow
+      T_p^{\mathscr O_y}(\kappa(y))
+    \]
+    est surjectif.
+
+  \item[c)] Pour tout entier $n$, l'homomorphisme canonique
+    \[
+      T_p^{\mathscr O_y}
+      (\mathscr O_y/\mathfrak m_y^{n+1})
+      \longrightarrow
+      T_p^{\mathscr O_y}(\kappa(y))
+    \]
+    est surjectif.
+\end{enumerate}
+De plus, l'ensemble des $y\in Y$ vérifiant ces conditions est le plus grand
+ensemble ouvert $U$ de $Y$ tel que $\mathscr T_p^U$ soit exact à droite.
+\end{proposition}
+
+\begin{proof}
+Compte tenu de (7.7.4), l'équivalence de a), b) et c) résulte de (7.4.7) et
+(7.5.2). Le fait que l'ensemble $U$ où $T_p^{\mathscr O_y}$ est exact à droite
+soit ouvert est aussi conséquence de (7.4.4), et inversement si
+$\mathscr T_p^V$ est exact à droite, il en est de même de
+$T_p^{\mathscr O_y}$ pour tout $y\in V$, par la condition c) de (7.7.5) et
+(7.6.1).
+\end{proof}
+
+\begin{corollary}[7.7.11]
+Si $\mathscr T_p$ est exact à droite (resp. à gauche), alors, pour tout morphisme
+$g:Y'\to Y$, $\mathscr T_p^{Y'}$ est exact à droite (resp. à gauche). La
+réciproque est vraie lorsque le morphisme $g$ est fidèlement plat.
+\end{corollary}
+
+\oldpage[III]{204}
+\begin{proof}
+La première assertion est conséquence immédiate de (7.6.1) et du fait que la
+question est locale sur $Y$ et $Y'$, d'après (7.7.5, c) et b)). Pour démontrer
+la seconde assertion, il suffit de voir que pour tout $y\in Y$,
+$T_p^{\mathscr O_y}$ est exact à droite (resp. à gauche), en vertu de (7.7.10).
+Mais par hypothèse, il existe $y'\in Y'$ tel que $g(y')=y$, et
+$\mathscr O_{y'}$ est un $\mathscr O_y$-module fidèlement plat ; la conclusion
+résulte alors de l'hypothèse et de (7.6.1).
+\end{proof}
+
+\begin{remarks}[7.7.12]
+\textnormal{(i)} Sous les hypothèses de (7.7.4), supposons en outre que
+$\mathscr P_\bullet$ soit un complexe \emph{fini} ; alors il résulte de (7.7.1)
+(puisqu'on peut prendre pour $\mathfrak U$ un recouvrement ouvert affine
+\emph{fini} de $X$) que le bicomplexe
+$C^\bullet(\mathfrak U,\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M)$ est
+aussi fini, et de façon précise qu'il existe un ensemble fini $E$ de couples,
+\emph{indépendant de $\mathscr M$}, tel que
+\[
+  C^h(\mathfrak U,\mathscr P^k\otimes_{\mathscr O_Y}\mathscr M)=0
+  \qquad\text{pour tous les couples }(h,k)\notin E.
+\]
+On en conclut qu'il existe $i_1$ tel que, pour $i\geq i_1$, on ait
+$\mathscr T_i(\mathscr M)=0$ pour \emph{tout} $\mathscr O_Y$-Module
+quasi-cohérent $\mathscr M$. En particulier, $\mathscr T_i$ est trivialement un
+foncteur exact en $\mathscr M$ pour ces valeurs de $i$, et par suite (7.4.1),
+$Z'_i(L_\bullet)$ est un $A$-module \emph{plat} de type fini (donc
+\emph{projectif} de type fini, puisque $A$ est noethérien) pour ces valeurs de
+$i$. Considérons alors le complexe $(L'_\bullet)$ de $A$-modules tel que
+$L'_i=L_i$ pour $i<i_1$, $L'_{i_1}=Z'_{i_1}(L_\bullet)$ et $L'_i=0$ pour
+$i>i_1$ et soit $\mathscr L'_\bullet=\widetilde{L'_\bullet}$. Il est clair que
+\[
+  \mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+  =
+  \mathscr H_i(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+\]
+pour $i<i_1-1$ et aussi pour $i\geq i_1$ (les deux membres étant alors nuls) ;
+enfin, comme
+$\operatorname{Im}(Z'_{i_1}\otimes_A M)=\operatorname{Im}(L_{i_1}\otimes_A M)$
+par définition, on a aussi
+$\mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+=\mathscr H_i(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M)$ pour
+$i=i_1-1$. On voit donc qu'on peut supposer dans (7.7.4) que
+$\mathscr L_\bullet$ est aussi un complexe \emph{fini}, à condition d'exiger
+seulement que les $\mathscr L_i$ soient des $\mathscr O_Y$-Modules
+\emph{localement libres} (associés à des $A$-modules projectifs de type fini).
+
+Ce raisonnement s'applique en particulier au cas où $\mathscr P_\bullet$ est
+réduit à \emph{un seul} terme $\mathscr F\ne0$, de degré 0 (auquel cas
+$\mathscr T_n(\mathscr M)=\mathrm R^{-n}f_*
+(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$) ; on peut alors supposer que les
+$\mathscr L_i$ sont nuls pour $i>0$ ; on utilisera de préférence dans ce cas les
+notations cohomologiques, écrivant donc $\mathscr T^{-p}$ au lieu de
+$\mathscr T_p$.
+
+\medskip
+\textnormal{(ii)} Lorsque dans l'énoncé de (7.7.5), on ne suppose plus que les
+$\mathscr P_i$ sont $Y$-plats, les conclusions restent valables à condition de
+poser cette fois
+\[
+  \mathscr T_p(\mathscr M)
+  =
+  \operatorname{Tor}^Y_p
+    (f,1_Y;\mathscr P_\bullet,\mathscr M).
+  \tag{7.7.12.1}\label{III.7.7.12.1.fr}
+\]
+En effet, $\operatorname{Tor}^Y_n(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)$ est
+alors un $\mathscr O_Y$-Module \emph{cohérent} en vertu de (6.7.9). La
+démonstration de (6.10.5) s'applique sans changement, compte tenu de (6.10.1)
+et montre encore que lorsque $Y=\operatorname{Spec}(A)$ est affine, l'on a
+\[
+  \mathscr T_p(\mathscr M)
+  =
+  \mathscr H_p(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M),
+  \qquad
+  \mathscr L_\bullet=\widetilde{L_\bullet},
+\]
+où $L_\bullet$ est un complexe de $A$-modules libres de type fini ; cela prouve
+notre assertion.
+\end{remarks}
+
+\subsection{Application aux morphismes propres : II. Critères de platitude
+cohomologique}
+\label{subsection:III.7.8.fr}
+
+\begin{definition}[7.8.1]
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme quasi-compact et
+séparé, $\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules
+quasi-cohérents et $Y$-plats, $\mathscr T_\bullet$ le foncteur homologique de
+$\mathscr O_Y$-Modules quasi-cohérents défini par (7.7.1.1), $y$ un point de $Y$.
+On dit que $\mathscr P_\bullet$ est
+
+\oldpage[III]{205}
+\emph{homologiquement plat sur $Y$ au point $y$, en dimension $p$} (ou
+\emph{cohomologiquement plat sur $Y$ au point $y$, en dimension $-p$}) s'il
+existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+$\mathscr T_p^U=\mathscr T_U^{-p}$ soit exact. On dit que $\mathscr P_\bullet$ est
+\emph{homologiquement plat en dimension $p$ sur $Y$} (ou
+\emph{cohomologiquement plat en dimension $-p$ sur $Y$}) s'il est
+homologiquement plat sur $Y$ en tout point $y\in Y$, en dimension $p$.
+
+Lorsque $\mathscr P_\bullet$ est homologiquement plat sur $Y$ (resp. sur $Y$ au
+point $y$) pour \emph{toute dimension $p$}, on dit simplement que
+$\mathscr P_\bullet$ est \emph{homologiquement plat sur $Y$} (resp. sur $Y$ au
+point $y$) ou \emph{cohomologiquement plat sur $Y$} (resp. sur $Y$ au point
+$y$).
+\end{definition}
+
+\begin{env}[7.8.2]
+Par définition, la notion de platitude homologique sur $Y$ est \emph{locale sur
+$Y$}. Si $Y$ est localement noethérien, ou un \emph{schéma}, pour que
+$\mathscr P_\bullet$ soit homologiquement plat sur $Y$ en dimension $p$, il faut
+et il suffit que le foncteur $\mathscr T_p$ soit \emph{exact} : la démonstration
+a été faite dans le cas où $Y$ est localement noethérien au cours de la
+démonstration de (7.7.5) ; le raisonnement est le même (basé sur (I, 9.4.2)
+appliqué à un ouvert affine dans un schéma quasi-compact) lorsque $Y$ est un
+schéma.
+\end{env}
+
+\begin{proposition}[7.8.3]
+Les notations et hypothèses étant celles de (7.8.1), les conditions suivantes
+sont équivalentes :
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ est homologiquement plat sur $Y$ au point $y$
+    en dimension $p$.
+  \item[b)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+    $\mathscr T_p^U$ et $\mathscr T_{p+1}^U$ soient exacts à droite.
+  \item[c)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+    $\mathscr T_p^U$ et $\mathscr T_{p-1}^U$ soient exacts à gauche.
+  \item[d)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+    $\mathscr T_{p+1}^U$ soit exact à droite et $\mathscr T_{p-1}^U$ exact à
+    gauche.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Compte tenu de l'interprétation de $\mathscr T_p$ lorsque $Y$ est affine, cela
+n'est qu'une traduction d'une partie de (7.3.3).
+\end{proof}
+
+\begin{proposition}[7.8.4]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules cohérents et $Y$-plats
+limité inférieurement, $\mathscr T_\bullet$ le foncteur défini par (7.7.1.1).
+Pour tout $y\in Y$, les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ est homologiquement plat sur $Y$ en $y$ en
+    dimension $p$.
+  \item[b)] Le foncteur $T_p^{\mathscr O_y}$ est exact.
+  \item[c)] Il existe un entier $n_0$ tel que pour $n\geq n_0$, on ait
+    \[
+      \operatorname{long}T_p^{\mathscr O_y}
+        (\mathscr O_y/\mathfrak m_y^{n+1})
+      =
+      \operatorname{long}T_p^{\mathscr O_y}(\kappa(y))
+      \cdot
+      \operatorname{long}(\mathscr O_y/\mathfrak m_y^{n+1})
+      \tag{7.8.4.1}\label{III.7.8.4.1.fr}
+    \]
+    (où il s'agit de longueurs de $\mathscr O_y$-modules).
+  \item[d)] Il y a un voisinage ouvert $U$ de $y$ tel que
+    $(\mathscr H^{-p}(f,\mathscr P^\bullet))|U$ soit isomorphe à un
+    $(\mathscr O_Y|U)$-Module de la forme $(\mathscr O_Y|U)^m$ et que, pour tout
+    $(\mathscr O_Y|U)$-Module quasi-cohérent $\mathscr M$, l'homomorphisme
+    canonique
+    \[
+      ((\mathscr H^{-p}(f,\mathscr P^\bullet))|U)
+      \otimes_{\mathscr O_Y|U}\mathscr M
+      \longrightarrow
+      \mathscr H^{-p}
+      \bigl(
+        f,(\mathscr P^\bullet|U)
+          \otimes_{\mathscr O_Y|U}\mathscr M
+      \bigr)
+      \tag{7.8.4.2}\label{III.7.8.4.2.fr}
+    \]
+    soit bijectif.
+\end{enumerate}
+Lorsque ces conditions sont vérifiées, on a en outre la propriété suivante :
+\begin{enumerate}
+  \item[e)] Il existe un voisinage de $y$ dans lequel la fonction
+    $z\mapsto d_p(z)$ (définie dans (7.7.5.1)) est constante.
+\end{enumerate}
+De plus, si $Y$ est réduit au point $y$ ($0_{\mathrm I}$, 4.1.4), e) est
+équivalente aux autres conditions.
+\end{proposition}
+
+\oldpage[III]{206}
+\begin{proof}
+En effet, la condition b) équivaut à dire que $T_p^{\mathscr O_y}$ et
+$T_{p+1}^{\mathscr O_y}$ sont exacts à droite (7.3.3). L'équivalence de a) et b)
+résulte alors de (7.7.10) et (7.8.3). Comme
+$\mathscr O_y/\mathfrak m_y^{n+1}$ est artinien, et que
+$T_p^{\mathscr O_y}(\mathscr O_y/\mathfrak m_y^{n+1})$ et
+$T_p^{\mathscr O_y}(\kappa(y))$ sont des
+$(\mathscr O_y/\mathfrak m_y^{n+1})$-modules de type fini (7.7.4), donc de
+longueur finie, l'équivalence de b) et c) résulte encore de (7.7.10) et de
+(7.3.5.7). Le fait que a) entraîne e), et lui est équivalente lorsque
+$\mathscr O_y$ est réduit, est conséquence de (7.6.9). Enfin, a) entraîne que
+(7.8.4.2) est bijectif en vertu de la définition (7.8.1) et de (7.7.5) ; d'autre
+part, a) entraîne que $(\mathscr H^{-p}(f,\mathscr P^\bullet))_y$ est un
+$\mathscr O_y$-module plat (7.3.3, f)), donc libre ($0_{\mathrm I}$, 10.1.3),
+puisqu'il s'agit d'un $\mathscr O_y$-module de type fini en vertu de (7.7.4) ;
+puisque $\mathscr H^{-p}(f,\mathscr P^\bullet)$ est un $\mathscr O_Y$-Module
+cohérent (7.7.4), il est localement libre dans un voisinage de $y$
+($0_{\mathrm I}$, 5.2.7). Inversement, il est clair que d) entraîne a) par
+définition du foncteur $\mathscr T_p^U$ (7.7.2.2).
+\end{proof}
+
+\begin{proposition}[7.8.5]
+Sous les hypothèses de (7.8.4), les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ est homologiquement plat sur $Y$ en toute
+    dimension $i\leq p$.
+  \item[b)] Pour $i\leq p+1$ les foncteurs $\mathscr T_i$ sont exacts à droite.
+  \item[c)] Pour $i\geq-p$, les $\mathscr O_Y$-Modules
+    $\mathscr H^i(f,\mathscr P^\bullet)$ sont localement libres.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence de a) et b) est triviale (7.8.3) et a) entraîne c) en vertu de
+(7.8.4). Inversement, supposons c) vérifiée ; notons d'autre part qu'on a
+$\mathscr L_i=0$ pour $i<i_0$ (7.7.4), donc aussi $\mathscr T_i=0$ pour
+$i\leq i_0$. Tout point $y\in Y$ a donc un voisinage affine
+$U=\operatorname{Spec}(A)$ tel que $T_i^A(A)$ soit un $A$-module libre pour
+$i\leq p$ ; en vertu de (7.3.7), on en conclut que
+$\mathscr T_i^U=T_i^A$ est exact pour $i\leq p$.
+\end{proof}
+
+Nous allons surtout appliquer les critères de platitude cohomologique au cas où
+le complexe $\mathscr P_\bullet$ est réduit à un \emph{seul}
+$\mathscr O_X$-Module cohérent $\mathscr F$ \emph{plat} sur $Y$, pris égal à
+$\mathscr P_0$ ; rappelons que l'on a alors
+$\mathscr T_p(\mathscr M)=\mathrm R^{-p}f_*
+(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$.
+
+\begin{proposition}[7.8.6]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre
+et plat, $y$ un point de $Y$ ; désignons par $X_y$ la fibre
+$f^{-1}(y)=X\otimes_Y\kappa(y)$. Supposons que
+$\Gamma(X_y,\mathscr O_{X_y})=R$ soit une $\kappa(y)$-algèbre séparable
+(Bourbaki, \emph{Alg.}, chap. VIII, § 7, n\textsuperscript{o} 5) autrement dit
+composée d'un nombre fini d'extensions séparables de degré fini de $\kappa(y)$.
+Alors $\mathscr O_X$ est cohomologiquement plat sur $Y$ au point $y$ en
+dimension 0.
+\end{proposition}
+
+\begin{proof}
+En vertu de (7.8.4), on peut se borner au cas où $Y$ est le spectre de l'anneau
+local $A=\mathscr O_y$ ; l'hypothèse que $f$ est plat entraîne
+$\mathscr T_{-1}=0$, donc on voit déjà que $T_0^A$ est exact à gauche et tout
+revient à voir qu'il est exact à droite ; en vertu de (7.7.10, c)), on est même
+ramené au cas où $A=\mathscr O_y$ est \emph{artinien}. Soit $k'$ une extension
+finie de $\kappa(y)$ qui soit un corps neutralisant de $R$, de sorte que
+$R\otimes_{\kappa(y)}k'$ est composée directe d'un nombre fini de corps
+isomorphes à $k'$. On sait qu'il existe un homomorphisme local de $A$ dans un
+anneau local $A'$, faisant de $A'$ une $A$-algèbre \emph{libre} finie sur $A$,
+et tel que le corps résiduel de $A'$ soit isomorphe à $k'$ ($0_{\mathrm I}$,
+10.3.2). En vertu de (7.6.1), on est ramené à prouver que $T_0^{A'}$ est exact
+à droite, autrement dit on peut supposer que $R$ est composé direct de $m$
+corps isomorphes à $\kappa(y)$. Notons maintenant le lemme élémentaire
+suivant :
+
+\begin{lemma}[7.8.6.1]
+Soit $Z$ un espace annelé en anneaux locaux ; pour que $Z$ soit connexe,
+
+\oldpage[III]{207}
+il faut et il suffit que l'anneau $\Gamma(Z,\mathscr O_Z)$ ne soit pas un produit
+de deux anneaux non réduits à 0.
+\end{lemma}
+
+\begin{proof}
+Il est clair en effet que si $Z$ est réunion de deux ouverts non vides disjoints,
+$\Gamma(Z,\mathscr O_Z)$ est isomorphe au produit des deux anneaux
+$\Gamma(Z_1,\mathscr O_Z)$ et $\Gamma(Z_2,\mathscr O_Z)$ non réduits à 0.
+Inversement, dire que $\Gamma(Z,\mathscr O_Z)$ est un tel produit équivaut à
+dire qu'il y a dans $\Gamma(Z,\mathscr O_Z)$ un idempotent $s$ distinct de 0 et
+de 1 ; pour tout $z\in Z$, $s_z$ est alors un idempotent dans $\mathscr O_z$,
+donc égal à 0 ou 1. Mais il est clair que l'ensemble des $z$ tels que $s_z=0$
+est ouvert ; d'autre part, si $s_z=1$, on a par définition $s(z)\ne0$, donc
+l'ensemble des $z$ où $s_z=1$ est aussi ouvert ($0_{\mathrm I}$, 5.5.2) ; d'où
+la conclusion.
+\end{proof}
+
+Il résulte de ce lemme que $X_y$ a exactement $m$ composantes connexes $X'_i$
+et que $\Gamma(X'_i,\mathscr O_{X'_i})=\kappa(y)$ pour tout $i$. Comme $A$ a été
+supposé local et artinien, son spectre est réduit à un point, donc $X$ et $X_y$
+ont même espace sous-jacent ; $X$ a donc $m$ composantes connexes $X_i$ telles
+que $X'_i=X_i\otimes_Y\kappa(y)$. On est ainsi finalement ramené au cas où
+$R=\kappa(y)$ ; en vertu de (7.7.10, b)), on est ramené à prouver que
+l'homomorphisme canonique
+\[
+  \Gamma(X,\mathscr O_X)
+  \longrightarrow
+  \Gamma(X_y,\mathscr O_{X_y})
+\]
+est surjectif ; mais cela est trivial, car le composé
+\[
+  \Gamma(Y,\mathscr O_Y)=A
+  \longrightarrow
+  \Gamma(X,\mathscr O_X)
+  \longrightarrow
+  \Gamma(X_y,\mathscr O_{X_y})=\kappa(y)
+\]
+est déjà surjectif.
+\end{proof}
+
+\begin{corollary}[7.8.7]
+Sous les hypothèses de (7.8.6), il existe un voisinage ouvert $U$ de $y$ tel
+que :
+\begin{enumerate}
+  \item[(i)] $f_*(\mathscr O_X)|U$ soit isomorphe à un
+    $(\mathscr O_Y|U)$-Module de la forme $(\mathscr O_Y|U)^m$.
+  \item[(ii)] Pour tout $z\in U$, l'homomorphisme canonique
+    \[
+      (f_*(\mathscr O_X))_z
+      \otimes_{\mathscr O_z}\kappa(z)
+      \longrightarrow
+      \Gamma(X_z,\mathscr O_{X_z})
+    \]
+    est bijectif.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) résulte de (7.8.6) et (7.8.4).
+
+(ii) résulte de ce que $\mathscr T_0^U$ est exact (pour $U$ convenablement
+choisi), et de (7.7.5.3).
+\end{proof}
+
+\begin{corollary}[7.8.8]
+Supposons vérifiées les conditions de (7.8.6) et en outre que
+$\Gamma(X_y,\mathscr O_{X_y})=\kappa(y)$. Alors il existe un voisinage ouvert
+$U$ de $y$ tel que l'homomorphisme canonique
+$\mathscr O_Y|U\to f_*(\mathscr O_X)|U$ soit bijectif.
+\end{corollary}
+
+\begin{proof}
+En effet, il résulte de (7.8.7, (ii)) que l'entier $m$ figurant dans (7.8.7,
+(i)) est nécessairement égal à 1.
+\end{proof}
+
+\begin{corollary}[7.8.9]
+Sous les hypothèses de (7.8.6), il existe un voisinage ouvert $U$ de $y$, un
+$\mathscr O_U$-Module cohérent $\mathscr Q$ (déterminé à isomorphisme unique
+près) et un isomorphisme de foncteurs en le $\mathscr O_U$-Module quasi-cohérent
+$\mathscr M$ :
+\[
+  \mathrm R^1f_*(f^*(\mathscr M))
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_U}(\mathscr Q,\mathscr M).
+  \tag{7.8.9.1}\label{III.7.8.9.1.fr}
+\]
+\end{corollary}
+
+\begin{proof}
+En effet, l'hypothèse entraîne que $\mathscr T_0^U$ est exact pour un $U$
+convenable ; il suffit donc d'appliquer l'équivalence de (7.7.5, a)) et
+(7.7.5, b$'$)) au cas $p=0$ et en prenant pour $\mathscr P_\bullet$ le complexe
+réduit à son terme de degré 0 égal à $\mathscr O_X$.
+\end{proof}
+
+\begin{remarks}[7.8.10]
+\textnormal{(i)} Sous les conditions de (7.8.6), considérons la factorisation de
+Stein de $f$ (4.3.3)
+\[
+\xymatrix{
+  X \ar[r]^{f'} & Y' \ar[r]^{g} & Y .
+}
+\]
+
+\oldpage[III]{208}
+avec $Y'=\operatorname{Spec}(f_*(\mathscr O_X))$ ; le morphisme fini $g$ est alors
+tel que $g_*(\mathscr O_{Y'})=f_*(\mathscr O_X)$ soit localement libre au
+voisinage de $y$, et sa fibre en $y$ est le spectre d'une algèbre séparable sur
+$\kappa(y)$ (II, 1.5.1). Nous en déduirons au chap. IV qu'il y a un voisinage
+ouvert $U$ de $y$ dans $Y$ tel que pour la restriction $g^{-1}(U)\to U$ de $g$,
+\emph{toute} fibre $g^{-1}(z)$ (où $z\in U$) soit spectre d'une algèbre séparable
+sur $\kappa(z)$ (c'est ce que nous appellerons un \emph{revêtement étale} de
+$U$) ; il résultera alors de (7.8.7, (ii)) que l'hypothèse faite sur le point
+$y$ dans (7.8.6) est vérifiée aussi en tous les points d'un voisinage de $y$.
+
+\medskip
+\textnormal{(ii)} Nous verrons au chap. V que, même si $X$ est projectif sur $Y$
+(et même s'il est en outre « simple » sur $Y$, propriété qui sera définie au
+chap. IV), le $\mathscr O_U$-Module $\mathscr Q$ de (7.8.9) n'est pas
+nécessairement localement libre ; en d'autres termes, $\mathscr O_X$ (sous ces
+conditions) n'est pas nécessairement cohomologiquement plat en \emph{dimension
+1} sur $Y$ au point $y$. Au chap. V, nous interpréterons $\mathscr Q$ comme le
+faisceau des 1-différentielles du schéma de Picard de $X$ par rapport à $Y$ le
+long de la section unité.
+\end{remarks}
+
+\subsection{Application aux morphismes propres : III. Invariance de la
+caractéristique d'Euler-Poincaré et du polynôme de Hilbert}
+\label{subsection:III.7.9.fr}
+\label{III.7.9.fr}
+
+\begin{env}[7.9.1]
+\label{III.7.9.1.fr}
+Soient $A$ un anneau, $M$ un $A$-module projectif de type fini ; rappelons
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S~5, n\textsuperscript{o}~2) qu'il
+revient au même de dire que le $\mathscr O_X$-Module associé $\widetilde M$ sur
+$X=\operatorname{Spec}(A)$ est \emph{localement libre de type fini}. Pour tout
+$\mathfrak p\in\operatorname{Spec}(A)$ on appelle \emph{rang de $M$ en
+$\mathfrak p$} et on note $\operatorname{rang}_{\mathfrak p}(M)$ le rang du
+$A_{\mathfrak p}$-module libre $M_{\mathfrak p}$ (ou encore le rang en
+$\mathfrak p$ du $\mathscr O_X$-Module localement libre $\widetilde M$). On a
+donc
+\[
+  \operatorname{rang}_{\mathfrak p}M
+  =\operatorname{rang}_{\mathfrak p}(M_{\mathfrak p})
+  =\operatorname{rang}_{\kappa(\mathfrak p)}
+  \bigl(M\otimes_A\kappa(\mathfrak p)\bigr).
+  \tag{7.9.1.1}\label{III.7.9.1.1.fr}
+\]
+\end{env}
+
+\begin{proposition}[7.9.2]
+\label{III.7.9.2.fr}
+Soit $P_\bullet$ un complexe fini de $A$-modules projectifs de type fini, et
+pour tout $A$-module $M$, soit
+$T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)$. Alors, pour tout
+$\mathfrak p\in\operatorname{Spec}(A)$, on a
+\[
+  \sum_i(-1)^i\operatorname{rang}_{\kappa(\mathfrak p)}
+  T_i\bigl(\kappa(\mathfrak p)\bigr)
+  =\sum_i(-1)^i\operatorname{rang}_{\mathfrak p}(P_i).
+  \tag{7.9.2.1}\label{III.7.9.2.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, on a par définition
+$T_i(\kappa(\mathfrak p))=H_i(P_\bullet\otimes_A\kappa(\mathfrak p))$ et,
+compte tenu de (7.9.1.1), la formule (7.9.1.2) n'est autre que l'invariance de
+la caractéristique d'Euler-Poincaré d'un complexe fini d'espaces vectoriels de
+dimension finie par passage à l'homologie ($0_{\mathrm I}$, 11.10.2).
+\end{proof}
+
+\begin{corollary}[7.9.3]
+\label{III.7.9.3.fr}
+La fonction
+\[
+  \mathfrak p\longmapsto
+  \sum_i(-1)^i\operatorname{rang}_{\kappa(\mathfrak p)}
+  T_i\bigl(\kappa(\mathfrak p)\bigr)
+\]
+est localement constante dans $\operatorname{Spec}(A)$.
+\end{corollary}
+
+\begin{theorem}[7.9.4]
+\label{III.7.9.4.fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr P_\bullet$ un complexe fini de $\mathscr O_X$-Modules cohérents et
+$Y$-plats. Si l'on pose
+\[
+  \mathscr T_\bullet(\mathscr M)
+  =\mathscr H^{-\bullet}
+  \bigl(f,\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M\bigr)
+  \qquad\text{(cf. (7.7.1.1))}
+\]
+la fonction
+
+\oldpage[III]{209}
+\[
+  y\longmapsto
+  \sum_i(-1)^i\operatorname{rang}_{\kappa(y)}
+  \mathscr T_i\bigl(\kappa(y)\bigr)
+  \tag{7.9.4.1}\label{III.7.9.4.1.fr}
+\]
+est localement constante dans $Y$.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $Y=\operatorname{Spec}(A)$ est affine d'anneau $A$
+noethérien. Comme le complexe $\mathscr P_\bullet$ est fini, on sait (7.7.12,
+(i)) qu'on a
+\[
+  \mathscr T_p(\mathscr M)
+  =\mathscr H_p(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M),
+  \qquad \mathscr L_\bullet=\widetilde{L_\bullet},
+\]
+$L_\bullet$ étant un complexe \emph{fini} de $A$-modules projectifs de type
+fini. Le théorème résulte alors de (7.9.3).
+\end{proof}
+
+\begin{env}[7.9.5]
+\label{III.7.9.5.fr}
+Sous les conditions de (7.9.4), la fonction (7.9.4.1) est \emph{constante}
+lorsque $Y$ est \emph{connexe}. Lorsque $Y$ est connexe et non vide, on désigne
+la valeur unique (entière) de (7.9.4.1) par
+\[
+  \operatorname{EP}(f,\mathscr P_\bullet)
+  \quad\text{ou}\quad
+  \operatorname{EP}(Y,\mathscr P_\bullet),
+  \quad\text{ou simplement}\quad
+  \operatorname{EP}(\mathscr P_\bullet)
+\]
+s'il ne peut en résulter de confusion, et l'on dit que cet entier est la
+\emph{caractéristique d'Euler-Poincaré de $\mathscr P_\bullet$} relativement à
+$f$ (ou à $Y$). Dans le cas général, on notera aussi
+\[
+  \operatorname{EP}(f,\mathscr P_\bullet;y)
+  \quad\text{ou}\quad
+  \operatorname{EP}(Y,\mathscr P_\bullet;y)
+  \quad\text{ou}\quad
+  \operatorname{EP}(\mathscr P_\bullet;y)
+\]
+le second membre de (7.9.4.1).
+\end{env}
+
+\begin{env}[7.9.6]
+\label{III.7.9.6.fr}
+Sous les hypothèses de (7.9.4) relativement à $X$, $Y$ et $f$, soit
+\[
+  0\longrightarrow\mathscr P'_\bullet
+  \xrightarrow{u}\mathscr P_\bullet
+  \xrightarrow{v}\mathscr P''_\bullet
+  \longrightarrow0
+\]
+une suite exacte de complexes finis de $\mathscr O_X$-Modules cohérents et
+$Y$-plats, les homomorphismes $u$ et $v$ étant de degrés \emph{pairs} $2d$,
+$2d'$ respectivement. Comme $\mathscr T_\bullet$ est un foncteur homologique
+(7.7.1), on a une suite exacte d'homologie
+\[
+  \cdots\longrightarrow
+  \mathscr T_i(\mathscr P'_\bullet,\kappa(y))
+  \longrightarrow
+  \mathscr T_{i+2d}(\mathscr P_\bullet,\kappa(y))
+  \longrightarrow
+  \mathscr T_{i+2d+2d'}(\mathscr P''_\bullet,\kappa(y))
+  \longrightarrow
+  \mathscr T_{i-1}(\mathscr P'_\bullet,\kappa(y))
+  \longrightarrow\cdots
+\]
+n'ayant d'ailleurs qu'un nombre fini de termes. En écrivant que la
+caractéristique d'Euler-Poincaré de ce complexe est nulle ($0_{\mathrm I}$,
+11.10.1), il vient aussitôt
+\[
+  \operatorname{EP}(\mathscr P_\bullet;y)
+  =\operatorname{EP}(\mathscr P'_\bullet;y)
+  +\operatorname{EP}(\mathscr P''_\bullet;y)
+  \tag{7.9.6.1}\label{III.7.9.6.1.fr}
+\]
+pour tout $y\in Y$. Or, si par exemple $\mathscr P_\bullet=(\mathscr P_i)$ avec
+$\mathscr P_i=0$ pour $i<0$, on a la suite exacte de complexes
+\[
+\xymatrix@C=2.4em{
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r] & 0 \ar[r]
+    & 0 \ar[r] & 0 \ar[r] & \cdots
+}
+\]
+les flèches verticales non nulles étant les automorphismes identiques ; on peut
+appliquer (7.9.6.1) à cette suite exacte, d'où, par récurrence sur la longueur de
+$\mathscr P_\bullet$, la formule
+\[
+  \operatorname{EP}(\mathscr P_\bullet;y)
+  =\sum_i(-1)^i\operatorname{EP}(\mathscr P_i;y).
+  \tag{7.9.6.2}\label{III.7.9.6.2.fr}
+\]
+
+\oldpage[III]{210}
+où, pour tout $\mathscr O_X$-Module cohérent $\mathscr F$, plat sur $Y$, on
+désigne par $\operatorname{EP}(\mathscr F;y)$ (ou
+$\operatorname{EP}(f,\mathscr F;y)$ ou $\operatorname{EP}(Y,\mathscr F;y)$) la
+fonction $\operatorname{EP}(\mathscr Q_\bullet;y)$ correspondant au complexe
+$\mathscr Q_\bullet$ dont le seul terme $\ne0$ est de degré $0$ et égal à
+$\mathscr F$. On voit donc qu'on peut se ramener à étudier les caractéristiques
+d'Euler-Poincaré de complexes réduits à un seul terme.
+\end{env}
+
+\begin{proposition}[7.9.7]
+\label{III.7.9.7.fr}
+Sous les hypothèses de (7.9.4), soient $Y'$ un préschéma localement noethérien,
+$g:Y'\to Y$ un morphisme,
+\[
+  X'=X\times_Y Y',
+  \qquad f'=f_{(Y')}:X'\longrightarrow Y',
+\]
+$\mathscr P'_\bullet$ le complexe fini
+\[
+  \mathscr P_\bullet\otimes_{\mathscr O_Y}\mathscr O_{Y'}
+\]
+de $\mathscr O_{X'}$-Modules ; $\mathscr P'_\bullet$ est formé de
+$\mathscr O_{X'}$-Modules cohérents et $Y'$-plats, et pour tout $y'\in Y'$, on a
+\[
+  \operatorname{EP}(\mathscr P'_\bullet;y')
+  =\operatorname{EP}(\mathscr P_\bullet;g(y')).
+  \tag{7.9.7.1}\label{III.7.9.7.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Les $\mathscr O_{X'}$-Modules $\mathscr P'_i$ étant images réciproques des
+$\mathscr P_i$ par la projection $X'\to X$ sont cohérents, ils sont $Y'$-plats en
+vertu de ($0_{\mathrm I}$, 6.2.1) et (I, 4.14.5), la question étant locale sur
+$X$, $Y$ et $Y'$ ; enfin, on sait que $f'$ est propre (II, 5.4.2), donc le
+premier membre de (7.9.7.1) est défini. La formule (7.9.7.1) résulte alors de
+(6.10.4.2), (7.7.2) et du lemme (7.6.7), en se ramenant, comme on peut toujours
+le faire, au cas où $Y$ et $Y'$ sont affines.
+\end{proof}
+
+\begin{proposition}[7.9.8]
+\label{III.7.9.8.fr}
+Supposons vérifiées les hypothèses de (7.9.4) et en outre qu'il existe un entier
+$i_0$ tel que
+\[
+  \mathscr T_i(\kappa(y))=0
+  \qquad\text{pour $i\ne i_0$ et tout $y\in Y$.}
+\]
+Alors
+\[
+  \mathscr T_{i_0}(\mathscr O_Y)
+  =\mathscr H^{-i_0}(f,\mathscr P_\bullet)
+\]
+est un $\mathscr O_Y$-Module localement libre, dont le rang en $y\in Y$ est égal
+à $(-1)^{i_0}\operatorname{EP}(f,\mathscr P_\bullet;y)$.
+\end{proposition}
+
+\begin{proof}
+Remarquons d'abord que les hypothèses de (7.4.4) sont vérifiées par les
+$\mathscr T_j^{\mathscr O_y}$, donc (7.4.7) leur est applicable, et l'hypothèse
+entraîne que $\mathscr T_i^{\mathscr O_y}$ est \emph{nul} pour $i\ne i_0$ en
+vertu de (7.5.3) ; en raison de (7.3.3), $\mathscr T_{i_0}$ est donc aussi exact,
+et par suite (7.8.4), $\mathscr H^{-i_0}(f,\mathscr P_\bullet)$ est localement
+libre et son rang en un point $y\in Y$ est
+\[
+  \operatorname{rang}_{\kappa(y)}
+  \mathscr T_{i_0}(\kappa(y))
+  =\operatorname{EP}(f,\mathscr P_\bullet;y)
+\]
+par définition, puisque $\mathscr T_i(\kappa(y))=0$ pour $i\ne i_0$.
+\end{proof}
+
+\begin{corollary}[7.9.9]
+\label{III.7.9.9.fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr F$ un $\mathscr O_X$-Module cohérent et $Y$-plat ; on suppose qu'il
+existe un entier $i_0$ tel que
+\[
+  H^i\bigl(f^{-1}(y),
+  \mathscr F\otimes_{\mathscr O_Y}\kappa(y)\bigr)=0
+  \qquad\text{pour tout $i\ne i_0$ et tout $y\in Y$.}
+\]
+Alors $\mathrm R^{i_0}f_*(\mathscr F)$ est un $\mathscr O_Y$-Module localement
+libre, dont le rang en $y$ est égal à
+$(-1)^{i_0}\operatorname{EP}(f,\mathscr F;y)$.
+\end{corollary}
+
+En particulier :
+
+\begin{corollary}[7.9.10]
+\label{III.7.9.10.fr}
+Sous les conditions préliminaires de (7.9.9) pour $X$, $Y$ et $\mathscr F$,
+supposons que l'on ait $\mathrm R^if_*(\mathscr F)=0$ pour tout $i>0$. Alors
+$f_*(\mathscr F)$ est un $\mathscr O_Y$-Module localement libre, dont le rang en
+$y$ est égal à $\operatorname{EP}(f,\mathscr F;y)$.
+\end{corollary}
+
+\begin{proof}
+Il suffira, en vertu de (7.9.9) de prouver le lemme suivant :
+\end{proof}
+
+\begin{lemma}[7.9.10.1]
+\label{III.7.9.10.1.fr}
+Sous les hypothèses de (7.9.10), on a
+\[
+  H^i\bigl(f^{-1}(y),
+  \mathscr F\otimes_{\mathscr O_Y}\kappa(y)\bigr)=0
+\]
+pour tout $i>0$ et tout $y\in Y$.
+\end{lemma}
+
+\begin{proof}
+En effet, on peut se borner au cas où $Y=\operatorname{Spec}(A)$ est affine.
+Avec les notations de (7.9.4), et $\mathscr P_\bullet$ étant réduit à son terme
+de degré $0$ égal à $\mathscr F$, on a en effet
+$\mathscr T_p(\mathscr O_Y)=0$ pour $p<0$ par hypothèse ; on conclut de (7.3.7)
+que $\mathscr T_p$ est exact pour $p<0$, et le lemme résulte alors de
+l'équivalence de (7.7.5, a)) et (7.7.5, d)).
+\end{proof}
+
+\oldpage[III]{211}
+\begin{proposition}[7.9.11]
+\label{III.7.9.11.fr}
+Les hypothèses étant celles de (7.9.4), soit $\mathscr L$ un
+$\mathscr O_X$-Module inversible très ample pour $Y$, et posons
+$\mathscr P_\bullet(n)=\mathscr P_\bullet\otimes_{\mathscr O_X}
+\mathscr L^{\otimes n}$ pour tout $n\in\mathbf Z$. Alors, pour tout $y\in Y$,
+la fonction
+\[
+  n\longmapsto\operatorname{EP}(f,\mathscr P_\bullet(n);y)
+  \tag{7.9.11.1}\label{III.7.9.11.1.fr}
+\]
+est un polynôme à coefficients dans $\mathbf Q$, qui est le même pour tous les
+points d'une même composante connexe de $Y$.
+\end{proposition}
+
+\begin{proof}
+Il est clair que $\mathscr P_\bullet(n)$ est un complexe de
+$\mathscr O_X$-Modules $Y$-plats. En vertu de (7.9.6.2), on peut se borner au cas
+où $\mathscr P_\bullet$ est réduit à un seul terme $\mathscr F\ne0$ de degré 0 ;
+en outre, comme il s'agit de questions locales sur $Y$, on peut supposer $Y$
+affine et $f$ projectif (II, 5.5.3) ; posons $X_y=f^{-1}(y)$, et soit
+$\mathscr L_y=\mathscr L\otimes_{\mathscr O_Y}\kappa(y)$, qui est un
+$\mathscr O_{X_y}$-Module très ample (II, 4.4.10) ; en vertu de (7.7.2), on a,
+pour le foncteur $\mathscr T_\bullet$ relatif au complexe
+$\mathscr P_\bullet(n)$,
+\[
+  \mathscr T_i(\kappa(y))
+  =H^{-i}(X_y,\mathscr F_y\otimes\mathscr L_y^{\otimes n})
+  \qquad
+  \bigl(\text{où }\mathscr F_y=\mathscr F\otimes_{\mathscr O_Y}\kappa(y)\bigr) ;
+\]
+d'où résulte que $\operatorname{EP}(f,\mathscr F(n);y)$ n'est autre que la
+caractéristique d'Euler-Poincaré $\chi_{\kappa(y)}(\mathscr F_y(n))$ définie dans
+(2.5.1) ; le fait que (7.9.11.1) soit un polynôme résulte alors de (2.5.3) ; en
+outre, pour chaque $n$, sa valeur est constante dans une composante connexe de
+$Y$ (7.9.4), ce qui achève la démonstration.
+\end{proof}
+
+\begin{env}[7.9.12]
+\label{III.7.9.12.fr}
+Nous désignerons par $\operatorname{PH}(f,\mathscr P_\bullet;y)$ ou
+$\operatorname{PH}(\mathscr P_\bullet;y)$ le polynôme (7.9.11.1), à coefficients
+rationnels, et nous dirons que c'est le \emph{polynôme de Hilbert en $y$
+relatif à $\mathscr P_\bullet$, $f$ et $\mathscr L$} (ou simplement le
+\emph{polynôme de Hilbert en $y$ de $\mathscr P_\bullet$}, ou de $f$, s'il n'en
+résulte pas de confusion) ; lorsque $Y$ est connexe non vide, on supprime la
+mention de $y$ dans la notation et la terminologie. L'invariant ainsi obtenu
+jouera un rôle essentiel au chap. V, dans la théorie des « modules » des
+faisceaux cohérents quotients d'un faisceau cohérent donné.
+
+Avec les notations de (7.9.6) et (7.9.11), on a
+\[
+  \operatorname{PH}(\mathscr P_\bullet;y)
+  =\operatorname{PH}(\mathscr P'_\bullet;y)
+  +\operatorname{PH}(\mathscr P''_\bullet;y)
+  \tag{7.9.12.1}\label{III.7.9.12.1.fr}
+\]
+et en particulier
+\[
+  \operatorname{PH}(\mathscr P_\bullet;y)
+  =\sum_i(-1)^i\operatorname{PH}(\mathscr P_i;y) ;
+  \tag{7.9.12.2}\label{III.7.9.12.2.fr}
+\]
+cela résulte trivialement de (7.9.6.1) et (7.9.6.2). De même, avec les notations
+et hypothèses de (7.9.7), on a
+\[
+  \operatorname{PH}(\mathscr P'_\bullet;y')
+  =\operatorname{PH}(\mathscr P_\bullet;g(y')).
+  \tag{7.9.12.3}\label{III.7.9.12.3.fr}
+\]
+\end{env}
+
+La formule (7.9.12.2) ramène l'étude des polynômes de Hilbert d'un complexe à
+celle des polynômes de Hilbert d'un seul $\mathscr O_X$-Module $Y$-plat. Ces
+derniers admettent une interprétation remarquable indépendante de considérations
+homologiques :
+
+\begin{corollary}[7.9.13]
+\label{III.7.9.13.fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr L$ un $\mathscr O_X$-Module inversible très ample pour $Y$,
+$\mathscr F$ un $\mathscr O_X$-Module cohérent et $Y$-plat. Il existe un entier
+$n_0$ tel que pour $n\geq n_0$, $f_*(\mathscr F(n))$ soit un
+$\mathscr O_Y$-Module localement libre, de rang en $y\in Y$ égal à
+$\operatorname{PH}(f,\mathscr F;y)(n)$.
+\end{corollary}
+
+\begin{proof}
+Comme le morphisme $f$ est projectif (II, 5.5.3), il existe $n_0$ tel que pour
+$n\geq n_0$
+
+\oldpage[III]{212}
+on ait $\mathrm R^if_*(\mathscr F(n))=0$ pour tout $i>0$ (2.2.1) ; la conclusion
+résulte donc de (7.9.10).
+\end{proof}
+
+Le critère de platitude suivant sera important dans la théorie des « modules »
+des faisceaux cohérents du chap. V :
+
+\begin{proposition}[7.9.14]
+\label{III.7.9.14.fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme projectif,
+$\mathscr L$ un $\mathscr O_X$-Module inversible ample pour $f$, et posons
+$\mathscr F(n)=\mathscr F\otimes\mathscr L^{\otimes n}$ pour tout
+$\mathscr O_X$-Module $\mathscr F$ et tout $n\in\mathbf Z$. Pour qu'un
+$\mathscr O_X$-Module cohérent $\mathscr F$ soit $Y$-plat, il faut et il suffit
+qu'il existe un entier $n_0$ tel que, pour tout $n\geq n_0$,
+$f_*(\mathscr F(n))$ soit un $\mathscr O_Y$-Module localement libre.
+\end{proposition}
+
+\begin{proof}
+La nécessité de la condition se démontre comme dans (7.9.13) (le résultat de
+(2.2.1) s'appliquant à un faisceau ample $\mathscr L$, puisque $f$ est
+projectif). Pour démontrer la réciproque, on peut se borner au cas où $Y$ est
+affine d'anneau $A$ ; en vertu de l'hypothèse et de (2.2.2, (i)), les
+$A$-modules $\Gamma(X,\mathscr F(n))$ sont de type fini et projectifs (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S~5, n\textsuperscript{o}~2, th. 1). Soit $S$
+l'anneau gradué
+\[
+  S=\bigoplus_{n\geq0}\Gamma(X,\mathscr L^{\otimes n}) ;
+\]
+on sait que $X$ s'identifie canoniquement à $\operatorname{Proj}(S)$ (II,
+4.5.2, (b) et 5.4.4). Soit
+\[
+  M=\bigoplus_{n\geq n_0}\Gamma(X,\mathscr F(n)) ;
+\]
+remplaçant au besoin $\mathscr L$ par une puissance $\mathscr L^{\otimes d}$,
+on peut supposer que $S$ est engendré par un nombre fini d'éléments de degré 1
+(2.3.5.1), et il résulte alors de (II, 2.7.5 et 2.7.2) que $\mathscr F$
+s'identifie à $\mathscr P\!roj_0(M)$. Pour tout élément homogène $g\in S$ de
+degré $>0$, on a donc $\Gamma(X_g,\mathscr F)=M_{(g)}$ ; or, $M$, somme directe
+de $A$-modules projectifs, est un $A$-module plat, donc il en est de même de
+$M_g$ ($0_{\mathrm I}$, 6.3.2), et par suite aussi de $M_{(g)}$, qui est un
+facteur direct de $M_g$ ($0_{\mathrm I}$, 6.1.2). On en conclut (I, 4.14.5) que
+$\mathscr F$ est $Y$-plat en tout point de $X_g$, et comme les $X_g$ recouvrent
+$X$, la proposition est démontrée.
+\end{proof}
+
+\bigskip
+\noindent\emph{(A suivre.)}
+
+\clearpage
+\oldpage[III]{213}
+\section*{INDEX DES NOTATIONS}
+
+\begin{flushleft}
+$\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$ : 6.3.1.
+
+\medskip
+$\mathscr{T}\!or_n^{\mathscr O_S}(\mathscr P_\bullet,\mathscr Q_\bullet)$,
+$\mathscr{T}\!or_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ : 6.4.1 et 6.5.1.
+
+\medskip
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$ : 6.5.1.
+
+\medskip
+$\mathscr{T}\!or_q^S(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)},\ldots,
+\mathscr P_\bullet^{(m)})$ : 6.5.15.
+
+\medskip
+$\mathbf H^{-n}(\mathfrak U^{(i)},\mathscr P_\bullet^{(i)})$,
+$\mathbf H^{-n}(X^{(i)},\mathscr P_\bullet^{(i)})$ : 6.6.1.
+
+\medskip
+$\mathbf{Tor}_n^A(L_{\bullet\bullet}^{(1)},L_{\bullet\bullet}^{(2)})$,
+$\mathbf{Tor}_n^S(\mathfrak U^{(1)},\mathfrak U^{(2)};
+\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ : 6.6.2.
+
+\medskip
+$\mathscr{T}\!or_n^S(\mathfrak U^{(1)},\mathfrak U^{(2)};
+\mathscr F^{(1)},\mathscr F^{(2)})$,
+$\mathscr{T}\!or_n^S(\mathfrak U^{(1)},\mathfrak U^{(2)};
+\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ : 6.6.2.
+
+\medskip
+$\mathscr{T}\!or_n^S(f_1,f_2;\mathscr P_\bullet^{(1)},
+\mathscr P_\bullet^{(2)})$ : 6.6.8, 6.7.1 et 6.7.3.
+
+\medskip
+$\mathscr{T}\!or_n^S((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})$,
+$\mathscr{T}\!or_n^S(f_1,\ldots,f_m;\mathscr P_\bullet^{(1)},\ldots,
+\mathscr P_\bullet^{(m)})$ : 6.7.11.
+
+\medskip
+$\mathbf{Ab}$, $\mathbf{Ab}_A$ : 7.1.1.
+
+\medskip
+$T_{(B)}$, $T^{(B)}$, $T\otimes_A B$
+($T$ foncteur de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$) : 7.1.3.
+
+\medskip
+$t_M$ : 7.2.2.
+
+\medskip
+$T_{\mathfrak p}$ : 7.1.4.
+
+\medskip
+$\mathscr T_\bullet^{Y'}(\mathscr M')$,
+$\mathscr T_\bullet^U(\mathscr M|U)$ : 7.7.2.
+
+\medskip
+$\operatorname{EP}(f,\mathscr P_\bullet;y)$,
+$\operatorname{EP}(Y,\mathscr P_\bullet;y)$,
+$\operatorname{EP}(\mathscr P_\bullet;y)$ : 7.9.5.
+
+\medskip
+$\operatorname{PH}(f,\mathscr P_\bullet;y)$,
+$\operatorname{PH}(\mathscr P_\bullet;y)$ : 7.9.12.
+\end{flushleft}
+
+\clearpage
+\oldpage[III]{214}
+\section*{INDEX TERMINOLOGIQUE}
+
+\begin{flushleft}
+Caractéristique d'Euler-Poincaré d'un complexe de Modules : 7.9.5.
+
+\medskip
+Cohomologiquement plat en un point $y\in Y$ en dimension $p$,
+cohomologiquement plat sur $Y$ en dimension $p$, cohomologiquement plat sur
+$Y$ au point $y$, cohomologiquement plat sur $Y$ (complexe de
+$\mathscr O_X$-Modules $Y$-plats) : 7.8.1.
+
+\medskip
+Complexes homotopes : 6.1.4.
+
+\medskip
+Espace annelé de dimension cohomologique $\leq n$ : 6.5.5.
+
+\medskip
+Extension des scalaires dans un foncteur covariant additif : 7.1.3.
+
+\medskip
+Faisceau d'anneaux de dimension cohomologique $\leq n$ : 6.5.5.
+
+\medskip
+Formule de Künneth : 6.7.8.
+
+\medskip
+Homologiquement plat en un point $y\in Y$ en dimension $p$,
+homologiquement plat sur $Y$ en dimension $p$, homologiquement plat sur $Y$
+au point $y$, homologiquement plat sur $Y$ (complexe de $\mathscr O_X$-Modules
+$Y$-plats) : 7.8.1.
+
+\medskip
+Homotopisme : 6.1.4.
+
+\medskip
+Hypertor de deux complexes de $A$-modules : 6.3.1.
+
+\medskip
+Hypertor local de deux complexes de Modules : 6.4.1.
+
+\medskip
+Hypertor global de deux complexes de Modules : 6.6.2, 6.6.8 et 6.7.3.
+
+\medskip
+Polynôme de Hilbert relatif à un complexe de Modules : 7.9.12.
+
+\medskip
+Suites spectrales de Künneth : 6.7.3.
+\end{flushleft}
+
+\clearpage
+\oldpage[III]{215}
+\section*{TABLE DES MATIÈRES}
+
+\begin{flushleft}
+\textsc{Chapitre III.} --- \textbf{Étude cohomologique des faisceaux cohérents
+(suite)} \dotfill 5
+
+\medskip
+\S~6. Foncteurs Tor locaux et globaux ; formule de Künneth \dotfill 5
+
+6.1. Introduction \dotfill 5
+
+6.2. Hypercohomologie des complexes de Modules sur un préschéma \dotfill 6
+
+6.3. Hypertor de deux complexes de modules \dotfill 9
+
+6.4. Foncteurs hypertor locaux de complexes de Modules quasi-cohérents ; cas
+des schémas affines \dotfill 14
+
+6.5. Foncteurs hypertor locaux de complexes de Modules quasi-cohérents : cas
+général \dotfill 16
+
+6.6. Foncteurs hypertor globaux de complexes de Modules quasi-cohérents et
+suites spectrales de Künneth : cas de la base affine \dotfill 21
+
+6.7. Foncteurs hypertor globaux de complexes de Modules quasi-cohérents et
+suites spectrales de Künneth : cas général \dotfill 25
+
+6.8. Les suites spectrales d'associativité des hypertor globaux \dotfill 32
+
+6.9. Les suites spectrales de changement de base dans les hypertor globaux
+\dotfill 34
+
+6.10. Structure locale de certains foncteurs cohomologiques \dotfill 39
+
+\medskip
+\S~7. Étude du changement de base dans les foncteurs homologiques covariants
+de Modules \dotfill 43
+
+7.1. Foncteurs de $A$-modules \dotfill 43
+
+7.2. Caractérisation du foncteur produit tensoriel \dotfill 44
+
+7.3. Critères d'exactitude des foncteurs homologiques de modules \dotfill 48
+
+7.4. Critères d'exactitude pour les foncteurs
+$\mathrm H_i(P\otimes_A M)$ \dotfill 53
+
+7.5. Cas des anneaux locaux noethériens \dotfill 58
+
+7.6. Descente des propriétés d'exactitude. Théorème de semi-continuité et
+critère d'exactitude de Grauert \dotfill 60
+
+7.7. Application aux morphismes propres : I. La propriété d'échange
+\dotfill 65
+
+7.8. Application aux morphismes propres : II. Critères de platitude
+cohomologique \dotfill 72
+
+7.9. Application aux morphismes propres : III. Invariance de la
+caractéristique d'Euler-Poincaré et du polynôme de Hilbert \dotfill 76
+
+\begin{flushright}
+\emph{Reçu le 15 décembre 1962.}
+\end{flushright}
+\end{flushleft}
+
+% La page imprimée 216 est blanche.
+\clearpage
+\thispagestyle{empty}
+\null
+\clearpage
+
+\oldpage[III]{217}
+\section*{ERRATA ET ADDENDA}
+\begin{center}
+(Liste 2)
+
+\medskip
+A) \emph{Erreurs typographiques}
+\end{center}
+
+\noindent\textbf{$(0_{\mathrm I},\,3.2.1)$} Ligne 2 de la p. 27, remplacer $X$
+par $U$.
+
+\noindent\textbf{$(0_{\mathrm I},\,3.2.6)$} Ligne 1 du bas de la p. 27 et ligne
+1 de la p. 28, remplacer (3 fois) $\mathfrak S_\lambda$ par
+$\mathscr H_\lambda$.
+
+\noindent\textbf{$(0_{\mathrm I},\,3.4.5)$} Ajouter une parenthèse devant
+3.4.5).
+
+\noindent\textbf{$(0_{\mathrm I},\,4.2.1)$} Ligne 10 de la p. 39, remplacer
+$\psi_*(A)$ par $\psi_*(\mathscr A)$.
+
+\noindent\textbf{$(0_{\mathrm I},\,5.1.3)$} Ligne 16 de la p. 45, remplacer
+$\mathscr F|V$ par $\mathscr F|U$.
+
+\noindent\textbf{$(0_{\mathrm I},\,5.3.9)$} Ligne 12 de la p. 48, avant
+« telle que », ajouter : au-dessus d'un voisinage ouvert $U$ de $x$.
+
+\noindent\textbf{$(0_{\mathrm I},\,7.6.9)$} Ligne 3 du bas de la p. 73,
+remplacer $I_\lambda$ par $J_\lambda$.
+
+\noindent\textbf{(I, 1.1.15)} Ligne 3 de la p. 83, remplacer $\mathfrak a$ par
+$\mathfrak a\ne A$.
+
+\noindent\textbf{(I, 1.4.1)} Ligne 2 du bas de la p. 90, remplacer
+$\widetilde N$ par $N$.
+
+\noindent\textbf{(I, 2.3.1)} Ligne 3 du bas de la p. 101, remplacer (0, 4.1.6)
+par (0, 4.1.7).
+
+\noindent\textbf{(I, 2.3.2)} Ligne 11 de la p. 101, remplacer $B$ par $B_s$ et
+$C$ par $C_t$.
+
+\noindent\textbf{(I, 2.5.5)} Ligne 19 de la p. 104, remplacer $S$-morphisme
+par $S$-préschéma.
+
+\noindent\textbf{(I, 3.3.7)} Ligne 17 de la p. 109, remplacer $Y_{(S)}$ par
+$Y_{(S')}$.
+
+\noindent\textbf{(I, 3.4.5)} Ligne 9 de la p. 113, remplacer $\mathrm s$ par
+$s$.
+
+\noindent\textbf{(I, 3.4.8)} Ligne 4 de la p. 114, remplacer $p(x)$ par
+$f(x)$.
+
+\noindent\textbf{(I, 3.5.1)} Ligne 3 de la p. 115, remplacer $1_X\times g$
+par $1_{X'}\times g$.
+
+\noindent\textbf{(I, 3.7.2)} Ligne 8 de la p. 119, remplacer le premier $X$
+par $X'$.
+
+\noindent\textbf{(I, 4.2.2)} Ligne 8 de la p. 123, dans la flèche verticale de
+gauche du diagramme, remplacer $\alpha_{\psi(y)}$ par $\varphi_{\psi(y)}$.
+
+\noindent\textbf{(I, 4.4.3)} Ligne 16 de la p. 126, remplacer isomorphée par
+isomorphes.
+
+\noindent\textbf{(I, 4.5.5)} Ligne 17 du bas de la p. 127, remplacer (4.2.4)
+par (4.2.5).
+
+\noindent\textbf{(I, 5.1.4)} Ligne 14 du bas de la p. 128, remplacer (2.1.7)
+par (2.1.8).
+
+\noindent\textbf{(I, 5.3.13)} Ligne 20 de la p. 134, remplacer (4.2.4) par
+(4.2.5).
+
+\noindent\textbf{(I, 6.4.2)} Ligne 1 du bas de la p. 147, remplacer
+recouvrement par recouvrement fini.
+
+\noindent\textbf{(I, 9.1.13)} Ligne 15 de la p. 171, remplacer
+$p^{-1}(\mathscr F)$ par $p^*(\mathscr F)$.
+
+\noindent\textbf{(I, 9.5.11)} Ligne 7 de la p. 179, remplacer $Y$ par $Y'$.
+
+\noindent\textbf{(I, 9.6.5)} Ligne 17 du bas de la p. 180, remplacer
+$(0,\,4.1.4)$ par $(0,\,4.1.3)$.
+
+\noindent\textbf{(I, 10.12.2)} Ligne 14 du bas de la p. 206, remplacer
+$(X_n)_{(S_n)}$ par $(X_n)_{(S_m)}$.
+
+\clearpage
+\oldpage[III]{218}
+\noindent\textbf{(I), Index terminologique :} Ligne 6 du bas de la p. 219,
+remplacer 0, 4.1.4 par 0, 4.1.5. Lignes 16, 17, 18 du bas de la p. 222,
+remplacer I, 2.1.7 par I, 2.1.8 ; ligne 19 du bas de la p. 222, remplacer I,
+2.1.8 par I, 2.1.7.
+
+\noindent\textbf{(II, 1.5.2)} Ligne 17 de la p. 12, insérer un $f$ à côté de
+la flèche verticale de gauche du diagramme.
+
+\noindent\textbf{(II, 4.2.7)} Ligne 16 du bas de la p. 75, remplacer (III,
+2.1.14) par (III, 2.1.13).
+
+\noindent\textbf{(II, 5.2.1)} Ligne 16 du bas de la p. 97, remplacer $X-U$ par
+$U$. Ligne 8 du bas de la p. 97, remplacer $X'$ par $X_f$.
+
+\noindent\textbf{(II, 5.3.6)} Ligne 16 de la p. 100, remplacer (4.6.18) par
+(4.6.17).
+
+\noindent\textbf{(II, 6.2.7)} Ligne 9 du bas de la p. 116, remplacer chap. V
+par chap. IV.
+
+\noindent\textbf{(II, 6.6.5)} Ligne 15 du bas de la p. 132, remplacer chap. V
+par chap. IV.
+
+\noindent\textbf{(II, 7.4.12)} Ligne 1 de la p. 151, remplacer chap. V par
+chap. III.
+
+\noindent\textbf{(II, 8.1.4)} Ligne 15 de la p. 154, remplacer (III, 2.3.8)
+par (III, 2.3.7).
+
+\noindent\textbf{(II, 8.10.5)} Ligne 17 du bas de la p. 187, remplacer
+$g_{(j)x}$ par $g_{j(x)}$.
+
+\noindent\textbf{$(0_{\mathrm{III}},\,10.2.7)$} Ligne 1 de la p. 20,
+remplacer $u$-adique par $\mathfrak m$-adique. Ligne 13 du bas de la p. 20,
+remplacer $k$ par $k_i$.
+
+\noindent\textbf{$(0_{\mathrm{III}},\,11.1.1)$} Ligne 18 de la p. 23,
+remplacer $\operatorname{Im}(d_r^{p+r,q-r+1})$ par
+$\operatorname{Im}(d_r^{p-r,q+r-1})$.
+
+\noindent\textbf{$(0_{\mathrm{III}},\,11.8.6)$} Ligne 14 du bas de la p. 45,
+remplacer les flèches $\to$ par $\rightsquigarrow$ (4 fois).
+
+\noindent\textbf{$(0_{\mathrm{III}},\,12.3.4)$} Ligne 4 de la p. 61,
+remplacer $\rightsquigarrow$ par $\to$.
+
+\noindent\textbf{$(0_{\mathrm{III}},\,13.2.4)$} Ligne 2 du bas de la p. 67,
+remplacer $\varinjlim$ par $\varprojlim$ (2 fois).
+
+\noindent\textbf{(III, 1.1.7)} Ligne 15 de la p. 85, remplacer $A^r$ par
+$\bigwedge(A^r)$ (2 fois).
+
+\noindent\textbf{(III, 1.2.4)} Ligne 7 de la p. 87, remplacer
+$\Gamma(U,\mathscr F)$ par $\Gamma(U,\mathscr O_X)$ et remplacer $\mathscr G$
+par $\mathscr F$. Ligne 8 de la p. 87, remplacer
+$\mathrm H^p(\mathfrak U,\mathscr G)$ par $\mathrm H^p(\mathfrak U,\mathscr F)$.
+
+\noindent\textbf{(III, 2.5.3.1)} Ligne 3 de la p. 111, remplacer $n>0$ par
+$n\geq0$. Ligne 8 de la p. 111, remplacer $-r\leq n\leq0$ par
+$-r\leq n<0$.
+
+\noindent\textbf{(III, 3.1.2)} Ligne 13 de la p. 116, remplacer $\mathscr G$
+par $\mathscr G\in\mathbf K'$.
+
+\noindent\textbf{(III, 4.3.6)} Ligne 7 de la p. 133, remplacer
+$K'=K\otimes_A\widehat A$ par $K'\supset K\otimes_A\widehat A$. Ligne 16 de
+la p. 133, remplacer $R(X)$ par $R(Y)$.
+
+\noindent\textbf{(III, 4.4.12)} Ligne 10 de la p. 138, remplacer chap. V par
+chap. IV.
+
+\noindent\textbf{(III, 4.6.6)} Ligne 19 de la p. 142, remplacer « chap. V » par
+« dans un paragraphe ultérieur ».
+
+\begin{center}
+B) \emph{Modifications de texte}\footnote{Pour faciliter la recherche des
+références, les modifications appartenant à la liste d'errata insérée dans le
+chapitre N seront désormais désignées par $\mathbf{Err}_{\mathrm N}$ suivi d'un
+numéro.}
+\end{center}
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,1)$} Dans
+$(0_{\mathrm I},\,5.1.3)$, ligne 18 de la p. 45, remplacer « somme directe »
+par « somme directe finie ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,2)$} Dans
+$(0_{\mathrm I},\,5.4.3)$, lignes 8 à 4 du bas de la p. 49, remplacer depuis
+« Dans le cas général\ldots{} » par le texte suivant :
+
+Dans le cas général où $X$ est un espace annelé tel que $\mathscr O_x$ soit un
+anneau \emph{local} pour
+\oldpage[III]{219}
+tout $x\in X$, si $\mathscr L$ est un $\mathscr O_X$-Module \emph{de type fini}
+tel qu'il existe un $\mathscr O_X$-Module $\mathscr F$ pour lequel
+$\mathscr L\otimes_{\mathscr O_X}\mathscr F$ soit \emph{isomorphe à}
+$\mathscr O_X$, le raisonnement précédent montre que pour tout $x\in X$,
+$\mathscr L_x$ est isomorphe à $\mathscr O_x$. On en déduit que $\mathscr L$ est
+alors \emph{inversible}. En effet, pour tout $x\in X$, soient $U$ un voisinage
+ouvert de $x$ tel que $\mathscr L|U$ soit engendré par $n$ sections
+$s_i\ (1\leq i\leq n)$ au-dessus de $U$ (5.2.1). On peut supposer par exemple
+que $s=s_1$ est telle que $s_x\ne0$, et comme $\mathscr L_x$ est isomorphe à
+$\mathscr O_x$, il existe pour chaque $i$ une section $t_i$ de $\mathscr O_X$
+au-dessus d'un voisinage ouvert $V_i\subset U$ de $x$ telle que
+$(t_i)_x s_x=(s_i)_x$. Il y a par suite un voisinage ouvert
+$V\subset\bigcap_{i=1}^nV_i$ de $x$ tel que $t_i s=s_i$ dans $V$, autrement
+dit $\mathscr L|V$ est engendré par \emph{l'unique} section $s|V$. En outre,
+si $z$ est une section au-dessus d'un ouvert $W\subset V$ du noyau de
+l'homomorphisme $\mathscr O_X|V\to\mathscr L|V$ défini par $s$ (5.1.1), $z_y$
+annule $\mathscr L_y$ pour tout $y\in W$, donc $z_y=0$ par hypothèse et par
+suite $z=0$, ce qui achève de prouver notre assertion. De plus, la
+considération du produit tensoriel
+$\mathscr L^{-1}\otimes\mathscr L\otimes\mathscr F$ montre aussitôt que
+$\mathscr F$ est isomorphe à $\mathscr L^{-1}$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,3)$} Dans
+$(0_{\mathrm I},\,7.2.4)$, il faut imposer la condition que les puissances
+$\mathfrak J^n$ sont des idéaux \emph{fermés} dans l'anneau admissible $A$ pour
+que la proposition soit exacte. La démonstration donnée est incorrecte, et
+l'énoncé rectifié résulte de Bourbaki, \emph{Top. gén.}, chap. III,
+3\textsuperscript{e} éd., \S~3, n\textsuperscript{o}~5, cor. 1 de la prop. 9.
+Il faut de même supposer les $\mathfrak J^n$ \emph{fermés} dans $A$ dans les
+énoncés $(0_{\mathrm I},\,7.2.5)$ et $(0_{\mathrm I},\,7.2.6)$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,4)$} Après la proposition
+(I, 2.2.5), ajouter : avec les notations de (I, 2.2.5), si $\mathfrak J$ est un
+idéal de $A$, on note $\widetilde{\mathfrak J\mathscr F}$ le sous-$\mathscr O_X$-Module
+$\mathfrak J\widetilde{\mathscr F}$ défini dans $(0,\,4.3.5)$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,5)$} Dans (I, 3.4.5), ligne 1
+du bas de la p. 112, remplacer « \emph{un corps} $K$ » par « \emph{un corps
+algébriquement clos} $K$ ». Ligne 1 de la p. 113, remplacer « \emph{extension} »
+par « \emph{extension algébriquement close} ». Lignes 1 à 4 de la p. 113,
+remplacer depuis « $K$ sera appelé\ldots{} » par le texte suivant :
+
+Pour tout point de $X$ à valeurs dans un corps $K$, $K$ sera appelé le
+\emph{corps des valeurs} du point correspondant, et si $x$ est la localité de
+ce point on dit encore que ce dernier est \emph{localisé en} $x$. On définit
+ainsi une application $X(K)\to X$, faisant correspondre à un point à valeurs
+dans $K$ sa localité.
+
+Lignes 7 et 16 de la p. 113, supprimer « géométrique » ; lignes 10 et 13 de
+la p. 113, supprimer « géométriques ». Lignes 10 et 11 du bas de la p. 115,
+supprimer « \emph{géométrique} ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,6)$} À la fin de la
+démonstration de (I, 3.6.1), ligne 12 du bas de la p. 117, ajouter : Si l'on
+pose
+$X'=X\times_Y\operatorname{Spec}(\mathscr O_y/\mathfrak a_y)$, alors, pour tout
+point $x\in X'$, identifié par $p$ à un point de $X$, on a
+$\mathscr O_{X',x}=\mathscr O_{X,x}/\mathfrak a_y\mathscr O_{X,x}$. La question
+étant en effet locale sur $X$ et $Y$, on peut supposer que
+$X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$, et l'on a
+$(B/\mathfrak a_yB)_x=B_x/\mathfrak a_yB_x$ par platitude $(0,\,1.3.2)$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,7)$} Dans (I, 5.1.1), ligne 3
+du bas de la p. 127, remplacer « $\mathscr O_X$-Module quasi-cohérent » par
+« \emph{Idéal quasi-cohérent de} $\mathscr B$ ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,8)$} Après (I, 5.1.10),
+ligne 16 de la p. 131, ajouter :
+
+\emph{Remarque (5.1.11).} --- Une légère adaptation du raisonnement fait dans
+(5.1.9) montre que la conclusion reste valable \emph{sans supposer a priori
+que $X$ soit un préschéma}, mais
+
+\oldpage[III]{220}
+en supposant seulement que $(X,\mathscr O_X)$ soit un espace annelé en anneaux
+locaux, $\mathscr J$ un Idéal de $\mathscr O_X$ tel que $\mathscr J^n=0$, que
+l'espace annelé $X_0=(X,\mathscr O_X/\mathscr J)$ soit un schéma affine et enfin
+que les Idéaux $\mathscr J^k/\mathscr J^{k+1}$ soient des
+$\mathscr O_{X_0}$-Modules quasi-cohérents. Il suffit en effet d'utiliser
+(1.8.1) (cf. $(\mathbf{Err}_{\mathrm{II}})$) au lieu de (2.2.4) dans le
+raisonnement.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,9)$} Dans (I, 5.3.1), ligne
+11 de la p. 132, insérer, après « ou $\Delta_X$ », « ou $\Delta_\varphi$ si
+$\varphi:X\to S$ est le morphisme structural ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,10)$} Dans (I, 5.3.9), la
+démonstration est insuffisante, car elle ne prouve pas que $\Delta_X(X)$ soit
+localement fermé dans $X\times_SX$. Pour avoir une démonstration correcte, il
+suffit d'utiliser (4.2.4, $a$)) : pour tout $x\in X$ et tout voisinage affine
+$U$ de $x$ dans $X$, $U\times_SU$ est un voisinage affine de $\Delta_X(x)$ ;
+compte tenu de (5.3.16) (dont la démonstration n'utilise que la définition
+(5.3.1.1)), on est ramené à démontrer (5.3.9) lorsque
+$S=\operatorname{Spec}(B)$ et $X=\operatorname{Spec}(A)$ sont des schémas
+affines ; il est clair alors en vertu de (5.3.1.1) que $\Delta_X$ correspond à
+l'homomorphisme canonique $A\otimes_BA\to A$ qui transforme $x\otimes y$ en
+$xy$ ; cet homomorphisme étant surjectif, $\Delta_X$ est dans ce cas une
+immersion fermée (4.2.3), ce qui achève la démonstration.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,11)$} Dans (I, 7.1.15) et
+(I, 7.1.16), lignes 7 et 15 du bas de la p. 158, supprimer
+« \emph{géométriques} ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,12)$} Remplacer (I, 7.4.7)
+par : On étend (par abus de langage) les définitions de (7.4.1) au cas où
+$X$ est un préschéma \emph{réduit} dont tout point admet un voisinage ouvert
+n'ayant qu'un nombre \emph{fini} de composantes irréductibles ; il résulte
+alors de (7.3.4) et (7.4.6) que, pour un $\mathscr O_X$-Module quasi-cohérent de
+type fini $\mathscr F$, dire que $\mathscr F$ est un \emph{faisceau de torsion}
+équivaut à dire que $\operatorname{Supp}(\mathscr F)$ \emph{ne contient aucune
+composante irréductible de $X$}.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,13)$} Dans (I, 10.11.7),
+lignes 17 à 23 de la p. 205, la fin de la démonstration depuis « Reste à
+prouver\ldots{} » est inutile en vertu de (10.11.6), les faisceaux considérés
+étant cohérents par $(0,\,5.3.5)$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,14)$} Dans (II, 1.7.8),
+après la ligne 10 du bas de la p. 16, ajouter : lorsque
+$\mathscr E=\mathscr O_S^n$, on écrit aussi $\mathbf V_S^n$ au lieu de
+$\mathbf V(\mathscr E)$ ; si en outre $S=\operatorname{Spec}(A)$ est affine,
+on écrit $\mathbf V_A^n$ au lieu de $\mathbf V_S^n$ ; on a
+$\mathbf V_A^n=\operatorname{Spec}(A[T_1,\ldots,T_n])$ où les $T_i$ sont des
+indéterminées.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,15)$} Dans (II, 1.7.10),
+ligne 10 de la p. 17, supprimer « \emph{géométriques} » ; lignes 12 et 16--17
+de la p. 17, supprimer « géométrique ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,16)$} Dans (II, 1.7.12),
+ajouter : On pose de même :
+\[
+  \mathbf V(\mathscr O_S^n)=\mathbf V_S^n=S[T_1,\ldots,T_n].
+\]
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,17)$} Dans (II, 4.2.6),
+ligne 7 de la p. 75, supprimer « \emph{géométriques} » ; ligne 8 de la p.
+75, supprimer « \emph{géométrique} ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,18)$} Dans (II, 4.6.13),
+ligne 7 de la p. 92, le raisonnement doit être précisé, car avec les notations
+de (4.4.10), il faut ici prouver que l'immersion $\Gamma_f$ est
+\emph{quasi-compacte}, afin d'appliquer (i bis). En vertu de (4.6.4), pour
+prouver que $\mathscr L$ est ample relativement à $f$, on peut se borner au
+cas où $Y$ est affine. Notons d'autre part que dans chacune des hypothèses de
+(v), $f$ est quasi-compact (I, 6.6.4). D'autre part, si $g$ est
+\oldpage[III]{221}
+séparé, $\Gamma_f$ est une immersion fermée (I, 5.4.3) donc quasi-compacte
+(I, 6.6.4). Si au contraire $X$ est localement noethérien, comme $Y$ est affine
+et $f$ quasi-compact, l'espace sous-jacent à $X$ est quasi-compact, donc
+noethérien, et on peut de nouveau appliquer (I, 6.6.4) pour prouver que
+$\Gamma_f$ est quasi-compacte.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,19)$} L'énoncé de (II,
+5.2.2) est incorrect, les conditions $b)$, $c)$ et $c')$ n'étant pas locales
+sur $Y$ lorsqu'on ne sait pas si pour un ouvert $U$ de $Y$, un
+$(\mathscr O_X|f^{-1}(U))$-Module quasi-cohérent est restriction à $f^{-1}(U)$
+d'un $\mathscr O_X$-Module quasi-cohérent. Il faut donc remplacer dans la ligne
+16 de la p. 98 « \emph{Soit $f:X\to Y$ un morphisme séparé quasi-compact} »
+par : « \emph{Soient $X$, $Y$ deux préschémas tels que $X$ soit un schéma ou
+que l'espace sous-jacent à $X$ soit localement noethérien, et soit
+$f:X\to Y$ un morphisme quasi-compact.} » Dans la démonstration, on observera
+que les hypothèses entraînent que $f$ est \emph{séparé} lorsqu'on suppose que
+$X$ est un schéma, en vertu de (I, 5.5.5 et 5.5.8) ; on peut donc appliquer
+(I, 9.2.2) dans les deux cas.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,20)$} Dans (II, 6.2.3),
+ajouter, après la ligne 18 du bas de la p. 115 :
+
+\emph{On dit qu'un morphisme $f:X\to Y$ est quasi-fini en un point $x\in X$
+s'il existe un voisinage ouvert affine $V$ de $y=f(x)$ et un voisinage ouvert
+affine $U$ de $x$ tels que $f(U)\subset V$ et que le morphisme $U\to V$
+restriction de $f$ soit quasi-fini. On dit qu'un morphisme $f:X\to Y$ est
+localement quasi-fini s'il est quasi-fini en tout point de $X$.}
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,21)$} Dans (II, 6.4.3), la
+démonstration est incorrecte, les éléments d'un sous-$A$-module de type fini de
+$K$ n'étant pas nécessairement entiers sur $A$. Remplacer les 9 dernières lignes
+de la p. 121 par le texte suivant : Comme on peut supposer que $E$ est sans
+torsion, donc fidèle, $E$ est aussi un $A[u]$-module fidèle ($A$ étant plongé
+dans l'anneau des endomorphismes de $E$). Comme $E$ est un $A$-module de type
+fini, il en résulte que $u$ est \emph{entier} sur $A$ (Bourbaki,
+\emph{Alg. comm.}, chap. V, \S~1, n\textsuperscript{o}~1, lemme 1). On en
+conclut immédiatement que les valeurs propres de $u\otimes1$ (dans une clôture
+algébrique de $K$) sont des éléments \emph{entiers} sur $A$, et il en est donc
+de même des $\sigma_i(u)$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,22)$} Dans
+$(0_{\mathrm{III}},\,9.1.1)$, ligne 18 du bas de la p. 12, supprimer
+« ouverte ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,23)$} Dans
+$(0_{\mathrm{III}},\,11.7.3)$, ligne 10 de la p. 43, après $\mathsf C''$,
+ajouter : tel que pour tout objet projectif $P$ de $\mathsf C'$ (resp. tout
+objet projectif $P'$ de $\mathsf C''$) le foncteur
+$A'\rightsquigarrow T(P,A')$ (resp. $A\rightsquigarrow T(A,P')$) soit exact
+dans $\mathsf C'$ (resp. $\mathsf C$).
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,24)$} L'énoncé de
+$(0_{\mathrm{III}},\,13.7.7)$ est inexact, et doit être modifié comme suit :
+ligne 6 de la p. 78, supprimer « et
+$(\mathrm R^{n+1}T(A_k))_{k\in\mathbf Z}$ » ; ligne 7 de la p. 78, remplacer
+« $\mathrm R'^nT(A)$ est un $S$-module de type fini » par
+« $\mathrm R'^nT(A)$ et $\mathrm R'^{n+1}T(A)$ sont des $S$-modules de type
+fini » ; lignes 12--13 de la p. 78, supprimer « et $p+q=n+1$ ». Dans la
+démonstration, ligne 23 de la p. 78, supprimer « et pour $n+1$ ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,25)$} Dans (III, 1.4.15),
+ligne 6 du bas de la p. 92, remplacer « \emph{de type fini} » par
+« \emph{quasi-compact} ».
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,26)$} Dans (III, 2.2.4),
+ligne 1 de la p. 102, remplacer « \emph{que les supports de $\mathscr F$ et de
+$\mathscr H$ soient propres sur $Y$} » par « \emph{que le support de
+$\operatorname{Im}(\mathscr F\to\mathscr G)$ soit propre sur $Y$} ». Dans la
+démonstration, remplacer le texte des lignes 10 à 16, depuis « Cela
+étant\ldots{} », par :
+
+\oldpage[III]{222}
+Posons
+$\mathscr G_1=\operatorname{Im}(\mathscr F\to\mathscr G)
+=\operatorname{Ker}(\mathscr G\to\mathscr H)$, qui est cohérent. Comme on a la
+suite exacte
+$0\to\mathscr G_1(n)\to\mathscr G(n)\to\mathscr H(n)$ et que le foncteur
+$f_*$ est exact à gauche, la suite
+$0\to f_*(\mathscr G_1(n))\to f_*(\mathscr G(n))\to f_*(\mathscr H(n))$ est
+exacte pour tout $n$, et il suffit donc de montrer que, pour $n$ assez grand,
+la suite $f_*(\mathscr F(n))\to f_*(\mathscr G_1(n))\to0$ est exacte. Autrement
+dit, on peut se borner au cas où $\mathscr H=0$ et où le support de
+$\mathscr G$ est propre sur $Y$, donc \emph{fermé dans $Z$} (II, 5.4.10) ;
+$\mathscr G'=i_*(\mathscr G)$ est par suite un $\mathscr O_Z$-Module cohérent tel
+que $\mathscr G'|X=\mathscr G$. On sait (I, 9.4.3) qu'il existe un
+$\mathscr O_Z$-Module cohérent $\mathscr F'$ tel que
+$\mathscr F'|X=\mathscr F$. En outre, comme $X$ est ouvert dans $Z$ et
+$\operatorname{Supp}(\mathscr G)\subset X$ fermé dans $Z$, il est immédiat que
+l'on définit un homomorphisme surjectif $u':\mathscr F'\to\mathscr G'$ de
+faisceaux tel que $u'|X$ soit l'homomorphisme surjectif donné
+$u:\mathscr F\to\mathscr G$, en prenant $u'|U=0$ pour tout ouvert $U$ de $Z$
+ne rencontrant pas $\operatorname{Supp}(\mathscr G)$ et $u'|U=u|U$ pour tout
+ouvert $U\subset X$. Cela étant, on voit comme au début de la démonstration de
+(2.2.2) que l'on peut se borner au cas où $Y$ est affine, et il s'agit donc de
+montrer que, pour $n$ assez grand, l'homomorphisme
+$\Gamma(u):\Gamma(X,\mathscr F(n))\to\Gamma(X,\mathscr G(n))$ est surjectif. Or,
+on a le diagramme commutatif
+\[
+\xymatrix@C=35mm@R=12mm{
+\Gamma(Z,\mathscr F'(n)) \ar[r]^{\Gamma(u')} \ar[d]_v &
+\Gamma(Z,\mathscr G'(n)) \ar[d]^w \\
+\Gamma(X,\mathscr F(n)) \ar[r]_{\Gamma(u)} & \Gamma(X,\mathscr G(n))
+}
+\]
+où $v$ et $w$ sont les homomorphismes de restriction. La définition de
+$\mathscr G'$ montre en outre que $w$ est \emph{bijectif} ; par ailleurs, en
+vertu de (2.2.3), $\Gamma(u')$ est \emph{surjectif} pour $n$ assez grand, donc
+il en est de même de $\Gamma(u)$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,27)$} Dans (III, 2.2.5),
+après la ligne 7 du bas de la p. 102, ajouter :
+
+(iii) Sous les hypothèses de (2.2.4) concernant $X$, $Y$, $f$ et $\mathscr L$,
+il est immédiat que si $\mathscr H$ est un $\mathscr O_X$-Module cohérent dont
+le support est \emph{propre sur $Y$}, un raisonnement analogue à celui de
+(2.2.4) montre qu'il existe un entier $N$ tel que pour $n\geq N$, on ait
+$\mathrm R^if_*(\mathscr H(n))=0$ pour tout $i>0$. On en conclut, par la suite
+exacte de cohomologie, que si $u:\mathscr F\to\mathscr G$ est un homomorphisme
+de $\mathscr O_X$-Modules cohérents tel que $\operatorname{Ker}(u)$ et
+$\operatorname{Coker}(u)$ aient leurs supports \emph{propres sur $Y$}, alors il
+existe $N$ tel que pour $n\geq N$, l'homomorphisme correspondant
+$\mathrm R^if_*(\mathscr F(n))\to\mathrm R^if_*(\mathscr G(n))$ soit
+\emph{bijectif} pour tout $i>0$.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,28)$} Dans (III, 4.4.9),
+ligne 17 du bas de la p. 137, remplacer « \emph{Soient $Y$ un préschéma
+intègre localement noethérien} » par « \emph{Soient $X$ et $Y$ deux
+préschémas intègres localement noethériens} » ; ligne 16 du bas de la p.
+137, remplacer « \emph{de type fini} » par « \emph{localement de type
+fini} ». La démonstration est essentiellement inchangée,
+$f^{-1}(y)$ étant localement de type fini sur $k(y)$, donc encore discret.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,29)$} dans (I, 9.3.4), ligne
+19 du bas de la p. 173, remplacer « \emph{noethérien} » par
+« \emph{quasi-compact} » ; lignes 18 et 19 du bas de la p. 173, remplacer
+« \emph{cohérent} » par « \emph{quasi-cohérent de type fini} ». Dans la
+démonstration, on se ramène au cas où
+
+\oldpage[III]{223}
+$X=\operatorname{Spec}(A)$, $\mathscr F=\widetilde M$, où $M$ est un $A$-module
+de type fini, $\mathscr J=\widetilde{\mathfrak J}$, où $\mathfrak J$ est un
+idéal de type fini de $A$ ; le reste du raisonnement est alors inchangé.
+
+\noindent\textbf{$(\mathbf{Err}_{\mathrm{III}},\,30)$} Dans (I, 9.3.5),
+remplacer les lignes 1 à 7 du bas de la p. 173 par le texte suivant :
+
+\emph{Proposition (9.3.5). --- Soient $X$ un préschéma, $\mathscr F$ un
+$\mathscr O_X$-Module quasi-cohérent de type fini. Alors il existe un
+sous-préschéma fermé $Y$ de $X$, dont l'espace sous-jacent est égal à
+$\operatorname{Supp}(\mathscr F)$, et un $\mathscr O_Y$-Module quasi-cohérent de
+type fini $\mathscr G$ tels que, si $j:Y\to X$ est l'injection canonique,
+$\mathscr F$ soit isomorphe à $j_*(\mathscr G)$.}
+
+Il suffira de montrer que l'Idéal $\mathscr J$ de $\mathscr O_X$,
+\emph{annulateur de $\mathscr F$}, est \emph{quasi-cohérent} ; on prendra alors
+pour $Y$ le sous-préschéma fermé de $X$ défini par $\mathscr J$ (I, 4.1.2), et
+comme $\mathscr J\mathscr F=0$, $\mathscr F$ est un
+$(\mathscr O_X/\mathscr J)$-Module et on répondra à la question en prenant
+$\mathscr G=j^*(\mathscr F)$. Pour voir que $\mathscr J$ est quasi-cohérent, on
+peut (la question étant locale) se borner au cas où
+$X=\operatorname{Spec}(A)$, $\mathscr F=\widetilde M$, où $M$ est un $A$-module
+engendré par un nombre fini d'éléments $x_i\ (1\leq i\leq r)$ ; l'Idéal
+$\mathscr J$ est alors l'intersection des annulateurs des $x_i$. Mais
+l'annulateur de $x_i$ est le noyau de l'homomorphisme
+$\mathscr O_X\to\mathscr F$ correspondant à l'homomorphisme $s\mapsto sx_i$ de
+$A$ dans $M$ ; c'est donc bien un Idéal quasi-cohérent (I, 4.1.1) et toute
+intersection finie de tels Idéaux est aussi un Idéal quasi-cohérent (I,
+1.3.10).
