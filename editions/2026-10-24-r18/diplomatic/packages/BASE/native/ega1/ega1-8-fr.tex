@@ -1,0 +1,410 @@
+\section{Les schémas de Chevalley}
+\label{section:I.8-fr}
+
+\subsection{Anneaux locaux apparentés.}
+\label{subsection:I.8.1-fr}
+
+Pour tout anneau local $A$, nous noterons $\mathfrak m(A)$ l'idéal maximal de
+$A$.
+
+\begin{lemma}[8.1.1]
+\label{I.8.1.1-fr}
+Soient $A$, $B$ deux anneaux locaux tels que $A\subset B$~; les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[(i)] $\mathfrak m(B)\cap A=\mathfrak m(A)$~;
+  \item[(ii)] $\mathfrak m(A)\subset\mathfrak m(B)$~;
+  \item[(iii)] $1$ n'appartient pas à l'idéal de $B$ engendré par
+    $\mathfrak m(A)$.
+\end{enumerate}
+\end{lemma}
+
+Il est évident que (i) entraîne (ii) et (ii) entraîne (iii)~; enfin, si (iii)
+est vérifiée, $\mathfrak m(B)\cap A$ contient $\mathfrak m(A)$ et ne contient
+pas $1$, donc est égal à $\mathfrak m(A)$.
+
+Lorsque les conditions équivalentes de
+(\hyperref[I.8.1.1-fr]{8.1.1}) sont remplies, on dit que $B$ \emph{domine}
+$A$~; il revient au même de dire que l'injection $A\to B$ est un
+homomorphisme \emph{local}. Il est clair que, dans l'ensemble des sous-anneaux
+locaux d'un anneau $R$, la relation de domination est une relation d'ordre.
+
+\begin{env}[8.1.2]
+\label{I.8.1.2-fr}
+Considérons maintenant un \emph{corps} $R$. Pour tout sous-anneau $A$ de $R$,
+nous désignerons par $L(A)$ l'ensemble des anneaux locaux $A_\mathfrak p$, où
+$\mathfrak p$ parcourt le spectre premier de $A$~; ils sont identifiés à des
+sous-anneaux de $R$ contenant $A$. Comme
+$\mathfrak p=(\mathfrak p A_\mathfrak p)\cap A$, l'application
+$\mathfrak p\mapsto A_\mathfrak p$ de $\operatorname{Spec}(A)$ dans $L(A)$
+est bijective.
+\end{env}
+
+\begin{lemma}[8.1.3]
+\label{I.8.1.3-fr}
+Soient $R$ un corps, $A$ un sous-anneau de $R$. Pour qu'un sous-anneau local
+$M$ de $R$ domine un anneau $A_\mathfrak p\in L(A)$, il faut et il suffit que
+$A\subset M$~; l'anneau local $A_\mathfrak p$ dominé par $M$ est alors unique
+et correspond à $\mathfrak p=\mathfrak m(M)\cap A$.
+\end{lemma}
+
+En effet, si $M$ domine $A_\mathfrak p$, on a
+$\mathfrak m(M)\cap A_\mathfrak p=\mathfrak p A_\mathfrak p$ d'après
+(\hyperref[I.8.1.1-fr]{8.1.1}), d'où l'unicité de $\mathfrak p$~; d'autre
+part, si $A\subset M$, $\mathfrak m(M)\cap A=\mathfrak p$ est premier dans
+$A$, et comme $A-\mathfrak p\subset M$, on a $A_\mathfrak p\subset M$ et
+$\mathfrak p A_\mathfrak p\subset\mathfrak m(M)$, donc $M$ domine
+$A_\mathfrak p$.
+
+\oldpage[I]{165}
+\begin{lemma}[8.1.4]
+\label{I.8.1.4-fr}
+Soient $R$ un corps, $M$, $N$ deux sous-anneaux locaux de $R$, $P$ le
+sous-anneau de $R$ engendré par $M\cup N$. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[(i)] Il existe un idéal premier $\mathfrak p$ de $P$ tel que
+    $\mathfrak m(M)=\mathfrak p\cap M$,
+    $\mathfrak m(N)=\mathfrak p\cap N$.
+  \item[(ii)] L'idéal $\mathfrak a$ engendré dans $P$ par
+    $\mathfrak m(M)\cup\mathfrak m(N)$ est distinct de $P$.
+  \item[(iii)] Il existe un sous-anneau local $Q$ de $R$ dominant à la fois
+    $M$ et $N$.
+\end{enumerate}
+\end{lemma}
+
+Il est clair que (i) implique (ii)~; inversement, si $\mathfrak a\ne P$,
+$\mathfrak a$ est contenu dans un idéal maximal $\mathfrak n$ de $P$ et comme
+$1\notin\mathfrak n$, $\mathfrak n\cap M$ contient $\mathfrak m(M)$ et est
+distinct de $M$, donc $\mathfrak n\cap M=\mathfrak m(M)$ et de même
+$\mathfrak n\cap N=\mathfrak m(N)$. Il est clair que si $Q$ domine $M$ et
+$N$, on a $P\subset Q$, et
+\[
+  \mathfrak m(M)=\mathfrak m(Q)\cap M
+  =(\mathfrak m(Q)\cap P)\cap M,\qquad
+  \mathfrak m(N)=(\mathfrak m(Q)\cap P)\cap N,
+\]
+donc (iii) entraîne (i)~; la réciproque est évidente en prenant
+$Q=P_\mathfrak p$.
+
+Lorsque les conditions de (\hyperref[I.8.1.4-fr]{8.1.4}) sont satisfaites,
+on dit, avec C.~Chevalley, que les anneaux locaux $M$ et $N$ sont
+\emph{apparentés}.
+
+\begin{proposition}[8.1.5]
+\label{I.8.1.5-fr}
+Soient $A$, $B$ deux sous-anneaux d'un corps $R$, $C$ le sous-anneau de $R$
+engendré par $A\cup B$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[(i)] Pour tout anneau local $Q$ contenant $A$ et $B$, on a
+    $A_\mathfrak p=B_\mathfrak q$, en posant
+    $\mathfrak p=\mathfrak m(Q)\cap A$,
+    $\mathfrak q=\mathfrak m(Q)\cap B$.
+  \item[(ii)] Pour tout idéal premier $\mathfrak r$ de $C$, on a
+    $A_\mathfrak p=B_\mathfrak q$, en posant
+    $\mathfrak p=\mathfrak r\cap A$, $\mathfrak q=\mathfrak r\cap B$.
+  \item[(iii)] Si $M\in L(A)$ et $N\in L(B)$ sont apparentés, ils sont
+    identiques.
+  \item[(iv)] On a $L(A)\cap L(B)=L(C)$.
+\end{enumerate}
+\end{proposition}
+
+Les lemmes (\hyperref[I.8.1.3-fr]{8.1.3}) et
+(\hyperref[I.8.1.4-fr]{8.1.4}) prouvent que (i) et (iii) sont équivalentes~;
+il est clair que (i) entraîne (ii) en l'appliquant à $Q=C_\mathfrak r$~;
+inversement, (ii) entraîne (i), car si $Q$ contient $A\cup B$, il contient
+$C$, et si $\mathfrak r=\mathfrak m(Q)\cap C$, on a
+$\mathfrak p=\mathfrak r\cap A$ et $\mathfrak q=\mathfrak r\cap B$ d'après
+(\hyperref[I.8.1.3-fr]{8.1.3}). Il est immédiat que (iv) implique (i), car si
+$Q$ contient $A\cup B$, il domine un anneau local
+$C_\mathfrak r\in L(C)$ par (\hyperref[I.8.1.3-fr]{8.1.3})~; on a par
+hypothèse $C_\mathfrak r\in L(A)\cap L(B)$, et
+(\hyperref[I.8.1.1-fr]{8.1.1}) et (\hyperref[I.8.1.3-fr]{8.1.3}) prouvent que
+$C_\mathfrak r=A_\mathfrak p=B_\mathfrak q$. Prouvons enfin que (iii)
+entraîne (iv). Soit $Q\in L(C)$~; $Q$ domine un $M\in L(A)$ et un
+$N\in L(B)$ (\hyperref[I.8.1.3-fr]{8.1.3}), donc $M$ et $N$, étant
+apparentés, sont identiques par hypothèse. Comme on a alors $C\subset M$,
+$M$ domine un $Q'\in L(C)$ (\hyperref[I.8.1.3-fr]{8.1.3}), donc $Q$ domine
+$Q'$, ce qui (\hyperref[I.8.1.3-fr]{8.1.3}) entraîne nécessairement
+$Q=Q'=M$, donc $Q\in L(A)\cap L(B)$. Inversement, si
+$Q\in L(A)\cap L(B)$, on a $C\subset Q$, donc
+(\hyperref[I.8.1.3-fr]{8.1.3}) $Q$ domine un
+$Q''\in L(C)\subset L(A)\cap L(B)$~; $Q$ et $Q''$ étant apparentés sont
+identiques, donc $Q''=Q\in L(C)$, ce qui achève la démonstration.
+
+\subsection{Anneaux locaux d'un schéma intègre.}
+\label{subsection:I.8.2-fr}
+
+\begin{env}[8.2.1]
+\label{I.8.2.1-fr}
+Soient $X$ un préschéma \emph{intègre}, $R$ son corps des fonctions
+rationnelles, identique à l'anneau local du point générique $a$ de $X$~; pour
+tout $x\in X$, on sait que $\mathscr{O}_x$ s'identifie canoniquement à un
+sous-anneau de $R$ (\hyperref[I.7.1.5-fr]{7.1.5}), et pour toute fonction
+rationnelle $f\in R$, le domaine de définition $\delta(f)$ de $f$ est
+l'ensemble ouvert des $x\in X$ tels que $f\in\mathscr{O}_x$. Il en résulte
+(\hyperref[I.7.2.6-fr]{7.2.6}) que pour tout ouvert $U\subset X$, on a
+\begin{equation}
+  \Gamma(U,\mathscr{O}_X)=\bigcap_{x\in U}\mathscr{O}_x.
+  \tag{8.2.1.1}\label{I.8.2.1.1-fr}
+\end{equation}
+\end{env}
+
+\oldpage[I]{166}
+\begin{proposition}[8.2.2]
+\label{I.8.2.2-fr}
+Soient $X$ un préschéma intègre, $R$ son corps des fonctions rationnelles.
+Pour que $X$ soit un schéma, il faut et il suffit que la relation
+«~$\mathscr{O}_x$ et $\mathscr{O}_y$ sont apparentés~»
+(\hyperref[I.8.1.4-fr]{8.1.4}) entre points $x$, $y$ de $X$ implique $x=y$.
+\end{proposition}
+
+Supposons cette condition vérifiée, et montrons que $X$ est séparé. Soient
+$U$ et $V$ deux ouverts affines distincts de $X$, $A$ et $B$ leurs anneaux,
+identifiés à des sous-anneaux de $R$~; $U$ (resp. $V$) s'identifie donc
+(\hyperref[I.8.1.2-fr]{8.1.2}) à $L(A)$ (resp. $L(B)$), et l'hypothèse
+entraîne (\hyperref[I.8.1.5-fr]{8.1.5}) que si $C$ est le sous-anneau de $R$
+engendré par $A\cup B$, $W=U\cap V$ s'identifie à
+$L(A)\cap L(B)=L(C)$. En outre, on sait
+(\cite{I-1}, p.~5-03, prop.~4 \emph{bis}) que tout sous-anneau $E$ de $R$ est
+égal à l'intersection des anneaux locaux appartenant à $L(E)$~; $C$
+s'identifie donc à l'intersection des anneaux $\mathscr{O}_z$ pour $z\in W$,
+autrement dit (\hyperref[I.8.2.1.1-fr]{8.2.1.1}) à
+$\Gamma(W,\mathscr{O}_X)$. Considérons alors le sous-préschéma induit par $X$
+sur $W$~; à l'homomorphisme identique
+$\varphi:C\to\Gamma(W,\mathscr{O}_X)$ correspond
+(\hyperref[I.2.2.4-fr]{2.2.4}) un morphisme
+$\Phi=(\psi,\theta):W\to\operatorname{Spec}(C)$~; nous allons voir que $\Phi$
+est un \emph{isomorphisme} de préschémas, d'où résultera que $W$ est un ouvert
+\emph{affine}. L'identification de $W$ à
+$L(C)=\operatorname{Spec}(C)$ montre que $\psi$ est \emph{bijective}. D'autre
+part, pour tout $x\in W$, $\theta_x^\sharp$ est l'injection
+$C_\mathfrak r\to\mathscr{O}_x$, si
+$\mathfrak r=\mathfrak m_x\cap C$, et par définition $C_\mathfrak r$ est
+identifié à $\mathscr{O}_x$, donc $\theta_x^\sharp$ est bijective. Il reste
+donc à voir que $\psi$ est un \emph{homéomorphisme}, autrement dit que pour
+toute partie fermée $F\subset W$, $\psi(F)$ est fermé dans
+$\operatorname{Spec}(C)$. Or, $F$ est la trace sur $W$ d'une partie fermée de
+$U$, de la forme $V(\mathfrak a)$, où $\mathfrak a$ est un idéal de $A$~;
+montrons que $\psi(F)=V(\mathfrak a C)$, ce qui prouvera notre assertion. En
+effet, les idéaux premiers de $C$ contenant $\mathfrak a C$ sont les idéaux
+premiers de $C$ contenant $\mathfrak a$, donc les idéaux de la forme
+$\psi(x)=\mathfrak m_x\cap C$ où
+$\mathfrak a\subset\mathfrak m_x$ et $x\in W$~; comme
+$\mathfrak a\subset\mathfrak m_x$ équivaut à
+$x\in V(\mathfrak a)=W\cap F$ pour $x\in U$, on a bien
+$\psi(F)=V(\mathfrak a C)$.
+
+Il s'ensuit que $X$ est séparé, car $U\cap V$ est affine et son anneau $C$ est
+engendré par la réunion $A\cup B$ des anneaux de $U$ et $V$
+(\hyperref[I.5.5.6-fr]{5.5.6}).
+
+Inversement, supposons $X$ séparé, et soient $x$, $y$ deux points de $X$ tels
+que $\mathscr{O}_x$ et $\mathscr{O}_y$ soient apparentés. Soit $U$ (resp.
+$V$) un ouvert affine contenant $x$ (resp. $y$), d'anneau $A$ (resp. $B$)~;
+on sait alors que $U\cap V$ est affine et que son anneau $C$ est engendré par
+$A\cup B$ (\hyperref[I.5.5.6-fr]{5.5.6}). Si
+$\mathfrak p=\mathfrak m_x\cap A$, $\mathfrak q=\mathfrak m_y\cap B$, on a
+$A_\mathfrak p=\mathscr{O}_x$, $B_\mathfrak q=\mathscr{O}_y$, et comme
+$A_\mathfrak p$ et $B_\mathfrak q$ sont apparentés, il existe un idéal premier
+$\mathfrak r$ de $C$ tel que $\mathfrak p=\mathfrak r\cap A$,
+$\mathfrak q=\mathfrak r\cap B$ (\hyperref[I.8.1.4-fr]{8.1.4}). Mais alors il
+existe un point $z\in U\cap V$ tel que
+$\mathfrak r=\mathfrak m_z\cap C$ puisque $U\cap V$ est affine, et on a
+évidemment $x=z$, et $y=z$, d'où $x=y$.
+
+\begin{corollary}[8.2.3]
+\label{I.8.2.3-fr}
+Soient $X$ un schéma intègre, $x$, $y$ deux points de $X$. Pour que
+$x\in\overline{\{y\}}$, il faut et il suffit que
+$\mathscr{O}_x\subset\mathscr{O}_y$, autrement dit que toute fonction
+rationnelle définie en $x$ soit définie en $y$.
+\end{corollary}
+
+La condition est évidemment nécessaire puisque le domaine de définition
+$\delta(f)$ d'une fonction rationnelle $f\in R$ est ouvert~; montrons qu'elle
+est suffisante. Si $\mathscr{O}_x\subset\mathscr{O}_y$, il existe un idéal
+premier $\mathfrak p$ de $\mathscr{O}_x$ tel que $\mathscr{O}_y$ domine
+$(\mathscr{O}_x)_\mathfrak p$ (\hyperref[I.8.1.3-fr]{8.1.3})~; or
+(\hyperref[I.2.4.2-fr]{2.4.2}) il existe $z\in X$ tel que
+$x\in\overline{\{z\}}$ et que
+$\mathscr{O}_z=(\mathscr{O}_x)_\mathfrak p$~; comme $\mathscr{O}_z$ et
+$\mathscr{O}_y$ sont apparentés, on a $z=y$ par
+(\hyperref[I.8.2.2-fr]{8.2.2}), d'où le corollaire.
+
+\begin{corollary}[8.2.4]
+\label{I.8.2.4-fr}
+Si $X$ est un schéma intègre, l'application $x\mapsto\mathscr{O}_x$ est
+injective~; autrement dit, si $x$, $y$ sont deux points distincts de $X$, il
+existe une fonction rationnelle définie en l'un de ces points et non en
+l'autre.
+\end{corollary}
+
+\oldpage[I]{167}
+Cela résulte de (\hyperref[I.8.2.3-fr]{8.2.3}) et de l'axiome
+$(T_0)$ (\hyperref[I.2.1.4-fr]{2.1.4}).
+
+\begin{corollary}[8.2.5]
+\label{I.8.2.5-fr}
+Soit $X$ un schéma intègre dont l'espace sous-jacent est noethérien~;
+lorsque $f$ parcourt le corps $R$ des fonctions rationnelles sur $X$, les
+ensembles $\delta(f)$ engendrent la topologie de $X$.
+\end{corollary}
+
+En effet, toute partie fermée de $X$ est alors réunion finie d'ensembles
+fermés irréductibles, c'est-à-dire de la forme $\overline{\{y\}}$
+(\hyperref[I.2.1.5-fr]{2.1.5}). Or, si
+$x\notin\overline{\{y\}}$, il existe une fonction rationnelle $f$ définie en
+$x$ et non en $y$ (\hyperref[I.8.2.3-fr]{8.2.3}), autrement dit, on a
+$x\in\delta(f)$ et $\delta(f)$ ne rencontre pas $\overline{\{y\}}$. Le
+complémentaire de $\overline{\{y\}}$ est par suite réunion d'ensembles de la
+forme $\delta(f)$, et en vertu de la première remarque, tout ouvert de $X$ est
+réunion d'intersections finies d'ouverts de la forme $\delta(f)$.
+
+\begin{env}[8.2.6]
+\label{I.8.2.6-fr}
+Le cor. (\hyperref[I.8.2.5-fr]{8.2.5}) montre que la topologie de $X$ est
+entièrement caractérisée par la donnée de la famille d'anneaux locaux
+$(\mathscr{O}_x)_{x\in X}$ ayant $R$ pour corps des fractions. Il revient au
+même d'ailleurs de dire que les parties fermées de $X$ sont définies de la
+façon suivante~: étant donnée une partie finie
+$\{x_1,\ldots,x_n\}$ de $X$, on considère l'ensemble des $y\in X$ tels que
+$\mathscr{O}_y\subset\mathscr{O}_{x_i}$ pour un indice $i$ au moins, et ces
+ensembles (pour tous les choix de $\{x_1,\ldots,x_n\}$) sont les ensembles
+fermés de $X$. En outre, une fois connue la topologie de $X$, le faisceau
+structural $\mathscr{O}_X$ est aussi bien déterminé par la famille des
+$\mathscr{O}_x$, puisque
+$\Gamma(U,\mathscr{O}_X)=\bigcap_{x\in U}\mathscr{O}_x$
+(\hyperref[I.8.2.1.1-fr]{8.2.1.1}). La famille
+$(\mathscr{O}_x)_{x\in X}$ détermine donc complètement le préschéma $X$
+lorsque $X$ est un schéma intègre dont l'espace sous-jacent est noethérien.
+\end{env}
+
+\begin{proposition}[8.2.7]
+\label{I.8.2.7-fr}
+Soient $X$, $Y$ deux schémas intègres, $f:X\to Y$ un morphisme dominant
+(\hyperref[I.2.2.6-fr]{2.2.6}), $K$ (resp. $L$) le corps des fonctions
+rationnelles sur $X$ (resp. $Y$). Alors $L$ s'identifie à un sous-corps de
+$K$, et pour tout $x\in X$, $\mathscr{O}_{f(x)}$ est l'unique anneau local de
+$Y$ dominé par $\mathscr{O}_x$.
+\end{proposition}
+
+En effet, si $f=(\psi,\theta)$ et si $a$ est le point générique de $X$,
+$\psi(a)$ est le point générique de $Y$
+(\hyperref[0.2.1.5-fr]{0, 2.1.5})~; $\theta_a^\sharp$ est par suite un
+monomorphisme du corps $L=\mathscr{O}_{\psi(a)}$ dans le corps
+$K=\mathscr{O}_a$. Comme tout ouvert affine non vide $U$ de $Y$ contient
+$\psi(a)$, il résulte de (\hyperref[I.2.2.4-fr]{2.2.4}) que l'homomorphisme
+$\Gamma(U,\mathscr{O}_Y)\to\Gamma(\psi^{-1}(U),\mathscr{O}_X)$ correspondant
+à $f$ est la restriction de $\theta_a^\sharp$ à
+$\Gamma(U,\mathscr{O}_Y)$. Donc, pour tout $x\in X$,
+$\theta_x^\sharp$ est la restriction à $\mathscr{O}_{\psi(x)}$ de
+$\theta_a^\sharp$, et est par suite un monomorphisme. On sait en outre que
+$\theta_x^\sharp$ est un homomorphisme local, donc, si on identifie $L$ à un
+sous-corps de $K$ par $\theta_a^\sharp$, $\mathscr{O}_{\psi(x)}$ est dominé
+par $\mathscr{O}_x$ (\hyperref[I.8.1.1-fr]{8.1.1})~; c'est d'ailleurs le seul
+anneau local de $Y$ dominé par $\mathscr{O}_x$ puisque deux anneaux locaux de
+$Y$ qui sont apparentés sont identiques
+(\hyperref[I.8.2.2-fr]{8.2.2}).
+
+\begin{proposition}[8.2.8]
+\label{I.8.2.8-fr}
+Soient $X$ un préschéma irréductible, $f:X\to Y$ une immersion locale
+(resp. un isomorphisme local)~; on suppose en outre le morphisme $f$ séparé.
+Alors $f$ est une immersion (resp. une immersion ouverte).
+\end{proposition}
+
+Soit $f=(\psi,\theta)$~; il suffit, dans les deux cas, de prouver que $\psi$
+est un \emph{homéomorphisme} de $X$ sur $\psi(X)$
+(\hyperref[I.4.5.3-fr]{4.5.3}). Remplaçant $f$ par $f_{\mathrm{red}}$
+(\hyperref[I.5.1.6-fr]{5.1.6} et
+\hyperref[I.5.5.1-fr]{5.5.1, (vi)}), on peut supposer $X$ et $Y$ réduits. Si
+$Y'$ est le sous-préschéma fermé réduit de $Y$ ayant pour espace sous-jacent
+$\overline{\psi(X)}$, $f$ se factorise en
+$X\xrightarrow{f'}Y'\xrightarrow{j}Y$, où $j$ est l'injection canonique
+(\hyperref[I.5.2.2-fr]{5.2.2}). Il résulte de
+(\hyperref[I.5.5.1-fr]{5.5.1, (v)}) que $f'$ est encore un morphisme séparé~;
+en outre, $f'$ est encore
+
+\oldpage[I]{168}
+une immersion locale (resp. un isomorphisme local), car la question étant
+locale sur $X$ et $Y$, on peut se borner pour le démontrer au cas où $f$ est
+une immersion fermée (resp. une immersion ouverte) et notre assertion découle
+alors aussitôt de (\hyperref[I.4.2.2-fr]{4.2.2}).
+
+On peut donc supposer que $f$ est un morphisme \emph{dominant}, ce qui
+entraîne que $Y$ est, lui aussi, irréductible
+(\hyperref[0.2.1.5-fr]{0, 2.1.5}), donc que $X$ et $Y$ sont tous deux
+\emph{intègres}. En outre, la question étant locale sur $Y$, on peut supposer
+que $Y$ est un schéma affine~; comme $f$ est séparé, $X$ est un schéma
+(\hyperref[I.5.5.1-fr]{5.5.1, (ii)}), et on est finalement dans les
+hypothèses de (\hyperref[I.8.2.7-fr]{8.2.7}). Alors, pour tout $x\in X$,
+$\theta_x^\sharp$ est injectif~; mais l'hypothèse que $f$ est une immersion
+locale implique que $\theta_x^\sharp$ est surjectif
+(\hyperref[I.4.2.2-fr]{4.2.2}), donc $\theta_x^\sharp$ est bijectif,
+autrement dit (avec l'identification de
+(\hyperref[I.8.2.7-fr]{8.2.7})) on a
+$\mathscr{O}_{\psi(x)}=\mathscr{O}_x$. Cela implique par
+(\hyperref[I.8.2.4-fr]{8.2.4}) que $\psi$ est une application
+\emph{injective}, ce qui démontre déjà la proposition lorsque $f$ est un
+isomorphisme local (\hyperref[I.4.5.3-fr]{4.5.3}). Lorsqu'on suppose seulement
+que $f$ est une immersion locale, pour tout $x\in X$ il existe un voisinage
+ouvert $U$ de $x$ dans $X$ et un voisinage ouvert $V$ de $\psi(x)$ dans $Y$
+tels que la restriction de $\psi$ à $U$ soit un homéomorphisme de $U$ sur une
+partie \emph{fermée} de $V$. Or, $U$ est dense dans $X$, donc $\psi(U)$ est
+dense dans $Y$ et \emph{a fortiori} dans $V$, ce qui prouve que
+$\psi(U)=V$~; comme $\psi$ est injective, $\psi^{-1}(V)=U$ et ceci achève de
+montrer que $\psi$ est un homéomorphisme de $X$ sur $\psi(X)$.
+
+\subsection{Les schémas de Chevalley.}
+\label{subsection:I.8.3-fr}
+
+\begin{env}[8.3.1]
+\label{I.8.3.1-fr}
+Soient $X$ un schéma intègre \emph{noethérien}, $R$ son corps des fonctions
+rationnelles~; désignons par $X'$ l'ensemble des sous-anneaux locaux
+$\mathscr{O}_x\subset R$, où $x$ parcourt $X$. L'ensemble $X'$ vérifie les
+trois conditions suivantes~:
+\begin{enumerate}
+  \item[(Sch. 1)] \emph{Pour tout $M\in X'$, $R$ est le corps des fractions
+    de $M$.}
+  \item[(Sch. 2)] \emph{Il existe un ensemble fini de sous-anneaux
+    noethériens $A_i$ de $R$ tels que $X'=\bigcup_i L(A_i)$ et que, pour tout
+    couple d'indices $i$, $j$, le sous-anneau $A_{ij}$ de $R$ engendré par
+    $A_i\cup A_j$ soit une algèbre de type fini sur $A_i$.}
+  \item[(Sch. 3)] \emph{Deux éléments $M$, $N$ de $X'$ qui sont apparentés
+    sont identiques.}
+\end{enumerate}
+\end{env}
+
+On a en effet vu dans (\hyperref[I.8.2.1-fr]{8.2.1}) que (Sch. 1) est
+satisfaite, et (Sch. 3) résulte de (\hyperref[I.8.2.2-fr]{8.2.2}). Pour
+démontrer (Sch. 2), il suffit de recouvrir $X$ par un nombre fini d'ouverts
+affines $U_i$, d'anneaux noethériens, et de prendre
+$A_i=\Gamma(U_i,\mathscr{O}_X)$~; l'hypothèse que $X$ est un schéma entraîne
+que $U_i\cap U_j$ est affine et que
+$\Gamma(U_i\cap U_j,\mathscr{O}_X)=A_{ij}$
+(\hyperref[I.5.5.6-fr]{5.5.6})~; en outre, comme l'espace $U_i$ est
+noethérien, l'immersion $U_i\cap U_j\to U_i$ est de type fini
+(\hyperref[I.6.3.5-fr]{6.3.5}), donc $A_{ij}$ est une $A_i$-algèbre de type
+fini (\hyperref[I.6.3.3-fr]{6.3.3}).
+
+\begin{env}[8.3.2]
+\label{I.8.3.2-fr}
+Les structures dont les axiomes sont (Sch. 1), (Sch. 2) et (Sch. 3)
+généralisent les «~schémas~» au sens de C.~Chevalley, qui suppose en outre que
+$R$ est une extension de type fini d'un corps $K$ et que les $A_i$ sont des
+$K$-algèbres de type fini (ce qui rend inutile une partie de (Sch. 2))
+\cite{I-1}. Inversement, si on a une telle structure sur un ensemble $X'$,
+on peut lui associer un schéma intègre $X$ en utilisant les remarques de
+(\hyperref[I.8.2.6-fr]{8.2.6})~: l'espace sous-jacent de $X$ est égal à $X'$
+muni de la topologie définie dans (\hyperref[I.8.2.6-fr]{8.2.6}), et du
+faisceau $\mathscr{O}_X$
+
+\oldpage[I]{169}
+tel que $\Gamma(U,\mathscr{O}_X)=\bigcap_{x\in U}\mathscr{O}_x$ pour tout
+ouvert $U\subset X$, avec une définition évidente des homomorphismes de
+restriction. Nous laissons au lecteur le soin de vérifier qu'on obtient bien
+ainsi un schéma intègre, dont les anneaux locaux sont les éléments de $X'$~;
+nous n'utiliserons pas ce résultat par la suite.
+\end{env}
