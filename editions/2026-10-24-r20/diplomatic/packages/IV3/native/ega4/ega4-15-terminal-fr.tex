@@ -1,0 +1,390 @@
+% EGA IV-3 terminal continuation, printed pp. 242--255.
+% Direct diplomatic French transcription from the NUMDAM authority.
+
+\subsection{Appendice : Critères valuatifs de propreté locale}
+\label{subsection:IV.15.7-fr}
+
+Ce numéro donne des compléments au critère valuatif de propreté démontré dans (\textbf{II}, 7.3.10)~; il est indépendant du reste du \S~15.
+
+\begin{definition}[15.7.1]
+\label{IV.15.7.1-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $y$ un point de $Y$. On dit que $f$ est propre au point $y$ s'il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que la restriction $f^{-1}(U)\to U$ de $f$ soit un morphisme propre. On dit qu'une partie $Z$ de $X$ est propre sur $Y$ au point $y$ s'il existe un voisinage ouvert $U$ de $y$ tel que $Z\cap f^{-1}(U)$ soit fermée dans $f^{-1}(U)$ et propre sur $U$ (\textbf{II}, 5.4.10) (ce qui revient à dire que pour tout sous-préschéma fermé de $X$ ayant $Z$ pour espace sous-jacent, la restriction $Z\to Y$ de $f$ à $Z$ est propre au point $y$).
+\end{definition}
+
+Soit $g:Y'\to Y$ un morphisme quelconque~; posons $X'=X\times_Y Y'$, $f'=f_{(Y')}$ et, si $p:X'\to X$ est la projection canonique, $Z'=p^{-1}(Z)$. Alors, si $Z$ est propre sur $Y$ au point $y$, $Z'$ est propre sur $Y'$ en tout point $y'$ au-dessus de $y$ (\textbf{II}, 5.4.2).
+
+\begin{proposition}[15.7.2]
+\label{IV.15.7.2-fr}
+Soient $Y$ un préschéma intègre localement noethérien, $X$ un préschéma intègre, $f:X\to Y$ un morphisme séparé, dominant et de type fini, $y$ un point de $Y$. Les conditions suivantes sont équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est propre au point $y$.
+  \item Si $Y_1=\operatorname{Spec}(\mathcal O_y)$, $X_1=X\times_Y Y_1$, le morphisme $f_1=f_{(Y_1)}:X_1\to Y_1$ est propre.
+  \item Tout anneau de valuation discrète ayant $R(X)$ pour corps des fractions et dominant $\mathcal O$ domine un anneau local $\mathcal O_x$ de $X$ (auquel cas on a nécessairement $f(x)=y$).
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-3]{243}
+\begin{proof}
+Le fait que a) implique b) résulte de (\textbf{II}, 5.4.2), et l'implication b) $\Rightarrow$ c) résulte de (\textbf{II}, 7.3.10). Reste donc à montrer que c) entraîne a). La question étant locale sur $Y$, on peut supposer $Y$ affine, donc noethérien. En vertu du lemme de Chow (\textbf{II}, 5.6.1), il existe un préschéma intègre $X'$, un morphisme projectif $p:P\to Y$, une immersion ouverte dominante $j:X'\to P$, et un morphisme projectif et birationnel (donc surjectif) $g:X'\to X$ tels que le diagramme
+\[
+\xymatrix{
+P\ar[d]_-{p} & X'\ar[l]_-{j}\ar[d]^-{g}\\
+Y & X\ar[l]^-{f}
+}
+\]
+soit commutatif. Comme $X'$ est intègre et $j$ dominant, $P$ est irréductible, et l'on peut, en remplaçant $P$ par $P_{\mathrm{red}}$, supposer $P$ intègre (\textbf{I}, 5.2.2 et \textbf{II}, 5.5.5, (vi)). Tout revient à prouver qu'il existe un voisinage ouvert $U$ de $y$ tel que $p^{-1}(U)\subset j(X')$, car alors la restriction de $j$ à
+\[
+j^{-1}\bigl(p^{-1}(U)\bigr)=g^{-1}\bigl(f^{-1}(U)\bigr)=V
+\]
+sera un isomorphisme sur $p^{-1}(U)$, donc la restriction $V\to U$ de $f\circ g$ sera propre, et comme la restriction $V\to f^{-1}(U)$ de $g$ est surjective, la restriction $f^{-1}(U)\to U$ de $f$ sera propre (\textbf{II}, 5.4.3). Comme $T=P-j(X')$ est fermé dans $P$, $p(T)$ est fermé dans $Y$, et il suffit de montrer que $y\notin p(T)$, ou encore que tout $z'\in P$ tel que $p(z')=y$ \emph{appartient à} $j(X')$. Or, le corps des fractions rationnelles $R(P)$ est égal à $R(X')$, donc à $R(X)$ par construction; comme on peut se borner au cas où $z'$ n'est pas le point générique de $P$, il existe un anneau de valuation discrète $A$ ayant $R(X)$ pour corps des fractions et dominant $\mathcal O_{z'}$ (\textbf{II}, 7.1.7); comme $p(z')=y$, $A$ domine aussi $\mathcal O_y$, donc par hypothèse il existe un $x\in X$ tel que $f(x)=y$ et que $A$ domine $\mathcal O_x$. Comme $g$ est propre, il existe $x'\in X'$ tel que $g(x')=x$ et que $A$ domine $\mathcal O_{x'}$ (\textbf{II}, 7.3.10); donc $z'$ et $j(x')$ sont deux points de $P$ dont les anneaux locaux $\mathcal O_z$ et $\mathcal O_{j(x')}=\mathcal O_{x'}$ sont apparentés (\textbf{I}, 8.1.4); comme $P$ est un schéma, cela entraîne $z'=j(x')$ (\textbf{I}, 8.2.2), ce qui achève la démonstration.
+\end{proof}
+
+\begin{remark}[15.7.3]
+\label{IV.15.7.3-fr}
+On peut dans (15.7.2) supprimer l'hypothèse que $Y$ est localement noethérien, en remplaçant dans la condition c) les anneaux de valuation discrète par des anneaux de valuation quelconque; la démonstration est alors inchangée, compte tenu de (\textbf{II}, 7.3.10).
+\end{remark}
+
+\begin{corollary}[15.7.4]
+\label{IV.15.7.4-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme séparé de type fini, $Z$ une partie de $X$ tel que les points maximaux de son adhérence $\overline Z$ appartiennent à $Z$ (ce qui est le cas lorsque $Z$ est fini, ou lorsque $Z$ est constructible ($\mathbf{0}_{\mathrm{III}}$, 9.2.2)). Soit $y$ un point de $Y$. Les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[\rm a)] L'ensemble $\overline Z$ est propre sur $Y$ au point $y$.
+  \item[\rm b)] Si $Y_1=\operatorname{Spec}(\mathcal O_y)$, $X_1=X\times_Y Y_1$, et si $g_1:X_1\to X$ est la projection canonique et $Z_1=g_1^{-1}(Z)$, l'adhérence $\overline Z_1$ de $Z_1$ dans $X_1$ est propre sur $Y_1$.
+  \item[\rm c)] Pour tout schéma $Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation discrète, et tout morphisme $g:Y'\to Y$, tel que l'image $g(y')$ du point fermé $y'$ de $Y'$ soit $y$, on a la propriété suivante : posant $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$, $g'=g_{(X)}:X'\to X$, $Z'=g'^{-1}(Z)$, et désignant par $\eta'$
+\oldpage[IV-3]{244}
+le point générique de $Y'$, alors, pour tout point $x'\in Z'\cap f'^{-1}(\eta')$ rationnel sur $\mathbf k(\eta')$, il existe une $Y'$-section de $X'$ contenant $x'$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Le fait que a) entraîne b) résulte de ce que $\overline Z_1\subset g_1^{-1}(\overline Z)$ et de ce que $g_1^{-1}(\overline Z)$ est propre sur $Y_1$ (15.7.1). Le fait que b) entraîne c) résulte de (\textbf{II}, 7.3.3). Reste donc à voir que c) implique a). Il suffit évidemment de prouver que toute composante irréductible de $\overline Z$ est propre sur $Y$ au point $y$, et l'hypothèse permet donc de se borner au cas où $Z$ est réduit à un seul point $z$. On peut évidemment aussi, compte tenu de (\textbf{I}, 5.2.2) et (\textbf{II}, 5.4.6), supposer que $X$ et $Y$ sont réduits, puis (par définition d'une partie propre (\textbf{II}, 5.4.10)) supposer que $\overline Z=X=\overline{\{z\}}$ et (appliquant encore (\textbf{I}, 5.2.2)) que $f$ est dominant, donc $X$ et $Y$ intègres et noethériens; il faut alors prouver que $f$ est propre au point $y$ de $Y$. Montrons pour cela que $f$ vérifie la condition c) de (15.7.2). Soit $A'$ un anneau de valuation discrète ayant $R(X)=\mathbf k(z)$ pour corps des fractions et dominant $\mathcal O_y$; avec les notations de c), on a donc $g(y')=y$, et $g(\eta')$ est le point générique $\eta=f(z)$ de $Y$. Comme par définition $\mathbf k(\eta')=\mathbf k(z)$, il existe un $\mathbf k(\eta)$-morphisme $\operatorname{Spec}(\mathbf k(\eta'))\to\operatorname{Spec}(\mathbf k(z))$ transformant $\eta'$ en $z$, donc une $\mathbf k(\eta')$-section de $f'^{-1}(\eta')$ (\textbf{I}, 3.3.14); si $z'$ est l'image de $\eta'$ par cette section, $z'$ est donc rationnel sur $\mathbf k(\eta')$ et $g'(z')=z$. On conclut donc de l'hypothèse c) qu'il existe une $Y'$-section $h'$ de $X'$ telle que $h'(\eta')=z'$; soit $h=g'\circ h':Y'\to X$ le $Y$-morphisme correspondant, et soit $x=h(y')$; il est clair que $f(x)=y$ et que $A'=\mathcal O_{y'}$ domine $\mathcal O_x$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{corollary}[15.7.5]
+\label{IV.15.7.5-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme séparé de type fini, $y$ un point de $Y$. Les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[\rm a)] $f$ est propre au point $y$.
+  \item[\rm b)] Si $Y_1=\operatorname{Spec}(\mathcal O_y)$, $X_1=X\times_Y Y_1$, le morphisme $f_1=f_{(Y_1)}:X_1\to Y_1$ est propre.
+  \item[\rm c)] Pour tout schéma $Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation discrète, et tout morphisme $g:Y'\to Y$, tel que l'image $g(y')$ du point fermé $y'$ de $Y'$ soit $y$, on a la propriété suivante : posant $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$ et désignant par $\eta'$ le point générique de $Y'$, alors, pour tout $x'\in f'^{-1}(\eta')$, rationnel sur $\mathbf k(\eta')$, il existe une $Y'$-section de $X'$ contenant $x'$.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}[15.7.6]
+\label{IV.15.7.6-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme de type fini. Les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[\rm a)] Il existe un morphisme propre $g:X\to Z$ et une immersion $h:Z\to Y$ tels que $f=h\circ g$.
+  \item[\rm b)] Le sous-espace $f(X)$ est localement fermé dans $Y$, et si $Z'$ est le sous-préschéma de $Y$ image fermée de $X$ par $f$ (\textbf{I}, 9.5.3 et 9.5.1), et $Z''$ le préschéma induit par $Z'$ sur l'ouvert $f(X)$ de $Z'$, de sorte que $f$ se factorise de façon unique en $f=j\circ g$ (où $j:Z''\to Y$ est l'injection canonique), alors $g:X\to Z''$ est propre.
+  \item[\rm c)] Pour tout $y\in f(X)$, $f$ est propre au point $y$.
+  \item[\rm d)] Pour tout schéma $Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation discrète, et tout morphisme $g:Y'\to Y$ tel que $g(Y')\subset f(X)$, toute $Y'$-section rationnelle (\textbf{I}, 7.1.2) de $X'=X\times_Y Y'$ se prolonge de façon unique en une $Y'$-section de $X'$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que b) entraîne a). Pour voir que a) entraîne c), remarquons d'abord que a) entraîne que $h(Z)$ est localement fermé dans $Y$ et $g(X)$ fermé dans $Z$, donc $f(X)$ est localement fermé dans $Y$; pour tout $y\in f(X)$, il y a par suite un voisinage ouvert $U$
+\oldpage[IV-3]{245}
+de $y$ dans $Y$ tel que $f(X)\cap U$ soit fermé dans $U$; alors la restriction $h^{-1}(U)\to U$ de $h$ est une immersion fermée, et la restriction $f^{-1}(U)=g^{-1}(h^{-1}(U))\to h^{-1}(U)$ de $g$ est propre, donc la restriction $f^{-1}(U)\to U$ de $f$ est propre (\textbf{II}, 5.4.2). Pour voir que c) entraîne b), notons d'abord que, pour tout $y\in f(X)$, il existe, en vertu de c), un voisinage ouvert $U$ de $y$ dans $Y$ tel que $f(X)\cap U$ soit fermé dans $U$, donc $f(X)$ est localement fermé, et par suite ouvert dans son adhérence. Comme cette dernière est l'espace sous-jacent de $Z'$, et que $f$ se factorise en $f=j_0\circ g_0$, où $j_0:Z'\to Y$ est l'injection canonique et $g_0$ est un morphisme de $X$ dans $Z'$, le fait que $g_0(X)=Z''$ (qui est ouvert dans $Z'$) entraîne la factorisation de l'énoncé de b); le fait que $g$ est propre résulte alors du caractère local (sur $Z''$) de cette propriété, et de (\textbf{II}, 5.4.3). Il est clair que c) implique d) en vertu de (15.7.5), l'unicité du prolongement d'une $Y'$-section rationnelle résultant de l'hypothèse que $f$ est séparé (\textbf{I}, 7.2.2). Prouvons enfin que d) entraîne c); en premier lieu, il résulte de d), compte tenu de (\textbf{II}, 7.2.3 et 7.2.4), que $f$ est séparé; on peut alors appliquer le critère (15.7.5, c)), qui montre que $f$ est propre en tout point de $f(X)$.
+\end{proof}
+
+\begin{remarks}[15.7.7]
+\label{IV.15.7.7-fr}
+(i) Dans (15.7.4, c)), (15.7.5, c)) et (15.7.6, d)), on peut se restreindre au cas où l'anneau de valuation discrète $A'$ est \emph{complet} et admet un corps résiduel \emph{algébriquement clos}. En effet, dans la démonstration de (15.7.4), si l'on considère un anneau de valuation discrète $A''$ complet dominant $A'$ et ayant un corps résiduel algébriquement clos ($\mathbf{0}_{\mathrm{III}}$, 10.3.1), l'hypothèse c) est alors vérifiée pour $Y''=\operatorname{Spec}(A'')$, $X''=X\times_Y Y''$ et $f''=f_{(Y'')}$; mais $X''=X'\times_{Y'}Y''$, et il résulte alors de la remarque (\textbf{II}, 7.3.9, (i)) que $f'$ est propre; par suite $Y'$, $X'$ et $f'$ vérifient aussi l'hypothèse c) (\textbf{II}, 7.3.8).
+
+(ii) Compte tenu de (\textbf{II}, 7.3.8), la condition c) de (15.7.5) peut se remplacer par la condition que $f'$ est \emph{propre}.
+\end{remarks}
+
+\begin{env}[15.7.8]
+\label{IV.15.7.8-fr}
+On dit qu'un morphisme de préschémas $f:X\to Y$ est \emph{submersif} s'il est surjectif et si la topologie de $Y$ est égale au quotient de la topologie de $X$ par la relation d'équivalence définie par $f$. On dit que $f$ est \emph{universellement submersif} si pour tout changement de base $Y'\to Y$, le morphisme $f'=f_{(Y')}:X\times_Y Y'\to Y'$ est submersif. Tout morphisme surjectif \emph{universellement ouvert}, ou \emph{universellement fermé}, ou \emph{fidèlement plat et quasi-compact} est universellement submersif (2.3.12). Étant donné un morphisme $f:X\to Y$, on dit qu'un sous-ensemble $Z$ de $X$ est \emph{submersif sur $f(Z)$} si la topologie du sous-espace $f(Z)$ de $Y$ est quotient de la topologie du sous-espace $Z$ de $X$ par la relation d'équivalence définie par $f|Z$. On dit que $Z$ est \emph{universellement submersif sur $f(Z)$} si, pour tout changement de base $g:Y'\to Y$, l'image réciproque $Z'=p^{-1}(Z)$ de $Z$ par la projection $p:X\times_Y Y'\to Y'$ est un ensemble submersif sur $f'(Z')=g^{-1}(f(Z))$. On notera que si le morphisme $f$ admet une $Y$-section $h:Y\to X$, tout ensemble $Z$ contenant $h(Y)$ est \emph{universellement submersif sur $Y$}.
+\end{env}
+
+\begin{proposition}[15.7.9]
+\label{IV.15.7.9-fr}
+Soient $Y$ un préschéma localement noethérien, $y$ un point de $Y$, $f:X\to Y$ un morphisme séparé de type fini. Soit $Z$ une partie localement constructible de $X$ ayant les propriétés suivantes :
+\begin{enumerate}
+  \item[\rm (i)] Pour toute générisation $y'$ de $y$, $Z_{y'}=Z\cap f^{-1}(y')$ est une composante connexe de $f^{-1}(y')$ et est géométriquement connexe sur $\mathbf k(y')$ (4.5.2).
+\oldpage[IV-3]{246}
+  \item[\rm (ii)] $Z_y$ est propre sur $\operatorname{Spec}(\mathbf k(y))$.
+  \item[\rm (iii)] $Z$ est universellement submersif sur $f(Z)$ (15.7.8).
+\end{enumerate}
+Alors $Z$ est propre sur $Y$ au point $y$ (autrement dit (15.7.1) il existe un voisinage ouvert $U$ de $y$ tel que $Z\cap f^{-1}(U)$ soit fermé dans $f^{-1}(U)$ et propre sur $U$).
+\end{proposition}
+
+\begin{proof}
+Utilisant la méthode de (8.1.2, a)) et (8.10.5, (xii)), on est ramené à prouver que lorsque $Y=\operatorname{Spec}(A)$ est spectre d'un anneau \emph{local} noethérien, les hypothèses (i), (ii) et (iii) entraînent que $Z$ est \emph{propre} sur $Y$.
+
+Notons d'abord que si $A'$ est un anneau local noethérien, $\varphi:A\to A'$ un homomorphisme local, $Y'=\operatorname{Spec}(A')$ et $g:Y'\to Y$ le morphisme correspondant à $\varphi$, l'image réciproque $Z'$ de $Z$ par la projection canonique $p:X\times_Y Y'\to X$ a vis-à-vis de $Y'$ les propriétés (i), (ii), (iii) de l'énoncé, compte tenu de (1.8.2); utilisant (2.7.1, (vii)), il revient donc au même de démontrer que $Z'$ est propre sur $Y'$, pourvu que $A'$ soit un $A$-module \emph{fidèlement plat}. Nous allons utiliser cette remarque en prenant $A'=\widehat A$ ($\mathbf{0}_{\mathrm{I}}$, 7.3.5), autrement dit nous pouvons nous borner au cas où $A$ est \emph{complet}. Comme $Z_y$ est une composante connexe de $f^{-1}(y)$, propre sur $\mathbf k(y)$, il résulte de (\textbf{III}, 5.5.2) que $X$ est \emph{somme} de deux sous-préschémas $X_0$, $X_1$ induits sur des parties ouvertes et fermées de $X$, telles que $X_0$ soit propre sur $Y$ et que $X_0\cap f^{-1}(y)=Z_y$. Posons $Z_0=X_0\cap Z$, $Z_1=X_1\cap Z$, de sorte que ces ensembles forment une partition de $Z$ en deux parties ouvertes et fermées dans $Z$. Comme les $Z_{y'}$ sont connexes, on a nécessairement $Z_{y'}\subset Z_0$ ou $Z_{y'}\subset Z_1$, donc $f(Z_0)\cap f(Z_1)=\varnothing$. Mais comme $Z_0$ et $Z_1$ sont saturés pour la relation d'équivalence définie par $f|Z$, il résulte de (iii) que $f(Z_0)$ et $f(Z_1)$ sont ouverts dans $f(Z)$. Mais $f(Z_0)$ contient $y$, et tout voisinage de $y$ dans $Y$ est égal à $Y$, donc $f(Z_0)=f(Z)$, et par suite $f(Z_1)=\varnothing$, donc $Z_1=\varnothing$ et $Z\subset X_0$.
+
+On peut donc désormais supposer de plus que $f$ est \emph{propre}, et il reste à prouver que $Z$ est fermé dans $X$. Autrement dit, il suffira de prouver qu'une partie \emph{constructible} $Z$ d'un préschéma $X$ \emph{propre} sur $Y$ qui satisfait aux \emph{deux seules conditions} (i) et (iii), est \emph{fermée} dans $X$. En vertu de ($\mathbf{0}_{\mathrm{III}}$, 9.2.5), il suffit donc de prouver que pour tout $x'\in Z$ et toute spécialisation $x$ de $x'$ dans $X$, on a $x\in Z$. Soient $A_1$ un anneau de valuation discrète \emph{complet}, $u$ un morphisme de $Y_1=\operatorname{Spec}(A_1)$ dans $X$ tel que, si $y_1$ et $y_1'$ sont le point fermé et le point générique de $Y_1$, on ait $u(y_1)=x$, $u(y_1')=x'$ (\textbf{II}, 7.1.7); posons $g=f\circ u:Y_1\to Y$ et $X_1=X\times_Y Y_1$; il existe une $Y_1$-section $u_1:Y_1\to X_1$ de $f_1=f_{(Y_1)}$ telle que $u=p\circ u_1$, où $p:X_1\to X$ est la projection canonique. Si $x_1=u_1(y_1)$, $x_1'=u_1(y_1')$, on a donc $p(x_1)=x$ et $p(x_1')=x'$, et $x_1$ est une spécialisation de $x_1'$. En outre, on a $x_1'\in Z_1=p^{-1}(Z)$; comme nous avons remarqué que les conditions (i) et (iii) sont stables pour \emph{tout} changement de base, ainsi que la propriété d'être constructible, on voit qu'on est ramené à la situation suivante : $Y$ est le spectre d'un anneau de valuation discrète complet, $X$ est propre sur $Y$, $f(x)=y$ est le point fermé de $Y$, $y'=f(x')$ son point générique, il existe une $Y$-section $h$ de $X$ telle que $h(y)=x$, $h(y')=x'$, et enfin on a $x'\in Z$; il faut prouver que $x\in Z$. Or, $Z_y$ est une composante connexe de $f^{-1}(y)$, \emph{propre} sur $\operatorname{Spec}(\mathbf k(y))$ puisque $X$ est propre sur $Y$. Appliquant de nouveau (\textbf{III}, 5.5.2), on voit comme plus haut qu'il y a une partie ouverte et fermée $X'$ de $X$ telle que $X'\cap f^{-1}(y)=Z_y$; comme $Z_y$ est connexe,
+\oldpage[IV-3]{247}
+on peut supposer $X'$ connexe (en remplaçant au besoin $X'$ par celle de ses composantes connexes contenant $Z_y$). Mais alors le même raisonnement qu'au début prouve qu'on a nécessairement $Z\subset X'$; comme $h(Y)$ est connexe et contient $x'$, il est nécessairement contenu dans $X'$, donc $x=h(y)\in X'\cap f^{-1}(y)=Z_y$. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[15.7.10]
+\label{IV.15.7.10-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme séparé de type fini, universellement submersif (15.7.8) et tel que toutes les fibres $X_y=f^{-1}(y)$ soient géométriquement connexes. Alors, si $y\in Y$ est tel que $X_y$ soit propre sur $\mathbf k(y)$, $f$ est propre au point $y$.
+\end{corollary}
+
+\begin{proof}
+Compte tenu de (15.7.5), on est ramené au cas où $Y=\operatorname{Spec}(\mathcal O_y)$ puisque les hypothèses sont stables par changement de base. Mais dans ce cas il suffit d'appliquer (15.7.9) à $Z=X$.
+\end{proof}
+
+\begin{corollary}[15.7.11]
+\label{IV.15.7.11-fr}
+Soit $f:X\to Y$ un morphisme séparé de présentation finie; supposons qu'il existe un morphisme surjectif de présentation finie $g:Y'\to Y$, qui soit en outre propre ou plat, et tel que si l'on pose $X'=X\times_Y Y'$, il existe une $Y'$-section de $X'$ (ou encore un $Y$-morphisme $Y'\to X$ (\textbf{I}, 3.3.14)). Supposons enfin que les fibres $X_y=f^{-1}(y)$ soient géométriquement connexes. Alors l'ensemble $U$ des $y\in Y$ tels que $X_y$ soit propre sur $\mathbf k(y)$ est ouvert dans $Y$, et la restriction $f^{-1}(U)\to U$ de $f$ est propre.
+\end{corollary}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y=\operatorname{Spec}(A)$ affine. Appliquant (8.9.1) à $f$ et à $g$, on voit qu'il existe un sous-anneau noethérien $A_0$ de $A$ et deux morphismes de type fini $f_0:X_0\to Y_0=\operatorname{Spec}(A_0)$, $g_0:Y_0'\to Y_0$ tels que $X=X_0\times_{Y_0}Y$, $Y'=Y_0'\times_{Y_0}Y$, $f=(f_0)_{(Y)}$ et $g=(g_0)_{(Y)}$; en outre, utilisant (8.10.5, (v), (vi) et (xii)) et (11.2.7), on peut supposer $f_0$ séparé, $g_0$ surjectif et propre (resp. plat) si $g$ est propre (resp. plat); utilisant (8.8.2), on peut de plus supposer qu'il existe une $Y_0'$-section de $X_0$. D'autre part, utilisant (9.7.7), on peut appliquer (9.3.3) à la propriété d'être géométriquement connexe, et on peut donc supposer $A_0$ choisi de sorte que les $f_0^{-1}(y_0)$ soient géométriquement connexes pour tout $y_0\in Y_0$. Enfin, utilisant (2.7.1, (vii)), il revient au même de dire que $f^{-1}(y)$ est propre sur $\mathbf k(y)$ ou que $f_0^{-1}(y_0)$ est propre sur $\mathbf k(y_0)$, où $y_0$ est la projection de $y$ dans $Y_0$. Ces remarques montrent qu'on est ramené à démontrer le corollaire lorsque $Y$ est \emph{noethérien}. Notons maintenant le
+
+\begin{lemma}[15.7.11.1]
+\label{IV.15.7.11.1-fr}
+Soient $f:X\to Y$ un morphisme, $g:Y'\to Y$ un morphisme surjectif, qui est en outre propre ou plat et quasi-compact. Posons $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Alors, si $f'$ est submersif (resp. universellement submersif), il en est de même de $f$.
+\end{lemma}
+
+\begin{proof}
+On peut se borner au cas où $f'$ est submersif. En effet, supposons le lemme prouvé dans ce cas, et montrons que si $f'$ est universellement submersif, $f$ l'est aussi. Soit donc $Y_1\to Y$ un morphisme quelconque, et posons $Y_1'=Y'\times_Y Y_1$; si $X_1'=X'\times_{Y'}Y_1'$ et $f_1'=(f')_{(Y_1')}:X_1'\to Y_1'$, $f_1'$ est submersif par hypothèse; de plus le morphisme $g_1:Y_1'\to Y_1$ est surjectif, et propre (resp. plat et quasi-compact) si $g$ l'est. Donc, si l'on pose $X_1=X\times_Y Y_1$, $f_1=f_{(Y_1)}$, il résulte de l'hypothèse et du fait que $X_1'=X_1\times_{Y_1}Y_1'$, que $f_1$ est submersif, donc $f$ universellement submersif. Supposons donc seulement que $f'$ soit submersif. Il est clair tout d'abord que $f$ est surjectif. Soit $E$ une partie de $Y$ telle que $f^{-1}(E)$ soit fermé dans $X$; alors, si $p:X'\to X$ est la projection canonique,
+\oldpage[IV-3]{248}
+$p^{-1}(f^{-1}(E))=f'^{-1}(g^{-1}(E))$ est fermé dans $X'$, donc, puisque $f'$ est submersif, $g^{-1}(E)$ est fermé dans $Y'$; mais comme $g$ est aussi universellement submersif (15.7.8), $E$ est fermé dans $Y$, ce qui prouve le lemme.
+\end{proof}
+
+Cela étant, comme il existe par hypothèse une $Y'$-section de $X'$, $f'$ est universellement submersif (15.7.8), donc il en est de même de $f$ d'après le lemme (15.7.11.1). Il suffit alors d'appliquer (15.7.10), en remarquant que l'ensemble des $y\in Y$ tels que $f$ soit propre en $y$ est par définition ouvert dans $Y$.
+\end{proof}
+
+\begin{center}
+\emph{(A suivre.)}
+\end{center}
+
+\clearpage
+\oldpage[IV-3]{249}
+\phantomsection
+\addcontentsline{toc}{section}{Bibliographie (suite)}
+\section*{BIBLIOGRAPHIE (\emph{suite})}
+
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+[39] J.-P.~\textsc{Serre}, \emph{Corps locaux}, Paris (Hermann), 1962.
+
+[40] J.-P.~\textsc{Serre}, \emph{Groupes proalgébriques}, \emph{Publ. Inst. Hautes Études Sci.}, n\textsuperscript{o} 7 (1960).
+
+\endgroup
+
+\clearpage
+\oldpage[IV-3]{250}
+\phantomsection
+\addcontentsline{toc}{section}{Index des notations}
+\section*{INDEX DES NOTATIONS}
+
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+$\mathfrak C(X)$, $\mathfrak D_c(X)$, $\mathfrak F_c(X)$,
+$\mathfrak{LF}_c(X)$ ($X$ préschéma) : 8.3.9.
+
+$\mathfrak Q(\mathcal F)$ ($\mathcal F$ $\mathcal O_X$-Module) : 8.5.10.
+
+$\mathfrak{Spr}(Y)$, $\mathfrak{Spro}(Y)$, $\mathfrak{Sprf}(Y)$
+($Y$ préschéma) : 8.6.1.
+
+$\mathbf{Pro}(\mathcal C)$ ($\mathcal C$ catégorie) : 8.13.3.
+
+$X_s$, $\mathcal F_s$, $u_s$, $g_s$, $Z_s$, $h_s$
+($X$ $S$-préschéma, $s\in S$, $\mathcal F$ $\mathcal O_X$-Module,
+$u$ homomorphisme de $\mathcal O_X$-Modules, $g$ section de
+$\mathcal O_X$-Module, $Z$ partie de $X$, $h:X\to Y$ $S$-morphisme) : 9.4.1.
+
+$\mathfrak{Qc}(X)$, $\mathfrak{Lqc}(X)$, $\mathfrak O(X)$,
+$\mathfrak F(X)$, $\mathfrak{Lf}(X)$, $\mathfrak{Lc}(X)$
+($X$ espace topologique) : 10.1.1.
+
+$\operatorname{prof}^{*}_{x}(\mathcal F)$,
+$\operatorname{prof}^{*}_{Z}(\mathcal F)$,
+$\operatorname{prof}^{*}(\mathcal F)$
+($\mathcal F$ $\mathcal O_X$-Module) : 10.8.1.
+
+$S(X)$ ($X$ préschéma de Jacobson) : 10.9.1.
+
+$S(f)$ ($f$ morphisme de préschémas de Jacobson) : 10.9.2.
+
+$\operatorname{Spm}(A)$, $D^m(h)$ ($A$ anneau de Jacobson, $h\in A$) : 10.9.3.
+
+$\operatorname{Tor.dim}_B(M)$ ($M$ $B$-module) : 12.3.2.
+
+\endgroup
+
+\clearpage
+\oldpage[IV-3]{251}
+\phantomsection
+\addcontentsline{toc}{section}{Index terminologique}
+\section*{INDEX TERMINOLOGIQUE}
+
+\begingroup
+\footnotesize
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.1pt}
+\newcommand{\EGAIVthreeTerm}[2]{#1 : #2.\par}
+
+\EGAIVthreeTerm{Critère de platitude par fibres}{11.3.10}
+\EGAIVthreeTerm{Espace algébrique sur $k$, espace $k$-algébrique, espace
+préalgébrique sur $k$, espace $k$-préalgébrique}{10.10.2}
+\EGAIVthreeTerm{Espace de Jacobson}{10.3.1}
+\EGAIVthreeTerm{Espace $k$-préalgébrique réduit}{10.10.4}
+\EGAIVthreeTerm{Famille de morphismes schématiquement dominante}{11.10.2}
+\EGAIVthreeTerm{Famille de morphismes universellement schématiquement dominante}{11.10.7}
+\EGAIVthreeTerm{Famille de sous-préschémas schématiquement dense}{11.10.2}
+\EGAIVthreeTerm{Famille séparante d'homomorphismes de faisceaux de modules}{11.9.1}
+\EGAIVthreeTerm{Famille séparante d'homomorphismes de modules}{11.9.4}
+\EGAIVthreeTerm{Famille universellement séparante d'homomorphismes de faisceaux de modules}{11.9.14}
+\EGAIVthreeTerm{Géométriquement isomorphes ($k$-préschémas)}{9.1.4}
+\EGAIVthreeTerm{Homomorphisme de Modules universellement injectif}{11.9.14 et 11.9.18}
+\EGAIVthreeTerm{Lemme de Chow pour les morphismes de présentation finie}{8.10.5.1}
+\EGAIVthreeTerm{« Main theorem » de Zariski pour les morphismes de présentation finie}{8.12.6}
+\EGAIVthreeTerm{Morphisme équidimensionnel en un point, morphisme équidimensionnel}{13.2.2 et 13.3.2}
+\EGAIVthreeTerm{Morphisme propre en un point}{15.7.1}
+\EGAIVthreeTerm{Morphisme pseudo-fini}{8.12.3}
+\EGAIVthreeTerm{Morphisme submersif, morphisme universellement submersif}{15.7.8}
+\EGAIVthreeTerm{Morphisme universellement ouvert en un point}{14.3.3}
+\EGAIVthreeTerm{Ouvert ultraaffine}{10.9.5}
+\EGAIVthreeTerm{Partie finie saturée d'un $k$-préschéma algébrique}{9.8.9}
+\EGAIVthreeTerm{Partie propre en un point (d'un $S$-préschéma)}{15.7.1}
+\EGAIVthreeTerm{Partie quasi-constructible, partie localement quasi-constructible d'un espace topologique}{10.1.1}
+\EGAIVthreeTerm{Partie très dense d'un espace topologique}{10.1.3}
+\EGAIVthreeTerm{Polynôme géométriquement irréductible}{9.7.4}
+\EGAIVthreeTerm{Préschéma de Jacobson}{10.4.1}
+\EGAIVthreeTerm{Préschéma équidimensionnel sur un autre en un point, équidimensionnel sur un autre}{13.2.2 et 13.3.2}
+\EGAIVthreeTerm{Préschéma essentiellement affine sur un autre}{8.13.4}
+\EGAIVthreeTerm{Principe de l'extension finie}{9.1.1}
+\EGAIVthreeTerm{Profondeur rectifiée}{10.8.1}
+\EGAIVthreeTerm{Pro-objet, morphisme de pro-objets}{8.13.3}
+\EGAIVthreeTerm{Pro-objet essentiellement affine}{8.13.4, 8.14.1}
+\EGAIVthreeTerm{Propriété constructible, propriété ind-constructible}{9.2.1 et 9.2.2, (i) et (ii)}
+\EGAIVthreeTerm{Quasi-homéomorphisme d'espaces topologiques}{10.2.2}
+\EGAIVthreeTerm{Quasi-isomorphisme d'espaces annelés}{10.2.8}
+\EGAIVthreeTerm{Saturée d'une partie finie d'un $k$-préschéma algébrique}{9.8.9}
+\EGAIVthreeTerm{Sous-ensemble d'un $S$-préschéma submersif, universellement submersif sur son image}{15.7.8}
+\EGAIVthreeTerm{Squelette primaire d'un Module, squelette virtuel}{9.8.9}
+\EGAIVthreeTerm{Spectre maximal d'un anneau de Jacobson}{10.9.3}
+\EGAIVthreeTerm{Type primaire d'un Module, type primaire géométrique d'un Module}{9.8.9}
+\EGAIVthreeTerm{Ultrapréschéma, morphisme d'ultrapréschémas}{10.9.5}
+\EGAIVthreeTerm{$R$-ultrapréschéma}{10.10.2}
+
+\let\EGAIVthreeTerm\relax
+\endgroup
+
+\clearpage
+% La page imprimée 252 est blanche.
+\thispagestyle{empty}
+\null
+
+\clearpage
+\oldpage[IV-3]{253}
+\phantomsection
+\addcontentsline{toc}{section}{Table des matières}
+\section*{TABLE DES MATIÈRES}
+
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\newcommand{\EGAIVthreeContentsLine}[3]{\textbf{#1}\quad #2\unskip\nobreak\hspace{0.4em}\nobreak\dotfill\nobreak\mbox{#3}\par}
+
+\EGAIVthreeContentsLine{CHAPITRE IV.}{\textbf{Étude locale des schémas et des morphismes de schémas} \emph{(suite)}}{5}
+\EGAIVthreeContentsLine{\S~8.}{Limites projectives de préschémas}{5}
+\EGAIVthreeContentsLine{8.1.}{Introduction}{5}
+\EGAIVthreeContentsLine{8.2.}{Limites projectives de préschémas}{7}
+\EGAIVthreeContentsLine{8.3.}{Parties constructibles dans une limite projective de préschémas}{12}
+\EGAIVthreeContentsLine{8.4.}{Critères d'irréductibilité et de connexion pour les limites projectives de préschémas}{17}
+\EGAIVthreeContentsLine{8.5.}{Modules de présentation finie sur une limite projective de préschémas}{19}
+\EGAIVthreeContentsLine{8.6.}{Sous-préschémas de présentation finie d'une limite projective de préschémas}{25}
+\EGAIVthreeContentsLine{8.7.}{Critères pour qu'une limite projective de préschémas soit un préschéma réduit (resp. intègre)}{27}
+\EGAIVthreeContentsLine{8.8.}{Préschémas de présentation finie sur une limite projective de préschémas}{28}
+\EGAIVthreeContentsLine{8.9.}{Premières applications à l'élimination des hypothèses noethériennes}{34}
+\EGAIVthreeContentsLine{8.10.}{Propriétés de permanence des morphismes par passage à la limite projective}{36}
+\EGAIVthreeContentsLine{8.11.}{Application aux morphismes quasi-finis}{41}
+\EGAIVthreeContentsLine{8.12.}{Nouvelle démonstration et généralisation du « Main Theorem » de Zariski}{43}
+\EGAIVthreeContentsLine{8.13.}{Traduction en termes de pro-objets}{49}
+\EGAIVthreeContentsLine{8.14.}{Caractérisation d'un préschéma localement de présentation finie sur un autre, en termes du foncteur qu'il représente}{52}
+
+\EGAIVthreeContentsLine{\S~9.}{Propriétés constructibles}{54}
+\EGAIVthreeContentsLine{9.1.}{Le principe de l'extension finie}{54}
+\EGAIVthreeContentsLine{9.2.}{Propriétés constructibles et ind-constructibles}{56}
+\EGAIVthreeContentsLine{9.3.}{Propriétés constructibles de morphismes de préschémas algébriques}{60}
+
+\clearpage
+\oldpage[IV-3]{254}
+\EGAIVthreeContentsLine{9.4.}{Constructibilité de certaines propriétés des Modules}{62}
+\EGAIVthreeContentsLine{9.5.}{Constructibilité de propriétés topologiques}{67}
+\EGAIVthreeContentsLine{9.6.}{Constructibilité de certaines propriétés des morphismes}{71}
+\EGAIVthreeContentsLine{9.7.}{Constructibilité des propriétés de séparabilité, d'irréductibilité géométrique et de connexité géométrique}{76}
+\EGAIVthreeContentsLine{9.8.}{Décomposition primaire au voisinage d'une fibre générique}{83}
+\EGAIVthreeContentsLine{9.9.}{Constructibilité des propriétés locales des fibres}{88}
+
+\EGAIVthreeContentsLine{\S~10.}{Préschémas de Jacobson}{95}
+\EGAIVthreeContentsLine{10.1.}{Parties très denses d'un espace topologique}{95}
+\EGAIVthreeContentsLine{10.2.}{Quasi-homéomorphismes}{97}
+\EGAIVthreeContentsLine{10.3.}{Espaces de Jacobson}{101}
+\EGAIVthreeContentsLine{10.4.}{Préschémas de Jacobson et anneaux de Jacobson}{101}
+\EGAIVthreeContentsLine{10.5.}{Préschémas de Jacobson noethériens}{104}
+\EGAIVthreeContentsLine{10.6.}{Dimension dans les préschémas de Jacobson}{107}
+\EGAIVthreeContentsLine{10.7.}{Exemples et contre-exemples}{109}
+\EGAIVthreeContentsLine{10.8.}{Profondeur rectifiée}{110}
+\EGAIVthreeContentsLine{10.9.}{Spectres maximaux et ultrapréschémas}{112}
+\EGAIVthreeContentsLine{10.10.}{Espaces algébriques de Serre}{114}
+
+\EGAIVthreeContentsLine{\S~11.}{Propriétés topologiques des morphismes plats de présentation finie. Critères de platitude}{116}
+\EGAIVthreeContentsLine{11.1.}{Ensembles de platitude (cas noethérien)}{117}
+\EGAIVthreeContentsLine{11.2.}{Platitude d'une limite projective de préschémas}{119}
+\EGAIVthreeContentsLine{11.3.}{Application à l'élimination d'hypothèses noethériennes}{132}
+\EGAIVthreeContentsLine{11.4.}{Descente de la platitude par des morphismes quelconques : cas d'un préschéma de base artinien}{143}
+\EGAIVthreeContentsLine{11.5.}{Descente de la platitude par des morphismes quelconques : cas général}{150}
+\EGAIVthreeContentsLine{11.6.}{Descente de la platitude par des morphismes quelconques : cas d'un préschéma de base unibranche}{154}
+\EGAIVthreeContentsLine{11.7.}{Contre-exemples}{157}
+\EGAIVthreeContentsLine{11.8.}{Un critère valuatif de platitude}{159}
+\EGAIVthreeContentsLine{11.9.}{Familles séparantes et universellement séparantes d'homomorphismes de faisceaux de modules}{160}
+\EGAIVthreeContentsLine{11.10.}{Familles schématiquement dominantes de morphismes et familles schématiquement denses de sous-préschémas}{170}
+
+\EGAIVthreeContentsLine{\S~12.}{Étude des fibres des morphismes plats de présentation finie}{173}
+\EGAIVthreeContentsLine{12.0.}{Introduction}{173}
+\EGAIVthreeContentsLine{12.1.}{Propriétés locales des fibres d'un morphisme plat localement de présentation finie}{174}
+
+\clearpage
+\oldpage[IV-3]{255}
+\EGAIVthreeContentsLine{12.2.}{Propriétés locales et globales des fibres d'un morphisme propre, plat et de présentation finie}{179}
+\EGAIVthreeContentsLine{12.3.}{Propriétés cohomologiques locales des fibres d'un morphisme plat et localement de présentation finie}{183}
+
+\EGAIVthreeContentsLine{\S~13.}{Morphismes équidimensionnels}{187}
+\EGAIVthreeContentsLine{13.1.}{Le théorème de semi-continuité de Chevalley}{188}
+\EGAIVthreeContentsLine{13.2.}{Morphismes équidimensionnels : cas des morphismes dominants de préschémas irréductibles}{190}
+\EGAIVthreeContentsLine{13.3.}{Morphismes équidimensionnels : cas général}{194}
+
+\EGAIVthreeContentsLine{\S~14.}{Morphismes universellement ouverts}{199}
+\EGAIVthreeContentsLine{14.1.}{Morphismes ouverts}{200}
+\EGAIVthreeContentsLine{14.2.}{Morphismes ouverts et formule des dimensions}{202}
+\EGAIVthreeContentsLine{14.3.}{Morphismes universellement ouverts}{204}
+\EGAIVthreeContentsLine{14.4.}{Le critère de Chevalley pour les morphismes universellement ouverts}{209}
+\EGAIVthreeContentsLine{14.5.}{Morphismes universellement ouverts et quasi-sections}{216}
+
+\EGAIVthreeContentsLine{\S~15.}{Étude des fibres d'un morphisme universellement ouvert}{223}
+\EGAIVthreeContentsLine{15.1.}{Multiplicités des fibres d'un morphisme universellement ouvert}{223}
+\EGAIVthreeContentsLine{15.2.}{Platitude des morphismes universellement ouverts à fibres géométriquement réduites}{226}
+\EGAIVthreeContentsLine{15.3.}{Application : critères de réduction et d'irréductibilité}{228}
+\EGAIVthreeContentsLine{15.4.}{Compléments sur les morphismes de Cohen-Macaulay}{229}
+\EGAIVthreeContentsLine{15.5.}{Rang séparable des fibres d'un morphisme quasi-fini et universellement ouvert. Application aux composantes connexes géométriques des fibres d'un morphisme propre}{231}
+\EGAIVthreeContentsLine{15.6.}{Composantes connexes des fibres le long d'une section}{236}
+\EGAIVthreeContentsLine{15.7.}{Appendice : Critères valuatifs de propreté locale}{242}
+\EGAIVthreeContentsLine{}{BIBLIOGRAPHIE \emph{(suite)}}{249}
+\EGAIVthreeContentsLine{}{INDEX DES NOTATIONS}{250}
+\EGAIVthreeContentsLine{}{INDEX TERMINOLOGIQUE}{251}
+
+\vspace{2em}
+\begin{center}
+\emph{Manuscrit reçu le 15 novembre 1964.}
+\end{center}
+
+\let\EGAIVthreeContentsLine\relax
+\endgroup

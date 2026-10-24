@@ -15,47 +15,47 @@ références pertinents, y compris les errata publiés par les auteurs.
 
 ## EGA 0–IV — lecteur cumulatif — édition diplomatique
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Diplomatic_Cumulative_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Diplomatic_Cumulative_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Diplomatic_Cumulative_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Diplomatic_Cumulative_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Diplomatic_Cumulative_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Diplomatic_Cumulative_Reader_Source.zip)
 
 ## EGA 0–IV — lecteur cumulatif — édition corrigée
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Current_Cumulative_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Current_Cumulative_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Current_Cumulative_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Current_Cumulative_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Current_Cumulative_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Current_Cumulative_Reader_Source.zip)
 
 ## Notes mathématiques — texte séparé
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Mathematical_Notes.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Mathematical_Notes.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_French_Mathematical_Notes_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Mathematical_Notes.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Mathematical_Notes.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_French_Mathematical_Notes_Source.zip)
 
 ## EGA IV, partie 1 — édition diplomatique
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV1_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV1_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV1_French_Diplomatic_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV1_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV1_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV1_French_Diplomatic_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 1 — édition corrigée
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV1_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV1_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV1_French_Current_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV1_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV1_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV1_French_Current_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 2 — édition diplomatique
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV2_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV2_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV2_French_Diplomatic_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV2_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV2_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV2_French_Diplomatic_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 2 — édition corrigée
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV2_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV2_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV2_French_Current_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV2_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV2_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV2_French_Current_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 3 — édition diplomatique
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV3_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV3_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV3_French_Diplomatic_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV3_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV3_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV3_French_Diplomatic_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 3 — édition corrigée
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV3_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV3_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV3_French_Current_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV3_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV3_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV3_French_Current_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 4 — édition diplomatique
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV4_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV4_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV4_French_Diplomatic_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV4_French_Diplomatic_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV4_French_Diplomatic_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV4_French_Diplomatic_Standalone_Reader_Source.zip)
 
 ## EGA IV, partie 4 — édition corrigée
 
-[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV4_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV4_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r19/EGA_IV4_French_Current_Standalone_Reader_Source.zip)
+[Lire le PDF](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV4_French_Current_Standalone_Reader.pdf) · [LaTeX](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV4_French_Current_Standalone_Reader.tex) · [Projet source ZIP](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-10-24-r20/EGA_IV4_French_Current_Standalone_Reader_Source.zip)
 
 ## Utiliser les éditions
 
