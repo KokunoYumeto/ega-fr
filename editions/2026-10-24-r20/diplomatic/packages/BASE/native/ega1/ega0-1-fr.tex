@@ -1,3 +1,11 @@
+\clearpage
+\oldpage[0\textsubscript{I}]{11}
+\begin{center}
+{\large CHAPITRE 0\par}
+\vspace{1.5em}
+{\Large\bfseries PRÉLIMINAIRES\par}
+\end{center}
+
 \section{Anneaux de fractions}
 \label{section:0.1-fr}
 
@@ -5,7 +13,6 @@
 \subsection{Anneaux et algèbres}
 \label{subsection:0.1.0-fr}
 
-\oldpage[0\textsubscript{I}]{11}
 \begin{env}[1.0.1]
 \label{0.1.0.1-fr}
 Tous les anneaux considérés dans ce Traité posséderont un \emph{élément unité};
@@ -83,14 +90,14 @@ Rappelons que le \emph{radical} $\mathfrak{R}(A)$ d'un anneau $A$ (non nécessai
 Le radical de $A/\mathfrak{R}(A)$ est $(0)$.
 \end{env}
 
+\oldpage[0\textsubscript{I}]{13}
 \subsection{Modules et anneaux de fractions}
 \label{subsection:0.1.2-fr}
 
-\oldpage[0\textsubscript{I}]{13}
 \begin{env}[1.2.1]
 \label{0.1.2.1-fr}
 On dit qu'une partie $S$ d'un anneau $A$ est \emph{multiplicative} si $1\in S$ et si le produit de deux éléments de $S$ est dans $S$.
-Les exemples qui seront les plus importants pour la suite sont~: $1^\circ$ l'ensemble $S_f$ des puissances $f^n$ ($n\geq 0$) d'un élément $f\in A$; $2^\circ$ le complémentaire $A-\mathfrak{p}$ d'un idéal \emph{premier} $\mathfrak{p}$ de $A$.
+Les exemples qui seront les plus importants pour la suite sont~: $1^\circ$ l'ensemble $S_f$ des puissances $f^n$ ($n\geq 0$) d'un élément $f\in A$; $2^\circ$ le complémentaire $A\setmin\mathfrak{p}$ d'un idéal \emph{premier} $\mathfrak{p}$ de $A$.
 \end{env}
 
 \begin{env}[1.2.2]
@@ -100,7 +107,7 @@ Soient $S$ une partie multiplicative d'un anneau $A$, $M$ un $A$-module; dans l'
   \text{<<~il existe $s\in S$ tel que $s(s_1m_2-s_2m_1)=0$~>>}
 \]
 est une relation d'équivalence.
-On désigne par $S^{-1}M$ l'ensemble quotient de $M\times S$ par cette relation, par $m/s$ l'image canonique dans $S^{-1}M$ du couple $(m,s)$; on appelle \emph{application canonique} de $M$ dans $S^{-1}M$ l'application $i_M^S:m\mapsto m/1$ (aussi notée $i^S$).
+On désigne par $S^{-1}M$ l'ensemble quotient de $M\times S$ par cette relation, par $m/s$ l'image canonique dans $S^{-1}M$ du couple $(m,s)$; on appelle application \emph{canonique} de $M$ dans $S^{-1}M$ l'application $i_M^S:m\to m/1$ (aussi notée $i^S$).
 Cette application n'est en général ni injective ni surjective; son noyau est l'ensemble des $m\in M$ tels qu'il existe un $s\in S$ pour lequel $sm=0$.
 
 Dans $S^{-1}M$ on définit une loi de groupe additif en prenant
@@ -119,21 +126,21 @@ Si $S_f=\{f^n\}_{n\geq 0}$ pour un $f\in A$, on écrit $A_f$ et $M_f$ au lieu de
 $A_f$ est isomorphe à l'algèbre quotient $A[T]/(fT-1)A[T]$.
 Lorsque $f=1$, $A_f$ et $M_f$ s'identifient canoniquement à $A$ et $M$; si $f$ est nilpotent, $A_f$ et $M_f$ sont réduits à $0$.
 
-Lorsque $S=A-\mathfrak{p}$, où $\mathfrak{p}$ est un idéal premier de $A$, on écrit $A_{\mathfrak{p}}$ et $M_{\mathfrak{p}}$ au lieu de $S^{-1}A$ et $S^{-1}M$; $A_{\mathfrak{p}}$ est un \emph{anneau local} dont l'idéal maximal $\mathfrak{q}$ est engendré par $i_A^S(\mathfrak{p})$, et on a $(i_A^S)^{-1}(\mathfrak{q})=\mathfrak{p}$; par passage aux quotients, $i_A^S$ donne un monomorphisme de l'anneau intègre $A/\mathfrak{p}$ dans le corps $A_{\mathfrak{p}}/\mathfrak{q}$, qui s'identifie au corps des fractions de $A/\mathfrak{p}$.
+Lorsque $S=A\setmin\mathfrak{p}$, où $\mathfrak{p}$ est un idéal premier de $A$, on écrit $A_{\mathfrak{p}}$ et $M_{\mathfrak{p}}$ au lieu de $S^{-1}A$ et $S^{-1}M$; $A_{\mathfrak{p}}$ est un \emph{anneau local} dont l'idéal maximal $\mathfrak{q}$ est engendré par $i_A^S(\mathfrak{p})$, et on a $(i_A^S)^{-1}(\mathfrak{q})=\mathfrak{p}$; par passage aux quotients, $i_A^S$ donne un monomorphisme de l'anneau intègre $A/\mathfrak{p}$ dans le corps $A_{\mathfrak{p}}/\mathfrak{q}$, qui s'identifie au corps des fractions de $A/\mathfrak{p}$.
 \end{env}
 
 \begin{env}[1.2.4]
 \label{0.1.2.4-fr}
 L'anneau de fractions $S^{-1}A$ et l'homomorphisme canonique $i_A^S$ sont solution d'un \emph{problème d'application universelle}~: tout homomorphisme $u$ de $A$ dans un anneau $B$ tel que $u(S)$ se compose d'éléments \emph{inversibles} dans $B$ se factorise d'une seule manière
 \[
-  u:A\xrightarrow{i_A^S}S^{-1}A\xrightarrow{u^*}B
+  u:A\xrightarrow[i_A^S]{}S^{-1}A\xrightarrow[u^*]{}B
 \]
 
 \oldpage[0\textsubscript{I}]{14}
 où $u^*$ est un homomorphisme d'anneaux.
 Sous les mêmes hypothèses, soient $M$ un $A$-module, $N$ un $B$-module, $v:M\to N$ un homomorphisme de $A$-modules (pour la structure de $B$-module sur $N$ définie par $u:A\to B$); alors $v$ se factorise d'une seule manière
 \[
-  v:M\xrightarrow{i_M^S}S^{-1}M\xrightarrow{v^*}N
+  v:M\xrightarrow[i_M^S]{}S^{-1}M\xrightarrow[v^*]{}N
 \]
 où $v^*$ est un homomorphisme de $S^{-1}A$-modules (pour la structure de $S^{-1}A$-module sur $N$ définie par $u^*$).
 \end{env}
@@ -146,7 +153,7 @@ On définit un isomorphisme canonique $S^{-1}A\otimes_A M\xrightarrow{\sim}S^{-1
 \begin{env}[1.2.6]
 \label{0.1.2.6-fr}
 Pour tout idéal $\mathfrak{a}'$ de $S^{-1}A$, $\mathfrak{a}=(i_A^S)^{-1}(\mathfrak{a}')$ est un idéal de $A$, et $\mathfrak{a}'$ est l'idéal de $S^{-1}A$ engendré par $i_A^S(\mathfrak{a})$, qui s'identifie à $S^{-1}\mathfrak{a}$ (1.3.2).
-L'application $\mathfrak{p}'\mapsto(i_A^S)^{-1}(\mathfrak{p}')$ est un isomorphisme, pour la structure d'ordre, de l'ensemble des idéaux \emph{premiers} de $S^{-1}A$ sur l'ensemble des idéaux premiers $\mathfrak{p}$ de $A$ tels que $\mathfrak{p}\cap S=\varnothing$.
+L'application $\mathfrak{p}'\to(i_A^S)^{-1}(\mathfrak{p}')$ est un isomorphisme, pour la structure d'ordre, de l'ensemble des idéaux \emph{premiers} de $S^{-1}A$ sur l'ensemble des idéaux premiers $\mathfrak{p}$ de $A$ tels que $\mathfrak{p}\cap S=\varnothing$.
 En outre, les anneaux locaux $A_{\mathfrak{p}}$ et $(S^{-1}A)_{S^{-1}\mathfrak{p}}$ sont alors canoniquement (1.5.1) isomorphes.
 \end{env}
 
@@ -181,6 +188,7 @@ est exacte, il en est de même de la suite
 \[
   S^{-1}M\xrightarrow{S^{-1}u}S^{-1}N\xrightarrow{S^{-1}v}S^{-1}P.
 \]
+
 En particulier, si $u:M\to N$ est injectif (resp. surjectif), il en est de même de $S^{-1}u$;
 
 \oldpage[0\textsubscript{I}]{15}
@@ -197,7 +205,7 @@ si $N$ et $P$ sont deux sous-modules de $M$, $S^{-1}N$ et $S^{-1}P$ s'identifien
 Soit $(M_\alpha,\varphi_{\beta\alpha})$ un système inductif de $A$-modules; alors $(S^{-1}M_\alpha,S^{-1}\varphi_{\beta\alpha})$ est un système inductif de $S^{-1}A$-modules.
 Exprimant les $S^{-1}M_\alpha$ et $S^{-1}\varphi_{\beta\alpha}$ comme des produits tensoriels (1.2.5 et 1.3.1), il résulte de la permutabilité des opérations de produit tensoriel et de limite inductive, que l'on a un isomorphisme canonique
 \[
-  S^{-1}\varinjlim M_\alpha\xrightarrow{\sim}\varinjlim S^{-1}M_\alpha,
+  S^{-1}\varinjlim M_\alpha\xrightarrow{\sim}\varinjlim S^{-1}M_\alpha
 \]
 ce qu'on exprime encore en disant que le foncteur $S^{-1}M$ (en $M$) \emph{commute avec les limites inductives}.
 \end{env}
@@ -221,7 +229,7 @@ On a de même un homomorphisme \emph{fonctoriel} (en $M$ et $N$)
   \longrightarrow
   \operatorname{Hom}_{S^{-1}A}(S^{-1}M,S^{-1}N)
 \]
-qui, à $u/s$, fait correspondre l'homomorphisme $m/t\mapsto u(m)/st$.
+qui, à $u/s$, fait correspondre l'homomorphisme $m/t\to u(m)/st$.
 Lorsque $M$ a une \emph{présentation finie}, l'homomorphisme précédent est un \emph{isomorphisme}~: c'est immédiat lorsque $M$ est de la forme $A^r$, et on passe de là au cas général en partant de la suite exacte $A^p\to A^q\to M\to 0$, et en utilisant l'exactitude du foncteur $S^{-1}M$ et l'exactitude à gauche du foncteur $\operatorname{Hom}_A(M,N)$ en $M$.
 On notera que ce cas se présente toujours lorsque $A$ est \emph{noethérien} et le $A$-module $M$ \emph{de type fini}.
 \end{env}
@@ -231,14 +239,8 @@ On notera que ce cas se présente toujours lorsque $A$ est \emph{noethérien} et
 
 \begin{env}[1.4.1]
 \label{0.1.4.1-fr}
-Soient $S$, $T$ deux parties multiplicatives d'un anneau $A$ telles que $S\subset T$; il existe un homomorphisme canonique $\rho_A^{T,S}$ (ou simplement $\rho^{T,S}$) de $S^{-1}A$ dans $T^{-1}A$, faisant correspondre à l'élément noté $a/s$ de $S^{-1}A$ l'élément noté $a/s$ dans $T^{-1}A$; on a
-\[
-  i_A^T=\rho_A^{T,S}\circ i_A^S.
-\]
-Pour tout $A$-module $M$, il existe de même une application $S^{-1}A$-linéaire de $S^{-1}M$ dans $T^{-1}M$ (ce dernier étant considéré comme $S^{-1}A$-module grâce à l'homomorphisme $\rho_A^{T,S}$), qui fait correspondre à l'élément $m/s$ de $S^{-1}M$ l'élément $m/s$ de $T^{-1}M$; on note cette application $\rho_M^{T,S}$, ou simplement $\rho^{T,S}$, et on a encore
-\[
-  i_M^T=\rho_M^{T,S}\circ i_M^S;
-\]
+Soient $S$, $T$ deux parties multiplicatives d'un anneau $A$ telles que $S\subset T$; il existe un homomorphisme canonique $\rho_A^{T,S}$ (ou simplement $\rho^{T,S}$) de $S^{-1}A$ dans $T^{-1}A$, faisant correspondre à l'élément noté $a/s$ de $S^{-1}A$ l'élément noté $a/s$ dans $T^{-1}A$; on a $i_A^T=\rho_A^{T,S}\circ i_A^S$.
+Pour tout $A$-module $M$, il existe de même une application $S^{-1}A$-linéaire de $S^{-1}M$ dans $T^{-1}M$ (ce dernier étant considéré comme $S^{-1}A$-module grâce à l'homomorphisme $\rho_A^{T,S}$), qui fait correspondre à l'élément $m/s$ de $S^{-1}M$ l'élément $m/s$ de $T^{-1}M$; on note cette application $\rho_M^{T,S}$, ou simplement $\rho^{T,S}$, et on a encore $i_M^T=\rho_M^{T,S}\circ i_M^S$;
 dans l'identification canonique (1.2.5), $\rho_M^{T,S}$ s'identifie à $\rho_A^{T,S}\otimes 1$.
 L'homomorphisme $\rho_M^{T,S}$ est un \emph{morphisme fonctoriel} (ou transformation naturelle) du foncteur $S^{-1}M$ dans le foncteur $T^{-1}M$, autrement dit, le diagramme
 \[
@@ -247,7 +249,6 @@ S^{-1}M \arrow[r,"S^{-1}u"] \arrow[d,"\rho_M^{T,S}"'] & S^{-1}N \arrow[d,"\rho_N
 T^{-1}M \arrow[r,"T^{-1}u"] & T^{-1}N
 \end{tikzcd}
 \]
-
 \oldpage[0\textsubscript{I}]{16}
 est commutatif, pour tout homomorphisme $u:M\to N$; on notera en outre que $T^{-1}u$ est entièrement déterminé par $S^{-1}u$, car pour $m\in M$ et $t\in T$, on a
 \[
@@ -295,9 +296,7 @@ Si $S$, $T$, $U$ sont trois parties multiplicatives de $A$ telles que $S\subset 
 \begin{env}[1.4.5]
 \label{0.1.4.5-fr}
 Considérons une \emph{famille filtrante croissante} $(S_\alpha)$ de parties multiplicatives de $A$ (on écrira $\alpha\leq\beta$ pour $S_\alpha\subset S_\beta$), et soit $S$ la partie multiplicative $\bigcup_\alpha S_\alpha$; posons
-\[
-  \rho_{\beta\alpha}=\rho_A^{S_\beta,S_\alpha}\quad\text{pour }\alpha\leq\beta;
-\]
+$\rho_{\beta\alpha}=\rho_A^{S_\beta,S_\alpha}$ pour $\alpha\leq\beta$;
 en vertu de (1.4.4), les homomorphismes $\rho_{\beta\alpha}$ définissent un anneau $A'$ \emph{limite inductive} du système inductif d'anneaux $(S_\alpha^{-1}A,\rho_{\beta\alpha})$.
 Soit $\rho_\alpha$ l'application canonique $S_\alpha^{-1}A\to A'$, et posons $\varphi_\alpha=\rho_A^{S,S_\alpha}$; comme $\varphi_\alpha=\varphi_\beta\circ\rho_{\beta\alpha}$ pour $\alpha\leq\beta$ d'après (1.4.4), on peut définir de façon unique un homomorphisme $\varphi:A'\to S^{-1}A$ tel que le diagramme
 \[
@@ -324,7 +323,7 @@ On traite de même le cas d'un $A$-module $M$, et on a ainsi défini des isomorp
   \varinjlim S_\alpha^{-1}M\xrightarrow{\sim}
   (\varinjlim S_\alpha)^{-1}M,
 \]
-le second étant \emph{fonctoriel en $M$}.
+le second étant \emph{fonctoriel} en $M$.
 \end{env}
 
 \oldpage[0\textsubscript{I}]{17}
@@ -345,13 +344,9 @@ qui fait correspondre à $(m/s_1)/(s_2/1)$ l'élément $m/(s_1s_2)$.
 \begin{env}[1.5.1]
 \label{0.1.5.1-fr}
 Soient $A$, $A'$ deux anneaux, $\varphi$ un homomorphisme $A'\to A$, $S$ (resp. $S'$) une partie multiplicative de $A$ (resp. $A'$), telle que $\varphi(S')\subset S$; l'homomorphisme composé
-\[
-  A'\xrightarrow{\varphi}A\longrightarrow S^{-1}A
-\]
+$A'\xrightarrow{\varphi}A\longrightarrow S^{-1}A$
 se factorise en
-\[
-  A'\longrightarrow S'^{-1}A'\xrightarrow{\varphi^{S'}}S^{-1}A
-\]
+$A'\longrightarrow S'^{-1}A'\xrightarrow{\varphi^{S'}}S^{-1}A$
 en vertu de (1.2.4); on a $\varphi^{S'}(a'/s')=\varphi(a')/\varphi(s')$.
 Si $A=\varphi(A')$ et $S=\varphi(S')$, $\varphi^{S'}$ est \emph{surjective}.
 Si $A'=A$ et si $\varphi$ est l'identité, $\varphi^{S'}$ n'est autre que l'homomorphisme $\rho_A^{S,S'}$ défini en (1.4.1).
@@ -366,13 +361,11 @@ Il existe un homomorphisme canonique fonctoriel
   (S^{-1}M)_{[\varphi^{S'}]}
 \]
 de $S'^{-1}A'$-modules, faisant correspondre à tout élément $m/s'$ de $S'^{-1}(M_{[\varphi]})$ l'élément $m/\varphi(s')$ de $(S^{-1}M)_{[\varphi^{S'}]}$; on vérifie en effet immédiatement que cette définition ne dépend pas de l'expression $m/s'$ de l'élément considéré.
-Lorsque $S=\varphi(S')$, l'homomorphisme $\sigma$ est \emph{bijectif}.
+\emph{Lorsque} $S=\varphi(S')$, l'homomorphisme $\sigma$ est \emph{bijectif}.
 Lorsque $A'=A$ et que $\varphi$ est l'identité, $\sigma$ n'est autre que l'homomorphisme $\rho_M^{S,S'}$ défini en (1.4.1).
 
 Lorsqu'on prend en particulier $M=A$, l'homomorphisme $\varphi$ définit sur $A$ une structure de $A'$-algèbre; $S'^{-1}(A_{[\varphi]})$ est alors muni d'une structure d'anneau, pour laquelle il s'identifie à $(\varphi(S'))^{-1}A$, et l'homomorphisme
-\[
-  \sigma:S'^{-1}(A_{[\varphi]})\longrightarrow S^{-1}A
-\]
+$\sigma:S'^{-1}(A_{[\varphi]})\longrightarrow S^{-1}A$
 est un homomorphisme de $S'^{-1}A'$-algèbres.
 \end{env}
 
@@ -397,9 +390,7 @@ qui est un isomorphisme lorsque $\varphi(S')=S$ et que $M$ admet une présentati
 \begin{env}[1.5.4]
 \label{0.1.5.4-fr}
 Considérons maintenant un $A'$-module $N'$, et formons le produit tensoriel $N'\otimes_{A'}A_{[\varphi]}$, qui peut être considéré comme un $A$-module en posant
-\[
-  a.(n'\otimes b)=n'\otimes(ab).
-\]
+$a.(n'\otimes b)=n'\otimes(ab)$.
 Il existe un isomorphisme fonctoriel de $S^{-1}A$-modules
 \[
   \tau:(S'^{-1}N')\otimes_{S'^{-1}A'}(S^{-1}A)_{[\varphi^{S'}]}
@@ -416,7 +407,7 @@ l'élément $(n'/1)\otimes(a/s)$: on utilise le fait que
 $S^{-1}(N'\otimes_{A'}A_{[\varphi]})$ est canoniquement isomorphe à
 $(N'\otimes_{A'}A_{[\varphi]})\otimes_A S^{-1}A$ (1.2.5), donc aussi à
 $N'\otimes_{A'}(S^{-1}A)_{[\psi]}$, en désignant par $\psi$ l'homomorphisme
-composé $a'\mapsto\varphi(a')/1$ de $A'$ dans $S^{-1}A$.
+composé $a'\to\varphi(a')/1$ de $A'$ dans $S^{-1}A$.
 \end{env}
 
 \begin{env}[1.5.5]
@@ -486,6 +477,7 @@ $\varphi'(S'')\subset S'$. Posons $\varphi''=\varphi\circ\varphi'$; alors on a
 \[
   \varphi''^{S''}=\varphi^{S'}\circ\varphi'^{S''}.
 \]
+
 Soit $M$ un $A$-module; on a évidemment
 $M_{[\varphi'']}=(M_{[\varphi]})_{[\varphi']}$; si $\sigma'$ et $\sigma''$ sont
 les homomorphismes définis à partir de $\varphi'$ et $\varphi''$ comme $\sigma$
@@ -493,22 +485,14 @@ est défini dans (1.5.2) à partir de $\varphi$, on a la formule de transitivit�
 \[
   \sigma''=\sigma\circ\sigma'.
 \]
+
 Enfin, soit $N''$ un $A''$-module; le $A$-module
 $N''\otimes_{A''}A_{[\varphi'']}$ s'identifie canoniquement à
-\[
-  (N''\otimes_{A''}A'_{[\varphi']})\otimes_{A'}A_{[\varphi]},
-\]
+$(N''\otimes_{A''}A'_{[\varphi']})\otimes_{A'}A_{[\varphi]}$,
 et de même, le $S^{-1}A$-module
-\[
-  (S''^{-1}N'')\otimes_{S''^{-1}A''}
-  (S^{-1}A)_{[\varphi''^{S''}]}
-\]
+$(S''^{-1}N'')\otimes_{S''^{-1}A''}(S^{-1}A)_{[\varphi''^{S''}]}$
 s'identifie canoniquement à
-\[
-  \bigl((S''^{-1}N'')\otimes_{S''^{-1}A''}
-  (S'^{-1}A')_{[\varphi'^{S''}]}\bigr)
-  \otimes_{S'^{-1}A'}(S^{-1}A)_{[\varphi^{S'}]}.
-\]
+$((S''^{-1}N'')\otimes_{S''^{-1}A''}(S'^{-1}A')_{[\varphi'^{S''}]})\otimes_{S'^{-1}A'}(S^{-1}A)_{[\varphi^{S'}]}$.
 Avec ces identifications, si $\tau'$ et $\tau''$ sont les isomorphismes définis
 à partir de $\varphi'$ et $\varphi''$ comme $\tau$ est défini dans (1.5.4) à
 partir de $\varphi$, on a la formule de transitivité
@@ -523,7 +507,7 @@ Soit $A$ un sous-anneau d'un anneau $B$; pour tout idéal premier
 \emph{minimal} $\mathfrak p$ de $A$, il existe un idéal premier minimal
 $\mathfrak q$ de $B$ tel que $\mathfrak p=A\cap\mathfrak q$. En effet,
 $A_{\mathfrak p}$ est un sous-anneau de $B_{\mathfrak p}$ (1.3.2) et possède
-un seul idéal premier $\mathfrak p'$ (1.2.6); comme $B_{\mathfrak p}$ n'est pas
+\emph{un seul} idéal premier $\mathfrak p'$ (1.2.6); comme $B_{\mathfrak p}$ n'est pas
 réduit à $0$, il possède au moins un idéal premier $\mathfrak q'$ et on a
 nécessairement $\mathfrak q'\cap A_{\mathfrak p}=\mathfrak p'$; l'idéal premier
 $\mathfrak q_1$ de $B$, image réciproque de $\mathfrak q'$ est donc tel que
@@ -539,12 +523,12 @@ de $B$ contenu dans $\mathfrak q_1$.
 \label{0.1.6.1-fr}
 Soient $M$ un $A$-module, $f$ un élément de $A$. Considérons une suite
 $(M_n)$ de $A$-modules, tous identiques à $M$, et pour tout couple d'entiers
-$m\leq n$, soit $\varphi_{nm}$ l'homomorphisme $z\mapsto f^{n-m}z$ de $M_m$
+$m\leq n$, soit $\varphi_{nm}$ l'homomorphisme $z\to f^{n-m}z$ de $M_m$
 dans $M_n$; il est immédiat que $((M_n),(\varphi_{nm}))$ est un \emph{système
 inductif} de $A$-modules; soit $N=\varinjlim M_n$ la limite inductive de ce
 système. Nous allons définir un $A$-isomorphisme canonique \emph{fonctoriel} de
 $N$ sur $M_f$. Pour cela, remarquons que, pour tout $n$,
-$\theta_n:z\mapsto z/f^n$ est un $A$-homomorphisme de $M=M_n$ dans $M_f$, et
+$\theta_n:z\to z/f^n$ est un $A$-homomorphisme de $M=M_{\imath}$ dans $M_f$, et
 il résulte des définitions que l'on a $\theta_n\circ\varphi_{nm}=\theta_m$ pour
 $m\leq n$. Il existe donc un $A$-homomorphisme $\theta:N\to M_f$ tel que, si
 $\varphi_n$ désigne l'homomorphisme canonique $M_n\to N$, on ait
@@ -564,9 +548,7 @@ $f^n$ divise $f^ng^n$, on a un homomorphisme fonctoriel
 \[
   \rho_{fg,f}:M_f\longrightarrow M_{fg}\qquad\text{(1.4.1 et 1.4.3)};
 \]
-
 \oldpage[0\textsubscript{I}]{20}
-
 si on identifie $M_f$ et $M_{fg}$ à $\varinjlim M_{f,n}$ et
 $\varinjlim M_{fg,n}$ respectivement, $\rho_{fg,f}$ s'identifie à la
 \emph{limite inductive} des applications
@@ -578,7 +560,7 @@ commutativité du diagramme
 M_{f,n} \arrow[r,"\rho_{fg,f}^n"] \arrow[d,"\varphi_n^f"']
   & M_{fg,n} \arrow[d,"\varphi_n^{fg}"] \\
 M_f \arrow[r,"\rho_{fg,f}"]
-  & M_{fg}.
+  & M_{fg}
 \end{tikzcd}
 \]
 \end{env}
@@ -613,9 +595,7 @@ $N_{\mathfrak p}=P_{\mathfrak p}=0$.
 Si $M$ est somme d'une famille $(M_\lambda)$ de sous-modules,
 $M_{\mathfrak p}$ est somme des $(M_\lambda)_{\mathfrak p}$ pour tout idéal
 premier $\mathfrak p$ de $A$ (1.3.3 et 1.3.2), donc
-\[
-  \operatorname{Supp}(M)=\bigcup_\lambda\operatorname{Supp}(M_\lambda).
-\]
+$\operatorname{Supp}(M)=\bigcup_\lambda\operatorname{Supp}(M_\lambda)$.
 \end{env}
 
 \begin{env}[1.7.4]
@@ -648,10 +628,7 @@ $P\otimes_B Q\neq0$. Soit $\mathfrak m$ l'idéal maximal de $B$. En vertu du
 lemme de Nakayama, les espaces vectoriels $P/\mathfrak mP$ et
 $Q/\mathfrak mQ$ ne sont pas réduits à $0$, donc il en est de même de leur
 produit tensoriel
-\[
-  (P/\mathfrak mP)\otimes_{B/\mathfrak m}(Q/\mathfrak mQ)
-  =(P\otimes_B Q)\otimes_B(B/\mathfrak m),
-\]
+$(P/\mathfrak mP)\otimes_{B/\mathfrak m}(Q/\mathfrak mQ)=(P\otimes_B Q)\otimes_B(B/\mathfrak m)$,
 d'où la conclusion.
 
 En particulier, si $M$ est un $A$-module de type fini, $\mathfrak a$ un idéal
@@ -706,13 +683,13 @@ vérifiant l'axiome de séparation~:
 un ensemble ouvert contenant l'un des points $x$, $y$ et non l'autre.
 
 Si un espace de Kolmogoroff irréductible admet un point générique, il n'en
-admet \emph{qu'un seul} puisqu'un ouvert non vide contient tout point
+admet qu'\emph{un seul} puisqu'un ouvert non vide contient tout point
 générique.
 
 Rappelons qu'un espace topologique $X$ est dit \emph{quasi-compact} si, de tout
 recouvrement ouvert de $X$, on peut extraire un recouvrement fini de $X$ (ou,
 ce qui revient au même, si toute famille filtrante décroissante d'ensembles
-fermés non vides a une intersection non vide). Si $X$ est un espace
+fermés non vides a une inter-section non vide). Si $X$ est un espace
 quasi-compact, toute partie fermée non vide $A$ de $X$ contient un ensemble
 fermé non vide \emph{minimal} $M$, car l'ensemble des parties fermées non vides
 de $A$ est inductif pour la relation $\supset$; si en outre $X$ est un espace
@@ -789,7 +766,7 @@ fermée irréductible de $X$, $Z$ est réunion des $Z\cap Y_i$, d'où on tire
 aussitôt que $Z$ doit être contenu dans un des $Y_i$. Soit $Y$ un sous-espace
 d'un espace topologique $X$, et supposons que $Y$ n'ait qu'un nombre fini de
 composantes irréductibles $Y_i$ ($1\leq i\leq n$); alors les adhérences
-$\overline{Y_i}$ dans $X$ sont les composantes irréductibles de $\overline Y$.
+$\overline{Y}_i$ dans $X$ sont les composantes irréductibles de $\overline Y$.
 \end{env}
 
 \begin{env}[2.1.8]
@@ -808,7 +785,7 @@ contenue dans une composante irréductible de $X$, on voit que si toute
 composante irréductible $Z$ de $X$ rencontrant $f^{-1}(y)$ admet un point
 générique, alors il y a \emph{correspondance biunivoque} entre l'ensemble de
 ces composantes et l'ensemble des composantes irréductibles
-$Z\cap f^{-1}(y)$ de $f^{-1}(y)$, les points génériques de $Z$ étant
+$Z\cap f^{-1}(Y)$ de $f^{-1}(y)$, les points génériques de $Z$ étant
 identiques à ceux de $Z\cap f^{-1}(y)$.
 \end{env}
 
@@ -829,12 +806,12 @@ voisinage qui est un sous-espace noethérien.
 \begin{env}[2.2.2]
 \label{0.2.2.2-fr}
 Soit $E$ un ensemble ordonné vérifiant la condition \emph{minimale}, et soit
-$P$ une propriété des éléments de $E$ soumise à la condition suivante~: si
-$a\in E$ est tel que pour tout $x<a$, $P(x)$ soit vraie, alors $P(a)$ est
-vraie. Dans ces conditions, \emph{$P(x)$ est vraie pour tout $x\in E$}
+$\boldsymbol{P}$ une propriété des éléments de $E$ soumise à la condition suivante~: si
+$a\in E$ est tel que pour tout $x<a$, $\boldsymbol{P}(x)$ soit vraie, alors $\boldsymbol{P}(a)$ est
+vraie. Dans ces conditions, \emph{$\boldsymbol{P}(x)$ est vraie pour tout $x\in E$}
 («~principe de récurrence noethérienne~»). En effet, soit $F$ l'ensemble des
-$x\in E$ pour lesquels $P(x)$ est fausse~; si $F$ était non vide, il aurait un
-élément minimal $a$, et comme alors $P(x)$ est vraie pour tout $x<a$, $P(a)$
+$x\in E$ pour lesquels $\boldsymbol{P}(x)$ est fausse~; si $F$ était non vide, il aurait un
+élément minimal $a$, et comme alors $\boldsymbol{P}(x)$ est vraie pour tout $x<a$, $\boldsymbol{P}(a)$
 serait aussi vraie, ce qui est contradictoire.
 
 Nous appliquerons en particulier ce principe lorsque $E$ est un \emph{ensemble
@@ -867,15 +844,15 @@ irréductibles, comme on le voit par récurrence noethérienne.
 
 \begin{env}[3.1.1]
 \label{0.3.1.1-fr}
-Soient $\mathbf{K}$ une catégorie, $(A_\alpha)_{\alpha\in I}$,
+Soient $\boldsymbol{K}$ une catégorie, $(A_\alpha)_{\alpha\in I}$,
 $(A_{\alpha\beta})_{(\alpha,\beta)\in I\times I}$ deux familles d'objets de
-$\mathbf{K}$ telles que $A_{\beta\alpha}=A_{\alpha\beta}$,
+$\boldsymbol{K}$ telles que $A_{\beta\alpha}=A_{\alpha\beta}$,
 $(\rho_{\alpha\beta})_{(\alpha,\beta)\in I\times I}$ une famille de morphismes
 $\rho_{\alpha\beta}:A_\alpha\to A_{\alpha\beta}$. Nous dirons qu'un couple
-formé d'un objet $A$ de $\mathbf{K}$ et d'une famille de morphismes
+formé d'un objet $A$ de $\boldsymbol{K}$ et d'une famille de morphismes
 $\rho_\alpha:A\to A_\alpha$ est \emph{solution du problème universel} défini
 par la donnée des familles $(A_\alpha)$, $(A_{\alpha\beta})$ et
-$(\rho_{\alpha\beta})$ si, pour tout objet $B$ de $\mathbf{K}$, l'application
+$(\rho_{\alpha\beta})$ si, pour tout objet $B$ de $\boldsymbol{K}$, l'application
 qui, à tout $f\in\operatorname{Hom}(B,A)$ fait correspondre la famille
 $(\rho_\alpha\circ f)\in\prod_\alpha\operatorname{Hom}(B,A_\alpha)$ est une
 \emph{bijection} de $\operatorname{Hom}(B,A)$ sur l'ensemble des $(f_\alpha)$
@@ -889,15 +866,15 @@ solution, elle est unique à un isomorphisme près.
 \label{0.3.1.2-fr}
 Nous ne rappellerons pas la définition d'un \emph{préfaisceau}
 $U\to\mathcal{F}(U)$ sur un espace topologique $X$, à valeurs dans une
-catégorie $\mathbf{K}$ (G, I, 1.9)~; nous dirons qu'un tel préfaisceau est un
-\emph{faisceau à valeurs dans $\mathbf{K}$} s'il satisfait à l'axiome
+catégorie $\boldsymbol{K}$ (G, I, 1.9)~; nous dirons qu'un tel préfaisceau est un
+\emph{faisceau à valeurs dans $\boldsymbol{K}$} s'il satisfait à l'axiome
 suivant~:
 
 \smallskip
 \noindent
 \textup{(F)} \emph{Pour tout recouvrement $(U_\alpha)$ d'un ouvert $U$ de $X$
 par des ouverts $U_\alpha$ contenus dans $U$, si on désigne par $\rho_\alpha$
-(resp. $\rho_{\alpha\beta}$) le morphisme de restriction}
+\textup{(resp. $\rho_{\alpha\beta}$)} le morphisme de restriction}
 \[
   \mathcal{F}(U)\to\mathcal{F}(U_\alpha)
   \qquad
@@ -909,64 +886,64 @@ par des ouverts $U_\alpha$ contenus dans $U$, si on désigne par $\rho_\alpha$
 
 \emph{le couple formé de $\mathcal{F}(U)$ et de la famille $(\rho_\alpha)$ est
 solution du problème universel pour $(\mathcal{F}(U_\alpha))$,
-$(\mathcal{F}(U_\alpha\cap U_\beta))$ et $(\rho_{\alpha\beta})$ (3.1.1)}%
+$(\mathcal{F}(U_\alpha\cap U_\beta))$ et $(\rho_{\alpha\beta})$ \textup{(3.1.1)}}%
 \footnote{C'est un cas particulier de la notion générale de \emph{limite
 projective} (non filtrante) (\emph{voir} (T, I, 1.8) et le livre en préparation
 annoncé dans l'Introduction).}.
 
-Il revient au même de dire que, pour tout objet $T$ de $\mathbf{K}$, la
+Il revient au même de dire que, pour tout objet $T$ de $\boldsymbol{K}$, la
 famille $U\to\operatorname{Hom}(T,\mathcal{F}(U))$ est un \emph{faisceau
 d'ensembles}.
 \end{env}
 
 \begin{env}[3.1.3]
 \label{0.3.1.3-fr}
-Supposons que $\mathbf{K}$ soit la catégorie définie par une «~espèce de
-structure avec morphismes~» $\Sigma$, les objets de $\mathbf{K}$ étant donc
+Supposons que $\boldsymbol{K}$ soit la catégorie définie par une «~espèce de
+structure avec morphismes~» $\Sigma$, les objets de $\boldsymbol{K}$ étant donc
 les ensembles munis de structures d'espèce $\Sigma$ et les morphismes ceux de
-$\Sigma$. Supposons que la catégorie $\mathbf{K}$ vérifie en outre la
+$\Sigma$. Supposons que la catégorie $\boldsymbol{K}$ vérifie en outre la
 condition suivante~:
 
 \smallskip
 \noindent
 \textup{(E)} Si $(A,(\rho_\alpha))$ est solution d'un problème d'application
-universelle \emph{dans la catégorie $\mathbf{K}$} pour des familles
+universelle \emph{dans la catégorie $\boldsymbol{K}$} pour des familles
 $(A_\alpha)$, $(A_{\alpha\beta})$, $(\rho_{\alpha\beta})$, alors c'est aussi
 une solution du problème d'application universelle pour les mêmes familles
 \emph{dans la catégorie des ensembles} (c'est-à-dire quand on considère $A$,
 les $A_\alpha$ et $A_{\alpha\beta}$ comme des ensembles, les $\rho_\alpha$ et
 $\rho_{\alpha\beta}$ comme des applications)%
 \footnote{On peut prouver que cela signifie aussi que le foncteur canonique
-$\mathbf{K}\to(\mathrm{Ens})$ \emph{permute aux limites projectives} (non
+$\boldsymbol{K}\to(\mathrm{Ens})$ \emph{permute aux limites projectives} (non
 nécessairement filtrantes).}.
 
 Dans ces conditions, la condition (F) entraîne que, considéré comme
-préfaisceau \emph{d'ensembles}, $U\to\mathcal{F}(U)$ est un \emph{faisceau}.
+préfaisceau d'\emph{ensembles}, $U\to\mathcal{F}(U)$ est un \emph{faisceau}.
 En outre, pour qu'une application $u:T\to\mathcal{F}(U)$ soit un morphisme de
-$\mathbf{K}$, il faut et il suffit, en vertu de (F), que chaque application
+$\boldsymbol{K}$, il faut et il suffit, en vertu de (F), que chaque application
 $\rho_\alpha\circ u$ soit un morphisme $T\to\mathcal{F}(U_\alpha)$, ce qui
 signifie que la structure d'espèce $\Sigma$ sur $\mathcal{F}(U)$ est
 \emph{structure initiale} pour les morphismes $\rho_\alpha$. Réciproquement,
 supposons qu'un préfaisceau $U\to\mathcal{F}(U)$ sur $X$, à valeurs dans
-$\mathbf{K}$, soit un \emph{faisceau d'ensembles}, et vérifie la condition
+$\boldsymbol{K}$, soit un \emph{faisceau d'ensembles}, et vérifie la condition
 précédente~; il est clair alors qu'il satisfait à (F), donc est un
-\emph{faisceau à valeurs dans $\mathbf{K}$}.
+\emph{faisceau à valeurs dans $\boldsymbol{K}$}.
 \end{env}
 
 \begin{env}[3.1.4]
 \label{0.3.1.4-fr}
 Lorsque $\Sigma$ est l'espèce de structure de groupe ou d'anneau, le fait que
-le préfaisceau $U\to\mathcal{F}(U)$ à valeurs dans $\mathbf{K}$ est un
-\emph{faisceau d'ensembles} entraîne \emph{ipso facto} que c'est un
-\emph{faisceau à valeurs dans $\mathbf{K}$} (autrement dit, un faisceau de
+le préfaisceau $U\to\mathcal{F}(U)$ à valeurs dans $\boldsymbol{K}$ est un
+faisceau d'\emph{ensembles} entraîne \emph{ipso facto} que c'est un
+faisceau \emph{à valeurs dans $\boldsymbol{K}$} (autrement dit, un faisceau de
 groupes ou d'anneaux au sens de (G))%
-\footnote{Cela tient à ce que dans la catégorie $\mathbf{K}$, tout morphisme
+\footnote{Cela tient à ce que dans la catégorie $\boldsymbol{K}$, tout morphisme
 qui est une \emph{bijection} (en tant qu'application d'ensembles) est un
-\emph{isomorphisme}. Cela n'est plus vrai lorsque $\mathbf{K}$ est la
+\emph{isomorphisme}. Cela n'est plus vrai lorsque $\boldsymbol{K}$ est la
 catégorie des espaces topologiques, par exemple.}. Mais il n'en est plus de
-même lorsque par exemple $\mathbf{K}$ est la catégorie des \emph{anneaux
+même lorsque par exemple $\boldsymbol{K}$ est la catégorie des \emph{anneaux
 topologiques} (avec pour morphismes les représentations continues)~: un
-faisceau à valeurs dans $\mathbf{K}$ est un faisceau d'anneaux
+faisceau à valeurs dans $\boldsymbol{K}$ est un faisceau d'anneaux
 $U\to\mathcal{F}(U)$ tel que, pour tout ouvert $U$ et tout recouvrement de $U$
 par des ouverts $U_\alpha\subset U$, la topologie de l'anneau $\mathcal{F}(U)$
 soit \emph{la moins fine} rendant continues les représentations
@@ -988,37 +965,37 @@ topologiques.
 
 \begin{env}[3.1.5]
 \label{0.3.1.5-fr}
-Il est clair que pour toute catégorie $\mathbf{K}$, si $\mathcal{F}$ est un
-préfaisceau (resp. un faisceau) sur $X$ à valeurs dans $\mathbf{K}$ et $U$ un
+Il est clair que pour toute catégorie $\boldsymbol{K}$, si $\mathcal{F}$ est un
+préfaisceau (resp. un faisceau) sur $X$ à valeurs dans $\boldsymbol{K}$ et $U$ un
 ouvert de $X$, les $\mathcal{F}(V)$ pour les ouverts $V\subset U$ constituent
-un préfaisceau (resp. un faisceau) à valeurs dans $\mathbf{K}$, que l'on
+un préfaisceau (resp. un faisceau) à valeurs dans $\boldsymbol{K}$, que l'on
 appelle préfaisceau (resp. faisceau) \emph{induit} par $\mathcal{F}$ sur $U$ et
 que l'on note $\mathcal{F}|U$.
 
 Pour tout morphisme $u:\mathcal{F}\to\mathcal{G}$ de préfaisceaux sur $X$ à
-valeurs dans $\mathbf{K}$, on désignera par $u|U$ le morphisme
+valeurs dans $\boldsymbol{K}$, on désignera par $u|U$ le morphisme
 $\mathcal{F}|U\to\mathcal{G}|U$ formé des $u_V$ pour $V\subset U$.
 \end{env}
 
 \begin{env}[3.1.6]
 \label{0.3.1.6-fr}
-Supposons maintenant que la catégorie $\mathbf{K}$ admette des \emph{limites
+Supposons maintenant que la catégorie $\boldsymbol{K}$ admette des \emph{limites
 inductives} (T, 1.8)~; alors, pour tout préfaisceau (et en particulier tout
-faisceau) $\mathcal{F}$ sur $X$ à valeurs dans $\mathbf{K}$ et tout $x\in X$,
-on peut définir la \emph{fibre} $\mathcal{F}_x$ comme l'objet de $\mathbf{K}$
+faisceau) $\mathcal{F}$ sur $X$ à valeurs dans $\boldsymbol{K}$ et tout $x\in X$,
+on peut définir la \emph{fibre} $\mathcal{F}_x$ comme l'objet de $\boldsymbol{K}$
 limite inductive des $\mathcal{F}(U)$ selon l'ensemble filtrant (pour
 $\supset$) des voisinages ouverts $U$ de $x$ dans $X$, et pour les morphismes
 $\rho_U^V:\mathcal{F}(V)\to\mathcal{F}(U)$. Si
 $u:\mathcal{F}\to\mathcal{G}$ est un morphisme de préfaisceaux à valeurs dans
-$\mathbf{K}$, on définit pour tout $x\in X$ le morphisme
+$\boldsymbol{K}$, on définit pour tout $x\in X$ le morphisme
 $u_x:\mathcal{F}_x\to\mathcal{G}_x$ comme la limite inductive des
 $u_U:\mathcal{F}(U)\to\mathcal{G}(U)$ selon l'ensemble des voisinages ouverts
 de $x$~; on définit ainsi $\mathcal{F}_x$ comme foncteur covariant en
-$\mathcal{F}$, à valeurs dans $\mathbf{K}$, pour tout $x\in X$.
+$\mathcal{F}$, à valeurs dans $\boldsymbol{K}$, pour tout $x\in X$.
 
-Lorsque $\mathbf{K}$ est en outre définie par une espèce de structure avec
+Lorsque $\boldsymbol{K}$ est en outre définie par une espèce de structure avec
 morphismes $\Sigma$, on appelle encore \emph{sections au-dessus de $U$} d'un
-\emph{faisceau $\mathcal{F}$} à valeurs dans $\mathbf{K}$ les éléments de
+\emph{faisceau $\mathcal{F}$} à valeurs dans $\boldsymbol{K}$ les éléments de
 $\mathcal{F}(U)$, et on écrit alors $\Gamma(U,\mathcal{F})$ au lieu de
 $\mathcal{F}(U)$~; pour $s\in\Gamma(U,\mathcal{F})$, $V$ ouvert contenu dans
 $U$, on écrit $s|V$ au lieu de $\rho_V^U(s)$~; pour tout $x\in U$, l'image
@@ -1028,7 +1005,7 @@ cette notation étant réservée pour une autre notion relative aux faisceaux
 particuliers qui seront considérés dans ce Traité (5.5.1)).
 
 Si alors $u:\mathcal{F}\to\mathcal{G}$ est un morphisme de faisceaux à valeurs
-dans $\mathbf{K}$, on écrira $u(s)$ au lieu de $u_V(s)$ pour tout
+dans $\boldsymbol{K}$, on écrira $u(s)$ au lieu de $u_V(s)$ pour tout
 $s\in\Gamma(U,\mathcal{F})$.
 
 Si $\mathcal{F}$ est un faisceau de groupes commutatifs, ou d'anneaux, ou de
@@ -1037,10 +1014,10 @@ $\mathcal{F}_x\neq\{0\}$ est le \emph{support} de $\mathcal{F}$, noté
 $\operatorname{Supp}(\mathcal{F})$~; cet ensemble n'est pas nécessairement
 fermé dans $X$.
 
-Lorsque $\mathbf{K}$ est définie par une espèce de structure avec morphismes,
+Lorsque $\boldsymbol{K}$ est définie par une espèce de structure avec morphismes,
 \emph{nous nous abstiendrons systématiquement de faire intervenir le point de
 vue des «~espaces étalés~»} en ce qui concerne les faisceaux à valeurs dans
-$\mathbf{K}$~; autrement dit, nous ne considérerons jamais un faisceau comme
+$\boldsymbol{K}$~; autrement dit, nous ne considérerons jamais un faisceau comme
 un espace topologique (ni même comme l'ensemble réunion de ses fibres), et
 nous ne considérerons pas davantage un morphisme
 $u:\mathcal{F}\to\mathcal{G}$ de tels faisceaux sur $X$ comme une application
@@ -1052,13 +1029,13 @@ continue d'espaces topologiques.
 
 \begin{env}[3.2.1]
 \label{0.3.2.1-fr}
-Nous nous restreindrons dans ce qui suit à des catégories $\mathbf{K}$
+Nous nous restreindrons dans ce qui suit à des catégories $\boldsymbol{K}$
 admettant des \emph{limites projectives} (généralisées, c'est-à-dire
 correspondant à des ensembles préordonnés non nécessairement filtrants,
 cf. (T, 1.8)). Soient $X$ un espace topologique, $\mathfrak{B}$ une base
 d'ouverts pour la topologie de $X$. Nous appellerons \emph{préfaisceau sur
-$\mathfrak{B}$, à valeurs dans $\mathbf{K}$}, une famille d'objets
-$\mathcal{F}(U)\in\mathbf{K}$, attachés à chaque $U\in\mathfrak{B}$, et une
+$\mathfrak{B}$, à valeurs dans $\boldsymbol{K}$}, une famille d'objets
+$\mathcal{F}(U)\in\boldsymbol{K}$, attachés à chaque $U\in\mathfrak{B}$, et une
 famille de morphismes
 $\rho_U^V:\mathcal{F}(V)\to\mathcal{F}(U)$ définis pour tout couple $(U,V)$
 d'éléments de $\mathfrak{B}$ tels que $U\subset V$,
@@ -1068,13 +1045,13 @@ d'éléments de $\mathfrak{B}$ tels que $U\subset V$,
 avec les conditions $\rho_U^U=\text{identité}$ et
 $\rho_U^W=\rho_U^V\circ\rho_V^W$ si $U$, $V$, $W$ dans $\mathfrak{B}$ sont
 tels que $U\subset V\subset W$. On peut lui associer un \emph{préfaisceau à
-valeurs dans $\mathbf{K}$}~: $U\to\mathcal{F}'(U)$ au sens ordinaire, en
+valeurs dans $\boldsymbol{K}$}~: $U\to\mathcal{F}'(U)$ au sens ordinaire, en
 prenant pour tout ouvert $U$,
 \[
-  \mathcal{F}'(U)=\varprojlim_{V\subset U}\mathcal{F}(V),
+  \mathcal{F}'(U)=\varprojlim\mathcal{F}(V),
 \]
-où $V$ parcourt l'ensemble ordonné (pour $\subset$, \emph{non filtrant en
-général}) des ensembles $V\in\mathfrak{B}$ tels que $V\subset U$, car les
+où $V$ parcourt l'ensemble ordonné (pour $\subset$, \emph{non filtrant} en
+général) des ensembles $V\in\mathfrak{B}$ tels que $V\subset U$, car les
 $\mathcal{F}(V)$ forment un système projectif pour les $\rho_V^W$
 ($V\subset W\subset U$, $V\in\mathfrak{B}$, $W\in\mathfrak{B}$). En effet,
 si $U$, $U'$ sont deux ouverts de $X$ tels que $U\subset U'$, on définit
@@ -1083,13 +1060,13 @@ canoniques $\mathcal{F}'(U')\to\mathcal{F}(V)$, autrement dit l'unique
 morphisme $\mathcal{F}'(U')\to\mathcal{F}'(U)$, qui, composé avec les
 morphismes canoniques $\mathcal{F}'(U)\to\mathcal{F}(V)$, donne les morphismes
 canoniques $\mathcal{F}'(U')\to\mathcal{F}(V)$~; la vérification de la
-transitivité de $\rho'_U{}^{U'}$ est alors immédiate. De plus, si
+transitivité des $\rho'_U{}^{U'}$ est alors immédiate. De plus, si
 $U\in\mathfrak{B}$, le morphisme canonique
 $\mathcal{F}'(U)\to\mathcal{F}(U)$ est un isomorphisme, permettant d'identifier
 ces deux objets%
 \footnote{Si $X$ est un espace \emph{noethérien}, on peut encore définir
 $\mathcal{F}'(U)$ et montrer que c'est un préfaisceau (au sens ordinaire)
-lorsqu'on suppose seulement que $\mathbf{K}$ admet des limites projectives
+lorsqu'on suppose seulement que $\boldsymbol{K}$ admet des limites projectives
 pour les systèmes projectifs \emph{finis}. En effet, si $U$ est un ouvert
 quelconque de $X$, il y a un recouvrement \emph{fini} $(V_i)$ de $U$ formé
 d'ensembles de $\mathfrak{B}$~; pour tout couple $(i,j)$ d'indices, soit
@@ -1112,7 +1089,7 @@ vérifie la condition~:
 \noindent
 \textup{(F\textsubscript{0})} \emph{Pour tout recouvrement $(U_\alpha)$ de
 $U\in\mathfrak{B}$ par des ensembles $U_\alpha\in\mathfrak{B}$ contenus dans
-$U$, et pour tout objet $T\in\mathbf{K}$, l'application qui, à tout
+$U$, et pour tout objet $T\in\boldsymbol{K}$, l'application qui, à tout
 $f\in\operatorname{Hom}(T,\mathcal{F}(U))$ fait correspondre la famille
 \[
   (\rho_{U_\alpha}^{U}\circ f)
@@ -1168,19 +1145,19 @@ sous-famille de $\mathfrak{B}$ constituée par les ensembles
 
 de $\mathfrak{B}$ contenus dans un $U_\alpha$ au moins~; il est clair que
 $\mathfrak{B}'$ est encore une base de la topologie de $X$, donc
-$\mathcal{F}'(U)$ (resp. $\mathcal{F}''(U_\alpha)$) est limite projective des
+$\mathcal{F}'(U)$ (resp. $\mathcal{F}'(U_\alpha)$) est limite projective des
 $\mathcal{F}(V)$ pour $V\in\mathfrak{B}'$ et $V\subset U$ (resp.
 $V\subset U_\alpha$)~; l'axiome (F) se vérifie alors aussitôt en vertu de la
 définition de la limite projective.
 
 Lorsque (F\textsubscript{0}) est vérifié, nous dirons par abus de langage que
-le préfaisceau $\mathcal{F}$ sur la base $\mathfrak{B}$ est un \emph{faisceau}.
+le préfaisceau $\mathcal{F}$ sur la base $\mathfrak{B}$ est \emph{un faisceau}.
 \end{env}
 
 \begin{env}[3.2.3]
 \label{0.3.2.3-fr}
 Soient $\mathcal{F}$, $\mathcal{G}$ deux préfaisceaux sur la base
-$\mathfrak{B}$, à valeurs dans $\mathbf{K}$~; on définit un \emph{morphisme}
+$\mathfrak{B}$, à valeurs dans $\boldsymbol{K}$~; on définit un \emph{morphisme}
 $u:\mathcal{F}\to\mathcal{G}$ comme une famille
 $(u_V)_{V\in\mathfrak{B}}$ de morphismes
 $u_V:\mathcal{F}(V)\to\mathcal{G}(V)$ satisfaisant aux conditions de
@@ -1189,14 +1166,14 @@ les notations de (3.2.1), on en déduit un morphisme
 $u':\mathcal{F}'\to\mathcal{G}'$ des préfaisceaux (ordinaires) correspondants
 en prenant pour $u_U'$ la limite projective des $u_V$ pour
 $V\in\mathfrak{B}$ et $V\subset U$~; la vérification des conditions de
-compatibilité avec $\rho'_U{}^{U'}$ découle du caractère fonctoriel de la
+compatibilité avec les $\rho'_U{}^{U'}$ découle du caractère fonctoriel de la
 limite projective.
 \end{env}
 
 \begin{env}[3.2.4]
 \label{0.3.2.4-fr}
-Si la catégorie $\mathbf{K}$ admet des limites inductives, et si $\mathcal{F}$
-est un préfaisceau sur la base $\mathfrak{B}$, à valeurs dans $\mathbf{K}$,
+Si la catégorie $\boldsymbol{K}$ admet des limites inductives, et si $\mathcal{F}$
+est un préfaisceau sur la base $\mathfrak{B}$, à valeurs dans $\boldsymbol{K}$,
 pour tout $x\in X$ les voisinages de $x$ appartenant à $\mathfrak{B}$ forment
 un ensemble cofinal (pour $\supset$) dans l'ensemble des voisinages de $x$,
 donc, si $\mathcal{F}'$ est le préfaisceau (ordinaire) correspondant à
@@ -1206,7 +1183,7 @@ $\mathcal{F}$, la fibre $\mathcal{F}_x'$ est égale à
 \]
 selon l'ensemble des $V\in\mathfrak{B}$ contenant $x$.
 Si $u:\mathcal{F}\to\mathcal{G}$ est un morphisme de préfaisceaux sur
-$\mathfrak{B}$ à valeurs dans $\mathbf{K}$,
+$\mathfrak{B}$ à valeurs dans $\boldsymbol{K}$,
 $u':\mathcal{F}'\to\mathcal{G}'$ le morphisme correspondant de préfaisceaux
 ordinaires, $u_x'$ est de même la limite inductive des morphismes
 $u_V:\mathcal{F}(V)\to\mathcal{G}(V)$ pour $V\in\mathfrak{B}$, $x\in V$.
@@ -1215,7 +1192,7 @@ $u_V:\mathcal{F}(V)\to\mathcal{G}(V)$ pour $V\in\mathfrak{B}$, $x\in V$.
 \begin{env}[3.2.5]
 \label{0.3.2.5-fr}
 Revenons aux conditions générales de (3.2.1). Si $\mathcal{F}$ est un
-\emph{faisceau} ordinaire à valeurs dans $\mathbf{K}$, $\mathcal{F}_1$ le
+\emph{faisceau} ordinaire à valeurs dans $\boldsymbol{K}$, $\mathcal{F}_1$ le
 faisceau \emph{sur $\mathfrak{B}$} obtenu par restriction de $\mathcal{F}$ à
 $\mathfrak{B}$, le faisceau ordinaire $\mathcal{F}_1'$ obtenu à partir de
 $\mathcal{F}_1$ par le procédé de (3.2.1) est canoniquement isomorphe à
@@ -1224,7 +1201,7 @@ limite projective. On identifiera d'ordinaire $\mathcal{F}$ et
 $\mathcal{F}_1'$.
 
 Si $\mathcal{G}$ est un second faisceau (ordinaire) sur $X$ à valeurs dans
-$\mathbf{K}$, et $u:\mathcal{F}\to\mathcal{G}$ un morphisme, la remarque
+$\boldsymbol{K}$, et $u:\mathcal{F}\to\mathcal{G}$ un morphisme, la remarque
 précédente montre que la donnée des
 $u_V:\mathcal{F}(V)\to\mathcal{G}(V)$ \emph{pour les $V\in\mathfrak{B}$
 seulement} détermine complètement $u$~; inversement, il suffit, les $u_V$
@@ -1237,29 +1214,29 @@ $V\in\mathfrak{B}$ (3.2.3).
 
 \begin{env}[3.2.6]
 \label{0.3.2.6-fr}
-Supposons toujours que $\mathbf{K}$ admette des limites projectives. Alors la
-catégorie des \emph{faisceaux sur $X$ à valeurs dans $\mathbf{K}$} admet aussi
+Supposons toujours que $\boldsymbol{K}$ admette des limites projectives. Alors la
+catégorie des \emph{faisceaux sur $X$ à valeurs dans $\boldsymbol{K}$} admet aussi
 des \emph{limites projectives}~; si $(\mathcal{F}_\lambda)$ est un système
-projectif de faisceaux sur $X$ à valeurs dans $\mathbf{K}$, les
+projectif de faisceaux sur $X$ à valeurs dans $\boldsymbol{K}$, les
 \[
   \mathcal{F}(U)=\varprojlim_\lambda\mathcal{F}_\lambda(U)
 \]
-définissent en effet un préfaisceau à valeurs dans $\mathbf{K}$, et la
+définissent en effet un préfaisceau à valeurs dans $\boldsymbol{K}$, et la
 vérification de l'axiome (F) résulte de la transitivité des limites
 projectives~; le fait que $\mathcal{F}$ est alors limite projective des
 $\mathcal{F}_\lambda$ est immédiat.
 
-Lorsque $\mathbf{K}$ est la catégorie des ensembles, pour tout système
-projectif $(\mathcal{H}_\lambda)$ tel
+Lorsque $\boldsymbol{K}$ est la catégorie des ensembles, pour tout système
+projectif $(\mathfrak{H}_\lambda)$ tel
 
 \oldpage[0\textsubscript{I}]{28}
 
-que $\mathcal{H}_\lambda$ soit un \emph{sous-faisceau} de
+que $\mathfrak{H}_\lambda$ soit un \emph{sous-faisceau} de
 $\mathcal{F}_\lambda$ pour tout $\lambda$,
-$\varprojlim_\lambda\mathcal{H}_\lambda$ s'identifie canoniquement à un
-\emph{sous-faisceau} de $\varprojlim_\lambda\mathcal{F}_\lambda$. Si
-$\mathbf{K}$ est la catégorie des groupes commutatifs, le foncteur covariant
-$\varprojlim_\lambda\mathcal{F}_\lambda$ est \emph{additif et exact à gauche}.
+$\varprojlim\mathfrak{H}_\lambda$ s'identifie canoniquement à un
+\emph{sous-faisceau} de $\varprojlim\mathcal{F}_\lambda$. Si
+$\boldsymbol{K}$ est la catégorie des groupes commutatifs, le foncteur covariant
+$\varprojlim\mathcal{F}_\lambda$ est \emph{additif} et \emph{exact à gauche}.
 \end{env}
 
 \subsection{Recollement de faisceaux}
@@ -1267,11 +1244,11 @@ $\varprojlim_\lambda\mathcal{F}_\lambda$ est \emph{additif et exact à gauche}.
 
 \begin{env}[3.3.1]
 \label{0.3.3.1-fr}
-Supposons encore que la catégorie $\mathbf{K}$ admette des limites projectives
+Supposons encore que la catégorie $\boldsymbol{K}$ admette des limites projectives
 (généralisées). Soient $X$ un espace topologique,
 $\mathfrak{U}=(U_\lambda)_{\lambda\in L}$ un recouvrement ouvert de $X$, et
 pour chaque $\lambda\in L$, soit $\mathcal{F}_\lambda$ un faisceau sur
-$U_\lambda$, à valeurs dans $\mathbf{K}$~; pour tout couple d'indices
+$U_\lambda$, à valeurs dans $\boldsymbol{K}$~; pour tout couple d'indices
 $(\lambda,\mu)$, supposons donné un \emph{isomorphisme}
 \[
   \theta_{\lambda\mu}:
@@ -1287,8 +1264,8 @@ $\theta_{\lambda\nu}$ à $U_\lambda\cap U_\mu\cap U_\nu$, on ait
   \theta'_{\lambda\nu}
   =\theta'_{\lambda\mu}\circ\theta'_{\mu\nu}
 \]
-(\emph{condition de recollement pour les $\theta_{\lambda\mu}$}). Alors, il
-existe un faisceau $\mathcal{F}$ sur $X$, à valeurs dans $\mathbf{K}$, et pour
+(\emph{condition de recollement} pour les $\theta_{\lambda\mu}$). Alors, il
+existe un faisceau $\mathcal{F}$ sur $X$, à valeurs dans $\boldsymbol{K}$, et pour
 chaque $\lambda$ un isomorphisme
 \[
   \eta_\lambda:\mathcal{F}|U_\lambda\xrightarrow{\sim}\mathcal{F}_\lambda
@@ -1304,7 +1281,7 @@ isomorphisme unique près par ces conditions. L'unicité résulte en effet
 aussitôt de (3.2.5). Pour établir l'existence de $\mathcal{F}$, désignons par
 $\mathfrak{B}$ la base d'ouverts formée des ouverts contenus dans un
 $U_\lambda$ au moins, et pour tout $U\in\mathfrak{B}$, choisissons (par la
-fonction $\tau$ de Hilbert) un des $\mathcal{F}_\lambda(U)$ pour un des
+fonction $\boldsymbol{\tau}$ de Hilbert) un des $\mathcal{F}_\lambda(U)$ pour un des
 $\lambda$ tels que $U\subset U_\lambda$~; si on désigne cet objet par
 $\mathcal{F}(U)$, les $\rho_U^V$ pour $U\subset V$, $U\in\mathfrak{B}$,
 $V\in\mathfrak{B}$ se définissent de façon évidente (au moyen des
@@ -1319,7 +1296,7 @@ d'ordinaire $\mathcal{F}_\lambda$ et $\mathcal{F}|U_\lambda$ au moyen de
 $\eta_\lambda$.
 
 Il est clair que tout faisceau $\mathcal{F}$ sur $X$ à valeurs dans
-$\mathbf{K}$ peut être considéré comme obtenu par recollement des faisceaux
+$\boldsymbol{K}$ peut être considéré comme obtenu par recollement des faisceaux
 $\mathcal{F}_\lambda=\mathcal{F}|U_\lambda$ (où $(U_\lambda)$ est un
 recouvrement ouvert arbitraire de $X$), au moyen des isomorphismes
 $\theta_{\lambda\mu}$ réduits à l'identité.
@@ -1328,7 +1305,7 @@ $\theta_{\lambda\mu}$ réduits à l'identité.
 \begin{env}[3.3.2]
 \label{0.3.3.2-fr}
 Avec les mêmes notations, soit $\mathcal{G}_\lambda$ un second faisceau sur
-$U_\lambda$ (pour tout $\lambda\in L$) à valeurs dans $\mathbf{K}$, et soit
+$U_\lambda$ (pour tout $\lambda\in L$) à valeurs dans $\boldsymbol{K}$, et soit
 donné pour tout couple $(\lambda,\mu)$ un isomorphisme
 \[
   \omega_{\lambda\mu}:
@@ -1389,7 +1366,7 @@ recollement de ces derniers s'identifie canoniquement à $\mathcal{F}|V$.
 \label{0.3.4.1-fr}
 Soient $X$, $Y$ deux espaces topologiques, $\psi:X\to Y$ une application
 continue. Soit $\mathcal{F}$ un préfaisceau sur $X$ à valeurs dans une
-catégorie $\mathbf{K}$~; pour tout ouvert $U\subset Y$, soit
+catégorie $\boldsymbol{K}$~; pour tout ouvert $U\subset Y$, soit
 \[
   \mathcal{G}(U)=\mathcal{F}(\psi^{-1}(U)),
 \]
@@ -1399,7 +1376,7 @@ $\rho_U^V$ le morphisme
   \mathcal{F}(\psi^{-1}(V))\to\mathcal{F}(\psi^{-1}(U));
 \]
 il est immédiat que les $\mathcal{G}(U)$ et les $\rho_U^V$ définissent un
-\emph{préfaisceau} sur $Y$ à valeurs dans $\mathbf{K}$, que l'on appelle
+\emph{préfaisceau} sur $Y$ à valeurs dans $\boldsymbol{K}$, que l'on appelle
 l'\emph{image directe de $\mathcal{F}$ par $\psi$} et que l'on note
 $\psi_*(\mathcal{F})$. Si $\mathcal{F}$ est un faisceau, on vérifie aussitôt
 l'axiome (F) pour le préfaisceau $\mathcal{G}(U)$, donc
@@ -1409,7 +1386,7 @@ $\psi_*(\mathcal{F})$ est un faisceau.
 \begin{env}[3.4.2]
 \label{0.3.4.2-fr}
 Soient $\mathcal{F}_1$, $\mathcal{F}_2$ deux préfaisceaux sur $X$ à valeurs
-dans $\mathbf{K}$, et soit $u:\mathcal{F}_1\to\mathcal{F}_2$ un morphisme.
+dans $\boldsymbol{K}$, et soit $u:\mathcal{F}_1\to\mathcal{F}_2$ un morphisme.
 Lorsque $U$ parcourt l'ensemble des parties ouvertes de $Y$, la famille de
 morphismes
 \[
@@ -1422,14 +1399,14 @@ et définit par suite un morphisme
   \psi_*(u):\psi_*(\mathcal{F}_1)\to\psi_*(\mathcal{F}_2).
 \]
 Si $v:\mathcal{F}_2\to\mathcal{F}_3$ est un morphisme de $\mathcal{F}_2$ dans
-un troisième préfaisceau sur $X$ à valeurs dans $\mathbf{K}$, on a
+un troisième préfaisceau sur $X$ à valeurs dans $\boldsymbol{K}$, on a
 \[
   \psi_*(v\circ u)=\psi_*(v)\circ\psi_*(u);
 \]
 autrement dit, $\psi_*(\mathcal{F})$ est un \emph{foncteur covariant} en
 $\mathcal{F}$, de la catégorie des préfaisceaux (resp. faisceaux) sur $X$ à
-valeurs dans $\mathbf{K}$, dans celle des préfaisceaux (resp. faisceaux) sur
-$Y$ à valeurs dans $\mathbf{K}$.
+valeurs dans $\boldsymbol{K}$, dans celle des préfaisceaux (resp. faisceaux) sur
+$Y$ à valeurs dans $\boldsymbol{K}$.
 \end{env}
 
 \begin{env}[3.4.3]
@@ -1439,7 +1416,7 @@ continue, et soit $\psi''=\psi'\circ\psi$. Il est clair que l'on a
 \[
   \psi_*''(\mathcal{F})=\psi_*'(\psi_*(\mathcal{F}))
 \]
-pour tout préfaisceau $\mathcal{F}$ sur $X$ à valeurs dans $\mathbf{K}$~; en
+pour tout préfaisceau $\mathcal{F}$ sur $X$ à valeurs dans $\boldsymbol{K}$~; en
 outre, pour tout morphisme $u:\mathcal{F}\to\mathcal{G}$ de tels préfaisceaux,
 on a
 \[
@@ -1459,8 +1436,8 @@ $\psi_*(\mathcal{F})|U$.
 
 \begin{env}[3.4.4]
 \label{0.3.4.4-fr}
-Supposons que la catégorie $\mathbf{K}$ admette des limites inductives, et soit
-$\mathcal{F}$ un préfaisceau sur $X$ à valeurs dans $\mathbf{K}$~; pour tout
+Supposons que la catégorie $\boldsymbol{K}$ admette des limites inductives, et soit
+$\mathcal{F}$ un préfaisceau sur $X$ à valeurs dans $\boldsymbol{K}$~; pour tout
 $x\in X$, les morphismes
 \[
   \Gamma(\psi^{-1}(U),\mathcal{F})\to\mathcal{F}_x
@@ -1477,7 +1454,7 @@ donne par passage
 des fibres~; en général, ce morphisme n'est \emph{ni injectif ni surjectif}.
 Il est fonctoriel~; en effet, si
 $u:\mathcal{F}_1\to\mathcal{F}_2$ est un morphisme de préfaisceaux sur $X$ à
-valeurs dans $\mathbf{K}$, le diagramme
+valeurs dans $\boldsymbol{K}$, le diagramme
 \[
 \begin{tikzcd}[column sep=huge,row sep=large]
 (\psi_*(\mathcal{F}_1))_{\psi(x)}
@@ -1506,8 +1483,8 @@ particulier à l'injection canonique $j$ d'une partie $X$ de $Y$ dans $Y$.
 
 \begin{env}[3.4.6]
 \label{0.3.4.6-fr}
-Supposons que $\mathbf{K}$ soit la catégorie des groupes, ou des anneaux, etc.
-Si $\mathcal{F}$ est un faisceau sur $X$ à valeurs dans $\mathbf{K}$, de
+Supposons que $\boldsymbol{K}$ soit la catégorie des groupes, ou des anneaux, etc.
+Si $\mathcal{F}$ est un faisceau sur $X$ à valeurs dans $\boldsymbol{K}$, de
 support $S$, et si $y\notin\overline{\psi(S)}$, il résulte de la définition de
 $\psi_*(\mathcal{F})$ que
 \[
@@ -1519,7 +1496,7 @@ $\psi(S)$. Sous les mêmes hypothèses, si $j$ est l'injection canonique d'une
 partie $X$ de $Y$ dans $Y$, le faisceau $j_*(\mathcal{F})$ induit
 $\mathcal{F}$ sur $X$~; si de plus $X$ est \emph{fermée} dans $Y$,
 $j_*(\mathcal{F})$ est le faisceau sur $Y$ qui induit $\mathcal{F}$ sur $X$
-et $0$ sur $Y-X$ (G, II, 2.9.2), mais il est en général distinct de ce dernier
+et $0$ sur $Y\setmin X$ (G, II, 2.9.2), mais il est en général distinct de ce dernier
 lorsqu'on suppose $X$ localement fermé mais non fermé.
 \end{env}
  
@@ -1528,14 +1505,13 @@ lorsqu'on suppose $X$ localement fermé mais non fermé.
 \begin{env}[3.5.1]
 \label{0.3.5.1-fr}
 Sous les hypothèses de (3.4.1), si $\mathcal{F}$ (resp. $\mathcal{G}$) est un
-préfaisceau sur $X$ (resp. $Y$) à valeurs dans $\mathbf{K}$, tout morphisme
+préfaisceau sur $X$ (resp. $Y$) à valeurs dans $\boldsymbol{K}$, tout morphisme
 $u:\mathcal{G}\to\psi_*(\mathcal{F})$ de préfaisceaux sur $Y$ s'appelle encore
 un $\psi$-\emph{morphisme} de $\mathcal{G}$ dans $\mathcal{F}$, et se note
 aussi $\mathcal{G}\to\mathcal{F}$. On désigne aussi par
 $\operatorname{Hom}_\psi(\mathcal{G},\mathcal{F})$ l'ensemble
 $\operatorname{Hom}_Y(\mathcal{G},\psi_*(\mathcal{F}))$ des
 $\psi$-morphismes de $\mathcal{G}$ dans $\mathcal{F}$.
-
 Pour tout couple $(U,V)$, où $U$ est un ouvert de $X$, $V$ un ouvert de $Y$
 tel que $\psi(U)\subset V$, on a un morphisme
 $u_{U,V}:\mathcal{G}(V)\to\mathcal{F}(U)$ en composant le morphisme de
@@ -1561,7 +1537,7 @@ diagrammes (3.5.1.1) définit un $\psi$-morphisme $u$, car il suffit de prendre
 
 \oldpage[0\textsubscript{I}]{31}
 
-Si la catégorie $\mathbf{K}$ admet des limites projectives (généralisées), et
+Si la catégorie $\boldsymbol{K}$ admet des limites projectives (généralisées), et
 si $\mathfrak{B}$, $\mathfrak{B}'$ sont des bases des topologies de $X$ et
 $Y$ respectivement, pour définir un $\psi$-morphisme $u$ de \emph{faisceaux},
 on peut se borner à se donner les $u_{U,V}$ pour
@@ -1572,7 +1548,7 @@ tout ouvert $W\subset Y$, comme limite projective des $u_{U,V}$ pour
 $V\in\mathfrak{B}'$ et $V\subset W$, $U\in\mathfrak{B}$ et
 $\psi(U)\subset V$.
 
-Lorsque la catégorie $\mathbf{K}$ admet des limites inductives, on a, pour
+Lorsque la catégorie $\boldsymbol{K}$ admet des limites inductives, on a, pour
 tout $x\in X$, un morphisme
 \[
   \mathcal{G}(V)\to\mathcal{F}(\psi^{-1}(V))\to\mathcal{F}_x
@@ -1587,7 +1563,7 @@ forment un système inductif qui donne par passage à la limite un morphisme
 \begin{env}[3.5.2]
 \label{0.3.5.2-fr}
 Sous les hypothèses de (3.4.3), soient $\mathcal{F}$, $\mathcal{G}$,
-$\mathcal{H}$ des préfaisceaux à valeurs dans $\mathbf{K}$ sur $X$, $Y$, $Z$
+$\mathcal{H}$ des préfaisceaux à valeurs dans $\boldsymbol{K}$ sur $X$, $Y$, $Z$
 respectivement, et soient
 $u:\mathcal{G}\to\psi_*(\mathcal{F})$,
 $v:\mathcal{H}\to\psi'_*(\mathcal{G})$ un $\psi$-morphisme et un
@@ -1599,7 +1575,7 @@ $\psi'$-morphisme respectivement. On en déduit un $\psi''$-morphisme
 \]
 que l'on appelle, par définition, le \emph{composé} de $u$ et de $v$. On peut
 donc considérer les couples $(X,\mathcal{F})$ formés d'un espace topologique
-$X$ et d'un préfaisceau $\mathcal{F}$ sur $X$ (à valeurs dans $\mathbf{K}$)
+$X$ et d'un préfaisceau $\mathcal{F}$ sur $X$ (à valeurs dans $\boldsymbol{K}$)
 comme formant une \emph{catégorie}, les morphismes étant les couples
 $(\psi,\theta):(X,\mathcal{F})\to(Y,\mathcal{G})$ formés d'une application
 continue $\psi:X\to Y$ et d'un $\psi$-morphisme
@@ -1609,13 +1585,13 @@ $\theta:\mathcal{G}\to\mathcal{F}$.
 \begin{env}[3.5.3]
 \label{0.3.5.3-fr}
 Soient $\psi:X\to Y$ une application continue, $\mathcal{G}$ un
-\emph{préfaisceau} sur $Y$ à valeurs dans $\mathbf{K}$. Nous appellerons
+\emph{préfaisceau} sur $Y$ à valeurs dans $\boldsymbol{K}$. Nous appellerons
 \emph{image réciproque de $\mathcal{G}$ par $\psi$} un couple
 $(\mathcal{G}',\rho)$, où $\mathcal{G}'$ est un \emph{faisceau} sur $X$ à
-valeurs dans $\mathbf{K}$, et
+valeurs dans $\boldsymbol{K}$, et
 $\rho:\mathcal{G}\to\mathcal{G}'$ un $\psi$-morphisme (autrement dit un
 homomorphisme $\mathcal{G}\to\psi_*(\mathcal{G}'))$ tels que, pour tout
-\emph{faisceau} $\mathcal{F}$ sur $X$ à valeurs dans $\mathbf{K}$,
+\emph{faisceau} $\mathcal{F}$ sur $X$ à valeurs dans $\boldsymbol{K}$,
 l'application
 \begin{equation*}
   \operatorname{Hom}_X(\mathcal{G}',\mathcal{F})
@@ -1631,8 +1607,8 @@ est \emph{déterminé à un isomorphisme unique près} lorsqu'il existe. On écr
 alors $\mathcal{G}'=\psi^*(\mathcal{G})$, $\rho=\rho_{\mathcal{G}}$, et par
 abus de langage, on dira que $\psi^*(\mathcal{G})$ est \emph{le faisceau image
 réciproque} de $\mathcal{G}$ par $\psi$, étant entendu que
-$\psi^*(\mathcal{G})$ est considéré comme muni du $\psi$-morphisme
-\emph{canonique}
+$\psi^*(\mathcal{G})$ est considéré comme muni du $\psi$-\emph{morphisme
+canonique}
 $\rho_{\mathcal{G}}:\mathcal{G}\to\psi^*(\mathcal{G})$, c'est-à-dire de
 l'\emph{homomorphisme canonique} de préfaisceaux sur $Y$~:
 \begin{equation*}
@@ -1641,10 +1617,10 @@ l'\emph{homomorphisme canonique} de préfaisceaux sur $Y$~:
 \end{equation*}
 Pour tout homomorphisme
 $v:\psi^*(\mathcal{G})\to\mathcal{F}$ (où $\mathcal{F}$ est un faisceau sur
-$X$ à valeurs dans $\mathbf{K}$), on posera
-$v^b=\psi_*(v)\circ\rho_{\mathcal{G}}:
+$X$ à valeurs dans $\boldsymbol{K}$), on posera
+$v^\flat=\psi_*(v)\circ\rho_{\mathcal{G}}:
 \mathcal{G}\to\psi_*(\mathcal{F})$. Par définition, \emph{tout} morphisme de
-préfaisceaux $u:\mathcal{G}\to\psi_*(\mathcal{F})$ est de la forme $v^b$ pour
+préfaisceaux $u:\mathcal{G}\to\psi_*(\mathcal{F})$ est de la forme $v^\flat$ pour
 un $v$ et un seul, que l'on notera $u^\sharp$. En d'autres termes, tout
 morphisme $u:\mathcal{G}\to\psi_*(\mathcal{F})$ de préfaisceaux se factorise
 de façon unique en
@@ -1660,17 +1636,17 @@ de façon unique en
 
 \begin{env}[3.5.4]
 \label{0.3.5.4-fr}
-Supposons maintenant que la catégorie $\mathbf{K}$ soit telle\footnote{Dans
+Supposons maintenant que la catégorie $\boldsymbol{K}$ soit telle\footnote{Dans
 le livre cité dans l'Introduction, nous donnerons des conditions très
-générales sur la catégorie $\mathbf{K}$ assurant l'existence des images
-réciproques de préfaisceaux à valeurs dans $\mathbf{K}$.} que \emph{tout}
-préfaisceau $\mathcal{G}$ sur $Y$ à valeurs dans $\mathbf{K}$ admette une
+générales sur la catégorie $\boldsymbol{K}$ assurant l'existence des images
+réciproques de préfaisceaux à valeurs dans $\boldsymbol{K}$.} que \emph{tout}
+préfaisceau $\mathcal{G}$ sur $Y$ à valeurs dans $\boldsymbol{K}$ admette une
 image réciproque par $\psi$, que nous noterons $\psi^*(\mathcal{G})$.
 
 Nous allons voir qu'on peut définir $\psi^*(\mathcal{G})$ comme \emph{foncteur
 covariant} en $\mathcal{G}$, de la catégorie des préfaisceaux sur $Y$ à
-valeurs dans $\mathbf{K}$, dans celle des faisceaux sur $X$ à valeurs dans
-$\mathbf{K}$, de telle façon que l'isomorphisme $v\to v^b$ soit un
+valeurs dans $\boldsymbol{K}$, dans celle des faisceaux sur $X$ à valeurs dans
+$\boldsymbol{K}$, de telle façon que l'isomorphisme $v\to v^\flat$ soit un
 \emph{isomorphisme de bifoncteurs}
 \begin{equation*}
   \operatorname{Hom}_X(\psi^*(\mathcal{G}),\mathcal{F})
@@ -1682,7 +1658,7 @@ en $\mathcal{G}$ et $\mathcal{F}$.
 
 En effet, pour tout morphisme
 $w:\mathcal{G}_1\to\mathcal{G}_2$ de préfaisceaux sur $Y$ à valeurs dans
-$\mathbf{K}$, considérons le morphisme composé
+$\boldsymbol{K}$, considérons le morphisme composé
 \[
   \mathcal{G}_1\xrightarrow{w}\mathcal{G}_2
   \xrightarrow{\rho_{\mathcal{G}_2}}
@@ -1698,10 +1674,10 @@ $\psi^*(w)$. On a donc, en vertu de (3.5.3.3)
 \tag{3.5.4.2}\label{0.3.5.4.2-fr}
 \end{equation*}
 Pour tout morphisme $u:\mathcal{G}_2\to\psi_*(\mathcal{F})$, où
-$\mathcal{F}$ est un faisceau sur $X$ à valeurs dans $\mathbf{K}$, on a,
-d'après (3.5.3.3), (3.5.4.2) et la définition de $v^b$
+$\mathcal{F}$ est un faisceau sur $X$ à valeurs dans $\boldsymbol{K}$, on a,
+d'après (3.5.3.3), (3.5.4.2) et la définition de $u^\flat$
 \[
-  (u^\sharp\circ\psi^*(w))^b
+  (u^\sharp\circ\psi^*(w))^\flat
   =\psi_*(u^\sharp)\circ\psi_*(\psi^*(w))\circ\rho_{\mathcal{G}_1}
   =\psi_*(u^\sharp)\circ\rho_{\mathcal{G}_2}\circ w
   =u\circ w
@@ -1727,7 +1703,7 @@ il vient
 d'où notre assertion.
 
 Enfin, pour tout faisceau $\mathcal{F}$ sur $X$ à valeurs dans
-$\mathbf{K}$, soit $i_{\mathcal{F}}$ le morphisme identique de
+$\boldsymbol{K}$, soit $i_{\mathcal{F}}$ le morphisme identique de
 $\psi_*(\mathcal{F})$ et notons
 \[
   \sigma_{\mathcal{F}}:
@@ -1749,10 +1725,10 @@ morphisme $\sigma_{\mathcal{F}}$ est \emph{canonique}.
 \begin{env}[3.5.5]
 \label{0.3.5.5-fr}
 Soit $\psi':Y\to Z$ une application continue, et supposons que tout
-préfaisceau $\mathcal{H}$ sur $Z$ à valeurs dans $\mathbf{K}$ admette une
+préfaisceau $\mathcal{H}$ sur $Z$ à valeurs dans $\boldsymbol{K}$ admette une
 image réciproque $\psi'^*(\mathcal{H})$ par $\psi'$. Alors (avec les
 hypothèses de (3.5.4)) tout préfaisceau $\mathcal{H}$ sur $Z$ à valeurs dans
-$\mathbf{K}$ admet une image réciproque par $\psi''=\psi'\circ\psi$ et l'on a
+$\boldsymbol{K}$ admet une image réciproque par $\psi''=\psi'\circ\psi$ et l'on a
 un isomorphisme canonique fonctoriel
 \begin{equation*}
   \psi''^*(\mathcal{H})\xrightarrow{\sim}
@@ -1780,10 +1756,10 @@ $w^\sharp$ est le morphisme composé
 \label{0.3.5.6-fr}
 Prenons en particulier pour $\psi$ l'application identique
 $1_X:X\to X$. Alors si l'image réciproque par $\psi$ d'un préfaisceau
-$\mathcal{F}$ sur $X$ à valeurs dans $\mathbf{K}$ existe, on dit que cette
+$\mathcal{F}$ sur $X$ à valeurs dans $\boldsymbol{K}$ existe, on dit que cette
 image réciproque est le \emph{faisceau associé au préfaisceau $\mathcal{F}$}.
 Tout morphisme $u:\mathcal{F}\to\mathcal{F}'$ de $\mathcal{F}$ dans un
-\emph{faisceau} $\mathcal{F}'$ à valeurs dans $\mathbf{K}$ se factorise donc
+\emph{faisceau} $\mathcal{F}'$ à valeurs dans $\boldsymbol{K}$ se factorise donc
 de façon unique en
 \[
   \mathcal{F}\xrightarrow{\rho_{\mathcal{F}}}
@@ -1796,7 +1772,7 @@ de façon unique en
 \begin{env}[3.6.1]
 \label{0.3.6.1-fr}
 Nous dirons qu'un \emph{préfaisceau} $\mathcal{F}$ sur $X$, à valeurs dans
-$\mathbf{K}$, est \emph{constant} si les morphismes canoniques
+$\boldsymbol{K}$, est \emph{constant} si les morphismes canoniques
 $\mathcal{F}(X)\to\mathcal{F}(U)$ sont des \emph{isomorphismes} pour tout
 ouvert non vide $U\subset X$~; on notera que $\mathcal{F}$ n'est pas
 nécessairement un faisceau. On dit qu'un \emph{faisceau} est \emph{simple}
@@ -1822,7 +1798,7 @@ $\mathcal{F}(X)\to\mathcal{F}(U)$ étant des isomorphismes, il en est de même
 de $\mathcal{F}(U)\to\mathcal{F}(U\cap V)$ et de même
 $\mathcal{F}(V)\to\mathcal{F}(U\cap V)$ est un isomorphisme. On en conclut
 aussitôt que l'axiome (F) de (3.1.2) est bien vérifié, $\mathcal{F}$ est
-isomorphe à son faisceau associé, et par suite a) entraîne b).
+isomorphe à son faisceau associé, et par suite \emph{a)} entraîne \emph{b)}.
 
 Soit maintenant $(U_\alpha)$ un recouvrement ouvert de $X$ par des ouverts
 non vides et un faisceau $\mathcal{F}$ sur $X$ tel que
@@ -1838,18 +1814,18 @@ voit que pour tout indice $\alpha_0$, $\mathcal{F}(U_{\alpha_0})$ et les
 $\theta_{\alpha_0\alpha}$ sont solutions du problème universel, ce qui (en
 vertu de l'unicité) implique que
 $\mathcal{F}(X)\to\mathcal{F}(U_{\alpha_0})$ est un isomorphisme, et démontre
-donc que c) entraîne a).
+donc que \emph{c)} entraîne \emph{a)}.
 \end{env}
-
-\subsection{Images réciproques de préfaisceaux de groupes ou d'anneaux}
 
 \oldpage[0\textsubscript{I}]{34}
 
+\subsection{Images réciproques de préfaisceaux de groupes ou d'anneaux}
+
 \begin{env}[3.7.1]
 \label{0.3.7.1-fr}
-Nous allons montrer que lorsqu'on prend pour $\mathbf{K}$ la catégorie des
+Nous allons montrer que lorsqu'on prend pour $\boldsymbol{K}$ la catégorie des
 ensembles, l'image réciproque par $\psi$ de tout préfaisceau $\mathcal{G}$ à
-valeurs dans $\mathbf{K}$ \emph{existe toujours} (les notations et hypothèses
+valeurs dans $\boldsymbol{K}$ \emph{existe toujours} (les notations et hypothèses
 sur $X$, $Y$, $\psi$ étant celles de (3.5.3)). En effet, pour tout ouvert
 $U\subset X$, définissons $\mathcal{G}'(U)$ comme suit~: un élément $s'$ de
 $\mathcal{G}'(U)$ est une famille $(s'_x)_{x\in U}$, où
@@ -1857,18 +1833,18 @@ $s'_x\in\mathcal{G}_{\psi(x)}$ pour tout $x\in U$, et où, pour tout $x\in U$,
 la condition suivante est remplie~: il existe un voisinage ouvert $V$ de
 $\psi(x)$ dans $Y$, un voisinage $W\subset\psi^{-1}(V)\cap U$ de $x$ et un
 élément $s\in\mathcal{G}(V)$ tels que $s'_z=s_{\psi(z)}$ pour tout $z\in W$.
-On vérifie immédiatement que $U\mapsto\mathcal{G}'(U)$ satisfait bien aux axiomes
+On vérifie immédiatement que $U\to\mathcal{G}'(U)$ satisfait bien aux axiomes
 des \emph{faisceaux}.
 
 Soit maintenant $\mathcal{F}$ un faisceau d'ensembles sur $X$, et soient
 $u:\mathcal{G}\to\psi_*(\mathcal{F})$,
-$v:\mathcal{G}'\to\mathcal{F}$ des morphismes. On définit $u^\sharp$ et $v^b$
+$v:\mathcal{G}'\to\mathcal{F}$ des morphismes. On définit $u^\sharp$ et $v^\flat$
 de la façon suivante~: si $s'$ est une section de $\mathcal{G}'$ au-dessus
 d'un voisinage $U$ de $x\in X$ et si $V$ est un voisinage ouvert de $\psi(x)$
 et $s\in\mathcal{G}(V)$ tel que l'on ait $s'_z=s_{\psi(z)}$ pour $z$ dans un
 voisinage de $x$ contenu dans $\psi^{-1}(V)\cap U$, on prend
 $u_x^\sharp(s'_x)=u_{\psi(x)}(s_{\psi(x)})$. De même, si
-$s\in\mathcal{G}(V)$ ($V$ ouvert dans $Y$), $v^b(s)$ est la section de
+$s\in\mathcal{G}(V)$ ($V$ ouvert dans $Y$), $v^\flat(s)$ est la section de
 $\mathcal{F}$ au-dessus de $\psi^{-1}(V)$, image par $v$ de la section $s'$ de
 $\mathcal{G}'$ telle que $s'_x=s_{\psi(x)}$ pour tout
 $x\in\psi^{-1}(V)$. En outre, l'homomorphisme canonique (3.5.3)
@@ -1877,8 +1853,8 @@ suivante~: pour tout ouvert $V\subset Y$ et toute section
 $s\in\Gamma(V,\mathcal{G})$, $\rho(s)$ est la section
 $(s_{\psi(x)})_{x\in\psi^{-1}(V)}$ de $\psi^*(\mathcal{G})$ au-dessus de
 $\psi^{-1}(V)$. La vérification des relations
-$(u^\sharp)^b=u$, $(v^b)^\sharp=v$ et
-$v^b=\psi_*(v)\circ\rho$ est immédiate, et démontre notre assertion.
+$(u^\sharp)^\flat=u$, $(v^\flat)^\sharp=v$ et
+$v^\flat=\psi_*(v)\circ\rho$ est immédiate, et démontre notre assertion.
 
 On vérifie que, si $w:\mathcal{G}_1\to\mathcal{G}_2$ est un homomorphisme de
 préfaisceaux d'ensembles sur $Y$, $\psi^*(w)$ s'explicite de la façon
@@ -1892,12 +1868,12 @@ $\psi^*(\mathcal{G})|\psi^{-1}(V)$.
 
 Lorsque $\psi$ est l'identité $1_X$, on retrouve la définition d'un faisceau
 d'ensembles associé à un préfaisceau (G, II, 1.2). Les considérations
-précédentes s'appliquent sans changement lorsque $\mathbf{K}$ est la
+précédentes s'appliquent sans changement lorsque $\boldsymbol{K}$ est la
 catégorie des groupes ou des anneaux (non nécessairement commutatifs).
 
 Lorsque $X$ est une partie quelconque d'un espace topologique $Y$, et $j$
 l'injection canonique $X\to Y$, pour tout faisceau $\mathcal{G}$ sur $Y$ à
-valeurs dans une catégorie $\mathbf{K}$, on appelle faisceau \emph{induit} sur
+valeurs dans une catégorie $\boldsymbol{K}$, on appelle faisceau \emph{induit} sur
 $X$ par $\mathcal{G}$ l'image réciproque $j^*(\mathcal{G})$ (lorsqu'elle
 existe)~; pour les faisceaux d'ensembles (ou de groupes, ou d'anneaux) on
 retrouve la définition usuelle (G, II, 1.5).
@@ -1922,9 +1898,9 @@ $\psi^*(\mathcal{G})$ est exact en $\mathcal{G}$} dans la catégorie abélienne
 des faisceaux de groupes commutatifs.
 \end{env}
 
-\subsection{Faisceaux d'espaces pseudo-discrets}
-
 \oldpage[0\textsubscript{I}]{35}
+
+\subsection{Faisceaux d'espaces pseudo-discrets}
 
 \begin{env}[3.8.1]
 \label{0.3.8.1-fr}
@@ -1932,12 +1908,12 @@ Soit $X$ un espace topologique dont la topologie admet une base
 $\mathfrak{B}$ formée d'ensembles ouverts \emph{quasi-compacts}. Soit
 $\mathcal{F}$ un \emph{faisceau d'ensembles} sur $X$~; si on munit chacun des
 $\mathcal{F}(U)$ de la topologie \emph{discrète},
-$U\mapsto\mathcal{F}(U)$ est un \emph{préfaisceau d'espaces topologiques}.
+$U\to\mathcal{F}(U)$ est un \emph{préfaisceau d'espaces topologiques}.
 Nous allons voir qu'il existe un \emph{faisceau d'espaces topologiques
-$\mathcal{F}'$ associé à $\mathcal{F}$} (3.5.6) tel que
+$\mathcal{F}'$ associé} à $\mathcal{F}$ (3.5.6) tel que
 $\Gamma(U,\mathcal{F}')$ soit l'espace discret $\mathcal{F}(U)$ pour tout
 ouvert \emph{quasi-compact} $U$. Il suffira pour cela de montrer que le
-préfaisceau $U\mapsto\mathcal{F}(U)$ d'espaces topologiques discrets
+préfaisceau $U\to\mathcal{F}(U)$ d'espaces topologiques discrets
 \emph{sur $\mathfrak{B}$} vérifie la condition $(\mathrm{F}_0)$ de (3.2.2),
 et plus généralement que si $U$ est un ouvert quasi-compact et si
 $(U_\alpha)$ est un recouvrement de $U$ par des ensembles de $\mathfrak{B}$,
@@ -2052,7 +2028,7 @@ Pour toute partie $M$ de $X$, le couple $(M,\mathcal{A}|M)$ est évidemment un
 espace annelé, dit \emph{induit} sur $M$ par l'espace annelé
 $(X,\mathcal{A})$ (et appelé encore la \emph{restriction} de
 $(X,\mathcal{A})$ à $M$). Si $j$ est l'injection canonique $M\to X$ et
-$\omega$ l'application identique de $\mathcal{A}|M$, $(j,\omega^b)$ est un
+$\omega$ l'application identique de $\mathcal{A}|M$, $(j,\omega^\flat)$ est un
 monomorphisme $(M,\mathcal{A}|M)\to(X,\mathcal{A})$ d'espaces annelés, appelé
 l'\emph{injection canonique}. Le composé d'un morphisme
 $\Psi:(X,\mathcal{A})\to(Y,\mathcal{B})$ et de cette injection est appelé la
@@ -2061,19 +2037,19 @@ $\Psi:(X,\mathcal{A})\to(Y,\mathcal{B})$ et de cette injection est appelé la
 
 \begin{env}[4.1.3]
 \label{0.4.1.3-fr}
-Nous ne reviendrons pas sur la définition des $\mathcal{A}$-Modules ou
-faisceaux algébriques sur un espace annelé $(X,\mathcal{A})$
+Nous ne reviendrons pas sur la définition des $\mathcal{A}$-\emph{Modules} ou
+\emph{faisceaux algébriques} sur un espace annelé $(X,\mathcal{A})$
 (G, II, 2.2)~; lorsque $\mathcal{A}$ est un faisceau d'anneaux non
 nécessairement commutatifs, par $\mathcal{A}$-Module, il faudra toujours
 sous-entendre \og $\mathcal{A}$-Module à gauche\fg{} sauf mention expresse du
 contraire. Les sous-$\mathcal{A}$-Modules de $\mathcal{A}$ seront qualifiés de
-faisceaux d'idéaux (à gauche, à droite ou bilatères) dans $\mathcal{A}$ ou de
-$\mathcal{A}$-Idéaux.
+\emph{faisceaux d'idéaux} (à gauche, à droite ou bilatères) dans $\mathcal{A}$ ou de
+$\mathcal{A}$-\emph{Idéaux}.
 
 Lorsque $\mathcal{A}$ est un faisceau d'anneaux commutatifs, et que, dans la
 définition des $\mathcal{A}$-Modules, on remplace partout la structure de
-module par celle d'algèbre, on obtient la définition d'une
-$\mathcal{A}$-Algèbre sur $X$. Il revient au même de dire qu'une
+\emph{module} par celle d'\emph{algèbre}, on obtient la définition d'une
+$\mathcal{A}$-\emph{Algèbre} sur $X$. Il revient au même de dire qu'une
 $\mathcal{A}$-Algèbre (non nécessairement commutative) est un
 $\mathcal{A}$-Module $\mathcal{C}$, muni d'un homomorphisme de
 $\mathcal{A}$-Modules
@@ -2120,11 +2096,11 @@ homomorphismes de $\mathcal{A}$-Modules dans (G, II, 2.2), mais naturellement
 ne forment plus un groupe abélien.
 
 Si $\mathcal{M}$ est un sous-$\mathcal{A}$-Module d'une
-$\mathcal{A}$-Algèbre $\mathcal{C}$, la sous-$\mathcal{A}$-Algèbre de
-$\mathcal{C}$ engendrée par $\mathcal{M}$ est la somme des images des
+$\mathcal{A}$-Algèbre $\mathcal{C}$, la \emph{sous-$\mathcal{A}$-Algèbre de
+$\mathcal{C}$ engendrée par $\mathcal{M}$} est la somme des images des
 homomorphismes $\bigotimes^n\mathcal{M}\to\mathcal{C}$ (pour les
 $n\geqslant 0$). C'est aussi le faisceau associé au préfaisceau
-$U\mapsto\mathcal{B}(U)$ d'algèbres, $\mathcal{B}(U)$ étant la sous-algèbre
+$U\to\mathcal{B}(U)$ d'algèbres, $\mathcal{B}(U)$ étant la sous-algèbre
 de $\Gamma(U,\mathcal{C})$ engendrée par le sous-module
 $\Gamma(U,\mathcal{M})$.
 \end{env}
@@ -2132,7 +2108,7 @@ $\Gamma(U,\mathcal{M})$.
 \begin{env}[4.1.4]
 \label{0.4.1.4-fr}
 On dit qu'un faisceau d'anneaux $\mathcal{A}$ sur un espace topologique $X$
-est \emph{réduit en un point} $x$ de $X$ si la fibre $\mathcal{A}_x$ est un
+est \emph{réduit} en un point $x$ de $X$ si la fibre $\mathcal{A}_x$ est un
 anneau \emph{réduit} (1.1.1)~; on dit que $\mathcal{A}$ est \emph{réduit}
 s'il est réduit en tout point de $X$. Rappelons qu'un anneau $A$ est dit
 \emph{régulier} si chacun des anneaux locaux $A_{\mathfrak p}$ (où
@@ -2142,12 +2118,12 @@ est \emph{régulier en un point} $x$ (resp. \emph{régulier}) si la fibre
 $\mathcal{A}_x$ est un anneau régulier (resp. si $\mathcal{A}$ est régulier
 en tout point). Enfin, nous dirons qu'un faisceau d'anneaux $\mathcal{A}$ sur
 $X$ est \emph{normal en un point} $x$ (resp. \emph{normal}) si sa fibre
-$\mathcal{A}_x$ est un anneau intègre et intégralement clos (resp. si
+$\mathcal{A}_x$ est un anneau \emph{intègre et intégralement clos} (resp. si
 $\mathcal{A}$ est normal en tout point). Nous dirons qu'un espace annelé
 $(X,\mathcal{A})$ a l'une des propriétés précédentes si le faisceau d'anneaux
 $\mathcal{A}$ a cette propriété.
 
-Un faisceau d'anneaux \emph{gradués} $\mathcal{A}$ est par définition un
+Un faisceau d'\emph{anneaux gradués} $\mathcal{A}$ est par définition un
 faisceau d'anneaux qui est somme directe (G, II, 2.7) d'une famille
 $(\mathcal{A}_n)_{n\in\mathbf Z}$ de faisceaux de groupes abéliens avec les
 conditions $\mathcal{A}_m\mathcal{A}_n\subset\mathcal{A}_{m+n}$~; un
@@ -2173,7 +2149,6 @@ $\operatorname{Hom}_{\mathcal{A}}(\mathcal{F},\mathcal{G})$
 (G, II, 2.8 et 2.2) dans les catégories des $\mathcal{A}$-Modules à gauche ou
 à droite (selon les cas), à valeurs dans la catégorie des faisceaux de groupes
 abéliens (ou plus
-
 \oldpage[0\textsubscript{I}]{38}
 généralement des $\mathcal{C}$-Modules, si $\mathcal{C}$ est le centre de
 $\mathcal{A}$). La fibre
@@ -2227,17 +2202,17 @@ canoniquement à $\mathcal{G}$~; enfin, pour tout ouvert $U\subset X$, on a
 \]
 
 Pour tout $\mathcal{A}$-Module à gauche $\mathcal{F}$ (resp. à droite), on
-appelle \emph{dual de $\mathcal{F}$} et on note $\check{\mathcal{F}}$ le
+appelle \emph{dual} de $\mathcal{F}$ et on note $\check{\mathcal{F}}$ le
 $\mathcal{A}$-Module à droite (resp. à gauche)
 $\mathcal{H}\!om_{\mathcal{A}}(\mathcal{F},\mathcal{A})$.
 
 Enfin, si $\mathcal{A}$ est un faisceau d'anneaux commutatifs,
 $\mathcal{F}$ un $\mathcal{A}$-Module,
-$U\mapsto\bigwedge^p\Gamma(U,\mathcal{F})$ est un préfaisceau dont le
+$U\to\bigwedge^p\Gamma(U,\mathcal{F})$ est un préfaisceau dont le
 faisceau associé est un $\mathcal{A}$-Module qui se note
 $\bigwedge^p\mathcal{F}$ et s'appelle la \emph{puissance extérieure $p$-ème
 de $\mathcal{F}$}~; on vérifie aisément que l'application canonique du
-préfaisceau $U\mapsto\bigwedge^p\Gamma(U,\mathcal{F})$ dans le faisceau
+préfaisceau $U\to\bigwedge^p\Gamma(U,\mathcal{F})$ dans le faisceau
 associé $\bigwedge^p\mathcal{F}$ est \emph{injective}, et que pour tout
 $x\in X$, on a
 $(\bigwedge^p\mathcal{F})_x=\bigwedge^p(\mathcal{F}_x)$. Il est clair que
@@ -2295,7 +2270,6 @@ $\varphi'_{\lambda\nu}=\varphi'_{\lambda\mu}\circ\varphi'_{\mu\nu}$
 (\emph{condition de recollement} pour les $\varphi_{\lambda\mu}$). On peut
 tout d'abord considérer alors l'espace topologique obtenu par recollement (au
 moyen des $\varphi_{\lambda\mu}$) des $X_\lambda$
-
 \oldpage[0\textsubscript{I}]{39}
 le long des $V_{\lambda\mu}$~; si on identifie $X_\lambda$ à la partie ouverte
 $X'_\lambda$ correspondante dans $X$, les hypothèses entraînent que les trois
@@ -2319,7 +2293,7 @@ $V_{\lambda\mu}$}, au moyen des $\varphi_{\lambda\mu}$.
 \label{0.4.2.1-fr}
 Soient $(X,\mathcal{A})$, $(Y,\mathcal{B})$ deux espaces annelés,
 $\Psi=(\psi,\theta)$ un morphisme
-$(X,\mathcal{A})\to(Y,\mathcal{B})$~; $\psi_*(\mathcal{A})$ est donc un
+$(X,\mathcal{A})\to(Y,\mathcal{B})$~; $\psi_*(A)$ est donc un
 faisceau d'anneaux sur $Y$, et $\theta$ un homomorphisme
 $\mathcal{B}\to\psi_*(\mathcal{A})$ de faisceaux d'anneaux. Soit alors
 $\mathcal{F}$ un $\mathcal{A}$-Module~; son image directe
@@ -2335,7 +2309,7 @@ applications bilinéaires qui définissent ces structures étant compatibles
 avec les opérations de restriction, définissent sur $\psi_*(\mathcal{F})$ une
 structure de $\psi_*(\mathcal{A})$-Module. L'homomorphisme
 $\theta:\mathcal{B}\to\psi_*(\mathcal{A})$ permet alors de définir aussi sur
-$\psi_*(\mathcal{F})$ une structure de $\mathcal{B}$-Module~; nous dirons que
+$\psi_*(\mathcal{F})$ une structure de $\mathcal{B}$-\emph{Module}~; nous dirons que
 ce $\mathcal{B}$-Module est l'\emph{image directe de $\mathcal{F}$ par le
 morphisme $\Psi$}, et nous le noterons $\Psi_*(\mathcal{F})$. Si
 $\mathcal{F}_1$, $\mathcal{F}_2$ sont deux $\mathcal{A}$-Modules sur $X$ et
@@ -2383,10 +2357,9 @@ de $\mathcal{B}$-Modules
 \[
   \Psi_*(\mathcal{M})\otimes_{\mathcal{B}}\Psi_*(\mathcal{N})
   \longrightarrow
-  \Psi_*(\mathcal{M}\otimes_{\mathcal{A}}\mathcal{N}).
+  \Psi_*(\mathcal{M}\otimes_{\mathcal{A}}\mathcal{N})
   \tag{4.2.2.1}\label{0.4.2.2.1-fr}
 \]
-
 \oldpage[0\textsubscript{I}]{40}
 qui ne sera en général ni injectif ni surjectif. Si $\mathcal{P}$ est un
 troisième $\mathcal{A}$-Module, on vérifie aussitôt que le diagramme
@@ -2433,7 +2406,7 @@ $u\to\Psi_*(u)$ est un homomorphisme
     (\Psi_*(\mathcal{M})|U,\Psi_*(\mathcal{N})|U)
 \]
 pour les structures de $\Gamma(U,\mathcal{B})$-modules~; ces homomorphismes
-étant compatibles aux opérations de restriction, définissent donc un
+étant compatibles aux opérations de restriction définissent donc un
 homomorphisme canonique fonctoriel de $\mathcal{B}$-Modules
 \[
   \Psi_*\bigl(\mathcal{H}\!om_{\mathcal{A}}(\mathcal{M},\mathcal{N})\bigr)
@@ -2454,7 +2427,7 @@ Si $\mathcal{C}$ est une $\mathcal{A}$-Algèbre, l'homomorphisme composé
   \longrightarrow
   \Psi_*(\mathcal{C})
 \]
-définit sur $\Psi_*(\mathcal{C})$ une structure de $\mathcal{B}$-Algèbre,
+définit sur $\Psi_*(\mathcal{C})$ une structure de $\mathcal{B}$-\emph{Algèbre},
 comme il résulte de (4.2.2.2). On voit de même que si $\mathcal{M}$ est un
 $\mathcal{C}$-Module, $\Psi_*(\mathcal{M})$ est muni canoniquement d'une
 structure de $\Psi_*(\mathcal{C})$-Module.
@@ -2486,13 +2459,12 @@ $\Psi'\circ\Psi$, il est clair que l'on a
 $\Psi''_*=\Psi'_*\circ\Psi_*$.
 \end{env}
 
-\oldpage[0\textsubscript{I}]{41}
 \subsection{Image réciproque d'un $\mathcal{B}$-Module}
 \label{subsection:0.4.3-fr}
 
 \begin{env}[4.3.1]
 \label{0.4.3.1-fr}
-Les hypothèses et notations étant celles de (4.2.1), soit $\mathcal{G}$ un
+Les hypothèses et notations étant celles de (4.2.1), soient $\mathcal{G}$ un
 $\mathcal{B}$-Module et $\psi^*(\mathcal{G})$ son image réciproque (3.7.1)
 qui est donc un faisceau de groupes abéliens sur $X$. La définition des
 sections de $\psi^*(\mathcal{G})$ et de $\psi^*(\mathcal{B})$ (3.7.1)
@@ -2504,7 +2476,9 @@ $\mathcal{A}_{[\theta]}$ lorsqu'il y a lieu d'éviter des confusions~; le
 produit tensoriel
 $\psi^*(\mathcal{G})\otimes_{\psi^*(\mathcal{B})}\mathcal{A}_{[\theta]}$
 est alors muni d'une structure de $\mathcal{A}$-Module. Nous dirons que ce
-$\mathcal{A}$-Module est l'image réciproque de $\mathcal{G}$ par le morphisme
+$\mathcal{A}$-Module est \emph{l'image
+\oldpage[0\textsubscript{I}]{41}
+réciproque de $\mathcal{G}$ par le morphisme}
 $\Psi$ et nous le noterons $\Psi^*(\mathcal{G})$. Si $\mathcal{G}_1$,
 $\mathcal{G}_2$ sont deux $\mathcal{B}$-Modules sur $Y$, $v$ un
 $\mathcal{B}$-homomorphisme $\mathcal{G}_1\to\mathcal{G}_2$,
@@ -2557,7 +2531,7 @@ D'autre part, pour une somme directe finie $\bigoplus_i\mathcal{G}_i$ de
 $\mathcal{B}$-Modules, il est clair que
 \[
   \psi^*\bigl(\bigoplus_i\mathcal{G}_i\bigr)
-  =\bigoplus_i\psi^*(\mathcal{G}_i)~;
+  =\bigoplus_i\psi^*(\mathcal{G}_i),
 \]
 donc, par produit tensoriel avec $\mathcal{A}_{[\theta]}$,
 \[
@@ -2584,7 +2558,7 @@ de $\psi^*(\mathcal{B})$-Modules, et la fibre en un point d'un produit
 tensoriel de faisceaux étant le produit tensoriel des fibres en ce point
 (G, II, 2.8), on déduit de (3.7.2) que l'homomorphisme précédent est en fait
 un \emph{isomorphisme}. Par produit tensoriel avec $\mathcal{A}$, on en déduit
-un \emph{isomorphisme canonique fonctoriel}
+un \emph{isomorphisme canonique} fonctoriel
 \[
   \Psi^*(\mathcal{G}_1)\otimes_{\mathcal{A}}\Psi^*(\mathcal{G}_2)
   \xrightarrow{\sim}
@@ -2609,7 +2583,7 @@ transporter cet homomorphisme en un homomorphisme de $\mathcal{A}$-Modules
 \]
 satisfaisant aux mêmes conditions, donc $\Psi^*(\mathcal{C})$ est ainsi muni
 d'une structure de $\mathcal{A}$-Algèbre. En particulier, il résulte aussitôt
-des définitions que la $\mathcal{A}$-Algèbre $\Psi^*(\mathcal{B})$ est égale à
+des définitions que la $\mathcal{A}$-Algèbre $\Psi^*(\mathcal{B})$ est \emph{égale à}
 $\mathcal{A}$ (à un isomorphisme canonique près).
 
 De même, si $\mathcal{M}$ est un $\mathcal{C}$-Module, la donnée de cette
@@ -2703,7 +2677,7 @@ $\Psi'$-morphisme~; alors
   w:\mathcal{H}\xrightarrow{v}\Psi'_*(\mathcal{G})
   \xrightarrow{\Psi'_*(u)}\Psi'_*(\Psi_*(\mathcal{F}))
 \]
-est un $\Psi''$-morphisme que l'on appelle le \emph{composé de $u$ et $v$}.
+est un $\Psi''$-morphisme que l'on appelle le \emph{composé} de $u$ et $v$.
 \end{env}
 
 \begin{env}[4.4.3]
@@ -2716,9 +2690,9 @@ canonique de \emph{bifoncteurs} en $\mathcal{F}$ et $\mathcal{G}$
   \operatorname{Hom}_{\mathcal{B}}(\mathcal{G},\Psi_*(\mathcal{F}))
   \tag{4.4.3.1}\label{0.4.4.3.1-fr}
 \]
-que nous désignerons par $v\mapsto v_\theta^\flat$ (ou simplement
-$v\mapsto v^\flat$ si aucune confusion n'est possible)~; nous noterons
-$u\mapsto u_\theta^\sharp$, ou $u\mapsto u^\sharp$ l'isomorphisme réciproque.
+que nous désignerons par $v\to v_\theta^\flat$ (ou simplement
+$v\to v^\flat$ si aucune confusion n'est possible)~; nous noterons
+$u\to u_\theta^\sharp$, ou $u\to u^\sharp$ l'isomorphisme réciproque.
 Cette définition est la suivante~: en composant
 $v:\Psi^*(\mathcal{G})\to\mathcal{F}$ avec l'application canonique
 $\psi^*(\mathcal{G})\to\Psi^*(\mathcal{G})$, on obtient un homomorphisme de
@@ -2738,8 +2712,8 @@ $\Psi^*(\mathcal{G})\to\mathcal{F}$, que nous désignerons par
 $u_\theta^\sharp$. Il est immédiat de vérifier que
 $(u_\theta^\sharp)_\theta^\flat=u$ et
 $(v_\theta^\flat)_\theta^\sharp=v$, ainsi que le caractère fonctoriel en
-$\mathcal{F}$ de l'isomorphisme $v\mapsto v_\theta^\flat$. Le caractère
-fonctoriel en $\mathcal{G}$ de $u\mapsto u_\theta^\sharp$ s'en déduit alors
+$\mathcal{F}$ de l'isomorphisme $v\to v_\theta^\flat$. Le caractère
+fonctoriel en $\mathcal{G}$ de $u\to u_\theta^\sharp$ s'en déduit alors
 formellement comme dans (3.5.4) (raisonnement qui démontrerait aussi le
 caractère fonctoriel de $\Psi^*$ établi dans (4.3.1) directement).
 
@@ -2770,7 +2744,7 @@ tout $x\in X$ un homomorphisme
 $u_x:\mathcal{G}_{\psi(x)}\to\mathcal{F}_x$ sur les fibres, obtenu en
 composant
 $(u^\sharp)_x:(\Psi^*(\mathcal{G}))_x\to\mathcal{F}_x$ et l'homomorphisme
-canonique $s_x\mapsto s_x\otimes1$ de $\mathcal{G}_{\psi(x)}$ dans
+canonique $s_x\to s_x\otimes1$ de $\mathcal{G}_{\psi(x)}$ dans
 $(\Psi^*(\mathcal{G}))_x
 =\mathcal{G}_{\psi(x)}\otimes_{\mathcal{B}_{\psi(x)}}\mathcal{A}_x$.
 L'homomorphisme $u_x$ s'obtient aussi par passage à la limite inductive à
@@ -2822,7 +2796,7 @@ limite inductive de ce système n'est autre que $u^\sharp$.
 \begin{env}[4.4.6]
 \label{0.4.4.6-fr}
 Soient $\mathcal{M}$, $\mathcal{N}$ deux $\mathcal{B}$-Modules, $V$ un ouvert
-de $Y$, $U=\psi^{-1}(V)$~; l'application $v\mapsto\Psi^*(v)$ est un
+de $Y$, $U=\psi^{-1}(V)$~; l'application $v\to\Psi^*(v)$ est un
 homomorphisme
 \[
   \operatorname{Hom}_{\mathcal{B}|V}(\mathcal{M}|V,\mathcal{N}|V)
@@ -2925,7 +2899,7 @@ $u(t)=t\cdot(s|U)$~; on dit que $u$ est \emph{défini par la section $s$}. Si
 maintenant $I$ est un ensemble d'indices quelconque, considérons le faisceau
 somme directe $\mathcal{O}_X^{(I)}$, et pour tout $i\in I$, soit $h_i$
 l'injection canonique du $i$-ème facteur dans $\mathcal{O}_X^{(I)}$~; on sait
-que $u\mapsto(u\circ h_i)$ est un isomorphisme de
+que $u\to(u\circ h_i)$ est un isomorphisme de
 $\operatorname{Hom}_{\mathcal{O}_X}(\mathcal{O}_X^{(I)},\mathcal{F})$ sur le
 produit
 $\bigl(\operatorname{Hom}_{\mathcal{O}_X}(\mathcal{O}_X,\mathcal{F})\bigr)^I$.
@@ -2943,7 +2917,7 @@ par cette famille est \emph{surjectif} (autrement dit, si, pour tout
 $x\in X$, $\mathcal{F}_x$ est un $\mathcal{O}_x$-module engendré par les
 $(s_i)_x$). On dit que $\mathcal{F}$ est \emph{engendré par ses sections
 au-dessus de $X$} s'il est engendré par la famille de toutes ces sections (ou
-par une sous-famille)~; autrement dit, s'il existe un homomorphisme surjectif
+par une sous-famille), autrement dit, s'il existe un homomorphisme surjectif
 $\mathcal{O}_X^{(I)}\to\mathcal{F}$ pour un $I$ convenable.
 
 On notera qu'un $\mathcal{O}_X$-Module $\mathcal{F}$ peut être tel qu'il
@@ -2974,11 +2948,11 @@ On dit qu'un $\mathcal{O}_X$-Module $\mathcal{F}$ est \emph{quasi-cohérent}
 si, pour tout $x\in X$, il y a un voisinage ouvert $U$ de $x$ tel que
 $\mathcal{F}|V$ soit isomorphe au \emph{conoyau} d'un homomorphisme de la
 forme
-$\mathcal{O}_X^{(I)}|V\to\mathcal{O}_X^{(J)}|V$, où $I$ et $J$ soient des
+$\mathcal{O}_X^{(I)}|V\to\mathcal{O}_X^{(J)}|V$, où $I$ et $J$ sont des
 ensembles d'indices arbitraires. Il est clair que $\mathcal{O}_X$ lui-même est
 un $\mathcal{O}_X$-Module quasi-cohérent, et que toute somme directe de
 $\mathcal{O}_X$-Modules quasi-cohérents est un $\mathcal{O}_X$-Module
-quasi-cohérent. On dit qu'une $\mathcal{O}_X$-Algèbre $\mathcal{A}$ est
+quasi-cohérent. On dit qu'une $\mathcal{O}_X$-\emph{Algèbre} $\mathcal{A}$ est
 \emph{quasi-cohérente} si elle l'est en tant que $\mathcal{O}_X$-Module.
 \end{env}
 
@@ -3038,7 +3012,7 @@ $y\in U$.
 \begin{env}[5.2.3]
 \label{0.5.2.3-fr}
 Supposons $X$ \emph{quasi-compact}, et soient $\mathcal{F}$, $\mathcal{G}$ deux
-$\mathcal{O}_X$-Modules tels que $\mathcal{G}$ soit \emph{de type fini},
+$\mathcal{O}_X$-Modules tels que $\mathcal{G}$ soit de \emph{type fini},
 $u:\mathcal{F}\to\mathcal{G}$ un homomorphisme \emph{surjectif}. Supposons de
 plus que $\mathcal{F}$ soit limite inductive d'un système inductif
 $(\mathcal{F}_\lambda)$ de $\mathcal{O}_X$-Modules. Alors il existe un indice
@@ -3243,8 +3217,7 @@ homomorphisme $\varphi:\mathcal{O}_x^p\to\mathcal{O}_x^q$~; alors il existe un
 voisinage ouvert $U$ de $X$ et un $(\mathcal{O}_X|U)$-Module cohérent
 $\mathcal{F}$ tel que $\mathcal{F}_x$ soit isomorphe à $M$. En effet, en vertu
 de (5.2.6), il existe une section $u$ de
-$\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{O}_X^p,\mathcal{O}_X^q)$ au-dessus
-d'un voisinage ouvert $U$ de $x$ telle que $u_x=\varphi$~; le conoyau
+$\mathcal{H}\!om_{\mathcal{O}_X}(\mathcal{O}_X^p,\mathcal{O}_X^q)$ telle que $u_x=\varphi$~; le conoyau
 $\mathcal{F}$ de l'homomorphisme
 $u:\mathcal{O}_X^p|U\to\mathcal{O}_X^q|U$ répond à la question (5.3.4).
 \end{env}
@@ -3439,7 +3412,7 @@ homomorphisme canonique fonctoriel
 \[
   f^*(\check{\mathcal{L}})
   \longrightarrow
-  \check{\bigl(f^*(\mathcal{L})\bigr)}
+  \bigl(f^*(\mathcal{L})\bigr)\check{}
 \]
 (4.4.6), et lorsque $L$ est localement libre, cet homomorphisme est
 \emph{bijectif}~: on est en effet encore ramené au cas où
@@ -3457,7 +3430,7 @@ abélien somme directe
 $\bigoplus_{n\in\mathbb{Z}}\Gamma(X,\mathcal{L}^{\otimes n})$~; on le munit
 d'une structure d'\emph{anneau gradué}, en faisant correspondre au couple
 $(s_n,s_m)$, où $s_n\in\Gamma(X,\mathcal{L}^{\otimes n})$,
-$s_m\in\Gamma(X,\mathcal{L}^{\otimes m})$, la section de
+$s_m\in\Gamma(X,\mathcal{L}^{\otimes n})$, la section de
 $\mathcal{L}^{\otimes(n+m)}$ au-dessus de $X$ qui correspond canoniquement
 (5.4.4.1) à la section $s_n\otimes s_m$ de
 $\mathcal{L}^{\otimes n}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes m}$~;
@@ -3476,9 +3449,9 @@ On munit ce groupe abélien d'une structure de \emph{module gradué} sur
 l'anneau gradué $\Gamma_*(\mathcal{L})$ de la façon suivante~: au couple
 $(s_n,u_m)$, où $s_n\in\Gamma(X,\mathcal{L}^{\otimes n})$ et
 $u_m\in\Gamma(X,
-\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes m})$, on fait
+\mathcal{F}\otimes\mathcal{L}^{\otimes m})$, on fait
 correspondre la section de
-$\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes(m+n)}$ qui correspond
+$\mathcal{F}\otimes\mathcal{L}^{\otimes(m+n)}$ qui correspond
 canoniquement (5.4.4.1) à $s_n\otimes u_m$~; la vérification des axiomes des
 modules est immédiate. Pour $X$ et $\mathcal{L}$ fixés,
 $\Gamma_*(\mathcal{L},\mathcal{F})$ est un foncteur covariant en
@@ -3509,17 +3482,17 @@ $\Gamma_*(\mathcal{L})\to\Gamma_*(f^*(\mathcal{L}))$. Le même homomorphisme
 canonique (4.4.3) définit de même un homomorphisme de groupes abéliens
 \[
   \Gamma\bigl(X,
-    \mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}\bigr)
+    \mathcal{F}\otimes\mathcal{L}^{\otimes n}\bigr)
   \longrightarrow
   \Gamma\bigl(Y,
-    f^*(\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n})\bigr),
+    f^*(\mathcal{F}\otimes\mathcal{L}^{\otimes n})\bigr),
 \]
 et comme
 \[
-  f^*(\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n})
-  =f^*(\mathcal{F})\otimes_{\mathcal{O}_Y}
+  f^*(\mathcal{F}\otimes\mathcal{L}^{\otimes n})
+  =f^*(\mathcal{F})\otimes
    (f^*(\mathcal{L}))^{\otimes n}
-  \tag{4.3.3.1}
+  \quad\text{(4.3.3.1),}
 \]
 
 \oldpage[0\textsubscript{I}]{51}
@@ -3542,7 +3515,7 @@ $\mathfrak{M}$ et un seul\footnote{Voir le livre en préparation cité dans
 l'Introduction.}~; on définit dans $\mathfrak{M}$ une loi de composition en
 faisant correspondre à deux éléments $\mathcal{L}$, $\mathcal{L}'$ de
 $\mathfrak{M}$ l'unique élément de $\mathfrak{M}$ isomorphe à
-$\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}'$. Avec cette loi de
+$\mathcal{L}\otimes\mathcal{L}'$. Avec cette loi de
 composition, $\mathfrak{M}$ est un \emph{groupe isomorphe au groupe de
 cohomologie} $H^1(X,\mathcal{O}_X^*)$, où $\mathcal{O}_X^*$ est le
 sous-faisceau de $\mathcal{O}_X$ tel que $\Gamma(U,\mathcal{O}_X^*)$ soit le
@@ -3570,7 +3543,6 @@ $\mathcal{O}_X^*$, et son \emph{cobord} correspond à la famille des
 automorphismes
 $(\omega_\lambda|U_\lambda\cap U_\mu)\circ
  (\omega_\mu|U_\lambda\cap U_\mu)^{-1}$.
-
 On peut faire correspondre à tout $1$-cocycle de $\mathfrak{U}$ à valeurs
 dans $\mathcal{O}_X^*$ l'élément de $\mathfrak{M}$ isomorphe au
 $\mathcal{O}_X$-Module inversible obtenu par recollement à partir de la
@@ -3658,7 +3630,7 @@ $\varepsilon_{\lambda\mu}$, il est clair que $f^*(\mathcal{L})$ s'obtient par
 recollement des $\mathcal{O}_Y|\psi^{-1}(U_\lambda)$ au moyen des
 automorphismes $f^*(\theta_{\lambda\mu})$, et il suffit donc de vérifier que
 ces derniers correspondent au cocycle
-$(\omega^\#(\varepsilon_{\lambda\mu}))$, ce qui résulte aussitôt des
+$(\omega^\sharp(\varepsilon_{\lambda\mu}))$, ce qui résulte aussitôt des
 définitions (on a identifié $\varepsilon_{\lambda\mu}$ à son image canonique
 par $\rho$ (3.7.2), section de $\psi^*(\mathcal{O}_X^*)$ au-dessus de
 $\psi^{-1}(U_\lambda\cap U_\mu)$).
@@ -3671,7 +3643,7 @@ $\mathcal{F}$ étant supposé \emph{localement libre}, et soit $\mathcal{G}$ un
 $\mathcal{O}_X$-Module \emph{extension de $\mathcal{F}$ par $\mathcal{E}$},
 autrement dit tel qu'il existe une suite exacte
 \[
-  0\longrightarrow\mathcal{E}\xrightarrow{i}\mathcal{G}
+  0\longrightarrow\mathcal{E}\xrightarrow{j}\mathcal{G}
   \xrightarrow{p}\mathcal{F}\longrightarrow 0.
 \]
 Alors, pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ tel que
@@ -3695,7 +3667,7 @@ libre de rang fini. Il existe alors un isomorphisme canonique
 \[
   f_*(\mathcal{F})\otimes_{\mathcal{O}_Y}\mathcal{L}
   \xrightarrow{\sim}
-  f_*\bigl(\mathcal{F}\otimes_{\mathcal{O}_X}f^*(\mathcal{L})\bigr).
+  f_*\bigl(\mathcal{F}\otimes_{\mathcal{O}_X}f^*(\mathcal{L})\bigr)
   \tag{5.4.10.1}\label{0.5.4.10.1-fr}
 \]
 
@@ -3708,7 +3680,7 @@ homomorphisme canonique
   \xrightarrow{1\otimes\rho}
   f_*(\mathcal{F})\otimes_{\mathcal{O}_Y}f_*(f^*(\mathcal{L}))
   \xrightarrow{\alpha}
-  f_*\bigl(\mathcal{F}\otimes_{\mathcal{O}_X}f^*(\mathcal{L})\bigr),
+  f_*\bigl(\mathcal{F}\otimes_{\mathcal{O}_X}f^*(\mathcal{L})\bigr)
 \]
 $\rho$ étant l'homomorphisme (4.4.3.2) et $\alpha$ l'homomorphisme (4.2.2.1).
 Pour montrer que lorsque $\mathcal{L}$ est localement libre, cet homomorphisme
@@ -3728,12 +3700,12 @@ Nous dirons qu'un espace annelé $(X,\mathcal{O}_X)$ est un \emph{espace
 annelé en anneaux locaux} si, pour tout $x\in X$, $\mathcal{O}_x$ est un
 anneau local~; ces espaces annelés seront de loin les plus fréquents de ceux
 qui seront considérés dans ce travail. Nous désignerons alors par
-$\mathfrak{m}_x$, l'\emph{idéal maximal} de $\mathcal{O}_x$, par $k(x)$ le
+$\mathfrak{m}_x$ l'\emph{idéal maximal} de $\mathcal{O}_x$, par $\boldsymbol{k}(x)$ le
 \emph{corps résiduel} $\mathcal{O}_x/\mathfrak{m}_x$~; pour tout
 $\mathcal{O}_X$-Module $\mathcal{F}$, tout ouvert $U$ de $X$, tout point
 $x\in U$ et toute section $f\in\Gamma(U,\mathcal{F})$, nous désignerons par
 $f(x)$ la \emph{classe} du germe
-$f_x\in\mathcal{F}_x\pmod{\mathfrak{m}_x\mathcal{F}_x}$, et nous dirons que
+$f_x\in\mathcal{F}_x$ mod.~$\mathfrak{m}_x\mathcal{F}_x$, et nous dirons que
 c'est la \emph{valeur} de $f$ au point $x$. La relation $f(x)=0$ signifie
 donc que $f_x\in\mathfrak{m}_x\mathcal{F}_x$~; lorsqu'elle est remplie, on dira
 (par abus de langage) que $f$ \emph{s'annule en $x$}. On aura soin de ne pas
@@ -3747,12 +3719,12 @@ $\mathcal{O}_X$-Module inversible, $f$ une section de $\mathcal{L}$ au-dessus
 de $X$. Il y a alors \emph{équivalence} entre les trois propriétés suivantes
 en un point $x\in X$~:
 \begin{enumerate}
-  \item[$a)$] \emph{$f_x$ est un générateur de $\mathcal{L}_x$}~;
-  \item[$b)$] \emph{$f_x\notin\mathfrak{m}_x\mathcal{L}_x$} (autrement dit,
+  \item[a)] \emph{$f_x$ est un générateur de $\mathcal{L}_x$}~;
+  \item[b)] \emph{$f_x\notin\mathfrak{m}_x\mathcal{L}_x$} (autrement dit,
     $f(x)\neq0$)~;
-  \item[$c)$] \emph{Il existe une section $g$ de $\mathcal{L}^{-1}$ au-dessus
+  \item[c)] \emph{Il existe une section $g$ de $\mathcal{L}^{-1}$ au-dessus
     d'un voisinage ouvert $V$ de $x$ telle que l'image canonique de $f\otimes
-    g$ dans $\Gamma(V,\mathcal{O}_X)$ (5.4.3) soit la section unité}.
+    g$ dans $\Gamma(V,\mathcal{O}_X)$ \textup{(5.4.3)} soit la section unité}.
 \end{enumerate}
 
 En effet, la question étant locale, on peut se borner au cas où
@@ -3775,8 +3747,9 @@ Sous les hypothèses de (5.5.2), soit $\mathcal{L}'$ un second
 $\mathcal{O}_X$-Module inversible~; alors, si
 $f\in\Gamma(X,\mathcal{L})$, $g\in\Gamma(X,\mathcal{L}')$, on a
 \[
-  X_f\cap X_g=X_{f\otimes g}.
+  X_f\cap X_g=X_{f\otimes g}
 \]
+
 On se ramène en effet aussitôt au cas où
 $\mathcal{L}=\mathcal{L}'=\mathcal{O}_X$ (la question étant locale)~; comme
 $f\otimes g$ s'identifie alors canoniquement au produit $fg$, la proposition
@@ -3796,18 +3769,18 @@ $\mathcal{F}=\mathcal{O}_X^n$~; en outre, pour tout $x\in X$,
   (\bigwedge^p\mathcal{F})_x/
   \mathfrak{m}_x(\bigwedge^p\mathcal{F})_x
 \]
-est un espace vectoriel de dimension $\binom{n}{p}$ sur $k(x)$, qui
+est un espace vectoriel de dimension $\binom{n}{p}$ sur $\boldsymbol{k}(x)$, qui
 s'identifie canoniquement à
 \[
   \bigwedge^p(\mathcal{F}_x/\mathfrak{m}_x\mathcal{F}_x).
 \]
 Soient
 $s_1,\ldots,s_p$ des sections de $F$ au-dessus d'un ouvert $U$ de $X$, et
-soit $s=s_1\wedge\cdots\wedge s_p$, qui est une section de
+soit $s=s_1\wedge\ldots\wedge s_p$, qui est une section de
 $\bigwedge^p\mathcal{F}$ au-dessus de $U$ (4.1.5)~; on a
-$s(x)=s_1(x)\wedge\cdots\wedge s_p(x)$, et par suite, dire que
+$s(x)=s_1(x)\wedge\ldots\wedge s_p(x)$, et par suite, dire que
 $s_1(x),\ldots,s_p(x)$ sont \emph{linéairement dépendants} signifie que
-$s(x)=0$. On en conclut que \emph{l'ensemble des $x\in X$ tels que
+$s(x)=0$. On en conclut que l'\emph{ensemble des $x\in X$ tels que
 $s_1(x),\ldots,s_p(x)$ soient linéairement indépendants est ouvert dans
 $X$}~: il suffit en effet, en se ramenant au cas où
 $\mathcal{F}=\mathcal{O}_X^n$, d'appliquer (5.5.2) à la section image de $s$
@@ -3822,7 +3795,7 @@ $u:\mathcal{O}_X^n|U\to\mathcal{F}|U$ défini par les $s_i$ (5.1.1) est un
 \emph{isomorphisme}~: on peut en effet se restreindre au cas où
 $\mathcal{F}=\mathcal{O}_X^n$ et où on identifie canoniquement
 $\bigwedge^n\mathcal{F}$ et $\mathcal{O}_X$~;
-$s=s_1\wedge\cdots\wedge s_n$ est alors une section de $\mathcal{O}_X$
+$s=s_1\wedge\ldots\wedge s_n$ est alors une section de $\mathcal{O}_X$
 \emph{inversible} au-dessus de $U$, et on définit un homomorphisme réciproque
 de $u$ au moyen des formules de Cramer.
 \end{env}
@@ -3852,7 +3825,7 @@ $\mathcal{G}_x/\mathfrak{m}_x\mathcal{G}_x$. La condition est
 $\mathcal{E}=\mathcal{O}_X^m$~; soient $s_1,\ldots,s_m$ les images par $u$ des
 sections $e_i$ de $\mathcal{O}_X^m$ telles que $(e_i)_y$ soit égal au $i$-ème
 élément de la base canonique de $\mathcal{O}_y^m$ pour tout $y\in X$
-(\emph{sections canoniques de $\mathcal{O}_X^m$})~; par hypothèse
+(\emph{sections canoniques} de $\mathcal{O}_X^m$)~; par hypothèse
 $s_1(x),\ldots,s_m(x)$ sont linéairement indépendants, donc, si $\mathcal{F}$
 est de rang $n$, il existe $n-m$ sections $s_{m+1},\ldots,s_n$ de
 $\mathcal{F}$ au-dessus d'un voisinage $V$ de $x$ telles que les $s_i(x)$
@@ -3873,9 +3846,9 @@ $e_i|U$, ce qui achève la démonstration.
 La notion de platitude est due à J.-P.~Serre [16]~; dans ce qui suit, on omet
 les démonstrations des résultats qui sont exposés dans l'\emph{Algèbre
 commutative} de N.~Bourbaki, à laquelle nous renvoyons le lecteur. Nous
-supposons tous les anneaux commutatifs.\footnote{Voir l'exposé cité de
+supposons tous les anneaux commutatifs\footnote{Voir l'exposé cité de
 N.~Bourbaki pour la généralisation de la plupart des résultats au cas non
-commutatif.}
+commutatif.}.
 
 \oldpage[0\textsubscript{I}]{55}
 
@@ -3900,10 +3873,10 @@ Soit $M$ un $A$-module. Les propriétés suivantes sont équivalentes~:
 \end{enumerate}
 
 Lorsque $M$ vérifie ces conditions, on dit que $M$ est un
-\emph{$A$-module plat}. Il est clair que tout $A$-module libre est plat.
+$A$-\emph{module plat}. Il est clair que tout $A$-module libre est plat.
 
 Pour que $M$ soit un $A$-module plat, il suffit que pour tout idéal
-$\mathfrak{J}$ de $A$, \emph{de type fini}, l'application canonique
+$\mathfrak{J}$ de $A$, de \emph{type fini}, l'application canonique
 $M\otimes_A\mathfrak{J}\to M\otimes_A A=M$ soit \emph{injective}.
 \end{env}
 
@@ -3935,7 +3908,7 @@ Soient $M$ un $A$-module plat, $N$ un $A$-module quelconque~; pour deux
 sous-modules $N'$, $N''$ de $N$, on a alors
 \[
   \operatorname{Im}(M\otimes(N'+N''))
-  =\operatorname{Im}(M\otimes N')+\operatorname{Im}(M\otimes N''),
+  =\operatorname{Im}(M\otimes N')+\operatorname{Im}(M\otimes N'')
 \]
 \[
   \operatorname{Im}(M\otimes(N'\cap N''))
@@ -3964,7 +3937,7 @@ $\mathfrak{J}M'=M'\cap\mathfrak{J}M$.
 Lorsqu'un groupe additif $M$ est muni de plusieurs structures de module par
 rapport à des anneaux $A$, $B$, \ldots, au lieu de dire que $M$ est plat en
 tant que $A$-module, $B$-module, \ldots, nous dirons parfois aussi que $M$
-est \emph{$A$-plat}, \emph{$B$-plat}, \ldots
+est $A$-\emph{plat}, $B$-\emph{plat}, \ldots
 
 \begin{env}[6.2.1]
 \label{0.6.2.1-fr}
@@ -3991,7 +3964,7 @@ finie~; alors l'homomorphisme canonique
   \tag{6.2.2.1}
 \]
 (transformant $u\otimes b$ en l'homomorphisme
-$m\otimes b'\longmapsto u(m)\otimes b'b$) est un isomorphisme.
+$m\otimes b'\to u(m)\otimes b'b$) est un isomorphisme.
 \end{env}
 
 \begin{env}[6.2.3]
@@ -4026,7 +3999,7 @@ commutant au produit tensoriel)
 \begin{env}[6.3.1]
 \label{0.6.3.1-fr}
 Si $A$ est un anneau, $S$ une partie multiplicative de $A$, $S^{-1}A$ est
-un $A$-module \emph{plat}. En effet, pour tout $A$-module $N$,
+un $A$-\emph{module plat}. En effet, pour tout $A$-module $N$,
 $N\otimes_A S^{-1}A$ s'identifie à $S^{-1}N$ (1.2.5) et on sait (1.3.2)
 que $S^{-1}N$ est un foncteur exact en $N$.
 
@@ -4041,7 +4014,7 @@ qu'il soit $S^{-1}A$-plat.
 \begin{env}[6.3.2]
 \label{0.6.3.2-fr}
 Soient $A$ un anneau, $B$ une $A$-algèbre, $T$ une partie multiplicative de
-$B$. Si $P$ est un $B$-module qui est $A$-plat, $T^{-1}P$ est $A$-plat. En
+$B$. Si $P$ est un $B$-module qui est $A$-\emph{plat}, $T^{-1}P$ est $A$-\emph{plat}. En
 effet, pour tout $A$-module $N$, on a
 \[
   (T^{-1}P)\otimes_A N
@@ -4105,15 +4078,15 @@ idéal maximal $\mathfrak{m}$ de $A$.
 \label{0.6.3.4-fr}
 Soit $M$ un $A$-module~; si $M$ est plat, et si $f\in A$ n'est pas diviseur
 de $0$ dans $A$, $f$ n'annule aucun élément $\neq0$ de $M$, car
-l'homomorphisme $m\mapsto f\cdot m$ s'écrit $1\otimes u$, où $u$ est la
-multiplication $a\mapsto f\cdot a$ dans $A$ et $M$ est identifié à
+l'homomorphisme $m\to f.m$ s'écrit $1\otimes u$, où $u$ est la
+multiplication $a\to f.a$ dans $A$ et $M$ est identifié à
 $M\otimes_A A$~; si $u$ est injective, il en est donc de même de
 $1\otimes u$ puisque $M$ est plat. En particulier, si $A$ est
 \emph{intègre}, $M$ est \emph{sans torsion}.
 
 Inversement, supposons $A$ intègre, $M$ sans torsion, et supposons que pour
 tout idéal maximal $\mathfrak{m}$ de $A$, $A_\mathfrak{m}$ soit un
-\emph{anneau de valuation discrète}~; alors $M$ est $A$-plat. Il suffit en
+\emph{anneau de valuation discrète}~; alors $M$ est $A$-\emph{plat}. Il suffit en
 effet (6.3.3) de prouver que $M_\mathfrak{m}$ est $A_\mathfrak{m}$-plat, et
 on peut donc supposer que $A$ est déjà un anneau de valuation discrète. Mais
 comme $M$ est limite inductive de ses sous-modules de type fini, et que ces
@@ -4126,7 +4099,7 @@ $\varphi:A\to B$ un homomorphisme d'anneaux faisant de $B$ un $A$-module
 \emph{plat} et $\neq\{0\}$, $\varphi$ est nécessairement \emph{injectif}.
 Inversement, si $B$ est intègre, $A$ un sous-anneau de $B$ et si pour tout
 idéal maximal $\mathfrak{m}$ de $A$, $A_\mathfrak{m}$ est un anneau de
-valuation discrète, $B$ est $A$-plat.
+valuation discrète, $B$ est $A$-\emph{plat}.
 \end{env}
 
 \subsection{Modules fidèlement plats}
@@ -4199,7 +4172,7 @@ plat, car $M$ est $A$-plat (6.3.3), et on a
   \otimes_{A_\mathfrak{m}}
   (A_\mathfrak{m}/\mathfrak{m}A_\mathfrak{m})
   =M\otimes_A(A/\mathfrak{m})
-  =M/\mathfrak{m}M,
+  =M/\mathfrak{m}M
 \]
 donc l'hypothèse entraîne que $M/\mathfrak{m}M\neq0$ pour tout idéal
 maximal $\mathfrak{m}$ de $A$, ce qui prouve notre assertion (6.4.1).
@@ -4213,7 +4186,7 @@ maximal $\mathfrak{m}$ de $A$, ce qui prouve notre assertion (6.4.1).
 Soient $A$ un anneau, $\varphi:A\to B$ un homomorphisme d'anneaux faisant
 de $B$ une $A$-algèbre. Supposons qu'il existe un $B$-module $N$ qui soit un
 $A$-module \emph{fidèlement plat}. Alors, pour tout $A$-module $M$,
-l'homomorphisme $x\mapsto 1\otimes x$ de $M$ dans
+l'homomorphisme $x\to 1\otimes x$ de $M$ dans
 $B\otimes_A M=M_{(B)}$ est \emph{injectif}. En particulier, $\varphi$ est
 injectif~; pour tout idéal $\mathfrak{a}$ de $A$, on a
 $\varphi^{-1}(\mathfrak{a}B)=\mathfrak{a}$~; pour tout idéal maximal (resp.
@@ -4227,7 +4200,7 @@ Lorsque la condition de (6.5.1) est remplie, on identifie $A$ à un
 sous-anneau de $B$ par $\varphi$ et plus généralement, pour tout $A$-module
 $M$, on identifie $M$ à un sous-$A$-module de $M_{(B)}$. On notera que si
 $B$ est alors \emph{noethérien}, il en est de même de $A$, car l'application
-$\mathfrak{a}\mapsto\mathfrak{a}B$ est une injection croissante de
+$\mathfrak{a}\to\mathfrak{a}B$ est une injection croissante de
 l'ensemble des idéaux de $A$ dans l'ensemble des idéaux de $B$~;
 l'existence d'une suite infinie strictement croissante d'idéaux de $A$
 entraînerait donc l'existence d'une suite analogue d'idéaux de $B$.
@@ -4242,15 +4215,15 @@ Soit $\varphi:A\to B$ un homomorphisme d'anneaux faisant de $B$ une
 $A$-algèbre. Les cinq propriétés suivantes sont équivalentes~:
 \begin{enumerate}
   \item[$a)$] $B$ est un $A$-module fidèlement plat (autrement dit,
-    $M_{(B)}$ est un foncteur exact et fidèle en $M$).
+    $M_{(B)}$ est un foncteur \emph{exact} et \emph{fidèle} en $M$).
   \item[$b)$] L'homomorphisme $\varphi$ est injectif et le $A$-module
     $B/\varphi(A)$ est plat.
 
 \oldpage[0\textsubscript{I}]{59}
 
   \item[$c)$] Le $A$-module $B$ est plat (autrement dit, le foncteur
-    $M_{(B)}$ est exact), et pour tout $A$-module $M$, l'homomorphisme
-    $x\mapsto1\otimes x$ de $M$ dans $M_{(B)}$ est injectif.
+    $M_{(B)}$ est \emph{exact}), et pour tout $A$-module $M$, l'homomorphisme
+    $x\to1\otimes x$ de $M$ dans $M_{(B)}$ est injectif.
   \item[$d)$] Le $A$-module $B$ est plat et pour tout idéal $\mathfrak a$ de
     $A$, on a $\varphi^{-1}(\mathfrak aB)=\mathfrak a$.
   \item[$e)$] Le $A$-module $B$ est plat et pour tout idéal maximal
@@ -4263,10 +4236,10 @@ Lorsque ces conditions ont lieu, on identifie $A$ à un sous-anneau de $B$.
 
 \begin{env}[6.6.2]
 \label{0.6.6.2-fr}
-Soient $A$ un anneau local, $\mathfrak m$ son idéal maximal, $B$ une
+Soient $A$ un anneau \emph{local}, $\mathfrak m$ son idéal maximal, $B$ une
 $A$-algèbre telle que $\mathfrak mB\neq B$ (ce qui a lieu par exemple lorsque
-$B$ est un anneau local et $A\to B$ un homomorphisme local). Si $B$ est un
-$A$-module plat, $B$ est un $A$-module fidèlement plat. En effet, comme
+$B$ est un anneau local et $A\to B$ un homomorphisme \emph{local}). Si $B$ est un
+$A$-module \emph{plat}, $B$ est un $A$-module \emph{fidèlement plat}. En effet, comme
 $\mathfrak mB\neq B$, il y a un idéal maximal $\mathfrak n$ de $B$ contenant
 $\mathfrak mB$~; comme $\varphi^{-1}(\mathfrak n)\cap A$ contient
 $\mathfrak m$ et ne contient pas $1$, on a
@@ -4302,14 +4275,14 @@ fidèlement plat sur $A$.
 \begin{env}[6.7.1]
 \label{0.6.7.1-fr}
 Soit $f:X\to Y$ un morphisme d'espaces annelés, et soit $\mathcal F$ un
-$\mathcal O_X$-Module. On dit que $\mathcal F$ est $f$-plat (ou $Y$-plat
-lorsque aucune confusion n'est à craindre sur $f$) en un point $x\in X$ si
+$\mathcal O_X$-Module. On dit que $\mathcal F$ est \emph{$f$-plat} (ou $Y$-\emph{plat}
+lorsque aucune confusion n'est à craindre sur $f$) \emph{en un point} $x\in X$ si
 $\mathcal F_x$ est un $\mathcal O_{f(x)}$-module plat~; on dit que
-$\mathcal F$ est $f$-plat au-dessus de $y\in Y$ si $\mathcal F$ est $f$-plat
-en tous les points $x\in f^{-1}(y)$~; on dit que $\mathcal F$ est $f$-plat
+$\mathcal F$ est \emph{$f$-plat au-dessus de} $y\in Y$ si $\mathcal F$ est $f$-plat
+en tous les points $x\in f^{-1}(y)$~; on dit que $\mathcal F$ est \emph{$f$-plat}
 si $\mathcal F$ est $f$-plat en tous les points de $X$. On dit que le
-morphisme $f$ est plat en $x\in X$ (resp. plat au-dessus de $y\in Y$, resp.
-plat) si $\mathcal O_X$ est $f$-plat en $x$ (resp. $f$-plat au-dessus de $y$,
+morphisme $f$ est \emph{plat en} $x\in X$ (resp. \emph{plat au-dessus de} $y\in Y$, resp.
+\emph{plat}) si $\mathcal O_X$ est $f$-plat en $x$ (resp. $f$-plat au-dessus de $y$,
 resp. $f$-plat).
 \end{env}
 
@@ -4318,20 +4291,20 @@ resp. $f$-plat).
 Avec les notations de (6.7.1), si $\mathcal F$ est $f$-plat en $x$, pour tout
 voisinage ouvert $U$ de $y=f(x)$, le foncteur
 $(f^*(\mathcal G)\otimes_{\mathcal O_X}\mathcal F)_x$ en $\mathcal G$ est
-exact dans la catégorie des $(\mathcal O_Y|U)$-Modules~; en effet, cette
+\emph{exact} dans la catégorie des $(\mathcal O_Y|U)$-Modules~; en effet, cette
 fibre s'identifie canoniquement à
 $\mathcal G_y\otimes_{\mathcal O_y}\mathcal F_x$, et notre assertion résulte
-de la définition. En particulier, si $f$ est un morphisme plat, le foncteur
-$f^*$ est exact dans la catégorie des $\mathcal O_Y$-Modules.
+de la définition. En particulier, si $f$ est un morphisme \emph{plat}, le foncteur
+$f^*$ est \emph{exact} dans la catégorie des $\mathcal O_Y$-Modules.
 \end{env}
 
 \begin{env}[6.7.3]
 \label{0.6.7.3-fr}
-Inversement, supposons le faisceau d'anneaux $\mathcal O_Y$ cohérent, et
-supposons que pour tout voisinage ouvert $U$ de $y$, le foncteur
+Inversement, supposons le faisceau d'anneaux $\mathcal O_Y$ \emph{cohérent}, et
+supposons que pour \emph{tout} voisinage ouvert $U$ de $y$, le foncteur
 $(f^*(\mathcal G)\otimes_{\mathcal O_X}\mathcal F)_x$ soit exact en
-$\mathcal G$ dans la catégorie des $(\mathcal O_Y|U)$-Modules cohérents.
-Alors $\mathcal F$ est $f$-plat en $x$. En effet, il suffit de prouver que
+$\mathcal G$ dans la catégorie des $(\mathcal O_Y|U)$-Modules \emph{cohérents}.
+Alors $\mathcal F$ est \emph{$f$-plat en $x$}. En effet, il suffit de prouver que
 pour tout idéal de type fini $\mathfrak J$ de $\mathcal O_y$,
 l'homomorphisme canonique
 $\mathfrak J\otimes_{\mathcal O_y}\mathcal F_x\to\mathcal F_x$ est injectif
@@ -4378,7 +4351,7 @@ $g$ sont des morphismes plats, $g\circ f$ est plat.
 
 \begin{env}[6.7.6]
 \label{0.6.7.6-fr}
-Soient $X$, $Y$ deux espaces annelés, $f:X\to Y$ un morphisme plat. Alors
+Soient $X$, $Y$ deux espaces annelés, $f:X\to Y$ un morphisme \emph{plat}. Alors
 l'homomorphisme canonique de bifoncteurs (4.4.6)
 \[
   f^*(\mathcal{H}om_{\mathcal O_Y}(\mathcal F,\mathcal G))
@@ -4387,7 +4360,7 @@ l'homomorphisme canonique de bifoncteurs (4.4.6)
   \tag{6.7.6.1}
   \label{0.6.7.6.1-fr}
 \]
-est un isomorphisme lorsque $\mathcal F$ admet une présentation finie
+est un \emph{isomorphisme} lorsque $\mathcal F$ admet une \emph{présentation finie}
 (5.2.5).
 
 En effet, la question étant locale, on peut supposer qu'il existe une suite
@@ -4399,12 +4372,12 @@ lorsque $\mathcal F=\mathcal O_Y$, cas où elle est triviale.
 
 \begin{env}[6.7.8]
 \label{0.6.7.8-fr}
-On dit qu'un morphisme $f:X\to Y$ d'espaces annelés est fidèlement plat si
-$f$ est surjectif et si, pour tout $x\in X$, $\mathcal O_x$ est un
-$\mathcal O_{f(x)}$-module fidèlement plat. Lorsque $X$ et $Y$ sont des
+On dit qu'un morphisme $f:X\to Y$ d'espaces annelés est \emph{fidèlement plat} si
+$f$ est \emph{surjectif} et si, pour tout $x\in X$, $\mathcal O_x$ est un
+$\mathcal O_{f(x)}$-module \emph{fidèlement plat}. Lorsque $X$ et $Y$ sont des
 espaces annelés en anneaux locaux (5.5.1), il revient au même de dire que le
-morphisme $f$ est surjectif et plat (6.6.2). Lorsque $f$ est fidèlement plat,
-$f^*$ est un foncteur exact et fidèle dans la catégorie des
+morphisme $f$ est \emph{surjectif} et \emph{plat} (6.6.2). Lorsque $f$ est fidèlement plat,
+$f^*$ est un foncteur \emph{exact} et \emph{fidèle} dans la catégorie des
 $\mathcal O_Y$-Modules (6.6.1, $a)$) et pour qu'un $\mathcal O_Y$-Module
 $\mathcal G$ soit $Y$-plat, il faut et il suffit que $f^*(\mathcal G)$ le
 soit (6.6.3).
@@ -4419,31 +4392,31 @@ soit (6.6.3).
 \begin{env}[7.1.1]
 \label{0.7.1.1-fr}
 Rappelons que dans un anneau topologique $A$ (non nécessairement séparé), on
-dit qu'un élément $x$ est topologiquement nilpotent si $0$ est une limite de
+dit qu'un élément $x$ est \emph{topologiquement nilpotent} si $0$ est \emph{une} limite de
 la suite $(x^n)_{n\geq0}$. On dit qu'un anneau topologique $A$ est
-linéairement topologisé s'il existe un système fondamental de voisinages de
-$0$ dans $A$ formé d'idéaux (nécessairement ouverts).
+\emph{linéairement topologisé} s'il existe un système fondamental de voisinages de
+$0$ dans $A$ formé d'\emph{idéaux} (nécessairement \emph{ouverts}).
 \end{env}
 
 \begin{definition}[7.1.2]
 \label{0.7.1.2-fr}
 Dans un anneau linéairement topologisé $A$, on dit qu'un idéal $\mathfrak J$
-est un idéal de définition si $\mathfrak J$ est ouvert et si, pour tout
+est un \textup{idéal de définition} si $\mathfrak J$ est ouvert et si, pour tout
 voisinage $V$ de $0$, il existe un entier $n>0$ tel
 
 \oldpage[0\textsubscript{I}]{61}
 
-que $\mathfrak J^n\subset V$ (ce qu'on exprime, par abus de langage, en disant
-que la suite $(\mathfrak J^n)$ tend vers $0$). On dit qu'un anneau linéairement
-topologisé $A$ est préadmissible s'il existe dans $A$ un idéal de définition~;
-on dit que $A$ est admissible s'il est préadmissible et si en outre il est
+que $\mathfrak J^n\subset V$ \textup{(ce qu'on exprime, par abus de langage, en disant
+que la suite $(\mathfrak J^n)$ \emph{tend vers} $0$)}. On dit qu'un anneau linéairement
+topologisé $A$ est \emph{préadmissible} s'il existe dans $A$ un idéal de définition~;
+on dit que $A$ est \emph{admissible} s'il est préadmissible et si en outre il est
 séparé et complet.
 \end{definition}
 
 Il est clair que si $\mathfrak J$ est un idéal de définition, $\mathfrak L$ un
 idéal ouvert de $A$, $\mathfrak J\cap\mathfrak L$ est encore un idéal de
 définition~; les idéaux de définition d'un anneau préadmissible $A$ forment
-donc un système fondamental de voisinages de $0$.
+donc un \emph{système fondamental de voisinages de} $0$.
 
 \begin{lemma}[7.1.3]
 \label{0.7.1.3-fr}
@@ -4496,7 +4469,7 @@ idéaux de définition.
 
 \begin{corollary}[7.1.6]
 \label{0.7.1.6-fr}
-Les notations et hypothèses étant celles de (7.1.4), les propriétés suivantes
+Les notations et hypothèses étant celles de \textup{(7.1.4)}, les propriétés suivantes
 d'un idéal $\mathfrak J_0$ de $A$ sont équivalentes~:
 \begin{enumerate}
   \item[$a)$] $\mathfrak J_0$ est le plus grand idéal de définition de $A$~;
@@ -4535,10 +4508,10 @@ ${\mathfrak J'}^n$ de tout idéal de définition $\mathfrak J'$ de $A$.
 
 \begin{definition}[7.1.9]
 \label{0.7.1.9-fr}
-On dit qu'un anneau préadmissible $A$ est préadique s'il existe un idéal de
+On dit qu'un anneau préadmissible $A$ est \emph{préadique} s'il existe un idéal de
 définition $\mathfrak J$ de $A$ tel que les $\mathfrak J^n$ forment un système
-fondamental de voisinages de $0$ dans $A$ (ou, ce qui revient au même, tel que
-les $\mathfrak J^n$ soient ouverts). On appelle anneau adique un anneau
+fondamental de voisinages de $0$ dans $A$ \textup{(ou, ce qui revient au même, tel que
+les $\mathfrak J^n$ soient \emph{ouverts})}. On appelle anneau \emph{adique} un anneau
 préadique séparé et complet.
 \end{definition}
 
@@ -4605,7 +4578,7 @@ sa somme, on a $y(1+x)=1$.
 
 \begin{env}[7.2.1]
 \label{0.7.2.1-fr}
-Toute limite projective d'anneaux discrets est évidemment un anneau
+Toute limite projective d'anneaux \emph{discrets} est évidemment un anneau
 linéairement topologisé, séparé et complet. Inversement, soit $A$ un anneau
 linéairement topologisé, et soit $(\mathfrak J_\lambda)$ un système fondamental
 de voisinages ouverts de $0$ dans $A$ formé
@@ -4615,10 +4588,10 @@ de voisinages ouverts de $0$ dans $A$ formé
 d'idéaux. Les applications canoniques
 $\varphi_\lambda:A\to A/\mathfrak J_\lambda$ forment un système projectif de
 représentations continues et définissent donc une représentation continue
-$\varphi:A\to\varprojlim A/\mathfrak J_\lambda$~; si $A$ est séparé,
+$\varphi:A\to\varprojlim A/\mathfrak J_\lambda$~; si $A$ est \emph{séparé},
 $\varphi$ est un isomorphisme topologique de $A$ sur un
 sous-anneau partout dense de $\varprojlim A/\mathfrak J_\lambda$~; si, en
-outre, $A$ est complet, $\varphi$ est un isomorphisme topologique de $A$ sur
+outre, $A$ est \emph{complet}, $\varphi$ est un isomorphisme topologique de $A$ \emph{sur}
 $\varprojlim A/\mathfrak J_\lambda$.
 \end{env}
 
@@ -4644,14 +4617,14 @@ de (7.1.2), et la dernière assertion est immédiate.
 
 \begin{env}[7.2.3]
 \label{0.7.2.3-fr}
-Soient $A$ un anneau topologique admissible, $\mathfrak J$ un idéal de $A$
+Soient $A$ un anneau topologique \emph{admissible}, $\mathfrak J$ un idéal de $A$
 contenu dans un idéal de définition (autrement dit (7.1.4) tel que
 $(\mathfrak J^n)$ tende vers $0$)~; on peut considérer sur $A$ la topologie
 d'anneau ayant pour système fondamental de voisinages de $0$ les puissances
 $\mathfrak J^n$ ($n>0$)~; nous l'appellerons encore la topologie
 \emph{$\mathfrak J$-préadique}. L'hypothèse que $A$ est admissible entraîne que
 $\bigcap_n\mathfrak J^n=0$, donc la topologie $\mathfrak J$-préadique sur $A$
-est séparée~; soit
+est \emph{séparée}~; soit
 $\widehat A=\varprojlim A/\mathfrak J^n$ le complété de $A$ pour cette topologie
 (où les $A/\mathfrak J^n$ sont munis de la topologie discrète), et désignons
 par $u$ l'homomorphisme d'anneaux $A\to\widehat A$ (non nécessairement
@@ -4684,14 +4657,14 @@ démontre la proposition.
 
 \begin{corollary}[7.2.5]
 \label{0.7.2.5-fr}
-Sous les hypothèses de (7.2.3), les conditions suivantes sont équivalentes~:
+Sous les hypothèses de \textup{(7.2.3)}, les conditions suivantes sont équivalentes~:
 \begin{enumerate}
-  \item[$a)$] L'homomorphisme $u$ est continu~;
+  \item[{\upshape a)}] L'homomorphisme $u$ est continu~;
 
 \oldpage[0\textsubscript{I}]{64}
 
-  \item[$b)$] L'homomorphisme $v$ est bicontinu~;
-  \item[$c)$] $A$ est un anneau $\mathfrak J$-adique.
+  \item[{\upshape b)}] L'homomorphisme $v$ est bicontinu~;
+  \item[{\upshape c)}] $A$ est un anneau $\mathfrak J$-adique.
 \end{enumerate}
 \end{corollary}
 
@@ -4707,7 +4680,7 @@ Ces conditions sont évidemment nécessaires. Inversement, supposons-les
 vérifiées~; comme en vertu de (7.2.4) $A$ est complet pour la topologie
 $\mathfrak J$-préadique, pour qu'il soit noethérien, il faut et il suffit que
 l'anneau gradué associé $\operatorname{grad}(A)$ (pour la filtration des
-$\mathfrak J^n$) le soit ([I], p.~18-07, th.~4). Or, soient
+$\mathfrak J^n$) le soit ([1], p.~18-07, th.~4). Or, soient
 $a_1,\ldots,a_n$ des éléments de $\mathfrak J$ dont les classes mod.
 $\mathfrak J^2$ sont des générateurs de $\mathfrak J/\mathfrak J^2$ en tant
 que $A/\mathfrak J$-module. Il est immédiat par récurrence que les classes mod.
@@ -4724,27 +4697,27 @@ Soit $(A_i,u_{ij})$ un système projectif $(i\in\mathbf N)$ d'anneaux discrets,
 et pour tout entier $i$, soit $\mathfrak J_i$ le noyau dans $A_i$ de
 l'homomorphisme $u_{0i}:A_i\to A_0$. On suppose que~:
 \begin{enumerate}
-  \item[$a)$] Pour $i\leq j$, $u_{ij}$ est surjectif et son noyau est
-    $\mathfrak J_j^{i+1}$ (donc $A_i$ est isomorphe à
-    $A_j/\mathfrak J_j^{i+1}$).
-  \item[$b)$] $\mathfrak J_1/\mathfrak J_1^2$ ($=\mathfrak J_1$) est un
+  \item[{\upshape a)}] Pour $i\leq j$, $u_{ij}$ est surjectif et son noyau est
+    $\mathfrak J_j^{i+1}$ \textup{(donc $A_i$ est isomorphe à
+    $A_j/\mathfrak J_j^{i+1}$)}.
+  \item[{\upshape b)}] $\mathfrak J_1/\mathfrak J_1^2$ ($=\mathfrak J_1$) est un
     module de type fini sur $A_0=A_1/\mathfrak J_1$.
 \end{enumerate}
 Soit $A=\varprojlim_i A_i$, et pour tout entier $n\geq0$, soient $u_n$
 l'homomorphisme canonique $A\to A_n$, $\mathfrak J^{(n+1)}\subset A$ son
 noyau. Dans ces conditions~:
 \begin{enumerate}
-  \item[(i)] $A$ est un anneau adique, ayant pour idéal de définition
+  \item[{\upshape(i)}] $A$ est un anneau adique, ayant pour idéal de définition
     $\mathfrak J=\mathfrak J^{(1)}$.
-  \item[(ii)] On a $\mathfrak J^{(n)}=\mathfrak J^n$ pour tout $n\geq1$.
-  \item[(iii)] $\mathfrak J/\mathfrak J^2$ est isomorphe à
+  \item[{\upshape(ii)}] On a $\mathfrak J^{(n)}=\mathfrak J^n$ pour tout $n\geq1$.
+  \item[{\upshape(iii)}] $\mathfrak J/\mathfrak J^2$ est isomorphe à
     $\mathfrak J_1=\mathfrak J_1/\mathfrak J_1^2$, et est par suite un module
     de type fini sur $A_0=A/\mathfrak J$.
 \end{enumerate}
 \end{proposition}
 
 L'hypothèse de surjectivité des $u_{ij}$ entraîne que $u_n$ est surjectif~;
-en outre, l'hypothèse $a)$ implique que $\mathfrak J_j^{j+1}=0$, donc $A$ est
+en outre, l'hypothèse a) implique que $\mathfrak J_j^{j+1}=0$, donc $A$ est
 un anneau admissible (7.2.2)~; par définition, les $\mathfrak J^{(n)}$ forment
 un système fondamental de voisinages de $0$ dans $A$, donc (ii) entraîne (i).
 En outre, on a $\mathfrak J=\varprojlim_i\mathfrak J_i$ et les applications
@@ -4767,7 +4740,7 @@ filtration $(\mathfrak J^{(m)})$, il suffit de prouver que l'ensemble
 $\overline S_n$ des classes mod. $\mathfrak J^{(n+1)}$ des éléments de $S_n$
 engendre le module gradué $\operatorname{grad}(\mathfrak J^{(n)})$ sur
 l'anneau gradué $\operatorname{grad}(A)$ pour la filtration précédente
-([I], p.~18-06, lemme)~; en vertu de la définition de la multiplication dans
+([1], p.~18-06, lemme)~; en vertu de la définition de la multiplication dans
 $\operatorname{grad}(A)$,
 
 \oldpage[0\textsubscript{I}]{65}
@@ -4789,7 +4762,7 @@ $\mathfrak J_m=\mathfrak J'_m$.
 
 \begin{corollary}[7.2.8]
 \label{0.7.2.8-fr}
-Sous les conditions de (7.2.7), pour que $A$ soit noethérien, il faut et il
+Sous les conditions de \textup{(7.2.7)}, pour que $A$ soit noethérien, il faut et il
 suffit que $A_0$ le soit.
 \end{corollary}
 
@@ -4797,15 +4770,15 @@ Cela résulte aussitôt de (7.2.6).
 
 \begin{proposition}[7.2.9]
 \label{0.7.2.9-fr}
-Supposons vérifiées les hypothèses de (7.2.7)~: pour tout entier $i$, soit
+Supposons vérifiées les hypothèses de \textup{(7.2.7)}~: pour tout entier $i$, soit
 $M_i$ un $A_i$-module, et, pour $i\leq j$, soit
 $v_{ij}:M_j\to M_i$ un $u_{ij}$-homomorphisme, tels que $(M_i,v_{ij})$ soit un
 système projectif. Supposons en outre que $M_0$ soit un $A_0$-module de type
 fini, que $v_{ij}$ soit surjectif et que son noyau soit
 $\mathfrak J_j^{i+1}M_j$. Alors $M=\varprojlim M_i$ est un $A$-module de type
 fini, et le noyau du $u_n$-homomorphisme surjectif $v_n:M\to M_n$ est
-$\mathfrak J^{n+1}M$ (de sorte que $M_n$ s'identifie à
-$M/\mathfrak J^{n+1}M=M\otimes_A(A/\mathfrak J^{n+1})$).
+$\mathfrak J^{n+1}M$ \textup{(de sorte que $M_n$ s'identifie à
+$M/\mathfrak J^{n+1}M=M\otimes_A(A/\mathfrak J^{n+1})$)}.
 \end{proposition}
 
 Soient $z_h=(z_{hk})_{k\geq0}$ un système de $s$ éléments de $M$ tels que les
@@ -4817,7 +4790,7 @@ il est clair que l'on a $\mathfrak J^{(n)}M\subset M^{(n)}$ et que
 $M^{(n)}/M^{(n+1)}=\mathfrak J_n^nM_n$. On est donc ramené à montrer que les
 classes des $z_h$ mod. $M^{(0)}$ engendrent le module gradué
 $\operatorname{grad}(M)$ (pour la filtration précédente) sur l'anneau gradué
-$\operatorname{grad}(A)$ ([I], p.~18-06, lemme)~; pour cela, on constate
+$\operatorname{grad}(A)$ ([1], p.~18-06, lemme)~; pour cela, on constate
 aisément qu'il suffit encore de prouver que les $z_{hn}$ ($1\leq h\leq s$)
 engendrent le $A_n$-module $M_n$. On raisonne de nouveau par récurrence sur
 $n$, la proposition étant évidente par définition pour $n=0$~; la relation
@@ -4832,7 +4805,7 @@ $\mathfrak J^{(n)}M=\mathfrak J^nM$ est le noyau de $M\to M_n$.
 \begin{corollary}[7.2.10]
 \label{0.7.2.10-fr}
 Soit $(N_i,w_{ij})$ un second système projectif de $A_i$-modules vérifiant les
-conditions de (7.2.9), et soit $N=\varprojlim N_i$. Il y a correspondance
+conditions de \textup{(7.2.9)}, et soit $N=\varprojlim N_i$. Il y a correspondance
 biunivoque entre les systèmes projectifs $(h_i)$ de $A_i$-homomorphismes
 $h_i:M_i\to N_i$ et les homomorphismes de $A$-modules $h:M\to N$ (qui sont
 nécessairement continus pour les topologies $\mathfrak J$-adiques).
@@ -4849,9 +4822,7 @@ d'où le corollaire.
 Soit $A$ un anneau adique ayant un idéal de définition $\mathfrak J$ tel que
 $\mathfrak J/\mathfrak J^2$ soit un $(A/\mathfrak J)$-module de type fini~;
 il est clair que les $A_i=A/\mathfrak J^{i+1}$ vérifient
-
 \oldpage[0\textsubscript{I}]{66}
-
 les conditions de (7.2.7)~; comme $A$ est la limite projective des $A_i$, on
 voit que la prop. (7.2.7) donne la description de \emph{tous} les anneaux
 adiques du type considéré (et en particulier de tous les anneaux
@@ -4869,18 +4840,18 @@ $A_n=B/\mathfrak J^{n+1}$, il est immédiat que les $A_n$ vérifient les
 conditions de (7.2.7)~; donc $A$ est un anneau adique et si
 $\overline{\mathfrak J}$ est l'adhérence dans $A$ de l'image canonique de
 $\mathfrak J$, $\overline{\mathfrak J}$ est un idéal de définition de $A$,
-$\overline{\mathfrak J^n}$ est l'adhérence de l'image canonique de
-$\mathfrak J^n$, $A/\overline{\mathfrak J^n}$ s'identifie à
+$\overline{\mathfrak J}^n$ est l'adhérence de l'image canonique de
+$\mathfrak J^n$, $A/\overline{\mathfrak J}^n$ s'identifie à
 $B/\mathfrak J^n$ et
-$\overline{\mathfrak J}/\overline{\mathfrak J^2}$ est isomorphe à
+$\overline{\mathfrak J}/\overline{\mathfrak J}^2$ est isomorphe à
 $\mathfrak J/\mathfrak J^2$ en tant que
 $(A/\overline{\mathfrak J})$-module. De même, si $N$ est tel que
 $N/\mathfrak JN$ soit un $B$-module de type fini, et si on pose
 $M_i=N/\mathfrak J^{i+1}N$, $M=\varprojlim M_i$ est un $A$-module de type
 fini, isomorphe au séparé complété de $N$ pour la topologie
-$\mathfrak J$-préadique, $\overline{\mathfrak J^n}M$ s'identifie à
+$\mathfrak J$-préadique, $\overline{\mathfrak J}^nM$ s'identifie à
 l'adhérence de l'image canonique de $\mathfrak J^nN$, et
-$M/\overline{\mathfrak J^n}M$ à $N/\mathfrak J^nN$.
+$M/\overline{\mathfrak J}^nM$ à $N/\mathfrak J^nN$.
 \end{example}
 
 \subsection{Anneaux préadiques noethériens}
@@ -4893,9 +4864,7 @@ nous désignerons par
 $\widehat A=\varprojlim_n A/\mathfrak J^n$ (resp.
 $\widehat M=\varprojlim_u M/\mathfrak J^nM$) le séparé complété de $A$
 (resp. $M$) pour la topologie $\mathfrak J$-préadique. Soit
-\[
-  M'\xrightarrow{u}M\xrightarrow{v}M''\to0
-\]
+$M'\xrightarrow{u}M\xrightarrow{v}M''\to0$
 une suite exacte de $A$-modules~; comme
 $M/\mathfrak J^nM=M\otimes_A(A/\mathfrak J^n)$, la suite
 \[
@@ -4910,9 +4879,9 @@ $\widehat v=\varprojlim v_n$ est surjective (Bourbaki,
 D'autre part, si $z=(z_k)$ est un élément du noyau de $\widehat v$, pour tout
 entier $k$, il existe un $z'_k\in M'/\mathfrak J^kM'$ tel que
 $u_k(z'_k)=z_k$~; on en conclut qu'il existe
-$z'=(z'_n)\in\widehat{M'}$ tel que les $k$ premières composantes de
+$z'=(z'_n)\in\widehat{M}'$ tel que les $k$ premières composantes de
 $\widehat u(z')$ coïncident avec celles de $z$~; autrement dit, l'image par
-$\widehat u$ de $\widehat{M'}$ est \emph{dense} dans le noyau de
+$\widehat u$ de $\widehat{M}'$ est \emph{dense} dans le noyau de
 $\widehat v$.
 
 Si on suppose $A$ \emph{noethérien}, il en est de même de $\widehat A$, en
@@ -4922,8 +4891,8 @@ type fini. En outre~:
 
 \begin{namedtheorem}[7.3.2]{Théorème de Krull}
 \label{0.7.3.2-fr}
-Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal de $A$, $M$ un
-$A$-module de type fini, $M'$ un sous-module de $M$~; alors la topologie
+Soient $A$ un anneau \textup{noethérien}, $\mathfrak J$ un idéal de $A$, $M$ un
+$A$-module \textup{de type fini}, $M'$ un sous-module de $M$~; alors la topologie
 induite sur $M'$ par la topologie $\mathfrak J$-préadique de $M$ est identique
 à la topologie $\mathfrak J$-préadique de $M'$.
 \end{namedtheorem}
@@ -4932,34 +4901,32 @@ Cela résulte aussitôt du
 
 \begin{namedlemma}[7.3.2.1]{Lemme d'Artin-Rees}
 \label{0.7.3.2.1-fr}
-Sous les hypothèses de (7.3.2), il existe un entier $p$ tel que, pour
+Sous les hypothèses de \textup{(7.3.2)}, il existe un entier $p$ tel que, pour
 $n\geq p$, on ait
 \[
   M'\cap\mathfrak J^nM=\mathfrak J^{n-p}
-  (M'\cap\mathfrak J^pM).
+  (M'\cap\mathfrak J^pM)
 \]
 \end{namedlemma}
 
-Pour la démonstration, voir ([I], p.~2-04).
+Pour la démonstration, voir ([1], p.~2-04).
 
 \oldpage[0\textsubscript{I}]{67}
 
 \begin{corollary}[7.3.3]
 \label{0.7.3.3-fr}
-Sous les hypothèses de (7.3.2), l'application canonique
+Sous les hypothèses de \textup{(7.3.2)}, l'application canonique
 $M\otimes_A\widehat A\to\widehat M$ est bijective, et le foncteur
 $M\otimes_A\widehat A$ est exact en $M$ dans la catégorie des $A$-modules de
 type fini~; par suite, le séparé complété $\mathfrak J$-adique $\widehat A$
-est un $A$-module plat (6.1.1).
+est un $A$-module plat \textup{(6.1.1)}.
 \end{corollary}
 
 Notons d'abord que dans la catégorie des $A$-modules de type fini,
 $\widehat M$ est un foncteur \emph{exact} en $M$. Soit en effet
-\[
-  0\to M'\xrightarrow{u}M\xrightarrow{v}M''\to0
-\]
+$0\to M'\xrightarrow{u}M\xrightarrow{v}M''\to0$
 une suite exacte~; on sait déjà que
-$\widehat v:\widehat M\to\widehat{M''}$ est surjectif (7.3.1)~; d'autre part,
+$\widehat v:\widehat M\to\widehat{M}''$ est surjectif (7.3.1)~; d'autre part,
 si $i$ est l'homomorphisme canonique $M\to\widehat M$, il résulte du th. de
 Krull que l'adhérence dans $\widehat M$ de $i(u(M'))$ s'identifie au séparé
 complété de $M'$ pour la topologie $\mathfrak J$-préadique~; donc
@@ -4968,10 +4935,7 @@ $\widehat u$ est injectif, et en vertu de (7.3.1) l'image de $\widehat u$ est
 
 Cela étant, l'application canonique $M\otimes_A\widehat A\to\widehat M$
 s'obtient en passant à la limite projective sur les applications
-\[
-  M\otimes_A\widehat A\to
-  M\otimes_A(A/\mathfrak J^n)=M/\mathfrak J^nM.
-\]
+$M\otimes_A\widehat A\to M\otimes_A(A/\mathfrak J^n)=M/\mathfrak J^nM$.
 Il est clair que cette application est bijective lorsque $M$ est de la forme
 $A^p$. Si $M$ est un $A$-module de type fini, on a une suite exacte
 $A^p\to A^q\to M\to0$, d'où, en vertu de l'exactitude \emph{à droite} des
@@ -4979,9 +4943,9 @@ foncteurs $M\otimes_A\widehat A$ et $\widehat M$ (en $M$) dans la catégorie
 des $A$-modules de type fini, le diagramme commutatif
 \[
 \begin{tikzcd}[column sep=large,row sep=large]
-  A^p\otimes_A\widehat A \arrow[r] \arrow[d] &
-  A^q\otimes_A\widehat A \arrow[r] \arrow[d] &
-  M\otimes_A\widehat A \arrow[r] \arrow[d] &
+  A^p\otimes\widehat A \arrow[r] \arrow[d] &
+  A^q\otimes\widehat A \arrow[r] \arrow[d] &
+  M\otimes\widehat A \arrow[r] \arrow[d] &
   0 \\
   \widehat A^{\,p} \arrow[r] &
   \widehat A^{\,q} \arrow[r] &
@@ -5001,9 +4965,9 @@ $A$-modules de type fini~; on a des isomorphismes canoniques fonctoriels
   \xrightarrow{\sim}
   \widehat M\otimes_{\widehat A}\widehat N,
   \qquad
-  \bigl(\operatorname{Hom}_A(M,N)\bigr)^\wedge
+  (\operatorname{Hom}_A(M,N))^\wedge
   \xrightarrow{\sim}
-  \operatorname{Hom}_{\widehat A}(\widehat M,\widehat N).
+  \operatorname{Hom}_{\widehat A}(\widehat M,\widehat N)
 \]
 \end{corollary}
 
@@ -5015,7 +4979,7 @@ Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal de $A$. Les
 conditions suivantes sont équivalentes~:
 \begin{enumerate}
   \item[$a)$] $\mathfrak J$ est contenu dans le radical de $A$.
-  \item[$b)$] $\widehat A$ est un $A$-module fidèlement plat (6.4.1).
+  \item[$b)$] $\widehat A$ est un $A$-module fidèlement plat \textup{(6.4.1)}.
   \item[$c)$] Tout $A$-module de type fini est séparé pour la topologie
   $\mathfrak J$-préadique.
   \item[$d)$] Tout sous-module d'un $A$-module de type fini est fermé pour la
@@ -5031,15 +4995,10 @@ immédiat que $c)$ entraîne $d)$, car si $N$ est un sous-module d'un $A$-module
 $M$ de type fini, $M/N$ est séparé pour la topologie $\mathfrak J$-préadique,
 donc $N$ est fermé dans $M$. Montrons que $d)$ implique $a)$~: si
 $\mathfrak m$ est un idéal maximal de $A$, $\mathfrak m$ est fermé dans $A$
-pour la topologie $\mathfrak J$-préadique, donc
-\[
-  \mathfrak m=\bigcap_{p\geq0}(\mathfrak m+\mathfrak J^p),
-\]
+pour la topologie $\mathfrak J$-préadique, donc $\mathfrak m=\bigcap_{p\geq0}(\mathfrak m+\mathfrak J^p)$,
 et comme $\mathfrak m+\mathfrak J^p$ est nécessairement égal à $A$ ou à
 $\mathfrak m$, on a $\mathfrak m+\mathfrak J^p=\mathfrak m$ pour $p$ assez
-
 \oldpage[0\textsubscript{I}]{68}
-
 grand, d'où $\mathfrak J^p\subset\mathfrak m$ et
 $\mathfrak J\subset\mathfrak m$ puisque $\mathfrak m$ est premier. Enfin,
 $a)$ entraîne $b)$~: soit en effet $P$ l'adhérence de $\{0\}$ dans un
@@ -5066,7 +5025,7 @@ modules de type fini sur un anneau adique noethérien.
 
 \begin{corollary}[7.3.7]
 \label{0.7.3.7-fr}
-Sous les hypothèses de (7.3.2), le noyau de l'application canonique
+Sous les hypothèses de \textup{(7.3.2)}, le noyau de l'application canonique
 $M\to\widehat M=M\otimes_A\widehat A$ est l'ensemble des $x\in M$ annulés par
 un élément de $1+\mathfrak J$.
 \end{corollary}
@@ -5085,7 +5044,7 @@ $A$-module $M$ est quasi-fini (sur $A$) si $M/\mathfrak mM$ est de rang fini
 sur le corps résiduel $k=A/\mathfrak m$.
 \end{definition}
 
-Lorsque $A$ est noethérien, le séparé complété $\widehat M$ de $M$ pour la
+Lorsque $A$ est \emph{noethérien}, le séparé complété $\widehat M$ de $M$ pour la
 topologie $\mathfrak m$-préadique est alors un
 $\widehat A$-\emph{module de type fini}~; en effet, comme
 $\mathfrak m/\mathfrak m^2$ est alors un $A$-module de type fini, cela résulte
@@ -5112,16 +5071,14 @@ Remarquons que par hypothèse $M/\mathfrak mM$ est de \emph{longueur finie} en
 tant que $A$-module, donc aussi \emph{a fortiori} en tant que $B$-module. On en
 conclut que $\mathfrak n$ est le \emph{seul idéal premier} de $B$ contenant
 l'annulateur de $M/\mathfrak mM$~: en effet, on se ramène aussitôt, en vertu
-de (I.7.4) et (I.7.2), au cas où $M/\mathfrak mM$ est \emph{simple}, donc
+de (1.7.4) et (1.7.2), au cas où $M/\mathfrak mM$ est \emph{simple}, donc
 nécessairement isomorphe à $B/\mathfrak n$, et notre assertion est évidente
 dans ce dernier cas. D'autre part, comme $M$ est un $B$-module de type fini,
 les idéaux premiers qui contiennent l'annulateur de $M/\mathfrak mM$ sont ceux
 qui contiennent $\mathfrak mB+\mathfrak b$, en désignant par $\mathfrak b$
-l'annulateur du $B$-module $M$ (I.7.5). Comme $B$ est noethérien, on en conclut
-([III], p.~127, cor.~4) que $\mathfrak mB+\mathfrak b$ est un idéal
-
+l'annulateur du $B$-module $M$ (1.7.5). Comme $B$ est noethérien, on en conclut
+([11], p.~127, cor.~4) que $\mathfrak mB+\mathfrak b$ est un idéal
 \oldpage[0\textsubscript{I}]{69}
-
 de définition de $B$, autrement dit qu'il existe $k>0$ tel que
 $\mathfrak n^k\subset\mathfrak mB+\mathfrak b\subset\mathfrak n$~; par suite,
 pour tout $h>0$
@@ -5129,7 +5086,7 @@ pour tout $h>0$
   \mathfrak n^{hk}M
   \subset(\mathfrak mB+\mathfrak b)^hM
   =\mathfrak m^hM
-  \subset\mathfrak n^hM,
+  \subset\mathfrak n^hM
 \]
 ce qui prouve que les topologies $\mathfrak m$-préadique et
 $\mathfrak n$-préadique sur $M$ sont les mêmes~; la seconde est d'ailleurs
@@ -5137,7 +5094,7 @@ séparée en vertu de (7.3.5).
 
 \begin{corollary}[7.4.3]
 \label{0.7.4.3-fr}
-Sous les hypothèses de (7.4.2), si en outre $A$ est noethérien et complet pour
+Sous les hypothèses de \textup{(7.4.2)}, si en outre $A$ est noethérien et complet pour
 la topologie $\mathfrak m$-préadique, $M$ est un $A$-module de type fini.
 \end{corollary}
 
@@ -5156,13 +5113,14 @@ conjonction des deux suivantes, en vertu de ce qui précède~:
   \item[(ii)] $B/\mathfrak n$ \emph{est une extension de rang fini du corps}
   $A/\mathfrak m$.
 \end{enumerate}
+
 Lorsqu'il en est ainsi, tout $B$-module de type fini est évidemment un
 $A$-module quasi-fini.
 \end{env}
 
 \begin{corollary}[7.4.5]
 \label{0.7.4.5-fr}
-Sous les hypothèses de (7.4.2), si $\mathfrak b$ est l'annulateur du
+Sous les hypothèses de \textup{(7.4.2)}, si $\mathfrak b$ est l'annulateur du
 $B$-module $M$, $B/\mathfrak b$ est un $A$-module quasi-fini.
 \end{corollary}
 
@@ -5197,12 +5155,10 @@ $(\mathfrak J_\lambda)$ considéré. De façon précise, soit $A'$ le sous-annea
 de l'anneau de séries formelles $A[\![T_1,\ldots,T_r]\!]$ formé des séries
 formelles $\sum_\alpha c_\alpha T^\alpha$ (avec
 $\alpha=(\alpha_1,\ldots,\alpha_r)\in\mathbf{N}^r$) telles que
-$\lim_\alpha c_\alpha=0$ (suivant le filtre des complémentaires des parties
+$\lim c_\alpha=0$ (suivant le filtre des complémentaires des parties
 finies de $\mathbf{N}^r$)~; nous dirons que ces séries sont les séries
 formelles \emph{restreintes} en les $T_i$, à coefficients dans $A$.
-
 \oldpage[0\textsubscript{I}]{70}
-
 Pour tout voisinage $V$ de $0$ dans $A$, soit $V'$ l'ensemble des
 $x=\sum_\alpha c_\alpha T^\alpha\in A'$ telles que $c_\alpha\in V$ pour tout
 $\alpha$. On vérifie aussitôt que les $V'$ forment un système fondamental de
@@ -5224,7 +5180,7 @@ $y_\lambda$ est la composante de $y$ dans $B_\lambda$, et si on désigne par
 $H_\lambda$ l'ensemble fini des $\alpha\in\mathbf{N}^r$ pour lesquels les
 coefficients du polynôme $y_\lambda$ ne sont pas nuls, on a
 $\varphi_{\lambda,\alpha}(y_\mu)\in\mathfrak J_\lambda$ pour
-$\mathfrak J_\mu\subset\mathfrak J_\lambda$ et $\alpha\notin H_\lambda$, et
+$\mathfrak J_\mu\subset\mathfrak J_\lambda$ et $\alpha\notin H_\lambda$ et
 par passage à la limite, $\varphi_\alpha(y)\in\mathfrak J_\lambda$ pour
 $\alpha\notin H_\lambda$. On définit donc un homomorphisme d'anneaux
 $\varphi:A\{T_1,\ldots,T_r\}\to A'$ en posant
@@ -5265,16 +5221,16 @@ définissent, par passage à la limite projective, un isomorphisme canonique
 \label{0.7.5.3-fr}
 Pour tout homomorphisme continu $u:A\to B$ de $A$ dans un anneau linéairement
 topologisé $B$, séparé et complet, et tout système $(b_1,\ldots,b_r)$ de $r$
-éléments de $B$, il existe \emph{un homomorphisme continu, et un seul},
+éléments de $B$, il existe \emph{un homomorphisme continu et un seul}
 $\overline u:A\{T_1,\ldots,T_r\}\to B$, tel que $\overline u(a)=u(a)$ pour
 tout $a\in A$ et $\overline u(T_j)=b_j$ pour $1\leq j\leq r$. Il suffit en
 effet de prendre
 \[
   \overline u\Bigl(\sum_\alpha c_\alpha T^\alpha\Bigr)
-  =\sum_\alpha u(c_\alpha)b_1^{\alpha_1}\cdots b_r^{\alpha_r}~;
+  =\sum_\alpha u(c_\alpha)b_1^{\alpha_1}\ldots b_r^{\alpha_r}~;
 \]
 les vérifications du fait que la famille
-$(u(c_\alpha)b_1^{\alpha_1}\cdots b_r^{\alpha_r})$ est sommable dans $B$ et
+$(u(c_\alpha)b_1^{\alpha_1}\ldots b_r^{\alpha_r})$ est sommable dans $B$ et
 de la continuité de $\overline u$ sont immédiates et laissées au lecteur. On
 notera que cette propriété (pour $B$ et les $b_j$ arbitraires)
 \emph{caractérise} l'anneau topologique $A\{T_1,\ldots,T_r\}$ à un
@@ -5284,13 +5240,11 @@ isomorphisme unique près.
 \begin{proposition}[7.5.4]
 \label{0.7.5.4-fr}
 \begin{enumerate}
-  \item[(i)] Si $A$ est un anneau admissible, il en est de même de
+  \item[\textup{(i)}] Si $A$ est un anneau admissible, il en est de même de
   $A'=A\{T_1,\ldots,T_r\}$.
-  \item[(ii)] Soient $A$ un anneau adique, $\mathfrak J$ un idéal de définition
+  \item[\textup{(ii)}] Soient $A$ un anneau adique, $\mathfrak J$ un idéal de définition
   de $A$ tel que $\mathfrak J/\mathfrak J^2$ soit de type fini
-
 \oldpage[0\textsubscript{I}]{71}
-
   sur $A/\mathfrak J$. Si on pose $\mathfrak J'=\mathfrak JA'$, $A'$ est alors
   un anneau $\mathfrak J'$-adique, et
   $\mathfrak J'/\mathfrak J'^{\,2}$ est de type fini sur
@@ -5315,7 +5269,7 @@ isomorphisme unique près.
   $(A'_i,u'_{ij})$ vérifie les conditions de (7.2.7)~; comme $\mathfrak J'$ est
   le noyau de $A'\to A'_0$, cela démontrera la première assertion de (ii). Or,
   il est clair que les $u'_{ij}$ sont surjectifs~; le noyau $\mathfrak J'_i$
-  de $u'_{0i}$ est l'ensemble des polynômes de
+  de $u_{0i}$ est l'ensemble des polynômes de
   $A_i[T_1,\ldots,T_r]$ dont les coefficients sont dans
   $\mathfrak J/\mathfrak J^{i+1}$~; en particulier, $\mathfrak J'_1$ est
   l'ensemble des polynômes de $A_1[T_1,\ldots,T_r]$ dont les coefficients
@@ -5323,7 +5277,7 @@ isomorphisme unique près.
   est de type fini sur $A_1=A/\mathfrak J^2$, on voit déjà que
   $\mathfrak J'_1/\mathfrak J_1'^{\,2}$ est un module de type fini sur $A'_1$
   (ou, ce qui revient au même, sur
-  $A'_0=A'_1/\mathfrak J'_1$). Montrons que le noyau de $u'_{ij}$ est
+  $A'_0=A'_1/\mathfrak J'_1$). Montrons que le noyau de $u_{ij}$ est
   $\mathfrak J_j'^{\,i+1}$. Il est évident que
   $\mathfrak J_j'^{\,i+1}$ est contenu dans ce noyau. D'autre part, soient
   $a_1,\ldots,a_m$ des éléments de $\mathfrak J$ dont les classes
@@ -5355,12 +5309,12 @@ $A$-algèbre. Les conditions suivantes sont équivalentes~:
 
   \item[c)] $B$ est topologiquement $A$-isomorphe à un quotient d'une algèbre
   de la forme\linebreak $A\{T_1,\ldots,T_r\}$ par un idéal (nécessairement fermé en vertu
-  de (7.3.6) et (7.5.4 (ii))).
+  de \textup{(7.3.6)} et \textup{(7.5.4 (ii))}).
 \end{enumerate}
 \end{proposition}
 
 Comme $A$ est noethérien, il en est de même de
-$A'=A\{T_1,\ldots,T_r\}$ (7.5.4), donc c) implique que $B$ est noethérien~;
+$A'=A\{T_1,\ldots,T_r\}$ (7.5.4), donc \emph{c)} implique que $B$ est noethérien~;
 comme $\mathfrak J'=\mathfrak JA'$ est un voisinage ouvert de 0 dans $A'$ tel
 que les $\mathfrak J'^{n}$ forment un système fondamental de voisinages de 0,
 les images $\mathfrak J^nB$ des $\mathfrak J'^{n}$ forment un système
@@ -5368,7 +5322,7 @@ fondamental de voisinages de 0 dans $B$, et comme on sait que $B$ est séparé e
 complet, $B$ est un anneau $\mathfrak JB$-adique. Enfin, $B/\mathfrak JB$ est
 une algèbre (sur $A/\mathfrak J$) quotient de
 $A'/\mathfrak JA'=(A/\mathfrak J)[T_1,\ldots,T_r]$, donc est de type fini, ce
-qui achève de prouver que c) entraîne a).
+qui achève de prouver que \emph{c)} entraîne \emph{a)}.
 
 Si $B$ est $\mathfrak JB$-adique et noethérien, $B$ est isomorphe à
 $\varprojlim B_n$, où $B_n=B/\mathfrak J^{n+1}B$ (7.2.11), et
@@ -5377,15 +5331,13 @@ $B/\mathfrak JB$. Soit $(a_j)_{1\leq j\leq s}$ un système de générateurs du
 $(B/\mathfrak JB)$-module $\mathfrak JB/\mathfrak J^2B$, et
 $(c_i)_{1\leq i\leq r}$ un système d'éléments de $B/\mathfrak J^2B$ dont les
 classes
-
 \oldpage[0\textsubscript{I}]{72}
-
 mod.~$\mathfrak JB/\mathfrak J^2B$ forment un système de générateurs de la
 $(A/\mathfrak J)$-algèbre $B/\mathfrak JB$~; on voit aussitôt que les $c_ia_j$
 forment un système de générateurs de la $(A/\mathfrak J^2)$-algèbre
-$B/\mathfrak J^2B$, donc a) implique b).
+$B/\mathfrak J^2B$, donc \emph{a)} implique \emph{b)}.
 
-Reste à prouver que b) entraîne c). L'hypothèse entraîne que $B_1$ est un
+Reste à prouver que \emph{b)} entraîne \emph{c)}. L'hypothèse entraîne que $B_1$ est un
 anneau noethérien, et comme $B_1=B_2/\mathfrak J^2B_2$, on a
 $\mathfrak J^2B_1=0$, donc
 $\mathfrak JB_1=\mathfrak JB_1/\mathfrak J^2B_1$ est un $B_0$-module de type
@@ -5398,11 +5350,11 @@ $\mathfrak J$ sont telles que leurs classes mod.~$\mathfrak J^2B$ engendrent
 le $B_0$-module $\mathfrak JB/\mathfrak J^2B$. Il existe un
 $A$-homomorphisme continu $u$ de $A'=A\{T_1,\ldots,T_r\}$ dans $B$ qui se
 réduit à $\varphi$ dans $A$ et est tel que $u(T_i)=c_i$ pour $1\leq i\leq r$
-(7.5.3)~; si nous prouvons que $u$ est \emph{surjectif}, c) sera établi, car de
+(7.5.3)~; si nous prouvons que $u$ est \emph{surjectif}, \emph{c)} sera établi, car de
 $u(A')=B$ on déduira $u(\mathfrak J^nA')=\mathfrak J^nB$, autrement dit $u$
 sera un morphisme strict d'anneaux topologiques et $B$ sera donc isomorphe à un
 quotient de $A'$ par un idéal fermé. Or, comme $B$ est complet pour la topologie
-$\mathfrak JB$-adique, il suffit ([I], p.~18-07) de montrer que
+$\mathfrak JB$-adique, il suffit ([1], p.~18-07) de montrer que
 l'homomorphisme $\operatorname{grad}(A')\to\operatorname{grad}(B)$ déduit
 canoniquement de $u$ pour les filtrations $\mathfrak J$-adiques sur $A'$ et
 $B$, est surjectif. Mais par définition, les homomorphismes
@@ -5458,7 +5410,7 @@ $S^{-1}A$ pour la topologie définie par les
 $S^{-1}\mathfrak J_\lambda$, comme on le voit par exemple en prenant pour $S$
 l'ensemble des $f^n$ ($n\geq0$), où $f$ est topologiquement nilpotent et non
 nilpotent~: en effet, $S^{-1}A$ n'est pas réduit à 0 et d'autre part, pour tout
-$\lambda$ il existe $n$ tel que $f^n\in\mathfrak J_\lambda$, donc
+$\lambda$ il existe $n$ tel que $f^n\in J_\lambda$, donc
 $1=f^n/f^n\in S^{-1}\mathfrak J_\lambda$ et
 $S^{-1}\mathfrak J_\lambda=S^{-1}A$.
 
@@ -5547,18 +5499,16 @@ $\mathfrak a'$ est un idéal ouvert de $A\{S^{-1}\}$, $\mathfrak a'$ contient
 un idéal de la forme $\mathfrak J_\lambda\{S^{-1}\}$, donc est l'image
 réciproque d'un idéal de $S^{-1}A/S^{-1}\mathfrak J_\lambda$, qui est
 nécessairement (1.2.6) de la forme $S^{-1}\mathfrak a$, où
-$\mathfrak a\supset\mathfrak J_\lambda$. On en conclut que l'on a
+$\mathfrak a\supset J_\lambda$. On en conclut que l'on a
 $\mathfrak a'=\mathfrak a\{S^{-1}\}$. En particulier (1.2.6)~:
 \end{env}
 
 \begin{proposition}[7.6.10]
 \label{0.7.6.10-fr}
-L'application $\mathfrak p\mapsto\mathfrak p\{S^{-1}\}$ est une bijection
-croissante de l'ensemble des idéaux premiers ouverts $\mathfrak p$ de $A$ tels
-que $\mathfrak p\cap S=\varnothing$ sur l'ensemble des idéaux premiers ouverts
-
+L'application $\mathfrak p\to\mathfrak p\{S^{-1}\}$ est une bijection
+croissante de l'ensemble des idéaux \textup{premiers ouverts} $\mathfrak p$ de $A$ tels
+que $\mathfrak p\cap S=\varnothing$ sur l'ensemble des idéaux \textup{premiers ouverts}
 \oldpage[0\textsubscript{I}]{74}
-
 de $A\{S^{-1}\}$~; en outre, le corps des fractions de
 $A\{S^{-1}\}/\mathfrak p\{S^{-1}\}$ est canoniquement isomorphe à celui de
 $A/\mathfrak p$.
@@ -5610,7 +5560,7 @@ $A/\mathfrak p$.
 
 \begin{corollary}[7.6.12]
 \label{0.7.6.12-fr}
-Sous les hypothèses de (7.6.11, (ii)), on a
+Sous les hypothèses de \textup{(7.6.11, (ii))}, on a
 $(\mathfrak J\{S^{-1}\})^n=\mathfrak J^n\{S^{-1}\}$.
 \end{corollary}
 
@@ -5631,7 +5581,7 @@ platitude (6.2.1).
 
 \begin{corollary}[7.6.14]
 \label{0.7.6.14-fr}
-Sous les hypothèses de (7.6.13), soit $S'\subset S$ une seconde partie
+Sous les hypothèses de \textup{(7.6.13)}, soit $S'\subset S$ une seconde partie
 multiplicative de $A$~; alors $A\{S^{-1}\}$ est un
 $A\{{S'}^{-1}\}$-module plat.
 \end{corollary}
@@ -5653,9 +5603,7 @@ forment donc un système inductif filtrant d'anneaux pour les homomorphismes
 précédents~; nous poserons
 $A_{\{S\}}=\varinjlim_{f\in S}A_{\{f\}}$. Pour tout $f\in S$, on a un
 homomorphisme $A_{\{f\}}\to A\{S^{-1}\}$ (7.6.7), et
-
 \oldpage[0\textsubscript{I}]{75}
-
 ces homomorphismes forment un système inductif~; par passage à la limite
 inductive, ils définissent donc un homomorphisme canonique
 $A_{\{S\}}\to A\{S^{-1}\}$.
@@ -5673,7 +5621,7 @@ $A_{\{f\}}$ pour $f\in S$, et la conclusion résulte de (6.2.3).
 \begin{proposition}[7.6.17]
 \label{0.7.6.17-fr}
 Soit $\mathfrak p$ un idéal premier ouvert dans un anneau admissible $A$, et
-soit $S=A-\mathfrak p$. Alors les anneaux $A\{S^{-1}\}$ et $A_{\{S\}}$ sont
+soit $S=A\setmin\mathfrak p$. Alors les anneaux $A\{S^{-1}\}$ et $A_{\{S\}}$ sont
 des anneaux locaux, l'homomorphisme canonique
 $A_{\{S\}}\to A\{S^{-1}\}$ est local et les corps résiduels de $A_{\{S\}}$
 et $A\{S^{-1}\}$ sont canoniquement isomorphes au corps des fractions de
@@ -5714,7 +5662,7 @@ résiduels.
 
 \begin{corollary}[7.6.18]
 \label{0.7.6.18-fr}
-Sous les hypothèses de (7.6.17), si on suppose de plus que $A$ est un anneau
+Sous les hypothèses de \textup{(7.6.17)}, si on suppose de plus que $A$ est un anneau
 adique noethérien, les anneaux locaux $A\{S^{-1}\}$ et $A_{\{S\}}$ sont
 noethériens, et $A\{S^{-1}\}$ est un $A_{\{S\}}$-module fidèlement plat.
 \end{corollary}
@@ -5730,18 +5678,16 @@ est noethérien (6.5.2).
 
 \begin{env}[7.7.1]
 \label{0.7.7.1-fr}
-Soient $A$ un anneau linéairement topologisé, $M$, $N$, deux $A$-modules
+Soient $A$ un anneau linéairement topologisé, $\mathbf{M}$, $N$, deux $A$-modules
 linéairement topologisés. Soient $\mathfrak J$, $V$, $W$ des voisinages
 ouverts de $0$ dans $A$, $M$, $N$ respectivement, qui soient des
-$A$-modules, et tels que $\mathfrak JM\subset V$, $\mathfrak JN\subset W$,
+$A$-modules, et tels que $\mathfrak J.M\subset V$, $\mathfrak J.N\subset W$,
 de sorte que $M/V$ et $N/W$ peuvent être considérés comme des
 $(A/\mathfrak J)$-modules. Lorsque $\mathfrak J$, $V$, $W$ parcourent les
 systèmes de voisinages ouverts vérifiant les conditions précédentes, il est
 immédiat que les modules
 $(M/V)\otimes_{A/\mathfrak J}(N/W)$ forment un système projectif de modules
-
 \oldpage[0\textsubscript{I}]{76}
-
 sur le système projectif d'anneaux $A/\mathfrak J$~; par passage à la limite
 projective, on en déduit donc un module sur le séparé complété $\widehat A$
 de $A$, que l'on appelle le \emph{produit tensoriel complété} de $M$ et de
@@ -5762,7 +5708,7 @@ $(M/V)\otimes_A(N/W)$ et
 $(M/V)\otimes_{A/\mathfrak J}(N/W)$ s'identifient canoniquement~; ils
 s'identifient donc aussi à
 $(M\otimes_A N)/(\Im(V\otimes_A N)+\Im(M\otimes_A W))$.
-On en conclut que $(M\otimes_A N)^\wedge$ est \emph{le séparé complété du
+On en conclut que $(M\otimes_A N)^\wedge$ est le \emph{séparé complété du
 $A$-module $M\otimes_A N$, muni de la topologie pour laquelle les
 sous-modules}
 \[
@@ -5780,9 +5726,9 @@ respectivement)~; nous dirons pour abréger que cette topologie est le
 Soient $M'$, $N'$ deux $A$-modules linéairement topologisés,
 $u:M\to M'$, $v:N\to N'$ deux homomorphismes continus~; il est immédiat
 que $u\otimes v$ est continu pour les topologies produits tensoriels sur
-$M\otimes_A N$ et $M'\otimes_A N'$ respectivement~; par passage au séparé
+$M\otimes N$ et $M'\otimes N'$ respectivement~; par passage au séparé
 complété, on en déduit un homomorphisme continu
-$(M\otimes_A N)^\wedge\to(M'\otimes_A N')^\wedge$, que nous désignerons
+$(M\otimes N)^\wedge\to(M'\otimes N')^\wedge$, que nous désignerons
 par $u\widehat\otimes v$~; $(M\otimes_A N)^\wedge$ est donc un
 \emph{bifoncteur} en $M$ et $N$ dans la catégorie des $A$-modules
 linéairement topologisés.
@@ -5814,21 +5760,21 @@ $C$.
 
 \begin{env}[7.7.6]
 \label{0.7.7.6-fr}
-Les homomorphismes de $A$-algèbres $b\mapsto b\otimes 1$,
-$c\mapsto 1\otimes c$ de $B$ et $C$ dans $B\otimes_A C$ sont continus
+Les homomorphismes de $A$-algèbres $b\to b\otimes 1$,
+$c\to 1\otimes c$ de $B$ et $C$ dans $B\otimes_A C$ sont continus
 quand on munit cette dernière algèbre de la topologie produit tensoriel~;
 par composition avec l'homomorphisme canonique de $B\otimes_A C$ dans son
 séparé complété, ils donnent donc des \emph{homomorphismes canoniques}
 $\rho:B\to(B\otimes_A C)^\wedge$, $\sigma:C\to(B\otimes_A C)^\wedge$.
 L'algèbre $(B\otimes_A C)^\wedge$ et les homomorphismes $\rho$ et $\sigma$
-possèdent en outre la \emph{propriété universelle suivante}~: pour toute
+possèdent en outre la \emph{propriété universelle} suivante~; pour toute
 $A$-algèbre linéairement topologisée, séparée et complète $D$, et tout
 couple de $A$-homomorphismes continus $u:B\to D$, $v:C\to D$, il existe un
 $A$-homomorphisme continu et un seul
 $w:(B\otimes_A C)^\wedge\to D$ et un seul tel que $u=w\circ\rho$ et
 $v=w\circ\sigma$. En effet, il existe déjà un $A$-homomorphisme unique
 $w_0:B\otimes_A C\to D$ tel que $u(b)=w_0(b\otimes 1)$ et
-$v(c)=w_0(1\otimes c)$, et tout revient à prouver que $w_0$ est continu,
+$v(c)=w_0(1\otimes c)$, et tout revient à prouver que $w_0$ est \emph{continu},
 car il donnera alors un
 
 \oldpage[0\textsubscript{I}]{77}
@@ -5838,17 +5784,17 @@ $\mathfrak M$ est un idéal ouvert de $D$, il existe par hypothèse des idéaux
 ouverts $\mathfrak K\subset B$, $\mathfrak L\subset C$ tels que
 $u(\mathfrak K)\subset\mathfrak M$, $v(\mathfrak L)\subset\mathfrak M$~;
 l'image par $w_0$ de
-$\Im(\mathfrak K\otimes_A C)+\Im(B\otimes_A\mathfrak L)$ est encore
+$\Im(\mathfrak K\otimes C)+\Im(B\otimes\mathfrak L)$ est encore
 contenue dans $\mathfrak M$, d'où notre assertion.
 \end{env}
 
 \begin{proposition}[7.7.7]
 \label{0.7.7.7-fr}
 Si $B$ et $C$ sont deux $A$-algèbres préadmissibles,
-$(B\otimes_A C)^\wedge$ est admissible, et si $\mathfrak K$ (resp.
-$\mathfrak L$) est un idéal de définition de $B$ (resp. $C$), l'adhérence
+$(B\otimes_A C)^\wedge$ est admissible, et si $\mathfrak K$ \textup{(resp.
+$\mathfrak L$)} est un idéal de définition de $B$ \textup{(resp. $C$)}, l'adhérence
 dans $(B\otimes_A C)^\wedge$ de l'image canonique de
-$\mathfrak H=\Im(\mathfrak K\otimes_A C)+\Im(B\otimes_A\mathfrak L)$ est
+$\mathfrak H=\Im(\mathfrak K\otimes C)+\Im(B\otimes\mathfrak L)$ est
 un idéal de définition.
 \end{proposition}
 
@@ -5856,7 +5802,7 @@ Il suffit de montrer que $\mathfrak H^n$ tend vers $0$ pour la topologie
 produit tensoriel, ce qui résulte immédiatement de l'inclusion
 \[
   \mathfrak H^{2n}\subset
-  \Im(\mathfrak K^n\otimes_A C)+\Im(B\otimes_A\mathfrak L^n).
+  \Im(\mathfrak K^n\otimes C)+\Im(B\otimes\mathfrak L^n)
 \]
 
 \begin{proposition}[7.7.8]
@@ -5882,7 +5828,7 @@ est un $B$-module de type fini, la proposition résulte aussitôt de (7.3.6).
 
 \begin{env}[7.8.1]
 \label{0.7.8.1-fr}
-Soient $A$ un anneau $\mathfrak J$-adique noethérien, $M$ et $N$ deux
+Soient $A$ un anneau \emph{$\mathfrak J$-adique noethérien}, $M$ et $N$ deux
 $A$-modules de type fini, munis de la topologie $\mathfrak J$-préadique~;
 on sait (7.3.6) qu'ils sont séparés et complets~; en outre, tout
 $A$-homomorphisme $M\to N$ est automatiquement continu, et le $A$-module
@@ -5936,8 +5882,8 @@ continu~; inversement, l'image réciproque dans $\operatorname{Hom}_A(M,N)$ du $
 $\operatorname{Hom}_{A_i}(M_i,N_i)$ est $\operatorname{Hom}_A(M,\mathfrak J^{i+1}N)$, donc $\varphi$
 est bicontinu.
 
-Si on suppose seulement que $A$ est un anneau $\mathfrak J$-préadique
-noethérien, $M$ et $N$ deux $A$-modules de type fini, séparés pour la
+Si on suppose seulement que $A$ est un anneau \emph{$\mathfrak J$-préadique
+noethérien}, $M$ et $N$ deux $A$-modules de type fini, séparés pour la
 topologie $\mathfrak J$-préadique, la démonstration précédente montre que
 la première assertion de (7.8.2) reste valable, et que $\varphi$ est un
 isomorphisme topologique de $\operatorname{Hom}_A(M,N)$ sur un sous-module de
@@ -5945,8 +5891,8 @@ $\varprojlim_i\operatorname{Hom}_{A_i}(M_i,N_i)$.
 
 \begin{proposition}[7.8.3]
 \label{0.7.8.3-fr}
-Sous les hypothèses de (7.8.2), l'ensemble des homomorphismes injectifs
-(resp. surjectifs, bijectifs) de $M$ dans $N$ est une partie ouverte de
+Sous les hypothèses de \textup{(7.8.2)}, l'ensemble des homomorphismes injectifs
+\textup{(resp.} surjectifs, bijectifs) de $M$ dans $N$ est une partie ouverte de
 $\operatorname{Hom}_A(M,N)$.
 \end{proposition}
 
@@ -5957,7 +5903,7 @@ homomorphismes surjectifs de $M$ dans $N$ est donc image réciproque par
 l'application continue $\operatorname{Hom}_A(M,N)\to\operatorname{Hom}_{A_0}(M_0,N_0)$ d'une partie
 d'un espace discret. Montrons maintenant que l'ensemble des homomorphismes
 injectifs est ouvert~; soit $v$ un tel homomorphisme et posons $M'=v(M)$~;
-par le lemme d'Artin--Rees (7.3.2.1), il existe un entier $k\geq 0$ tel que
+par le lemme d'Artin-Rees (7.3.2.1), il existe un entier $k\geq 0$ tel que
 $M'\cap\mathfrak J^{m+k}N\subset\mathfrak J^mM'$ pour tout $m>0$~; nous
 allons voir que pour $w\in\mathfrak J^{k+1}\operatorname{Hom}_A(M,N)$,
 $u=v+w$ est injectif, ce qui achèvera la démonstration. En effet, soit
