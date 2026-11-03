@@ -1,8 +1,5 @@
 # EGA French cumulative edition — r9
 
-Release DOI: https://doi.org/10.5281/zenodo.22147336
-Stable concept DOI: https://doi.org/10.5281/zenodo.21921588
-
 ## What changed
 
 - Rebuilt the complete cumulative French reader from the current R30-bound diplomatic source tree.

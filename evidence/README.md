@@ -1,5 +1,7 @@
-# Evidence
+# Pièces justificatives
 
-The flattened r9 publication evidence is tracked at `release/02_EGA_FR_EVIDENCE_AND_PROVENANCE.zip` and in the exact Zenodo release https://doi.org/10.5281/zenodo.22147336.
+Les pièces justificatives de la publication r9 sont réunies dans `release/02_EGA_FR_EVIDENCE_AND_PROVENANCE.zip`.
 
-The archive binds the 189-member source manifest and serialization, the exact r9 PDF inventory, the predecessor release identity, and the public projection of the deterministic cumulative-reader receipt. It contains no private absolute paths or credentials.
+L'archive contient le manifeste des 189 fichiers source et leur sérialisation, l'inventaire exact des PDF de r9,
+l'identité de la version précédente et la partie publique du reçu de construction déterministe du lecteur cumulatif.
+Elle ne contient ni chemin absolu privé ni identifiant de connexion.

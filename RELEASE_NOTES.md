@@ -6,4 +6,4 @@ Le texte français reste diplomatique : les erreurs de transcription sont corrig
 
 Les sources TeX modifiables correspondent aux fichiers effectivement employés par les lecteurs. Les documents de provenance décrivent leurs témoins, les interventions éditoriales et les contrôles de cette édition.
 
-[Lire le volume cumulatif](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-09-08-r12/EGA_French_Cumulative_Reader.pdf) · [Édition anglaise distincte](https://doi.org/10.5281/zenodo.21921591)
+[Lire le volume cumulatif](https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-09-08-r12/EGA_French_Cumulative_Reader.pdf)
