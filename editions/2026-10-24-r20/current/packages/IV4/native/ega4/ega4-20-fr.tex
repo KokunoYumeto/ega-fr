@@ -2,75 +2,75 @@
 \label{IV.20}
 
 \setcounter{subsection}{-1}
-\subsection{Introduction}
+\subsection{Introduction.}
 \EGAReaderTarget{ega4.c04.subsec.20-0}{IV.20.0}
 
 La plupart des notions et résultats des \textsection\textsection20 et 21 se rattachent directement au chap.~I, et ne dépendent guère des chap.~II à IV, sauf en ce qui concerne l'usage occasionnel de la notion de profondeur et d'anneau local régulier (dans \sref{IV.20.6}, \sref{IV.21.11}, \sref{IV.21.13} et \sref{IV.21.15}), du « Main theorem » de Zariski dans \sref{IV.20.4} et \sref{IV.21.12}, et des propriétés des immersions transversalement régulières dans \sref{IV.20.6} et \sref{IV.21.15}.
 
 \oldpage[IV-4]{226}
 Au \textsection20, nous introduisons plusieurs variantes de la notion d'application rationnelle, déjà étudiée dans \sref[I]{section:I.7} d'un point de vue encore assez proche du point de vue classique, et pour cette raison assez mal adaptée au cas des préschémas non nécessairement réduits.
-Les notions et résultats du \textsection20 sont utilisés pour développer au \textsection21 (n\textsuperscript{os} \sref{IV.21.1} à \sref{IV.21.7}) la notion générale de diviseur et ses propriétés les plus élémentaires.
-Cette notion est surtout commode lorsque les anneaux locaux des préschémas considérés sont noethériens et intégralement clos, et surtout lorsqu'ils sont en outre \emph{factoriels} (\sref{IV.21.6} et \sref{IV.21.7}), en raison de son identification dans ce dernier cas avec la notion de \emph{cycle $1$-codimensionnel} (combinaison linéaire de sous-préschémas irréductibles de codimension~$1$).
+Les notions et résultats du \textsection20 sont utilisés pour développer au \textsection21 (n\textsuperscript{os} \hyperref[IV.21.1]{21.1} à \hyperref[IV.21.7]{21.7}) la notion générale de diviseur et ses propriétés les plus élémentaires.
+Cette notion est surtout commode lorsque les anneaux locaux des préschémas considérés sont noethériens et intégralement clos, et surtout lorsqu'ils sont en outre \emph{factoriels} (\hyperref[IV.21.6]{21.6} et \hyperref[IV.21.7]{21.7}), en raison de son identification dans ce dernier cas avec la notion de \emph{cycle $1$-codimensionnel} (combinaison linéaire de sous-préschémas irréductibles de codimension~$1$).
 Dans \sref{IV.21.9}, on détermine les diviseurs sur un préschéma noethérien de dimension~$1$ mais non nécessairement normal, ce qui est utile pour diverses applications.
-Les n\textsuperscript{os} \sref{IV.21.11} et \sref{IV.21.12} donnent deux théorèmes importants, dus respectivement à Auslander--Buchsbaum et Van der Waerden, et se rattachant à la notion d'anneau factoriel (les n\textsuperscript{os} \sref{IV.21.9}, \sref{IV.21.11} et \sref{IV.21.12} sont indépendants les uns des autres).
+Les n\textsuperscript{os} \hyperref[IV.21.11]{21.11} et \hyperref[IV.21.12]{21.12} donnent deux théorèmes importants, dus respectivement à Auslander-Buchsbaum et Van der Waerden, et se rattachant à la notion d'anneau factoriel (les n\textsuperscript{os} \sref{IV.21.9}, \sref{IV.21.11} et \sref{IV.21.12} sont indépendants les uns des autres).
 Dans les n\textsuperscript{os} \sref{IV.21.13} et \sref{IV.21.14}, également indépendants des trois précédents, nous étudions une variante utile de la notion d'anneau local factoriel, celle d'anneau local \emph{parafactoriel}, qui s'introduit notamment~\cite{IV-41} dans le développement de théorèmes de comparaison du groupe de Picard d'un préschéma projectif $X$ sur un corps $k$ et d'une « section hyperplane ».
-On verra dans \sref{IV.21.14.1} (théorème de Ramanujam--Samuel) que les anneaux locaux parafactoriels sont bien plus nombreux que l'on ne pouvait s'y attendre \emph{a priori}.
+On verra dans \sref{IV.21.14.1} (théorème de Ramanujam-Samuel) que les anneaux locaux parafactoriels sont bien plus nombreux que l'on ne pouvait s'y attendre \emph{a priori}.
 
 Dans \sref{IV.20.5}, \sref{IV.20.6} et \sref{IV.21.15}, nous reprenons les notions précédentes mais d'un point de vue « relatif » à un préschéma de base fixé.
 Pour l'instant ces notions ne sont utilisées qu'assez rarement ; en particulier la notion de diviseur relatif n'est guère employée que lorsqu'il s'agit de diviseurs positifs, et dans ce cas elle s'explicite avantageusement sans le secours de la notion de fonction méromorphe relative, à l'aide de la notion d'immersion transversalement régulière de codimension~$1$.
 On aura donc avantage à omettre ces sections en première lecture.
 
-\subsection{Fonctions méromorphes}
+\subsection{Fonctions méromorphes.}
 \EGAReaderTarget{ega4.c04.subsec.20-1}{IV.20.1}
 
 \begin{env}[20.1.1]
 \EGAReaderTarget{ega4.c04.statement.20-1-1}{IV.20.1.1}
 Soit $(X,\sh{O}_X)$ un espace annelé, et soit $\sh{S}$ un sous-faisceau \emph{d'ensembles} de $\sh{O}_X$.
 Pour tout ouvert $U$ de $X$, considérons l'\emph{anneau de fractions} $\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ (Bourbaki, \emph{Alg. comm.}, chap.~II, \textsection2, n\textsuperscript{o}1).
-Il est immédiat que l'application $U\mapsto\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ est un \emph{préfaisceau d'anneaux} (\sref[0]{0.1.5.1} et \sref[0]{0.1.5.7}).
-On note $\sh{O}_X[\sh{S}^{-1}]$ le \emph{faisceau d'anneaux} associé à ce préfaisceau et on dit que c'est le \emph{faisceau d'anneaux de fractions de $\sh{O}_X$, à dénominateurs dans $\sh{S}$} ; c'est un $\sh{O}_X$-module \emph{plat}.
+Il est immédiat que l'application $U\leadsto\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ est un \emph{préfaisceau d'anneaux} ($\mathbf{0}_{\mathrm I}$, \EGAUnavailableHyperref{0.1.5.1}{1.5.1} et \EGAUnavailableHyperref{0.1.5.7}{1.5.7}).
+On note $\sh{O}_X[\sh{S}^{-1}]$ le \emph{faisceau d'anneaux} associé à ce préfaisceau et on dit que c'est le \emph{faisceau d'anneaux de fractions de $\sh{O}_X$, à dénominateurs dans $\sh{S}$} ; c'est un $\sh{O}_X$-Module \emph{plat}.
 Il est immédiat que pour tout $x\in X$, on a un isomorphisme canonique
 \[
 \label{IV.20.1.1.1}
-  (\sh{O}_X[\sh{S}^{-1}])_x\isoto\sh{O}_{X,x}[\sh{S}_x^{-1}],
+  (\sh{O}_X[\sh{S}^{-1}])_x\simto\sh{O}_x[\sh{S}_x^{-1}]
   \tag{20.1.1.1}
 \]
-car le raisonnement de \sref[0]{0.1.4.5} se généralise aussitôt au cas où l'on a un système inductif $(A_\alpha,\vphi_{\beta\alpha})$ d'anneaux, et pour chaque indice $\alpha$ une partie $S_\alpha$ de $A_\alpha$ telle que
+car le raisonnement de \sref[$\mathbf{0}_{\mathrm I}$]{0.1.4.5} se généralise aussitôt au cas où l'on a un système inductif $(A_\alpha,\vphi_{\beta\alpha})$ d'anneaux, et pour chaque indice $\alpha$ une partie $S_\alpha$ de $A_\alpha$ telle que
 \oldpage[IV-4]{227}
 $\vphi_{\beta\alpha}(S_\alpha)\subset S_\beta$ pour $\alpha\leq\beta$ ; on prend alors pour $S$ la limite inductive dans $A=\varinjlim A_\alpha$ du système inductif de parties $(S_\alpha)$.
 \end{env}
 
 \begin{env}[20.1.2]
 \EGAReaderTarget{ega4.c04.statement.20-1-2}{IV.20.1.2}
-Soit maintenant $\sh{F}$ un $\sh{O}_X$-module.
+Soit maintenant $\sh{F}$ un $\sh{O}_X$-Module.
 On pose alors
 \[
 \label{IV.20.1.2.1}
   \sh{F}[\sh{S}^{-1}]=\sh{F}\otimes_{\sh{O}_X}\sh{O}_X[\sh{S}^{-1}]
   \tag{20.1.2.1}
 \]
-et on dit que c'est le \emph{faisceau de modules de fractions de $\sh{F}$ à dénominateurs dans $\sh{S}$} ; il est immédiat qu'il est associé au préfaisceau de modules $U\mapsto\Gamma(U,\sh{F})[\Gamma(U,\sh{S})^{-1}]$, et que pour tout $x\in X$, on a un isomorphisme canonique
+et on dit que c'est le \emph{faisceau de modules de fractions de $\sh{F}$ à dénominateurs dans $\sh{S}$} ; il est immédiat qu'il est associé au préfaisceau de modules $U\leadsto\Gamma(U,\sh{F})[\Gamma(U,\sh{S})^{-1}]$, et que pour tout $x\in X$, on a un isomorphisme canonique
 \[
 \label{IV.20.1.2.2}
-  (\sh{F}[\sh{S}^{-1}])_x\isoto\sh{F}_x[\sh{S}_x^{-1}].
+  (\sh{F}[\sh{S}^{-1}])_x\simto\sh{F}_x[\sh{S}_x^{-1}].
   \tag{20.1.2.2}
 \]
 \end{env}
 
 \begin{env}[20.1.3]
 \EGAReaderTarget{ega4.c04.statement.20-1-3}{IV.20.1.3}
-Nous allons nous intéresser ici au cas où $\sh{S}$ est le sous-faisceau $\sh{S}(\sh{O}_X)$ de $\sh{O}_X$ tel que pour tout ouvert $U$, $\Gamma(U,\sh{S})$ soit l'\emph{ensemble des éléments réguliers} de l'anneau $\Gamma(U,\sh{O}_X)$ ; il est immédiat qu'il s'agit d'un faisceau (et non seulement d'un préfaisceau), la régularité d'une section de $\sh{O}_X$ au-dessus de $U$ se vérifiant « fibre par fibre » (i.e. signifiant que le germe de la section en $x$ est régulier dans $\sh{O}_{X,x}$ pour tout $x\in U$), autrement dit $\sh{S}(\sh{O}_X)_x$ n'est autre que l'ensemble des éléments réguliers de $\sh{O}_{X,x}$.
+Nous allons nous intéresser ici au cas où $\sh{S}$ est le sous-faisceau $\sh{S}(\sh{O}_X)$ de $\sh{O}_X$ tel que pour tout ouvert $U$, $\Gamma(U,\sh{S})$ soit l'\emph{ensemble des éléments réguliers} de l'anneau $\Gamma(U,\sh{O}_X)$ ; il est immédiat qu'il s'agit d'un faisceau (et non seulement d'un préfaisceau) la régularité d'une section de $\sh{O}_X$ au-dessus de $U$ se vérifiant « fibre par fibre » (i.e. signifiant que le germe de la section en $x$ est régulier dans $\sh{O}_{X,x}$ pour tout $x\in U$) autrement dit $\sh{S}(\sh{O}_X)_x$ n'est autre que l'ensemble des éléments réguliers de $\sh{O}_{X,x}$.
 Le faisceau d'anneaux correspondant
 \[
   \sh{M}_X=\sh{O}_X[\sh{S}^{-1}]
 \]
 est appelé le \emph{faisceau des germes de fonctions méromorphes sur $X$}, et les sections de $\sh{M}_X$ au-dessus de $X$ sont appelées les \emph{fonctions méromorphes sur $X$} ; elles forment un anneau que l'on note $M(X)$.
-Pour tout $\sh{O}_X$-module $\sh{F}$,
+Pour tout $\sh{O}_X$-\emph{Module} $\sh{F}$,
 \[
   \sh{F}\otimes_{\sh{O}_X}\sh{M}_X=\sh{F}[\sh{S}^{-1}]
 \]
 est encore noté $\sh{M}_X(\sh{F})$ et appelé le \emph{faisceau des germes de sections méromorphes de $\sh{F}$} ; ses sections au-dessus de $X$ forment un $M(X)$-module noté $M(X,\sh{F})$, dont les éléments sont appelés \emph{sections méromorphes de $\sh{F}$ au-dessus de $X$}.
-Ces définitions impliquent que pour tout ouvert $U$ de $X$, on a un isomorphisme canonique $\sh{M}_X(\sh{F})|U\isoto\sh{M}_U(\sh{F}|U)$, en particulier $\sh{M}_X|U\isoto\sh{M}_U$.
+Ces définitions impliquent que pour tout ouvert $U$ de $X$, on a un isomorphisme canonique $\sh{M}_X(\sh{F})|U\simto\sh{M}_U(\sh{F}|U)$, en particulier $\sh{M}_X|U\simto\sh{M}_U$.
 \end{env}
 
 \begin{env}[20.1.3.1]
@@ -83,7 +83,7 @@ On est en effet aussitôt ramené au cas où $X=\Spec(A)$ est affine ; si $\math
 
 \begin{env}[20.1.4]
 \EGAReaderTarget{ega4.c04.statement.20-1-4}{IV.20.1.4}
-Pour tout ouvert $U$ de $X$, l'homomorphisme $t\mapsto t/1$ de $\Gamma(U,\sh{O}_X)$ dans $\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ (qui n'est autre que l'\emph{anneau total des fractions} de
+Pour tout ouvert $U$ de $X$, l'homomorphisme $t\leadsto t/1$ de $\Gamma(U,\sh{O}_X)$ dans $\Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]$ (qui n'est autre que l'\emph{anneau total des fractions} de
 \oldpage[IV-4]{228}
 $\Gamma(U,\sh{O}_X)$) est injectif ; ces homomorphismes définissent donc un \emph{homomorphisme canonique injectif}
 \[
@@ -97,23 +97,23 @@ qui permet d'identifier $\sh{O}_X$ à un sous-faisceau de $\sh{M}_X$.
 
 \begin{env}[20.1.5]
 \EGAReaderTarget{ega4.c04.statement.20-1-5}{IV.20.1.5}
-Pour tout $\sh{O}_X$-module $\sh{F}$, on déduit de \sref{IV.20.1.4.1} un di-homomorphisme formé de $i$ et de l'homomorphisme de faisceaux de groupes additifs
+Pour tout $\sh{O}_X$-Module $\sh{F}$, on déduit de \sref{IV.20.1.4.1} un di-homomorphisme formé de $i$ et de l'homomorphisme de faisceaux de groupes additifs
 \[
 \label{IV.20.1.5.1}
   1_{\sh{F}}\otimes i:\sh{F}\to\sh{M}_X(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_X.
   \tag{20.1.5.1}
 \]
-On notera que ce dernier n'est plus injectif en général ; lorsqu'il est injectif, on dit que $\sh{F}$ est \emph{strictement sans torsion} : cela signifie que pour tout ouvert $U$ de $X$ et toute section $s\in\Gamma(U,\sh{O}_X)$ qui est un élément régulier de cet anneau, l'homothétie $z\mapsto sz$ de $\Gamma(U,\sh{F})$ est injective ; cette condition est évidemment remplie si $\sh{F}$ est \emph{localement libre}.
+On notera que ce dernier n'est plus injectif en général ; lorsqu'il est injectif, on dit que $\sh{F}$ est \emph{strictement sans torsion} : cela signifie que pour tout ouvert $U$ de $X$ et toute section $s\in\Gamma(U,\sh{O}_X)$ qui est un élément régulier de cet anneau, l'homothétie $z\leadsto sz$ de $\Gamma(U,\sh{F})$ est injective ; cette condition est évidemment remplie si $\sh{F}$ est \emph{localement libre}.
 \end{env}
 
 \begin{proposition}[20.1.6]
 \label{IV.20.1.6}
-Soient $X$ un préschéma localement noethérien, $\sh{F}$ un $\sh{O}_X$-module quasi-cohérent.
+Soient $X$ un préschéma localement noethérien, $\sh{F}$ un $\sh{O}_X$-Module quasi-cohérent.
 Pour que $\sh{F}$ soit strictement sans torsion, il faut et il suffit que $\operatorname{Ass}(\sh{F})\subset\operatorname{Ass}(\sh{O}_X)$.
 \end{proposition}
 
 \begin{proof}
-On est en effet aussitôt ramené au cas où $X=\Spec(A)$ est affine, $\sh{F}=\widetilde M$, et on sait que les éléments $s$ de $A$ appartenant à un idéal de $\operatorname{Ass}(M)$ sont exactement ceux pour lesquels l'homothétie $z\mapsto sz$ n'est pas injective (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection1, n\textsuperscript{o}1, cor.~2 de la prop.~2).
+On est en effet aussitôt ramené au cas où $X=\Spec(A)$ est affine, $\sh{F}=\widetilde M$, et on sait que les éléments $s$ de $A$ appartenant à un idéal de $\operatorname{Ass}(M)$ sont exactement ceux pour lesquels l'homothétie $z\leadsto sz$ n'est pas injective (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection1, n\textsuperscript{o}1, cor.~2 de la prop.~2).
 \end{proof}
 
 \begin{env}[20.1.7]
@@ -125,31 +125,31 @@ Lorsque $\sh{F}$ est strictement sans torsion, de sorte que $\sh{F}$ s'identifie
 
 \begin{env}[20.1.8]
 \EGAReaderTarget{ega4.c04.statement.20-1-8}{IV.20.1.8}
-Conformément aux notations générales \sref[0\textsubscript{I}]{0.5.4.7}, on note $\sh{M}_X^*$ le faisceau de groupes multiplicatifs tel que $\Gamma(U,\sh{M}_X^*)$ soit (pour tout ouvert $U$ de $X$) le groupe des \emph{éléments inversibles} de $\Gamma(U,\sh{M}_X)$.
+Conformément aux notations générales \sref[$\mathbf{0}_{\mathrm I}$]{0.5.4.7}, on note $\sh{M}_X^*$ le faisceau de groupes multiplicatifs tel que $\Gamma(U,\sh{M}_X^*)$ soit (pour tout ouvert $U$ de $X$) le groupe des \emph{éléments inversibles} de $\Gamma(U,\sh{M}_X)$.
 Ce faisceau n'est autre que le faisceau $\sh{S}(\sh{M}_X)$ défini en \sref{IV.20.1.3} : en effet, si $s\in\Gamma(U,\sh{S}(\sh{M}_X))$, pour tout $x\in U$, il existe un voisinage ouvert $V\subset U$ de $x$ tel que $s|V$ soit un élément régulier dans l'\emph{anneau total des fractions} de $\Gamma(V,\sh{O}_X)$ et on sait qu'un tel élément est nécessairement inversible dans cet anneau de fractions.
 Nous dirons que les sections de $\sh{M}_X^*$ au-dessus de $X$ sont les \emph{fonctions méromorphes régulières} (on notera que nous nous écartons ici de la terminologie suivie par certains auteurs, qui nomment fonctions méromorphes « régulières » celles qui sont des \emph{sections de $\sh{O}_X$}, identifié à un sous-faisceau de $\sh{M}_X$).
 
-Soit $\sh{L}$ un $\sh{O}_X$-module inversible \sref[0\textsubscript{I}]{0.5.4.1} ; alors il est clair que $\sh{M}_X(\sh{L})=\sh{L}\otimes_{\sh{O}_X}\sh{M}_X$
+Soit $\sh{L}$ un $\sh{O}_X$-\emph{Module inversible} \sref[$\mathbf{0}_{\mathrm I}$]{0.5.4.1} ; alors il est clair que $\sh{M}_X(\sh{L})=\sh{L}\otimes_{\sh{O}_X}\sh{M}_X$
 \oldpage[IV-4]{229}
-est un $\sh{M}_X$-module inversible.
-Soit $U$ un ouvert tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$ ; comme tout automorphisme de $\sh{M}_U$ est la multiplication par un élément inversible de $\Gamma(U,\sh{M}_X)$ \sref[0\textsubscript{I}]{0.5.4.7}, il revient au même de dire qu'une section $s\in\Gamma(U,\sh{M}_X(\sh{L}))$ a une image inversible dans $\Gamma(U,\sh{M}_X)$ par \emph{un} isomorphisme ou par \emph{tout} isomorphisme sur $\Gamma(U,\sh{M}_X)$ ; on dira dans ce cas que $s$ est une \emph{section méromorphe régulière de $\sh{L}$ au-dessus de $U$} ; une section $s$ de $\sh{L}$ au-dessus de $X$ sera appelée une \emph{section méromorphe régulière de $\sh{L}$} si, pour tout ouvert $U$ tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$, $s|U$ est une section méromorphe régulière de $\sh{L}$ au-dessus de $U$.
+est un $\sh{M}_X$-\emph{Module inversible}.
+Soit $U$ un ouvert tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$ ; comme tout automorphisme de $\sh{M}_U$ est la multiplication par un élément inversible de $\Gamma(U,\sh{M}_X)$ \sref[$\mathbf{0}_{\mathrm I}$]{0.5.4.7}, il revient au même de dire qu'une section $s\in\Gamma(U,\sh{M}_X(\sh{L}))$ a une image inversible dans $\Gamma(U,\sh{M}_X)$ par \emph{un} isomorphisme ou par \emph{tout} isomorphisme sur $\Gamma(U,\sh{M}_X)$ ; on dira dans ce cas que $s$ est une \emph{section méromorphe régulière de $\sh{L}$} au-dessus de $U$ ; une section $s$ de $\sh{L}$ au-dessus de $X$ sera appelée une \emph{section méromorphe régulière de $\sh{L}$} si, pour tout ouvert $U$ tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$, $s|U$ est une section méromorphe régulière de $\sh{L}$ au-dessus de $U$.
 On notera $(\sh{M}_X(\sh{L}))^*$ le sous-faisceau de $\sh{M}_X(\sh{L})$ tel que pour tout ouvert $U$, $\Gamma(U,(\sh{M}_X(\sh{L}))^*)$ soit l'ensemble des sections méromorphes régulières de $\sh{L}$ au-dessus de $U$.
 Soit $s$ une section méromorphe de $\sh{L}$ au-dessus de $X$ (i.e. une section de $\sh{M}_X(\sh{L})$) ; elle définit un homomorphisme $h_s:\sh{M}_X\to\sh{M}_X(\sh{L})$ qui, à toute section $t$ de $\sh{M}_X$ au-dessus d'un ouvert $U$, fait correspondre $(s|U)t$.
 Il résulte aussitôt de ce qui précède que, pour que $s$ soit \emph{régulière}, il faut et il suffit que $h_s$ soit \emph{injectif}, et en fait $h_s$ est alors un homomorphisme \emph{bijectif} de $\sh{M}_X$ sur $\sh{M}_X(\sh{L})$, et sa restriction à $\sh{M}_X^*$ est une bijection sur $(\sh{M}_X(\sh{L}))^*$.
-On en conclut que l'homothétie $t\mapsto ts$ est un isomorphisme de $M(X)$ sur $M(X,\sh{L})$.
+On en conclut que l'homothétie $t\leadsto ts$ est un isomorphisme de $M(X)$ sur $M(X,\sh{L})$.
 \end{env}
 
 \begin{env}[20.1.9]
 \label{IV.20.1.9}
-Soit $s$ une section méromorphe régulière du $\sh{O}_X$-module inversible $\sh{L}$ au-dessus de $X$ ; alors, pour tout $\sh{O}_X$-module $\sh{F}$, $s$ définit de même un homomorphisme $h_s\otimes1_{\sh{F}}:\sh{M}_X(\sh{F})\to\sh{M}_X(\sh{F}\otimes_{\sh{O}_X}\sh{L})$, qui est encore \emph{bijectif}.
+Soit $s$ une section méromorphe régulière du $\sh{O}_X$-Module inversible $\sh{L}$ au-dessus de $X$ ; alors, pour tout $\sh{O}_X$-Module $\sh{F}$, $s$ définit de même un homomorphisme $h_s\otimes1_{\sh{F}}:\sh{M}_X(\sh{F})\to\sh{M}_X(\sh{F}\otimes_{\sh{O}_X}\sh{L})$, qui est encore \emph{bijectif}.
 \end{env}
 
 \begin{env}[20.1.10]
 \label{IV.20.1.10}
-Soit $s$ une section méromorphe d'un $\sh{O}_X$-module inversible $\sh{L}$ au-dessus de $X$ ; pour que $s$ soit régulière, il faut et il suffit qu'il existe une section méromorphe $s'$ de $\sh{L}^{-1}$ au-dessus de $X$ telle que l'image canonique de $s\otimes s'$ dans $\sh{M}_X$ \sref[0\textsubscript{I}]{0.5.4.3} soit la section unité, et cette section $s'$ est alors unique : en effet, la nécessité de l'existence locale d'une telle section est évidente, et son unicité locale entraîne son existence (et unicité) globale ; en outre, l'existence de $s'$ est trivialement suffisante pour que $s$ soit régulière.
+Soit $s$ une section méromorphe d'un $\sh{O}_X$-Module inversible $\sh{L}$ au-dessus de $X$ ; pour que $s$ soit régulière, il faut et il suffit qu'il existe une section méromorphe $s'$ de $\sh{L}^{-1}$ au-dessus de $X$ telle que l'image canonique de $s\otimes s'$ dans $\sh{M}_X$ \sref[$\mathbf{0}_{\mathrm I}$]{0.5.4.3} soit la section unité, et cette section $s'$ est alors unique : en effet, la nécessité de l'existence locale d'une telle section est évidente, et son unicité locale entraîne son existence (et unicité) globale ; en outre, l'existence de $s'$ est trivialement suffisante pour que $s$ soit régulière.
 On posera $s'=s^{-1}$.
 
-Enfin, si $\sh{L}'$ est un second $\sh{O}_X$-module inversible, $s$ (resp. $s'$) une section méromorphe régulière de $\sh{L}$ (resp. $\sh{L}'$) au-dessus de $X$, $s\otimes s'$ est évidemment une section méromorphe régulière de $\sh{L}\otimes\sh{L}'$ au-dessus de $X$.
+Enfin, si $\sh{L}'$ est un second $\sh{O}_X$-Module inversible, $s$ (resp. $s'$) une section méromorphe régulière de $\sh{L}$ (resp. $\sh{L}'$) au-dessus de $X$, $s\otimes s'$ est évidemment une section méromorphe régulière de $\sh{L}\otimes\sh{L}'$ au-dessus de $X$.
 \end{env}
 
 \begin{env}[20.1.11]
@@ -159,21 +159,21 @@ Par exemple, si $X$ est le spectre d'un anneau local intègre $A$, $X'$ celui de
 
 De façon générale, si $f=(\psi,\theta)$, notons, pour tout ouvert $U$ de $X$, $\sh{S}_f(U)$ l'ensemble des sections \emph{régulières} $s\in\Gamma(U,\sh{O}_X)$ telles que l'image de $s$ par
 \[
-  \Gamma(\theta^\#):\Gamma(U,\sh{O}_X)\to\Gamma(f^{-1}(U),\sh{O}_{X'})
+  \Gamma(\theta^\sharp):\Gamma(U,\sh{O}_X)\to\Gamma(f^{-1}(U),\sh{O}_{X'})
 \]
 soit une section \emph{régulière}.
-Il est immédiat que $U\mapsto\sh{S}_f(U)$ est un \emph{sous-faisceau} du faisceau d'ensembles $\sh{S}(\sh{O}_X)$, que l'on note $\sh{S}_f$.
+Il est immédiat que $U\leadsto\sh{S}_f(U)$ est un \emph{sous-faisceau} du faisceau d'ensembles $\sh{S}(\sh{O}_X)$, que l'on note $\sh{S}_f$.
 On pose $\sh{M}_f=\sh{O}_X[\sh{S}_f^{-1}]$ ; c'est un sous-faisceau
 \oldpage[IV-4]{230}
-d'anneaux de $\sh{M}_X$, et on déduit canoniquement de $\theta^\#:\psi^*(\sh{O}_X)\to\sh{O}_{X'}$ un homomorphisme de faisceaux d'anneaux $\theta^{\prime\#}:\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ prolongeant $\theta^\#$ (Bourbaki, \emph{Alg. comm.}, chap.~II, \textsection2, n\textsuperscript{o}1, prop.~2) ; d'où, en se rappelant que $f^*(\sh{M}_f)=\psi^*(\sh{M}_f)\otimes_{\psi^*(\sh{O}_X)}\sh{O}_{X'}$, un homomorphisme canonique de $\sh{O}_{X'}$-algèbres
+d'anneaux de $\sh{M}_X$, et on déduit canoniquement de $\theta^\sharp:\psi^*(\sh{O}_X)\to\sh{O}_{X'}$ un homomorphisme de faisceaux d'anneaux $\theta^{\prime\sharp}:\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ prolongeant $\theta^\sharp$ (Bourbaki, \emph{Alg. comm.}, chap.~II, \textsection2, n\textsuperscript{o}1, prop.~2) ; d'où, en se rappelant que $f^*(\sh{M}_f)=\psi^*(\sh{M}_f)\otimes_{\psi^*(\sh{O}_X)}\sh{O}_{X'}$, un homomorphisme canonique de $\sh{O}_{X'}$-Algèbres
 \[
 \label{IV.20.1.11.1}
   f^*(\sh{M}_f)\to\sh{M}_{X'}.
   \tag{20.1.11.1}
 \]
-Pour toute fonction méromorphe $\vphi$ sur $X$, qui \emph{est une section de $\sh{M}_f$}, $\Gamma(\theta^{\prime\#})(\vphi)$ est une fonction méromorphe sur $X'$, dite \emph{image réciproque de $\vphi$ par $f$}, et notée $\vphi\circ f$ si cela n'entraîne pas confusion.
+Pour toute fonction méromorphe $\vphi$ sur $X$, qui \emph{est une section de $\sh{M}_f$}, $\Gamma(\theta^{\prime\sharp})(\vphi)$ est une fonction méromorphe sur $X'$, dite \emph{image réciproque de $\vphi$ par $f$}, et notée $\vphi\circ f$ si cela n'entraîne pas confusion.
 
-De même, si $\sh{F}$ est un $\sh{O}_X$-module, on pose $\sh{M}_f(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_f$, et on déduit aussitôt de $\theta^{\prime\#}$ un homomorphisme canonique (qu'on écrit aussi $u\mapsto u\circ f$)
+De même, si $\sh{F}$ est un $\sh{O}_X$-Module, on pose $\sh{M}_f(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_f$, et on déduit aussitôt de $\theta^{\prime\sharp}$ un homomorphisme canonique (qu'on écrit aussi $u\leadsto u\circ f$)
 \[
   \Gamma(X,\sh{M}_f(\sh{F}))\to\Gamma(X',\sh{M}_{X'}(f^*(\sh{F}))).
 \]
@@ -186,31 +186,31 @@ Comme par hypothèse les images des $s_i$ dans $\Gamma(f^{-1}(U),\sh{O}_{X'})$ s
 \]
 Nous verrons plus loin \sref{IV.20.6.5}[(i)] des exemples (avec $\sh{F}=\sh{O}_X$) où les deux membres de \sref{IV.20.1.11.2} peuvent être distincts.
 
-Considérons en particulier le cas où $\sh{M}_f=\sh{M}_X$ ; alors, si $\sh{L}$ est un $\sh{O}_X$-module inversible, l'image dans $\sh{M}_{X'}(f^*(\sh{L}))$, par $\Gamma(\theta^{\prime\#})$, d'une section méromorphe \emph{régulière} de $\sh{L}$ au-dessus de $X$ \sref{IV.20.1.8} est une section méromorphe \emph{régulière} de $f^*(\sh{L})$ au-dessus de $X'$, comme il résulte aussitôt de la définition de ces sections, et du fait qu'un homomorphisme d'anneaux transforme un élément inversible en un élément inversible.
+Considérons en particulier le cas où $\sh{M}_f=\sh{M}_X$ ; alors, si $\sh{L}$ est un $\sh{O}_X$-Module inversible, l'image dans $\sh{M}_{X'}(f^*(\sh{L}))$, par $\Gamma(\theta^{\prime\sharp})$, d'une section méromorphe \emph{régulière} de $\sh{L}$ au-dessus de $X$ \sref{IV.20.1.8} est une section méromorphe \emph{régulière} de $f^*(\sh{L})$ au-dessus de $X'$, comme il résulte aussitôt de la définition de ces sections, et du fait qu'un homomorphisme d'anneaux transforme un élément inversible en un élément inversible.
 
 Soit $f':X''\to X'$ un second morphisme d'espaces annelés, et supposons que $\sh{M}_f=\sh{M}_X$ et $\sh{M}_{f'}=\sh{M}_{X'}$ ; alors, si l'on pose $f''=f\circ f'$, on a aussi $\sh{M}_{f''}=\sh{M}_X$, et l'on voit aussitôt que pour toute section méromorphe $u$ de $\sh{F}$ au-dessus de $X$, on a $u\circ f''=(u\circ f)\circ f'$.
 \end{env}
 
 \begin{proposition}[20.1.12]
 \label{IV.20.1.12}
-Si le morphisme $f:X'\to X$ est plat \sref[0\textsubscript{I}]{0.6.7.1}, on a $\sh{M}_f=\sh{M}_X$, et l'homomorphisme $\vphi\mapsto\vphi\circ f$ est défini dans $M(X)$ tout entier.
-En outre, si $f$ est un morphisme (plat) d'espaces annelés en anneaux locaux, on a $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$ ; si de plus $f$ est surjectif (donc fidèlement plat), l'homomorphisme $\vphi\mapsto\vphi\circ f$ est injectif.
+Si le morphisme $f:X'\to X$ est plat \sref[0\textsubscript{\mdseries I}]{0.6.7.1} on a $\sh{M}_f=\sh{M}_X$, et l'homomorphisme $\vphi\leadsto\vphi\circ f$ est défini dans $M(X)$ tout entier.
+En outre, si $f$ est un morphisme (plat) d'espaces annelés en anneaux locaux, on a $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$ ; si de plus $f$ est surjectif (donc fidèlement plat), l'homomorphisme $\vphi\leadsto\vphi\circ f$ est injectif.
 \end{proposition}
 
 \begin{proof}
-La première assertion résulte de ce que, si $B$ est une $A$-algèbre qui est un $A$-module plat, tout élément de $A$ non diviseur de $0$ dans $A$ est non diviseur de $0$ dans $B$ \sref[0\textsubscript{I}]{0.6.3.4}.
-Pour prouver les autres assertions, notons que, pour tout $x'\in X'$, si $x=f(x')$, $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat, et comme l'homomorphisme $\sh{O}_{X,x}\to\sh{O}_{X',x'}$ est \emph{local} par hypothèse, il est injectif (\sref[0\textsubscript{I}]{0.6.5.1} et \sref[0\textsubscript{I}]{0.6.6.2}) ; si l'on pose $A=\sh{O}_{X,x}$, $B=\sh{O}_{X',x'}$, de sorte que $A$ s'identifie à un sous-anneau de $B$, $(f^*(\sh{M}_X))_{x'}$ est égal à $S^{-1}A\otimes_A B=S^{-1}B$, où $S$ est l'ensemble des éléments réguliers de $A$, $(\sh{M}_{X'})_{x'}$ est égal à $T^{-1}B$, où $T$ est l'ensemble
+La première assertion résulte de ce que, si $B$ est une $A$-algèbre qui est un $A$-module plat, tout élément de $A$ non diviseur de $0$ dans $A$ est non diviseur de $0$ dans $B$ \sref[0\textsubscript{\mdseries I}]{0.6.3.4}.
+Pour prouver les autres assertions, notons que, pour tout $x'\in X'$, si $x=f(x')$, $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat, et comme l'homomorphisme $\sh{O}_{X,x}\to\sh{O}_{X',x'}$ est \emph{local} par hypothèse, il est injectif (\textbf{0}\textsubscript{I}, \EGAUnavailableHyperref{0.6.5.1}{6.5.1} et \EGAUnavailableHyperref{0.6.6.2}{6.6.2}) ; si l'on pose $A=\sh{O}_{X,x}$, $B=\sh{O}_{X',x'}$, de sorte que $A$ s'identifie à un sous-anneau de $B$, $(f^*(\sh{M}_X))_{x'}$ est égal à $S^{-1}A\otimes_A B=S^{-1}B$, où $S$ est l'ensemble des éléments réguliers de $A$, $(\sh{M}_{X'})_{x'}$ est égal à $T^{-1}B$, où $T$ est l'ensemble
 \oldpage[IV-4]{231}
 des éléments réguliers de $B$, et comme on a vu que $S\subset T$, l'homomorphisme $S^{-1}B\to T^{-1}B$ est injectif ; autrement dit, cela prouve que l'homomorphisme \sref{IV.20.1.11.1} $f^*(\sh{M}_X)\to\sh{M}_{X'}$ est \emph{injectif} (d'où la dernière assertion de l'énoncé).
-Le quotient $f^*(\sh{M}_X)/\sh{O}_{X'}$ s'identifie à un sous-$\sh{O}_{X'}$-module de $\sh{M}_{X'}/\sh{O}_{X'}$, et $(f^*(\sh{M}_X)/\sh{O}_{X'})_{x'}$ s'identifie à $(\sh{M}_X/\sh{O}_X)_x\otimes_{\sh{O}_{X,x}}\sh{O}_{X',x'}$.
+Le quotient $f^*(\sh{M}_X)/\sh{O}_{X'}$ s'identifie à un sous-$\sh{O}_{X'}$-Module de $\sh{M}_{X'}/\sh{O}_{X'}$, et $(f^*(\sh{M}_X)/\sh{O}_{X'})_{x'}$ s'identifie à $(\sh{M}_X/\sh{O}_X)_x\otimes_{\sh{O}_{X,x}}\sh{O}_{X',x'}$.
 Supposons alors que $x\notin\operatorname{dom}(\vphi)$ ; l'image de $\vphi_x$ dans $(\sh{M}_X/\sh{O}_X)_x$ est donc $\neq0$ ; par fidèle platitude, on en déduit qu'il en est de même de l'image de $(\vphi\circ f)_{x'}$ dans $(\sh{M}_{X'}/\sh{O}_{X'})_{x'}$, donc $x'\notin\operatorname{dom}(\vphi\circ f)$, ce qui achève la démonstration.
 \end{proof}
 
 \begin{remark}[20.1.13]
 \label{IV.20.1.13}
 Soit $X$ un espace analytique complexe \emph{réduit} ; alors la notion de fonction méromorphe sur $X$ définie ci-dessus coïncide avec la notion usuelle.
-Considérons d'autre part un préschéma $Y$, localement de type fini sur le corps $\bb{C}$ ; on sait alors qu'on peut associer à $Y$ un espace analytique $Y^\mathrm{an}$ ayant même espace topologique sous-jacent, et que le morphisme canonique $f:Y^\mathrm{an}\to Y$ est \emph{plat}~\cite{IV-37} ; en vertu de \sref{IV.20.1.12}, l'homomorphisme canonique $u\mapsto u\circ f$ de $M(Y)$ dans $M(Y^\mathrm{an})$ est donc partout défini et est injectif ; mais il n'est pas \emph{surjectif} en général.
-Par exemple, lorsque $Y=\bb{V}_{\bb{C}}^r$ (\textbf{Err}\textsubscript{\textbf{III}},~14) est l'espace affine de dimension $r$ sur $\bb{C}$, $M(Y)$ s'identifie canoniquement au corps $R(Y)$ des fonctions rationnelles sur $Y$ \sref{IV.20.2.13}[(i)], tandis que $M(Y^\mathrm{an})$ est le corps des fonctions méromorphes usuelles sur $\bb{C}^r$.
+Considérons d'autre part un préschéma $Y$, localement de type fini sur le corps $\bb{C}$ ; on sait alors qu'on peut associer à $Y$ un espace analytique $Y^\mathrm{an}$ ayant même espace topologique sous-jacent, et que le morphisme canonique $f:Y^\mathrm{an}\to Y$ est \emph{plat}~\cite{IV-37} ; en vertu de \sref{IV.20.1.12}, l'homomorphisme canonique $u\leadsto u\circ f$ de $M(Y)$ dans $M(Y^\mathrm{an})$ est donc partout défini et est injectif ; mais il n'est pas \emph{surjectif} en général.
+Par exemple, lorsque $Y=\bb{V}_{\bb{C}}^r$ (\textbf{Err}\textsubscript{III},~14) est l'espace affine de dimension $r$ sur $\bb{C}$, $M(Y)$ s'identifie canoniquement au corps $R(Y)$ des fonctions rationnelles sur $Y$ \sref{IV.20.2.13}[(i)], tandis que $M(Y^\mathrm{an})$ est le corps des fonctions méromorphes usuelles sur $\bb{C}^r$.
 En raison de ce fait, il est souvent préférable, en Géométrie algébrique, de s'abstenir de la terminologie introduite dans cette section, et d'utiliser la terminologie équivalente de « pseudo-fonction » qui va être définie ci-dessous.
 \end{remark}
 
@@ -227,22 +227,22 @@ Considérons deux préschémas $X$, $Y$, deux ouverts \emph{schématiquement den
 Comme il résulte aussitôt de la définition des ouverts schématiquement denses que l'intersection de deux tels ouverts en est un autre, il est immédiat que la relation précédente est bien une relation d'équivalence.
 Une classe d'équivalence suivant cette relation s'appelle un \emph{pseudo-morphisme} de $X$ dans $Y$, ou une \emph{application rationnelle stricte} de $X$ dans $Y$.
 
-Si $S$ est un préschéma et $X$, $Y$ deux $S$-préschémas, on appelle \emph{pseudo-$S$-morphisme} la classe d'équivalence (pour la relation précédente) d'un $S$-morphisme d'un ouvert schématiquement dense de $X$ dans $Y$.
+Si $S$ est un préschéma et $X$, $Y$ deux $S$-préschémas, on appelle \emph{pseudo-$S$-morphisme} la classe d'équivalence (pour la relation précédente) d'un $S$-\emph{morphisme} d'un ouvert schématiquement dense de $X$ dans $Y$.
 Un pseudo-morphisme n'est donc autre chose qu'un pseudo-$S$-morphisme pour $S=\Spec(\bb{Z})$.
 
 On note $\operatorname{Ps.hom}(X,Y)$ (resp. $\operatorname{Ps.hom}_S(X,Y)$) l'ensemble des pseudo-morphismes (resp. des pseudo-$S$-morphismes) de $X$ dans $Y$.
 \end{env}
 
+\oldpage[IV-4]{232}
 \begin{env}[20.2.2]
 \EGAReaderTarget{ega4.c04.statement.20-2-2}{IV.20.2.2}
-\oldpage[IV-4]{232}
 Il résulte de la définition rappelée ci-dessus que si $U$ est un ouvert schématiquement dense dans $X$, alors, pour tout ouvert $V$ de $X$, $U\cap V$ est schématiquement dense dans $V$.
 Si deux morphismes $u:U\to Y$, $u':U'\to Y$ d'ouverts schématiquement denses de $X$ dans $Y$ sont équivalents il s'ensuit donc que leurs restrictions $u|(V\cap U)$ et $u'|(V\cap U')$ sont aussi des morphismes équivalents (pour le préschéma induit sur $V$) ; leur classe est dite la \emph{restriction} à $V$ du pseudo-morphisme $\omega$, classe de $u$, et on note ce pseudo-morphisme $\omega|V$.
 Si $W\subset V$ est un ouvert de $X$, il est clair que $(\omega|V)|W=\omega|W$.
-Ceci montre que les applications de restriction définissent un \emph{préfaisceau} d'ensembles $U\mapsto\operatorname{Ps.hom}(U,Y)$ ; on notera que ce préfaisceau \emph{n'est pas} un faisceau en général (cf. \sref{IV.20.2.16}) ; le faisceau associé se note $\mathscr{P}\!s.\!\operatorname{hom}(X,Y)$.
-Pour les pseudo-$S$-morphismes, on voit de même que $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ est un préfaisceau d'ensembles, dont on note $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$ le faisceau associé.
+Ceci montre que les applications de restriction définissent un \emph{préfaisceau} d'ensembles $U\leadsto\operatorname{Ps.hom}(U,Y)$ ; on notera que ce préfaisceau \emph{n'est pas} un faisceau en général (cf. \sref{IV.20.2.16}) ; le faisceau associé se note $\mathscr{P}\!s.\!\mathit{hom}(X,Y)$.
+Pour les pseudo-$S$-morphismes, on voit de même que $U\leadsto\operatorname{Ps.hom}_S(U,Y)$ est un préfaisceau d'ensembles, dont on note $\mathscr{P}\!s.\!\mathit{hom}_S(X,Y)$ le faisceau associé.
 
-Si $V$ est un ouvert \emph{schématiquement dense} dans $X$, alors, pour tout ouvert $U$ schématiquement dense dans $X$, $U\cap V$ est aussi schématiquement dense dans $X$, donc l'application $\omega\mapsto\omega|V$ est une \emph{bijection} de l'ensemble $\operatorname{Ps.hom}(X,Y)$ (resp. $\operatorname{Ps.hom}_S(X,Y)$) sur $\operatorname{Ps.hom}(V,Y)$ (resp. $\operatorname{Ps.hom}_S(V,Y)$).
+Si $V$ est un ouvert \emph{schématiquement dense} dans $X$, alors, pour tout ouvert $U$ schématiquement dense dans $X$, $U\cap V$ est aussi schématiquement dense dans $X$, donc l'application $\omega\leadsto\omega|V$ est une \emph{bijection} de l'ensemble $\operatorname{Ps.hom}(X,Y)$ (resp. $\operatorname{Ps.hom}_S(X,Y)$) sur $\operatorname{Ps.hom}(V,Y)$ (resp. $\operatorname{Ps.hom}_S(V,Y)$).
 \end{env}
 
 \begin{env}[20.2.3]
@@ -264,7 +264,7 @@ Supposons que $X$, $Y$ soient des $S$-préschémas tels que le morphisme structu
 
 \begin{proof}
 Il suffit évidemment de prouver que si $U$, $U'$ sont deux ouverts schématiquement denses dans $X$ tels que deux $S$-morphismes $u:U\to Y$ et $u':U'\to Y$ soient équivalents, alors les restrictions de $u$ et $u'$ à $U\cap U'$ sont égales.
-Or il existe par hypothèse un ouvert $U''\subset U\cap U'$, schématiquement dense dans $X$ et dans lequel $u$ et $u'$ coïncident ; comme $U''$ est aussi schématiquement dense dans $U\cap U'$, notre assertion résulte de \sref{IV.11.10.1}[(d)].
+Or il existe par hypothèse un ouvert $U''\subset U\cap U'$, schématiquement dense dans $X$ et dans lequel $u$ et $u'$ coïncident ; comme $U''$ est aussi schématiquement dense dans $U\cap U'$, notre assertion résulte de \sref{IV.11.10.1}[\emph{d)}].
 \end{proof}
 
 \begin{corollary}[20.2.5]
@@ -278,12 +278,12 @@ En particulier, si $Y$ est un schéma, on a $\operatorname{dom}_S(\omega)=\opera
 En effet, il est clair que $\operatorname{dom}_S(\omega)\subset\operatorname{dom}_{S_0}(\omega)$ sans hypothèse de séparation ; en vertu de \sref{IV.20.2.4}, il suffit de prouver que si un $S_0$-morphisme $u_0:U_0\to Y$ d'un ouvert
 \oldpage[IV-4]{233}
 schématiquement dense $U_0$ de $X$ dans $Y$ est tel que le composé $v_0:U_0\xrightarrow{u_0}Y\to S$ coïncide avec la restriction du morphisme structural $w_0:U_0\to S$ dans un ouvert $U\subset U_0$ schématiquement dense dans $X$, alors on a $v_0=w_0$.
-Mais en vertu de l'hypothèse que le morphisme $S\to S_0$ est séparé, cela résulte encore de \sref{IV.11.10.1}[(d)].
+Mais en vertu de l'hypothèse que le morphisme $S\to S_0$ est séparé, cela résulte encore de \sref{IV.11.10.1}[\emph{d)}].
 \end{proof}
 
 \begin{corollary}[20.2.6]
 \label{IV.20.2.6}
-Sous les hypothèses de \sref{IV.20.2.4}, le préfaisceau $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ est un faisceau.
+Sous les hypothèses de \sref{IV.20.2.4}, le préfaisceau $U\leadsto\operatorname{Ps.hom}_S(U,Y)$ est un faisceau.
 \end{corollary}
 
 \begin{proof}
@@ -301,12 +301,12 @@ Dans le cas général, la notion de pseudo-morphisme semble plus utile que celle
 \EGAReaderTarget{ega4.c04.statement.20-2-8}{IV.20.2.8}
 On appelle \emph{pseudo-fonction} sur $X$ un pseudo-morphisme de $X$ dans $\Spec(\bb{Z}[T])$ ($T$ indéterminée), ou, ce qui revient au même, un $X$-pseudo-morphisme de $X$ dans $X\otimes_{\bb{Z}}\bb{Z}[T]$ ; il revient aussi au même \sref[I]{I.3.3.15} de dire qu'une pseudo-fonction sur $X$ est une \emph{classe d'équivalence de sections de $\sh{O}_X$ au-dessus d'ouverts schématiquement denses de $X$}, deux sections $g\in\Gamma(U,\sh{O}_X)$, $g'\in\Gamma(U',\sh{O}_X)$ au-dessus de tels ouverts étant équivalentes s'il existe un ouvert $U''\subset U\cap U'$, schématiquement dense dans $X$, où $g$ et $g'$ coïncident.
 On peut ici appliquer \sref{IV.20.2.4} avec $S=X$ et $Y=X\otimes_{\bb{Z}}\bb{Z}[T]$ ; donc, pour toute pseudo-fonction $\vphi$ sur $X$, il existe un \emph{plus grand} ouvert schématiquement dense $\operatorname{dom}(\vphi)$ dans $X$ tel qu'il y ait une section de $\sh{O}_X$ au-dessus de $\operatorname{dom}(\vphi)$ appartenant à la classe $\vphi$.
-Il est clair que le faisceau $\mathscr{P}\!s.\!\operatorname{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T])$ est ici un \emph{faisceau d'anneaux}, et même une $\sh{O}_X$-\emph{Algèbre}, que nous noterons $\sh{M}'_X$ ; il résulte de \sref{IV.20.2.6} que, pour tout ouvert $U$ de $X$, $\Gamma(U,\sh{M}'_X)$ est égal à l'ensemble des pseudo-morphismes de $U$ dans $\Spec(\bb{Z}[T])$ ; on pose $M'(X)=\Gamma(X,\sh{M}'_X)$.
+Il est clair que le faisceau $\mathscr{P}\!s.\!\mathit{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T])$ est ici un \emph{faisceau d'anneaux}, et même une $\sh{O}_X$-\emph{Algèbre}, que nous noterons $\sh{M}'_X$ ; il résulte de \sref{IV.20.2.6} que, pour tout ouvert $U$ de $X$, $\Gamma(U,\sh{M}'_X)$ est égal à l'ensemble des pseudo-morphismes de $U$ dans $\Spec(\bb{Z}[T])$ ; on pose $M'(X)=\Gamma(X,\sh{M}'_X)$.
 Dire qu'une section $\vphi$ de $\sh{M}'_X$ au-dessus de $U$ est \emph{inversible} dans l'anneau $\Gamma(U,\sh{M}'_X)$ signifie qu'il existe un ouvert $U'$ schématiquement dense dans $\operatorname{dom}(\vphi)$, donc dans $U$, tel que, si $g$ est l'unique section de $\sh{O}_X$ au-dessus de $\operatorname{dom}(\vphi)$ appartenant à $\vphi$, $g|U'$ soit \emph{inversible} dans $\Gamma(U',\sh{O}_X)$.
-Il résulte de \sref[I]{I.3.3.15} que, dans la correspondance canonique entre $\Gamma(V,\sh{O}_X)$ et $\Hom(V,\bb{Z}[T])$ ($V$ ouvert de $X$), les éléments inversibles de $\Gamma(V,\sh{O}_X)$ correspondent aux morphismes qui se
+Il résulte de \sref[I]{I.3.3.15} que, dans la correspondance canonique entre $\Gamma(V,\sh{O}_X)$ et $\Hom(V,\bb{Z}[T])$ ($V$ ouvert de $X$) les éléments inversibles de $\Gamma(V,\sh{O}_X)$ correspondent aux morphismes qui \emph{se}
 \oldpage[IV-4]{234}
-\emph{factorisent} en $V\to\Spec(\bb{Z}[T,T^{-1}])\to\Spec(\bb{Z}[T])$.
-On en conclut que le faisceau ${\sh{M}'}^*_X$ des germes de sections inversibles de $\sh{M}'_X$ s'identifie canoniquement au faisceau $\mathscr{P}\!s.\!\operatorname{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T,T^{-1}])$.
+\emph{factorisent en} $V\to\Spec(\bb{Z}[T,T^{-1}])\to\Spec(\bb{Z}[T])$.
+On en conclut que le faisceau ${\sh{M}'}^*_X$ des germes de sections inversibles de $\sh{M}'_X$ s'identifie canoniquement au faisceau $\mathscr{P}\!s.\!\mathit{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T,T^{-1}])$.
 \end{env}
 
 \begin{lemma}[20.2.9]
@@ -341,9 +341,9 @@ pour les faisceaux de germes inversibles de sections de $\sh{M}_X$ et $\sh{M}'_X
 \EGAReaderTarget{ega4.c04.prop.20-2-11}{IV.20.2.11}
 \medskip
 \begin{enumerate}[label=\emph{(\roman*)}]
-  \item L'homomorphisme canonique \emph{\sref{IV.20.2.10.1}} (et par suite aussi \emph{\sref{IV.20.2.10.2}}) est \emph{injectif}.
+  \item L'homomorphisme canonique \emph{\sref{IV.20.2.10.1}} \textup{(et par suite aussi \emph{\sref{IV.20.2.10.2}})} est injectif.
   \item Supposons, soit que $X$ soit localement noethérien, soit que $X$ soit réduit et que l'ensemble de ses composantes irréductibles soit localement fini.
-  Alors l'homomorphisme canonique \emph{\sref{IV.20.2.10.1}} (et par suite aussi \emph{\sref{IV.20.2.10.2}}) est \emph{bijectif}.
+  Alors l'homomorphisme canonique \emph{\sref{IV.20.2.10.1}} \textup{(et par suite aussi \emph{\sref{IV.20.2.10.2}})} est bijectif.
 \end{enumerate}
 \end{proposition}
 
@@ -354,7 +354,7 @@ Compte tenu de la définition du faisceau $\sh{M}_X$ \sref{IV.20.1.3}, on peut d
   \Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]\to\Gamma(U,\sh{M}'_X)
 \]
 et il suffit de montrer que, pour $U$ affine, ce dernier est injectif (resp. bijectif sous les hypothèses de~(ii)).
-Notant $S$ l'ensemble des éléments réguliers de $A$ (de sorte que $S^{-1}A$ est \emph{l'anneau total des fractions} de $A$), on doit donc considérer l'homomorphisme canonique
+Notant $S$ l'ensemble des éléments réguliers de $A$ (de sorte que $S^{-1}A$ est l'\emph{anneau total des fractions} de $A$), on doit donc considérer l'homomorphisme canonique
 \[
 \label{IV.20.2.11.1}
   S^{-1}A\to M'(X)
@@ -362,12 +362,12 @@ Notant $S$ l'ensemble des éléments réguliers de $A$ (de sorte que $S^{-1}A$ e
 \]
 \oldpage[IV-4]{235}
 et montrer qu'il est injectif (resp. bijectif sous les conditions de~(ii)).
-Or, on peut écrire $S^{-1}A=\varinjlim A_t$, où $t$ parcourt l'ensemble des éléments \emph{réguliers} de $A$, ordonné suivant la relation « $t$ est un diviseur de $t'$ » \sref[0]{0.1.4.5} ; on peut aussi écrire $A_t=\Gamma(\mathrm{D}(t),\sh{O}_X)$.
-D'autre part on a par définition $M'(X)=\varinjlim\Gamma(U,\sh{O}_X)$, où $U$ parcourt l'ensemble des ouverts schématiquement denses de $X$ (ordonné par la relation $\supset$), et l'application \sref{IV.20.2.11.1} n'est autre que l'application canonique provenant du fait que les $\mathrm{D}(t)$ constituent une partie de l'ensemble des ouverts schématiquement denses dans $X$ \sref{IV.20.2.9}.
+Or, on peut écrire $S^{-1}A=\varinjlim_t A_t$, où $t$ parcourt l'ensemble des éléments \emph{réguliers} de $A$, ordonné suivant la relation « $t$ est un diviseur de $t'$ » \sref[$\mathbf{0}_{\mathrm I}$]{0.1.4.5} ; on peut aussi écrire $A_t=\Gamma(\mathrm{D}(t),\sh{O}_X)$.
+D'autre part on a par définition $M'(X)=\varinjlim_U\Gamma(U,\sh{O}_X)$, où $U$ parcourt l'ensemble des ouverts schématiquement denses de $X$ (ordonné par la relation $\supset$), et l'application \sref{IV.20.2.11.1} n'est autre que l'application canonique provenant du fait que les $\mathrm{D}(t)$ constituent une partie de l'ensemble des ouverts schématiquement denses dans $X$ \sref{IV.20.2.9}.
 Notons que par définition d'un ouvert schématiquement dense, l'homomorphisme $\Gamma(U,\sh{O}_X)\to\Gamma(U',\sh{O}_X)$ pour deux tels ouverts $U'\subset U$ est toujours \emph{injectif}, donc il en est de même des homomorphismes $\Gamma(U,\sh{O}_X)\to M'(X)$, et on en conclut que \sref{IV.20.2.11.1} est injectif.
 Pour prouver que \sref{IV.20.2.11.1} est bijectif, il suffit de montrer que l'ensemble des $\mathrm{D}(t)$ est \emph{cofinal} à l'ensemble des ouverts schématiquement denses, autrement dit que pour un tel ouvert $U$, il existe $t$ régulier dans $A$ tel que $\mathrm{D}(t)\subset U$.
 Or, lorsque $X$ est réduit et que les composantes irréductibles de $X$ forment un ensemble localement fini, cet ensemble est fini puisque $X$ a été supposé affine, autrement dit $A$ n'a qu'un nombre fini d'idéaux premiers minimaux $\mathfrak{p}_i$ ; comme $A$ est réduit, l'intersection des $\mathfrak{p}_i$ est réduite à $0$, et dire que $t$ est régulier équivaut donc à dire que $t$ n'appartient à aucun des $\mathfrak{p}_i$ ; on conclut donc par le raisonnement de \sref[I]{I.7.1.9.1}.
-Lorsque $A$ est noethérien, dire que $U=X-Y$ (où $Y=V(\mathfrak{J})$ est fermé dans $X$) est schématiquement dense signifie \sref{IV.5.10.2} que $Y$ \emph{ne rencontre pas} $\operatorname{Ass}(\sh{O}_X)$, et en vertu de Bourbaki, \emph{Alg.~comm.}, chap.~IV, \textsection1, n\textsuperscript{o}~4, prop.~8, cela entraîne l'existence d'un $t\in\mathfrak{J}$ tel que $t$ soit $A$-régulier, donc $U\supset\mathrm{D}(t)$.
+Lorsque $A$ est noethérien, dire que $U=X\setmin Y$ (où $Y=V(\mathfrak{J})$ est fermé dans $X$) est schématiquement dense signifie \sref{IV.5.10.2} que $Y$ \emph{ne rencontre pas} $\operatorname{Ass}(\sh{O}_X)$, et en vertu de Bourbaki, \emph{Alg.~comm.}, chap.~IV, \textsection1, n\textsuperscript{o}~4, prop.~8, cela entraîne l'existence d'un $t\in\mathfrak{J}$ tel que $t$ soit $A$-régulier, donc $U\supset\mathrm{D}(t)$.
 
 On a en outre prouvé au cours de cette démonstration le
 \end{proof}
@@ -386,23 +386,23 @@ Si $X=\Spec(A)$, où $A$ est noethérien, ou réduit et n'ayant qu'un nombre fin
   En général, puisque tout ensemble ouvert schématiquement dense est dense, on a un homomorphisme canonique $\sh{M}'_X\to\sh{R}(X)$, mais même lorsque $X$ est localement noethérien, cet homomorphisme n'est pas nécessairement injectif.
   Par exemple, si $X=\Spec(A)$, où $A$ est un anneau noethérien tel que $\operatorname{Ass}(A)$ contienne des idéaux premiers immergés (ce qui entraîne que $A$ n'est pas réduit), on a vu que $M(X)$ et $M'(X)$ s'identifient à l'anneau total de fractions $S^{-1}A$,
   \oldpage[IV-4]{236}
-  où $S$ est l'ensemble des éléments réguliers de $A$, complémentaire de la réunion des idéaux $\mathfrak{p}\in\operatorname{Ass}(A)$ ; par contre, $R(X)$ s'identifie à $Q^{-1}A$, où $Q$ est le complémentaire de la réunion des idéaux premiers \emph{minimaux} de $A$ \sref[I]{I.7.1.9}, et l'homomorphisme canonique $A\to Q^{-1}A$ (et \emph{a fortiori} $S^{-1}A\to Q^{-1}A$) n'est donc pas injectif, puisqu'il existe dans $A-Q$ des éléments $\neq0$ de $A$ annulés par des éléments de $Q$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \textsection1, n\textsuperscript{o}~1, cor.~2 de la prop.~1).
+  où $S$ est l'ensemble des éléments réguliers de $A$, complémentaire de la réunion des idéaux $\mathfrak{p}\in\operatorname{Ass}(A)$ ; par contre, $R(X)$ s'identifie à $Q^{-1}A$, où $Q$ est le complémentaire de la réunion des idéaux premiers \emph{minimaux} de $A$ \sref[I]{I.7.1.9}, et l'homomorphisme canonique $A\to Q^{-1}A$ (et \emph{a fortiori} $S^{-1}A\to Q^{-1}A$) n'est donc pas injectif, puisqu'il existe dans $A\setmin Q$ des éléments $\neq0$ de $A$ annulés par des éléments de $Q$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \textsection1, n\textsuperscript{o}~1, cor.~2 de la prop.~1).
 
   \item On notera que même lorsque $X$ est localement noethérien, le $\sh{O}_X$-Module $\sh{M}'_X$ \emph{n'est pas nécessairement quasi-cohérent}.
   Considérons par exemple un anneau local noethérien $A$ de dimension $\geq2$, dont l'idéal maximal $\mathfrak{m}$ est tel que $\mathfrak{m}\in\operatorname{Ass}(A)$ et que si l'on pose $X=\Spec(A)$, le schéma induit sur l'ouvert $U$ de $X$, complémentaire de $\{\mathfrak{m}\}$, soit \emph{intègre}.
-  Les seuls éléments réguliers de $A$ sont alors les éléments inversibles, donc $\Gamma(X,\sh{M}'_X)=M'(X)=A$ ; si $\sh{M}'_X$ était quasi-cohérent, il serait donc égal à $\sh{O}_X$ ; mais comme $U$ est un schéma intègre, $\sh{M}'_X|U=R(U)$ est un faisceau \emph{simple} \sref[I]{I.7.3.5}, alors que $\sh{O}_U$ n'est pas un faisceau simple puisque $\dim(A)\geq2$.
+  Les seuls éléments réguliers de $A$ sont alors les éléments inversibles, donc $\Gamma(X,\sh{M}_X)=M(X)=A$ ; si $\sh{M}_X$ était quasi-cohérent, il serait donc égal à $\sh{O}_X$ ; mais comme $U$ est un schéma intègre, $\sh{M}_X|U=R(U)$ est un faisceau \emph{simple} \sref[I]{I.7.3.5}, alors que $\sh{O}_U$ n'est pas un faisceau simple puisque $\dim(A)\geq2$.
 
   Reste à donner un exemple d'anneau $A$ ayant les propriétés précédentes.
   Il suffit de considérer un anneau local intègre $B$ de dimension $\geq2$ et de corps résiduel $k$, et de prendre $A=B\oplus k$ avec la loi de multiplication $(b,x)(b',x')=(bb',bx'+b'x)$.
 
-  \item Si $X$ est localement noethérien, il résulte de \sref{IV.5.10.2} que les ouverts schématiquement denses dans $X$ sont ceux qui \emph{contiennent} l'ensemble $\operatorname{Ass}(\sh{O}_X)$.
+  \item Si $X$ est localement noethérien, il résulte de \sref{IV.5.10.2} que les ouverts schématiquement denses dans $X$ sont ceux qui \emph{contiennent l'ensemble} $\operatorname{Ass}(\sh{O}_X)$.
 \end{enumerate}
 \end{remarks}
 
 \begin{env}[20.2.14]
 \EGAReaderTarget{ega4.c04.statement.20-2-14}{IV.20.2.14}
 Soient $X$ un préschéma, $\sh{F}$ un $\sh{O}_X$-Module quasi-cohérent et \emph{strictement sans torsion} \sref{IV.20.1.5}, de sorte que $\sh{F}$ s'identifie à un sous-$\sh{O}_X$-Module de $\sh{M}_X(\sh{F})$.
-Pour toute section méromorphe $u$ de $\sh{F}$ au-dessus de $X$, on appelle l'\emph{Idéal des dénominateurs de $u$} l'annulateur $\sh{J}$ de la section $\overline{u}$ image de $u$ dans $\sh{M}_X(\sh{F})/\sh{F}$.
+Pour toute section méromorphe $u$ de $\sh{F}$ au-dessus de $X$, on appelle \emph{Idéal des dénominateurs de $u$} l'annulateur $\sh{J}$ de la section $\overline{u}$ image de $u$ dans $\sh{M}_X(\sh{F})/\sh{F}$.
 L'Idéal $\sh{J}$ est \emph{quasi-cohérent} : en effet, la question étant locale sur $X$, on peut se borner au cas où $X$ est affine, et il existe une section $s\in\Gamma(X,\sh{S}(\sh{O}_X))$ telle que $v=su\in\Gamma(X,\sh{F})$.
 Dire que, pour un ouvert $U\subset X$, une section $f\in\Gamma(U,\sh{O}_X)$ appartient à $\Gamma(U,\sh{J})$ signifie que $f(u|U)\in\Gamma(U,\sh{F})$, et puisque $s|U$ est un élément régulier de $\Gamma(U,\sh{O}_X)$ et que $\sh{F}$ est strictement sans torsion, la relation précédente équivaut encore à $f((su)|U)\in\Gamma(U,s\sh{F})$ ; si $\overline{v}$ est la section de $\sh{F}/s\sh{F}$, image canonique de $v$, on voit donc que $\sh{J}$ est le noyau de l'homomorphisme $\sh{O}_X\to\sh{F}/s\sh{F}$ obtenu par multiplication par la section $\overline{v}$.
 Comme $\sh{F}/s\sh{F}$ est quasi-cohérent, il en est de même de $\sh{J}$.
@@ -423,16 +423,16 @@ On sait alors \sref{IV.20.2.9} que $\mathrm{D}(s')$ est un ouvert schématiqueme
 
 \begin{remark}[20.2.16]
 \label{IV.20.2.16}
-Lorsque $Y$ n'est pas séparé, le préfaisceau $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ sur $X$ n'est pas nécessairement un faisceau, même lorsque $X$ est noethérien, comme le montre l'exemple suivant.
-Nous allons prendre pour $X$ un spectre d'un anneau semi-local noethérien $A$ de dimension $\geq2$, ayant exactement deux idéaux
+Lorsque $Y$ n'est pas séparé, le préfaisceau $U\leadsto\operatorname{Ps.hom}_S(U,Y)$ sur $X$ n'est pas nécessairement un faisceau, même lorsque $X$ est noethérien, comme le montre l'exemple suivant.
+Nous allons prendre pour $X$ un spectre d'un anneau \emph{semi-local} noethérien $A$ de dimension $\geq2$, ayant exactement deux idéaux
 \oldpage[IV-4]{237}
-maximaux $\mathfrak{m}'$, $\mathfrak{m}''$ (donc tel que $X$ ait exactement deux points fermés $x'$, $x''$), de sorte que $\mathfrak{m}'$ et $\mathfrak{m}''$ appartiennent à $\operatorname{Ass}(A)$ et que l'ouvert $U=X-\{x',x''\}$ soit \emph{intègre}.
-Soient $U'=X-\{x'\}$, $U''=X-\{x''\}$, de sorte que $U=U'\cap U''$.
+maximaux $\mathfrak{m}'$, $\mathfrak{m}''$ (donc tel que $X$ ait exactement deux points fermés $x'$, $x''$), de sorte que $\mathfrak{m}'$ et $\mathfrak{m}''$ appartiennent à $\operatorname{Ass}(A)$ et que l'ouvert $U=X\setmin\{x',x''\}$ soit \emph{intègre}.
+Soient $U'=X\setmin\{x'\}$, $U''=X\setmin\{x''\}$, de sorte que $U=U'\cap U''$.
 Notons que les seuls ouverts schématiquement denses dans $X$ sont ceux qui contiennent $x'$ et $x''$ \sref{IV.20.2.13}[(iv)], donc ils sont nécessairement identiques à $X$.
-Pour avoir un contre-exemple, il suffira donc de définir deux $S$-morphismes $u':U'\to Y$, $u'':U''\to Y$ (avec $S=X$) dont les restrictions à $U$ appartiennent au même pseudo-morphisme de $U$ dans $Y$, mais qui soient tels que, pour tout voisinage $V'$ de $x''$ dans $U'$ et tout voisinage $V''$ de $x'$ dans $U''$, les restrictions de $u'$ et $u''$ à $V'\cap V''$ soient distinctes.
-Pour cela, considérons une partie fermée irréductible $Z$ de $X$ contenant $x'$ et $x''$, distincte de $X$ ; soit $Y$ le $X$-préschéma obtenu en recollant deux préschémas $Y'$, $Y''$ isomorphes à $X$ le long de l'ouvert partout dense $X-Z$ \sref[I]{I.2.3.1}.
-On prendra alors pour $u'$ et $u''$ les restrictions respectives à $U'$ et $U''$ des isomorphismes réciproques des isomorphismes structuraux $Y'\to X$, $Y''\to X$.
-Comme $V'$ et $V''$ contiennent le point générique de $Z$, les restrictions de $u'$ et $u''$ à $V'\cap V''$ sont distinctes, mais les restrictions de $u'$ et $u''$ à $U-(U\cap Z)$ sont égales, et $U-(U\cap Z)$ est un ouvert dense dans $U$, donc schématiquement dense puisque $U$ est réduit.
+Pour avoir un contre-exemple, il suffira donc de définir deux $S$-morphismes $u':U'\to Y$, $u'':U''\to Y$ (avec $S=X$) dont les restrictions à $U$ appartiennent au même pseudo-morphisme de $U$ dans $Y$, mais qui sont tels que, pour tout voisinage $V'$ de $x''$ dans $U'$ et tout voisinage $V''$ de $x'$ dans $U''$, les restrictions de $u'$ et $u''$ à $V'\cap V''$ soient distinctes.
+Pour cela, considérons une partie fermée \emph{irréductible} $Z$ de $X$ contenant $x'$ et $x''$, distincte de $X$ ; soit $Y$ le $X$-préschéma obtenu en recollant deux préschémas $Y'$, $Y''$ isomorphes à $X$ le long de l'ouvert partout dense $X\setmin Z$ \sref[I]{I.2.3.1}.
+On prendra alors pour $u'$ et $u''$ les restrictions respectives à $U'$ et $U''$ des isomorphismes réciproques des isomorphismes structuraux $Y'\xrightarrow{\sim}X$, $Y''\xrightarrow{\sim}X$.
+Comme $V'$ et $V''$ contiennent le point générique de $Z$, les restrictions de $u'$ et $u''$ à $V'\cap V''$ sont distinctes, mais les restrictions de $u'$ et $u''$ à $U\setmin(U\cap Z)$ sont égales, et $U\setmin(U\cap Z)$ est un ouvert dense dans $U$, donc schématiquement dense puisque $U$ est réduit.
 
 Reste donc seulement à définir $A$ et $Z$ de façon à avoir les propriétés précédentes.
 Soient $X_0=\Spec(B)$ un schéma affine intègre (par exemple le plan affine sur un corps $k$), $Y$ une partie fermée irréductible de $X_0$ (par exemple une droite affine) contenant deux points fermés distincts $x'$ et $x''$, correspondant aux idéaux maximaux $\mathfrak{n}'$, $\mathfrak{n}''$ de $B$.
@@ -441,13 +441,13 @@ Si $X_1=\Spec(C)$, on a $X_0=(X_1)_\mathrm{red}$ et $X_1$ est réduit sauf aux p
 Il suffit alors de prendre $A=R^{-1}C$, où $R$ est le complémentaire de la réunion des idéaux maximaux de $C$ aux points $x'$, $x''$, et pour $Z$ la trace de $Y$ sur $X=\Spec(A)$.
 \end{remark}
 
-\subsection{Composition des pseudo-morphismes}
+\subsection{Composition des pseudo-morphismes.}
 \EGAReaderTarget{ega4.c04.subsec.20-3}{IV.20.3}
 
 \begin{env}[20.3.1]
 \EGAReaderTarget{ega4.c04.statement.20-3-1}{IV.20.3.1}
-Soient $X$, $Y$, $Z$ trois préschémas, $\omega$ un pseudo-morphisme de $X$ dans $Y$, $f:Y\to Z$ un morphisme.
-Il est clair que si $U'$, $U''$ sont deux ouverts schématiquement denses dans $X$, $u':U'\to Y$, $u'':U''\to Y$ deux morphismes de la classe $\omega$, les morphismes $f\circ u'$ et $f\circ u''$ sont équivalents (pour la relation définie dans \sref{IV.20.2.1}), donc, pour tous les morphismes $u$ de la classe $\omega$, les morphismes $f\circ u$ appartiennent à une même classe d'équivalence, que l'on note $f\circ\omega$ et que l'on appelle le pseudo-morphisme de $X$ dans $Z$ \emph{composé de $f$ et de $\omega$}.
+Soient $X$, $Y$, $Z$ trois préschémas, $\omega$ un pseudo-morphisme de $X$ dans $Y$, $f:Y\to Z$ un \emph{morphisme}.
+Il est clair que si $U'$, $U''$ sont deux ouverts schématiquement denses dans $X$, $u':U'\to Y$, $u'':U''\to Y$ deux morphismes de la classe $\omega$, les morphismes $f\circ u'$ et $f\circ u''$ sont équivalents (pour la relation définie dans \sref{IV.20.2.1}), donc, pour tous les morphismes $u$ de la classe $\omega$, les morphismes $f\circ u$ appartiennent à une même classe d'équivalence, que l'on note $f\circ\omega$ et que l'on appelle le pseudo-morphisme de $X$ dans $Z$ \emph{composé} de $f$ et de $\omega$.
 On a $\operatorname{dom}(f\circ\omega)=\operatorname{dom}(\omega)$.
 Si $g:Z\to T$ est un morphisme, il est clair que l'on a $g\circ(f\circ\omega)=(g\circ f)\circ\omega$.
 \end{env}
@@ -455,10 +455,10 @@ Si $g:Z\to T$ est un morphisme, il est clair que l'on a $g\circ(f\circ\omega)=(g
 \begin{env}[20.3.2]
 \EGAReaderTarget{ega4.c04.statement.20-3-2}{IV.20.3.2}
 Supposons maintenant donnés un pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, où $Y$ est \emph{séparé sur $S$}, de sorte qu'il existe un $S$-morphisme $u:\operatorname{dom}_S(\omega)\to Y$ de la classe $\omega$ \sref{IV.20.2.4}.
-Soit $f:X'\to X$ un $S$-morphisme tel que l'ouvert $V'=f^{-1}(\operatorname{dom}_S(\omega))$ soit schématiquement dense dans $X'$ ; alors on dit que la classe (pour la relation d'équivalence de \sref{IV.20.2.1}) du $S$-morphisme $u\circ(f|U')$ (classe qui est définie en vertu de l'hypothèse précédente) est le pseudo-$S$-morphisme \emph{composé de $\omega$ et de $f$}, et on le note $\omega\circ f$ ; il est clair que l'on a
+Soit $f:X'\to X$ un $S$-morphisme tel que l'ouvert $V'=f^{-1}(\operatorname{dom}_S(\omega))$ soit \emph{schématiquement dense dans} $X'$ ; alors on dit que la classe (pour la relation d'équivalence de \sref{IV.20.2.1}) du $S$-morphisme $u\circ(f|U')$ (classe qui est définie en vertu de l'hypothèse précédente) est le pseudo-$S$-morphisme \emph{composé} de $\omega$ et de $f$, et on le note $\omega\circ f$ ; il est clair que l'on a
 \[
 \label{IV.20.3.2.1}
-  f^{-1}(\operatorname{dom}_S(\omega))\subset\operatorname{dom}_S(\omega\circ f)
+  f^{-1}(\operatorname{dom}_S(\omega))\subset\operatorname{dom}_S(\omega\circ f).
   \tag{20.3.2.1}
 \]
 
@@ -470,22 +470,23 @@ Si $\omega$ est un tel pseudo-$S$-morphisme, il est clair que pour tout ouvert $
 est schématiquement dense dans $f^{-1}(V)$, donc, si $f^V:f^{-1}(V)\to V$ est la restriction de $f$, le composé $(\omega|V)\circ f^V$ est défini et égal à $(\omega\circ f)|f^{-1}(V)$.
 On définit ainsi une
 \oldpage[IV-4]{238}
-application canonique de restriction $\operatorname{Ps.hom}_S(X,Y)^f\to\operatorname{Ps.hom}_S(V,Y)^{f^V}$, ce qui permet de définir un \emph{préfaisceau} d'ensembles $V\mapsto\operatorname{Ps.hom}_S(V,Y)^{f^V}$ sur $X$, sous-préfaisceau de $V\mapsto\operatorname{Ps.hom}_S(V,Y)$, d'où un faisceau d'ensembles associé que l'on note $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f$.
-En outre, pour tout ouvert $V$ de $X$, on a une application $\omega\mapsto\omega\circ f^V$ de $\operatorname{Ps.hom}_S(V,Y)^{f^V}$ dans $\operatorname{Ps.hom}_S(f^{-1}(V),Y)$, qui définit donc un $f$-morphisme de faisceaux d'ensembles
+application canonique de restriction $\operatorname{Ps.hom}_S(X,Y)^f\to\operatorname{Ps.hom}_S(V,Y)^{f^V}$, ce qui permet de définir un \emph{préfaisceau} d'ensembles $V\leadsto\operatorname{Ps.hom}_S(V,Y)^{f^V}$ sur $X$, sous-préfaisceau de $V\leadsto\operatorname{Ps.hom}_S(V,Y)$, d'où un faisceau d'ensembles associé que l'on note $\mathscr{P}\!s.\mathit{hom}_S(X,Y)^f$.
+En outre, pour tout ouvert $V$ de $X$, on a une application $\omega\leadsto\omega\circ f^V$ de $\operatorname{Ps.hom}_S(V,Y)^{f^V}$ dans $\operatorname{Ps.hom}_S(f^{-1}(V),Y)$, qui définit donc un \emph{$f$-morphisme} de faisceaux d'ensembles
 \[
-  \mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f\to\mathscr{P}\!s.\!\operatorname{hom}_S(X',Y).
+  \mathscr{P}\!s.\mathit{hom}_S(X,Y)^f\to\mathscr{P}\!s.\mathit{hom}_S(X',Y).
 \]
 \end{env}
 
 \begin{env}[20.3.3]
 \label{IV.20.3.3}
 Soit maintenant $f':X''\to X'$ un $S$-morphisme tel que l'ouvert $f'^{-1}(f^{-1}(\operatorname{dom}_S(\omega)))$ soit schématiquement dense dans $X''$ ; alors $\omega\circ(f\circ f')$ est défini et $u\circ f\circ f'$ appartient à ce pseudo-$S$-morphisme ; en outre, en vertu de \sref{IV.20.3.2.1}, $f'^{-1}(\operatorname{dom}_S(\omega\circ f))$ est \emph{a fortiori} schématiquement dense dans $X''$, donc $(\omega\circ f)\circ f'$ est aussi défini et $u\circ f\circ f'$ appartient à ce pseudo-$S$-morphisme, donc on a $(\omega\circ f)\circ f'=\omega\circ(f\circ f')$.
+
 D'autre part, pour tout $S$-morphisme $g:Y\to Z$, on a $\operatorname{dom}_S(g\circ\omega)=\operatorname{dom}_S(\omega)$ \sref{IV.20.3.1}, donc $(g\circ\omega)\circ f$ est défini, et $g\circ u\circ f$ appartient à ce pseudo-$S$-morphisme, ce qui montre que $(g\circ\omega)\circ f=g\circ(\omega\circ f)$.
 \end{env}
 
 \begin{env}[20.3.4]
 \label{IV.20.3.4}
-Le cas le plus important dans la définition \sref{IV.20.3.2} est celui où l'on a $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f=\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$ : il suffit pour cela que pour tout ouvert $U$ de $X$, et tout ouvert $V$ schématiquement dense dans $U$, $f^{-1}(V)$ soit schématiquement dense dans $f^{-1}(U)$ ; lorsqu'il en est ainsi, alors, pour \emph{tout} ouvert $U$ de $X$ et \emph{tout} pseudo-$S$-morphisme $\omega:U\to Y$, on peut définir le composé $\omega\circ f^U$, \emph{même si $Y$ n'est pas séparé sur $S$}.
+Le cas le plus important dans la définition \sref{IV.20.3.2} est celui où l'on a $\mathscr{P}\!s.\mathit{hom}_S(X,Y)^f=\mathscr{P}\!s.\mathit{hom}_S(X,Y)$ : il suffit pour cela que pour tout ouvert $U$ de $X$, et tout ouvert $V$ schématiquement dense dans $U$, $f^{-1}(V)$ soit schématiquement dense dans $f^{-1}(U)$ ; lorsqu'il en est ainsi, alors, pour \emph{tout} ouvert $U$ de $X$ et \emph{tout} pseudo-$S$-morphisme $\omega:U\to Y$, on peut définir le composé $\omega\circ f^U$, \emph{même si $Y$ n'est pas séparé sur $S$}.
 En effet, si $u':U'\to Y$ et $u'':U''\to Y$ sont deux morphismes de la classe $\omega$, ils coïncident dans un ouvert $U_0$ schématiquement dense dans $U$, donc les morphismes composés $f^{-1}(U')\to U'\xrightarrow{u'}Y$ et $f^{-1}(U'')\to U''\xrightarrow{u''}Y$ coïncident dans $f^{-1}(U_0)$, qui est par hypothèse schématiquement dense dans $f^{-1}(U)$ ; on peut donc définir $\omega\circ f^U$ comme la classe d'un quelconque des morphismes $f^{-1}(U')\to U'\xrightarrow{u'}Y$, où $u'$ appartient à $\omega$.
 \end{env}
 
@@ -501,8 +502,8 @@ Alors, dans chacun des trois cas suivants, pour tout ouvert $U$ de $X$ et tout o
 \end{proposition}
 
 \begin{proof}
-L'assertion~(i) résulte de \sref{IV.11.10.5}[(ii), (b)] ; l'assertion~(ii) résulte de \sref{IV.11.10.5}[(ii), (a)], car alors tout ouvert $V$ dans $U$ est rétrocompact, autrement dit l'injection canonique $j:V\to U$ est un morphisme quasi-compact.
-Enfin, pour prouver~(iii), notons que puisque $X'$ est réduit, il suffit de montrer que pour tout ouvert $U$ de $X$ et tout ouvert $V$ dense dans $U$, $f^{-1}(V)$ est \emph{dense} dans $f^{-1}(U)$.
+L'assertion~(i) résulte de \sref{IV.11.10.5}[(ii), \emph{b)}] ; l'assertion~(ii) résulte de \sref{IV.11.10.5}[(ii), \emph{a)}], car alors tout ouvert $V$ dans $U$ est \emph{rétrocompact}, autrement dit l'injection canonique $j:V\to U$ est un morphisme quasi-compact.
+Enfin, pour prouver~(iii), notons que puisque $X'$ est réduit, il suffit de montrer que pour tout ouvert $U$ de $X$ et tout ouvert $V$ \emph{dense} dans $U$, $f^{-1}(V)$ est \emph{dense} dans $f^{-1}(U)$.
 Or, pour que $f^{-1}(V)$ soit dense dans $f^{-1}(U)$, il suffit que $f^{-1}(V)$ contienne tous les points maximaux de $X'$ appartenant à $f^{-1}(U)$ ; la conclusion résulte donc de l'hypothèse que l'image par $f$ de tout point
 \oldpage[IV-4]{239}
 maximal de $X'$ appartenant à $f^{-1}(U)$ est un point maximal de $X$ appartenant à $U$, donc à $V$ puisque l'ensemble des composantes irréductibles de $X$ est localement fini.
@@ -511,20 +512,21 @@ maximal de $X'$ appartenant à $f^{-1}(U)$ est un point maximal de $X$ appartena
 \begin{env}[20.3.6]
 \EGAReaderTarget{ega4.c04.statement.20-3-6}{IV.20.3.6}
 Soient $X$, $Y$ deux $S$-préschémas ; supposons que $X$ vérifie l'une des deux hypothèses suivantes :
-\begin{enumerate}[label=\emph{\alph*)}]
-  \item $X$ est localement noethérien ;
-  \item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.
+\begin{enumerate}[label=\alph*)]
+  \item $X$ \emph{est localement noethérien} ;
+  \item $X$ \emph{est réduit et l'ensemble de ses composantes irréductibles est localement fini}.
 \end{enumerate}
-Alors, pour tout $x\in X$, le $S$-morphisme canonique $j:\Spec(\sh{O}_{X,x})\to X$ est plat et vérifie la condition~(ii) de \sref{IV.20.3.5} dans le cas~a), la condition~(iii) de \sref{IV.20.3.5} dans le cas~b).
-Pour tout pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, le composé $\omega\circ j$ est donc défini et est un pseudo-$S$-morphisme de $\Spec(\sh{O}_{X,x})$ dans $Y$, appelé la \emph{restriction} de $\omega$ à $\Spec(\sh{O}_{X,x})$.
-Notons maintenant que si $X$ vérifie la condition~a) (resp. b)) de \sref{IV.20.3.6}, il en est de même de tout préschéma induit sur un ouvert $U$ de $X$ contenant $x$.
+
+Alors, pour tout $x\in X$, le $S$-morphisme canonique $j:\Spec(\sh{O}_{X,x})\to X$ est plat et vérifie la condition~(ii) de \sref{IV.20.3.5} dans le cas~\emph{a)}, la condition~(iii) de \sref{IV.20.3.5} dans le cas~\emph{b)}.
+Pour \emph{tout} pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, le composé $\omega\circ j$ est donc défini et est un pseudo-$S$-morphisme de $\Spec(\sh{O}_{X,x})$ dans $Y$, appelé la \emph{restriction} de $\omega$ à $\Spec(\sh{O}_{X,x})$.
+Notons maintenant que si $X$ vérifie la condition~\emph{a)} (resp. \emph{b)}) de \sref{IV.20.3.6}, il en est de même de tout préschéma induit sur un ouvert $U$ de $X$ contenant $x$.
 Par passage à la limite inductive, on déduit donc, des applications canoniques $\operatorname{Ps.hom}_S(U,Y)\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)$ ainsi obtenues, une application canonique
 \[
 \label{IV.20.3.6.1}
-  (\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y))_x\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)
+  (\mathscr{P}\!s.\mathit{hom}_S(X,Y))_x\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)
   \tag{20.3.6.1}
 \]
-où le premier membre est la fibre au point $x$ du faisceau $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$, ensemble des germes en $x$ de pseudo-$S$-morphismes de voisinages ouverts de $x$ dans $Y$.
+où le premier membre est la fibre au point $x$ du faisceau $\mathscr{P}\!s.\mathit{hom}_S(X,Y)$, ensemble des germes en $x$ de pseudo-$S$-morphismes de voisinages ouverts de $x$ dans $Y$.
 \end{env}
 
 \begin{proposition}[20.3.7]
@@ -534,24 +536,25 @@ Si en outre $Y$ est localement de présentation finie sur $S$, l'application \sr
 \end{proposition}
 
 \begin{proof}
-Par application de la méthode de \sref{IV.8.1.2}[(a)], cette proposition sera un cas particulier de la suivante :
+Par application de la méthode de \sref{IV.8.1.2}[\emph{a)}], cette proposition sera un cas particulier de la suivante :
 \end{proof}
 
 \begin{proposition}[20.3.8]
 \EGAReaderTarget{ega4.c04.prop.20-3-8}{IV.20.3.8}
-Les notations étant celles de \sref{IV.8.8.1}, supposons $X_\alpha$ quasi-compact (resp. quasi-compact et quasi-séparé) et $Y_\alpha$ localement de type fini (resp. localement de présentation finie) sur $S_\alpha$.
+Les notations étant celles de \sref{IV.8.8.1}, supposons $X_\alpha$ quasi-compact \textup{(resp.} quasi-compact et quasi-séparé) et $Y_\alpha$ localement de type fini \textup{(resp.} localement de présentation finie) sur $S_\alpha$.
 Supposons en outre que l'une des conditions suivantes soit vérifiée :
 \begin{enumerate}[label=\emph{(\roman*)}]
   \item Les morphismes de transition $S_\mu\to S_\lambda$ (pour $\lambda\leq\mu$) sont plats, et les $X_\lambda$ et $X$ sont noethériens.
   \item Les $X_\lambda$ sont réduits, l'ensemble des composantes irréductibles de $X$ et de chacun des $X_\lambda$ est fini, et, pour $\lambda\leq\mu$, toute composante irréductible de $X_\mu$ domine une composante irréductible de $X_\lambda$.
 \end{enumerate}
+
 Alors, l'application canonique
 \[
 \label{IV.20.3.8.1}
   \varinjlim\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)
   \tag{20.3.8.1}
 \]
-est injective (resp. bijective).
+est injective \textup{(resp.} bijective).
 \end{proposition}
 
 \begin{proof}
@@ -560,13 +563,13 @@ Notons d'abord que, dans le cas~(i), les morphismes $X_\mu\to X_\lambda$ (pour $
   \operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_{S_\mu}(X_\mu,Y_\mu)
 \]
 \oldpage[IV-4]{240}
-pour $\lambda\leq\mu$, et $\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)$ sont définies (sans hypothèse de séparation sur les $Y_\lambda$ ni $Y$) ; il en est par suite de même de l'application \sref{IV.20.3.8.1}.
+pour $\lambda\leq\mu$ et $\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)$ sont définies (sans hypothèse de séparation sur les $Y_\lambda$ ni $Y$) ; il en est par suite de même de l'application \sref{IV.20.3.8.1}.
 La proposition va résulter du lemme suivant :
 
 \begin{lemma}[20.3.8.2]
 \label{IV.20.3.8.2}
 Les notations étant celles de \sref{IV.8.8.1}, supposons $X_\alpha$ quasi-compact, et soit $U_\alpha$ un ouvert dans $X_\alpha$ ; soient $U_\lambda$ et $U$ ses images réciproques dans $X_\lambda$ et $X$ pour $\lambda\geq\alpha$.
-Supposons que l'une des conditions~(i),~(ii) de \sref{IV.20.3.8} soit vérifiée.
+Supposons que l'une des conditions~\textup{(i)},~\textup{(ii)} de \sref{IV.20.3.8} soit vérifiée.
 Alors, pour que $U$ soit schématiquement dense dans $X$, il faut et il suffit qu'il existe $\lambda\geq\alpha$ tel que $U_\lambda$ soit schématiquement dense dans $X_\lambda$, et dans ce cas $U_\mu$ est schématiquement dense dans $X_\mu$ pour $\mu\geq\lambda$.
 \end{lemma}
 
@@ -579,14 +582,14 @@ Pour établir \sref{IV.20.3.8.2} lorsque la condition~(ii) est vérifiée, nous 
 
 \begin{lemma}[20.3.8.3]
 \label{IV.20.3.8.3}
-Sous les hypothèses de \sref{IV.8.2.2}, soit $M_\lambda$ (resp. $M$) l'ensemble des points maximaux de $S_\lambda$ (resp. $S$).
+Sous les hypothèses de \sref{IV.8.2.2}, soit $M_\lambda$ \textup{(resp. $M$)} l'ensemble des points maximaux de $S_\lambda$ \textup{(resp. $S$)}.
 Supposons que pour tout $\lambda$, l'ensemble $M_\lambda$ soit fini, et que les $M_\lambda$ forment un système projectif d'ensembles.
 Alors $M$ est limite projective du système des $M_\lambda$.
 \end{lemma}
 
-Montrons d'abord qu'un point $s\in\varprojlim M_\lambda$ est maximal dans $S$ : en effet, si $s'$ est une généralisation de $s$, l'image $s'_\lambda$ de $s'$ dans $S_\lambda$ est une généralisation de l'image $s_\lambda$ de $s$, donc égale à $s_\lambda$ pour tout $\lambda$, ce qui implique $s'=s$, puisque l'ensemble sous-jacent à $S$ est limite projective des ensembles sous-jacents aux $S_\lambda$ \sref{IV.8.2.9}.
+Montrons d'abord qu'un point $s\in\varprojlim M_\lambda$ est maximal dans $S$ : en effet, si $s'$ est une générisation de $s$, l'image $s'_\lambda$ de $s'$ dans $S_\lambda$ est une générisation de l'image $s_\lambda$ de $s$, donc égale à $s_\lambda$ pour tout $\lambda$, ce qui implique $s'=s$, puisque l'ensemble sous-jacent à $S$ est limite projective des ensembles sous-jacents aux $S_\lambda$ \sref{IV.8.2.9}.
 Inversement, soit $s$ un point maximal de $S$ et prouvons qu'il appartient à $\varprojlim M_\lambda$.
-Soient $s_\lambda$ l'image de $s$ dans $S_\lambda$, $M'_\lambda$ l'ensemble des points maximaux de $S_\lambda$ qui sont des généralisations de $s_\lambda$ ; les $M'_\lambda$ sont des ensembles finis non vides, qui forment un système projectif, donc $M'=\varprojlim M'_\lambda$ n'est pas vide et l'application $M'\to M'_\lambda$ est surjective (Bourbaki, \emph{Ens.}, chap.~III, 2\textsuperscript{e} éd., \textsection~7, n\textsuperscript{o}~4, Exemple~I).
+Soient $s_\lambda$ l'image de $s$ dans $S_\lambda$, $M'_\lambda$ l'ensemble des points maximaux de $S_\lambda$ qui sont des générisations de $s_\lambda$ ; les $M'_\lambda$ sont des ensembles finis non vides, qui forment un système projectif, donc $M'=\varprojlim M'_\lambda$ n'est pas vide et l'application $M'\to M'_\lambda$ est surjective (Bourbaki, \emph{Ens.}, chap.~III, 2\textsuperscript{e} éd., \textsection~7, n\textsuperscript{o}~4, Exemple~I).
 D'autre part, on a $\Spec(\sh{O}_{S,s})=\varprojlim\Spec(\sh{O}_{S_\lambda,s_\lambda})$ en vertu de \sref{IV.8.2.12} et \sref{IV.8.2.9}, donc les points de $\varprojlim M'_\lambda$ sont aussi points maximaux de $\Spec(\sh{O}_{S,s})$ d'après la première partie du raisonnement.
 Donc $M'=\varprojlim M'_\lambda$ se réduit nécessairement au point $s$ ; on en conclut que $M'_\lambda$ se réduit au point $s_\lambda$ et par suite les $s_\lambda$ sont maximaux dans les $S_\lambda$, ce qui achève de prouver le lemme.
 
@@ -604,11 +607,11 @@ Inversement, supposons $M$ fini et $U$ dense dans $S$, donc $M\subset U$ ; noton
 La seconde assertion résulte alors de \sref{IV.8.3.2}.
 
 \phantomsection\label{IV.20.3.8.5}
-\emph{20.3.8.5. Fin de la démonstration de \sref{IV.20.3.8.2}.}
+\textbf{(20.3.8.5)} \emph{Fin de la démonstration de \sref{IV.20.3.8.2}.} ---
 Supposons la condition~(ii) vérifiée, et notons que $X$ est alors \emph{réduit} en vertu de \sref{IV.8.7.1} ; il revient donc au même de dire que $U_\lambda$ (resp. $U$) est schématiquement dense dans $X_\lambda$ (resp. $X$) ou qu'il est dense dans $X_\lambda$ (resp. $X$), et la conclusion résulte de \sref{IV.20.3.8.4} appliqué aux $X_\lambda$ et à $X$.
 
 \phantomsection\label{IV.20.3.8.6}
-\emph{20.3.8.6. Fin de la démonstration de \sref{IV.20.3.8}.}
+\textbf{(20.3.8.6)} \emph{Fin de la démonstration de \sref{IV.20.3.8}.} ---
 Pour montrer que l'application \sref{IV.20.3.8.1} est injective, considérons deux morphismes $u'_\lambda$, $u''_\lambda$ d'un ouvert schématiquement dense $U_\lambda\subset X_\lambda$ dans $Y_\lambda$, et supposons que leurs images $u'$, $u''$, morphismes de $U$ dans $Y$, coïncident dans un ouvert schématiquement dense $V$ de $U$.
 En outre, dans l'une ou l'autre des hypothèses~(i),~(ii), on peut supposer $V$ \emph{quasi-compact} ; c'est évident si $X$ est noethérien ; sinon, comme $X$ n'a qu'un nombre fini de points maximaux et est réduit, il suffit de remplacer $V$ par la réunion d'un nombre fini de voisinages ouverts affines de ces points maximaux (contenus dans $V$ par hypothèse).
 Alors il existe un $\lambda\geq\alpha$ tel que $V$ soit l'image réciproque d'un ouvert quasi-compact $V_\lambda$ de $X_\lambda$ \sref{IV.8.2.11}, et il résulte de \sref{IV.20.3.8.2} qu'en prenant $\lambda$ assez grand, on peut supposer que $V_\lambda$ est schématiquement dense dans $X_\lambda$.
@@ -635,7 +638,7 @@ Alors tout sous-préschéma $W$ de $T$ qui majore un ouvert schématiquement den
 
   En effet, le sous-espace de $T$ sous-jacent à $W$ est localement fermé, donc ouvert
   \oldpage[IV-4]{242}
-  dans son adhérence, ce qui prouve déjà que l'espace sous-jacent à $W$ est ouvert dans $T$ ; la conclusion résulte alors de \sref{IV.11.10.1}[(c)].
+  dans son adhérence, ce qui prouve déjà que l'espace sous-jacent à $W$ est ouvert dans $T$ ; la conclusion résulte alors de \sref{IV.11.10.1}[\emph{c)}].
 
   Ce lemme étant établi, on en conclut que pour $\mu\geq\lambda$ assez grand, $Z_\mu$ est induit sur un ouvert de $X_\mu$ en vertu de \sref{IV.8.6.3}, car $Z_\lambda$, en tant que sous-préschéma d'un préschéma noethérien, est de présentation finie sur $X_\lambda$ \sref{IV.1.6.2}, et il en est donc de même des $Z_\mu$ pour $\mu\geq\lambda$ sur $X_\mu$ et de $Z$ sur $X$.
   On peut maintenant appliquer \sref{IV.20.3.8.2} qui montre que pour $\mu\geq\lambda$ assez grand, $Z_\mu$ est schématiquement dense dans $X_\mu$, d'où la conclusion.
@@ -647,8 +650,8 @@ Alors tout sous-préschéma $W$ de $T$ qui majore un ouvert schématiquement den
 
 \begin{corollary}[20.3.9]
 \label{IV.20.3.9}
-Supposons vérifiées l'une ou l'autre hypothèse~a),~b) de \sref{IV.20.3.6} sur $X$, et que $Y$ soit localement de présentation finie sur $S$.
-Alors, pour qu'un pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$ soit défini au point $x$ \sref{IV.20.2.3}, il faut et il suffit que sa restriction à $\Spec(\sh{O}_{X,x})$ soit partout définie (autrement dit, soit un $S$-morphisme de $\Spec(\sh{O}_{X,x})$ dans $Y$).
+Supposons vérifiées l'une ou l'autre hypothèse~\textup{a)},~\textup{b)} de \sref{IV.20.3.6} sur $X$, et que $Y$ soit localement de présentation finie sur $S$.
+Alors, pour qu'un pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$ soit défini au point $x$ \sref{IV.20.2.3}, il faut et il suffit que sa restriction à $\Spec(\sh{O}_{X,x})$ soit partout définie \textup{(autrement dit, soit un $S$-\emph{morphisme} de $\Spec(\sh{O}_{X,x})$ dans $Y$)}.
 \end{corollary}
 
 Le résultat suivant, qui nous servira dans la démonstration de \sref{IV.20.3.11}, utilise la théorie de la descente fidèlement plate du chap.~VI.
@@ -666,20 +669,21 @@ On notera que les hypothèses entraînent que $U$ (resp. $U'$) est schématiquem
 \begin{proof}
 Pour prouver \sref{IV.20.3.10}, désignons par $g'$ un $S$-morphisme $X'\to Y$ qui prolonge $g\circ(f|U')$, et posons $g''_i=g'\circ p_i:X''\to Y$ ($i=1,2$).
 Si l'on pose $f''=f\circ p_1=f\circ p_2:X''\to X$, il est clair que $g''_1$ et $g''_2$ coïncident dans $U''$ avec $g\circ(f''|U'')$.
-Mais comme $Y$ est séparé sur $S$ et $U''$ schématiquement dense dans $X''$, on a $g''_1=g''_2$ \sref{IV.11.10.1}[(d)].
+Mais comme $Y$ est séparé sur $S$ et $U''$ schématiquement dense dans $X''$, on a $g''_1=g''_2$ \sref{IV.11.10.1}[\emph{d)}].
 Comme $f$ est fidèlement plat et quasi-compact, il résulte de la théorie de la descente (chap.~VI) qu'il existe un unique $S$-morphisme $h:X\to Y$ tel que $h\circ f=g'$ ; comme la restriction $U'\to U$ de $f$ est un morphisme fidèlement plat et quasi-compact et que $U''=U'\times_U U'$, le résultat d'unicité précédent, appliqué à $U$ au lieu de $X$, montre que $h|U=g$, ce qui prouve le lemme.
 \end{proof}
 
 \begin{proposition}[20.3.11]
 \label{IV.20.3.11}
 Soient $Y$ un $S$-préschéma séparé sur $S$, $\omega$ un pseudo-$S$-morphisme de $X$ dans $Y$, $f:X'\to X$ un $S$-morphisme.
-Supposons que $f$ soit plat, et que l'une des conditions suivantes soit réalisée :
+Supposons que $f$ soit \emph{plat}, et que \emph{l'une} des conditions suivantes soit réalisée :
 \begin{enumerate}[label=\emph{(\roman*)}]
 \oldpage[IV-4]{243}
   \item $f$ est un morphisme ouvert, ou surjectif et quasi-compact, et $\operatorname{dom}_S(\omega)$ contient un ouvert $U$ schématiquement dense dans $X$ et rétrocompact dans $X$.
   \item $f$ est localement de présentation finie.
-  \item $Y$ est localement de présentation finie sur $S$, et $X$ vérifie l'une des conditions~a),~b) de \sref{IV.20.3.6}.
+  \item $Y$ est localement de présentation finie sur $S$, et $X$ vérifie l'une des conditions~\textup{a)},~\textup{b)} de \sref{IV.20.3.6}.
 \end{enumerate}
+
 Alors, $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X'$, de sorte que $\omega\circ f$ est défini \sref{IV.20.3.2} et l'on a
 \[
 \label{IV.20.3.11.1}
@@ -690,18 +694,22 @@ Alors, $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X
 
 \begin{proof}
 Prouvons d'abord que $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X'$.
-La question étant locale sur $X$ et $X'$, on peut supposer $X$ et $X'$ affines et puisque $f$ est plat, il suffit de voir, en vertu de \sref{IV.11.10.5}[(ii), (a)] que $\operatorname{dom}_S(\omega)$ contient un ensemble ouvert $U$ rétrocompact et schématiquement dense dans $X$.
+La question étant locale sur $X$ et $X'$, on peut supposer $X$ et $X'$ affines et puisque $f$ est plat, il suffit de voir, en vertu de \sref{IV.11.10.5}[(ii), \emph{a)}] que $\operatorname{dom}_S(\omega)$ contient un ensemble ouvert $U$ \emph{rétrocompact} et schématiquement dense dans $X$.
 Cela résulte de l'hypothèse dans le cas~(i), et de \sref{IV.20.2.12} dans le cas~(iii), compte tenu du fait que dans un schéma affine, tout ouvert de la forme $\mathrm{D}(t)$ est rétrocompact ; enfin, dans le cas~(ii), on voit directement que $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X'$ en appliquant \sref{IV.20.3.5}[(i)].
 
-Prouvons maintenant \sref{IV.20.3.11.1}, autrement dit que, pour tout point $x'\in\operatorname{dom}_S(\omega\circ f)$, on a $x=f(x')\in\operatorname{dom}_S(\omega)$.
+Prouvons maintenant \sref{IV.20.3.11.1}, autrement dit que, pour tout point
+\[
+  x'\in\operatorname{dom}_S(\omega\circ f),
+\]
+on a $x=f(x')\in\operatorname{dom}_S(\omega)$.
 Notons d'abord qu'on peut se borner au cas où $f$ est \emph{fidèlement plat et quasi-compact}.
-C'est en effet l'hypothèse dans le second cas de~(i) ; dans les autres cas, la question est locale sur $X'$, et on peut donc supposer déjà $X$ et $X'$ affines, donc $f$ quasi-compact.
-Dans le premier cas de~(i) et dans le cas~(ii), $f$ est un morphisme ouvert \sref{IV.11.3.1}, donc on peut, en remplaçant $X$ par l'ouvert $f(X')$, supposer $f$ surjectif, donc fidèlement plat.
+C'est en effet l'hypothèse dans le second cas de~(i) ; dans les autres cas, la question est locale sur $X'$, et on peut donc supposer déjà $X$ et $X'$ affines, donc $f$ \emph{quasi-compact}.
+Dans le premier cas de~(i) et dans le cas~(ii) $f$ est un morphisme ouvert \sref{IV.11.3.1}, donc on peut, en remplaçant $X$ par l'ouvert $f(X')$, supposer $f$ surjectif, donc fidèlement plat.
 Dans le cas~(iii), en utilisant \sref{IV.20.3.9}, on peut se borner à prouver que la restriction de $\omega$ à $\Spec(\sh{O}_{X,x})$ est partout définie, et on peut donc remplacer $X$ par $\Spec(\sh{O}_{X,x})$, $X'$ par $X'\times_X\Spec(\sh{O}_{X,x})$ et $f$ par sa restriction à ce dernier préschéma, qui est un morphisme surjectif \sref{IV.2.3.4}, donc fidèlement plat.
 
-Supposons donc $f$ fidèlement plat et quasi-compact ; avec les notations du lemme \sref{IV.20.3.10}, il suffit de voir alors que $U''$ est schématiquement dense dans $X''$, en prenant pour $U$ un ouvert schématiquement dense dans $X$, contenu dans $\operatorname{dom}_S(\omega)$ ; cela sera le cas, en vertu de \sref{IV.11.10.5}[(ii), (a)] si $U$ est pris rétrocompact dans $X$ (puisque le morphisme $f'':X''\to X$ est plat).
+Supposons donc $f$ fidèlement plat et quasi-compact ; avec les notations du lemme \sref{IV.20.3.10}, il suffit de voir alors que $U''$ est schématiquement dense dans $X''$, en prenant pour $U$ un ouvert schématiquement dense dans $X$, contenu dans $\operatorname{dom}_S(\omega)$ ; cela sera le cas, en vertu de \sref{IV.11.10.5}[(ii), \emph{a)}] si $U$ est pris \emph{rétrocompact} dans $X$ (puisque le morphisme $f'':X''\to X$ est plat).
 Or l'existence d'un tel ouvert $U$ fait partie de l'hypothèse dans le cas~(i) ; dans le cas~(iii) elle résulte de \sref{IV.20.2.12} et du fait que dans un schéma affine $\Spec(A)$, tout ouvert de la forme $\mathrm{D}(t)$ est rétrocompact.
-Enfin, dans le cas~(ii), prenons $U=\operatorname{dom}_S(\omega)$ et montrons directement que $U''$ est schématiquement dense dans $X''$ : il suffit pour cela de remarquer que $f'':X''\to X$ est plat et localement de présentation finie et d'appliquer \sref{IV.11.10.5}[(ii), (b)].
+Enfin, dans le cas~(ii), prenons $U=\operatorname{dom}_S(\omega)$ et montrons directement que $U''$ est schématiquement dense dans $X''$ : il suffit pour cela de remarquer que $f'':X''\to X$ est plat et localement de présentation finie et d'appliquer \sref{IV.11.10.5}[(ii), \emph{b)}].
 \end{proof}
 
 \begin{corollary}[20.3.12]
@@ -710,14 +718,14 @@ Soit $\vphi$ une pseudo-fonction sur un préschéma $X$.
 Alors, pour tout morphisme plat et localement de présentation finie $f:X'\to X$, la pseudo-fonction $\vphi\circ f$ est définie et l'on a $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$.
 \end{corollary}
 
+\oldpage[IV-4]{244}
 \begin{remark}[20.3.13]
 \label{IV.20.3.13}
-\oldpage[IV-4]{244}
-Lorsque $X$ vérifie l'une des conditions~a),~b) de \sref{IV.20.3.6}, alors on a vu \sref{IV.20.2.11} que les pseudo-fonctions sur $X$ s'identifient aux fonctions méromorphes sur $X$.
+Lorsque $X$ vérifie l'une des conditions~\emph{a)},~\emph{b)} de \sref{IV.20.3.6}, alors on a vu \sref{IV.20.2.11} que les pseudo-fonctions sur $X$ s'identifient aux fonctions méromorphes sur $X$.
 En vertu de \sref{IV.20.1.12} et de \sref{IV.20.2.13}[(i)], si l'on suppose seulement que le morphisme $f:X'\to X$ est \emph{plat}, alors, pour toute pseudo-fonction $\vphi$ sur $X$, $\vphi\circ f$ est définie et l'on a $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$.
 \end{remark}
 
-\subsection{Propriétés des domaines de définition des fonctions rationnelles}
+\subsection{Propriétés des domaines de définition des fonctions rationnelles.}
 \EGAReaderTarget{ega4.c04.subsec.20-4}{IV.20.4}
 
 \begin{env}[20.4.1]
@@ -725,10 +733,11 @@ En vertu de \sref{IV.20.1.12} et de \sref{IV.20.2.13}[(i)], si l'on suppose seul
 Soient $X$, $Y$ deux $S$-préschémas, $\omega$ un pseudo-$S$-morphisme de $X$ dans $Y$.
 Soit $u$ un $S$-morphisme $U\to Y$ appartenant à $\omega$, où $U$ est schématiquement dense dans $X$, et considérons le \emph{graphe} $\Gamma_u$, sous-préschéma de $U\times_S Y$ \sref[I]{I.5.3.11}, donc sous-préschéma de $X\times_S Y$.
 Supposons que ce sous-préschéma admette une \emph{adhérence} \sref[I]{I.9.5.11} dans $X\times_S Y$ ; si $j:\Gamma_u\to X\times_S Y$ est l'injection canonique, ce sera le cas lorsque le $\sh{O}_{X\times_S Y}$-Module $j_*(\sh{O}_{\Gamma_u})$ est quasi-cohérent ; il résulte de la définition de la classe d'équivalence $\omega$ \sref{IV.20.2.1} que $j_*(\sh{O}_{\Gamma_u})$ ne dépend pas du représentant $u$ considéré, donc le préschéma adhérence de $\Gamma_u$ est alors bien déterminé par $\omega$ ; on dit que ce sous-préschéma fermé de $X\times_S Y$ est le \emph{graphe} du pseudo-$S$-morphisme $\omega$ et on le note $\Gamma_\omega$.
-On notera que $\Gamma_\omega$ est défini s'il existe un morphisme $u:U\to Y$ de la classe $\omega$ tel que $U$ soit \emph{rétrocompact} dans $X$ et si de plus $Y$ est quasi-séparé sur $S$, car alors l'injection $j$ est un morphisme quasi-compact et quasi-séparé (\sref[I]{I.2.2} et \sref[I]{I.7.4}) ; la première hypothèse sera toujours vérifiée lorsque $X$ est \emph{localement noethérien}.
-Notons aussi que lorsque $X$ est \emph{réduit}, il en est de même de $\Gamma_u$, qui est isomorphe à $U$ \sref[I]{I.5.3.11} ; alors $\Gamma_\omega$ existe et n'est autre que le sous-préschéma \emph{réduit} de $X\times_S Y$ ayant pour espace sous-jacent l'adhérence dans $X\times_S Y$ de l'espace sous-jacent à $\Gamma_u$ (\sref[I]{I.5.2.1} et \sref[I]{I.5.2.2}).
+On notera que $\Gamma_\omega$ est défini s'il existe un morphisme $u:U\to Y$ de la classe $\omega$ tel que $U$ soit \emph{rétrocompact} dans $X$ et si de plus $Y$ est quasi-séparé sur $S$, car alors l'injection $j$ est un morphisme quasi-compact et quasi-séparé (\sref{IV.1.2.2} et \sref{IV.1.7.4}) ; la première hypothèse sera toujours vérifiée lorsque $X$ est \emph{localement noethérien}.
+Notons aussi que lorsque $X$ est \emph{réduit}, il en est de même de $\Gamma_u$, qui est isomorphe à $U$ \sref[I]{I.5.3.11} ; alors $\Gamma_\omega$ existe et n'est autre que le sous-préschéma \emph{réduit} de $X\times_S Y$ ayant pour espace sous-jacent l'adhérence dans $X\times_S Y$ de l'espace sous-jacent à $\Gamma_u$ (\textbf{I}, \EGAUnavailableHyperref{I.5.2.1}{5.2.1} et \EGAUnavailableHyperref{I.5.2.2}{5.2.2}).
+
 Notons enfin que si $Y$ est \emph{séparé} sur $S$, $\Gamma_u$ est \emph{fermé} dans $U\times_S Y$ \sref[I]{I.5.4.3}, donc est \emph{induit par} $\Gamma_\omega$ (lorsque ce dernier existe) sur l'ouvert $\Gamma_\omega\cap(U\times_S Y)$ \sref[I]{I.9.5.10} ; par contre, ce préschéma induit est en général différent de $\Gamma_u$ lorsque $Y$ n'est pas séparé.
-En particulier, si $v:X\to Y$ est un $S$-morphisme, le graphe $\Gamma_\omega$ de la classe $\omega$ de $v$ peut être distinct du graphe $\Gamma_v$.
+En particulier, si $v:X\to Y$ est un $S$-\emph{morphisme}, le graphe $\Gamma_\omega$ de la classe $\omega$ de $v$ peut être distinct du graphe $\Gamma_v$.
 Aussi allons-nous dans ce qui suit, lorsqu'il sera question du graphe d'un pseudo-$S$-morphisme, nous borner au cas où \emph{$Y$ est séparé sur $S$}.
 \end{env}
 
@@ -742,7 +751,7 @@ Supposons donc $\Gamma_\omega$ défini et $Y$ séparé sur $S$ ; notons $p$ et $
   }
 \]
 Alors, si $U\subset\operatorname{dom}_S(\omega)$, la restriction $p^{-1}(U)\to U$ de $p$ est un isomorphisme \sref[I]{I.5.3.11} ; réciproquement, si $U$ est un ouvert de $X$ ayant cette propriété, et si $u$ est l'isomorphisme réciproque de la restriction $p^{-1}(U)\to U$ de $p$, $q\circ u$ est un $S$-morphisme de $U$ dans $Y$ qui coïncide avec un morphisme de la classe $\omega$ dans $U\cap\operatorname{dom}_S(\omega)$.
-On en conclut que $\operatorname{dom}_S(\omega)$ est le \emph{plus grand ouvert} $U$ de $X$ tel que la restriction $p^{-1}(U)\to U$ de $p$ soit un
+On en conclut que $\operatorname{dom}_S(\omega)$ est \emph{le plus grand ouvert} $U$ de $X$ tel que la restriction $p^{-1}(U)\to U$ de $p$ soit un
 \oldpage[IV-4]{245}
 isomorphisme.
 Soit $v:\operatorname{dom}_S(\omega)\to\Gamma_\omega$ le $S$-morphisme réciproque de la restriction $p^{-1}(\operatorname{dom}_S(\omega))\to\operatorname{dom}_S(\omega)$ de $p$ ; on note parfois $p^{-1}$ le pseudo-$S$-morphisme de $X$ dans $\Gamma_\omega$, classe de $v$ (dont l'application rationnelle associée \sref{IV.20.2.13}[(ii)] est alors \emph{birationnelle}) ; comme $p^{-1}(\operatorname{dom}_S(\omega))$ est le graphe du $S$-morphisme $u=q\circ v:\operatorname{dom}_S(\omega)\to Y$, il est schématiquement dense dans $\Gamma_\omega$ \sref{IV.11.10.3}[(iv)], donc $\omega$ peut être considéré comme le \emph{composé} $q\circ p^{-1}$ \sref{IV.20.3.2}.
@@ -759,27 +768,27 @@ En outre, le \emph{graphe} de toute $S$-application rationnelle de $X$ dans $Y$ 
 \begin{proposition}[20.4.4]
 \label{IV.20.4.4}
 Soient $X$ un $S$-préschéma localement intègre, $Y$ un $S$-préschéma localement de type fini et séparé sur $S$, $\omega$ une $S$-application rationnelle de $X$ dans $Y$, $p:\Gamma_\omega\to X$ la projection canonique.
-Alors, si $x\in X$ est un point normal tel que l'ensemble $p^{-1}(x)$ contienne un point isolé, $\omega$ est définie au point $x$.
+Alors, si $x\in X$ est un point \textup{normal} tel que l'ensemble $p^{-1}(x)$ contienne un point \textup{isolé}, $\omega$ est définie au point $x$.
 \end{proposition}
 
 \begin{proof}
-En effet, la première projection $p_1:X\times_S Y\to X$ est alors un morphisme séparé et localement de type fini, donc il en est de même de sa restriction $p:\Gamma_\omega\to X$, qui est en outre \emph{birationnel} et comme $\Gamma_\omega$ est réduit et $X$ intègre, $\Gamma_\omega$ est \emph{intègre} ; il résulte donc de (\textbf{Err}\textsubscript{\textbf{IV}}, 30) que l'hypothèse sur $x$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ tel que la restriction $p^{-1}(U)\to U$ de $p$ soit un isomorphisme ; d'où la conclusion \sref{IV.20.4.2}.
+En effet, la première projection $p_1:X\times_S Y\to X$ est alors un morphisme séparé et localement de type fini, donc il en est de même de sa restriction $p:\Gamma_\omega\to X$, qui est en outre \emph{birationnel} et comme $\Gamma_\omega$ est réduit et $X$ intègre, $\Gamma_\omega$ est \emph{intègre} ; il résulte donc de (\textbf{Err}\textsubscript{IV}, \textbf{30}) que l'hypothèse sur $x$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ tel que la restriction $p^{-1}(U)\to U$ de $p$ soit un isomorphisme ; d'où la conclusion \sref{IV.20.4.2}.
 
 On notera que l'énoncé \sref{IV.20.4.4} est la formulation originelle donnée par Zariski à son « Main theorem » (à cela près qu'il se restreignait aux schémas algébriques sur un corps de base).
 \end{proof}
 
 \begin{proposition}[20.4.5]
 \label{IV.20.4.5}
-Les hypothèses et notations étant celles de \sref{IV.20.4.4}, supposons en outre $X$ normal, et soient $X'$ un préschéma réduit, $f:X'\to X$ un morphisme localement de type fini et universellement ouvert.
-Alors $\omega\circ f$ est défini, et l'on a $\operatorname{dom}_S(\omega\circ f)=f^{-1}(\operatorname{dom}_S(\omega))$ (en d'autres termes, si $x'\in X'$ et $x=f(x')$, alors, pour que $\omega$ soit définie au point $x$, il faut et il suffit que $\omega\circ f$ le soit au point $x'$).
+Les hypothèses et notations étant celles de \sref{IV.20.4.4}, supposons en outre $X$ normal, et soient $X'$ un préschéma \textup{réduit}, $f:X'\to X$ un morphisme localement de type fini et \textup{universellement ouvert}.
+Alors $\omega\circ f$ est défini, et l'on a $\operatorname{dom}_S(\omega\circ f)=f^{-1}(\operatorname{dom}(\omega))$ \textup{(en d'autres termes, si $x'\in X'$ et $x=f(x')$, alors, pour que $\omega$ soit définie au point $x$, il faut et il suffit que $\omega\circ f$ le soit au point $x'$)}.
 \end{proposition}
 
 \begin{proof}
 Comme $X'$ est réduit et $f^{-1}(\operatorname{dom}_S(\omega))$ partout dense dans $X'$ en vertu de \sref{IV.2.4.11}, le composé $\omega\circ f$ est défini ; pour prouver que, lorsque $\omega\circ f$ est définie au point $x'$, $\omega$ l'est au point $x$, on peut évidemment remplacer $X'$ par un voisinage ouvert de $x'$, donc supposer $\omega\circ f$ \emph{partout définie} ; en outre, comme $f(X')$ est ouvert dans $X$, on peut supposer $f$ \emph{surjectif}.
-En vertu de l'hypothèse sur $f$, le morphisme $f_{(Y)}:X'\times_S Y\to X\times_S Y$ est alors ouvert, donc $\overline{f_{(Y)}^{-1}(M)}=f_{(Y)}^{-1}(\overline{M})$ pour toute partie $M$ de $X\times_S Y$ ; prenant pour $M$ l'ensemble $\Gamma_u$, où $u:\operatorname{dom}_S(\omega)\to Y$ est la restriction de $\omega$ à $\operatorname{dom}_S(\omega)$, il résulte de la relation précédente et de \sref[I]{I.3.3.12} que l'ensemble sous-jacent à $\Gamma_{\omega\circ f}$ est égal à $f_{(Y)}^{-1}(\Gamma_\omega)$ ; comme on sait
+En vertu de l'hypothèse sur $f$, le morphisme $f_{(Y)}:X'\times_S Y\to X\times_S Y$ est alors ouvert, donc $f_{(Y)}^{-1}(\overline{M})=\overline{f_{(Y)}^{-1}(M)}$ pour toute partie $M$ de $X\times_S Y$ ; prenant pour $M$ l'ensemble $\Gamma_u$, où $u:\operatorname{dom}_S(\omega)\to Y$ est la restriction de $\omega$ à $\operatorname{dom}_S(\omega)$, il résulte de la relation précédente et de \sref[I]{I.5.3.12} que l'ensemble sous-jacent à $\Gamma_{\omega\circ f}$ est égal à $f_{(Y)}^{-1}(\Gamma_\omega)$ ; comme on sait
 \oldpage[IV-4]{246}
 que $\Gamma_{\omega\circ f}$ est un préschéma réduit \sref{IV.20.4.1}, on voit que le $X'$-préschéma $\Gamma_{\omega\circ f}$ est égal à $(\Gamma_\omega\times_X X')_\mathrm{red}$.
-Mais comme par hypothèse le morphisme composé $\Gamma_{\omega\circ f}\to\Gamma_\omega\times_X X'\xrightarrow{p^{(X')}}X'$ est un isomorphisme, $p^{(X')}$ est nécessairement \emph{radiciel} ; comme $f$ est surjectif, il en est de même de $p:\Gamma_\omega\to X$ \sref[I]{I.3.4.8}, donc $p^{-1}(x)$ est un ensemble réduit à un point \sref[I]{I.3.6.4} ; il résulte alors de \sref{IV.20.4.4} que $\omega$ est définie au point $x$.
+Mais comme par hypothèse le morphisme composé $\Gamma_{\omega\circ f}\to\Gamma_\omega\times_X X'\xrightarrow{p_{(X')}}X'$ est un isomorphisme, $p_{(X')}$ est nécessairement \emph{radiciel} ; comme $f$ est surjectif, il en est de même de $p:\Gamma_\omega\to X$ \sref[I]{I.3.4.8}, donc $p^{-1}(x)$ est un ensemble réduit à un point \sref[I]{I.3.6.4} ; il résulte alors de \sref{IV.20.4.4} que $\omega$ est définie au point $x$.
 \end{proof}
 
 La proposition suivante donne un \emph{critère valuatif} pour qu'une application rationnelle soit définie en un point :
@@ -787,18 +796,19 @@ La proposition suivante donne un \emph{critère valuatif} pour qu'une applicatio
 \begin{proposition}[20.4.6]
 \label{IV.20.4.6}
 Soient $S$ un préschéma, $X$, $Y$ deux $S$-préschémas ; on suppose $X$ localement noethérien, $Y$ localement de type fini sur $S$.
-Soient $U$ un ouvert dense dans $X$, $h:U\to Y$ un $S$-morphisme, $x\in X-U$ un point normal de $X$, $h'_x:\Spec(k(x))\to Y$ un $S$-morphisme.
-Afin que $h$ puisse être prolongé en un $S$-morphisme $h':U'\to Y$, où $U'$ est un ouvert de $X$ contenant $U$ et $x$, et où le morphisme composé $\Spec(k(x))\to U'\xrightarrow{h'}Y$ est le $S$-morphisme donné $h'_x$, il faut et il suffit que la condition suivante soit vérifiée :
+Soient $U$ un ouvert dense dans $X$, $h:U\to Y$ un $S$-morphisme, $x\in X\setmin U$ un point \textup{normal} de $X$, $h'_x:\Spec(\boldsymbol{k}(x))\to Y$ un $S$-morphisme.
+Afin que $h$ puisse être prolongé en un $S$-morphisme $h':U'\to Y$, où $U'$ est un ouvert de $X$ contenant $U$ et $x$, et où le morphisme composé $\Spec(\boldsymbol{k}(x))\to U'\xrightarrow{h'}Y$ est le $S$-morphisme donné $h'_x$, il faut et il suffit que la condition suivante soit vérifiée :
 \begin{quote}
-\emph{(P) Pour tout spectre $S_1$ d'un anneau de valuation discrète, de point fermé $a$ et de point générique $b$, et tout morphisme $u:S_1\to X$ tel que $u(a)=x$, $u(b)\in U$, le morphisme composé $h_1=h\circ(u|\{b\}):\{b\}=u^{-1}(U)\to Y$, se prolonge en un morphisme $h'_1:S_1\to Y$ tel que le diagramme}
+\textup{(P)} Pour tout spectre $S_1$ d'un anneau de valuation discrète, de point fermé $a$ et de point générique $b$, et tout morphisme $u:S_1\to X$ tel que $u(a)=x$, $u(b)\in U$, le morphisme composé $h_1=h\circ(u|\{b\}):\{b\}=u^{-1}(U)\to Y$, se prolonge en un morphisme $h'_1:S_1\to Y$ tel que le diagramme
 \[
   \xymatrix{
-  \Spec(k(a)) \ar[r] & S_1 \ar[d]^{h'_1} \\
-  \Spec(k(x)) \ar[r]_{h'_x} & Y
+  \Spec(\boldsymbol{k}(a)) \ar[r] & S_1 \ar[d]^{h'_1} \\
+  \Spec(\boldsymbol{k}(x)) \ar[r]_{h'_x} & Y
   }
 \]
-\emph{soit commutatif.}
+soit commutatif.
 \end{quote}
+
 De plus, si cette condition est vérifiée, et si $h'':U''\to Y$ est un morphisme vérifiant les mêmes conditions que $h'$, alors il existe un ensemble ouvert contenant $U\cup\{x\}$, et dans lequel $h'$ et $h''$ coïncident.
 \end{proposition}
 
@@ -807,17 +817,17 @@ Prouvons d'abord la dernière assertion ; on peut supposer $h'$ et $h''$ défini
 Le sous-préschéma $Z$ des coïncidences de $h'$ et $h''$ \sref{IV.17.4.5} contient $U$ et $x$, donc il y a un voisinage ouvert $V$ de $x$ dans $U_0$ tel que le sous-préschéma induit par $Z$ sur l'ouvert $Z\cap V$ soit un sous-préschéma \emph{fermé} du préschéma induit par $X$ sur $V$ ; comme ce préschéma $Z\cap V$ majore le sous-préschéma induit par $V$ sur l'ouvert $U\cap V$, et que ce dernier est schématiquement dense dans $V$, $Z\cap V$ est nécessairement égal à $V$ \sref{IV.20.3.8.8}, ce qui prouve que $h'$ et $h''$ coïncident dans $U\cup V$.
 
 La nécessité de la condition de l'énoncé étant évidente, prouvons qu'elle est suffisante.
-En vertu de la correspondance biunivoque entre $S$-morphismes de $X$ dans $Y$ et $X$-sections de $X\times_S Y$ \sref[I]{I.3.3.15}, on peut se borner au cas où $S=X$ et où $h$ est donc une $U$-section de $Y$ ; on notera qu'alors $Y$ est localement noethérien, et on peut évidemment (puisque $X$ est localement intègre et localement noethérien) supposer $X=S$ irréductible.
+En vertu de la correspondance biunivoque entre $S$-morphismes de $X$ dans $Y$ et $X$-sections de $X\times_S Y$ \sref[I]{I.3.3.15}, on peut se borner au cas où $S=X$ et où $h$ est donc une $U$-section de $Y$ ; on notera qu'alors $Y$ est localement noethérien, et on peut évidemment (puisque $X$ est localement intègre et localement noethérien) supposer $X=S$ \emph{irréductible}.
 En outre, compte tenu de \sref{IV.20.3.7}, on peut supposer que $X=\Spec(A)$, où $A$ est un anneau \emph{local} noethérien, intègre et intégralement clos.
 
 \oldpage[IV-4]{247}
 Notons que pour tout $x'\in U$, $h(x')$ est une spécialisation de $h'_x(x)=y$.
 En effet, il existe un spectre $S_1$ d'anneau de valuation discrète et un morphisme $u:S_1\to X$ tel que $u(a)=x$, $u(b)=x'$ \sref[II]{II.7.1.9}.
 Appliquant la condition de l'énoncé, on obtient aussitôt notre assertion, puisque $h(x')=h_1(b)=h'_1(b)$ et $y=h'_1(a)$.
-Si $Y'$ est un voisinage ouvert affine de $y$, on a donc $h(X\cap U)\subset Y'$ ; on peut par suite remplacer $Y$ par $Y'$, autrement dit supposer $Y$ \emph{affine}, donc séparé sur $X$.
+Si $Y'$ est un voisinage ouvert affine de $y$, on a donc $h(X\cap U)\subset Y'$ ; on peut par suite remplacer $Y$ par $Y'$, autrement dit supposer $Y$ \emph{affine}, donc \emph{séparé} sur $X$.
 Soit $\omega$ la $X$-section rationnelle de $Y$ à laquelle $h$ appartient, de sorte que son graphe a ici pour ensemble sous-jacent l'adhérence de $h(U)$ dans $Y$.
 Puisque $Y$ est séparé sur $X$, on peut appliquer \sref{IV.20.4.4} à $\omega$ : il suffira de prouver que, si $p:\Gamma_\omega\to X$ est la projection canonique, $p^{-1}(x)$ est réduit à un seul point $y$ et que $h'_x(x)=y$.
-En effet, par \sref{IV.20.4.4} $h$ se prolongera en une section $h'$ au-dessus d'un ouvert $U'$ contenant $U\cup\{x\}$, telle que $h'(x)=y$, et comme alors il n'existe qu'un seul $X$-morphisme $\Spec(k(x))\to Y$ transformant $x$ en $y$, cela prouvera l'identité de $h'_x$ et du composé de $h'$ et de $\Spec(k(x))\to U'$.
+En effet, par \sref{IV.20.4.4} $h$ se prolongera en une section $h'$ au-dessus d'un ouvert $U'$ contenant $U\cup\{x\}$, telle que $h'(x)=y$, et comme alors il n'existe qu'un seul $X$-morphisme $\Spec(\boldsymbol{k}(x))\to Y$ transformant $x$ en $y$, cela prouvera l'identité de $h'_x$ et du composé de $h'$ et de $\Spec(\boldsymbol{k}(x))\to U'$.
 
 Puisque pour $x'\in X\cap U$, $h(x')$ est une spécialisation de $y$, on a $y\in p^{-1}(x)$.
 Supposons alors que $z$ soit un point quelconque de $p^{-1}(x)$.
@@ -829,11 +839,11 @@ C.Q.F.D.
 
 \begin{corollary}[20.4.7]
 \EGAReaderTarget{ega4.c04.cor.20-4-7}{IV.20.4.7}
-Les hypothèses sur $S$, $X$, $Y$, $U$ et $h$ étant celles de \sref{IV.20.4.6}, soit $E$ une partie de $X-U$ telle que $X$ soit normal en tout point de $E$, et pour chaque $x\in E$, soit $h'_x:\Spec(k(x))\to Y$ un $S$-morphisme, tel que la condition~(P) de \sref{IV.20.4.6} soit vérifiée.
-On suppose en outre que la réunion $F$ des graphes des $h'_x$ (identifiés à des parties de $X\times_S Y$) pour $x\in E$, soit contenue dans la réunion d'un nombre fini d'ouverts $V_i$ de $X\times_S Y$ qui sont \emph{séparés} sur $X$ (condition automatiquement vérifiée si $Y$ est \emph{séparé} sur $S$, ou si $X$ est \emph{quasi-compact} et $Y$ de \emph{type fini} sur $S$).
+Les hypothèses sur $S$, $X$, $Y$, $U$ et $h$ étant celles de \sref{IV.20.4.6}, soit $E$ une partie de $X\setmin U$ telle que $X$ soit \textup{normal} en tout point de $E$, et pour chaque $x\in E$, soit $h'_x:\Spec(\boldsymbol{k}(x))\to Y$ un $S$-morphisme, tel que la condition~\textup{(P)} de \sref{IV.20.4.6} soit vérifiée.
+On suppose en outre que la réunion $F$ des graphes des $h'_x$ (identifiés à des parties de $X\times_S Y$) pour $x\in E$, soit contenue dans la réunion d'un nombre \textup{fini} d'ouverts $V_i$ de $X\times_S Y$ qui sont séparés sur $X$ \textup{(condition automatiquement vérifiée si $Y$ est \emph{séparé} sur $S$, ou si $X$ est \emph{quasi-compact} et $Y$ \emph{de type fini} sur $S$)}.
 Alors il existe un $S$-morphisme $h':U'\to Y$, où $U'$ est un ouvert de $X$ contenant $U\cup E$, tel que, pour tout $x\in E$, le composé
 \[
-  \Spec(k(x))\to U'\xrightarrow{h'}Y
+  \Spec(\boldsymbol{k}(x))\to U'\xrightarrow{h'}Y
 \]
 soit égal à $h'_x$.
 \end{corollary}
@@ -851,45 +861,45 @@ Le morphisme $h'$ égal à $h$ dans $U$, à $h_i$ dans chacun des $U_i$, répond
 
 \begin{remark}[20.4.8]
 \label{IV.20.4.8}
-Lorsque $E=X-U$, il est clair que si, pour tout ouvert affine $T$ de $X$, il existe un $S$-morphisme $h'_T:T\to Y$ prolongeant $h|(U\cap T)$ et tel que le composé $\Spec(k(x))\to T\xrightarrow{h'_T}Y$ soit égal à $h'_x$ pour tout $x\in T-(U\cap T)$, alors les $h'_T$ sont les restrictions d'un $S$-morphisme $h':X\to Y$ (partout défini) en vertu de l'assertion d'unicité dans \sref{IV.20.4.6}.
+Lorsque $E=X\setmin U$, il est clair que si, pour tout ouvert affine $T$ de $X$, il existe un $S$-morphisme $h'_T:T\to Y$ prolongeant $h|(U\cap T)$ et tel que le composé $\Spec(\boldsymbol{k}(x))\to T\xrightarrow{h'_T}Y$ soit égal à $h'_x$ pour tout $x\in T\setmin(U\cap T)$, alors les $h'_T$ sont les restrictions d'un $S$-\emph{morphisme} $h':X\to Y$ (partout défini) en vertu de l'assertion d'unicité dans \sref{IV.20.4.6}.
 Pour prouver l'existence de $h'$, on est donc ramené au cas où $X$ est \emph{affine}, et alors il suffit que l'ensemble $F$, réunion des graphes des $h'_x$, soit \emph{quasi-compact} dans $X\times_S Y$ pour que l'on puisse appliquer \sref{IV.20.4.7}.
-Il en sera ainsi lorsque les $h'_x$ sont de la forme $\Spec(k(x))\to Z\xrightarrow{h_0}Y$, où $Z$ est un sous-préschéma fermé de $X$ ayant $X-U$ pour espace sous-jacent, et $h_0$ un $S$-morphisme.
+Il en sera ainsi lorsque les $h'_x$ sont de la forme $\Spec(\boldsymbol{k}(x))\to Z\xrightarrow{h_0}Y$, où $Z$ est un sous-préschéma fermé de $X$ ayant $X\setmin U$ pour espace sous-jacent, et $h_0$ un $S$-morphisme.
 \end{remark}
 
 \begin{corollary}[20.4.9]
 \label{IV.20.4.9}
 Soient $S$ un préschéma localement noethérien, $X$ un préschéma localement noethérien, $f:X\to S$ un morphisme plat, $g:Y\to S$ un morphisme localement de type fini.
-Soient $U$ un ouvert dense dans $S$, $h:f^{-1}(U)\to Y$ un $S$-morphisme, $T=S-U$, $Z$ le sous-préschéma fermé réduit de $X$ ayant $f^{-1}(T)$ comme espace sous-jacent, $h_0:Z\to Y$ un $S$-morphisme.
-Supposons $X$ normal en tous les points de $Z$.
+Soient $U$ un ouvert dense dans $S$, $h:f^{-1}(U)\to Y$ un $S$-morphisme, $T=S\setmin U$, $Z$ le sous-préschéma fermé réduit de $X$ ayant $f^{-1}(T)$ comme espace sous-jacent, $h_0:Z\to Y$ un $S$-morphisme.
+Supposons $X$ \textup{normal} en tous les points de $Z$.
 Afin qu'il existe un $S$-morphisme (nécessairement unique) $h':X\to Y$ prolongeant $h$ et $h_0$, il faut et il suffit que la condition suivante soit satisfaite :
 
-\emph{Pour tout spectre $S_1$ d'un anneau de valuation discrète, de point fermé $a$ et de point générique $b$, et tout morphisme $u:S_1\to S$ tel que $u(a)\in T$ et $u(b)\in U$, il existe un $S_1$-morphisme $h'_1:X_{(S_1)}\to Y_{(S_1)}$ qui prolonge $h_{(S_1)}:f_{(S_1)}^{-1}(b)\to Y_{(S_1)}$ et est tel que le diagramme}
+Pour tout spectre $S_1$ d'un anneau de valuation discrète, de point fermé $a$ et de point générique $b$, et tout morphisme $u:S_1\to S$ tel que $u(a)\in T$ et $u(b)\in U$, il existe un $S_1$-morphisme $h'_1:X_{(S_1)}\to Y_{(S_1)}$ qui prolonge $h_{(S_1)}:f_{(S_1)}^{-1}(b)\to Y_{(S_1)}$ et est tel que le diagramme
 \[
   \xymatrix{
-  \Spec(k(z_1)) \ar[r] \ar[d] & Z_{(S_1)} \ar[d]^{(h_0)_{(S_1)}} \\
+  \Spec(\boldsymbol{k}(z_1)) \ar[r] \ar[d] & Z_{(S_1)} \ar[d]^{(h_0)_{(S_1)}} \\
   X_{(S_1)} \ar[r]_{h'_1} & Y_{(S_1)}
   }
 \]
-\emph{soit commutatif pour tout $z_1\in Z_{(S_1)}$.}
+soit commutatif pour tout $z_1\in Z_{(S_1)}$.
+\end{corollary}
 
 L'hypothèse que $f$ est plat entraîne en effet que $f^{-1}(U)$ est dense dans $X$ \sref{IV.2.3.10}, et il suffit alors d'appliquer \sref{IV.20.4.8}.
-\end{corollary}
 
 \begin{corollary}[20.4.10]
 \label{IV.20.4.10}
 Sous les hypothèses de \sref{IV.20.4.6}, supposons en outre $Y$ séparé et localement quasi-fini sur $S$.
-Soient $U$ un ouvert dense dans $X$, $h:U\to Y$ un $S$-morphisme, $\omega$ la $S$-application rationnelle correspondante, $x\in X-U$ un point normal de $X$.
+Soient $U$ un ouvert dense dans $X$, $h:U\to Y$ un $S$-morphisme, $\omega$ la $S$-application rationnelle correspondante, $x\in X\setmin U$ un point \textup{normal} de $X$.
 Afin que $\omega$ soit définie au point $x$, il faut et il suffit que la condition suivante soit vérifiée : il existe un spectre $S_1$ d'un anneau de valuation discrète, de point fermé $a$ et de point générique $b$, et un morphisme $u:S_1\to X$
 \oldpage[IV-4]{249}
 tels que $u(a)=x$, $u(b)\in U$ et que la $S$-application rationnelle $\omega\circ u$ soit partout définie.
-
-En effet, par hypothèse toutes les fibres du morphisme projection $X\times_S Y\to X$ sont formées de points isolés, et pour appliquer \sref{IV.20.4.4} il suffit de savoir que la fibre $p^{-1}(x)$ est non vide dans $\Gamma_\omega$.
-Or si $h_1$ est l'unique morphisme de la classe $\omega\circ u$, l'unique point de $X\times_S Y$ au-dessus de $x$ et de $h_1(a)$ appartient à $\Gamma_\omega$, d'où la conclusion.
 \end{corollary}
+
+En effet, par hypothèse toutes les fibres du morphisme projection $X\times_S Y\to X$ sont formées de points isolés, et pour appliquer \sref{IV.20.4.4} il suffit de savoir que la fibre $p^{-1}(x)$ est \emph{non vide} dans $\Gamma_\omega$.
+Or si $h_1$ est l'unique morphisme de la classe $\omega\circ u$, l'unique point de $X\times_S Y$ au-dessus de $x$ et de $h_1(a)$ appartient à $\Gamma_\omega$, d'où la conclusion.
 
 \begin{proposition}[20.4.11]
 \label{IV.20.4.11}
-Soient $X$ un préschéma localement noethérien, $Y$ un $S$-préschéma affine sur $S$, $U$ un ouvert de $X$, $Z=X-U$.
+Soient $X$ un préschéma localement noethérien, $Y$ un $S$-préschéma affine sur $S$, $U$ un ouvert de $X$, $Z=X\setmin U$.
 Supposons que l'on ait $\operatorname{prof}_Z(\sh{O}_X)\geq 2$ \sref{IV.5.10.1} ; alors tout $S$-morphisme $f:U\to Y$ se prolonge de façon unique en un $S$-morphisme de $X$ dans $Y$.
 \end{proposition}
 
@@ -897,7 +907,7 @@ Supposons que l'on ait $\operatorname{prof}_Z(\sh{O}_X)\geq 2$ \sref{IV.5.10.1} 
 On peut se borner au cas où $S$ et $X$ sont affines et (en vertu de \sref[I]{I.3.3.14}) au cas où $S=X$ ; on a donc $X=\Spec(A)$, $Y=\Spec(B)$, $B$ étant une $A$-algèbre de type fini.
 Comme $B$ est quotient d'une algèbre de polynômes $A[(T_\lambda)]_{\lambda\in L}$, $Y$ est un sous-préschéma fermé de $Y'=X[(T_\lambda)]_{\lambda\in L}$.
 D'autre part, l'hypothèse sur $Z$ entraîne que $U$ est schématiquement dense dans $X$ en vertu de \sref{IV.20.2.13}[(iv)] et \sref{IV.5.10.2}.
-Si l'on prouve que tout $X$-morphisme $u:U\to Y$ se prolonge de façon unique en un $X$-morphisme $v':X\to Y'$, il en résultera que $v'$ se factorisera en $X\xrightarrow{v}Y\to Y'$ ; en effet, le sous-préschéma $v'^{-1}(Y)$ est fermé et majore $U$ \sref[I]{I.4.4.1}, donc est identique à $X$ \sref{IV.20.3.8.8}.
+Si l'on prouve que tout $X$-morphisme $u:U\to Y$ se prolonge de façon unique en un $X$-morphisme $v':X\to Y'$, il en résultera que $v'$ se factorisera en $X\xrightarrow{v}Y\to Y'$ : en effet, le sous-préschéma $v'^{-1}(Y)$ est fermé et majore $U$ \sref[I]{I.4.4.1}, donc est identique à $X$ \sref{IV.20.3.8.8}.
 Dans ces conditions, $v$ sera l'unique $S$-morphisme de $X$ dans $Y$ prolongeant $u$.
 On peut donc se borner au cas où $Y=Y'$.
 Mais alors il y a correspondance biunivoque entre les $X$-morphismes d'un ouvert $U\subset X$ dans $Y'$ et les familles $(s_\lambda)_{\lambda\in L}$ de sections de $\sh{O}_X$ au-dessus de $U$ \sref[II]{II.1.7.9} ; la conclusion résulte donc de \sref{IV.5.10.5}.
@@ -905,14 +915,14 @@ Mais alors il y a correspondance biunivoque entre les $X$-morphismes d'un ouvert
 
 \begin{corollary}[20.4.12]
 \label{IV.20.4.12}
-Soient $X$ un $S$-préschéma localement noethérien réduit et vérifiant la condition $(S_2)$ \sref{IV.5.7.2} (par exemple un $S$-préschéma localement noethérien et normal \sref{IV.5.8.6}), $Y$ un $S$-préschéma affine sur $S$, $f$ une $S$-application rationnelle de $X$ dans $Y$ ; alors toute composante irréductible de $X-\operatorname{dom}(f)$ est de codimension $1$ dans $X$.
+Soient $X$ un $S$-préschéma localement noethérien réduit et vérifiant la condition $(S_2)$ \sref{IV.5.7.2} \textup{(par exemple un $S$-préschéma localement noethérien et \emph{normal} \sref{IV.5.8.6})}, $Y$ un $S$-préschéma affine sur $S$, $f$ une $S$-application rationnelle de $X$ dans $Y$ ; alors toute composante irréductible de $X\setmin\operatorname{dom}(f)$ est de codimension $1$ dans $X$.
 \end{corollary}
 
 \begin{proof}
-Il revient au même de dire que si $Z^{(2)}$ est l'ensemble des $x\in X$ tels que $\dim(\sh{O}_{X,x})\geq 2$, alors, pour toute partie fermée $Z\subset Z^{(2)}$ de $X$, tout $S$-morphisme de $X-Z$ dans $Y$ se prolonge en un $S$-morphisme de $X$ dans $Y$ ; or, cela résulte de l'hypothèse sur $X$ \sref{IV.5.7.2} et de \sref{IV.20.4.11}.
+Il revient au même de dire que si $Z^{(2)}$ est l'ensemble des $x\in X$ tels que $\dim(\sh{O}_{X,x})\geq 2$, alors, pour toute partie fermée $Z\subset Z^{(2)}$ de $X$, tout $S$-morphisme de $X\setmin Z$ dans $Y$ se prolonge en un $S$-morphisme de $X$ dans $Y$ ; or, cela résulte de l'hypothèse sur $X$ \sref{IV.5.7.2} et de \sref{IV.20.4.11}.
 \end{proof}
 
-\subsection{Pseudo-morphismes relatifs}
+\subsection{Pseudo-morphismes relatifs.}
 \EGAReaderTarget{ega4.c04.subsec.20-5}{IV.20.5}
 
 \begin{env}[20.5.1]
@@ -940,30 +950,30 @@ de $X$ dans $Y$ relativement à $S$ sont équivalents au sens de \sref{IV.20.2.1
 Supposons $Y$ séparé sur $S$.
 Alors :
 \begin{enumerate}[label=\emph{(\roman*)}]
-  \item L'application \sref{IV.20.5.2.1} est injective et identifie $\operatorname{Ps.hom}_{X/S}(X,Y)$ au sous-ensemble de $\operatorname{Ps.hom}_S(X,Y)$ formé des pseudo-$S$-morphismes $\omega$ tels que $\operatorname{dom}_S(\omega)$ soit universellement schématiquement dense relativement à $S$.
-  \item Le préfaisceau $U\mapsto\operatorname{Ps.hom}_{U/S}(U,Y)$ sur $X$ est un faisceau.
+  \item L'application \sref{IV.20.5.2.1} est injective et identifie $\operatorname{Ps.hom}_{X/S}(X,Y)$, au sous-ensemble de $\operatorname{Ps.hom}_S(X,Y)$ formé des pseudo-$S$-morphismes $\omega$ tels que $\operatorname{dom}_S(\omega)$ soit universellement schématiquement dense relativement à $S$.
+  \item Le préfaisceau $U\leadsto\operatorname{Ps.hom}_{U/S}(U,Y)$ sur $X$ est un faisceau.
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
 L'assertion~(i) est immédiate, car dire que deux $S$-morphismes $u:U\to Y$, $u':U'\to Y$ sont équivalents au sens de \sref{IV.20.2.1} signifie alors que ce sont les restrictions d'un même morphisme $\operatorname{dom}_S(\omega)\to Y$ \sref{IV.20.2.4}, et si $U$ et $U'$ sont universellement schématiquement denses par rapport à $S$, il en est de même \emph{a fortiori} de $\operatorname{dom}_S(\omega)$.
-Pour prouver~(ii), notons que $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ est alors un faisceau \sref{IV.20.2.6} ; d'autre part, étant donné un recouvrement ouvert $(U_\alpha)$ de $U$, et un pseudo-$S$-morphisme $\omega$ de $U$ dans $Y$, pour que $\operatorname{dom}_S(\omega)$ soit universellement schématiquement dense dans $U$ relativement à $S$, il résulte aussitôt des définitions (cf.\ \sref{IV.20.2.1}) qu'il faut et il suffit que chacun des ensembles $\operatorname{dom}_S(\omega)\cap U_\alpha=\operatorname{dom}_S(\omega|U_\alpha)$ soit universellement schématiquement dense dans $U_\alpha$ relativement à $S$ ; d'où~(ii).
+Pour prouver~(ii), notons que $U\leadsto\operatorname{Ps.hom}_S(U,Y)$ est alors un faisceau \sref{IV.20.2.6} ; d'autre part, étant donné un recouvrement ouvert $(U_\alpha)$ de $U$, et un pseudo-$S$-morphisme $\omega$ de $U$ dans $Y$, pour que $\operatorname{dom}_S(\omega)$ soit universellement schématiquement dense dans $U$ relativement à $S$, il résulte aussitôt des définitions (cf.\ \sref{IV.20.2.1}) qu'il faut et il suffit que chacun des ensembles $\operatorname{dom}_S(\omega)\cap U_\alpha=\operatorname{dom}_S(\omega|U_\alpha)$ soit universellement schématiquement dense dans $U_\alpha$ relativement à $S$ ; d'où~(ii).
 \end{proof}
 
-Lorsque $Y$ est séparé, on notera $\mathscr{P}\!s.\!\operatorname{hom}_{X/S}(X,Y)$ le sous-faisceau
+Lorsque $Y$ est séparé, on notera $\mathscr{P}\!s.\mathit{hom}_{X/S}(X,Y)$ le sous-faisceau
 \[
-  U\mapsto\operatorname{Ps.hom}_{U/S}(U,Y)
+  U\leadsto\operatorname{Ps.hom}_{U/S}(U,Y)
 \]
-de $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$.
+de $\mathscr{P}\!s.\mathit{hom}_S(X,Y)$.
 
-Lorsque $X$ est \emph{plat et localement de présentation finie} sur $S$ et $Y$ séparé sur $S$, les pseudo-morphismes de $X$ dans $Y$ relativement à $S$ s'identifient encore aux pseudo-$S$-morphismes $\omega$ tels que, pour toute fibre $X_s$ du morphisme $X\to S$, $\operatorname{dom}_S(\omega)\cap X_s$ soit \emph{schématiquement dense} dans $X_s$ \sref{IV.11.10.10}.
+Lorsque $X$ est \emph{plat et localement de présentation finie} sur $S$ et $Y$ séparé sur $S$, les pseudo-morphismes de $X$ dans $Y$ relativement à $S$ s'identifient encore aux pseudo-$S$-morphismes $\omega$ tels que, pour toute fibre $X_s$ du morphisme $X\to S$, $\operatorname{dom}_S(\omega)\cap X_s$ soit \emph{schématiquement dense dans} $X_s$ \sref{IV.11.10.10}.
 
 \begin{env}[20.5.4]
 \EGAReaderTarget{ega4.c04.statement.20-5-4}{IV.20.5.4}
 Un cas particulièrement important où $Y$ est séparé sur $S$ est le cas où $Y=S[T]=S\otimes_{\bb{Z}}\Spec(\bb{Z}[T])$ ($T$ indéterminée).
 Il y a alors correspondance biunivoque entre les pseudo-$S$-morphismes de $X$ dans $Y$ et les \emph{pseudo-fonctions} sur $X$ \sref{IV.20.2.8} en vertu de la définition d'un produit de $\bb{Z}$-préschémas.
 Les pseudo-morphismes de $X$ dans $Y$ relativement à $S$ s'identifient alors, en vertu de \sref{IV.20.5.3}, aux \emph{pseudo-fonctions $\varphi$ sur $X$ telles que $\operatorname{dom}(\varphi)$ soit universellement schématiquement dense relativement à $S$}.
-Le faisceau $\mathscr{P}\!s.\!\operatorname{hom}_{X/S}(X,Y)$ est un \emph{sous-faisceau d'anneaux} de $\sh{M}'_X$, que l'on note $\sh{M}'_{X/S}$.
+Le faisceau $\mathscr{P}\!s.\mathit{hom}_{X/S}(X,Y)$ est un \emph{sous-faisceau d'anneaux} de $\sh{M}'_X$, que l'on note $\sh{M}'_{X/S}$.
 
 On pose alors $\operatorname{Ps.hom}_{X/S}(X,Y)=M'(X/S)$ et on dit que ses éléments sont les \emph{pseudo-fonctions sur $X$ relatives à $S$}.
 \end{env}
@@ -1004,15 +1014,15 @@ Il est clair que si $S''\to S'$ est un second morphisme, on a $(\omega_{(S')})_{
 \end{env}
 
 \oldpage[IV-4]{252}
-\subsection{Fonctions méromorphes relatives}
+\subsection{Fonctions méromorphes relatives.}
 \EGAReaderTarget{ega4.c04.subsec.20-6}{IV.20.6}
 
 \begin{env}[20.6.1]
 \EGAReaderTarget{ega4.c04.statement.20-6-1}{IV.20.6.1}
 Soient $S$ un préschéma, $X$ un $S$-préschéma qui est \emph{plat et localement de présentation finie} sur $S$ ; pour tout $s\in S$, nous noterons $X_s$ la fibre au point $s$ du morphisme structural $X\to S$.
 En général, si $\varphi$ est une fonction méromorphe sur $X$, il n'est pas possible de lui associer de façon « naturelle », pour chaque $s\in S$, une fonction méromorphe « induite » sur $X_s$ \sref{IV.20.1.11}.
-Pour tout ouvert $U$ de $X$, notons $T_{X/S}(U)$ l'ensemble des sections $t\in\Gamma(U,\sh{O}_X)$ telles que, pour tout $s\in S$, l'image $t_s$ de $t$ par l'homomorphisme canonique $\Gamma(U,\sh{O}_X)\to\Gamma(U\cap X_s,\sh{O}_{X_s})$ soit une section \emph{régulière} ; cela implique d'ailleurs, par l'équivalence de a) et b) dans \sref{IV.11.3.7}, que $t$ est elle-même une section \emph{régulière}.
-Il est clair que $U\mapsto T_{X/S}(U)$ est un \emph{sous-faisceau} du faisceau d'ensemble $\sh{S}=\sh{S}(\sh{O}_X)$ (notation de \sref{IV.20.1.3}), que l'on note $\sh{T}_{X/S}$ ; on pose
+Pour tout ouvert $U$ de $X$, notons $T_{X/S}(U)$ l'ensemble des sections $t\in\Gamma(U,\sh{O}_X)$ telles que, pour tout $s\in S$, l'image $t_s$ de $t$ par l'homomorphisme canonique $\Gamma(U,\sh{O}_X)\to\Gamma(U\cap X_s,\sh{O}_{X_s})$ soit une section \emph{régulière} ; cela implique d'ailleurs, par l'équivalence de \emph{a)} et \emph{b)} dans \sref{IV.11.3.7}, que $t$ est elle-même une section \emph{régulière}.
+Il est clair que $U\leadsto T_{X/S}(U)$ est un \emph{sous-faisceau} du faisceau d'ensemble $\sh{S}=\sh{S}(\sh{O}_X)$ (notation de \sref{IV.20.1.3}), que l'on note $\sh{T}_{X/S}$ ; on pose
 \[
 \label{IV.20.6.1.1}
   \sh{M}_{X/S}=\sh{O}_X[\sh{T}_{X/S}^{-1}]
@@ -1031,7 +1041,7 @@ Soit maintenant $\sh{F}$ un $\sh{O}_X$-Module quasi-cohérent ; on pose
   \tag{20.6.2.1}
 \]
 les sections de $\sh{M}_{X/S}(\sh{F})$ sont dites \emph{sections méromorphes de $\sh{F}$ au-dessus de $X$, relatives à $S$} et leur ensemble est noté $M(X/S,F)$.
-L'homomorphisme canonique $\sh{F}\to\sh{M}_{X/S}(\sh{F})$ n'est pas nécessairement injectif ; lorsqu'il l'est, on dit que $\sh{F}$ est \emph{sans torsion relativement à $S$} : cela signifie que pour tout ouvert $U$ de $X$ et toute section $t\in T_{X/S}(U)$, $t$ est $(\sh{F}|U)$-régulière ; cette condition est remplie \emph{a fortiori} lorsque $\sh{F}$ est \emph{strictement sans torsion} \sref{IV.20.1.5}.
+L'homomorphisme canonique $\sh{F}\to\sh{M}_{X/S}(\sh{F})$ n'est pas nécessairement injectif ; lorsqu'il l'est, on dit que $\sh{F}$ est \emph{sans torsion relativement à $S$} : cela signifie que pour tout ouvert $U$ de $X$ et toute section $t\in T_{X/S}(U)$, $t$ est $(\sh{F}|U)$-\emph{régulière} ; cette condition est remplie \emph{a fortiori} lorsque $\sh{F}$ est \emph{strictement sans torsion} \sref{IV.20.1.5}.
 Dans ce dernier cas, il résulte aussitôt des définitions \sref{IV.20.1.2} que l'homomorphisme canonique de $\sh{O}_X$-Modules
 \[
 \label{IV.20.6.2.2}
@@ -1043,7 +1053,7 @@ est \emph{injectif}, de sorte que les sections méromorphes de $\sh{F}$ relative
 
 \begin{proposition}[20.6.3]
 \label{IV.20.6.3}
-L'image par l'homomorphisme injectif \sref{IV.20.2.10.1} du sous-faisceau $\sh{M}_{X/S}$ de $\sh{M}_X$ est le sous-faisceau $\sh{M}'_{X/S}$ des pseudo-fonctions sur $X$ relatives à $S$ (i.e.\ des pseudo-fonctions dont le domaine de définition est universellement schématiquement dense relativement à $S$ \sref{IV.20.5.4}).
+L'image par l'homomorphisme injectif \sref{IV.20.2.10.1} du sous-faisceau $\sh{M}_{X/S}$ de $\sh{M}_X$ est le sous-faisceau $\sh{M}'_{X/S}$ des pseudo-fonctions sur $X$ relatives à $S$ \textup{(i.e.}\ des pseudo-fonctions dont le domaine de définition est universellement schématiquement dense relativement à $S$ \sref{IV.20.5.4}\textup{)}.
 \end{proposition}
 
 \begin{proof}
@@ -1060,8 +1070,8 @@ Alors, pour qu'une section méromorphe $\varphi$ de $\sh{F}$ au-dessus de $X$ so
 \begin{proof}
 La nécessité de la condition résulte de \sref{IV.20.2.15} appliqué à chaque injection canonique $X_s\to X$ ($s\in S$), compte tenu de \sref{IV.11.10.9}.
 Pour voir que la condition est suffisante, il faut prouver que pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ dans $X$ et une section de $\sh{M}_{X/S}(\sh{F})$ au-dessus de $U$ dont la restriction à $U\cap\operatorname{dom}(\varphi)$ coïncide avec $\varphi$ dans un ouvert schématiquement dense de $U\cap\operatorname{dom}(\varphi)$.
-Considérons l'Idéal des dénominateurs $\sh{J}$ de $\varphi$ \sref{IV.20.2.14}, qui est quasi-cohérent, et qui définit un sous-préschéma fermé de $X$ dont l'espace sous-jacent est $X-\operatorname{dom}(\varphi)$.
-Par hypothèse, si $s$ est l'image de $x$ dans $S$, $\operatorname{dom}(\varphi)\cap X_s$ est schématiquement dense dans le préschéma localement noethérien $X_s$, donc \sref{IV.20.2.13}[(iv)] contient $\operatorname{Ass}(\sh{O}_{X_s})$ ; cela implique donc que l'idéal $\sh{J}_x$ de $\sh{O}_{X,x}$ a une image dans $\sh{O}_{X_s,x}=\sh{O}_{X,x}\otimes_{\sh{O}_{S,s}}k(s)$ qui n'est contenue dans aucun des idéaux premiers $\mathfrak{p}_i\in\operatorname{Ass}(\sh{O}_{X_s,x})$ (en nombre fini) ; donc (Bourbaki, \emph{Alg.~comm.}, chap.~II, \textsection1, n\textsuperscript{o}~1, prop.~2) il existe un élément $t_x\in\sh{J}_x$ dont l'image dans $\sh{O}_{X_s,x}$ n'appartient à aucun des $\mathfrak{p}_i$, et est par suite régulière dans cet anneau noethérien.
+Considérons l'Idéal des dénominateurs $\sh{J}$ de $\varphi$ \sref{IV.20.2.14}, qui est quasi-cohérent, et qui définit un sous-préschéma fermé de $X$ dont l'espace sous-jacent est $X\setmin\operatorname{dom}(\varphi)$.
+Par hypothèse, si $s$ est l'image de $x$ dans $S$, $\operatorname{dom}(\varphi)\cap X_s$ est schématiquement dense dans le préschéma localement noethérien $X_s$, donc \sref{IV.20.2.13}[(iv)] contient $\operatorname{Ass}(\sh{O}_{X_s})$ ; cela implique donc que l'idéal $\sh{J}_x$ de $\sh{O}_{X,x}$ a une image dans $\sh{O}_{X_s,x}=\sh{O}_{X,x}\otimes_{\sh{O}_{S,s}}\boldsymbol{k}(s)$ qui n'est contenue dans aucun des idéaux premiers $\mathfrak{p}_i\in\operatorname{Ass}(\sh{O}_{X_s,x})$ (en nombre fini) ; donc (Bourbaki, \emph{Alg.~comm.}, chap.~II, \textsection1, n\textsuperscript{o}~1, prop.~2) il existe un élément $t_x\in\sh{J}_x$ dont l'image dans $\sh{O}_{X_s,x}$ n'appartient à aucun des $\mathfrak{p}_i$, et est par suite \emph{régulière} dans cet anneau noethérien.
 Soit $t$ une section de $\sh{J}$ au-dessus d'un voisinage ouvert affine $U$ de $x$, dont $t_x$ soit le germe au point $x$ ; puisque $X$ est plat et localement de présentation finie sur $S$, on peut supposer \sref{IV.11.3.8} que $t$ est une section \emph{régulière} de $\sh{O}_X$ au-dessus de $U$ et que, pour tout $s'\in S$, l'image de $t$ dans $\Gamma(U\cap X_{s'},\sh{O}_{X_{s'}})$ soit aussi \emph{régulière} ; autrement dit, on a $t\in T_{X/S}(U)$.
 Mais alors, par définition de $\sh{J}$, puisque $\sh{F}$ est strictement sans torsion, $t(\varphi|(U\cap\operatorname{dom}(\varphi)))$ est une section $u$ de $\sh{F}$ au-dessus de $U\cap\operatorname{dom}(\varphi)$ ; d'autre part, $U\cap\operatorname{dom}(\varphi)$ contient l'ensemble ouvert $U_t$ des points $x'\in U$ où $t(x')\neq0$, et ce dernier contient $x$ et est schématiquement dense dans $U$ \sref{IV.20.2.9}.
 On voit donc que dans $U_t$, $\varphi$ coïncide avec la restriction à $U_t$ de la section $u/t$ de $\sh{M}_{X/S}(\sh{F})$ au-dessus de $U$.
@@ -1077,7 +1087,7 @@ C.Q.F.D.
     \operatorname{dom}(\varphi)\cap X_s\subset\operatorname{dom}(\varphi_s).
     \tag{20.6.5.1}
   \]
-  Mais il convient de noter que même lorsque $S$ est le spectre d'un anneau de valuation discrète $A$ et $X=S[T]$ ($T$ indéterminée), les deux membres de \sref{IV.20.6.5.1} ne sont pas nécessairement égaux : par exemple, si $\pi$ est une uniformisante de $A$, il est immédiat que $\varphi=\pi/T$ est une fonction méromorphe sur $S$ relative à $S$, car si $a$ et $b$ sont le point fermé et le point générique de $S$, $T$ est régulière dans $\Gamma(X_a,\sh{O}_{X_a})=k[T]$ et dans $\Gamma(X_b,\sh{O}_{X_b})=K[T]$, $k$ et $K$ étant le corps résiduel et le corps des fractions de $A$.
+  Mais il convient de noter que même lorsque $S$ est le spectre d'un anneau de valuation discrète $A$ et $X=S[T]$ ($T$ indéterminée), les deux membres de \sref{IV.20.6.5.1} ne sont pas nécessairement égaux : par exemple, si $\pi$ est une uniformisante de $A$, il est immédiat que $\varphi=\pi/T$ est une fonction méromorphe sur $S$ relative à $S$, car si $a$ et $b$ sont le point fermé et le point générique de $S$, $T$ est régulier dans $\Gamma(X_a,\sh{O}_{X_a})=k[T]$ et dans $\Gamma(X_b,\sh{O}_{X_b})=K[T]$, $k$ et $K$ étant le corps résiduel et le corps des fractions de $A$.
   On a $\operatorname{dom}(\varphi)=\mathrm{D}(T)$ dans $X$, mais $\operatorname{dom}(\varphi_a)=X_a$ puisque $\varphi_a=0$.
 
   \item Pour qu'une fonction méromorphe $\varphi$ relative à $S$ soit \emph{inversible dans l'anneau} $M(X/S)$, il faut et il suffit que pour tout $s\in S$, $\varphi_s$ soit inversible dans $M(X_s)$ (autrement dit, que $\varphi_s$ soit une fonction méromorphe régulière sur $X_s$ \sref{IV.20.1.8}).
@@ -1088,9 +1098,9 @@ C.Q.F.D.
   En restreignant $U$, on peut donc supposer, en vertu de \sref{IV.11.3.8}, que $u\in T_{X/S}(U)$, d'où la conclusion.
 
   Lorsque $\varphi$ est inversible dans $M(X/S)$, on dit encore que $\varphi$ est une \emph{fonction méromorphe régulière relative à $S$}.
-  On notera que $\varphi\in M(X/S)$ peut être inversible dans $M(X)$ (autrement dit, être \emph{régulière} au sens de \sref{IV.20.1.8}) sans l'être dans $M(X/S)$, comme le montre aussitôt l'exemple de~(i).
+  On notera que $\varphi\in M(X/S)$ peut être inversible \emph{dans} $M(X)$ (autrement dit, être \emph{régulière} au sens de \sref{IV.20.1.8}) sans l'être dans $M(X/S)$, comme le montre aussitôt l'exemple de~(i).
 
-  \item Soit $\sh{L}$ un $\sh{O}_X$-Module \emph{inversible}, et soit $\varphi$ une section méromorphe \emph{régulière} de $\sh{L}$ au-dessus de $X$ \sref{IV.20.1.8} ; on dit que $\varphi$ est \emph{régulière relativement à $S$} si, pour tout ouvert $U$ de $X$ tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$, $\varphi|U$ correspond à un élément de $\Gamma(U,\sh{M}_X)$ qui est \emph{régulière relativement à $S$} ; en vertu de~(ii), il est immédiat qu'il faut et il suffit pour cela que, pour tout $s\in S$, $\varphi_s$ soit une section méromorphe \emph{régulière} \sref{IV.20.1.8} du $\sh{O}_{X_s}$-Module inversible $\sh{L}_s=\sh{L}\otimes_{\sh{O}_X}k(s)$.
+  \item Soit $\sh{L}$ un $\sh{O}_X$-Module \emph{inversible}, et soit $\varphi$ une section méromorphe \emph{régulière} de $\sh{L}$ au-dessus de $X$ \sref{IV.20.1.8} ; on dit que $\varphi$ est \emph{régulière relativement à $S$} si, pour tout ouvert $U$ de $X$ tel que $\sh{L}|U$ soit isomorphe à $\sh{O}_U$, $\varphi|U$ correspond à un élément de $\Gamma(U,\sh{M}_X)$ qui est \emph{régulière relative à $S$} ; en vertu de~(ii), il est immédiat qu'il faut et il suffit pour cela que, pour tout $s\in S$, $\varphi_s$ soit une section méromorphe \emph{régulière} \sref{IV.20.1.8} du $\sh{O}_{X_s}$-Module inversible $\sh{L}_s=\sh{L}\otimes_{\sh{O}_X}\boldsymbol{k}(s)$.
   Si $\varphi'$ est l'inverse de $\varphi$ dans $\sh{L}^{-1}$ \sref{IV.20.1.10}, $\varphi'$ est alors aussi régulière relative à $S$.
   Si $\sh{L}_1$ est un second $\sh{O}_X$-Module inversible, $\varphi_1$ une section méromorphe de $\sh{L}_1$ au-dessus de $X$, régulière relativement à $S$, alors $\varphi\otimes\varphi_1$ est une section méromorphe de $\sh{L}\otimes\sh{L}_1$ au-dessus de $X$, régulière relativement à $S$.
 \end{enumerate}
@@ -1104,22 +1114,22 @@ Alors $\varphi$ est partout définie.
 \end{proposition}
 
 \begin{proof}
-Par hypothèse, $\operatorname{dom}(\varphi)\cap X_s$ est schématiquement dense dans $X_s$ pour tout $s\in S$, donc contient les points $x$ de $X_s$ tels que $\operatorname{prof}(\sh{O}_{X_s,x})=0$ \sref{IV.5.10.2} ; l'hypothèse signifie donc que si l'on pose $Z=X-\operatorname{dom}(\varphi)$, on a $\operatorname{prof}(\sh{O}_{X_{f(x)},x})\geq2$ en tous les points de $Z$.
+Par hypothèse, $\operatorname{dom}(\varphi)\cap X_s$ est schématiquement dense dans $X_s$ pour tout $s\in S$, donc contient les points $x$ de $X_s$ tels que $\operatorname{prof}(\sh{O}_{X_s,x})=0$ \sref{IV.5.10.2} ; l'hypothèse signifie donc que si l'on pose $Z=X\setmin\operatorname{dom}(\varphi)$, on a $\operatorname{prof}(\sh{O}_{X_{f(x)},x})\geq2$ en tous les points de $Z$.
 Il suffit donc d'appliquer \sref{IV.19.9.8}.
 \end{proof}
 
 \begin{env}[20.6.7]
 \EGAReaderTarget{ega4.c04.statement.20-6-7}{IV.20.6.7}
 Soient $X$, $X'$ deux $S$-préschémas plats et localement de présentation finie sur $S$, $f=(\psi,\theta):X'\to X$ un $S$-morphisme.
-Pour tout ouvert $U$ de $X$, notons $T_f(U)$ l'ensemble des sections $t\in T_{X/S}(U)$ dont l'image dans $\Gamma(f^{-1}(U),\sh{O}_{X'})$ appartienne à $T_{X'/S}(f^{-1}(U))$ ; il est immédiat que $U\mapsto T_f(U)$ est un sous-faisceau du faisceau d'ensembles $\sh{T}_{X/S}$, que l'on note $\sh{T}_f$.
-On pose $\sh{M}_{X/S,f}=\sh{O}_X[\sh{T}_f^{-1}]$ ; c'est un sous-faisceau d'anneaux de $\sh{M}_{X/S}$, et on en déduit canoniquement de $\theta^\#: \psi^*(\sh{O}_X)\to\sh{O}_{X'}$ un homomorphisme de faisceaux d'anneaux $\theta'^\#: \psi^*(\sh{M}_{X/S,f})\to\sh{M}_{X'/S}$ prolongeant $\theta^\#$.
-Si une fonction méromorphe $\varphi$ sur $X$, relative à $S$, est \emph{une section de $\sh{M}_{X/S,f}$}, $\Gamma(\theta'^\#)(\varphi)$ est une fonction méromorphe sur $X'$, dite \emph{image réciproque de $\varphi$ par $f$}, et notée $\varphi\circ f$ si cela n'entraîne pas confusion.
+Pour tout ouvert $U$ de $X$, notons $T_f(U)$ l'ensemble des sections $t\in T_{X/S}(U)$ dont l'image dans $\Gamma(f^{-1}(U),\sh{O}_{X'})$ appartienne à $T_{X'/S}(f^{-1}(U))$ ; il est immédiat que $U\leadsto T_f(U)$ est un sous-faisceau du faisceau d'ensembles $\sh{T}_{X/S}$, que l'on note $\sh{T}_f$.
+On pose $\sh{M}_{X/S,f}=\sh{O}_X[\sh{T}_f^{-1}]$ ; c'est un sous-faisceau d'anneaux de $\sh{M}_{X/S}$, et on déduit canoniquement de $\theta^\sharp: \psi^*(\sh{O}_X)\to\sh{O}_{X'}$ un homomorphisme de faisceaux d'anneaux $\theta'^\sharp: \psi^*(\sh{M}_{X/S,f})\to\sh{M}_{X'/S}$ prolongeant $\theta^\sharp$.
+Si une fonction méromorphe $\varphi$ sur $X$, relative à $S$, est \emph{une section de $\sh{M}_{X/S,f}$}, $\Gamma(\theta'^\sharp)(\varphi)$ est une fonction méromorphe sur $X'$, dite \emph{image réciproque de $\varphi$ par $f$}, et notée $\varphi\circ f$ si cela n'entraîne pas confusion.
 On étend aussitôt de même les définitions de \sref{IV.20.1.11} relatives aux $\sh{O}_X$-Modules.
 \end{env}
 
 \begin{proposition}[20.6.8]
 \label{IV.20.6.8}
-Avec les notations de \sref{IV.20.6.7}, si le $S$-morphisme $f:X'\to X$ est \emph{plat}, on a $\sh{M}_{X/S,f}=\sh{M}_{X/S}$, et l'homomorphisme $\varphi\mapsto\varphi\circ f$ est défini dans $M(X/S)$ tout entier.
+Avec les notations de \sref{IV.20.6.7}, si le $S$-morphisme $f:X'\to X$ est plat, on a $\sh{M}_{X/S,f}=\sh{M}_{X/S}$, et l'homomorphisme $\varphi\leadsto\varphi\circ f$ est défini dans $M(X/S)$ tout entier.
 \end{proposition}
 
 \begin{proof}
@@ -1137,7 +1147,7 @@ On déduit de là, comme dans \sref{IV.20.1.12}, un homomorphisme canonique de $
 \begin{env}[20.6.9]
 \label{IV.20.6.9}
 Considérons enfin un morphisme \emph{quelconque} $S'\to S$, et posons $X'=X\times_S S'$, qui est plat et localement de présentation finie sur $S'$ ; soit $p:X'\to X$ la projection canonique.
-Soient $U$ un ouvert de $X$, $t$ une section appartenant à $T_{X/S}(U)$, $t'$ son image dans $\Gamma(p^{-1}(U),\sh{O}_{X'})$ ; pour tout $s'\in S'$, si $s\in S$ est l'image de $s'$, on a $X'_{s'}=X_s\otimes_{k(s)}k(s')$, donc le morphisme $X'_{s'}\to X_s$ est plat, et par suite \sref{IV.20.1.12} l'image réciproque $t'_{s'}$ de $t_s$ dans $\Gamma(p^{-1}(U)\cap X'_{s'},\sh{O}_{X'_{s'}})$ est régulière ; ceci prouve que l'on a $t'\in T_{X'/S'}(p^{-1}(U))$.
+Soient $U$ un ouvert de $X$, $t$ une section appartenant à $T_{X/S}(U)$, $t'$ son image dans $\Gamma(p^{-1}(U),\sh{O}_{X'})$ ; pour tout $s'\in S'$, si $s\in S$ est l'image de $s'$, on a $X'_{s'}=X_s\otimes_{\mathbf{k}(s)}\boldsymbol{k}(s')$, donc le morphisme $X'_{s'}\to X_s$ est plat, et par suite \sref{IV.20.1.12} l'image réciproque $t'_{s'}$ de $t_s$ dans $\Gamma(p^{-1}(U)\cap X'_{s'},\sh{O}_{X'_{s'}})$ est régulière ; ceci prouve que l'on a $t'\in T_{X'/S'}(p^{-1}(U))$.
 Ceci permet de définir canoniquement, comme dans \sref{IV.20.6.8}, un homomorphisme canonique de $\sh{O}_{X'}$-Algèbres
 \[
 \label{IV.20.6.9.1}
