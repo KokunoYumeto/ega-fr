@@ -7,9 +7,11 @@ corrige.
 
 ## Réalisation
 
-La transcription, les corrections, la composition et les notes mathématiques sont produites par IA, d'après les
-fascicules originaux, librement consultables sur [Numdam](https://www.numdam.org/journals/PMIHES/). Les travaux
-documentés comprennent ceux d'OpenAI Codex (GPT-6 Astra, effort Ultra).
+La transcription, les corrections, la composition et les notes mathématiques sont produites par des modèles
+d'OpenAI Codex, d'après les fascicules originaux, librement consultables sur
+[Numdam](https://www.numdam.org/journals/PMIHES/) ; les registres ne nomment pas le modèle de chaque partie. La
+préparation des sources et l'assemblage des éditions sont documentés pour GPT-5.6 Sol (septembre 2026), puis pour
+GPT-6 Astra (effort Ultra, depuis octobre 2026).
 
 Depuis le 1er novembre 2026, la transcription est vérifiée page par page sur les numérisations Numdam des fascicules
 imprimés, par Claude Opus 5.5 (Anthropic) ; l'historique des commits indique les parties déjà vérifiées. Les
