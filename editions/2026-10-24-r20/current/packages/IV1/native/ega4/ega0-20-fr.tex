@@ -160,7 +160,7 @@ respecte les structures de groupe, et que celle qu'on en déduit entre (ii) et
 
 \begin{corollary}[20.1.7]
 \label{0.20.1.7-fr}
-Soient $A$ un anneau, $C$ un $A$-anneau, $L$ un $A$-bimodule, $E$ une
+Soient $A$ un anneau, $C$ un $A$-anneau, $L$ un $C$-bimodule, $E$ une
 $A$-extension triviale de $C$ par $L$, $p:E\to C$ l'augmentation. L'ensemble
 des $A$-dérivations $D$ de $E$ dans $L$ telles que $D(x)=x$ dans $L$ est
 identique à l'ensemble des applications $x\leadsto x\setmin w(p(x))$, où $w$
@@ -495,7 +495,7 @@ On a alors un isomorphisme canonique
   \operatorname{D\acute{e}r.\ cont}_A(B,L)
 \end{equation}
 où dans le premier membre la limite inductive est prise suivant l'ensemble
-ordonné filtrant des couples $(\mathfrak{J},\mathfrak{K})$ d'idéaux bilatères
+ordonné filtrant des couples $(\mathfrak{J},\mathfrak{K})$ d'idéaux bilatères ouverts
 tels que $\mathfrak{K}.L=L.\mathfrak{K}=0$,
 $\mathfrak{J}.B\subset\mathfrak{K}$,
 $B.\mathfrak{J}\subset\mathfrak{K}$.
@@ -577,8 +577,8 @@ fonctorielle en $L$,
 
 \begin{corollary}[20.3.8]
 \label{0.20.3.8-fr}
-Sous les hypothèses de \sref{0.20.3.5-fr} \textup{(resp.}
-\sref{0.20.3.6-fr}) on a une suite exacte canonique, fonctorielle en $L$
+Sous les hypothèses de \sref{0.20.3.6-fr} \textup{(resp.}
+\sref{0.20.3.7-fr}) on a une suite exacte canonique, fonctorielle en $L$
 \begin{equation}
 \tag{20.3.8.1}
 \label{0.20.3.8.1-fr}
@@ -962,7 +962,7 @@ de \sref{0.20.4.8-fr}.
   \item[\rm(ii)] Soient $A$ un anneau, $L$ un $A$-module, $B$ la
   $A$-algèbre $D_A(L)$ ; alors l'homomorphisme canonique
   $x\leadsto d_{B/A}x$ de $L$ dans $\Omega^1_{B/A}$ est \emph{bijectif}, car
-  il est immédiat que les $B$-dérivations de $B=D_A(L)$ dans un $B$-module
+  il est immédiat que les $A$-dérivations de $B=D_A(L)$ dans un $B$-module
   $M$ sont les applications de la forme $(b,x)\leadsto u(x)$, où
   $u\in\operatorname{Hom}_A(L,M)$ ; on conclut donc par
   (\ref{0.20.4.8-fr}, (ii)).
@@ -2238,7 +2238,7 @@ $j_0(x)=(g(x),x)$, $p_0(y,z)=g(z)\setmin y$ de sorte que
 $\operatorname{Im}(j_1)=\operatorname{Ker}(p_1)$ est le graphe de $f$,
 supplémentaire de $\{0\}\oplus\mathrm{T}_1$, et
 $\operatorname{Im}(j_0)=\operatorname{Ker}(p_0)$ est le graphe de $g$,
-supplémentaire de $\mathrm{K}_1(C/A/\Lambda)\oplus\{0\}$ ; la vérification
+supplémentaire de $\mathrm{K}_0(C/A/\Lambda)\oplus\{0\}$ ; la vérification
 de la commutativité du diagramme
 \[
 \xymatrix{
@@ -2506,7 +2506,7 @@ diagramme commutatif
   \Upsilon_{C/A/\Lambda} \ar[r] \ar[d]_{\chi_E} &
   \Omega^1_{A/\Lambda}\otimes_A C \ar[d] \\
   \Upsilon_{C/E/\Lambda}=\Upsilon_{C/B/\Lambda}=\mathfrak{K}/\mathfrak{K}^2
-    \ar[r]^-{\delta_{C/B/A}} \ar[d]^{\wr} &
+    \ar[r]^-{\delta_{C/B/\Lambda}} \ar[d]^{\wr} &
   \Omega^1_{B/\Lambda}\otimes_B C=\Omega^1_{E/\Lambda}\otimes_E C \ar[d] \\
   \mathfrak{K}/\mathfrak{K}^2 \ar[r]_{\delta_{C/B/A}} &
   \Omega^1_{B/A}\otimes_B C
@@ -2942,7 +2942,7 @@ pour tout $C$-module discret $L$ annulé par un idéal ouvert de $C$.
 On a en effet, dans la suite exacte \sref{0.20.3.7.1-fr},
 $\operatorname{Exalcotop}_A(C,L)=0$ \sref{0.19.4.4-fr}, donc
 $\operatorname{Exalcotop}_B(C,L)=\operatorname{Exalcotop}_{B/A}(C,L)$ et
-l'homomorphisme \sref{0.20.7.8.1-fr} n'est autre que
+l'homomorphisme \sref{0.20.7.11.1-fr} n'est autre que
 \sref{0.20.7.10.1-fr} ; le fait qu'il est bijectif se déduit de
 \sref{0.20.6.13-fr} par passage à la limite inductive, compte tenu de ce que
 la topologie de $\Omega^1_{C/B}$ est alors déduite de celle de $C$
@@ -2959,7 +2959,7 @@ considérés sont topologiques et les homomorphismes d'anneaux continus.
 
 \begin{env}[20.7.13]
 \label{0.20.7.13-fr}
-Si, dans \sref{0.20.6.23-fr}, on suppose que les anneaux $\Lambda$, $A$, $B$,
+Si, dans \sref{0.20.6.25-fr}, on suppose que les anneaux $\Lambda$, $A$, $B$,
 $C$ sont topologiques, les homomorphismes $s$, $u$, $v$ continus et $L$ un
 $C$-module discret annulé par un idéal ouvert de $C$, alors on peut passer à
 la limite inductive comme dans \sref{0.20.3.6-fr}, et on a une suite exacte
@@ -3223,8 +3223,8 @@ homomorphisme canonique
 \]
 et en raisonnant comme dans \sref{0.20.7.17-fr}, on voit que l'homomorphisme
 canonique
-$\widehat u_{C/B/A}:\widehat{\Omega}^1_{B/A}
+$\widehat v_{C/B/A}:\widehat{\Omega}^1_{B/A}
 \widehat\otimes_B C\to\widehat{\Omega}^1_{C/A}$ est
 \emph{surjectif} et que $\operatorname{Im}(\widehat\delta_{C/B/A})$ est
-\emph{dense} dans $\operatorname{Ker}(\widehat u_{C/B/A})$.
+\emph{dense} dans $\operatorname{Ker}(\widehat v_{C/B/A})$.
 \end{env}
