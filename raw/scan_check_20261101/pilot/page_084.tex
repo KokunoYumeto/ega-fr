@@ -1,0 +1,103 @@
+\oldpage[I]{84}
+Supposons que $\varphi$ soit tel que tout $f\in A$ s'écrive
+$f=h\varphi(f')$, où $h$ est inversible dans $A$ (ce qui est en particulier
+le cas lorsque $\varphi$ est surjectif). Alors ${}^a\varphi$ est un
+homéomorphisme de $X$ sur ${}^a\varphi(X)$.
+\end{corollary}
+
+Montrons que pour toute partie $E\subset A$, il existe une partie $E'$ de
+$A'$ telle que $V(E)=V(\varphi(E'))$~; en vertu de l'axiome $(T_0)$
+(\hyperref[I.1.1.8-fr]{1.1.8}) et de la formule
+(\hyperref[I.1.2.2.1-fr]{1.2.2.1}), cela entraînera d'abord que
+${}^a\varphi$ est injective, puis, toujours en vertu de
+(\hyperref[I.1.2.2.1-fr]{1.2.2.1}), que ${}^a\varphi$ est un
+homéomorphisme. Or, il suffit pour chaque $f\in E$ de prendre un $f'\in A'$ tel
+que $h\varphi(f')=f$ avec $h$ inversible dans $A$~; l'ensemble $E'$ de ces
+éléments $f'$ répond à la question.
+
+\begin{env}[1.2.5]
+\label{I.1.2.5-fr}
+En particulier, lorsque $\varphi$ est l'homomorphisme canonique de $A$ sur un
+anneau quotient $A/\mathfrak{a}$, on retrouve
+(\hyperref[I.1.1.12-fr]{1.1.12}), et ${}^a\varphi$ est l'injection canonique
+de $V(\mathfrak{a})$, identifié à $\operatorname{Spec}(A/\mathfrak{a})$,
+dans $X=\operatorname{Spec}(A)$.
+\end{env}
+
+Un autre cas particulier de (\hyperref[I.1.2.4-fr]{1.2.4}) donne~:
+
+\begin{corollary}[1.2.6]
+\label{I.1.2.6-fr}
+Si $S$ est une partie multiplicative de $A$, le spectre
+$\operatorname{Spec}(S^{-1}A)$ s'identifie canoniquement (avec sa topologie)
+au sous-espace de $X=\operatorname{Spec}(A)$ formé des $x$ tels que
+$\mathfrak{j}_x\cap S=\varnothing$.
+\end{corollary}
+
+On sait en effet (\hyperref[0.1.2.6-fr]{0, 1.2.6}) que les idéaux premiers de
+$S^{-1}A$ sont les idéaux $S^{-1}\mathfrak{j}_x$ tels que
+$\mathfrak{j}_x\cap S=\varnothing$, et que l'on a
+$\mathfrak{j}_x=({}^S i_A)^{-1}(S^{-1}\mathfrak{j}_x)$. Il suffit donc
+d'appliquer à ${}^S i_A$ le cor. (\hyperref[I.1.2.4-fr]{1.2.4}).
+
+\begin{corollary}[1.2.7]
+\label{I.1.2.7-fr}
+Pour que ${}^a\varphi(X)$ soit partout dense dans $X'$, il faut et il suffit
+que tout élément du noyau $\operatorname{Ker}\varphi$ soit nilpotent.
+\end{corollary}
+
+En effet, appliquant la formule (\hyperref[I.1.2.2.3-fr]{1.2.2.3}) à l'idéal
+$\mathfrak{a}=(0)$, il vient
+$\overline{{}^a\varphi(X)}=V(\operatorname{Ker}\varphi)$, et pour que
+$V(\operatorname{Ker}\varphi)=X$, il faut et il suffit que
+$\operatorname{Ker}\varphi$ soit contenu dans tous les idéaux premiers de
+$A$, c'est-à-dire dans le nilradical $\mathfrak{N}$ de $A$.
+
+\subsection{Faisceau associé à un module}
+\label{subsection:I.1.3-fr}
+\label{I.1.3-fr}
+
+\begin{env}[1.3.1]
+\label{I.1.3.1-fr}
+Soient $A$ un anneau commutatif, $M$ un $A$-module, $f$ un élément de $A$,
+$S_f$ l'ensemble multiplicatif des $f^n$, où $n\geq0$. Rappelons que nous
+posons $A_f=S_f^{-1}A$, $M_f=S_f^{-1}M$. Si $S'_f$ est la partie
+multiplicative saturée de $A$ formée des $g\in A$ qui divisent un élément de
+$S_f$, on sait que $A_f$ et $M_f$ s'identifient canoniquement à
+${S'_f}^{-1}A$ et ${S'_f}^{-1}M$
+(\hyperref[0.1.4.3-fr]{0, 1.4.3}).
+\end{env}
+
+\begin{lemma}[1.3.2]
+\label{I.1.3.2-fr}
+Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\rm(a)] $g\in S'_f$~;
+  \item[\rm(b)] $S'_g\subset S'_f$~;
+  \item[\rm(c)] $f\in\mathfrak{r}(g)$~;
+  \item[\rm(d)] $\mathfrak{r}(f)\subset\mathfrak{r}(g)$~;
+  \item[\rm(e)] $V(g)\subset V(f)$~;
+  \item[\rm(f)] $D(f)\subset D(g)$.
+\end{enumerate}
+\end{lemma}
+
+Cela résulte immédiatement des définitions et de
+(\hyperref[I.1.1.5-fr]{1.1.5}).
+
+\begin{env}[1.3.3]
+\label{I.1.3.3-fr}
+Si $D(f)=D(g)$, le lemme (\hyperref[I.1.3.2-fr]{1.3.2, b)}) montre que
+$M_f=M_g$. Plus généralement, si $D(f)\supset D(g)$, donc
+$S'_f\subset S'_g$, on sait (\hyperref[0.1.4.1-fr]{0, 1.4.1}) qu'il existe un
+homomorphisme canonique fonctoriel
+\[
+  \rho_{g,f}:M_f\longrightarrow M_g,
+\]
+et si $D(f)\supset D(g)\supset D(h)$, on a
+(\hyperref[0.1.4.4-fr]{0, 1.4.4})
+\begin{equation}
+  \rho_{h,g}\circ\rho_{g,f}=\rho_{h,f}.
+  \tag{1.3.3.1}\label{I.1.3.3.1-fr}
+\end{equation}
+\end{env}
+

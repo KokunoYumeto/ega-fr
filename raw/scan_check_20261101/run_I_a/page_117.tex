@@ -1,0 +1,97 @@
+% from ega1-3-fr.tex
+\oldpage[I]{117}
+\phantomsection\label{I.3.5.10.base-change-points-diagram-fr}
+\[
+  \xymatrix{
+    X'(K)\ar[r]\ar[d] & Y'(K)\ar[d]\\
+    X(K)\ar[r] & Y(K)
+  }
+\]
+
+\begin{remark}[3.5.11]
+\label{I.3.5.11-fr}
+Nous dirons qu'un morphisme $f=(\psi,\theta)$ de préschémas est
+\emph{injectif} si l'application $\psi$ est injective. Pour qu'un morphisme
+$f=(\psi,\theta):X\to Y$ soit radiciel, il faut et il suffit que pour tout
+morphisme $Y'\to Y$, le morphisme $f_{(Y')}:X_{(Y')}\to Y'$ soit injectif (ce
+qui justifie la terminologie de morphisme \emph{universellement injectif}). En
+effet, la condition est nécessaire en vertu de
+(\hyperref[I.3.5.7-fr]{3.5.7, (ii)}) et de
+(\hyperref[I.3.5.8-fr]{3.5.8}). Inversement, la condition implique d'abord que
+$\psi$ est injectif~; si pour un $x\in X$, le monomorphisme
+$\theta^x:k(\psi(x))\to k(x)$ n'était pas radiciel, il y aurait une extension
+$K$ de $k(\psi(x))$ et deux morphismes distincts
+$\operatorname{Spec}(K)\to X$ correspondant au même morphisme
+$\operatorname{Spec}(K)\to Y$ (\hyperref[I.3.5.8-fr]{3.5.8}). Mais alors, en
+posant $Y'=\operatorname{Spec}(K)$, il y aurait deux $Y'$-sections distinctes
+de $X_{(Y')}$ (\hyperref[I.3.3.14-fr]{3.3.14}), ce qui contredit l'hypothèse
+que $f_{(Y')}$ est injectif.
+\end{remark}
+
+\subsection{Fibres.}
+\label{subsection:I.3.6-fr}
+
+\begin{proposition}[3.6.1]
+\label{I.3.6.1-fr}
+Soient $f:X\to Y$ un morphisme, $y$ un point de $Y$, $\mathfrak{a}_y$ un
+idéal de définition de $\mathcal{O}_y$ pour la topologie
+$\mathfrak{m}_y$-préadique. La projection
+$p:X\times_Y\operatorname{Spec}(\mathcal{O}_y/\mathfrak{a}_y)\to X$ est un
+homéomorphisme de l'espace sous-jacent au préschéma
+$X\times_Y\operatorname{Spec}(\mathcal{O}_y/\mathfrak{a}_y)$ sur la fibre
+$f^{-1}(y)$ munie de la topologie induite par celle de l'espace sous-jacent à
+$X$.
+\end{proposition}
+
+Comme $\operatorname{Spec}(\mathcal{O}_y/\mathfrak{a}_y)\to Y$ est radiciel
+(\hyperref[I.3.5.4-fr]{3.5.4} et \hyperref[I.2.4.7-fr]{2.4.7}) et que
+$\operatorname{Spec}(\mathcal{O}_y/\mathfrak{a}_y)$ est réduit à un seul
+point, l'idéal $\mathfrak{m}_y/\mathfrak{a}_y$ étant nilpotent par hypothèse
+(\hyperref[I.1.1.12-fr]{1.1.12}), on sait déjà
+(\hyperref[I.3.5.10-fr]{3.5.10} et \hyperref[I.3.3.4-fr]{3.3.4}) que $p$
+identifie en tant \emph{qu'ensemble} l'espace sous-jacent à
+$X\times_Y\operatorname{Spec}(\mathcal{O}_y/\mathfrak{a}_y)$ à $f^{-1}(y)$~;
+tout revient à démontrer que $p$ est un homéomorphisme. En vertu de
+(\hyperref[I.3.2.7-fr]{3.2.7}), la question est locale sur $X$ et $Y$, et on
+peut donc supposer que $X=\operatorname{Spec}(B)$,
+$Y=\operatorname{Spec}(A)$, $B$ étant une $A$-algèbre. Le morphisme $p$
+correspond alors à l'homomorphisme
+$1\otimes\varphi:B\to B\otimes_A A'$, où $A'=A_y/\mathfrak{a}_y$ et
+$\varphi$ est l'application canonique de $A$ dans $A'$. Or, tout élément de
+$B\otimes_A A'$ s'écrit
+\phantomsection\label{I.3.6.1.localization-fraction-fr}
+\[
+  \sum_i b_i\otimes\varphi(a_i)/\varphi(s)
+  =\left(\sum_i(a_i b_i\otimes 1)\right)(1\otimes\varphi(s))^{-1},
+\]
+où $s\notin\mathfrak{j}_y$, et la prop.
+(\hyperref[I.1.2.4-fr]{1.2.4}) est applicable.
+
+\begin{env}[3.6.2]
+\label{I.3.6.2-fr}
+Dans toute la suite de ce Traité, lorsque nous considérerons une fibre
+$f^{-1}(y)$ d'un morphisme comme munie d'une structure de $k(y)$-préschéma,
+\emph{il s'agira toujours du préschéma obtenu en transportant la structure de
+$X\times_Y\operatorname{Spec}(k(y))$ par la projection dans $X$}. Nous
+écrirons aussi ce dernier produit $X\otimes_Y k(y)$, ou
+$X\otimes_{\mathcal{O}_Y}k(y)$~; plus généralement, si $B$ est une
+$\mathcal{O}_y$-algèbre, nous noterons $X\otimes_Y B$ ou
+$X\otimes_{\mathcal{O}_Y}B$ le produit
+$X\times_Y\operatorname{Spec}(B)$.
+\end{env}
+
+Avec la convention précédente, il résulte de
+(\hyperref[I.3.5.10-fr]{3.5.10}) que les points de $X$ à valeurs dans une
+extension $K$ de $k(y)$ sont identifiés aux \emph{points de $f^{-1}(y)$ à
+valeurs dans $K$}.
+
+\begin{env}[3.6.3]
+\label{I.3.6.3-fr}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes, $h=g\circ f$ leur composé~;
+pour tout $z\in Z$, la fibre $h^{-1}(z)$ est un préschéma isomorphe à
+\phantomsection\label{I.3.6.3.fibre-composition-fr}
+\[
+  X\times_Z\operatorname{Spec}(k(z))
+  =(X\times_Y Y)\times_Z\operatorname{Spec}(k(z))
+  =X\times_Y g^{-1}(z)
+\]

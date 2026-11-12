@@ -1,0 +1,101 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{44}
+Avec ces notations :
+\begin{proposition}[11.8.3]
+\label{0.11.8.3-fr}
+{Il existe une homotopie
+$h:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)\longrightarrow\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)$,
+telle que $h(\sigma,\tau)$ soit combinaison linéaire de couples de simplexes
+$(\sigma_i,\tau_i)$ avec $|\sigma_i|\subset|\sigma|$,
+$|\tau_i|\subset|\tau|$, et que l'on ait pour $f=j\circ p$,}
+\[
+\label{0.11.8.3.1-fr}
+\tag{11.8.3.1}
+f-1=h\circ d+d\circ h.
+\]
+\end{proposition}
+
+\begin{proof}
+Il suffit de définir $h$ sur chaque couple $(\sigma,\tau)$ de simplexes, en
+raisonnant par récurrence sur la somme des degrés de $\sigma$ et $\tau$, car
+on peut prendre $h=0$ lorsque cette somme est $0$. Soit
+$\omega=f(\sigma,\tau)-(\sigma,\tau)-h(d(\sigma,\tau))$;
+en vertu de l'hypothèse de récurrence et de la définition de $d$, on a
+$\omega\in\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$.
+On a
+\[
+d\omega=f(d(\sigma,\tau))-d(\sigma,\tau)-d(h(d(\sigma,\tau)))
+=h(d(d(\sigma,\tau)))=0
+\]
+en vertu de (\hyperref[0.11.8.3.1-fr]{11.8.3.1}) et de l'hypothèse de
+récurrence. Or, on a
+$H_q(\mathrm C_\bullet(A))=0$ pour $q>0$ (G, I, 3.7.4), donc aussi
+$H_q(\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B))=0$ pour $q>0$,
+en vertu de la formule de Künneth (G, I, 5.5.2). Appliquant cette remarque en
+remplaçant $A$ par $|\sigma|$ et $B$ par $|\tau|$, on voit qu'il existe un
+élément
+$\omega'$ de $\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|)$
+tel que $\omega=d\omega'$; prenant $h(\sigma,\tau)=\omega'$, on vérifie
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}) pour le couple $(\sigma,\tau)$ et la
+récurrence peut se poursuivre.
+\end{proof}
+
+\begin{env}[11.8.4]
+\label{0.11.8.4-fr}
+Les notations étant celles de (\hyperref[0.11.8.2-fr]{11.8.2}), nous poserons
+$(\sigma,\tau)\leq(\sigma',\tau')$ si $|\sigma|\subset|\sigma'|$ et
+$|\tau|\subset|\tau'|$. Un \emph{système de coefficients} $\mathscr S$ sur
+$\Sigma(A)\times\Sigma(B)$ est constitué par une famille
+$(\Gamma_{\sigma,\tau})$ de groupes abéliens, où
+$\Gamma_{\sigma,\tau}$ ne dépend que des ensembles $|\sigma|$ et $|\tau|$,
+et une famille d'homomorphismes
+$\Gamma_{\sigma,\tau}\longrightarrow\Gamma_{\sigma',\tau'}$, pour $(\sigma,\tau)\leq(\sigma',\tau')$,
+formant un \emph{système inductif} pour cette relation de préordre. On définit alors
+un \emph{complexe de cochaînes} $\mathrm C^\bullet(A,B;\mathscr S)$ comme l'ensemble
+des familles $\lambda=(\lambda(\sigma,\tau))$, où $(\sigma,\tau)$ parcourt
+$\Sigma(A)\times\Sigma(B)$, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$ pour tout couple
+$(\sigma,\tau)$. La différentielle est donnée de la façon suivante : si
+$d(\sigma,\tau)=\sum_i\pm(\sigma_i,\tau_i)$,
+on a $|\sigma_i|\subset|\sigma|$, $|\tau_i|\subset|\tau|$ pour tout $i$, et
+l'on prend
+\[
+d\lambda(\sigma,\tau)=\sum_i\pm\lambda_i(\sigma_i,\tau_i),
+\]
+où $\lambda_i(\sigma_i,\tau_i)$ désigne l'image canonique de
+$\lambda(\sigma_i,\tau_i)$ dans $\Gamma_{\sigma,\tau}$.
+
+Nous dirons qu'une cochaîne $\lambda\in\mathrm C^\bullet(A,B;\mathscr S)$ est
+\emph{bi-alternée} si $\lambda(\sigma,\tau)=0$ lorsque l'un des deux
+simplexes $\sigma$, $\tau$ a deux termes égaux, et si l'on a
+$\lambda(\pi(\sigma),\tau)=\varepsilon_\pi\lambda(\sigma,\tau)$ et
+$\lambda(\sigma,\pi'(\tau))=\varepsilon_{\pi'}\lambda(\sigma,\tau)$
+pour des permutations quelconques $\pi$, $\pi'$ des indices. Il est clair
+que ces cochaînes engendrent un \emph{sous-complexe}
+$\mathrm L^\bullet(A,B;\mathscr S)$ de $\mathrm C^\bullet(A,B;\mathscr S)$.
+\end{env}
+
+\begin{proposition}[11.8.5]
+\label{0.11.8.5-fr}
+{L'injection canonique
+$\mathrm L^\bullet(A,B;\mathscr S)\longrightarrow\mathrm C^\bullet(A,B;\mathscr S)$
+définit un isomorphisme pour la cohomologie de ces deux complexes.}
+\end{proposition}
+
+\begin{proof}
+Notons que si $p$ et $j$ ont le sens défini dans
+(\hyperref[0.11.8.2-fr]{11.8.2}), les applications
+${}^tp:\lambda\to\lambda\circ p$ et
+${}^tj:\lambda\to\lambda\circ j$
+sont définies dans $\mathrm L^\bullet(A,B;\mathscr S)$ et
+$\mathrm C^\bullet(A,B;\mathscr S)$ respectivement, la première n'étant autre
+que l'injection canonique. Comme ${}^tj\circ{}^tp$ est l'identité, il
+suffit de démontrer que ${}^tp\circ{}^tj$ est homotope à l'identité; or,
+d'après (\hyperref[0.11.8.3-fr]{11.8.3}),
+${}^th:\lambda\to\lambda\circ h$ est \emph{définie} dans
+$\mathrm C^\bullet(A,B;\mathscr S)$ et on peut donc transposer l'identité
+(\hyperref[0.11.8.3.1-fr]{11.8.3.1}), qui fournit le résultat cherché.
+\end{proof}
+
+\begin{env}[11.8.6]
+\label{0.11.8.6-fr}

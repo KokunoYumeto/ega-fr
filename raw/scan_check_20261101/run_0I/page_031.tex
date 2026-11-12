@@ -1,0 +1,98 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{31}
+
+Si la catégorie $\mathbf{K}$ admet des limites projectives (généralisées), et
+si $\mathfrak{B}$, $\mathfrak{B}'$ sont des bases des topologies de $X$ et
+$Y$ respectivement, pour définir un $\psi$-morphisme $u$ de \emph{faisceaux},
+on peut se borner à se donner les $u_{U,V}$ pour
+$U\in\mathfrak{B}$, $V\in\mathfrak{B}'$ et $\psi(U)\subset V$, vérifiant les
+conditions de compatibilité (3.5.1.1) pour $U$, $U'$ dans $\mathfrak{B}$ et
+$V$, $V'$ dans $\mathfrak{B}'$~; il suffit en effet de définir $u_W$, pour
+tout ouvert $W\subset Y$, comme limite projective des $u_{U,V}$ pour
+$V\in\mathfrak{B}'$ et $V\subset W$, $U\in\mathfrak{B}$ et
+$\psi(U)\subset V$.
+
+Lorsque la catégorie $\mathbf{K}$ admet des limites inductives, on a, pour
+tout $x\in X$, un morphisme
+\[
+  \mathcal{G}(V)\to\mathcal{F}(\psi^{-1}(V))\to\mathcal{F}_x
+\]
+pour tout voisinage ouvert $V$ de $\psi(x)$ dans $Y$, et ces morphismes
+forment un système inductif qui donne par passage à la limite un morphisme
+\[
+  \mathcal{G}_{\psi(x)}\to\mathcal{F}_x.
+\]
+\end{env}
+
+\begin{env}[3.5.2]
+\label{0.3.5.2-fr}
+Sous les hypothèses de (3.4.3), soient $\mathcal{F}$, $\mathcal{G}$,
+$\mathcal{H}$ des préfaisceaux à valeurs dans $\mathbf{K}$ sur $X$, $Y$, $Z$
+respectivement, et soient
+$u:\mathcal{G}\to\psi_*(\mathcal{F})$,
+$v:\mathcal{H}\to\psi'_*(\mathcal{G})$ un $\psi$-morphisme et un
+$\psi'$-morphisme respectivement. On en déduit un $\psi''$-morphisme
+\[
+  w:\mathcal{H}\xrightarrow{v}\psi'_*(\mathcal{G})
+  \xrightarrow{\psi'_*(u)}
+  \psi'_*(\psi_*(\mathcal{F}))=\psi''_*(\mathcal{F}),
+\]
+que l'on appelle, par définition, le \emph{composé} de $u$ et de $v$. On peut
+donc considérer les couples $(X,\mathcal{F})$ formés d'un espace topologique
+$X$ et d'un préfaisceau $\mathcal{F}$ sur $X$ (à valeurs dans $\mathbf{K}$)
+comme formant une \emph{catégorie}, les morphismes étant les couples
+$(\psi,\theta):(X,\mathcal{F})\to(Y,\mathcal{G})$ formés d'une application
+continue $\psi:X\to Y$ et d'un $\psi$-morphisme
+$\theta:\mathcal{G}\to\mathcal{F}$.
+\end{env}
+
+\begin{env}[3.5.3]
+\label{0.3.5.3-fr}
+Soient $\psi:X\to Y$ une application continue, $\mathcal{G}$ un
+\emph{préfaisceau} sur $Y$ à valeurs dans $\mathbf{K}$. Nous appellerons
+\emph{image réciproque de $\mathcal{G}$ par $\psi$} un couple
+$(\mathcal{G}',\rho)$, où $\mathcal{G}'$ est un \emph{faisceau} sur $X$ à
+valeurs dans $\mathbf{K}$, et
+$\rho:\mathcal{G}\to\mathcal{G}'$ un $\psi$-morphisme (autrement dit un
+homomorphisme $\mathcal{G}\to\psi_*(\mathcal{G}'))$ tels que, pour tout
+\emph{faisceau} $\mathcal{F}$ sur $X$ à valeurs dans $\mathbf{K}$,
+l'application
+\begin{equation*}
+  \operatorname{Hom}_X(\mathcal{G}',\mathcal{F})
+  \longrightarrow \operatorname{Hom}_\psi(\mathcal{G},\mathcal{F})
+  =\operatorname{Hom}_Y(\mathcal{G},\psi_*(\mathcal{F}))
+\tag{3.5.3.1}\label{0.3.5.3.1-fr}
+\end{equation*}
+transformant $v$ en $\psi_*(v)\circ\rho$, soit une \emph{bijection}~; cette
+application, étant fonctorielle en $\mathcal{F}$, définira alors un
+isomorphisme de foncteurs en $\mathcal{F}$. Le couple
+$(\mathcal{G}',\rho)$ étant solution d'un problème universel, on sait qu'il
+est \emph{déterminé à un isomorphisme unique près} lorsqu'il existe. On écrira
+alors $\mathcal{G}'=\psi^*(\mathcal{G})$, $\rho=\rho_{\mathcal{G}}$, et par
+abus de langage, on dira que $\psi^*(\mathcal{G})$ est \emph{le faisceau image
+réciproque} de $\mathcal{G}$ par $\psi$, étant entendu que
+$\psi^*(\mathcal{G})$ est considéré comme muni du $\psi$-morphisme
+\emph{canonique}
+$\rho_{\mathcal{G}}:\mathcal{G}\to\psi^*(\mathcal{G})$, c'est-à-dire de
+l'\emph{homomorphisme canonique} de préfaisceaux sur $Y$~:
+\begin{equation*}
+  \rho_{\mathcal{G}}:\mathcal{G}\to\psi_*(\psi^*(\mathcal{G})).
+\tag{3.5.3.2}\label{0.3.5.3.2-fr}
+\end{equation*}
+Pour tout homomorphisme
+$v:\psi^*(\mathcal{G})\to\mathcal{F}$ (où $\mathcal{F}$ est un faisceau sur
+$X$ à valeurs dans $\mathbf{K}$), on posera
+$v^b=\psi_*(v)\circ\rho_{\mathcal{G}}:
+\mathcal{G}\to\psi_*(\mathcal{F})$. Par définition, \emph{tout} morphisme de
+préfaisceaux $u:\mathcal{G}\to\psi_*(\mathcal{F})$ est de la forme $v^b$ pour
+un $v$ et un seul, que l'on notera $u^\sharp$. En d'autres termes, tout
+morphisme $u:\mathcal{G}\to\psi_*(\mathcal{F})$ de préfaisceaux se factorise
+de façon unique en
+\begin{equation*}
+  u:\mathcal{G}\xrightarrow{\rho_{\mathcal{G}}}
+  \psi_*(\psi^*(\mathcal{G}))
+  \xrightarrow{\psi_*(u^\sharp)}\psi_*(\mathcal{F}).
+\tag{3.5.3.3}\label{0.3.5.3.3-fr}
+\end{equation*}
+\end{env}
+

@@ -1,0 +1,40 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{240}
+pour $\lambda\leq\mu$, et $\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)$ sont définies (sans hypothèse de séparation sur les $Y_\lambda$ ni $Y$) ; il en est par suite de même de l'application \sref{IV.20.3.8.1}.
+La proposition va résulter du lemme suivant :
+
+\begin{lemma}[20.3.8.2]
+\label{IV.20.3.8.2}
+Les notations étant celles de \sref{IV.8.8.1}, supposons $X_\alpha$ quasi-compact, et soit $U_\alpha$ un ouvert dans $X_\alpha$ ; soient $U_\lambda$ et $U$ ses images réciproques dans $X_\lambda$ et $X$ pour $\lambda\geq\alpha$.
+Supposons que l'une des conditions~(i),~(ii) de \sref{IV.20.3.8} soit vérifiée.
+Alors, pour que $U$ soit schématiquement dense dans $X$, il faut et il suffit qu'il existe $\lambda\geq\alpha$ tel que $U_\lambda$ soit schématiquement dense dans $X_\lambda$, et dans ce cas $U_\mu$ est schématiquement dense dans $X_\mu$ pour $\mu\geq\lambda$.
+\end{lemma}
+
+Supposons d'abord vérifiée la condition~(i) ; désignons par $j_\lambda:U_\lambda\to X_\lambda$ et $j:U\to X$ les injections canoniques, par $\sh{J}_\lambda$ le noyau de l'homomorphisme canonique $\sh{O}_{X_\lambda}\to(j_\lambda)_*(\sh{O}_{U_\lambda})$.
+L'immersion $j_\lambda$ étant quasi-compacte et quasi-séparée, $(j_\lambda)_*(\sh{O}_{U_\lambda})$ est un $\sh{O}_{X_\lambda}$-Module quasi-cohérent, donc $\sh{J}_\lambda$ est un Idéal quasi-cohérent de $\sh{O}_{X_\lambda}$, et puisque $X_\lambda$ est noethérien, $\sh{J}_\lambda$ est cohérent, donc de type fini.
+D'autre part, le morphisme de transition $p_{\lambda\mu}:X_\mu\to X_\lambda$ (resp. $p_\lambda:X\to X_\lambda$) étant plat, il résulte de \sref{IV.2.3.1} que l'on peut identifier $(j_\mu)_*(\sh{O}_{U_\mu})$ à $p_{\lambda\mu}^*((j_\lambda)_*(\sh{O}_{U_\lambda}))$ (resp. $j_*(\sh{O}_U)$ à $p_\lambda^*((j_\lambda)_*(\sh{O}_{U_\lambda}))$).
+L'assertion résulte alors de la définition d'un ouvert schématiquement dense et de \sref{IV.8.5.8}[(ii)].
+
+Pour établir \sref{IV.20.3.8.2} lorsque la condition~(ii) est vérifiée, nous prouverons d'abord deux lemmes.
+
+\begin{lemma}[20.3.8.3]
+\label{IV.20.3.8.3}
+Sous les hypothèses de \sref{IV.8.2.2}, soit $M_\lambda$ (resp. $M$) l'ensemble des points maximaux de $S_\lambda$ (resp. $S$).
+Supposons que pour tout $\lambda$, l'ensemble $M_\lambda$ soit fini, et que les $M_\lambda$ forment un système projectif d'ensembles.
+Alors $M$ est limite projective du système des $M_\lambda$.
+\end{lemma}
+
+Montrons d'abord qu'un point $s\in\varprojlim M_\lambda$ est maximal dans $S$ : en effet, si $s'$ est une généralisation de $s$, l'image $s'_\lambda$ de $s'$ dans $S_\lambda$ est une généralisation de l'image $s_\lambda$ de $s$, donc égale à $s_\lambda$ pour tout $\lambda$, ce qui implique $s'=s$, puisque l'ensemble sous-jacent à $S$ est limite projective des ensembles sous-jacents aux $S_\lambda$ \sref{IV.8.2.9}.
+Inversement, soit $s$ un point maximal de $S$ et prouvons qu'il appartient à $\varprojlim M_\lambda$.
+Soient $s_\lambda$ l'image de $s$ dans $S_\lambda$, $M'_\lambda$ l'ensemble des points maximaux de $S_\lambda$ qui sont des généralisations de $s_\lambda$ ; les $M'_\lambda$ sont des ensembles finis non vides, qui forment un système projectif, donc $M'=\varprojlim M'_\lambda$ n'est pas vide et l'application $M'\to M'_\lambda$ est surjective (Bourbaki, \emph{Ens.}, chap.~III, 2\textsuperscript{e} éd., \textsection~7, n\textsuperscript{o}~4, Exemple~I).
+D'autre part, on a $\Spec(\sh{O}_{S,s})=\varprojlim\Spec(\sh{O}_{S_\lambda,s_\lambda})$ en vertu de \sref{IV.8.2.12} et \sref{IV.8.2.9}, donc les points de $\varprojlim M'_\lambda$ sont aussi points maximaux de $\Spec(\sh{O}_{S,s})$ d'après la première partie du raisonnement.
+Donc $M'=\varprojlim M'_\lambda$ se réduit nécessairement au point $s$ ; on en conclut que $M'_\lambda$ se réduit au point $s_\lambda$ et par suite les $s_\lambda$ sont maximaux dans les $S_\lambda$, ce qui achève de prouver le lemme.
+
+\begin{lemma}[20.3.8.4]
+\label{IV.20.3.8.4}
+Les hypothèses étant celles de \sref{IV.20.3.8.3}, supposons en outre $S_\alpha$ quasi-compact ; soit $V_\alpha$ un ensemble ouvert de $S_\alpha$, et soient $V_\lambda$ et $V$ ses images réciproques dans $S_\lambda$ pour $\lambda\geq\alpha$ et dans $S$.
+Si $U_\alpha$ est dense dans $S_\alpha$, $U_\lambda$ est dense dans $S_\lambda$ pour $\lambda\geq\alpha$ et $U$ est dense dans $S$.
+Inversement, si $U$ est dense dans $S$ et si de plus l'ensemble $M$ des points maximaux de $S$ est fini, il existe $\lambda\geq\alpha$ tel que $U_\lambda$ soit dense dans $S_\lambda$.
+\end{lemma}
+
+En effet, puisque $M_\alpha$ est fini, l'hypothèse que $U_\alpha$ est dense dans $S_\alpha$ entraîne que

@@ -1,0 +1,52 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{277}
+Pour prouver que l'homomorphisme $\varinjlim\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(X)$ est bijectif, il suffira de prouver de même que pour tout $Z\in\mathfrak{Z}^1(X)$ et tout $x\in T$, il y a un voisinage $W(x)$ de $x$ dans $X$ et un diviseur $D^{(x)}$ sur $W(x)$ tel que $\operatorname{cyc}(D^{(x)})=Z|W(x)$.
+En effet, on pourra alors recouvrir l'ensemble quasi-compact $T$ par un nombre fini de $W(x_i)$, et en vertu de la première partie de la démonstration, puisque les couples $(i,j)$ sont en nombre fini, il existera un indice $\lambda$ tel que dans chacun des $W(x_i)\cap W(x_j)\cap U_\lambda$, les restrictions de $D^{(x_i)}$ et $D^{(x_j)}$ coïncident;
+comme on peut supposer en outre que $U_\lambda$ est contenu dans la réunion des $W(x_i)$, on voit que les restrictions $D^{(x_i)}|(W(x_i)\cap U_\lambda)$ sont les restrictions d'un même diviseur $D\in\operatorname{Div}(U_\lambda)$ qui sera tel que $\operatorname{cyc}(D)=Z|U_\lambda$.
+On est donc ramené encore au cas où $X=\Spec(\sh{O}_{X,x})$ avec $x\in T$, mais comme $\sh{O}_{X,x}$ est factoriel, il en est de même de ses localisés (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~3, n\textsuperscript{o}~4, prop.~3), et il suffit d'appliquer \sref{IV.21.6.9}, (ii).
+\end{proof}
+
+\begin{corollary}[21.6.13]
+\label{IV.21.6.13}
+Soit $A$ un anneau local noethérien intègre et intégralement clos et de dimension $\geq2$.
+Posons $X=\Spec(A)$, et soient $a$ le point fermé de $X$, $U=X-\{a\}$.
+Pour que $A$ soit factoriel, il faut et il suffit que $U$ soit localement factoriel et que $\operatorname{Pic}(U)=0$.
+\end{corollary}
+
+\begin{proof}
+En effet, dire que $A$ est factoriel équivaut à dire que $\mathfrak{Cl}(X)=0$ (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~1, n\textsuperscript{o}~4, cor.\ du th.~2 et \textsection~3, n\textsuperscript{o}~2, th.~1);
+il suffit donc d'utiliser l'existence du second isomorphisme \sref{IV.21.6.12.1}, en prenant la famille $(U_\lambda)$ restreinte au seul ouvert $U$.
+\end{proof}
+
+\begin{corollary}[21.6.14]
+\label{IV.21.6.14}
+Soient $A$ un anneau local noethérien de dimension $\geq2$, $X=\Spec(A)$, $a$ le point fermé de $X$, $U=X-\{a\}$.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $A$ est factoriel.
+  \item $\operatorname{Pic}(U)=0$ et $\operatorname{prof}(A)\geq2$ (conditions que nous exprimerons plus loin \sref{IV.21.13} en disant que l'anneau $A$ est \emph{parafactoriel}), et $U$ est localement factoriel.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Il est clair que si $A$ est factoriel, il est normal, donc $\operatorname{prof}(A)\geq2$ puisque $\dim(A)\geq2$ \sref[0]{0.16.5.1}, et \sref{IV.21.6.13} montre que \emph{a)} implique \emph{b)}.
+Inversement, si \emph{b)} est vérifiée, il suffit de voir que $A$ est intégralement clos pour en conclure par \sref{IV.21.6.13} que \emph{b)} entraîne \emph{a)}.
+En vertu du critère de Serre \sref{IV.5.8.6}, il suffit de vérifier pour $X$ les conditions $(\mathrm{R}_1)$ et $(\mathrm{S}_2)$.
+Or, $U$ étant localement factoriel vérifie ces conditions, et l'hypothèse $\operatorname{prof}(A)\geq2$ entraîne que $X$ les vérifie également.
+\end{proof}
+\subsection{Interprétation des cycles positifs 1-codimensionnels en termes de sous-préschémas}
+\EGAReaderTarget{ega4.c04.subsec.21-7}{subsection:IV.21.7}
+\label{IV.21.7}
+
+\begin{env}[21.7.1]
+\label{IV.21.7.1}
+Soient $X$ un préschéma localement noethérien, $C=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}$ un cycle $1$-codimensionnel positif (de sorte que l'on a $n_x\geq0$ pour tout $x\in X^{(1)}$, et $n_x=0$ sauf en un ensemble localement fini de points).
+Désignons par $Y(C)$ le sous-préschéma fermé de $X$, \emph{image fermée} (\sref[I]{I.9.5.3} et \sref{IV.9.5.1}) du préschéma \emph{somme} $Y'(C)=\coprod_{x\in X^{(1)}}\Spec(\sh{O}_{X,x}/\mathfrak{m}_x^{n_x})$ par le morphisme canonique, et par $\sh{J}_X(C)$ (ou $\sh{J}(C)$) l'Idéal de $\sh{O}_X$ définissant $Y(C)$.
+\end{env}
+
+\begin{proposition}[21.7.2]
+\label{IV.21.7.2}
+Soit $X$ un préschéma localement noethérien vérifiant la condition $(\mathrm{R}_1)$ \sref{IV.5.8.2}.
+Pour qu'un sous-préschéma fermé $Y$ de $X$ soit de la forme $Y(C)$, où $C$ est un cycle $1$-codimensionnel positif, il faut et il suffit qu'il vérifie les deux conditions suivantes:
+\begin{enumerate}[label=(\roman*)]
+  \item $Y$ est purement de codimension $1$.

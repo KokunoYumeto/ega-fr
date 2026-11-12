@@ -1,0 +1,86 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{50}
+abéliennes [32]). Rappelons rapidement ici la notion de \emph{pro-objet} d'une
+catégorie, renvoyant au chap.~V pour de plus amples développements (nous
+n'utiliserons d'ailleurs pas avant le chap.~V l'interprétation qui va suivre,
+et le lecteur peut donc omettre jusque-là la lecture de la fin de ce numéro).
+Étant donnée une catégorie $\mathcal C$, la catégorie
+$\mathbf{Pro}(\mathcal C)$ des \emph{pro-objets} de $\mathcal C$ a pour objets
+les \emph{systèmes projectifs} (dans l'univers où l'on se place)
+$\mathbf X=(X_\mu)_{\mu\in M}$ d'objets de $\mathcal C$ dont les ensembles
+d'indices (dépendant du système projectif considéré) sont supposés préordonnés
+filtrants. Étant donnés deux tels pro-objets
+$\mathbf X=(X_\mu)_{\mu\in M}$,
+$\mathbf X'=(X'_{\mu'})_{\mu'\in M'}$, les \emph{morphismes} de $\mathbf X$
+dans $\mathbf X'$ sont par définition les éléments de l'ensemble
+\[
+\varprojlim_{\mu'}\left(\varinjlim_\mu
+\operatorname{Hom}(X_\mu,X'_{\mu'})\right)~;
+\]
+la vérification du fait que l'on peut prendre ces ensembles pour ensembles de
+morphismes est immédiate, la composition de systèmes de morphismes
+$u_{\mu'}^\mu:X_\mu\to X'_{\mu'}$,
+$u_{\mu''}^{\prime\mu'}:X'_{\mu'}\to X''_{\mu''}$ qui sont inductifs en
+l'indice supérieur et projectifs en l'indice inférieur, se faisant
+«~argument par argument~», autrement dit en considérant le système des
+$u_{\mu''}^{\prime\mu'}\circ u_{\mu'}^\mu$.
+\end{env}
+
+\begin{env}[8.13.4]
+\label{IV.8.13.4-fr}
+Considérons alors un préschéma quasi-compact et quasi-séparé $S$, et désignons
+par $\mathcal C$ la sous-catégorie pleine de la catégorie
+$(\mathbf{Sch})_{/S}$ des $S$-préschémas, formée des $S$-préschémas $X$ ayant
+la propriété suivante~: le morphisme structural $X\to S$ se factorise en
+\[
+X\xrightarrow{g}X_0\xrightarrow{f}S,
+\]
+où $g:X\to X_0$ est affine et $f:X_0\to S$ de présentation finie~; nous
+dirons pour abréger que les préschémas de $\mathcal C$ sont
+\emph{essentiellement affines au-dessus de $S$}.
+
+Considérons d'autre part la sous-catégorie pleine $\mathcal C'_0$ de
+$(\mathbf{Sch})_{/S}$ formée des $S$-préschémas \emph{de présentation finie},
+et la catégorie $\mathbf{Pro}(\mathcal C'_0)$ des pro-objets de
+$\mathcal C'_0$. Nous dirons qu'un objet
+$\mathbf X=(X_\mu)_{\mu\in M}$ de $\mathbf{Pro}(\mathcal C'_0)$ est
+\emph{essentiellement affine} s'il existe un $\gamma\in M$ tel que pour tout
+$\mu\geqslant\gamma$, le morphisme de transition
+$v_{\gamma\mu}:X_\mu\to X_\gamma$ soit affine (ce qui entraîne que pour
+$\gamma\leqslant\mu\leqslant\nu$, $v_{\mu\nu}:X_\nu\to X_\mu$ est affine).
+On notera qu'un objet de $\mathbf{Pro}(\mathcal C'_0)$ \emph{isomorphe} à un
+objet essentiellement affine \emph{n'est pas} nécessairement essentiellement
+affine lui-même.
+
+Nous désignerons par $\mathcal C'$ la sous-catégorie pleine de
+$\mathbf{Pro}(\mathcal C'_0)$ formée des pro-objets de $\mathcal C'_0$
+essentiellement affines.
+
+Cela étant, il résulte de (8.2.2) et (8.2.3) que pour tout objet
+$\mathbf X=(X_\mu)_{\mu\in M}$ de $\mathcal C'$, le $S$-préschéma
+$X=\varprojlim_\mu X_\mu$ existe~; en outre, comme, pour $\mu$ assez grand,
+le morphisme $X\to X_\mu$ est affine (8.2.2), $X$ est
+\emph{essentiellement affine au-dessus de $S$} par définition. Posons
+$X=L(\mathbf X)$~; montrons qu'on a ainsi défini un \emph{foncteur canonique}
+\begin{equation}
+\label{IV.8.13.4.1-fr}
+L:\mathcal C'\longrightarrow\mathcal C. \tag{8.13.4.1}
+\end{equation}
+
+On a en effet, pour deux objets $\mathbf X=(X_\mu)$,
+$\mathbf X'=(X'_{\mu'})$ de $\mathcal C'$, une application canonique pour
+chaque $\mu'$
+\[
+\varinjlim_\mu\operatorname{Hom}_S(X_\mu,X'_{\mu'})
+\longrightarrow
+\operatorname{Hom}_S(\varprojlim_\mu X_\mu,X'_{\mu'})
+\]
+définie dans (8.13.1.1), et d'autre part, par définition de la limite
+projective, une bijection canonique
+\[
+\varprojlim_{\mu'}
+\operatorname{Hom}_S(\varprojlim_\mu X_\mu,X'_{\mu'})
+\xrightarrow{\sim}
+\operatorname{Hom}_S(\varprojlim_\mu X_\mu,
+\varprojlim_{\mu'}X'_{\mu'}),
+\]

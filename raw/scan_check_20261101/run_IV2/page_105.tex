@@ -1,0 +1,96 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{105}
+
+(ii) Le raisonnement est le même que dans (i), à cela près qu'il faut se
+limiter aux $z\in X$ qui sont des générisations de $x$, et tenir compte de
+(5.1.3.2).
+
+\begin{proposition}[5.7.5]
+\label{IV.2.s5.7.5-fr}
+Soient $X$ un préschéma localement noethérien, $\mathscr F$ un
+$\mathcal O_X$-Module cohérent. Pour que $\mathscr F$ vérifie $(S_k)$
+($k\geq1$), il faut et il suffit que pour tout entier $r$ tel que
+$0\leq r<k$, tout ouvert $U$ de $X$ et toute suite
+$(\mathscr F|U)$-régulière $(f_i)_{1\leq i\leq r}$ de sections de
+$\mathcal O_X$ au-dessus de $U$,
+\[
+(\mathscr F|U)\big/\Big(\sum_{i=1}^r f_i(\mathscr F|U)\Big)
+\]
+soit sans cycle premier associé immergé.
+\end{proposition}
+
+Démontrons d'abord la proposition pour $k=1$; elle s'énonce alors encore en
+disant que pour que $\mathscr F$ vérifie $(S_1)$, il faut et il suffit que
+$\mathscr F$ soit sans cycle premier associé immergé. En effet, dire que
+$\mathscr F$ vérifie $(S_1)$ signifie qu'aux points
+$x\in\operatorname{Supp}(\mathscr F)$ tels que $\dim(\mathscr F_x)>0$, on a
+$\operatorname{prof}(\mathscr F_x)\geq1$ (puisque aux autres points de
+$\operatorname{Supp}(\mathscr F)$ on a $\dim(\mathscr F_x)=0$, donc
+$\operatorname{prof}(\mathscr F_x)=0$); mais dire que
+$\operatorname{prof}(\mathscr F_x)\geq1$ signifie que $\mathfrak m_x$
+n'est pas associé à $\mathscr F_x$ (0, 16.4.6, (i)), ou encore que $x$
+n'est pas associé à $\mathscr F$ (3.1.1); d'autre part, si $S$ est un
+sous-préschéma de $X$ ayant pour espace sous-jacent
+$\operatorname{Supp}(\mathscr F)$, on a (5.1.12.1)
+$\dim(\mathscr F_x)=\dim(\mathcal O_{S,x})$; dire que
+$\dim(\mathscr F_x)>0$ signifie donc que $x$ n'est pas point maximal de
+$\operatorname{Supp}(\mathscr F)$ (5.1.2), d'où la conclusion.
+
+En second lieu, montrons que, pour $k$ quelconque $>1$, la condition de
+l'énoncé est nécessaire. On peut se borner à considérer le cas où $U=X$,
+et notre assertion sera prouvée (par récurrence sur $k$ et en vertu de la
+première partie du raisonnement) si nous montrons que lorsque $\mathscr F$
+vérifie $(S_k)$ ($k>1$) et que $f$ est une section $\mathscr F$-régulière
+de $\mathcal O_X$ au-dessus de $X$, alors $\mathscr F/f\mathscr F$ vérifie
+$(S_{k-1})$ (i.e. vérifie (5.7.2.1) où $k$ est remplacé par $k-1$). Or,
+pour tout $x\in X$, $f_x$ est un élément $\mathscr F_x$-régulier; s'il est
+inversible, on a $\mathscr F_x/f_x\mathscr F_x=0$ et la conclusion est
+triviale. Si au contraire $f_x\in\mathfrak m_x$, on sait que l'on a
+$\operatorname{prof}(\mathscr F_x/f_x\mathscr F_x)
+=\operatorname{prof}(\mathscr F_x)-1$ (0, 16.4.6, (i)), et
+$\dim(\mathscr F_x/f_x\mathscr F_x)=\dim(\mathscr F_x)-1$ (0, 16.3.4), et
+notre assertion en résulte.
+
+Prouvons enfin que pour $k>1$, la condition de l'énoncé est suffisante. Nous
+allons procéder par récurrence sur $k$; soit $x$ un point de $X$, et
+supposons d'abord que $\dim(\mathscr F_x)\geq k$. L'hypothèse de récurrence
+entraîne que $\mathscr F$ vérifie $(S_{k-1})$, donc
+$\operatorname{prof}(\mathscr F_x)\geq k-1$; compte tenu de (0, 15.2.4), il
+y a donc un voisinage ouvert $U$ de $x$ et une suite
+$(\mathscr F|U)$-régulière $(f_i)_{1\leq i\leq k-1}$ de sections de
+$\mathcal O_X$ au-dessus de $U$, telles que $(f_i)_x\in\mathfrak m_x$ pour
+$1\leq i\leq k-1$. L'hypothèse entraîne que
+\[
+\mathscr G=(\mathscr F|U)\big/\Big(\sum_{i=1}^{k-1}
+f_i(\mathscr F|U)\Big)
+\]
+est sans cycle premier associé immergé; mais on a
+$\dim(\mathscr G_x)=\dim(\mathscr F_x)-(k-1)\geq1$ (0, 16.3.4), donc $x$
+n'est pas associé à $\mathscr G$; on a donc
+$\operatorname{prof}(\mathscr G_x)\geq1$ (0, 16.4.6), et comme
+$\operatorname{prof}(\mathscr G_x)=\operatorname{prof}(\mathscr F_x)-(k-1)$
+(0, 16.4.6), on a $\operatorname{prof}(\mathscr F_x)\geq k$. Supposons en
+second lieu que $\dim(\mathscr F_x)=r<k$; comme $\mathscr F$ vérifie
+$(S_{k-1})$, on a
+$\operatorname{prof}(\mathscr F_x)\geq\inf(k-1,r)=r$, et cela achève la
+démonstration.
+
+\begin{corollary}[5.7.6]
+\label{IV.2.s5.7.6-fr}
+Supposons que $\mathscr F$ vérifie $(S_k)$ ($k\geq1$); si
+$(f_i)$ ($1\leq i\leq r$) est une suite $\mathscr F$-régulière de sections
+de $\mathcal O_X$ au-dessus de $X$ et si $r<k$,
+$\mathscr F/(\sum_{i=1}^r f_i\mathscr F)$ vérifie $(S_{k-r})$.
+\end{corollary}
+
+Cela résulte immédiatement de (5.7.5).
+
+\begin{corollary}[5.7.7]
+\label{IV.2.s5.7.7-fr}
+Pour que $\mathscr F$ vérifie $(S_2)$, il faut et il suffit que $\mathscr F$
+soit sans cycle premier associé immergé et que pour tout ouvert $U$ de $X$
+et toute section $(\mathscr F|U)$-régulière $f$ de $\mathcal O_X$ au-dessus
+de $U$, $(\mathscr F|U)/f(\mathscr F|U)$ soit sans cycle premier associé
+immergé.
+\end{corollary}
+

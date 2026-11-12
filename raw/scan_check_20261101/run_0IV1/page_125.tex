@@ -1,0 +1,103 @@
+% from ega0-20-fr.tex
+\oldpage[0\textsubscript{IV-1}]{125}
+par celle de $B\otimes_A B$ est moins fine que la topologie sur $\mathfrak{J}$
+déduite de celle de $B$. Pour démontrer la seconde assertion, écrivons
+$M\otimes N$, par abus de notation, le sous-module
+$\operatorname{Im}(M\otimes_A N)$ pour deux sous-$A$-modules $M$, $N$ de $B$.
+Utilisant la relation
+\[
+\begin{aligned}
+  (xy)\otimes z-x\otimes(yz)
+  &=(x\otimes1)(1\otimes z)(y\otimes1-1\otimes y)\\
+  &=xz.(y\otimes1-1\otimes y)
+    -x.(z\otimes1-1\otimes z)(y\otimes1-1\otimes y)
+\end{aligned}
+\]
+dans le $B$-module $B\otimes_A B$ (défini par $j_1$), on voit aussitôt,
+compte tenu de \sref{0.20.4.4-fr}, que, si $\mathfrak{R}$ est un idéal de
+$B$, on a
+\[
+  ((\mathfrak{R}^2\otimes B)+(B\otimes\mathfrak{R}^2))\cap\mathfrak{J}
+  \subset(\mathfrak{R}\otimes\mathfrak{R})\cap\mathfrak{J}
+  +\mathfrak{R}\mathfrak{J}+\mathfrak{J}^2
+\]
+et d'autre part, si $x_i$, $y_i$ sont des éléments de $\mathfrak{R}$ tels
+que $\sum_i(x_i\otimes y_i)\in\mathfrak{J}$, il résulte de
+\sref{0.20.4.4.1-fr} que l'on a
+$\sum_i(x_i\otimes y_i)\in\mathfrak{R}\mathfrak{J}$, si bien que finalement
+\begin{equation}
+\tag{20.4.5.1}
+\label{0.20.4.5.1-fr}
+  (\mathfrak{R}^2\otimes B+B\otimes\mathfrak{R}^2)\cap\mathfrak{J}
+  \subset\mathfrak{R}\mathfrak{J}+\mathfrak{J}^2.
+\end{equation}
+Or, on a un système fondamental de voisinages de $0$ dans $\mathfrak{J}$
+(pour la topologie induite par celle de $B\otimes_A B$) en prenant pour
+voisinages de $0$ les ensembles
+$(\mathfrak{R}\otimes B+B\otimes\mathfrak{R})\cap\mathfrak{J}$, où
+$\mathfrak{R}$ parcourt l'ensemble des idéaux ouverts. Comme la topologie de
+$\Omega^1_{B/A}$ déduite de celle de $B$ est aussi le quotient par
+$\mathfrak{J}^2$ de la topologie de $\mathfrak{J}$ déduite de celle de $B$,
+l'hypothèse sur les idéaux ouverts de $B$ et la relation
+\sref{0.20.4.5.1-fr} achèvent de prouver la seconde assertion.
+\end{proof}
+
+\begin{definition}[20.4.6]
+\label{0.20.4.6-fr}
+Soient $p_1$ et $p_2$ les applications composées
+$B\xrightarrow{j_1}B\otimes_A B\to\mathrm{P}^1_{B/A}$,
+$B\xrightarrow{j_2}B\otimes_A B\to\mathrm{P}^1_{B/A}$, qui sont des
+$A$-homomorphismes continus tels que
+$\varepsilon\circ p_1=\varepsilon\circ p_2=\mathrm{I}_B$. Le
+$A$-homomorphisme continu de $A$-modules
+\begin{equation}
+\tag{20.4.6.1}
+\label{0.20.4.6.1-fr}
+  d_{B/A}=p_1-p_2:B\to\Omega^1_{B/A}
+\end{equation}
+est appelé la \emph{différentielle extérieure de $B$ relative à $A$} ; pour
+tout $x\in B$, $d_{B/A}(x)$ (aussi noté $d(x)$ ou $dx$) est appelé la
+\emph{différentielle de $x$} (relativement à $A$).
+\end{definition}
+
+Lorsque $A=\mathbf{Z}$, on écrit $d_B$ au lieu de $d_{B/\mathbf{Z}}$ ; si $B$
+est une algèbre sur un corps premier $P$, on a $d_B=d_{B/P}$.
+
+\begin{proposition}[20.4.7]
+\label{0.20.4.7-fr}
+Le $B$-module $\Omega^1_{B/A}$ est engendré par les éléments $d_{B/A}(x)$,
+où $x$ parcourt un système de générateurs de la $A$-algèbre $B$.
+\end{proposition}
+
+\begin{proof}
+Comme $d_{B/A}(x)$ est l'image canonique de $x\otimes1-1\otimes x$ dans
+$\Omega^1_{B/A}$, la proposition est une conséquence immédiate de
+\sref{0.20.4.4-fr}.
+\end{proof}
+
+\begin{theorem}[20.4.8]
+\label{0.20.4.8-fr}
+Soient $A$ un anneau topologique, $B$ une $A$-algèbre topologique.
+\begin{enumerate}
+  \item[\rm(i)] Il existe un isomorphisme unique de $B$-algèbres augmentées
+  topologiques
+\begin{equation}
+\tag{20.4.8.1}
+\label{0.20.4.8.1-fr}
+  \varphi:\mathrm{P}^1_{B/A}\xrightarrow{\sim}D_B(\Omega^1_{B/A})
+\end{equation}
+qui se réduit à l'identité dans $\Omega^1_{B/A}$.
+  \item[\rm(ii)] L'homomorphisme $d_{B/A}$ est une $A$-dérivation de $B$
+  dans $\Omega^1_{B/A}$, ayant la propriété universelle suivante : pour tout
+  $B$-module topologique $L$, l'application $u\mapsto u\circ d_{B/A}$ est
+  un isomorphisme de $A$-modules
+\begin{equation}
+\tag{20.4.8.2}
+\label{0.20.4.8.2-fr}
+  \operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)
+  \xrightarrow{\sim}\operatorname{D\acute{e}r.\ cont}_A(B,L).
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}

@@ -1,0 +1,85 @@
+% from ega0-15-fr.tex
+\oldpage[0\textsubscript{IV-1}]{13}
+ne dépend que de $\xi$ et de $P$, et si $S_k$ est l'ensemble des polynômes
+homogènes de degré $k$ dans $A[T_1,\ldots,T_n]$, on a ainsi défini une
+application $A$-linéaire
+\[
+  \varphi_k:\gr_0(M)\otimes_A S_k\longrightarrow\gr_k(M),
+\]
+qui est surjective par définition de $\mathfrak{J}^kM$.
+
+Nous dirons dans ce qui suit qu'un élément $f\in A$ est \emph{non diviseur de
+zéro dans un $A$-module $M$} si l'homothétie $f_M:x\mapsto fx$ de $M$ est
+\emph{injective}.
+\end{env}
+
+\begin{lemma}[15.1.2]
+\label{0.15.1.2-fr}
+Soient $M$ un $A$-module, $f$ un élément de $A$, et munissons $M$ de la
+filtration $(fA)$-préadique. Si $f$ est non diviseur de zéro dans $M$,
+l'homomorphisme canonique défini dans (15.1.1)~:
+\[
+  \varphi:(M/fM)[T]\longrightarrow\gr_\bullet(M)
+  \tag{15.1.2.1}\label{0.15.1.2.1-fr}
+\]
+est bijectif. La réciproque est vraie si $M$ est séparé pour la topologie
+$(fA)$-préadique.
+\end{lemma}
+
+\begin{proof}
+On a ici $\gr_k(M)=f^kM/f^{k+1}M$~; dire que $\varphi$ est injective signifie
+que pour tout $x\in M$ et tout $k$, la relation $f^kx\in f^{k+1}M$ implique
+$x\in fM$~; il est clair qu'il en est bien ainsi si $f$ est non diviseur de
+zéro dans $M$. Inversement, remarquons que l'homothétie
+$f_M:x\mapsto fx$ définit par passage aux quotients, des homomorphismes
+$\gr_k(M)\to\gr_{k+1}(M)$, donc un homomorphisme gradué $g$ de degré $1$ de
+$\gr_\bullet(M)$ dans lui-même~; et dire que $\varphi$ est injectif exprime
+encore que $g$ est injectif. Si on suppose la filtration de $M$ séparée, il en
+résulte que $f_M$ est injective (Bourbaki, \emph{Alg.~comm.}, chap.~III,
+\S~2, no~8, cor.~1 du th.~1).
+\end{proof}
+
+\begin{corollary}[15.1.3]
+\label{0.15.1.3-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini. Pour que $f$
+soit non diviseur de zéro dans $M$, il faut et il suffit que $\varphi$ soit
+bijectif.
+\end{corollary}
+
+\begin{proof}
+On doit seulement démontrer que la condition est suffisante~; pour prouver
+que $f_M$ est injective, il suffit de montrer que pour tout idéal premier
+$\mathfrak p$ de $A$, l'homothétie de rapport
+$f'=f/1\in A'=A_{\mathfrak p}$ dans le $A_{\mathfrak p}$-module
+$M_{\mathfrak p}=M'$ est injective (Bourbaki, \emph{Alg.~comm.}, chap.~II,
+\S~3, no~4, th.~1). Or on a
+$f'^kM'/f'^{k+1}M'=(f^kM/f^{k+1}M)\otimes_A A'$, et il est immédiat que
+l'homomorphisme canonique
+$\varphi':(M'/f'M')[T]\to\gr_\bullet(M')$ est égal à
+$\varphi\otimes 1_{A'}$~; si $\varphi$ est injectif, il en est donc de même de
+$\varphi'$ ($0_{\mathrm I}$, 1.3.2). On est donc ramené au cas où $A$ est un
+anneau noethérien \emph{local}, dont nous désignerons par $\mathfrak m$
+l'idéal maximal. Si $f\notin\mathfrak m$, alors $f$ est inversible et il n'y a
+rien à démontrer. Si $f\in\mathfrak m$, on sait que $M$ est séparé pour la
+topologie $(fA)$-préadique ($0_{\mathrm I}$, 7.3.5), et il suffit donc
+d'appliquer (15.1.2).
+\end{proof}
+
+\begin{definition}[15.1.4]
+\label{0.15.1.4-fr}
+Soient $A$ un anneau, $M$ un $A$-module. On dit qu'un élément $f\in A$ est
+\emph{$M$-régulier} (resp. \emph{$M$-quasi-régulier}) si $f$ est non diviseur
+de zéro dans $M$ (resp. si l'homomorphisme (15.1.2.1) est bijectif).
+\end{definition}
+
+Nous venons donc de démontrer que tout élément $M$-régulier est
+$M$-quasi-régulier, et que la réciproque est vraie si $A$ est noethérien et
+$M$ un $A$-module de type fini. Lorsqu'on ne suppose plus $M$ de type fini,
+cette réciproque peut être en défaut~: par exemple, si $A$ est un anneau
+principal qui n'est pas un corps, $K$ son corps des fractions et $M$ le
+$A$-module $K/A$, on a $fM=M$ pour tout $f\neq0$ dans $A$, donc les deux
+membres de (15.1.2.1) sont réduits à $0$, mais $f$ est alors diviseur de zéro
+dans $M$.
+
+\begin{env}[15.1.5]
+\label{0.15.1.5-fr}

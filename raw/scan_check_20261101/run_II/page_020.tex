@@ -1,0 +1,79 @@
+% from ega2-1-fr.tex
+\oldpage[II]{20}
+des $M_{nd+k}$ ($n\in\mathbf{Z}$)~; c'est un $S^{(d)}$-module gradué, quand
+on considère les éléments de $M_{nd+k}$ comme homogènes de degré $n$. On
+écrira $M^{(d)}$ au lieu de $M^{(d,0)}$.
+
+Avec les notations précédentes, pour tout entier $n$ (positif ou négatif),
+nous désignerons par $M(n)$ le $S$-module gradué défini par
+$(M(n))_k=M_{n+k}$ pour tout $k\in\mathbf{Z}$. En particulier, $S(n)$ sera
+un $S$-module gradué tel que $(S(n))_k=S_{n+k}$, en convenant de poser
+$S_n=0$ pour $n<0$. On dit qu'un $S$-module gradué $M$ est \emph{libre}
+s'il est isomorphe, en tant que \emph{module gradué}, à une somme directe de
+modules de la forme $S(n)$~; comme $S(n)$ est un $S$-module monogène,
+engendré par l'élément $1$ de $S$ considéré comme élément de degré $-n$, il
+revient au même de dire que $M$ admet une \emph{base} sur $S$ formée
+d'éléments \emph{homogènes}.
+
+On dit qu'un $S$-module gradué $M$ \emph{admet une présentation finie} s'il
+existe une suite exacte $P\to Q\to M\to0$, où $P$ et $Q$ sont des sommes
+directes finies de modules de la forme $S(n)$ et les homomorphismes sont de
+degré $0$ (cf. (\hyperref[II.2.1.2-fr]{2.1.2})).
+\end{notation}
+
+\begin{env}[2.1.2]
+\label{II.2.1.2-fr}
+Soient $M$, $N$ deux $S$-modules gradués~; on définit sur $M\otimes_S N$ une
+structure de $S$-module \emph{gradué} de la façon suivante. Sur le produit
+tensoriel $M\otimes_{\mathbf{Z}}N$, on peut définir une structure de
+$\mathbf{Z}$-module gradué (où $\mathbf{Z}$ est gradué par
+$\mathbf{Z}_0=\mathbf{Z}$, $\mathbf{Z}_n=0$ pour $n\ne0$) en posant
+\[
+  (M\otimes_{\mathbf{Z}}N)_q
+  =\bigoplus_{m+n=q}M_m\otimes_{\mathbf{Z}}N_n
+\]
+(comme $M$ et $N$ sont respectivement sommes directes des $M_m$ et des
+$N_n$, on sait que l'on peut identifier canoniquement
+$M\otimes_{\mathbf{Z}}N$ à la somme directe de tous les
+$M_m\otimes_{\mathbf{Z}}N_n$). Cela étant, on a
+$M\otimes_S N=(M\otimes_{\mathbf{Z}}N)/P$, où $P$ est le
+sous-$\mathbf{Z}$-module de $M\otimes_{\mathbf{Z}}N$ engendré par les
+éléments $(xs)\otimes y-x\otimes(sy)$ pour $x\in M$, $y\in N$, $s\in S$~;
+il est clair que $P$ est un sous-$\mathbf{Z}$-module \emph{gradué} de
+$M\otimes_{\mathbf{Z}}N$, et on voit aussitôt qu'on obtient bien en passant
+au quotient une structure de $S$-module gradué sur $M\otimes_S N$.
+
+Pour deux $S$-modules gradués $M$, $N$, rappelons qu'un homomorphisme
+$u:M\to N$ de $S$-modules est dit \emph{de degré $k$} si
+$u(M_j)\subset N_{j+k}$ pour tout $j\in\mathbf{Z}$. Si $H_n$ désigne
+l'ensemble de tous les homomorphismes de degré $n$ de $M$ dans $N$, on
+désigne par $\operatorname{Hom}_S(M,N)$ la \emph{somme} (directe) des $H_n$
+($n\in\mathbf{Z}$) dans le $S$-module $H$ de tous les homomorphismes (de
+$S$-module) de $M$ dans $N$~; en général $\operatorname{Hom}_S(M,N)$ n'est
+pas égal à ce dernier. Toutefois, on a $H=\operatorname{Hom}_S(M,N)$ lorsque
+$M$ est \emph{de type fini}~; on peut en effet supposer alors $M$ engendré
+par un nombre fini d'éléments homogènes $x_i$ ($1\leq i\leq n$), et tout
+homomorphisme $u\in H$ s'écrit d'une seule manière
+$\sum_{k\in\mathbf{Z}}u_k$, où pour chaque $k$, $u_k(x_i)$ est égal au
+composant homogène de degré $k+\deg(x_i)$ de $u(x_i)$ ($1\leq i\leq n$), ce
+qui entraîne $u_k=0$ sauf pour un nombre fini d'indices~; on a par définition
+$u_k\in H_k$, d'où la conclusion.
+
+On dit que les éléments de degré $0$ de $\operatorname{Hom}_S(M,N)$ sont des
+\emph{homomorphismes de $S$-modules gradués}. Il est clair que
+$S_mH_n\subset H_{m+n}$, donc les $H_n$ définissent sur
+$\operatorname{Hom}_S(M,N)$ une structure de $S$-module gradué.
+
+Il résulte aussitôt de ces définitions que l'on a
+\[
+  \label{II.2.1.2.1-fr}
+  M(m)\otimes_S N(n)=(M\otimes_S N)(m+n),
+  \tag{2.1.2.1}
+\]
+\[
+  \label{II.2.1.2.2-fr}
+  \operatorname{Hom}_S(M(m),N(n))
+  =(\operatorname{Hom}_S(M,N))(n-m)
+  \tag{2.1.2.2}
+\]
+pour deux $S$-modules gradués $M$, $N$.

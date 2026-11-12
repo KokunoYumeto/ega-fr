@@ -1,0 +1,32 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{204}
+
+dimensions de ces deux anneaux réguliers sont égales ($0$, 17.1.9). Mais en vertu de ($0$, 17.3.3), cela équivaut aussi à l'égalité des dimensions des deux anneaux $\sh{O}_{Z,z}\otimes_{\sh{O}_{X,x}}\mathbf k(x)$ et $\sh{O}_{X',x'}\otimes_{\sh{O}_{X,x}}\mathbf k(x)$, si bien que finalement on peut remplacer $X'$ et $Z$ par les \emph{fibres} $q^{-1}(x)$ et $Z\cap p^{-1}(x)$ respectivement, et se ramener à prouver que le morphisme $q^{-1}(x)\to Z\cap p^{-1}(x)$ déduit de $j$ est un \emph{isomorphisme}. Or, on peut ici se borner au cas où $X=\Spec(B)$ avec $B=\sh{O}_{X,x}$ et $E=B^m$, d'où $S=B[T_1,\ldots,T_m]$; en outre, l'hypothèse signifie qu'il existe un système régulier de paramètres $(t_i)_{1\leq i\leq n}$ de $B$ tel que $u(T_i)=t_i$ pour $1\leq i\leq m$ ($0$, 17.1.7); soit $\mathfrak J$ l'image de $u$; si $\mathfrak m$ est l'idéal maximal de $B$, on a $\mathfrak J^n\otimes_B B/\mathfrak m=\mathfrak J^n/\mathfrak m\mathfrak J^n=(\mathfrak J^n/\mathfrak J^{n+1})\otimes_B(B/\mathfrak m)$ et par suite (16.9.4.1), $(\bigoplus_{n\geq0}\mathfrak J^n)\otimes_B\mathbf k(x)$ s'identifie à $\mathbf k(x)[T_1,\ldots,T_m]$, d'où résulte que l'immersion $q^{-1}(x)\to p^{-1}(x)$ est ici un \emph{isomorphisme}; ceci implique \emph{a fortiori} que le sous-préschéma fermé $Z\cap p^{-1}(x)$ est identique à la fibre $p^{-1}(x)$, et termine la démonstration de (19.4.11).
+
+\subsection{Critères de M-régularité.}
+\EGAReaderTarget{ega4.c04.subsec.19-5}{subsection:IV.19.5}
+
+Nous reprenons ici, en les complétant, les critères pour qu'une suite d'éléments d'un anneau $A$ soit M-régulière ou M-quasi-régulière ($M$ étant un $A$-module), déjà étudiés dans ($0$, 15.1).
+
+\begin{theorem}[19.5.1]
+\label{IV.19.5.1}
+Soient $A$ un anneau, $\mathbf f=(f_i)_{1\leq i\leq n}$ une suite d'éléments de $A$, $M$ un $A$-module. Considérons les propriétés suivantes:
+\begin{enumerate}
+  \item[a)] La suite $\mathbf f$ est M-régulière.
+  \item[b)] On a $\operatorname{H}_i(\mathbf f,M)=0$ pour tout $i>0$ (III, 1.1.3).
+  \item[b$'$)] On a $\operatorname{H}_1(\mathbf f,M)=0$.
+  \item[c)] La suite $\mathbf f$ est M-quasi-régulière.
+\end{enumerate}
+Alors on a les implications
+\[
+  a)\Rightarrow b)\Rightarrow b')\qquad\text{et}\qquad a)\Rightarrow c).
+\]
+Posons $\mathfrak J=\sum_{i=1}^n f_iA$. Si les modules $M_i=M/(\sum_{j=1}^i f_jM)$ sont séparés pour la topologie $\mathfrak J$-préadique (resp. si tout module quotient d'un sous-module de $M$ est séparé pour la topologie $\mathfrak J$-préadique), alors on a aussi l'implication $c)\Rightarrow a)$ (resp. $b')\Rightarrow a)$.
+\end{theorem}
+
+Les implications $a)\Rightarrow c)$, et $c)\Rightarrow a)$ lorsque les $M_i$ sont séparés pour la topologie $\mathfrak J$-préadique, ont déjà été prouvées ($0$, 15.1.9), et ne sont données que pour mémoire. On a aussi montré (III, 1.1.4 et 1.1.3.3) que $a)$ entraîne $b)$, et $b)$ implique trivialement $b')$. Il reste donc à voir que lorsque tout module quotient d'un sous-module de $M$ est séparé pour la topologie $\mathfrak J$-préadique, $b')$ entraîne $a)$. Raisonnons par récurrence sur $n$. Pour $n=1$, l'assertion résulte trivialement des définitions, car alors $\operatorname{H}_1(\mathbf f,M)$ n'est autre que le noyau de l'homothétie $z\mapsto f_1z$ dans $M$ (III, 1.1.1 et 1.1.2). Supposons donc $n\geq2$, et posons $\mathbf f'=(f_i)_{1\leq i\leq n-1}$; avec les notations de (III, 1.1.2), on a $\operatorname{K}_\bullet(\mathbf f,M)=\operatorname{K}_\bullet(f_n)\otimes_A\operatorname{K}_\bullet(\mathbf f',M)$. On a donc (III, 1.1.4.1) la suite exacte
+\begin{equation}
+  0\longrightarrow\operatorname{H}_0(f_n,\operatorname{H}_1(\mathbf f',M))\longrightarrow\operatorname{H}_1(\mathbf f,M)\longrightarrow\operatorname{H}_1(f_n,\operatorname{H}_0(\mathbf f',M))\longrightarrow0.
+  \tag{19.5.1.1}\label{IV.19.5.1.1}
+\end{equation}
+

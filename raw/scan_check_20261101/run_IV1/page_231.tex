@@ -1,0 +1,67 @@
+% from ega4-1-fr.tex
+\oldpage[IV-1]{231}
+
+  \item[(iii)] Si $f:X\to Y$ est un $S$-morphisme localement de présentation
+  finie, $f_{(S')}:X_{(S')}\to Y_{(S')}$ est localement de présentation finie
+  pour toute extension $S'\to S$ du préschéma de base.
+  \item[(iv)] Si $f:X\to X'$ et $g:Y\to Y'$ sont deux $S$-morphismes
+  localement de présentation finie, $f\times_Sg$ est localement de
+  présentation finie.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est localement de
+  présentation finie et si $g$ est localement de type fini, alors $f$ est
+  localement de présentation finie.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'assertion (i) est triviale. Pour démontrer (iii), on peut se limiter au cas
+où $S=Y$ (I, 3.3.11)~; soient $x'$ un point de $X_{(S')}$, $s'$ et $x$ ses
+projections sur $S'$ et $X$ respectivement, $s$ la projection commune de $s'$
+et $x$ sur $S$. Par hypothèse, il y a un voisinage ouvert affine $V$ (resp.
+$U$) de $s$ (resp. $x$) tels que l'image de $U$ soit contenue dans $V$ et que
+$A(U)$ soit une $A(V)$-algèbre de présentation finie~; soit $V'$ un voisinage
+ouvert affine de $s'$ dont l'image dans $S$ soit contenue dans $V$~; alors
+$U\times_VV'$ est un voisinage ouvert affine de $x'$ dont l'image dans $S'$
+est contenue dans $V'$ et dont l'anneau $A(U)\otimes_{A(V)}A(V')$ est une
+$A(V')$-algèbre de présentation finie (1.4.1).
+
+Pour démontrer (ii), considérons un point $x\in X$, et soient $y=f(x)$,
+$z=g(f(x))$. Il y a par hypothèse un voisinage ouvert affine $W=\operatorname{Spec}(C)$
+(resp. $V=\operatorname{Spec}(B)$) de $z$ (resp. $y$) tels que $g(V)\subset W$ et que $B$
+soit une $C$-algèbre de présentation finie. D'autre part, il y a un voisinage
+ouvert affine $V'=\operatorname{Spec}(B')$ (resp. $U=\operatorname{Spec}(A)$) de $y$ (resp. $x$) tels que
+$f(U)\subset V'$ et que $A$ soit une $B'$-algèbre de présentation finie. Soit
+$s\in B$ tel que l'ouvert $D(s)=\operatorname{Spec}(B_s)$ dans $V$ soit un voisinage de $y$
+contenu dans $V'$, et soit $U'=f^{-1}(D(s))\subset U$~; on a
+$U'=\operatorname{Spec}(A\otimes_{B'}B_s)$, et $A\otimes_{B'}B_s$ est une $B_s$-algèbre de
+présentation finie (1.4.1)~; d'aute part $B_s=B[T]/(1-sT)$ est une
+$B$-algèbre de présentation finie par définition~; par suite (1.4.1),
+$A\otimes_{B'}B_s$ est une $C$-algèbre de présentation finie, ce qui prouve
+(ii).
+
+On sait que (iv) résulte de (i), (ii) et (iii) (I, 3.5.1). Pour prouver (v),
+considérons le diagramme commutatif
+\[
+\xymatrix{
+X \ar[r]^{\Gamma_f} \ar[d] & X\times_ZY \ar[d]^{f\times 1} \\
+Y \ar[r]_{\Delta_g} & Y\times_ZY
+}
+\]
+qui identifie $X$ au produit des $(Y\times_ZY)$-préschémas $Y$ et
+$X\times_ZY$ (I, 5.3.7, $\Delta_g$ étant le morphisme diagonal). Si l'on sait
+que $\Delta_g$ est localement de présentation finie, il en résultera par
+(iii) qu'il en est de même de $\Gamma_f$. D'autre part, on a la factorisation
+de $f$ en
+$X\xrightarrow{\Gamma_f}X\times_ZY\xrightarrow{p_2}Y$ (I, 5.3.13), où la
+projection $p_2$ est égale à $(g\circ f)\times_Z1_Y$~; comme $g\circ f$ est
+supposé localement de présentation finie, il en est de même de $p_2$ par
+(iv), et il résultera finalement de (ii) que $f$ est aussi localement de
+présentation finie. On voit donc qu'on est ramené à démontrer le
+\end{proof}
+
+\begin{corollary}[1.4.3.1]
+\label{IV.1.4.3.1-fr}
+Soit $g:Y\to Z$ un morphisme localement de type fini~; alors le morphisme
+diagonal $\Delta_g:Y\to Y\times_ZY$ est localement de présentation finie.
+\end{corollary}
+

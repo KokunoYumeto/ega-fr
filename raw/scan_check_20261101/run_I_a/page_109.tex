@@ -1,0 +1,83 @@
+% from ega1-3-fr.tex
+\oldpage[I]{109}
+nombre fini quelconque $n$ de $S$-préschémas, l'existence de ces produits
+résulte de (\hyperref[I.3.2.6-fr]{3.2.6}) par récurrence sur $n$, en remarquant
+que
+$(X_1\times_S X_2\times_S\cdots\times_S X_{n-1})\times_S X_n$ satisfait à
+la définition du produit. L'unicité du produit entraîne, comme dans toute
+catégorie, ses propriétés de \emph{commutativité} et d'\emph{associativité}.
+Si, par exemple, $p_1$, $p_2$, $p_3$ désignent les projections de
+$X_1\times_S X_2\times_S X_3$, et si on identifie ce préschéma à
+$(X_1\times_S X_2)\times_S X_3$, la projection dans $X_1\times_S X_2$ est
+identifiée à $(p_1,p_2)_S$.
+\end{env}
+
+\begin{env}[3.3.6]
+\label{I.3.3.6-fr}
+Soient $S$, $S'$ deux préschémas, $\varphi:S'\to S$ un morphisme, qui fait de
+$S'$ un $S$-préschéma. Pour tout $S$-préschéma $X$, considérons le produit
+$X\times_S S'$, et soient $p$ et $\pi'$ ses projections dans $X$ et $S'$,
+respectivement. Muni de $\pi'$, ce produit est un $S'$-préschéma~; quand on le
+considère comme tel, on le désigne par $X_{(S')}$ ou $X_{(\varphi)}$, et on dit
+que c'est le préschéma obtenu par \emph{extension du préschéma de base} de $S$
+à $S'$, au moyen du morphisme $\varphi$, ou l'\emph{image réciproque} de $X$
+par $\varphi$. On notera que si $\pi$ est le morphisme structural de $X$,
+$\theta$ le morphisme structural de $X\times_S S'$, considéré comme
+$S$-préschéma, le diagramme
+\phantomsection\label{I.3.3.6.base-change-diagram-fr}
+\[
+  \xymatrix{
+    X\ar[d]_{\pi} &
+    X_{(S')}\ar[l]_{p}\ar[ld]_{\theta}\ar[d]^{\pi'}\\
+    S & S'\ar[l]^{\varphi}
+  }
+\]
+est commutatif.
+\end{env}
+
+\begin{env}[3.3.7]
+\label{I.3.3.7-fr}
+Avec les notations de (\hyperref[I.3.3.6-fr]{3.3.6}), pour tout
+$S$-morphisme $f:X\to Y$, on note encore $f_{(S')}$ le $S'$-morphisme
+$f\times_S 1:X_{(S')}\to Y_{(S')}$, et on dit que $f_{(S')}$ est
+l'\emph{image réciproque} du morphisme $f$ par $\varphi$. $X_{(S')}$ est donc
+un \emph{foncteur covariant} en $X$, de la catégorie des $S$-préschémas dans
+celle des $S'$-préschémas.
+\end{env}
+
+\begin{env}[3.3.8]
+\label{I.3.3.8-fr}
+Le préschéma $X_{(S')}$ peut encore être considéré comme solution d'un
+\emph{problème d'application universelle}~: tout $S'$-préschéma $T$ est aussi
+un $S$-préschéma au moyen de $\varphi$~; tout $S$-morphisme $g:T\to X$
+s'écrit alors d'une seule manière $g=p\circ f$, où $f$ est un
+$S'$-morphisme $T\to X_{(S')}$, comme il résulte de la définition du produit
+appliquée aux $S$-morphismes $f$ et $\psi:T\to S'$ (morphisme structural de
+$T$).
+\end{env}
+
+\begin{proposition}[3.3.9]
+\label{I.3.3.9-fr}
+\textup{(«~transitivité de l'extension des préschémas de base~»).} Soient
+$S''$ un préschéma, $\varphi':S''\to S'$ un morphisme. Pour tout
+$S$-préschéma $X$, il existe un isomorphisme canonique fonctoriel du
+$S''$-préschéma $(X_{(\varphi)})_{(\varphi')}$ sur le $S''$-préschéma
+$X_{(\varphi\circ\varphi')}$.
+\end{proposition}
+
+En effet, soient $T$ un $S''$-préschéma, $\psi$ son morphisme structural,
+$g$ un $S$-morphisme de $T$ dans $X$ ($T$ étant considéré comme
+$S$-préschéma de morphisme structural $\varphi\circ\varphi'\circ\psi$).
+Comme $T$ est aussi un $S'$-préschéma de morphisme structural
+$\varphi'\circ\psi$, on peut écrire $g=p\circ g'$, où $g'$ est un
+$S'$-morphisme $T\to X_{(\varphi)}$, puis $g'=p'\circ g''$, où $g''$ est un
+$S''$-morphisme $T\to(X_{(\varphi)})_{(\varphi')}$~:
+\phantomsection\label{I.3.3.9.transitivity-diagram-fr}
+\[
+  \xymatrix{
+    X\ar[d]_{\pi} &
+    X_{(\varphi)}\ar[l]_{p}\ar[d]_{\pi'} &
+    (X_{(\varphi)})_{(\varphi')}\ar[l]_{p'}\ar[d]_{\pi''}\\
+    S & S'\ar[l]^{\varphi} & S''\ar[l]^{\varphi'}
+  }
+\]

@@ -1,0 +1,48 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{300}
+le support de $M''$ étant donc réduit à $\mathfrak{m}$, $M''$ est de longueur finie $(\mathbf{0},16.1.10)$.
+Si l'on pose $u'_i=u\otimes1_{A/\mathfrak{q}_i}$, et si $u''$ est l'endomorphisme de $M''$ déduit de $\bigoplus u'_i$ par passage aux quotients, on déduit de \sref{IV.21.10.17.6} que $\chi(M,u)+\chi(M'',u'')=\sum_i\chi(M'_i,u'_i)$, et puisque $M''$ est de longueur finie, $\chi(M'',u'')=0$.
+Pour prouver \sref{IV.21.10.17.8}, on peut donc se ramener au cas où $n=1$.
+On désignera alors par $\mathfrak{p}$ l'unique idéal premier minimal, qui est le nilradical de $A$;
+si $A_0=A/\mathfrak{p}$, $M_0=M\otimes_AA_0$, $u_0=u\otimes1_{A_0}$, il s'agit de prouver que si $\chi(M_0,u_0)$ est défini, on a
+\[
+\label{IV.21.10.17.9}
+  \chi(M,u)=\operatorname{long}A_{\mathfrak{p}}\cdot\chi(M_0,u_0).
+  \tag{21.10.17.9}
+\]
+
+Soit $\mathfrak{n}_j$ $(0\leq j\leq r)$ la « puissance symbolique $j$-ème » de $\mathfrak{p}$, image réciproque dans $A$ de l'idéal $(\mathfrak{p}A_{\mathfrak{p}})^j$ de $A_{\mathfrak{p}}$ $(1\leq j\leq r)$, avec $\mathfrak{n}_0=A$ et $\mathfrak{n}_r=0$;
+posons
+\[
+  M_j=\mathfrak{n}_jM/\mathfrak{n}_{j+1}M\qquad(0\leq j\leq r-1),
+\]
+et notons $v_j$ l'endomorphisme de $M_j$ déduit de $u$ par restriction à $\mathfrak{n}_jM$ et passage aux quotients.
+Nous allons d'abord montrer que chacun des nombres $\chi(M_j,v_j)$ est défini et que l'on a
+\[
+\label{IV.21.10.17.10}
+  \chi(M,u)=\sum_j\chi(M_j,v_j).
+  \tag{21.10.17.10}
+\]
+La première assertion entraînera la seconde, en appliquant \sref{IV.21.10.17.6} à chacune des suites exactes
+\[
+  0\to\mathfrak{n}_jM/\mathfrak{n}_{j+1}M\to M/\mathfrak{n}_{j+1}M\to M/\mathfrak{n}_jM\to0.
+\]
+
+Pour prouver la première assertion, on note que si $m$ est le rang du $A$-module libre $M$, $M_j$ est isomorphe à $(\mathfrak{n}_j/\mathfrak{n}_{j+1})^m$, ou encore (puisque $\mathfrak{p}$ annule chacun des quotients $\mathfrak{n}_j/\mathfrak{n}_{j+1}$), $M_j$ est un $A_0$-module isomorphe à $M_0\otimes_{A_0}(\mathfrak{n}_j/\mathfrak{n}_{j+1})$.
+Désignons par $l_j$ le rang du $A_0$-module $\mathfrak{n}_j/\mathfrak{n}_{j+1}$;
+comme le corps des fractions $K_0$ de $A_0$ est le corps résiduel de $A_{\mathfrak{p}}$, $l_j$ est aussi la longueur du $A_{\mathfrak{p}}$-module $(\mathfrak{p}A_{\mathfrak{p}})^j/(\mathfrak{p}A_{\mathfrak{p}})^{j+1}$.
+Il y a un système de générateurs du $A_0$-module $M_j$ qui contient une base de $M_j\otimes_{A_0}K_0$;
+donc il y a un $A_0$-homomorphisme
+\[
+  w_j:M_0^{l_j}\to M_j
+\]
+dont le localisé en l'idéal $(0)$ de $A_0$ est un isomorphisme, de sorte que le support de $\operatorname{Ker}(w_j)$ et de $\operatorname{Coker}(w_j)$ est réduit à l'idéal maximal $\mathfrak{m}/\mathfrak{p}$ de $A_0$;
+$\operatorname{Ker}(w_j)$ et $\operatorname{Coker}(w_j)$ sont donc des $A_0$-modules de longueur finie $(\mathbf{0},16.1.10)$.
+Comme par hypothèse $\chi(M_0,u_0)$ est défini, il en est de même de $\chi(M_0^{l_j},u_0^{l_j})=l_j\chi(M_0,u_0)$ et en vertu de \sref{IV.21.10.17.6} et du fait que $\operatorname{Ker}(w_j)$ et $\operatorname{Coker}(w_j)$ sont de longueur finie, on voit que $\chi(M_j,v_j)$ est défini et égal à $l_j\chi(M_0,u_0)$;
+la relation \sref{IV.21.10.17.10} donne alors
+\[
+  \chi(M,u)=\left(\sum_jl_j\right)\chi(M_0,u_0),
+\]
+et en vertu d'une remarque précédente, $\sum_jl_j$ n'est autre que la longueur de $A_{\mathfrak{p}}$, ce qui achève de prouver le lemme \sref{IV.21.10.17.7}.
+\end{proof}
+

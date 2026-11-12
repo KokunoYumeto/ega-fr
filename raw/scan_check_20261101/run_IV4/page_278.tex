@@ -1,0 +1,40 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{278}
+  \item $Y$ vérifie la condition $(\mathrm{S}_1)$, autrement dit \sref{IV.5.7.5} n'a pas de cycle premier associé immergé.
+\end{enumerate}
+On a alors
+\[
+\label{IV.21.7.2.1}
+  \operatorname{mult}_x(C)=\operatorname{long}\sh{O}_{Y,x}.
+  \tag{21.7.2.1}
+\]
+L'application $C\mapsto Y(C)$ est une bijection de $\mathfrak{Z}^{1+}(X)$ sur l'ensemble des sous-préschémas fermés de $X$ vérifiant les conditions (i) et (ii).
+\end{proposition}
+
+\begin{proof}
+Les conditions sont nécessaires (sans supposer que $X$ vérifie $(\mathrm{R}_1)$).
+En effet, la question étant locale sur $X$, on peut supposer que $X=\Spec(A)$, où $A$ est un anneau noethérien;
+on a alors $Y(C)=\Spec(A/\mathfrak{J})$, où $\mathfrak{J}$ est, par définition \sref[I]{I.9.5.1}, le noyau de l'homomorphisme canonique $A\to\bigoplus_i A_{\mathfrak{p}_i}/\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$, où les $\mathfrak{p}_i$ sont les idéaux premiers correspondant aux points $x\in X^{(1)}$ pour lesquels $n_x>0$, et où l'on a posé $n_i=n_x$.
+L'image réciproque $\mathfrak{q}_i$ de $\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$ dans $A$ est un idéal $\mathfrak{p}_i$-primaire et on a $\mathfrak{J}=\bigcap_i\mathfrak{q}_i$.
+D'ailleurs, comme les $x\in X^{(1)}$ sont tels que $\overline{\{x\}}$ est de codimension $1$, aucun point de $X^{(1)}$ ne peut être adhérent à un autre point de $X^{(1)}$.
+Donc les $\mathfrak{p}_i$ sont les idéaux premiers minimaux de $A/\mathfrak{J}$ et l'ensemble des $\mathfrak{p}_i$ est égal à $\operatorname{Ass}(A/\mathfrak{J})$, ce qui prouve les conditions (i) et (ii).
+
+Les conditions sont suffisantes.
+Désignant par $\sh{J}$ l'Idéal de $\sh{O}_X$ définissant $Y$, l'hypothèse (ii) implique que $\operatorname{Ass}(\sh{O}_X/\sh{J})$ est identique à l'ensemble $F$ des points maximaux de $Y$, et l'hypothèse (i) implique que $F$ est contenu dans $X^{(1)}$;
+donc \sref{IV.3.2.6} $\sh{O}_X/\sh{J}$ s'identifie à un sous-$\sh{O}_X$-Module de $\bigoplus_{x\in F}\mathscr{G}(x)$, où pour chaque $x\in F$, $\mathscr{G}(x)$ est un $\sh{O}_X$-Module irredondant tel que $\operatorname{Ass}(\mathscr{G}(x))=\{x\}$.
+Or, puisque $X$ vérifie $(\mathrm{R}_1)$, pour chaque $x\in F$, $\sh{O}_{X,x}$ est un anneau de valuation discrète et par suite les idéaux primaires non nuls de cet anneau sont les puissances $\mathfrak{m}_x^{n_x}$ de l'idéal maximal;
+supposant encore que $X=\Spec(A)$, on en conclut que $\sh{J}=\widetilde{\mathfrak{J}}$, où $\widetilde{\mathfrak{J}}=\bigcap_i\mathfrak{q}_i$, les $\mathfrak{q}_i$ étant les images réciproques dans $A$ d'idéaux $\mathfrak{p}_i^{n_i}A_{\mathfrak{p}_i}$, où les $\mathfrak{p}_i$ correspondent aux points de $F$.
+On voit donc bien que $Y$ est de la forme $Y(C)$.
+\end{proof}
+
+\begin{corollary}[21.7.3]
+\label{IV.21.7.3}
+Soit $X$ un préschéma localement noethérien.
+Pour tout diviseur positif $D$ sur $X$, tel que $X$ vérifie $(\mathrm{R}_1)$ aux points maximaux du sous-préschéma fermé $Y(D)$ \sref{IV.21.2.12}, $Y(D)$ majore le sous-préschéma fermé $Y(\operatorname{cyc}(D))$ \sref{IV.21.7.1}, et a même espace sous-jacent;
+pour que ces deux sous-préschémas soient égaux, il faut et il suffit que $Y(D)$ vérifie la condition $(\mathrm{S}_1)$, ou encore que, pour tout $z\in Y(D)$ distinct d'un point maximal de $Y(D)$, on ait $\operatorname{prof}(\sh{O}_{X,z})\geq2$ (condition toujours vérifiée lorsque $X$ est \emph{normal}).
+\end{corollary}
+
+\begin{proof}
+En effet, la question étant locale, on peut toujours supposer que $\sh{J}_X(D)=t\sh{O}_X$, $t$ étant une section régulière de $\sh{O}_X$ au-dessus de $X$;
+en tout point maximal $x$ de $Y(D)$, appartenant nécessairement à $X^{(1)}$, $\sh{O}_{X,x}$ est par hypothèse un anneau de valuation discrète, donc $t_x\sh{O}_{X,x}=\mathfrak{m}_x^{n_x}$ où $n_x=\operatorname{mult}_x(D)$.
+On peut supposer $X=\Spec(A)$, et alors, si $\sh{J}_X(\operatorname{cyc}(D))=\widetilde{\mathfrak{J}}$, il résulte de ce qui précède et de \sref{IV.21.7.1} que $\mathfrak{J}=tA$ et $\widetilde{\mathfrak{J}}$ ont mêmes \emph{idéaux primaires non immergés}, donc $\widetilde{\mathfrak{J}}\subset\mathfrak{J}$, puisque $\widetilde{\mathfrak{J}}$ est l'intersection

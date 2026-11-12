@@ -1,0 +1,87 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{154}
+
+Pour appliquer ce lemme à la situation de (11.5.5) on notera en outre que si
+l'homomorphisme $A\to A'$ est injectif, il en est ainsi \emph{a fortiori} de
+$A\to A'_{\lambda}$, pour tout $\lambda$.
+
+\begin{lemma}[11.5.5.2]
+\label{IV.11.5.5.2-fr}
+Soient $A$ un anneau, $A'$ une $A$-algèbre, $(A'_{\lambda})$ un système inductif
+de $A$-algèbres tel que $A'=\varinjlim A'_{\lambda}$~; on pose
+$Y=\operatorname{Spec}(A)$, $Y'=\operatorname{Spec}(A')$,
+$Y'_{\lambda}=\operatorname{Spec}(A'_{\lambda})$. Soient $f:X\to Y$ un
+morphisme de présentation finie, $\mathcal F$ un $\mathcal O_X$-Module
+quasi-cohérent de présentation finie~; on pose $X'=X\times_Y Y'$,
+$f'=f_{(Y')}$, $\mathcal F'=\mathcal F\otimes_Y Y'$,
+$X'_{\lambda}=X\times_Y Y'_{\lambda}$, $f'_{\lambda}=f_{(Y'_{\lambda})}$,
+$\mathcal F'_{\lambda}=\mathcal F\otimes_Y Y'_{\lambda}$. Soit $x$ un point de
+$X$, tel que $\mathcal F'$ soit $f'$-plat en tous les points $x'\in X'$
+au-dessus de $x$~; alors il existe $\lambda$ tel que $\mathcal F'_{\lambda}$
+soit $f'_{\lambda}$-plat en tous les points de $X'_{\lambda}$ au-dessus de $x$.
+\end{lemma}
+
+\begin{proof}
+Soit $U'$ l'ensemble des $x'\in X'$ tels que $\mathcal F'$ soit $f'$-plat au
+point $x'$~; on sait (11.3.1) que $U'$ est ouvert dans $X'$ puisque $f'$ est de
+présentation finie (1.6.2)~; de même l'ensemble $U'_{\lambda}$ des points de
+$X'_{\lambda}$ où $\mathcal F'_{\lambda}$ est $f'_{\lambda}$-plat est ouvert
+dans $X'_{\lambda}$, et on sait en outre (11.2.6) que $U'$ est réunion des
+$v_{\lambda}^{-1}(U'_{\lambda})$, où
+$v_{\lambda}:X'\to X'_{\lambda}$ est la projection canonique. Considérons le
+schéma $T=\operatorname{Spec}(k(x))$~; posons $T'=T\times_Y Y'$,
+$T'_{\lambda}=T\times_Y Y'_{\lambda}$, et soient
+$w_{\lambda}:T'\to T'_{\lambda}$, $g':T'\to X'$,
+$g'_{\lambda}:T'_{\lambda}\to X'_{\lambda}$ les projections canoniques. Posons
+$V'_{\lambda}=g_{\lambda}'^{-1}(U'_{\lambda})$,
+$V'=g'^{-1}(U')=\bigcup_{\lambda}w_{\lambda}^{-1}(V'_{\lambda})$. Par
+hypothèse on a (compte tenu de (\textbf I, 3.6.1)) $V'=T'$~; comme $T'$ est
+quasi-compact, il existe $\lambda$ tel que
+$w_{\lambda}^{-1}(V'_{\lambda})=T'$. On déduit alors de (8.3.3) appliqué aux
+parties fermées quasi-compactes $T'_{\lambda}-V'_{\lambda}$ de
+$T'_{\lambda}$, qu'il existe $\mu\geq\lambda$ tel que
+$T'_{\mu}=V'_{\mu}$~; cela signifie que $\mathcal F'_{\mu}$ est
+$f'_{\mu}$-plat en tous les points de $X'_{\mu}$ dont la projection dans $X$
+est $x$. C.Q.F.D.
+\end{proof}
+
+\subsection{Descente de la platitude par des morphismes quelconques : cas d'un
+préschéma de base unibranche}
+\label{subsection:IV.11.6-fr}
+
+\begin{theorem}[11.6.1]
+\label{IV.11.6.1-fr}
+Soient $A$ un anneau local intègre géométriquement unibranche
+$(\mathbf 0,23.2.1)$, $Y=\operatorname{Spec}(A)$, $f:X\to Y$ un morphisme
+localement de présentation finie, $\mathcal F$ un $\mathcal O_X$-Module
+quasi-cohérent de présentation finie. Soient $A'$ un anneau local,
+$u:A\to A'$ un homomorphisme local injectif~; on pose
+$Y'=\operatorname{Spec}(A')$, $X'=X\times_Y Y'$, $f'=f_{(Y')}$,
+$\mathcal F'=\mathcal F\otimes_Y Y'$. Soient $x$ un point de $X$ dont la
+projection $f(x)=y$ est le point fermé de $Y$, $x'$ un point de $X'$ dont les
+projections dans $X$ et $Y'$ sont respectivement $x$ et le point fermé $y'$ de
+$Y'$. Alors, si $\mathcal F'$ est $f'$-plat au point $x'$, $\mathcal F$ est
+$f$-plat au point $x$.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $f$ est de présentation finie, la question étant
+locale sur $X$. Nous procéderons en plusieurs étapes.
+
+\medskip
+\noindent\textbf{I)} \emph{Réduction au cas où $A$ et $A'$ sont des anneaux
+locaux intégralement clos.}
+
+Comme $u$ est injectif et $A$ intègre, il existe un idéal premier
+$\mathfrak p'$ de $A'$ tel que $u^{-1}(\mathfrak p')=0$
+$(\mathbf 0_{\mathrm I},1.5.8)$~; l'homomorphisme composé
+$A\xrightarrow{u}A'\to A''=A'/\mathfrak p'$ est donc injectif et local, et si
+$Y''=\operatorname{Spec}(A'')$, $X''=X'\otimes_{A'}A''=X\times_Y Y''$,
+$\mathcal F''=\mathcal F'\otimes_{A'}A''$, $\mathcal F''$ est $Y''$-plat aux
+points de $X''$ au-dessus de $x'$ (2.1.4)~; remplaçant au besoin $A'$ par $A''$
+et tenant compte de (\textbf I, 3.4.7), on peut donc supposer d'abord que $A'$
+est intègre. Si $K'$ est le corps des fractions de $A'$, il y a alors un anneau
+de valuation $B'$ dans $K'$ qui domine $A'$~; l'homomorphisme composé
+$A\xrightarrow{u}A'\to B'$ étant injectif et local, le même raisonnement que
+% IV3_B23_P154_END
+

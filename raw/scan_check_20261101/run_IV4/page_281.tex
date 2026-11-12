@@ -1,0 +1,63 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{281}
+projective des préschémas induits par $X'$ sur les ouverts $f^{-1}(U)$, où $U$ parcourt l'ensemble filtrant des voisinages ouverts affines de $x$ dans $X$, suivant la méthode de \sref{IV.8.1.2}, \emph{a)}), et appliquant \sref{IV.8.5.2.5}, on obtient la conclusion cherchée.
+\end{proof}
+
+\begin{corollary}[21.8.2]
+\label{IV.21.8.2}
+Soit $f:X'\to X$ un morphisme entier de préschémas.
+Alors:
+\begin{enumerate}[label=(\roman*)]
+  \item On a $\RR^1 f_*(\sh{O}^*_{X'})=0$ \sref[0]{0.12.2.1}.
+  \item Le groupe $\operatorname{Pic}(X')$ est canoniquement isomorphe à $\HH^1(X,f_*(\sh{O}^*_{X'}))$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item $\RR^1 f_*(\sh{O}^*_{X'})$ est le faisceau associé au préfaisceau de groupes commutatifs $U\mapsto\HH^1(f^{-1}(U),\sh{O}^*_{X'})$ sur $X$ (\emph{loc.\ cit.});
+la fibre de ce faisceau en un point $x$ peut donc \sref[0]{0.5.4.7} être identifiée au groupe commutatif $\varinjlim\operatorname{Pic}(f^{-1}(U))$, où $U$ parcourt l'ensemble des voisinages ouverts de $x$, les homomorphismes de transition $\operatorname{Pic}(f^{-1}(U'))\to\operatorname{Pic}(f^{-1}(U))$ pour deux ouverts $U\subset U'$ étant définis par \sref{IV.21.3.2.4}.
+Or, pour tout $x\in X$, tout voisinage ouvert $U'$ de $x$ dans $X$, et tout élément $\zeta\in\operatorname{Pic}(f^{-1}(U'))$, il résulte de \sref{IV.21.8.1} qu'il y a un voisinage ouvert $U\subset U'$ de $x$ tel que l'image de $\zeta$ dans $\operatorname{Pic}(f^{-1}(U))$ soit nulle.
+Donc la fibre de $\RR^1f_*(\sh{O}^*_{X'})$ au point $x$ est nulle.
+
+  \item La suite spectrale de Leray pour le foncteur composé $\sh{F}'\mapsto\Gamma(X,f_*(\sh{F}'))$ de faisceaux de groupes commutatifs sur $X'$ (T, 2.4) donne la suite exacte de termes de bas degré
+\[
+  0\to\HH^1(X,f_*(\sh{O}^*_{X'}))\to\HH^1(X',\sh{O}^*_{X'})\to\HH^0(X,\RR^1f_*(\sh{O}^*_{X'}))
+\]
+et la conclusion résulte de (i) et de l'isomorphisme de $\operatorname{Pic}(X')$ et de $\HH^1(X',\sh{O}^*_{X'})$ \sref[0]{0.5.4.7}.
+\end{enumerate}
+\end{proof}
+
+\begin{proposition}[21.8.3]
+\label{IV.21.8.3}
+Soit $f=(\psi,\theta):X'\to X$ un morphisme entier de préschémas;
+supposons que, pour tout ouvert $U$ de $X$, l'homomorphisme $\Gamma(\theta):\Gamma(U,\sh{O}_X)\to\Gamma(U,f_*(\sh{O}_{X'}))$ transforme les éléments réguliers en éléments réguliers, ce qui permet de prolonger canoniquement l'homomorphisme $\theta:\sh{O}_X\to f_*(\sh{O}_{X'})$ en un homomorphisme de faisceaux d'anneaux $\theta':\sh{M}_X\to f_*(\sh{M}_{X'})$, d'où des homomorphismes de faisceaux de groupes multiplicatifs $\theta^*:\sh{O}^*_X\to f_*(\sh{O}^*_{X'})$ et $\theta'^*:\sh{M}^*_X\to f_*(\sh{M}^*_{X'})$, donnant par passage aux quotients un homomorphisme $\theta''^*:\sh{D}iv_X\to f_*(\sh{D}iv_{X'})$.
+On a alors un diagramme commutatif
+\[
+\label{IV.21.8.3.1}
+  \xymatrix{
+    1 \ar[r] & \sh{O}^*_X \ar[r] \ar[d]^{\theta^*} & \sh{M}^*_X \ar[r] \ar[d]^{\theta'^*} & \sh{D}iv_X \ar[r] \ar[d]^{\theta''^*} & 0\\
+    1 \ar[r] & f_*(\sh{O}^*_{X'}) \ar[r] & f_*(\sh{M}^*_{X'}) \ar[r] & f_*(\sh{D}iv_{X'}) \ar[r] & 0
+  }
+  \tag{21.8.3.1}
+\]
+dans lequel les deux lignes sont exactes.
+\end{proposition}
+
+\begin{proof}
+Le seul point à vérifier est l'exactitude de la seconde ligne du diagramme, qui résulte de l'application de la suite exacte de cohomologie pour le foncteur $f_*$ à la suite exacte de faisceaux de groupes commutatifs sur $X'$
+\[
+  1\to\sh{O}^*_{X'}\to\sh{M}^*_{X'}\to\sh{D}iv_{X'}\to0
+\]
+et de \sref{IV.21.8.2}.
+\end{proof}
+
+\begin{corollary}[21.8.4]
+\label{IV.21.8.4}
+Si, en outre des hypothèses de \sref{IV.21.8.3}, l'homomorphisme $\theta'$ est un isomorphisme de faisceaux d'anneaux, alors $\theta^*:\sh{O}^*_X\to f_*(\sh{O}^*_{X'})$ est injectif, $\theta''^*:\sh{D}iv_X\to f_*(\sh{D}iv_{X'})$ est surjectif et $\operatorname{Ker}(\theta''^*)$ est isomorphe à $\operatorname{Coker}(\theta^*)$.
+\end{corollary}
+
+\begin{proof}
+C'est une conséquence immédiate du diagramme du serpent (Bourbaki, \emph{Alg.\ comm.}, chap.~I, \textsection~2, n\textsuperscript{o}~4, prop.~2) appliqué au diagramme \sref{IV.21.8.3.1}.
+\end{proof}
+

@@ -1,0 +1,103 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{36}
+de $\mathcal C$ dans $\mathcal C'$, permutant aux
+limites inductives (on suppose que les limites inductives filtrantes existent
+et sont exactes dans $\mathcal C$ et $\mathcal C'$). Alors
+$\mathrm R^\bullet T(K^\bullet)$ est isomorphe à la limite inductive
+\[
+  \varinjlim_{r\to-\infty}\mathrm R^\bullet T(K_{(r)}^\bullet)
+\]
+lorsque $r$ tend vers $-\infty$.
+\end{lemma}
+
+La construction d'une résolution injective de Cartan-Eilenberg de $K^\bullet$
+se fait en choisissant arbitrairement, pour chaque $i$, une résolution
+injective $(X_{\mathrm B}^{ij})_{j\geq0}$ de $\mathrm B^i(K^\bullet)$ et une
+résolution injective $(X_{\mathrm H}^{ij})_{j\geq0}$ de
+$\mathrm H^i(K^\bullet)$~; cela fait, la méthode de construction montre que
+la résolution injective $(L^{ij})_{j\geq0}$ de $K^i$ et les opérateurs de
+dérivation $L^{i,j}\to L^{i+1,j}$ \emph{ne dépendent que des résolutions}
+$(X_{\mathrm B}^{i,\bullet})$, $(X_{\mathrm H}^{i,\bullet})$ et
+$(X_{\mathrm B}^{i+1,\bullet})$ (M, XVII, 1.2). Or, il est clair que l'on a
+$\mathrm B^i(K_{(r)}^\bullet)=\mathrm B^i(K^\bullet)$ et
+$\mathrm H^i(K_{(r)}^\bullet)=\mathrm H^i(K^\bullet)$ pour $i\geq r+1$. On
+a, d'autre part, pour chaque $r$, une injection canonique
+$\varphi_{r-1,r}^\bullet:K_{(r)}^\bullet\to K_{(r-1)}^\bullet$,
+$\varphi_{r-1,r}^i$ étant l'identité pour $i\neq r-1$. La remarque précédente
+montre que, si $L^{\bullet\bullet}=(L^{ij})$ est une résolution injective de
+Cartan-Eilenberg de $K^\bullet$, on peut pour chaque $r$ définir une résolution
+injective de Cartan-Eilenberg
+$L_{(r)}^{\bullet\bullet}=(L_{(r)}^{ij})$ de $K_{(r)}^\bullet$ telle que
+$L_{(r)}^{ij}=0$ pour $i<r$ et $L_{(r)}^{ij}=L^{ij}$ pour $i\geq r+1$. On peut
+d'autre part définir un morphisme de bicomplexes
+$\Phi_{r-1,r}^{\bullet\bullet}:L_{(r)}^{\bullet\bullet}\to
+L_{(r-1)}^{\bullet\bullet}$ correspondant à $\varphi_{r-1,r}^\bullet$, et la
+méthode de définition de ce morphisme (\emph{loc. cit.}) montre encore qu'on
+peut le construire de sorte que $\Phi_{r-1,r}^{ij}$ soit l'identité pour
+$i\neq r$ et $i\neq r-1$. On a ainsi défini un système inductif
+$(L_{(r)}^{\bullet\bullet})$ de bicomplexes de $\mathcal C$, dont
+$L^{\bullet\bullet}$ est évidemment la limite inductive lorsque $r$ tend vers
+$-\infty$~; en raison de la permutabilité des sommes directes et des limites
+inductives, le complexe simple associé à $L^{\bullet\bullet}$ est aussi limite
+inductive du complexe simple associé à $L_{(r)}^{\bullet\bullet}$. Comme $T$
+permute par hypothèse aux limites inductives et qu'il en est de même de la
+cohomologie (en raison de l'exactitude du foncteur $\varinjlim$), on a bien
+\[
+  \mathrm H^\bullet(T(L^{\bullet\bullet}))=
+  \varinjlim\mathrm H^\bullet(T(L_{(r)}^{\bullet\bullet}))
+\]
+à un isomorphisme près.
+
+Le lemme (\hyperref[0.11.5.1-fr]{11.5.1}) permet d'étendre à des complexes
+$K^\bullet$ quelconques, par passage à la limite inductive, des propriétés
+valables pour les complexes \emph{limités inférieurement}. Comme premier
+exemple, nous prouverons~:
+
+\begin{proposition}[11.5.2]
+\label{0.11.5.2-fr}
+Sous les hypothèses de (\hyperref[0.11.5.1-fr]{11.5.1}) concernant
+$\mathcal C$, $\mathcal C'$ et $T$, $\mathrm R^\bullet T(K^\bullet)$ est un
+foncteur cohomologique dans la catégorie abélienne des complexes de
+$\mathcal C$.
+\end{proposition}
+
+\begin{proof}
+Montrons qu'on peut se ramener au cas des complexes limités inférieurement~:
+si on a une suite exacte
+\[
+  0\longrightarrow K'^\bullet\longrightarrow K^\bullet
+  \longrightarrow K''^\bullet\longrightarrow0
+\]
+de complexes, on en déduit évidemment pour chaque $r$ une suite exacte
+\[
+  0\longrightarrow K_{(r)}'^\bullet\longrightarrow K_{(r)}^\bullet
+  \longrightarrow K_{(r)}''^\bullet\longrightarrow0,
+\]
+d'où par hypothèse, une suite exacte
+\[
+  \cdots\longrightarrow\mathrm R^nT(K_{(r)}'^\bullet)
+  \longrightarrow\mathrm R^nT(K_{(r)}^\bullet)
+  \longrightarrow\mathrm R^nT(K_{(r)}''^\bullet)
+  \xrightarrow{\partial}\mathrm R^{n+1}T(K_{(r)}'^\bullet)
+  \longrightarrow\cdots
+\]
+ces suites exactes formant un système inductif~; le lemme
+(\hyperref[0.11.5.1-fr]{11.5.1}) et l'exactitude du foncteur $\varinjlim$
+démontrent que l'on a une suite exacte
+\[
+  \cdots\longrightarrow\mathrm R^nT(K'^\bullet)
+  \longrightarrow\mathrm R^nT(K^\bullet)
+  \longrightarrow\mathrm R^nT(K''^\bullet)
+  \xrightarrow{\partial}\mathrm R^{n+1}T(K'^\bullet)
+  \longrightarrow\cdots
+\]
+\end{proof}
+
+Pour traiter le cas des complexes limités inférieurement, on peut se borner à
+ceux tels que $K^i=0$ pour $i<0$~; ils forment évidemment une catégorie
+abélienne $\mathcal K$.
+
+\begin{lemma}[11.5.2.1]
+\label{0.11.5.2.1-fr}
+Dans $\mathcal K$, soit $\mathfrak J$ l'ensemble des complexes
+$Q^\bullet=(Q^i)_{i\geq0}$ ayant les

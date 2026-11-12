@@ -1,0 +1,39 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{67}
+fois ouvert et fermé dans $S$, et son complémentaire $V$ dans $S$ est donc un voisinage ouvert et fermé de $s$ tel que $\varphi^{-1}(V)\subset C$.
+
+\begin{proposition}[17.4.9]
+\label{IV.17.4.9}
+Soient $Y$ un préschéma connexe, $f:X\to Y$ un morphisme non ramifié et séparé. Alors toute $Y$-section $g$ de $X$ est un isomorphisme de $Y$ sur une composante connexe ouverte de $X$, et l'application $g\mapsto g(Y)$ est une bijection de $\Gamma(X/Y)$ sur l'ensemble des composantes connexes $Z$ de $X$ (nécessairement ouvertes dans $X$) telles que la restriction de $f$ à $Z$ soit un isomorphisme de $Z$ sur $Y$. En particulier, si $g'$ et $g''$ sont deux $Y$-sections de $X$ telles que $g'(y)=g''(y)$ pour un $y\in Y$, on a $g'=g''$.
+\end{proposition}
+
+Il résulte en effet de (17.4.1, b'')) qu'une $Y$-section $s$ de $X$ est une immersion ouverte, et comme $X$ est un $Y$-schéma, $s$ est aussi une immersion fermée (I, 5.4.7); il en résulte que $s$ est un isomorphisme de $Y$ sur un sous-préschéma de $X$ induit sur une partie ouverte et fermée de $X$, et comme $s(Y)$ est connexe, c'est nécessairement une composante connexe de $X$. Le reste de la proposition est immédiat.
+
+\begin{remark}[17.4.10]
+\label{IV.17.4.10}
+Compte tenu de la remarque (17.4.1.2), on voit que, dans les énoncés (17.4.6) à (17.4.9), on peut remplacer partout les mots « non ramifié » par « formellement non ramifié et localement de type fini ».
+\end{remark}
+
+\subsection{Caractérisations des morphismes lisses}
+\EGAReaderTarget{ega4.c04.subsec.17-5}{subsection:IV.17.5}
+
+\begin{theorem}[17.5.1]
+\label{IV.17.5.1}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est lisse au point $x$.
+  \item[b)] $f$ est plat au point $x$ et le $k(y)$-préschéma $f^{-1}(y)$ est lisse sur $k(y)$ au point $x$.
+  \item[b')] $f$ est régulier au point $x$ (6.8.1).
+  \item[c)] L'anneau $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement lisse pour les topologies discrètes.
+\end{enumerate}
+\end{theorem}
+
+On peut se borner au cas où $Y=\Spec(A)$, $X=\Spec(C)$, où $C=B/\mathfrak{J}$, $B=A[T_1,\ldots,T_n]$ étant une algèbre de polynômes et $\mathfrak{J}$ un idéal de $B$ de type fini. L'équivalence de a) et c) résulte alors de l'équivalence de a) et c) dans (0, 22.6.4). D'autre part, appliquant ce résultat au morphisme localement de type fini $f^{-1}(y)\to\Spec(k(y))$, on voit que l'équivalence de b) et b') résulte de l'équivalence de a) et b) dans (6.8.6). Reste donc à démontrer l'équivalence de a) et b).
+
+Montrons d'abord que a) entraîne b); notons $\mathfrak p$ l'idéal premier $\mathfrak i_x$ dans $C$, $\mathfrak r$ l'idéal premier $\mathfrak i_y$ dans $A$; on a $\mathfrak p=\mathfrak q/\mathfrak J$, où $\mathfrak q$ est un idéal premier de $B$ et $\mathfrak r$ est l'image réciproque de $\mathfrak q$ dans $A$. L'hypothèse a) entraîne d'abord que $f^{-1}(y)$ est lisse sur $k(y)$ au point $x$ par (17.3.3), et il s'agit de montrer en outre que $C_{\mathfrak p}=\sh{O}_{X,x}$ est un $A_{\mathfrak r}$-module \emph{plat}. Comme $C_{\mathfrak p}$ est une $A_{\mathfrak r}$-algèbre formellement lisse et que $B$ est une $A$-algèbre formellement lisse (pour les topologies discrètes), le critère jacobien (0, 22.6.4), joint à (0, 19.1.12), entraîne qu'il existe dans $\mathfrak J$ un système de $r$ polynômes $u_i$ ($1\leq i\leq r$) et $r$ indices $j_i$ ($1\leq i\leq r$) tels que les images des $u_i$ dans $\mathfrak J_{\mathfrak q}/\mathfrak J_{\mathfrak q}^2$ engendrent ce $B_{\mathfrak q}$-module et que l'on ait
+\[
+\label{IV.17.5.1.1}
+\det(\partial u_i/\partial T_{j_k})\notin\mathfrak q.
+\tag{17.5.1.1}
+\]
+

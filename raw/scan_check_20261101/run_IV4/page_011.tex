@@ -1,0 +1,104 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{11}
+\noindent(ii) et (iii) Si $f$ est une immersion, on peut se borner au cas où
+$f$ est une immersion fermée, $Y$ étant donc défini par l'Idéal
+quasi-cohérent $\mathscr{I}$ de $\mathcal{O}_X$, et $Y^{(n)}$ par l'Idéal
+$\mathscr{I}^{n+1}$; les assertions résultent alors de (I, 4.4.5).
+
+Supposons en second lieu que $v$ soit plat; on peut se borner au cas où
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$,
+$X'=\operatorname{Spec}(A')$ sont affines, $A'$ étant un $A$-module plat;
+alors $Y'=\operatorname{Spec}(B')$ avec $B'=B\otimes_A A'$; en outre, si
+$\mathfrak{I}$ est le noyau de l'homomorphisme $A\to B$, le noyau
+$\mathfrak{I}'$ de $A'\to B'$ s'identifie à $\mathfrak{I}\otimes_A A'$ par
+platitude, et
+\[
+  \mathfrak{I}'^n/\mathfrak{I}'^{n+1}
+  =(\mathfrak{I}^n/\mathfrak{I}^{n+1})\otimes_A A'.
+\]
+On en déduit aussitôt, compte tenu de (0\textsubscript{I}, 4.3.3), que le
+$\mathcal{O}_{Y'}$-Module
+$\mathscr{I}'^n/\mathscr{I}'^{n+1}$ est égal à
+\begin{align*}
+&\psi'^*\!\left(\sigma^*
+  \left((\mathfrak{I}^n/\mathfrak{I}^{n+1})^{\sim}\right)\right)
+  \otimes_{\sigma^*(\mathcal{O}_X)}\mathcal{O}_{X'} \\
+={}&
+\psi'^*\!\left(\sigma^*
+  \left((\mathfrak{I}^n/\mathfrak{I}^{n+1})^{\sim}\right)\right)
+  \otimes_{\psi'^*(\sigma^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}) \\
+={}&
+\rho^*(\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\rho^*(\psi^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}),
+\end{align*}
+et comme en particulier pour $n=0$, on a
+\[
+  \mathcal{O}_{Y'}=
+  \rho^*(\mathcal{O}_Y)
+  \otimes_{\rho^*(\psi^*(\mathcal{O}_X))}
+  \psi'^*(\mathcal{O}_{X'}),
+\]
+on obtient un isomorphisme canonique de
+$\mathscr{I}'^n/\mathscr{I}'^{n+1}$ sur
+\[
+  \rho^*(\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\rho^*(\mathcal{O}_Y)}\mathcal{O}_{Y'}
+  =
+  (\mathscr{I}^n/\mathscr{I}^{n+1})
+  \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'},
+\]
+ce qui prouve (iii). Posons maintenant
+$C_n=\Gamma(Y,\mathcal{O}_{Y^{(n)}})$,
+$C'_n=\Gamma(Y',\mathcal{O}_{Y'^{(n)}})$. Puisque $Y^{(n)}$ et
+$Y'^{(n)}$ sont des schémas affines (16.1.5), le noyau
+$\mathfrak{K}_n$ (resp. $\mathfrak{K}'_n$) de l'homomorphisme
+$C_n\to C_{n-1}$ (resp. $C'_n\to C'_{n-1}$) est
+$\Gamma(Y,\mathscr{I}^n/\mathscr{I}^{n+1})$ (resp.
+$\Gamma(Y',\mathscr{I}'^n/\mathscr{I}'^{n+1})$); on déduit donc de ce qui
+précède que $\mathfrak{K}'_n=\mathfrak{K}_n\otimes_A A'$. Or, on a un
+diagramme commutatif
+\[
+  \xymatrix{
+    0 \ar[r] &
+    \mathfrak{K}_n\otimes_A A' \ar[r]\ar[d]^r &
+    C_n\otimes_A A' \ar[r]\ar[d]^{s_n} &
+    C_{n-1}\otimes_A A' \ar[r]\ar[d]^{s_{n-1}} & 0 \\
+    0 \ar[r] &
+    \mathfrak{K}'_n \ar[r] &
+    C'_n \ar[r] &
+    C'_{n-1} \ar[r] & 0
+  }
+\]
+où la flèche verticale de gauche est bijective et les deux lignes sont exactes
+($A'$ étant un $A$-module plat). On en déduit par récurrence que $s_n$ est
+bijectif pour tout $n$, car c'est vrai par hypothèse pour $n=0$, et se déduit
+par application du lemme des cinq pour $n$ quelconque. Cela prouve la seconde
+assertion de (ii).
+
+\begin{corollary}[16.2.3]
+\label{IV.16.2.3}
+Soient $g:X\to Y$, $u:Y'\to Y$ deux morphismes de préschémas,
+$X'=X\times_Y Y'$, $g':X'\to Y'$ et $v:X'\to X$ les projections canoniques.
+Soient $f:Y\to X$ une $Y$-section de $X$ (donc une immersion),
+$f'=f_{(Y')}:Y'\to X'$ la $Y'$-section de $X'$ déduite de $f$ par le
+changement de base $u$. Alors:
+\begin{enumerate}
+\item[(i)] Le morphisme
+$w_n:Y_{f'}'^{(n)}\to Y_f^{(n)}$ correspondant à $f$, $f'$, $u$, $v$
+(16.2.1) et le morphisme canonique
+$h'_n:Y_{f'}'^{(n)}\to X'$ identifient $Y_{f'}'^{(n)}$ au produit
+$Y_f^{(n)}\times_X X'$.
+\item[(ii)] Si l'on munit $\mathcal{O}_{Y_f^{(n)}}$ (resp.
+$\mathcal{O}_{Y_{f'}'^{(n)}}$) de la structure de $\mathcal{O}_Y$-Algèbre
+définie par $g$ (resp. de la structure de $\mathcal{O}_{Y'}$-Algèbre définie
+par $g'$) (16.1.6), l'homomorphisme de $\mathcal{O}_{Y'}$-Algèbres
+\[
+  \rho^*(\mathcal{O}_{Y_f^{(n)}})
+  \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+  \longrightarrow
+  \mathcal{O}_{Y_{f'}'^{(n)}}
+  \tag{16.2.3.1}
+  \label{IV.16.2.3.1}
+\]

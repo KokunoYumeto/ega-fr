@@ -1,0 +1,84 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{275}
+de dimension $0$ ou $\geq2$, donc on a $\operatorname{prof}(\sh{O}_{X,x})=0$ ou $\operatorname{prof}(\sh{O}_{X,x})\geq2$ \sref[0]{0.16.5.1}.
+D'autre part, aux points $x\in X^{(1)}$, l'anneau $\sh{O}_{X,x}$ est un anneau de valuation discrète (\sref[II]{II.7.1.6}), donc $\operatorname{prof}(\sh{O}_{X,x})=1$ \sref[0]{0.16.5.1};
+les seuls points de $X$ tels que $\operatorname{prof}(\sh{O}_{X,x})=1$ sont donc les points de $X^{(1)}$, et la conclusion résulte par suite de \sref{IV.21.1.8}.
+
+  \item L'équivalence de \emph{a)} et \emph{b)} est claire en vertu de (i).
+D'après la caractérisation des cycles localement principaux donnée dans \sref{IV.21.6.7}, et la relation entre cycles $1$-codimensionnels sur $\Spec(A)$ et diviseurs (au sens de Bourbaki) de l'anneau $A$ lorsque $A$ est un anneau noethérien intégralement clos \sref{IV.21.6.8}, la condition \emph{b)} équivaut à dire que pour tout $x\in X$, tout diviseur de l'anneau $\sh{O}_{X,x}$ est principal, autrement dit que l'anneau $\sh{O}_{X,x}$ est factoriel (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~3, n\textsuperscript{o}~1), d'où l'équivalence de \emph{b)} et \emph{c)}.
+\end{enumerate}
+\end{proof}
+
+\begin{env}[21.6.9.2]
+\label{IV.21.6.9.2}
+Lorsque $A$ est un anneau noethérien \emph{factoriel}, il est clair que $X=\Spec(A)$ est localement factoriel (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~3, n\textsuperscript{o}~4, prop.~3).
+Si, dans ce cas, on écrit un élément $f\neq0$ du corps des fractions $K$ de $A$ sous la forme $r/s$, où $r$ et $s$ sont deux éléments \emph{étrangers} de $A$, dont les diviseurs sont bien déterminés (\emph{loc.\ cit.}, \textsection~3, n\textsuperscript{o}~3), ces diviseurs s'identifient respectivement au \emph{diviseur des zéros} et au \emph{diviseur des pôles} de $f$ \sref{IV.21.6.7}.
+\end{env}
+
+\begin{corollary}[21.6.10]
+\label{IV.21.6.10}
+Soit $X$ un préschéma localement noethérien normal.
+\begin{enumerate}[label=(\roman*)]
+  \item Il existe un homomorphisme canonique injectif
+\[
+\label{IV.21.6.10.1}
+  \operatorname{Pic}(X)\to\mathfrak{Cl}(X).
+  \tag{21.6.10.1}
+\]
+
+  \item Si $X$ est localement factoriel, l'homomorphisme \sref{IV.21.6.10.1} est bijectif, et réciproquement.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+On a vu \sref{IV.21.6.7} que l'image de $\operatorname{Div.princ}(X)$ par l'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est $\mathfrak{Z}^1_\mathrm{princ}(X)$;
+on déduit donc de \sref{IV.21.6.9} que l'homomorphisme $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)=\mathfrak{Cl}(X)$ déduit de $\operatorname{cyc}$ est injectif, et qu'il est bijectif si et seulement si $X$ est localement factoriel.
+La conclusion résulte donc de ce que, lorsque $X$ est localement noethérien et réduit, l'homomorphisme canonique $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\operatorname{Pic}(X)$ \sref{IV.21.3.3.1} est bijectif \sref{IV.21.3.4}, (ii).
+\end{proof}
+
+\begin{corollary}[21.6.11]
+\label{IV.21.6.11}
+Soit $X$ un préschéma localement noethérien et localement factoriel.
+Alors le faisceau $\sh{D}iv_X$ est flasque, et pour tout ouvert $U$ de $X$, l'homomorphisme canonique $\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ est surjectif.
+\end{corollary}
+
+\begin{proof}
+Tenant compte de \sref{IV.21.6.9}, (ii), la première assertion équivaut à dire que le faisceau $\mathscr{Z}_X^1$ est flasque, ce qui a été vu plus haut \sref{IV.21.6.3}.
+Pour tout ouvert $U$ de $X$, l'homomorphisme canonique $\mathfrak{Z}^1(X)\to\mathfrak{Z}^1(U)$ est donc surjectif;
+comme en vertu de \sref{IV.21.6.10}, l'homomorphisme $\operatorname{Pic}(X)\to\operatorname{Pic}(U)$ s'identifie canoniquement à $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)\to\mathfrak{Z}^1(U)/\mathfrak{Z}^1_\mathrm{princ}(U)$, il est aussi surjectif.
+\end{proof}
+
+\begin{proposition}[21.6.12]
+\label{IV.21.6.12}
+Soit $X$ un préschéma noethérien réduit.
+Soit $(U_\lambda)_{\lambda\in L}$ une famille filtrante décroissante d'ouverts de $X$ vérifiant les conditions suivantes:
+\begin{enumerate}
+  \item[\rm 1\textsuperscript{o}] Si $Y_\lambda=X-U_\lambda$, on a $\codim(Y_\lambda,X)\geq2$ pour tout $\lambda\in L$.
+  \item[\rm 2\textsuperscript{o}] Pour tout $x\in\bigcap_{\lambda\in L}U_\lambda$, l'anneau $\sh{O}_{X,x}$ est factoriel.
+\end{enumerate}
+Alors il existe des isomorphismes canoniques
+\[
+\label{IV.21.6.12.1}
+  \varinjlim\operatorname{Div}(U_\lambda)\simto\mathfrak{Z}^1(X),\qquad
+  \varinjlim\operatorname{Pic}(U_\lambda)\simto\mathfrak{Cl}(X)
+  \tag{21.6.12.1}
+\]
+tels que, pour tout ouvert $V$ de $X$, les diagrammes
+\[
+\label{IV.21.6.12.2}
+  \xymatrix{
+    \varinjlim\operatorname{Div}(U_\lambda) \ar[r]^-\sim \ar[d] & \mathfrak{Z}^1(X) \ar[d] & & \varinjlim\operatorname{Pic}(U_\lambda) \ar[r]^-\sim \ar[d] & \mathfrak{Cl}(X) \ar[d]\\
+    \varinjlim\operatorname{Div}(U_\lambda\cap V) \ar[r]^-\sim & \mathfrak{Z}^1(V) & & \varinjlim\operatorname{Pic}(U_\lambda\cap V) \ar[r]^-\sim & \mathfrak{Cl}(V)
+  }
+  \tag{21.6.12.2}
+\]
+soient commutatifs.
+\end{proposition}
+
+\begin{proof}
+L'hypothèse 1\textsuperscript{o} sur $U_\lambda$ implique que pour tout $\lambda\in L$, on a $X^{(1)}\subset U_\lambda$ \sref{IV.5.1.3.1} donc l'homomorphisme de restriction $\mathfrak{Z}^1(X)\to\mathfrak{Z}^1(U_\lambda)$ est bijectif et par suite on a un isomorphisme canonique $\varinjlim\mathfrak{Z}^1(U_\lambda)\simto\mathfrak{Z}^1(X)$.
+Les homomorphismes canoniques $\operatorname{cyc}:\operatorname{Div}(U_\lambda)\to\mathfrak{Z}^1(U_\lambda)$ définissent donc, par passage à la limite inductive, le premier des homomorphismes canoniques \sref{IV.21.6.12.1}, et le second s'en déduit par passage aux quotients.
+En outre, il résulte de la condition 1\textsuperscript{o} que les $U_\lambda$ sont denses dans $X$, donc schématiquement denses puisque $X$ est réduit \sref{IV.11.10.4}, et par suite toute fonction méromorphe sur $X$ est entièrement déterminée par sa restriction à chaque $U_\lambda$;
+on déduit aussitôt de là que dans l'isomorphisme $\mathfrak{Z}^1(X)\simto\mathfrak{Z}^1(U_\lambda)$, l'image de $\mathfrak{Z}^1_\mathrm{princ}(X)$ est $\mathfrak{Z}^1_\mathrm{princ}(U_\lambda)$, donc on a aussi un isomorphisme canonique $\varinjlim\mathfrak{Cl}(U_\lambda)\simto\mathfrak{Cl}(X)$.
+Le second des homomorphismes canoniques \sref{IV.21.6.12.1} sera donc un isomorphisme si le premier l'est, et il reste donc à prouver ce dernier point, la commutativité des diagrammes \sref{IV.21.6.12.2} étant triviale.
+

@@ -1,0 +1,107 @@
+% from ega2-1-fr.tex
+\oldpage[II]{32}
+
+En particulier, \emph{l'anneau local $(\mathcal{O}_X)_\mathfrak{p}$} n'est
+autre que l'anneau $S_{(\mathfrak{p})}$, ensemble des fractions $x/f$, où
+$f$ est homogène dans $S_+$ et n'appartient pas à $\mathfrak{p}$, et $x$
+homogène est de même degré que $f$.
+
+Plus particulièrement, si $S$ est \emph{essentiellement intègre}, de sorte
+que $\operatorname{Proj}(S)=X$ est \emph{intègre}
+(\hyperref[II.2.4.4-fr]{2.4.4}), et si $\xi=(0)$ est le point générique de
+$X$, le \emph{corps des fonctions rationnelles}
+$R(X)=\mathcal{O}_\xi$, est le corps formé des éléments $fg^{-1}$, où $f$
+et $g$ sont homogènes de même degré dans $S_+$ et $g\neq0$.
+
+\begin{proposition}[2.5.6]
+\label{II.2.5.6-fr}
+Si, pour tout $z\in M$ et tout $f$ homogène dans $S_+$, il existe une
+puissance de $f$ annulant $z$, on a $\widetilde{M}=0$. Cette condition
+suffisante est aussi nécessaire lorsque la $S_0$-algèbre $S$ est engendrée
+par l'ensemble $S_1$ des éléments homogènes de degré $1$.
+\end{proposition}
+
+\begin{proof}
+En effet, la condition $\widetilde{M}=0$ équivaut à $M_{(f)}=0$ pour tout
+$f$ homogène dans $S_+$. D'autre part, si $f\in S_d$, dire que $M_{(f)}=0$
+signifie que pour tout $z\in M$ homogène et de degré multiple de $d$, il y
+a une puissance $f^n$ telle que $f^nz=0$. Si $M_{(f)}=0$ pour tout
+$f\in S_1$, la condition de l'énoncé est donc vérifiée pour tout
+$f\in S_1$~; elle l'est \emph{a fortiori} pour tout $f$ homogène dans
+$S_+$ lorsque $S_1$ engendre $S$, puisque tout élément homogène de $S_+$
+est alors combinaison linéaire de produits d'éléments de $S_1$.
+\end{proof}
+
+\begin{proposition}[2.5.7]
+\label{II.2.5.7-fr}
+Soient $d$ un entier $>0$, $f\in S_d$. Alors, pour tout $n\in\mathbf{Z}$,
+le $(\mathcal{O}_X|D_+(f))$-Module
+$\widetilde{S(nd)}|D_+(f)$ est canoniquement isomorphe à
+$\mathcal{O}_X|D_+(f)$.
+\end{proposition}
+
+\begin{proof}
+En effet, la multiplication par l'élément inversible $(f/1)^n$ de $S_f$
+est une bijection de $S_{(f)}=(S_f)_0$ sur
+$(S_f)_{nd}=(S_f(nd))_0=(S(nd)_f)_0=S(nd)_{(f)}$~; autrement dit, les
+$S_{(f)}$-modules $S_{(f)}$ et $S(nd)_{(f)}$ sont canoniquement
+isomorphes, d'où la proposition.
+\end{proof}
+
+\begin{corollary}[2.5.8]
+\label{II.2.5.8-fr}
+Sur l'ensemble ouvert
+\[
+  U=\bigcup_{f\in S_d}D_+(f),
+\]
+la restriction du $\mathcal{O}_X$-Module $\widetilde{S(nd)}$ est un
+$(\mathcal{O}_X|U)$-Module inversible
+(\hyperref[0.5.4.1-fr]{0, 5.4.1}).
+\end{corollary}
+
+\begin{corollary}[2.5.9]
+\label{II.2.5.9-fr}
+Si l'idéal $S_+$ de $S$ est engendré par l'ensemble $S_1$ des éléments
+homogènes de degré $1$, les $\mathcal{O}_X$-Modules
+$\widetilde{S(n)}$ sont inversibles pour tout $n\in\mathbf{Z}$.
+\end{corollary}
+
+\begin{proof}
+Il suffit de remarquer que
+$X=\bigcup_{f\in S_1}D_+(f)$ en vertu de l'hypothèse
+(\hyperref[II.2.3.14-fr]{2.3.14}) et d'appliquer
+(\hyperref[II.2.5.8-fr]{2.5.8}) avec $U=X$.
+\end{proof}
+
+\begin{env}[2.5.10]
+\label{II.2.5.10-fr}
+Nous poserons, dans toute la suite de ce paragraphe
+\[
+\label{II.2.5.10.1-fr}
+  \mathcal{O}_X(n)=\widetilde{S(n)}
+\tag{2.5.10.1}
+\]
+pour tout $n\in\mathbf{Z}$, et pour toute partie ouverte $U$ de $X$ et tout
+$(\mathcal{O}_X|U)$-Module $\mathcal{F}$
+\[
+\label{II.2.5.10.2-fr}
+  \mathcal{F}(n)=
+  \mathcal{F}\otimes_{\mathcal{O}_X|U}(\mathcal{O}_X(n)|U)
+\tag{2.5.10.2}
+\]
+pour tout $n\in\mathbf{Z}$. Si l'idéal $S_+$ est engendré par $S_1$, le
+foncteur $\mathcal{F}(n)$ est \emph{exact} en
+$\mathcal{F}$ pour tout $n\in\mathbf{Z}$, car $\mathcal{O}_X(n)$ est alors
+un $\mathcal{O}_X$-Module inversible.
+\end{env}
+
+\begin{env}[2.5.11]
+\label{II.2.5.11-fr}
+Soient $M$ et $N$ deux $S$-modules gradués. Pour tout $f\in S_d$ ($d>0$)
+on définit un homomorphisme canonique fonctoriel de $S_{(f)}$-modules
+\[
+\label{II.2.5.11.1-fr}
+  \lambda_f:M_{(f)}\otimes_{S_{(f)}}N_{(f)}
+  \longrightarrow(M\otimes_S N)_{(f)}
+\tag{2.5.11.1}
+\]

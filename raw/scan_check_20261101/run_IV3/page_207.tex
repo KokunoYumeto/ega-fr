@@ -1,0 +1,84 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{207}
+affines~; si $X_i$ ($1\leq i\leq n$) sont les sous-préschémas fermés (intègres)
+de $X$ ayant pour espaces sous-jacents les composantes irréductibles de $X$,
+alors, pour tout $x\in X$, $\mathcal O_{X,x}$, étant réduit, est un sous-anneau du
+composé direct des $\mathcal O_{X_i,x}$~; si $y=f(x)$, il suffira de montrer que
+chacun des $\mathcal O_{X_i,x}$ est un $\mathcal O_y$-module \emph{sans torsion},
+car il en sera alors de même de $\mathcal O_{X,x}$~; comme par hypothèse
+$\mathcal O_y$ est un anneau local régulier de dimension 1, c'est-à-dire un anneau
+de valuation discrète (\textbf{II}, 7.1.6), il résultera alors de
+($\mathbf{0}_{\mathrm I}$, 6.3.4) que $\mathcal O_{X,x}$ est un
+$\mathcal O_y$-module \emph{plat}. Mais si $X_i=\operatorname{Spec}(B_i)$, où
+$B_i$ est un anneau intègre, l'hypothèse $d)$ entraîne que l'homomorphisme
+$A\to B_i$ est \emph{injectif} (I, 1.2.7)~; donc $B_i$ est un $A$-module sans
+torsion, et \emph{a fortiori} $\mathcal O_{X_i,x}$ est un $\mathcal O_y$-module
+sans torsion.
+\end{proof}
+
+\begin{remarks}[14.3.9]
+\label{IV.14.3.9-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Dans l'énoncé de (14.3.8), on ne peut se dispenser de l'hypothèse que $Y$
+  est \emph{régulier}. Avec les notations de (11.7.5), prenons en effet
+  $Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(\overline A)$, de sorte que
+  $f:X\to Y$ est un morphisme \emph{fini surjectif}~; comme $A$ est un anneau
+  local intègre de dimension 1, ainsi que $\overline A$, il résulte aussitôt de
+  (1.10.4) que le morphisme $f$ est \emph{ouvert}. Cependant $f$ n'est pas
+  universellement ouvert (ni \emph{a fortiori} plat), comme le montre (11.7.5).
+  On aurait un exemple analogue en prenant pour $Y$ le schéma local au point
+  double d'une courbe algébrique ayant un «~point double ordinaire~» et pour $X$
+  le normalisé de $Y$.
+
+  \item L'exemple de (14.1.3, (i)) montre que l'ensemble des points de $X$ où un
+  morphisme est universellement ouvert n'est pas nécessairement ouvert, le
+  morphisme $f$ dans cet exemple étant universellement ouvert en tous les points
+  où il est ouvert. L'exemple $f:X\to Y$ vu ci-dessus en (i) montre de même que
+  l'ensemble des points où un morphisme est universellement ouvert n'est pas
+  nécessairement fermé, car il est immédiat qu'en tous les points de $X$ sauf un
+  le morphisme $f$ est universellement ouvert (c'est même un isomorphisme local).
+  Il serait intéressant de savoir si l'ensemble des points où un morphisme est
+  universellement ouvert est localement constructible.
+\end{enumerate}
+\end{remarks}
+
+Les deux propositions suivantes nous ont été signalées par M.~Artin~:
+
+\begin{lemma}[14.3.10]
+\label{IV.14.3.10-fr}
+Soient $A$ un anneau de valuation (non nécessairement discrète), $k$ son corps
+résiduel, $K$ son corps des fractions, et posons $S=\operatorname{Spec}(A)$. Soient
+$X$ un préschéma irréductible, $f:X\to S$ un morphisme dominant de type fini~; soit
+$X_0=X\otimes_A k$ (resp. $X_1=X\otimes_A K$) la fibre de $f$ au point fermé
+(resp. au point générique) de $S$. Alors, si $X_0\ne\varnothing$, on a
+$\dim(X_0)=\dim(X_1)$.
+\end{lemma}
+
+On peut se borner au cas où $X$ est affine, en remplaçant au besoin $X$ par un
+ouvert affine contenant un point générique d'une composante irréductible de $X_0$,
+de dimension maximale, et utilisant (4.1.1.3). Soit $n=\dim(X_0)\geq 0$~; il résulte
+de (13.3.1.1) qu'il existe un voisinage $U$ de $X_0$ dans $X$ et un $S$-morphisme
+quasi-fini
+\[
+  g:U\to S[T_1,\ldots,T_n]=Z
+\]
+tel que le morphisme restriction
+$g_0:U_0=U\cap X_0\to Z_0=\operatorname{Spec}(k[T_1,\ldots,T_n])$ soit fini et
+\emph{surjectif}. Par changement de base $\operatorname{Spec}(K)\to S$ et restriction
+à l'ouvert $U_1=U\cap X_1$ de $X_1$, on déduit de $g$ un morphisme quasi-fini
+$g_1:U_1\to Z_1=\operatorname{Spec}(K[T_1,\ldots,T_n])$. Comme $U_1$ est dense dans
+$X_1$, on a $\dim(U_1)=\dim(X_1)$ (4.1.1.3)~; la proposition sera établie, en vertu
+de (4.1.2), si nous prouvons que le morphisme $g_1$ est \emph{dominant}. Supposons
+le contraire~; il existerait alors un polynôme $F_1\ne 0$ dans
+$K[T_1,\ldots,T_n]$ tel que $g_1(U_1)\subset V(F_1)$. Si $\omega$ est une valuation
+sur $K$ associée à $A$, et si $(a_\alpha)$ est la famille des coefficients de $F_1$,
+on peut, après multiplication de $F_1$ par un élément $\ne 0$ de $K$, supposer que
+l'on a $\inf_\alpha(\omega(a_\alpha))=0$~; autrement dit, $F_1$ provient d'un
+polynôme $F\in A[T_1,\ldots,T_n]$ (avec lequel il s'identifie) tel que l'image $F_0$
+de $F$ dans $k[T_1,\ldots,T_n]$ soit \emph{non nul}. Considérons alors dans $Z$
+l'ensemble fermé $V(F)$~; on a $V(F)\cap Z_1=V(F_1)$, et comme $U_1$ est dense
+dans $U$ (puisqu'il contient le point générique de $X$), $g(U)\subset V(F)$~; en
+particulier, on aurait $g_0(U_0)\subset V(F)\cap Z_0=V(F_0)$~; mais puisque
+$F_0\ne 0$, $V(F_0)$ est une partie fermée de $Z_0$ \emph{distincte de $Z_0$} et
+l'on aboutit à une contradiction. C.Q.F.D.
+

@@ -1,0 +1,70 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{209}
+
+\begin{enumerate}[label=\emph{\alph*$'$)}]
+  \item[b$'$)] Pour tout voisinage ouvert $U$ de $x$ dans $X$ et toute
+  générisation $y'$ de $y$, on a
+  $\dim(U\cap X_{y'})\geq\dim_x(U\cap X_y)$.
+\end{enumerate}
+Alors on a les implications $a)\Rightarrow b)\Leftrightarrow b')$.
+\end{proposition}
+
+\begin{proof}
+Pour montrer que $b)$ implique $b')$, il suffit de remarquer que $y'$ appartient à
+une composante irréductible $Y_0$ de $Y$ contenant $y$, de point générique $\eta$~;
+prenant $Z$ comme dans $b)$ et notant que le point générique de $Z$ (qui est aussi
+celui de $Z\cap X_\eta$ ($\mathbf{0}_{\mathrm I}$, 2.1.8)) est contenu dans $U$, on
+a $\dim(U\cap X_{y'})\geq\dim(U\cap Z\cap X_{y'})$, et, en vertu de (13.1.6),
+$\dim(U\cap Z\cap X_{y'})\geq\dim(Z\cap X_\eta)$~; d'où l'assertion, puisque
+$\dim_x(U\cap X_y)=\dim_x(X_y)$ (4.1.1.3).
+
+Pour prouver que $b')$ implique $b)$, on peut d'abord remplacer $X$ par
+$f^{-1}(Y_0)$, donc supposer $Y_0=Y$~; on peut se borner au cas où $X$ et $Y$ sont
+affines, puisque $\dim_x(U\cap X_y)=\dim_x(X_y)$ (4.1.1.3). Les composantes
+irréductibles $W_i$ du préschéma noethérien $X_\eta$ sont alors en nombre fini, et
+le complémentaire de la réunion des $\overline W_i$ (adhérences dans $X$) qui ne
+contiennent pas $x$ est un voisinage ouvert $V$ de $x$. En remplaçant $X$ par $V$,
+on peut donc supposer que $x\in\overline W_i$ pour tout $i$ (l'hypothèse $b')$
+entraîne $\dim(V\cap X_\eta)\geq 0$, donc $x$ appartient à un des $\overline W_i$
+pour un $i$ au moins). En outre, les $\overline W_i$ sont exactement les
+composantes irréductibles de $X$ qui dominent $Y$ ($\mathbf{0}_{\mathrm I}$,
+2.1.8)~; cela étant, si l'on avait, pour chacune de ces composantes $Z$,
+$\dim(Z\cap X_\eta)<\dim_x(X_y)$, on en conclurait
+$\dim(X_\eta)<\dim_x(X_y)$, contrairement à l'hypothèse $b')$. La relation
+$\dim_x(Z\cap X_y)=\dim(Z\cap X_\eta)$ résulte alors de (13.1.6).
+
+Reste à démontrer que $a)$ entraîne $b')$. Tenant compte de (\textbf{II}, 7.1.4)
+et de l'invariance des hypothèses et de la conclusion par changement de base (en
+vertu de (4.2.7)), on peut se borner au cas où $Y$ est un spectre d'anneau de
+valuation, de point fermé $y$ et de point générique $y'$, et où $U=X$.
+L'hypothèse que $f$ est ouvert au point $x$ entraîne qu'il existe une composante
+irréductible $Z$ de $X$ contenant $x$ et dominant $Y$ (1.10.3). Appliquant
+(14.3.10) à un voisinage de $x$ dans $Z$, on en conclut que
+$\dim(Z\cap X_{y'})=\dim_x(Z\cap X_y)$~; mais comme $x$ est maximal dans $X_y$,
+$Z\cap X_y$ contient la composante irréductible de $X_y$ de point générique $x$,
+donc $\dim_x(Z\cap X_y)=\dim_x(X_y)$~; d'autre part, on a
+$\dim(X_{y'})\geq\dim(Z\cap X_{y'})$, ce qui achève de prouver $b')$.
+\end{proof}
+
+\begin{remark}[14.3.14]
+\label{IV.14.3.14-fr}
+Nous ignorons si dans (14.3.13), la conclusion subsiste lorsqu'on remplace
+l'hypothèse $a)$ par l'hypothèse plus faible que $f$ est ouvert au point $x$. On
+peut montrer aisément qu'il suffirait de traiter le cas où $Y$ est spectre d'un
+anneau local intègre, dont le point générique est isolé, et où $X$ est un
+sous-préschéma fermé du fibré vectoriel $Y[T]$.
+\end{remark}
+
+\subsection{Le critère de Chevalley pour les morphismes universellement ouverts}
+\label{subsection:IV.14.4-fr}
+
+\begin{theorem}[14.4.1]
+\EGAReaderTarget{ega4.c04.thm.14-4-1}{IV.14.4.1-fr}
+Soient $f:X\to Y$ un morphisme localement de type fini, $y$ un point de $Y$, $x$
+un point maximal de la fibre $X_y=X\times_Y\operatorname{Spec}(k(y))$. Supposons
+$y$ géométriquement unibranche. Alors les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert au point $x$ (ou encore en tout point de la
+  composante irréductible de $X_y$ de point générique $x$ (14.3.3.1, (iii))).
+
+  

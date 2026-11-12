@@ -1,0 +1,62 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{292}
+Supposons maintenant que $f:X'\to X$ soit un morphisme de préschémas localement noethériens, transformant tout point maximal de $X'$ en point maximal de $X$, et supposons en outre que pour toute partie fermée rare $T$ de $X$, $f$ vérifie les conditions de \sref{IV.21.10.1};
+cela signifie encore que pour tout $x'\in X'^{(1)}$, ou bien $x=f(x')$ est point maximal de $X$, ou bien $x'$ vérifie l'une des conditions (ii), (iii) de \sref{IV.21.10.1}.
+Si on tient compte de ce que tout cycle $1$-codimensionnel a un support rare dans $X$, on voit que $f^*(Z)$ est défini pour tout cycle $1$-codimensionnel $Z$ sur $X$;
+en vertu de \sref{IV.21.10.3.1}, on a donc défini ainsi un homomorphisme de faisceaux de groupes commutatifs ordonnés
+\[
+  \psi^*(\mathscr{Z}^1_X)\to\mathscr{Z}^1_{X'}.
+\]
+Si de plus, pour tout diviseur $D$ sur $X$, $f^*(D)$ est défini \sref{IV.21.4.5}, le fait que le support de $D$ soit rare dans $X$ \sref{IV.21.6.6} entraîne que \sref{IV.21.10.4} est applicable, et on a donc la formule \sref{IV.21.10.4.1} pour tout diviseur $D$ sur $X$.
+En particulier:
+\end{env}
+
+\begin{proposition}[21.10.6]
+\label{IV.21.10.6}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme plat.
+Alors $f^*(Z)$ est défini pour tout cycle $1$-codimensionnel $Z$ sur $X$, $f^*(D)$ est défini pour tout diviseur $D$ sur $X$ et l'on a la relation \sref{IV.21.10.4.1}.
+\end{proposition}
+
+\begin{proof}
+En effet, si $x'\in X'^{(1)}$ est tel que $x=f(x')$ ne soit pas maximal, il résulte de \sref{IV.6.1.1} que l'on a nécessairement $x\in X^{(1)}$, donc on est dans le cas (ii) de \sref{IV.21.10.1}.
+On peut donc appliquer \sref{IV.21.10.5}, compte tenu de \sref{IV.21.4.5} et de \sref{IV.2.3.4}.
+\end{proof}
+
+\begin{remark}[21.10.7]
+\label{IV.21.10.7}
+L'existence de $f^*(Z)$ pour tout cycle $1$-codimensionnel $Z$ sur $X$ résulte déjà de l'hypothèse que $f$ est \emph{plat aux points $x'$ de $X'$ de codimension $\leq1$ dans $X'$} (i.e.\ tels que $\dim\sh{O}_{X',x'}\leq1$);
+en effet, pour tout point maximal $z'\in X'$, il résulte de \sref{IV.6.1.1} que $z=f(z')$ est point maximal de $X$ puisque $\dim\sh{O}_{X,z}\leq\dim\sh{O}_{X',z'}=0$.
+De même, si $x'\in X'^{(1)}$, $x=f(x')$ est maximal ou appartient à $X^{(1)}$ par \sref{IV.6.1.1};
+on peut donc encore appliquer \sref{IV.21.10.5}.
+\end{remark}
+
+\begin{proposition}[21.10.8]
+\label{IV.21.10.8}
+Soient $X$, $X'$, $X''$ trois préschémas localement noethériens, $f:X'\to X$, $g:X''\to X'$ deux morphismes;
+on suppose que $f$ (resp.\ $g$) est plat en tout point de codimension $\leq1$ dans $X'$ (resp.\ $X''$).
+Alors $f\circ g$ est plat en tout point de codimension $\leq1$ dans $X''$ et pour tout cycle $1$-codimensionnel $Z$ sur $X$, on a $(f\circ g)^*(Z)=g^*(f^*(Z))$.
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de \sref{IV.6.1.1} et \sref{IV.2.1.6}.
+La seconde résulte de ce que $f$ (resp.\ $g$, resp.\ $f\circ g$) transforme les points maximaux de $X'$ (resp.\ $X''$, resp.\ $X''$) en points maximaux de $X$ (resp.\ $X'$, resp.\ $X$) et de ce que, si $x''\in X''^{(1)}$ est tel que $x'=g(x'')\in X'^{(1)}$ et $x=f(x')\in X^{(1)}$, on a
+\[
+  \operatorname{long}(\sh{O}_{X'',x''}/\mathfrak{m}_x\sh{O}_{X'',x''})
+  =\operatorname{long}(\sh{O}_{X'',x''}/\mathfrak{m}_{x'}\sh{O}_{X'',x''})
+   \cdot\operatorname{long}(\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}).
+\]
+En effet, si l'on pose $A=\sh{O}_{X,x}$, $A'=\sh{O}_{X',x'}$, $A''=\sh{O}_{X'',x''}$, $\mathfrak{m}=\mathfrak{m}_x$, $\mathfrak{m}'=\mathfrak{m}_{x'}$, on a $A''/\mathfrak{m}A''=(A'/\mathfrak{m}A')\otimes_{A'}A''$, et la formule
+\[
+  \operatorname{long}_{A''}(A''/\mathfrak{m}A'')
+  =\operatorname{long}_{A'}(A'/\mathfrak{m}A')
+   \cdot\operatorname{long}_{A''}(A''/\mathfrak{m}'A'')
+\]
+résulte de \sref{IV.4.7.1} et de l'hypothèse de platitude de $A''$ sur $A'$.
+\end{proof}
+
+\begin{env}[21.10.9]
+\EGAReaderTarget{ega4.c04.statement.21-10-9}{IV.21.10.9}
+Soient $X$ un préschéma localement noethérien, $\Lambda$ un groupe commutatif, noté additivement, et considéré donc comme $\bb{Z}$-module;
+on notera encore par $\bb{Z}$ et $\Lambda$ les faisceaux simples sur $X$ associés aux préfaisceaux constants égaux respectivement à $\bb{Z}$ et $\Lambda$ \sref[0]{0.3.6}.
+On appelle \emph{faisceau des germes de cycles $1$-codimensionnels à coefficients dans $\Lambda$} le faisceau de groupes commutatifs $\mathscr{Z}^1_X\otimes_{\bb{Z}}\Lambda$.
+Si $\Lambda=\bb{Q}$, on dit que les sections

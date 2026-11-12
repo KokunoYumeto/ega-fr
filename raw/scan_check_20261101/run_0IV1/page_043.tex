@@ -1,0 +1,95 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{43}
+  foncteurs dérivés que si $\operatorname{dim.proj}(M)\leq n$ (resp.
+  $\operatorname{dim.inj}(M)\leq n$), on a $L^iT(M)=0$ (resp.
+  $R^iT(M)=0$) \emph{pour tout $i>n$}.
+  \item[\rm (iii)] Si on suppose $A$ \emph{noethérien} et $M$ \emph{de type
+  fini}, la dernière interprétation de la dimension projective donnée dans
+  (17.2.1) montre que si $\operatorname{dim.proj}(M)=n$, $M$ admet une
+  résolution gauche de longueur $n$ formée de modules projectifs \emph{de type
+  fini}. Si de plus $A$ est un anneau \emph{local} noethérien, $M$ admet une
+  résolution de longueur $n$ par des modules \emph{libres de type fini}, un
+  $A$-module projectif de type fini étant alors libre (Bourbaki,
+  \emph{Alg.~comm.}, chap.~II, \S~3, no~2, cor.~2 de la prop.~5).
+\end{enumerate}
+\end{remarks}
+
+\begin{lemma}[17.2.3]
+\label{0.17.2.3-fr}
+Soient $A$ un anneau, $M$ un $A$-module. Pour que
+$\operatorname{dim.inj}(M)\leq n$, il faut et il suffit que pour tout
+$A$-module monogène $N$, on ait $\operatorname{Ext}^{n+1}_A(N,M)=0$.
+\end{lemma}
+
+\begin{proof}
+Avec les notations de (17.2.1), il s'agit de prouver que $C$ est injectif~;
+pour tout $A$-module $N$, $\operatorname{Ext}^{n+1}_A(N,M)$ est isomorphe à
+$\operatorname{Ext}^1_A(N,C)$ (M, V, 7), donc on a
+$\operatorname{Ext}^1_A(N,C)=0$ pour tout $A$-module $N$ de la forme
+$A/\mathfrak{J}$, où $\mathfrak{J}$ est un idéal quelconque de $A$. La suite
+exacte des Ext montre alors que l'homomorphisme canonique
+$\operatorname{Hom}(A,C)\longrightarrow\operatorname{Hom}(\mathfrak{J},C)$ est
+surjectif pour tout idéal $\mathfrak{J}$ de $A$, ce qui implique que $C$ est un
+$A$-module injectif (M, I, 3.2).
+\end{proof}
+
+\begin{lemma}[17.2.4]
+\label{0.17.2.4-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini. Pour que
+$\operatorname{dim.proj}(M)\leq n$, il faut et il suffit que pour tout
+$A$-module monogène $N$, on ait $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{lemma}
+
+\begin{proof}
+On sait en effet (M, VI, 2.5) que la condition
+$\operatorname{dim.proj}(M)\leq n$ est équivalente à
+$\operatorname{Ext}^{n+1}_A(M,N)=0$ pour tout $A$-module $N$ \emph{de type
+fini}~; pour voir que la condition de l'énoncé est aussi suffisante, on
+raisonne par récurrence sur le nombre de générateurs $m$ de $N$~: il y a un
+sous-module $N_1$ de $N$ engendré par $m-1$ éléments et tel que
+$N_2=N/N_1$ soit monogène~; de la suite exacte
+$0\longrightarrow N_1\longrightarrow N\longrightarrow N_2\longrightarrow0$,
+on déduit alors la suite exacte
+$\operatorname{Ext}^{n+1}_A(M,N_1)\longrightarrow
+\operatorname{Ext}^{n+1}_A(M,N)\longrightarrow
+\operatorname{Ext}^{n+1}_A(M,N_2)$ et l'hypothèse de récurrence montre que la
+condition de l'énoncé entraîne bien $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{proof}
+
+\begin{corollary}[17.2.5]
+\label{0.17.2.5-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module. On a
+\begin{equation}
+\label{0.17.2.5.1-fr}
+\tag{17.2.5.1}
+  \operatorname{dim.inj}_A(M)
+  =\sup_{\mathfrak{m}}
+  \bigl(\operatorname{dim.inj}_{A_{\mathfrak{m}}}(M_{\mathfrak{m}})\bigr)
+\end{equation}
+et si $M$ est \emph{de type fini}
+\begin{equation}
+\label{0.17.2.5.2-fr}
+\tag{17.2.5.2}
+  \operatorname{dim.proj}_A(M)
+  =\sup_{\mathfrak{m}}
+  \bigl(\operatorname{dim.proj}_{A_{\mathfrak{m}}}(M_{\mathfrak{m}})\bigr)
+\end{equation}
+où $\mathfrak{m}$ parcourt l'ensemble des idéaux premiers (ou l'ensemble des
+idéaux maximaux) de $A$.
+\end{corollary}
+
+\begin{proof}
+En effet, si $N$ est un $A$-module de type fini (donc de présentation finie),
+on a, pour toute partie multiplicative $S$ de $A$ et pour tout $i\geq0$
+\[
+  S^{-1}\operatorname{Ext}^i_A(N,M)
+  =\operatorname{Ext}^i_{S^{-1}A}(S^{-1}N,S^{-1}M)
+\]
+par platitude, en considérant une résolution libre de $M$ et en utilisant le
+fait que la relation précédente est vraie pour $i=0$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~2, no~7, prop.~19). En particulier
+$\operatorname{Ext}^i_{A_{\mathfrak{m}}}
+(A_{\mathfrak{m}}/\mathfrak{J}A_{\mathfrak{m}},M_{\mathfrak{m}})
+=(\operatorname{Ext}^i_A(A/\mathfrak{J},M))_{\mathfrak{m}}$ pour tout idéal
+premier $\mathfrak{m}$ et tout idéal $\mathfrak{J}$ de $A$~; si l'on tient
+compte de (17.2.3) et de ce que tout

@@ -1,0 +1,91 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{32}
+dans $A$ (resp.~$B$), on a
+$\dim_A(M)=\dim(A/\mathfrak{r})$, $\dim_B(N)=\dim(B/\mathfrak{s})$ par
+définition (16.1.7)~; d'autre part, $\operatorname{Supp}(M\otimes_A N)$ est un
+sous-ensemble fermé de $\operatorname{Spec}(B)$ qui s'identifie (I, 9.1.13) à
+\[
+  \operatorname{Supp}(M)\times_{\operatorname{Spec}(A)}\operatorname{Supp}(N)
+  =\operatorname{Spec}((B/\mathfrak{s})\otimes_A(A/\mathfrak{r}))
+  =\operatorname{Spec}(B/(\mathfrak{s}+\mathfrak{r}B)).
+\]
+Comme $N\otimes_A k$ est un $B$-module de type fini, on a
+$\dim_{B\otimes_A k}(N\otimes_A k)=\dim_B(N\otimes_A k)$ (16.1.9), et
+$\operatorname{Supp}(N\otimes_A k)$ est égal à
+$\operatorname{Spec}(B/(\mathfrak{s}+\mathfrak{m}B))$ par le même raisonnement
+que ci-dessus. Appliquant (16.3.9.1) à $A/\mathfrak{r}$ et à
+$B/(\mathfrak{s}+\mathfrak{r}B)$ il vient
+\[
+  \dim(B/(\mathfrak{s}+\mathfrak{r}B))
+  \leq\dim(A/\mathfrak{r})+
+  \dim(B/(\mathfrak{s}+\mathfrak{m}B)),
+\]
+ce qui n'est autre que (16.3.9.2).
+\end{proof}
+
+\begin{corollary}[16.3.10]
+\label{0.16.3.10-fr}
+Sous les hypothèses de (16.3.9), si $\mathfrak{m}B$ est un idéal de définition
+de $B$, on a $\dim(B)\leq\dim(A)$~; si de plus $A$ est intègre et
+$\dim(A)=\dim(B)$, $\varphi$ est injectif.
+\end{corollary}
+
+\begin{proof}
+La première assertion résulte de (16.3.9) puisque alors
+$\dim(B/\mathfrak{m}B)=0$. On peut d'ailleurs remplacer $A$ par
+$\varphi(A)$, donc $\dim(B)\leq\dim(\varphi(A))$~; si
+$\mathfrak{a}=\operatorname{Ker}(\varphi)\neq0$, et si $A$ est intègre, on a
+$\dim(\varphi(A))=\dim(A/\mathfrak{a})<\dim(A)$ (16.1.2.2), donc on ne peut
+alors avoir $\dim(A)=\dim(B)$ que si $\mathfrak{a}=0$.
+\end{proof}
+
+\subsection[Profondeur et coprofondeur]{Profondeur et
+coprofondeur\protect\footnote{Dans la 3e partie du chap.~III, nous développons
+la notion de profondeur du point de vue cohomologique et dans un cadre plus
+général.}}
+\label{subsection:0.16.4-fr}
+
+\begin{proposition}[16.4.1]
+\label{0.16.4.1-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$ un
+$A$-module de type fini. Alors toute suite $M$-régulière
+$(x_i)_{1\leq i\leq r}$ (15.1.7) formée d'éléments de $\mathfrak{m}$, fait
+partie d'un système de paramètres pour $M$.
+\end{proposition}
+
+\begin{proof}
+Raisonnons par récurrence sur $r$~; considérons le $A$-module
+\[
+  N=M/(x_1M+\cdots+x_{r-1}M)~;
+\]
+par hypothèse $x_1,\ldots,x_{r-1}$ font partie d'un système de paramètres pour
+$M$, donc $\dim(N)=\dim(M)-(r-1)$ (16.3.7). Comme par hypothèse l'homothétie
+de rapport $x_r$ dans $N$ est injective, $x_r$ n'appartient à aucun des idéaux
+premiers associés à $N$, donc (16.3.4) on a
+$\dim(N/x_rN)=\dim(N)-1$, ce qui s'écrit aussi
+\[
+  \dim(M/(x_1M+\cdots+x_rM))=\dim(M)-r~;
+\]
+la conclusion résulte donc de (16.3.7).
+\end{proof}
+
+Pour un $A$-module $M\neq0$, une suite $M$-régulière d'éléments de
+$\mathfrak{m}$ a donc \emph{au plus} $\dim(M)$ éléments.
+
+\begin{lemma}[16.4.2]
+\label{0.16.4.2-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel, $M$ un $A$-module. Pour qu'une suite
+$M$-régulière $(x_i)_{1\leq i\leq n}$ d'éléments de $\mathfrak{m}$ soit
+maximale, il faut et il suffit que l'on ait
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_nM))\neq0.
+\]
+\end{lemma}
+
+\begin{proof}
+Dire que $(x_i)$ est maximale signifie que, pour aucun $x\in\mathfrak{m}$,
+l'homothétie de rapport $x$ dans $N=M/(x_1M+\cdots+x_nM)$ n'est injective, ou
+encore que $\mathfrak{m}$ est contenu dans la réunion des idéaux premiers
+associés à $N$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1, cor.~2 de
+la prop.~2), donc égal à un de ces derniers, puisque c'est un idéal

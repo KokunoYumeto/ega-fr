@@ -1,0 +1,95 @@
+% from ega4-1-fr.tex
+\oldpage[IV-1]{226}
+
+Pour abréger, nous appellerons \emph{point maximal} d'un préschéma $X$ tout
+point générique d'une composante irréductible de $X$~; si
+$X=\operatorname{Spec}(A)$ est affine, les points maximaux de $X$ sont les
+\emph{idéaux premiers minimaux} de $A$.
+
+\begin{proposition}[1.1.5]
+\label{IV.1.1.5-fr}
+Soit $f:X\to Y$ un morphisme quasi-compact. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[a)] $f$ est dominant~;
+  \item[b)] pour tout point maximal $y$ de $Y$, on a
+  $f^{-1}(y)\neq\varnothing$~;
+  \item[c)] pour tout point maximal $y$ de $Y$, $f^{-1}(y)$ contient un point
+  maximal de $X$.
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de \emph{a)} et \emph{c)} a été démontrée dans (I, 6.6.5). Il
+est clair que \emph{c)} entraîne \emph{b)}~; d'autre part, si $X'$ est une
+composante irréductible de $X$ rencontrant $f^{-1}(y)$, $f(X')$ est
+irréductible et contient $y$, donc est contenu dans la composante irréductible
+$Y'=\overline{\{y\}}$ de $Y$ (0\textsubscript{I}, 2.1.6)~; si $x$ est le
+point générique de $X'$, on a donc nécessairement $f(x)=y$
+(0\textsubscript{I}, 2.1.5)~; donc \emph{b)} entraîne \emph{c)}.
+
+\begin{proposition}[1.1.6]
+\label{IV.1.1.6-fr}
+Soient $f':X'\to Y$, $f'':X''\to Y$ deux morphismes, $X$ le préschéma somme
+$X'\coprod X''$, $f:X\to Y$ le morphisme égal à $f'$ dans $X'$ et à $f''$
+dans $X''$. Pour que $f$ soit quasi-compact, il faut et il suffit que $f'$ et
+$f''$ le soient.
+\end{proposition}
+
+Cela résulte aussitôt de la définition.
+
+\subsection{Morphismes quasi-séparés}
+\label{subsection:IV.1.2-fr}
+
+\begin{definition}[1.2.1]
+\label{IV.1.2.1-fr}
+Soient $X$, $Y$ deux préschémas. On dit qu'un morphisme $f:X\to Y$ est
+\emph{quasi-séparé} (ou que $X$ est \emph{quasi-séparé sur} $Y$) si le
+morphisme diagonal
+$\Delta_f=(1_X,1_X)_Y:X\to X\times_Y X$ est quasi-compact. On dit qu'un
+préschéma $X$ est \emph{quasi-séparé} s'il est quasi-séparé sur
+$\operatorname{Spec}(\mathbf Z)$.
+\end{definition}
+
+Par définition, tout morphisme séparé est quasi-séparé, $\Delta_f$ étant une
+immersion fermée (1.1.2, (i))~; un \emph{schéma} $X$ est un préschéma
+quasi-séparé, étant séparé sur $\operatorname{Spec}(\mathbf Z)$ (I, 5.4.1).
+
+\begin{proposition}[1.2.2]
+\label{IV.1.2.2-fr}
+\begin{enumerate}
+  \item[(i)] Tout monomorphisme de préschémas $f:X\to Y$ (en particulier toute
+  immersion) est quasi-séparé.
+  \item[(ii)] Si $f:X\to Y$ et $g:Y\to Z$ sont deux morphismes quasi-séparés,
+  $g\circ f:X\to Z$ est quasi-séparé.
+  \item[(iii)] Soient $X$, $Y$ deux $S$-préschémas, $f:X\to Y$ un $S$-morphisme
+  quasi-séparé. Alors, pour tout changement de base $g:S'\to S$, le morphisme
+  $f_{(S')}:X_{(S')}\to Y_{(S')}$ est quasi-séparé.
+  \item[(iv)] Si $f:X\to Y$, $f':X'\to Y'$ sont deux $S$-morphismes quasi-séparés,
+  alors
+  \[
+    f\times_S f':X\times_S X'\to Y\times_S Y'
+  \]
+  est quasi-séparé.
+  \item[(v)] Si $f:X\to Y$, $g:Y\to Z$ sont deux morphismes tels que $g\circ f$
+  soit quasi-séparé, alors $f$ est quasi-séparé.
+  \item[(vi)] Si $f:X\to Y$ est un morphisme quasi-séparé,
+  $f_{\mathrm{red}}:X_{\mathrm{red}}\to Y_{\mathrm{red}}$ est quasi-séparé.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+En vertu de (I, 5.5.12), il suffit de démontrer (i), (ii) et (iii).
+
+L'assertion (i) est triviale, tout monomorphisme étant séparé (I, 5.5.1).
+Pour démontrer (iii), on se ramène aussitôt au cas où $Y=S$ (I, 3.3.11) et
+l'assertion résulte de ce que
+$\Delta_{f_{(S')}}=(\Delta_f)_{(S')}$ (I, 5.3.4) et de (1.1.2, (iii)). Pour
+démontrer (ii), considérons les projections $p$ et $q$ de $X\times_Y X$ sur
+$X$~; si $i=(p,q)_Z$, on sait que le diagramme
+\[
+\xymatrix{
+  X\times_Y X \ar[r]^-{i} \ar[d]_-{\pi} & X\times_Z X
+    \ar[d]^-{f\times_Z f} \\
+  Y \ar[r]_-{\Delta_g} & Y\times_Z Y
+}
+\]

@@ -1,0 +1,94 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{28}
+faisceau induit sur $S$ par tous les $\mathcal O_{S_\lambda}$~; en particulier
+pour tout $s\in S$, l'anneau local $\mathcal O_s$ est \emph{le même} pour $S$
+et pour tous les $S_\lambda$. Si $\mathcal N_\lambda$ est le Nilradical de
+$\mathcal O_{S_\lambda}$, le Nilradical $\mathcal N$ de $\mathcal O_S$ a donc
+en chaque point de $S$ la même fibre $\mathcal N_s$ (nilradical de
+$\mathcal O_s$) que $u_\lambda^*(\mathcal N_\lambda)$ (induit sur $S$ par
+$\mathcal N_\lambda$). L'hypothèse que $S$ est réduit entraîne par suite
+$u_\lambda^*(\mathcal N_\lambda)=0$~; comme $\mathcal N_0$ est supposé de
+type fini, il en est de même des $\mathcal N_\lambda$, et la conclusion résulte
+donc de (8.5.7).
+\end{proof}
+
+\begin{corollary}[8.7.3]
+\label{IV.8.7.3-fr}
+Supposons vérifiée l'une des hypothèses suivantes~:
+\begin{enumerate}
+\item[\emph{a)}] $S_0$ est un préschéma noethérien et les morphismes
+$u_{\lambda\mu}:S_\mu\to S_\lambda$ sont des immersions ouvertes.
+\item[\emph{b)}] Les morphismes $u_{\lambda\mu}:S_\mu\to S_\lambda$ sont
+fidèlement plats.
+\end{enumerate}
+Alors, pour que $S$ soit intègre, il faut et il suffit qu'il existe
+$\lambda_0$ tel que $S_\lambda$ soit intègre pour $\lambda\geq\lambda_0$.
+\end{corollary}
+
+\begin{proof}
+Dire qu'un préschéma est intègre signifie qu'il est à la fois réduit et
+irréductible~; le corollaire résulte donc de (8.7.2) et de (8.4.3).
+\end{proof}
+
+\begin{remark}[8.7.4]
+\label{IV.8.7.4-fr}
+Si l'on ne fait pas d'hypothèse sur les $u_{\lambda\mu}$, il peut se faire que
+$S$ soit intègre bien que tous les $S_\lambda$ soient non réduits et non
+connexes, comme le montre l'exemple (8.4.4), où on prend l'anneau $A$ non
+réduit.
+\end{remark}
+
+\subsection{Préschémas de présentation finie sur une limite projective de préschémas}
+\label{subsection:IV.8.8-fr}
+
+\begin{env}[8.8.1]
+\label{IV.8.8.1-fr}
+Conservant toujours les notations et hypothèses de (8.2.2), nous supposerons
+donnés dans cette section deux $S_\alpha$-préschémas $X_\alpha$, $Y_\alpha$,
+ce qui définit (8.2.5) deux systèmes projectifs de préschémas
+$(X_\lambda,v_{\lambda\mu})$ et $(Y_\lambda,w_{\lambda\mu})$ en posant
+$X_\lambda=X_\alpha\times_{S_\alpha}S_\lambda$,
+$Y_\lambda=Y_\alpha\times_{S_\alpha}S_\lambda$,
+$v_{\lambda\mu}=1_{X_\alpha}\times u_{\lambda\mu}$,
+$w_{\lambda\mu}=1_{Y_\alpha}\times u_{\lambda\mu}$ (pour
+$\alpha\leq\lambda\leq\mu$), dont les limites projectives sont respectivement
+$X=X_\alpha\times_{S_\alpha}S$, $Y=Y_\alpha\times_{S_\alpha}S$, les
+morphismes canoniques $v_\lambda:X\to X_\lambda$ et
+$w_\lambda:Y\to Y_\lambda$ étant respectivement égaux à
+$1_{X_\alpha}\times u_\lambda$ et $1_{Y_\alpha}\times u_\lambda$. Pour
+$\alpha\leq\lambda\leq\mu$, on a une application canonique
+$e_{\mu\lambda}:\operatorname{Hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to
+\operatorname{Hom}_{S_\mu}(X_\mu,Y_\mu)$, qui à tout $S_\lambda$-morphisme
+$f_\lambda:X_\lambda\to Y_\lambda$ fait correspondre
+$f_\mu=f_\lambda\times1_{S_\mu}:X_\lambda\times_{S_\lambda}S_\mu\to
+Y_\lambda\times_{S_\lambda}S_\mu$, et il est clair que
+$(\operatorname{Hom}_{S_\lambda}(X_\lambda,Y_\lambda),e_{\mu\lambda})$ est un
+\emph{système inductif} d'ensembles. De même, on a une application canonique
+$e_\lambda:\operatorname{Hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to
+\operatorname{Hom}_S(X,Y)$ qui à $f_\lambda$ fait correspondre
+$f=f_\lambda\times1_S:X_\lambda\times_{S_\lambda}S\to
+Y_\lambda\times_{S_\lambda}S$ et $(e_\lambda)$ est un système inductif
+d'applications~; d'où, en passant à la limite inductive, une application
+canonique, fonctorielle en $S_\alpha$, $X_\alpha$ et $Y_\alpha$~:
+\begin{equation}
+e:\varinjlim\operatorname{Hom}_{S_\lambda}(X_\lambda,Y_\lambda)
+\longrightarrow\operatorname{Hom}_S(X,Y).
+\tag{8.8.1.1}\label{IV.8.8.1.1-fr}
+\end{equation}
+\end{env}
+
+\begin{theorem}[8.8.2]
+\EGAReaderTarget{ega4.c04.thm.8-8-2}{IV.8.8.2-fr}
+\begin{enumerate}
+\item[(i)] Supposons $X_\alpha$ quasi-compact (resp. quasi-compact et
+quasi-séparé), et $Y_\alpha$ localement de type fini (resp. localement de
+présentation finie) sur $S_\alpha$. Alors l'application (8.8.1.1) est
+injective (resp. bijective).
+\item[(ii)] Supposons $S_0$ quasi-compact et quasi-séparé. Pour tout préschéma
+$X$ de présentation finie sur $S$, il existe un $\lambda\in L$, un préschéma
+$X_\lambda$ de présentation finie sur $S_\lambda$, et un $S$-isomorphisme
+$X\xrightarrow{\sim}X_\lambda\times_{S_\lambda}S$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}

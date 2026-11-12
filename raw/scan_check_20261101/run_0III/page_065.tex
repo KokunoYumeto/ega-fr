@@ -1,0 +1,114 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{65}
+un système projectif d'objets de $\mathcal C$ dont l'ensemble d'indices $I$
+est filtrant à droite~; soient $A=\varprojlim A_\alpha$ et, pour tout
+$\alpha\in I$, soit $f_\alpha:A\to A_\alpha$ le morphisme canonique. Pour
+tout $\alpha\in I$, les $f_{\alpha\beta}(A_\beta)$ pour
+$\alpha\leq\beta$ forment une famille filtrante décroissante de sous-objets
+de $A_\alpha$~; le sous-objet
+\[
+A'_\alpha=\inf_{\beta\geq\alpha}f_{\alpha\beta}(A_\beta)
+\]
+est dit sous-objet des «~images universelles~» dans $A_\alpha$~; il est
+clair que $f_\alpha(A)\subset A'_\alpha$ et
+$f_{\alpha\beta}(A'_\beta)\subset A'_\alpha$ pour
+$\alpha\leq\beta$~; donc
+$(A'_\alpha,f_{\alpha\beta}|A'_\beta)$ est un système projectif et
+$A=\varprojlim A'_\alpha$.
+\end{env}
+
+\begin{env}[13.1.2]
+\label{0.13.1.2-fr}
+Étant donné un système projectif $(A_\alpha,f_{\alpha\beta})$ dans
+$\mathcal C$, on appelle \emph{condition de Mittag-Leffler} la condition
+suivante~:
+\begin{itemize}
+\item[\textbf{(ML)}]
+\emph{Pour tout indice $\alpha$, il existe $\beta\geq\alpha$ tel que, pour
+tout $\gamma\geq\beta$, on ait
+$f_{\alpha\gamma}(A_\gamma)=f_{\alpha\beta}(A_\beta)$.}
+\end{itemize}
+Il est clair que si les $f_{\alpha\beta}$ sont des \emph{épimorphismes}, la
+condition (ML) est vérifiée. Inversement, si (ML) est vérifiée, et si pour
+tout $\alpha\in I$, $A'_\alpha$ est le sous-objet des «~images
+universelles~» dans $A_\alpha$, la restriction de $f_{\alpha\beta}$ à
+$A'_\beta$ est un \emph{épimorphisme}
+$A'_\beta\to A'_\alpha$ pour $\alpha\leq\beta$~: en effet, si
+$\gamma\geq\beta$ est tel que
+$f_{\beta\delta}(A_\delta)=f_{\beta\gamma}(A_\gamma)$ pour
+$\delta\geq\gamma$, on a
+$A'_\beta=f_{\beta\gamma}(A_\gamma)$ et cela entraîne d'autre part
+$f_{\alpha\delta}(A_\delta)=f_{\alpha\gamma}(A_\gamma)$ pour
+$\delta\geq\gamma$, donc
+$A'_\alpha=f_{\alpha\gamma}(A_\gamma)=f_{\alpha\beta}(A'_\beta)$.
+
+Notons aussi que la condition (ML) est vérifiée lorsque les objets
+$A_\alpha$ sont \emph{artiniens} dans $\mathcal C$, c'est-à-dire que toute
+famille de sous-objets de $A_\alpha$ admet un élément minimal~: un élément
+minimal de la famille filtrante décroissante
+$(f_{\alpha\beta}(A_\beta))$ de sous-objets de $A_\alpha$ est en effet
+alors nécessairement le plus petit de ces sous-objets.
+\end{env}
+
+\begin{remark}[13.1.3]
+\label{0.13.1.3-fr}
+La condition (ML) peut se formuler également lorsque $\mathcal C$ est par
+exemple la catégorie des ensembles~; on peut alors encore définir le
+sous-ensemble des «~images universelles~» de $A_\alpha$ et les remarques
+faites à ce sujet dans (\hyperref[0.13.1.1-fr]{13.1.1}) et
+(\hyperref[0.13.1.2-fr]{13.1.2}) restent valables.
+\end{remark}
+
+\subsection{La condition de Mittag-Leffler pour les groupes abéliens}
+\label{subsection:0.13.2-fr}
+
+\begin{proposition}[13.2.1]
+\label{0.13.2.1-fr}
+\emph{Soit}
+\[
+0\longrightarrow A_\alpha\xrightarrow{u_\alpha}B_\alpha
+\xrightarrow{v_\alpha}C_\alpha\longrightarrow0
+\]
+\emph{une suite exacte de systèmes projectifs de groupes abéliens (relatifs
+à un même ensemble filtrant d'indices $I$).}
+\begin{enumerate}
+\item[\emph{(i)}]
+\emph{Si $(B_\alpha)$ vérifie (ML), il en est de même de $(C_\alpha)$.}
+\item[\emph{(ii)}]
+\emph{Si $(A_\alpha)$ et $(C_\alpha)$ vérifient (ML), il en est de même de
+$(B_\alpha)$.}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Soient $(f_{\alpha\beta})$, $(g_{\alpha\beta})$, $(h_{\alpha\beta})$ les
+systèmes d'homomorphismes définissant les systèmes projectifs
+$(A_\alpha)$, $(B_\alpha)$, $(C_\alpha)$ respectivement.
+
+(i) Supposons que
+$g_{\alpha\beta}(B_\beta)=g_{\alpha\lambda}(B_\lambda)$ pour
+$\lambda\geq\beta$~; comme $v_\beta$ et $v_\lambda$ sont surjectives, on a
+\[
+h_{\alpha\beta}(C_\beta)
+=v_\alpha(g_{\alpha\beta}(B_\beta))
+=v_\alpha(g_{\alpha\lambda}(B_\lambda))
+=h_{\alpha\lambda}(C_\lambda)
+\]
+pour $\lambda\geq\beta$.
+
+(ii) Soit $\alpha\in I$, et soit $\beta\geq\alpha$ un indice tel que pour
+$\lambda\geq\beta$, on ait
+$f_{\alpha\beta}(A_\beta)=f_{\alpha\lambda}(A_\lambda)$~; soit d'autre
+part $\gamma\geq\beta$ un indice tel que, pour $\lambda\geq\gamma$, on ait
+$h_{\beta\gamma}(C_\gamma)=h_{\beta\lambda}(C_\lambda)$. Soit alors
+$y_\alpha$ un élément de $g_{\alpha\gamma}(B_\gamma)$~; on a donc
+$y_\alpha=g_{\alpha\gamma}(y_\gamma)$ avec $y_\gamma\in B_\gamma$~;
+posons $y_\beta=g_{\beta\gamma}(y_\gamma)$, de sorte que
+$v_\beta(y_\beta)=h_{\beta\gamma}(v_\gamma(y_\gamma))$. Pour tout
+$\lambda\geq\gamma$, il existe par hypothèse $y_\lambda\in B_\lambda$ tel
+que
+$h_{\beta\gamma}(v_\gamma(y_\gamma))
+=h_{\beta\lambda}(v_\lambda(y_\lambda))
+=v_\beta(g_{\beta\lambda}(y_\lambda))$, d'où
+$v_\beta(y_\beta-g_{\beta\lambda}(y_\lambda))=0$, et par suite il existe
+$x_\beta\in A_\beta$

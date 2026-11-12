@@ -1,0 +1,95 @@
+% from ega1-8-fr.tex
+\oldpage[I]{165}
+\begin{lemma}[8.1.4]
+\label{I.8.1.4-fr}
+Soient $R$ un corps, $M$, $N$ deux sous-anneaux locaux de $R$, $P$ le
+sous-anneau de $R$ engendré par $M\cup N$. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[(i)] Il existe un idéal premier $\mathfrak p$ de $P$ tel que
+    $\mathfrak m(M)=\mathfrak p\cap M$,
+    $\mathfrak m(N)=\mathfrak p\cap N$.
+  \item[(ii)] L'idéal $\mathfrak a$ engendré dans $P$ par
+    $\mathfrak m(M)\cup\mathfrak m(N)$ est distinct de $P$.
+  \item[(iii)] Il existe un sous-anneau local $Q$ de $R$ dominant à la fois
+    $M$ et $N$.
+\end{enumerate}
+\end{lemma}
+
+Il est clair que (i) implique (ii)~; inversement, si $\mathfrak a\ne P$,
+$\mathfrak a$ est contenu dans un idéal maximal $\mathfrak n$ de $P$ et comme
+$1\notin\mathfrak n$, $\mathfrak n\cap M$ contient $\mathfrak m(M)$ et est
+distinct de $M$, donc $\mathfrak n\cap M=\mathfrak m(M)$ et de même
+$\mathfrak n\cap N=\mathfrak m(N)$. Il est clair que si $Q$ domine $M$ et
+$N$, on a $P\subset Q$, et
+\[
+  \mathfrak m(M)=\mathfrak m(Q)\cap M
+  =(\mathfrak m(Q)\cap P)\cap M,\qquad
+  \mathfrak m(N)=(\mathfrak m(Q)\cap P)\cap N,
+\]
+donc (iii) entraîne (i)~; la réciproque est évidente en prenant
+$Q=P_\mathfrak p$.
+
+Lorsque les conditions de (\hyperref[I.8.1.4-fr]{8.1.4}) sont satisfaites,
+on dit, avec C.~Chevalley, que les anneaux locaux $M$ et $N$ sont
+\emph{apparentés}.
+
+\begin{proposition}[8.1.5]
+\label{I.8.1.5-fr}
+Soient $A$, $B$ deux sous-anneaux d'un corps $R$, $C$ le sous-anneau de $R$
+engendré par $A\cup B$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[(i)] Pour tout anneau local $Q$ contenant $A$ et $B$, on a
+    $A_\mathfrak p=B_\mathfrak q$, en posant
+    $\mathfrak p=\mathfrak m(Q)\cap A$,
+    $\mathfrak q=\mathfrak m(Q)\cap B$.
+  \item[(ii)] Pour tout idéal premier $\mathfrak r$ de $C$, on a
+    $A_\mathfrak p=B_\mathfrak q$, en posant
+    $\mathfrak p=\mathfrak r\cap A$, $\mathfrak q=\mathfrak r\cap B$.
+  \item[(iii)] Si $M\in L(A)$ et $N\in L(B)$ sont apparentés, ils sont
+    identiques.
+  \item[(iv)] On a $L(A)\cap L(B)=L(C)$.
+\end{enumerate}
+\end{proposition}
+
+Les lemmes (\hyperref[I.8.1.3-fr]{8.1.3}) et
+(\hyperref[I.8.1.4-fr]{8.1.4}) prouvent que (i) et (iii) sont équivalentes~;
+il est clair que (i) entraîne (ii) en l'appliquant à $Q=C_\mathfrak r$~;
+inversement, (ii) entraîne (i), car si $Q$ contient $A\cup B$, il contient
+$C$, et si $\mathfrak r=\mathfrak m(Q)\cap C$, on a
+$\mathfrak p=\mathfrak r\cap A$ et $\mathfrak q=\mathfrak r\cap B$ d'après
+(\hyperref[I.8.1.3-fr]{8.1.3}). Il est immédiat que (iv) implique (i), car si
+$Q$ contient $A\cup B$, il domine un anneau local
+$C_\mathfrak r\in L(C)$ par (\hyperref[I.8.1.3-fr]{8.1.3})~; on a par
+hypothèse $C_\mathfrak r\in L(A)\cap L(B)$, et
+(\hyperref[I.8.1.1-fr]{8.1.1}) et (\hyperref[I.8.1.3-fr]{8.1.3}) prouvent que
+$C_\mathfrak r=A_\mathfrak p=B_\mathfrak q$. Prouvons enfin que (iii)
+entraîne (iv). Soit $Q\in L(C)$~; $Q$ domine un $M\in L(A)$ et un
+$N\in L(B)$ (\hyperref[I.8.1.3-fr]{8.1.3}), donc $M$ et $N$, étant
+apparentés, sont identiques par hypothèse. Comme on a alors $C\subset M$,
+$M$ domine un $Q'\in L(C)$ (\hyperref[I.8.1.3-fr]{8.1.3}), donc $Q$ domine
+$Q'$, ce qui (\hyperref[I.8.1.3-fr]{8.1.3}) entraîne nécessairement
+$Q=Q'=M$, donc $Q\in L(A)\cap L(B)$. Inversement, si
+$Q\in L(A)\cap L(B)$, on a $C\subset Q$, donc
+(\hyperref[I.8.1.3-fr]{8.1.3}) $Q$ domine un
+$Q''\in L(C)\subset L(A)\cap L(B)$~; $Q$ et $Q''$ étant apparentés sont
+identiques, donc $Q''=Q\in L(C)$, ce qui achève la démonstration.
+
+\subsection{Anneaux locaux d'un schéma intègre.}
+\label{subsection:I.8.2-fr}
+
+\begin{env}[8.2.1]
+\label{I.8.2.1-fr}
+Soient $X$ un préschéma \emph{intègre}, $R$ son corps des fonctions
+rationnelles, identique à l'anneau local du point générique $a$ de $X$~; pour
+tout $x\in X$, on sait que $\mathscr{O}_x$ s'identifie canoniquement à un
+sous-anneau de $R$ (\hyperref[I.7.1.5-fr]{7.1.5}), et pour toute fonction
+rationnelle $f\in R$, le domaine de définition $\delta(f)$ de $f$ est
+l'ensemble ouvert des $x\in X$ tels que $f\in\mathscr{O}_x$. Il en résulte
+(\hyperref[I.7.2.6-fr]{7.2.6}) que pour tout ouvert $U\subset X$, on a
+\begin{equation}
+  \Gamma(U,\mathscr{O}_X)=\bigcap_{x\in U}\mathscr{O}_x.
+  \tag{8.2.1.1}\label{I.8.2.1.1-fr}
+\end{equation}
+\end{env}
+

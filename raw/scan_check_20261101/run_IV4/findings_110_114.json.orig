@@ -1,0 +1,1127 @@
+[
+ {
+  "page": 110,
+  "where": "top of p. 110: blank line after \\oldpage[IV-4]{110}",
+  "scan": "p. 109 ends 'B_0 est donc un anneau quotient', p. 110 begins 'de B, q_0 est l'image' (no indent; page_110_s1.png)",
+  "tex": "blank line between the marker and 'de $B$' (the blank line before the marker is already gone in the current source)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{110}\n\nde $B$, $\\mathfrak q_0$",
+   "new": "\\oldpage[IV-4]{110}\nde $B$, $\\mathfrak q_0$"
+  },
+  "note": "The marker stands at the right place. This removes the blank line after it (\\oldpage ends with \\ignorespaces, which does not skip a paragraph break)."
+ },
+ {
+  "page": 110,
+  "where": "Théorème (18.1.2), display 'X ⇝ X×_S S_0'",
+  "scan": "wavy arrow (crop p110_leadsto.png)",
+  "tex": "\\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "X\\longmapsto X\\times_S S_0",
+   "new": "X\\leadsto X\\times_S S_0"
+  },
+  "note": "GLOBAL_ISSUES 33 (wavy arrow)."
+ },
+ {
+  "page": 110,
+  "where": "proof of (18.1.2), first sentence: 'ce foncteur est pleinement fidèle'",
+  "scan": "'pleinement fidèle' italic (crop p110_pleinement.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ce foncteur est pleinement fidèle. Soient",
+   "new": "ce foncteur est \\emph{pleinement fidèle}. Soient"
+  },
+  "note": ""
+ },
+ {
+  "page": 110,
+  "where": "proof of (18.1.2): 'sont donc les mêmes que les parties de Z_0'",
+  "scan": "'mêmes' italic (crop p110_memes.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont donc les mêmes que",
+   "new": "sont donc les \\emph{mêmes} que"
+  },
+  "note": ""
+ },
+ {
+  "page": 110,
+  "where": "proof of (18.1.2): 'condition de recollement (0_I, 4.1.7)'",
+  "scan": "bold 0 with subscript I (crop p110_0I417.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 4.1.7)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 4.1.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 110,
+  "where": "Corollaire (18.1.3): '(I, 3.4.3)'",
+  "scan": "bold upright I; the reference and its parentheses upright inside the italic statement (crop p110_I343.png)",
+  "tex": "plain I, italic inside the corollary",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 3.4.3)",
+   "new": "\\textup{(\\textbf{I}, 3.4.3)}"
+  },
+  "note": "A genuine EGA I reference (bold I in the print, not EGA IV's own (1.3.4.3)). Convention 2 with convention 6 (upright reference in an italic statement), one edit."
+ },
+ {
+  "page": 110,
+  "where": "end of page_110.tex: the heading '18.2. Revêtements étales.' (it opens printed p. 111)",
+  "scan": "p. 110 ends with the proof of (18.1.3), '(ou directement de (17.9.3)).'; p. 111 begins with the heading '18.2. Revêtements étales.' (page_110_s4.png, page_111_s1.png)",
+  "tex": "\\subsection{Revêtements étales.} and its \\EGAReaderTarget stand before \\oldpage[IV-4]{111}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Revêtements étales.}\n\\EGAReaderTarget{ega4.c04.subsec.18-2}{subsection:IV.18.2}\n\n",
+   "new": ""
+  },
+  "note": "Two-part move (the heading moves, not the marker, so each edit stays in its own page segment): the first p. 111 finding re-inserts these two lines after \\oldpage[IV-4]{111}. Apply both or neither. Net result in ega4-18-fr.tex: \\oldpage[IV-4]{111} stands before the 18.2 heading."
+ },
+ {
+  "page": 111,
+  "where": "start of page_111.tex: the 18.2 heading",
+  "scan": "printed p. 111 begins with '18.2. Revêtements étales.', then '(18.2.1) Étant donnés' (page_111_s1.png)",
+  "tex": "the heading stands before the marker, at the end of the p. 110 segment",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{111}\n\n\\begin{env}[18.2.1]",
+   "new": "\\oldpage[IV-4]{111}\n\n\\subsection{Revêtements étales.}\n\\EGAReaderTarget{ega4.c04.subsec.18-2}{subsection:IV.18.2}\n\n\\begin{env}[18.2.1]"
+  },
+  "note": "Part 2 of 2: apply together with the last p. 110 finding, which removes the same two lines from the end of the p. 110 segment."
+ },
+ {
+  "page": 111,
+  "where": "display (18.2.1.1): '(x, y) ⇝ Tr_{B/A}(xy)'",
+  "scan": "wavy arrow (crop p111_leadsto.png)",
+  "tex": "\\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(x,y)\\longmapsto\\operatorname{Tr}_{B/A}(xy)",
+   "new": "(x,y)\\leadsto\\operatorname{Tr}_{B/A}(xy)"
+  },
+  "note": "GLOBAL_ISSUES 33 (wavy arrow)."
+ },
+ {
+  "page": 111,
+  "where": "(18.2.2), l. 1-2: 'soit B une O_X-Algèbre qui, en tant que O_X-Module, est localement libre de rang fini'",
+  "scan": "'Algèbre' and 'Module' italic, like 'localement libre de rang fini' after them (crop p111_algebre.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\sh{O}_X$-Algèbre qui, en tant que $\\sh{O}_X$-Module, est",
+   "new": "$\\sh{O}_X$-\\emph{Algèbre} qui, en tant que $\\sh{O}_X$-\\emph{Module}, est"
+  },
+  "note": ""
+ },
+ {
+  "page": 111,
+  "where": "(18.2.2): 'que nous noterons aussi Tr_{B/O_X,U}'",
+  "scan": "slash between B and O_X (crop p111_tr_U.png; the bar of 'B|U' two lines higher is vertical, crop p111_BbarU.png)",
+  "tex": "vertical bar: \\sh{B}|\\sh{O}_X",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Tr}_{\\sh{B}|\\sh{O}_X,U}",
+   "new": "\\operatorname{Tr}_{\\sh{B}/\\sh{O}_X,U}"
+  },
+  "note": "The print writes these subscripts with a slash, as in Tr_{B/A}; the TeX has a vertical bar in all 16 of them (pp. 111-113, all fixed one by one here). Only the bar of B|U (restriction, p. 113) is a real bar."
+ },
+ {
+  "page": 111,
+  "where": "(18.2.2), display 'astr_{B/O_X,U} : Γ(U,B) → Γ(U,B)ˇ = Γ(U,B̌)'",
+  "scan": "slash (crop p111_astrU_display.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{astr}_{\\sh{B}|\\sh{O}_X,U}",
+   "new": "\\operatorname{astr}_{\\sh{B}/\\sh{O}_X,U}"
+  },
+  "note": "Same as the previous finding."
+ },
+ {
+  "page": 111,
+  "where": "after the display astr_{B/O_X,U}: 'En outre, il résulte de (18.2.1.2)'",
+  "scan": "new indented paragraph (crop p111_enoutre.png)",
+  "tex": "no blank line after \\]: the text continues the paragraph without indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nEn outre, il résulte de (18.2.1.2)",
+   "new": "\\]\n\nEn outre, il résulte de (18.2.1.2)"
+  },
+  "note": "Paragraph indent only (GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 111,
+  "where": "display (18.2.2.1): 'Tr_{B/O_X} : B → O_X'",
+  "scan": "slash (crop p111_tr_sub.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Tr}_{\\sh{B}|\\sh{O}_X}:\\sh{B}",
+   "new": "\\operatorname{Tr}_{\\sh{B}/\\sh{O}_X}:\\sh{B}"
+  },
+  "note": "Slash for the bar, as above."
+ },
+ {
+  "page": 111,
+  "where": "display (18.2.2.2): 'astr_{B/O_X} : B → B̌'",
+  "scan": "slash (crop p111_2222.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{astr}_{\\sh{B}|\\sh{O}_X}:\\sh{B}",
+   "new": "\\operatorname{astr}_{\\sh{B}/\\sh{O}_X}:\\sh{B}"
+  },
+  "note": "Slash for the bar, as above."
+ },
+ {
+  "page": 111,
+  "where": "display (18.2.2.3): '(Tr_{B/O_X})_x = Tr_{B_x/O_{X,x}}'",
+  "scan": "two slashes (crop p111_22234.png)",
+  "tex": "two vertical bars",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\operatorname{Tr}_{\\sh{B}|\\sh{O}_X})_x=\\operatorname{Tr}_{\\sh{B}_x|\\sh{O}_{X,x}}",
+   "new": "(\\operatorname{Tr}_{\\sh{B}/\\sh{O}_X})_x=\\operatorname{Tr}_{\\sh{B}_x/\\sh{O}_{X,x}}"
+  },
+  "note": "Slash for the bar, as above."
+ },
+ {
+  "page": 111,
+  "where": "display (18.2.2.4): '(astr_{B/O_X})_x = astr_{B_x/O_{X,x}}.'",
+  "scan": "two slashes (crops p111_22234.png, p111_2224.png)",
+  "tex": "two vertical bars",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\operatorname{astr}_{\\sh{B}|\\sh{O}_X})_x=\\operatorname{astr}_{\\sh{B}_x|\\sh{O}_{X,x}}",
+   "new": "(\\operatorname{astr}_{\\sh{B}/\\sh{O}_X})_x=\\operatorname{astr}_{\\sh{B}_x/\\sh{O}_{X,x}}"
+  },
+  "note": "Slash for the bar, as above."
+ },
+ {
+  "page": 111,
+  "where": "after (18.2.2.4): 'Enfin, sous les conditions de (18.2.1)'",
+  "scan": "new indented paragraph (page_111_s4.png)",
+  "tex": "no blank line after \\end{equation}: the text continues the paragraph without indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{equation}\nEnfin, sous",
+   "new": "\\end{equation}\n\nEnfin, sous"
+  },
+  "note": "Paragraph indent only (GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 111,
+  "where": "(18.2.2), last paragraph: 'la forme Tr_{B/O_X} (resp. l'homomorphisme astr_{B/O_X})'",
+  "scan": "two slashes (crop p111_enfin.png)",
+  "tex": "two vertical bars",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "la forme $\\operatorname{Tr}_{\\sh{B}|\\sh{O}_X}$ (resp. l'homomorphisme $\\operatorname{astr}_{\\sh{B}|\\sh{O}_X}$)",
+   "new": "la forme $\\operatorname{Tr}_{\\sh{B}/\\sh{O}_X}$ (resp. l'homomorphisme $\\operatorname{astr}_{\\sh{B}/\\sh{O}_X}$)"
+  },
+  "note": "Slash for the bar, as above."
+ },
+ {
+  "page": 112,
+  "where": "Proposition (18.2.3), l. 1: 'un morphisme fini de préschémas'",
+  "scan": "'fini' roman inside the italic statement (crop p112_prop3_head.png)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "un morphisme fini de préschémas",
+   "new": "un morphisme \\textup{fini} de préschémas"
+  },
+  "note": ""
+ },
+ {
+  "page": 112,
+  "where": "Proposition (18.2.3), label a)",
+  "scan": "upright 'a)' (crop p112_prop3_head.png)",
+  "tex": "\\item[a)]: italic in the proposition",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)] $f$ est étale.",
+   "new": "\\item[\\textup{a)}] $f$ est étale."
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 112,
+  "where": "Proposition (18.2.3), label a')",
+  "scan": "upright a') (crop p112_prop3_head.png)",
+  "tex": "\\item[a$'$)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a$'$)]",
+   "new": "\\item[\\textup{a$'$)}]"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 112,
+  "where": "(18.2.3) a'): 'extension finie séparable de k(y)'",
+  "scan": "bold italic k (crop p112_prop3_items.png)",
+  "tex": "\\kappa(y)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "extension finie séparable de $\\kappa(y)$.",
+   "new": "extension finie séparable de $\\boldsymbol{k}(y)$."
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114)."
+ },
+ {
+  "page": 112,
+  "where": "Proposition (18.2.3), label b)",
+  "scan": "upright 'b)' (crop p112_prop3_items.png)",
+  "tex": "\\item[b)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)] $\\sh{B}$ est un",
+   "new": "\\item[\\textup{b)}] $\\sh{B}$ est un"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 112,
+  "where": "(18.2.3) b): 'B_y ⊗_{O_{Y,y}} k(y) est une k(y)-algèbre finie séparable'",
+  "scan": "two bold italic k (crop p112_prop3_items.png; the k after ⊗ is on the line, not in the subscript)",
+  "tex": "\\kappa(y) twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\kappa(y)$ est une $\\kappa(y)$-algèbre finie",
+   "new": "\\boldsymbol{k}(y)$ est une $\\boldsymbol{k}(y)$-algèbre finie"
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114)."
+ },
+ {
+  "page": 112,
+  "where": "(18.2.3) b): '(donc le composé direct d'un nombre fini de corps, extensions finies séparables de k(y))'",
+  "scan": "the whole parenthesis roman inside the italic statement; bold italic k (crop p112_prop3_items.png)",
+  "tex": "italic; \\kappa(y)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "séparable (donc le composé direct d'un nombre fini de corps, extensions finies séparables de $\\kappa(y)$).",
+   "new": "séparable \\textup{(donc le composé direct d'un nombre fini de corps, extensions finies séparables de $\\boldsymbol{k}(y)$)}."
+  },
+  "note": "Convention 6, one edit that also carries the convention-1 k of the parenthesis (\\kappa -> \\boldsymbol{k})."
+ },
+ {
+  "page": 112,
+  "where": "Proposition (18.2.3), label c)",
+  "scan": "upright 'c)' (page_112_s2.png)",
+  "tex": "\\item[c)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[c)] $\\sh{B}$ est un $\\sh{O}_Y$-Module localement libre, et",
+   "new": "\\item[\\textup{c)}] $\\sh{B}$ est un $\\sh{O}_Y$-Module localement libre, et"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 112,
+  "where": "(18.2.3) c): 'astr_{B/O_Y} : B → B̌'",
+  "scan": "slash (crop p112_c_astr.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'homomorphisme $\\operatorname{astr}_{\\sh{B}|\\sh{O}_Y}",
+   "new": "l'homomorphisme $\\operatorname{astr}_{\\sh{B}/\\sh{O}_Y}"
+  },
+  "note": "Slash for the bar (see p. 111)."
+ },
+ {
+  "page": 112,
+  "where": "(18.2.3) c): '(18.2.2) est bijectif'",
+  "scan": "reference upright inside the italic statement (crop p112_c_astr.png)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(18.2.2) est bijectif.",
+   "new": "\\textup{(18.2.2)} est bijectif."
+  },
+  "note": ""
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'l'équivalence de a) et a') a déjà été démontrée'",
+  "scan": "labels italic as a whole (crop p112_labels1.png)",
+  "tex": "$a)$ and $a')$: italic letter, upright parenthesis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'équivalence de $a)$ et $a')$ a déjà",
+   "new": "l'équivalence de \\emph{a)} et \\emph{a$'$)} a déjà"
+  },
+  "note": "GLOBAL_ISSUES 88: condition labels in roman text are italic as a whole in the print."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'que B est un A-module de présentation finie (1.4.7)'",
+  "scan": "'module de présentation finie' italic (crop p112_module_pf.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un $A$-module de présentation finie (1.4.7)",
+   "new": "est un $A$-\\emph{module de présentation finie} (1.4.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'que B est un A-module projectif'",
+  "scan": "'projectif' italic (crop p112_module_pf.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un $A$-module projectif,",
+   "new": "est un $A$-module \\emph{projectif},"
+  },
+  "note": ""
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'le spectre de la k(y)-algèbre B(y)=B_y ⊗_{O_{Y,y}} k(y)'",
+  "scan": "two bold italic k (page_112_s2.png)",
+  "tex": "\\kappa(y) twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "spectre de la $\\kappa(y)$-algèbre $\\sh{B}(y)=\\sh{B}_y\\otimes_{\\sh{O}_{Y,y}}\\kappa(y)$",
+   "new": "spectre de la $\\boldsymbol{k}(y)$-algèbre $\\sh{B}(y)=\\sh{B}_y\\otimes_{\\sh{O}_{Y,y}}\\boldsymbol{k}(y)$"
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114)."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'l'équivalence de a') et b)'",
+  "scan": "labels italic as a whole (page_112_s2.png)",
+  "tex": "$a')$, $b)$",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'équivalence de $a')$ et $b)$.",
+   "new": "l'équivalence de \\emph{a$'$)} et \\emph{b)}."
+  },
+  "note": "GLOBAL_ISSUES 88: condition labels in roman text are italic as a whole in the print."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'Pour voir que b) est équivalente à c), notons que la seconde assertion de b)'",
+  "scan": "labels italic as a whole (page_112_s2.png)",
+  "tex": "$b)$, $c)$, $b)$",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Pour voir que $b)$ est équivalente à $c)$, notons que la seconde assertion de $b)$ équivaut",
+   "new": "Pour voir que \\emph{b)} est équivalente à \\emph{c)}, notons que la seconde assertion de \\emph{b)} équivaut"
+  },
+  "note": "GLOBAL_ISSUES 88: condition labels in roman text are italic as a whole in the print."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'astr_{B(y)/k(y)}'",
+  "scan": "slash (crop p112_astr_y.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{astr}_{\\sh{B}(y)|",
+   "new": "\\operatorname{astr}_{\\sh{B}(y)/"
+  },
+  "note": "Slash for the bar (see p. 111)."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): subscript k(y) of astr_{B(y)/k(y)}",
+  "scan": "bold upright k in the subscript (crop p112_astr_y.png)",
+  "tex": "\\kappa(y)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\kappa(y)}:\\sh{B}(y)",
+   "new": "\\mathbf{k}(y)}:\\sh{B}(y)"
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114). In the subscript the print's k is bold upright (GLOBAL_ISSUES 48)."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'astr_{B(y)/k(y)} : B(y) → B(y)ˇ est bijectif'",
+  "scan": "check accent set after the parenthesis, like an exponent: B(y)ˇ (crop p112_astr_y.png)",
+  "tex": "\\check{\\sh{B}(y)}: check over the whole expression",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\to\\check{\\sh{B}(y)}$ est bijectif",
+   "new": "\\to\\sh{B}(y)^\\vee$ est bijectif"
+  },
+  "note": "Check-accent analogue of convention 5; written ^\\vee as the TeX writes the same raised check at (18.2.2) (Γ(U,B)ˇ) and (18.2.7) ((∧B)ˇ)."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'comme B(y)=B_y/m_yB_y et B(y)ˇ=B̌_y/m_yB̌_y'",
+  "scan": "check accent after the parenthesis: B(y)ˇ (crop p112_astr_y.png)",
+  "tex": "\\check{\\sh{B}(y)}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et $\\check{\\sh{B}(y)}=",
+   "new": "et $\\sh{B}(y)^\\vee="
+  },
+  "note": "As the previous finding."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.3): 'l'homomorphisme astr_{B_y/O_{Y,y}} : B_y → B̌_y est lui aussi bijectif'",
+  "scan": "slash (crop p112_astr_By.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{astr}_{\\sh{B}_y|\\sh{O}_{Y,y}}:\\sh{B}_y\\to\\check{\\sh{B}}_y$ est lui",
+   "new": "\\operatorname{astr}_{\\sh{B}_y/\\sh{O}_{Y,y}}:\\sh{B}_y\\to\\check{\\sh{B}}_y$ est lui"
+  },
+  "note": "Slash for the bar (see p. 111)."
+ },
+ {
+  "page": 112,
+  "where": "after (18.2.3): 'les conditions équivalentes b) et c) de (18.2.3)'",
+  "scan": "labels italic as a whole (page_112_s3.png)",
+  "tex": "$b)$, $c)$",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "équivalentes $b)$ et $c)$ de",
+   "new": "équivalentes \\emph{b)} et \\emph{c)} de"
+  },
+  "note": "GLOBAL_ISSUES 88: condition labels in roman text are italic as a whole in the print."
+ },
+ {
+  "page": 112,
+  "where": "Corollaire (18.2.4), label a)",
+  "scan": "upright 'a)' (page_112_s3.png)",
+  "tex": "\\item[a)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$",
+   "new": "\\item[\\textup{a)}] Il existe un voisinage ouvert $U$ de $y$ dans $Y$"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 112,
+  "where": "Corollaire (18.2.4), label b)",
+  "scan": "upright 'b)' (page_112_s4.png)",
+  "tex": "\\item[b)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)] $\\sh{B}_y$ est un",
+   "new": "\\item[\\textup{b)}] $\\sh{B}_y$ est un"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 112,
+  "where": "(18.2.4) b): 'B_y ⊗_{O_{Y,y}} k(y) est une k(y)-algèbre séparable'",
+  "scan": "two bold italic k (crop p112_cor4b_k.png)",
+  "tex": "\\kappa(y) twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\kappa(y)$ est une $\\kappa(y)$-algèbre séparable",
+   "new": "\\boldsymbol{k}(y)$ est une $\\boldsymbol{k}(y)$-algèbre séparable"
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114)."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.4): 'Il est clair que a) entraîne b)'",
+  "scan": "labels italic as a whole (page_112_s4.png)",
+  "tex": "$a)$, $b)$",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Il est clair que $a)$ entraîne $b)$",
+   "new": "Il est clair que \\emph{a)} entraîne \\emph{b)}"
+  },
+  "note": "GLOBAL_ISSUES 88: condition labels in roman text are italic as a whole in the print."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.4): 'O_U-Module localement libre (0_I, 5.2.7)'",
+  "scan": "bold 0 with subscript I (page_112_s4.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "localement libre ($0_{\\mathrm I}$, 5.2.7)",
+   "new": "localement libre ($\\mathbf{0}_{\\mathrm I}$, 5.2.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.4): 'l'homomorphisme astr_{B_y/O_{Y,y}} : B_y → B̌_y étant bijectif'",
+  "scan": "slash (crop p112_astr_By2.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{astr}_{\\sh{B}_y|\\sh{O}_{Y,y}}:\\sh{B}_y\\to\\check{\\sh{B}}_y$ étant",
+   "new": "\\operatorname{astr}_{\\sh{B}_y/\\sh{O}_{Y,y}}:\\sh{B}_y\\to\\check{\\sh{B}}_y$ étant"
+  },
+  "note": "Slash for the bar (see p. 111)."
+ },
+ {
+  "page": 112,
+  "where": "proof of (18.2.4): 'il résulte aussi de (0_I, 5.2.7)'",
+  "scan": "bold 0 with subscript I (page_112_s4.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "aussi de ($0_{\\mathrm I}$, 5.2.7)",
+   "new": "aussi de ($\\mathbf{0}_{\\mathrm I}$, 5.2.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 112,
+  "where": "page break 112/113 inside 'choisi de sorte que | l'homomorphisme'",
+  "scan": "p. 112 ends 'choisi de sorte que' (no stop); p. 113 continues the sentence ('l'homomorphisme astr ...', no indent) (page_112_s4.png, page_113_s1.png)",
+  "tex": "blank line before \\oldpage[IV-4]{113} (and another after it): a paragraph break inside the sentence",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "choisi de sorte que\n\n",
+   "new": "choisi de sorte que\n"
+  },
+  "note": "The marker is at the right place. Part 1 of 2: the first p. 113 finding removes the blank line after \\oldpage[IV-4]{113}; apply both."
+ },
+ {
+  "page": 113,
+  "where": "top of page_113.tex: blank line after \\oldpage[IV-4]{113}",
+  "scan": "p. 113 begins mid-sentence ('l'homomorphisme', no indent)",
+  "tex": "blank line between the marker and 'l'homomorphisme'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{113}\n\nl'homomorphisme",
+   "new": "\\oldpage[IV-4]{113}\nl'homomorphisme"
+  },
+  "note": "Part 2 of 2 with the last p. 112 finding; both blank lines must go."
+ },
+ {
+  "page": 113,
+  "where": "proof of (18.2.4), first line of p. 113: 'l'homomorphisme astr_{B|U,O_U} soit bijectif'",
+  "scan": "'astr_{B|U, O_U}': a vertical bar after B, then U, a COMMA, O_U (crop p113_astrU.png)",
+  "tex": "'\\sh{B}|U/\\sh{O}_U': slash where the print has the comma (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\operatorname{astr}_{\\sh{B}|U/\\sh{O}_U}",
+   "new": "\\operatorname{astr}_{\\sh{B}|U,\\sh{O}_U}"
+  },
+  "corrected": "\\operatorname{astr}_{\\sh{B}|U/\\sh{O}_U}",
+  "note": "The notation of (18.2.2.2) needs the slash (the map astr of the O_U-algebra B|U); the print's comma looks like a slip. The fix restores the printed comma and touches nothing else; the bar of B|U is right in both."
+ },
+ {
+  "page": 113,
+  "where": "proof of (18.2.4): 'Le fait que b) implique a)'",
+  "scan": "labels italic as a whole (page_113_s1.png)",
+  "tex": "$b)$, $a)$",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Le fait que $b)$ implique $a)$",
+   "new": "Le fait que \\emph{b)} implique \\emph{a)}"
+  },
+  "note": "GLOBAL_ISSUES 88: condition labels in roman text are italic as a whole in the print."
+ },
+ {
+  "page": 113,
+  "where": "proof of (18.2.4), last words: 'résulte alors de (18.2.3).'",
+  "scan": "'de' printed ITALIC at the start of the line, in roman text (crop p113_de_italic.png against the roman 'de' of 'il résulte de', crop p113_de_roman_cmp.png)",
+  "tex": "roman 'de' (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "alors de (18.2.3)",
+   "new": "alors \\textit{de} (18.2.3)"
+  },
+  "corrected": "alors de (18.2.3)",
+  "note": "Wrong-fount word (GLOBAL_ISSUES 29 pattern); corrected edition roman."
+ },
+ {
+  "page": 113,
+  "where": "Corollaire (18.2.5): 'B_y ⊗_{O_{Y,y}} k(y) une k(y)-algèbre séparable'",
+  "scan": "two bold italic k (crop p113_cor5_k.png)",
+  "tex": "\\kappa(y) twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\otimes_{\\sh{O}_{Y,y}}\\kappa(y)$ une $\\kappa(y)$-algèbre",
+   "new": "\\otimes_{\\sh{O}_{Y,y}}\\boldsymbol{k}(y)$ une $\\boldsymbol{k}(y)$-algèbre"
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114)."
+ },
+ {
+  "page": 113,
+  "where": "proof of (18.2.5): '(5.1.11 et 0_I, 2.1.3)'",
+  "scan": "bold 0 with subscript I (crop p113_cor5_0I.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "et $0_{\\mathrm I}$, 2.1.3)",
+   "new": "et $\\mathbf{0}_{\\mathrm I}$, 2.1.3)"
+  },
+  "note": ""
+ },
+ {
+  "page": 113,
+  "where": "Corollaire (18.2.6): 'Tr_{B/O_Y} : B → O_Y'",
+  "scan": "slash (crop p113_cor6.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Tr}_{\\sh{B}|\\sh{O}_Y}",
+   "new": "\\operatorname{Tr}_{\\sh{B}/\\sh{O}_Y}"
+  },
+  "note": "Slash for the bar (see p. 111)."
+ },
+ {
+  "page": 113,
+  "where": "Corollaire (18.2.6): '(18.2.2) (aussi noté Tr_f) est surjectif'",
+  "scan": "'(18.2.2) (aussi noté Tr_f)' roman with upright parentheses inside the italic statement; 'est surjectif' italic (crop p113_cor6_paren.png)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(18.2.2) (aussi noté $\\operatorname{Tr}_f$)",
+   "new": "\\textup{(18.2.2) (aussi noté $\\operatorname{Tr}_f$)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (i): 'revêtement étale de Y. On notera que dans ce cas'",
+  "scan": "no paragraph break: 'de Y.' ends a full line and 'On notera' starts the next line at the left margin, without the indent of the print's paragraphs (compare the indented 'On dit qu'un revêtement' below) (page_113_s2.png, page_113_s3.png)",
+  "tex": "blank line: 'On notera' opens a new paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\emph{revêtement étale} de $Y$.\n\nOn notera",
+   "new": "\\emph{revêtement étale} de $Y$. On notera"
+  },
+  "note": "The blank line before 'On dit qu'un revêtement étale' stays (indented paragraph in the print)."
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (i): 'de préschémas isomorphes à Y'",
+  "scan": "'isomorphes à' italic, 'à' included (crop p113_isomorphes.png)",
+  "tex": "\\emph{isomorphes} à: 'à' outside the emphasis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{isomorphes} à $Y$",
+   "new": "\\emph{isomorphes à} $Y$"
+  },
+  "note": "Judged with the remark body roman, as the print sets it."
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (ii): 'soit u=astr_{B/O_Y} : B → B̌'",
+  "scan": "slash (crop p113_wedge_line.png)",
+  "tex": "vertical bar",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "u=\\operatorname{astr}_{\\sh{B}|\\sh{O}_Y}",
+   "new": "u=\\operatorname{astr}_{\\sh{B}/\\sh{O}_Y}"
+  },
+  "note": "Slash for the bar (see p. 111)."
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (ii): 'puissance extérieure n-ème'",
+  "scan": "'n-ème' italic, '-ème' included (crop p113_wedge_line.png)",
+  "tex": "$n$-ème: '-ème' roman in a roman body",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "extérieure $n$-ème",
+   "new": "extérieure \\emph{$n$-ème}"
+  },
+  "note": "Judged with the remark body roman, as the print sets it."
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (ii): '∧^n u : ∧^n B → ∧^n B̌ = (∧^n B)ˇ de O_Y-Modules inversibles'",
+  "scan": "formula in the running text, at the start of a text line, followed on the same line by 'de O_Y-Modules inversibles' (crop p113_wedge_line.png)",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  \\bigwedge^n u:\\bigwedge^n\\sh{B}\\longrightarrow\\bigwedge^n\\check{\\sh{B}}=(\\bigwedge^n\\sh{B})^\\vee\n\\]\nde $\\sh{O}_Y$-Modules",
+   "new": "$\\bigwedge^n u:\\bigwedge^n\\sh{B}\\to\\bigwedge^n\\check{\\sh{B}}=(\\bigwedge^n\\sh{B})^\\vee$ de $\\sh{O}_Y$-Modules"
+  },
+  "note": "Display set inline, as printed (GLOBAL_ISSUES 21). No words lost or added. Independent of the 'n-ème' edit just before it (no overlap)."
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (ii): 'et par suite (0_I, 5.4.2) un élément'",
+  "scan": "bold 0 with subscript I (crop p113_wedge_line.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 5.4.2)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 5.4.2)"
+  },
+  "note": ""
+ },
+ {
+  "page": 113,
+  "where": "Remarques (18.2.7) (ii), last line: 'encore appelé Idéal discriminant de X sur Y'",
+  "scan": "only 'Idéal discriminant' italic; 'de X sur Y' roman (page_113_s4.png)",
+  "tex": "\\emph{Idéal discriminant de $X$ sur $Y$}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Idéal discriminant de $X$ sur $Y$}",
+   "new": "\\emph{Idéal discriminant} de $X$ sur $Y$"
+  },
+  "note": "Judged with the remark body roman, as the print sets it."
+ },
+ {
+  "page": 114,
+  "where": "first line of p. 114: 'il faut et il suffit que ∧^n u soit bijectif'",
+  "scan": "the index n over ∧ and the u after it BOLD (side-by-side crop p114_n_side.png against the light n of ∧^n u, ∧^n B on p. 113; crop p114_line1_right.png against the light u of 'l'homomorphisme u' on the same line)",
+  "tex": "normal weight (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\bigwedge^n u$ soit bijectif",
+   "new": "$\\bigwedge^{\\boldsymbol{n}}\\boldsymbol{u}$ soit bijectif"
+  },
+  "corrected": "$\\bigwedge^n u$ soit bijectif",
+  "note": "Wrong-fount letters (GLOBAL_ISSUES 29, rule of 4 Nov), at the end of the line; heavy impression of the last sorts is the alternative reading. The fix changes only the two letters."
+ },
+ {
+  "page": 114,
+  "where": "'ce qui s'écrit aussi d_{X/Y}(y)≠0 pour tout y (0_I, 5.5.2)'",
+  "scan": "bold 0 with subscript I (crop p114_top.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 5.5.2)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 5.5.2)"
+  },
+  "note": ""
+ },
+ {
+  "page": 114,
+  "where": "Proposition (18.2.8): 'Alors la fonction y ⇝ n(y)'",
+  "scan": "wavy arrow (crop p114_leadsto.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$y\\mapsto n(y)$",
+   "new": "$y\\leadsto n(y)$"
+  },
+  "note": "GLOBAL_ISSUES 33 (wavy arrow)."
+ },
+ {
+  "page": 114,
+  "where": "Proposition (18.2.8): '(donc constante dans un voisinage de y)'",
+  "scan": "the parenthesis roman inside the italic statement, except 'constante', which is italic (crop p114_prop8_l3_l4.png)",
+  "tex": "all italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(donc constante dans un voisinage de $y$)",
+   "new": "\\textup{(donc \\emph{constante} dans un voisinage de $y$)}"
+  },
+  "note": "'constante' italic inside the roman parenthesis is reproduced with \\emph (emphasis, or the compositor's italic carried over; same output either way)."
+ },
+ {
+  "page": 114,
+  "where": "proof of (18.2.8): 'chaque fibre f^{-1}(y) est géométriquement réduite sur k(y)'",
+  "scan": "bold italic k (crop p114_k.png)",
+  "tex": "\\kappa(y)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "réduite sur $\\kappa(y)$",
+   "new": "réduite sur $\\boldsymbol{k}(y)$"
+  },
+  "note": "The TeX has Greek \\kappa for the print's bold italic k (ega4-18 writes \\kappa 14 times; 12 are on pp. 112-114)."
+ },
+ {
+  "page": 114,
+  "where": "Corollaire (18.2.9): '(autrement dit, que X soit un revêtement étale de Y)'",
+  "scan": "the parenthesis roman inside the italic statement, 'revêtement étale' italic in it (crop p114_cor9.png)",
+  "tex": "all italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(autrement dit, que $X$ soit un revêtement étale de $Y$)",
+   "new": "\\textup{(autrement dit, que $X$ soit un \\emph{revêtement étale} de $Y$)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 114,
+  "where": "Remarques (18.2.10) (i): '« droite affine avec un point dédoublé » (I, 5.5.11)'",
+  "scan": "bold I (crop p114_I5511.png); a genuine EGA I reference",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 5.5.11)",
+   "new": "(\\textbf{I}, 5.5.11)"
+  },
+  "note": ""
+ },
+ {
+  "page": 114,
+  "where": "Remarques (18.2.10) (ii): 'toute fibre f^{-1}(y) est finie ((17.6.1) et (I, 6.2.2)), de la caractérisation'",
+  "scan": "both references inside an outer pair of parentheses: '((17.6.1) et (I, 6.2.2))' (crop p114_I622.png)",
+  "tex": "'(17.6.1) et (I, 6.2.2),': outer parentheses missing",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est finie (17.6.1)",
+   "new": "est finie ((17.6.1)"
+  },
+  "note": "Part 1 of 2 (opening parenthesis); the closing one is two findings below. The convention-2 edit between them does not overlap either part."
+ },
+ {
+  "page": 114,
+  "where": "Remarques (18.2.10) (ii): '(I, 6.2.2)'",
+  "scan": "bold I (crop p114_I622.png); a genuine EGA I reference",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "et (I, 6.2.2",
+   "new": "et (\\textbf{I}, 6.2.2"
+  },
+  "note": ""
+ },
+ {
+  "page": 114,
+  "where": "Remarques (18.2.10) (ii): closing outer parenthesis after '(I, 6.2.2)'",
+  "scan": "'(I, 6.2.2)),' (crop p114_I622.png)",
+  "tex": "one closing parenthesis",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "), de la caractérisation",
+   "new": ")), de la caractérisation"
+  },
+  "note": "Part 2 of 2 of the outer parentheses (part 1 two findings above)."
+ },
+ {
+  "page": 114,
+  "where": "Proposition (18.3.1), label (i)",
+  "scan": "upright '(i)' (crop p114_prop31_i.png)",
+  "tex": "\\item[(i)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(i)] Pour que $B$ soit une $A$-algèbre non ramifiée",
+   "new": "\\item[\\textup{(i)}] Pour que $B$ soit une $A$-algèbre non ramifiée"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 114,
+  "where": "Proposition (18.3.1) (i), end of its first line: 'que B soit un A-module'",
+  "scan": "the final e of 'module' BOLD italic (side-by-side crop p114_e_side.png against 'module' of (ii), line 2; the 'modul' before it is light)",
+  "tex": "normal weight (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "low",
+  "fix": {
+   "old": "soit un $A$-module de présentation finie et que",
+   "new": "soit un $A$-modul\\textbf{e} de présentation finie et que"
+  },
+  "corrected": "soit un $A$-module de présentation finie et que",
+  "note": "Wrong-fount letter by the 4 Nov rule (GLOBAL_ISSUES 29); it is the last letter of the line, so a sort printing heavy is the alternative reading. Changes only the letter."
+ },
+ {
+  "page": 114,
+  "where": "Proposition (18.3.1), label (ii)",
+  "scan": "upright '(ii)' (crop p114_prop31_ii.png)",
+  "tex": "\\item[(ii)]: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(ii)] Supposons de plus que $B$ soit une $A$-algèbre finie",
+   "new": "\\item[\\textup{(ii)}] Supposons de plus que $B$ soit une $A$-algèbre finie"
+  },
+  "note": "Labels printed upright inside the italic statement (GLOBAL_ISSUES 16/88)."
+ },
+ {
+  "page": 114,
+  "where": "Proposition (18.3.1) (ii), end of its first line: 'Pour que B soit une A-algèbre étale,'",
+  "scan": "'étale,' BOLD italic, the comma included (side-by-side crop p114_etale_side.png: heavier than 'algèbre' just before it)",
+  "tex": "normal weight (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "Pour que $B$ soit une $A$-algèbre étale, il faut et il suffit que $B$ soit un $A$-module projectif",
+   "new": "Pour que $B$ soit une $A$-algèbre \\textbf{étale,} il faut et il suffit que $B$ soit un $A$-module projectif"
+  },
+  "corrected": "Pour que $B$ soit une $A$-algèbre étale, il faut et il suffit que $B$ soit un $A$-module projectif",
+  "note": "Wrong-fount word, as the bold italic 'est' of p. 42 (GLOBAL_ISSUES 97); at the line end, so heavy impression is the alternative reading. Changes only the word."
+ },
+ {
+  "page": 114,
+  "where": "after (18.3.1): 'de noyau J_{B/A} (0, 20.4.1)'",
+  "scan": "bold 0, no subscript (crop p114_0_2041.png)",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 20.4.1)",
+   "new": "(\\textbf{0}, 20.4.1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 114,
+  "where": "page break 114/115 inside 'Dire | que B est une A-algèbre non ramifiée'",
+  "scan": "p. 114 ends '(1.4.6). Dire'; p. 115 continues the sentence ('que B est une A-algèbre non ramifiée signifie alors', no indent) (page_114_s4.png, page_115_s1.png)",
+  "tex": "blank line before \\oldpage[IV-4]{115} (and another after it): a paragraph break inside the sentence",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(1.4.6). Dire\n\n",
+   "new": "(1.4.6). Dire\n"
+  },
+  "note": "The marker is at the right place. Part 1 of 2: the blank line AFTER \\oldpage[IV-4]{115} (p. 115 segment, outside this batch) must go too."
+ }
+]

@@ -1,0 +1,53 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{259}
+multiplication par ces éléments fournit tous les automorphismes du $\sh{O}_U$-Module $\sh{O}_U$ (\hyperref[0.5.4.3]{$\mathbf{0}_{\mathrm I}$, 5.4.3}).
+
+\begin{corollary}[21.2.3]
+\label{IV.21.2.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Soit $\sh{J}$ un Idéal fractionnaire inversible;
+  alors le $\sh{O}_X$-Module inversible $\sh{J}^{-1}$ s'identifie canoniquement à l'Idéal fractionnaire $\sh{J}'$ (\emph{transporteur} de $\sh{J}$ dans $\sh{O}_X$) défini de la façon suivante : pour tout ouvert $U$ de $X$ tel que $\sh{J}|U=\sh{O}_U.f$, où $f\in\Gamma(U,\sh{M}_X^*)$, on a $\sh{J}'|U=\sh{O}_U.f^{-1}$.
+  \item Si $\sh{J}_1$ et $\sh{J}_2$ sont deux Idéaux fractionnaires inversibles, l'application canonique $\sh{J}_1\otimes\sh{J}_2\to\sh{J}_1\sh{J}_2$ est un isomorphisme de $\sh{O}_X$-Modules.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+L'assertion (ii) résulte aussitôt de \sref{IV.21.2.2}.
+D'autre part, la remarque faite à la fin de \sref{IV.21.2.2} prouve qu'il existe bien un Idéal fractionnaire $\sh{J}'$ et un seul défini par la condition de l'énoncé;
+l'isomorphisme canonique de $\sh{J}'$ sur $\sh{J}^{-1}=\shHom_{\sh{O}_X}(\sh{J},\sh{O}_X)$ s'obtient en faisant correspondre à toute section $s(f^{-1}|V)$ de $\Gamma(V,\sh{J}')$ (où $V$ est un ouvert contenu dans $U$ et $s\in\Gamma(V,\sh{O}_X)$) l'homomorphisme $t(f|V)\mapsto st$ de $\Gamma(V,\sh{J})$ dans $\Gamma(V,\sh{O}_X)$.
+\end{proof}
+
+En vertu de \sref{IV.21.2.3},~(i), on identifiera généralement les $\sh{O}_X$-Modules inversibles $\sh{J}'$ et $\sh{J}^{-1}$, considérant donc $\sh{J}^{-1}$ comme un sous-$\sh{O}_X$-Module de $\sh{M}_X$.
+
+\begin{env}[21.2.4]
+\label{IV.21.2.4}
+Il résulte de \sref{IV.21.2.3} que l'ensemble $\operatorname{Id.inv}(X)$ des Idéaux fractionnaires inversibles sur $X$ est muni d'une structure de \emph{groupe commutatif} pour la loi de composition $(\sh{J}_1,\sh{J}_2)\mapsto\sh{J}_1\sh{J}_2$, l'élément neutre de ce groupe étant $\sh{O}_X$.
+Il est clair que pour tout ouvert $U$ de $X$, on a $(\sh{J}_1\sh{J}_2)|U=(\sh{J}_1|U)(\sh{J}_2|U)$, donc l'application de restriction $\sh{J}\mapsto\sh{J}|U$ est un homomorphisme de groupes $\operatorname{Id.inv}(X)\to\operatorname{Id.inv}(U)$;
+on définit donc ainsi un \emph{préfaisceau de groupes commutatifs} $U\mapsto\operatorname{Id.inv}(U)$;
+il est immédiat qu'en fait ce préfaisceau est un \emph{faisceau de groupes commutatifs}, que l'on note $\sh{J}d.inv_X$.
+\end{env}
+
+\begin{env}[21.2.5]
+\label{IV.21.2.5}
+Pour toute fonction méromorphe régulière $f\in\Gamma(X,\sh{M}_X^*)$, il résulte de \sref{IV.21.2.2} que $\sh{J}(f)=\sh{O}_X.f$ est un Idéal fractionnaire inversible, et on a évidemment $\sh{J}(f_1f_2)=\sh{J}(f_1)\sh{J}(f_2)$, autrement dit l'application $f\mapsto\sh{J}(f)$ est un homomorphisme du groupe commutatif $\Gamma(X,\sh{M}_X^*)$ dans le groupe commutatif $\operatorname{Id.inv}(X)$.
+Remplaçant $X$ par un ouvert quelconque $U$ de $X$ et notant que les homomorphismes obtenus sont compatibles avec les opérations de restriction, on obtient un homomorphisme canonique de faisceaux de groupes commutatifs :
+\[
+\label{IV.21.2.5.1}
+  I_0:\sh{M}_X^*\to\sh{J}d.inv_X.
+  \tag{21.2.5.1}
+\]
+Notons que si $f\in\Gamma(X,\sh{O}_X^*)$, on a $\sh{J}(f)=\sh{O}_X$;
+on en déduit aussitôt que l'homomorphisme $I_0$ se factorise en
+\[
+\label{IV.21.2.5.2}
+  \sh{M}_X^*\to\sh{M}_X^*/\sh{O}_X^*=\sh{D}iv_X\xrightarrow{I}\sh{J}d.inv_X
+  \tag{21.2.5.2}
+\]
+où $I$ est un homomorphisme du faisceau de groupes additifs $\sh{D}iv_X$ dans le faisceau de groupes multiplicatifs $\sh{J}d.inv_X$;
+on a donc pour tout ouvert $U$ de $X$ un homomorphisme $\sh{J}_U:\operatorname{Div}(U)\to\operatorname{Id.inv}(U)$ de groupes commutatifs, tel que, pour toute section $f\in\Gamma(U,\sh{M}_X^*)$, on ait
+\[
+\label{IV.21.2.5.3}
+  \sh{J}_U(\operatorname{div}_U(f))=\sh{O}_U.f.
+  \tag{21.2.5.3}
+\]
+

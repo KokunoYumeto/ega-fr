@@ -1,0 +1,74 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{204}
+\subsection{Morphismes universellement ouverts}
+\label{subsection:IV.14.3-fr}
+
+\begin{env}[14.3.1]
+\label{IV.14.3.1-fr}
+Rappelons (2.4.2) que dire qu'un morphisme $f:X\to Y$ est universellement ouvert
+signifie que pour tout morphisme $g:Y'\to Y$, $f_{(Y')}:X_{(Y')}\to Y'$ est
+ouvert~; il suffit d'ailleurs qu'il en soit ainsi lorsque
+$Y'=Y[T_1,\ldots,T_e]$, pour tout $e$ (8.10.2) (et si $Y$ est localement
+noethérien, il suffit donc qu'il en soit ainsi pour tout $Y'$ localement
+noethérien).
+\end{env}
+
+\begin{proposition}[14.3.2]
+\label{IV.14.3.2-fr}
+Soit $f:X\to Y$ un morphisme de préschémas. Si $f$ est universellement ouvert,
+alors, pour tout morphisme $g:Y'\to Y$, où $Y'$ est irréductible, l'image par
+$f'=f_{(Y')}:X_{(Y')}\to Y'$ de toute composante irréductible de $X_{(Y')}$ est
+dense dans $Y'$. Réciproquement, si cette condition est vérifiée pour tout $Y'$
+irréductible et tout morphisme de type fini $g:Y'\to Y$, et si de plus $f$ est
+localement de présentation finie, alors $f$ est universellement ouvert.
+\end{proposition}
+
+\begin{proof}
+En effet, il résulte de (1.10.4) que si $f$ est universellement ouvert, il vérifie
+la condition de l'énoncé. Inversement, supposons que $f$ soit localement de
+présentation finie, et montrons que pour tout entier $e$, si l'on pose
+$Y''=Y[T_1,\ldots,T_e]$, $f_{(Y'')}$ est ouvert. En effet, soit $Y'$ un
+sous-préschéma fermé de $Y''$ ayant pour espace sous-jacent une partie fermée
+irréductible de $Y''$~; le morphisme composé $Y'\to Y''\to Y$ est de type fini,
+donc toute composante irréductible de $X_{(Y')}$ domine $Y'$ par hypothèse~; on
+déduit donc de (1.10.4) que $f_{(Y'')}$ est un morphisme ouvert.
+\end{proof}
+
+Cette proposition montre que la définition (\textbf{III}, 4.3.9) coïncide dans
+le cas considéré avec la définition générale des morphismes universellement
+ouverts donnée dans (2.4.2).
+
+A la notion de morphisme ouvert en un point (14.1.1) correspond de même la
+suivante~:
+
+\begin{definition}[14.3.3]
+\label{IV.14.3.3-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $x$ un point de $X$. On dit que $f$
+est \emph{universellement ouvert au point $x$} si, pour tout morphisme $g:Y'\to Y$,
+en posant $X'=X\times_Y Y'$, le morphisme $f'=f_{(Y')}:X'\to Y'$ est ouvert en
+tout point $x'$ de $X'$ dont la projection dans $X$ est $x$.
+\end{definition}
+
+\begin{remarks}[14.3.3.1]
+\label{IV.14.3.3.1-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Le raisonnement de (8.10.1) montre (avec les mêmes notations) que si $x$
+  est un point de $X$, $x_\lambda$ sa projection dans $X_\lambda$, alors, si
+  $f_\mu$ est ouvert au point $x_\mu$ pour tout $\mu\geq\lambda$, $f$ est ouvert
+  au point $x$~; il suffit de se borner aux ouverts $U$ de $X$ contenant $x$ et de
+  remarquer que l'hypothèse implique que $f_\mu(U_\mu)$ est un voisinage de
+  $f_\mu(x_\mu)$, donc $f(v_\mu^{-1}(U_\mu))$ est un voisinage de $f(x)$. On en
+  déduit que l'énoncé (8.10.2) est encore exact quand on y remplace
+  «~universellement ouvert~» par «~universellement ouvert au point $x$~», et
+  «~morphisme ouvert~» par «~morphisme ouvert en tout point $x_n$ de $X_n$ dont
+  la projection dans $X$ est $x$~»~: il suffit dans la démonstration de se limiter
+  aux ouverts $V$ contenant un $x_n$.
+
+  \item Le résultat de (14.1.4) est encore valable pour un morphisme $f:X\to Y$,
+  en y remplaçant «~ouvert~» par «~universellement ouvert~». En effet, supposons
+  que $f$ ne soit pas universellement ouvert en un point $x\in f^{-1}(y)$~; il y a
+  par suite un morphisme $Y'\to Y$ et un point $x'\in X'$ se projetant en $x$, tels
+  que $f'$ ne soit pas ouvert au point $x'$.
+\end{enumerate}
+\end{remarks}
+

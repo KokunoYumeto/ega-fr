@@ -1,0 +1,94 @@
+% from ega3-1-fr.tex
+\oldpage[III]{145}
+
+\subsection{Un critère d'amplitude}
+
+\begin{theorem}[4.7.1]
+\label{III.4.7.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre, $\mathcal L$ un $\mathcal O_X$-Module inversible, $y$ un point de
+$Y$, $X_y=X\otimes_Yk(y)=f^{-1}(y)$, $g$ la projection de $X_y$ dans $X$.
+Si $\mathcal L_y=g^*(\mathcal L)=\mathcal L\otimes_{\mathcal O_Y}k(y)$ est
+ample sur $X_y$, il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+$\mathcal L|f^{-1}(U)$ soit ample pour la restriction de $f$ à $f^{-1}(U)$.
+\end{theorem}
+
+\begin{proof}
+\noindent\textit{I)} Posons
+\[
+Y'=\operatorname{Spec}(\mathcal O_y),\qquad
+X'=X\times_YY',\qquad
+\mathcal L'=\mathcal L\otimes_{\mathcal O_Y}\mathcal O_y~;
+\]
+nous allons d'abord prouver que $\mathcal L'$ est ample pour
+$f'=f_{(Y')}$. On a le diagramme commutatif
+\[
+\xymatrix{
+X\ar[d]_f & X'\ar[l]\ar[d]_{f'} & X_y\ar[l]\ar[d]_{f_y}\\
+Y & Y'\ar[l] & \operatorname{Spec}(k(y))\ar[l]
+}
+\]
+Comme $f'$ est propre (II, 5.4.2, (iii)) et $\mathcal O_y$ noethérien, on
+voit qu'on peut se borner au cas où
+$Y=Y'=\operatorname{Spec}(\mathcal O_y)$, donc $X=X'$, supposer que
+$\mathcal L_y$ est ample pour $f_y$ et prouver que $\mathcal L$ est ample
+pour $f$ (II, 4.6.6). Nous allons appliquer le critère
+(\hyperref[III.2.6.1-fr]{2.6.1, c)}) et montrer en fait que pour tout
+$\mathcal O_X$-Module cohérent $\mathcal F$, il existe un entier $N$ tel que
+\[
+H^1(X,\mathcal F(n))=0\quad\text{pour tout }n\geq N,
+\qquad
+\mathcal F(n)=\mathcal F\otimes\mathcal L^{\otimes n}.
+\]
+Notons que $y$ est un point fermé de $Y$ correspondant à l'idéal maximal
+$\mathfrak m$ de $\mathcal O_y$~; $X_y$ est donc un sous-préschéma fermé de
+$X$ défini par l'Idéal cohérent
+$\mathcal J=f^*(\widetilde{\mathfrak m})\mathcal O_X=
+\mathfrak m\mathcal O_X$ de $\mathcal O_X$ (I, 4.4.5), et $g$ l'injection
+canonique. Considérons alors la $k(y)$-algèbre graduée
+\[
+S=\operatorname{gr}(\mathcal O_y)
+=\bigoplus_{j\geq0}\mathfrak m^j/\mathfrak m^{j+1},
+\]
+qui est de type fini puisque $\mathcal O_y$ est noethérien~; la
+$\mathcal O_X$-Algèbre $\mathcal S=f^*(\widetilde S)$ est donc
+quasi-cohérente et de type fini, et elle est évidemment annulée par
+$\mathcal J$, donc si on pose $\mathcal S_y=g^*(\mathcal S)$,
+$\mathcal S_y$ est une $\mathcal O_{X_y}$-Algèbre quasi-cohérente de type
+fini, et $\mathcal S=g_*(\mathcal S_y)$. Posons d'autre part
+\[
+\mathcal M_j=\mathfrak m^j\mathcal F/\mathfrak m^{j+1}\mathcal F,
+\qquad
+\mathcal M=\bigoplus_{j\geq0}\mathcal M_j
+=\operatorname{gr}(\mathcal F)~;
+\]
+comme $\mathcal F$ est cohérent, $\mathcal M$ est un $\mathcal S$-Module
+quasi-cohérent de type fini (0, 10.1.1) qui est aussi annulé par
+$\mathcal J$, de sorte que si l'on pose
+\[
+\mathcal M'_j=g^*(\mathcal M_j),\qquad
+\mathcal M'=g^*(\mathcal M)=\bigoplus_{j\geq0}\mathcal M'_j,
+\]
+$\mathcal M'$ est un $\mathcal S_y$-Module gradué quasi-cohérent de type
+fini tel que $\mathcal M=g_*(\mathcal M')$. En outre, si on pose
+$\mathcal M'_j(n)=\mathcal M'_j\otimes\mathcal L_y^{\otimes n}$, on a
+$\mathcal M'_j(n)=g^*(\mathcal M_j(n))$. Cela étant, $f_y$ est propre
+(II, 5.4.2, (iii)) et $\mathcal L_y$ est ample, donc $f_y$ est projectif
+(II, 5.5.4 et 4.6.11), et on peut appliquer à
+$\operatorname{Spec}(k(y))$, $f_y$, $\mathcal S_y$, $\mathcal L_y$ et
+$\mathcal M'$ le théorème (\hyperref[III.2.4.1-fr]{2.4.1, (ii)})~: il
+existe un entier $N$ tel que pour $n\geq N$, on ait
+$H^q(X_y,\mathcal M'_j(n))=0$ pour tout $q>0$ et tout $j$~; par suite, on a
+aussi $H^q(X,\mathcal M_j(n))=0$ pour tout $q>0$ et tout $j$
+(G, II, 4.9.1). Posons alors
+\[
+\mathcal F(n)_j=\mathcal F(n)/\mathfrak m^{j+1}\mathcal F(n),
+\]
+de sorte que $\mathcal F(n)_{j-1}=\mathcal F(n)_j/\mathcal M_j(n)$ pour
+$j\geq1$ et $\mathcal F(n)_0=\mathcal M_0(n)$. On a
+$H^1(X,\mathcal F(n)_0)=0$, et, par la suite exacte de cohomologie,
+$H^1(X,\mathcal F(n)_j)=H^1(X,\mathcal F(n)_{j-1})$ pour tout $j\geq1$,
+donc $H^1(X,\mathcal F(n)_j)=0$ pour tout $j\geq0$. On conclut donc de
+(\hyperref[III.4.2.1-fr]{4.2.1}) que $H^1(X,\mathcal F(n))=0$, ce qui
+achève de prouver notre assertion.
+

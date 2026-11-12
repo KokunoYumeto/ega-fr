@@ -1,0 +1,94 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{303}
+Utilisant (21.6.14), on est ramené à prouver que $\operatorname{Pic}(U)=0$.
+Considérons donc un $\mathcal O_U$-Module inversible $\mathscr L$, et prouvons qu'il
+est isomorphe à $\mathcal O_U$. Il résulte de $(\mathbf I, 9.4.5)$ qu'il existe un
+$\mathcal O_X$-Module \emph{cohérent} $\mathscr F$ tel que
+$\mathscr F|U=\mathscr L$. Comme $A$ est régulier, donc de dimension cohomologique
+finie $(\mathbf 0, 17.3.1)$, il existe une résolution gauche \emph{finie} de
+$\mathscr F$ :
+\[
+  0\leftarrow\mathscr F\leftarrow\mathcal O_X^{n_1}
+  \leftarrow\mathcal O_X^{n_2}\leftarrow\cdots
+  \leftarrow\mathcal O_X^{n_h}\leftarrow0
+\]
+$(\mathbf 0, 17.2.8$ et $\mathbf 0, 17.2.2$, (iii)). Par restriction à $U$, on a
+donc une résolution finie
+\[
+\label{IV.21.11.1.1}
+  0\leftarrow\mathscr L\leftarrow\mathcal O_U^{n_1}
+  \leftarrow\mathcal O_U^{n_2}\leftarrow\cdots
+  \leftarrow\mathcal O_U^{n_h}\leftarrow0.
+  \tag{21.11.1.1}
+\]
+\end{proof}
+
+Le théorème résultera alors des considérations générales suivantes. Sur un espace
+annelé $X$, soit $\mathscr E$ un $\mathcal O_X$-Module localement libre de rang fini;
+on désignera par $\Lambda^{\max}\mathscr E$ le $\mathcal O_X$-Module inversible qui,
+au voisinage de chaque point de $X$, est égal à $\Lambda^p\mathscr E$, en désignant
+par $p$ le rang de $\mathscr E$ dans ce voisinage (qui peut varier avec la composante
+connexe de $X$). Avec cette notation, on a le
+
+\begin{lemma}[21.11.1.2]
+\label{IV.21.11.1.2}
+Soient $X$ un espace annelé en anneaux locaux, et
+\[
+  0\leftarrow\mathscr E_0\xleftarrow{u_0}\mathscr E_1
+  \leftarrow\cdots\leftarrow\mathscr E_h\leftarrow0
+\]
+une suite exacte de $\mathcal O_X$-Modules localement libres de rang fini; alors le
+$\mathcal O_X$-Module inversible
+\[
+  \bigotimes_{0\leq i\leq h}
+  (\Lambda^{\max}\mathscr E_i)^{\otimes(-1)^i}
+\]
+est isomorphe à $\mathcal O_X$.
+\end{lemma}
+
+\begin{proof}
+Montrons comment ce lemme permettra de conclure la preuve de (21.11.1). Il suffit de
+noter pour cela que, pour tout entier $n$,
+$\Lambda^{\max}(\mathcal O_U^n)=\Lambda^n\mathcal O_U^n$ est isomorphe à
+$\mathcal O_U$, ainsi que $\mathcal O_U^{\otimes(-1)}$. Comme d'autre part
+$\Lambda^{\max}\mathscr L=\mathscr L$ pour tout $\mathcal O_U$-Module inversible
+$\mathscr L$, le lemme (21.11.1.2), appliqué à la suite exacte (21.11.1.1) montre
+que $\mathscr L$ est isomorphe à $\mathcal O_U$.
+
+Reste à prouver (21.11.1.2); on procède par récurrence sur $h$, le lemme étant trivial
+pour $h=1$. Pour $h>1$, $\mathscr N=\operatorname{Ker}(u_0)$ est un
+$\mathcal O_X$-Module localement libre de rang fini $(\mathbf 0_{\mathrm I}, 5.5.5)$,
+et on a les deux suites exactes
+\[
+  0\leftarrow\mathscr E_0\leftarrow\mathscr E_1
+  \leftarrow\mathscr N\leftarrow0
+\]
+\[
+  0\leftarrow\mathscr N\leftarrow\mathscr E_2
+  \leftarrow\cdots\leftarrow\mathscr E_h\leftarrow0.
+\]
+En vertu de l'hypothèse de récurrence,
+$(\Lambda^{\max}\mathscr N)\otimes
+(\bigotimes_{2\leq i\leq h}(\Lambda^{\max}\mathscr E_i)^{\otimes(-1)^{i-1}})$
+est isomorphe à $\mathcal O_X$; il suffira donc de définir un isomorphisme canonique
+\[
+  (\Lambda^{\max}\mathscr N)\otimes(\Lambda^{\max}\mathscr E_0)
+  \xrightarrow{\sim}\Lambda^{\max}\mathscr E_1
+\]
+pour achever la démonstration. Or, il existe un recouvrement ouvert $(U_\alpha)$ de
+$X$ tel que dans tout $U_\alpha$, $\mathscr E_1|U_\alpha$ soit somme directe de
+$\mathscr N|U_\alpha$ et d'un $\mathcal O_{U_\alpha}$-Module localement libre
+$\mathscr M_\alpha$ $(\mathbf 0_{\mathrm I}, 5.5.5)$, d'où un isomorphisme canonique
+$v_\alpha:\mathscr M_\alpha\xrightarrow{\sim}\mathscr E_0|U_\alpha$.
+Comme on a un isomorphisme canonique
+\[
+  r_\alpha:(\Lambda^{\max}\mathscr N|U_\alpha)
+  \otimes(\Lambda^{\max}\mathscr M_\alpha)
+  \xrightarrow{\sim}(\Lambda^{\max}\mathscr E_1)|U_\alpha,
+\]
+on en déduit au moyen de $v_\alpha$ un isomorphisme
+\[
+  u_\alpha:(\Lambda^{\max}\mathscr N|U_\alpha)
+  \otimes(\Lambda^{\max}\mathscr E_0|U_\alpha)
+  \xrightarrow{\sim}\Lambda^{\max}\mathscr E_1|U_\alpha.
+\]

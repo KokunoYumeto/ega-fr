@@ -1,0 +1,43 @@
+\oldpage[IV-4]{181}
+
+à
+\[
+  K\otimes_k k_1^{p^{-\infty}}=(K\otimes_k k^{p^{-\infty}})\otimes_{k^{p^{-\infty}}}k_1^{p^{-\infty}},
+\]
+donc $K\otimes_k k^{p^{-\infty}}$ est aussi artinien (Bourbaki, \emph{Alg. comm.}, chap. I, \textsection~3, n\textsuperscript{o}~5, cor. de la prop. 8); on a ainsi prouvé que $b)$ entraîne $a)$, ce qui achève la démonstration de (18.11.12.1) et de (18.11.12).
+
+\subsection{Applications de la localisation étale aux morphismes quasi-finis (généralisations de résultats antérieurs)}
+\EGAReaderTarget{ega4.c04.subsec.18-12}{subsection:IV.18.12}
+
+Les résultats de ce numéro nous ont été communiqués par P.~Deligne.
+
+\begin{theorem}[18.12.1]
+\label{IV.18.12.1}
+Soient $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Supposons que $x$ soit un point isolé de l'espace $f^{-1}(y)$. Alors, il existe un morphisme étale $Y'\to Y$, un point $x'$ de $X'=X\times_Y Y'$ au-dessus de $x$ et un voisinage ouvert $V'$ de $x'$ dans $X'$ tel que, si $f'=f_{(Y')}:X'\to Y'$, $f'|V'$ soit un morphisme fini. Si de plus $f$ est séparé, $V'$ est à la fois ouvert et fermé, et $X'$ est donc somme de deux sous-préschémas induits sur des ouverts de $X'$, dont l'un est fini sur $Y'$ et contient $x'$.
+\end{theorem}
+
+La dernière assertion résulte de ce que, si $f$ est séparé, il en est de même de $f'$; donc, si $j':V'\to X'$ est l'injection canonique, le fait que le morphisme $f'|V'=f'\circ j'$ soit fini entraîne qu'il en est de même de $j'$ (II, 6.1.5), et par suite $V'=j'(V')$ est fermé dans $X'$ (II, 6.1.10).
+
+La question étant locale sur $X$, on peut supposer $Y=\Spec(A)$ et $X=\Spec(B)$ affines, $B$ étant une $A$-algèbre de type fini, donc de la forme $C/\mathfrak J$, où $C=A[T_1,\ldots,T_r]$ et $\mathfrak J$ est un idéal de $C$; $f$ est donc séparé, et on peut en outre supposer que $f^{-1}(y)=\{x\}$. Soit $(\mathfrak J_\lambda)$ la famille des idéaux de type fini de $C$ contenus dans $\mathfrak J$, de sorte que $\mathfrak J$ est la réunion filtrante des $\mathfrak J_\lambda$. Si $X$ et les $X_\lambda=\Spec(C/\mathfrak J_\lambda)$ sont considérés comme des sous-préschémas fermés de $Z=\Spec(C)$, on a donc, pour les espaces sous-jacents, $X=\bigcap_\lambda X_\lambda$; si $f_\lambda:X_\lambda\to Y$ est le morphisme structural, on en déduit que
+\[
+  f^{-1}(y)=\bigcap_\lambda f_\lambda^{-1}(y),
+\]
+et comme les ensembles $f_\lambda^{-1}(y)$ sont fermés dans l'espace noethérien $Z_y=\Spec(k(y)[T_1,\ldots,T_r])$, il existe un indice $\lambda$ tel que $f_\lambda^{-1}(y)=f^{-1}(y)=\{x\}$. On peut donc supposer que les $X_\lambda$ vérifient la même condition que $X$ au point $x$; si l'on prouve la proposition pour un tel $X_\lambda$, elle en résultera pour $X$, car si $x'$ est un point au-dessus de $x$ dans $Z'=Z\times_Y Y'$, $X'_\lambda=p^{-1}(X_\lambda)$, où $p:Z'\to Z$ est la projection (de sorte qu'on a aussi $X'=p^{-1}(X)$), s'il existe un voisinage ouvert $V'_\lambda$ de $x'$ dans $X'_\lambda$ qui est fini sur $Y'$, \emph{a fortiori} la restriction de $f'_\lambda$ au sous-préschéma fermé $X'\cap V'_\lambda$ de $V'_\lambda$ sera un morphisme fini. On est donc ramené au cas où $f$ est de présentation finie.
+
+Notons en outre que l'ensemble des points de $X$ isolés dans leur fibre est ouvert dans $X$ (13.1.4), donc $f$ est quasi-fini au point $x$, et on peut par suite se borner au cas où $f$ est quasi-fini. Soit $A''$ l'anneau local hensélisé de $\sh{O}_{Y,y}$, et posons $Y''=\Spec(A'')$. Si $X''=X\times_Y Y''$, $f''=f_{(Y'')}:X''\to Y''$ est séparé, quasi-fini et de présentation finie; comme $A''$ est hensélien, il y a pour tout $x''\in X''$ au-dessus de $x$ un voisinage ouvert et fermé $V''$ de $x''$ dans $X''$ qui est fini sur $Y''$ (18.5.11, c)); comme l'immersion $V''\to X''$ est ouverte et fermée, elle est quasi-compacte, donc de présentation finie (1.6.2), donc $f''|V''$ est de présentation finie.
+
+Cela étant, par définition, $A''$ est limite inductive d'une famille filtrante $(A_\lambda)$ de $\sh{O}_{Y,y}$-algèbres strictement essentiellement étales (18.6.5); chaque $A_\lambda$ est lui-même limite inductive d'une famille filtrante $(B_{\lambda\mu})$ de $\sh{O}_{Y,y}$-algèbres étales ((18.6.1) et (8.1.2, a)). Enfin, comme $B_{\lambda\mu}$ peut être supposée une $\sh{O}_{Y,y}$-algèbre de présentation finie, il résulte encore de (8.1.2, a)) et de (17.7.8) que $B_{\lambda\mu}$ est limite inductive d'une famille filtrante $(C_{\lambda\mu\nu})$ de $A$-algèbres étales. Finalement, on voit, en utilisant le théorème de la double limite inductive, que $Y''$ est limite projective d'une famille filtrante $(Y'_\alpha)$ de schémas affines étales sur $Y$. Si $x'_\alpha$ est la projection de $x''$ sur $X'_\alpha=X\times_Y Y'_\alpha$, on peut supposer que le voisinage $V''$, qui est quasi-compact, est de la forme $V'_\alpha\times_{Y'_\alpha}Y''$ où $V'_\alpha$ est un voisinage ouvert de $x'_\alpha$ dans $X'_\alpha$ (8.2.11). Enfin, $V''$ étant de présentation finie sur $Y''$, on conclut de (8.10.5, (x)) que pour un $\alpha$ convenable, $V'_\alpha$ est fini sur $Y'_\alpha$. C.Q.F.D.
+
+\begin{remark}[18.12.2]
+\label{IV.18.12.2}
+Dans la démonstration précédente, on voit (compte tenu de (18.6.2)) que l'on a construit un $Y'$ répondant à la question, et tel en plus que si $y'=f'(X')$, l'homomorphisme $k(y)\to k(y')$ soit bijectif.
+\end{remark}
+
+\begin{corollary}[18.12.3]
+\label{IV.18.12.3}
+Soient $f:X\to Y$ un morphisme localement de type fini et séparé, $y$ un point de $Y$ tel que le sous-espace $f^{-1}(y)$ soit fini et discret. Il existe alors un morphisme étale $Y'\to Y$, un point $y'\in Y'$ au-dessus de $y$, tel que $k(y')=k(y)$, et une décomposition de $X'$ en somme de deux sous-préschémas $X'_1$, $X'_2$, induits sur des ouverts de $X'$, tels que la restriction de $f'=f_{(Y')}:X'\to Y'$ à $X'_1$ soit un morphisme fini et que l'on ait $X'_2\cap f'^{-1}(y')=\varnothing$.
+\end{corollary}
+
+Si $n$ est le nombre de points de $f^{-1}(y)$, on raisonne par récurrence sur $n$, le corollaire étant trivial pour $n=0$. Soit $x$ un point de $f^{-1}(y)$; en vertu de (18.12.1) et (18.12.2) il y a un morphisme étale $Y_1\to Y$, un point $y_1$ de $Y_1$ au-dessus de $y$ tel que $k(y_1)=k(y)$ et si l'on pose $S_1=X\times_Y Y_1$, $f_1=f_{(S_1)}:S_1\to Y_1$, il existe un point $x_1$ de $f_1^{-1}(y_1)$ tel que $S_1$ soit somme de deux ouverts $V_1$, $X_1$, $V_1$ étant fini sur $Y_1$ et un voisinage de $x_1$.
+
+\oldpage[IV-4]{182}

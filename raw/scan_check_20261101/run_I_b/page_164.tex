@@ -1,0 +1,104 @@
+% from ega1-7-fr.tex
+\oldpage[I]{164}
+\begin{proof}
+Comme $f_*$ est exact à gauche
+(\hyperref[0.4.2.1-fr]{0, 4.2.1}), il suffit, en vertu de
+(\hyperref[I.7.4.2-fr]{7.4.2}), de prouver la proposition lorsque
+$\mathscr{F}=(\mathscr{R}(X))^{(I)}$. Or, tout ouvert non vide $U$ de $Y$
+contient le point générique de $Y$, donc $f^{-1}(U)$ contient le point
+générique de $X$ (\hyperref[0.2.1.5-fr]{0, 2.1.5}), donc on a alors
+\[
+  \Gamma(U,f_*(\mathscr{F}))
+  =\Gamma(f^{-1}(U),\mathscr{F})=(R(X))^{(I)}~;
+\]
+autrement dit, $f_*(\mathscr{F})$ est le faisceau simple de fibre
+$(R(X))^{(I)}$, considéré comme $\mathscr{R}(Y)$-Module, et il est évidemment
+sans torsion.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+\label{I.7.4.6-fr}
+Soient $X$ un préschéma intègre, $x$ son point générique. Pour tout
+$\mathscr{O}_X$-Module quasi-cohérent de type fini $\mathscr{F}$, les
+conditions suivantes sont équivalentes~: a) $\mathscr{F}$ est un faisceau de
+torsion~; b) $\mathscr{F}_x=0$~; c)
+$\operatorname{Supp}(\mathscr{F})\neq X$.
+\end{proposition}
+
+En vertu de (\hyperref[I.7.3.5-fr]{7.3.5}) et de
+(\hyperref[I.7.4.1-fr]{7.4.1}), les relations $\mathscr{F}_x=0$ et
+$\mathscr{F}\otimes_{\mathscr{O}_X}\mathscr{R}(X)=0$ sont équivalentes, donc
+a) et b) sont équivalentes~; d'autre part,
+$\operatorname{Supp}(\mathscr{F})$ est fermé dans $X$
+(\hyperref[0.5.2.2-fr]{0, 5.2.2}), et comme tout ouvert non vide de $X$
+contient $x$, b) et c) sont équivalentes.
+
+\begin{env}[7.4.7]
+\label{I.7.4.7-fr}
+On étend (par abus de langage) les définitions de
+(\hyperref[I.7.4.1-fr]{7.4.1}) au cas où $X$ est un préschéma
+\emph{réduit} n'ayant qu'un nombre \emph{fini} de composantes irréductibles~;
+il résulte alors de (\hyperref[I.7.3.4-fr]{7.3.4}) que l'équivalence de a) et
+c) dans (\hyperref[I.7.4.6-fr]{7.4.6}) est encore valable pour un tel
+préschéma.
+\end{env}
+
+% (continued in ega1-8-fr.tex, before its first page marker)
+\section{Les schémas de Chevalley}
+\label{section:I.8-fr}
+
+\subsection{Anneaux locaux apparentés.}
+\label{subsection:I.8.1-fr}
+
+Pour tout anneau local $A$, nous noterons $\mathfrak m(A)$ l'idéal maximal de
+$A$.
+
+\begin{lemma}[8.1.1]
+\label{I.8.1.1-fr}
+Soient $A$, $B$ deux anneaux locaux tels que $A\subset B$~; les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[(i)] $\mathfrak m(B)\cap A=\mathfrak m(A)$~;
+  \item[(ii)] $\mathfrak m(A)\subset\mathfrak m(B)$~;
+  \item[(iii)] $1$ n'appartient pas à l'idéal de $B$ engendré par
+    $\mathfrak m(A)$.
+\end{enumerate}
+\end{lemma}
+
+Il est évident que (i) entraîne (ii) et (ii) entraîne (iii)~; enfin, si (iii)
+est vérifiée, $\mathfrak m(B)\cap A$ contient $\mathfrak m(A)$ et ne contient
+pas $1$, donc est égal à $\mathfrak m(A)$.
+
+Lorsque les conditions équivalentes de
+(\hyperref[I.8.1.1-fr]{8.1.1}) sont remplies, on dit que $B$ \emph{domine}
+$A$~; il revient au même de dire que l'injection $A\to B$ est un
+homomorphisme \emph{local}. Il est clair que, dans l'ensemble des sous-anneaux
+locaux d'un anneau $R$, la relation de domination est une relation d'ordre.
+
+\begin{env}[8.1.2]
+\label{I.8.1.2-fr}
+Considérons maintenant un \emph{corps} $R$. Pour tout sous-anneau $A$ de $R$,
+nous désignerons par $L(A)$ l'ensemble des anneaux locaux $A_\mathfrak p$, où
+$\mathfrak p$ parcourt le spectre premier de $A$~; ils sont identifiés à des
+sous-anneaux de $R$ contenant $A$. Comme
+$\mathfrak p=(\mathfrak p A_\mathfrak p)\cap A$, l'application
+$\mathfrak p\mapsto A_\mathfrak p$ de $\operatorname{Spec}(A)$ dans $L(A)$
+est bijective.
+\end{env}
+
+\begin{lemma}[8.1.3]
+\label{I.8.1.3-fr}
+Soient $R$ un corps, $A$ un sous-anneau de $R$. Pour qu'un sous-anneau local
+$M$ de $R$ domine un anneau $A_\mathfrak p\in L(A)$, il faut et il suffit que
+$A\subset M$~; l'anneau local $A_\mathfrak p$ dominé par $M$ est alors unique
+et correspond à $\mathfrak p=\mathfrak m(M)\cap A$.
+\end{lemma}
+
+En effet, si $M$ domine $A_\mathfrak p$, on a
+$\mathfrak m(M)\cap A_\mathfrak p=\mathfrak p A_\mathfrak p$ d'après
+(\hyperref[I.8.1.1-fr]{8.1.1}), d'où l'unicité de $\mathfrak p$~; d'autre
+part, si $A\subset M$, $\mathfrak m(M)\cap A=\mathfrak p$ est premier dans
+$A$, et comme $A-\mathfrak p\subset M$, on a $A_\mathfrak p\subset M$ et
+$\mathfrak p A_\mathfrak p\subset\mathfrak m(M)$, donc $M$ domine
+$A_\mathfrak p$.
+

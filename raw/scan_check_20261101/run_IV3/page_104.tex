@@ -1,0 +1,77 @@
+% from ega4-10-fr.tex
+\oldpage[IV-3]{104}
+Soient $f:X\to S$ le morphisme structural, $g:X\to X$ le $S$-endomorphisme
+considéré et, pour tout $s\in S$, soit $g_s$ le morphisme déduit de $g$ par le
+changement de base $\operatorname{Spec}(k(s))\to S$, qui est un
+$k(s)$-endomorphisme de la fibre
+$f^{-1}(s)=X\times_S\operatorname{Spec}(k(s))$.
+
+Pour prouver que $g$ est surjectif, il suffit de prouver que $g_s$ est
+surjectif pour tout $s\in S$, donc on peut (en vertu de (\textbf{I}, 3.5.7))
+se borner au cas où $S=\operatorname{Spec}(k)$ est le spectre d'un corps $k$,
+auquel cas $f$ est un morphisme de présentation finie, puisque $S$ est
+noethérien. Appliquant (8.9.1) et (8.10.5, (vii)), on est ramené au cas où
+$S=\operatorname{Spec}(A)$, où $A$ est une sous-$\mathbf Z$-algèbre de type
+fini de $k$. Or $X$ est alors un préschéma de Jacobson (10.4.7), et $g(X)$ est
+constructible dans $X$ (\textbf{I}, 1.8.5), donc, pour prouver que $g(X)=X$,
+il suffit de montrer que $g(X)$ contient tous les points \emph{fermés} de $X$
+(10.3.1).
+
+\begin{lemma}[10.4.11.1]
+\label{IV.10.4.11.1-fr}
+Soit $Y$ un $\mathbf Z$-préschéma de type fini.
+\begin{enumerate}[label=(\roman*)]
+  \item Pour qu'un point $y\in Y$ soit fermé dans $Y$, il faut et il suffit
+  que $k(y)$ soit un corps fini.
+  \item Pour tout nombre premier $p$ et tout entier $d\geq1$, l'ensemble des
+  points $y\in Y$ tels que $k(y)$ soit une extension de $\mathbf F_p$ dont le
+  degré divise $d$ est fini.
+\end{enumerate}
+\end{lemma}
+
+L'assertion (i) résulte de ce que l'image d'un point fermé $y\in Y$ dans
+$\operatorname{Spec}(\mathbf Z)$ est un point fermé (10.4.7), autrement dit
+un nombre premier, et de (\textbf{I}, 6.4.2). D'autre part, comme $Y$ est
+réunion finie d'ouverts affines de type fini sur $\mathbf Z$, on peut se
+borner pour prouver (ii) au cas où $Y=\operatorname{Spec}(C)$, où $C$ est une
+$\mathbf Z$-algèbre de type fini. Or, les points $y\in Y$ tels que le degré de
+$k(y)$ sur $\mathbf F_p$ divise $d$ correspondent biunivoquement aux
+homomorphismes $C\to\mathbf F_{p^d}$~; mais si $(t_i)$ est un système de
+générateurs de la $\mathbf Z$-algèbre $C$, tout homomorphisme de $C$ est
+déterminé par ses valeurs aux éléments $t_i$, et par suite il n'y a qu'un
+nombre fini d'homomorphismes de $C$ dans un corps fini.
+
+Cela étant, $X$ est un $\mathbf Z$-préschéma de type fini~; soit $T_{p,d}$
+l'ensemble des points fermés $z\in X$ tels que $k(z)$ soit une extension de
+$\mathbf F_p$ de degré divisant $d$~; il résulte de (10.4.11.1) que l'ensemble
+$T_{p,d}$ est fini et que l'ensemble des points fermés de $X$ est réunion des
+$T_{p,d}$. En outre, si $z\in T_{p,d}$ et si $h$ est un endomorphisme
+quelconque de $X$, $k(h(z))$ est isomorphe à un sous-corps de $k(z)$, donc
+$h(z)\in T_{p,d}$, autrement dit $T_{p,d}$ est \emph{stable} par tout
+endomorphisme de $X$. Comme $g$ est par hypothèse injectif, sa restriction à
+$T_{p,d}$ est \emph{bijective} puisque $T_{p,d}$ est fini, ce qui achève de
+démontrer la proposition.
+
+Nous verrons plus loin (17.9.7) que lorsqu'on suppose de plus, d'une part que
+$X$ est un $S$-préschéma de présentation finie, d'autre part que $g$ est un
+monomorphisme, alors on peut affirmer que $g$ est un \emph{automorphisme} de
+$X$.
+
+\subsection{Préschémas de Jacobson noethériens}
+\label{subsection:IV.10.5-fr}
+
+\begin{proposition}[10.5.1]
+\label{IV.10.5.1-fr}
+Soit $B$ un anneau intègre noethérien. Les conditions équivalentes \emph{a)} à
+\emph{d)} de (10.4.4) sont alors aussi équivalentes aux suivantes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \setcounter{enumi}{4}
+  \item $\operatorname{Spec}(B)$ est fini.
+  \item $B$ est un anneau semi-local de dimension $\leq1$.
+\end{enumerate}
+\end{proposition}
+
+Il résulte en effet du théorème d'Artin--Tate ($\mathbf 0$, 16.3.3) que les
+conditions \emph{a)} et \emph{f)} sont équivalentes. La condition \emph{f)}
+implique que $\operatorname{Spec}(B)$ est réunion de l'ensemble
+

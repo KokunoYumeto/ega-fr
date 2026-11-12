@@ -1,0 +1,97 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{158}
+est le produit des $x_\alpha^p$ pour les $\alpha\in I$ tels que
+$m(\alpha)+n(\alpha)\geq p$~; il s'agit de voir que
+$u(a)=\prod_\alpha z_\alpha^p$~; mais comme $x_\alpha=q(z_\alpha)$, cela
+résulte de l'hypothèse.
+\end{proof}
+
+\begin{corollary}[21.2.2]
+\label{0.21.2.2-fr}
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$.
+S'il existe une $p$-base de $B$ sur $A$, $B$ est une $A$-algèbre formellement
+lisse relativement à $B^p$ (pour les topologies discrètes).
+\end{corollary}
+
+\begin{proof}
+Soient $E$ une $A$-extension de $B$ par un $B$-module $L$, $q:E\to B$
+l'augmentation, $u:A\to E$ l'homomorphisme structural. Dire que $E$ est
+$B^p$-triviale signifie qu'il existe un homomorphisme d'anneaux $v:B\to E$
+tel que $q(v(b))=b$ et $v(b^p)=u(b^p)$ pour tout $b\in B$. On en déduit,
+pour $z\in E$, que $u(q(z)^p)=v(q(z)^p)=(v(q(z)))^p$~; mais, en vertu de
+la relation $L^2=0$, on a aussi $L^p=0$, et comme $v(q(z))-z\in L$, on a
+$(v(q(z)))^p=z^p$. La condition de (21.2.1), (i), est donc satisfaite et
+$E$ est $B^p$-triviale.
+\end{proof}
+
+\begin{corollary}[21.2.3]
+\label{0.21.2.3-fr}
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$,
+et $\left(x_\alpha\right)_{\alpha\in I}$ une $p$-base de $B$ sur $A$. Soit
+$L$ un $B$-module. Alors~:
+\begin{enumerate}
+  \item[(i)] Pour qu'une dérivation $D$ de $A$ dans $L$ se prolonge en une
+  dérivation de $B$ dans $L$, il faut et il suffit que $D$ s'annule dans $B^p$.
+  \item[(ii)] Si $D$ s'annule dans $B^p$, alors, pour toute famille
+  $(y_\alpha)_{\alpha\in I}$ d'éléments de $L$, il existe une dérivation
+  $D'$ de $B$ dans $L$ et une seule prolongeant $D$ et telle que
+  $D'(x_\alpha)=y_\alpha$ pour tout $\alpha\in I$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Étant donnée une dérivation $D$ de $A$ dans $L$, considérons l'anneau
+$E=D_B(L)$ et l'homomorphisme $u:A\to E$ défini par $u(a)=(a,D(a))$~; un
+$A$-homomorphisme $v:B\to E$ inverse à droite de l'homomorphisme canonique
+$q:E\to B$ est alors de la forme $x\mapsto(x,D'(x))$, où $D'$ est une
+dérivation de $B$ dans $L$ prolongeant $D$ (20.1.5)~; comme
+$u(q(z)^p)=(q(z)^p,D(q(z)^p))$ pour $z\in E$, le corollaire résulte aussitôt
+de (21.2.1) appliqué à $E$.
+\end{proof}
+
+Il résulte de (21.2.3) que la suite
+\begin{equation}
+\tag{21.2.3.1}
+\label{0.21.2.3.1-fr}
+0\to\operatorname{Der}_A(B,L)\to\operatorname{Der}_{B^p}(B,L)
+\to\operatorname{Der}_{B^p}(A,L)\to0
+\end{equation}
+(cf. (20.2.2.1)) est exacte, et que l'application
+\begin{equation}
+\tag{21.2.3.2}
+\label{0.21.2.3.2-fr}
+D'\longmapsto(D'(x_\alpha))_{\alpha\in I}
+\end{equation}
+est un isomorphisme du $B$-module $\operatorname{Der}_A(B,L)$ sur le
+$B$-module produit $L^I$ (en faisant $D=0$ dans (21.2.3)).
+
+\begin{corollary}[21.2.4]
+\label{0.21.2.4-fr}
+Sous les hypothèses de (21.2.3), la suite
+\begin{equation}
+\tag{21.2.4.1}
+\label{0.21.2.4.1-fr}
+0\to\Omega^1_{A/B^p}\otimes_A B\to\Omega^1_{B/B^p}
+\to\Omega^1_{B/A}\to0
+\end{equation}
+est exacte et scindée, et la famille $(d_{B/A}(x_\alpha))_{\alpha\in I}$ est
+une base du $B$-module $\Omega^1_{B/A}$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte aussitôt de (21.2.3) et de la formule
+$\operatorname{Der}_A(B,L)=\operatorname{Hom}_B(\Omega^1_{B/A},L)$ (20.4.8).
+\end{proof}
+
+\begin{corollary}[21.2.5]
+\label{0.21.2.5-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $(x_\alpha)_{\alpha\in I}$ une
+$p$-base de $B$ sur $A$. Alors $(d_{B/A}(x_\alpha))_{\alpha\in I}$ est une
+base du $B$-module $\Omega^1_{B/A}$.
+\end{corollary}
+
+\begin{proof}
+En utilisant (21.1.5), (ii), on se ramène au cas où $A=A[B^p]$ et il suffit
+alors d'appliquer (21.2.4).
+\end{proof}
+

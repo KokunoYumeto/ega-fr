@@ -1,0 +1,171 @@
+[
+ {
+  "page": 225,
+  "where": "Index des notations, entry 'deg.tr_K L (L extension du corps K) : 4.1.'",
+  "scan": "deg.tr_K L: no period after 'tr', the subscript K follows directly (2x crop)",
+  "tex": "$\\operatorname{deg.tr.}_K L$ (period after tr)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{deg.tr.}_K L",
+   "new": "\\operatorname{deg.tr}_K L"
+  },
+  "note": "The main text writes \\operatorname{deg.tr}_K L as well (definition in 4.1, source line 3947)."
+ },
+ {
+  "page": 226,
+  "where": "Index terminologique, entry 'P-anneau : 7.3.13.'",
+  "scan": "bold italic P (3x crop), hyphen and 'anneau' roman",
+  "tex": "$P$-anneau (plain italic P)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$P$-anneau",
+   "new": "$\\boldsymbol P$-anneau"
+  },
+  "note": "The property letter P, written \\boldsymbol P in the main text (7.3.13). The TeX has plain $P$, not \\mathbf, so this is not convention 10."
+ },
+ {
+  "page": 226,
+  "where": "Index terminologique, entry 'Décomposition irredondante, décomposition irredondante réduite d'un Module : 3.2.5'",
+  "scan": "the entry ends '3.2.5' with no final period (enlarged crop; no ink after the 5); every other entry ends with a period",
+  "tex": "\\EGAIVtwoTerm{...}{3.2.5}: the macro adds the period (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\EGAIVtwoTerm{Décomposition irredondante, décomposition irredondante réduite\nd'un Module}{3.2.5}",
+   "new": "Décomposition irredondante, décomposition irredondante réduite\nd'un Module : 3.2.5\\par"
+  },
+  "corrected": "\\EGAIVtwoTerm{Décomposition irredondante, décomposition irredondante réduite\nd'un Module}{3.2.5}",
+  "note": "The period comes from \\EGAIVtwoTerm (#1 : #2.\\par), so the diplomatic text writes this one entry out without the macro (same output minus the period); the corrected edition keeps the macro call. Medium: a sort lost in printing cannot be excluded, but no trace of a period is visible."
+ },
+ {
+  "page": 227,
+  "where": "Index terminologique, entry 'P-morphisme : 7.3.1.'",
+  "scan": "bold italic P (3x crop)",
+  "tex": "$P$-morphisme (plain italic P)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$P$-morphisme",
+   "new": "$\\boldsymbol P$-morphisme"
+  },
+  "note": "Property letter P, \\boldsymbol P in the main text (7.3.1 ff.). Not convention 10 (the TeX has plain $P$)."
+ },
+ {
+  "page": 227,
+  "where": "Index terminologique, entry 'Préschéma connexe en codimension d—1 : 5.10.8.'",
+  "scan": "long dash for the minus in d—1 (2x crop)",
+  "tex": "$d-1$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$d-1$",
+   "new": "$d\\setmin 1$"
+  },
+  "note": "Subtraction printed with the long dash (GLOBAL_ISSUES 23); form of the fix as for the other convention-7 findings in ega4-2."
+ },
+ {
+  "page": 228,
+  "where": "Index terminologique, entry 'Propriété P du premier type (du second type) associée à une propriété R ...'",
+  "scan": "bold italic P",
+  "tex": "$P$ (plain italic)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Propriété $P$ du premier",
+   "new": "Propriété $\\boldsymbol P$ du premier"
+  },
+  "note": "Property letter P, \\boldsymbol P in the main text (7.3.10). Not convention 10 (the TeX has plain $P$)."
+ },
+ {
+  "page": 228,
+  "where": "same entry, '... associée à une propriété R d'anneaux locaux noethériens : 7.3.10.'",
+  "scan": "bold italic R",
+  "tex": "$R$ (plain italic)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "propriété $R$ d'anneaux",
+   "new": "propriété $\\boldsymbol R$ d'anneaux"
+  },
+  "note": "The property R of local rings is \\boldsymbol R in the main text (7.3.10 ff.)."
+ },
+ {
+  "page": 228,
+  "where": "Index terminologique, entry 'Propriété P géométrique : 7.3.6.'",
+  "scan": "bold italic P",
+  "tex": "$P$ (plain italic)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Propriété $P$ géométrique",
+   "new": "Propriété $\\boldsymbol P$ géométrique"
+  },
+  "note": "Property letter P, as in the two entries above."
+ },
+ {
+  "page": 229,
+  "where": "Table des matières, top right above the page-number column (before the Chapitre IV line)",
+  "scan": "column head 'Pages' in small capitals, a short rule under it",
+  "tex": "(nothing)",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\setlength{\\parskip}{1.5pt}\n",
+   "new": "\\setlength{\\parskip}{1.5pt}\n\\hfill\\textsc{Pages}\\par\n"
+  },
+  "note": "Contents column head, as added for the EGA II, EGA III part 1 and EGA IV part 1 contents (GLOBAL_ISSUES 45); the rule under it is layout. Placed inside the group so that it gets \\small; it does not touch the \\newcommand line."
+ },
+ {
+  "page": 229,
+  "where": "\\newcommand{\\EGAIVtwoContentsLine} (labels of every contents line, pp. 229-231)",
+  "scan": "the labels 'Chapitre IV.', '§ 2.', '2.1.', ..., '4.6.' are set in regular weight (enlarged crop)",
+  "tex": "\\textbf{#1}: every label bold",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{\\textbf{#1}\\quad #2\\dotfill #3\\par}",
+   "new": "{#1\\quad #2\\dotfill #3\\par}"
+  },
+  "note": "One edit for all labels of pp. 229-231 (the macro is defined in this page's segment)."
+ },
+ {
+  "page": 229,
+  "where": "contents line 'Chapitre IV. — Étude locale des schémas et des morphismes des schémas (suite) ... 5'",
+  "scan": "'CHAPITRE' in small capitals with a full capital C, 'IV.' in capitals, regular weight (enlarged crop)",
+  "tex": "{CHAPITRE IV.} (full capitals, bold through the macro)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\EGAIVtwoContentsLine{CHAPITRE IV.}",
+   "new": "\\EGAIVtwoContentsLine{\\textsc{Chapitre IV.}}"
+  },
+  "note": "Independent of the macro fix and of the dash fix (no overlap)."
+ },
+ {
+  "page": 229,
+  "where": "same line, between 'IV.' and 'Étude'",
+  "scan": "a long dash: 'CHAPITRE IV. — Étude locale ...'",
+  "tex": "no dash",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{\\textbf{Étude locale",
+   "new": "{--- \\textbf{Étude locale"
+  },
+  "note": "As in the EGA IV part 1 contents (Chapitre 0 line). The new string ends the dash with a space before \\textbf."
+ }
+]

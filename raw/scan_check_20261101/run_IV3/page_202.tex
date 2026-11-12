@@ -1,0 +1,90 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{202}
+\subsection{Morphismes ouverts et formule des dimensions}
+\label{subsection:IV.14.2-fr}
+
+\begin{theorem}[14.2.1]
+\EGAReaderTarget{ega4.c04.thm.14-2-1}{IV.14.2.1-fr}
+Soient $X$, $Y$ deux préschémas localement noethériens, $f:X\to Y$ un morphisme,
+$x$ un point de $X$, $y=f(x)$. On suppose que $f$ est ouvert aux points génériques
+des composantes irréductibles de $f^{-1}(y)$ contenant $x$. Alors on a la relation
+\begin{equation}
+\tag{14.2.1.1}
+\label{IV.14.2.1.1-fr}
+  \dim(\mathcal O_x)=\dim(\mathcal O_y)+
+  \dim(\mathcal O_x\otimes_{\mathcal O_y}k(y)).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Soit $y'$ une générisation quelconque de $y$ distincte de $y$, et considérons le
+sous-préschéma fermé réduit $Y'$ de $Y$ ayant pour espace sous-jacent
+$\overline{\{y'\}}$~; alors aucune composante irréductible $X'$ de $f^{-1}(Y')$
+contenant $x$ ne peut être contenue dans $f^{-1}(y)$~: en effet, si $x'$ est le
+point générique de $X'$, on aurait $f(x')=y\ne y'$, et comme $x'$ est sa seule
+générisation dans $f^{-1}(Y')$, cela contredirait l'hypothèse que $f$ est ouvert
+au point $x'$, en vertu du fait que $a)$ implique $c)$ dans (1.10.3). On peut donc
+appliquer (6.1.2) à l'homomorphisme local d'anneaux noethériens
+$\mathcal O_y\to\mathcal O_x$, d'où la conclusion.
+\end{proof}
+
+\begin{corollary}[14.2.2]
+\label{IV.14.2.2-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $x$ un point de $X$, $y=f(x)$. Supposons $f$ ouvert aux points
+génériques des composantes irréductibles de $f^{-1}(y)$ contenant $x$. Alors $f$
+est équidimensionnel au point $x$ dans chacun des deux cas suivants~:
+\begin{enumerate}[label=(\roman*)]
+  \item $X$ est irréductible et $f$ est dominant.
+  \item Les anneaux $\mathcal O_x$ et $\mathcal O_y$ sont équidimensionnels.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Pour (i), cela résulte de (14.2.1) et de (13.2.3). Pour (ii), cela résulte de
+(14.2.1) et de (13.3.6).
+\end{proof}
+
+\begin{proposition}[14.2.3]
+\label{IV.14.2.3-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $\eta$ son point
+générique, $f:X\to Y$ un morphisme localement de type fini, $y$ un point de
+$f(X)$, $Z$ une composante irréductible de $f^{-1}(y)$ telle que $f$ soit ouvert
+au point générique de $Z$. Alors $Z$ est contenue dans une composante irréductible
+$X'$ de $X$ dominant $Y$ et telle que
+\[
+  \dim(Z)=\dim(X'\cap f^{-1}(y))=\dim(X'\cap f^{-1}(\eta)).
+\]
+\end{proposition}
+
+\begin{proof}
+Cela résulte en effet de (14.2.1) appliqué au point générique de $Z$, et de
+(13.2.7).
+\end{proof}
+
+\begin{corollary}[14.2.4]
+\label{IV.14.2.4-fr}
+Avec les notations de (14.2.3), supposons que $f$ soit ouvert en tous les points
+de $f^{-1}(y)$. Pour tout $z\in Y$, soient $E(z)$ l'ensemble des dimensions des
+composantes irréductibles de $f^{-1}(z)$ et
+$d(z)=\sup E(z)=\dim(f^{-1}(z))$. On a alors $E(y)\subset E(\eta)$, d'où
+$d(y)\leq d(\eta)$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte aussitôt de (14.2.3).
+\end{proof}
+
+\begin{corollary}[14.2.5]
+\label{IV.14.2.5-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$y\in Y$ un point tel que $f$ soit ouvert en tous les points de $f^{-1}(y)$. Alors
+la fonction $z\mapsto\dim(f^{-1}(z))$ est constante dans un voisinage de $y$.
+\end{corollary}
+
+\begin{proof}
+Soient $Y_i$ ($1\leq i\leq n$) les sous-préschémas fermés réduits de $Y$ ayant
+pour espaces sous-jacents les composantes irréductibles de $Y$ contenant $y$~;
+si $f_i:f^{-1}(Y_i)\to Y_i$ est la restriction de $f$, on sait que chacun des
+$f_i$ est propre (\textbf{II}, 5.4.5) et ouvert en tous les points de $f^{-1}(y)$
+(14.1.2). Comme la réunion des $Y_i$ est un voisinage de $y$ dans $Y$,

@@ -1,0 +1,65 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{288}
+que $W^{(x)}=V^{(x)}$, autrement dit que $V^{(x)}$ est fermé dans $X$.
+On peut alors définir un diviseur $D^{(x)}$ sur $X$ par la condition que $D^{(x)}|U^{(x)}=D'^{(x)}$, et $D^{(x)}|(X-V^{(x)})=0$, ce qui a un sens puisque dans $U^{(x)}\cap(X-V^{(x)})$ la restriction de $g^{(x)}$ est une section inversible, donc les restrictions à cet ouvert des deux diviseurs considérés sur $U^{(x)}$ et $X-V^{(x)}$ sont égales.
+Il suffit alors, pour répondre à la question, de prendre $D=\sum_{x\in T}D^{(x)}$, ce qui a un sens puisque $T$ est fini.
+
+  \item Compte tenu du diagramme commutatif \sref{IV.21.4.2.1}, la conclusion résultera de (i) si l'on prouve que tout $\sh{O}_{X_0}$-Module inversible $\sh{L}_0$ est isomorphe à un $\sh{O}_{X_0}$-Module de la forme $\sh{O}_{X_0}(D_0)$ \sref{IV.21.2.8}, où $D_0$ est un diviseur sur $X_0$ dont le support ne rencontre pas $Z_0$.
+Or, comme $U_0$ est schématiquement dense dans $X_0$ \sref{IV.20.2.13}, (iv), il suffit pour cela de prouver qu'il existe une section $t\in\Gamma(U_0,\sh{L}_0)$ telle que $t(z_0)\neq0$ aux points de $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ \sref{IV.3.1.9}.
+On peut donc se borner au cas où $X_0=\Spec(A_0)$ est affine;
+mais alors $\sh{L}_0$ est ample \sref[II]{II.5.1.4} et comme l'ensemble $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ est fini, la conclusion résulte de \sref[II]{II.4.5.4}.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[21.9.12]
+\label{IV.21.9.12}
+Soient $A$ un anneau local hensélien \sref{IV.18.5.8}, $S=\Spec(A)$, $s_0$ le point fermé de $S$, $f:X\to S$ un morphisme séparé de présentation finie, et supposons que l'ensemble $X_0=f^{-1}(s_0)$ soit de dimension $\leq1$.
+Alors, pour tout sous-schéma fermé $X'_0$ de $X$, ayant $X_0$ pour ensemble sous-jacent et de présentation finie sur $S$, l'homomorphisme canonique \sref{IV.21.3.2.4} $\operatorname{Pic}(X)\to\operatorname{Pic}(X'_0)$ est surjectif.
+\end{corollary}
+
+\begin{proof}
+Montrons d'abord qu'il suffit de prouver le corollaire lorsque l'anneau local hensélien $A$ est de plus noethérien.
+On sait en effet \sref{IV.18.6.15} que l'on peut écrire $A=\varinjlim A_\lambda$, où les $A_\lambda$ sont des anneaux locaux noethériens et henséliens, les homomorphismes $A_\lambda\to A$ étant locaux;
+il existe en outre un indice $\alpha$ et un morphisme séparé de présentation finie $f_\alpha:X_\alpha\to S_\alpha=\Spec(A_\alpha)$ tels que $X$ et $f$ soient déduits de $X_\alpha$ et $f_\alpha$ par le changement de base $S\to S_\alpha$ \sref{IV.8.10.5}, (v);
+avec les notations habituelles \sref{IV.8.8.1}, les morphismes $f_\lambda:X_\lambda\to S_\lambda$ seront séparés pour $\lambda\geq\alpha$ et on aura $X=X_\lambda\times_{S_\lambda}S$.
+En outre, on peut supposer que, si $s_{0\alpha}$ est l'unique point fermé de $S_\alpha$, il y a un sous-schéma fermé $X'_{0\alpha}$ de $X_\alpha$, ayant même ensemble sous-jacent que $f_\alpha^{-1}(s_{0\alpha})$, tel que $X'_0=X'_{0\alpha}\times_{S_\alpha}S$ \sref{IV.8.6.3};
+pour $\lambda\geq\alpha$, posons $X'_{0\lambda}=X'_{0\alpha}\times_{S_\alpha}S_\lambda$;
+on a $\dim(X'_{0\lambda})=\dim(X'_0)\leq1$ par transitivité des fibres et \sref{IV.4.1.4}.
+Il s'agit de voir que si l'on a prouvé que l'homomorphisme $\operatorname{Pic}(X_\lambda)\to\operatorname{Pic}(X'_{0\lambda})$ est surjectif pour tout $\lambda\geq\alpha$, il en est de même de $\operatorname{Pic}(X)\to\operatorname{Pic}(X'_0)$.
+On a évidemment le diagramme commutatif d'homomorphismes canoniques
+\[
+  \xymatrix{
+    \operatorname{Pic}(X_\lambda) \ar[r] \ar[d] & \operatorname{Pic}(X) \ar[d]\\
+    \operatorname{Pic}(X'_{0\lambda}) \ar[r] & \operatorname{Pic}(X'_0)
+  }
+\]
+Pour tout $\sh{O}_{X'_0}$-Module inversible $\sh{L}'_0$, il existe un $\lambda\geq\alpha$ et un $\sh{O}_{X'_{0\lambda}}$-Module inversible $\sh{L}'_{0\lambda}$ tel que $\sh{L}'_0$ s'en déduise par changement de base $S\to S_\lambda$ \sref{IV.8.5.2} et \sref{IV.8.5.5};
+il suffit de considérer un $\sh{O}_{X_\lambda}$-Module inversible $\sh{L}_\lambda$ tel que $\operatorname{cl}(\sh{L}'_{0\lambda})$ soit l'image de $\operatorname{cl}(\sh{L}_\lambda)$ dans $\operatorname{Pic}(X'_{0\lambda})$, puis de prendre le $\sh{O}_X$-Module inversible $\sh{L}$ déduit de $\sh{L}_\lambda$ par changement de base;
+en vertu de la commutativité du diagramme précédent, $\operatorname{cl}(\sh{L}'_0)$ sera l'image de $\operatorname{cl}(\sh{L})$.
+
+Supposons donc $A$ noethérien, donc aussi $X$, et vérifions que $X$ et $X'_0$ satisfont aux conditions de \sref{IV.21.9.11}, (ii).
+On a par hypothèse $\dim(X'_0)\leq1$;
+d'autre part, pour vérifier la condition 2\textsuperscript{o} de \sref{IV.21.9.11}, considérons un sous-préschéma réduit $Y$ de $X$ ayant une partie localement fermée $Y$ pour ensemble sous-jacent;
+le morphisme $g:Y\to S$, restriction de $f$, étant quasi-fini en chacun des points $x_i$ de $Y\cap X_0$ ($1\leq i\leq n$), on peut appliquer \sref{IV.18.5.11}, c), et on voit que $Y$ est somme des sous-préschémas ouverts $Y_i=\Spec(\sh{O}_{Y,x_i})$ ($1\leq i\leq n$) et d'un préschéma $Y''$ tel que $Y''\cap X_0=\emp$, et en outre que les injections canoniques $j_i:Y_i\to X$ sont telles que $f\circ j_i$ soit un morphisme fini.
+Comme $f$ est séparé, $j_i$ est aussi un morphisme fini, donc $Y_i$ est fermé dans $X$;
+on répond donc à la question en prenant $Y'=\bigcup_{1\leq i\leq n}Y_i$.
+
+Il reste à vérifier l'hypothèse supplémentaire de \sref{IV.21.9.11}, (ii).
+Or, $X'_0$ étant une courbe séparée sur le corps $\boldsymbol{k}(s_0)$, est un $\boldsymbol{k}(s_0)$-schéma quasi-projectif (chap.~V)\footnote{Le lecteur vérifiera que \sref{IV.21.9.12} n'est pas utilisé pour prouver cette propriété au chap.~V.}, donc il existe un $\sh{O}_{X'_0}$-Module ample \sref[II]{II.5.3.1}, et cela achève la démonstration.
+\end{proof}
+
+\begin{remark}[21.9.13]
+\label{IV.21.9.13}
+Sous les conditions de \sref{IV.21.9.12}, supposant en outre $f$ propre, le morphisme $f$ est même \emph{projectif}:
+en effet, si $\sh{L}_0$ est un $\sh{O}_{X'_0}$-Module ample, il existe, en vertu de \sref{IV.21.9.12}, un $\sh{O}_X$-Module inversible $\sh{L}$ dont l'image réciproque dans $X'_0$ est isomorphe à $\sh{L}_0$, donc est ample.
+Puisque tout voisinage de $s_0$ dans $S$ est nécessairement $S$ tout entier, on déduit alors de \sref{IV.9.6.4} que $\sh{L}$ est un $\sh{O}_X$-Module ample, d'où la conclusion (\sref[II]{II.5.3.1} et \sref[II]{II.5.5.3}).
+\end{remark}
+
+\subsection{Images réciproques et images directes de cycles 1-codimensionnels}
+\EGAReaderTarget{ega4.c04.subsec.21-10}{subsection:IV.21.10}
+
+Dans un chapitre ultérieur, consacré à la théorie des intersections, seront développées de façon systématique les notions d'image inverse et d'image directe de cycles.
+Dans le présent numéro, nous nous contenterons de définir ces notions dans certains cas particuliers utiles, et pour les cycles $1$-codimensionnels, ces définitions étant choisies de telle sorte qu'elles soient compatibles avec les définitions correspondantes pour les diviseurs \sref{IV.21.4} et \sref{IV.21.5}, compte tenu de l'homomorphisme $\operatorname{cyc}$ défini en \sref{IV.21.6}.
+
+\begin{env}[21.10.1]
+\label{IV.21.10.1}

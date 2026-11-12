@@ -1,0 +1,110 @@
+% from ega1-6-fr.tex
+\oldpage[I]{152}
+    tel que $a=Q(t_1,\ldots,t_n)$~; posons
+    \[
+      Q(X_1/T,\ldots,X_n/T)
+      =P(X_1,\ldots,X_n,T)/T^m,
+    \]
+    où $P$ est homogène de degré $m$. Dans l'anneau $A_g$, on a
+    \[
+      a/1
+      =a^mP(\varphi(b_1),\ldots,\varphi(b_n),\varphi(c))/g^m
+      =a^m\varphi(d)/g^m
+    \]
+    où $d\in B$. Comme, dans $A_g$,
+    $g/1=(a/1)(\varphi(c)/1)$ est inversible par définition, il en est de même
+    de $a/1$ et de $\varphi(c)/1$, et on peut donc écrire
+    \[
+      a/1=(\varphi(d)/1)(\varphi(c)/1)^{-m}.
+    \]
+    On en conclut que $\varphi(d)/1$ est aussi inversible dans $A_g$. Posons
+    alors $h=cd$~; comme $\varphi(h)/1$ est inversible dans $A_g$,
+    l'homomorphisme composé
+    \[
+      B\xrightarrow{\varphi}A\longrightarrow A_g
+    \]
+    se factorise en
+    \[
+      B\longrightarrow B_h\xrightarrow{\gamma}A_g
+    \]
+    (\hyperref[0.1.2.4-fr]{0, 1.2.4}). Montrons que $\gamma$ est
+    \emph{surjectif}~; il suffit de vérifier que l'image de $B_h$ dans $A_g$
+    contient les $t_i/1$ et $(g/1)^{-1}$. Or, on a
+    \[
+      (g/1)^{-1}
+      =(\varphi(c)/1)^{m-1}(\varphi(d)/1)^{-1}
+      =\gamma(c^m/h),
+    \]
+    et
+    \[
+      a/1=\gamma(d^{m+1}/h^m),
+    \]
+    donc
+    \[
+      (a\varphi(b_i))/1=\gamma(b_i d^{m+1}/h^m),
+    \]
+    et comme
+    $t_i/1=(a\varphi(b_i)/1)(g/1)^{-1}$, notre assertion est démontrée. Le
+    choix de $h$ implique que $\psi(D(g))\subset D(h)$, et la restriction de
+    $f$ à $D(g)$ est égale à
+    $({}^a\gamma,\widetilde{\gamma})$~; comme $\gamma$ est surjectif, cette
+    restriction est une immersion fermée de $D(g)$ dans $D(h)$
+    (\hyperref[I.4.2.3-fr]{4.2.3}).
+\end{enumerate}
+
+\begin{corollary}[6.5.5]
+\label{I.6.5.5-fr}
+Soit $f=(\psi,\theta):X\to Y$ un morphisme de type fini. On suppose $X$
+irréductible, on désigne par $x$ son point générique, et on pose $y=\psi(x)$.
+\begin{enumerate}
+  \item[(i)] Pour que $f$ soit une immersion locale en un point de $X$, il
+    faut et il suffit que
+    $\theta_x^\sharp:\mathscr{O}_y\to\mathscr{O}_x$ soit surjectif.
+  \item[(ii)] On suppose de plus $Y$ irréductible et localement noethérien.
+    Pour que $f$ soit un isomorphisme local en un point de $X$, il faut et il
+    suffit que $y$ soit le point générique de $Y$ (ou, ce qui revient au même
+    (\hyperref[0.2.1.4-fr]{0, 2.1.4}) que $f$ soit un morphisme
+    \emph{dominant}) et que $\theta_x^\sharp$ soit un isomorphisme (autrement
+    dit, que $f$ soit \emph{birationnel}
+    (\hyperref[I.2.2.9-fr]{2.2.9})).
+\end{enumerate}
+\end{corollary}
+
+Il est clair que (i) résulte de
+(\hyperref[I.6.5.4-fr]{6.5.4, (i)}) compte tenu de ce que tout ouvert non vide
+de $X$ contient $x$~; de même (ii) résulte de
+(\hyperref[I.6.5.4-fr]{6.5.4, (ii)}).
+
+\subsection{Morphismes quasi-compacts et morphismes localement de type fini.}
+\label{subsection:I.6.6-fr}
+
+\begin{definition}[6.6.1]
+\label{I.6.6.1-fr}
+On dit qu'un morphisme $f:X\to Y$ est \emph{quasi-compact} si l'image
+réciproque par $f$ de tout ouvert quasi-compact de $Y$ est quasi-compacte.
+\end{definition}
+
+Soit $\mathfrak{B}$ une base de la topologie de $Y$ formée d'ouverts
+quasi-compacts (par exemple d'ouverts affines)~; pour que $f$ soit
+quasi-compact, il faut et il suffit que l'image réciproque par $f$ de tout
+ensemble de $\mathfrak{B}$ soit quasi-compacte (ou, ce qui revient au même,
+réunion \emph{finie} d'ouverts affines), car tout ouvert quasi-compact de $Y$
+est réunion finie d'ensembles de $\mathfrak{B}$. Par exemple, si $X$ est
+\emph{quasi-compact} et $Y$ \emph{affine}, alors \emph{tout} morphisme
+$f:X\to Y$ est quasi-compact~: en effet, $X$ est réunion finie d'ensembles
+ouverts affines $U_i$, et pour tout ouvert affine $V$ de $Y$,
+$U_i\cap f^{-1}(V)$ est affine
+(\hyperref[I.5.5.10-fr]{5.5.10}), donc quasi-compact.
+
+Si $f:X\to Y$ est un morphisme quasi-compact, il est clair que pour tout
+ouvert $V$ de $Y$, la restriction de $f$ à $f^{-1}(V)$ est un morphisme
+quasi-compact $f^{-1}(V)\to V$. Inversement, si $(U_\alpha)$ est un
+recouvrement ouvert de $Y$ et $f:X\to Y$ un morphisme tel que les restrictions
+$f^{-1}(U_\alpha)\to U_\alpha$ soient quasi-compactes, alors $f$ est
+quasi-compact.
+
+\begin{definition}[6.6.2]
+\label{I.6.6.2-fr}
+On dit qu'un morphisme $f:X\to Y$ est \emph{localement de type fini} si, pour
+tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ et un voisinage ouvert
+$V\supset f(U)$ de $y$ tels que la

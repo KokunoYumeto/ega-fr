@@ -1,0 +1,16 @@
+"""Crop a region of a strip image and upscale it.
+
+Usage: python -I crop.py <strip.png> <x0> <y0> <x1> <y1> <out.png> [scale]
+Coordinates are in the original image's pixels.
+"""
+import sys
+from PIL import Image
+
+src, x0, y0, x1, y1, out = sys.argv[1], *map(int, sys.argv[2:6]), sys.argv[6]
+scale = float(sys.argv[7]) if len(sys.argv) > 7 else 2.0
+im = Image.open(src)
+box = im.crop((x0, y0, x1, y1))
+if scale != 1.0:
+    box = box.resize((int(box.width * scale), int(box.height * scale)), Image.LANCZOS)
+box.save(out)
+print(out, box.size)

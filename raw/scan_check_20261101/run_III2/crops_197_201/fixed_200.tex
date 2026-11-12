@@ -1,0 +1,82 @@
+% from ega3-7-fr.tex
+\oldpage[III]{200}
+\medskip
+\noindent
+\textnormal{II) (La propriété d'échange).}
+Pour un entier $p$ donné, les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[\textup{a)}] $\mathscr T_p$ est exact à droite.
+
+  \item[\textup{a$'$)}] $\mathscr T_p(\mathscr M)$ est isomorphe à un foncteur de la forme
+    $\mathscr N\otimes_{\mathscr O_Y}\mathscr M$ ($\mathscr N$ étant nécessairement
+    isomorphe à $\mathscr T_p(\mathscr O_Y)=\mathscr H^{-p}(f,\mathscr P^\bullet)$).
+
+  \item[\textup{a$''$)}] L'homomorphisme canonique fonctoriel (7.7.3.1) est un
+    isomorphisme.
+
+  \item[\textup{b)}] $\mathscr T_{p-1}$ est exact à gauche.
+
+  \item[\textup{b$'$)}] Il existe un $\mathscr O_Y$-Module $\mathscr Q$ (nécessairement
+    cohérent, et déterminé à un isomorphisme unique près) et un isomorphisme de
+    foncteurs
+    \[
+      \mathscr T_{p-1}(\mathscr M)
+      \xrightarrow{\sim}
+      \mathscr{H}\!om_{\mathscr O_Y}(\mathscr Q,\mathscr M).
+      \tag{7.7.5.2}\label{III.7.7.5.2.fr}
+    \]
+
+  \item[\textup{c)}] En désignant par $A_\alpha$ l'anneau de l'ouvert affine $U_\alpha$,
+    pour tout indice $\alpha$ le foncteur de $A_\alpha$-modules
+    $T_p^{A_\alpha}$ est exact à droite.
+
+  \item[\textup{d)}] Pour tout morphisme $g:Y'\to Y$, l'homomorphisme canonique
+    \[
+      \mathscr T_p(\mathscr O_Y)
+      \otimes_{\mathscr O_Y}\mathscr O_{Y'}
+      \longrightarrow
+      \mathscr T_p^{Y'}(\mathscr O_{Y'})
+      \tag{7.7.5.3}\label{III.7.7.5.3.fr}
+    \]
+    est un isomorphisme.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+La propriété de semi-continuité est locale sur $Y$ et résulte donc de la
+remarque (7.7.4) et de (7.6.9). Il est clair que \emph{a$''$)} entraîne \emph{a$'$)} et que
+\emph{a$'$)} entraîne \emph{a)}. L'équivalence de \emph{a)}, \emph{a$''$)}, \emph{b)} et \emph{b$'$)} a été démontrée
+dans (7.3.1) et (7.4.6), compte tenu de la remarque (7.7.4), lorsque $Y$ est
+\emph{affine}. Pour passer au cas général, prouvons d'abord que \emph{a)} est équivalent à \emph{c)},
+ce qui prouvera le caractère \emph{local} sur $Y$ de la propriété \emph{a)} ; la démonstration
+s'appliquera également pour prouver le caractère local de \emph{a$''$)} et \emph{b)}. Comme il
+est clair que \emph{c)} entraîne \emph{a)}, tout revient à prouver la réciproque. Il suffit
+évidemment de montrer que pour tout ouvert affine $U$ de $Y$ et toute suite
+exacte
+$0\longrightarrow\mathscr F'\longrightarrow\mathscr F\longrightarrow\mathscr F''\longrightarrow0$
+de $(\mathscr O_Y|U)$-Modules quasi-cohérents, il existe une suite exacte
+$0\longrightarrow\mathscr G'\longrightarrow\mathscr G\longrightarrow\mathscr G''\longrightarrow0$
+de $\mathscr O_Y$-Modules quasi-cohérents telle que
+$\mathscr F'=\mathscr G'|U$, $\mathscr F=\mathscr G|U$, $\mathscr F''=\mathscr G''|U$;
+or, cela résulte aussitôt de l'hypothèse que $Y$ est localement noethérien, et
+de (\textbf{I}, 9.4.2) : on prolonge en effet $\mathscr F$ en un $\mathscr O_X$-Module
+quasi-cohérent $\mathscr G$, $\mathscr F'$ en un sous-$\mathscr O_X$-Module
+$\mathscr G'$ de $\mathscr G$, et il suffit de prendre
+$\mathscr G''=\mathscr G/\mathscr G'$.
+
+Pour démontrer l'équivalence de \emph{b)} et \emph{b$'$)} dans le cas général, remarquons que
+lorsque $Y$ est affine, on sait que $\mathscr Q$ est déterminé à un isomorphisme
+unique près ; si alors $U$ est un ouvert affine du schéma affine $Y$, on en
+déduit qu'il existe un isomorphisme fonctoriel
+$\mathscr T_{p-1}^{U}(\mathscr M|U)\xrightarrow{\sim}\mathscr{H}\!om_{\mathscr O_Y|U}(\mathscr Q|U,\mathscr M|U)$.
+Dans le cas général, pour tout ouvert affine $U$ de $Y$, il y a un
+$(\mathscr O_Y|U)$-Module cohérent $\mathscr Q_U$ et un isomorphisme fonctoriel
+$\mathscr T_{p-1}^{U}(\mathscr M|U)\to\mathscr{H}\!om_{\mathscr O_Y|U}(\mathscr Q_U,\mathscr M|U)$;
+la remarque précédente montre que si $V$ est un ouvert affine contenu dans $U$,
+on a $\mathscr Q_U|V=\mathscr Q_V$ ; d'où l'existence et l'unicité du
+$\mathscr O_Y$-Module $\mathscr Q$ vérifiant (7.7.5.2).
+
+Reste enfin à montrer l'équivalence de \emph{a)} et \emph{d)} ; il est clair que \emph{d)} est de
+caractère local sur $Y$, et l'on a vu ci-dessus qu'il en est de même de \emph{a)} ; en
+outre, \emph{d)} est aussi local sur $Y'$. Or, lorsque $Y=\operatorname{Spec}(A)$,
+$Y'=\operatorname{Spec}(A')$, on a vu que $T_\bullet^{A'}$ est le foncteur obtenu

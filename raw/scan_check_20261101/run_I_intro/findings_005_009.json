@@ -1,0 +1,310 @@
+[
+ {
+  "page": 5,
+  "where": "top of the page: heading and dedication",
+  "scan": "printed p. 5 begins with the heading 'INTRODUCTION' and the italic dedication 'A Oscar Zariski et André Weil.', then 'Ce mémoire, et les nombreux autres ...'",
+  "tex": "\\section*{Introduction} and the dedication stand before \\oldpage[I]{5} (intro-fr.tex ll. 1-7), so both fall outside page 5",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\section*{Introduction}\n\n\\begin{center}\n\\emph{A Oscar Zariski et André Weil.}\n\\end{center}\n\n\\oldpage[I]{5}",
+   "new": "\\oldpage[I]{5}\n\\section*{Introduction}\n\n\\begin{center}\n\\emph{A Oscar Zariski et André Weil.}\n\\end{center}"
+  },
+  "note": "The marker belongs before \\section*{Introduction}, as at pp. 101 and 130. The 'old' string spans the page boundary: it is an exact, unique substring of intro-fr.tex ll. 1-7 (LF line endings; identical in source/ega1 and the r20 release), not of page_005.tex, which starts at the marker. Apply it as a file-level edit (apply_manual.py, region 'file'). \\oldpage is a \\marginpar, which is allowed in vertical mode before \\section*."
+ },
+ {
+  "page": 5,
+  "where": "list of prerequisites, label of item a)",
+  "scan": "'a)' set in italic, letter and parenthesis (a) L'Algèbre commutative ...)",
+  "tex": "\\item[a)]: upright label",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)]",
+   "new": "\\item[\\textit{a)}]"
+  },
+  "note": "The four labels a) to d) are italic in the print (the parenthesis is slanted too). Labels set upright were corrected the same way on pp. 84 and 122."
+ },
+ {
+  "page": 5,
+  "where": "list of prerequisites, label of item b)",
+  "scan": "'b)' set in italic, letter and parenthesis (b) L'Algèbre homologique ...)",
+  "tex": "\\item[b)]: upright label",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)]",
+   "new": "\\item[\\textit{b)}]"
+  },
+  "note": "As for a)."
+ },
+ {
+  "page": 5,
+  "where": "list of prerequisites, label of item c)",
+  "scan": "'c)' set in italic, letter and parenthesis (c) La Théorie des faisceaux ...)",
+  "tex": "\\item[c)]: upright label",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[c)]",
+   "new": "\\item[\\textit{c)}]"
+  },
+  "note": "As for a)."
+ },
+ {
+  "page": 5,
+  "where": "list of prerequisites, label of item d)",
+  "scan": "'d)' set in italic, letter and parenthesis (d) Enfin, il sera utile ...)",
+  "tex": "\\item[d)]: upright label",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[d)]",
+   "new": "\\item[\\textit{d)}]"
+  },
+  "note": "As for a)."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter II",
+  "scan": "'— II. — Étude globale élémentaire de quelques classes de morphismes.' with the numeral II in regular roman (not bold)",
+  "tex": "--- \\textbf{II}. & --- Étude globale élémentaire de quelques classes de morphismes.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{II}.",
+   "new": "II."
+  },
+  "note": "The chapter numerals of the plan are printed in the text weight. Measured at 300 dpi, each capital I in them has a 6 px stem and about 240 dark pixels, the same as the sentence-initial 'Il' on pp. 7 and 9; the bold reference numeral of (II, 2.4.3) on p. 101 measures 8-9 px stems, and its two I's merge into one blob. The chapter numerals in the running text of pp. 7-9 (chap. II, III, IV, V, VI, IX; 'III, 4.9.3') measure the same regular weight, and the TeX sets those plain."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter III",
+  "scan": "'— III. — Cohomologie des faisceaux algébriques cohérents. Applications.' with the numeral III in regular roman (not bold)",
+  "tex": "--- \\textbf{III}. & --- Cohomologie des faisceaux algébriques cohérents. Applications.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{III}.",
+   "new": "III."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter IV",
+  "scan": "'— IV. — Étude locale des morphismes.' with the numeral IV in regular roman (not bold)",
+  "tex": "--- \\textbf{IV}. & --- Étude locale des morphismes.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{IV}.",
+   "new": "IV."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter V",
+  "scan": "'— V. — Procédés élémentaires de construction de schémas.' with the numeral V in regular roman (not bold)",
+  "tex": "--- \\textbf{V}. & --- Procédés élémentaires de construction de schémas.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{V}.",
+   "new": "V."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter VI",
+  "scan": "'— VI. — Technique de descente. Méthode générale de construction des schémas.' with the numeral VI in regular roman (not bold)",
+  "tex": "--- \\textbf{VI}. & --- Technique de descente. Méthode générale de construction des schémas.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{VI}.",
+   "new": "VI."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter VII",
+  "scan": "'— VII. — Schémas de groupes, espaces fibrés principaux.' with the numeral VII in regular roman (not bold)",
+  "tex": "--- \\textbf{VII}. & --- Schémas de groupes, espaces fibrés principaux.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{VII}.",
+   "new": "VII."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter VIII",
+  "scan": "'— VIII. — Étude différentielle des espaces fibrés.' with the numeral VIII in regular roman (not bold)",
+  "tex": "--- \\textbf{VIII}. & --- Étude différentielle des espaces fibrés.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{VIII}.",
+   "new": "VIII."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter IX",
+  "scan": "'— IX. — Le groupe fondamental.' with the numeral IX in regular roman (not bold)",
+  "tex": "--- \\textbf{IX}. & --- Le groupe fondamental.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{IX}.",
+   "new": "IX."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter X",
+  "scan": "'— X. — Résidus et dualité.' with the numeral X in regular roman (not bold)",
+  "tex": "--- \\textbf{X}. & --- Résidus et dualité.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{X}.",
+   "new": "X."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter XI",
+  "scan": "'— XI. — Théories d'intersection, classes de Chern, théorème de Riemann-Roch.' with the numeral XI in regular roman (not bold)",
+  "tex": "--- \\textbf{XI}. & --- Théories d'intersection, classes de Chern, théorème de Riemann-Roch.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{XI}.",
+   "new": "XI."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter XII",
+  "scan": "'— XII. — Schémas abéliens et schémas de Picard.' with the numeral XII in regular roman (not bold)",
+  "tex": "--- \\textbf{XII}. & --- Schémas abéliens et schémas de Picard.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{XII}.",
+   "new": "XII."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 6,
+  "where": "plan of the treatise, chapter XIII",
+  "scan": "'— XIII. — Cohomologie de Weil.' with the numeral XIII in regular roman (not bold)",
+  "tex": "--- \\textbf{XIII}. & --- Cohomologie de Weil.",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{XIII}.",
+   "new": "XIII."
+  },
+  "note": "As for II."
+ },
+ {
+  "page": 8,
+  "where": "label 1° of the four steps",
+  "scan": "'1' followed by a superior letter o (oval, with thick and thin strokes): the ordinal 1º",
+  "tex": "\\item[$1^\\circ$]: math ring (degree-like circle)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$1^\\circ$",
+   "new": "1\\textsuperscript{o}"
+  },
+  "note": "The print has the French ordinal with a superior letter o, not a degree ring (a 5x crop of 1º shows an upright oval with stroke contrast). ega1-7-fr.tex l. 443 and ega1-9-fr.tex l. 659 already write \\item[1\\textsuperscript{o}]; ega1-4-fr.tex l. 55 has $1^\\circ$ like this page. The old-style figure of the print is ignored."
+ },
+ {
+  "page": 8,
+  "where": "label 2° of the four steps",
+  "scan": "'2' followed by a superior letter o (oval, with thick and thin strokes): the ordinal 2º",
+  "tex": "\\item[$2^\\circ$]: math ring (degree-like circle)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$2^\\circ$",
+   "new": "2\\textsuperscript{o}"
+  },
+  "note": "As for 1°."
+ },
+ {
+  "page": 8,
+  "where": "label 3° of the four steps",
+  "scan": "'3' followed by a superior letter o (oval, with thick and thin strokes): the ordinal 3º",
+  "tex": "\\item[$3^\\circ$]: math ring (degree-like circle)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$3^\\circ$",
+   "new": "3\\textsuperscript{o}"
+  },
+  "note": "As for 1°."
+ },
+ {
+  "page": 8,
+  "where": "label 4° of the four steps",
+  "scan": "'4' followed by a superior letter o (oval, with thick and thin strokes): the ordinal 4º",
+  "tex": "\\item[$4^\\circ$]: math ring (degree-like circle)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$4^\\circ$",
+   "new": "4\\textsuperscript{o}"
+  },
+  "note": "As for 1°."
+ },
+ {
+  "page": 9,
+  "where": "last paragraph, last sentence",
+  "scan": "A l'intérieur du même chapitre, on supprimera la mention du chapitre. ('du même chapitre' italic)",
+  "tex": "A l'intérieur du même chapitre, on supprimera la mention du chapitre. (all roman)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "du même chapitre, on",
+   "new": "\\emph{du même chapitre}, on"
+  },
+  "note": "Only 'du même chapitre' is italic; 'A l'intérieur' and the rest of the sentence are roman."
+ }
+]

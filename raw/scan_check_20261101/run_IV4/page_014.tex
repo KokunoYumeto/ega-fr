@@ -1,0 +1,95 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{14}
+que la suite d'homomorphismes canoniques
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}\to
+\mathfrak{K}/\mathfrak{K}^2\to
+(\mathfrak{K}/\mathfrak{I})/(\mathfrak{K}/\mathfrak{I})^2\to 0$
+est exacte, ce qui est immédiat puisque l'image de
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}$ dans
+$\mathfrak{K}/\mathfrak{K}^2$ est
+$(\mathfrak{I}+\mathfrak{K}^2)/\mathfrak{K}^2$ et que
+$(\mathfrak{K}/\mathfrak{I})/(\mathfrak{K}/\mathfrak{I})^2$ s'identifie à
+$\mathfrak{K}/(\mathfrak{I}+\mathfrak{K}^2)$.
+
+Il est facile de donner des exemples où la suite (16.2.7.1) prolongée à gauche
+par un 0 n'est plus exacte; avec les notations précédentes, il suffit de
+prendre $A=k[T]$, $\mathfrak{I}=AT^2$, $\mathfrak{K}=AT$, car on a alors
+$(\mathfrak{I}+\mathfrak{K}^2)/\mathfrak{K}^2=0$ et
+$\mathfrak{I}/\mathfrak{K}\mathfrak{I}\neq 0$. Voir cependant (16.9.13) et
+(19.1.5) pour des cas utiles où la suite prolongée reste encore exacte.
+
+\subsection{Invariants différentiels fondamentaux d'un morphisme de préschémas}
+\EGAReaderTarget{ega4.c04.subsec.16-3}{IV.16.3}
+
+\begin{definition}[16.3.1]
+\EGAReaderTarget{ega4.c04.def.16-3-1}{IV.16.3.1}
+Soient $f:X\to S$ un morphisme de préschémas, $\Delta_f:X\to X\times_S X$
+le morphisme diagonal correspondant, qui est une immersion (I, 5.3.9 et
+$\mathbf{Err}_{\mathrm{III}}$, 10). On désigne par $\mathscr{P}_f^n$ ou
+$\mathscr{P}_{X/S}^n$, et l'on appelle faisceau des parties principales d'ordre $n$
+du $S$-préschéma $X$, le faisceau d'anneaux $\mathcal{O}_X$-augmentés, $n$-ème
+invariant normal de $\Delta_f$ (16.1.2). On pose
+$\mathscr{P}_f^\infty=\mathscr{P}_{X/S}^\infty=
+\varprojlim_n\mathscr{P}_{X/S}^n$,
+$\mathscr{G}r_n(\mathscr{P}_f)=\mathscr{G}r_n(\mathscr{P}_{X/S})=
+\mathscr{G}r_n(\Delta_f)$ (16.1.2); le $\mathcal{O}_X$-Module
+$\mathscr{G}r_1(\Delta_f)$, Idéal d'augmentation de $\mathscr{P}_{X/S}^1$, est
+aussi noté $\Omega_f^1$ ou $\Omega_{X/S}^1$, et appelé le $\mathcal{O}_X$-Module
+des 1-différentielles de $f$, ou de $X$ par rapport à $S$, ou du $S$-préschéma $X$.
+\end{definition}
+
+Il résulte de cette définition que $\mathscr{P}_{X/S}^0$ s'identifie
+canoniquement à $\mathcal{O}_X$ (16.1.2).
+
+On a (16.1.2.2) un homomorphisme canonique surjectif de
+$\mathcal{O}_X$-Algèbres graduées
+\[
+  \mathscr{S}_{\mathcal{O}_X}^{\bullet}(\Omega_{X/S}^1)
+  \longrightarrow\mathscr{G}r_\bullet(\mathscr{P}_{X/S}).
+  \tag{16.3.1.1}
+  \label{IV.16.3.1.1}
+\]
+Il résulte aussi de la définition (16.3.1) que pour tout ouvert $U$ de $X$, on a
+$\mathscr{P}_{f|U}^n=\mathscr{P}_f^n|U$,
+$\mathscr{P}_{f|U}^\infty=\mathscr{P}_f^\infty|U$,
+$\mathscr{G}r_n(\mathscr{P}_{f|U})=\mathscr{G}r_n(\mathscr{P}_f)|U$,
+$\Omega_{f|U}^1=\Omega_f^1|U$ (autrement dit, les notions introduites sont
+locales sur $X$).
+
+\begin{env}[16.3.2]
+\label{IV.16.3.2}
+Notons $p_1$, $p_2$ les deux projections canoniques du produit $X\times_S X$;
+comme $\Delta_f$ est une $X$-section de $X\times_S X$ à la fois pour les
+morphismes $p_1$ et $p_2$, chacun de ces morphismes définit, pour tout $n$, un
+homomorphisme de faisceaux d'anneaux $\mathcal{O}_X\to\mathscr{P}_{X/S}^n$,
+inverse à droite de l'augmentation $\mathscr{P}_{X/S}^n\to\mathcal{O}_X$
+(16.1.7); on peut encore dire que l'on définit ainsi sur
+$\mathscr{P}_{X/S}^n$ deux structures de $\mathcal{O}_X$-Algèbres augmentées
+quasi-cohérentes; les structures correspondantes de $\mathcal{O}_X$-Module sur
+$\mathscr{G}r_n(\mathscr{P}_{X/S})$ sont les mêmes. On a de même, par passage à
+la limite, deux structures de $\mathcal{O}_X$-Algèbre sur
+$\mathscr{P}_{X/S}^\infty$.
+\end{env}
+
+\begin{env}[16.3.3]
+\EGAReaderTarget{ega4.c04.statement.16-3-3}{IV.16.3.3}
+Le morphisme $s=(p_2,p_1)_S:X\times_S X\to X\times_S X$ est un automorphisme
+involutif de $X\times_S X$, appelé la symétrie canonique, tel que
+\[
+  p_1\circ s=p_2,\qquad p_2\circ s=p_1,\qquad s\circ\Delta_f=\Delta_f.
+  \tag{16.3.3.1}
+  \label{IV.16.3.3.1}
+\]
+Si l'on pose $s=(\rho,\lambda)$, $p_i=(\pi_i,\mu_i)$ ($i=1,2$),
+$\Delta_f=(\delta,\nu)$, $\lambda^\#$ est donc un isomorphisme de
+$\rho^*(\pi_1^*(\mathcal{O}_X))$ sur $\pi_2^*(\mathcal{O}_X)$, et
+$\delta^*(\lambda^\#)$ laisse invariant $\delta^*(\mathcal{O}_{X\times_S X})$
+et le noyau $\mathscr{I}$ de l'homomorphisme
+$\nu^\#:\delta^*(\mathcal{O}_{X\times_S X})\to\mathcal{O}_X$. Par suite:
+\end{env}
+
+\begin{proposition}[16.3.4]
+\EGAReaderTarget{ega4.c04.prop.16-3-4}{IV.16.3.4}
+L'homomorphisme $\sigma=\delta^*(\lambda^\#)$ déduit de $s$ (et appelé encore
+symétrie canonique) est un automorphisme involutif du système projectif
+$(\mathscr{P}_{X/S}^n)$ de faisceaux

@@ -1,0 +1,80 @@
+% from ega4-15-fr.tex
+\oldpage[IV-3]{230}
+équidimensionnel au point $x$.
+
+En effet ((11.1.1) et (12.1.1, (vi))), il existe un voisinage $U$ de $x$ tel que
+$\mathcal F|U$ soit $f$-plat et que pour tout $x'\in U$,
+$\mathcal F_{f(x')}$ soit un $\mathcal O_{X_{f(x')}}$-Module de Cohen-Macaulay
+au point $x'$~; cette dernière propriété entraîne que $\mathcal F_{f(x')}$ est
+équidimensionnel au point $x'$ et que $x'$ n'appartient à aucun cycle premier
+immergé associé à $\mathcal F_{f(x')}$ ($\mathbf{0}_{\mathrm{IV}}$, 16.5.4). En
+outre, en vertu de (12.1.1, (ii)), on peut supposer que les dimensions des
+composantes irréductibles de
+$\operatorname{Supp}(\mathcal F_{f(x')})|(U\cap X_{f(x')})$ aient une (même)
+valeur indépendante de $x'$. Comme
+$\operatorname{Supp}(\mathcal F_{f(x')})=X_{f(x')}$ par hypothèse, il résulte de
+(2.3.4) et de (13.3.1, $a$)) que $f$ est équidimensionnel au point $x$.
+\end{proposition}
+
+\begin{proposition}[15.4.2]
+\EGAReaderTarget{ega4.c04.prop.15-4-2}{IV.15.4.2-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $\mathcal F$ un $\mathcal O_X$-Module cohérent tel que
+$\operatorname{Supp}(\mathcal F)=X$, $x$ un point de $X$, $y=f(x)$. On suppose
+que $\mathcal O_y$ est régulier et que $\mathcal F$ est un $\mathcal O_X$-Module
+de Cohen-Macaulay au point $x$. Alors (avec les notations de (15.4.1)) les
+conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*})]
+  \item $\mathcal F$ est $f$-plat au point $x$ et $\mathcal F_y$ est un
+  $\mathcal O_{X_y}$-Module de Cohen-Macaulay au point $x$.
+  \item $\mathcal F$ est $f$-plat au point $x$.
+  \item $f$ est universellement ouvert dans un voisinage de $x$.
+  \item $f$ est ouvert aux points génériques des composantes irréductibles de
+  $X_y$ contenant $x$.
+  \item $\dim(\mathcal F_x)=\dim(\mathcal O_y)+\dim((\mathcal F_y)_x)$.
+  \item[\emph{e}$'$)]
+  $\dim(\mathcal O_{X,x})=\dim(\mathcal O_y)+
+  \dim(\mathcal O_{X,x}\otimes_{\mathcal O_y}\mathbf{k}(y))$.
+\end{enumerate}
+Comme $\operatorname{Supp}(\mathcal F)=X$, les conditions $e)$ et $e')$ sont
+équivalentes par définition (5.1.12). La condition $a)$ implique trivialement
+$b)$~; $b)$ entraîne que $\mathcal F$ est $f$-plat aux points d'un voisinage de
+$x$ (11.1.1), donc $b)$ entraîne $c)$ (2.4.6)~; $c)$ entraîne trivialement $d)$,
+et $d)$ entraîne $e')$ par (14.2.1). Enfin, puisque $\mathcal O_y$ est régulier
+et que $\mathcal F_x$ est un $\mathcal O_{X,x}$-module de Cohen-Macaulay, il
+résulte de (6.1.4) que $e)$ entraîne $a)$.
+\end{proposition}
+
+\begin{proposition}[15.4.3]
+\label{IV.15.4.3-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $\mathcal F$ un
+$\mathcal O_X$-Module de présentation finie, tel que
+$\operatorname{Supp}(\mathcal F)=X$, $x$ un point de $X$, $y=f(x)$. Alors (avec
+les notations de (15.4.1)) les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*})]
+  \item $\mathcal F$ est $f$-plat au point $x$ et $\mathcal F_y$ est un
+  $\mathcal O_{X_y}$-Module de Cohen-Macaulay au point $x$.
+  \item Il existe un voisinage ouvert $U$ de $x$ dans $X$, et un $Y$-morphisme
+  quasi-fini $g:U\to Y'=Y[T_1,\ldots,T_n]$ ($T_i$ indéterminées), tels que
+  $\mathcal F|U$ soit $g$-plat au point $x$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Montrons d'abord que $b)$ entraîne $a)$. Posons $h:Y'\to Y$~; le
+$\mathbf{k}(y)$-préschéma $Y_y'=h^{-1}(y)$ est régulier
+($\mathbf{0}_{\mathrm{IV}}$, 17.3.7)~; soient $A$ l'anneau local de ce préschéma
+au point $y'=g(x)$, $k$ son corps résiduel, et soit $B$ l'anneau local de $X_y$
+au point $x$~; posons d'autre part $(\mathcal F_y)_x=M$, qui est un $B$-module
+de type fini. L'hypothèse que le morphisme $g$ est quasi-fini entraîne qu'il en
+est de même de $g_y:X_y\to Y_y'$ (\textbf{II}, 6.2.4), donc $M\otimes_A k$ est
+un $(B\otimes_A k)$-module de longueur finie (\textbf{II}, 6.2.2)~; comme par
+hypothèse $M$ est un $A$-module plat et $A$ un anneau de Cohen-Macaulay, $M$ est
+un $B$-module de Cohen-Macaulay (6.3.3). Le fait que $\mathcal F$ est $f$-plat
+au point $x$ résulte de ce qu'il est $g$-plat et de ce que le morphisme $h$ est
+plat (2.1.6).
+
+Montrons maintenant que $a)$ entraîne $b)$. La question étant locale sur $X$ et
+$Y$, on peut supposer $X$ et $Y$ affines~; utilisant (8.9.1) et (11.2.7), on se
+ramène au cas où $X$ et $Y$ sont noethériens, compte tenu de (6.7.1).
+L'hypothèse entraîne que $f$ est

@@ -1,0 +1,99 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{96}
+
+Si $\mathfrak q=\mathfrak pB$, on a, d'après (5.5.3.1),
+$\dim(B_{\mathfrak q})=\dim(A_{\mathfrak p})$, et dans ce cas $k'=k(T)$,
+donc la formule (5.5.6.1) est bien vérifiée. Dans le cas contraire,
+$\dim(B_{\mathfrak q})=\dim(A_{\mathfrak p})+1$, et comme $\mathfrak q$
+correspond à un idéal premier $\mathfrak q'\ne0$ de $k[T]$, $k'$ est une
+extension algébrique de $k$, donc on a encore la formule (5.5.6.1).
+\end{proof}
+
+\begin{lemma}[5.5.7]
+\label{IV.2.s5.5.7-fr}
+Soient $A$ un anneau local intègre noethérien, $\mathfrak m$ son idéal
+maximal, $k$ son corps résiduel.
+\begin{enumerate}
+\item[(i)] Pour tout anneau intègre $B$ contenant $A$, tel que $B=A[x]$
+(pour un $x\in B$) et tout idéal premier $\mathfrak q$ de $B$ tel que
+$\mathfrak q\cap A=\mathfrak m$, on a
+\begin{equation}
+\dim(A)+\operatorname{deg.tr.}_A B
+\geq\dim(B_{\mathfrak q})+\operatorname{deg.tr.}_k k'
+\tag{5.5.7.1}\label{IV.2.s5.5.7.1-fr}
+\end{equation}
+en désignant par $k'$ le corps résiduel de $B_{\mathfrak q}$ et par
+$\operatorname{deg.tr.}_A B$ le degré de transcendance du corps des
+fractions de $B$ sur celui de $A$.
+\item[(ii)] Supposons que pour tout idéal maximal $\mathfrak n$ de $A[T]$
+tel que $\mathfrak n\cap A=\mathfrak m$, l'anneau $(A[T])_{\mathfrak n}$
+soit caténaire; alors les deux membres de (5.5.7.1) sont égaux.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] Si $x$ est transcendant sur le corps des fractions de $A$, on a
+$\operatorname{deg.tr.}_A B=1$ et les deux membres de (5.5.7) sont égaux en
+vertu de (5.5.6). Dans le cas contraire, on a $B=A[T]/\mathfrak p$, où
+$\mathfrak p$ est un idéal premier $\ne0$ de $A[T]$, tel que
+$\mathfrak p\cap A=0$ puisque $B$ contient $A$; on a donc
+$\operatorname{ht}(\mathfrak p)=1$ en vertu de (5.5.3). L'idéal
+$\mathfrak q$ de $B$ est de la forme $\mathfrak n/\mathfrak p$, où
+$\mathfrak n\supset\mathfrak p$ est un idéal premier de $A[T]$ tel que
+$\mathfrak n\cap A=\mathfrak m$, et l'on a
+$B_{\mathfrak q}=(A[T])_{\mathfrak n}/\mathfrak p(A[T])_{\mathfrak n}$;
+la formule (0, 16.1.4.1), appliquée à
+$X=\operatorname{Spec}((A[T])_{\mathfrak n})$ et à
+$Y=\operatorname{Spec}(B_{\mathfrak q})$, donne
+\begin{equation}
+\dim((A[T])_{\mathfrak n})
+\geq\operatorname{ht}(\mathfrak p(A[T])_{\mathfrak n})
++\dim(B_{\mathfrak q})=1+\dim(B_{\mathfrak q})
+\tag{5.5.7.2}\label{IV.2.s5.5.7.2-fr}
+\end{equation}
+car $\operatorname{ht}(\mathfrak p(A[T])_{\mathfrak n})
+=\operatorname{ht}(\mathfrak p)=1$ en vertu de la correspondance biunivoque
+entre idéaux premiers de $A[T]$ contenus dans $\mathfrak n$ et idéaux
+premiers de $(A[T])_{\mathfrak n}$. Enfin, la formule (5.5.6.1) donne
+\begin{equation}
+\dim((A[T])_{\mathfrak n})
+=\dim(A)+1-\operatorname{deg.tr.}_k k'
+\tag{5.5.7.3}\label{IV.2.s5.5.7.3-fr}
+\end{equation}
+puisque les corps résiduels de $B_{\mathfrak q}$ et de
+$(A[T])_{\mathfrak n}$ sont les mêmes; par ailleurs, on a alors
+$\operatorname{deg.tr.}_A B=0$, ce qui achève de prouver (5.5.7.1).
+\item[(ii)] Si $(A[T])_{\mathfrak n}$ est caténaire, les deux membres de
+(5.5.7.2) sont égaux (0, 16.1.4), donc aussi les deux membres de (5.5.7.1).
+\end{enumerate}
+\end{proof}
+
+\begin{theorem}[5.5.8 (formule des dimensions)]
+\label{IV.2.s5.5.8-fr}
+Soient $A$ un anneau local noethérien intègre, $B$ un anneau intègre contenant
+$A$ et qui est une $A$-algèbre de type fini, $\mathfrak q$ un idéal premier
+de $B$ tel que $\mathfrak q\cap A$ soit l'idéal maximal $\mathfrak m$ de
+$A$, $k$ et $k'$ les corps résiduels de $A$ et $B_{\mathfrak q}$
+respectivement. On a alors l'inégalité
+\begin{equation}
+\dim(A)+\operatorname{deg.tr.}_A B
+\geq\dim(B_{\mathfrak q})+\operatorname{deg.tr.}_k k'.
+\tag{5.5.8.1}\label{IV.2.s5.5.8.1-fr}
+\end{equation}
+En outre les deux membres sont égaux si, pour toute sous-$A$-algèbre $A'$ de
+type fini de $B[T]$ et tout idéal maximal $\mathfrak m'$ de $A'$ tel que
+$\mathfrak m'\cap A=\mathfrak m$, $A'_{\mathfrak m'}$ est caténaire.
+\end{theorem}
+
+\begin{proof}
+Soit $B=A[x_1,\ldots,x_n]$ et raisonnons par récurrence sur $n$. Posons
+$C=A[x_1,\ldots,x_{n-1}]$ et $\mathfrak r=\mathfrak q\cap C$;
+$C_{\mathfrak r}$ est un anneau local intègre noethérien, et si on pose
+$S=C-\mathfrak r$, $B'=S^{-1}B$, $\mathfrak q'=S^{-1}\mathfrak q$, on a
+$B_{\mathfrak q}=B'_{\mathfrak q'}$, $B'=C_{\mathfrak r}[x_n]$ et
+$\mathfrak q'\cap C_{\mathfrak r}=\mathfrak rC_{\mathfrak r}$; en outre les
+corps des fractions de $B'$ et $C_{\mathfrak r}$ sont ceux de $B$ et $C$
+respectivement. Si $k_1$ est le corps résiduel de $C_{\mathfrak r}$, on a
+donc, d'après (5.5.7.1)
+

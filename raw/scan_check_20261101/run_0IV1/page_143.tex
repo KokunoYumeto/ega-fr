@@ -1,0 +1,103 @@
+% from ega0-20-fr.tex
+\oldpage[0\textsubscript{IV-1}]{143}
+où l'opérateur bord $\partial$ est le composé
+\begin{equation}
+\tag{20.6.17.2}
+\label{0.20.6.17.2-fr}
+  \Upsilon_{C/B/\Lambda}\xrightarrow{s'}\Upsilon_{C/B/A}
+  \longrightarrow\Omega^1_{B/A}\otimes_B C
+\end{equation}
+la seconde flèche étant l'injection canonique.
+\end{theorem}
+
+\begin{proof}
+En écrivant la suite exacte d'homologie pour la suite exacte de complexes
+\sref{0.20.6.16.1-fr}, on obtient \sref{0.20.6.17.1-fr}, l'homologie étant
+nulle en degrés distincts de 0 et de 1 ; le fait que les homomorphismes de
+cette suite exacte qui proviennent par fonctorialité de $j$ et de $p$ sont
+bien ceux de l'énoncé est immédiat. Reste à vérifier que $\partial$ est égal
+à \sref{0.20.6.17.2-fr} ; or un élément $z\in\Upsilon_{C/B/\Lambda}$ est
+image par $p_1$ de $(0,z)$, d'où on déduit aussitôt que $\partial(z)$ est
+l'image de $z$ par l'homomorphisme canonique
+\[
+  s_{B/A/\Lambda}\otimes1_C:
+  \Omega^1_{B/\Lambda}\otimes_B C\to\Omega^1_{B/A}\otimes_B C.
+\]
+Notre assertion résulte de la commutativité du diagramme
+\begin{equation}
+\tag{20.6.17.3}
+\label{0.20.6.17.3-fr}
+\xymatrix{
+  \Upsilon_{C/B/\Lambda} \ar[r]^{s'} \ar[dd] & \Upsilon_{C/B/A} \ar[dd] \\
+  & \\
+  \Omega^1_{B/\Lambda}\otimes_B C \ar[r] &
+  \Omega^1_{B/A}\otimes_B C
+}
+\end{equation}
+(cf.\ \sref{0.20.6.4.3-fr}).
+\end{proof}
+
+\begin{corollary}[20.6.18]
+\label{0.20.6.18-fr}
+\begin{enumerate}
+  \item[\rm(i)] La suite de $C$-modules
+\begin{equation}
+\tag{20.6.18.1}
+\label{0.20.6.18.1-fr}
+  0\to\Upsilon^C_{B/A/\Lambda}\xrightarrow{v'}
+  \Upsilon_{C/A/\Lambda}\xrightarrow{u'}
+  \Upsilon_{C/B/\Lambda}\xrightarrow{s'}\Upsilon_{C/B/A}\to0
+\end{equation}
+est exacte.
+  \item[\rm(ii)] Si $B$ est une $A$-algèbre formellement lisse relativement
+  à $\Lambda$, on a $\Upsilon^C_{B/A/\Lambda}=0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) Dans \sref{0.20.6.17.1-fr}, l'image de $\Upsilon_{C/B/\Lambda}$ par
+$\partial$ est le noyau de $v_{C/B/A}$, donc $\Upsilon_{C/B/A}$ par
+définition.
+
+(ii) L'hypothèse entraîne que la suite
+\[
+  0\to\Omega^1_{A/\Lambda}\otimes_A B\to
+  \Omega^1_{B/\Lambda}\to\Omega^1_{B/A}\to0
+\]
+est exacte et scindée \sref{0.20.5.7-fr} ; par tensorisation avec $C$, la
+suite
+\[
+  0\to\Omega^1_{A/\Lambda}\otimes_A C\to
+  \Omega^1_{B/\Lambda}\otimes_B C\to
+  \Omega^1_{B/A}\otimes_B C\to0
+\]
+reste donc exacte, d'où notre assertion.
+\end{proof}
+
+\begin{corollary}[20.6.19]
+\label{0.20.6.19-fr}
+Soient $K$ un corps, $E$, $F$ deux extensions de $K$ telles que
+$K\subset E\subset F$.
+\begin{enumerate}
+  \item[\rm(i)] Si $F$ est une extension séparable de $E$, on a
+  $\Upsilon_{F/E/K}=0$ (autrement dit, l'homomorphisme canonique
+  $\Omega^1_{E/K}\otimes_E F\to\Omega^1_{F/K}$ est injectif).
+  \item[\rm(ii)] Inversement, si $F$ est une extension séparable de $K$ et
+  si l'on a $\Upsilon_{F/E/K}=0$, alors $F$ est une extension séparable de
+  $E$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Si $P$ est le corps premier de $K$, on a en effet la suite exacte
+\sref{0.20.6.18-fr}
+\[
+  \Upsilon_{F/K/P}\to\Upsilon_{F/E/P}\to\Upsilon_{F/E/K}\to0.
+\]
+Si $\Upsilon_{F/E/P}=\Upsilon_{F/E}=0$, on a donc
+$\Upsilon_{F/E/K}=0$, d'où (i) en vertu de \sref{0.20.6.3-fr} ;
+inversement, si $\Upsilon_{F/E/K}=0$ et
+$\Upsilon_{F/K/P}=\Upsilon_{F/K}=0$, on a
+$\Upsilon_{F/E/P}=0$, d'où (ii) en vertu de \sref{0.20.6.3-fr}.
+\end{proof}
+

@@ -1,0 +1,108 @@
+% from ega3-1-fr.tex
+\oldpage[III]{111}
+\begin{lemma}[2.5.3.1]
+\label{III.2.5.3.1-fr}
+Soient $A$ un corps, $r$ un entier $>0$, et $X=\mathbf P_A^r$~; on a
+alors
+\[
+\chi_A(\mathcal O_X(n))=\binom{n+r}{r}
+\]
+pour tout $n\in\mathbb Z$.
+\end{lemma}
+
+\begin{proof}
+En effet, pour $n\geq0$, on a
+$\chi_A(\mathcal O_X(n))=\operatorname{long}H^0(X,\mathcal O_X(n))$, qui
+est le nombre de monômes en les $T_i$ de degré total $n$, c'est-à-dire
+$\binom{n+r}{r}$ (\hyperref[III.2.1.12-fr]{2.1.12}). Pour
+$n\leq-r-1$, on a de même
+\[
+\chi_A(\mathcal O_X(n))=(-1)^r
+\operatorname{long}H^r(X,\mathcal O_X(n))~;
+\]
+si $n=-r-h$, la dimension de $H^r(X,\mathcal O_X(n))$ sur $A$ est le
+nombre des suites $(p_i)_{0\leq i\leq r}$ d'entiers $p_i>0$ tels que
+$\sum_{i=0}^{r}p_i=r+h$ (\hyperref[III.2.1.12-fr]{2.1.12}), ou encore le
+nombre des suites d'entiers $q_i\geq0$ $(0\leq i\leq r)$ tels que
+$\sum_{i=0}^{r}q_i=h-1$~; c'est donc le nombre
+\[
+\binom{h+r-1}{r}=(-1)^r\binom{n+r}{r}.
+\]
+Enfin, pour $-r\leq n<0$, on a $\binom{n+r}{r}=0$ et d'autre part
+$H^i(X,\mathcal O_X(n))=0$ pour tout $i\geq0$
+(\hyperref[III.2.1.12-fr]{2.1.12}), ce qui prouve le lemme.
+\end{proof}
+
+\begin{corollary}[2.5.4]
+\label{III.2.5.4-fr}
+Soient $A$ un anneau local artinien, $S$ une $A$-algèbre graduée de type
+fini engendrée par $S_1$, $M$ un $S$-module gradué de type fini,
+$X=\operatorname{Proj}(S)$. On a alors
+\[
+\chi_A(\widetilde M(n))=\operatorname{long}M_n
+\]
+pour $n$ assez grand.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de ce que $M_n$ et $\Gamma(X,\widetilde M(n))$ sont
+isomorphes pour $n$ assez grand
+(\hyperref[III.2.3.1-fr]{2.3.1}).
+\end{proof}
+
+\subsection{Application : critères d'amplitude}
+\label{subsection:III.2.6-fr}
+
+\begin{proposition}[2.6.1]
+\label{III.2.6.1-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme propre,
+$\mathcal L$ un $\mathcal O_X$-Module inversible. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+\item[a)] $\mathcal L$ est ample pour $f$.
+\item[b)] Pour tout $\mathcal O_X$-Module cohérent $\mathcal F$, il
+existe un entier $N$ tel que pour $n\geq N$, on ait
+\[
+R^qf_*(\mathcal F\otimes\mathcal L^{\otimes n})=0
+\]
+pour tout $q>0$.
+\item[c)] Pour tout Idéal cohérent $\mathcal J$ de $\mathcal O_X$, il
+existe un entier $N$ tel que pour $n\geq N$ on ait
+\[
+R^1f_*(\mathcal J\otimes\mathcal L^{\otimes n})=0.
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On a vu que a) entraîne b) (\hyperref[III.2.2.1-fr]{2.2.1}, (ii)). Il
+est trivial que b) entraîne c), et il reste à prouver que c) implique
+a). On peut se borner au cas où $Y$ est affine (II, 4.6.4), et prouver
+dans ce cas que $\mathcal L$ est ample~; il suffira de montrer que lorsque
+$h$ parcourt l'ensemble des sections des $\mathcal L^{\otimes n}$
+$(n>0)$ au-dessus de $X$, ceux des $X_h$ qui sont affines forment un
+recouvrement de $X$ (II, 4.5.2). Pour cela, montrons que pour tout point
+fermé $x$ de $X$ et tout voisinage ouvert affine $U$ de $x$, il existe un
+$n$ et un $h\in\Gamma(X,\mathcal L^{\otimes n})$ tels que
+$x\in X_h\subset U$~; $X_h$ sera nécessairement affine (I, 1.3.6) et la
+réunion de ces $X_h$ sera un ouvert de $X$ contenant tous les points
+fermés de $X$, et par suite $X$ lui-même puisque $X$ est noethérien
+(I, 6.3.7 et 0\textsubscript{I}, 2.1.3). Soit $\mathcal J$ (resp.
+$\mathcal J'$) le faisceau quasi-cohérent d'idéaux de $\mathcal O_X$
+définissant le sous-préschéma fermé réduit de $X$ ayant pour espace
+sous-jacent $X-U$ (resp. $(X-U)\cup\{x\}$) (I, 5.2.1)~; il est clair que
+$\mathcal J$ et $\mathcal J'$ sont cohérents (I, 6.1.1), que
+$\mathcal J'\subset\mathcal J$ et que
+$\mathcal J''=\mathcal J/\mathcal J'$ est un $\mathcal O_X$-Module
+cohérent (0\textsubscript{I}, 5.3.3) ayant pour support $\{x\}$ et tel
+que $\mathcal J''_x=k(x)$. Comme $\mathcal L$ est localement libre, la
+suite
+\[
+0\to\mathcal J'\otimes\mathcal L^{\otimes n}
+\to\mathcal J\otimes\mathcal L^{\otimes n}
+\to\mathcal J''\otimes\mathcal L^{\otimes n}\to0
+\]
+est exacte pour tout $n$, et par hypothèse il existe $n$ assez grand tel
+que $H^1(X,\mathcal J'\otimes\mathcal L^{\otimes n})=0$~; la suite
+exacte de cohomologie
+

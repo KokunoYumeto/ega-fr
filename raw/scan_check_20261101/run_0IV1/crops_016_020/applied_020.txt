@@ -1,0 +1,81 @@
+% from ega0-15-fr.tex
+Soient $A$ un anneau, $M$ un $A$-module, $(f_i)_{1\leq i\leq n}$ une suite
+$M$-régulière d'éléments de $A$. Alors, quels que soient les entiers
+$\nu_i\geq1$, la suite $(f_i^{\nu_i})$ est $M$-régulière et
+$M/(\sum_{i\leq n}f_i^{\nu_i}M)$ a une suite de composition dont les
+quotients sont isomorphes à $M/(\sum_{i\leq n}f_iM)$.
+\end{corollary}
+
+\begin{proof}
+Raisonnons par récurrence sur $n$~; pour $n=1$ les assertions sont immédiates
+puisque $f^jM/f^{j+1}M$ est isomorphe à $M/fM$, l'homothétie de rapport $f$
+dans $M$ étant injective par hypothèse. Posons alors
+$N=M/(\sum_{i\leq n-1}f_i^{\nu_i}M)$~;
+par l'hypothèse de récurrence, $N$ admet une filtration \emph{finie} $(N_k)$ pour
+laquelle les $\gr_k(N)$ sont isomorphes à
+$M/(\sum_{i\leq n-1}f_iM)$~; par hypothèse $f_n$ est donc
+$\gr_\bullet(N)$-régulier~; il résulte par suite de (15.1.19) que $f_n$ est
+$N$-régulier. Appliquant le cas $n=1$ démontré au début, on en conclut que
+$f_n^{\nu_n}$ est $N$-régulier et que $N/f_n^{\nu_n}N$ admet une suite de
+composition dont les quotients sont isomorphes à $N/f_nN$~; mais pour la
+filtration de $N/f_nN$ quotient de la filtration $(N_k)$,
+$\gr_k(N/f_nN)$ est isomorphe à $\gr_k(N)/f_n\gr_k(N)$ par (15.1.19) pour
+tout $k$, donc à $M/(\sum_{i\leq n}f_iM)$, ce qui prouve le corollaire.
+\end{proof}
+
+\begin{proposition}[15.1.21]
+\label{0.15.1.21-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $\varphi:A\to B$ un
+homomorphisme local, $M$ un $B$-module de type fini, $(f_i)_{1\leq i\leq n}$
+une suite $A$-régulière formée d'éléments de l'idéal maximal de $A$. Les
+propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] $M$ est un $A$-module plat.
+  \item[\textup{b)}] Si $\mathfrak{J}$ est l'idéal $\sum_{i\leq n}f_iA$,
+  $M/\mathfrak{J}M$ est un $A/\mathfrak{J}$-module plat et la suite $(f_i)$
+  est $M$-régulière.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Le fait que \emph{a)} entraîne \emph{b)} résulte de (15.1.13) et de
+($\mathbf{0}_{\mathrm{III}}$, 10.2.2). Inversement, si la suite $(f_i)$ est
+$M$-régulière, elle est $M$-quasi-régulière (15.1.9), donc l'homomorphisme
+(15.1.1.1) est bijectif. Mais comme la suite $(f_i)_{1\leq i\leq n}$ est aussi
+supposée $A$-régulière, elle est $A$-quasi-régulière (15.1.9), et
+l'homomorphisme canonique (15.1.1.1) correspondant
+$(A/\mathfrak{J})[T_1,\ldots,T_n]\to\gr_\bullet(A)$ est bijectif. On en
+conclut que l'homomorphisme canonique ($\mathbf{0}_{\mathrm{III}}$, 10.1.1.2)
+\[
+  \gr_0(M)\otimes_{A/\mathfrak{J}}\gr_\bullet(A)
+  \longrightarrow\gr_\bullet(M)
+\]
+est bijectif. La conclusion résulte alors de ($\mathbf{0}_{\mathrm{III}}$, 10.2.2),
+les $f_i$ étant dans l'idéal maximal de $A$ et l'homomorphisme $\varphi$ étant
+local.
+\end{proof}
+
+\subsection{Suites \texorpdfstring{$\mathscr{F}$}{F}-régulières.}
+\label{subsection:0.15.2-fr}
+
+\begin{env}[15.2.1]
+\label{0.15.2.1-fr}
+Soient $X$ un \emph{espace annelé}, $\mathscr{F}$ un $\mathcal{O}_X$-Module,
+$f_i$ ($1\leq i\leq n$) une suite de sections de $\mathcal{O}_X$ au-dessus
+de $X$, $\mathscr{J}$ l'Idéal de $\mathcal{O}_X$ engendré par les $f_i$
+(image de $\mathcal{O}_X^n$ par l'homomorphisme
+$\mathcal{O}_X^n\to\mathcal{O}_X$ défini canoniquement par les $f_i$
+($\mathbf{0}_{\mathrm I}$, 5.1.1)). Les sous-$\mathcal{O}_X$-Modules
+$\mathscr{J}^k\mathscr{F}$ définissent sur $\mathscr{F}$ une \emph{filtration}, et
+on pose encore
+$\gr_k(\mathscr{F})=\mathscr{J}^k\mathscr{F}/\mathscr{J}^{k+1}\mathscr{F}$~;
+si $S_k$ est l'ensemble des polynômes homogènes de degré total $k$ dans
+l'anneau $\mathbb{Z}[T_1,\ldots,T_n]$, $S_k$ peut être considéré comme un
+faisceau simple sur $X$, et on définit comme dans (15.1.1) un \emph{homomorphisme
+canonique}
+\[
+\label{0.15.2.1.1-fr}
+  \varphi_k:\gr_0(\mathscr{F})\otimes_{\mathbb Z}S_k
+  \longrightarrow\gr_k(\mathscr{F})
+\tag{15.2.1.1}
+\]

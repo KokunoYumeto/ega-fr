@@ -1,0 +1,93 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{17}
+Posons $B'=B\otimes_A\widehat A$~; en vertu de $1^\circ$, $B'$ est de la forme
+$S^{-1}(C\otimes_A\widehat A)$, où $C$ est une $A$-algèbre de type fini et
+$S$ est une partie multiplicative de $C$, donc $B'$ est un anneau noethérien.
+Comme $A$ s'identifie à un sous-anneau de $\widehat A$
+$(0_{\mathrm I},7.3.5)$, $A$ est intègre par $2^\circ$. L'hypothèse
+$3^\circ$ entraîne alors qu'il existe un idéal premier $\mathfrak q$ de $B$
+induisant l'idéal 0 de $A$ $(0_{\mathrm I},1.5.8)$, et par suite
+l'homomorphisme local $A\to B/\mathfrak q$ est injectif. On peut donc se borner
+à prouver la conclusion de (2.3.8) en ajoutant l'hypothèse que $B$ est un
+anneau local \emph{intègre}. Appliquons (2.3.7, (ii)) à
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$,
+$Y'=\operatorname{Spec}(\widehat A)$ et $X'=\operatorname{Spec}(B')$~; comme
+le morphisme $Y'\to Y$ est plat et que $X$ (qui est intègre) domine le schéma
+intègre $Y$, toute composante irréductible de $X'$ domine le schéma (intègre
+par hypothèse) $Y'$. Si $y$, $x$, $y'$ sont les points fermés de $Y$, $X$ et
+$Y'$ respectivement, il y a un point $x'\in X'$ (d'ailleurs unique) au-dessus
+de $x$ et $y'$ (I, 3.4.9) et $\operatorname{Spec}(\mathcal O_{x'})$ domine
+donc $\operatorname{Spec}(\mathcal O_{y'})$~; on a par suite un diagramme
+commutatif d'homomorphismes locaux d'anneaux locaux noethériens
+\[
+\xymatrix{
+  B=\mathcal O_x \ar[r] & \mathcal O_{x'}\\
+  A=\mathcal O_y \ar[u]^{\varphi} \ar[r]_{u} &
+  \mathcal O_{y'}=\widehat A \ar[u]_{v}
+}
+\]
+tel que $u$ et $v$ soient injectifs (I, 1.2.7)~; identifiant $A$ et
+$\widehat A$ à des sous-anneaux de $\mathcal O_{x'}$, et désignant par
+$\mathfrak r$ l'idéal maximal de $\mathcal O_{x'}$, l'intersection des idéaux
+$\mathfrak r^k\cap\widehat A$ est donc nulle $(0_{\mathrm I},7.3.5)$~;
+comme $\widehat A$ est complet et que ces idéaux sont ouverts dans
+$\widehat A$, cela entraîne (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~2,
+n\textsuperscript{o}~7, prop.~8) que la topologie de $\widehat A$ est induite
+par la topologie $\mathfrak r$-préadique de $\mathcal O_{x'}$~; \emph{a
+fortiori} il en est de même de la topologie de $A$
+$(0_{\mathrm I},7.3.5)$. D'ailleurs on a
+$\mathfrak n^k\cap A\subset\mathfrak r^k\cap A$, donc la topologie
+$\mathfrak n$-préadique de $B$ induit sur $A$ une topologie plus fine que la
+topologie $\mathfrak m$-préadique~; mais comme
+$\mathfrak m^k\subset\mathfrak n^k\cap A$, ces deux topologies sont
+identiques. C.Q.F.D.
+
+\begin{remark}[2.3.9]
+\label{IV.2.3.9-fr}
+Nous verrons plus loin (7.8.3, (vii)) que pour les anneaux locaux noethériens
+$A$ les plus usuels en Géométrie algébrique, l'hypothèse que $A$ est intègre
+et intégralement clos implique qu'il en est de même de $\widehat A$. C'est
+pourquoi, en Géométrie algébrique sur un corps de base, on énonce généralement
+(2.3.8) sous l'hypothèse que $A$ est \emph{intègre et intégralement clos}.
+\end{remark}
+
+\begin{theorem}[2.3.10]
+\label{IV.2.3.10-fr}
+Soit $f:X\to Y$ un morphisme quasi-plat (2.3.3). Alors, pour toute partie
+pro-constructible (1.9.4) $Z$ de $Y$, on a
+$\overline{f^{-1}(Z)}=f^{-1}(\overline Z)$.
+\end{theorem}
+
+Comme $f$ est continue, on a
+$\overline{f^{-1}(Z)}\subset f^{-1}(\overline Z)$ et tout revient à prouver
+que pour tout $x\in X$ tel que $f(x)\in\overline Z$, $x$ est adhérent à
+$f^{-1}(Z)$~; il est clair que la question est locale sur $Y$, donc on peut
+supposer $Y$ affine. En vertu de l'hypothèse, il existe un schéma affine $Y'$
+et un morphisme $g:Y'\to Y$ tels que $g(Y')=Z$ (1.9.5, (ix)). Soit $Y_1$
+l'image fermée de $Y'$ par $g$ (I, 9.5.3), et soit $X_1$ le sous-préschéma
+fermé $f^{-1}(Y_1)$ de $X$~; si $f_1:X_1\to Y_1$ est la restriction de $f$ à
+$X_1$, on sait que $f_1$ est quasi-plat (2.3.3)~; on peut par suite remplacer
+$X$, $Y$ par $X_1$, $Y_1$ respectivement, autrement dit supposer que $g$ est
+\emph{dominant}. Posons alors $X'=X\times_Y Y'$, et soient $f'$ et $g'$ les
+projections de $X'$ dans $Y'$ et $X$ respectivement, de sorte que l'on a le
+diagramme commutatif
+\[
+\xymatrix{
+  X \ar[d]_f & X' \ar[l]_{g'} \ar[d]^{f'} \\
+  Y & Y' \ar[l]^g
+}
+\]
+Comme $f$ est quasi-plat, $g$ quasi-compact et dominant, il résulte de (2.3.7)
+(où les rôles de $f$ et $g$ sont intervertis) que $g'$ est un morphisme
+dominant, ce qui démontre le théorème.
+
+\begin{corollary}[2.3.11]
+\label{IV.2.3.11-fr}
+Soient $f$ un morphisme quasi-plat et quasi-compact, $F$ une partie fermée de
+$X$ telle que $F=f^{-1}(f(F))$~; alors on a
+$F=f^{-1}(\overline{f(F)})$.
+\end{corollary}
+
+Soient $Y'$ le sous-préschéma réduit de $X$ ayant $F$ comme espace sous-jacent
+(I, 5.2.1) et soit $j:Y'\to X$ l'injection canonique~; alors $f\circ j$ est
+quasi-compact (1.1.2),

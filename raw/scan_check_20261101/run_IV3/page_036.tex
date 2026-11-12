@@ -1,0 +1,79 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{36}
+présentation finie (I, 1.6.2, (i)). Il suffira donc que $T'_j$ soit de
+présentation finie sur $U_j$, autrement dit, on peut déjà se borner au cas où
+$U_j=S$ et $T_j=T$ est fermé constructible dans $S$.
+
+Soit $S=\operatorname{Spec}(A)$, et considérons $A$ comme limite inductive de
+ses sous-$\mathbf Z$-algèbres de type fini, de sorte que
+$S=\varprojlim S_\lambda$, où les $S_\lambda$ sont affines et noethériens. En
+vertu de (8.3.11), il existe un $\lambda$ et une partie fermée (nécessairement
+constructible) $T_\lambda$ de $S_\lambda$ tels que
+$T=u_\lambda^{-1}(T_\lambda)$ ($u_\lambda:S\to S_\lambda$ étant le morphisme
+canonique). On munira $T_\lambda$ d'une structure de sous-préschéma de
+$S_\lambda$ et on prendra $T'=T_\lambda\times_{S_\lambda}S$~; comme
+l'immersion canonique $T_\lambda\to S_\lambda$ est de présentation finie
+(I, 1.6.1), il en est de même de l'immersion $T'\to S$. Comme $T'$ est affine,
+on voit finalement qu'on peut se borner au cas où $T'=S$ est affine.
+
+Alors (8.9.1), avec les mêmes notations, il existe un $\lambda$, un morphisme
+de type fini $u_\lambda:X_\lambda\to S_\lambda$ et un
+$\mathcal O_{X_\lambda}$-Module cohérent $\mathcal F_\lambda$ tels que $X$
+soit isomorphe à $X_\lambda\times_{S_\lambda}S$, $\mathcal F$ à
+$\mathcal F_\lambda\otimes_{\mathcal O_{X_\lambda}}\mathcal O_X$. On peut
+alors appliquer à $S_\lambda$, $X_\lambda$ et $\mathcal F_\lambda$ le
+résultat de (6.9.3) et il y a des sous-préschémas $S'_{\lambda i}$ de
+$S_\lambda$, dont les ensembles sous-jacents forment une partition de
+$S_\lambda$ et qui sont tels que si l'on pose
+$X_{\lambda i}=X_\lambda\times_{S_\lambda}S'_{\lambda i}$,
+$\mathcal F_{\lambda i}=\mathcal F_\lambda\otimes_{\mathcal O_{S_\lambda}}
+\mathcal O_{S'_{\lambda i}}$ soit plat sur $S'_{\lambda i}$. Les
+$S'_i=S'_{\lambda i}\times_{S_\lambda}S$ sont alors des sous-préschémas de
+$S$ répondant à la question en vertu de (2.1.4).
+\end{proof}
+
+\subsection{Propriétés de permanence des morphismes par passage à la limite projective}
+\label{subsection:IV.8.10-fr}
+
+Dans cette section, nous conservons les hypothèses générales et les notations
+de (8.8.1).
+
+\begin{proposition}[8.10.1]
+\EGAReaderTarget{ega4.c04.prop.8-10-1}{IV.8.10.1-fr}
+S'il existe $\lambda$ tel que, pour $\mu\geq\lambda$, $f_\mu$ soit un morphisme
+ouvert (resp. universellement ouvert), alors $f$ est un morphisme ouvert
+(resp. universellement ouvert).
+\end{proposition}
+
+\begin{proof}
+Comme $X=X_\lambda\times_{Y_\lambda}Y$, l'assertion relative aux morphismes
+universellement ouverts est un cas particulier de (2.4.3, (iii)). Supposons
+donc $f_\mu$ ouvert pour $\mu\geq\lambda$~; il suffit de voir que pour tout
+ouvert quasi-compact $U$ de $X$, $f(U)$ est ouvert dans $Y$. Or, il existe
+$\mu\geq\lambda$ tel que $U=v_\mu^{-1}(U_\mu)$, où $U_\mu$ est un ouvert
+quasi-compact dans $X_\mu$ (2.3.11)~; on a alors
+$f(v_\mu^{-1}(U_\mu))=w_\mu^{-1}(f_\mu(U_\mu))$ (I, 3.4.8), donc $f(U)$ est
+ouvert dans $Y$.
+\end{proof}
+
+\begin{corollary}[8.10.2]
+\label{IV.8.10.2-fr}
+Soit $f:X\to Y$ un morphisme. Pour que $f$ soit universellement ouvert, il
+suffit que, pour tout entier $n>0$, si l'on pose
+$Y_n=Y\otimes_{\mathbf Z}\mathbf Z[T_1,\ldots,T_n](=\mathbf V_Y^n)$, et
+$X_n=X\times_YY_n$, la projection canonique
+$f_n=f\times1_{Y_n}:X_n\to Y_n$ soit un morphisme ouvert.
+\end{corollary}
+
+\begin{proof}
+Pour démontrer que $f$ est universellement ouvert, il suffit de prouver qu'il
+en est ainsi de la restriction $f^{-1}(U)\to U$ de $f$ pour tout ouvert affine
+$U$ de $Y$~; comme, par hypothèse, si
+$U_n=U\otimes_{\mathbf Z}\mathbf Z[T_1,\ldots,T_n]$ est l'image réciproque de
+$U$ dans $Y_n$, le morphisme $f_n^{-1}(U_n)\to U_n$, restriction de $f_n$, est
+ouvert, on voit qu'on peut se borner au cas où $Y=\operatorname{Spec}(A)$ est
+affine. En outre, il suffit aussi évidemment de montrer que pour tout
+morphisme $Y'\to Y$, où $Y'=\operatorname{Spec}(A')$ est lui aussi affine,
+$f'=f_{(Y')}$ est ouvert. Supposons d'abord que $A'$ soit une $A$-algèbre de
+type fini, donc quotient d'une algèbre de polynômes $A[T_1,\ldots,T_n]$~;
+alors $Y'$ est un sous-préschéma fermé de $Y_n$ et $f'$ la

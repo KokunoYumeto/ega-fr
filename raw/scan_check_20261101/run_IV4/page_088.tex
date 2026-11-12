@@ -1,0 +1,25 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{88}
+
+La condition c) est un cas particulier de b): il suffit en effet de prendre $Y'=X$ et $g=f$ dans b), car alors $f'$ n'est autre que la seconde projection $p_2$, et $\Delta_f$ est une $X$-section de $X\times_YX$. En second lieu, c) entraîne a), car $p_2$ est un morphisme localement de présentation finie, et si $p_2$ est lisse aux points de $\Delta_f(X)$, $\Delta_f$ est une immersion quasi-régulière (17.12.3), donc $f$ est différentiellement lisse. Enfin, montrons que a) entraîne b); si $\Delta_f$ est une immersion quasi-régulière, $p_2$ est lisse en tous les points de $\Delta_f(X)$ (17.12.3).
+
+Or, si $g':X'\to X$ est la projection canonique, et $v=(g',g')_Y:X'\to X\times_YX$, on vérifie aussitôt que le diagramme
+\[
+\xymatrix{
+  X\times_Y X \ar[d]_{p_2} & X' \ar[l]_-v \ar[d]^{f'}\\
+  X & Y' \ar[l]^{h=g'\circ s'}
+}
+\]
+est commutatif et identifie $X'$ au produit $(X\times_YX)\times_XY'$ (I, 3.3.9); tenant compte de ce que le diagramme (17.4.1.1) identifie $Y'$ au produit des $(X\times_YX)$-préschémas $X$ et $X'$, on conclut, de ce que $p_2$ est lisse en tout point de $\Delta_f(X)$, que $f'$ est lisse en tout point de $s'(Y')$ (17.3.3, (iii)).
+
+\begin{corollary}[17.12.6]
+\label{IV.17.12.6}
+Les notations étant celles de (8.8.1), on suppose $X_\alpha$ quasi-compact, et $f_\alpha:X_\alpha\to S_\alpha$ localement de présentation finie. Pour que $f:X\to S$ soit différentiellement lisse, il faut et il suffit qu'il existe $\lambda\geq\alpha$ tel que $f_\lambda:X_\lambda\to S_\lambda$ soit différentiellement lisse (auquel cas $f_\mu:X_\mu\to S_\mu$ est différentiellement lisse pour $\mu\geq\lambda$).
+\end{corollary}
+
+La suffisance de la condition et la dernière assertion résultent de (16.10.4). Pour prouver que la condition est nécessaire, notons que $\Delta_f:X\to X\times_SX$ et $p_2:X\times_SX\to X$ se déduisent par changement de base de $\Delta_{f_\lambda}:X_\lambda\to X_\lambda\times_{S_\lambda}X_\lambda$ et $p_{2,\lambda}:X_\lambda\times_{S_\lambda}X_\lambda\to X_\lambda$. En vertu de (17.12.5), pour tout $z\in\Delta_f(X)$, il existe un voisinage ouvert affine $U(z)$ de $z$ dans $X\times_SX$ tel que $p_2$ soit lisse dans $U(z)$; en vertu de (8.2.11) et (17.7.8), il existe un indice $\lambda(z)$ et un voisinage $U_{\lambda(z)}$ de la projection de $z$ dans $X_{\lambda(z)}\times_{S_{\lambda(z)}}X_{\lambda(z)}$ tels que $U(z)$ soit l'image réciproque de $U_{\lambda(z)}$, et que $p_{2,\lambda(z)}$ soit lisse dans $U_{\lambda(z)}$. Comme $X$ est quasi-compact, on peut recouvrir $\Delta_f(X)$ par un nombre fini de voisinages $U(z_i)$; en vertu de (8.3.4), il existe un $\lambda$ supérieur à tous les $\lambda(z_i)$ tels que les images réciproques des $U_{\lambda(z_i)}$ dans $X_\lambda\times_{S_\lambda}X_\lambda$ forment un recouvrement de $\Delta_{f_\lambda}(X_\lambda)$; il résulte alors de (17.12.5) que cet indice $\lambda$ répond à la question.
+
+\begin{examples}[17.12.7]
+\label{IV.17.12.7}
+Soient $S$ un préschéma, $G$ un $S$-\emph{préschéma en groupes}, localement de présentation finie sur $S$. Alors, pour que $G$ soit différentiellement lisse, il faut et il suffit que $G$ soit lisse sur $S$ aux points de la « section unité » $e$ de $G$. La condition est en effet nécessaire par (17.12.5). Inversement, supposons-la remplie; pour tout morphisme $S'\to S$, $G'=G\times_SS'$ est alors un $S'$-préschéma en groupes localement de présentation finie sur $S'$; on peut donc, en vertu de (17.12.5), se borner à prouver que pour toute $S$-section $s$ de $G$, $f$ est lisse aux points de $s(S)$. Or, si $m:G\times_SG\to G$ est le morphisme qui définit la structure de préschéma en groupes de $G$, $m\circ(s\times1_G):S\times_SG\to G\times_SG\to G$ est un
+

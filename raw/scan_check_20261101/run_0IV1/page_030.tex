@@ -1,0 +1,82 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{30}
+$\dim(M/xM)=\dim(M)-1$, aucun des $\mathfrak{p}_i$ ne peut appartenir à
+$\operatorname{Supp}(M/xM)$, et les idéaux premiers de ce support sont ceux
+qui contiennent $\operatorname{Ann}(M)+Ax$~; comme les $\mathfrak{p}_i$
+contiennent $\operatorname{Ann}(M)$, ils ne peuvent contenir $x$.
+\end{proof}
+
+\begin{corollary}[16.3.5]
+\label{0.16.3.5-fr}
+Avec les notations de (16.3.4), pour tout idéal
+$\mathfrak{a}\subset\mathfrak{p}_i$, on a
+$\dim(M/\mathfrak{a}M)=\dim(M)$ et si l'on pose
+$N=M/\mathfrak{a}M$, la relation $\dim(M/xM)=\dim(M)-1$ entraîne
+$\dim(N/xN)=\dim(N)-1$.
+\end{corollary}
+
+\begin{proof}
+En effet, $\operatorname{Supp}(N)$ est l'ensemble des idéaux premiers
+contenant $\mathfrak{a}+\operatorname{Ann}(M)$, donc $\mathfrak{p}_i$
+appartient à $\operatorname{Supp}(N)$ et comme
+$\dim(N)\leq\dim(M)=\dim(A/\mathfrak{p}_i)$, on a
+$\dim(A/\mathfrak{p}_i)=\dim(N)$~; en outre les idéaux premiers
+$\mathfrak{q}\in\operatorname{Supp}(N)$ tels que
+$\dim(A/\mathfrak{q})=\dim(N)$ sont certains des $\mathfrak{p}_j$~; si $x$
+n'appartient à aucun des $\mathfrak{p}_j$, on a donc
+$\dim(N/xN)=\dim(N)-1$ en vertu de (16.3.4).
+\end{proof}
+
+\begin{definition}[16.3.6]
+\label{0.16.3.6-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical, $M$ un
+$A$-module de type fini, et posons $n=\dim(M)$. On appelle \emph{système de
+paramètres pour $M$} tout système $(x_i)_{1\leq i\leq n}$ de $n$ éléments de
+$\mathfrak{r}$ tel que $M/(x_1M+\cdots+x_nM)$ soit de longueur finie.
+\end{definition}
+
+On a vu (16.2.3) qu'il existe toujours de tels systèmes.
+
+On a vu au cours de la démonstration de (16.2.3.3) que si
+$\mathfrak{J}=\sum_{i=1}^n x_iA$ est tel que $M/\mathfrak{J}M$ soit de
+longueur finie, $\mathfrak{q}=\mathfrak{J}+\operatorname{Ann}(M)$ est un
+\emph{idéal de définition} de $A$, et réciproquement, s'il en est ainsi,
+$M/\mathfrak{J}M$ est un module de type fini sur l'anneau artinien
+$A/\mathfrak{q}$, donc est de longueur finie. Il revient donc au même de dire
+que $(x_i)_{1\leq i\leq n}$ est un système de paramètres \emph{pour $M$} ou
+\emph{pour $A/\operatorname{Ann}(M)$} (ou encore que leurs images dans
+$A/\operatorname{Ann}(M)$ forment un système de paramètres pour cet anneau).
+Si $(x_i)_{1\leq i\leq n}$ est un système de paramètres pour $M$, il en est de
+même de $(x_i^k)$ pour tout entier $k\geq1$, car on peut se borner, en vertu de
+ce qui précède, au cas où $M=A$, et si $\mathfrak{J}$ est un idéal de
+définition de $A$, l'idéal $\sum_{i=1}^n x_i^kA$ contient
+$\mathfrak{J}^{kn}$, donc est aussi un idéal de définition.
+
+\begin{proposition}[16.3.7]
+\label{0.16.3.7-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical,
+$x_1,\ldots,x_k$ des éléments de $\mathfrak{r}$, $M$ un $A$-module de type
+fini. On a alors
+\begin{equation}
+\label{0.16.3.7.1-fr}
+\tag{16.3.7.1}
+  \dim(M/(x_1M+\cdots+x_kM))\geq\dim(M)-k.
+\end{equation}
+En outre, pour que les deux membres de (16.3.7.1) soient égaux, il faut et il
+suffit qu'il existe des éléments $x_i$
+$(k+1\leq i\leq n=\dim(M))$ de $\mathfrak{r}$ tels que
+$(x_i)_{1\leq i\leq n}$ soit un système de paramètres pour $M$.
+\end{proposition}
+
+\begin{proof}
+L'inégalité (16.3.7.1) résulte de (16.3.4.1) par récurrence sur $k$. Si les
+deux membres de (16.3.7.1) sont égaux, et si $x_{k+1},\ldots,x_n$ est un
+système de paramètres pour $M/(x_1M+\cdots+x_kM)$, il est clair que
+$M/(x_1M+\cdots+x_kM+x_{k+1}M+\cdots+x_nM)$ est de longueur finie, donc
+$(x_i)_{1\leq i\leq n}$ est un système de paramètres pour $M$~;
+réciproquement, s'il existe des $x_i$ $(k+1\leq i\leq n)$ ayant cette
+propriété et si l'on pose $N=M/(x_1M+\cdots+x_kM)$, il est clair que
+$N/(x_{k+1}N+\cdots+x_nN)$ est de longueur finie, donc
+$\dim(N)\leq n-k$, et les deux membres sont égaux en vertu de (16.3.7.1).
+\end{proof}
+

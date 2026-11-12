@@ -1,0 +1,64 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{272}
+de monoïdes $U\mapsto\mathfrak{Z}^+(U)$ (resp.\ $U\mapsto\mathfrak{Z}^{p+}(U)$) de $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+Le faisceau $\mathscr{Z}_X$ est évidemment \emph{somme directe} des faisceaux $\mathscr{Z}_X^p$.
+
+Notons enfin que les faisceaux $\mathscr{Z}_X^p$ (donc aussi $\mathscr{Z}_X$) sont \emph{flasques}.
+Supposons en effet donnée une section $Z$ de $\mathscr{Z}_X^p$ au-dessus d'un ouvert $U$, de sorte que l'ensemble $S$ des $x\in U$ tels que $\operatorname{mult}_x(Z)\neq0$ est localement fini \emph{dans} $U$;
+cet ensemble est aussi localement fini \emph{dans} $X$, car pour tout $z\in X$ et tout voisinage ouvert noethérien $V$ de $z$, $U\cap V$ est noethérien, donc ne contient qu'un nombre fini de points de $S$.
+On définit donc une section $Z'$ de $\mathscr{Z}_X^p$ au-dessus de $X$ en posant $Z'=\sum_{x\in U}\operatorname{mult}_x(Z)\cdot\overline{\{x\}}$ et puisque l'adhérence de $x$ dans $U$ est $\overline{\{x\}}\cap U$, on a bien $Z'|U=Z$, d'où notre assertion.
+\end{env}
+
+\begin{env}[21.6.4]
+\label{IV.21.6.4}
+Nous nous proposons de définir un homomorphisme canonique
+\[
+\label{IV.21.6.4.1}
+  c:\sh{D}iv_X\to\mathscr{Z}_X^1
+  \tag{21.6.4.1}
+\]
+de faisceaux de groupes commutatifs.
+Il suffit évidemment de définir un homomorphisme de $\sh{M}_X^*$ dans $\mathscr{Z}_X^1$, qui s'annule dans $\sh{O}_X^*$ \sref{IV.21.1.2};
+or, par définition, $\sh{M}_X^*$ est le \emph{symétrisé} du faisceau de monoïdes $\sh{O}_X\cap\sh{M}_X^*$, et un homomorphisme $\sh{M}_X^*\to\mathscr{Z}_X^1$ est déterminé de façon unique par la donnée de sa restriction $\sh{S}(\sh{O}_X)\to\mathscr{Z}_X^1$ qui est un homomorphisme de faisceaux de \emph{monoïdes} soumis à la seule condition d'être nul dans $\sh{O}_X^*$;
+il revient au même de dire que pour définir $c$, il suffit de définir un homomorphisme de \emph{faisceaux de monoïdes}
+\[
+\label{IV.21.6.4.2}
+  c:\sh{D}iv_X^+\to\mathscr{Z}_X^{1+}.
+  \tag{21.6.4.2}
+\]
+\end{env}
+
+\begin{env}[21.6.5]
+\label{IV.21.6.5}
+Or, on a vu qu'à tout diviseur positif $D$ sur $X$ on fait correspondre le sous-préschéma fermé $Y(D)$ de $X$, défini par l'Idéal $\sh{J}_X(D)\subset\sh{O}_X$, et qui est régulièrement immergé et de codimension $1$.
+En chacun des points maximaux $x$ de $Y(D)$, on a donc (\sref{IV.19.1.4} et \sref{IV.5.1.2}) $\codim(\overline{\{x\}},X)=\dim(\sh{O}_{X,x})=1$, autrement dit $x\in X^{(1)}$;
+d'ailleurs l'ensemble de ces points maximaux est localement fini dans $X$ \sref{IV.3.1.6}, et $\sh{O}_{Y(D),x}$ est un anneau \emph{artinien}.
+En tout point $x\in X^{(1)}$ qui n'est pas point maximal de $Y(D)$, on a nécessairement $x\notin Y(D)$, donc $\sh{O}_{Y(D),x}=0$.
+Posons
+\[
+\label{IV.21.6.5.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{long}(\sh{O}_{Y(D),x})\cdot\overline{\{x\}}
+  \tag{21.6.5.1}
+\]
+qui est donc un élément de $\mathfrak{Z}^1(X)$.
+\end{env}
+
+\begin{proposition}[21.6.6]
+\label{IV.21.6.6}
+L'application $D\mapsto\operatorname{cyc}(D)$ est un homomorphisme du monoïde $\operatorname{Div}^+(X)$ dans $\mathfrak{Z}^{1+}(X)$.
+\end{proposition}
+
+\begin{proof}
+Tout revient à voir que pour deux diviseurs positifs $D$, $D'$, on a
+\[
+  \operatorname{cyc}(D+D')=\operatorname{cyc}(D)+\operatorname{cyc}(D').
+\]
+Or, on a \sref{IV.21.2.5} $\sh{J}_X(D+D')=\sh{J}_X(D)\sh{J}_X(D')$;
+tout revient à voir que si $x\in X^{(1)}$, si l'on pose $A=\sh{O}_{X,x}$, et si $t$ et $t'$ sont deux éléments réguliers de $A$, on a $\operatorname{long}(A/tt'A)=\operatorname{long}(A/tA)+\operatorname{long}(A/t'A)$;
+mais puisque $t$ est régulier, $tA/tt'A$ est isomorphe à $A/t'A$, d'où aussitôt la proposition.
+\end{proof}
+
+Il résulte aussitôt des définitions que pour tout ouvert $U\subset X$, on a
+\[
+  Y(D|U)=Y(D)\cap U,
+\]

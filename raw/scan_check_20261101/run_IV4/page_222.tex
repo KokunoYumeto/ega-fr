@@ -1,0 +1,43 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{222}
+
+\begin{env}[19.9.1]
+\EGAReaderTarget{ega4.c04.statement.19-9-1}{IV.19.9.1}
+Rappelons que si $X$ est un préschéma localement noethérien, $\sh F$ un $\sh O_X$-Module cohérent, $T$ une partie de $X$, on pose (5.10.1)
+\begin{equation}
+  \operatorname{prof}_T(\sh F)=\inf_{x\in T}\operatorname{prof}(\sh F_x).
+  \tag{19.9.1.1}\label{IV.19.9.1.1}
+\end{equation}
+
+On pose d'autre part, pour tout point $t\in T$
+\begin{equation}
+  \operatorname{prof}_{T,t}(\sh F)=\inf_{x\in T\cap\Spec(\sh O_{X,t})}\operatorname{prof}(\sh F_x),
+  \tag{19.9.1.2}\label{IV.19.9.1.2}
+\end{equation}
+et on dit que $\operatorname{prof}_{T,t}(\sh F)$ est la \emph{$T$-profondeur de $\sh F$ au point $t$}; il est clair que l'on a
+\begin{equation}
+  \operatorname{prof}_T(\sh F)=\inf_{t\in T}\operatorname{prof}_{T,t}(\sh F).
+  \tag{19.9.1.3}\label{IV.19.9.1.3}
+\end{equation}
+\end{env}
+
+\begin{lemma}[19.9.2]
+\label{IV.19.9.2}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini, $\mathfrak J$ un idéal de $A$. Afin que, pour tout idéal premier $\mathfrak p\supset\mathfrak J$, on ait $\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\geq r$, il faut et il suffit qu'il existe une suite $M$-régulière de $r$ éléments appartenant à $\mathfrak J$.
+\end{lemma}
+
+La suffisance de la condition résultant aussitôt de ($0$, 16.4.5), prouvons sa nécessité. Raisonnons par récurrence sur $r$ (il n'y a rien à démontrer si $r=0$): puisque $\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})\geq r-1$ pour tout $\mathfrak p\supset\mathfrak J$, il existe par hypothèse une suite $M$-régulière $(g_i)_{1\leq i\leq r-1}$ formée d'éléments de $\mathfrak J$. Posons $N=M/(g_1M+\cdots+g_{r-1}M)$; pour tout $\mathfrak p\supset\mathfrak J$, les images des $g_i$ dans $A_{\mathfrak p}$ appartiennent donc à l'idéal maximal $\mathfrak pA_{\mathfrak p}$, et forment une suite $M_{\mathfrak p}$-régulière ($0$, 15.1.14); on conclut donc de ($0$, 16.4.6) que l'on a $\operatorname{prof}_{A_{\mathfrak p}}(N_{\mathfrak p})=\operatorname{prof}_{A_{\mathfrak p}}(M_{\mathfrak p})-(r-1)\geq1$, et on voit que tout revient à prouver le lemme pour $r=1$. Or l'hypothèse signifie alors que, pour tout $\mathfrak p\supset\mathfrak J$, $\mathfrak pA_{\mathfrak p}$ n'est pas associé à $M_{\mathfrak p}$ ($0$, 16.4.6), donc (Bourbaki, \emph{Alg. comm.}, chap. IV, § 1, n\textsuperscript{o} 2, prop. 5), $\mathfrak p$ n'est pas associé à $M$. Autrement dit, $\mathfrak J$ n'est contenu dans aucun des idéaux premiers de $\operatorname{Ass}(M)$, donc il n'est pas contenu dans leur réunion (Bourbaki, \emph{Alg. comm.}, chap. II, § 1, n\textsuperscript{o} 1, prop. 2). Mais comme cette réunion est l'ensemble des éléments qui ne sont pas $M$-réguliers (Bourbaki, \emph{Alg. comm.}, chap. IV, § 1, n\textsuperscript{o} 1, cor. 2 de la prop. 2), cela prouve le lemme.
+
+\begin{proposition}[19.9.3]
+\label{IV.19.9.3}
+Soient $X$ un préschéma localement noethérien, $\sh F$ un $\sh O_X$-Module cohérent, $Y$ une partie fermée de $X$, $y$ un point de $Y$, $n$ un entier $>0$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] Il existe un voisinage ouvert $U$ de $y$ dans $X$ tel que $\operatorname{prof}_{Y\cap U}(\sh F|U)\geq n$.
+  \item[b)] Il existe un voisinage ouvert $U$ de $y$ dans $X$ et une suite $(\sh F|U)$-régulière de $n$ sections $f_i$ de $\sh O_U$ au-dessus de $U$, telles que $f_i(x)=0$ ($0_{\mathrm I}$, 5.5.1) pour $1\leq i\leq n$ en tout point $x\in U\cap Y$.
+  \item[c)] On a $\operatorname{prof}_{Y,y}(\sh F)\geq n$.
+\end{enumerate}
+En outre, l'ensemble des $y\in Y$ vérifiant ces conditions est ouvert dans $Y$.
+\end{proposition}
+
+La dernière assertion résulte trivialement de $a)$. L'équivalence de $a)$ et $b)$ découle de (19.9.2) appliqué à un voisinage ouvert affine de $y$ dans $X$ et de ($0$, 15.1.14). Il est clair que $a)$ entraîne $c)$, tout voisinage ouvert de $y$ dans $X$ contenant $\Spec(\sh O_{X,y})$; montrons inversement que $c)$ implique $b)$. Il résulte de $c)$ et de la définition (19.9.1.1) que l'on
+

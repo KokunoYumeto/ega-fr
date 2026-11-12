@@ -1,0 +1,97 @@
+% from ega1-10-fr.tex
+\oldpage[I]{189}
+
+canonique
+$f_{\mu\lambda}:(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda)\to
+(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\mu)$ de préschémas
+(usuels) tel que l'on ait $f_\lambda=f_\mu\circ f_{\mu\lambda}$. Les
+préschémas
+$X_\lambda=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda)$ et les morphismes
+$f_{\mu\lambda}$ constituent donc (en vertu de
+\hyperref[I.10.4.8-fr]{10.4.8}) un \emph{système inductif} dans la
+catégorie des préschémas formels.
+\end{env}
+
+\begin{proposition}[10.6.2]
+\label{I.10.6.2-fr}
+Avec les notations de (\hyperref[I.10.6.1-fr]{10.6.1}), le préschéma
+formel $\mathfrak{X}$ et les morphismes $f_\lambda$ constituent une
+limite inductive (T, I, 1.8) du système $(X_\lambda,f_{\mu\lambda})$
+dans la catégorie des préschémas formels.
+\end{proposition}
+
+\begin{proof}
+Soit $\mathfrak{Y}$ un préschéma formel, et pour chaque indice $\lambda$,
+soit
+\[
+  g_\lambda=(\psi_\lambda,\theta_\lambda):X_\lambda\to\mathfrak{Y}
+\]
+un morphisme, tel que l'on ait
+$g_\lambda=g_\mu\circ f_{\mu\lambda}$ pour
+$\mathscr{J}_\mu\subset\mathscr{J}_\lambda$. Cette dernière condition
+et la définition des $X_\lambda$ entraînent d'abord que tous les
+$\psi_\lambda$ sont identiques à une même application continue
+$\psi:\mathfrak{X}\to\mathfrak{Y}$ des espaces sous-jacents~; en outre,
+les homomorphismes
+$\theta_\lambda^\sharp:\psi^*(\mathscr{O}_{\mathfrak{Y}})\to
+\mathscr{O}_{X_\lambda}=
+\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda$ forment un
+\emph{système projectif} d'homomorphismes de faisceaux d'anneaux. Par
+passage à la limite projective, on en déduit donc un homomorphisme
+\[
+  \omega:\psi^*(\mathscr{O}_{\mathfrak{Y}})\to
+  \varprojlim\mathscr{O}_{\mathfrak{X}}/\mathscr{J}_\lambda
+  =\mathscr{O}_{\mathfrak{X}},
+\]
+et il est clair que le morphisme $g=(\psi,\omega^b)$ d'\emph{espaces
+annelés} est le \emph{seul} rendant commutatif les diagrammes
+\[
+  \label{I.10.6.2.1-fr}
+  \xymatrix{
+    X_\lambda\ar[rr]^{g_\lambda}\ar[rd]_{f_\lambda} &&
+    \mathfrak{Y}\\
+    & \mathfrak{X}\ar[ru]_g
+  }
+  \tag{10.6.2.1}
+\]
+Il reste donc à prouver que $g$ est un morphisme de \emph{préschémas
+formels}~; la question étant locale sur $\mathfrak{X}$ et
+$\mathfrak{Y}$, on peut donc supposer
+$\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$, $A$ et $B$ étant des anneaux
+admissibles, avec
+$\mathscr{J}_\lambda=\mathfrak{J}_\lambda^{\Delta}$, où
+$(\mathfrak{J}_\lambda)$ est un système fondamental d'idéaux de
+définition de $A$ (\hyperref[I.10.3.5-fr]{10.3.5})~; comme
+$A=\varprojlim A/\mathfrak{J}_\lambda$, l'existence d'un morphisme de
+schémas formels affines $g$ rendant commutatifs les diagrammes
+(\hyperref[I.10.6.2.1-fr]{10.6.2.1}) résulte alors de la correspondance
+biunivoque (\hyperref[I.10.2.2-fr]{10.2.2}) entre morphismes de schémas
+formels affines et homomorphismes continus d'anneaux, et de la définition
+de la limite projective. Mais l'unicité de $g$ en tant que morphisme
+d'espaces annelés montre qu'il coïncide avec le morphisme noté de même au
+début de la démonstration.
+\end{proof}
+
+La proposition suivante établit, sous certaines conditions
+supplémentaires, l'existence de la limite inductive d'un système inductif
+donné de préschémas (usuels) dans la catégorie des préschémas formels~:
+
+\begin{proposition}[10.6.3]
+\label{I.10.6.3-fr}
+Soient $\mathfrak{X}$ un espace topologique,
+$(\mathscr{O}_i,u_{ji})$ un système projectif de faisceaux d'anneaux sur
+$\mathfrak{X}$, ayant $\mathbf{N}$ pour ensemble d'indices. Soit
+$\mathscr{J}_i$ le noyau de
+$u_{0i}:\mathscr{O}_i\to\mathscr{O}_0$. On suppose que~:
+\begin{enumerate}
+  \item[a)] L'espace annelé $(\mathfrak{X},\mathscr{O}_i)$ est un
+    préschéma $X_i$.
+  \item[b)] Pour tout $x\in X$ et tout $i$, il existe un voisinage
+    ouvert $U_i$ de $x$ dans $\mathfrak{X}$ tel que la restriction
+    $\mathscr{J}_i|U_i$ soit nilpotente.
+  \item[c)] Les homomorphismes $u_{ji}$ sont surjectifs.
+\end{enumerate}
+

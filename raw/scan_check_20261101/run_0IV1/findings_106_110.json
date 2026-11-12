@@ -1,0 +1,518 @@
+[
+ {
+  "page": 106,
+  "where": "top of p. 106: page break inside '... ; mais lim_j((B/m^i)⊗_A(C/n^j)) est le séparé complété de ...'",
+  "scan": "printed p. 106 begins with 'est le séparé complété de (B/𝔪^i)⊗_A C'; 'mais lim_j((B/𝔪^i)⊗_A(C/𝔫^j))' is the last line of printed p. 105 (checked on the p. 105 strip)",
+  "tex": "\\oldpage[0\\textsubscript{IV-1}]{106} and a blank line stand before 'mais $\\varprojlim_j(...)$'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{106}\n\nmais $\\varprojlim_j((B/\\mathfrak m^i)\\otimes_A(C/\\mathfrak n'{}^j))$ est le",
+   "new": "mais $\\varprojlim_j((B/\\mathfrak m^i)\\otimes_A(C/\\mathfrak n^j))$\n\\oldpage[0\\textsubscript{IV-1}]{106}\nest le"
+  },
+  "note": "One edit inside the p. 106 segment: the marker moves after 'mais $\\varprojlim_j(...)$' (which then ends the p. 105 segment), and the blank line after it goes (mid-sentence break, GLOBAL_ISSUES 20). The same edit removes the prime on 𝔫 (next finding). Do not also apply a p. 105 edit that re-inserts 'mais ...'. The blank line after '\\]' at the end of the p. 105 segment, which then precedes 'mais', is a paragraph break the print lacks (p. 105 segment)."
+ },
+ {
+  "page": 106,
+  "where": "the phrase 'mais lim_j((B/m^i)⊗_A(C/n^j))' (printed at the foot of p. 105, TeX in the p. 106 segment)",
+  "scan": "(C/𝔫^j): Fraktur n without a prime (enlarged crop of p. 105); the print has 𝔫 throughout the proof of (19.7.1.2) on p. 105: Im(B⊗_A𝔫^j), Im(B⊗_A𝔫), (C/𝔫), (𝔫/𝔫²)",
+  "tex": "(C/\\mathfrak n'{}^j)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Fix included in the marker edit above. The p. 105 segment writes \\mathfrak n' in the same proof (about 9 times) where the print has 𝔫: for the p. 105 check."
+ },
+ {
+  "page": 106,
+  "where": "'On a donc E = lim_i((B/m^i)⊗_A C). Pour tout entier'",
+  "scan": "the formula is inline, in the running line",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "On a donc\n\\[\n  E=\\varprojlim_i((B/\\mathfrak m^i)\\otimes_A C).\n\\]\nPour tout",
+   "new": "On a donc\n$E=\\varprojlim_i((B/\\mathfrak m^i)\\otimes_A C)$.\nPour tout"
+  },
+  "note": "Layout: inline in the print, displayed in the TeX (GLOBAL_ISSUES 21)."
+ },
+ {
+  "page": 106,
+  "where": "'il est évidemment dense dans lim_i(Im(m^h/m^{h+i})⊗_A C)), donc égal à cette dernière limite projective'",
+  "scan": "the formula is inline, in the running line",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dense dans\n\\[\n  \\varprojlim_i\n  (\\operatorname{Im}(\\mathfrak m^h/\\mathfrak m^{h+i})\\otimes_A C),\n\\]\ndonc égal",
+   "new": "dense dans\n$\\varprojlim_i(\\operatorname{Im}(\\mathfrak m^h/\\mathfrak m^{h+i})\\otimes_A C)$,\ndonc égal"
+  },
+  "note": "Layout only. Apply before the misprint finding for this formula (whose 'old' lies inside the formula and is unchanged by this edit)."
+ },
+ {
+  "page": 106,
+  "where": "same formula: 'lim_i(Im(m^h/m^{h+i})⊗_A C))'",
+  "scan": "lim_i(Im(𝔪^h/𝔪^{h+i})⊗_A C)): two opening and three closing parentheses (enlarged crop)",
+  "tex": "(\\operatorname{Im}(\\mathfrak m^h/\\mathfrak m^{h+i})\\otimes_A C): balanced, i.e. the surplus ')' silently dropped",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathfrak m^{h+i})\\otimes_A C)",
+   "new": "\\mathfrak m^{h+i})\\otimes_A C))"
+  },
+  "corrected": "\\varprojlim_i(\\operatorname{Im}((\\mathfrak m^h/\\mathfrak m^{h+i})\\otimes_A C))",
+  "note": "The TeX silently corrects the print; the fix restores the printed reading (one more ')'). Correct reading: the parenthesis missing is the one after Im (the image of (𝔪^h/𝔪^{h+i})⊗_A C in (B/𝔪^{h+i})⊗_A C, as in Im(𝔪^h⊗_A C) a few lines below); the TeX's balanced form puts ⊗_A C outside Im."
+ },
+ {
+  "page": 106,
+  "where": "'que E/m^hE est isomorphe à (B/m^h)⊗_A C = (B⊗_A C)/Im(m^h⊗_A C). En particulier'",
+  "scan": "the formula is inline, in the running line",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "isomorphe à\n\\[\n  (B/\\mathfrak m^h)\\otimes_A C\n  =(B\\otimes_A C)/\\operatorname{Im}(\\mathfrak m^h\\otimes_A C).\n\\]\nEn particulier",
+   "new": "isomorphe à\n$(B/\\mathfrak m^h)\\otimes_A C=(B\\otimes_A C)/\\operatorname{Im}(\\mathfrak m^h\\otimes_A C)$.\nEn particulier"
+  },
+  "note": "Layout: inline in the print, displayed in the TeX (GLOBAL_ISSUES 21). Independent of the next finding."
+ },
+ {
+  "page": 106,
+  "where": "'En particulier comme Im(m⊗_A C) ⊂ r, cela montre'",
+  "scan": "no comma after 'particulier' (enlarged crop)",
+  "tex": "En particulier, comme",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "En particulier, comme",
+   "new": "En particulier comme"
+  },
+  "note": "Comma added in the TeX."
+ },
+ {
+  "page": 106,
+  "where": "Lemme (19.7.1.3): 'on suppose que B_0 est un anneau local noethérien, complet et régulier.'",
+  "scan": "'régulier.' upright (roman) inside the italic statement; 'complet et' italic (enlarged crop)",
+  "tex": "italic (statement environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "complet et régulier.",
+   "new": "complet et \\textup{régulier}."
+  },
+  "note": ""
+ },
+ {
+  "page": 106,
+  "where": "Lemme (19.7.1.3): 'qui est un anneau local noethérien complet, un A-module plat, et tel que'",
+  "scan": "'plat,' upright (roman) at the start of the line, 'A-module' and 'et tel que' italic (enlarged crop)",
+  "tex": "italic (statement environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "complet, un $A$-module plat,\net tel que",
+   "new": "complet, un $A$-module \\textup{plat},\net tel que"
+  },
+  "note": ""
+ },
+ {
+  "page": 106,
+  "where": "proof of (19.7.1.3), case I): 'soit C un anneau local noethérien complet qui est un A-module plat et tel que'",
+  "scan": "A-module *plat* (plat italic; enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A$-module plat et tel que",
+   "new": "$A$-module \\emph{plat} et tel que"
+  },
+  "note": ""
+ },
+ {
+  "page": 106,
+  "where": "proof of (19.7.1.3), case II): 'K est de caractéristique p>0'",
+  "scan": "*de caractéristique* (both words italic; enlarged crop)",
+  "tex": "de \\emph{caractéristique} ('de' upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de \\emph{caractéristique}",
+   "new": "\\emph{de caractéristique}"
+  },
+  "note": ""
+ },
+ {
+  "page": 106,
+  "where": "proof of (19.7.1.3), last paragraph: 'un anneau local noethérien complet et un W(P)-module plat, tel que'",
+  "scan": "W(P)-module *plat* (plat italic; enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$W(P)$-module plat, tel que",
+   "new": "$W(P)$-module \\emph{plat}, tel que"
+  },
+  "note": ""
+ },
+ {
+  "page": 106,
+  "where": "end of the p. 106 segment: '... par platitude (0_I, 6.3.4) et comme' / p. 107 'W(k)/pW(k) = k, ...'",
+  "scan": "the sentence runs on: p. 107 begins flush left with 'W(k)/pW(k)=k', no new paragraph",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{107}: paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "6.3.4) et comme\n\n",
+   "new": "6.3.4) et comme\n"
+  },
+  "note": "Mid-sentence page break (GLOBAL_ISSUES 20); the p. 107 finding removes the blank line after the marker."
+ },
+ {
+  "page": 107,
+  "where": "top of p. 107: 'W(k)/pW(k) = k, pW(k) est l'idéal maximal'",
+  "scan": "continues the sentence from p. 106, flush left",
+  "tex": "blank line after the marker: new paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{107}\n\n$W(k)/pW(k)=k$",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{107}\n$W(k)/pW(k)=k$"
+  },
+  "note": "Mid-sentence page break (GLOBAL_ISSUES 20); pairs with the p. 106 end-of-segment finding."
+ },
+ {
+  "page": 107,
+  "where": "proof of (19.7.1.3): 'donc B est en fait un anneau local. Comme B_P'",
+  "scan": "anneau *local* (local italic; enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un anneau local. Comme",
+   "new": "un anneau \\emph{local}. Comme"
+  },
+  "note": ""
+ },
+ {
+  "page": 107,
+  "where": "end of the p. 107 segment: diagram of the proof of (19.7.1.4), followed on p. 108 by 'où A_0 = A/J = gr_0(A), ...'",
+  "scan": "p. 108 begins flush left with 'où', continuing the sentence after the diagram",
+  "tex": "blank line after \\] before the p. 108 marker: paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\gr_\\bullet(M)\n}\n\\]\n\n",
+   "new": "\\gr_\\bullet(M)\n}\n\\]\n"
+  },
+  "note": "Page break inside the sentence (GLOBAL_ISSUES 20/47); the p. 108 finding removes the blank line after the marker."
+ },
+ {
+  "page": 108,
+  "where": "top of p. 108: 'où A_0 = A/J = gr_0(A), et φ_M et φ_N sont les applications canoniques'",
+  "scan": "continues the sentence after the diagram, flush left",
+  "tex": "blank line after the marker: new paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{108}\n\noù",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{108}\noù"
+  },
+  "note": "Pairs with the p. 107 end-of-segment finding."
+ },
+ {
+  "page": 108,
+  "where": "Lemme (19.7.1.5): conditions 1°, 2°, 3°",
+  "scan": "run in the statement's paragraph: 'On suppose que : 1° B et B' sont complets ... ; 2° B est ... lisse; 3° B' est un A-module plat. Posons A_0 = A/J, ...'",
+  "tex": "enumerate list",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "On suppose que~:\n\\begin{enumerate}\n  \\item[$1^{\\mathrm o}$] $B$ et $B'$ sont complets pour les topologies\n  $\\mathfrak J$-préadiques~;\n  \\item[$2^{\\mathrm o}$] $B$ est une $A$-algèbre formellement lisse~;\n  \\item[$3^{\\mathrm o}$] $B'$ est un $A$-module plat.\n\\end{enumerate}\nPosons",
+   "new": "On suppose que~:\n$1^{\\mathrm o}$ $B$ et $B'$ sont complets pour les topologies\n$\\mathfrak J$-préadiques~;\n$2^{\\mathrm o}$ $B$ est une $A$-algèbre formellement lisse~;\n$3^{\\mathrm o}$ $B'$ est un $A$-module plat.\nPosons"
+  },
+  "note": "Layout: the print runs the three conditions into the statement (enlarged crop: '... que : 1° B et B' sont ...'); words and formulas agree. Same treatment as Corollaire (6.9.7), EGA III p. 169."
+ },
+ {
+  "page": 108,
+  "where": "(19.7.1.6): 'donc tout revient à prouver que B est un A-module plat.'",
+  "scan": "A-module *plat*. (plat italic; enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A$-module plat. Il revient",
+   "new": "$A$-module \\emph{plat}. Il revient"
+  },
+  "note": ""
+ },
+ {
+  "page": 108,
+  "where": "(19.7.1.6): 'on peut donc se borner au cas où A et B sont complets.'",
+  "scan": "*complets* italic (enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont complets. Comme",
+   "new": "sont \\emph{complets}. Comme"
+  },
+  "note": ""
+ },
+ {
+  "page": 108,
+  "where": "(19.7.1.6): 'c'est un anneau régulier (19.6.5) et complet'",
+  "scan": "*régulier* italic (enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un anneau régulier (19.6.5)",
+   "new": "un anneau \\emph{régulier} (19.6.5)"
+  },
+  "note": ""
+ },
+ {
+  "page": 108,
+  "where": "(19.7.1.6): 'un anneau local noethérien complet et un A-module plat, un homomorphisme local A→B''",
+  "scan": "A-module *plat* (plat italic; enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A$-module plat, un homomorphisme",
+   "new": "$A$-module \\emph{plat}, un homomorphisme"
+  },
+  "note": ""
+ },
+ {
+  "page": 108,
+  "where": "(19.7.1.6): 'un k-isomorphisme B_0 ⥲ B'_0 = B'⊗_A k'",
+  "scan": "isomorphism arrow (arrow with a tilde above; enlarged crop)",
+  "tex": "\\simeq",
+  "kind": "convention",
+  "convention": 4,
+  "confidence": "high",
+  "fix": {
+   "old": "$B_0\\simeq B'_0=B'\\otimes_A k$",
+   "new": "$B_0\\xrightarrow{\\sim}B'_0=B'\\otimes_A k$"
+  },
+  "note": ""
+ },
+ {
+  "page": 108,
+  "where": "Théorème (19.7.2): 'un homomorphisme local A→B faisant de B un A-module plat, et un A_0-isomorphisme'",
+  "scan": "'plat,' upright (roman) inside the italic statement; 'un A-module' and 'et un' italic (enlarged crop)",
+  "tex": "italic (statement environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "un $A$-module\nplat, et un",
+   "new": "un $A$-module\n\\textup{plat}, et un"
+  },
+  "note": ""
+ },
+ {
+  "page": 109,
+  "where": "proof of (19.7.2): 'qui est un anneau local noethérien complet, un A-module plat, et pour laquelle'",
+  "scan": "A-module *plat* (plat italic; enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un $A$-module plat, et pour laquelle",
+   "new": "un $A$-module \\emph{plat}, et pour laquelle"
+  },
+  "note": ""
+ },
+ {
+  "page": 109,
+  "where": "proof of (19.7.2): 'comme on a un k-isomorphisme u_00 : B⊗_A k = (B⊗_A A_0)⊗_{A_0} k ⥲ B_0⊗_A k = B_00, on déduit'",
+  "scan": "the formula is inline, in the running line",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$k$-isomorphisme\n\\[\n  u_{00}:B\\otimes_A k=(B\\otimes_A A_0)\\otimes_{A_0}k\n  \\xrightarrow{\\sim}B_0\\otimes_{A_0}k=B_{00},\n\\]\non déduit",
+   "new": "$k$-isomorphisme\n$u_{00}:B\\otimes_A k=(B\\otimes_A A_0)\\otimes_{A_0}k\n\\xrightarrow{\\sim}B_0\\otimes_{A_0}k=B_{00}$,\non déduit"
+  },
+  "note": "Layout: inline in the print, displayed in the TeX (GLOBAL_ISSUES 21). Independent of the next finding."
+ },
+ {
+  "page": 109,
+  "where": "same formula, last term: '⥲ B_0⊗_A k = B_00'",
+  "scan": "B_0⊗_A k: subscript A without 0 (enlarged crops of both strips; the middle term has ⊗_{A_0}k)",
+  "tex": "B_0\\otimes_{A_0}k",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\xrightarrow{\\sim}B_0\\otimes_{A_0}k=B_{00}",
+   "new": "\\xrightarrow{\\sim}B_0\\otimes_A k=B_{00}"
+  },
+  "note": "Not a misprint: B_00 was defined as B_0⊗_{A_0}k, and ⊗_A and ⊗_{A_0} agree on A_0-modules (A_0 = A/𝔍); the TeX normalises the print."
+ },
+ {
+  "page": 109,
+  "where": "heading 19.8: 'Algèbres de Cohen et p-anneaux de Cohen'",
+  "scan": "p bold upright, like the rest of the heading (enlarged crop)",
+  "tex": "$p$ (math italic, not bold)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Cohen et $p$-anneaux",
+   "new": "Cohen et p-anneaux"
+  },
+  "note": ""
+ },
+ {
+  "page": 109,
+  "where": "heading 19.8: '... application à la structure des anneaux locaux complets.'",
+  "scan": "final full stop",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneaux locaux complets}",
+   "new": "anneaux locaux complets.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58: no \\subsection title in ega0-14 ... ega0-23 has the printed full stop."
+ },
+ {
+  "page": 109,
+  "where": "Définition (19.8.1): 'On dit que B est une A-algèbre de Cohen si elle vérifie'",
+  "scan": "'A-algèbre de Cohen' italic like the rest of the statement: no change of face (enlarged crop)",
+  "tex": "\\emph{$A$-algèbre de Cohen}: upright inside the italic definition",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{$A$-algèbre de Cohen}",
+   "new": "$A$-algèbre de Cohen"
+  },
+  "note": "Drop \\emph where the print shows no change of face (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 109,
+  "where": "Définition (19.8.1)(i): 'B est un anneau complet.'",
+  "scan": "'complet' italic, no change of face (enlarged crop)",
+  "tex": "\\emph{complet}: upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "est un anneau \\emph{complet}.",
+   "new": "est un anneau complet."
+  },
+  "note": ""
+ },
+ {
+  "page": 109,
+  "where": "Définition (19.8.1)(ii): 'B est un A-module plat.'",
+  "scan": "'plat' italic, no change of face (enlarged crop)",
+  "tex": "\\emph{plat}: upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$A$-module \\emph{plat}.",
+   "new": "$A$-module plat."
+  },
+  "note": ""
+ },
+ {
+  "page": 109,
+  "where": "Définition (19.8.1)(iii): 'B⊗_A k est un corps'",
+  "scan": "'corps' italic, no change of face (enlarged crop)",
+  "tex": "\\emph{corps}: upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "un \\emph{corps}",
+   "new": "un corps"
+  },
+  "note": ""
+ },
+ {
+  "page": 109,
+  "where": "Définition (19.8.1)(iii): '(autrement dit, mB est l'idéal maximal de B)'",
+  "scan": "the parenthetical is roman, with 'l'idéal maximal' italic (enlarged crop)",
+  "tex": "italic throughout (definition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(autrement dit,\n  $\\mathfrak mB$ est l'idéal maximal de $B$)",
+   "new": "\\textup{(autrement dit,\n  $\\mathfrak mB$ est \\emph{l'idéal maximal} de $B$)}"
+  },
+  "note": "Inside \\textup the \\emph makes 'l'idéal maximal' italic, as printed."
+ },
+ {
+  "page": 109,
+  "where": "Définition (19.8.1)(iii): 'qui est une extension séparable de k.'",
+  "scan": "'extension' italic, 'séparable' roman (enlarged crop)",
+  "tex": "\\emph{extension séparable}: both words upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{extension\n  séparable}",
+   "new": "extension\n  \\emph{séparable}"
+  },
+  "note": "\\emph inside the italic definition gives the printed upright 'séparable'."
+ },
+ {
+  "page": 110,
+  "where": "Définition (19.8.3): 'On appelle anneau local premier un anneau local de la forme Z_pZ'",
+  "scan": "'anneau local' italic, only 'premier' roman (enlarged crop)",
+  "tex": "\\emph{anneau local premier}: all three words upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{anneau local premier}",
+   "new": "anneau local \\emph{premier}"
+  },
+  "note": ""
+ },
+ {
+  "page": 110,
+  "where": "Définition (19.8.3): 'On appelle anneau local complet premier le complété d'un anneau local premier.'",
+  "scan": "'anneau local' italic, 'complet premier' roman (enlarged crop)",
+  "tex": "\\emph{anneau local complet premier}: all four words upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{anneau local complet premier}",
+   "new": "anneau local \\emph{complet premier}"
+  },
+  "note": ""
+ }
+]

@@ -1,0 +1,548 @@
+[
+ {
+  "page": 5,
+  "where": "chapter heading",
+  "scan": "CHAPITRE IV (suite): 'suite' italic, its parentheses italic (slanted)",
+  "tex": "{\\large CHAPITRE IV (suite)\\par}, all upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "CHAPITRE IV (suite)",
+   "new": "CHAPITRE IV \\textit{(suite)}"
+  },
+  "note": "Enlarged crop; same form as the IV-1 and IV-2 p. 5 fixes."
+ },
+ {
+  "page": 5,
+  "where": "subsection heading 8.1",
+  "scan": "'8.1. Introduction.' (final full stop)",
+  "tex": "\\subsection{Introduction} (no full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Introduction}",
+   "new": "\\subsection{Introduction.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58 (subsection titles lack the printed full stop); same fix as IV-2 p. 5."
+ },
+ {
+  "page": 5,
+  "where": "(8.1.1), l. 9: 'pour que X possède une propriété P (par exemple'",
+  "scan": "bold italic P (enlarged crop)",
+  "tex": "$P$ (plain italic)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "une propriété $P$ (par",
+   "new": "une propriété $\\boldsymbol{P}$ (par"
+  },
+  "note": "Property letter P. The TeX has plain $P$, not \\mathbf{P}, so this is not convention 10; form of the earlier \\boldsymbol{P} page fixes (GLOBAL_ISSUES 13/44)."
+ },
+ {
+  "page": 5,
+  "where": "(8.1.1), l. 12: 'la même propriété P. Nous obtiendrons'",
+  "scan": "bold italic P (enlarged crop)",
+  "tex": "$P$ (plain italic)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "même propriété $P$.",
+   "new": "même propriété $\\boldsymbol{P}$."
+  },
+  "note": "As the previous finding."
+ },
+ {
+  "page": 5,
+  "where": "(8.1.2) a), last lines: 'où f parcourt A_α—p_α (pour un α fixé)'",
+  "scan": "long dash for the set difference A_α—p_α",
+  "tex": "$A_\\alpha-\\mathfrak p_\\alpha$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$A_\\alpha-\\mathfrak p_\\alpha$",
+   "new": "$A_\\alpha\\setmin\\mathfrak p_\\alpha$"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 6,
+  "where": "(8.1.2) a), paragraph 'Un cas particulièrement important': '... de A); cf. (I, 3.7)).'",
+  "scan": "(𝐈, 3.7): bold I",
+  "tex": "cf. (I, 3.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "cf. (I, 3.7)",
+   "new": "cf. (\\textbf{I}, 3.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "(8.1.2) c): 'C'est là l'explicitation du « point de vue kroneckérien »'",
+  "scan": "kroneckérien, with é (enlarged crop)",
+  "tex": "kroneckerien",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "kroneckerien",
+   "new": "kroneckérien"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "(8.1.2) c): 'des Z-algèbres de type fini, ce qui permet'",
+  "scan": "'algèbres de type fini' all italic after the bold Z and the hyphen (enlarged crop)",
+  "tex": "$\\mathbf Z$-algèbres \\emph{de type fini}: 'algèbres' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf Z$-algèbres \\emph{de type fini}",
+   "new": "$\\mathbf Z$-\\emph{algèbres de type fini}"
+  },
+  "note": ""
+ },
+ {
+  "page": 7,
+  "where": "subsection heading 8.2",
+  "scan": "'8.2. Limites projectives de préschémas.' (final full stop)",
+  "tex": "\\subsection{Limites projectives de préschémas} (no full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Limites projectives de préschémas}",
+   "new": "\\subsection{Limites projectives de préschémas.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58; same fix as IV-2 p. 5."
+ },
+ {
+  "page": 8,
+  "where": "display (8.2.1.1), left side: 'Hom_{S_0-Alg.}(𝒜, ℬ)'",
+  "scan": "subscript S_0-Alg. (no 𝒪; enlarged crop)",
+  "tex": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Alg.}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Alg.}}(\\mathscr A,\\mathscr B)\n\\longrightarrow",
+   "new": "\\operatorname{Hom}_{S_0\\text{-Alg.}}(\\mathscr A,\\mathscr B)\n\\longrightarrow"
+  },
+  "note": "The print writes Hom_{S_0-Alg.} / Hom_{S_0-Mod.} at all four places on this page; the TeX normalises them to 𝒪_{S_0}. Consistent notation, not a misprint."
+ },
+ {
+  "page": 8,
+  "where": "display (8.2.1.1), right side: 'lim← Hom_{S_0-Alg.}(𝒜_λ, ℬ)'",
+  "scan": "subscript S_0-Alg. (no 𝒪)",
+  "tex": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Alg.}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Alg.}}\n(\\mathscr A_\\lambda",
+   "new": "\\operatorname{Hom}_{S_0\\text{-Alg.}}\n(\\mathscr A_\\lambda"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "after (8.2.1.1): 'identifie Hom_{S_0-Alg.}(𝒜, ℬ) à une partie de'",
+  "scan": "subscript S_0-Alg. (no 𝒪; enlarged crop)",
+  "tex": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Alg.}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Alg.}}(\\mathscr A,\\mathscr B)$",
+   "new": "$\\operatorname{Hom}_{S_0\\text{-Alg.}}(\\mathscr A,\\mathscr B)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "after (8.2.1.1): 'une partie de lim← Hom_{S_0-Mod.}(𝒜_λ, ℬ)'",
+  "scan": "subscript S_0-Mod. (no 𝒪; enlarged crop)",
+  "tex": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Mod.}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Hom}_{\\mathcal O_{S_0}\\text{-Mod.}}",
+   "new": "\\operatorname{Hom}_{S_0\\text{-Mod.}}"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "(8.2.1): 'est aussi un homomorphisme de 𝒪_{S_0}-Algèbres; mais cela'",
+  "scan": "'Algèbres' italic, like 'Modules' just before (enlarged crop)",
+  "tex": "$\\mathcal O_{S_0}$-Algèbres~; with 'Algèbres' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal O_{S_0}$-Algèbres~; mais cela",
+   "new": "$\\mathcal O_{S_0}$-\\emph{Algèbres}~; mais cela"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "(8.2.2): 'une 𝒪_{S_0}-Algèbre quasi-cohérente (I, 4.1.1)'",
+  "scan": "(𝐈, 4.1.1): bold I",
+  "tex": "(I, 4.1.1)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 4.1.1)",
+   "new": "(\\textbf{I}, 4.1.1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "(8.2.2): '(resp. 𝒜) (II, 1.3.1), et soient'",
+  "scan": "(𝐈𝐈, 1.3.1): bold II",
+  "tex": "(II, 1.3.1)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 1.3.1)",
+   "new": "(\\textbf{II}, 1.3.1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "(8.2.2): 'respectivement (II, 1.2.7); il est clair'",
+  "scan": "(𝐈𝐈, 1.2.7): bold II",
+  "tex": "(II, 1.2.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 1.2.7)",
+   "new": "(\\textbf{II}, 1.2.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "(8.2.2): 'des morphismes affines (II, 1.6.2), donc'",
+  "scan": "(𝐈𝐈, 1.6.2): bold II",
+  "tex": "(II, 1.6.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 1.6.2)",
+   "new": "(\\textbf{II}, 1.6.2)"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "Proposition (8.2.3): 'Avec les notations de (8.2.2), les morphismes'",
+  "scan": "the reference (8.2.2) is upright inside the italic statement (enlarged crop)",
+  "tex": "(8.2.2) inside the italic proposition environment: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "Avec les notations de (8.2.2)",
+   "new": "Avec les notations de \\textup{(8.2.2)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "page break 8/9: 'Prouvons d'abord ... dans le cas T=S_0.' / p. 9 'Tout revient à démontrer'",
+  "scan": "'Tout revient à démontrer' opens p. 9 with a paragraph indent: new paragraph",
+  "tex": "'... $T=S_0$.' then \\oldpage[IV-3]{9} and 'Tout revient' with no blank line (same paragraph)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans le cas $T=S_0$.",
+   "new": "dans le cas $T=S_0$.\n"
+  },
+  "note": "Missing paragraph break. The edit leaves a blank line before \\oldpage[IV-3]{9}, so the marker opens the new paragraph, as at the other paragraph-initial markers of ega4-8."
+ },
+ {
+  "page": 9,
+  "where": "after (8.2.3.1): 's'identifie canoniquement à (8.2.1.1) (II, 1.2.7), et'",
+  "scan": "(𝐈𝐈, 1.2.7): bold II",
+  "tex": "(II, 1.2.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 1.2.7)",
+   "new": "(\\textbf{II}, 1.2.7)"
+  },
+  "note": ""
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.4), l. 1: 'Soient C une catégorie, T un objet de C,'",
+  "scan": "category letter C bold italic, 2 times (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Soient $\\mathbf C$ une catégorie, $T$ un objet de $\\mathbf C$,",
+   "new": "Soient $\\boldsymbol{C}$ une catégorie, $T$ un objet de $\\boldsymbol{C}$,"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.4), l. 1-2: 'C_T la sous-catégorie des objets de C au-dessus de T.'",
+  "scan": "category letter C bold italic, 2 times (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf C_T$ la sous-catégorie des objets de $\\mathbf C$ au-dessus de $T$.",
+   "new": "$\\boldsymbol{C}_T$ la sous-catégorie des objets de $\\boldsymbol{C}$ au-dessus de $T$."
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.4), l. 2: 'un système projectif dans C_T;'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un système projectif dans $\\mathbf C_T$~;",
+   "new": "un système projectif dans $\\boldsymbol{C}_T$~;"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.4), l. 3: 'de ce système dans C_T est aussi'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ce système dans $\\mathbf C_T$ est aussi",
+   "new": "ce système dans $\\boldsymbol{C}_T$ est aussi"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.4), l. 3: 'limite projective dans C, et réciproquement.'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "limite projective dans $\\mathbf C$, et réciproquement.",
+   "new": "limite projective dans $\\boldsymbol{C}$, et réciproquement."
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'de (S_λ, u_λμ) dans C, et désignons'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans $\\mathbf C$, et\ndésignons",
+   "new": "dans $\\boldsymbol{C}$, et\ndésignons"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'où Y∈C_T.'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "où $Y\\in\\mathbf C_T$.",
+   "new": "où $Y\\in\\boldsymbol{C}_T$."
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'un morphisme unique (dans C) w : Y→S'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "unique (dans $\\mathbf C$)",
+   "new": "unique (dans $\\boldsymbol{C}$)"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'de (S_λ, u_λμ) dans C_T, et considérons'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans $\\mathbf C_T$, et considérons",
+   "new": "dans $\\boldsymbol{C}_T$, et considérons"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'système projectif de morphismes (de C) w_λ'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(de $\\mathbf C$)",
+   "new": "(de $\\boldsymbol{C}$)"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'f_λ∘w_λ = f_λ∘u_λν∘w_ν = f_ν∘w_ν et on voit de même que'",
+  "scan": "no comma before 'et on voit' (enlarged crop)",
+  "tex": "=f_\\nu\\circ w_\\nu$, et on voit",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=f_\\nu\\circ w_\\nu$, et on voit",
+   "new": "=f_\\nu\\circ w_\\nu$ et on voit"
+  },
+  "note": ""
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'et a fortiori un morphisme de C;'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "morphisme de $\\mathbf C$~;",
+   "new": "morphisme de $\\boldsymbol{C}$~;"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "proof of (8.2.4): 'toute limite projective w' (dans C)'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$w'$ (dans $\\mathbf C$)",
+   "new": "$w'$ (dans $\\boldsymbol{C}$)"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Proposition (8.2.5): 'Sous les conditions de (8.2.2), soient'",
+  "scan": "the reference (8.2.2) is upright inside the italic statement (enlarged crop)",
+  "tex": "(8.2.2) inside the italic proposition environment: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "Sous les conditions de (8.2.2)",
+   "new": "Sous les conditions de \\textup{(8.2.2)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.6), l. 1: 'Soient C une catégorie dans laquelle'",
+  "scan": "category letter C bold italic (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Soient $\\mathbf C$ une catégorie dans laquelle",
+   "new": "Soient $\\boldsymbol{C}$ une catégorie dans laquelle"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.6), l. 2: 'q : T'→T un morphisme de C, C_T'",
+  "scan": "category letter C bold italic, 2 times (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un morphisme de $\\mathbf C$, $\\mathbf C_T$",
+   "new": "un morphisme de $\\boldsymbol{C}$, $\\boldsymbol{C}_T$"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.6), l. 2: 'C_T (resp. C_T') la catégorie'",
+  "scan": "'resp.' and its parenthesis upright inside the italic statement (enlarged crop)",
+  "tex": "(resp. inside the italic lemma environment: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp.",
+   "new": "(\\textup{resp.}"
+  },
+  "note": "Does not overlap the neighbouring \\boldsymbol fixes."
+ },
+ {
+  "page": 9,
+  "where": "Lemme (8.2.6), l. 2: 'C_T') la catégorie des objets de C au-dessus'",
+  "scan": "category letter C bold italic, 2 times (enlarged crop)",
+  "tex": "\\mathbf C (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf C_{T'}$) la catégorie des objets de $\\mathbf C$ au-dessus",
+   "new": "$\\boldsymbol{C}_{T'}$) la catégorie des objets de $\\boldsymbol{C}$ au-dessus"
+  },
+  "note": "The category C of (8.2.4)-(8.2.6) is bold italic in the print, in the italic statements and in the roman proof alike; the TeX has \\mathbf C. Same form as the earlier \\boldsymbol page fixes (GLOBAL_ISSUES 33/35/44)."
+ }
+]

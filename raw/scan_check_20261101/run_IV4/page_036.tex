@@ -1,0 +1,87 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{36}
+suffit de voir que l'on a $d(xy)-x.dy-y.dx=0$, ce qui exprime que $d$ est une
+dérivation.
+
+Il reste à prouver que $d$ vérifie la condition (i). Or, le carré d'une
+antidérivation est une dérivation (Bourbaki, \emph{loc. cit.}), et comme
+$\Omega_{B/A}^{\bullet}$ est engendré par $\Omega_{B/A}^1$ comme
+$B$-algèbre, il suffit de vérifier que $d(dz)=0$ pour $z\in B$ et
+$z\in\Omega_{B/A}^1$; dans le premier cas, cela résulte de la formule
+(16.6.2.3) avec $g=1$; dans le second, on peut se borner au cas où $z=g.df$
+avec $f$, $g$ dans $B$, et alors, en vertu de (16.6.2.1) et (16.6.2.3), on a
+\[
+  d(d(g.df))=d(dg\wedge df)
+  =(d(dg))\wedge(df)-(dg)\wedge(d(df))=0.
+\]
+\hfill C.Q.F.D.
+
+\begin{definition}[16.6.3]
+\EGAReaderTarget{ega4.c04.def.16-6-3}{IV.16.6.3}
+L'antidérivation $d$ définie dans (16.6.2) (aussi notée $d_{X/S}$) est
+appelée \emph{différentielle extérieure sur $X$} (relativement à $S$).
+\end{definition}
+
+\begin{proposition}[16.6.4]
+\label{IV.16.6.4}
+Pour tout changement de base $g:S'\to S$, si l'on pose
+$X'=X\times_S S'$, l'homomorphisme canonique
+\[
+  \Omega_{X/S}^{\bullet}\otimes_S S'
+  \longrightarrow\Omega_{X'/S'}^{\bullet}
+  \tag{16.6.4.1}
+  \label{IV.16.6.4.1}
+\]
+déduit de l'isomorphisme (16.5.9.1) est bijectif. En outre, si $s$ est une
+section de $\Omega_{X/S}^{\bullet}$ au-dessus d'un ouvert $U$ de $X$,
+$s\otimes1$ son image réciproque, section de $\Omega_{X'/S'}^{\bullet}$
+au-dessus de l'image réciproque $U'$ de $U$ dans $X'$, on a
+$d_{X'/S'}(s\otimes1)=d_{X/S}(s)\otimes1$.
+\end{proposition}
+
+La première assertion est immédiate, la formation de l'algèbre extérieure
+d'un module permutant avec toute extension de l'anneau des scalaires. Pour
+prouver la seconde, on peut, en vertu de (16.6.2.2), se borner au cas où
+$s\in\Gamma(U,\mathcal{O}_X)$, et dans ce cas l'assertion a déjà été prouvée
+(16.4.3.7).
+
+\begin{env}[16.6.5]
+\label{IV.16.6.5}
+Supposons que $\Omega_{X/S}^1$ soit un $\mathcal{O}_X$-Module localement libre
+de rang $n$ en un point $x$, de sorte qu'il y a $n$ sections
+$s_i\in\Gamma(U,\mathcal{O}_X)$ telles que les $ds_i$ forment une base du
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\Omega_{X/S}^1)$ (16.5.8).
+Alors, pour tout entier $p\geq1$, les $p$-différentielles
+$ds_{i_1}\wedge ds_{i_2}\wedge\cdots\wedge ds_{i_p}$ (pour
+$i_1<i_2<\cdots<i_p$, éléments de $[1,n]$) forment une base de
+$\binom{n}{p}$ éléments de $\Gamma(U,\Omega_{X/S}^p)$ sur
+$\Gamma(U,\mathcal{O}_X)$. En outre la formule (16.6.2.2) montre que pour
+toute section $g\in\Gamma(U,\mathcal{O}_X)$, on a
+\[
+  d(g.ds_{i_1}\wedge ds_{i_2}\wedge\cdots\wedge ds_{i_p})
+  =\sum_k(-1)^r\frac{\partial g}{\partial s_k}
+  ds_{i_1}\wedge\cdots\wedge ds_{i_r}\wedge ds_k\wedge
+  ds_{i_{r+1}}\wedge\cdots\wedge ds_{i_p}
+  \tag{16.6.5.1}
+  \label{IV.16.6.5.1}
+\]
+où, au second membre, $k$ parcourt l'ensemble des $n-p$ indices distincts des
+$i_h$, $i_r$ étant le plus grand indice $<k$.
+
+On notera que la relation $d(dg)=0$ pour toute section
+$g\in\Gamma(U,\mathcal{O}_X)$ s'exprime sous la forme
+\[
+  D_i(D_jg)=D_j(D_ig)\qquad\text{pour $i\neq j$};
+\]
+autrement dit, les dérivations $D_i$ définies dans (16.5.7) sont deux à deux
+permutables.
+\end{env}
+
+\subsection{\texorpdfstring{Les $\mathscr{P}_{X/S}^n(\mathscr{F})$.}{Les P\string_\string{X/S\string}\string^n(F).}}
+\EGAReaderTarget{ega4.c04.subsec.16-7}{IV.16.7}
+
+\begin{env}[16.7.1]
+\label{IV.16.7.1}
+Soient $f:X\to S$ un morphisme de préschémas, $\mathscr{F}$ un
+$\mathcal{O}_X$-Module. Désignons par $X_{\Delta_f}^{(n)}$ le \emph{$n$-ème
+voisinage infinitésimal de $X$} pour le morphisme diagonal

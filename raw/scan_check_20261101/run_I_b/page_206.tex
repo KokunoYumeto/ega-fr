@@ -1,0 +1,104 @@
+% from ega1-10-fr.tex
+\oldpage[I]{206}
+
+\subsection{Morphismes adiques de préschémas formels.}
+\label{subsection:I.10.12-fr}
+
+\begin{env}[10.12.1]
+\label{I.10.12.1-fr}
+Soient $\mathfrak{X}$, $\mathfrak{S}$ deux préschémas formels
+\emph{localement noethériens}~; nous dirons qu'un morphisme
+$f:\mathfrak{X}\to\mathfrak{S}$ est \emph{adique} s'il existe un Idéal
+de définition $\mathscr{J}$ de $\mathfrak{S}$ tel que
+$\mathscr{K}=f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}$ soit un Idéal de
+définition de $\mathfrak{X}$~; on dit aussi alors que $\mathfrak{X}$ est
+un \emph{$\mathfrak{S}$-préschéma adique} (pour $f$). Lorsqu'il en est
+ainsi, pour \emph{tout} Idéal de définition $\mathscr{J}_1$ de
+$\mathfrak{S}$,
+$\mathscr{K}_1=f^*(\mathscr{J}_1)\mathscr{O}_{\mathfrak{X}}$ est un Idéal
+de définition de $\mathfrak{X}$. En effet, la question étant locale, on
+peut supposer $\mathfrak{X}$ et $\mathfrak{S}$ affines noethériens~; il
+existe donc un entier $n$ tel que $\mathscr{J}^n\subset\mathscr{J}_1$ et
+$\mathscr{J}_1^n\subset\mathscr{J}$
+(\hyperref[I.10.3.6-fr]{10.3.6} et
+\hyperref[0.7.1.4-fr]{0, 7.1.4}), d'où
+$\mathscr{K}^n\subset\mathscr{K}_1$ et
+$\mathscr{K}_1^n\subset\mathscr{K}$. La première de ces relations prouve
+que $\mathscr{K}_1=\mathfrak{K}_1^\Delta$, où $\mathfrak{K}_1$ est un
+idéal ouvert de
+$A=\Gamma(\mathfrak{X},\mathscr{O}_{\mathfrak{X}})$, et la seconde prouve
+que $\mathfrak{K}_1$ est un idéal de définition de $A$
+(\hyperref[0.7.1.4-fr]{0, 7.1.4}), d'où notre assertion.
+\end{env}
+
+Il résulte aussitôt de ce qui précède que si $\mathfrak{X}$ et
+$\mathfrak{Y}$ sont deux $\mathfrak{S}$-préschémas adiques, \emph{tout
+$\mathfrak{S}$-morphisme $u:\mathfrak{X}\to\mathfrak{Y}$ est adique}~:
+en effet, si $f:\mathfrak{X}\to\mathfrak{S}$,
+$g:\mathfrak{Y}\to\mathfrak{S}$ sont les morphismes structuraux, et
+$\mathscr{J}$ un Idéal de définition de $\mathfrak{S}$, on a
+$f=g\circ u$, donc
+$u^*(g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}})
+\mathscr{O}_{\mathfrak{X}}=f^*(\mathscr{J})
+\mathscr{O}_{\mathfrak{X}}$ est un Idéal de définition de
+$\mathfrak{X}$, et par hypothèse
+$g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}}$ est un Idéal de définition
+de $\mathfrak{Y}$.
+
+\begin{env}[10.12.2]
+\label{I.10.12.2-fr}
+Dans ce qui suit, nous supposerons fixé un préschéma formel localement
+noethérien $\mathfrak{S}$ et un Idéal de définition $\mathscr{J}$ de
+$\mathfrak{S}$~; nous poserons
+$S_n=(\mathfrak{S},\mathscr{O}_{\mathfrak{S}}/\mathscr{J}^{n+1})$. Les
+$\mathfrak{S}$-préschémas adiques (localement noethériens) forment
+évidemment une \emph{catégorie}. Nous dirons qu'un système inductif
+$(X_n)$ de $S_n$-préschémas (usuels) localement noethériens est un
+\emph{$(S_n)$-système inductif adique} si les morphismes structuraux
+$f_n:X_n\to S_n$ sont tels que, pour $m\leq n$, les diagrammes
+\[
+  \label{I.10.12.2.1-fr}
+  \xymatrix{
+    X_n \ar[d]_{f_n}
+    & X_m \ar[l] \ar[d]^{f_m}\\
+    S_n
+    & S_m \ar[l]
+  }
+  \tag{10.12.2.1}
+\]
+soient commutatifs et \emph{identifient $X_m$ au produit
+$X_n\times_{S_n}S_m=(X_n)_{(S_m)}$}. Les systèmes inductifs adiques
+forment une \emph{catégorie}~: il suffit en effet de définir un morphisme
+$(X_n)\to(Y_n)$ de tels systèmes comme un \emph{système inductif de
+$S_n$-morphismes $u_n:X_n\to Y_n$} tel que $u_m$ s'identifie à
+$(u_n)_{(S_m)}$ pour $m\leq n$. Cela étant~:
+\end{env}
+
+\begin{theorem}[10.12.3]
+\label{I.10.12.3-fr}
+Il y a équivalence canonique entre la catégorie des
+$\mathfrak{S}$-préschémas adiques et la catégorie des
+$(S_n)$-systèmes inductifs adiques.
+\end{theorem}
+
+L'équivalence en question s'obtient de la façon suivante~: si
+$\mathfrak{X}$ est un $\mathfrak{S}$-préschéma adique,
+$f:\mathfrak{X}\to\mathfrak{S}$ le morphisme structural,
+$\mathscr{K}=f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}$ est un Idéal de
+définition de $\mathfrak{X}$ et on fait correspondre à $\mathfrak{X}$ le
+système inductif des
+$X_n=(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{K}^{n+1})$, le
+morphisme structural $f_n:X_n\to S_n$ correspondant à $f$
+(\hyperref[I.10.5.6-fr]{10.5.6}). Montrons d'abord que $(X_n)$ est un
+\emph{système inductif adique}~: si $f=(\psi,\theta)$, on a
+$\psi^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}=\mathscr{K}$, donc
+$\psi^*(\mathscr{J}^n)\mathscr{O}_{\mathfrak{X}}=\mathscr{K}^n$ pour tout
+$n$, et (par l'exactitude du foncteur $\psi^*$)
+$\mathscr{K}^{m+1}/\mathscr{K}^{n+1}
+=\psi^*(\mathscr{J}^{m+1}/\mathscr{J}^{n+1})
+(\mathscr{O}_{\mathfrak{X}}/\mathscr{K}^{n+1})$ pour $m\leq n$~; notre
+conclusion résulte donc de (\hyperref[I.4.4.5-fr]{4.4.5}). Il est immédiat
+en outre de vérifier qu'à un $\mathfrak{S}$-morphisme
+$u:\mathfrak{X}\to\mathfrak{Y}$ de $\mathfrak{S}$-préschémas adiques
+correspond (avec des notations évidentes)
+

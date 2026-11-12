@@ -1,0 +1,75 @@
+% from ega3-1-fr.tex
+\oldpage[III]{82}
+Le contenu des \S\S~1 et 2 est dû à J.-P. Serre, et le lecteur constatera que
+nous n'avons eu qu'à suivre l'exposé de (FAC). Les \S\S~8 et 9 sont également
+inspirés par (FAC) (les transpositions nécessitées par les contextes
+différents étant toutefois moins évidentes). Enfin, comme nous l'avons dit
+dans l'Introduction, le \S~4 doit être considéré comme la mise en forme, en
+langage moderne, du «~théorème d'invariance~» fondamental de la «~théorie des
+fonctions holomorphes~» de Zariski.
+
+Signalons enfin que les résultats du n\textsuperscript{o}~3.4 (et les
+propositions préliminaires de (0, 13.4 à 13.7)) ne seront pas utilisés dans la
+suite du chap.~III et peuvent donc être omis en première lecture.
+
+\setcounter{section}{0}
+\section{Cohomologie des schémas affines}
+\label{section:III.1-fr}
+
+\subsection{Rappels sur le complexe de l'algèbre extérieure}
+\label{subsection:III.1.1-fr}
+
+\begin{env}[1.1.1]
+\label{III.1.1.1-fr}
+Soient $A$ un anneau, $\mathbf f=(f_i)_{1\leq i\leq r}$ un système de $r$
+éléments de $A$. Le \emph{complexe de l'algèbre extérieure
+$K_\bullet(\mathbf f)$} correspondant à $\mathbf f$ est un complexe de chaînes
+(G, I, 2.2) se définissant de la façon suivante~: le $A$-module gradué
+$K_\bullet(\mathbf f)$ est égal à l'\emph{algèbre extérieure
+$\bigwedge(A^r)$}, graduée de la façon usuelle, et l'opérateur bord est la
+\emph{multiplication intérieure $i_{\mathbf f}$} par $\mathbf f$ considéré
+comme élément du dual $(A^r)^\vee$~; on rappelle que $i_{\mathbf f}$ est une
+\emph{antidérivation} de degré $-1$ de $\bigwedge(A^r)$, et que si
+$(\mathbf e_i)_{1\leq i\leq r}$ est la base canonique de $A^r$, on a
+$i_{\mathbf f}(\mathbf e_i)=f_i$~; la vérification de la condition
+$i_{\mathbf f}\circ i_{\mathbf f}=0$ est immédiate.
+
+Une définition équivalente est la suivante~: pour chaque $i$, on considère
+un complexe de chaînes $K_\bullet(f_i)$ défini comme suit~:
+$K_0(f_i)=K_1(f_i)=A$, $K_n(f_i)=0$ pour $n\neq0,1$~; l'opérateur bord est
+défini par la condition que $d_1:A\to A$ est la \emph{multiplication par
+$f_i$}. On prend alors pour $K_\bullet(\mathbf f)$ le \emph{produit tensoriel
+$K_\bullet(f_1)\otimes K_\bullet(f_2)\otimes\cdots\otimes K_\bullet(f_r)$}
+(G, I, 2.7) muni de son degré total~; la vérification de l'isomorphisme de ce
+complexe et du complexe défini plus haut est immédiate.
+\end{env}
+
+\begin{env}[1.1.2]
+\label{III.1.1.2-fr}
+Pour tout $A$-module $M$, on définit le \emph{complexe de chaînes}
+\begin{equation}
+\label{III.1.1.2.1-fr}
+\tag{1.1.2.1}
+K_\bullet(\mathbf f,M)=K_\bullet(\mathbf f)\otimes_A M
+\end{equation}
+et le \emph{complexe de cochaînes} (G, I, 2.2)
+\begin{equation}
+\label{III.1.1.2.2-fr}
+\tag{1.1.2.2}
+K^\bullet(\mathbf f,M)=\operatorname{Hom}_A(K_\bullet(\mathbf f),M).
+\end{equation}
+Si $g$ est une $k$-cochaîne de ce dernier complexe, et si on pose
+\[
+g(i_1,\ldots,i_k)=g(\mathbf e_{i_1}\wedge\cdots\wedge\mathbf e_{i_k}),
+\]
+$g$ s'identifie à une application \emph{alternée} de $[1,r]^k$ dans $M$, et
+il résulte des définitions précédentes que l'on a
+\begin{equation}
+\label{III.1.1.2.3-fr}
+\tag{1.1.2.3}
+d^kg(i_1,i_2,\ldots,i_{k+1})=
+\sum_{h=1}^{k+1}(-1)^{h-1}f_{i_h}
+g(i_1,\ldots,\widehat{i_h},\ldots,i_{k+1}).
+\end{equation}
+\end{env}
+

@@ -1,0 +1,108 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{78}
+
+\begin{proposition}[4.7.6]
+\label{IV.2.4.7.6-fr}
+Soit
+\[
+0\longrightarrow\mathscr F'\longrightarrow\mathscr F
+\longrightarrow\mathscr F''\longrightarrow0
+\]
+une suite exacte de $\mathcal O_X$-Modules cohérents. Si en un point $x\in X$
+la longueur géométrique $\lambda_x(\mathscr F)$ de $\mathscr F$ en ce point
+est définie, il en est de même des longueurs géométriques
+$\lambda_x(\mathscr F')$ et $\lambda_x(\mathscr F'')$, de $\mathscr F'$ et
+$\mathscr F''$ au point $x$, et réciproquement; en outre, on a
+\begin{equation}
+\lambda_x(\mathscr F)=\lambda_x(\mathscr F')+\lambda_x(\mathscr F'').
+\tag{4.7.6.1}
+\label{IV.2.4.7.6.1-fr}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+La proposition résulte aussitôt de la définition, car
+$\operatorname{long}(\mathscr F_x)$ est finie si et seulement si
+$\operatorname{long}(\mathscr F'_x)$ et
+$\operatorname{long}(\mathscr F''_x)$ sont finies, et l'on a
+\[
+\operatorname{long}(\mathscr F_x)
+=\operatorname{long}(\mathscr F'_x)+\operatorname{long}(\mathscr F''_x).
+\]
+\end{proof}
+
+\begin{env}[4.7.7]
+\label{IV.2.4.7.7-fr}
+Sous les hypothèses de (4.7.5), les seuls points $x\in X$ tels que
+$\mathscr F_x$ soit un $\mathcal O_x$-module de longueur finie non nulle sont
+(en vertu de (3.1.2)) les points maximaux de
+$\operatorname{Supp}(\mathscr F)$, comme il résulte de Bourbaki,
+\emph{Alg. comm.}, chap.~IV, \S~2, n\textsuperscript{o}~5, cor.~2 de la
+prop.~7, la question étant locale sur $X$. On sait qu'il existe un
+sous-préschéma fermé $Y$ ayant $\operatorname{Supp}(\mathscr F)$ pour espace
+sous-jacent, et un $\mathcal O_Y$-Module cohérent $\mathscr G$ tel que
+$\mathscr F=j_*(\mathscr G)$, $j:Y\to X$ étant l'injection canonique. Si $x$
+est point maximal de $Y$, on voit que les longueurs géométriques de
+$\mathscr F$ et de $\mathscr G$ en $x$ sont égales, $\mathcal O_{X,x}$ et
+$\mathcal O_{Y,x}$ ayant même corps résiduels. On en déduit la caractérisation
+suivante de la longueur géométrique:
+\end{env}
+
+\begin{proposition}[4.7.8]
+\label{IV.2.4.7.8-fr}
+Sous les hypothèses de (4.7.5), soit $x$ un point maximal de
+$\operatorname{Supp}(\mathscr F)$. Soit $k'$ une extension parfaite de $k$;
+posons $X'=X\otimes_k k'$, $\mathscr F'=\mathscr F\otimes_k k'$; alors la
+longueur géométrique $\lambda_x(\mathscr F)$ de $\mathscr F$ en $x$ est égale
+à la longueur du $\mathcal O_{x'}$-module $\mathscr F'_{x'}$, en tout point
+maximal $x'$ de $\operatorname{Supp}(\mathscr F')$ au-dessus de $x$. En outre,
+il existe une extension radicielle finie $k_1$ de $k$ telle que, en posant
+$X_1=X\otimes_k k_1$, $\mathscr F_1=\mathscr F\otimes_k k_1$,
+$\lambda_x(\mathscr F)$ soit égale à la longueur du
+$\mathcal O_{x_1}$-module $(\mathscr F_1)_{x_1}$ en tout point maximal $x_1$
+de $\operatorname{Supp}(\mathscr F_1)$ au-dessus de $x$.
+\end{proposition}
+
+\begin{proof}
+La remarque de (4.7.7) montre qu'on peut se borner au cas où $x$ est point
+maximal de $X$. En outre, la question est locale sur $X$ et l'on peut donc
+supposer $X=\operatorname{Spec}(A)$ affine noethérien,
+$\mathscr F=\widetilde M$, où $M$ est un $A$-module de type fini; soient
+$B=A\otimes_k k'$, $\mathfrak p$ (resp. $\mathfrak q$) l'idéal premier
+minimal de $A$ (resp. $B$) correspondant à $x$ (resp. $x'$). On a alors, en
+appliquant la formule (4.7.2.1)
+\[
+\operatorname{long}_{B_{\mathfrak q}}(\mathscr F'_{x'})
+=\operatorname{long}_{A_{\mathfrak p}}(\mathscr F_x)
+ \operatorname{long}_{B_{\mathfrak q}}
+ (B_{\mathfrak q}/\mathfrak pB_{\mathfrak q}).
+\]
+Mais comme $k(x)=A_{\mathfrak p}/\mathfrak pA_{\mathfrak p}$, le même
+raisonnement que dans (4.7.3) montre que
+$\operatorname{long}_{B_{\mathfrak q}}
+(B_{\mathfrak q}/\mathfrak pB_{\mathfrak q})$ est égal à la longueur de
+l'anneau local $(B/\mathfrak pB)_{\mathfrak q'}$, où
+$\mathfrak q'=\mathfrak q/\mathfrak pB$. L'anneau
+$(B/\mathfrak pB)_{\mathfrak q'}$ est un anneau local de
+$(A/\mathfrak p)\otimes_k k'$ pour un idéal premier minimal de cet anneau,
+donc aussi un anneau local de l'anneau total des fractions de
+$k(x)\otimes_k k'$, et la longueur d'un tel anneau est par définition
+$\mu_i(k(x)\mid k)$, d'où la première assertion. La seconde se démontre de
+même, en remplaçant $k'$ par $k_1$ et utilisant (4.7.3, (iii)).
+\end{proof}
+
+On dit encore, dans le cas où $x$ est point maximal de
+$\operatorname{Supp}(\mathscr F)$, que la longueur géométrique de $\mathscr F$
+en $x$ est la multiplicité radicielle du cycle premier maximal
+$\overline{\{x\}}$ associé à $\mathscr F$.
+
+\begin{corollary}[4.7.9]
+\label{IV.2.4.7.9-fr}
+Sous les hypothèses de (4.7.5), soient $k'$ une extension de $k$,
+$X'=X\otimes_k k'$, $\mathscr F'=\mathscr F\otimes_k k'$; soient $Z$ une
+composante irréductible de $\operatorname{Supp}(\mathscr F)$, et $Z'$ une
+composante irréductible de $\operatorname{Supp}(\mathscr F')$ qui domine $Z$
+(4.2.7). Alors les multiplicités radicielles de $Z$ par rapport à
+$\mathscr F$ et de $Z'$ par rapport à $\mathscr F'$ sont les mêmes.
+\end{corollary}
+

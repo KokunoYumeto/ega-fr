@@ -1,0 +1,101 @@
+[
+  {
+    "page": 229,
+    "where": "contents macro \\EGAIVtwoContentsLine (defined on p. 229); it sets the entry number of every contents line on pp. 229-231",
+    "scan": "entry numbers (4.7., § 5., 5.11., § 6., 6.15., § 7., 7.9.) in roman, the same weight as the titles and page numbers (enlarged crop)",
+    "tex": "\\textbf{#1}: every entry number bold",
+    "kind": "font",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "\\newcommand{\\EGAIVtwoContentsLine}[3]{\\textbf{#1}\\quad", "new": "\\newcommand{\\EGAIVtwoContentsLine}[3]{#1\\quad"},
+    "note": "Seen on all entries of pp. 230-231; the edit lies in page_229.tex, outside pp. 230-231. The pp. 225-229 findings may carry the same edit: apply once. The CHAPITRE IV. label on p. 229 also loses its bold with this edit; its printed form (Chapitre in small capitals, IV. followed by a dash) belongs to the p. 229 check."
+  },
+  {
+    "page": 230,
+    "where": "top of the page, right-hand column above the page numbers (before the 4.7 entry)",
+    "scan": "column head 'Pages' (small capitals, a short rule under it)",
+    "tex": "(nothing): the page starts with the 4.7 entry",
+    "kind": "missing",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "\\EGAIVtwoContentsLine{4.7.}", "new": "\\hfill\\textsc{Pages}\n\n\\EGAIVtwoContentsLine{4.7.}"},
+    "note": "Contents column head, repeated on each contents page (p. 229 has it too); added the same way as in the EGA II, EGA III and EGA IV-1 contents (GLOBAL_ISSUES item 45). The short rule under it is layout."
+  },
+  {
+    "page": 230,
+    "where": "entry 5.11 (Critères de cohérence pour les Modules H^0_{X/Z}(F))",
+    "scan": "script H in H^0_{X/Z}(F): the same roundhand script as the F beside it (5x crop)",
+    "tex": "$\\mathcal H^0_{X/Z}(\\mathscr F)$: calligraphic H beside a script F",
+    "kind": "font",
+    "convention": null,
+    "confidence": "medium",
+    "fix": {"old": "\\mathcal H^0_{X/Z}", "new": "\\mathscr H^0_{X/Z}"},
+    "note": "GLOBAL_ISSUES item 19 (\\mathcal for the print's script letters): ega4-2-fr.tex writes this symbol \\mathcal H^0_{X/Z}(\\mathcal F) throughout 5.9-5.11 and in the notation index (source line 18250), so a global decision would cover those. The letter here is the ordinary script H, not the lighter roundhand H of item 42."
+  },
+  {
+    "page": 231,
+    "where": "top of the page, right-hand column above the page numbers (before the § 7 entry)",
+    "scan": "column head 'Pages' (small capitals, a short rule under it)",
+    "tex": "(nothing): the page starts with the § 7 entry",
+    "kind": "missing",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "\\EGAIVtwoContentsLine{\\S~7.}", "new": "\\hfill\\textsc{Pages}\n\n\\EGAIVtwoContentsLine{\\S~7.}"},
+    "note": "As on p. 230 (GLOBAL_ISSUES item 45). The short rule under it is layout."
+  },
+  {
+    "page": 231,
+    "where": "entry 7.5 (Un critère pour les P-morphismes)",
+    "scan": "P-morphismes with a bold italic P (enlarged crop)",
+    "tex": "$P$-morphismes (light italic P)",
+    "kind": "font",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "$P$-morphismes", "new": "$\\boldsymbol P$-morphismes"},
+    "note": "The 7.5 heading and the text of section 7 in ega4-2-fr.tex write $\\boldsymbol P$-morphisme(s). Not convention 10: the TeX has a plain P, not \\mathbf{P}."
+  },
+  {
+    "page": 231,
+    "where": "entry Bibliographie (suite), page 224",
+    "scan": "Bibliographie in small capitals with a full capital B; (suite) italic with italic parentheses (enlarged crop)",
+    "tex": "BIBLIOGRAPHIE in full capitals",
+    "kind": "font",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "BIBLIOGRAPHIE", "new": "\\textsc{Bibliographie}"},
+    "note": "As in the EGA II, EGA III and EGA IV-1 contents. The \\emph{(suite)} matches the print."
+  },
+  {
+    "page": 231,
+    "where": "entry Index des notations, page 225",
+    "scan": "Index des notations in small capitals with a full capital I (enlarged crop)",
+    "tex": "INDEX DES NOTATIONS in full capitals",
+    "kind": "font",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "INDEX DES NOTATIONS", "new": "\\textsc{Index des notations}"},
+    "note": "As in the EGA II and EGA IV-1 contents."
+  },
+  {
+    "page": 231,
+    "where": "entry Index terminologique, page 226",
+    "scan": "Index terminologique in small capitals with a full capital I (enlarged crop)",
+    "tex": "INDEX TERMINOLOGIQUE in full capitals",
+    "kind": "font",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "INDEX TERMINOLOGIQUE", "new": "\\textsc{Index terminologique}"},
+    "note": "As in the EGA II contents."
+  },
+  {
+    "page": 231,
+    "where": "below 'Manuscrit reçu le 15 décembre 1963.', end of the fascicle",
+    "scan": "short centred closing rule (measured 317 px at 300 dpi, about 27 mm)",
+    "tex": "nothing",
+    "kind": "missing",
+    "convention": null,
+    "confidence": "high",
+    "fix": {"old": "\\end{center}\n\n\\endgroup", "new": "\\end{center}\n\n\\begin{center}\\rule{25mm}{0.4pt}\\end{center}\n\n\\endgroup"},
+    "note": "End-of-part rule (GLOBAL_ISSUES item 61): apply only if the closing rules of all parts are reproduced; same form as the EGA III p. 223 finding. End-of-fascicle check: p. 231 is the last page of the scan and the TeX has nothing after the last printed line (only \\endgroup); the bibliography (suite), both indexes and the contents are all in ega4-2-fr.tex at pp. 224-231, and every contents page number agrees with the page marker of its heading."
+  }
+]

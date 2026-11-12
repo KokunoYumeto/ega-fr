@@ -1,0 +1,93 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{35}
+il suffit de prendre pour $A$ un anneau local intègre de dimension $\geq1$~; on a
+$\operatorname{prof}(A)\geq1$ mais $\operatorname{prof}(K)=0$ pour le corps
+des fractions $K$ de $A$. Pour un exemple du second cas, considérons un
+anneau local noethérien intègre $A_0$ de dimension $\geq2$, d'idéal maximal
+$\mathfrak{m}_0$ et soit $k=A_0/\mathfrak{m}_0$ son corps résiduel~; soit
+$A=A_0\oplus\mathfrak{J}$ l'extension triviale de $A_0$ par le $A_0$-module
+$k$ (18.2.3), l'idéal $\mathfrak{J}$ étant $A_0$-isomorphe à $k$ (de sorte
+que la multiplication dans $A$ est donnée par
+$(x,z)(x',z')=(xx',xz'+x'z)$). Il est clair que $\mathfrak{J}$ est le
+nilradical de $A$ et $A/\mathfrak{J}$ est isomorphe à $A_0$, de sorte que
+tout idéal premier $\mathfrak{p}$ de $A$ est de la forme
+$\mathfrak{p}_0\oplus\mathfrak{J}$, où $\mathfrak{p}_0$ est un idéal premier
+de $A_0$~; en particulier $\mathfrak{m}=\mathfrak{m}_0\oplus\mathfrak{J}$
+est l'unique idéal maximal de $A$. Comme tout élément de $\mathfrak{m}_0$
+annule $\mathfrak{J}$, on a
+$\operatorname{prof}(A)=\operatorname{prof}(A_{\mathfrak{m}})=0$~; au
+contraire, si $\mathfrak{p}_0\neq\mathfrak{m}_0$, les éléments de
+$\mathfrak{J}$ sont annulés par ceux de
+$\mathfrak{m}_0-\mathfrak{p}_0$, donc $A_{\mathfrak{p}}$ est canoniquement
+isomorphe à $(A_0)_{\mathfrak{p}_0}$, et comme $A_0$ est intègre,
+$\operatorname{prof}(A_{\mathfrak{p}})
+=\operatorname{prof}((A_0)_{\mathfrak{p}_0})\geq1$ si
+$\mathfrak{p}_0\neq0$.
+\end{env}
+
+\begin{corollary}[16.4.7]
+\label{0.16.4.7-fr}
+Pour qu'un anneau local noethérien réduit $A$ soit de profondeur $0$, il faut
+et il suffit que $A$ soit un corps.
+\end{corollary}
+
+\begin{proof}
+En effet, comme l'intersection des idéaux premiers minimaux de $A$ est $0$,
+$A$ n'a pas d'idéaux premiers associés immergés~; en vertu de (16.4.6, (i)),
+si $\operatorname{prof}(A)=0$, l'idéal maximal $\mathfrak{m}$ de $A$ est
+aussi idéal premier minimal, donc c'est le seul idéal premier de $A$, et
+comme $A$ est réduit, $\mathfrak{m}=0$.
+\end{proof}
+
+\begin{proposition}[16.4.8]
+\label{0.16.4.8-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens,
+$\rho:A\to B$ un homomorphisme local, $M$ un $B$-module tel que
+$M_{[\rho]}$ soit un $A$-module de type fini. Alors on a
+\begin{equation}
+\label{0.16.4.8.1-fr}
+\tag{16.4.8.1}
+  \operatorname{prof}_A(M_{[\rho]})=\operatorname{prof}_B(M).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On peut se borner au cas $M\neq0$~; supposons que
+$\operatorname{prof}_A(M_{[\rho]})=n$. Si $(x_i)_{1\leq i\leq n}$ est une
+suite $(M_{[\rho]})$-régulière maximale formée d'éléments de l'idéal maximal
+de $A$, les $\rho(x_i)$ constituent une suite $M$-régulière formée d'éléments
+de l'idéal maximal de $B$, et on a donc, en posant
+$N=M/(\rho(x_1)M+\cdots+\rho(x_n)M)$,
+$\operatorname{prof}_B(N)=\operatorname{prof}_B(M)-n$ (16.4.6, (ii))~; de
+même
+$N_{[\rho]}=M_{[\rho]}/(x_1M_{[\rho]}+\cdots+x_nM_{[\rho]})$ et
+$\operatorname{prof}_A(N_{[\rho]})=0$~; on est ainsi ramené à démontrer la
+proposition lorsque $n=0$. Soit $k$ le corps résiduel de $A$~; comme $k$ est
+un quotient de $A$, le $A$-module
+$P=\operatorname{Hom}_A(k,M_{[\rho]})$ est un sous-module de
+$\operatorname{Hom}_A(A,M_{[\rho]})=M_{[\rho]}$ et l'hypothèse entraîne que
+$P\neq0$ (16.4.6, (i))~; en outre, $P$ est un $A$-module de type fini
+(puisque $M_{[\rho]}$ est un $A$-module de type fini), donc un $k$-espace
+vectoriel de type fini, étant annulé par l'idéal maximal de $A$, et finalement
+un $A$-module de longueur finie. D'autre part, $P$ est aussi un sous-module du
+$B$-module $M$, et puisqu'il est de longueur finie en tant que $A$-module, il
+l'est \emph{a fortiori} en tant que $B$-module. Comme il est $\neq0$, il
+contient un sous-$B$-module simple, c'est-à-dire isomorphe au corps résiduel de
+$B$~; on conclut alors de (16.4.6, (i)) que l'on a bien
+$\operatorname{prof}_B(M)=0$.
+\end{proof}
+
+\begin{definition}[16.4.9]
+\label{0.16.4.9-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini. Si
+$M\neq0$, on appelle \emph{coprofondeur} de $M$ et on note
+$\operatorname{coprof}_A(M)$ ou $\operatorname{coprof}(M)$, l'entier fini
+$\dim_A(M)-\operatorname{prof}_A(M)\geq0$ (16.4.5.1). Si $M=0$, on pose
+$\operatorname{coprof}(M)=0$.
+
+On a $\operatorname{coprof}(M^k)=\operatorname{coprof}(M)$ pour tout $k>0$.
+\end{definition}
+
+\begin{proposition}[16.4.10]
+\label{0.16.4.10-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini.

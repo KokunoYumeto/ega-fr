@@ -1,0 +1,117 @@
+% from ega3-7-fr.tex
+\oldpage[III]{201}
+à partir de $T_\bullet^A$ par extension des scalaires à $A'$, et il est clair
+alors que \emph{a$'$)} entraîne que (7.7.5.3) est un isomorphisme. Inversement, supposons
+toujours $Y=\operatorname{Spec}(A)$ affine et soit $A'$ la $A$-algèbre
+$A\oplus M$, où $M$ est un $A$-module quelconque, la multiplication dans $A'$
+étant donnée par
+$(a_1,m_1)(a_2,m_2)=(a_1a_2,a_1m_2+a_2m_1)$;
+alors
+\[
+  T_p^{A'}(A')
+  =
+  T_p(A\oplus M)
+  =
+  T_p(A)\oplus T_p(M),
+\]
+et l'hypothèse que (7.7.5.3) soit bijectif entraîne qu'il en est de même de
+l'application canonique
+$T_p(A)\otimes_A M\longrightarrow T_p(M)$,
+autrement dit \emph{d)} entraîne \emph{a$''$)}, ce qui achève la démonstration.
+\end{proof}
+
+\begin{theorem}[7.7.6]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr F$ un $\mathscr O_X$-Module cohérent et $Y$-plat. Il existe alors un
+$\mathscr O_Y$-Module cohérent $\mathscr Q$ (déterminé à isomorphisme unique près)
+et un isomorphisme de foncteurs en le $\mathscr O_Y$-Module quasi-cohérent
+$\mathscr M$ :
+\[
+  f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr Q,\mathscr M)
+  \tag{7.7.6.1}\label{III.7.7.6.1.fr}
+\]
+\textup{(d'où un isomorphisme de foncteurs}
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M).)
+  \tag{7.7.6.2}\label{III.7.7.6.2.fr}
+\]
+\end{theorem}
+
+\begin{proof}
+En effet, comme $\mathscr M\leadsto\mathscr F\otimes_{\mathscr O_Y}\mathscr M$ est
+exact (\textbf{0}\textsubscript{I}, 6.7.4) et $f_*$ exact à gauche, le foncteur
+$\mathscr M\leadsto f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$ est exact à
+gauche. Il suffit alors d'appliquer l'équivalence de (7.7.5, \emph{b)}) et (7.7.5,
+\emph{b$'$)}) pour $p=1$.
+\end{proof}
+
+\begin{corollary}[7.7.7]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr F$, $\mathscr F'$ deux $\mathscr O_X$-Modules cohérents et $Y$-plats,
+$u:\mathscr F\to\mathscr F'$ un homomorphisme. Considérons les deux foncteurs en
+le $\mathscr O_Y$-Module quasi-cohérent $\mathscr M$ :
+\begin{align*}
+  \mathscr T(\mathscr M)
+  &=
+  \operatorname{Ker}
+  \bigl(
+    f_*(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    f_*(\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)\\
+  T(\mathscr M)
+  &=
+  \Gamma(Y,\mathscr T(\mathscr M))\\
+  &=
+  \operatorname{Ker}
+  \bigl(
+    \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr).
+\end{align*}
+
+Alors il existe un $\mathscr O_Y$-Module cohérent $\mathscr R$ (déterminé à
+isomorphisme unique près) et des isomorphismes de foncteurs
+\[
+  \mathscr T(\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr R,\mathscr M)
+  \tag{7.7.7.1}\label{III.7.7.7.1.fr}
+\]
+\[
+  T(\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr R,\mathscr M).
+  \tag{7.7.7.2}\label{III.7.7.7.2.fr}
+\]
+\end{corollary}
+
+\begin{proof}
+On peut se borner à démontrer (7.7.7.2) ; cela prouvera en effet (7.7.7.1)
+dans le cas où $Y$ est affine, et on passera de là au cas général en raisonnant
+comme dans la démonstration de l'équivalence de (7.7.5, \emph{b)} et \emph{b$'$)}), grâce à
+l'unicité à isomorphisme unique près d'un représentant d'un foncteur
+représentable (\textbf{0}, 8.1.8). Il résulte de (7.7.6) qu'il existe deux
+$\mathscr O_Y$-Modules cohérents $\mathscr Q$, $\mathscr Q'$ définissant des
+isomorphismes fonctoriels
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M),
+  \qquad
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q',\mathscr M).
+\]
+
+Or, $u:\mathscr F\to\mathscr F'$ définit canoniquement un morphisme de foncteurs
+\[
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \longrightarrow
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M);
+\]

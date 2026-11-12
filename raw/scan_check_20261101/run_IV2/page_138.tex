@@ -1,0 +1,78 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{138}
+
+\begin{proposition}[6.2.3]
+\EGAReaderTarget{ega4.c04.prop.6-2-3}{IV.2.s6.2.3-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $k$ le corps résiduel de
+$A$, $\varphi:A\to B$ un homomorphisme local, $N$ un $B$-module de type fini.
+On suppose que $B$ et $N$ sont des $A$-modules plats. Alors on a
+\begin{equation}
+\dim.\operatorname{proj}_B(N)
+=\dim.\operatorname{proj}_{B\otimes_Ak}(N\otimes_Ak).
+\tag{6.2.3.1}\label{IV.2.s6.2.3.1-fr}
+\end{equation}
+\end{proposition}
+
+Considérons en effet une résolution gauche de $N$ par des $B$-modules libres
+de type fini
+\[
+\cdots\to L_i\to L_{i-1}\to\cdots\to L_0\to N\to0.
+\]
+Comme les $L_i$ et $N$ sont des $A$-modules plats ($B$ étant un $A$-module
+plat) il résulte de (2.1.10) que les $Z_i(L_\bullet)$ sont des $A$-modules
+plats, que $L_\bullet\otimes_Ak$ est une résolution gauche du
+$(B\otimes_Ak)$-module $N\otimes_Ak$ et que l'on a
+$Z_i(L_\bullet\otimes_Ak)=Z_i(L_\bullet)\otimes_Ak$ pour tout $i$. Notons que
+puisque $B$ est noethérien, les $Z_i(L_\bullet)$ sont des $B$-modules de type
+fini, donc les $Z_i(L_\bullet\otimes_Ak)$ sont des $(B\otimes_Ak)$-modules de
+type fini. Or, dire qu'un $B$-module (resp. un $(B\otimes_Ak)$-module) de type
+fini est plat équivaut à dire qu'il est libre ou encore projectif
+$(0_{\mathrm{III}}, 10.1.3)$. Comme les $Z_i(L_\bullet)$ sont des $A$-modules
+plats, il résulte d'autre part de $(0_{\mathrm{III}}, 10.2.5)$ (où l'on fait
+$C=B$) que, pour que $Z_i(L_\bullet)$ soit un $B$-module plat, il faut et il
+suffit que $Z_i(L_\bullet)\otimes_Ak$ soit un $(B\otimes_Ak)$-module plat. Le
+plus petit entier $n$ tel que $Z_{n-1}(L_\bullet)$ soit un $B$-module libre est
+donc aussi le plus petit entier tel que $Z_{n-1}(L_\bullet\otimes_Ak)$ soit un
+$(B\otimes_Ak)$-module libre, ce qui démontre la proposition (0, 17.2.1).
+
+\subsection{Platitude et profondeur}
+
+\begin{proposition}[6.3.1]
+\EGAReaderTarget{ega4.c04.prop.6-3-1}{IV.2.s6.3.1-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $k$ le corps résiduel de
+$A$, $\varphi:A\to B$ un homomorphisme local, $M$ un $A$-module de type fini,
+$N$ un $B$-module de type fini. Si $N$ est un $A$-module plat $\neq0$, on a
+\begin{equation}
+\operatorname{prof}_B(M\otimes_AN)=\operatorname{prof}_A(M)
++\operatorname{prof}_{B\otimes_Ak}(N\otimes_Ak).
+\tag{6.3.1.1}\label{IV.2.s6.3.1.1-fr}
+\end{equation}
+\end{proposition}
+
+On peut se borner au cas où $M\neq0$, sans quoi les deux membres de (6.3.1.1)
+sont tous deux égaux à $+\infty$. Nous procéderons par récurrence sur l'entier
+$n$ égal au second membre de (6.3.1.1) (qui est fini en vertu des hypothèses,
+de (0, 16.4.6.2) et du lemme de Nakayama appliqué à $N$). Supposons d'abord
+$n=0$; alors, si $\mathfrak m$ et $\mathfrak n$ désignent les idéaux maximaux
+de $A$ et $B$ respectivement, $\mathfrak m$ est un idéal premier associé à $M$
+et $\mathfrak n/\mathfrak mB$ un idéal premier de
+$B/\mathfrak mB=B\otimes_Ak$ associé à $N\otimes_Ak$ (0, 16.4.6, (i)). On
+conclut alors de (3.3.1) que $\mathfrak n$ est un idéal premier de $B$ associé
+à $M\otimes_AN$, donc (0, 16.4.6, (i)) que
+$\operatorname{prof}_B(M\otimes_AN)=0$. Supposons donc $n>0$, et distinguons
+deux cas:
+
+$a)$ Supposons $\operatorname{prof}_A(M)>0$. Soit $x\in\mathfrak m$ un
+élément $M$-régulier, et posons
+\[
+A'=A/xA,\qquad B'=B/xB,\qquad M'=M/xM,\qquad N'=N/xN;
+\]
+on a
+\[
+B'\otimes_{A'}k=B\otimes_Ak,\qquad N'\otimes_{A'}k=N\otimes_Ak
+\]
+puisque $x\in\mathfrak m$, et
+\[
+M'\otimes_{A'}N'=(M\otimes_AN)/x(M\otimes_AN);
+\]
+

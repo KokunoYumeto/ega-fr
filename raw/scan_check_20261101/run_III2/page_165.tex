@@ -1,0 +1,117 @@
+% from ega3-6-fr.tex
+\oldpage[III]{165}
+Pour simplifier l'écriture, nous nous bornerons au cas où $I$ est
+l'intervalle $1\leq i\leq m$, et où la partition $(I_j)$ se compose des deux
+intervalles $\{1,2,\ldots,r\}$ et $\{r+1,\ldots,m\}$.
+\end{env}
+
+\begin{proposition}[6.8.2]
+Il existe un foncteur spectral canonique birégulier (dit « foncteur spectral
+d'associativité ») noté
+\[
+  {}^{(e)}\mathscr E^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})
+\]
+(ou simplement ${}^{(e)}\mathscr E(f_1,\ldots,f_m;
+\mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})$) dont
+l'aboutissement est
+$\mathfrak{Tor}_\bullet^S(f_1,\ldots,f_m;
+\mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})$, et dont le terme
+$E_2$ est donné par
+\[
+\begin{split}
+  {}^{(e)}\mathscr E_{pq}^2
+  =\bigoplus_{q_1+q_2=q}
+  \mathscr{T}\!or_p^S\Bigl(
+  &\mathfrak{Tor}_{q_1}^S
+  (f_1,\ldots,f_r;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(r)}),\\
+  &\mathfrak{Tor}_{q_2}^S
+  (f_{r+1},\ldots,f_m;
+   \mathscr P_\bullet^{(r+1)},\ldots,\mathscr P_\bullet^{(m)})
+  \Bigr).
+\end{split}
+\]
+\end{proposition}
+
+\begin{proof}
+Dans cet énoncé, on a identifié canoniquement $Y$ au produit
+$Z^{(1)}\times_S Z^{(2)}$, où
+$Z^{(1)}=Y^{(1)}\times_S Y^{(2)}\times_S\cdots\times_S Y^{(r)}$, et
+$Z^{(2)}=Y^{(r+1)}\times_S\cdots\times_S Y^{(m)}$. Nous nous bornerons au
+cas où $S$ et les $Y^{(i)}$ sont affines; on passe de ce cas particulier au
+cas général par les méthodes développées dans (6.7.1) et (6.7.2), et nous
+laissons les détails du raisonnement (sans difficulté) au lecteur. Nous
+démontrerons donc le corollaire suivant.
+\end{proof}
+
+\begin{corollary}[6.8.3]
+Soient $A$ un anneau, $S=\operatorname{Spec}(A)$, $X^{(i)}$
+($1\leq i\leq m$) des $S$-schémas quasi-compacts et, pour chaque $i$, soit
+$\mathscr P_\bullet^{(i)}$ un complexe de
+$\mathscr O_{X^{(i)}}$-Modules quasi-cohérents limité inférieurement. Il
+existe un foncteur spectral canonique birégulier ayant pour aboutissement
+\[
+  \mathbf{Tor}_\bullet^S
+  (X^{(1)},\ldots,X^{(m)};
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})
+\]
+et dont le terme $E_2$ est donné par
+\[
+\begin{split}
+  {}^{(e)}E_{pq}^2
+  =\bigoplus_{q_1+q_2=q}
+  \operatorname{Tor}_p^A\Bigl(
+  &\mathbf{Tor}_{q_1}^S
+  (X^{(1)},\ldots,X^{(r)};
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(r)}),\\
+  &\mathbf{Tor}_{q_2}^S
+  (X^{(r+1)},\ldots,X^{(m)};
+   \mathscr P_\bullet^{(r+1)},\ldots,\mathscr P_\bullet^{(m)})
+  \Bigr).
+\end{split}
+\]
+\end{corollary}
+
+\begin{proof}
+Suivant la définition donnée en (6.6.2), le calcul de l'hypertor considéré se
+fait en prenant pour chaque $i$ un recouvrement ouvert affine fini
+$\mathfrak U^{(i)}$ de $X^{(i)}$, en considérant les bicomplexes
+$L_{\bullet\bullet}^{(i)}=C^\bullet(\mathfrak U^{(i)},
+\mathscr P_\bullet^{(i)})$, une résolution projective
+$M_{\bullet\bullet\bullet}^{(i)}$ de Cartan-Eilenberg de chacun de ces
+bicomplexes (au sens de (0, 11.7.1)), le produit tensoriel
+\[
+  M_{\bullet\bullet\bullet}
+  =\bigotimes_{i=1}^m M_{\bullet\bullet\bullet}^{(i)}
+\]
+de ces tricomplexes, et en prenant l'homologie de
+$M_{\bullet\bullet\bullet}$. Considérons $M_{\bullet\bullet\bullet}$ comme
+un complexe simple $N_\bullet$, produit tensoriel des deux complexes simples
+\[
+  N'_\bullet=\bigotimes_{i=1}^r M_{\bullet\bullet\bullet}^{(i)},
+  \qquad
+  N''_\bullet=\bigotimes_{i=r+1}^m M_{\bullet\bullet\bullet}^{(i)},
+\]
+où $N'_\bullet$ et $N''_\bullet$ sont gradués par la somme des degrés totaux
+des $M_{\bullet\bullet\bullet}^{(i)}$. En outre, les $A$-modules des
+complexes $N'_\bullet$ et $N''_\bullet$ sont projectifs, donc il résulte de
+(6.5.9) que l'on a
+\[
+  H_\bullet(M_{\bullet\bullet\bullet})
+  =\mathbf{Tor}_\bullet^A(N'_\bullet,N''_\bullet);
+\]
+la suite spectrale cherchée n'est autre alors que la suite (6.3.2.2)
+appliquée aux complexes $N'_\bullet$ et $N''_\bullet$, compte tenu de
+l'interprétation des modules d'homologie de ces complexes qui résulte de ce
+qui précède (quand on applique les remarques du début à chacun des produits
+partiels
+$X^{(1)}\times_S\cdots\times_S X^{(r)}$ et
+$X^{(r+1)}\times_S\cdots\times_S X^{(m)}$). Enfin, les propriétés de
+régularité résultent de (6.3.2) et du fait que, les
+$\mathscr P_\bullet^{(i)}$ étant limités inférieurement, il en est de même
+des $M_{\bullet\bullet\bullet}^{(i)}$; par suite, $N'_\bullet$ et
+$N''_\bullet$ sont limités inférieurement.
+\end{proof}
+

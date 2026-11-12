@@ -1,0 +1,104 @@
+% from ega3-7-fr.tex
+\oldpage[III]{194}
+    Or, l'hypothèse sur l'anneau $A$ entraîne que
+    $\operatorname{Tor}_p^A(E,F)=0$ pour $p\geq2$ et pour des $A$-modules
+    quelconques ($0_{\mathrm{IV}}$, 17.2.2); on sait (M, XV) que cela entraîne
+    l'exactitude de la suite
+    \[
+      0\longrightarrow E^2_{0,q}
+      \longrightarrow H_q(P_\bullet\otimes_A M)
+      \longrightarrow E^2_{1,q-1}
+      \longrightarrow0
+    \]
+    qui n'est autre que (7.6.3.1).
+  \item[(ii)] Compte tenu de (7.3.1), la suite exacte (7.6.3.1) redonne comme
+    cas particulier le résultat de (7.4.3).
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[7.6.5]
+Sous les conditions de (7.4.1), supposons que $A$ soit un anneau de valuation
+discrète, de corps des fractions $K$, de corps résiduel $k$, et que les $T_i(A)$
+soient des $A$-modules de type fini. On a alors
+\[
+  \operatorname{rang}_k T_p(k)
+  \geq
+  \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rang}_A T_p(A)
+  =
+  \operatorname{rang}_K T_p(K).
+  \tag{7.6.5.1}\label{III.7.6.5.1.fr}
+\]
+En outre, pour que les termes extrêmes de cette inégalité soient égaux, il faut
+et il suffit que $T_p$ soit exact, ou encore que $T_p(A)$ et $T_{p-1}(A)$ soient
+des $A$-modules libres.
+\end{corollary}
+
+\begin{proof}
+Faisons en effet $M=k$ dans la suite exacte (7.6.3.1); il vient, puisqu'il
+s'agit d'espaces vectoriels sur $k$
+\[
+  \operatorname{rang}_k T_p(k)
+  =
+  \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+  +
+  \operatorname{rang}_k\bigl(\operatorname{Tor}_1^A(T_{p-1}(A),k)\bigr).
+\]
+D'autre part, comme $T_p(A)$ est un module de type fini sur l'anneau local
+intègre $A$, on a (Bourbaki, \emph{Alg. comm.}, chap. II, \S 3,
+n\textsuperscript{o} 2, cor. 1 de la prop. 4)
+\[
+  \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+  \geq
+  \operatorname{rang}_A T_p(A)
+  =
+  \operatorname{rang}_K\bigl(T_p(A)\otimes_A K\bigr)
+  \tag{7.6.5.2}\label{III.7.6.5.2.fr}
+\]
+et en outre les deux membres de (7.6.5.2) sont égaux si et seulement si $T_p(A)$
+est un $A$-module libre (\emph{loc. cit.}, prop. 7). On notera d'ailleurs que
+puisque $K$ est un $A$-module plat, on a par définition
+\[
+  T_p(A)\otimes_A K
+  =
+  H_p(P_\bullet)\otimes_A K
+  =
+  H_p(P_\bullet\otimes_A K)
+  =
+  T_p(K).
+\]
+On a donc bien l'inégalité (7.6.5.1) et on voit en outre que l'égalité n'est
+possible que si : 1\textsuperscript{o} $T_p(A)$ est libre;
+2\textsuperscript{o} $\operatorname{Tor}_1^A(T_{p-1}(A),k)=0$, condition qui
+équivaut, comme on sait ($0$, 10.1.3), au fait que $T_{p-1}(A)$ est un
+$A$-module libre. Enfin, comme les $T_i(A)$ sont des $A$-modules de type fini,
+il revient au même de dire qu'ils sont plats ou libres (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5), et on conclut par (7.4.3).
+\end{proof}
+
+\begin{env}[7.6.6]
+Les hypothèses étant toujours celles de (7.4.1), nous poserons, pour tout
+$x\in\operatorname{Spec}(A)$,
+\[
+  d_p(x)=d_p^T(x)=\operatorname{rang}_{\kappa(x)}T_p(\kappa(x)).
+  \tag{7.6.6.1}\label{III.7.6.6.1.fr}
+\]
+\end{env}
+
+\begin{lemma}[7.6.7]
+Soit $\varphi:A\to A'$ un homomorphisme d'anneaux, et soit
+\[
+  f={}^a\!\varphi:
+  \operatorname{Spec}(A')\longrightarrow\operatorname{Spec}(A)
+\]
+l'application correspondante (I, 1.2.1). Si l'on pose
+$T'_\bullet=T_\bullet^{(A')}$ (7.1.3), on a
+\[
+  d_p^{T'}=d_p^T\circ f.
+  \tag{7.6.7.1}\label{III.7.6.7.1.fr}
+\]
+\end{lemma}
+
+\begin{proof}

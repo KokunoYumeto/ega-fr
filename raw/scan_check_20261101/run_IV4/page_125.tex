@@ -1,0 +1,30 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{125}
+
+\begin{enumerate}
+  \item[(i)] Pour que $B$ soit une $A$-algèbre formellement non ramifiée, il faut et il suffit que $B\otimes_A k$ soit une $k$-algèbre étale.
+  \item[(ii)] Pour que $B$ soit une $A$-algèbre étale, il faut et il suffit que $B\otimes_A k$ soit une $k$-algèbre étale et que $B$ soit un $A$-module plat (ce qui équivaut à dire ($0_{\mathrm I}$, 6.3.3) que pour tout idéal maximal $\mathfrak n$ de $B$ (nécessairement au-dessus de $\mathfrak m$), $B_{\mathfrak n}$ est un $A$-module plat).
+\end{enumerate}
+\end{corollary}
+
+On n'a évidemment à prouver que la suffisance des conditions énoncées. Il est clair que (ii) résulte de (i) et de (18.4.12, (ii)), compte tenu de (17.1.2, (i)). Pour prouver (i) remarquons que si $B\otimes_A k$ est une $k$-algèbre étale, on a $\Omega^1_{(B\otimes_A k)/k}=0$ (17.2.1). Or on a $\Omega^1_{(B\otimes_A k)/k}=\Omega^1_{B/A}\otimes_B k$ (0, 20.5.5) et puisque $B$ est une $A$-algèbre de type fini, $\Omega^1_{B/A}$ est un $B$-module de type fini (0, 20.4.7). Mais comme $B$ est une $A$-algèbre finie, $\mathfrak mB$ est contenu dans le radical de $B$ (Bourbaki, \emph{Alg. comm.}, chap. V, \textsection~2, n\textsuperscript{o}~1, prop. 1), donc le lemme de Nakayama prouve que $\Omega^1_{B/A}=0$, et par suite $B$ est une $A$-algèbre formellement non ramifiée (17.2.1).
+
+\subsection{Anneaux locaux henséliens\texorpdfstring{\protect\footnotemark}{}.}
+\footnotetext{La notion d'anneau local hensélien est due à Azumaya, celle de hensélisation à Nagata, à qui l'on doit aussi les principaux résultats de cette théorie.}
+\EGAReaderTarget{ega4.c04.subsec.18-5}{subsection:IV.18.5}
+
+\begingroup
+\newcommand{\shHom}{\mathscr{H}\!om}
+\begin{env}[18.5.1]
+\label{IV.18.5.1}
+Soient $X$ un préschéma, $\sh{E}$ un $\sh{O}_X$-Module \emph{localement libre} de rang fini; le dual $\check{\sh{E}}=\shHom_{\sh{O}_X}(\sh{E},\sh{O}_X)$ est donc un $\sh{O}_X$-Module localement libre dont le rang en tout point de $X$ est égal à celui de $\sh{E}$ en ce point, et l'homomorphisme canonique $\sh{E}\to\shHom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)=(\check{\sh{E}})^\vee$ est \emph{bijectif}. Pour tout morphisme $X'\to X$, posons $\sh{E}_{(X')}=\sh{E}\otimes_{\sh{O}_X}\sh{O}_{X'}$ qui est un $\sh{O}_{X'}$-Module localement libre, et considérons l'\emph{ensemble} $\Gamma(X',\sh{E}_{(X')})$ des sections de ce $\sh{O}_{X'}$-Module au-dessus de $X'$. Nous allons voir que l'on définit ainsi un \emph{foncteur contravariant représentable}
+\begin{equation}
+  {}^t\!\mathbf V_{\sh{E}}:X'\longmapsto\Gamma(X',\sh{E}_{(X')})
+  \tag{18.5.1.1}\label{IV.18.5.1.1}
+\end{equation}
+de la catégorie des $X$-préschémas dans celle des \emph{ensembles} ($0_{\mathrm{III}}$, 8.1.8).
+
+Tout d'abord, on a bien défini un foncteur, car si $f:X''\to X'$ est un $X$-morphisme de $X$-préschémas, on a $\sh{E}_{(X'')}=f^*(\sh{E}_{(X')})$, d'où ($0_{\mathrm I}$, 4.4.3.2) une application $\Gamma(X',\sh{E}_{(X')})\to\Gamma(X'',f_*(\sh{E}_{(X'')}))=\Gamma(X'',\sh{E}_{(X'')})$ qui achève de définir le foncteur ${}^t\!\mathbf V$. Montrons ensuite que le $X$-préschéma $\mathbf V(\check{\sh{E}})$ (II, 1.7.8) \emph{représente} le foncteur ${}^t\!\mathbf V$. Il est immédiat en effet que l'on a $(\sh{E}_{(X')})^\vee=(\check{\sh{E}})_{(X')}$, donc $\mathbf V(\check{\sh{E}})\times_X X'=\mathbf V((\check{\sh{E}})_{(X')})$; compte tenu de (I, 3.3.14), on est ramené à définir une bijection $\Gamma(\mathbf V(\check{\sh{E}})/X)\to\Gamma(X,\sh{E})$, et à vérifier que la bijection $\Gamma(\mathbf V((\check{\sh{E}})_{(X')})/X')\to\Gamma(X',\sh{E}_{(X')})$ est fonctorielle en $X'$. Or, on a une bijection canonique de $\Gamma(\mathbf V(\check{\sh{E}})/X)$ sur $\Hom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)$ (II, 1.7.8), et la transposition $u\mapsto{}^t u$ est une bijection canonique de $\Hom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)$ sur $\Hom_{\sh{O}_X}(\sh{O}_X,\sh{E})=\Gamma(X,\sh{E})$, en raison de l'identification de $(\check{\sh{E}})^\vee$ et de $\sh{E}$. La vérification de la propriété fonctorielle est immédiate.
+\end{env}
+\endgroup
+

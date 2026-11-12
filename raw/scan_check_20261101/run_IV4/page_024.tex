@@ -1,0 +1,91 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{24}
+Notons d'abord que $g_{X/Y/Z}$ correspond au cas où dans (16.4.3.3) on fait
+$X'=X$, $S'=Y$, $S=Z$ et $u=1_X$, et $f_{X/Y/Z}$ au cas où l'on remplace
+$X'$, $X$, $S$, $S'$ par $X$, $Y$, $Z$, $Z$ respectivement et $u$, $f$ par
+$f$, $g$ respectivement.
+
+On a un diagramme commutatif (I, 5.3.5)
+\[
+  \xymatrix{
+    X\ar[r]^-{\Delta_f}\ar[dr]_-f
+      &X\times_Y X\ar[d]^-p\ar[r]^-j
+      &X\times_Z X\ar[d]^-{f\times_Z f}\\
+    &Y\ar[r]_-{\Delta_g}&Y\times_Z Y
+  }
+  \tag{16.4.18.3}
+  \label{IV.16.4.18.3}
+\]
+où $j=(1_X,1_X)_Z$ est une immersion, $j\circ\Delta_f=\Delta_{g\circ f}$ et
+$p$ est le morphisme structural. Comme on peut se borner au cas où $X$, $Y$,
+$Z$ sont affines, on peut supposer les immersions $\Delta_f$, $\Delta_g$ et
+$j$ fermées, de sorte que $\mathcal{O}_X$ et
+$\mathcal{O}_{X\times_Y X}$ s'identifient respectivement à
+$\mathcal{O}_{X\times_Z X}/\mathscr{J}$ et
+$\mathcal{O}_{X\times_Z X}/\mathscr{L}$, où
+$\mathscr{J}\supset\mathscr{L}$ sont les deux Idéaux quasi-cohérents
+correspondant respectivement aux immersions $\Delta_{g\circ f}$ et $j$. La
+$\mathcal{O}_X$-Algèbre $\mathscr{P}_{X/Z}^n$ s'identifie donc à
+$\mathcal{O}_{X\times_Z X}/\mathscr{J}^{n+1}$, et
+$\mathscr{P}_{X/Y}^n$ s'identifie à
+$\mathcal{O}_{X\times_Y X}/(\mathscr{J}/\mathscr{L})^{n+1}$, c'est-à-dire à
+$\mathcal{O}_{X\times_Z X}/(\mathscr{J}^{n+1}+\mathscr{L})$, et par suite au
+quotient de $\mathscr{P}_{X/Z}^n$ par
+$(\mathscr{J}^{n+1}+\mathscr{L})/\mathscr{J}^{n+1}$. Mais on sait
+(\emph{loc. cit.}) que $p$ et $j$ font de $X\times_Y X$ le produit des
+$(Y\times_Z Y)$-préschémas $Y$ et $X\times_Z X$, donc si $\mathcal{O}_Y$ est
+identifié à $\mathcal{O}_{Y\times_Z Y}/\mathscr{K}$, où $\mathscr{K}$ est
+l'Idéal correspondant à $\Delta_g$, $\mathscr{L}$ est égal à
+$(f\times_Z f)^*(\mathscr{K})\cdot\mathcal{O}_{X\times_Z X}$ (I, 4.4.5).
+Comme $(\mathscr{J}^{n+1}+\mathscr{L})/\mathscr{J}^{n+1}$ est l'Idéal de
+$\mathscr{P}_{X/Z}^n$ engendré par l'image de $\mathscr{L}$, on en déduit la
+proposition.
+
+\begin{corollary}[16.4.19]
+\label{IV.16.4.19}
+Avec les notations de (16.4.18), on a une suite exacte de
+$\mathcal{O}_X$-Modules quasi-cohérents
+\[
+  \xymatrix{
+    f^*(\Omega_{Y/Z}^1)\ar[r]^-{f_{X/Y/Z}}&
+    \Omega_{X/Z}^1\ar[r]^-{g_{X/Y/Z}}&
+    \Omega_{X/Y}^1\ar[r]&0.
+  }
+  \tag{16.4.19.1}
+  \label{IV.16.4.19.1}
+\]
+\end{corollary}
+
+Lorsque $X$, $Y$, $Z$ sont affines, on retrouve ainsi la suite exacte
+(0, 20.5.7.1).
+
+\begin{proposition}[16.4.20]
+\label{IV.16.4.20}
+Soient $f:Y\to Z$ un morphisme, $j:X\to Y$ une immersion fermée,
+$\mathscr{K}$ l'Idéal quasi-cohérent de $\mathcal{O}_Y$ correspondant à $j$.
+Alors on a
+$\mathscr{P}_{X/Y}^n=\mathcal{O}_X=\mathcal{O}_Y/\mathscr{K}$,
+l'homomorphisme canonique
+$j_{X/Y/Z}:j^*(\mathscr{P}_{Y/Z}^n)\to\mathscr{P}_{X/Z}^n$ est surjectif, et
+son noyau est l'Idéal de $j^*(\mathscr{P}_{Y/Z}^n)$ engendré par
+$j^*(\mathcal{O}_Y\cdot d_{Y/Z}^n(\mathscr{K}))$ (il faut noter que
+$d_{Y/Z}^n(\mathscr{K})$ est un sous-faisceau de groupes commutatifs de
+$\mathscr{P}_{Y/Z}^n$, mais non un $\mathcal{O}_Y$-Module en général).
+\end{proposition}
+
+On sait (I, 5.3.8) que la diagonale
+$\Delta_j:X\to X\times_Y X$ est un isomorphisme, d'où la première assertion.
+Si $\varpi_1$ et $\varpi_2$ sont les deux homomorphismes d'Algèbres
+$\mathcal{O}_Y\to\mathscr{P}_{Y/Z}^n$ correspondant respectivement aux deux
+projections canoniques $p_1$, $p_2$ de $Y\times_Z Y$ sur $Y$, rappelons que
+par définition (16.3.5 et 16.3.6) $\varpi_1$ est l'homomorphisme structural de
+la $\mathcal{O}_Y$-Algèbre $\mathscr{P}_{Y/Z}^n$ et
+$\varpi_2=d_{Y/Z}^n$. La $\mathcal{O}_X$-Algèbre
+$j^*(\mathscr{P}_{Y/Z}^n)$ s'identifie donc à
+$\mathscr{P}_{Y/Z}^n/\varpi_1(\mathscr{K})\mathscr{P}_{Y/Z}^n$ et son quotient
+par l'Idéal engendré par $j^*(d_{Y/Z}^n(\mathscr{K}))$ à
+\[
+  \mathscr{P}_{Y/Z}^n/
+  (\varpi_1(\mathscr{K})+\varpi_2(\mathscr{K}))\mathscr{P}_{Y/Z}^n.
+\]
+Notons maintenant qu'on a un diagramme commutatif

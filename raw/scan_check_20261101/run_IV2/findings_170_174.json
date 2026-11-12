@@ -1,0 +1,1054 @@
+[
+ {
+  "page": 169,
+  "where": "printed p. 170, line 1: Lemme (6.14.1.1), label (i)",
+  "scan": "(i) upright before the italic statement 'Pour qu'un sous-anneau A de R ...'",
+  "tex": "\\item[(i)] inside the italic lemma environment (label comes out italic)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(i)] Pour qu'un",
+   "new": "\\item[\\textup{(i)}] Pour qu'un"
+  },
+  "note": "OUTSIDE pp. 170-174: printed on p. 170, but the text lies in the p. 169 segment (page_169.tex, checked unique there) because \\oldpage[IV-2]{170} stands too late. Apply before the p. 170 marker insertion below. findings_165_169.json has the same edit (as a p. 169 entry): apply it once; a second copy fails harmlessly ('old' no longer found)."
+ },
+ {
+  "page": 169,
+  "where": "printed p. 170, line 3: Lemme (6.14.1.1), label (ii)",
+  "scan": "(ii) upright before the italic 'Soit (A_lambda) une famille ...'",
+  "tex": "\\item[(ii)] inside the italic lemma environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(ii)] Soit $(A_\\lambda)$",
+   "new": "\\item[\\textup{(ii)}] Soit $(A_\\lambda)$"
+  },
+  "note": "OUTSIDE pp. 170-174: printed on p. 170, but the text lies in the p. 169 segment (page_169.tex, checked unique there) because \\oldpage[IV-2]{170} stands too late. Apply before the p. 170 marker insertion below. findings_165_169.json has the same edit (as a p. 169 entry): apply it once; a second copy fails harmlessly ('old' no longer found)."
+ },
+ {
+  "page": 169,
+  "where": "printed p. 170, proof of (6.14.1.1)(i), end: '(Bourbaki, Alg. comm., chap. II, § 3, n° 3, cor. 1 du th. 1)'",
+  "scan": "Alg. comm. in italics",
+  "tex": "Alg. comm. upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(Bourbaki, Alg. comm., chap.\nII,",
+   "new": "(Bourbaki, \\emph{Alg. comm.}, chap.\nII,"
+  },
+  "note": "OUTSIDE pp. 170-174: printed on p. 170, but the text lies in the p. 169 segment (page_169.tex, checked unique there) because \\oldpage[IV-2]{170} stands too late. Apply before the p. 170 marker insertion below. findings_165_169.json has the same edit (as a p. 169 entry): apply it once; a second copy fails harmlessly ('old' no longer found)."
+ },
+ {
+  "page": 169,
+  "where": "printed p. 170, same reference: 'chap. II, § 3, n° 3, cor. 1 du th. 1'",
+  "scan": "n° with an upright superscript o",
+  "tex": "n$^o$ (math italic o)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "§ 3, n$^o$ 3, cor. 1 du th. 1",
+   "new": "§ 3, n\\textsuperscript{o} 3, cor. 1 du th. 1"
+  },
+  "note": "OUTSIDE pp. 170-174: printed on p. 170, but the text lies in the p. 169 segment (page_169.tex, checked unique there) because \\oldpage[IV-2]{170} stands too late. Apply before the p. 170 marker insertion below. findings_165_169.json has the same edit (as a p. 169 entry): apply it once; a second copy fails harmlessly ('old' no longer found). The edition writes n\\textsuperscript{o} (103 times in ega4-2-fr.tex); n$^o$ (8 times, 4 on pp. 170-172) sets a math-italic o."
+ },
+ {
+  "page": 169,
+  "where": "page break 169/170: the p. 170 marker (edit 1 of 2, insert)",
+  "scan": "printed p. 169 ends with 'Lemme (6.14.1.1). — Soit R un anneau composé direct d'un nombre fini de corps.' (page_169_s4.png); printed p. 170 begins with '(i) Pour qu'un sous-anneau A de R ...'",
+  "tex": "\\oldpage[IV-2]{170} stands before '(ii) Comme A\\subset A_\\lambda\\subset R' (the second part of the proof), so the lemma's items (i), (ii) and the proof of (i) (about 19 printed lines of p. 170) sit in the p. 169 segment",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d'un nombre fini de corps.\n\\begin{enumerate}",
+   "new": "d'un nombre fini de corps.\n\\oldpage[IV-2]{170}\n\\begin{enumerate}"
+  },
+  "note": "OUTSIDE pp. 170-174: 'old' lies in page_169.tex (checked unique there). Marker on its own line directly before \\begin{enumerate}, as at \\oldpage[IV-2]{152}. Apply after the three p. 169 entries above and together with the next entry, which removes the old marker. findings_165_169.json makes the same move (its last two entries, insert 'fini de corps.\\n\\oldpage[IV-2]{170}\\n\\begin{enumerate}' and the same removal): apply one pair only; the result is identical."
+ },
+ {
+  "page": 170,
+  "where": "page break 169/170: the p. 170 marker (edit 2 of 2, remove the misplaced marker)",
+  "scan": "see the previous entry; '(ii) Comme A⊂A_λ⊂R' is an indented new paragraph in the middle of p. 170",
+  "tex": "\\oldpage[IV-2]{170} directly before '(ii) Comme'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-2]{170}\n(ii) Comme",
+   "new": "(ii) Comme"
+  },
+  "note": "Apply together with the previous entry (either order works). The blank line after 'dans $R$.' remains, so '(ii) Comme' still opens a paragraph, as printed. Identical to the p. 170 removal in findings_165_169.json."
+ },
+ {
+  "page": 170,
+  "where": "proof of (6.14.1.1)(ii): 'résulte de Bourbaki, Alg. comm., chap. V, § 1, n° 3, prop. 12'",
+  "scan": "Alg. comm. in italics",
+  "tex": "Alg. comm. upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "résulte de Bourbaki, Alg. comm.,",
+   "new": "résulte de Bourbaki, \\emph{Alg. comm.},"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "proof of (6.14.1.1)(ii): 'chap. V, § 1, n° 3, prop. 12'",
+  "scan": "n° with an upright superscript o",
+  "tex": "n$^o$ (math italic o)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "n$^o$\n3, prop. 12",
+   "new": "n\\textsuperscript{o}\n3, prop. 12"
+  },
+  "note": "The edition writes n\\textsuperscript{o} (103 times in ega4-2-fr.tex); n$^o$ (8 times, 4 on pp. 170-172) sets a math-italic o."
+ },
+ {
+  "page": 170,
+  "where": "'... procède en plusieurs étapes.' / 'I) Réduction au cas où ...'",
+  "scan": "'I) Réduction au cas où ...' begins a new indented paragraph after 'étapes.'",
+  "tex": "no blank line between 'étapes.' and 'I) \\emph{Réduction': one paragraph in the TeX",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "étapes.\nI) \\emph{Réduction",
+   "new": "étapes.\n\nI) \\emph{Réduction"
+  },
+  "note": "Paragraph break the print has."
+ },
+ {
+  "page": 170,
+  "where": "step I): 'B'=B⊗_A A' (I, 3.6.5)'",
+  "scan": "bold I in the reference",
+  "tex": "(I, 3.6.5)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 3.6.5), et il s'agit",
+   "new": "(\\textbf{I}, 3.6.5), et il s'agit"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'il s'agit donc de prouver que B' est un anneau normal'",
+  "scan": "normal in italics",
+  "tex": "normal upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneau normal. Notons",
+   "new": "anneau \\emph{normal}. Notons"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'par définition (6.8.1 et I, 3.6.5)'",
+  "scan": "bold I in the reference",
+  "tex": "(6.8.1 et I, 3.6.5)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(6.8.1 et I, 3.6.5)",
+   "new": "(6.8.1 et \\textbf{I}, 3.6.5)"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'X le spectre d'un anneau local intègre et intégralement clos B'",
+  "scan": "'intègre et intégralement clos' in italics ('local' upright)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "local intègre et\nintégralement clos $B$",
+   "new": "local \\emph{intègre et\nintégralement clos} $B$"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'la famille des clôtures intégrales des sous-A-algèbres'",
+  "scan": "'clôtures intégrales' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "des clôtures\nintégrales des",
+   "new": "des \\emph{clôtures\nintégrales} des"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'des sous-A-algèbres de type fini de B'",
+  "scan": "'de type fini' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de type fini de $B$; il est clair",
+   "new": "\\emph{de type fini} de $B$; il est clair"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'les anneaux B'_α sont normaux'",
+  "scan": "normaux in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "normaux et que, pour",
+   "new": "\\emph{normaux} et que, pour"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "step I): 'toute composante irréductible de Spec(B'_β) domine une composante'",
+  "scan": "domine in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "domine une composante",
+   "new": "\\emph{domine} une composante"
+  },
+  "note": null
+ },
+ {
+  "page": 170,
+  "where": "printed p. 171, line 4: 'donc supposer que A est intègre et que B est la clôture intégrale de A'",
+  "scan": "'clôture intégrale de' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "clôture intégrale de $A$. Enfin",
+   "new": "\\emph{clôture intégrale de} $A$. Enfin"
+  },
+  "note": "Printed on p. 171, but the text lies in the p. 170 segment (page_170.tex) until the p. 171 marker moves: apply before the p. 171 marker insertion below."
+ },
+ {
+  "page": 170,
+  "where": "printed p. 171, line 5: 'se borner au cas où A est local (tenant compte ...'",
+  "scan": "local in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est local (tenant",
+   "new": "est \\emph{local} (tenant"
+  },
+  "note": "Printed on p. 171, text in the p. 170 segment: apply before the p. 171 marker insertion below."
+ },
+ {
+  "page": 170,
+  "where": "page break 170/171: the p. 171 marker (edit 1 of 2, insert)",
+  "scan": "printed p. 170 ends 'On peut donc se borner à démontrer que B'=B⊗_A A' est normal lorsque B est'; printed p. 171 begins 'la clôture intégrale d'une A-algèbre intègre de type fini C; ...'",
+  "tex": "\\oldpage[IV-2]{171} stands before 'II) \\emph{Réduction', so the first six printed lines of p. 171 sit in the p. 170 segment",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "lorsque\n$B$ est la clôture intégrale d'une",
+   "new": "lorsque\n$B$ est\n\\oldpage[IV-2]{171}\nla clôture intégrale d'une"
+  },
+  "note": "Inserts the marker mid-sentence on its own line (no blank lines). Apply after every other p. 170 entry and together with the next entry, which removes the old marker."
+ },
+ {
+  "page": 171,
+  "where": "page break 170/171: the p. 171 marker (edit 2 of 2, remove the misplaced marker)",
+  "scan": "see the previous entry; 'II) Réduction au cas où A est un anneau local intègre ...' is an indented paragraph on p. 171, line 7",
+  "tex": "\\oldpage[IV-2]{171} directly before 'II) \\emph{Réduction'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-2]{171}\nII) \\emph{Réduction",
+   "new": "II) \\emph{Réduction"
+  },
+  "note": "Apply together with, and after, the previous entry. The blank line after 'de $A$).' remains, so 'II)' still opens a paragraph, as printed."
+ },
+ {
+  "page": 171,
+  "where": "step II): 'On sait (0, 23.2.7) que B est intersection'",
+  "scan": "bold 0 in the reference",
+  "tex": "(0, 23.2.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "On sait (0, 23.2.7) que",
+   "new": "On sait (\\textbf{0}, 23.2.7) que"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'Posons K'=K⊗_A A', V'_λ=V_λ⊗_A A'; par platitude ...' after the display ⊕_λ(K/V_λ)",
+  "scan": "'Posons' begins a new indented paragraph after the display",
+  "tex": "no blank line after \\]: the TeX continues the paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nPosons",
+   "new": "\\]\n\nPosons"
+  },
+  "note": "Paragraph break the print has (the text after the second display, 'et par suite', is not indented and stays in the paragraph)."
+ },
+ {
+  "page": 171,
+  "where": "step II), second display: 0→B'→K'→⊕(K'_λ/V'_λ)",
+  "scan": "0→B'→K'→⊕(K'_λ/V'_λ): no index under ⊕, and K' carries the index λ",
+  "tex": "0\\longrightarrow B'\\longrightarrow K'\\longrightarrow \\bigoplus_\\lambda(K'/V'_\\lambda)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\bigoplus_\\lambda(K'/V'_\\lambda)",
+   "new": "\\bigoplus(K'_\\lambda/V'_\\lambda)"
+  },
+  "corrected": "\\bigoplus_\\lambda(K'/V'_\\lambda)",
+  "note": "The TeX silently corrects the print. The index λ has slipped from ⊕ to K': K'_λ is not defined (K' = K⊗_A A'), and tensoring the first display 0→B→K→⊕_λ(K/V_λ) with A' gives ⊕_λ(K'/V'_λ). The diplomatic text takes the printed reading."
+ },
+ {
+  "page": 171,
+  "where": "step II): 'donc K' est un anneau noethérien normal'",
+  "scan": "normal in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "noethérien normal, et par",
+   "new": "noethérien \\emph{normal}, et par"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'si l'on prouve que chacun des V'_λ est un anneau normal'",
+  "scan": "normal in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un anneau normal, il en sera",
+   "new": "est un anneau \\emph{normal}, il en sera"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'On sait d'autre part (0, 23.2.7)'",
+  "scan": "bold 0 in the reference",
+  "tex": "(0, 23.2.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "d'autre part (0, 23.2.7)",
+   "new": "d'autre part (\\textbf{0}, 23.2.7)"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'donc supposer que A est local, intègre et de dimension 1'",
+  "scan": "'de dimension' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et de dimension 1, $B$ sa",
+   "new": "et \\emph{de dimension} 1, $B$ sa"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'Il y a une sous-A-algèbre finie A_1 de B'",
+  "scan": "finie in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "algèbre finie $A_1$",
+   "new": "algèbre \\emph{finie} $A_1$"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'soit radiciel (0, 23.2.5)'",
+  "scan": "bold 0 in the reference",
+  "tex": "(0, 23.2.5)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 23.2.5)",
+   "new": "(\\textbf{0}, 23.2.5)"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'ont même corps résiduel (loc. cit.).'",
+  "scan": "'(loc. cit.)' in italics, parentheses included",
+  "tex": "(loc. cit.) upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "résiduel (loc. cit.).",
+   "new": "résiduel \\emph{(loc. cit.)}."
+  },
+  "note": "The parentheses are italic too (elsewhere the release writes (\\emph{loc. cit.}))."
+ },
+ {
+  "page": 171,
+  "where": "step II): 'A' est lui aussi un anneau local et que'",
+  "scan": "local in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneau local et que",
+   "new": "anneau \\emph{local} et que"
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "step II): 'l'homomorphisme A→A' est local.'",
+  "scan": "local in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A'$ est local.",
+   "new": "A'$ est \\emph{local}."
+  },
+  "note": null
+ },
+ {
+  "page": 171,
+  "where": "printed p. 172, line 1: Lemme (6.14.1.2), label (i)",
+  "scan": "(i) upright",
+  "tex": "\\item[(i)] inside the italic lemma environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(i)] Si $\\mathfrak q'_j$",
+   "new": "\\item[\\textup{(i)}] Si $\\mathfrak q'_j$"
+  },
+  "note": "Printed on p. 172, but the text lies in the p. 171 segment (page_171.tex) until the p. 172 marker moves: apply before the p. 172 marker insertion below."
+ },
+ {
+  "page": 171,
+  "where": "printed p. 172, line 3: Lemme (6.14.1.2)(i), 'le corps des fractions L'_j de A'/q'_j (1⩽j⩽r), de sorte que'",
+  "scan": "'(1⩽j⩽r)' printed after A'/q'_j (third time in (i))",
+  "tex": "'des fractions $L'_j$ de $A'/\\mathfrak q'_j$, de sorte que': the parenthesis is missing",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $A'/\\mathfrak q'_j$, de sorte",
+   "new": "de $A'/\\mathfrak q'_j$ $(1\\leqslant j\\leqslant r)$, de sorte"
+  },
+  "note": "Printed on p. 172, but the text lies in the p. 171 segment (page_171.tex) until the p. 172 marker moves: apply before the p. 172 marker insertion below."
+ },
+ {
+  "page": 171,
+  "where": "printed p. 172, line 5: Lemme (6.14.1.2), label (ii)",
+  "scan": "(ii) upright",
+  "tex": "\\item[(ii)] inside the italic lemma environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(ii)] L'idéal",
+   "new": "\\item[\\textup{(ii)}] L'idéal"
+  },
+  "note": "Printed on p. 172, but the text lies in the p. 171 segment (page_171.tex) until the p. 172 marker moves: apply before the p. 172 marker insertion below."
+ },
+ {
+  "page": 171,
+  "where": "printed p. 172, line 7: Lemme (6.14.1.2), label (iii)",
+  "scan": "(iii) upright",
+  "tex": "\\item[(iii)] inside the italic lemma environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(iii)] Si",
+   "new": "\\item[\\textup{(iii)}] Si"
+  },
+  "note": "Printed on p. 172, but the text lies in the p. 171 segment (page_171.tex) until the p. 172 marker moves: apply before the p. 172 marker insertion below."
+ },
+ {
+  "page": 171,
+  "where": "printed p. 172, line 7: Lemme (6.14.1.2)(iii), 'Si Ā'_p' désigne le sous-anneau de L''",
+  "scan": "bar over the A only: Ā'_{p'}",
+  "tex": "\\overline{A'_{\\mathfrak p'}} (bar over A'_{p'})",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\overline{A'_{\\mathfrak p'}}$ désigne",
+   "new": "$\\overline{A}'_{\\mathfrak p'}$ désigne"
+  },
+  "note": "Printed on p. 172, but the text lies in the p. 171 segment (page_171.tex) until the p. 172 marker moves: apply before the p. 172 marker insertion below."
+ },
+ {
+  "page": 171,
+  "where": "printed p. 172, display (6.14.1.3): A'=K'∩Ā'_p'.",
+  "scan": "bar over the A only",
+  "tex": "\\overline{A'_{\\mathfrak p'}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A'=K'\\cap\\overline{A'_{\\mathfrak p'}}.",
+   "new": "A'=K'\\cap\\overline{A}'_{\\mathfrak p'}."
+  },
+  "note": "Printed on p. 172, but the text lies in the p. 171 segment (page_171.tex) until the p. 172 marker moves: apply before the p. 172 marker insertion below."
+ },
+ {
+  "page": 171,
+  "where": "page break 171/172: the p. 172 marker (edit 1 of 2, insert)",
+  "scan": "printed p. 171 ends with the opening of Lemme (6.14.1.2), '... k=A/m son corps résiduel.' (page_171_s4.png); printed p. 172 begins with '(i) Si q'_j (1⩽j⩽r) sont les idéaux minimaux de A' ...'",
+  "tex": "\\oldpage[IV-2]{172} stands after \\begin{proof}, before 'L'assertion (i)', so the lemma's items (i)-(iii) and (6.14.1.3) sit in the p. 171 segment",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "son corps résiduel.\n\\begin{enumerate}",
+   "new": "son corps résiduel.\n\\oldpage[IV-2]{172}\n\\begin{enumerate}"
+  },
+  "note": "Marker on its own line before \\begin{enumerate}. Apply after every other p. 171 entry (the six entries above edit text that moves into the p. 172 segment) and together with the next entry, which removes the old marker."
+ },
+ {
+  "page": 172,
+  "where": "page break 171/172: the p. 172 marker (edit 2 of 2, remove the misplaced marker)",
+  "scan": "see the previous entry",
+  "tex": "\\oldpage[IV-2]{172} directly before 'L'assertion (i)'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-2]{172}\nL'assertion (i)",
+   "new": "L'assertion (i)"
+  },
+  "note": "Apply together with the previous entry (either order works). Afterwards \\begin{proof} is directly followed by 'L'assertion (i)'."
+ },
+ {
+  "page": 172,
+  "where": "proof of (6.14.1.2): 'A'⊗_A k=A'/mA' est un anneau normal local et noethérien'",
+  "scan": "local in italics ('normal' upright)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneau normal local et",
+   "new": "anneau normal \\emph{local} et"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "proof of (6.14.1.2): 'donc intègre, ce qui montre déjà'",
+  "scan": "intègre in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donc intègre, ce qui",
+   "new": "donc \\emph{intègre}, ce qui"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "proof of (6.14.1.3): 'On a évidemment A'⊂K'∩Ā'_p''",
+  "scan": "bar over the A only",
+  "tex": "\\overline{A'_{\\mathfrak p'}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "K'\\cap\\overline{A'_{\\mathfrak p'}}$. Inversement",
+   "new": "K'\\cap\\overline{A}'_{\\mathfrak p'}$. Inversement"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "proof of (6.14.1.3): 'p' est le seul idéal premier associé à A'/a'^nA''",
+  "scan": "seul in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "seul idéal premier associé à\n$A'/",
+   "new": "\\emph{seul} idéal premier associé à\n$A'/"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "proof of (6.14.1.3): 'comme par hypothèse y'∈Ā'_p''",
+  "scan": "bar over the A only",
+  "tex": "\\overline{A'_{\\mathfrak p'}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$y'\\in\\overline{A'_{\\mathfrak p'}}$",
+   "new": "$y'\\in\\overline{A}'_{\\mathfrak p'}$"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'B' est radiciel sur A''",
+  "scan": "radiciel in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est radiciel sur",
+   "new": "est \\emph{radiciel} sur"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'radiciel sur A' (I, 3.5.7)'",
+  "scan": "bold I in the reference",
+  "tex": "(I, 3.5.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 3.5.7)",
+   "new": "(\\textbf{I}, 3.5.7)"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'et par suite est aussi un anneau local; en outre'",
+  "scan": "local in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "local; en outre $B'$",
+   "new": "\\emph{local}; en outre $B'$"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'(Bourbaki, Alg. comm., chap. V, § 2, n° 1, prop. 1)'",
+  "scan": "Alg. comm. in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Alg. comm., chap. V, § 2",
+   "new": "\\emph{Alg. comm.}, chap. V, § 2"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "same reference: 'chap. V, § 2, n° 1, prop. 1'",
+  "scan": "n° with an upright superscript o",
+  "tex": "n$^o$ (math italic o)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "n$^o$ 1, prop.",
+   "new": "n\\textsuperscript{o} 1, prop."
+  },
+  "note": "The edition writes n\\textsuperscript{o} (103 times in ega4-2-fr.tex); n$^o$ (8 times, 4 on pp. 170-172) sets a math-italic o."
+ },
+ {
+  "page": 172,
+  "where": "'B'_p' est un anneau noethérien et normal.'",
+  "scan": "noethérien and normal in italics ('et' upright)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneau noethérien et normal. Or",
+   "new": "anneau \\emph{noethérien} et \\emph{normal}. Or"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'comme tout élément de A'—p' est régulier dans L_1'",
+  "scan": "long dash for the set difference A'—p'",
+  "tex": "$A'-\\mathfrak p'$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$A'-\\mathfrak p'$",
+   "new": "$A'\\setmin\\mathfrak p'$"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'contient l'anneau local intègre de dimension 1, A'_p'/q'_jA'_p''",
+  "scan": "'intègre de dimension' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "local intègre de dimension 1,",
+   "new": "local \\emph{intègre de dimension} 1,"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "'Krull-Akizuki (Bourbaki, Alg. comm., chap. VII, § 2, n° 5, prop. 5)'",
+  "scan": "Alg. comm. in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Alg. comm., chap. VII",
+   "new": "\\emph{Alg. comm.}, chap. VII"
+  },
+  "note": null
+ },
+ {
+  "page": 172,
+  "where": "same reference: 'chap. VII, § 2, n° 5, prop. 5'",
+  "scan": "n° with an upright superscript o",
+  "tex": "n$^o$ (math italic o)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "n$^o$ 5,",
+   "new": "n\\textsuperscript{o} 5,"
+  },
+  "note": "The edition writes n\\textsuperscript{o} (103 times in ega4-2-fr.tex); n$^o$ (8 times, 4 on pp. 170-172) sets a math-italic o."
+ },
+ {
+  "page": 173,
+  "where": "proof of Lemme (6.14.1.4): 'on a donc a∩b⊂a∩c⊂c'",
+  "scan": "𝔞∩𝔟⊂𝔞∩𝔠⊂𝔠 (Fraktur a first)",
+  "tex": "\\mathfrak c\\cap\\mathfrak b\\subset\\mathfrak a\\cap\\mathfrak c\\subset\\mathfrak c",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathfrak c\\cap\\mathfrak b\\subset",
+   "new": "\\mathfrak a\\cap\\mathfrak b\\subset"
+  },
+  "note": "Wrong letter in the TeX (Fraktur c for the printed Fraktur a); the printed chain is also the correct one."
+ },
+ {
+  "page": 173,
+  "where": "'sont respectivement isomorphes aux fibres du morphisme'",
+  "scan": "isomorphes in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "isomorphes aux fibres",
+   "new": "\\emph{isomorphes} aux fibres"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'au point générique de Spec(A) (I, 3.6.4)'",
+  "scan": "bold I in the reference",
+  "tex": "(I, 3.6.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 3.6.4)",
+   "new": "(\\textbf{I}, 3.6.4)"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'donc sont géométriquement normales par hypothèse'",
+  "scan": "'géométriquement normales' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "géométriquement normales par",
+   "new": "\\emph{géométriquement normales} par"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'on en conclut qu'il est normal (6.8.1)'",
+  "scan": "normal in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "qu'il est normal (6.8.1)",
+   "new": "qu'il est \\emph{normal} (6.8.1)"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'on déduit de (6.5.4) que B'_p' est normal.'",
+  "scan": "normal in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(6.5.4) que $B'_{\\mathfrak p'}$ est normal.",
+   "new": "(6.5.4) que $B'_{\\mathfrak p'}$ est \\emph{normal}."
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'et l'anneau B̄'_q'=L''×B'_q''",
+  "scan": "bar over the B only",
+  "tex": "\\overline{B'_{\\mathfrak q'}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\overline{B'_{\\mathfrak q'}}=L''",
+   "new": "$\\overline{B}'_{\\mathfrak q'}=L''"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'des anneaux L''×(A'_α)_p'_α=(Ā'_α)_p'_α.'",
+  "scan": "bar over the A only",
+  "tex": "(\\overline{A'_\\alpha})",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\n(\\overline{A'_\\alpha})",
+   "new": "=\n(\\overline{A}'_\\alpha)"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "display after 'l'on a': A'_α=K'∩(Ā'_α)_p'_x",
+  "scan": "bar over the A only",
+  "tex": "(\\overline{A'_\\alpha})",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "K'\\cap(\\overline{A'_\\alpha})",
+   "new": "K'\\cap(\\overline{A}'_\\alpha)"
+  },
+  "note": "Apply before the next entry (same display)."
+ },
+ {
+  "page": 173,
+  "where": "display after 'l'on a': subscript of p'",
+  "scan": "A'_α=K'∩(Ā'_α)_{p'_x}: the inner index under p' is an italic x (not α), unlike every other p'_α on the page",
+  "tex": "_{\\mathfrak p'_\\alpha} at the end of the display",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "_{\\mathfrak p'_\\alpha}\n\\]",
+   "new": "_{\\mathfrak p'_x}\n\\]"
+  },
+  "corrected": "_{\\mathfrak p'_\\alpha}",
+  "note": "The TeX silently corrects the print. The glyph is a clear italic x (possibly chi), distinct from the α of A'_α in the same display; the correct index is α. Listed after the bar fix of the same display; its 'old' does not overlap it."
+ },
+ {
+  "page": 173,
+  "where": "display: B'=K'∩B̄'_q'.",
+  "scan": "bar over the B only",
+  "tex": "\\overline{B'_{\\mathfrak q'}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "B'=K'\\cap\\overline{B'_{\\mathfrak q'}}.",
+   "new": "B'=K'\\cap\\overline{B}'_{\\mathfrak q'}."
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "'Mais B̄'_q', composé direct des anneaux normaux' after the display B'=K'∩B̄'_q'.",
+  "scan": "'Mais' begins a new indented paragraph after the display",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nMais",
+   "new": "\\]\n\nMais"
+  },
+  "note": "Paragraph break the print has."
+ },
+ {
+  "page": 173,
+  "where": "'Mais B̄'_q', composé direct'",
+  "scan": "bar over the B only",
+  "tex": "\\overline{B'_{\\mathfrak q'}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\overline{B'_{\\mathfrak q'}}$, composé",
+   "new": "$\\overline{B}'_{\\mathfrak q'}$, composé"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "Corollaire (6.14.2): '(non nécessairement localement noethérien)'",
+  "scan": "the parenthesis is upright inside the italic statement",
+  "tex": "italic (corollary environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(non nécessairement\nlocalement noethérien)",
+   "new": "\\textup{(non nécessairement\nlocalement noethérien)}"
+  },
+  "note": null
+ },
+ {
+  "page": 173,
+  "where": "Corollaire (6.14.3): 'Soient k un corps, X, Y deux k-préschémas'",
+  "scan": "comma after 'corps'",
+  "tex": "semicolon: 'Soient $k$ un corps; $X$, $Y$'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un corps; $X$, $Y$",
+   "new": "un corps, $X$, $Y$"
+  },
+  "note": null
+ },
+ {
+  "page": 174,
+  "where": "proof of Lemme (6.14.4.1): 'x^n+a_1x^{n-1}+ . . . +a_n∈n'",
+  "scan": "baseline dots",
+  "tex": "\\cdots",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "+\\cdots+a_n",
+   "new": "+\\ldots+a_n"
+  },
+  "note": null
+ },
+ {
+  "page": 174,
+  "where": "proof of Lemme (6.14.4.1): 'avec a_i∈A'",
+  "scan": "a_i (index i)",
+  "tex": "$a_k\\in A$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "avec $a_k\\in A$",
+   "new": "avec $a_i\\in A$"
+  },
+  "note": null
+ },
+ {
+  "page": 175,
+  "where": "page break 174/175: the p. 175 marker (edit 1 of 2, insert)",
+  "scan": "printed p. 174 ends '... sous-A-algèbres de type fini de B, et soit C_α la fermeture' (page_174_s4.png); printed p. 175 begins 'intégrale de A dans B_α. Il résulte aussitôt ...' (page_175_s1.png)",
+  "tex": "\\oldpage[IV-2]{175} stands before 'II) \\emph{Réduction au cas où $B$ est une $A$-algèbre', two printed lines too early, so the end of p. 174 sits in the p. 175 segment",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et soit $C_\\alpha$ la fermeture\nintégrale de $A$ dans $B_\\alpha$.",
+   "new": "et soit $C_\\alpha$ la fermeture\n\\oldpage[IV-2]{175}\nintégrale de $A$ dans $B_\\alpha$."
+  },
+  "note": "OUTSIDE pp. 170-174: 'old' lies in page_175.tex (checked unique there). Marker mid-sentence on its own line. Apply together with the next entry. The moved two lines ('II) Réduction au cas où B est une A-algèbre intègre de type fini contenant A. — Soit (B_α) ... et soit C_α la fermeture') match the print of p. 174. The pp. 175-179 batch may report the same move: apply it once."
+ },
+ {
+  "page": 175,
+  "where": "page break 174/175: the p. 175 marker (edit 2 of 2, remove the misplaced marker)",
+  "scan": "see the previous entry; 'II) Réduction ...' is an indented paragraph on p. 174",
+  "tex": "\\oldpage[IV-2]{175} directly before 'II) \\emph{Réduction'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-2]{175}\nII) \\emph{Réduction",
+   "new": "II) \\emph{Réduction"
+  },
+  "note": "OUTSIDE pp. 170-174 (page_175.tex, checked unique there). Apply together with the previous entry (either order works). The blank line after 'dans $B'$.' remains, so 'II)' still opens a paragraph, as printed."
+ }
+]

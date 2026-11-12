@@ -1,0 +1,105 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{32}
+
+\begin{env}[3.5.4]
+\label{0.3.5.4-fr}
+Supposons maintenant que la catégorie $\mathbf{K}$ soit telle\footnote{Dans
+le livre cité dans l'Introduction, nous donnerons des conditions très
+générales sur la catégorie $\mathbf{K}$ assurant l'existence des images
+réciproques de préfaisceaux à valeurs dans $\mathbf{K}$.} que \emph{tout}
+préfaisceau $\mathcal{G}$ sur $Y$ à valeurs dans $\mathbf{K}$ admette une
+image réciproque par $\psi$, que nous noterons $\psi^*(\mathcal{G})$.
+
+Nous allons voir qu'on peut définir $\psi^*(\mathcal{G})$ comme \emph{foncteur
+covariant} en $\mathcal{G}$, de la catégorie des préfaisceaux sur $Y$ à
+valeurs dans $\mathbf{K}$, dans celle des faisceaux sur $X$ à valeurs dans
+$\mathbf{K}$, de telle façon que l'isomorphisme $v\to v^b$ soit un
+\emph{isomorphisme de bifoncteurs}
+\begin{equation*}
+  \operatorname{Hom}_X(\psi^*(\mathcal{G}),\mathcal{F})
+  \xrightarrow{\sim}
+  \operatorname{Hom}_Y(\mathcal{G},\psi_*(\mathcal{F}))
+\tag{3.5.4.1}\label{0.3.5.4.1-fr}
+\end{equation*}
+en $\mathcal{G}$ et $\mathcal{F}$.
+
+En effet, pour tout morphisme
+$w:\mathcal{G}_1\to\mathcal{G}_2$ de préfaisceaux sur $Y$ à valeurs dans
+$\mathbf{K}$, considérons le morphisme composé
+\[
+  \mathcal{G}_1\xrightarrow{w}\mathcal{G}_2
+  \xrightarrow{\rho_{\mathcal{G}_2}}
+  \psi_*(\psi^*(\mathcal{G}_2))~;
+\]
+il lui correspond un morphisme
+$(\rho_{\mathcal{G}_2}\circ w)^\sharp:
+\psi^*(\mathcal{G}_1)\to\psi^*(\mathcal{G}_2)$, que nous noterons
+$\psi^*(w)$. On a donc, en vertu de (3.5.3.3)
+\begin{equation*}
+  \psi_*(\psi^*(w))\circ\rho_{\mathcal{G}_1}
+  =\rho_{\mathcal{G}_2}\circ w.
+\tag{3.5.4.2}\label{0.3.5.4.2-fr}
+\end{equation*}
+Pour tout morphisme $u:\mathcal{G}_2\to\psi_*(\mathcal{F})$, où
+$\mathcal{F}$ est un faisceau sur $X$ à valeurs dans $\mathbf{K}$, on a,
+d'après (3.5.3.3), (3.5.4.2) et la définition de $v^b$
+\[
+  (u^\sharp\circ\psi^*(w))^b
+  =\psi_*(u^\sharp)\circ\psi_*(\psi^*(w))\circ\rho_{\mathcal{G}_1}
+  =\psi_*(u^\sharp)\circ\rho_{\mathcal{G}_2}\circ w
+  =u\circ w
+\]
+ou encore
+\begin{equation*}
+  (u\circ w)^\sharp=u^\sharp\circ\psi^*(w).
+\tag{3.5.4.3}\label{0.3.5.4.3-fr}
+\end{equation*}
+Si on prend en particulier pour $u$ un morphisme
+\[
+  \mathcal{G}_2\xrightarrow{w'}\mathcal{G}_3
+  \xrightarrow{\rho_{\mathcal{G}_3}}
+  \psi_*(\psi^*(\mathcal{G}_3)),
+\]
+il vient
+\[
+  \psi^*(w'\circ w)
+  =(\rho_{\mathcal{G}_3}\circ w'\circ w)^\sharp
+  =(\rho_{\mathcal{G}_3}\circ w')^\sharp\circ\psi^*(w)
+  =\psi^*(w')\circ\psi^*(w),
+\]
+d'où notre assertion.
+
+Enfin, pour tout faisceau $\mathcal{F}$ sur $X$ à valeurs dans
+$\mathbf{K}$, soit $i_{\mathcal{F}}$ le morphisme identique de
+$\psi_*(\mathcal{F})$ et notons
+\[
+  \sigma_{\mathcal{F}}:
+  \psi^*(\psi_*(\mathcal{F}))\to\mathcal{F}
+\]
+le morphisme $(i_{\mathcal{F}})^\sharp$~; la formule (3.5.4.3) donne en
+particulier la factorisation
+\begin{equation*}
+  u^\sharp:\psi^*(\mathcal{G})
+  \xrightarrow{\psi^*(u)}
+  \psi^*(\psi_*(\mathcal{F}))
+  \xrightarrow{\sigma_{\mathcal{F}}}\mathcal{F}
+\tag{3.5.4.4}\label{0.3.5.4.4-fr}
+\end{equation*}
+pour tout morphisme $u:\mathcal{G}\to\psi_*(\mathcal{F})$. Nous dirons que le
+morphisme $\sigma_{\mathcal{F}}$ est \emph{canonique}.
+\end{env}
+
+\begin{env}[3.5.5]
+\label{0.3.5.5-fr}
+Soit $\psi':Y\to Z$ une application continue, et supposons que tout
+préfaisceau $\mathcal{H}$ sur $Z$ à valeurs dans $\mathbf{K}$ admette une
+image réciproque $\psi'^*(\mathcal{H})$ par $\psi'$. Alors (avec les
+hypothèses de (3.5.4)) tout préfaisceau $\mathcal{H}$ sur $Z$ à valeurs dans
+$\mathbf{K}$ admet une image réciproque par $\psi''=\psi'\circ\psi$ et l'on a
+un isomorphisme canonique fonctoriel
+\begin{equation*}
+  \psi''^*(\mathcal{H})\xrightarrow{\sim}
+  \psi^*(\psi'^*(\mathcal{H}))
+\tag{3.5.5.1}\label{0.3.5.5.1-fr}
+\end{equation*}
+

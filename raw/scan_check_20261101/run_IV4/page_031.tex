@@ -1,0 +1,85 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{31}
+changement de base $g:S'\to S$, et tout point
+$x'\in X'=X\times_S S'$ au-dessus de $x$, on a un isomorphisme canonique
+\[
+  T_{X'/S'}(x')\xrightarrow{\sim}
+  T_{X/S}(x)\otimes_{k(x)}k(x').
+  \tag{16.5.13.2}
+  \label{IV.16.5.13.2}
+\]
+
+Si $x$ est \emph{rationnel sur $k(s)$}, où $s=f(x)$ (de sorte que
+$k(s)\to k(x)$ est un isomorphisme), il résulte de (16.4.13) que l'on a un
+isomorphisme canonique
+\[
+  T_{X/S}(x)=T_{X_s/k(s)}(x)
+  =\operatorname{Hom}_{k(s)}
+  (\mathfrak{m}'_x/\mathfrak{m}'_x{}^2,k(s))
+  \tag{16.5.13.3}
+  \label{IV.16.5.13.3}
+\]
+où $\mathfrak{m}'_x$ est l'idéal maximal de
+$\mathcal{O}_{X_s,x}=\mathcal{O}_{X,x}/
+\mathfrak{m}_s\mathcal{O}_{X,x}$. Dans le cas où $S$ est le spectre d'un corps
+$k$, on retrouve ainsi la définition de Zariski de l'espace tangent en un
+point $x\in X$ \emph{rationnel sur $k$}, comme dual de
+$\mathfrak{m}_x/\mathfrak{m}_x^2$.
+
+Soit $Y$ un second $S$-préschéma et soit $g:Y\to X$ un $S$-morphisme; on a
+alors un homomorphisme canonique de $\mathcal{O}_Y$-Modules (16.4.19)
+\[
+  g_{Y/X/S}:g^*(\Omega_{X/S}^1)\longrightarrow\Omega_{Y/S}^1.
+  \tag{16.5.13.4}
+  \label{IV.16.5.13.4}
+\]
+Notons maintenant que si $y\in Y$ et $x=g(y)$, on a
+\[
+  g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y)
+  =(\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x))
+  \otimes_{k(x)}k(y)
+\]
+et par suite, si $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module
+\emph{de type fini}, on peut identifier
+\[
+  \operatorname{Hom}_{k(y)}
+  (g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y),k(y))
+\]
+à $T_{X/S}(x)\otimes_{k(x)}k(y)$. On déduit donc alors de l'homomorphisme
+(16.5.13.4) un homomorphisme de \emph{$k(y)$-espaces vectoriels}
+\[
+  T_y(g):T_{Y/S}(y)\longrightarrow
+  T_{X/S}(x)\otimes_{k(x)}k(y)
+  \tag{16.5.13.5}
+  \label{IV.16.5.13.5}
+\]
+dit \emph{application linéaire tangente à $g$ au point $y$}. Lorsque $y$ est
+\emph{rationnel sur $k(s)$}, on peut identifier $k(s)$, $k(y)$ et $k(x)$ et
+$T_y(g)$ est alors un homomorphisme de $k(s)$-espaces vectoriels
+$T_{Y/S}(y)\to T_{X/S}(x)$; on notera d'ailleurs que dans ce cas,
+$g^*(\Omega_{X/S}^1)\otimes_{\mathcal{O}_Y}k(y)$ s'identifie à
+$\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x)$, et l'homomorphisme précédent est
+donc défini sans aucune condition de finitude sur $\Omega_{X/S}^1$ et n'est
+autre que l'homomorphisme $T_{Y/S}(g)$ (16.5.12) restreint à la fibre au point
+$y$ de $T_{Y/S}$.
+\end{env}
+
+\begin{env}[16.5.14]
+\label{IV.16.5.14}
+L'interprétation des dérivations d'une $A$-algèbre $B$ dans un $B$-module
+$L$, donnée dans (0, 20.1.1), se traduit dans le langage des préschémas de la
+façon suivante.
+
+Considérons deux morphismes de préschémas $f:X\to S$, $g:Y\to S$, et un
+sous-préschéma fermé $Y_0$ de $Y$ défini par un Idéal de carré nul
+$\mathscr{J}$ de $\mathcal{O}_Y$ (de sorte que $Y$ et $Y_0$ ont
+\emph{même espace topologique sous-jacent}). Supposons donné un $S$-morphisme
+$u_0:Y_0\to X$, de sorte qu'on a un diagramme commutatif
+\[
+  \xymatrix{
+    X\ar[d]_-f & Y_0\ar[l]_-{u_0}\ar[d]^j\\
+    S & Y\ar@{-->}[ul]_-u\ar[l]^-g
+  }
+  \tag{16.5.14.1}
+  \label{IV.16.5.14.1}
+\]

@@ -1,0 +1,72 @@
+% from ega4-12-fr.tex
+\oldpage[IV-3]{181}
+Cas (xi)~: Pour l'étape A) du raisonnement, on utilise (8.9.1), (11.2.6),
+(8.10.5, (xii)) (pour conserver l'hypothèse que $f$ est propre), ainsi que
+(4.2.7), (4.5.6) et (4.7.9). Pour l'étape B), on voit, comme dans le cas (iv),
+qu'on peut supposer que pour tout $y\in Y$, $\mathcal F_y$ n'a pas de cycle
+premier associé immergé, et l'on applique (9.8.8) qui prouve que la fonction
+$z\mapsto l(z)$ est constructible. Il reste donc à voir (en supposant $Y$
+noethérien et $f$ propre) que pour toute générisation $y'$ d'un point $y\in Y$,
+on a $l(y')\leq l(y)$. En raisonnant comme dans (12.1.1.3), on voit (à l'aide
+de (4.7.8) et (4.5.11)) qu'on peut supposer que les composantes irréductibles
+de $\operatorname{Supp}(\mathcal F_{y'})$ sont géométriquement irréductibles
+et que $l(y')$ est la \emph{somme des longueurs} des
+$(\mathcal F_{y'})_{z'_j}$ aux points maximaux $z'_j$ de
+$\operatorname{Supp}(\mathcal F_{y'})$. Appliquant de nouveau (4.2.7), (4.5.6)
+et (4.7.9), on se ramène, comme dans (12.2.1.1), au cas où $Y$ est un spectre
+d'anneau de valuation discrète, $y$ son point fermé et $y'$ son point générique.
+Le fait que $l(y')\leq l(y)$ sera alors conséquence du
+
+\begin{lemma}[12.2.1.4]
+\label{IV.12.2.1.4-fr}
+Soient $Y$ un spectre d'anneau de valuation discrète, $y$ son point fermé,
+$y'$ son point générique, $f:X\to Y$ un morphisme propre, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent et $f$-plat, $z_i$ (resp. $z'_j$) les points
+maximaux de $\operatorname{Supp}(\mathcal F_y)$ (resp.
+$\operatorname{Supp}(\mathcal F_{y'})$). Supposons que $\mathcal F_y$ n'ait
+pas de cycle premier associé immergé. Alors on a
+\[
+  \sum_j\operatorname{long}((\mathcal F_{y'})_{z'_j})
+  \leq\sum_i\operatorname{long}((\mathcal F_y)_{z_i}).
+\]
+\end{lemma}
+
+On a $Y=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation discrète,
+dont nous désignerons par $t$ une uniformisante, de sorte que
+$\mathcal F_y=\mathcal F/t\mathcal F$. Comme $\mathcal F$ est $f$-plat, les
+$z'_j$ sont aussi les points maximaux de $\operatorname{Supp}(\mathcal F)$
+(2.3.4)~; pour tout $z_i$, désignons par $z'_{ik}$ ceux des $z'_j$ qui sont des
+générisations de $z_i$~; il résulte de (3.4.1.1) que l'on a
+\[
+  \operatorname{long}((\mathcal F_y)_{z_i})
+  \geq\sum_k\operatorname{long}((\mathcal F_{y'})_{z'_{ik}})
+\]
+d'où en sommant
+\[
+  \sum_i\operatorname{long}((\mathcal F_y)_{z_i})
+  \geq\sum_i\sum_k\operatorname{long}((\mathcal F_{y'})_{z'_{ik}}).
+\]
+
+Le lemme sera donc prouvé si nous établissons que pour tout $z'_j$, il y a au
+moins un indice $i$ tel que $z'_j$ soit l'un des $z'_{ik}$. Or, comme $f$ est
+propre (donc fermé) et $f(z'_j)=y'$, il existe $x\in X$ qui est une
+spécialisation de $z'_j$ et est tel que $f(x)=y$, autrement dit
+$\overline{\{z'_j\}}\cap X_y$ n'est pas vide. Comme $t$ est
+$\mathcal F$-régulier par platitude, on déduit de (3.4.3) qu'il y a au moins un
+point de $\operatorname{Ass}(\mathcal F_y)$ dont $z'_j$ est une
+générisation~; mais comme les points de $\operatorname{Ass}(\mathcal F_y)$
+sont par hypothèse les $z_i$, cela termine la démonstration.
+\end{env}
+
+\begin{corollary}[12.2.2]
+\label{IV.12.2.2-fr}
+Sous les hypothèses de (12.2.1)~:
+\begin{enumerate}[label=(\roman*)]
+  \item La fonction $y\mapsto\dim(\operatorname{Supp}(\mathcal F_y))$ est
+  continue (donc localement constante) dans $Y$.
+  \item La fonction $y\mapsto\operatorname{coprof}(\mathcal F_y)$ (5.7.1) est
+  semi-continue supérieurement dans $Y$.
+  \item La fonction $y\mapsto l(y)$ (12.2.1, (xi)) est semi-continue
+  supérieurement dans $Y$ lorsque les $\mathcal F_y$ n'ont pas de cycle
+  premier associé immergé.
+  

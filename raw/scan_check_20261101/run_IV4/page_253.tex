@@ -1,0 +1,34 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{253}
+\begin{proposition}[20.6.4]
+\label{IV.20.6.4}
+Soit $\sh{F}$ un $\sh{O}_X$-Module quasi-cohérent de présentation finie et strictement sans torsion.
+Alors, pour qu'une section méromorphe $\varphi$ de $\sh{F}$ au-dessus de $X$ soit une section méromorphe relative à $S$, il faut et il suffit que $\operatorname{dom}(\varphi)$ soit universellement schématiquement dense relativement à $S$.
+\end{proposition}
+
+\begin{proof}
+La nécessité de la condition résulte de \sref{IV.20.2.15} appliqué à chaque injection canonique $X_s\to X$ ($s\in S$), compte tenu de \sref{IV.11.10.9}.
+Pour voir que la condition est suffisante, il faut prouver que pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ dans $X$ et une section de $\sh{M}_{X/S}(\sh{F})$ au-dessus de $U$ dont la restriction à $U\cap\operatorname{dom}(\varphi)$ coïncide avec $\varphi$ dans un ouvert schématiquement dense de $U\cap\operatorname{dom}(\varphi)$.
+Considérons l'Idéal des dénominateurs $\sh{J}$ de $\varphi$ \sref{IV.20.2.14}, qui est quasi-cohérent, et qui définit un sous-préschéma fermé de $X$ dont l'espace sous-jacent est $X-\operatorname{dom}(\varphi)$.
+Par hypothèse, si $s$ est l'image de $x$ dans $S$, $\operatorname{dom}(\varphi)\cap X_s$ est schématiquement dense dans le préschéma localement noethérien $X_s$, donc \sref{IV.20.2.13}[(iv)] contient $\operatorname{Ass}(\sh{O}_{X_s})$ ; cela implique donc que l'idéal $\sh{J}_x$ de $\sh{O}_{X,x}$ a une image dans $\sh{O}_{X_s,x}=\sh{O}_{X,x}\otimes_{\sh{O}_{S,s}}k(s)$ qui n'est contenue dans aucun des idéaux premiers $\mathfrak{p}_i\in\operatorname{Ass}(\sh{O}_{X_s,x})$ (en nombre fini) ; donc (Bourbaki, \emph{Alg.~comm.}, chap.~II, \textsection1, n\textsuperscript{o}~1, prop.~2) il existe un élément $t_x\in\sh{J}_x$ dont l'image dans $\sh{O}_{X_s,x}$ n'appartient à aucun des $\mathfrak{p}_i$, et est par suite régulière dans cet anneau noethérien.
+Soit $t$ une section de $\sh{J}$ au-dessus d'un voisinage ouvert affine $U$ de $x$, dont $t_x$ soit le germe au point $x$ ; puisque $X$ est plat et localement de présentation finie sur $S$, on peut supposer \sref{IV.11.3.8} que $t$ est une section \emph{régulière} de $\sh{O}_X$ au-dessus de $U$ et que, pour tout $s'\in S$, l'image de $t$ dans $\Gamma(U\cap X_{s'},\sh{O}_{X_{s'}})$ soit aussi \emph{régulière} ; autrement dit, on a $t\in T_{X/S}(U)$.
+Mais alors, par définition de $\sh{J}$, puisque $\sh{F}$ est strictement sans torsion, $t(\varphi|(U\cap\operatorname{dom}(\varphi)))$ est une section $u$ de $\sh{F}$ au-dessus de $U\cap\operatorname{dom}(\varphi)$ ; d'autre part, $U\cap\operatorname{dom}(\varphi)$ contient l'ensemble ouvert $U_t$ des points $x'\in U$ où $t(x')\neq0$, et ce dernier contient $x$ et est schématiquement dense dans $U$ \sref{IV.20.2.9}.
+On voit donc que dans $U_t$, $\varphi$ coïncide avec la restriction à $U_t$ de la section $u/t$ de $\sh{M}_{X/S}(\sh{F})$ au-dessus de $U$.
+C.Q.F.D.
+\end{proof}
+
+\begin{remarks}[20.6.5]
+\EGAReaderTarget{ega4.c04.statement.20-6-5}{IV.20.6.5}
+\begin{enumerate}[label=(\roman*)]
+  \item Soit $\varphi$ une fonction méromorphe sur $X$ relative à $S$, de sorte que pour tout $s\in S$, $\varphi_s$ est une fonction méromorphe sur $X_s$ \sref{IV.20.6.1} ; en vertu de \sref{IV.20.1.11.1}, on a
+  \[
+  \label{IV.20.6.5.1}
+    \operatorname{dom}(\varphi)\cap X_s\subset\operatorname{dom}(\varphi_s).
+    \tag{20.6.5.1}
+  \]
+  Mais il convient de noter que même lorsque $S$ est le spectre d'un anneau de valuation discrète $A$ et $X=S[T]$ ($T$ indéterminée), les deux membres de \sref{IV.20.6.5.1} ne sont pas nécessairement égaux : par exemple, si $\pi$ est une uniformisante de $A$, il est immédiat que $\varphi=\pi/T$ est une fonction méromorphe sur $S$ relative à $S$, car si $a$ et $b$ sont le point fermé et le point générique de $S$, $T$ est régulière dans $\Gamma(X_a,\sh{O}_{X_a})=k[T]$ et dans $\Gamma(X_b,\sh{O}_{X_b})=K[T]$, $k$ et $K$ étant le corps résiduel et le corps des fractions de $A$.
+  On a $\operatorname{dom}(\varphi)=\mathrm{D}(T)$ dans $X$, mais $\operatorname{dom}(\varphi_a)=X_a$ puisque $\varphi_a=0$.
+
+  \item Pour qu'une fonction méromorphe $\varphi$ relative à $S$ soit \emph{inversible dans l'anneau} $M(X/S)$, il faut et il suffit que pour tout $s\in S$, $\varphi_s$ soit inversible dans $M(X_s)$ (autrement dit, que $\varphi_s$ soit une fonction méromorphe régulière sur $X_s$ \sref{IV.20.1.8}).
+  La condition est
+  

@@ -1,0 +1,45 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{214}
+
+est \emph{bijectif}. Il s'agit, en vertu de (19.6.3), de prouver que $\psi_R'$ est \emph{surjectif}, ce qui va être fait en plusieurs étapes.
+
+\begin{env}[19.7.1.2]
+\label{IV.19.7.1.2}
+Posons $B=\operatorname{gr}_{\mathfrak R}^*A\otimes_{A/\mathfrak R}(A/\mathfrak L)$, $P=\operatorname{gr}_{\mathfrak R}^*(N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$, $Q=\operatorname{gr}_{\mathfrak L}^*(R,N)$; puisque $\psi_N$ est bijectif, $P[T_1,\ldots,T_n]$ s'identifie à $\operatorname{gr}_{\mathfrak L}^*(N)$, et $Q$ à un sous-$B[T_1,\ldots,T_n]$-module de $P[T_1,\ldots,T_n]$; nous allons d'abord voir que l'on a
+\end{env}
+
+\begin{env}[19.7.1.3]
+\label{IV.19.7.1.3}
+\[
+  Q=(Q\cap P)[T_1,\ldots,T_n].
+\]
+\end{env}
+
+Pour cela, posons $Z=Q/((Q\cap P)[T_1,\ldots,T_n])$; c'est un sous-$B[T_1,\ldots,T_n]$-module de
+\[
+  P[T_1,\ldots,T_n]/((Q\cap P)[T_1,\ldots,T_n])=(P/(Q\cap P))[T_1,\ldots,T_n].
+\]
+En tant que $(A/\mathfrak L)$-module, il est donc isomorphe à un sous-module d'une somme directe de $(A/\mathfrak L)$-modules isomorphes à $P/(Q\cap P)=(P+Q)/Q$. Mais $(P+Q)/Q$ est un $(A/\mathfrak L)$-module isomorphe à un sous-module de $P[T_1,\ldots,T_n]/Q$, qui n'est autre que $\operatorname{gr}_{\mathfrak L}^*(M)$ en vertu du diagramme (19.7.1.1). On a donc
+\begin{equation}
+  \operatorname{Ass}_{A/\mathfrak L}(Z)\subset\operatorname{Ass}_{A/\mathfrak L}(\operatorname{gr}_{\mathfrak L}^*(M)).
+  \tag{19.7.1.4}\label{IV.19.7.1.4}
+\end{equation}
+
+Mais chacun des $\operatorname{gr}_{\mathfrak L}^m(M)$ est par hypothèse un $(A/\mathfrak L)$-module \emph{plat} de type fini, donc projectif puisque $A/\mathfrak L$ est noethérien, et on a par suite $\operatorname{Ass}_{A/\mathfrak L}(\operatorname{gr}_{\mathfrak L}^*(M))\subset\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$. Pour voir que $Z=0$, il suffit par suite (Bourbaki, \emph{Alg. comm.}, chap. IV, § 1, n\textsuperscript{o} 1, cor. 1 de la prop. 2 et n\textsuperscript{o} 3, prop. 7) de voir que pour tout $\mathfrak q\in\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$, on a $Z_{\mathfrak q}=0$. Mais les idéaux de $\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$ sont les idéaux de la forme $\mathfrak p/(\mathfrak L/\mathfrak R)$, où $\mathfrak p\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$, et il revient donc au même de voir que $Z_{\mathfrak p}=0$ pour tout $\mathfrak p\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$. Or, si $\mathfrak p=\mathfrak r/\mathfrak R$, où $\mathfrak r$ est un idéal premier de $A$, on a $(\operatorname{gr}_{\mathfrak R}^*(M))_{\mathfrak p}=\operatorname{gr}_{\mathfrak R_{\mathfrak r}}^*(M_{\mathfrak r})$ et $(A/\mathfrak L)_{\mathfrak p}=A_{\mathfrak r}/\mathfrak L_{\mathfrak r}$, et les images des $f_i$ dans $A_{\mathfrak r}$ forment une suite $\operatorname{gr}_{\mathfrak R_{\mathfrak r}}^*(A_{\mathfrak r})$-régulière ($0$, 15.1.14); appliquant à $A_{\mathfrak r}$, $\mathfrak R_{\mathfrak r}$ et $M_{\mathfrak r}$ l'implication $a)\Rightarrow b)$ de l'énoncé, on voit que l'hypothèse $d)$ entraîne que $\psi_{M_{\mathfrak r}}$ est bijectif, donc aussi $\psi_{R_{\mathfrak r}}'$ en vertu de (19.6.3); en d'autres termes, $Q_{\mathfrak r}=Q_{\mathfrak r}'[T_1,\ldots,T_n]$, où on a posé $Q'=\operatorname{gr}_{\mathfrak R}^*(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$, qui est ici un sous-$B$-module de $P$; en particulier $Q_{\mathfrak r}'=Q_{\mathfrak r}\cap P_{\mathfrak r}$, donc finalement on a bien $Z_{\mathfrak r}=Z_{\mathfrak p}=0$, ce qui achève de démontrer (19.7.1.3).
+
+\begin{env}[19.7.1.5]
+\label{IV.19.7.1.5}
+En vertu de (19.7.1.3), pour prouver que $\psi_R'$ est surjectif, il suffit de montrer que tout élément homogène de degré $m$ de $Q\cap P$ est l'image d'un élément de même degré de $\operatorname{gr}_{\mathfrak R}^*(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$. Or, les éléments de degré $m$ de $P$ s'identifient (par $\psi_N$) aux éléments de $\operatorname{gr}_{\mathfrak L}^m(N)$ qui appartiennent à $(\mathfrak R^mN+\mathfrak L^{m+1}N)/\mathfrak L^{m+1}N$; ceux qui sont images d'éléments de $\operatorname{gr}_{\mathfrak R}^m(R,N)\otimes_{A/\mathfrak R}(A/\mathfrak L)$ s'identifient aux éléments de $\operatorname{gr}_{\mathfrak L}^m(N)$ appartenant à $((R\cap\mathfrak R^mN)+\mathfrak L^{m+1}N)/\mathfrak L^{m+1}N$. Il suffira donc finalement de prouver, pour tout entier $m>0$, l'inclusion
+\[
+  ((R\cap\mathfrak L^mN)+\mathfrak L^{m+1}N)\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^mN)+\mathfrak L^{m+1}N.
+\]
+Comme $\mathfrak R\subset\mathfrak L$, on vérifie aussitôt que le premier membre de cette relation est égal à $(R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N))+\mathfrak L^{m+1}N$, si bien que tout se réduit à prouver
+\end{env}
+
+\begin{env}[19.7.1.6]
+\label{IV.19.7.1.6}
+\[
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^mN)+\mathfrak L^{m+1}N.
+\]
+\end{env}
+

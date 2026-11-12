@@ -1,0 +1,91 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{157}
+
+Reste à prouver (iii) pour un point quelconque $x\in Y$. Posons
+$A=\mathcal O_{X,x}$, $\mathfrak J=\mathcal J_x$, de sorte que
+$\mathcal O_{Y,x}=A/\mathfrak J$, et $M=\mathcal F_x$; soit
+$S=\operatorname{gr}_{\mathfrak J}^{\bullet}(A)$, qui est une
+$(A/\mathfrak J)$-algèbre graduée de type fini, à degrés positifs, telle
+que $S_0=A/\mathfrak J$, et engendrée par ses éléments homogènes de degré
+$1$; soit enfin
+$N=\operatorname{gr}_{\mathfrak J}^{\bullet}(M)$, qui est un $S$-module
+gradué de type fini, chaque composante homogène $N_n$ étant par hypothèse
+un $(A/\mathfrak J)$-module libre de longueur $r(n)$. Soient $\mathfrak m$
+l'idéal maximal de $A$, $k=A/\mathfrak m$ son corps résiduel;
+$B=S\otimes_A k$ est une $k$-algèbre graduée de type fini, à degrés
+positifs, engendrée par ses éléments homogènes de degré $1$ et telle que
+$B_0=k$, de sorte que $\mathfrak q=B_+=\bigoplus_{n\geq1}B_n$ est un idéal
+maximal dans $B$; $E=N\otimes_A k$ est un $B$-module gradué de type fini
+tel que $\operatorname{rg}_k(E_n)=r(n)$. Appliquons (0, 16.2.7) à l'anneau
+gradué $B=S\otimes_A k$ et au $B$-module gradué $E=N\otimes_A k$, et soit
+$f_i\in\mathfrak J^{n_i}$ $(1\leq i\leq d)$ un élément dont $t_i$ est
+l'image dans $B_{n_i}$. Pour $n\geq\sup(n_i)$, considérons le sous-$A$-module
+$\sum_{i=1}^{d}f_i\mathfrak J^{n-n_i}M$ de $M$; comme le composant homogène
+de degré $n$ du sous-module $\sum_{i=1}^{d}t_iE$ de $E$ est égal à
+$E_n$ dès que $n$ est assez grand, on voit que, pour $n$ assez grand, on a
+\[
+\mathfrak J^nM=\sum_{i=1}^{d}f_i\mathfrak J^{n-n_i}M+
+\mathfrak m\mathfrak J^nM
+\]
+et comme $\mathfrak J^nM$ est un $A$-module de type fini, cela entraîne,
+par le lemme de Nakayama,
+\[
+\mathfrak J^nM=\sum_{i=1}^{d}f_i\mathfrak J^{n-n_i}M
+\subset\sum_{i=1}^{d}f_iM.
+\]
+Si $\mathfrak a$ est l'annulateur de $M$, on a donc (0$_{\rm I}$, 1.7.5)
+dans $\operatorname{Spec}(A)$
+\[
+V\left(\sum_{i=1}^{d}f_iA\right)\cap V(\mathfrak a)
+\subset V(\mathfrak J^n)\cap V(\mathfrak a)
+=V(\mathfrak J)\cap V(\mathfrak a)=V(\mathfrak J)
+\]
+puisque par hypothèse
+$Y\cap\operatorname{Spec}(A)=V(\mathfrak J)\cap\operatorname{Supp}(M)
+=V(\mathfrak J)$. Comme d'autre part les $f_i$ appartiennent à
+$\mathfrak J$, on a
+$V(\mathfrak J)\subset V(\sum_{i=1}^{d}f_iA)$, ce qui prouve la dernière
+relation de (iii). Il reste à montrer que les $f_i$ font partie d'un système
+de paramètres pour $M$. Remplaçant $A$ par $A/\mathfrak a$ et les $f_i$ par
+leurs images dans $A/\mathfrak a$, on peut se borner au cas où
+$\mathfrak a=0$; on vient de voir que l'on a
+\[
+\dim(A/\mathfrak J)=
+\dim\left(A/\left(\sum_{i=1}^{d}f_iA\right)\right)
+\]
+et il reste donc à prouver (0, 16.3.7) que l'on a
+\[
+\dim(A)\geq\dim(A/\mathfrak J)+d.
+\]
+Or, soit $\mathfrak p$ un idéal premier de $A$ contenant $\mathfrak J$ et
+tel que $\dim(A/\mathfrak J)=\dim(A/\mathfrak p)$, de sorte que
+$\mathfrak p$ est minimal parmi les idéaux premiers contenant
+$\mathfrak J$. On a donc $\mathfrak p=\mathfrak j_y$ où
+$y\in\operatorname{Spec}(A)$ est un point maximal de $Y$. Mais en vertu de
+(6.10.5.2) et de l'hypothèse
+$\operatorname{Spec}(A)=\operatorname{Supp}(M)$, on a
+$\dim(A_{\mathfrak p})=d$; l'inégalité
+$\dim(A/\mathfrak p)+\dim(A_{\mathfrak p})\leq\dim(A)$ (0, 16.1.4)
+achève la démonstration.
+\end{proof}
+
+\begin{proposition}[6.10.6]
+\label{IV.2.s6.10.6-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent, $Y$ un sous-préschéma fermé irréductible de
+$X$, de point générique $y\in\operatorname{Supp}(\mathcal F)$. Il existe
+alors un voisinage ouvert non vide $U$ de $y$ dans $X$ tel que, pour tout
+$x\in U\cap Y$, on ait
+\begin{align}
+\dim(\mathcal F_x)&=\dim(\mathcal F_y)+\dim(\mathcal O_{Y,x})
+\tag{6.10.6.1}\label{IV.2.s6.10.6.1-fr}\\
+\operatorname{prof}(\mathcal F_x)&=\operatorname{prof}(\mathcal F_y)+
+\operatorname{prof}(\mathcal O_{Y,x})
+\tag{6.10.6.2}\label{IV.2.s6.10.6.2-fr}\\
+\operatorname{coprof}(\mathcal F_x)&=\operatorname{coprof}(\mathcal F_y)+
+\operatorname{coprof}(\mathcal O_{Y,x}).
+\tag{6.10.6.3}\label{IV.2.s6.10.6.3-fr}
+\end{align}
+\end{proposition}
+
+\begin{proof}

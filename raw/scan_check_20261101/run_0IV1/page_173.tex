@@ -1,0 +1,64 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{173}
+canonique $\Upsilon_{L/K/k_0}\to\Upsilon_{L/K/k_\alpha}$ est injectif~; or,
+si $N_\alpha$ est le noyau de cet homomorphisme, les $N_\alpha$ forment un
+système filtrant décroissant de sous-espaces vectoriels de
+$\Upsilon_{L/K/k_0}$, et comme $\Upsilon_{L/K/k_0}$ est par hypothèse de rang
+fini, il revient au même de dire que l'un des $N_\alpha$ est nul ou que leur
+intersection est nulle. Mais cette intersection n'est autre que le noyau de
+l'homomorphisme limite projective
+$\Upsilon_{L/K/k_0}\to\varprojlim_\alpha\Upsilon_{L/K/k_\alpha}$. Or, on a
+le diagramme commutatif
+\[
+\xymatrix{
+\Upsilon_{L/K/k_0}\ar[r]\ar[d]&\varprojlim\Upsilon_{L/K/k_\alpha}\ar[d]\\
+\Omega^1_{K/k_0}\otimes_KL\ar[r]&
+\varprojlim(\Omega^1_{K/k_\alpha}\otimes_KL)
+}
+\]
+où la flèche verticale de gauche est injective par définition. Pour prouver
+que $c)$ entraîne $b)$, il suffit donc de montrer que l'application canonique
+\begin{equation}
+\tag{21.8.3.2}
+\label{0.21.8.3.2-fr}
+\Omega^1_{K/k_0}\otimes_KV\longrightarrow
+\varprojlim_{\alpha}(\Omega^1_{K/k_\alpha}\otimes_KV)
+\end{equation}
+est injective pour tout espace vectoriel $V$ sur $K$ (et en particulier pour
+$V=L$). Or cela est évident si $V=K^n$ puisque alors
+$W\otimes_KV=W^n$ pour tout espace vectoriel $W$ sur $K$ et que les produits
+et limites projectives commutent. D'autre part, pour tout élément $z$ du
+premier membre de (21.8.3.2), il existe un sous-espace $V'$ de $V$ de rang
+fini tel que $z\in\Omega^1_{K/k_0}\otimes_KV'$ (identifié canoniquement à un
+sous-espace de $\Omega^1_{K/k_0}\otimes_KV$)~; si $z\ne0$, son image dans
+$\varprojlim_\alpha(\Omega^1_{K/k_\alpha}\otimes_KV')$ n'est donc pas nulle~;
+comme le foncteur $\varprojlim$ est exact à gauche, l'image de $z$ dans le
+second membre de (21.8.3.2) est donc aussi $\ne0$, ce qui achève de montrer
+que $c)$ implique $b)$.
+
+Il est trivial que $b)$ entraîne $b')$~; montrons que $b')$ entraîne $a)$.
+Avec les notations de $b')$, on peut supposer que $L\ne K$. Il résulte alors
+de (21.4.7) que l'on a $\operatorname{rg}\Upsilon_{L/K}\leqslant1$. Si
+$\Upsilon_{L/K/k_\alpha}=0$, il n'y a rien à démontrer en vertu de
+(21.6.1.1). Sinon, $\Upsilon_{L/K/k_\alpha}$ s'identifie canoniquement à
+$\Upsilon_{L/K}$ et, si l'on pose $a=x^p$, $\Upsilon_{L/K}$ a une base
+formée du seul élément $d_K(a)\otimes1$ (21.4.7)~;
+$\Upsilon_{L/K/k_\alpha}$ a donc une base formée du seul élément
+$d_{K/k_\alpha}(a)\otimes1$, et dire qu'un sous-corps $k_\alpha$ est
+$k_0$-admissible pour l'extension $L$ de $K$ signifie que l'on a
+$d_{K/k_\alpha}(a)\ne0$, ou encore (21.4.5) que
+$a\notin k_\alpha(K^p)$. Or, pour tout $a\notin k_0(K^p)$, on a
+$d_{K/k_0}(a)\ne0$ et $K(a^{1/p})\ne K$, donc on peut appliquer $b')$, qui
+prouve l'existence d'un $\alpha$ tel que $a\notin k_\alpha(K^p)$~;
+autrement dit $b')$ implique $a)$.
+
+Reste à montrer que $a)$ implique $c)$. Soit $(x_\mu)_{\mu\in M}$ une
+$p$-base de $K$ sur $k_0$~; alors, les $d_{K/k_0}(x_\mu)$ forment une base du
+$K$-espace vectoriel $\Omega^1_{K/k_0}$ (21.4.5), et la condition $c)$
+signifie que pour toute partie finie $J$ de l'ensemble d'indices $M$, il
+existe un $\alpha\in I$ tel que les $d_{K/k_\alpha}(x_\mu)$ pour $\mu\in J$
+soient linéairement indépendants dans $\Omega^1_{K/k_\alpha}$~; mais cela
+signifie aussi (21.4.5) que les $x_\mu$ pour $\mu\in J$ forment une famille
+$p$-libre sur $k_\alpha$, et l'existence d'un $\alpha$ ayant cette propriété
+découle de (21.8.2) et de l'hypothèse $a)$.
+\end{proof}

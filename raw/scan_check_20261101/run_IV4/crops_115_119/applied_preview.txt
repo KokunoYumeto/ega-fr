@@ -1,0 +1,129 @@
+\oldpage[IV-4]{115}
+que $B$ est une $A$-algèbre non ramifiée signifie alors (17.4.2) que $\Spec((B\otimes_A B)/\mathfrak J_{B/A})$ est un sous-schéma induit sur une partie \emph{ouverte et fermée} de $\Spec(B\otimes_A B)$ et on sait que pour qu'il en soit ainsi, il faut et il suffit que $\mathfrak J_{B/A}$ soit un idéal \emph{facteur direct} de $B\otimes_A B$ (Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~4, n\textsuperscript{o}~3, prop. 15); mais il revient au même de dire que le $(B\otimes_A B)$-module quotient $(B\otimes_A B)/\mathfrak J_{B/A}$ est projectif (Bourbaki, \emph{Alg.}, chap. II, 3\textsuperscript{e} éd., \textsection~2, n\textsuperscript{o}~2, prop. 4).
+
+(ii) Si on se rappelle qu'un $A$-module plat de présentation finie est projectif et réciproquement (Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~5, n\textsuperscript{o}~2, cor. 2 du th. 1), l'assertion de (ii) résulte de celle de (i) et de (17.6.2).
+
+\begin{proposition}[18.3.2]
+\label{IV.18.3.2}
+Soient $A$ un anneau, $\mathfrak J$ un idéal de $A$ tel que, pour la topologie $\mathfrak J$-préadique, $A$ soit séparé et complet; on pose $A_0=A/\mathfrak J$. Alors le foncteur
+\[
+  B\leadsto B\otimes_A A_0
+\]
+est une équivalence de la catégorie des $A$-algèbres finies et étales, dans la catégorie des $A_0$-algèbres finies et étales.
+\end{proposition}
+
+Nous démontrerons d'abord le lemme suivant:
+
+\begin{lemma}[18.3.2.1]
+\label{IV.18.3.2.1}
+Soient $A$ un anneau, $\mathfrak J$ un idéal de $A$ tel que, pour la topologie $\mathfrak J$-préadique, $A$ soit séparé et complet.
+\begin{enumerate}
+  \item[\textup{(i)}] Tout $A$-module projectif de type fini $M$ est séparé et complet pour la topologie $\mathfrak J$-préadique, donc limite projective des $(A/\mathfrak J^{n+1})$-modules projectifs $M/\mathfrak J^{n+1}M$.
+  \item[\textup{(ii)}] Inversement, posons $A_n=A/\mathfrak J^{n+1}$, et soit $(M_n)$ un système projectif de $A_n$-modules, tel que, pour tout $n$, l'homomorphisme $M_{n+1}\otimes_{A_{n+1}}A_n\to M_n$ déduit du di-homomorphisme de transition $M_{n+1}\to M_n$ soit bijectif. Supposons en outre les $M_n$ projectifs et $M_0$ de type fini. Alors $M=\varprojlim M_n$ est un $A$-module projectif de type fini tel que l'homomorphisme canonique $M\otimes_A A_0\to M_0$ soit bijectif.
+\end{enumerate}
+\end{lemma}
+
+(i) Il existe un $A$-module libre de type fini $L$ tel que $M$ soit isomorphe à un facteur direct de $L$; comme $L$ est séparé pour la topologie $\mathfrak J$-préadique, il en est de même de tout sous-module $N$ de $L$ puisque $\mathfrak J^{n+1}N\subset\mathfrak J^{n+1}L$; en particulier $M$ est séparé pour cette topologie, et comme l'homomorphisme surjectif $f:L\to M$ est continu pour la topologie $\mathfrak J$-préadique, son noyau $N$ est fermé pour la topologie induite par celle de $L$; puisque $L$ est complet et $f$ un morphisme strict, on en conclut que $M$ est complet (Bourbaki, \emph{Top. gén.}, chap. IX, 2\textsuperscript{e} éd., \textsection~3, n\textsuperscript{o}~1, prop. 4).
+
+(ii) Il résulte du lemme de Nakayama que si $M_0$ est engendré par une famille finie $(x_{i0})$ de $r$ éléments et si pour tout $n$, $x_{in}$ est un élément de $M_n$ dont $x_{i,n-1}$ est l'image dans $M_{n-1}$, alors $(x_{in})$ $(1\leq i\leq r)$ est un système de générateurs de $M_n$ (Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~3, cor. 2 de la prop. 4). Cela étant, pour tout $n$, posons $L_n=A_n^r$; si $(e_{in})_{1\leq i\leq r}$ est la base canonique de $L_n$, soit $u_n:L_n\to M_n$ l'application $A$-linéaire telle que $u_n(e_{in})=x_{in}$ pour tout $i$. Par hypothèse on a une suite exacte \emph{scindée}
+\[
+  0\longrightarrow N_n\xrightarrow{v_n}L_n\xrightarrow{u_n}M_n\longrightarrow 0
+\]
+\oldpage[IV-4]{116}
+et comme $L_n=L_{n+1}/\mathfrak J^{n+1}L_{n+1}$ et $M_n=M_{n+1}/\mathfrak J^{n+1}M_{n+1}$, les flèches verticales dans le diagramme commutatif
+\[
+\xymatrix{
+0\ar[r] & N_{n+1}\ar[r]^{v_{n+1}}\ar[d] & L_{n+1}\ar[r]^{u_{n+1}}\ar[d] & M_{n+1}\ar[r]\ar[d] & 0\\
+0\ar[r] & N_n\ar[r]_{v_n} & L_n\ar[r]_{u_n} & M_n\ar[r] & 0
+}
+\]
+sont toutes trois \emph{surjectives}. Or on a $M=\varprojlim M_n$ et $L=A^r=\varprojlim L_n$; si l'on pose $N=\varprojlim N_n$, $u=\varprojlim u_n$, $v=\varprojlim v_n$, on a, en vertu de ($\mathbf{0}_{\mathrm{III}}$, 13.2.2), la suite exacte
+\begin{equation}
+  0\longrightarrow N\xrightarrow{v}L\xrightarrow{u}M\longrightarrow 0.
+  \tag{18.3.2.2}\label{IV.18.3.2.2}
+\end{equation}
+En outre, comme pour tout $n$, $v_n$ est inversible à gauche et que $M_n$ est un $A_n$-module projectif, il résulte de (\textbf{0}, 19.1.8) que la suite exacte (18.3.2.2) est scindée, ce qui prouve le lemme.
+
+Cela étant, montrons d'abord que le foncteur de l'énoncé de (18.3.2) est \emph{pleinement fidèle}. Posons, comme dans le lemme, $A_n=A/\mathfrak J^{n+1}$; soient $B$, $C$ deux $A$-algèbres finies et étales, et posons, pour tout $n$, $B_n=B\otimes_A A_n$, $C_n=C\otimes_A A_n$; en vertu de (18.3.1) et (18.3.2.1), $B$ et $C$ sont séparés et complets pour la topologie $\mathfrak J$-préadique, et l'on a $B=\varprojlim B_n$, $C=\varprojlim C_n$; en outre tout homomorphisme de $A$-algèbres $u:B\to C$ est continu pour les topologies $\mathfrak J$-préadiques, et donne donc un système projectif d'homomorphismes de $A_n$-algèbres $u_n=u\otimes 1:B_n\to C_n$, dont il est la limite projective; la réciproque étant évidente, on a donc une bijection canonique
+\[
+  \Hom_{A\text{-alg.}}(B,C)\xrightarrow{\sim}\varprojlim\Hom_{A_n\text{-alg.}}(B_n,C_n).
+\]
+Mais comme $B$ et $C$ sont des $A$-algèbres \emph{étales}, il résulte aussitôt de (18.1.2) que l'application canonique
+\[
+  \Hom_{A_{n+1}\text{-alg.}}(B_{n+1},C_{n+1})\longrightarrow\Hom_{A_n\text{-alg.}}(B_n,C_n)
+\]
+est \emph{bijective} pour $n\geq 0$, ce qui achève de prouver que l'application canonique $\Hom_{A\text{-alg.}}(B,C)\to\Hom_{A_0\text{-alg.}}(B_0,C_0)$ est bijective.
+
+Pour achever de démontrer (18.3.2), il suffit de voir que pour toute $A_0$-algèbre finie et étale $B_0$, il existe une $A$-algèbre finie et étale $B$ et un $A_0$-isomorphisme $B_0\xrightarrow{\sim}B\otimes_A A_0$. Or, il résulte de (18.1.2) qu'il y a un système projectif $(B_n)$ tel que $B_n$ soit une $A_n$-algèbre étale et que les homomorphismes $B_{n+1}\otimes_{A_{n+1}}A_n\to B_n$ soient bijectifs. Il résulte de (18.3.1) et (18.3.2.1) que la $A$-algèbre $B=\varprojlim B_n$ est un $A$-module projectif de type fini et que $B_0$ est isomorphe à $B\otimes_A A_0$. Pour prouver que $B$ est une $A$-algèbre étale, il suffit, en vertu de (18.2.5), de montrer que pour tout idéal maximal $\mathfrak m$ de $A$, $B_{\mathfrak m}/\mathfrak mB_{\mathfrak m}$ est une $(A/\mathfrak m)$-algèbre séparable. Or, puisque $\mathfrak J$ est contenu dans le radical de $A$ ($\mathbf{0}_{\mathrm I}$, 7.1.10),
+\oldpage[IV-4]{117}
+on a $\mathfrak J\subset\mathfrak m$ et si $\mathfrak m_0=\mathfrak m/\mathfrak J$, on a $A_0/\mathfrak m_0=A/\mathfrak m$ et $B_{\mathfrak m}/\mathfrak mB_{\mathfrak m}=(B_0)_{\mathfrak m_0}/\mathfrak m_0(B_0)_{\mathfrak m_0}$; la conclusion résulte donc du fait que $B_0$ est une $A_0$-algèbre étale (18.2.5).
+
+\begin{example}[18.3.3]
+\label{IV.18.3.3}
+La prop. (18.3.2) s'applique en particulier lorsque $A$ est un \emph{anneau local} séparé et complet, $\mathfrak J$ étant l'idéal maximal de $A$, de sorte que $A_0$ est un \emph{corps} et la catégorie des $A_0$-algèbres finies et étales identique à celle des $A_0$-algèbres finies et séparables, donc isomorphes à des composées directes de corps, extensions séparables et finies de $A_0$. En particulier, si le corps $A_0$ est \emph{séparablement clos}, ces extensions sont toutes identiques à $A_0$, et par suite tout revêtement étale de $\Spec(A)$ est \emph{trivial} (18.2.7) en vertu de (18.3.2).
+\end{example}
+
+\begin{theorem}[18.3.4]
+\label{IV.18.3.4}
+Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal de $A$ tel que $A$ soit séparé et complet pour la topologie $\mathfrak J$-préadique, $A_0=A/\mathfrak J$. Posons $S=\Spec(A)$, $S_0=\Spec(A_0)$. Soit $X$ un $S$-schéma propre sur $S$, et posons $X_0=X\times_S S_0$. Alors le foncteur
+\[
+  Z\leadsto Z\times_X X_0
+\]
+de la catégorie des $X$-schémas finis et étales sur $X$ dans la catégorie des $X_0$-schémas finis et étales sur $X_0$, est une équivalence de catégories.
+\end{theorem}
+
+Montrons d'abord que ce foncteur est \emph{pleinement fidèle}. Soient donc $Z'$ et $Z''$ deux $X$-schémas finis et étales sur $X$. Posons $S_n=\Spec(A/\mathfrak J^{n+1})$, $X_n=X\times_S S_n$, $Z'_n=Z'\times_S S_n$, $Z''_n=Z''\times_S S_n$ pour tout $n\geq 0$. Il résulte de (\textbf{III}, 5.4.1) que l'on a une bijection canonique $\Hom_X(Z',Z'')\xrightarrow{\sim}\varprojlim\Hom_{X_n}(Z'_n,Z''_n)$. Or, en vertu de (18.1.2), l'application canonique $\Hom_{X_{n+1}}(Z'_{n+1},Z''_{n+1})\to\Hom_{X_n}(Z'_n,Z''_n)$ est bijective, ce qui achève de prouver notre assertion.
+
+Il reste à prouver que si $\sh{B}_0$ est une $\sh{O}_{X_0}$-Algèbre finie et étale, il existe une $\sh{O}_X$-Algèbre finie et étale $\sh{B}$ et un isomorphisme $\sh{B}_0\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_0}$. Il résulte de (18.1.2) qu'il y a un système projectif $(\sh{B}_n)$, où $\sh{B}_n$ est une $\sh{O}_{X_n}$-Algèbre finie et étale, et le deuxième théorème de comparaison (\textbf{III}, 5.1.4) prouve l'existence d'un $\sh{O}_X$-Module cohérent $\sh{B}$ et d'un système projectif d'isomorphismes $\sh{B}_n\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_n}$. La donnée d'une structure d'Algèbre sur un Module $\sh{F}$ étant équivalente à celle d'un homomorphisme $\sh{F}\otimes\sh{F}\to\sh{F}$ rendant commutatifs des diagrammes où n'interviennent que des puissances tensorielles de $\sh{F}$, il résulte de (\textbf{III}, 5.1.3), (\textbf{I}, 10.11.4) et (\textbf{I}, 10.11.7) que $\sh{B}$ est muni de façon naturelle d'une structure de $\sh{O}_X$-Algèbre pour laquelle l'isomorphisme $\sh{B}_0\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_0}$ est un isomorphisme d'Algèbres. De plus, $\sh{B}$ est un $\sh{O}_X$-Module \emph{localement libre}; cela résulte encore de (\textbf{III}, 5.1.3), (\textbf{I}, 10.11.4), (\textbf{I}, 10.11.7) et du fait que, dans la catégorie des $\sh{O}_X$-Modules cohérents, les $\sh{O}_X$-Modules localement libres $\sh{F}$ peuvent être définis comme ceux pour lesquels le foncteur $\sh{G}\leadsto\mathscr{H}\!om_{\sh{O}_X}(\sh{F},\sh{G})$ est \emph{exact}. Enfin, pour voir que $\sh{B}$ est une $\sh{O}_X$-Algèbre étale, il suffit (18.2.5) de montrer que pour tout point \emph{fermé} $x\in X$, $\sh{B}_x\otimes_{\sh{O}_{X,x}}\boldsymbol{k}(x)$ est une $\boldsymbol{k}(x)$-algèbre séparable. Mais comme le morphisme structural $f:X\to S$ est \emph{propre}, $f(x)$ est un point fermé de $S$, donc appartient à $S_0$, puisque $\mathfrak J$ est contenu dans le radical de $A$ ($\mathbf{0}_{\mathrm I}$, 7.1.10); la conclusion résulte donc de ce que $X_0=f^{-1}(S_0)$ et de ce que $\sh{B}_0$ est une $\sh{O}_{X_0}$-algèbre finie et étale.
+
+\oldpage[IV-4]{118}
+
+\subsection{Structure locale des morphismes non ramifiés et des morphismes étales.}
+\EGAReaderTarget{ega4.c04.subsec.18-4}{subsection:IV.18.4}
+
+\begin{lemma}[18.4.1]
+\label{IV.18.4.1}
+Soient $A$ un anneau, $B$ une $A$-algèbre finie monogène, $u$ un générateur de la $A$-algèbre $B$, $F\in A[T]$ un polynôme tel que $F(u)=0$, $F'$ le polynôme dérivé; posons $u'=F'(u)$. Alors l'idéal de $B$, annulateur de $\Omega^1_{B/A}$, contient $u'B$; il est égal à $u'B$ si l'idéal $\mathfrak J$ de $A[T]$ formé des polynômes $G$ tels que $G(u)=0$, est engendré par $F$, autrement dit si l'homomorphisme surjectif canonique $\varphi:A[T]/F.A[T]\to B$ transformant l'image de $T$ en $u$, est bijectif.
+\end{lemma}
+
+Posons $C=A[T]$, de sorte que $B=C/\mathfrak J$. On a la suite exacte (\textbf{0}, 20.5.12.1)
+\[
+  \mathfrak J/\mathfrak J^2\longrightarrow\Omega^1_{C/A}\otimes_C B\longrightarrow\Omega^1_{B/A}\longrightarrow 0
+\]
+et $\Omega^1_{B/A}$ s'identifie donc au quotient $B/\mathfrak J'$, $\mathfrak J'$ étant l'idéal engendré par les éléments $G'(u)$, où $G'$ parcourt un système de générateurs de l'idéal $\mathfrak J$ (\textbf{0}, 20.5.13); d'où aussitôt le lemme.
+
+\begin{proposition}[18.4.2]
+\label{IV.18.4.2}
+Les notations étant celles de \textup{(18.4.1)}, soit $\mathfrak q$ un idéal premier de $B$. Alors:
+\begin{enumerate}
+  \item[\textup{(i)}] Si $\mathfrak q$ ne contient pas $u'$, $B_{\mathfrak q}$ est une $A_{\mathfrak p}$-algèbre formellement non ramifiée \textup{(}$\mathfrak p$ étant l'image réciproque de $\mathfrak q$ dans $A$\textup{)}; en d'autres termes, $\Spec(B_{u'})$ est formellement non ramifié sur $\Spec(A)$.
+  \item[\textup{(ii)}] Supposons de plus que $F$ soit unitaire et engendre $\mathfrak J$. Alors, pour que $\Spec(B)$ soit étale sur $\Spec(A)$ au point $\mathfrak q$, il faut et il suffit que $u'\notin\mathfrak q$.
+\end{enumerate}
+\end{proposition}
+
+L'hypothèse que $u'\notin\mathfrak q$ entraîne que $\Omega^1_{B_{\mathfrak q}/A_{\mathfrak p}}=0$ (\textbf{0}, 20.5.9), donc (i) résulte de (17.2.1). En outre, sous les hypothèses de (ii), $B$ est un $A$-module libre en vertu de la division euclidienne; comme l'annulateur $\mathfrak J'$ de $\Omega^1_{B/A}$ est alors égal à $u'B$ en vertu de (18.4.1) et que $\Omega^1_{B/A}$ est un $B$-module de présentation finie (16.4.22), l'annulateur de $\Omega^1_{B_{\mathfrak q}/A_{\mathfrak p}}$ est égal à $u'B_{\mathfrak q}$ (Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~2, n\textsuperscript{o}~4, formule (9)), et (ii) résulte donc de (i) et de l'implication $\textit{c)}\Rightarrow\textit{a)}$ dans (17.6.1).
+
+\begin{corollary}[18.4.3]
+\EGAReaderTarget{ega4.c04.cor.18-4-3}{IV.18.4.3}
+Les notations étant celles de \textup{(18.4.2)}, supposons que $F$ soit unitaire et engendre $\mathfrak J$. Alors, pour que $B$ soit une $A$-algèbre étale, il faut et il suffit que $u'$ soit inversible dans $B$ \textup{(ou, ce qui revient au même, que l'idéal de $A[T]$ engendré par $F$ et $F'$ soit égal à $A[T]$)}.
+\end{corollary}
+
+Compte tenu de (18.4.2), (ii)), dire que $\Spec(B)$ est étale sur $\Spec(A)$ signifie en effet que $u'$ n'appartient à aucun idéal premier de $B$, i.e. qu'il est inversible dans $B$.
+
+On dit qu'un polynôme unitaire $F\in A[T]$ tel que l'idéal de $A[T]$ engendré par $F$ et $F'$ soit égal à $A[T]$ lui-même, est \emph{séparable}; il est immédiat que cette définition coïncide avec la définition usuelle (Bourbaki, \emph{Alg.}, chap. V, \textsection~7, n\textsuperscript{o}~6) lorsque $A$ est un corps.
+
+\begin{lemma}[18.4.4]
+\label{IV.18.4.4}
+Soient $A$ un anneau local, $B$ une $A$-algèbre finie monogène, $u$ un générateur de la $A$-algèbre $B$. Soient $\mathfrak n_i$ \textup{(}$1\leq i\leq r$\textup{)} des idéaux maximaux de $B$ tels que $\Spec(B)$ soit formellement non ramifié sur $\Spec(A)$ aux points $\mathfrak n_i$. Alors il existe un polynôme unitaire $F\in A[T]$ tel que $F(u)=0$ et $F'(u)\notin\mathfrak n_i$ pour tout indice $i$ \textup{(}$1\leq i\leq r$\textup{)}. En outre, si $k$ est le corps
+\oldpage[IV-4]{119}
+résiduel de $A$, $f\in k[T]$ le polynôme minimal de l'image de $u$ dans $B\otimes_A k$, il existe un $F\in A[T]$ dont $f$ est l'image canonique et tel que $F(u)=0$; un tel polynôme $F$ vérifie les conditions $F'(u)\notin\mathfrak n^i$ pour $1\leq i\leq r$.
+\end{lemma}
+
+L'idéal maximal $\mathfrak m$ de $A$ est l'image réciproque de chacun des $\mathfrak n_i$ (\textbf{II}, 6.1.10); soit $L=B\otimes_A k$, qui est une $k$-algèbre finie. Soit $\xi$ l'image de $u$ dans $L$, et soit $n$ le rang de $L$ sur $k$; le polynôme minimal $f\in k[T]$ de $\xi$ sur $k$ est donc de degré $n$, et $L$ est isomorphe à $k[T]/f.k[T]$. Si $\mathfrak n'_i=\mathfrak n_i/\mathfrak mB$, l'hypothèse entraîne que $\Spec(L)$ est étale sur $k$ aux points $\mathfrak n'_i$ ($1\leq i\leq r$) en vertu de (17.6.1, \emph{c)}), donc $f'(\xi)\notin\mathfrak n'_i$ en vertu de (18.4.2, (ii)). Notons maintenant que $\mathfrak mB$ est contenu dans le radical de $B$; comme $1,\xi,\ldots,\xi^{n-1}$ forment une base de $L$ sur $k$, il résulte du lemme de Nakayama que $1,u,\ldots,u^{n-1}$ engendrent le $A$-module $B$, et par suite il existe un polynôme unitaire $F\in A[T]$ de degré $n$, tel que $F(u)=0$; en outre, comme $\xi$ est racine de l'image canonique de $F$ dans $k[T]$, cette image est nécessairement égale à $f$. Mais alors l'image de $F'(u)$ dans $L$ est $f'(\xi)$, et comme $f'(\xi)\notin\mathfrak n'_i$, on a $F'(u)\notin\mathfrak n_i$ pour tout $i$.
+
+\begin{proposition}[18.4.5]
+\label{IV.18.4.5}
+Soient $A$ un anneau local, $k$ son corps résiduel, $B$ une $A$-algèbre finie \textup{(resp.} finie et de présentation finie\textup{)}. On suppose en outre, ou bien que le corps $k$ est infini, ou bien que $B$ est un anneau local. Soit $n$ le rang de $L=B\otimes_A k$ sur $k$. Pour que $B$ soit une $A$-algèbre formellement non ramifiée \textup{(resp.} étale\textup{)}, il faut et il suffit qu'il existe un polynôme unitaire séparable $F\in A[T]$ \textup{(18.4.3)} tel que $B$ soit isomorphe à un quotient de $A[T]/F.A[T]$ \textup{(resp.} isomorphe à $A[T]/F.A[T]$\textup{)}. En outre, on peut supposer que $F$ est de degré $n$ \textup{(resp.} $F$ est nécessairement de degré $n$\textup{)}.
+\end{proposition}
+
+Les conditions sont suffisantes en vertu de (18.4.2), sans supposer $k$ infini ni $B$ local. Pour voir que les conditions sont nécessaires, notons que si $B$ est une $A$-algèbre formellement non ramifiée, $L$ est une algèbre finie et séparable sur $k$, donc composée directe d'un nombre fini d'extensions finies et séparables $k_j$ de $k$ ($1\leq j\leq r$), $k_j$ étant donc engendrée par un élément $\xi_j$, de polynôme minimal $f_j$ ($1\leq j\leq r$) (Bourbaki, \emph{Alg.}, chap. V, \textsection~11, n\textsuperscript{o}~4, prop. 4). Montrons qu'en vertu des hypothèses faites sur $k$ ou $B$, il existe un élément $\xi$ de $L$ engendrant la $k$-algèbre $L$. C'est immédiat si $B$ est local, puisque alors $r=1$. Sinon, $k$ étant supposé infini, on peut supposer que les polynômes irréductibles $f_j\in k[T]$ sont tous \emph{distincts} (en remplaçant au besoin chaque $\xi_j$ par $\xi_j+a_j$, pour un élément convenable $a_j\in k$); si l'on pose $f=f_1f_2\ldots f_r$, il est clair que $L$ est isomorphe à $k[T]/f.k[T]$ dans les deux cas envisagés, donc est engendrée par un élément $\xi$ de polynôme minimal $f\in k[T]$ de degré $n$. Si $u\in B$ est un élément d'image $\xi$ dans $L$, le lemme de Nakayama montre que les éléments $1,u,\ldots,u^{n-1}$ engendrent le $A$-module $B$; ceci montre déjà qu'il existe un polynôme unitaire $F\in A[T]$ de degré $n$ tel que $F(u)=0$, $u$ engendrant la $A$-algèbre $B$, qui est par suite isomorphe à une algèbre quotient de $A[T]/F.A[T]$; en outre $B$ est un anneau semi-local et en chacun de ses idéaux maximaux $\mathfrak n_i$, on a $F'(u)\notin\mathfrak n_i$ d'après (18.4.4), ce qui prouve que $F'(u)$ est inversible dans $B$, donc que $F$ est un polynôme \emph{séparable}. Enfin, si $B$ est une $A$-algèbre étale, $B$ étant un $A$-module plat de présentation finie (1.4.7) est un $A$-module libre, et $1,u,\ldots,u^{n-1}$ forment une base du $A$-module $B$ (Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~3, n\textsuperscript{o}~2, prop. 5), autrement dit la $A$-algèbre $B$ est

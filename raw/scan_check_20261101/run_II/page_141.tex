@@ -1,0 +1,72 @@
+% from ega2-1-fr.tex
+\oldpage[II]{141}
+\begin{proposition}[7.1.9]
+\label{II.7.1.9-fr}
+Soient $Y$ un préschéma localement noethérien, $p:X\to Y$ un morphisme
+localement de type fini, $x$ un point de $X$, $y=p(x)$, $y'\neq y$ une
+spécialisation de $y$. Il existe alors un schéma local $Y'$, spectre d'un
+anneau de valuation discrète, un morphisme séparé $f:Y'\to Y$ et une
+$Y$-application rationnelle $g$ de $Y'$ dans $X$, tels que, si $a$ désigne le
+point fermé de $Y'$ et $b$ son point générique, on ait $f(a)=y'$,
+$f(b)=y$, $g(b)=x$, et que dans le diagramme commutatif
+\[
+\tag{7.1.9.1}
+\label{II.7.1.9.1-fr}
+\begin{tikzcd}[column sep=large,row sep=large]
+& k(x) \arrow[dl,"\gamma"'] \\
+k(b) & k(y) \arrow[u,"\pi"] \arrow[l,"\varphi"']
+\end{tikzcd}
+\]
+(où $\pi$, $\varphi$, $\gamma$ sont les homomorphismes correspondant
+respectivement à $p$, $f$ et $g$), $\gamma$ soit une bijection.
+\end{proposition}
+
+Comme dans (\hyperref[II.7.1.4-fr]{7.1.4}), on peut se ramener au cas où $Y$
+est intègre de point générique $y$ (compte tenu de
+(\hyperref[I.6.3.4-fr]{I, 6.3.4, (iv)})) et comme la question est locale sur
+$X$ et $Y$, on peut supposer $p$ de type fini~; on est alors dans la situation
+de (\hyperref[II.7.1.4-fr]{7.1.4}), avec la propriété supplémentaire que
+$k(x)$ est une extension \emph{de type fini} de $k(y)$
+(\hyperref[I.6.4.11-fr]{I, 6.4.11}) et que $\mathcal{O}_{y'}$ est noethérien~;
+cela permet d'appliquer (\hyperref[II.7.1.7-fr]{7.1.7}) et de prendre
+$Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation discrète
+dominant $\mathcal{O}_{y'}$ et dont $k(x)$ est le corps des fractions. On a
+donc ainsi défini un diagramme commutatif
+(\hyperref[II.7.1.9.1-fr]{7.1.9.1}), où $\gamma$ est une bijection, et $\pi$
+et $\varphi$ correspondent aux morphismes $p$ et $f$. En outre, comme $X$ et
+$Y$ sont localement noethériens (\hyperref[I.6.6.2-fr]{I, 6.6.2}) et que $Y'$
+est intègre, il y a une $Y$-application rationnelle $g$ et une seule de $Y'$
+dans $X$ à laquelle correspond l'isomorphisme $\gamma$
+(\hyperref[I.7.1.15-fr]{I, 7.1.15}), ce qui achève la démonstration.
+
+\subsection{Critère valuatif de séparation}
+\label{subsection:II.7.2-fr}
+
+\begin{proposition}[7.2.1]
+\label{II.7.2.1-fr}
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme quasi-compact. Les
+deux conditions suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\rm a)] Le morphisme $f$ est fermé.
+\item[\rm b)] Pour tout $x\in X$ et toute spécialisation $y'$ de $y=f(x)$,
+distincte de $y$, il existe une spécialisation $x'$ de $x$ telle que
+$f(x')=x$.
+\end{enumerate}
+\end{proposition}
+
+La condition b) exprime que $f(\overline{\{x\}})=\overline{\{y\}}$ et est donc
+conséquence de a). Pour montrer que b) entraîne a), considérons une partie
+fermée $X'$ de l'espace sous-jacent $X$~; soit $Y'=\overline{f(X')}$ et
+montrons que $Y'=f(X')$. Considérons les sous-préschémas fermés réduits de
+$X$ et $Y$ respectivement ayant pour espaces sous-jacents $X'$ et $Y'$
+(\hyperref[I.5.2.1-fr]{I, 5.2.1})~; il y a alors un morphisme $f':X'\to Y'$ tel
+que le diagramme
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X' \arrow[r,"f'"] \arrow[d] & Y' \arrow[d] \\
+X \arrow[r,"f"'] & Y
+\end{tikzcd}
+\]
+soit commutatif (\hyperref[I.5.2.2-fr]{I, 5.2.2}), et comme $f$ est
+quasi-compact, il en est de même de $f'$. On est donc ramené à prouver que si
+$f$ est un morphisme quasi-compact et \emph{dominant}, alors la

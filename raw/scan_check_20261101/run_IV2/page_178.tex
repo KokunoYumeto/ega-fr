@@ -1,0 +1,102 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{178}
+(i) Si $f$ est radiciel au point $y$ et $g$ radiciel au point $z$,
+$g^{-1}(z)$ est réduit à $y$ et
+$f^{-1}(g^{-1}(z))=f^{-1}(y)$ vide ou réduit à un seul point $x$; en
+outre $k(x)$ est extension radicielle de $k(y)$ et $k(y)$ extension
+radicielle de $k(z)$, donc $k(x)$ est extension radicielle de $k(z)$.
+Inversement, supposons $f$ surjectif; si $g\circ f$ est radiciel au point
+$z=g(y)$, $g^{-1}(z)$ se réduit au seul point $y$, sans quoi
+$f^{-1}(g^{-1}(z))$ aurait au moins deux points distincts; en outre,
+$f^{-1}(y)=f^{-1}(g^{-1}(z))$ se réduit à un seul point $x$, et par
+hypothèse on a $k(z)\subset k(y)\subset k(x)$, et $k(x)$ est radiciel sur
+$k(z)$, donc $k(y)$ est radiciel sur $k(z)$ et $k(x)$ radiciel sur $k(y)$.
+
+(ii) Soient $g:f^{-1}(y)\to\operatorname{Spec}(k(y))$,
+$g':f'^{-1}(y')\to\operatorname{Spec}(k(y'))$ les morphismes images
+réciproques de $f$ et $f'$ respectivement; comme
+$f'^{-1}(y')=f^{-1}(y)\otimes_{k(y)}k(y')$ (I, 3.6.4), $g'$ est image
+réciproque de $g$ et l'assertion se réduit à (2.6.1, (v)).
+\end{proof}
+
+Soit alors $X$ un préschéma réduit n'ayant qu'un nombre fini de
+composantes irréductibles, et soit $X'$ son normalisé (II, 6.3.8); on sait
+(loc. cit.) que le morphisme canonique $f:X'\to X$ est surjectif. La
+définition (6.15.1) montre alors que pour que $X$ soit géométriquement
+unibranche en un point $x$, il faut et il suffit que $f$ soit radiciel en ce
+point; pour que $X$ soit géométriquement unibranche, il faut et il suffit
+donc que $f$ soit radiciel.
+
+\begin{env}[6.15.4]
+\EGAReaderTarget{ega4.c04.statement.6-15-4}{IV.2.s6.15.4-fr}
+Généralisant la définition donnée dans (I, 2.2.9), nous dirons que, pour
+deux préschémas réduits $X$, $Y$, un morphisme $f:X\to Y$ est
+\emph{birationnel} si la restriction de $f$ à l'ensemble des points
+maximaux de $X$ est une bijection de cet ensemble sur l'ensemble des points
+maximaux de $Y$, et si, pour tout point maximal $y$ de $Y$, le morphisme
+$X\times_Y\operatorname{Spec}(k(y))\to\operatorname{Spec}(k(y))$ déduit de
+$f$ est un isomorphisme (autrement dit, si la fibre $f^{-1}(y)$ est réduite
+à un seul point $x$ (maximal dans $X$) et si l'homomorphisme
+$k(y)\to k(x)$ déduit de $f$ est bijectif); cette notion se réduit à celle
+de (I, 2.2.9) lorsque $X$ et $Y$ n'ont qu'un nombre fini de composantes
+irréductibles.
+\end{env}
+
+\begin{lemma}[6.15.4.1]
+\label{IV.2.s6.15.4.1-fr}
+Soit $f:X\to Y$ un morphisme, $g:Y'\to Y$ un morphisme plat,
+$X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Si $f_{\mathrm{red}}$ est
+birationnel, il en est de même de $f'_{\mathrm{red}}$.
+\end{lemma}
+
+\begin{proof}
+En effet, si $y'$ est un point maximal de $Y'$, on sait (2.3.4, (ii)) que
+$y=g(y')$ est un point maximal de $Y$; il existe un seul point $x$ de $X$
+dans $f^{-1}(y)$ par hypothèse; de plus $x$ est maximal dans $X$ et tel que
+$k(x)=k(y)$. Il résulte donc de (I, 3.4.9) que $f'^{-1}(y')$ est réduit à
+un seul point $x'$ et que $k(x')=k(y')$. On conclut le raisonnement en
+remarquant que d'après (2.3.7, (ii)), toute composante irréductible de $X'$
+domine une composante irréductible de $Y'$.
+\end{proof}
+
+\begin{proposition}[6.15.5]
+\label{IV.2.s6.15.5-fr}
+Soit $f:X\to Y$ un morphisme tel que $f_{\mathrm{red}}$ soit entier et
+birationnel (6.15.4), donc surjectif.
+\begin{enumerate}
+\item[(i)] Pour que $Y$ soit géométriquement unibranche en un point $y$,
+il faut et il suffit que $f$ soit radiciel au point $y$ et que $X$ soit
+géométriquement unibranche en l'unique point $x$ de $f^{-1}(y)$.
+\item[(ii)] Pour que $Y$ soit géométriquement unibranche, il faut et il
+suffit que $X$ soit géométriquement unibranche et que $f$ soit radiciel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se borner au cas où $X$ et $Y$ sont réduits, le fait
+que $f$ soit surjectif résulte de ce que $f$ est un morphisme fermé (II,
+6.1.10) et que $f(X)$ contient par hypothèse tous les points maximaux de
+$Y$. Cela montre aussitôt que (i) entraîne (ii). Utilisant (I, 3.6.5) et
+(II, 6.1.5), on peut supposer, pour prouver (i), que
+$Y=\operatorname{Spec}(\mathcal O_{Y,y})$, autrement dit
+$Y=\operatorname{Spec}(A)$, où $A$ est local. Comme $f$ est affine, on a
+aussi $X=\operatorname{Spec}(B)$. Si $A$ est géométriquement unibranche,
+il est intègre, donc il en est de même de $B$ puisque $f$ est birationnel;
+inversement, si $f$ est radiciel au point $y$ et $X$ géométriquement
+unibranche au point $x$, $B$ n'a qu'un seul idéal maximal (puisqu'il est
+entier sur $A$ et que tout idéal maximal de $B$ est donc au-dessus de celui
+de $A$), autrement dit $B$ est un anneau local, et dire que $X$ est
+géométriquement unibranche au point $x$ signifie que $B$ est
+géométriquement unibranche, donc intègre. Comme $f$ est dominant par
+hypothèse et que $A$ est réduit, on en conclut que $A\subset B$ (I,
+1.2.7), donc $A$ est aussi intègre. Ainsi, pour prouver (i), on peut se
+borner au cas où $A$ et $B$ sont locaux, intègres, $A$ étant contenu dans
+$B$ et ayant même corps des fractions, et par suite (puisque $B$ est entier
+sur $A$) même clôture intégrale $C$. Mais alors l'assertion résulte de
+(6.15.3.1, (i)) appliqué aux morphismes
+$\operatorname{Spec}(C)\to\operatorname{Spec}(B)$ et
+$\operatorname{Spec}(B)\to\operatorname{Spec}(A)$, vu l'interprétation
+donnée dans (6.15.3) de la propriété d'être géométriquement unibranche en
+un point.
+\end{proof}
+

@@ -1,0 +1,51 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{225}
+
+un $A_0$-module plat et un $A_0$-module $N_0$, tels que $B=B_0\otimes_{A_0}A$, $\mathfrak J=\mathfrak J_0B$, $M=M_0\otimes_{A_0}A$ et $N=N_0\otimes_{A_0}A$ (8.9.1, 8.5.11 et 11.2.7). De plus, soit $(A_\lambda)$ la famille des sous-$A_0$-algèbres de type fini de $A$, de sorte que $A=\varinjlim A_\lambda$; posons
+\[
+\begin{gathered}
+  B_\lambda=B_0\otimes_{A_0}A_\lambda,\qquad
+  \mathfrak J_\lambda=\mathfrak J_0B_\lambda,\qquad
+  M_\lambda=M_0\otimes_{A_0}A_\lambda=M_0\otimes_{B_0}B_\lambda,\\
+  N_\lambda=N_0\otimes_{A_0}A_\lambda,\qquad
+  S_\lambda=\Spec(A_\lambda),\quad
+  X_\lambda=\Spec(B_\lambda),\quad
+  Z_\lambda=V(\mathfrak J_\lambda);
+\end{gathered}
+\]
+si $p_\lambda:X\to X_\lambda$ est la projection canonique, on a donc $Z=p_\lambda^{-1}(Z_\lambda)$, et $X-Z=p_\lambda^{-1}(X_\lambda-Z_\lambda)$. Comme $X_\lambda-Z_\lambda$ est quasi-compact et quasi-séparé, on en conclut (8.5.2) que si l'on pose $\sh F_\lambda=\widetilde{M_\lambda}$ et $\sh H_\lambda=(M_\lambda\otimes_{A_\lambda}N_\lambda)^\sim$, les homomorphismes
+\[
+  \varinjlim\Gamma(X_\lambda,\sh H_\lambda)\longrightarrow\Gamma(X,\sh H)
+  \qquad\text{et}\qquad
+  \varinjlim\Gamma(X_\lambda-Z_\lambda,\sh H_\lambda)\longrightarrow\Gamma(X-Z,\sh H)
+\]
+sont bijectifs; en vertu de l'exactitude du foncteur $\varinjlim$, il suffira donc de prouver que pour tout $\lambda$ assez grand, l'homomorphisme canonique $\Gamma(X_\lambda,\sh H_\lambda)\to\Gamma(X_\lambda-Z_\lambda,\sh H_\lambda)$ est injectif (resp. bijectif). Mais pour tout $x\in Z$, si $x_\lambda$ est la projection de $x$ dans $Z_\lambda$, on a
+\[
+  \operatorname{prof}((\sh F_{f(x)})_x)
+  =\operatorname{prof}(((\sh F_\lambda)_{f_\lambda(x_\lambda)})_{x_\lambda})
+\]
+en vertu de (4.2.7) et (6.7.1); pour être ramené à démontrer (19.9.8) dans le cas où $A$ est noethérien, il faut prouver que, pour $\lambda$ assez grand on a $\operatorname{prof}(((\sh F_\lambda)_{f_\lambda(x_\lambda)})_{x_\lambda})\geq1$ (resp. $\geq2$) pour tout point $x_\lambda\in Z_\lambda$. Or, notons $Z_\lambda'$ l'ensemble des points $x_\lambda\in Z_\lambda$ tels que, pour toute générisation $z_\lambda$ de $x_\lambda$ dans $Z_\lambda\cap(X_\lambda)_{f_\lambda(x_\lambda)}$, on ait $\operatorname{prof}(((\sh F_\lambda)_{f_\lambda(x_\lambda)})_{z_\lambda})\geq1$; si $p_{\lambda\mu}:Z_\mu\to Z_\lambda$ est la projection canonique pour $\lambda\leq\mu$, il résulte de l'hypothèse et de (19.9.5) que l'on a $Z_\mu'=p_{\lambda\mu}^{-1}(Z_\lambda')$ et $Z=p_\lambda^{-1}(Z_\lambda')$; d'autre part, il résulte de (19.9.6) que $Z_\lambda'$ est ouvert dans $Z_\lambda$, donc notre assertion résulte de (8.3.4).
+
+Pour terminer la démonstration lorsque $A$ est noethérien, notons qu'en vertu de l'hypothèse de platitude et de (6.3.1), on a alors $\operatorname{prof}_Z(\sh H)\geq1$ (resp. $\operatorname{prof}_Z(\sh H)\geq2$); mais la conclusion de (19.9.8) résulte dans ce cas de (5.10.2) (resp. 5.10.4)).
+
+\begin{remark}[19.9.9]
+\label{IV.19.9.9}
+La même démonstration, jointe aux résultats du chap. III, 3\textsuperscript{e} partie sur la profondeur et la cohomologie locale, permet d'établir la généralisation suivante de (19.9.8):
+
+\emph{Sous les conditions générales de (19.9.8), supposons que, pour tout $x\in Z$, on ait $\operatorname{prof}((\sh F_{f(x)})_x)\geq k$; alors l'homomorphisme canonique}
+\[
+  H^i(X,\sh H)\longrightarrow H^i(X-Z,\sh H|(X-Z))
+\]
+\emph{est bijectif pour $i\leq k-2$ et injectif pour $i=k-1$} (ce qui, exprimé à l'aide de la notion cohomologique générale de profondeur introduite au chap. III, s'écrit aussi $\operatorname{prof}_Z(\sh H)\geq k$).
+\end{remark}
+
+% (continued in ega4-20-fr.tex, before its first page marker)
+\section{Fonctions méromorphes et pseudo-morphismes}
+\label{IV.20}
+
+\setcounter{subsection}{-1}
+\subsection{Introduction}
+\EGAReaderTarget{ega4.c04.subsec.20-0}{IV.20.0}
+
+La plupart des notions et résultats des \textsection\textsection20 et 21 se rattachent directement au chap.~I, et ne dépendent guère des chap.~II à IV, sauf en ce qui concerne l'usage occasionnel de la notion de profondeur et d'anneau local régulier (dans \sref{IV.20.6}, \sref{IV.21.11}, \sref{IV.21.13} et \sref{IV.21.15}), du « Main theorem » de Zariski dans \sref{IV.20.4} et \sref{IV.21.12}, et des propriétés des immersions transversalement régulières dans \sref{IV.20.6} et \sref{IV.21.15}.
+

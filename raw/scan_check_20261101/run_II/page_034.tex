@@ -1,0 +1,103 @@
+% from ega2-1-fr.tex
+\oldpage[II]{34}
+
+est commutatif. Il suffit encore de le vérifier dans chaque $D_+(f)$ et
+cela découle aussitôt des définitions et de
+(\hyperref[I.1.3.13-fr]{I, 1.3.13}).
+\end{env}
+
+\begin{env}[2.5.12]
+\label{II.2.5.12-fr}
+Sous les hypothèses de (\hyperref[II.2.5.11-fr]{2.5.11}), on définit un
+homomorphisme canonique fonctoriel de $S_{(f)}$-modules
+\[
+\label{II.2.5.12.1-fr}
+  \mu_f:\bigl(\operatorname{Hom}_S(M,N)\bigr)_{(f)}
+  \longrightarrow
+  \operatorname{Hom}_{S_{(f)}}(M_{(f)},N_{(f)})
+\tag{2.5.12.1}
+\]
+en faisant correspondre à $u/f^n$, où $u$ est un homomorphisme de degré
+$nd$, l'homomorphisme $M_{(f)}\to N_{(f)}$ qui transforme $x/f^m$
+($x\in M_{md}$) en $u(x)/f^{m+n}$. Pour $g\in S_e$ ($e>0$), on a encore
+un diagramme commutatif
+\[
+  \xymatrix{
+    \bigl(\operatorname{Hom}_S(M,N)\bigr)_{(f)}
+    \ar[r]^{\mu_f}\ar[d]
+    & \operatorname{Hom}_{S_{(f)}}(M_{(f)},N_{(f)})\ar[d]\\
+    \bigl(\operatorname{Hom}_S(M,N)\bigr)_{(fg)}
+    \ar[r]_{\mu_{fg}}
+    & \operatorname{Hom}_{S_{(fg)}}(M_{(fg)},N_{(fg)})
+  }
+\]
+(la flèche de gauche étant l'homomorphisme canonique, celle de droite
+provenant des homomorphismes canoniques). On en conclut encore (compte
+tenu de (\hyperref[I.1.3.8-fr]{I, 1.3.8})) que les $\mu_f$ définissent un
+homomorphisme canonique fonctoriel de $\mathcal{O}_X$-Modules
+\[
+\label{II.2.5.12.2-fr}
+  \mu:\widetilde{\operatorname{Hom}_S(M,N)}
+  \longrightarrow
+  \mathcal{H}om_{\mathcal{O}_X}(\widetilde{M},\widetilde{N}).
+\tag{2.5.12.2}
+\]
+\end{env}
+
+\begin{proposition}[2.5.13]
+\label{II.2.5.13-fr}
+Supposons l'idéal $S_+$ engendré par $S_1$. Alors l'homomorphisme
+$\lambda$ (\hyperref[II.2.5.11.2-fr]{2.5.11.2}) est un isomorphisme~; il
+en est de même de l'homomorphisme $\mu$
+(\hyperref[II.2.5.12.2-fr]{2.5.12.2}) lorsque le $S$-module gradué $M$
+admet une présentation finie (\hyperref[II.2.1.1-fr]{2.1.1}).
+\end{proposition}
+
+\begin{proof}
+Comme $X$ est réunion des $D_+(f)$ pour $f\in S_1$
+(\hyperref[II.2.3.14-fr]{2.3.14}), on est ramené à prouver que $\lambda_f$
+et $\mu_f$ sont des isomorphismes, sous les hypothèses envisagées, lorsque
+$f$ est homogène et \emph{de degré $1$}. Or, on définit alors une
+application $\mathbf{Z}$-bilinéaire
+\[
+  M_m\times N_n\longrightarrow
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)}
+\]
+en faisant correspondre à $(x,y)$ l'élément
+$(x/f^m)\otimes(y/f^n)$ (lorsque $m<0$, nous écrivons $x/f^m$ pour
+$f^{-m}x/1$)~; ces applications définissent une application
+$\mathbf{Z}$-linéaire
+\[
+  M\otimes_{\mathbf{Z}}N\longrightarrow
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)},
+\]
+et si $s\in S_q$, cette application transforme $(sx)\otimes y$ en
+\[
+  (s/f^q)\bigl((x/f^m)\otimes(y/f^n)\bigr)
+\]
+(pour $x\in M_m$, $y\in N_n$). On en déduit donc un di-homomorphisme de
+modules
+\[
+  \gamma_f:M\otimes_S N\longrightarrow
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)},
+\]
+relatif à l'homomorphisme canonique $S\to S_{(f)}$ (transformant
+$s\in S_q$ en $s/f^q$). Supposons en outre que pour un élément
+$\sum_i(x_i\otimes y_i)$ de $M\otimes_S N$ ($x_i$, $y_i$ homogènes de
+degrés respectifs $m_i$, $n_i$) on ait
+\[
+  f^r\sum_i(x_i\otimes y_i)=0,
+\]
+autrement dit $\sum_i(f^rx_i\otimes y_i)=0$. On en déduit en vertu de
+(\hyperref[0.1.3.4-fr]{0, 1.3.4}) que l'on a
+\[
+  \sum_i(f^rx_i/f^{m_i+r})\otimes(y_i/f^{n_i})=0,
+\]
+c'est-à-dire $\gamma_f(\sum_i(x_i\otimes y_i))=0$. Par suite $\gamma_f$
+se factorise en
+\[
+  M\otimes_S N\longrightarrow(M\otimes_S N)_f
+  \xrightarrow{\gamma'_f}
+  M_{(f)}\otimes_{S_{(f)}}N_{(f)}~;
+\]
+si $\lambda'_f$ est la restriction de $\gamma'_f$

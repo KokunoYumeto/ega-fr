@@ -1,0 +1,41 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{138}
+
+Soit $\mathfrak m_\lambda$ l'idéal maximal de $A_\lambda$; il résulte du fait que, dans (17.6.1), $a)$ implique $c')$, que pour $\lambda\leq\mu$, on a $\mathfrak m_\mu=\mathfrak m_\lambda A_\mu$, l'homomorphisme $A_\lambda/\mathfrak m_\lambda\to A_\mu/\mathfrak m_\mu$ est bijectif et $A_\mu$ est un $A_\lambda$-module plat. Le fait que ${}^h\!A$ soit local, que l'homomorphisme $A\to{}^h\!A$ soit local, l'assertion (iii) et la suffisance de (v) résultent donc de ($0_{\mathrm{III}}$, 10.3.1.3); la nécessité de (v) résulte de ce que ${}^h\!A$ est un $A$-module fidèlement plat ($0_{\mathrm I}$, 6.5.2).
+
+Pour prouver que ${}^h\!A$ est hensélien, appliquons le critère (18.5.11, $b)$). Posons donc $S=\Spec({}^h\!A)$, $S_0=\Spec({}^h\!A/\mathfrak m.{}^h\!A)$, et soit $g:S'\to S$ un morphisme étale; posons $S'_0=g^{-1}(S_0)$, et soit $f_0:S_0\to S'_0$ une $S_0$-section de $S'_0$. Raisonnant comme dans (18.5.4), on peut supposer que $g$ est de présentation finie. Il résulte alors de (8.8.2) et (17.7.5) qu'il existe un indice $\lambda\in\mathfrak S$, un morphisme étale $g_\lambda:S'^{(\lambda)}\to S^{(\lambda)}=\Spec(A_\lambda)$ et, si l'on pose $S_0^{(\lambda)}=\Spec(A_\lambda/\mathfrak mA_\lambda)$ et $S_0'^{(\lambda)}=g_\lambda^{-1}(S_0^{(\lambda)})$, une $S_0^{(\lambda)}$-section $f_0^{(\lambda)}:S_0^{(\lambda)}\to S_0'^{(\lambda)}$ tels que
+\[
+  S'=S'^{(\lambda)}\times_{S^{(\lambda)}}S,\qquad
+  g=g_\lambda\times1,\qquad
+  f_0=f_0^{(\lambda)}\times1.
+\]
+Soient $s$ le point fermé de $S$, $x=f_0(s)$, $x_\lambda$ la projection de $x$ dans $S'^{(\lambda)}$; comme $x_\lambda$ est au-dessus du point fermé $s_\lambda$ de $S^{(\lambda)}$, l'anneau local $C_\lambda$ de $S'^{(\lambda)}$ au point $x_\lambda$ est une $A_\lambda$-algèbre essentiellement étale; en outre, comme $f_0^{(\lambda)}(s_\lambda)=x_\lambda$, on a $k(x_\lambda)=k(s_\lambda)$, autrement dit, $C_\lambda$ est une $A_\lambda$-algèbre locale strictement essentiellement étale, et par suite (18.6.1) est $A_\lambda$-isomorphe à une $A$-algèbre $A_\mu$ avec $\mu\geq\lambda$. Il y a donc un $A_\lambda$-homomorphisme $C_\lambda\to{}^h\!A$, c'est-à-dire un $S^{(\lambda)}$-morphisme $h:S\to S'^{(\lambda)}$ tel que $h(s)=x_\lambda$, et par suite il existe bien une $S$-section $f$ de $S'$ telle que $f(s)=x$, ce qui achève de prouver (i).
+
+Pour prouver (ii), il suffit de noter que l'on a
+\[
+  \Hom.\operatorname{loc}({}^h\!A,B)=\varprojlim_\lambda\Hom.\operatorname{loc}(A_\lambda,B)
+\]
+et que par (18.6.2) les homomorphismes canoniques $\Hom.\operatorname{loc}(A_\lambda,B)\leftarrow\Hom.\operatorname{loc}(A,B)$ sont bijectifs.
+
+Pour démontrer (iv), notons que pour tout $\lambda$ et tout entier $n>0$, $\mathfrak m_\lambda^n=\mathfrak m^nA_\lambda$, et
+\[
+  (\mathfrak m.{}^h\!A)^n=\mathfrak m^n.{}^h\!A=\varinjlim_\lambda\mathfrak m_\lambda^n.
+\]
+On en conclut, par l'exactitude du foncteur $\varinjlim$ dans la catégorie des $A$-modules, que
+\[
+  {}^h\!A/(\mathfrak m.{}^h\!A)^n=\varinjlim_\lambda(A_\lambda/\mathfrak m_\lambda^n),
+\]
+et par suite, il suffit de montrer que, pour tout entier $n$, et tout indice $\lambda$, l'homomorphisme $A/\mathfrak m^n\to A_\lambda/\mathfrak m_\lambda^n$ est bijectif. Or, cela est vrai par hypothèse pour $n=1$; d'autre part, puisque $A_\lambda$ est un $A$-module plat, on a
+\[
+  \mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1}
+  =(\mathfrak m^n/\mathfrak m^{n+1})\otimes_A A_\lambda
+  =(\mathfrak m^n/\mathfrak m^{n+1})\otimes_{A/\mathfrak m}(A_\lambda/\mathfrak mA_\lambda)
+\]
+et comme $A/\mathfrak m\to A_\lambda/\mathfrak mA_\lambda=A_\lambda/\mathfrak m_\lambda$ est bijectif, l'homomorphisme $\mathfrak m^n/\mathfrak m^{n+1}\to\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1}$ est lui aussi bijectif; la conclusion résulte donc de Bourbaki, \emph{Alg. comm.}, chap. III, \textsection~2, n\textsuperscript{o}~8, cor. 3 du th. 1.
+
+Enfin, si $A$ est hensélien, il résulte de la remarque qui précède (18.6.3) que les homomorphismes $A\to A_\lambda$ sont bijectifs, ce qui prouve (vi) par définition de ${}^h\!A$.
+
+\begin{env}[18.6.7]
+\EGAReaderTarget{ega4.c04.statement.18-6-7}{IV.18.6.7}
+Soient maintenant $A$ un anneau semi-local, $\mathfrak m_i$ ($1\leq i\leq r$) ses idéaux maximaux. On appelle \emph{hensélisé} de $A$ et l'on note encore ${}^h\!A$ l'anneau produit $\prod_{i=1}^r{}^h(A_{\mathfrak m_i})$ des hensélisés des anneaux locaux $A_{\mathfrak m_i}$. C'est un $A$-module fidèlement plat et une $A$-algèbre semi-locale, dont les idéaux maximaux sont les $\mathfrak m_i.{}^h\!A$ en vertu de (18.6.6, (iii)); en outre, si $\mathfrak r=\bigcap_i\mathfrak m_i$ est le radical de $A$, il résulte de ce qui précède que $\mathfrak r.{}^h\!A$
+

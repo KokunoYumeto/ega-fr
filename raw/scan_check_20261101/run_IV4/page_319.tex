@@ -1,0 +1,75 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{319}
+Pour avoir un exemple explicite d'anneau parafactoriel de dimension $2$ obtenu de
+cette manière et \emph{non factoriel}, considérons l'anneau
+\[
+  E=\mathbb R[[U,V]]/(U^2+V^2),
+\]
+dont la clôture intégrale $E'$ s'identifie à $\mathbb C[[U]]$ (6.15.11). Si l'on pose
+$A=E[[T]]$, la clôture intégrale de $A$ est l'anneau $A'=E'[[T]]$ (Bourbaki,
+\emph{Alg. comm.}, chap.~V, \S1, n\textsuperscript{o}~4, prop.~14); on vérifie
+aussitôt que le conducteur de $E$ dans $E'$ est l'idéal maximal $\mathfrak n$ de
+$E$, donc le conducteur $\mathfrak J$ de $A$ dans $A'$ est $\mathfrak n[[T]]$, et on
+a $B=A/\mathfrak J\cong\mathbb R[[T]]$, $B'=A'/\mathfrak J\cong\mathbb C[[T]]$.
+Il est alors immédiat que les conditions $1^{\mathrm o}$, $2^{\mathrm o}$ et
+$3^{\mathrm o}$ énoncées ci-dessus sont bien vérifiées, mais $A$ n'est même pas
+intégralement clos.
+
+On peut varier cet exemple, et le lecteur verra sans peine que si $k$ est un corps
+algébriquement clos, l'anneau $A$, localisé de l'anneau
+$k[U,V,W]/(U^2-WV^2)$ en l'idéal maximal engendré par les images de $U$, $V$ et $W$,
+vérifie aussi les conditions $1^{\mathrm o}$, $2^{\mathrm o}$ et $3^{\mathrm o}$
+ci-dessus.
+
+Il se pourrait que ces trois conditions impliquent même que chacun des anneaux
+$B'/\mathfrak p_i'$ soit un anneau de valuation discrète, ce qui entraînerait que
+$A'$ est même un anneau \emph{régulier}.
+\end{env}
+
+\begin{proposition}[21.13.10]
+\label{IV.21.13.10}
+Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$. Pour que
+le couple $(X,Y)$ soit parafactoriel il faut et il suffit que, pour tout $y\in Y$,
+l'anneau local $\mathcal O_{X,y}$ soit parafactoriel.
+\end{proposition}
+
+\begin{proof}
+Posons $U=X-Y$ et soit $j:U\to X$ l'injection canonique.
+
+En vertu de (21.13.4), dire que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ soit bijectif équivaut à dire que chacun des
+anneaux locaux $\mathcal O_{X,y}$ pour $y\in Y$ satisfait à la condition (i bis) de
+(21.13.8).
+
+Montrons d'abord que si le couple $(X,Y)$ est parafactoriel, chacun des anneaux
+$\mathcal O_{X,y}$ ($y\in Y$) est parafactoriel. Compte tenu de la remarque
+précédente, tout revient à voir que, si l'on pose
+$T_y=\operatorname{Spec}(\mathcal O_{X,y})$ et $U_y=T_y-\{y\}$, tout
+$\mathcal O_{U_y}$-Module inversible $\mathscr L_0$ est isomorphe à
+$\mathcal O_{U_y}$. Or, lorsque $V$ parcourt l'ensemble des voisinages ouverts
+affines de $y$ dans $X$, il résulte de (8.2.13) et $(\mathbf I, 2.4.2)$ que le
+préschéma $U_y$ est limite projective des préschémas induits par $X$ sur les ouverts
+$V-(V\cap\overline{\{y\}})$, qui sont quasi-compacts puisque $X$ est localement
+noethérien. Comme les $V-(V\cap\overline{\{y\}})$ sont séparés, il résulte alors de
+(8.5.2, (ii)) et (8.5.5) qu'il y a un voisinage ouvert affine $V$ de $y$ dans $X$ et
+un $\mathcal O_{U_V}$-Module inversible $\mathscr L'_V$ tel que $\mathscr L_0$ soit le
+faisceau induit par $\mathscr L'_V$ sur $U_y$. Mais l'hypothèse entraîne, en vertu de
+(21.13.6, (i) et (iii)), que le couple $(V,V\cap\overline{\{y\}})$ est parafactoriel;
+on en conclut par définition (21.13.1) qu'il existe un $\mathcal O_V$-Module inversible
+$\mathscr L_V$ induisant $\mathscr L'_V$ sur $U_V$. Remplaçant au besoin $V$ par un
+voisinage ouvert plus petit de $y$, on peut supposer que $\mathscr L_V$ est isomorphe
+à $\mathcal O_V$, d'où on conclut que $\mathscr L_0$ est isomorphe à
+$\mathcal O_{U_y}$.
+
+Inversement, prouvons que si tous les $\mathcal O_{X,y}$ ($y\in Y$) sont
+parafactoriels le couple $(X,Y)$ est parafactoriel. On est évidemment ramené, compte
+tenu de la remarque du début, à montrer que pour tout $\mathcal O_U$-Module inversible
+$\mathscr L$, $j_*(\mathscr L)$ est un $\mathcal O_X$-Module inversible (21.13.5).
+La question étant locale sur $X$, on peut supposer $X$ noethérien. L'ensemble $V$ des
+$x\in X$ tels que la restriction de $j_*(\mathscr L)$ à un voisinage ouvert de $x$
+dans $X$ soit inversible est évidemment ouvert dans $X$; il s'agit de montrer que
+$V=X$. Pour cela, supposons le contraire et posons $Z=X-V\neq\varnothing$. Soit $y$
+un point \emph{maximal} de $Z$; puisque $Z\subset Y$ par définition,
+$\mathcal O_{X,y}$ est par hypothèse un anneau parafactoriel. Remplaçant au besoin
+$X$ par un voisinage ouvert de $y$ dans $X$, on peut supposer que la restriction de
+$j_*(\mathscr L)$

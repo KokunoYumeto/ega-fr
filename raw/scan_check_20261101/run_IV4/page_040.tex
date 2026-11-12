@@ -1,0 +1,87 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{40}
+pour $n\leq m$ (16.7.7) qu'un opérateur différentiel d'ordre $\leq n$ est
+aussi un opérateur différentiel d'ordre $\leq m$ pour tout $m\geq n$. Si
+$D:\mathscr{F}\to\mathscr{G}$ est un opérateur différentiel d'ordre
+$\leq n$, alors, pour tout ouvert $U$ de $X$,
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ est aussi un opérateur différentiel
+d'ordre $\leq n$.
+
+On dit qu'un homomorphisme $D:\mathscr{F}\to\mathscr{G}$ des faisceaux de
+groupes additifs sous-jacents à $\mathscr{F}$ et à $\mathscr{G}$ est un
+\emph{opérateur différentiel} (relativement à $S$) si, pour tout $x\in X$, il
+existe un voisinage ouvert $U$ de $x$ et un entier $n\geq0$ tels que
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ soit un opérateur différentiel d'ordre
+$\leq n$. L'\emph{ordre} d'un opérateur différentiel
+$D:\mathscr{F}\to\mathscr{G}$ est la borne inférieure des entiers $n$ tels
+que $D$ soit un opérateur différentiel d'ordre $\leq n$ (et donc $+\infty$
+s'il n'y a pas de tels entiers); cet ordre est toujours fini si $X$ est
+\emph{quasi-compact}. Les opérateurs différentiels d'ordre $0$ ne sont autres
+que les homomorphismes de $\mathcal{O}_X$-Modules
+$\mathscr{F}\to\mathscr{G}$; on convient que tout opérateur différentiel
+d'ordre $<0$ est \emph{nul}. Pour $n\geq0$, un opérateur différentiel n'est
+pas en général un homomorphisme de $\mathcal{O}_X$-Modules mais est toujours
+un homomorphisme de $\psi^*(\mathcal{O}_S)$-Modules.
+
+Lorsque $\mathscr{F}=\mathcal{O}_X$, un opérateur différentiel d'ordre
+$\leq1$ de $\mathcal{O}_X$ dans $\mathscr{G}$ s'écrit d'une seule manière
+sous la forme $v+D$, où $v:\mathcal{O}_X\to\mathscr{G}$ est un
+$\mathcal{O}_X$-homomorphisme, et $D$ une $S$-\emph{dérivation} (16.5.1) de
+$\mathcal{O}_X$ dans $\mathscr{G}$: cela résulte de la structure de
+$P_{B/A}^1$ (0, 20.4.8).
+
+\begin{env}[16.8.2]
+\label{IV.16.8.2}
+Pour décrire de façon plus explicite un opérateur différentiel d'ordre
+$\leq n$, $D:\mathscr{F}\to\mathscr{G}$, il suffit, pour tout ouvert affine
+$U$ de $X$, dont l'image dans $S$ est contenue dans un ouvert affine $V$, de
+caractériser l'homomorphisme
+$D=D_U:\Gamma(U,\mathscr{F})\to\Gamma(U,\mathscr{G})$. Si l'on pose
+$\Gamma(V,\mathcal{O}_S)=A$, $\Gamma(U,\mathcal{O}_X)=B$, de sorte que $B$
+est une $A$-algèbre, on a
+\[
+  \Gamma(U,\mathscr{P}_{X/S}^n)
+  =(B\otimes_A B)/\mathfrak{I}^{n+1},
+\]
+où l'on a posé pour abréger $\mathfrak{I}=\mathfrak{I}_{B/A}$. Posons en
+outre $M=\Gamma(U,\mathscr{F})$, $N=\Gamma(U,\mathscr{G})$; alors la
+définition de $D$ signifie que pour chaque couple $(U,V)$ vérifiant les
+conditions précédentes, le $A$-homomorphisme $D:M\to N$ se factorise en
+\[
+  M\longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M
+  \xrightarrow{v}N
+\]
+où la première flèche est l'homomorphisme canonique $t\mapsto1\otimes t$, et
+$v$ est un $B$-homomorphisme, la structure de $B$-module de
+$((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M$ provenant du premier
+facteur $B$ (alors qu'on rappelle que dans la formation du produit tensoriel
+sur $B$, la structure de $B$-module de
+$(B\otimes_A B)/\mathfrak{I}^{n+1}$ provient du second facteur $B$). Notons
+maintenant que le $B$-module
+$((B\otimes_A B)/\mathfrak{I}^{n+1})\otimes_B M$ est isomorphe à
+$(B\otimes_A M)/\mathfrak{I}^{n+1}(B\otimes_A M)$, où $B\otimes_A M$ est
+considéré comme $(B\otimes_A B)$-module et sa structure de $B$-module
+provient de l'homomorphisme $b\mapsto b\otimes1$ de $B$ dans $B\otimes_A B$.
+Soit alors $D'$ le $B$-homomorphisme de $B\otimes_A M$ dans $N$ tel que
+$D'(b\otimes t)=bD(t)$; la condition de factorisation sur $D$ s'exprime encore
+en disant que $D'$ doit \emph{être nul dans le $B$-module}
+$\mathfrak{I}^{n+1}(B\otimes_A M)$.
+\end{env}
+
+\begin{env}[16.8.3]
+\label{IV.16.8.3}
+Il est clair que l'ensemble des opérateurs différentiels d'ordre $\leq n$ de
+$\mathscr{F}$ dans $\mathscr{G}$ est un groupe additif, noté
+$\operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})$; lorsque
+$\mathscr{F}=\mathscr{G}=\mathcal{O}_X$, on écrit aussi
+$\operatorname{Diff}_{X/S}^n$ au lieu de
+$\operatorname{Diff}_{X/S}^n(\mathcal{O}_X,\mathcal{O}_X)$.
+
+On a vu (16.8.1) que l'on a pour deux ouverts $U\supset V$ de $X$, un
+homomorphisme canonique de restriction
+\[
+  \operatorname{Diff}_{U/S}^n(\mathscr{F}|U,\mathscr{G}|U)
+  \longrightarrow
+  \operatorname{Diff}_{V/S}^n(\mathscr{F}|V,\mathscr{G}|V)
+\]

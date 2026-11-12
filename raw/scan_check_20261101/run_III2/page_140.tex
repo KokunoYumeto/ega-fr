@@ -1,0 +1,94 @@
+% from ega3-6-fr.tex
+\oldpage[III]{140}
+
+\begin{corollary}[6.2.4]
+Sous les hypothèses de (6.2.3), pour tout ouvert affine $V$ de $Y$,
+l'homomorphisme canonique
+\[
+  \mathbf H^n(f^{-1}(V),\mathscr K^\bullet)
+  \longrightarrow
+  \Gamma(V,\mathscr H^n(f,\mathscr K^\bullet))
+  \tag{6.2.4.1}\label{III.6.2.4.1.fr}
+\]
+est bijectif pour tout $n\in\mathbf Z$.
+\end{corollary}
+
+\begin{proof}
+La démonstration est la même que celle de (1.4.11), en utilisant (6.2.2),
+remplaçant $\mathscr F$ par $\mathscr K^\bullet$,
+$\mathscr K^\bullet$ par
+$f_*(C^\bullet(\mathfrak U,\mathscr K^\bullet))$,
+$\mathscr H^\bullet(\mathscr K^\bullet)$ par
+$\mathscr H^\bullet(f,\mathscr K^\bullet)$, et notant que ce dernier est un
+$\mathscr O_Y$-Module quasi-cohérent par (6.2.3).
+\end{proof}
+
+\begin{proposition}[6.2.5]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre, $\mathscr K^\bullet$ un complexe de $\mathscr O_X$-Modules tel que les
+$\mathscr O_X$-Modules $\mathscr H^q(\mathscr K^\bullet)$ soient cohérents.
+Alors les $\mathscr O_Y$-Modules $\mathscr H^n(f,\mathscr K^\bullet)$ sont
+cohérents.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut se borner au cas où $Y$ est
+noethérien et affine, et il s'agit donc, en vertu de (6.2.4), de prouver que
+les $\mathbf H^n(X,\mathscr K^\bullet)$ sont des
+$\Gamma(Y,\mathscr O_Y)$-modules de type fini. On a alors
+$\mathbf H^\bullet(X,\mathscr K^\bullet)=
+\mathbf H^\bullet(\mathfrak U,\mathscr K^\bullet)$ (6.2.2), où l'on peut
+supposer que $\mathfrak U$ est fini, puisque $X$ est quasi-compact. Les
+cochaînes de chaque complexe $C^\bullet(\mathfrak U,\mathscr K^j)$ étant
+alternées par définition, il y a un entier $r>0$ tel que
+$C^i(\mathfrak U,\mathscr K^j)=0$ pour $i<0$ et $i>r$; on en conclut
+(0, 11.3.3) que les deux suites spectrales du bicomplexe
+$C^\bullet(\mathfrak U,\mathscr K^\bullet)$ sont birégulières. Comme les
+intersections des ensembles de $\mathfrak U$ sont des ouverts affines
+(I, 5.5.6), chaque foncteur
+$\mathscr F\mapsto C^i(\mathfrak U,\mathscr F)$ est exact dans la catégorie
+des $\mathscr O_X$-Modules quasi-cohérents; donc
+$\mathrm H_I^q(C^i(\mathfrak U,\mathscr K^\bullet))
+=C^i(\mathfrak U,\mathscr H^q(\mathscr K^\bullet))$, et les termes
+$E_2$ de la seconde suite spectrale de
+$C^\bullet(\mathfrak U,\mathscr K^\bullet)$ sont donnés (0, 11.3.2) par
+\[
+  ''E_2^{pq}
+  =\mathrm H^p(C^\bullet(\mathfrak U,\mathscr H^q(\mathscr K^\bullet)))
+  =\mathbf H^p(\mathfrak U,\mathscr H^q(\mathscr K^\bullet))
+  =\mathrm H^p(X,\mathscr H^q(\mathscr K^\bullet))
+\]
+en vertu de (1.4.1); puisque $f$ est propre, ce sont des
+$\Gamma(Y,\mathscr O_Y)$-modules de type fini (3.2.1). La suite spectrale
+$''E(C^\bullet(\mathfrak U,\mathscr K^\bullet))$ étant birégulière, on en
+déduit bien que les $\mathbf H^n(X,\mathscr K^\bullet)$ sont des
+$\Gamma(Y,\mathscr O_Y)$-modules de type fini (0, 11.1.8).
+
+A fortiori, si $\mathscr K^\bullet$ est un complexe de
+$\mathscr O_X$-Modules cohérents, les $\mathscr O_Y$-Modules
+$\mathscr H^n(f,\mathscr K^\bullet)$ sont cohérents sous les hypothèses de
+(6.2.5) relatives à $Y$ et $f$ (0\textsubscript{I}, 5.3.4).
+\end{proof}
+
+\begin{env}[6.2.6]
+L'hypercohomologie $\mathscr H^\bullet(f,\mathscr K^\bullet)$ est un foncteur
+cohomologique dans la catégorie des complexes de $\mathscr O_X$-Modules
+limités inférieurement (0, 12.4.4). C'est un foncteur cohomologique dans la
+catégorie de tous les complexes de $\mathscr O_X$-Modules lorsque le
+morphisme $f$ est quasi-compact et l'espace sous-jacent à $X$ localement
+noethérien : en effet, il résulte alors de (G, II, 3.10.1) que $f_*$ permute
+aux limites inductives (la question étant locale sur $Y$), et l'on peut
+appliquer (0, 11.5.2).
+
+Enfin, si $f$ est séparé, $\mathscr H^\bullet(f,\mathscr K^\bullet)$ est un
+foncteur cohomologique dans la catégorie des complexes de
+$\mathscr O_X$-Modules quasi-cohérents. C'est immédiat lorsque $Y$ est
+affine, car alors $X$ est un schéma, donc, en vertu de l'isomorphisme
+canonique (6.2.2), on est ramené à voir que
+$\mathscr K^\bullet\mapsto\mathbf H^\bullet(\mathfrak U,\mathscr K^\bullet)$
+est un foncteur cohomologique dans la catégorie des complexes de
+$\mathscr O_X$-Modules quasi-cohérents, ce qui est immédiat puisque le
+foncteur $\mathscr K^\bullet\mapsto
+C^\bullet(\mathfrak U,\mathscr K^\bullet)$ est exact dans cette catégorie
+(I, 1.3.7). Dans le cas général, pour tout ouvert affine $V$
+

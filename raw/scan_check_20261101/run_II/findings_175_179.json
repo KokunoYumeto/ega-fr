@@ -1,0 +1,557 @@
+[
+ {
+  "page": 175,
+  "where": "heading of (8.7.4)",
+  "scan": "Remarques (8.7.4). — (i) La fin du raisonnement ... (plural 'Remarques')",
+  "tex": "\\begin{remark}[8.7.4] (the remark environment prints 'Remarque (8.7.4). ---')",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{remark}[8.7.4]",
+   "new": "\\begin{remarks}[8.7.4]"
+  },
+  "note": "The print has the plural heading; EGA_FR.tex has a 'remarks' environment that prints 'Remarques (#1). ---'. Apply together with the p. 176 edit \\end{remark} -> \\end{remarks} (otherwise LaTeX error)."
+ },
+ {
+  "page": 175,
+  "where": "'... et si on pose S|U = S~, S|U' = S~', le diagramme'",
+  "scan": "S̃' : the tilde covers only S (same width as in S̃ just before); the prime stands outside it",
+  "tex": "\\widetilde{S'}",
+  "kind": "convention",
+  "convention": 8,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widetilde{S'}",
+   "new": "\\widetilde{S}'"
+  },
+  "note": "Checked on a 3x crop."
+ },
+ {
+  "page": 175,
+  "where": "page break 175/176: '... soit partout défini; on a d'autre part | un Y-morphisme v : C -> C''' (p. 176)",
+  "scan": "the sentence runs on across the page break; p. 176 begins flush left with 'un Y-morphisme' (no indent)",
+  "tex": "blank line after 'd'autre part' before \\oldpage[II]{176} makes a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d'autre part\n\n",
+   "new": "d'autre part\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES item 20): the blank line is the last line of this page's segment, just before \\oldpage[II]{176}; the source has no blank line after that marker, so this edit alone removes the break."
+ },
+ {
+  "page": 176,
+  "where": "end of Remarques (8.7.4)",
+  "scan": "heading 'Remarques (8.7.4)' (p. 175)",
+  "tex": "\\end{remark}",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{remark}",
+   "new": "\\end{remarks}"
+  },
+  "note": "Second half of the p. 175 edit \\begin{remark}[8.7.4] -> \\begin{remarks}[8.7.4]; apply both together."
+ },
+ {
+  "page": 176,
+  "where": "(8.7.4)(i), text before (8.7.4.2): 'd'où (1.5.6) un morphisme w : C_X'' -> C_X'",
+  "scan": "w : C_{X''} -> C_X  (the TeX keeps this printed reading)",
+  "tex": "$w:C_{X''}\\to C_X$",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": null,
+  "corrected": "$w:C_X\\to C_{X''}$",
+  "note": "The u-morphism S_{X''} -> S_X (u : X -> X'') gives by (1.5.6) Spec(u): Spec(S_X) -> Spec(S_{X''}), i.e. w : C_X -> C_{X''}; the printed arrow is reversed. The TeX keeps the printed reading (correct for the diplomatic edition). Goes with the misprint in diagram (8.7.4.2) (next item)."
+ },
+ {
+  "page": 176,
+  "where": "diagram (8.7.4.2)",
+  "scan": "top row C_{X''} (iso arrow) Proj(S^♮); bottom row C_X (iso arrow) Proj(S^♮); left arrow w, right arrow Proj(ψ) (top right has no double prime; checked on a 3x crop). The TeX keeps this printed reading.",
+  "tex": "C_{X''}\\ar[r]^{\\sim}\\ar[d]_{w} & \\operatorname{Proj}(\\mathcal{S}^{\\natural})\\ar[d]^{\\operatorname{Proj}(\\psi)}\\\\ C_X\\ar[r]^{\\sim} & \\operatorname{Proj}(\\mathcal{S}^{\\natural})",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": null,
+  "corrected": "\\xymatrix{\n  C_X\\ar[r]^{\\sim}\\ar[d]_{w} & \\operatorname{Proj}(\\mathcal{S}^{\\natural})\\ar[d]^{\\operatorname{Proj}(\\psi)}\\\\\n  C_{X''}\\ar[r]^{\\sim} & \\operatorname{Proj}(\\mathcal{S}''^{\\natural})\n}",
+  "note": "As printed the right column maps Proj(S^♮) to Proj(S^♮) by Proj(ψ), but ψ : S''^♮ -> S^♮, so Proj(ψ) : Proj(S^♮) -> Proj(S''^♮); and C_{X''} is isomorphic to Proj(S''^♮), not Proj(S^♮) (8.7.3.1). With w : C_X -> C_{X''} (previous item) the consistent diagram has C_X ~> Proj(S^♮) on top and C_{X''} ~> Proj(S''^♮) below. That the printed right column is wrong is certain; the full correction is a reconstruction."
+ },
+ {
+  "page": 176,
+  "where": "(8.7.4)(ii): 'Si on pose T = (+)_{n>=0} J_m, qui est une O_C^-Algèbre graduée'",
+  "scan": "T = ⊕_{n⩾0} J_m (summation index n, summand index m; checked on a 3x crop). The TeX keeps this printed reading.",
+  "tex": "\\mathcal{T}=\\bigoplus_{n\\geqslant 0}\\mathcal{J}_m",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "\\mathcal{T}=\\bigoplus_{m\\geqslant 0}\\mathcal{J}_m",
+  "note": "Index mismatch in the print: the sum runs over the index of the Ideals J_m."
+ },
+ {
+  "page": 176,
+  "where": "end of (8.7.4)(ii): 'cet isomorphisme et (8.7.3.1) coïncident au-dessus de Ê.'",
+  "scan": "au-dessus de Ê (E with a hat; checked on a 2x crop)",
+  "tex": "au-dessus de $E$.",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "au-dessus de $E$.",
+   "new": "au-dessus de $\\widehat{E}$."
+  },
+  "corrected": "au-dessus de $E$.",
+  "note": "The TeX silently corrects the print. (8.7.3.1) is defined over C only, so the two isomorphisms can be compared (and glued) only over C ∩ Ê = E: the correct reading is E. The fix restores the printed Ê."
+ },
+ {
+  "page": 176,
+  "where": "Corollaire (8.7.5), last words: 'il existe n_0>0 tel que l'on ait (8.7.5.1).'",
+  "scan": "reference (8.7.5.1) upright (roman parentheses and figures) inside the italic statement",
+  "tex": "(\\hyperref[II.8.7.5.1-fr]{8.7.5.1}) italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.8.7.5.1-fr]{8.7.5.1})",
+   "new": "\\textup{(\\hyperref[II.8.7.5.1-fr]{8.7.5.1})}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 176,
+  "where": "proof of (8.7.5): 'l'image réciproque de ε(Y) dans C_X (I, 4.4.1)'",
+  "scan": "(I, 4.4.1) with bold I",
+  "tex": "(I, 4.4.1) with plain I in the link text",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 4.4.1}",
+   "new": "{\\textbf{I}, 4.4.1}"
+  },
+  "note": ""
+ },
+ {
+  "page": 176,
+  "where": "page break 176/177: '... lorsque Y est affine noethérien et S de type fini. | Si Y est noethérien (non nécessairement affine)' (p. 177)",
+  "scan": "p. 177 begins flush left with 'Si Y est noethérien' (no indent): same paragraph",
+  "tex": "blank line after 'type fini.' before \\oldpage[II]{177} makes a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "type fini.\n\n",
+   "new": "type fini.\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES item 20): the blank line is the last line of this page's segment, just before \\oldpage[II]{177}; the source has no blank line after that marker, so this edit alone removes the break."
+ },
+ {
+  "page": 177,
+  "where": "(8.7.6), example: 'K étant un corps, S = S~ avec S = K[y]'",
+  "scan": "S = 𝒮̃ : roman S on the left, tilde over script S on the right (checked on a 2x crop)",
+  "tex": "$\\mathcal{S}=\\widetilde{S}$",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal{S}=\\widetilde{S}$",
+   "new": "$S=\\widetilde{\\mathcal{S}}$"
+  },
+  "corrected": "$\\mathcal{S}=\\widetilde{S}$",
+  "note": "The TeX silently corrects the print (the quasi-coherent algebra is S~ for S = K[y]). The fix restores the printed reading."
+ },
+ {
+  "page": 177,
+  "where": "(8.7.6): 'où y est une indéterminée de degré 2;'",
+  "scan": "only 'de degré' italic; the figure 2 is upright (same glyph as the 2 of (2.3.14); checked on a 6x crop)",
+  "tex": "\\emph{de degré\\n2} (the 2 inside the emphasis)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{de degré\n2}",
+   "new": "\\emph{de degré}\n2"
+  },
+  "note": ""
+ },
+ {
+  "page": 177,
+  "where": "(8.7.6): 'S_+^♮ n'est pas la racine dans S_+^♮ de l'idéal engendré par la réunion des R_n'",
+  "scan": "racine dans S^♮_+ (with subscript +; checked on a crop)",
+  "tex": "racine dans $S^{\\natural}$ (no +)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "racine dans\n$S^{\\natural}$ de",
+   "new": "racine dans\n$S_+^{\\natural}$ de"
+  },
+  "note": "Not a misprint: the example negates (8.2.10, (iv)), which reads 'S_+^♮ est la racine dans S_+^♮ de l'idéal de S_+^♮ engendré par ...'."
+ },
+ {
+  "page": 177,
+  "where": "Corollaire (8.7.7): 'Alors le morphisme canonique (8.7.6.2) est partout défini'",
+  "scan": "reference (8.7.6.2) upright inside the italic statement",
+  "tex": "(\\hyperref[II.8.7.6.2-fr]{8.7.6.2}) italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.8.7.6.2-fr]{8.7.6.2})",
+   "new": "\\textup{(\\hyperref[II.8.7.6.2-fr]{8.7.6.2})}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 177,
+  "where": "Corollaire (8.7.7), last words: 'il existe n_0 tel que l'on ait (8.7.7.1).'",
+  "scan": "reference (8.7.7.1) upright inside the italic statement",
+  "tex": "(\\hyperref[II.8.7.7.1-fr]{8.7.7.1}) italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "l'on ait\n(\\hyperref[II.8.7.7.1-fr]{8.7.7.1})",
+   "new": "l'on ait\n\\textup{(\\hyperref[II.8.7.7.1-fr]{8.7.7.1})}"
+  },
+  "note": "Checked on a crop. The two (8.7.7.1) of Remarque (8.7.8) are in roman text and need nothing."
+ },
+ {
+  "page": 177,
+  "where": "(8.8.1): 'f : X -> Y un morphisme séparé et quasi-compact'",
+  "scan": "'séparé' and 'quasi-compact' italic, 'et' roman (checked on a 2.5x crop)",
+  "tex": "\\emph{séparé et quasi-compact} ('et' italic)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{séparé et\nquasi-compact}",
+   "new": "\\emph{séparé} et\n\\emph{quasi-compact}"
+  },
+  "note": ""
+ },
+ {
+  "page": 177,
+  "where": "page break 177/178: '(8.8.1.1) S = O_Y (+) ... | qui est quasi-cohérente (I, 9.2.2, a))' (p. 178)",
+  "scan": "p. 178 begins flush left with 'qui est quasi-cohérente' (no indent): the sentence continues after the display",
+  "tex": "blank line after \\end{equation} of (8.8.1.1) before \\oldpage[II]{178} makes a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\tag{8.8.1.1}\n\\end{equation}\n\n",
+   "new": "\\tag{8.8.1.1}\n\\end{equation}\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES item 20): the blank line is the last line of this page's segment, just before \\oldpage[II]{178}; the source has no blank line after that marker, so this edit alone removes the break."
+ },
+ {
+  "page": 178,
+  "where": "first line: 'qui est quasi-cohérente (I, 9.2.2, a))'",
+  "scan": "(I, 9.2.2, a)) with bold I",
+  "tex": "plain I in the link text",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 9.2.2",
+   "new": "{\\textbf{I}, 9.2.2"
+  },
+  "note": "Independent of the italic a) edit at the same reference (either order works)."
+ },
+ {
+  "page": 178,
+  "where": "first line: 'qui est quasi-cohérente (I, 9.2.2, a))'",
+  "scan": "letter a and its parenthesis italic (checked on a 6x crop)",
+  "tex": "a) upright in the link text",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "9.2.2, a)}",
+   "new": "9.2.2, \\emph{a)}}"
+  },
+  "note": "Independent of the bold-I edit at the same reference (either order works)."
+ },
+ {
+  "page": 178,
+  "where": "after (8.8.1.2): 'l'homomorphisme canonique σ : ... (0, 4.4.3)'",
+  "scan": "(0, 4.4.3) with bold 0",
+  "tex": "plain 0 in the link text",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 4.4.3}",
+   "new": "{\\textbf{0}, 4.4.3}"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "Proposition (8.8.2): 'Soit C = Spec(S) le cône affine défini par S;'",
+  "scan": "'le cône affine défini par S' in the same italic as the rest of the statement (no change of face; checked on a crop)",
+  "tex": "\\emph{le cône affine défini par $\\mathcal{S}$} inside the \\itshape proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{le cône affine défini par\n$\\mathcal{S}$}",
+   "new": "le cône affine défini par\n$\\mathcal{S}$"
+  },
+  "note": "Printed italic words left upright by \\emph inside the italic environment; drop the \\emph."
+ },
+ {
+  "page": 178,
+  "where": "Proposition (8.8.2): 'la restriction de g à V(L)—j(X) est une immersion ouverte'",
+  "scan": "long dash V(L)—j(X)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf{V}(\\mathcal{L})-j(X)$ est une",
+   "new": "\\mathbf{V}(\\mathcal{L})\\setmin j(X)$ est une"
+  },
+  "note": "\\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 178,
+  "where": "(8.8.2.3), left side: 'V(L)—j(X) -> E'",
+  "scan": "long dash V(L)—j(X)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf{V}(\\mathcal{L})-j(X)\\longrightarrow",
+   "new": "\\mathbf{V}(\\mathcal{L})\\setmin j(X)\\longrightarrow"
+  },
+  "note": "As above."
+ },
+ {
+  "page": 178,
+  "where": "(8.8.2.3), right side: 'E = C—ε(Y)'",
+  "scan": "long dash C—ε(Y) (checked on a 2.5x crop)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "E=C-\\varepsilon(Y)",
+   "new": "E=C\\setmin\\varepsilon(Y)"
+  },
+  "note": "As above."
+ },
+ {
+  "page": 178,
+  "where": "page break 178/179: 'r^*(S_P^>=) = S_{O_X}(L) | et par suite on a un P-morphisme canonique' (p. 179)",
+  "scan": "p. 179 begins flush left with 'et par suite' (no indent): the sentence continues after the display",
+  "tex": "blank line after \\] before \\oldpage[II]{179} makes a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf{S}_{\\mathcal{O}_X}(\\mathcal{L})\n\\]\n\n",
+   "new": "\\mathbf{S}_{\\mathcal{O}_X}(\\mathcal{L})\n\\]\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES item 20): the blank line is the last line of this page's segment, just before \\oldpage[II]{179}; the source has no blank line after that marker, so this edit alone removes the break."
+ },
+ {
+  "page": 179,
+  "where": "after (8.8.2.6): 'il en est donc de même de q (I, 4.3.2)'",
+  "scan": "(I, 4.3.2) with bold I",
+  "tex": "plain I in the link text",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 4.3.2}",
+   "new": "{\\textbf{I}, 4.3.2}"
+  },
+  "note": ""
+ },
+ {
+  "page": 179,
+  "where": "'la restriction de q à V(L)—j(X) applique ce préschéma dans E_P'",
+  "scan": "long dash V(L)—j(X)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf{V}(\\mathcal{L})-j(X)$ applique",
+   "new": "\\mathbf{V}(\\mathcal{L})\\setmin j(X)$ applique"
+  },
+  "note": "\\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 179,
+  "where": "Remarque (8.8.3): 'On verra en outre au chapitre III (III, 2.3.5.1), que S est alors'",
+  "scan": "(III, 2.3.5.1) with bold III",
+  "tex": "plain III in the link text",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{III, 2.3.5.1}), que $\\mathcal{S}$",
+   "new": "{\\textbf{III}, 2.3.5.1}), que $\\mathcal{S}$"
+  },
+  "note": "The 'III' of 'au chapitre III' is plain in the print and stays."
+ },
+ {
+  "page": 179,
+  "where": "Remarque (8.8.3): 'la restriction (8.8.2.3) de g est un isomorphisme V(L)—j(X) ~> E'",
+  "scan": "long dash V(L)—j(X)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf{V}(\\mathcal{L})-j(X)\\xrightarrow{\\sim}E",
+   "new": "\\mathbf{V}(\\mathcal{L})\\setmin j(X)\\xrightarrow{\\sim}E"
+  },
+  "note": "As above."
+ },
+ {
+  "page": 179,
+  "where": "Remarque (8.8.3), second paragraph: 'Si on suppose de plus que L est très ample pour f'",
+  "scan": "plain roman L (not the script L; checked on a 2x crop)",
+  "tex": "$\\mathcal{L}$",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "que $\\mathcal{L}$ est \\emph{très ample}",
+   "new": "que $L$ est \\emph{très ample}"
+  },
+  "corrected": "que $\\mathcal{L}$ est \\emph{très ample}",
+  "note": "The TeX silently corrects the print; the invertible sheaf is script L throughout. The fix restores the printed roman L."
+ },
+ {
+  "page": 179,
+  "where": "Remarque (8.8.3), second paragraph: 'on verra aussi au chapitre III (III, 2.3.5.1), qu'il existe'",
+  "scan": "(III, 2.3.5.1) with bold III",
+  "tex": "plain III in the link text",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{III, 2.3.5.1}), qu'il",
+   "new": "{\\textbf{III}, 2.3.5.1}), qu'il"
+  },
+  "note": ""
+ },
+ {
+  "page": 179,
+  "where": "Remarque (8.8.3): 'et que la section nulle de V(L) (identifiée à Y) est l'image réciproque'",
+  "scan": "(identifiée à Y)  (the TeX keeps this printed reading)",
+  "tex": "(identifiée à $Y$)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": null,
+  "corrected": "(identifiée à $X$)",
+  "note": "The zero section of V(L) (a vector bundle over X) is identified with X, not Y (compare Remarque (8.7.8): 'le sommet (identifié à X) de C_X'); Y is the vertex subscheme of C. The TeX keeps the printed reading."
+ },
+ {
+  "page": 179,
+  "where": "Remarque (8.8.3): 'est l'image réciproque du sous-préschéma des sommets'",
+  "scan": "\"l'\" roman, only 'image réciproque' italic (checked on a 2.5x crop)",
+  "tex": "\\emph{l'image réciproque} (the article inside the emphasis)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{l'image réciproque}",
+   "new": "l'\\emph{image réciproque}"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 179,
+  "where": "end of Remarque (8.8.3): '... du sous-préschéma des sommets Y de C. | Une partie des résultats précédents peut en fait s'établir sans hypothèse noethérienne :'",
+  "scan": "'Une partie des résultats précédents ...' begins a new, indented paragraph (the previous line ends short)",
+  "tex": "same paragraph as '... sommets $Y$ de $C$.'",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y$ de $C$. Une partie",
+   "new": "$Y$ de $C$.\n\nUne partie"
+  },
+  "note": "Missing paragraph break."
+ },
+ {
+  "page": 179,
+  "where": "Corollaire (8.8.4): 'Soient Y un préschéma (resp. un schéma quasi-compact)'",
+  "scan": "'(resp.' and the closing parenthesis roman, 'un schéma quasi-compact' italic (checked on a crop)",
+  "tex": "all italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. un schéma quasi-compact)",
+   "new": "\\textup{(resp.} un schéma quasi-compact\\textup{)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 179,
+  "where": "Corollaire (8.8.4): 'Alors le morphisme (8.8.2.1) est propre'",
+  "scan": "reference (8.8.2.1) upright inside the italic statement",
+  "tex": "italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.8.8.2.1-fr]{8.8.2.1})",
+   "new": "\\textup{(\\hyperref[II.8.8.2.1-fr]{8.8.2.1})}"
+  },
+  "note": ""
+ },
+ {
+  "page": 179,
+  "where": "Corollaire (8.8.4): 'est propre (resp. projectif)'",
+  "scan": "'(resp.' and the closing parenthesis roman, 'projectif' italic",
+  "tex": "all italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp.\nprojectif)",
+   "new": "\\textup{(resp.}\nprojectif\\textup{)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 179,
+  "where": "Corollaire (8.8.4): 'et sa restriction (8.8.2.3) est un isomorphisme'",
+  "scan": "reference (8.8.2.3) upright inside the italic statement",
+  "tex": "italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "sa restriction (\\hyperref[II.8.8.2.3-fr]{8.8.2.3})",
+   "new": "sa restriction \\textup{(\\hyperref[II.8.8.2.3-fr]{8.8.2.3})}"
+  },
+  "note": "The other two (8.8.2.3) on this page are in roman text."
+ },
+ {
+  "page": 179,
+  "where": "page break 179/180: 'on peut appliquer (3.8.5) à l'homo- | morphisme τ de (8.8.1.2)' (p. 180)",
+  "scan": "the word and the sentence run on across the page break",
+  "tex": "blank line after 'l'homomorphisme' before \\oldpage[II]{180} makes a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "à l'homomorphisme\n\n",
+   "new": "à l'homomorphisme\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES item 20): the blank line is the last line of this page's segment, just before \\oldpage[II]{180}; the source has no blank line after that marker, so this edit alone removes the break. The marker follows the whole word 'l'homomorphisme' (print: 'l'homo-|morphisme'); left as is."
+ }
+]

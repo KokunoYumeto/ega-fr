@@ -1,0 +1,102 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{26}
+Soit $(M_n)$ une filtration $\mathfrak{q}$-bonne de $M$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~3, no~1)~; alors
+$\operatorname{long}(M/M_n)$ est égal, pour $n$ grand, à un polynôme en $n$
+dont le degré et le coefficient dominant sont les mêmes que ceux de
+$P_{\mathfrak{q}}(M,n)$.
+\end{lemma}
+
+\begin{proof}
+En effet, il existe $n_0$ tel que $M_{n+1}=\mathfrak{q}M_n$ pour $n\geq n_0$,
+d'où les inclusions
+$\mathfrak{q}^{n+n_0}M\subset M_{n+n_0}=\mathfrak{q}^nM_{n_0}
+\subset\mathfrak{q}^nM\subset M_n$ pour $n$ grand, ce qui entraîne
+\[
+  P_{\mathfrak{q}}(M,n+n_0)\geq
+  \operatorname{long}(M/M_{n+n_0})\geq
+  P_{\mathfrak{q}}(M,n)\geq\operatorname{long}(M/M_n)
+\]
+et par suite la conclusion.
+\end{proof}
+
+Si $\mathfrak{q}'$ est un second idéal de définition, on a
+$\mathfrak{q}'\supset\mathfrak{q}^m$ pour un entier $m$, donc
+$P_{\mathfrak{q}'}(M,n)\leq P_{\mathfrak{q}}(M,mn)$~; par suite le degré de
+$P_{\mathfrak{q}}(M,n)$ ne dépend pas de l'idéal de définition
+$\mathfrak{q}$ considéré~; on le note $d(M)$.
+
+\begin{lemma}[16.2.2.2]
+\label{0.16.2.2.2-fr}
+Soit $0\to M'\to M\to M''\to0$ une suite exacte de $A$-modules de type
+fini. Alors le polynôme
+\[
+  P_{\mathfrak{q}}(M,n)-P_{\mathfrak{q}}(M',n)
+  -P_{\mathfrak{q}}(M'',n)
+\]
+a un degré $\leq d(M')-1\leq d(M)-1$.
+\end{lemma}
+
+\begin{proof}
+En effet, la filtration des
+$M'_n=M'\cap\mathfrak{q}^nM'$ est $\mathfrak{q}$-bonne (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~3, no~1, prop.~1)~; comme
+\[
+  \operatorname{long}(M/\mathfrak{q}^nM)
+  =\operatorname{long}(M''/\mathfrak{q}^nM'')
+  +\operatorname{long}(M'/M'_n),
+\]
+le lemme résulte aussitôt de (16.2.2.1) appliqué à $M'$.
+\end{proof}
+
+\begin{theorem}[16.2.3]
+\label{0.16.2.3-fr}
+\textup{(Krull-Chevalley-Samuel).}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical,
+$M\neq0$ un $A$-module de type fini, $d(M)$ le degré du polynôme de
+Hilbert-Samuel de $M$ (pour un idéal de définition quelconque de $A$)~; soit
+d'autre part $s(M)$ la borne inférieure des entiers $n$ tels qu'il existe des
+éléments $x_1,\ldots,x_n$ de $\mathfrak{r}$ pour lesquels
+$M/(x_1M+\cdots+x_nM)$ soit de longueur finie. Alors on a
+\[
+  d(M)=s(M)=\dim(M).
+\]
+\end{theorem}
+
+\begin{lemma}[16.2.3.1]
+\label{0.16.2.3.1-fr}
+Pour tout $x\in\mathfrak{r}$, soit ${}_xM$ le sous-module de $M$ formé des
+éléments annulés par $x$. Alors~:
+\begin{enumerate}
+  \item[\rm{(i)}] On a $s(M)\leq s(M/xM)+1$.
+  \item[\rm{(ii)}] Soient $\mathfrak{p}_i$ les idéaux premiers appartenant à
+  $\operatorname{Supp}(M)$ et tels que
+  \[
+    \dim(A/\mathfrak{p}_i)=\dim(M)\quad(1\leq i\leq m).
+  \]
+\end{enumerate}
+Si $x\notin\mathfrak{p}_i$ pour tout $i$, on a
+$\dim(M/xM)\leq\dim(M)-1$.
+\begin{enumerate}
+  \item[\rm{(iii)}] Si $\mathfrak{q}$ est un idéal de définition de $A$, le
+  polynôme
+  \[
+    P_{\mathfrak{q}}({}_xM,n)-P_{\mathfrak{q}}(M/xM,n)
+  \]
+  est de degré $\leq d(M)-1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+L'assertion (i) est triviale, car si $(x_i)_{1\leq i\leq m}$ est tel que pour
+le module $N=M/xM$, $N/(x_1N+\cdots+x_mN)$ soit de longueur finie, il suffit
+d'observer que ce module est isomorphe à
+$M/(xM+x_1M+\cdots+x_mM)$.
+
+Pour prouver (ii), on remarque que, si $\mathfrak{a}$ est l'annulateur de
+$M$, les idéaux premiers qui contiennent l'annulateur de $M/xM$ sont ceux qui
+contiennent $\mathfrak{a}+Ax$ ($0_{\mathrm I}$, 1.7.5)~; aucun des
+$\mathfrak{p}_i$ ne peut donc contenir $\mathfrak{a}+Ax$ et par définition de
+$\dim(M)$ (16.1.7) toute chaîne d'idéaux premiers contenant
+$\mathfrak{a}+Ax$ a donc une longueur $\leq\dim(M)-1$.
+

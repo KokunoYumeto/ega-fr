@@ -1,0 +1,34 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{246}
+que $\Gamma_{\omega\circ f}$ est un préschéma réduit \sref{IV.20.4.1}, on voit que le $X'$-préschéma $\Gamma_{\omega\circ f}$ est égal à $(\Gamma_\omega\times_X X')_\mathrm{red}$.
+Mais comme par hypothèse le morphisme composé $\Gamma_{\omega\circ f}\to\Gamma_\omega\times_X X'\xrightarrow{p^{(X')}}X'$ est un isomorphisme, $p^{(X')}$ est nécessairement \emph{radiciel} ; comme $f$ est surjectif, il en est de même de $p:\Gamma_\omega\to X$ \sref[I]{I.3.4.8}, donc $p^{-1}(x)$ est un ensemble réduit à un point \sref[I]{I.3.6.4} ; il résulte alors de \sref{IV.20.4.4} que $\omega$ est définie au point $x$.
+\end{proof}
+
+La proposition suivante donne un \emph{critère valuatif} pour qu'une application rationnelle soit définie en un point :
+
+\begin{proposition}[20.4.6]
+\label{IV.20.4.6}
+Soient $S$ un préschéma, $X$, $Y$ deux $S$-préschémas ; on suppose $X$ localement noethérien, $Y$ localement de type fini sur $S$.
+Soient $U$ un ouvert dense dans $X$, $h:U\to Y$ un $S$-morphisme, $x\in X-U$ un point normal de $X$, $h'_x:\Spec(k(x))\to Y$ un $S$-morphisme.
+Afin que $h$ puisse être prolongé en un $S$-morphisme $h':U'\to Y$, où $U'$ est un ouvert de $X$ contenant $U$ et $x$, et où le morphisme composé $\Spec(k(x))\to U'\xrightarrow{h'}Y$ est le $S$-morphisme donné $h'_x$, il faut et il suffit que la condition suivante soit vérifiée :
+\begin{quote}
+\emph{(P) Pour tout spectre $S_1$ d'un anneau de valuation discrète, de point fermé $a$ et de point générique $b$, et tout morphisme $u:S_1\to X$ tel que $u(a)=x$, $u(b)\in U$, le morphisme composé $h_1=h\circ(u|\{b\}):\{b\}=u^{-1}(U)\to Y$, se prolonge en un morphisme $h'_1:S_1\to Y$ tel que le diagramme}
+\[
+  \xymatrix{
+  \Spec(k(a)) \ar[r] & S_1 \ar[d]^{h'_1} \\
+  \Spec(k(x)) \ar[r]_{h'_x} & Y
+  }
+\]
+\emph{soit commutatif.}
+\end{quote}
+De plus, si cette condition est vérifiée, et si $h'':U''\to Y$ est un morphisme vérifiant les mêmes conditions que $h'$, alors il existe un ensemble ouvert contenant $U\cup\{x\}$, et dans lequel $h'$ et $h''$ coïncident.
+\end{proposition}
+
+\begin{proof}
+Prouvons d'abord la dernière assertion ; on peut supposer $h'$ et $h''$ définis dans le même ouvert $U_0\supset U\cup\{x\}$.
+Le sous-préschéma $Z$ des coïncidences de $h'$ et $h''$ \sref{IV.17.4.5} contient $U$ et $x$, donc il y a un voisinage ouvert $V$ de $x$ dans $U_0$ tel que le sous-préschéma induit par $Z$ sur l'ouvert $Z\cap V$ soit un sous-préschéma \emph{fermé} du préschéma induit par $X$ sur $V$ ; comme ce préschéma $Z\cap V$ majore le sous-préschéma induit par $V$ sur l'ouvert $U\cap V$, et que ce dernier est schématiquement dense dans $V$, $Z\cap V$ est nécessairement égal à $V$ \sref{IV.20.3.8.8}, ce qui prouve que $h'$ et $h''$ coïncident dans $U\cup V$.
+
+La nécessité de la condition de l'énoncé étant évidente, prouvons qu'elle est suffisante.
+En vertu de la correspondance biunivoque entre $S$-morphismes de $X$ dans $Y$ et $X$-sections de $X\times_S Y$ \sref[I]{I.3.3.15}, on peut se borner au cas où $S=X$ et où $h$ est donc une $U$-section de $Y$ ; on notera qu'alors $Y$ est localement noethérien, et on peut évidemment (puisque $X$ est localement intègre et localement noethérien) supposer $X=S$ irréductible.
+En outre, compte tenu de \sref{IV.20.3.7}, on peut supposer que $X=\Spec(A)$, où $A$ est un anneau \emph{local} noethérien, intègre et intégralement clos.
+

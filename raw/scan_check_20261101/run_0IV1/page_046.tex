@@ -1,0 +1,99 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{46}
+de (17.2.13.2) est égal à
+$\operatorname{Tor}^B_i(M\otimes_A B,N\otimes_A B)$~; l'hypothèse sur $B$
+entraîne que ce $B$-module est nul pour $i>n$ (17.2.2, (ii)), d'où la
+conclusion.
+\end{proof}
+
+\begin{env}[17.2.14]
+\label{0.17.2.14-fr}
+Soient $(X,\mathscr{O}_X)$ un espace annelé, $\mathscr{F}$ un
+$\mathscr{O}_X$-Module~; on appelle \emph{dimension projective} (resp.
+\emph{injective}) \emph{ponctuelle} de $\mathscr{F}$ et on note
+$\operatorname{dim.proj}(\mathscr{F})$ (resp.
+$\operatorname{dim.inj}(\mathscr{F})$) le nombre
+$\sup_{x\in X}(\operatorname{dim.proj}(\mathscr{F}_x))$ (resp.
+$\sup_{x\in X}(\operatorname{dim.inj}(\mathscr{F}_x))$. On appelle
+\emph{dimension cohomologique ponctuelle de $X$} et on note
+$\operatorname{dim.coh}(X)$ le nombre
+$\sup_{x\in X}(\operatorname{dim.coh}(\mathscr{O}_x))$. Il résulte de
+(17.2.5) et (17.2.10) que lorsque $A$ est un anneau noethérien, $M$ un
+$A$-module de type fini et $X=\operatorname{Spec}(A)$, on a
+$\operatorname{dim.proj}(\widetilde{M})=\operatorname{dim.proj}(M)$,
+$\operatorname{dim.inj}(\widetilde{M})=\operatorname{dim.inj}(M)$ et
+$\operatorname{dim.coh}(X)=\operatorname{dim.coh}(A)$. On appelle
+\emph{dimension projective} (resp. \emph{injective}) \emph{de $\mathscr{F}$ en
+un point $x\in X$} la dimension projective (resp. injective) de
+$\mathscr{F}_x$, \emph{dimension cohomologique de $X$ en un point $x$} la
+dimension cohomologique de $\mathscr{O}_x$.
+\end{env}
+
+\begin{proposition}[17.2.15]
+\label{0.17.2.15-fr}
+Soient $X$, $Y$ deux espaces annelés en anneaux locaux noethériens,
+$f:X\longrightarrow Y$ un morphisme plat. Si
+$\operatorname{dim.coh}(X)\leq n$, alors $Y$ est de dimension cohomologique
+$\leq n$ en tout point de $f(X)$.
+\end{proposition}
+
+\begin{proof}
+Cela résulte aussitôt de (17.2.13).
+\end{proof}
+
+\subsection{Théorie cohomologique des anneaux réguliers}
+\label{subsection:0.17.3-fr}
+
+\begin{theorem}[17.3.1]
+\label{0.17.3.1-fr}
+\textnormal{(Hilbert-Serre)} Soit $A$ un anneau local noethérien. Pour que $A$
+soit de dimension cohomologique finie, il faut et il suffit que $A$ soit
+régulier~; on a alors
+\begin{equation}
+\label{0.17.3.1.1-fr}
+\tag{17.3.1.1}
+  \operatorname{dim.coh}(A)=\dim(A).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Supposons $A$ régulier~; soient $\mathfrak{m}$ son idéal maximal,
+$\mathbf{x}=(x_i)_{1\leq i\leq n}$ un système régulier de paramètres de $A$
+(17.1.6)~; considérons le complexe de l'algèbre extérieure
+$K_\bullet(\mathbf{x})$ (\textbf{III}, 1.1.1), qui est formé de $A$-modules
+libres, avec $K_i(\mathbf{x})=0$ pour $i>n$~; comme $(x_i)$ est une suite
+régulière, on a $H_i(K_\bullet(\mathbf{x}))=0$ pour $i>0$ (\textbf{III},
+1.1.4 et 1.1.3.3) et
+$H_0(K_\bullet(\mathbf{x}))=A/(x_1A+\cdots+x_nA)=A/\mathfrak{m}=k$~; les
+$K_i(\mathbf{x})$ forment par suite une \emph{résolution libre} de $k$ de
+longueur $n$. Or, le fait que les $x_i$ appartiennent à $\mathfrak{m}$
+entraîne aussitôt que dans le complexe
+$K_\bullet(\mathbf{x},k)=K_\bullet(\mathbf{x})\otimes_A k$, l'opérateur bord
+est nul en toutes dimensions, si bien que l'on a, par définition,
+$\operatorname{Tor}^A_i(k,k)=\bigwedge^i(k^n)$~; l'égalité (17.3.1.1) résulte
+donc aussitôt de (17.2.11) (ce résultat est essentiellement le «~théorème des
+syzygies~» de Hilbert).
+
+Montrons maintenant que si $A$ est un anneau local noethérien,
+$\mathfrak{m}$ son idéal maximal, et si
+$\operatorname{dim.proj}_A(\mathfrak{m})$ est \emph{finie}, alors $A$ est
+régulier, ce qui achèvera de démontrer (17.3.1). Nous procéderons par
+récurrence sur $n=\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)$. Pour
+$n=0$, on a $\mathfrak{m}=0$ et l'assertion est triviale.
+\end{proof}
+
+\begin{lemma}[17.3.1.2]
+\label{0.17.3.1.2-fr}
+\textnormal{(Nagata)} Si tout élément de
+$\mathfrak{m}-\mathfrak{m}^2$ est diviseur de zéro dans $A$, il existe
+$c\neq0$ dans $A$ tel que $c\mathfrak{m}=0$ (autrement dit on a
+$\mathfrak{m}\in\operatorname{Ass}(A)$).
+\end{lemma}
+
+\begin{proof}
+On peut se borner au cas où $\mathfrak{m}\neq0$, donc
+$\mathfrak{m}\neq\mathfrak{m}^2$. L'hypothèse entraîne que
+$\mathfrak{m}-\mathfrak{m}^2$ est contenu dans la réunion des idéaux
+$\mathfrak{p}_i$ de $\operatorname{Ass}(A)$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~1, cor.~3 de la prop.~2)~; donc
+$\mathfrak{m}$ est contenu dans la réunion de $\mathfrak{m}^2$

@@ -1,0 +1,92 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{144}
+
+Les conditions sur $M$ entraînent, en vertu de l'hypothèse de récurrence, que
+$M\otimes_A(A/\mathfrak J_N)$ est un $(A/\mathfrak J_N)$-module plat. Notons
+maintenant que l'on a $\mathfrak J_N^2\subset\mathfrak J_{N+1}=0$ si $N\geq1$,
+et
+\[
+(M/\mathfrak J_1M)\otimes(\mathfrak J_N/\mathfrak J_{N+1})
+=(M/\mathfrak J_NM)\otimes(\mathfrak J_N/\mathfrak J_{N+1})
+=(M/\mathfrak J_NM)\otimes\mathfrak J_N\,;
+\]
+donc l'homomorphisme canonique
+\[
+(M/\mathfrak J_NM)\otimes\mathfrak J_N
+\longrightarrow\mathfrak J_NM=\mathfrak J_NM/\mathfrak J_N^2M
+\]
+est injectif. Appliquant $(\mathbf 0_{\mathrm{III}},10.2.1)$ à la filtration
+$\mathfrak J_N$-préadique, on en conclut bien que $M$ est un $A$-module plat.
+
+Pour appliquer ce lemme à (11.4.1), nous désignerons par $\mathfrak J_n$
+l'idéal de $A$ intersection des images réciproques
+$u_\lambda^{-1}(\mathfrak J^nB_\lambda)$~; il est immédiat que l'on a
+$\mathfrak J_0=A$, $\mathfrak J_m\mathfrak J_n\subset\mathfrak J_{m+n}$ pour
+$m\geq0$, $n\geq0$~; en outre, si $\mathfrak J^{N+1}=0$, on a aussi
+$\mathfrak J_{N+1}=0$ puisque l'intersection des noyaux des $u_\lambda$ est
+réduite à $0$.
+
+Munissons $A$ de la filtration $(\mathfrak J_n)$, $M$ de la filtration
+$(\mathfrak J_nM)$, et, pour chaque $\lambda$, munissons $B_\lambda$ et
+$N_\lambda=M\otimes_A B_\lambda$ des filtrations $\mathfrak J$-préadiques~;
+considérons pour chaque $\lambda$ le diagramme commutatif
+\[
+\xymatrix{
+\operatorname{gr}^0(M)\otimes_{\operatorname{gr}^0(A)}\operatorname{gr}(A)
+ \ar[r]^{\varphi} \ar[d]_{f_\lambda} & \operatorname{gr}(M) \ar[d]^{g_\lambda} \\
+\operatorname{gr}_{\mathfrak J}^0(N_\lambda)
+ \otimes_{\operatorname{gr}_{\mathfrak J}^0(B_\lambda)}
+ \operatorname{gr}_{\mathfrak J}(B_\lambda)
+ \ar[r]_{\varphi_\lambda} & \operatorname{gr}_{\mathfrak J}(N_\lambda)
+}
+\]
+où les flèches horizontales sont les homomorphismes canoniques (11.4.1.2) et
+les flèches verticales sont déduites des homomorphismes canoniques
+$A\to B_\lambda$ et $M\to N_\lambda$. L'hypothèse que $N_\lambda$ est un
+$B_\lambda$-module plat entraîne que $\varphi_\lambda$ est injective
+$(\mathbf 0_{\mathrm{III}},10.2.1)$, donc
+$\operatorname{Ker}(\varphi)\subset\operatorname{Ker}(f_\lambda)$. Posant
+$A_0=A/\mathfrak J_1$, $M_0=M\otimes_A A_0$, notons que
+\[
+\operatorname{gr}_{\mathfrak J}^0(N_\lambda)
+=N_\lambda/\mathfrak JN_\lambda
+=(M/\mathfrak JM)\otimes_A B_\lambda
+=(M/\mathfrak J_1M)\otimes_A(B_\lambda/\mathfrak JB_\lambda),
+\]
+car ce dernier produit tensoriel est égal à
+\[
+(M\otimes_A B_\lambda)\Big/
+\big(\operatorname{Im}(M\otimes_A\mathfrak JB_\lambda)
+ +\operatorname{Im}(\mathfrak J_1M\otimes_A B_\lambda)\big),
+\]
+et l'on a
+$\operatorname{Im}(\mathfrak J_1M\otimes_A B_\lambda)
+=\operatorname{Im}(M\otimes_A\mathfrak J_1B_\lambda)
+\subset\operatorname{Im}(M\otimes_A\mathfrak JB_\lambda)$ puisque
+$\mathfrak J_1B_\lambda\subset\mathfrak JB_\lambda$ par définition~; enfin,
+la relation $\mathfrak J_1B_\lambda\subset\mathfrak JB_\lambda$ montre que l'on
+a aussi
+\[
+(M/\mathfrak J_1M)\otimes_A(B_\lambda/\mathfrak JB_\lambda)
+=(M/\mathfrak J_1M)\otimes_{A/\mathfrak J_1}
+ (B_\lambda/\mathfrak JB_\lambda),
+\]
+si bien que finalement on a
+\[
+\operatorname{gr}_{\mathfrak J}^0(N_\lambda)
+=M_0\otimes_{A_0}(B_\lambda/\mathfrak JB_\lambda)
+\]
+et par suite
+\[
+\operatorname{gr}_{\mathfrak J}^0(N_\lambda)
+\otimes_{\operatorname{gr}_{\mathfrak J}^0(B_\lambda)}
+\operatorname{gr}_{\mathfrak J}(B_\lambda)
+=M_0\otimes_{A_0}\operatorname{gr}_{\mathfrak J}(B_\lambda).
+\]
+L'homomorphisme $f_\lambda$ peut donc s'écrire
+\[
+1\otimes\operatorname{gr}(u_\lambda):
+M_0\otimes_{A_0}\operatorname{gr}(A)
+\longrightarrow M_0\otimes_{A_0}\operatorname{gr}_{\mathfrak J}(B_\lambda),
+\]
+

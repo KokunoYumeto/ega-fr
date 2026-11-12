@@ -1,0 +1,102 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{26}
+
+avec les conditions $\rho_U^U=\text{identité}$ et
+$\rho_U^W=\rho_U^V\circ\rho_V^W$ si $U$, $V$, $W$ dans $\mathfrak{B}$ sont
+tels que $U\subset V\subset W$. On peut lui associer un \emph{préfaisceau à
+valeurs dans $\mathbf{K}$}~: $U\to\mathcal{F}'(U)$ au sens ordinaire, en
+prenant pour tout ouvert $U$,
+\[
+  \mathcal{F}'(U)=\varprojlim_{V\subset U}\mathcal{F}(V),
+\]
+où $V$ parcourt l'ensemble ordonné (pour $\subset$, \emph{non filtrant en
+général}) des ensembles $V\in\mathfrak{B}$ tels que $V\subset U$, car les
+$\mathcal{F}(V)$ forment un système projectif pour les $\rho_V^W$
+($V\subset W\subset U$, $V\in\mathfrak{B}$, $W\in\mathfrak{B}$). En effet,
+si $U$, $U'$ sont deux ouverts de $X$ tels que $U\subset U'$, on définit
+$\rho'_U{}^{U'}$ comme la limite projective (pour $V\subset U$) des morphismes
+canoniques $\mathcal{F}'(U')\to\mathcal{F}(V)$, autrement dit l'unique
+morphisme $\mathcal{F}'(U')\to\mathcal{F}'(U)$, qui, composé avec les
+morphismes canoniques $\mathcal{F}'(U)\to\mathcal{F}(V)$, donne les morphismes
+canoniques $\mathcal{F}'(U')\to\mathcal{F}(V)$~; la vérification de la
+transitivité de $\rho'_U{}^{U'}$ est alors immédiate. De plus, si
+$U\in\mathfrak{B}$, le morphisme canonique
+$\mathcal{F}'(U)\to\mathcal{F}(U)$ est un isomorphisme, permettant d'identifier
+ces deux objets%
+\footnote{Si $X$ est un espace \emph{noethérien}, on peut encore définir
+$\mathcal{F}'(U)$ et montrer que c'est un préfaisceau (au sens ordinaire)
+lorsqu'on suppose seulement que $\mathbf{K}$ admet des limites projectives
+pour les systèmes projectifs \emph{finis}. En effet, si $U$ est un ouvert
+quelconque de $X$, il y a un recouvrement \emph{fini} $(V_i)$ de $U$ formé
+d'ensembles de $\mathfrak{B}$~; pour tout couple $(i,j)$ d'indices, soit
+$(V_{ijk})$ un recouvrement fini de $V_i\cap V_j$ formé d'ensembles de
+$\mathfrak{B}$. Soit $I$ l'ensemble formé des $i$ et des triplets $(i,j,k)$,
+ordonné par les seules relations $i>(i,j,k)$, $j>(i,j,k)$~; on prend alors
+pour $\mathcal{F}'(U)$ la limite projective du système des $\mathcal{F}(V_i)$
+et $\mathcal{F}(V_{ijk})$~; on vérifie aisément que cela ne dépend pas des
+recouvrements $(V_i)$ et $(V_{ijk})$ et que $U\to\mathcal{F}'(U)$ est un
+préfaisceau.}.
+\end{env}
+
+\begin{env}[3.2.2]
+\label{0.3.2.2-fr}
+Pour que le préfaisceau $\mathcal{F}'$ ainsi défini soit un \emph{faisceau},
+il faut et il suffit que le préfaisceau $\mathcal{F}$ sur $\mathfrak{B}$
+vérifie la condition~:
+
+\smallskip
+\noindent
+\textup{(F\textsubscript{0})} \emph{Pour tout recouvrement $(U_\alpha)$ de
+$U\in\mathfrak{B}$ par des ensembles $U_\alpha\in\mathfrak{B}$ contenus dans
+$U$, et pour tout objet $T\in\mathbf{K}$, l'application qui, à tout
+$f\in\operatorname{Hom}(T,\mathcal{F}(U))$ fait correspondre la famille
+\[
+  (\rho_{U_\alpha}^{U}\circ f)
+  \in\prod_\alpha\operatorname{Hom}(T,\mathcal{F}(U_\alpha))
+\]
+est une bijection de $\operatorname{Hom}(T,\mathcal{F}(U))$ sur l'ensemble des
+$(f_\alpha)$ tels que
+$\rho_V^{U_\alpha}\circ f_\alpha=\rho_V^{U_\beta}\circ f_\beta$ pour tout
+couple d'indices $(\alpha,\beta)$ et tout $V\in\mathfrak{B}$ tel que
+$V\subset U_\alpha\cap U_\beta$}%
+\footnote{Cela signifie encore que le couple formé par $\mathcal{F}(U)$ et les
+$\rho_\alpha=\rho_{U_\alpha}^{U}$ est \emph{solution du problème universel}
+défini (3.1.1) par la donnée de
+$A_\alpha=\mathcal{F}(U_\alpha)$,
+$A_{\alpha\beta}=\prod\mathcal{F}(V)$ (pour les $V\in\mathfrak{B}$ tels que
+$V\subset U_\alpha\cap U_\beta$) et
+$\rho_{\alpha\beta}=(\rho_V''):\mathcal{F}(U_\alpha)\to
+\prod\mathcal{F}(V)$ défini par la condition que pour
+$V\in\mathfrak{B}$, $V'\in\mathfrak{B}$, $W\in\mathfrak{B}$,
+$V\cup V'\subset U_\alpha\cap U_\beta$, $W\subset V\cap V'$,
+$\rho_W^V\circ\rho_V''=\rho_W^{V'}\circ\rho_{V'}''$.}.
+
+La condition est évidemment nécessaire. Pour montrer qu'elle est suffisante,
+considérons d'abord une seconde base $\mathfrak{B}'$ de la topologie de $X$,
+\emph{contenue dans $\mathfrak{B}$}, et montrons que si $\mathcal{F}''$
+désigne le préfaisceau déduit de la sous-famille
+$(\mathcal{F}(V))_{V\in\mathfrak{B}'}$, $\mathcal{F}''$ est
+\emph{canoniquement isomorphe} à $\mathcal{F}'$. En effet, tout d'abord la
+limite projective (pour $V\in\mathfrak{B}'$, $V\subset U$) des morphismes
+canoniques $\mathcal{F}'(U)\to\mathcal{F}(V)$ est un morphisme
+$\mathcal{F}'(U)\to\mathcal{F}''(U)$ pour tout ouvert $U$. Si
+$U\in\mathfrak{B}$, ce morphisme est un isomorphisme, car par hypothèse les
+morphismes canoniques $\mathcal{F}''(U)\to\mathcal{F}(V)$ pour
+$V\in\mathfrak{B}'$, $V\subset U$, se factorisent en
+\[
+  \mathcal{F}''(U)\to\mathcal{F}(U)\to\mathcal{F}(V),
+\]
+et il est immédiat de voir que les composés des morphismes
+$\mathcal{F}(U)\to\mathcal{F}''(U)$ et
+$\mathcal{F}''(U)\to\mathcal{F}(U)$ ainsi définis sont les identités. Ceci
+étant, pour tout ouvert $U$, les morphismes
+$\mathcal{F}''(U)\to\mathcal{F}''(W)=\mathcal{F}(W)$ pour
+$W\in\mathfrak{B}$ et $W\subset U$ vérifient les conditions caractérisant la
+limite projective des $\mathcal{F}(W)$ ($W\in\mathfrak{B}$, $W\subset U$), ce
+qui démontre notre assertion compte tenu de l'unicité d'une limite projective
+à un isomorphisme près.
+
+Cela posé, soit $U$ un ouvert quelconque de $X$, $(U_\alpha)$ un recouvrement
+de $U$ par des ouverts contenus dans $U$, et soit $\mathfrak{B}'$ la
+sous-famille de $\mathfrak{B}$ constituée par les ensembles
+

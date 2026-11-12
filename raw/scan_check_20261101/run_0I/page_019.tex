@@ -1,0 +1,90 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{19}
+
+\begin{env}[1.5.7]
+\label{0.1.5.7-fr}
+Soient $A''$ un troisième anneau, $\varphi':A''\to A'$ un homomorphisme
+d'anneaux, $S''$ une partie multiplicative de $A''$ telle que
+$\varphi'(S'')\subset S'$. Posons $\varphi''=\varphi\circ\varphi'$; alors on a
+\[
+  \varphi''^{S''}=\varphi^{S'}\circ\varphi'^{S''}.
+\]
+Soit $M$ un $A$-module; on a évidemment
+$M_{[\varphi'']}=(M_{[\varphi]})_{[\varphi']}$; si $\sigma'$ et $\sigma''$ sont
+les homomorphismes définis à partir de $\varphi'$ et $\varphi''$ comme $\sigma$
+est défini dans (1.5.2) à partir de $\varphi$, on a la formule de transitivité
+\[
+  \sigma''=\sigma\circ\sigma'.
+\]
+Enfin, soit $N''$ un $A''$-module; le $A$-module
+$N''\otimes_{A''}A_{[\varphi'']}$ s'identifie canoniquement à
+\[
+  (N''\otimes_{A''}A'_{[\varphi']})\otimes_{A'}A_{[\varphi]},
+\]
+et de même, le $S^{-1}A$-module
+\[
+  (S''^{-1}N'')\otimes_{S''^{-1}A''}
+  (S^{-1}A)_{[\varphi''^{S''}]}
+\]
+s'identifie canoniquement à
+\[
+  \bigl((S''^{-1}N'')\otimes_{S''^{-1}A''}
+  (S'^{-1}A')_{[\varphi'^{S''}]}\bigr)
+  \otimes_{S'^{-1}A'}(S^{-1}A)_{[\varphi^{S'}]}.
+\]
+Avec ces identifications, si $\tau'$ et $\tau''$ sont les isomorphismes définis
+à partir de $\varphi'$ et $\varphi''$ comme $\tau$ est défini dans (1.5.4) à
+partir de $\varphi$, on a la formule de transitivité
+\[
+  \tau''=\tau\circ(\tau'\otimes 1).
+\]
+\end{env}
+
+\begin{env}[1.5.8]
+\label{0.1.5.8-fr}
+Soit $A$ un sous-anneau d'un anneau $B$; pour tout idéal premier
+\emph{minimal} $\mathfrak p$ de $A$, il existe un idéal premier minimal
+$\mathfrak q$ de $B$ tel que $\mathfrak p=A\cap\mathfrak q$. En effet,
+$A_{\mathfrak p}$ est un sous-anneau de $B_{\mathfrak p}$ (1.3.2) et possède
+un seul idéal premier $\mathfrak p'$ (1.2.6); comme $B_{\mathfrak p}$ n'est pas
+réduit à $0$, il possède au moins un idéal premier $\mathfrak q'$ et on a
+nécessairement $\mathfrak q'\cap A_{\mathfrak p}=\mathfrak p'$; l'idéal premier
+$\mathfrak q_1$ de $B$, image réciproque de $\mathfrak q'$ est donc tel que
+$\mathfrak q_1\cap A=\mathfrak p$, et \emph{a fortiori} on a
+$\mathfrak q\cap A=\mathfrak p$ pour tout idéal premier minimal $\mathfrak q$
+de $B$ contenu dans $\mathfrak q_1$.
+\end{env}
+
+\subsection{Identification du module $M_f$ à une limite inductive}
+\label{subsection:0.1.6-fr}
+
+\begin{env}[1.6.1]
+\label{0.1.6.1-fr}
+Soient $M$ un $A$-module, $f$ un élément de $A$. Considérons une suite
+$(M_n)$ de $A$-modules, tous identiques à $M$, et pour tout couple d'entiers
+$m\leq n$, soit $\varphi_{nm}$ l'homomorphisme $z\mapsto f^{n-m}z$ de $M_m$
+dans $M_n$; il est immédiat que $((M_n),(\varphi_{nm}))$ est un \emph{système
+inductif} de $A$-modules; soit $N=\varinjlim M_n$ la limite inductive de ce
+système. Nous allons définir un $A$-isomorphisme canonique \emph{fonctoriel} de
+$N$ sur $M_f$. Pour cela, remarquons que, pour tout $n$,
+$\theta_n:z\mapsto z/f^n$ est un $A$-homomorphisme de $M=M_n$ dans $M_f$, et
+il résulte des définitions que l'on a $\theta_n\circ\varphi_{nm}=\theta_m$ pour
+$m\leq n$. Il existe donc un $A$-homomorphisme $\theta:N\to M_f$ tel que, si
+$\varphi_n$ désigne l'homomorphisme canonique $M_n\to N$, on ait
+$\theta_n=\theta\circ\varphi_n$ pour tout $n$. Comme par hypothèse tout élément
+de $M_f$ est de la forme $z/f^n$ pour un $n$ au moins, il est clair que
+$\theta$ est surjectif. D'autre part, si $\theta(\varphi_n(z))=0$, autrement dit
+$z/f^n=0$, il existe un entier $k>0$ tel que $f^kz=0$, donc
+$\varphi_{n+k,n}(z)=0$, ce qui entraîne $\varphi_n(z)=0$. On peut donc
+identifier $M_f$ et $\varinjlim M_n$ au moyen de $\theta$.
+\end{env}
+
+\begin{env}[1.6.2]
+\label{0.1.6.2-fr}
+Écrivons maintenant $M_{f,n}$, $\varphi_{nm}^f$ et $\varphi_n^f$ au lieu de
+$M_n$, $\varphi_{nm}$ et $\varphi_n$. Soit $g$ un second élément de $A$. Comme
+$f^n$ divise $f^ng^n$, on a un homomorphisme fonctoriel
+\[
+  \rho_{fg,f}:M_f\longrightarrow M_{fg}\qquad\text{(1.4.1 et 1.4.3)};
+\]
+

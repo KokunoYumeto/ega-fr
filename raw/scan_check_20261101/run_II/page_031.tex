@@ -1,0 +1,100 @@
+% from ega2-1-fr.tex
+\oldpage[II]{31}
+
+\begin{proposition}[2.5.2]
+\label{II.2.5.2-fr}
+Il existe sur $X=\operatorname{Proj}(S)$ un $\mathcal{O}_X$-Module
+quasi-cohérent et un seul $\widetilde{M}$ tel que pour tout $f$ homogène
+dans $S_+$, on ait
+$\Gamma(D_+(f),\widetilde{M})=M_{(f)}$, l'homomorphisme de restriction
+$\Gamma(D_+(f),\widetilde{M})\to
+\Gamma(D_+(fg),\widetilde{M})$ pour $f$, $g$ homogènes dans $S_+$, étant
+l'homomorphisme canonique $M_{(f)}\to M_{(fg)}$
+(\hyperref[II.2.2.3-fr]{2.2.3}).
+\end{proposition}
+
+\begin{proof}
+Supposons $f\in S_d$, $g\in S_e$. Comme $D_+(fg)$ s'identifie au spectre
+premier de $(S_{(f)})_{g^d/f^e}$ en vertu de
+(\hyperref[II.2.2.2-fr]{2.2.2}), la restriction à $D_+(fg)$ du faisceau
+$\widetilde{M_{(f)}}$ sur $D_+(f)$ s'identifie canoniquement au faisceau
+associé au module $(M_{(f)})_{g^d/f^e}$
+(\hyperref[I.1.3.6-fr]{I, 1.3.6}), donc aussi à
+$\widetilde{M_{(fg)}}$ (\hyperref[II.2.2.2-fr]{2.2.2})~; on en conclut
+qu'il existe un isomorphisme canonique
+\[
+  \theta_{g,f}:\widetilde{M_{(f)}}|D_+(fg)
+  \xrightarrow{\sim}\widetilde{M_{(g)}}|D_+(fg)
+\]
+tel que, si $h$ est un troisième élément homogène de $S_+$, on ait
+$\theta_{f,h}=\theta_{f,g}\circ\theta_{g,h}$ dans $D_+(fgh)$. Par suite
+(\hyperref[0.3.3.1-fr]{0, 3.3.1}) il existe sur $X$ un
+$\mathcal{O}_X$-Module quasi-cohérent $\mathcal{F}$, et pour chaque $f$
+homogène dans $S_+$, un isomorphisme $\eta_f$ de
+$\mathcal{F}|D_+(f)$ sur $\widetilde{M_{(f)}}$ tels que
+$\theta_{g,f}=\eta_g\circ\eta_f^{-1}$. Si alors on considère le faisceau
+$\mathcal{G}$ associé au préfaisceau (sur la base de la topologie de $X$
+formée des $D_+(f)$) défini par $D_+(f)\to M_{(f)}$, avec les
+homomorphismes canoniques $M_{(f)}\to M_{(fg)}$ comme homomorphismes de
+restriction, ce qui précède prouve que $\mathcal{F}$ et $\mathcal{G}$ sont
+isomorphes (compte tenu de (\hyperref[I.1.3.7-fr]{I, 1.3.7}))~; le
+faisceau $\mathcal{G}$ sera désigné par $\widetilde{M}$ et vérifie bien les
+conditions de l'énoncé. On a en particulier
+$\widetilde{S}=\mathcal{O}_X$.
+\end{proof}
+
+\begin{definition}[2.5.3]
+\label{II.2.5.3-fr}
+On dit que le $\mathcal{O}_X$-Module quasi-cohérent $\widetilde{M}$ défini
+dans (\hyperref[II.2.5.2-fr]{2.5.2}) est \emph{associé} au $S$-module
+gradué $M$.
+\end{definition}
+
+Rappelons que les $S$-modules gradués forment une catégorie lorsqu'on
+restreint les homomorphismes de modules gradués aux homomorphismes
+\emph{de degré $0$}. Avec cette convention~:
+
+\begin{proposition}[2.5.4]
+\label{II.2.5.4-fr}
+Le foncteur $M\mapsto\widetilde{M}$ est un foncteur covariant additif exact,
+de la catégorie des $S$-modules gradués dans celle des
+$\mathcal{O}_X$-Modules quasi-cohérents, qui commute aux limites
+inductives et aux sommes directes.
+\end{proposition}
+
+\begin{proof}
+En effet, ces propriétés étant locales, il suffit de les vérifier sur les
+faisceaux
+$\widetilde{M}|D_+(f)=\widetilde{M_{(f)}}$~; or, le foncteur
+$M\mapsto M_f$, le foncteur $N\mapsto N_0$ (dans la catégorie des
+$S_f$-modules gradués) et le foncteur $P\mapsto\widetilde{P}$ (dans la
+catégorie des $S_{(f)}$-modules) ont tous trois les propriétés d'exactitude
+et de permutabilité aux limites inductives et aux sommes directes
+(\hyperref[I.1.3.5-fr]{I, 1.3.5} et
+\hyperref[I.1.3.9-fr]{I, 1.3.9})~; d'où la proposition.
+\end{proof}
+
+On notera $\widetilde{u}$ l'homomorphisme
+$\widetilde{M}\to\widetilde{N}$ correspondant à un homomorphisme de degré
+$0$, $u:M\to N$. On déduit aussitôt de
+(\hyperref[II.2.5.4-fr]{2.5.4}) que les résultats de
+(\hyperref[I.1.3.9-fr]{I, 1.3.9} et
+\hyperref[I.1.3.10-fr]{I, 1.3.10}) sont encore valables pour les
+$S$-modules gradués et les homomorphismes de degré $0$ (avec le sens donné
+ici à $\widetilde{M}$), les démonstrations étant purement formelles.
+
+\begin{proposition}[2.5.5]
+\label{II.2.5.5-fr}
+Pour tout $\mathfrak{p}\in X=\operatorname{Proj}(S)$, on a
+$\widetilde{M}_{\mathfrak{p}}=M_{(\mathfrak{p})}$.
+\end{proposition}
+
+\begin{proof}
+En effet, par définition
+$\widetilde{M}_{\mathfrak{p}}=
+\varinjlim\Gamma(D_+(f),\widetilde{M})$, où $f$ parcourt l'ensemble des
+éléments homogènes de $S_+$ tels que $f\notin\mathfrak{p}$~; comme
+$\Gamma(D_+(f),\widetilde{M})=M_{(f)}$, la proposition résulte de la
+définition de $M_{(\mathfrak{p})}$
+(\hyperref[II.2.2.7-fr]{2.2.7}).
+\end{proof}

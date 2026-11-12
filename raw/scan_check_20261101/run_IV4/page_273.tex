@@ -1,0 +1,62 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{273}
+donc $\operatorname{cyc}(D|U)=\operatorname{cyc}(D)|U$, et les homomorphismes $\operatorname{cyc}:\operatorname{Div}^+(U)\to\mathfrak{Z}^1(U)$ définissent donc un homomorphisme de faisceaux de monoïdes \sref{IV.21.6.4.2}, d'où l'homomorphisme cherché \sref{IV.21.6.4.1} de faisceaux de groupes.
+
+On a $\Supp(\operatorname{cyc}(D))\subset\Supp(D)$ pour tout diviseur $D$ et
+\begin{env}[21.6.6.2]
+\label{IV.21.6.6.2}
+\[
+  \Supp(\operatorname{cyc}(D))=\Supp(D)\quad\text{lorsque}\quad D\geq0;
+\]
+\end{env}
+on a déjà vu en effet la seconde relation \sref{IV.21.2.12};
+lorsque $D$ est quelconque, la relation $D_x=0$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ tel que $D|U=0$, d'où $\operatorname{cyc}(D)|U=0$, ce qui prouve notre assertion.
+
+\begin{env}[21.6.7]
+\EGAReaderTarget{ega4.c04.statement.21-6-7}{IV.21.6.7}
+L'homomorphisme \sref{IV.21.6.4.1} donne, par passage aux groupes de sections au-dessus de $X$, un \emph{homomorphisme croissant de groupes ordonnés} $\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$, que nous noterons encore $D\mapsto\operatorname{cyc}(D)$;
+le nombre $\operatorname{mult}_x(\operatorname{cyc}(D))$ pour $x\in X^{(1)}$ se note encore $\operatorname{mult}_x(D)$ ou $\operatorname{mult}_{\overline{\{x\}}}(D)$ et s'appelle \emph{multiplicité du diviseur $D$ au point $x$}, ou \emph{multiplicité du cycle premier $\overline{\{x\}}$ dans $D$};
+c'est un entier positif ou négatif, égal comme on l'a vu à $\operatorname{long}(\sh{O}_{Y(D),x})$ lorsque $D$ est un diviseur \emph{positif};
+on a donc par définition
+\[
+\label{IV.21.6.7.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{mult}_x(D)\cdot\overline{\{x\}},
+  \tag{21.6.7.1}
+\]
+et en vertu du fait que $D\mapsto\operatorname{cyc}(D)$ est un homomorphisme, on a
+\[
+\label{IV.21.6.7.2}
+  \operatorname{mult}_x(-D)=-\operatorname{mult}_x(D),\qquad
+  \operatorname{mult}_x(D+D')=\operatorname{mult}_x(D)+\operatorname{mult}_x(D')
+  \tag{21.6.7.2}
+\]
+pour deux diviseurs quelconques $D$, $D'$.
+
+Pour toute fonction méromorphe régulière $f$ sur $X$, on pose en particulier, pour $x\in X^{(1)}$
+\[
+\label{IV.21.6.7.3}
+  o_x(f)=\operatorname{mult}_x(\operatorname{div}(f))
+  \tag{21.6.7.3}
+\]
+et on dit que $o_x(f)$ (entier positif ou négatif) est \emph{l'ordre de $f$ au point} $x\in X^{(1)}$.
+Si $f_x\in\sh{O}_{X,x}$ (élément régulier de cet anneau local par hypothèse), on a donc
+\[
+\label{IV.21.6.7.4}
+  o_x(f)=\operatorname{long}(\sh{O}_{X,x}/f_x\sh{O}_{X,x});
+  \tag{21.6.7.4}
+\]
+pour deux fonctions méromorphes régulières $f$, $f'$ sur $X$, on a
+\[
+\label{IV.21.6.7.5}
+  o_x(ff')=o_x(f)+o_x(f'),\qquad o_x(f^{-1})=-o_x(f)
+  \tag{21.6.7.5}
+\]
+pour tout $x\in X^{(1)}$.
+Les cycles $1$-codimensionnels
+\[
+  Z^+(f)=\sum_{x\in X^{(1)}}(o_x(f))^+\cdot\overline{\{x\}},\qquad
+  Z^-(f)=\sum_{x\in X^{(1)}}(o_x(f))^-\cdot\overline{\{x\}}
+\]
+sont appelés respectivement le \emph{cycle des zéros} et le \emph{cycle des pôles} (ou \emph{cycle polaire}) de $f$, et l'on a évidemment $\operatorname{cyc}(\operatorname{div}(f))=Z^+(f)-Z^-(f)$.
+Les cycles $1$-codimensionnels de la forme $\operatorname{cyc}(\operatorname{div}(f))$ sont appelés \emph{principaux} (ou \emph{linéairement équivalents à zéro}) et forment un sous-groupe $\mathfrak{Z}^1_\mathrm{princ}(X)$ de $\mathfrak{Z}^1(X)$.
+Les sections au-dessus de $X$ de l'image $c(\sh{D}iv_X)\subset\mathscr{Z}_X^1$ sont

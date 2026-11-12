@@ -1,0 +1,87 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{22}
+résultera que $\widehat A'$ est $A'$-plat
+(\hyperref[0.6.2.3-fr]{$0_{\mathrm I}$, 6.2.3}), et comme
+$\mathfrak m'\widehat A'\ne\widehat A'$, $\widehat A'$ est un $A'$-module
+fidèlement plat (\hyperref[0.6.6.2-fr]{$0_{\mathrm I}$, 6.6.2}), d'où on
+conclura finalement que $A'$ est \emph{noethérien}
+(\hyperref[0.6.5.2-fr]{$0_{\mathrm I}$, 6.5.2}), ce qui achèvera la
+démonstration du lemme.
+
+On a $\widehat A'=\varprojlim_n A'/\mathfrak m'^{n}$~; en raison de ce que
+$A'$ est $A_\lambda$-plat, on a
+\[
+  \mathfrak m'^{n}/\mathfrak m'^{n+1}
+  =(\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1})
+    \otimes_{A_\lambda}A'
+  =(\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1})
+    \otimes_{K_\lambda}(K_\lambda\otimes_{A_\lambda}A')
+  =(\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1})
+    \otimes_{K_\lambda}K~;
+\]
+comme $\mathfrak m_\lambda^n/\mathfrak m_\lambda^{n+1}$ est un
+$K_\lambda$-espace vectoriel de dimension finie,
+$\mathfrak m'^{n}/\mathfrak m'^{n+1}$ est un $K$-espace vectoriel de
+dimension finie pour tout $n\geq0$. Il résulte donc de
+(\hyperref[0.7.2.12-fr]{$0_{\mathrm I}$, 7.2.12}) et
+(\hyperref[0.7.2.8-fr]{$0_{\mathrm I}$, 7.2.8}) que $\widehat A'$ est
+noethérien. On sait en outre que l'idéal maximal de $\widehat A'$ est
+$\mathfrak m'\widehat A'$ et que
+$\widehat A'/\mathfrak m'^{n}\widehat A'$ est isomorphe à
+$A'/\mathfrak m'^{n}$~; comme
+$A'/\mathfrak m'^{n}=(A_\lambda/\mathfrak m_\lambda^n)
+\otimes_{A_\lambda}A'$, $A'/\mathfrak m'^{n}$ est un
+$(A_\lambda/\mathfrak m_\lambda^n)$-module plat
+(\hyperref[0.6.2.1-fr]{$0_{\mathrm I}$, 6.2.1})~; le critère
+(\hyperref[0.10.2.2-fr]{10.2.2}) est donc applicable à la
+$A_\lambda$-algèbre noethérienne $\widehat A'$, et montre que $\widehat A'$
+est $A_\lambda$-plat. C.Q.F.D.
+
+\begin{env}[10.3.1.4]
+\label{0.10.3.1.4-fr}
+Abordons maintenant le cas général. Il existe un ordinal $\gamma$ et pour
+tout ordinal $\lambda\leq\gamma$ un sous-corps $k_\lambda$ de $K$ contenant
+$k$, tels que~: $1^\circ$ Pour tout $\lambda<\gamma$, $k_{\lambda+1}$ soit
+une extension de $k_\lambda$ engendrée par un seul élément~; $2^\circ$ Pour
+tout ordinal $\mu$ sans prédécesseur,
+$k_\mu=\bigcup_{\lambda<\mu}k_\lambda$~; $3^\circ$ $K=k_\gamma$. Il suffit en
+effet de considérer une bijection $\xi\mapsto t_\xi$ de l'ensemble des
+ordinaux $\xi\leq\beta$ (pour un $\beta$ convenable) sur $K$, de définir
+$k_\lambda$ par induction transfinie (pour $\lambda\leq\beta$) comme la
+réunion des $k_\mu$ pour $\mu<\lambda$ si $\lambda$ n'a pas de prédécesseur,
+et, si $\lambda=\nu+1$, comme $k_\nu(t_\xi)$, où $\xi$ est le plus petit
+ordinal tel que $t_\xi\notin k_\nu$~; $\gamma$ est alors par définition le plus
+petit ordinal $\leq\beta$ tel que $k_\gamma=K$.
+
+Cela étant, nous allons définir, par récurrence transfinie, une famille
+d'anneaux locaux noethériens $A_\lambda$ pour $\lambda\leq\gamma$, et des
+homomorphismes locaux $f_{\mu\lambda}:A_\lambda\to A_\mu$ pour
+$\lambda\leq\mu$, vérifiant les conditions suivantes~:
+\begin{enumerate}
+  \item[(i)] $(A_\lambda,f_{\mu\lambda})$ est un système inductif et $A_0=A$.
+  \item[(ii)] Pour tout $\lambda$, on a un $k$-isomorphisme
+    $A_\lambda/\mathfrak J A_\lambda\xrightarrow{\sim}k_\lambda$.
+  \item[(iii)] Pour $\lambda\leq\mu$, $A_\mu$ est un $A_\lambda$-module plat.
+\end{enumerate}
+
+Supposons donc les $A_\lambda$ et les $f_{\mu\lambda}$ définis pour
+$\lambda<\mu<\xi$, et supposons en premier lieu que $\xi=\zeta+1$, de sorte
+que $k_\xi=k_\zeta(t)$. Si $t$ est transcendant sur $k_\zeta$, on définit
+$A_\xi$ suivant le procédé de (\hyperref[0.10.3.1.1-fr]{10.3.1.1}) comme
+égal à $(A_\zeta[t])_{\mathfrak J A_\zeta[t]}$~;
+$f_{\xi\zeta}$ est l'application canonique, et pour $\lambda<\zeta$, on prend
+$f_{\xi\lambda}=f_{\xi\zeta}\circ f_{\zeta\lambda}$~; la vérification des
+conditions (i) à (iii) est alors immédiate, vu ce qui a été démontré en
+(\hyperref[0.10.3.1.1-fr]{10.3.1.1}). Supposons ensuite $t$ algébrique, et
+soient $h$ son polynôme minimal dans $k_\zeta[T]$, $H$ un polynôme unitaire de
+$A_\zeta[T]$ dont l'image dans $k_\zeta[T]$ est $h$~; on prend alors $A_\xi$
+égal à $A_\zeta[T]/(H)$, les $f_{\xi\lambda}$ se définissant comme
+précédemment~; la vérification des conditions (i) à (iii) résulte alors de
+ce qui a été vu en (\hyperref[0.10.3.1.2-fr]{10.3.1.2}).
+
+Supposons maintenant que $\xi$ n'ait pas de prédécesseur~; on prend alors
+pour $A_\xi$ la limite inductive du système inductif d'anneaux locaux
+$(A_\lambda,f_{\mu\lambda})$ pour $\lambda<\xi$~; $f_{\xi\lambda}$ est définie
+comme l'application canonique pour $\lambda<\xi$. Le fait que $A_\xi$ soit
+local noethérien, que les $f_{\xi\lambda}$ soient des homomorphismes locaux,
+et les conditions (i) à (iii) pour $\lambda\leq\xi$

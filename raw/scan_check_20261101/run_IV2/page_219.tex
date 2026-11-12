@@ -1,0 +1,88 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{219}
+
+Notons que le morphisme $f'$ est propre (\textbf{II}, 5.4.2), et en
+particulier de type fini, donc $Y'$ est noethérien, puisqu'il en est ainsi de
+$X'$. Soit $a'$ le point fermé de $X'$; pour voir que $Y'$ est régulier, il
+suffira de prouver que \emph{pour tout} $y'\in f'^{-1}(a')$, \emph{l'anneau
+local $\mathcal O_{Y',y'}$ est régulier}. En effet, on aura alors
+$f'^{-1}(a')\subset\operatorname{Reg}(Y')$. Mais comme $X'$ est le spectre
+d'un anneau local complet et que $f'$ est de type fini,
+$\operatorname{Reg}(Y')$ est \emph{ouvert} dans $Y'$ (6.12.8), et comme le
+morphisme $f'$ est \emph{fermé} et que
+$f'^{-1}(a')\subset\operatorname{Reg}(Y')$, il existe un voisinage $V'$ de
+$a'$ dans $X'$ tel que $f'^{-1}(V')\subset\operatorname{Reg}(Y')$. Comme
+$\widehat A$ est un anneau local, on a nécessairement $V'=X'$, donc
+$\operatorname{Reg}(Y')=Y'$ et la proposition sera démontrée.
+
+Or, si $a$ est le point fermé de $X$, on a $g^{-1}(a)=\{a'\}$ et les corps
+résiduels $k(a)$ et $k(a')$ sont isomorphes; donc
+$g'^{-1}(f^{-1}(a))=f'^{-1}(a')$ et la restriction
+$f'^{-1}(a')\to f^{-1}(a)$ de $g'$ est un \emph{isomorphisme} de ces deux
+fibres. Soit $y=g'(y')$ et posons $B=\mathcal O_{Y,y}$; si
+$\mathfrak n=\mathfrak m_y$ est l'idéal maximal de $B$, ce qui précède montre
+qu'il existe dans l'anneau (noethérien) $B'=B\otimes_A\widehat A$ un seul
+idéal maximal $\mathfrak n'$ au-dessus de $\mathfrak n$ et que l'on a
+$\mathcal O_{Y',y'}=B'_{\mathfrak n'}$. Pour montrer que l'anneau local
+$B'_{\mathfrak n'}$ est régulier, il suffit d'établir que son \emph{complété}
+(0, 17.1.5) l'est; or, par hypothèse $B$ est régulier, donc il en est de même
+de son complété $\widehat B$. La conclusion résultera par suite du lemme
+suivant :
+
+\begin{lemma}[7.9.3.1]
+\label{IV.2.s7.9.3.1-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens,
+$\rho:A\to B$ un homomorphisme local tel que l'anneau
+$B'=B\otimes_A\widehat A$ soit noethérien. Alors, pour tout idéal maximal
+$\mathfrak n'$ de $B'$ au-dessus de l'idéal maximal $\mathfrak n$ de $B$ et
+de l'idéal maximal de $\widehat A$, les complétés de $B$ et de
+$B'_{\mathfrak n'}$ sont isomorphes.
+\end{lemma}
+
+\begin{proof}
+Soit $\mathfrak m$ l'idéal maximal de $A$ et posons
+$B''=B'_{\mathfrak n'}$. Pour tout entier $h>0$, on a
+$B'/\mathfrak m^hB'=B\otimes_A(\widehat A/\mathfrak m^h\widehat A)$; mais
+$\widehat A/\mathfrak m^h\widehat A$ est isomorphe à
+$A/\mathfrak m^h$, donc $B'/\mathfrak m^hB'$ est isomorphe à
+$B/\mathfrak m^hB$, et en particulier c'est un anneau local dont l'idéal
+maximal est $\mathfrak n'/\mathfrak m^hB'$; par suite
+$B''/\mathfrak m^hB''$, isomorphe à
+$(B'/\mathfrak m^hB')_{\mathfrak n'}$, est $B$-isomorphe à
+$B'/\mathfrak m^hB'$, et finalement à $B/\mathfrak m^hB$; en particulier,
+l'idéal maximal de $B''$ est égal à $\mathfrak nB''$, et
+$B''/\mathfrak n^hB''$ est isomorphe à $B/\mathfrak n^h$ d'après ce qui
+précède. Comme
+$\widehat{B''}=\varprojlim_h(B''/\mathfrak n^hB'')$, le lemme est démontré,
+ainsi que (7.9.3).
+\end{proof}
+\end{proof}
+
+\begin{corollary}[7.9.4]
+\label{IV.2.s7.9.4-fr}
+Soit $A$ un anneau local noethérien.
+\begin{enumerate}
+\item[\emph{(i)}] Si, pour tout anneau quotient intègre $B$ de $A$, on peut
+résoudre $\operatorname{Spec}(B)$, alors les fibres formelles de $A$ sont
+régulières.
+\item[\emph{(ii)}] Supposons que, pour tout anneau quotient intègre $B$ de
+$A$, et tout anneau intègre $B'$ contenant $B$, qui est une $B$-algèbre finie
+et dont le corps des fractions est radiciel sur celui de $B$, on puisse
+résoudre $\operatorname{Spec}(B')$; alors les fibres formelles de $A$ sont
+géométriquement régulières.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Toute fibre formelle de $A$ étant fibre formelle d'un anneau quotient intègre
+de $A$ au point générique de son spectre, il est clair que (i) est conséquence
+immédiate de (7.9.3), et (ii) résulte de (i) et de (6.7.7).
+\end{proof}
+
+\begin{proposition}[7.9.5]
+\label{IV.2.s7.9.5-fr}
+Soit $X$ un préschéma localement noethérien, tel que, pour tout préschéma $Y$
+intègre et fini sur $X$, on puisse résoudre $Y$. Alors les anneaux des ouverts
+affines de $X$ vérifient les conditions (ii) et (iii) de (7.8.2); si en outre
+$X$ est universellement caténaire (5.6.3) (et
+

@@ -1,0 +1,87 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{25}
+\[
+  \xymatrix{
+    Y\ar[d]_-{\Delta_f}&X\ar[l]_-j\ar[d]^-{\Delta_{f\circ j}}\\
+    Y\times_Z Y&X\times_Z X\ar[l]^-{j\times_Z j}
+  }
+\]
+identifiant $X$ au produit des $(Y\times_Z Y)$-préschémas $Y$ et
+$X\times_Z X$ (I, 5.3.7). Comme $j\times_Z j$ est une immersion, on déduit
+donc de cette remarque et de (16.2.2) que si $\Delta_{Y/Z}^n$ et
+$\Delta_{X/Z}^n$ désignent les voisinages infinitésimaux d'ordre $n$ de $Y$
+et $X$ pour les immersions canoniques $\Delta_f$ et $\Delta_{f\circ j}$
+respectivement, on a un diagramme
+\[
+  \xymatrix{
+    \Delta_{Y/Z}^n\ar[d]&\Delta_{X/Z}^n\ar[l]\ar[d]\\
+    Y\times_Z Y&X\times_Z X\ar[l]^-{j\times_Z j}
+  }
+\]
+faisant de $\Delta_{X/Z}^n$ le produit des $(Y\times_Z Y)$-préschémas
+$\Delta_{Y/Z}^n$ et $X\times_Z X$. On peut encore dire que
+$\mathscr{P}_{X/Z}^n$ s'identifie au faisceau d'anneaux
+$\mathscr{P}_{Y/Z}^n\otimes_{\mathcal{O}_{Y\times_Z Y}}
+\mathcal{O}_{X\times_Z X}$. Mais on voit aussitôt (par exemple en se ramenant
+au cas affine) que
+\[
+  \mathcal{O}_{X\times_Z X}=
+  \mathcal{O}_{Y\times_Z Y}/
+  (p_1^*(\mathscr{K})+p_2^*(\mathscr{K}))
+  \mathcal{O}_{Y\times_Z Y}.
+\]
+Donc $\mathscr{P}_{X/Z}^n$ s'identifie au quotient de
+$\mathscr{P}_{Y/Z}^n$ par l'Idéal engendré par l'image dans
+$\mathscr{P}_{Y/Z}^n$ de $p_1^*(\mathscr{K})+p_2^*(\mathscr{K})$. Mais par
+définition cet Idéal est aussi engendré par
+$\varpi_1(\mathscr{K})+\varpi_2(\mathscr{K})$. C.Q.F.D.
+
+\begin{corollary}[16.4.21]
+\label{IV.16.4.21}
+Soient $f:Y\to Z$ un morphisme, $j:X\to Y$ une immersion. On a une suite
+exacte de $\mathcal{O}_X$-Modules quasi-cohérents
+\[
+  \xymatrix{
+    \mathscr{N}_{X/Y}\ar[r]&j^*(\Omega_{Y/Z}^1)\ar[r]&
+    \Omega_{X/Z}^1\ar[r]&0.
+  }
+  \tag{16.4.21.1}
+  \label{IV.16.4.21.1}
+\]
+\end{corollary}
+
+Lorsque $X$, $Y$ et $Z$ sont affines, on retrouve ainsi la suite exacte
+(0, 20.5.12.1).
+
+\begin{corollary}[16.4.22]
+\label{IV.16.4.22}
+Si $f:X\to S$ est un morphisme localement de présentation finie,
+$\mathscr{P}_{X/S}^n$ et $\Omega_{X/S}^1$ sont des
+$\mathcal{O}_X$-Modules quasi-cohérents de présentation finie.
+\end{corollary}
+
+On est aussitôt ramené au cas où $S=\operatorname{Spec}(A)$ est affine,
+$X=\operatorname{Spec}(B)$, où
+$B=A[T_1,\ldots,T_r]/\mathfrak{K}$, $\mathfrak{K}$ étant un idéal de type
+fini de $C=A[T_1,\ldots,T_r]$. On applique alors (16.4.20) avec $Z=S$,
+$Y=\operatorname{Spec}(C)$ et $\mathscr{K}=\widetilde{\mathfrak{K}}$. Alors
+$j^*(\mathscr{P}_{Y/Z}^n)$ est un $\mathcal{O}_X$-Module libre de rang fini
+(16.4.10) et l'hypothèse sur $\mathfrak{K}$ entraîne que
+$j^*(\mathcal{O}_Y\cdot d_{Y/Z}^n(\mathscr{K}))$ engendre un
+$\mathcal{O}_X$-Module quasi-cohérent de type fini; d'où la conclusion.
+
+\begin{proposition}[16.4.23]
+\label{IV.16.4.23}
+Soient $X$, $Y$ deux $S$-préschémas, $Z=X\times_S Y$ leur produit,
+$p:X\times_S Y\to X$ et $q:X\times_S Y\to Y$ les projections canoniques.
+Alors l'homomorphisme canonique
+\[
+  p_{Z/X/S}\oplus q_{Z/Y/S}:
+  p^*(\Omega_{X/S}^1)\oplus q^*(\Omega_{Y/S}^1)
+  \longrightarrow\Omega_{(X\times_S Y)/S}^1
+  \tag{16.4.23.1}
+  \label{IV.16.4.23.1}
+\]
+est bijectif.
+\end{proposition}
+

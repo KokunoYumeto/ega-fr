@@ -1,0 +1,80 @@
+% from ega0-20-fr.tex
+\oldpage[0\textsubscript{IV-1}]{139}
+On peut définir l'homomorphisme $\chi_E$ d'une autre manière :
+\begin{proposition}[20.6.9]
+\label{0.20.6.9-fr}
+Soit $E$ une $B$-extension de $C$ par un $C$-module $L$, qui est
+$A$-triviale (18.3.7); alors le diagramme
+\begin{equation}
+\tag{20.6.9.1}
+\label{0.20.6.9.1-fr}
+\xymatrix{
+  0 \ar[r] & \Upsilon_{C/B/A} \ar[r] \ar[d]^{\chi_E} &
+  \Omega^1_{B/A}\otimes_B C \ar[r]^{v_{C/B/A}}
+    \ar[d]^{q_{E/B/A}\otimes1_C} &
+  \Omega^1_{C/A} \ar[d]^{1} \\
+  0 \ar[r] & L \ar[r]_{\delta_{C/E/A}} &
+  \Omega^1_{E/A}\otimes_E C \ar[r]_{p_{C/E/A}} &
+  \Omega^1_{C/A} \ar[r] & 0
+}
+\end{equation}
+où $q:B\to E$ définit la structure de $B$-extension de $E$ et
+$p:E\to C$ est l'homomorphisme d'augmentation, est commutatif et ses
+lignes sont exactes.
+\end{proposition}
+
+\begin{proof}
+La ligne inférieure du diagramme est la suite (20.5.12.5) relative aux
+deux homomorphismes $A\xrightarrow{q\circ u}E$ et
+$p:E\to C=E/L$; comme $p$ est surjectif et que $E$ est une extension
+$A$-triviale, cette suite est exacte et scindée en vertu de (20.5.12,
+(iii)). La commutativité du carré de droite de (20.6.9.1) résulte de la
+relation $v=p\circ q$ (20.5.2.7); l'image par
+$q_{E/B/A}\otimes1_C$ du noyau $\Upsilon_{C/B/A}$ de $v_{C/B/A}$ est
+donc contenue dans le noyau $L$ de $p_{C/E/A}$. D'autre part soit
+$h:C\to E$ un $A$-homomorphisme inverse à droite de $p$, et soit
+$j:L\to E$ l'injection canonique, de sorte que l'on a
+$q(b)=h(v(b))+j(D(b))$ pour $b\in B$, où $D$ est la $A$-dérivation de
+$B$ dans $L$ définissant la $B$-extension $E$; on peut écrire
+$D=f\circ d_{B/A}$, où $f:\Omega^1_{B/A}\to L$ est un
+$B$-homomorphisme. En vertu de (20.5.2.6), on a
+\[
+  q_{E/B/A}(d_{B/A}(b))=d_{E/A}(q(b))
+  =d_{E/A}(h(v(b)))+d_{E/A}(j(f(d_{B/A}(b))))
+\]
+pour $b\in B$. Soit alors
+$z=\sum_i d_{B/A}(b_i)\otimes c_i$, où $b_i\in B$ et $c_i\in C$, un
+élément de $\Omega^1_{B/A}\otimes_B C$; on a
+\[
+  (q_{E/B/A}\otimes1_C)(z)=
+  \sum_i d_{E/A}(h(v(b_i)))\otimes c_i+
+  \sum_i d_{E/A}(j(f(d_{B/A}(b_i))))\otimes c_i.
+\]
+Dans la première somme, on a
+$d_{E/A}(h(v(b_i)))=h_{E/C/A}(d_{C/A}(v(b_i)))$, donc cette somme est
+$(h_{E/C/A}\otimes1_C)(v_{C/B/A}(z))$ en vertu de (20.5.2.6). Si l'on
+prend $z\in\Upsilon_{C/B/A}$, cette somme est donc nulle, et il reste,
+par définition de $\delta_{C/E/A}$,
+\[
+  (q_{E/B/A}\otimes1_C)(z)=
+  \sum_i\delta_{C/E/A}(c_i f(d_{B/A}(b_i)))
+  =\delta_{C/E/A}(f(z)),
+\]
+ce qui démontre la commutativité du carré de gauche dans (20.6.9.1).
+\end{proof}
+
+On notera que lorsque l'on suppose seulement que $\delta_{C/E/A}$ est
+\emph{injectif} (et non nécessairement inversible à gauche), cette
+interprétation permettrait encore de définir $\chi_E$ comme la
+restriction de $q_{E/B/A}\otimes1_C$ à $\Upsilon_{C/B/A}$.
+
+\begin{corollary}[20.6.10]
+\label{0.20.6.10-fr}
+Si $\mathfrak{R}$ est un idéal de $B$, $C=B/\mathfrak{R}$,
+$E=B/\mathfrak{R}^2$, et si $E$ est une $B$-extension $A$-triviale
+(18.3.7) de $C$ par $\mathfrak{R}/\mathfrak{R}^2$, alors
+l'homomorphisme caractéristique
+$\chi_E:\Upsilon_{C/B/A}\to\mathfrak{R}/\mathfrak{R}^2$ est bijectif.
+\end{corollary}
+
+\begin{proof}

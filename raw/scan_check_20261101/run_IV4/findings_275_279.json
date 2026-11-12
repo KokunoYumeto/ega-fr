@@ -1,0 +1,1030 @@
+[
+ {
+  "page": 275,
+  "where": "l. 2: 'un anneau de valuation discrète (II, 7.1.6), donc'",
+  "scan": "one pair of parentheses around 'II, 7.1.6' (bold II)",
+  "tex": "(\\sref[II]{II.7.1.6}): \\sref prints its own parentheses, so the output is '((II, 7.1.6))'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "discrète (\\sref[II]{II.7.1.6}), donc",
+   "new": "discrète \\sref[II]{II.7.1.6}, donc"
+  },
+  "note": "GLOBAL_ISSUES 107 (ega4-21b line 223)."
+ },
+ {
+  "page": 275,
+  "where": "proof of Corollaire (21.6.10), l. 1-2: 'par l'homomorphisme cyc : D(X) → 𝔜¹(X)'",
+  "scan": "the print has D(X), not Div(X) (crop c275_cyc.png)",
+  "tex": "\\operatorname{Div}(X): silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'homomorphisme $\\operatorname{cyc}:\\operatorname{Div}(X)\\to\\mathfrak{Z}^1(X)$ est $",
+   "new": "l'homomorphisme $\\operatorname{cyc}:D(X)\\to\\mathfrak{Z}^1(X)$ est $"
+  },
+  "corrected": "\\operatorname{cyc}:\\operatorname{Div}(X)\\to",
+  "note": "The map cyc is defined on Div(X) (21.6.7, 21.6.9; the same proof writes Div(X)/Div.princ(X) one line below). The TeX silently corrects; the fix restores the printed reading."
+ },
+ {
+  "page": 275,
+  "where": "proof of (21.6.10), l. 3: '𝔜¹(X)/𝔜¹_princ(X) = Cl(X) déduit de cyc'",
+  "scan": "roman 'Cl' (crop c275_Cl.png), where (21.6.10.1) on this page and (21.6.12.1) have the Fraktur ℭl",
+  "tex": "\\mathfrak{Cl}(X): silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\mathfrak{Cl}(X)$ déduit de",
+   "new": "=\\mathrm{Cl}(X)$ déduit de"
+  },
+  "corrected": "=\\mathfrak{Cl}(X)",
+  "note": "Wrong fount: the class group is ℭl(X) (Fraktur) everywhere else in 21.6. The fix restores the printed roman letters."
+ },
+ {
+  "page": 275,
+  "where": "end of the proof of (21.6.10): 'est bijectif (21.3.4, (ii)).'",
+  "scan": "'(21.3.4, (ii))': the label inside the reference's parentheses",
+  "tex": "\\sref{IV.21.3.4}, (ii) prints '(21.3.4), (ii)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.21.3.4}, (ii).",
+   "new": "\\sref{IV.21.3.4}[(ii)]."
+  },
+  "note": "\\sref's third argument prints '(21.3.4, (ii))' (GLOBAL_ISSUES 68)."
+ },
+ {
+  "page": 275,
+  "where": "Corollaire (21.6.10), l. 1: 'Soit X un préschéma localement noethérien normal.'",
+  "scan": "'normal.' is roman inside the italic statement (crop c275_cor10.png)",
+  "tex": "'normal' italic like the rest of the corollary",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "localement noethérien normal.",
+   "new": "localement noethérien \\textup{normal}."
+  },
+  "note": ""
+ },
+ {
+  "page": 275,
+  "where": "Corollaire (21.6.10): item labels (i), (ii)",
+  "scan": "labels upright (crop c275_i.png; (ii) in page_275_s2.png)",
+  "tex": "enumerate labels italic inside the italic corollary",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{enumerate}[label=(\\roman*)]\n  \\item Il existe",
+   "new": "\\begin{enumerate}[label=\\textup{(\\roman*)}]\n  \\item Il existe"
+  },
+  "note": "GLOBAL_ISSUES 16; one edit covers both labels."
+ },
+ {
+  "page": 275,
+  "where": "proof of Corollaire (21.6.11): 'Tenant compte de (21.6.9, (ii)), la première assertion'",
+  "scan": "'(21.6.9, (ii))'",
+  "tex": "\\sref{IV.21.6.9}, (ii) prints '(21.6.9), (ii)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Tenant compte de \\sref{IV.21.6.9}, (ii),",
+   "new": "Tenant compte de \\sref{IV.21.6.9}[(ii)],"
+  },
+  "note": "GLOBAL_ISSUES 68."
+ },
+ {
+  "page": 275,
+  "where": "Proposition (21.6.12), l. 2: 'Soit (U_λ)_{λ∈L} une famille filtrante décroissante'",
+  "scan": "new indented paragraph after 'Soit X un préschéma noethérien réduit.' (crop c275_prop12.png)",
+  "tex": "same paragraph (single line break)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "noethérien réduit.\nSoit $(U_\\lambda)",
+   "new": "noethérien réduit.\n\nSoit $(U_\\lambda)"
+  },
+  "note": "Inside the proposition environment, so the blank line gives the printed indent."
+ },
+ {
+  "page": 275,
+  "where": "Proposition (21.6.12), condition 1°: 'Si Y_λ = X—U_λ'",
+  "scan": "long dash for set difference",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y_\\lambda=X-U_\\lambda$",
+   "new": "$Y_\\lambda=X\\setmin U_\\lambda$"
+  },
+  "note": ""
+ },
+ {
+  "page": 275,
+  "where": "proof of (21.6.12), PRINTED ON P. 276 (in the p. 275 segment until marker 276 moves): 'déterminée par sa rejtriction à chaque U_λ'",
+  "scan": "'rejtriction' with a dotted j (crops c276_rejtr.png, c276_rejtr2.png)",
+  "tex": "'restriction': silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "par sa restriction à chaque",
+   "new": "par sa rejtriction à chaque"
+  },
+  "corrected": "restriction",
+  "note": "The fix restores the printed reading. The misprint is on printed p. 276; its text lies in the p. 275 segment of ega4-21b-fr.tex until the marker move below, so apply it before that move."
+ },
+ {
+  "page": 275,
+  "where": "page break 275/276: before 'Alors il existe des isomorphismes canoniques' (Proposition (21.6.12))",
+  "scan": "printed p. 275 ends with condition 2° ('... l'anneau O_X,x est factoriel.'); p. 276 begins 'Alors il existe des isomorphismes canoniques', indented as a new paragraph (page_275_s4.png, page_276_s1.png)",
+  "tex": "\\oldpage[IV-4]{276} stands before 'Montrons d'abord ...', about 22 printed lines too late; 'Alors' follows \\end{enumerate} without a blank line (no indent)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\nAlors il existe des isomorphismes canoniques",
+   "new": "\\end{enumerate}\n\n\\oldpage[IV-4]{276}\nAlors il existe des isomorphismes canoniques"
+  },
+  "note": "MARKER 276 MOVES EARLIER. Part 1 of 2: inserts the marker at the printed page start, with the blank line before it that the printed paragraph indent needs (GLOBAL_ISSUES 80 pattern). Apply AFTER all other p. 275 edits (it ends the p. 275 segment here, and the 'rejtriction' edit lies after it); part 2 is the last p. 276 finding (removes the old marker). Until part 2 is applied the file has two \\oldpage[IV-4]{276} (apply_fixes.py then treats the span from the new one to marker 277 as page 276)."
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'pour tout ouvert V⊃T, X—V est un sous-espace fermé'",
+  "scan": "long dash for set difference",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$X-V$ est un sous-espace",
+   "new": "$X\\setmin V$ est un sous-espace"
+  },
+  "note": ""
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'les ensembles (X—V)∩(X—U_λ)'",
+  "scan": "two long dashes for set difference",
+  "tex": "minus signs",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$(X-V)\\cap(X-U_\\lambda)$",
+   "new": "$(X\\setmin V)\\cap(X\\setmin U_\\lambda)$"
+  },
+  "note": "One edit for both dashes."
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'sont fermés dans X—V, forment'",
+  "scan": "long dash for set difference",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "fermés dans $X-V$, forment",
+   "new": "fermés dans $X\\setmin V$, forment"
+  },
+  "note": ""
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'ont pour réunion X—V, notre assertion'",
+  "scan": "long dash for set difference",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "réunion $X-V$, notre",
+   "new": "réunion $X\\setmin V$, notre"
+  },
+  "note": ""
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'notre assertion résulte de (0_III, 9.2.4)'",
+  "scan": "bold 0 with a light subscript III (crop c276_0III.png)",
+  "tex": "\\sref[0]{0.9.2.4} prints '(0, 9.2.4)' without the subscript",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "résulte de \\sref[0]{0.9.2.4}.",
+   "new": "résulte de \\sref[$\\mathbf{0}_{\\mathrm{III}}$]{0.9.2.4}."
+  },
+  "note": "GLOBAL_ISSUES 108 form (as \\sref[$\\mathbf{0}_{\\mathrm I}$]). Independent of the dash edit before it (no overlap)."
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'on est donc ramené au cas où X = Spec(O_X,x); mais par hypothèse'",
+  "scan": "no 'avec x∈T' here (crop c276_ramene.png); the words occur only in the parallel sentence on p. 277",
+  "tex": "'... $X=\\Spec(\\sh{O}_{X,x})$ avec $x\\in T$;': words added",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$X=\\Spec(\\sh{O}_{X,x})$ avec $x\\in T$;\nmais par hypothèse",
+   "new": "$X=\\Spec(\\sh{O}_{X,x})$;\nmais par hypothèse"
+  },
+  "note": "The TeX copied 'avec x∈T' from the p. 277 sentence (GLOBAL_ISSUES 46/102)."
+ },
+ {
+  "page": 276,
+  "where": "proof of (21.6.12): 'donc la conclusion résulte de (21.6.9, (i)).'",
+  "scan": "'(21.6.9, (i))' (crop c276_ramene.png)",
+  "tex": "\\sref{IV.21.6.9}, (i) prints '(21.6.9), (i)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.21.6.9}, (i).",
+   "new": "\\sref{IV.21.6.9}[(i)]."
+  },
+  "note": "GLOBAL_ISSUES 68."
+ },
+ {
+  "page": 276,
+  "where": "old position of \\oldpage[IV-4]{276} (before 'Montrons d'abord', in the middle of printed p. 276)",
+  "scan": "no page break there: 'Montrons d'abord' is a new paragraph in the middle of p. 276 (page_276_s3.png)",
+  "tex": "\\oldpage[IV-4]{276}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{276}\nMontrons d'abord",
+   "new": "Montrons d'abord"
+  },
+  "note": "Part 2 of 2 of the marker-276 move: apply after the last p. 275 finding (which inserts the new marker). The blank line before it stays (new paragraph in the print)."
+ },
+ {
+  "page": 277,
+  "where": "proof of (21.6.12), end: 'au cas où X = Spec(O_X,x) avec x∈T; mais comme O_X,x est factoriel'",
+  "scan": "semicolon after 'x∈T' (crop c277_avec.png)",
+  "tex": "comma",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "avec $x\\in T$, mais comme",
+   "new": "avec $x\\in T$; mais comme"
+  },
+  "note": ""
+ },
+ {
+  "page": 277,
+  "where": "proof of (21.6.12), last line: 'et il suffit d'appliquer (21.6.9, (ii)).'",
+  "scan": "'(21.6.9, (ii))' (crop c277_avec.png)",
+  "tex": "\\sref{IV.21.6.9}, (ii) prints '(21.6.9), (ii)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.21.6.9}, (ii).",
+   "new": "\\sref{IV.21.6.9}[(ii)]."
+  },
+  "note": "GLOBAL_ISSUES 68. Independent of the semicolon edit on the same line (no overlap)."
+ },
+ {
+  "page": 277,
+  "where": "Corollaire (21.6.13): 'U = X—{a}'",
+  "scan": "long dash for set difference",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U=X-\\{a\\}$.\nPour que",
+   "new": "$U=X\\setmin\\{a\\}$.\nPour que"
+  },
+  "note": ""
+ },
+ {
+  "page": 277,
+  "where": "Corollaire (21.6.14): 'U = X—{a}'",
+  "scan": "long dash for set difference (crop c277_cor14.png)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U=X-\\{a\\}$.\nLes conditions",
+   "new": "$U=X\\setmin\\{a\\}$.\nLes conditions"
+  },
+  "note": ""
+ },
+ {
+  "page": 277,
+  "where": "Corollaire (21.6.14) b): '(conditions que nous exprimerons plus loin (21.13) en disant que l'anneau A est parafactoriel)'",
+  "scan": "the parenthesis is roman with upright parentheses; only 'parafactoriel' is italic (crop c277_cor14.png)",
+  "tex": "the parenthesis italic, 'parafactoriel' upright (\\emph inside the italic corollary)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(conditions que nous exprimerons plus loin \\sref{IV.21.13} en disant que l'anneau $A$ est \\emph{parafactoriel})",
+   "new": "\\textup{(conditions que nous exprimerons plus loin \\sref{IV.21.13} en disant que l'anneau $A$ est \\emph{parafactoriel})}"
+  },
+  "note": "Inside \\textup the \\emph gives the printed italic 'parafactoriel'."
+ },
+ {
+  "page": 277,
+  "where": "proof of (21.6.14), l. 1-2: 'puisque dim(A) ⩾ 2 (0, 16.5.1) et (21.6.13) montre que'",
+  "scan": "no comma after (0, 16.5.1) (crop c277_proof14.png)",
+  "tex": "comma before 'et'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref[0]{0.16.5.1}, et \\sref{IV.21.6.13}",
+   "new": "\\sref[0]{0.16.5.1} et \\sref{IV.21.6.13}"
+  },
+  "note": ""
+ },
+ {
+  "page": 277,
+  "where": "heading of 21.7: '21.7. Interprétation des cycles positifs 1-codimensionnels en termes de sous-préschémas.'",
+  "scan": "the title ends with a full stop (crop c277_head.png)",
+  "tex": "no full stop in the \\subsection title",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "en termes de sous-préschémas}",
+   "new": "en termes de sous-préschémas.}"
+  },
+  "note": "Same form as the 21.1 and 21.2 titles (findings_255_259.json; GLOBAL_ISSUES 43/58)."
+ },
+ {
+  "page": 277,
+  "where": "(21.7.1), l. 1: 'C = Σ n_x.{x}-bar'",
+  "scan": "baseline period between n_x and the barred {x} (measured: its bottom on the baseline of the x)",
+  "tex": "\\cdot (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$C=\\sum_{x\\in X^{(1)}}n_x\\cdot\\overline{\\{x\\}}$",
+   "new": "$C=\\sum_{x\\in X^{(1)}}n_x.\\overline{\\{x\\}}$"
+  },
+  "note": "Same treatment as the p.1 baseline periods (GLOBAL_ISSUES 65; IV-2 p. 75)."
+ },
+ {
+  "page": 277,
+  "where": "(21.7.1), l. 2: 'un cycle 1-codimensionnel positif (de sorte que'",
+  "scan": "'cycle 1-codimensionnel positif' italic (crop c277_2171a.png)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un cycle $1$-codimensionnel positif (de sorte",
+   "new": "un \\emph{cycle $1$-codimensionnel positif} (de sorte"
+  },
+  "note": "Independent of the preceding edit (no overlap)."
+ },
+ {
+  "page": 277,
+  "where": "(21.7.1): 'Désignons par Y(C)'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Désignons par $Y(C)$",
+   "new": "Désignons par $\\boldsymbol{\\mathsf{Y}}(C)$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 277,
+  "where": "(21.7.1): 'image fermée (I, 9.5.3 et 9.5.1) du préschéma somme'",
+  "scan": "one pair of parentheses, bold I, and both numbers are EGA I's (crop c277_2171b.png)",
+  "tex": "(\\sref[I]{I.9.5.3} et \\sref{IV.9.5.1}) prints '((I, 9.5.3) et (9.5.1))', and links 9.5.1 to EGA IV",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\sref[I]{I.9.5.3} et \\sref{IV.9.5.1})",
+   "new": "(\\textbf{I}, \\EGAUnavailableHyperref{I.9.5.3}{9.5.3} et \\EGAUnavailableHyperref{I.9.5.1}{9.5.1})"
+  },
+  "note": "GLOBAL_ISSUES 107 (ega4-21b line 358). The 9.5.1 is EGA I's: the proof of (21.7.2) cites the same definition as '(I, 9.5.1)'. Form as ega4-20 line 737 '(\\textbf{I}, \\EGAUnavailableHyperref{I.5.2.1}{5.2.1} et ...)'."
+ },
+ {
+  "page": 277,
+  "where": "(21.7.1): 'du préschéma somme Y'(C) = ∐ Spec(...)'",
+  "scan": "sans-serif Y",
+  "tex": "$Y'(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y'(C)=\\coprod",
+   "new": "$\\boldsymbol{\\mathsf{Y}}'(C)=\\coprod"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 277,
+  "where": "(21.7.1), end: 'l'Idéal de O_X définissant Y(C).'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "définissant $Y(C)$.",
+   "new": "définissant $\\boldsymbol{\\mathsf{Y}}(C)$."
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267. The script letter of J_X(C), J(C) on this line is the script J (descender), as in the TeX."
+ },
+ {
+  "page": 277,
+  "where": "Proposition (21.7.2), l. 2: 'soit de la forme Y(C), où C est'",
+  "scan": "sans-serif Y (crop c277_2172.png)",
+  "tex": "$Y(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit de la forme $Y(C)$, où",
+   "new": "soit de la forme $\\boldsymbol{\\mathsf{Y}}(C)$, où"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 277,
+  "where": "Proposition (21.7.2): item labels (i) (p. 277) and (ii) (p. 278)",
+  "scan": "labels upright (crops c277_2172.png, c278_top.png)",
+  "tex": "enumerate labels italic inside the italic proposition",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{enumerate}[label=(\\roman*)]\n  \\item $Y$ est purement",
+   "new": "\\begin{enumerate}[label=\\textup{(\\roman*)}]\n  \\item $Y$ est purement"
+  },
+  "note": "GLOBAL_ISSUES 16; one edit covers both labels."
+ },
+ {
+  "page": 277,
+  "where": "page break 276/277 inside 'il y a un voisinage W(x) | de x dans X et un diviseur D^(x)'",
+  "scan": "printed p. 276 ends with 'il y a un voisinage W(x)'; p. 277 begins 'de x dans X et un diviseur D(x) sur W(x)' at the left margin (page_276_s4.png, page_277_s1.png)",
+  "tex": "\\oldpage[IV-4]{277} stands before 'Pour prouver que l'homomorphisme', two printed lines too early",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "il y a un voisinage $W(x)$ de $x$ dans $X$ et un diviseur",
+   "new": "il y a un voisinage $W(x)$\n\\oldpage[IV-4]{277}\nde $x$ dans $X$ et un diviseur"
+  },
+  "note": "MARKER 277 MOVES LATER. Part 1 of 2: inserts the marker at the printed break (mid-sentence: no blank lines). Part 2 (next finding) removes the old marker; apply this one first. Until part 2 is applied the file has two \\oldpage[IV-4]{277}."
+ },
+ {
+  "page": 277,
+  "where": "old position of \\oldpage[IV-4]{277} (before 'Pour prouver que l'homomorphisme', printed on p. 276)",
+  "scan": "no page break there: 'Pour prouver' is a new paragraph two lines above the foot of p. 276",
+  "tex": "\\oldpage[IV-4]{277}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{277}\nPour prouver",
+   "new": "Pour prouver"
+  },
+  "note": "Part 2 of 2 of the marker-277 move: apply after the preceding finding (and after all other p. 277 edits). The blank line before it stays (new paragraph in the print)."
+ },
+ {
+  "page": 278,
+  "where": "Proposition (21.7.2), after the items: 'On a alors'",
+  "scan": "new indented paragraph (crop c278_top.png)",
+  "tex": "follows \\end{enumerate} without a blank line (no indent)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\nOn a alors",
+   "new": "\\end{enumerate}\n\nOn a alors"
+  },
+  "note": "GLOBAL_ISSUES 80 pattern."
+ },
+ {
+  "page": 278,
+  "where": "Proposition (21.7.2), after (21.7.2.1): 'L'application C ⇝ Y(C) est une bijection'",
+  "scan": "wavy arrow (crop c278_top.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$C\\mapsto Y(C)$",
+   "new": "$C\\leadsto\\boldsymbol{\\mathsf{Y}}(C)$"
+  },
+  "note": "GLOBAL_ISSUES 33/107. One edit for this finding and the next (sans-serif Y)."
+ },
+ {
+  "page": 278,
+  "where": "same formula: 'C ⇝ Y(C)'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding entry. The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 278,
+  "where": "Proposition (21.7.2), end: 'vérifiant les conditions (i) et (ii).'",
+  "scan": "(i) and (ii) upright with upright parentheses; 'et' italic (crop c278_top.png)",
+  "tex": "all italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "vérifiant les conditions (i) et (ii).\n\\end{proposition}",
+   "new": "vérifiant les conditions \\textup{(i)} et \\textup{(ii)}.\n\\end{proposition}"
+  },
+  "note": ""
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), l. 3: 'on a alors Y(C) = Spec(A/𝔍)'",
+  "scan": "sans-serif Y (crop c278_nec.png)",
+  "tex": "$Y(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a alors $Y(C)=",
+   "new": "on a alors $\\boldsymbol{\\mathsf{Y}}(C)="
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), l. 3: 'par définition (I, 9.5.1) le noyau'",
+  "scan": "no comma after the reference (crop c278_nec.png)",
+  "tex": "comma",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref[I]{I.9.5.1}, le noyau",
+   "new": "\\sref[I]{I.9.5.1} le noyau"
+  },
+  "note": ""
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), l. 4: 'A → ⊕_i A_{p_i}/p_i^{ni} A_{p_i}'",
+  "scan": "exponent printed 'ni' on one level: the i is not lowered (6x crop c278_pini2.png), while the A_{p_i} beside it has a lowered second-order i",
+  "tex": "\\mathfrak{p}_i^{n_i}: silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "/\\mathfrak{p}_i^{n_i}A",
+   "new": "/\\mathfrak{p}_i^{ni}A"
+  },
+  "corrected": "\\mathfrak{p}_i^{n_i}",
+  "note": "Flat second-order index, recorded as a misprint as in run_I_b p. 142 and run_IV3 p. 158. The same setting recurs twice below (two more entries)."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), l. 5: 'aux points x∈X^(1) pour lesquels n_x ⩾ 0'",
+  "scan": "'n_x ⩾ 0' (crop c278_nx.png), the same sign as 'n_x ⩾ 0' in (21.7.1)",
+  "tex": "'n_x>0': silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "pour lesquels $n_x>0$",
+   "new": "pour lesquels $n_x\\geq0$"
+  },
+  "corrected": "pour lesquels $n_x>0$",
+  "note": "Misprint: the p_i must be the primes with n_x > 0 (for n_x = 0 the preimage of p^0A_p is A, not p-primary, and the p_i are said to be the minimal primes of A/𝔍). The TeX silently corrects; the fix restores the printed reading."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), l. 6: 'L'image réciproque q_i de p_i^{ni} A_{p_i}'",
+  "scan": "exponent printed 'ni' on one level (crop c278_pini3.png)",
+  "tex": "\\mathfrak{p}_i^{n_i}: silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "de $\\mathfrak{p}_i^{n_i}A",
+   "new": "de $\\mathfrak{p}_i^{ni}A"
+  },
+  "corrected": "\\mathfrak{p}_i^{n_i}",
+  "note": "As the first 'ni' above."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), second paragraph: 'Les conditions sont suffisantes; désignant par 𝒥'",
+  "scan": "semicolon and lower-case 'désignant' (crop c278_Jdesig.png)",
+  "tex": "full stop and 'Désignant' (a new sentence)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Les conditions sont suffisantes.\nDésignant par",
+   "new": "Les conditions sont suffisantes;\ndésignant par"
+  },
+  "note": "The script letters 𝒥 of this paragraph are script J (descender), as in the TeX."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2): 'par suite les idéaux primaires ≠ 0 de cet anneau'",
+  "scan": "'≠0' (crop c278_ne0.png)",
+  "tex": "'non nuls' (reworded)",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "les idéaux primaires non nuls de cet anneau",
+   "new": "les idéaux primaires $\\neq0$ de cet anneau"
+  },
+  "note": "GLOBAL_ISSUES 46/102 (rewording)."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2): 'on en conclut que 𝒥 = 𝔍~, où 𝔍 = ⋂_i q_i'",
+  "scan": "the second 𝔍 has no tilde (crop c278_Jtilde.png)",
+  "tex": "où $\\widetilde{\\mathfrak{J}}=\\bigcap_i\\mathfrak{q}_i$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "où $\\widetilde{\\mathfrak{J}}=\\bigcap_i",
+   "new": "où $\\mathfrak{J}=\\bigcap_i"
+  },
+  "note": "The print defines the ideal 𝔍 of A; the TeX's tilde makes the sheaf equal to an intersection of ideals."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2): 'les images réciproques dans A d'idéaux p_i^{ni} A_{p_i}'",
+  "scan": "exponent printed 'ni' on one level (crop c278_pini4.png)",
+  "tex": "\\mathfrak{p}_i^{n_i}: silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "d'idéaux $\\mathfrak{p}_i^{n_i}A",
+   "new": "d'idéaux $\\mathfrak{p}_i^{ni}A"
+  },
+  "corrected": "\\mathfrak{p}_i^{n_i}",
+  "note": "As the first 'ni' above."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.2), last line: 'Y est de la forme Y(C).'",
+  "scan": "sans-serif Y in Y(C); the bare Y before it is roman (crop c278_formeY.png)",
+  "tex": "$Y(C)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de la forme $Y(C)$.\n\\end{proof}",
+   "new": "de la forme $\\boldsymbol{\\mathsf{Y}}(C)$.\n\\end{proof}"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 278,
+  "where": "Corollaire (21.7.3), l. 2-3: 'du sous-préschéma fermé Y(D) (21.2.12), Y(D) majore le sous-préschéma fermé Y(cyc(D))'",
+  "scan": "three sans-serif Y (crop c278_cor3.png)",
+  "tex": "$Y(D)$, $Y(D)$, $Y(\\operatorname{cyc}(D))$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "fermé $Y(D)$ \\sref{IV.21.2.12}, $Y(D)$ majore le sous-préschéma fermé $Y(\\operatorname{cyc}(D))$",
+   "new": "fermé $\\boldsymbol{\\mathsf{Y}}(D)$ \\sref{IV.21.2.12}, $\\boldsymbol{\\mathsf{Y}}(D)$ majore le sous-préschéma fermé $\\boldsymbol{\\mathsf{Y}}(\\operatorname{cyc}(D))$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267. One edit for three occurrences. Apply before the misprint entry that follows (same line, no overlap)."
+ },
+ {
+  "page": 278,
+  "where": "Corollaire (21.7.3), l. 3: 'Y(cyc(D)) (21.7.1). et a même espace sous-jacent'",
+  "scan": "a full stop after (21.7.1), then lower-case 'et' (5x crop c278_period.png; compare the comma after (21.2.12) one line above, c278_comma_ref.png)",
+  "tex": "', et': silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.21.7.1}, et a même",
+   "new": "\\sref{IV.21.7.1}. et a même"
+  },
+  "corrected": "\\sref{IV.21.7.1}, et a même",
+  "note": "Misprint (full stop for a comma). The TeX silently corrects; the fix restores the printed reading. Listed after the Y(D) edit of the same line."
+ },
+ {
+  "page": 278,
+  "where": "Corollaire (21.7.3), l. 4: 'il suffit que Y(D) vérifie la condition (S_1)'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "il suffit que $Y(D)$ vérifie",
+   "new": "il suffit que $\\boldsymbol{\\mathsf{Y}}(D)$ vérifie"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 278,
+  "where": "Corollaire (21.7.3), l. 5: 'pour tout z∈Y(D) distinct d'un point maximal de Y(D)'",
+  "scan": "two sans-serif Y",
+  "tex": "$Y(D)$ twice",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "pour tout $z\\in Y(D)$ distinct d'un point maximal de $Y(D)$",
+   "new": "pour tout $z\\in\\boldsymbol{\\mathsf{Y}}(D)$ distinct d'un point maximal de $\\boldsymbol{\\mathsf{Y}}(D)$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267. One edit for two occurrences."
+ },
+ {
+  "page": 278,
+  "where": "Corollaire (21.7.3), end: '(condition toujours vérifiée lorsque X est normal).'",
+  "scan": "the parenthesis is roman with upright parentheses; only 'normal' is italic (crop c278_cor3.png)",
+  "tex": "the parenthesis italic, 'normal' upright (\\emph inside the italic corollary)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(condition toujours vérifiée lorsque $X$ est \\emph{normal})",
+   "new": "\\textup{(condition toujours vérifiée lorsque $X$ est \\emph{normal})}"
+  },
+  "note": ""
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.3), l. 1: 'on peut toujours supposer que ℐ_X(D) = tO_X'",
+  "scan": "script I: the letter sits on the base line, no descender (4x crop c278_JXD1.png; compare the script J of 𝒥_X(cyc(D)) two lines below, c278_JXD2.png)",
+  "tex": "\\sh{J}_X(D)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "supposer que $\\sh{J}_X(D)=t\\sh{O}_X$",
+   "new": "supposer que $\\sh{I}_X(D)=t\\sh{O}_X$"
+  },
+  "note": "Script I of the Idéal I_X(D) of a divisor (21.2), as on pp. 260-262; the script J is kept for J_X(C) of a cycle (21.7.1)."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.3), l. 2: 'en tout point maximal x de Y(D)'",
+  "scan": "sans-serif Y (crop c278_proof3.png)",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "point maximal $x$ de $Y(D)$",
+   "new": "point maximal $x$ de $\\boldsymbol{\\mathsf{Y}}(D)$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.3), l. 4: 't_x O_X,x = 𝔪_x^{n_x}, où n_x = mult_x(D)'",
+  "scan": "comma before 'où' (crop c278_proof3.png)",
+  "tex": "no comma",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\mathfrak{m}_x^{n_x}$ où $n_x",
+   "new": "=\\mathfrak{m}_x^{n_x}$, où $n_x"
+  },
+  "note": ""
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.3), l. 5: 'si 𝒥_X(cyc(D)) = 𝔍~, ℐ_X(D) = 𝔍~', il résulte de ce qui précède et de (21.7.1) que 𝔍 et 𝔍' ont'",
+  "scan": "two formulas, the second with the script I (no descender) and a tilde over 𝔍 only, the prime after it; then 'que 𝔍 et 𝔍' ont' (crops c278_proof3.png, c278_JXD2.png)",
+  "tex": "the formula 'ℐ_X(D) = 𝔍~'' is missing, and the TeX writes '$\\mathfrak{J}=tA$ et $\\widetilde{\\mathfrak{J}}$' for the print's '𝔍 et 𝔍''",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\widetilde{\\mathfrak{J}}$, il résulte de ce qui précède et de \\sref{IV.21.7.1} que $\\mathfrak{J}=tA$ et $\\widetilde{\\mathfrak{J}}$ ont",
+   "new": "=\\widetilde{\\mathfrak{J}}$, $\\sh{I}_X(D)=\\widetilde{\\mathfrak{J}}'$, il résulte de ce qui précède et de \\sref{IV.21.7.1} que $\\mathfrak{J}$ et $\\mathfrak{J}'$ ont"
+  },
+  "note": "Rewording (GLOBAL_ISSUES 46/102): the TeX renamed the print's 𝔍', 𝔍 as 𝔍 = tA and \\widetilde{𝔍}. Part 1 of 3 edits of this sentence (the next two follow; no overlaps). The 𝒥 of 𝒥_X(cyc(D)) is a script J in the print and stays \\sh{J}."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.3), l. 6: 'ont mêmes idéaux primaires non immergés'",
+  "scan": "'mêmes' italic too (crop c278_memes.png)",
+  "tex": "\\emph starts after 'mêmes'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "mêmes \\emph{idéaux primaires non immergés}",
+   "new": "\\emph{mêmes idéaux primaires non immergés}"
+  },
+  "note": "Part 2 of 3 edits of this sentence."
+ },
+ {
+  "page": 278,
+  "where": "proof of (21.7.3), l. 6: 'donc 𝔍' ⊂ 𝔍, puisque 𝔍 est l'intersection'",
+  "scan": "'𝔍' ⊂ 𝔍' and '𝔍 est l'intersection' (crop c278_proof3.png)",
+  "tex": "'$\\widetilde{\\mathfrak{J}}\\subset\\mathfrak{J}$, puisque $\\widetilde{\\mathfrak{J}}$ est': with the renamed letters this states the inclusion the wrong way round (\\widetilde{𝔍} ⊂ tA)",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donc $\\widetilde{\\mathfrak{J}}\\subset\\mathfrak{J}$, puisque $\\widetilde{\\mathfrak{J}}$ est l'intersection",
+   "new": "donc $\\mathfrak{J}'\\subset\\mathfrak{J}$, puisque $\\mathfrak{J}$ est l'intersection"
+  },
+  "note": "Part 3 of 3 edits of this sentence (rewording, GLOBAL_ISSUES 46/102)."
+ },
+ {
+  "page": 279,
+  "where": "l. 1: 'Cela prouve que Y(D) majore Y(cyc(D))'",
+  "scan": "two sans-serif Y (crop c279_top.png)",
+  "tex": "$Y(D)$, $Y(\\operatorname{cyc}(D))$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Cela prouve que $Y(D)$ majore $Y(\\operatorname{cyc}(D))$",
+   "new": "Cela prouve que $\\boldsymbol{\\mathsf{Y}}(D)$ majore $\\boldsymbol{\\mathsf{Y}}(\\operatorname{cyc}(D))$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267. One edit for two occurrences."
+ },
+ {
+  "page": 279,
+  "where": "l. 2: 'si et seulement si Y(D) n'a pas de cycle premier'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si et seulement si $Y(D)$",
+   "new": "si et seulement si $\\boldsymbol{\\mathsf{Y}}(D)$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 279,
+  "where": "l. 3: 'Comme pour tout x∈Y(D)'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Comme pour tout $x\\in Y(D)$",
+   "new": "Comme pour tout $x\\in\\boldsymbol{\\mathsf{Y}}(D)$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 279,
+  "where": "l. 5: 'O_{Y(D)}|(U∩Y(D)) soit restriction à Y(D)∩U'",
+  "scan": "three sans-serif Y, including the subscript of O_Y(D) (crop c279_OYD.png)",
+  "tex": "$Y(D)$ three times",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\sh{O}_{Y(D)}|(U\\cap Y(D))$ soit restriction à $Y(D)\\cap U$",
+   "new": "$\\sh{O}_{\\boldsymbol{\\mathsf{Y}}(D)}|(U\\cap\\boldsymbol{\\mathsf{Y}}(D))$ soit restriction à $\\boldsymbol{\\mathsf{Y}}(D)\\cap U$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267. One edit for three occurrences."
+ },
+ {
+  "page": 279,
+  "where": "l. 5: 'dire que Y(D) vérifie (S_1)'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dire que $Y(D)$ vérifie",
+   "new": "dire que $\\boldsymbol{\\mathsf{Y}}(D)$ vérifie"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 279,
+  "where": "l. 6: 'en tout point z∈Y(D) non maximal'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "en tout point $z\\in Y(D)$ non maximal",
+   "new": "en tout point $z\\in\\boldsymbol{\\mathsf{Y}}(D)$ non maximal"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 279,
+  "where": "l. 8: 'aux points non maximaux z de Y(D) on a'",
+  "scan": "sans-serif Y",
+  "tex": "$Y(D)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "non maximaux $z$ de $Y(D)$",
+   "new": "non maximaux $z$ de $\\boldsymbol{\\mathsf{Y}}(D)$"
+  },
+  "note": "The print sets the Y of Y(C)/Y(D) as a heavy sans-serif capital (even strokes, no serifs; crops c277_2171a.png, c277_2171b.png, c277_2172.png, c278_cor3.png, c279_top.png, c279_OYD.png), while a bare Y (sous-préschéma fermé Y de X) is the ordinary roman Y. Written \\boldsymbol{\\mathsf{Y}} as decided by the coordinator for pp. 260-267."
+ },
+ {
+  "page": 279,
+  "where": "Proposition (21.7.4) b): 'cyc : Div(X) → 𝔜¹(X) est bijectif'",
+  "scan": "the Fraktur Z carries a bar beneath it, printed as dark as the type and exactly the letter's width (crop c279_Zbar.png, ink map); no other 𝔜 on pp. 275-279 has it, e.g. the same formula on the last lines of the page (c279_Z2.png)",
+  "tex": "\\mathfrak{Z}^1(X): silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "low",
+  "fix": {
+   "old": "$X$ est normal et l'homomorphisme $\\operatorname{cyc}:\\operatorname{Div}(X)\\to\\mathfrak{Z}^1(X)$ est bijectif.",
+   "new": "$X$ est normal et l'homomorphisme $\\operatorname{cyc}:\\operatorname{Div}(X)\\to\\underline{\\mathfrak{Z}}^1(X)$ est bijectif."
+  },
+  "corrected": "\\to\\mathfrak{Z}^1(X)$ est bijectif.",
+  "note": "A wrong or damaged sort (an underlined 𝔜) in the small type of (21.7.4); no mathematical meaning. If the coordinator judges the bar a stray mark (physical defect) rather than a printed sort, drop this entry."
+ },
+ {
+  "page": 279,
+  "where": "proof of (21.7.4), second paragraph, l. 1: 'et montrons d'abord que X est normal.'",
+  "scan": "'normal' italic (crop c279_normal.png)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "montrons d'abord que $X$ est normal.",
+   "new": "montrons d'abord que $X$ est \\emph{normal}."
+  },
+  "note": ""
+ },
+ {
+  "page": 279,
+  "where": "proof of (21.7.4): 'au moins un diviseur ≠ 0, autrement dit'",
+  "scan": "'≠0' (page_279_s3.png, line 9)",
+  "tex": "'non nul' (reworded)",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "au moins un diviseur non nul,",
+   "new": "au moins un diviseur $\\neq0$,"
+  },
+  "note": "GLOBAL_ISSUES 46/102 (rewording)."
+ },
+ {
+  "page": 279,
+  "where": "proof of (21.7.4): 'que X est réduit (5.8.5)'",
+  "scan": "'réduit' italic (crop c279_reduit.png)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "que $X$ est réduit \\sref{IV.5.8.5}",
+   "new": "que $X$ est \\emph{réduit} \\sref{IV.5.8.5}"
+  },
+  "note": ""
+ },
+ {
+  "page": 279,
+  "where": "proof of (21.7.4): 'l'ouvert U = X_1—{x}'",
+  "scan": "long dash for set difference (crop c279_X1x.png)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U=X_1-\\{x\\}$",
+   "new": "$U=X_1\\setmin\\{x\\}$"
+  },
+  "note": ""
+ }
+]

@@ -1,0 +1,96 @@
+% from ega1-3-fr.tex
+\oldpage[I]{106}
+Il suffit d'appliquer (\hyperref[I.3.2.4-fr]{3.2.4}) à l'injection canonique
+$S'\to S$.
+
+\begin{theorem}[3.2.6]
+\label{I.3.2.6-fr}
+Étant donnés deux $S$-préschémas $X$, $Y$, il existe un produit
+$X\times_S Y$.
+\end{theorem}
+
+Nous procéderons en plusieurs étapes.
+
+\begin{lemma}[3.2.6.1]
+\label{I.3.2.6.1-fr}
+Soient $(Z,p,q)$ un produit de $X$ et $Y$, $U$, $V$ des parties ouvertes de
+$X$, $Y$ respectivement. Si on pose
+$W=p^{-1}(U)\cap q^{-1}(V)$, le triplet formé de $W$ et des restrictions de
+$p$ et $q$ à $W$ \textup{(considérées comme des morphismes $W\to U$,
+$W\to V$ respectivement)} est un produit de $U$ et $V$.
+\end{lemma}
+
+En effet, si $T$ est un $S$-préschéma, on peut identifier les $S$-morphismes
+$T\to W$ et les $S$-morphismes $T\to Z$ appliquant $T$ dans $W$. Si alors
+$g:T\to U$, $h:T\to V$ sont deux $S$-morphismes quelconques, on peut les
+considérer comme des $S$-morphismes de $T$ dans $X$ et $Y$ respectivement, et
+par hypothèse il y a donc un $S$-morphisme et un seul $f:T\to Z$ tel que
+$g=p\circ f$, $h=q\circ f$. Comme $p(f(T))\subset U$, $q(f(T))\subset V$,
+on a
+\[
+  f(T)\subset p^{-1}(U)\cap q^{-1}(V)=W,
+\]
+d'où notre assertion.
+
+\begin{lemma}[3.2.6.2]
+\label{I.3.2.6.2-fr}
+Soient $Z$ un $S$-préschéma, $p:Z\to X$, $q:Z\to Y$ deux $S$-morphismes,
+$(U_\alpha)$ un recouvrement ouvert de $X$, $(V_\lambda)$ un recouvrement
+ouvert de $Y$. On suppose que pour tout couple $(\alpha,\lambda)$, le
+$S$-préschéma
+$W_{\alpha\lambda}=p^{-1}(U_\alpha)\cap q^{-1}(V_\lambda)$ et les
+restrictions de $p$ et $q$ à $W_{\alpha\lambda}$ constituent un produit de
+$U_\alpha$ et de $V_\lambda$. Alors $(Z,p,q)$ est un produit de $X$ et $Y$.
+\end{lemma}
+
+Montrons d'abord que, si $f_1$, $f_2$ sont deux $S$-morphismes $T\to Z$, les
+relations $p\circ f_1=p\circ f_2$ et $q\circ f_1=q\circ f_2$ entraînent
+$f_1=f_2$. En effet, $Z$ est réunion des $W_{\alpha\lambda}$, donc les
+$f_1^{-1}(W_{\alpha\lambda})$ forment un recouvrement ouvert de $T$, et il
+en est de même des $f_2^{-1}(W_{\alpha\lambda})$. En outre, on a
+\[
+\begin{aligned}
+  f_1^{-1}(W_{\alpha\lambda})
+  &=f_1^{-1}(p^{-1}(U_\alpha))\cap
+    f_1^{-1}(q^{-1}(V_\lambda)) \\
+  &=f_2^{-1}(p^{-1}(U_\alpha))\cap
+    f_2^{-1}(q^{-1}(V_\lambda))
+   =f_2^{-1}(W_{\alpha\lambda})
+\end{aligned}
+\]
+par hypothèse, et tout revient à voir que les restrictions de $f_1$ et $f_2$
+à $f_1^{-1}(W_{\alpha\lambda})=f_2^{-1}(W_{\alpha\lambda})$ sont
+identiques pour tout couple d'indices. Mais comme ces restrictions peuvent
+être considérées comme des $S$-morphismes de
+$f_1^{-1}(W_{\alpha\lambda})$ dans $W_{\alpha\lambda}$, notre assertion
+résulte des hypothèses et de la déf. (\hyperref[I.3.2.1-fr]{3.2.1}).
+
+Supposons maintenant donnés deux $S$-morphismes $g:T\to X$, $h:T\to Y$.
+Posons
+$T_{\alpha\lambda}=g^{-1}(U_\alpha)\cap h^{-1}(V_\lambda)$~; les
+$T_{\alpha\lambda}$ forment un recouvrement ouvert de $T$. Par hypothèse,
+il existe un $S$-morphisme $f_{\alpha\lambda}$ tel que
+$p\circ f_{\alpha\lambda}$ et $q\circ f_{\alpha\lambda}$ soient les
+restrictions respectives de $g$ et $h$ à $T_{\alpha\lambda}$. En outre,
+montrons que les restrictions de $f_{\alpha\lambda}$ et
+$f_{\beta\mu}$ à
+$T_{\alpha\lambda}\cap T_{\beta\mu}$ coïncident, ce qui achèvera de
+prouver (\hyperref[I.3.2.6.2-fr]{3.2.6.2}). Or, les images de
+$T_{\alpha\lambda}\cap T_{\beta\mu}$ par $f_{\alpha\lambda}$ et par
+$f_{\beta\mu}$ sont contenues dans
+$W_{\alpha\lambda}\cap W_{\beta\mu}$ par définition. Comme
+\[
+  W_{\alpha\lambda}\cap W_{\beta\mu}
+  =p^{-1}(U_\alpha\cap U_\beta)\cap
+   q^{-1}(V_\lambda\cap V_\mu),
+\]
+il résulte de (\hyperref[I.3.2.6.1-fr]{3.2.6.1}) que
+$W_{\alpha\lambda}\cap W_{\beta\mu}$ et les restrictions à ce préschéma
+de $p$ et $q$ constituent un produit de
+$U_\alpha\cap U_\beta$ et de $V_\lambda\cap V_\mu$. Comme
+$p\circ f_{\alpha\lambda}$ et $p\circ f_{\beta\mu}$ coïncident dans
+$T_{\alpha\lambda}\cap T_{\beta\mu}$ et qu'il en est de même de
+$q\circ f_{\alpha\lambda}$ et $q\circ f_{\beta\mu}$, on voit que
+$f_{\alpha\lambda}$ et $f_{\beta\mu}$ coïncident dans
+$T_{\alpha\lambda}\cap T_{\beta\mu}$, c.q.f.d.
+

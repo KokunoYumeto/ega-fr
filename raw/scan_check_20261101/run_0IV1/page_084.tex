@@ -1,0 +1,95 @@
+% from ega0-19-fr.tex
+\oldpage[0\textsubscript{IV-1}]{84}
+
+\begin{proposition}[19.3.10]
+\label{0.19.3.10-fr}
+Soient $A$ un anneau topologique, $B$ une $A$-algèbre formellement lisse.
+Soient $C$ une $A$-algèbre topologique, $\mathfrak J$ un idéal de $C$,
+vérifiant les conditions suivantes~:
+\begin{enumerate}
+  \item[$1^\circ$] $C$ est métrisable et complet.
+  \item[$2^\circ$] $\mathfrak J$ est fermé et la suite
+  $(\mathfrak J^n)$ tend vers $0$.
+\end{enumerate}
+Alors, tout $A$-homomorphisme continu $u:B\to C/\mathfrak J$ se factorise en
+$B\xrightarrow{v}C\to C/\mathfrak J$, où $v$ est un
+$A$-homomorphisme continu.
+\end{proposition}
+
+\begin{proof}
+Soit $(\mathfrak Q_n)$ une suite décroissante d'idéaux de $C$ formant un
+système fondamental de voisinages de $0$. Pour tout $n$, considérons la
+$A$-algèbre discrète $C/\mathfrak Q_n$ et l'idéal
+$(\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n$ de cette algèbre~; comme il
+existe $k$ tel que $\mathfrak J^k\subset\mathfrak Q_n$,
+$(\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n$ est nilpotent. Pour tout
+$n$, soit $u_n$ l'homomorphisme continu
+\[
+  B\xrightarrow{u}C/\mathfrak J\to C/(\mathfrak J+\mathfrak Q_n)
+  =(C/\mathfrak Q_n)/((\mathfrak J+\mathfrak Q_n)/\mathfrak Q_n)~;
+\]
+par hypothèse $u_n$ se factorise en
+\[
+  B\xrightarrow{v_n}C/\mathfrak Q_n
+  \xrightarrow{\varphi_n}C/(\mathfrak J+\mathfrak Q_n),
+\]
+où $v_n$ est un $A$-homomorphisme continu. Montrons qu'on peut choisir de
+proche en proche les $v_n$ de sorte que $v_n$ se factorise en
+\[
+  B\xrightarrow{v_{n+1}}C/\mathfrak Q_{n+1}\to C/\mathfrak Q_n
+\]
+pour tout $n$ (autrement dit, que les $v_n$ forment un \emph{système
+projectif} d'homomorphismes). Cela résultera du lemme suivant.
+\end{proof}
+
+\begin{lemma}[19.3.10.1]
+\label{0.19.3.10.1-fr}
+Soient $B$ une $A$-algèbre formellement lisse, $E$, $E'$ deux $A$-algèbres
+topologiques discrètes, $\mathfrak R$ (resp. $\mathfrak R'$) un idéal
+nilpotent de $E$ (resp. $E'$), $f:E\to E'$ un $A$-homomorphisme surjectif tel
+que $f(\mathfrak R)\subset\mathfrak R'$, $f':E/\mathfrak R\to
+E'/\mathfrak R'$ l'homomorphisme déduit de $f$ par passage aux quotients.
+Soient $u:B\to E/\mathfrak R$ un $A$-homomorphisme continu, $u'$
+l'homomorphisme composé
+$B\xrightarrow{u}E/\mathfrak R\xrightarrow{f'}E'/\mathfrak R'$, et soit
+$v':B\to E'$ un $A$-homomorphisme continu tel que $u'$ se factorise en
+$B\xrightarrow{v'}E'\to E'/\mathfrak R'$. Alors il existe un
+$A$-homomorphisme continu $v:B\to E$ tel que $v'$ se factorise en
+$B\xrightarrow{v}E\xrightarrow{f}E'$.
+\end{lemma}
+
+Dans le diagramme commutatif
+\[
+\xymatrix{
+  E \ar[r]^f \ar[d] & E' \ar[d] \\
+  E/\mathfrak R \ar[r]_{f'} & E'/\mathfrak R'
+}
+\]
+tous les homomorphismes sont surjectifs~; si $\mathfrak L$ est le noyau de
+$f$, $E'$ s'identifie à $E/\mathfrak L$ et $\mathfrak R'$ à
+$(\mathfrak R+\mathfrak L)/\mathfrak L$. Utilisons maintenant le lemme
+élémentaire suivant.
+
+\begin{lemma}[19.3.10.2]
+\label{0.19.3.10.2-fr}
+Soient $F$ un anneau (non nécessairement commutatif), $\mathfrak a$,
+$\mathfrak b$ deux idéaux bilatères de $F$~; alors le produit fibré
+\[
+  (F/\mathfrak a)\times_{F/(\mathfrak a+\mathfrak b)}(F/\mathfrak b)
+\]
+s'identifie canoniquement à $F/(\mathfrak a\cap\mathfrak b)$.
+\end{lemma}
+
+\begin{proof}
+Ce n'est autre qu'une application particulière de (18.1.7), où, dans le
+diagramme (18.1.7.1), on remplace $G$ par
+$F/(\mathfrak a\cap\mathfrak b)$, $\mathfrak J'$ par
+$\mathfrak b/(\mathfrak a\cap\mathfrak b)$, $F$ par
+$F/\mathfrak b$, $\mathfrak R$ par
+$(\mathfrak a+\mathfrak b)/\mathfrak b$, $B$ par
+$F/(\mathfrak a+\mathfrak b)$ et $\theta$ par le $F$-homomorphisme
+bijectif canonique
+$(\mathfrak a+\mathfrak b)/\mathfrak b\to
+\mathfrak a/(\mathfrak a\cap\mathfrak b)$.
+\end{proof}
+

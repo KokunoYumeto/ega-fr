@@ -1,0 +1,96 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{120}
+
+Comme les $L'_i$ sont des $A'$-modules libres, on sait (M, V, 1.1) qu'il y a
+des $A'$-homomorphismes $u_i$ formant un diagramme commutatif
+\[
+\xymatrix{
+\cdots\ar[r]&L'_{i+1}\ar[r]^{f'_i}\ar[d]_{u_{i+1}}&
+L'_i\ar[r]\ar[d]_{u_i}&\cdots\ar[r]&
+L'_0\ar[r]^{\varepsilon'}\ar[d]_{u_0}&M'\ar[r]\ar[d]_{1_{M'}}&0\\
+\cdots\ar[r]&L''_{i+1}\ar[r]_{f''_i}&L''_i\ar[r]&\cdots\ar[r]&
+L''_0\ar[r]_{\varepsilon''}&M'\ar[r]&0.
+}
+\]
+Si l'on compose l'homomorphisme $u_\bullet:L'_\bullet\to L''_\bullet$ de
+complexes ainsi défini avec l'homomorphisme canonique
+$L_\bullet\to L'_\bullet$, on obtient un homomorphisme de complexes de
+$A$-modules $L_\bullet\to L''_\bullet$~; en remarquant que l'on a
+$(L_i\otimes_AN)\otimes_AA'=L'_i\otimes_{A'}N'$, on en déduit un
+homomorphisme de complexes de $A$-modules
+$L_\bullet\otimes_AN\to L''_\bullet\otimes_{A'}N'$, d'où, en passant à
+l'homologie, les homomorphismes canoniques (11.2.1.1). Comme les $u_i$ sont
+bien déterminés à homotopie près (M, V, 1.1), les homomorphismes (11.2.1.1)
+ne dépendent pas du choix des $u_i$ ni du choix des résolutions libres
+$L_\bullet$ et $L''_\bullet$.
+
+\begin{sloppypar}
+Comme les $\operatorname{Tor}_i^{A'}(M',N')$ sont des $A'$-modules, on déduit
+canoniquement de (11.2.1.1) des $A'$-homomorphismes
+\begin{equation}
+\begin{gathered}
+\varphi_i:\operatorname{Tor}_i^A(M,N)\otimes_AA'\\[-2pt]
+\longrightarrow\operatorname{Tor}_i^{A'}(M',N').
+\end{gathered}
+\label{IV.11.2.1.5-fr}
+\tag{11.2.1.5}
+\end{equation}
+\end{sloppypar}
+
+Considérons maintenant deux homomorphismes d'anneaux
+\[
+\rho:A\to A^{(1)},\qquad \sigma:A^{(1)}\to A^{(2)},
+\]
+et leur composé $\sigma\circ\rho:A\to A^{(2)}$~; posons
+$M^{(j)}=M\otimes_AA^{(j)}$, $N^{(j)}=N\otimes_AA^{(j)}$ pour $j=1,2$.
+Alors l'homomorphisme canonique composé
+\[
+\operatorname{Tor}_i^A(M,N)\to
+\operatorname{Tor}_i^{A^{(1)}}(M^{(1)},N^{(1)})\to
+\operatorname{Tor}_i^{A^{(2)}}(M^{(2)},N^{(2)})
+\]
+est le même que l'homomorphisme canonique déduit de $\sigma\circ\rho$~;
+cela résulte de ce que, si $L_\bullet^{(j)}$ est une résolution libre de
+$M^{(j)}$, le diagramme
+\[
+\xymatrix{
+L_\bullet\ar[r]&L_\bullet\otimes_AA^{(1)}\ar[r]\ar[d]&
+L_\bullet^{(1)}\ar[d]\\
+&L_\bullet\otimes_AA^{(2)}\ar[r]&
+L_\bullet^{(1)}\otimes_{A^{(1)}}A^{(2)}\ar[r]&L_\bullet^{(2)}
+}
+\]
+est commutatif.
+
+\begin{env}[11.2.2]
+\label{IV.11.2.2-fr}
+Les notations étant celles de (11.2.1), considérons maintenant un
+\emph{système inductif filtrant} de $A$-algèbres
+$(A_\alpha,g_{\beta\alpha})$, et pour tout indice $\alpha$, posons
+$M_\alpha=M\otimes_AA_\alpha$, $N_\alpha=N\otimes_AA_\alpha$~; il résulte
+alors de (11.2.1) que pour chaque $i$,
+$(\operatorname{Tor}_i^{A_\alpha}(M_\alpha,N_\alpha),
+\psi_{i\beta\alpha})$, où $\psi_{i\beta\alpha}$ est l'homomorphisme
+canonique (11.2.1.1) correspondant à $g_{\beta\alpha}$, est un \emph{système
+inductif} de $A_\alpha$-modules. Posons
+$A'=\varinjlim A_\alpha$, $M'=\varinjlim M_\alpha=M\otimes_AA'$,
+$N'=\varinjlim N_\alpha=N\otimes_AA'$~; si on désigne par
+$g_\alpha:A_\alpha\to A'$ l'homomorphisme canonique, on en déduit des
+homomorphismes canoniques (11.2.1.1)
+$\psi_{i\alpha}:\operatorname{Tor}_i^{A_\alpha}(M_\alpha,N_\alpha)
+\to\operatorname{Tor}_i^{A'}(M',N')$ qui (toujours en vertu de (11.2.1))
+forment un système inductif d'homomorphismes~; nous nous proposons de
+compléter le résultat de (M, V, 9.4$^*$) en montrant que les
+\begin{equation}
+\psi_i=\varinjlim_\alpha\psi_{i\alpha}:
+\varinjlim_\alpha\operatorname{Tor}_i^{A_\alpha}(M_\alpha,N_\alpha)
+\to\operatorname{Tor}_i^{A'}(M',N')
+\label{IV.11.2.2.1-fr}
+\tag{11.2.2.1}
+\end{equation}
+sont des \emph{isomorphismes de $A'$-modules}. Pour cela, nous procédons
+comme dans (M, V, 9.5$^*$), en associant à chaque $M_\alpha$ sa
+\emph{résolution libre canonique}. Tout revient (compte tenu de l'exactitude
+du foncteur $\varinjlim$) à prouver le
+\end{env}
+

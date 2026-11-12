@@ -1,0 +1,85 @@
+% from ega0-22-fr.tex
+\oldpage[0\textsubscript{IV-1}]{204}
+
+polynômes $k[T_1,\ldots,T_r]$ par l'idéal engendré par les polynômes
+$F_i=T_i^p-b_i$ $(1\leqslant i\leqslant r)$~; on en déduit que $A'_1$ est
+isomorphe au quotient de l'anneau de polynômes $A_1[T_1,\ldots,T_r]$ par
+l'idéal engendré par les $F_i$. On peut alors appliquer le critère (22.4.7), et
+la condition de l'énoncé équivaut donc au fait que $\chi'_{A'_1/A_1}$ soit
+injectif~; on conclut à l'aide de (22.5.6).
+\end{proof}
+
+Nous pouvons maintenant démontrer la réciproque de (19.6.5)~:
+
+\begin{theorem}[22.5.8]
+\label{0.22.5.8-fr}
+Soient $k$ un corps, $p$ son exposant caractéristique, $A$ une $k$-algèbre
+locale noethérienne. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $A$ est une $k$-algèbre formellement lisse (pour sa topologie
+  préadique).
+  \item[b)] $A$ est géométriquement régulier sur $k$.
+  \item[b')] Pour toute extension finie $k'$ de $k$ telle que $k'^p\subset k$,
+  $A'=A\otimes_kk'$ est un anneau régulier.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Compte tenu de (19.6.6), on peut se borner au cas $p>1$.
+
+Le fait que a) implique b) n'est autre que (19.6.5), et b) entraîne
+trivialement b'). Montrons que b') entraîne que les conditions de (22.2.2) sont
+satisfaites~; c'est évident pour la première (17.1.1) puisque b') entraîne
+d'abord que $A$ est régulier. D'autre part, soit $(x_\alpha)_{\alpha\in I}$ une
+$p$-base de $k^{1/p}$ sur $k$~; on sait que les éléments $d_k(x_\alpha^p)$
+forment une base du $k$-espace vectoriel $\Omega^1_k$ (21.4.5), donc les
+éléments $d_k(x_\alpha^p)\otimes1_K$ forment une base du $K$-espace vectoriel
+$\Omega^1_k\otimes_kK$. On en conclut (cf. (22.5.5)) que lorsque $k'$ parcourt
+l'ensemble des sous-extensions de $k^{1/p}$, finies sur $k$, la famille des
+sous-espaces $\Theta_{k'/k}\otimes_kK$ de $\Omega^1_k\otimes_kK$ est filtrante
+croissante et a pour réunion $\Omega^1_k\otimes_kK$. Il résulte alors de
+(22.5.7) que la condition b') entraîne que $\chi_{A/k}$ est injectif, ce qui
+n'est autre que la condition (ii) de (22.2.2).
+\end{proof}
+
+\begin{corollary}[22.5.9]
+\label{0.22.5.9-fr}
+Soient $k$ un corps, $A$ une $k$-algèbre locale noethérienne formellement
+lisse. Alors, pour tout idéal premier $\mathfrak p$ de $A$, l'anneau local
+$A_{\mathfrak p}$ est une $k$-algèbre formellement lisse (pour la topologie
+$\mathfrak p$-préadique).
+\end{corollary}
+
+\begin{proof}
+En effet, avec les notations de (22.5.8, b')), il suffit de montrer que
+l'anneau local $A_{\mathfrak p}\otimes_kk'$ est régulier~; mais comme c'est un
+anneau de fractions de l'anneau local $A\otimes_kk'$ et que ce dernier est
+régulier par hypothèse, il en est de même de $A_{\mathfrak p}\otimes_kk'$
+(17.3.6).
+\end{proof}
+
+\begin{remark}[22.5.10]
+\label{0.22.5.10-fr}
+\begin{enumerate}
+  \item[\rm(i)] La conclusion de (22.5.8) est en défaut lorsque, dans la
+  condition b'), on se borne aux extensions \emph{monogènes} $k'=k(x)$ de $k$
+  (avec $x^p\in k$). Il se peut en effet que pour toutes ces extensions $k'$,
+  on ait
+  $\Upsilon_{K/k}\cap(\Theta_{k'/k}\otimes_kK)=0$, bien que
+  $\Upsilon_{K/k}\neq0$~; cela signifie que pour tout $x\in k^{1/p}$ tel que
+  $x\notin k$, on doit avoir
+  $d_k(x^p)\otimes1_K\notin\Upsilon_{K/k}$, ou encore $d_K(x^p)\neq0$,
+  c'est-à-dire $x^p\notin K^p$~; autrement dit, on doit avoir
+  $K^p\cap k=k^p$, bien que $K$ soit une extension \emph{inséparable} de $k$.
+  Or, on construit aisément des exemples de telles extensions~: partons d'un
+  corps parfait $k_0$ de caractéristique $p>0$, soient $X$, $Y$, $Z$ trois
+  indéterminées et posons $k=k_0(X,Y)$ et
+  $K=k(X^{1/p}+ZY^{1/p})$~; on vérifie aisément que $K$ vérifie les conditions
+  précédentes, donc $\Upsilon_{K/k}\neq0$. Appliquons maintenant le lemme
+  (22.2.5.2) en prenant $V=K$ et pour $h$ l'homomorphisme nul~; $A$ est alors
+  un anneau de valuation discrète ayant $K$ pour corps résiduel, avec
+  $\chi_{A/k}=0$, et n'est donc pas une $k$-algèbre formellement lisse par
+  (22.2.2)~; toutefois $A\otimes_kk'$ est un anneau régulier pour toute
+  extension \emph{monogène} $k'\subset k^{1/p}$ de $k$.
+
+  

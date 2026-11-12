@@ -1,0 +1,81 @@
+% from ega4-1-fr.tex
+\oldpage[IV-1]{242}
+
+\begin{env}[1.9.2.ii]
+\label{IV.1.9.2.ii-fr}
+\emph{On a}
+\[
+  u(X)=\bigcap_{\alpha\in I}u_\alpha(X_\alpha). \tag{1.9.2.1}
+  \label{IV.1.9.2.1-fr}
+\]
+\end{env}
+
+L'assertion (i) n'est autre que la traduction de (1.9.1). Pour démontrer
+(ii), notons que, puisque $u$ se factorise en
+$X\to X_\alpha\xrightarrow{u_\alpha}Y$, le premier membre de (1.9.2.1) est
+contenu dans le second. Inversement, soit $y\in Y-u(X)$~; on a
+$u^{-1}(y)=\varnothing$, et $u^{-1}(y)$ est l'espace sous-jacent au
+$k(y)$-préschéma $\operatorname{Spec}(A\otimes_Bk(y))$~; comme dans la
+catégorie des $B$-modules le foncteur $\varinjlim$ commute au produit
+tensoriel, $A\otimes_Bk(y)$ est limite inductive du système inductif d'anneaux
+$A_\alpha\otimes_Bk(y)$~; le lemme (1.9.1) montre qu'il existe $\alpha$ tel
+que $A_\alpha\otimes_Bk(y)=0$, c'est-à-dire
+$u_\alpha^{-1}(y)=\varnothing$, donc $y\notin u_\alpha(X_\alpha)$. C.Q.F.D.
+
+\begin{proposition}[1.9.3]
+\label{IV.1.9.3-fr}
+Soient $X$ un préschéma quasi-compact et quasi-séparé, $E$ une partie de $X$,
+$(X_\alpha)_{\alpha\in I}$ un recouvrement ouvert affine de $X$, et pour
+tout $\alpha\in I$, posons $E_\alpha=E\cap X_\alpha$. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] Il existe un morphisme quasi-compact $f:X'\to X$ tel que
+  $E=f(X')$.
+  \item[a$'$)] Pour tout $\alpha$, il existe un morphisme quasi-compact
+  $f_\alpha:X'_\alpha\to X_\alpha$ tel que
+  $E_\alpha=f_\alpha(X'_\alpha)$.
+  \item[a$''$)] Pour tout $\alpha$, il existe un schéma affine $X''_\alpha$
+  et un morphisme $f'_\alpha:X''_\alpha\to X_\alpha$ tel que
+  $f'_\alpha(X''_\alpha)=E_\alpha$.
+  \item[b)] $E$ est intersection de parties constructibles de $X$.
+  \item[b$'$)] $F=X-E$ est réunion de parties constructibles de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que $b)$ et $b')$ sont équivalentes. La condition $a)$ entraîne
+$a')$ en prenant pour $X'_\alpha$ le préschéma induit sur l'ouvert
+$f^{-1}(X_\alpha)$ de $X'$ et pour $f_\alpha$ la restriction de $f$. Pour
+voir que $a')$ entraîne $a'')$, il suffit de remarquer que $X'_\alpha$ est
+réunion d'ouverts affines $X''_{\alpha\lambda}$ ($\lambda\in L$)~; soit
+$X''_\alpha$ le préschéma \emph{somme} des $X''_{\alpha\lambda}$
+($\lambda\in L$), qui est un schéma affine~; si
+$g_\alpha:X''_\alpha\to X'_\alpha$ est le morphisme coïncidant avec
+l'identité dans chacun des $X''_{\alpha\lambda}$, il est clair que si l'on
+pose $f'_\alpha=f_\alpha\circ g_\alpha$, on a
+$E_\alpha=f'_\alpha(X''_\alpha)$ puisque $g_\alpha$ est surjectif. Pour
+montrer que $a'')$ entraîne $a)$, notons qu'il y a une partie finie $J$ de
+$I$ telle que les $X_\alpha$ d'indices $\alpha\in J$ recouvrent $X$~; soit
+$X'$ le préschéma somme des $X''_\alpha$ pour $\alpha\in J$, et soit
+$f:X'\to X$ le morphisme coïncidant avec $j_\alpha\circ f'_\alpha$ pour tout
+$\alpha\in J$, où $j_\alpha:X_\alpha\to X$ est l'injection canonique. Comme
+$E$ est réunion des $E\cap X_\alpha$ pour $\alpha\in J$, on a bien
+$E=f(X')$ et il reste à voir que $f$ est un morphisme quasi-compact~; mais
+l'hypothèse que $X$ est quasi-séparé entraîne que $j_\alpha$ est
+quasi-compact (1.2.7), donc il en est de même de
+$j_\alpha\circ f'_\alpha$ (1.1.1 et 1.1.2) et finalement de $f$ (1.1.6).
+
+Reste donc à prouver l'équivalence de $a'')$ et de $b)$. Prouvons en premier
+lieu que $a'')$ entraîne $b)$~: considérons une partie finie $J$ de $I$ telle
+que les $X_\alpha$ pour $\alpha\in J$ recouvrent $X$~; il suffira de montrer
+que, pour tout $\alpha\in J$, $E_\alpha$ est intersection de parties
+constructibles $F_{\alpha\lambda}$ de $X_\alpha$ ($\lambda\in L_\alpha$)~;
+en effet, tout $F_{\alpha\lambda}$ est aussi une partie constructible de $X$
+en vertu de (0\textsubscript{III}, 9.1.8, (ii)), car l'hypothèse que $X$ est
+quasi-séparé entraîne que tout $X_\alpha$ est rétrocompact dans $X$ (1.2.7)~;
+$E$ étant réunion des $E_\alpha$ pour $\alpha\in J$, est intersection des
+réunions (finies) $\bigcup_{\alpha\in J}F_{\alpha,\lambda(\alpha)}$, pour
+tous les choix des $\lambda(\alpha)\in L_\alpha$~; ces réunions étant
+constructibles dans $X$, cela établit notre assertion. On peut donc se borner
+au cas
+

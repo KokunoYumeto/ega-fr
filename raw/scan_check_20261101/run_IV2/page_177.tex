@@ -1,0 +1,75 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{177}
+Soient $K$ un corps algébriquement clos de caractéristique 0, $B$ l'anneau
+intègre
+\[
+K[U,V,W]/(U^2(U-W)-V^2(U+W))
+\]
+($U$, $V$, $W$ indéterminées) de sorte que $Y=\operatorname{Spec}(B)$ est
+un « cône de sommet l'origine, ayant une génératrice double ». Nous
+désignerons par $u$, $v$, $w$ les images de $U$, $V$, $W$ dans $B$. Soit
+$R$ le corps des fractions de $B$, et considérons dans $R$ l'élément
+$t=v(u+w)/u$, qui n'appartient pas à $B$; montrons que $C=B[t]$ est la
+clôture intégrale de $B$. On a en effet $t^2=u^2-w^2$, donc $t$ est entier
+sur $B$, et $v=tu/(u+w)$; l'anneau $C_1=K[t,u,w]$ est intégralement clos,
+car il est isomorphe à
+$K[T,U,W]/(T^2-U^2+W^2)$ et est donc la fermeture intégrale de l'anneau
+intégralement clos $K[U,W]$ dans l'extension quadratique
+$K(U,W)(\sqrt{U^2+W^2})$ de son corps des fractions (Bourbaki, Alg. comm.,
+chap. V, § 1, n$^o$ 6, prop. 18). L'anneau de fractions
+$K[t,u,w,1/(u+w)]$ de $C_1$ est donc aussi intégralement clos. De la même
+manière, on voit que l'anneau $C_2=K[t,v,w]$ est intégralement clos, car
+$t$ est racine de l'équation
+$t(t-v)-w^2(2v-t)=0$, et par suite
+$K[t,v,w,1/(t-v)]=K[t,tu/(u+w),w,(u+w)/(tw)]$ est intégralement clos. Finalement, compte tenu de ce
+que $u$ et $w$ sont algébriquement indépendants sur $K$, on prouve aisément
+que
+\[
+C=K[t,u,v,w]=K[t,u,w,1/(u+w)]\cap K[t,v,w,1/(t-v)],
+\]
+ce qui achève de montrer que $C$ est la clôture intégrale de $B$. Il est
+immédiat que si $\mathfrak m_0$ est l'idéal maximal de $B$ engendré par
+$u$, $v$, $w$ (« sommet du cône »), il existe un seul idéal maximal
+$\mathfrak n_0$ de $C$ au-dessus de $\mathfrak m_0$, savoir l'idéal
+engendré par $t$, $u$, $v$, $w$. Si l'on pose $A=B_{\mathfrak m_0}$, on en
+déduit aisément que $A'=C_{\mathfrak n_0}$ est la clôture intégrale de
+$A$, qui est donc unibranche, et par suite aussi géométriquement unibranche
+puisque son corps résiduel $K$ est algébriquement clos. Mais dans $A$
+l'idéal premier $\mathfrak p$ engendré par $u$ et $v$ est tel que la
+clôture intégrale $A_\mathfrak p[t]$ de $A_\mathfrak p$ ne soit pas un
+anneau local.
+
+Nous verrons toutefois plus loin (9.7.10) que lorsque $X$ est un préschéma
+localement noethérien tel que, si $X'$ est le normalisé de
+$X_{\mathrm{red}}$, le morphisme canonique $X'\to X$ soit fini (ce qui sera
+le cas si $X$ est tel que les anneaux de ses ouverts affines soient
+universellement japonais (0, 23.1.1)), alors l'ensemble des points $x\in X$
+où $X$ est géométriquement unibranche est localement constructible.
+
+\begin{env}[6.15.3]
+\label{IV.2.s6.15.3-fr}
+Nous dirons pour abréger qu'un morphisme $f:X\to Y$ est \emph{radiciel en
+un point} $y\in Y$, si $f^{-1}(y)$ est vide ou réduit à un seul point $x$
+et si $k(x)$ est une extension radicielle de $k(y)$. Il revient donc au
+même de dire que $f$ est radiciel en tous les points de $Y$ ou que $f$ est
+radiciel (I, 3.5.8). Si
+$g:f^{-1}(y)\to\operatorname{Spec}(k(y))$ est le morphisme image réciproque
+de $f$ par le changement de base
+$\operatorname{Spec}(k(y))\to Y$, il revient au même de dire que $f$ est
+radiciel au point $y\in Y$, ou que $g$ est radiciel.
+\end{env}
+
+\begin{lemma}[6.15.3.1]
+\label{IV.2.s6.15.3.1-fr}
+\begin{enumerate}
+\item[(i)] Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes. Si $f$ est
+radiciel en un point $y$ et $g$ radiciel au point $z=g(y)$, alors $g\circ f$
+est radiciel au point $g(y)$. La réciproque est vraie si $f$ est surjectif.
+\item[(ii)] Soient $f:X\to Y$, $h:Y'\to Y$ deux morphismes, et soit
+$f'=f_{(Y')}:X\times_Y Y'\to Y'$. Soient $y'\in Y'$ et $y=h(y')$; alors
+pour que $f$ soit radiciel au point $y$, il faut et il suffit que $f'$ soit
+radiciel au point $y'$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}

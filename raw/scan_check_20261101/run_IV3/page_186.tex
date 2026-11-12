@@ -1,0 +1,80 @@
+% from ega4-12-fr.tex
+\oldpage[IV-3]{186}
+on voit qu'on peut, pour prouver le lemme, supposer en
+outre $v$ surjectif. Le lemme sera alors conséquence du suivant~:
+
+\begin{lemma}[12.3.3.3]
+\label{IV.12.3.3.3-fr}
+Soient $B$ un anneau, $M,N,P$ trois $B$-modules,
+$u:M\to N$, $v:N\to P$ deux homomorphismes tels que $u$ soit injectif, $v$
+surjectif et $v\circ u=0$. Soit $t$ un élément de $B$ tel que $t$ soit
+$P$-régulier. Alors on a
+\begin{equation}
+  \tag{12.3.3.4}
+  \label{IV.12.3.3.4-fr}
+  \operatorname{Ker}(v\otimes1)/\operatorname{Im}(u\otimes1)
+  =(\operatorname{Ker}(v)/\operatorname{Im}(u))\otimes_B(B/tB)
+\end{equation}
+à un isomorphisme canonique près.
+\end{lemma}
+
+En effet, l'hypothèse que la suite (12.3.3.2) est exacte entraînera alors
+$(\operatorname{Ker}v/\operatorname{Im}u)\otimes_B(B/tB)=0$, et comme $t$
+appartient à l'idéal maximal de $B$ et que $\operatorname{Ker}(v)$ est un
+$B$-module de type fini (puisque $B$ est supposé noethérien dans (12.3.3.1)),
+le lemme de Nakayama prouvera que $\operatorname{Ker}(v)=\operatorname{Im}(u)$.
+
+Reste donc à démontrer (12.3.3.3). Posons $u'=u\otimes1$, $v'=v\otimes1$,
+$Z=\operatorname{Ker}(v)$, $H=Z/\operatorname{Im}(u)$, de sorte qu'on a les
+suites exactes
+\begin{gather*}
+  0\to M\to Z\to H\to0,\\
+  0\to Z\to N\xrightarrow{v}P\to0,
+\end{gather*}
+d'où, en tensorisant par $B/tB$ et utilisant le lemme (3.4.1.4) et le fait que
+$t$ est $P$-régulier, les suites exactes
+\begin{gather*}
+  M/tM\xrightarrow{w'}Z/tZ\to H/tH\to0,\\
+  0\to Z/tZ\to N/tN\xrightarrow{v'}P/tP\to0,
+\end{gather*}
+d'où $\operatorname{Ker}(v')=Z/tZ$, et comme
+$\operatorname{Im}(w')=\operatorname{Im}(u')$, on obtient (12.3.3.4).
+
+\medskip
+II) Supposons maintenant en outre que $\mathcal L_1$ soit $f$-plat~;
+remplaçant en outre éventuellement $X$ par $U$, on peut supposer que $X=U$.
+Il s'agit de voir que pour tout $x\in X$, on a
+$(\mathcal H_1(\mathcal L_\bullet))_x=0$. Soit $s=f(x)$, et soit
+$\mathfrak n$ l'idéal $\mathfrak m_s\mathcal O_{X,x}$ qui est contenu dans
+l'idéal maximal de $\mathcal O_{X,x}$~; comme
+$(\mathcal H_1(\mathcal L_\bullet))_x$ est un $\mathcal O_{X,x}$-module de type
+fini ($X$ étant localement noethérien), il est séparé pour la topologie
+$\mathfrak n$-adique ($\mathbf 0_{\mathrm I}$, 7.3.5), donc il suffit de
+montrer que son \emph{séparé complété} pour cette topologie est 0. Or, en vertu
+de (\textbf{III}, 7.4.7.2), ce séparé complété est égal à
+$\varprojlim_k\mathcal H_1(\mathcal L_\bullet\otimes_{\mathcal O_S}
+(\mathcal O_{S,s}/\mathfrak m_s^{k+1}))$, et il suffira donc de prouver que
+chacun des termes de ce système projectif est nul. Mais cela est vrai par
+hypothèse pour $k=0$~; raisonnons donc par récurrence sur $k$. La conclusion
+résultera du lemme plus général suivant (qu'on appliquera pour
+$A=\mathcal O_{S,s}/\mathfrak m_s^{k+1}$ et $\mathfrak J$ égal à l'idéal
+maximal $\mathfrak m_s/\mathfrak m_s^{k+1}$ de $A$)~:
+
+\begin{lemma}[12.3.3.5]
+\label{IV.12.3.3.5-fr}
+Soient $A$ un anneau, $\mathfrak J$ un idéal nilpotent de $A$,
+$L_\bullet:P\xrightarrow{u}Q\xrightarrow{v}R$ un complexe de $A$-modules. On
+pose $A_0=A/\mathfrak J$,
+$L_\bullet^{(0)}=L_\bullet\otimes_AA_0:
+P_0\xrightarrow{u_0}Q_0\xrightarrow{v_0}R_0$, et l'on suppose que
+$\operatorname{gr}_{\mathfrak J}^{\bullet}(A)$ est un $A_0$-module plat, et
+que $Q$ et $R$ sont des $A$-modules plats. Alors la relation
+$\mathrm H_1(L_\bullet^{(0)})=0$ entraîne $\mathrm H_1(L_\bullet)=0$.
+\end{lemma}
+
+Posons
+$L_\bullet^{(k)}=L_\bullet\otimes_A(A/\mathfrak J^{k+1}):
+P_k\xrightarrow{u_k}Q_k\xrightarrow{v_k}R_k$~; comme il existe un entier
+$k\geq1$ tel que $L_\bullet^{(k)}=L_\bullet$, il suffira de prouver, par
+récurrence sur $k$, que la suite
+$P_k\xrightarrow{u_k}Q_k\xrightarrow{v_k}R_k$ est

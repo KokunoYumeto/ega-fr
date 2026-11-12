@@ -1,0 +1,106 @@
+% from ega4-errata-addenda-list3-fr.tex
+\oldpage[IV]{360}
+$f(T_\alpha)=Y$ et $f|T_\alpha$ est quasi-compact. On peut par suite
+appliquer à $f|T_\alpha$ le résultat de I), et il existe un diviseur
+$D_\alpha$ sur $Y$ tel que
+\[
+ (f|T_\alpha)^*(D_\alpha)=D'|T_\alpha;
+\]
+en vertu de la transitivité des images réciproques de diviseurs par
+morphismes plats {\hyperlink{ega4.c04.statement.21-4-4}{(21.4.4)}}, on
+a aussi $(f|T)^*(D_\alpha)=D'|T$. On en conclut que pour deux indices
+$\alpha$, $\beta$ distincts, on a
+\[
+ (f|T)^*(D_\alpha)=(f|T)^*(D_\beta),
+\]
+d'où (par {\hyperlink{ega4.c04.prop.21-4-8}{(21.4.8)}}),
+$D_\alpha=D_\beta$. Si $D$ est la valeur commune des $D_\alpha$, on a
+donc $f^*(D)|T_\alpha=D'|T_\alpha$ pour tout $\alpha$, et par suite
+$f^*(D)=D'$.
+\end{proof}
+
+\begin{corollary}[21.4.10]
+\EGAReaderTarget{ega4.c04.cor.21-4-10}{IV.21.4.10}
+Supposons vérifiées les hypothèses générales de
+{\hyperlink{ega4.c04.prop.21-4-9}{(21.4.9)}}, et en outre supposons que
+$Y$ soit normal et que pour tout $y\in Y$ tel que
+$\dim(\sh{O}_{Y,y})=1$, la fibre $X_y=f^{-1}(y)$ n'ait pas de cycle
+premier associé immergé. Pour qu'un diviseur $D'$ sur $X$ soit de la
+forme $f^*(D)$, où $D\in\operatorname{Div}(Y)$, il faut et il suffit
+que les deux conditions suivantes soient vérifiées :
+\begin{enumerate}[label=\textup{\arabic*\textdegree}]
+\item pour tout point maximal $y$ de $Y$, l'image réciproque de $D'$
+dans $\operatorname{Div}(X_y)$ soit nulle;
+\item pour tout $y\in Y$ tel que $\dim(\sh{O}_{Y,y})=1$, il existe un
+entier $n_y$ tel que, pour tout point maximal $x$ de $X_y$, l'image
+réciproque de $D'$ dans
+$\operatorname{Div}(\operatorname{Spec}(\sh{O}_{X,x}))$ soit égale à
+$\operatorname{div}(t_y^{n_y})$, où $t_y$ est l'image par
+l'homomorphisme $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ d'une uniformisante de
+l'anneau de valuation discrète $\sh{O}_{Y,y}$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Appliquons le critère {\hyperlink{ega4.c04.prop.21-4-9}{(21.4.9)}}.
+Aux points maximaux $y$ de $Y$, on a $\operatorname{Div}(Y_1)=0$
+puisque $\sh{O}_{Y,y}$ est artinien, et la condition 1\textdegree{} de
+(21.4.10) est équivalente au critère de (21.4.9) en un tel point. Il
+faut voir que les conditions 1\textdegree{} et 2\textdegree{} impliquent
+de même la condition de (21.4.9) en un point $y\in Y$ où
+$\operatorname{prof}(\sh{O}_{Y,y})=1$; comme $Y$ est normal, ces points
+sont aussi ceux où $\dim(\sh{O}_{Y,y})=1$, ou encore où
+$\sh{O}_{Y,y}$ est un anneau de valuation discrète
+{\hyperref[canon-index.ega4.c04.thm.5-8-6]{(5.8.6)}}. On peut donc se borner au
+cas où $Y=\operatorname{Spec}(\sh{O}_{Y,y})$. Si $t$ est une
+uniformisante de $\sh{O}_{Y,y}$, l'application
+$n\mapsto\operatorname{div}(t^n)$ est un isomorphisme de $\mathbb Z$
+sur $\operatorname{Div}(Y)$; la condition de (21.4.9) signifie que
+$D'$ est de la forme $\operatorname{div}(t^n\circ f)$ pour un
+$n\in\mathbb Z$. Cela montre aussitôt que cette condition entraîne la
+condition 2\textdegree{} de l'énoncé. Inversement, supposons cette
+dernière vérifiée (ainsi que la condition 1\textdegree{}); posant pour
+simplifier $n=n_y$, tout revient à voir que l'on a alors
+$D'=\operatorname{div}(t^n\circ f)$. Si $\eta$ est le point générique
+de $Y$, les germes de $D'$ et de $\operatorname{div}(t^n\circ f)$ en
+un point quelconque de $X_\eta$ sont tous deux nuls en vertu de
+1\textdegree{}. De même, les germes de $D'$ et
+$\operatorname{div}(t^n\circ f)$ en un point maximal de $X_y$ sont
+égaux par la condition 2\textdegree{}. Mais en un point $x\in X_y$ qui
+n'est pas maximal, on a
+$\operatorname{prof}(\sh{O}_{X_y,x})\geq1$ puisque $X_y$ n'a pas de
+cycle premier associé immergé, donc aussi
+$\operatorname{prof}(\sh{O}_{X,x})\geq2$ par
+{\hyperref[canon-index.ega4.c04.prop.6-3-1]{(6.3.1)}}. On a donc
+$D'=\operatorname{div}(t^n\circ f)$ en vertu de
+{\hyperlink{ega4.c04.prop.21-1-8}{(21.1.8)}}.
+\end{proof}
+
+\begin{corollary}[21.4.11]
+\EGAReaderTarget{ega4.c04.cor.21-4-11}{IV.21.4.11}
+Supposons vérifiées les hypothèses générales de
+{\hyperlink{ega4.c04.prop.21-4-9}{(21.4.9)}}, et supposons en outre que
+$Y$ soit normal et que pour tout $y\in Y$ tel que
+$\dim(\sh{O}_{Y,y})=1$, la fibre $X_y$ soit intègre. Alors, pour qu'un
+diviseur $D'$ soit de la forme $f^*(D)$, où
+$D\in\operatorname{Div}(Y)$, il faut et il suffit que, pour tout point
+maximal $y$ de $Y$, l'image réciproque de $D'$ dans
+$\operatorname{Div}(X_y)$ soit nulle.
+\end{corollary}
+
+\begin{proof}
+Il suffit de vérifier que la condition 2\textdegree{} de
+{\hyperlink{ega4.c04.cor.21-4-10}{(21.4.10)}} est alors
+automatiquement vérifiée. Or, si $\dim(\sh{O}_{Y,y})=1$ et si $X_y$ est
+intègre, on a, en l'unique point maximal $x$ de $X_y$,
+$\dim(\sh{O}_{X,x})=1$ en vertu de
+{\hyperref[canon-index.ega4.c04.cor.6-1-3]{(6.1.3)}}; en outre, comme
+$\sh{O}_{Y,y}$ est un anneau régulier et $\sh{O}_{X_y,x}$ un corps,
+$\sh{O}_{X,x}$ est régulier
+{\hyperref[canon-index.ega4.c04.prop.6-5-1]{(6.5.1)}}, donc un anneau de valuation
+discrète, et si $t$ est une uniformisante de $\sh{O}_{Y,y}$, son image
+$t_y$ dans $\sh{O}_{X,x}$ est une uniformisante de $\sh{O}_{X,x}$
+($0$, 17.3.3); l'image réciproque de $D'$ dans
+$\operatorname{Div}(\operatorname{Spec}(\sh{O}_{X,x}))$ est donc bien
+de la forme
+

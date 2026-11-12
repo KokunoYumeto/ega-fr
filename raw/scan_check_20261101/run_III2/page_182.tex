@@ -1,0 +1,107 @@
+% from ega3-7-fr.tex
+\oldpage[III]{182}
+
+\begin{corollary}[7.3.4]
+Supposons $A$ commutatif, $T_p$ exact et supposons en outre que $T_p(A)$ soit
+un $A$-module de présentation finie. Alors la fonction
+\[
+  x\mapsto\operatorname{rang}_{\kappa(x)}(T_p(\kappa(x)))
+\]
+est localement constante dans $X=\operatorname{Spec}(A)$, donc constante si
+$\operatorname{Spec}(A)$ est connexe.
+\end{corollary}
+
+\begin{proof}
+En effet, comme $T_p(A)$ est un $A$-module plat en vertu de (7.3.3, $f)$), il
+est projectif de type fini, et $\bigl(T_p(A)\bigr)^{\sim}$ est donc un
+$\mathscr O_X$-Module localement libre (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S 5, n\textsuperscript{o} 2, th. 1); on a en outre
+\[
+  T_p(\kappa(x))=T_p(A)\otimes_A\kappa(x)
+\]
+(7.3.3, $e)$) et l'on sait que le rang au point $x$ du $A$-module $T_p(A)$ est
+localement constant (\emph{loc. cit.}), d'où le corollaire.
+\end{proof}
+
+\begin{proposition}[7.3.5]
+Supposons que $A$ soit un anneau artinien à gauche dont le quotient par son
+radical $\mathfrak m$ est un corps $k$. Alors les conditions de (7.3.3) sont
+encore équivalentes à chacune des suivantes :
+\begin{enumerate}
+  \item[g)] L'homomorphisme canonique
+    \[
+      T_i(\varepsilon):T_i(A_s)\longrightarrow T_i(k)
+    \]
+    est un épimorphisme pour $i=p$ et $i=p+1$.
+  \item[h)] $T_p(\varepsilon)$ est un épimorphisme et $T_p(A_s)$ est un
+    $A$-module à droite plat (ou, ce qui revient au même (Bourbaki,
+    \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la
+    prop. 5) un $A$-module libre).
+\end{enumerate}
+Supposons en outre que $A$ soit commutatif et le $A$-module $T_p(k)$ de
+longueur finie $d$. Alors les conditions précédentes équivalent aussi à
+chacune des suivantes :
+\begin{enumerate}
+  \item[i)] Pour tout $A$-module $M$ de longueur finie, on a
+    \[
+      \operatorname{long}(T_p(M))=d\mathbin{.}\operatorname{long}(M).
+      \tag{7.3.5.1}\label{III.7.3.5.1.fr}
+    \]
+  \item[j)] On a
+    \[
+      \operatorname{long}(T_p(A))=d\mathbin{.}\operatorname{long}(A).
+      \tag{7.3.5.2}\label{III.7.3.5.2.fr}
+    \]
+\end{enumerate}
+\end{proposition}
+
+L'équivalence de $g)$ et $h)$ avec les conditions de (7.3.3) découle aussitôt
+de (7.2.7). Pour démontrer les autres assertions, nous utiliserons le lemme
+suivant :
+
+\begin{lemma}[7.3.5.3]
+Soient $\mathcal K$, $\mathcal K'$ deux catégories abéliennes,
+$F:\mathcal K\to\mathcal K'$ un foncteur
+covariant additif; on suppose que $F$ soit semi-exact, et que, pour tout objet
+simple $S$ de $\mathcal K$, $F(S)$ soit un objet de longueur finie dans
+$\mathcal K'$. Alors, pour tout objet $E$ de longueur finie dans $\mathcal K$,
+$F(E)$ est de longueur finie dans $\mathcal K'$. Pour toute suite exacte
+\[
+  0\longrightarrow E'\xrightarrow{u}E\xrightarrow{v}E''\longrightarrow0
+\]
+d'objets de longueur finie dans $\mathcal K$, on a
+\[
+  \operatorname{long}F(E)
+  \leq
+  \operatorname{long}F(E')+\operatorname{long}F(E'')
+  \tag{7.3.5.4}\label{III.7.3.5.4.fr}
+\]
+et pour que les deux membres de (7.3.5.4) soient égaux, il faut et il suffit
+que la suite
+\[
+  0\longrightarrow F(E')\longrightarrow F(E)\longrightarrow F(E'')
+  \longrightarrow0
+\]
+soit exacte.
+\end{lemma}
+
+\begin{proof}
+En effet, la suite
+\[
+  F(E')\xrightarrow{F(u)}F(E)\xrightarrow{F(v)}F(E'')
+\]
+est exacte par hypothèse; si l'on suppose $F(E')$ et $F(E'')$ de longueur
+finie, il en est de même de $\operatorname{Im}(F(u))$ et de
+$\operatorname{Im}(F(v))$ et comme
+$\operatorname{Ker}(F(v))=\operatorname{Im}(F(u))$, $F(E)$ est de longueur
+finie et l'on a
+\[
+  \operatorname{long}F(E)
+  =
+  \operatorname{long}\operatorname{Im}(F(u))
+  +
+  \operatorname{long}\operatorname{Im}(F(v))
+  \leq
+  \operatorname{long}F(E')+\operatorname{long}F(E'').
+  \tag{7.3.5.5}\label{III.7.3.5.5.fr}
+\]

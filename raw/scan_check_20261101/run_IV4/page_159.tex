@@ -1,0 +1,23 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{159}
+
+\begin{enumerate}
+  \item[$1^\circ$] $f$ est formellement non ramifié au point $x$;
+  \item[$2^\circ$] l'homomorphisme $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ est injectif.
+\end{enumerate}
+
+Il n'y a encore à prouver que la suffisance de ces conditions. Tenant compte de (18.4.12), il suffit de montrer que $f$ est plat au point $x$. Or, en reprenant la démonstration de (18.10.1) et les notations utilisées dans cette démonstration, il suffit de montrer que $f'$ est plat au point $x'$ (2.5.1); par ailleurs $f'$ est formellement non ramifié au point $x'$ (17.1.3); on peut donc se borner à faire la démonstration lorsque $Y=\Spec(A)$, où $A$ est strictement local et $y=f(x)$ le point fermé de $Y$. Utilisant alors (18.8.3) on voit que l'homomorphisme $\sh{O}_{Y,y}\to\sh{O}_{X,x}$ est surjectif, donc bijectif en vertu de l'hypothèse, et cela suffit à montrer la platitude de $f$ au point $x$.
+
+Supposons de plus que $Y$ soit localement intègre au point $y$ (I, 2.1.8). Alors les conditions $1^\circ$ et $2^\circ$ précédentes (jointe au fait que $Y$ est géométriquement unibranche au point $y$ et $f$ localement de type fini) entraînent déjà que $f$ est étale au point $x$. En effet, cela résulte de ce qui précède et de (18.4.13).
+\end{enumerate}
+\end{remark}
+
+\begin{corollary}[18.10.3]
+\label{IV.18.10.3}
+Soient $Y$ un préschéma intègre et géométriquement unibranche, $\eta$ son point générique, $X$ un préschéma connexe, $f:X\to Y$ un morphisme localement de type fini et tel que $f^{-1}(\eta)$ soit non vide. Alors, si $f$ est formellement non ramifié, $f$ est étale, et $X$ est intègre et géométriquement unibranche.
+\end{corollary}
+
+Il résulte de l'hypothèse et de (18.4.13) que $f$ est étale en tous les points où il est plat, et en particulier aux points de $f^{-1}(\eta)$, puisque $\sh{O}_{Y,\eta}=k(\eta)$ est un corps. L'ensemble ouvert $U$ des points de $X$ où $f$ est étale est donc non vide. Montrons d'autre part que pour tout $x\in\overline U$, l'homomorphisme $\sh{O}_{Y,f(x)}\to\sh{O}_{X,x}$ est injectif. Soit en effet $s$ une section de $\sh{O}_Y$ au-dessus d'un voisinage ouvert de $f(x)$, qu'on peut toujours supposer être $Y$ lui-même (la question étant locale sur $X$ et $Y$), et supposons que son image $t\in\Gamma(Y,f_*(\sh{O}_X))=\Gamma(X,\sh{O}_X)$ ait un germe nul au point $x$, donc s'annule dans un voisinage ouvert $V$ de $x$; alors la restriction de $t$ à l'ouvert $U\cap V\neq\varnothing$ est nulle; mais la restriction $f|(U\cap V)$ est étale, donc $W=f(U\cap V)$ est ouvert dans $Y$ et contient par suite le point générique $\eta$; l'homomorphisme $\sh{O}_{Y,\eta}\to\sh{O}_{X,z}$ étant injectif pour tout point $z\in f^{-1}(\eta)$, l'hypothèse que $t|(U\cap V)=0$ entraîne que $s_\eta=0$, et comme $Y$ est intègre, cela entraîne $s=0$, d'où notre assertion. Appliquant maintenant (18.10.2, (iii)), on conclut que $f$ est plat au point $x$, autrement dit $x\in U$, et $U$ est donc à la fois ouvert et fermé dans $X$; comme il est non vide et que $X$ est connexe, on a $U=X$.
+
+Notons maintenant que puisque $f$ est étale, donc localement quasi-fini et que $Y$ est irréductible, les points maximaux de $X$ appartiennent à $f^{-1}(\eta)$ (2.3.4) et pour tout $x\in X$, il y a un voisinage de $x$ qui ne contient qu'un nombre fini de ces points maximaux; autrement dit l'ensemble des composantes irréductibles de $X$ est localement fini. Mais par (18.10.1) $X$ est intègre et géométriquement unibranche en tout point, donc tout point de $X$ n'appartient qu'à une seule composante irréductible, et puisque ces dernières forment un ensemble localement fini, elles sont ouvertes (et fermées) dans $X$; puisque $X$ est connexe, il est intègre.
+

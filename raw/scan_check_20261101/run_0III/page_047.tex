@@ -1,0 +1,69 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{47}
+\[
+\xymatrix{
+C\times_B A\ar[r]^{q}\ar[d]_{p} & A\ar[d]^{v}\\
+C\ar[r]_{u} & B
+}
+\tag{11.9.1.2}\label{0.11.9.1.2-fr}
+\]
+On sait ([27], p.~1-12) que le conoyau de $q$ est le quotient de $A$ par
+$v^{-1}(u(C))$; comme $u$ est un épimorphisme, $u(C)=B$ et
+$v^{-1}(u(C))=A$, donc $q$ est un épimorphisme; il suffit alors d'appliquer
+(i) à l'épimorphisme $q:C\times_B A\to A$ : il y a un objet $D\in K''$ et un
+morphisme $w:D\to C\times_B A$ tels que $q\circ w$ soit un épimorphisme; on
+prendra $u'=q\circ w$, $v'=p\circ w$.
+
+Cela étant, pour démontrer la proposition, procédons par récurrence.
+Supposons, pour un $i\geq d-1$, construits, pour $j\leq i$, les objets $Q_j$,
+les morphismes $d_j:Q_j\to Q_{j-1}$ et les morphismes $u_j:Q_j\to P_j$, de
+sorte que $Q_j=0$ pour $j<d$, que $d_{j-1}\circ d_j=0$ et
+$d_j\circ u_j=u_{j-1}\circ d_j$ pour $j\leq i$; en outre, nous supposons
+vérifiées les conditions suivantes :
+\begin{enumerate}
+\item[$(\mathrm I_i)$] On a $Q_j\in K''$ pour $j\leq i$ et
+$B_j(Q_\bullet)\in K'$ pour $j<i$.
+\item[$(\mathrm{II}_i)$] Pour $j<i$, l'homomorphisme
+$H_j(Q_\bullet)\to H_j(P_\bullet)$ déduit de la famille $(u_k)_{k\leq i}$
+est un isomorphisme.
+\item[$(\mathrm{III}_i)$] Le morphisme composé
+\[
+v_i:Z_i(Q_\bullet)\longrightarrow Z_i(P_\bullet)
+\longrightarrow H_i(P_\bullet)
+\]
+(où la flèche de gauche est la restriction de $u_i$ et la flèche de droite
+le morphisme canonique) est un épimorphisme.
+\end{enumerate}
+Notons que, d'après (ii), $Z_i(Q_\bullet)$, noyau de l'épimorphisme
+$Q_i\to B_{i-1}(Q_\bullet)$, appartient à $K'$ en vertu de l'hypothèse
+$(\mathrm I_i)$. On tire encore de (ii) que
+$N_i=\operatorname{Ker}(v_i)$ appartient aussi à $K'$, compte tenu de
+l'hypothèse $(\mathrm{III}_i)$. En vertu de (i bis), il existe un
+$Q'_{i+1}\in K''$, un épimorphisme $d'_{i+1}:Q'_{i+1}\to N_i$ et un
+morphisme $u'_{i+1}:Q'_{i+1}\to P_{i+1}$, tels que le diagramme
+\[
+\xymatrix{
+Q'_{i+1}\ar[r]^{d'_{i+1}}\ar[d]_{u'_{i+1}} &
+N_i\ar[d]^{u_i}\\
+P_{i+1}\ar[r]_{d_{i+1}} & B_i(P_\bullet)
+}
+\tag{11.9.1.3}\label{0.11.9.1.3-fr}
+\]
+soit commutatif.
+
+Comme le morphisme canonique $Z_{i+1}(P_\bullet)\to H_{i+1}(P_\bullet)$ est
+un épimorphisme et que $H_{i+1}(P_\bullet)\in K'$ par hypothèse, il résulte
+de (i) qu'il existe un objet $Q''_{i+1}\in K''$ et un morphisme
+$u''_{i+1}:Q''_{i+1}\to Z_{i+1}(P_\bullet)$ tels que le composé
+$Q''_{i+1}\to Z_{i+1}(P_\bullet)\to H_{i+1}(P_\bullet)$ soit un
+épimorphisme. Si on prend $d''_{i+1}:Q''_{i+1}\to N_i$ égal à $0$, le
+diagramme
+\[
+\xymatrix{
+Q''_{i+1}\ar[r]^{d''_{i+1}}\ar[d]_{u''_{i+1}} &
+N_i\ar[d]^{u_i}\\
+Z_{i+1}(P_\bullet)\ar[r]_{d_{i+1}} & P_i
+}
+\tag{11.9.1.4}\label{0.11.9.1.4-fr}
+\]
+est commutatif, la flèche horizontale inférieure étant $0$.

@@ -1,0 +1,35 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{101}
+
+  \item[\textup{e)}] Il existe une extension parfaite $k'$ de $k$ et un voisinage ouvert $U$ de $x$ dans $X$ tels que le préschéma $U\otimes_k k'$ soit régulier.
+\end{enumerate}
+\end{proposition}
+
+Le fait que $X$ soit lisse sur $k$ au point $x$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ qui est lisse sur $k$, donc $U\otimes_k k'$ est régulier pour \emph{toute} extension $k'$ de $k$ (17.15.2), ce qui prouve que \emph{a)} implique \emph{e)}. Inversement \emph{e)} implique \emph{a)}, car alors $U\otimes_k k'$ est lisse sur $k'$ (17.15.2), donc $U$ est lisse sur $k$ (17.7.1, (ii)).
+
+On a déjà prouvé que \emph{a)} entraîne \emph{c)} (17.10.2); \emph{c)} implique \emph{d)} trivialement et le fait que \emph{d)} implique \emph{a)} résulte de (\textbf{0}, 20.4.7) et (17.15.3, \emph{c)}).
+
+Enfin, on a déjà vu que \emph{a)} implique \emph{b)} (17.12.4). Inversement, pour prouver que \emph{b)} entraîne \emph{a)}, on peut se borner au cas où $x$ est \emph{rationnel sur $k$}, en considérant, comme dans la démonstration de (17.15.3), un point $x'$ de $X'=X\otimes_k k'$ au-dessus de $x$ et tel que $\boldsymbol{k}(x')=k'=\boldsymbol{k}(x)$, utilisant encore (17.7.1, (ii)) et le fait que si $X$ est différentiellement lisse au point $x$, $X'$ est différentiellement lisse au point $x'$ (16.10.4). Supposant donc $x$ rationnel sur $k$, le fait que $f$ soit lisse en $x$ résulte alors de l'hypothèse \emph{b)} et de (17.12.5) appliqué à la $k$-section $u:\operatorname{Spec}(k)\to X$ telle que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Soit $X$ un préschéma de type fini sur un corps $k$. Pour que $X$ soit lisse sur $k$, il faut et il suffit que le $\sh{O}_X$-Module $\varOmega^1_{X/k}$ soit localement libre, et que les anneaux locaux aux points maximaux de $X$ soient des corps, extensions séparables de $k$ \textup{(cette dernière condition étant automatiquement vérifiée si $k$ est un corps \emph{parfait} et $X$ un préschéma \emph{réduit})}.
+\end{corollary}
+
+Les conditions sont nécessaires, car si $X$ est lisse sur $k$, il résulte de (17.10.2) que $\varOmega^1_{X/k}$ est localement libre; d'autre part, $X$ est régulier, donc \emph{a fortiori} réduit, donc en tout point maximal $x$ de $X$, $\sh{O}_{X,x}$ est un corps, qui doit être une $k$-algèbre formellement lisse pour les topologies discrètes (17.5.1), donc une extension séparable de $k$ (\textbf{0}, 19.6.1).
+
+Les conditions sont suffisantes. On peut en effet se borner au cas où $X$ est connexe, donc $\varOmega^1_{X/k}$ localement libre de rang constant $n$. Pour tout point maximal $x$ de $X$, on a alors $\operatorname{rg}_{\mathbf{k}(x)}\Omega^1_{\mathbf{k}(x)/k}=n$ puisque $\sh{O}_{X,x}=\boldsymbol{k}(x)$; comme par hypothèse $\boldsymbol{k}(x)$ est une extension séparable de $k$, on a $\Upsilon_{\mathbf{k}(x)/k}=0$ (\textbf{0}, 20.6.3), donc $\deg.\operatorname{tr}_k \boldsymbol{k}(x)=n$ par l'égalité de Cartier (\textbf{0}, 21.7.1). Toutes les composantes irréductibles de $X$ ont donc même dimension $n$ (5.2.1), et on conclut que $X$ est lisse sur $k$ en tout point en vertu de ce que \emph{c)} entraîne \emph{a)} dans (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique \textup{0}, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\varOmega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cela résulte de (16.12.2) et de l'équivalence de \emph{b)} et \emph{a)} dans (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$; posons $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$, de sorte que $n\setmin r=\deg.\operatorname{tr}_k \boldsymbol{k}(x)$ \textup{(5.2.3)}. Soit $(g_i)_{1\leq i\leq n}$ une famille de $n$ sections de $\sh{O}_X$ au-dessus de $X$, telles que $(g_i)_x\in\mathfrak m_x$ pour $1\leq i\leq r$; soit $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ le morphisme correspondant au $k$-homomorphisme $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$. Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ et que $\boldsymbol{k}(x)$ est une extension séparable de $k$):
+\begin{enumerate}
+  \item[\textup{a)}] $f$ est étale au point $x$.
+

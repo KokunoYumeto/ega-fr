@@ -1,0 +1,92 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{10}
+\item[\emph{c)}] Le foncteur
+$\mathscr G\mapsto\mathscr F\otimes_Y\mathscr G$ de la catégorie des
+$\mathcal O_Y$-Modules quasi-cohérents dans celle des
+$\mathcal O_X$-Modules quasi-cohérents, est exact et fidèle.
+\end{enumerate}
+\end{proposition}
+
+Si \emph{b$'$)} est vérifié, il y a au moins un $x\in f^{-1}(y)$ tel que
+$(\mathscr F_y)_x\neq0$~; soit $U=\operatorname{Spec}(B)$ un voisinage ouvert
+affine de $x$, et soit $\mathscr F|U=\widetilde M$, où $M$ est un $B$-module.
+Alors \emph{b$'$)} implique que $M/\mathfrak j_yM$ est $\neq0$, et par suite
+(puisque $M$ est un $A$-module plat (2.1.2)) que
+$M\otimes_A A_y$ est un $A_y$-module fidèlement plat
+$(0_{\mathrm I},6.4.5)$. La relation
+$(\mathscr F\otimes_Y\mathscr G)\otimes_Y\mathcal O_y=0$ pour un point fermé
+$y$ de $Y$ implique
+\[
+(\mathscr F\otimes_Y\mathcal O_y)\otimes_{\mathcal O_y}\mathscr G_y=0,
+\]
+donc $\mathscr G_y=0$. Mais si l'on a $\mathscr G_y=0$ pour tout point fermé
+de $Y$, on en conclut $\mathscr G=0$, car si $\mathscr G=\widetilde N$,
+l'annulateur d'un élément de $N$ n'est contenu dans aucun idéal maximal de
+$A$, donc est $A$ tout entier. La relation
+$\mathscr F\otimes_Y\mathscr G=0$ implique donc $\mathscr G=0$, autrement dit
+le foncteur $\mathscr G\mapsto\mathscr F\otimes_Y\mathscr G$ est fidèle~; on
+sait par ailleurs que ce foncteur est exact (2.1.3), ce qui montre bien que
+\emph{b$'$)} entraîne \emph{c)}.
+
+Enfin, pour voir que \emph{c)} entraîne \emph{a)}, on peut se borner au cas
+où $Y'$ est aussi affine~; comme $g:Y'\to Y$ est alors un morphisme affine,
+il en est de même de la projection $g':X'\to X$ (II, 1.5.5)~; de plus, le
+foncteur $\mathscr H'\mapsto g'_*(\mathscr H')$ est alors exact dans la
+catégorie des $\mathcal O_{X'}$-Modules quasi-cohérents (I, 1.6.4), et si
+$g'_*(\mathscr H')=\mathscr H$, on a $\mathscr H'=\widetilde{\mathscr H}$,
+donc le foncteur précédent est aussi fidèle~; pour voir que
+$\mathscr G'\mapsto\mathscr F\otimes_Y\mathscr G'$ est exact et fidèle, il
+suffit par suite de voir que le foncteur
+\[
+\mathscr G'\mapsto g'_*(\mathscr F\otimes_Y\mathscr G')
+\]
+l'est. Or, si $f'=f_{(Y')}:X'\to Y'$, on a
+$g'_*(\mathscr F\otimes_Y\mathscr G')
+=g'_*(g'^*(\mathscr F)\otimes_{X'}f'^*(\mathscr G'))$~; le fait que $g$ est
+affine entraîne que l'on a un isomorphisme canonique
+\begin{equation}
+\tag{2.2.2.1}
+\label{IV.2.2.2.1-fr}
+\mathscr F\otimes_{\mathcal O_X}f^*(g_*(\mathscr G'))
+\xrightarrow{\sim}
+g'_*(g'^*(\mathscr F)\otimes_{\mathcal O_{X'}}f'^*(\mathscr G')).
+\end{equation}
+En effet, on sait (II, 1.5.2) qu'on a un isomorphisme canonique
+\[
+f^*(g_*(\mathscr G'))\xrightarrow{\sim}g'_*(f'^*(\mathscr G')),
+\]
+et d'autre part on a un homomorphisme canonique
+$\mathscr F\to g'_*(g'^*(\mathscr F))$ $(0_{\mathrm I},4.4.3.2)$~;
+composant l'homomorphisme
+$\mathscr F\otimes_{\mathcal O_X}f^*(g_*(\mathscr G'))
+\to g'_*(g'^*(\mathscr F))\otimes_{\mathcal O_X}g'_*(f'^*(\mathscr G'))$
+avec l'homomorphisme canonique $(0_{\mathrm I},4.2.2.1)$, on en déduit
+l'homomorphisme (2.2.2.1)~; la vérification du fait qu'il s'agit d'un
+isomorphisme est immédiate en se ramenant au cas où $X$ est affine. Cela
+étant, le foncteur $\mathscr G'\mapsto g_*(\mathscr G')$ est exact et fidèle
+et par hypothèse il en est de même de
+$\mathscr G\mapsto\mathscr F\otimes_Y\mathscr G
+=\mathscr F\otimes_{\mathcal O_X}f^*(\mathscr G)$~; leur composé est donc
+exact et fidèle, ce qui achève de prouver (2.2.1) et (2.2.2).
+
+\begin{corollary}[2.2.3]
+\label{IV.2.2.3-fr}
+Soient $X=\operatorname{Spec}(B)$, $Y=\operatorname{Spec}(A)$ deux schémas
+affines, $f:X\to Y$ un morphisme, $\mathscr F=\widetilde M$ un
+$\mathcal O_X$-Module quasi-cohérent. Pour que $\mathscr F$ vérifie les
+conditions équivalentes de (2.2.1) (ou (2.2.2)), il faut et il suffit que le
+$A$-module $M$ soit fidèlement plat.
+\end{corollary}
+
+En effet, la condition \emph{c)} de (2.2.2) signifie alors que le foncteur
+$N\mapsto M\otimes_A N$ de la catégorie des $A$-modules dans celle des
+$B$-modules est exact et fidèle, et la conclusion résulte de
+$(0_{\mathrm I},6.4.1)$.
+
+\begin{definition}[2.2.4]
+\label{IV.2.2.4-fr}
+Lorsque les conditions équivalentes de (2.2.1) sont satisfaites, on dit que
+le $\mathcal O_X$-Module quasi-cohérent $\mathscr F$ est \emph{fidèlement plat
+relativement à} $f$ (ou à $Y$).
+\end{definition}
+

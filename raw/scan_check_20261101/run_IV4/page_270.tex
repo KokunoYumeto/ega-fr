@@ -1,0 +1,53 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{270}
+
+La question est évidemment locale sur $X$, et on peut donc se borner au cas où $X=\operatorname{Spec}(A)$ est affine;
+on a alors $X'=\operatorname{Spec}(A')$ et $X''=\operatorname{Spec}(A'')$, et on peut supposer que $A''$ est un $A'$-module projectif de rang $n$.
+Lorsque $f$ est localement libre, on peut supposer que $A'$ est un $A$-module libre de rang $m$, et alors $A''$ est un $A$-module projectif de rang $mn$, et en restreignant $X$ à un ouvert convenable, on peut supposer que $A''$ est un $A$-module libre de rang $mn$;
+la formule \sref{IV.21.5.7.4} résulte alors de la transitivité de la norme (Bourbaki, \emph{Alg.}, chap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7).
+Lorsque $f$ vérifie l'hypothèse II), $A$ est noethérien réduit, et si $R$ est son anneau total de fractions, $A'\otimes_A R$ est un $R$-module libre de rang $m$, donc $A''\otimes_A R=A''\otimes_{A'}(A'\otimes_A R)$ est un $R$-module projectif de rang $mn$, et comme $R$ est alors un anneau semi-local, ce $R$-module est libre;
+la proposition résulte alors encore de la transitivité des normes.
+
+\begin{proposition}[21.5.8]
+\label{IV.21.5.8}
+Soient $f:X'\to X$ un morphisme fini, $g:Y\to X$ un morphisme;
+on pose $Y'=X'\times_XY$, $f'=f_{(Y)}:Y'\to Y$, $g'=g_{(X')}:Y'\to X'$.
+On suppose vérifiée l'une des conditions suivantes :
+\begin{enumerate}[label=(\roman*)]
+  \item $f$ est localement libre et $g$ est plat.
+  \item $f$ est localement libre, $X$ et $Y$ sont localement noethériens, $g(\operatorname{Ass}(\sh{O}_Y))\subset\operatorname{Ass}(\sh{O}_X)$ et $g'(\operatorname{Ass}(\sh{O}_{Y'}))\subset\operatorname{Ass}(\sh{O}_{X'})$.
+  \item $f$ vérifie l'hypothèse II) de \sref{IV.21.5.3}, $Y$ est localement noethérien, $Y$ et $Y'$ sont réduits et toute composante irréductible de $Y$ (resp. $Y'$) domine une composante irréductible de $X$ (resp. $X'$).
+\end{enumerate}
+Alors, pour tout diviseur $D'$ sur $X'$, $g'^*(D')$ est défini, $g^*(f_*(D'))$ est défini et l'on a
+\[
+\label{IV.21.5.8.1}
+  g^*(f_*(D'))=f_*'(g'^*(D')).
+  \tag{21.5.8.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, dans tous les cas, il résulte de (\textbf{II}, 6.5.8) que l'on a un isomorphisme fonctoriel
+\[
+  g^*(\mathrm{N}_{X'/X}(\sh{L}'))\xrightarrow{\sim}\mathrm{N}_{Y'/Y}(g'^*(\sh{L}'))
+\]
+dans la catégorie des $\sh{O}_Y$-Modules inversibles;
+en outre (\textbf{II}, 6.5.4), si $s'$ est une section de $\sh{O}_{X'}$ au-dessus de $f^{-1}(U)$, $s''$ la section correspondante de $\sh{O}_{Y'}$ au-dessus de $g'^{-1}(f^{-1}(U))$ ($U$ ouvert de $X$), $\mathrm{N}_{Y'/Y}(s'')$ est la section de $\sh{O}_Y$ au-dessus de $g^{-1}(U)$ qui correspond à la section $\mathrm{N}_{X'/X}(s')$ de $\sh{O}_X$ au-dessus de $U$.
+La formule \sref{IV.21.5.8.1} résultera donc des définitions si l'on prouve que $g'^*(D')$ et $g^*(D)$ sont définis, quels que soient les diviseurs $D'$ sur $X'$ et $D$ sur $X$.
+En ce qui concerne $D$, cela résulte des hypothèses faites et de \sref{IV.21.4.5}.
+En ce qui concerne $D'$, dans le cas (i) $g'$ est plat, donc dans tous les cas $g'^*(D')$ est défini en vertu de \sref{IV.21.4.5}.
+\end{proof}
+
+% (continued in ega4-21b-fr.tex, before its first page marker)
+\subsection{Cycle 1-codimensionnel associé à un diviseur}
+\EGAReaderTarget{ega4.c04.subsec.21-6}{subsection:IV.21.6}
+\label{IV.21.6}
+
+\begin{env}[21.6.1]
+\EGAReaderTarget{ega4.c04.statement.21-6-1}{IV.21.6.1}
+Soit $X$ un préschéma localement noethérien, et soit $\mathfrak{I}(X)$ l'ensemble des \emph{parties fermées irréductibles} de $X$ (qui est en correspondance biunivoque avec $X$ par l'application $x\mapsto\overline{\{x\}}$).
+Dans le groupe produit $\bb{Z}^X$, considérons le sous-groupe $\mathfrak{Z}(X)$ des éléments $(n_x)_{x\in X}$ tels que l'ensemble des $\overline{\{x\}}\in\mathfrak{I}(X)$ tels que $n_x\neq0$ (ou, ce qui revient au même, l'ensemble des $x\in X$ tels que $n_x\neq0$) soit localement fini.
+Il est clair que $\mathfrak{Z}(X)$ est un sous-groupe de $\bb{Z}^X$ qui contient le groupe somme directe $\bb{Z}^{(X)}$ (groupe libre ayant pour base $\mathfrak{I}(X)$), et lui est égal lorsque $X$ est noethérien.
+Les éléments de $\mathfrak{Z}(X)$ sont appelés \emph{cycles} sur $X$ et ceux de $\mathfrak{I}(X)$ \emph{cycles premiers} (ils ne forment pas en général une base de $\mathfrak{Z}(X)$ lorsque $X$ n'est pas noethérien).
+On considère toujours $\mathfrak{Z}(X)$ comme ordonné par l'ordre induit sur ce sous-groupe par l'ordre produit de $\bb{Z}^X$ et on notera $\mathfrak{Z}^+(X)$ l'ensemble des cycles $\geq0$.
+

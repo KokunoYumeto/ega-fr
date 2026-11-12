@@ -1,0 +1,82 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{27}
+assez grand, on voit finalement qu'on est ramené (en remplaçant $S_\lambda$
+par $U_\lambda$) au cas où $Z'_\lambda$ et $Z''_\lambda$ sont des
+sous-préschémas fermés de $S_\lambda$. Mais alors, cela a déjà été démontré
+puisque (8.6.2.3) est croissante et injective.
+\end{proof}
+
+\begin{corollary}[8.6.4]
+\label{IV.8.6.4-fr}
+Supposons $S_0$ quasi-compact, et soit $Z_\lambda$ un sous-préschéma de
+$S_\lambda$, de présentation finie sur $S_\lambda$. Pour que
+$Z=u_\lambda^{-1}(Z_\lambda)$ soit un sous-préschéma induit sur un ouvert
+(resp. un sous-préschéma fermé) de $S$, il faut et il suffit qu'il existe
+$\mu\geq\lambda$ tel que $Z_\mu=u_{\lambda\mu}^{-1}(Z_\lambda)$ soit induit
+sur un ouvert (resp. un sous-préschéma fermé) dans $S_\mu$.
+\end{corollary}
+
+\begin{proof}
+Soit $(U_\lambda^{(i)})$ un recouvrement ouvert affine fini de $S_\lambda$, et
+posons $U_\mu^{(i)}=u_{\lambda\mu}^{-1}(U_\lambda^{(i)})$ pour
+$\mu\geq\lambda$ et $U^{(i)}=u_\lambda^{-1}(U_\lambda^{(i)})$. Si $Z$ est
+ouvert (resp. fermé) dans $S$, $Z\cap U^{(i)}$ l'est dans $U^{(i)}$, et
+inversement si chacun des $Z_\mu\cap U_\mu^{(i)}$ est ouvert (resp. fermé)
+dans $U_\mu^{(i)}$, $Z_\mu$ l'est dans $S_\mu$. Puisque $L$ est filtrant, il
+suffit de démontrer le corollaire lorsque $S_\lambda$ est affine, donc
+quasi-séparé. Mais alors le résultat découle de ce que les applications
+(8.6.2.1), (8.6.2.2) et (8.6.2.3) sont bijectives.
+\end{proof}
+
+\subsection{Critères pour qu'une limite projective de préschémas soit un préschéma réduit (resp. intègre)}
+\label{subsection:IV.8.7-fr}
+
+Nous conservons les hypothèses et notations de (8.2.2) et supposons toujours
+que $S_0$ est un des $S_\lambda$.
+
+\begin{proposition}[8.7.1]
+\label{IV.8.7.1-fr}
+Supposons que $S$ soit non réduit. Alors il existe $\lambda_0$ tel que pour
+$\lambda\geq\lambda_0$, $S_\lambda$ soit non réduit.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $S_0$, on peut supposer
+$S_0=\operatorname{Spec}(A_0)$ affine, d'où $S=\operatorname{Spec}(A)$, où
+$A=\varinjlim A_\lambda$ est la limite inductive d'un système inductif de
+$A_0$-algèbres $(A_\lambda)$. On sait alors (5.13.2) que le nilradical de $A$
+est la limite inductive de ceux des $A_\lambda$~; s'il n'est pas nul, un des
+$A_\lambda$ contient donc un élément nilpotent $a_\lambda\neq0$ dont l'image
+dans $A$ est un élément nilpotent et $\neq0$, et l'image de $a_\lambda$ dans
+les $A_\mu$ pour $\mu\geq\lambda$ est par suite un élément nilpotent et
+$\neq0$.
+\end{proof}
+
+\begin{proposition}[8.7.2]
+\label{IV.8.7.2-fr}
+Supposons vérifiée l'une des hypothèses suivantes~:
+\begin{enumerate}
+\item[\emph{a)}] $S_0$ est quasi-compact, le nilradical $\mathcal N_0$ de
+$\mathcal O_{S_0}$ est un Idéal de type fini (ce qui sera par exemple vérifié
+lorsque $S_0$ est noethérien), et les morphismes
+$u_{\lambda\mu}:S_\mu\to S_\lambda$ sont des immersions ouvertes.
+\item[\emph{b)}] Les morphismes $u_{\lambda\mu}:S_\mu\to S_\lambda$ sont
+fidèlement plats.
+\end{enumerate}
+Sous ces conditions, pour que $S$ soit réduit, il faut et il suffit qu'il
+existe $\lambda_0$ tel que $S_\lambda$ soit réduit pour
+$\lambda\geq\lambda_0$.
+
+En outre, dans le cas \emph{b)}, si $S$ est réduit, tous les $S_\lambda$ le
+sont.
+\end{proposition}
+
+\begin{proof}
+La dernière assertion résulte de ce que le morphisme $S\to S_\lambda$ est
+alors fidèlement plat pour tout $\lambda$ (8.3.8) et de (2.1.13). D'autre part,
+(8.7.1) prouve que la condition de l'énoncé est suffisante (sans hypothèse sur
+$S_0$ ni sur les $u_{\lambda\mu}$). Il reste donc à voir que la condition est
+nécessaire dans l'hypothèse \emph{a)}~; alors (8.2.13), l'espace sous-jacent à
+$S$ s'identifie à l'intersection des espaces sous-jacents aux $S_\lambda$ (les
+$S_\lambda$ étant identifiés à des sous-préschémas induits sur des ouverts de
+$S_0$), et le faisceau structural $\mathcal O_S$ s'identifie au

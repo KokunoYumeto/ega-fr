@@ -1,0 +1,115 @@
+% from ega4-10-fr.tex
+\oldpage[IV-3]{113}
+homéomorphisme, on a vu (10.2.8, (ii)) que si
+$\theta:\mathcal O_X\to\psi_*(\mathcal O_{S(X)})$ est l'homomorphisme de
+faisceaux d'anneaux tel que
+$\theta^\sharp:\psi^*(\mathcal O_X)\to\mathcal O_{S(X)}$ soit l'identité,
+alors $j_X=(\psi,\theta)$ est un \emph{quasi-isomorphisme} d'espaces annelés,
+et $\mathcal F\mapsto j_X^*(\mathcal F)$ une équivalence de la catégorie des
+$\mathcal O_X$-Modules et de celle des $\mathcal O_{S(X)}$-Modules. Il est clair
+que dans cette équivalence, aux $\mathcal O_X$-Modules localement libres (resp.
+cohérents) correspondent les $\mathcal O_{S(X)}$-Modules localement libres
+(resp. cohérents)~; en outre, si $\mathcal L$ est un $\mathcal O_X$-Module
+localement libre et si $U$ est un ouvert de $X$ tel que $\mathcal L|U$ soit
+isomorphe à $(\mathcal O_X|U)^n$, $j_X^*(\mathcal L)$ est tel que
+$j_X^*(\mathcal L)|(U\cap S(X))$ soit isomorphe à
+$(\mathcal O_{S(X)}|(U\cap S(X)))^n$.
+\end{env}
+
+\begin{env}[10.9.2]
+\label{IV.10.9.2-fr}
+Soient $X$, $Y$ deux préschémas de Jacobson et
+$f=(\rho,\lambda):X\to Y$ un morphisme \emph{localement de type fini}. On a vu
+(10.4.7) que l'on a $\rho(S(X))\subset S(Y)$ et par restriction de $\rho$ à
+$S(X)$, on définit donc une application continue $S(\rho):S(X)\to S(Y)$.
+D'autre part, pour tout ouvert $V$ de $Y$, on définit par composition un
+homomorphisme d'anneaux
+\[
+  \Gamma(V\cap S(Y),\mathcal O_{S(Y)})\longrightarrow
+  \Gamma(V,\mathcal O_Y)\xrightarrow{\lambda_V}
+  \Gamma(f^{-1}(V),\mathcal O_X)\longrightarrow
+  \Gamma(f^{-1}(V)\cap S(X),\mathcal O_{S(X)})
+\]
+où les deux isomorphismes extrêmes ont été définis dans (10.9.1)~; il est clair
+que cela définit un homomorphisme de faisceaux d'anneaux
+$S(\lambda):\mathcal O_{S(Y)}\to\rho_*(\mathcal O_{S(X)})$ (en se rappelant
+que les ouverts de $S(X)$ (resp. $S(Y)$) correspondent biunivoquement à ceux de
+$X$ (resp. $Y$) (10.2.1))~; on obtient ainsi un morphisme d'espaces annelés
+\[
+  S(f)=(S(\rho),S(\lambda)):(S(X),\mathcal O_{S(X)})\longrightarrow
+  (S(Y),\mathcal O_{S(Y)})
+\]
+tel que le diagramme
+\[
+\begin{tikzcd}
+S(X) \ar[r,"S(f)"] \ar[d,"j_X"'] & S(Y) \ar[d,"j_Y"] \\
+X \ar[r,"f"'] & Y
+\end{tikzcd}
+\]
+soit commutatif~; en outre, si $Z$ est un troisième préschéma de Jacobson et
+$g:Y\to Z$ un morphisme localement de type fini, il est clair que
+$S(g\circ f)=S(g)\circ S(f)$. On a ainsi défini un \emph{foncteur covariant}
+$S:\mathbf C\to\mathbf C'$, où $\mathbf C'$ est la catégorie des \emph{espaces
+annelés en anneaux locaux}, et $\mathbf C$ la catégorie dont les objets sont les
+\emph{préschémas de Jacobson} et les morphismes sont les morphismes
+\emph{localement de type fini} entre préschémas de Jacobson.
+\end{env}
+
+\begin{env}[10.9.3]
+\label{IV.10.9.3-fr}
+Proposons-nous de déterminer la sous-catégorie $\mathbf C''$ de $\mathbf C'$
+formée des espaces annelés isomorphes aux $S(X)$ et dont les morphismes
+proviennent des $S(f)$. Supposons d'abord que $X=\operatorname{Spec}(A)$, où
+$A$ est un anneau de Jacobson~; alors $S(X)$ est l'ensemble des \emph{idéaux
+maximaux} de $A$, muni~: $1^\circ$ de la topologie induite par celle de $X$, de
+sorte qu'une base de cette topologie est formée des
+$D^m(h)=D(h)\cap S(X)$, ensemble des idéaux maximaux $\mathfrak m$ de $A$ tels
+que $h\notin\mathfrak m$, où $h$ parcourt $A$~; $2^\circ$ du faisceau d'anneaux
+$\mathcal O_{S(X)}$ tel que
+$\Gamma(D^m(h),\mathcal O_{S(X)})=A_h$. Nous dirons que cet espace annelé est
+le \emph{spectre maximal} de l'anneau de Jacobson $A$ et nous le noterons
+$\operatorname{Spm}(A)$.
+
+On notera que si $j:D(h)\to X$ est l'injection canonique, l'espace annelé
+induit sur $D^m(h)$ par $S(X)$ est $S(D(h))$ et l'injection canonique
+$D^m(h)\to S(X)$ d'espaces annelés est égale à $S(j)$.
+
+Soient $B$ un second anneau de Jacobson, $Y=\operatorname{Spec}(B)$,
+$\varphi:B\to A$ un homomorphisme d'anneaux faisant de $A$ une $B$-algèbre de
+type fini, $f=({}^a\varphi,\widetilde\varphi):X\to Y$ le morphisme
+correspondant de préschémas, et
+\[
+  S(f):\operatorname{Spm}(A)\longrightarrow\operatorname{Spm}(B)
+\]
+le morphisme d'espaces annelés correspondant à $f$. Il est clair que
+$S(f)=(\psi,\theta)$ est un morphisme d'espaces annelés en anneaux locaux,
+c'est-à-dire ($\mathrm{Err}_{\mathrm{II}}$, 1.8.2) que pour tout
+$x\in\operatorname{Spm}(A)$, $\theta_x^\sharp$ est un homomorphisme local.
+Réciproquement~:
+\end{env}
+
+\begin{proposition}[10.9.4]
+\label{IV.10.9.4-fr}
+Soient $A$, $B$ deux anneaux de Jacobson. Si
+$u=(\psi,\theta):\operatorname{Spm}(A)\to\operatorname{Spm}(B)$ est un
+morphisme d'espaces annelés en anneaux locaux tel que
+$\Gamma(\theta):B\to A$ fasse de $A$ une $B$-algèbre de type fini, il existe
+un morphisme de préschémas
+$f:\operatorname{Spec}(A)\to\operatorname{Spec}(B)$ et un seul tel que
+$u=S(f)$.
+\end{proposition}
+
+L'unicité de $f$ est évidente, puisque si
+$f=({}^a\varphi,\widetilde\varphi)$, on doit avoir
+$\varphi=\Gamma(\theta)$~; il reste à voir que $S(f)$ est défini et qu'on a
+bien $u=S(f)$. Or, la première assertion résulte de ce que $\varphi$ est
+supposé faire de $A$ une $B$-algèbre de type fini, et par suite
+$f(\operatorname{Spm}(A))\subset\operatorname{Spm}(B)$~; le fait que
+$\theta_x^\sharp$ est un homomorphisme local pour tout
+$x\in\operatorname{Spm}(A)$ permet alors de répéter le raisonnement de
+(\textbf I, 1.7.3) en se bornant aux points $x$ de $\operatorname{Spm}(A)$~:
+on montre ainsi successivement que $\psi(x)={}^a\varphi(x)$ pour tout
+$x\in\operatorname{Spm}(A)$, puis que
+$\theta_x^\sharp=\varphi_x:B_{\psi(x)}\to A_x$, ce qui achève de prouver que
+$u=S(f)$.
+

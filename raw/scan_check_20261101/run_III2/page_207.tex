@@ -1,0 +1,107 @@
+% from ega3-7-fr.tex
+\oldpage[III]{207}
+il faut et il suffit que l'anneau $\Gamma(Z,\mathscr O_Z)$ ne soit pas un produit
+de deux anneaux non réduits à 0.
+\end{lemma}
+
+\begin{proof}
+Il est clair en effet que si $Z$ est réunion de deux ouverts non vides disjoints,
+$\Gamma(Z,\mathscr O_Z)$ est isomorphe au produit des deux anneaux
+$\Gamma(Z_1,\mathscr O_Z)$ et $\Gamma(Z_2,\mathscr O_Z)$ non réduits à 0.
+Inversement, dire que $\Gamma(Z,\mathscr O_Z)$ est un tel produit équivaut à
+dire qu'il y a dans $\Gamma(Z,\mathscr O_Z)$ un idempotent $s$ distinct de 0 et
+de 1 ; pour tout $z\in Z$, $s_z$ est alors un idempotent dans $\mathscr O_z$,
+donc égal à 0 ou 1. Mais il est clair que l'ensemble des $z$ tels que $s_z=0$
+est ouvert ; d'autre part, si $s_z=1$, on a par définition $s(z)\ne0$, donc
+l'ensemble des $z$ où $s_z=1$ est aussi ouvert ($0_{\mathrm I}$, 5.5.2) ; d'où
+la conclusion.
+\end{proof}
+
+Il résulte de ce lemme que $X_y$ a exactement $m$ composantes connexes $X'_i$
+et que $\Gamma(X'_i,\mathscr O_{X'_i})=\kappa(y)$ pour tout $i$. Comme $A$ a été
+supposé local et artinien, son spectre est réduit à un point, donc $X$ et $X_y$
+ont même espace sous-jacent ; $X$ a donc $m$ composantes connexes $X_i$ telles
+que $X'_i=X_i\otimes_Y\kappa(y)$. On est ainsi finalement ramené au cas où
+$R=\kappa(y)$ ; en vertu de (7.7.10, b)), on est ramené à prouver que
+l'homomorphisme canonique
+\[
+  \Gamma(X,\mathscr O_X)
+  \longrightarrow
+  \Gamma(X_y,\mathscr O_{X_y})
+\]
+est surjectif ; mais cela est trivial, car le composé
+\[
+  \Gamma(Y,\mathscr O_Y)=A
+  \longrightarrow
+  \Gamma(X,\mathscr O_X)
+  \longrightarrow
+  \Gamma(X_y,\mathscr O_{X_y})=\kappa(y)
+\]
+est déjà surjectif.
+\end{proof}
+
+\begin{corollary}[7.8.7]
+Sous les hypothèses de (7.8.6), il existe un voisinage ouvert $U$ de $y$ tel
+que :
+\begin{enumerate}
+  \item[(i)] $f_*(\mathscr O_X)|U$ soit isomorphe à un
+    $(\mathscr O_Y|U)$-Module de la forme $(\mathscr O_Y|U)^m$.
+  \item[(ii)] Pour tout $z\in U$, l'homomorphisme canonique
+    \[
+      (f_*(\mathscr O_X))_z
+      \otimes_{\mathscr O_z}\kappa(z)
+      \longrightarrow
+      \Gamma(X_z,\mathscr O_{X_z})
+    \]
+    est bijectif.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) résulte de (7.8.6) et (7.8.4).
+
+(ii) résulte de ce que $\mathscr T_0^U$ est exact (pour $U$ convenablement
+choisi), et de (7.7.5.3).
+\end{proof}
+
+\begin{corollary}[7.8.8]
+Supposons vérifiées les conditions de (7.8.6) et en outre que
+$\Gamma(X_y,\mathscr O_{X_y})=\kappa(y)$. Alors il existe un voisinage ouvert
+$U$ de $y$ tel que l'homomorphisme canonique
+$\mathscr O_Y|U\to f_*(\mathscr O_X)|U$ soit bijectif.
+\end{corollary}
+
+\begin{proof}
+En effet, il résulte de (7.8.7, (ii)) que l'entier $m$ figurant dans (7.8.7,
+(i)) est nécessairement égal à 1.
+\end{proof}
+
+\begin{corollary}[7.8.9]
+Sous les hypothèses de (7.8.6), il existe un voisinage ouvert $U$ de $y$, un
+$\mathscr O_U$-Module cohérent $\mathscr Q$ (déterminé à isomorphisme unique
+près) et un isomorphisme de foncteurs en le $\mathscr O_U$-Module quasi-cohérent
+$\mathscr M$ :
+\[
+  \mathrm R^1f_*(f^*(\mathscr M))
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_U}(\mathscr Q,\mathscr M).
+  \tag{7.8.9.1}\label{III.7.8.9.1.fr}
+\]
+\end{corollary}
+
+\begin{proof}
+En effet, l'hypothèse entraîne que $\mathscr T_0^U$ est exact pour un $U$
+convenable ; il suffit donc d'appliquer l'équivalence de (7.7.5, a)) et
+(7.7.5, b$'$)) au cas $p=0$ et en prenant pour $\mathscr P_\bullet$ le complexe
+réduit à son terme de degré 0 égal à $\mathscr O_X$.
+\end{proof}
+
+\begin{remarks}[7.8.10]
+\textnormal{(i)} Sous les conditions de (7.8.6), considérons la factorisation de
+Stein de $f$ (4.3.3)
+\[
+\xymatrix{
+  X \ar[r]^{f'} & Y' \ar[r]^{g} & Y .
+}
+\]
+

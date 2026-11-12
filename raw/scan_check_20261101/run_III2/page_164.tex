@@ -1,0 +1,107 @@
+% from ega3-6-fr.tex
+\oldpage[III]{164}
+l'isomorphisme canonique
+\[
+  (M\otimes_B B')_{g'}
+  \xrightarrow{\sim}
+  M_g\otimes_{B_g}B'_{g'}
+\]
+($0_{\mathrm I}$, 1.5.4); nous laissons les détails au lecteur.
+\end{env}
+
+\begin{env}[6.7.11]
+La théorie des hypertor globaux, développée ci-dessus pour deux
+$S$-morphismes $X^{(i)}\to Y^{(i)}$ et deux complexes
+$\mathscr P_\bullet^{(i)}$ de Modules quasi-cohérents limités inférieurement,
+s'étend aussitôt au cas général suivant : on a un préschéma $S$, une famille
+finie de $S$-préschémas $Y^{(i)}$ ($i\in I$), une famille finie de
+$S$-morphismes séparés et quasi-compacts
+$f_i:X^{(i)}\to Y^{(i)}$, et pour chaque $i$ un complexe de
+$\mathscr O_{X^{(i)}}$-Modules quasi-cohérents
+$\mathscr P_\bullet^{(i)}$ limités inférieurement. Si $Y$ est le produit des
+$S$-préschémas $Y^{(i)}$, on définit alors pour chaque entier
+$n\in\mathbf Z$, un $\mathscr O_Y$-Module quasi-cohérent
+$\mathfrak{Tor}_n^S((f_i)_{i\in I};
+(\mathscr P_\bullet^{(i)})_{i\in I})$,
+ces Modules formant un $\partial$-foncteur covariant en chacun des complexes
+$\mathscr P_\bullet^{(i)}$; en outre, ce foncteur est l'aboutissement commun
+de six foncteurs spectraux
+${}^{(t)}\mathscr E((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})$.
+Nous laissons au lecteur le soin de répéter pour ce cas général les
+définitions et les raisonnements faits ci-dessus pour $I=\{1,2\}$. Notons
+simplement que lorsque $I$ se réduit à un seul élément, on retrouve
+l'hypercohomologie $\mathscr H^\bullet(f,\mathscr P_\bullet)$ définie dans
+(6.2.7) (comme on l'a déjà observé dans (6.7.4)). Lorsque $I$ est l'intervalle
+$1\leq i\leq m$ de $\mathbf N$, nous écrirons
+\[
+  \mathfrak{Tor}_n^S
+  (f_1,\ldots,f_m;
+   \mathscr P_\bullet^{(1)},\ldots,\mathscr P_\bullet^{(m)})
+  \quad\text{pour}\quad
+  \mathfrak{Tor}_n^S
+  ((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I}).
+\]
+\end{env}
+
+\begin{proposition}[6.7.12]
+Les notations étant celles de (6.7.11), soit $J$ une partie de $I$ telle que,
+pour $i\in I-J$, on ait $X^{(i)}=Y^{(i)}=S$, $f_i$ étant réduit à l'identité,
+et $\mathscr P_\bullet^{(i)}$ égal au complexe réduit au terme de degré $0$
+égal à $\mathscr O_S$. Il y a alors un isomorphisme canonique de
+$\partial$-foncteurs
+\[
+  \mathfrak{Tor}_\bullet^S
+  ((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})
+  \xrightarrow{\sim}
+  \mathfrak{Tor}_\bullet^S
+  ((f_i)_{i\in J};(\mathscr P_\bullet^{(i)})_{i\in J}).
+  \tag{6.7.12.1}\label{III.6.7.12.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+On peut se borner à définir cet isomorphisme lorsque $S$ et les $Y^{(i)}$
+sont affines, le recollement se faisant comme d'ordinaire. Pour $i\in I-J$,
+on peut prendre le recouvrement $\mathfrak U^{(i)}$ formé du seul ensemble
+$S$, et alors
+$L_{\bullet\bullet}^{(i)}=C^\bullet(\mathfrak U^{(i)},
+\mathscr P_\bullet^{(i)})$ est réduit à son seul terme de degrés $(0,0)$,
+égal à $\Gamma(S,\mathscr O_S)=A(S)$; l'isomorphisme (6.7.12.1) est alors
+évident.
+\end{proof}
+
+\begin{remark}[6.7.13]
+Les notations étant celles de (6.7.3), considérons le $S$-isomorphisme
+canonique
+$Y^{(1)}\times_S Y^{(2)}\to Y^{(2)}\times_S Y^{(1)}$ (I, 3.3.5); alors
+l'image par cet isomorphisme de
+$\mathfrak{Tor}_\bullet^S(f_1,f_2;
+\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)})$ est
+$\mathfrak{Tor}_\bullet^S(f_2,f_1;
+\mathscr P_\bullet^{(2)},\mathscr P_\bullet^{(1)})$; la question étant
+locale, on est ramené au cas envisagé dans (6.6.2), et si on désigne par
+$M_{\bullet\bullet\bullet}^{(i)}$ une résolution projective de
+Cartan-Eilenberg de $L_{\bullet\bullet}^{(i)}$ ($i=1,2$), l'isomorphisme
+considéré transforme
+$M_{\bullet\bullet\bullet}^{(1)}\otimes_A
+M_{\bullet\bullet\bullet}^{(2)}$ en
+$M_{\bullet\bullet\bullet}^{(2)}\otimes_A
+M_{\bullet\bullet\bullet}^{(1)}$, d'où notre assertion en considérant
+l'homologie des complexes simples associés à ces tricomplexes.
+\end{remark}
+
+\subsection{Les suites spectrales d'associativité des hypertor globaux.}
+
+\begin{env}[6.8.1]
+Les hypothèses et notations étant celles de (6.7.11) (et en particulier les
+$\mathscr P_\bullet^{(i)}$ étant supposés limités inférieurement, supposons
+donnée une partition $(I_j)_{j\in J}$ de l'ensemble d'indices $I$; nous nous
+proposons de donner une relation d'« associativité » entre les hypertor
+$\mathfrak{Tor}_n^S((f_i)_{i\in I};(\mathscr P_\bullet^{(i)})_{i\in I})$ et
+chacun des hypertor « partiels »
+\[
+  \mathcal T_{\bullet j}
+  =\mathfrak{Tor}_\bullet^S
+  ((f_i)_{i\in I_j};(\mathscr P_\bullet^{(i)})_{i\in I_j}).
+\]
+

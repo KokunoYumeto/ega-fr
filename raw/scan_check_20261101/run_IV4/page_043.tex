@@ -1,0 +1,88 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{43}
+\end{proposition}
+
+Prouvons d'abord l'équivalence de a) et c). Par définition, pour prouver que
+$D$ est un opérateur différentiel d'ordre $\leq n$, il suffit de montrer qu'il
+en est ainsi pour la restriction
+$D|U:\mathscr{F}|U\to\mathscr{G}|U$ à tout ouvert affine $U$ de $X$, et
+d'autre part la propriété c) est valable pour tout ouvert $U$ de $X$ si elle
+l'est pour tout ouvert affine. On peut donc se borner au cas où
+$S=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ sont affines. En
+vertu de (16.8.2) (dont on garde les notations), la condition a) signifie
+alors que le $A$-homomorphisme $D':B\otimes_A M\to N$ tel que
+$D'(b\otimes t)=bD(t)$ s'annule dans
+$\mathfrak{I}^{n+1}(B\otimes_A M)$, ce qui, en vertu de (0, 20.4.4), équivaut
+à dire que $D'$ s'annule pour tous les éléments de la forme
+\[
+  \left(\prod_{i=1}^{n+1}(a_i\otimes1-1\otimes a_i)\right).(1\otimes t)
+\]
+où $a_i\in B$ et $t\in M$. Or, cet élément s'écrit
+\[
+  \sum_{H\subset I_{n+1}}
+  \left(\prod_{i\in H}a_i\right)\otimes
+  \left(\left(\prod_{i\notin H}a_i\right)t\right),
+\]
+et la valeur de $D'$ pour cet élément n'est autre que le premier membre de
+(16.8.8.2), ce qui prouve l'équivalence de a) et c).
+
+Prouvons maintenant l'équivalence de b) et c). Raisonnons par récurrence sur
+$n$, l'assertion étant triviale pour $n=0$. Écrivant $a_{n+1}$ au lieu de $a$
+dans la condition b), on voit, en vertu de l'hypothèse de récurrence, que la
+condition b) signifie que pour toute famille $(a_i)_{1\leq i\leq n}$ de $n$
+sections de $\mathcal{O}_X$ au-dessus de $U$ et toute section $t$ de
+$\mathscr{F}$ au-dessus de $U$, on a
+\[
+  \sum_{H'\subset I_n}(-1)^{\operatorname{Card}(H')}
+  \left(\prod_{i\in H'}a_i\right)
+  D_{a_{n+1}}\!\left(\left(\prod_{i\notin H'}a_i\right)t\right)=0.
+\]
+Mais si l'on remplace dans cette relation $D_{a_{n+1}}$ par sa définition
+(16.8.8.1), on constate aussitôt qu'on obtient, au signe près, le premier
+membre de (16.8.8.2); d'où la conclusion.
+
+\begin{proposition}[16.8.9]
+\label{IV.16.8.9}
+Si $D:\mathscr{F}\to\mathscr{G}$ est un opérateur différentiel d'ordre
+$\leq n$, et $D':\mathscr{G}\to\mathscr{H}$ un opérateur différentiel d'ordre
+$\leq n'$, alors $D'\circ D:\mathscr{F}\to\mathscr{H}$ est un opérateur
+différentiel d'ordre $\leq n+n'$.
+\end{proposition}
+
+Par hypothèse, on peut écrire $D=u\circ d_{X/S,\mathscr{F}}^n$ et
+$D'=v\circ d_{X/S,\mathscr{G}}^{n'}$, où
+$u:\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}\to\mathscr{G}$ et
+$v:\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}\to\mathscr{H}$
+sont des $\mathcal{O}_X$-homomorphismes. Tout revient à montrer que
+l'homomorphisme composé de faisceaux de groupes additifs
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^n}
+      &\mathscr{P}_{X/S}^n\otimes_{\mathcal{O}_X}\mathscr{F}
+        \ar[r]^-u
+      &\mathscr{G}\ar[r]^-{d_{X/S,\mathscr{G}}^{n'}}
+      &\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}
+  }
+\]
+se factorise en
+\[
+  \xymatrix{
+    \mathscr{F}\ar[r]^-{d_{X/S,\mathscr{F}}^{n+n'}}
+      &\mathscr{P}_{X/S}^{n+n'}\otimes_{\mathcal{O}_X}\mathscr{F}
+        \ar[r]^-w
+      &\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{G}
+  }
+\]
+où $w$ est un $\mathcal{O}_X$-homomorphisme. Il suffira de prouver le
+
+\begin{lemma}[16.8.9.1]
+\label{IV.16.8.9.1}
+Il existe un $\mathcal{O}_X$-homomorphisme et un seul
+\[
+  \delta:\mathscr{P}_{X/S}^{n+n'}
+  \longrightarrow
+  \mathscr{P}_{X/S}^{n'}(\mathscr{P}_{X/S}^n)
+  =\mathscr{P}_{X/S}^{n'}\otimes_{\mathcal{O}_X}\mathscr{P}_{X/S}^n
+  \tag{16.8.9.2}
+  \label{IV.16.8.9.2}
+\]

@@ -1,0 +1,86 @@
+% from ega0-14-fr.tex
+\oldpage[0\textsubscript{IV-1}]{9}
+  \item[\rm(ii)] Pour toute partie fermée non vide $Y$ de $X$, on a
+  \[
+    \dim(Y)+\operatorname{codim}(Y,X)\leq\dim(X).
+    \tag{14.2.2.2}\label{0.14.2.2.2-fr}
+  \]
+  \item[\rm(iii)] Si $Y$, $Z$, $T$ sont trois parties fermées de $X$ telles
+  que $Y\subset Z\subset T$, on a
+  \[
+    \operatorname{codim}(Y,Z)+\operatorname{codim}(Z,T)
+    \leq\operatorname{codim}(Y,T).
+    \tag{14.2.2.3}\label{0.14.2.2.3-fr}
+  \]
+  \item[\rm(iv)] Pour qu'une partie fermée $Y$ de $X$ soit telle que
+  $\operatorname{codim}(Y,X)=0$, il faut et il suffit que $Y$ contienne une
+  composante irréductible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Les assertions (i) et (iv) sont des conséquences immédiates de la définition
+(14.2.1). Pour démontrer (ii), on peut se borner au cas où $Y$ est
+irréductible, et alors la formule résulte des définitions (14.1.1) et
+(14.2.1). Enfin, pour démontrer (iii), on peut, en vertu de la définition
+(14.2.1), se borner d'abord au cas où $Y$ est irréductible~; alors
+$\operatorname{codim}(Y,Z)=
+\sup_\alpha(\operatorname{codim}(Y,Z_\alpha))$ pour les composantes
+irréductibles $Z_\alpha$ de $Z$ contenant $Y$~; il est clair que
+$\operatorname{codim}(Y,T)\geq\operatorname{codim}(Y,Z)$, donc l'inégalité
+est vraie si $\operatorname{codim}(Y,Z)=+\infty$~; sinon, il existe un
+$\alpha$ tel que
+$\operatorname{codim}(Y,Z)=\operatorname{codim}(Y,Z_\alpha)$ et en vertu de
+(14.2.1), on peut se borner au cas où $Z$ est lui aussi irréductible~; mais
+alors l'inégalité (14.2.2.3) est conséquence évidente de la définition
+(14.2.1).
+\end{proof}
+
+\begin{proposition}[14.2.3]
+\label{0.14.2.3-fr}
+Soient $X$ un espace topologique, $Y$ une partie fermée de $X$. Pour tout
+ouvert $U$ dans $X$, on a
+\[
+  \operatorname{codim}(Y\cap U,U)\geq\operatorname{codim}(Y,X).
+  \tag{14.2.3.1}\label{0.14.2.3.1-fr}
+\]
+En outre, pour que les deux membres de (14.2.3.1) soient égaux, il faut et il
+suffit que, si $(Y_\alpha)$ est la famille des composantes irréductibles de
+$Y$ rencontrant $U$, on ait
+$\operatorname{codim}(Y,X)=
+\inf_\alpha(\operatorname{codim}(Y_\alpha,X))$.
+\end{proposition}
+
+\begin{proof}
+On sait ($0_{\mathrm I}$, 2.1.6) que $Z\mapsto\overline Z$ est une bijection
+de l'ensemble des parties fermées irréductibles de $U$ sur l'ensemble des
+parties fermées irréductibles de $X$ rencontrant $U$, et en particulier fait
+correspondre aux composantes irréductibles de $Y\cap U$ les composantes
+irréductibles de $Y$ rencontrant $U$~; si $Y_\alpha$ est une de ces
+dernières, on a donc
+$\operatorname{codim}(Y_\alpha,X)=
+\operatorname{codim}(Y_\alpha\cap U,U)$, et la proposition résulte alors de
+la définition (14.2.1).
+\end{proof}
+
+\begin{definition}[14.2.4]
+\label{0.14.2.4-fr}
+Soient $X$ un espace topologique, $Y$ une partie fermée de $X$, $x$ un point
+de $X$. On appelle \emph{codimension de $Y$ dans $X$ au point $x$} et on note
+$\operatorname{codim}_x(Y,X)$ le nombre
+$\sup_U(\operatorname{codim}(Y\cap U,U))$, où $U$ parcourt l'ensemble des
+voisinages ouverts de $x$ dans $X$.
+\end{definition}
+
+En vertu de (14.2.3), on peut aussi écrire
+\[
+  \operatorname{codim}_x(Y,X)=
+  \lim_U\bigl(\operatorname{codim}(Y\cap U,U)\bigr)
+  \tag{14.2.4.1}\label{0.14.2.4.1-fr}
+\]
+la limite étant prise suivant l'ensemble filtrant décroissant des voisinages
+ouverts de $x$ dans $X$. On notera que l'on a
+\[
+  \operatorname{codim}_x(Y,X)=+\infty\quad\text{si}\quad x\in X-Y.
+\]
+

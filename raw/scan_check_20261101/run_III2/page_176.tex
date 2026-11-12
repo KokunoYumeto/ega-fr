@@ -1,0 +1,106 @@
+% from ega3-7-fr.tex
+\oldpage[III]{176}
+additif
+\[
+  \rho_*:M\longmapsto M_{[\rho]}
+\]
+de la catégorie $\mathbf{Ab}_B$ des $B$-modules à gauche dans la catégorie
+$\mathbf{Ab}_A$ des $A$-modules. Par composition, on en déduit un foncteur
+\[
+  T_{(B)}:
+  \mathbf{Ab}_B
+  \xrightarrow{\rho_*}
+  \mathbf{Ab}_A
+  \xrightarrow{T}
+  \mathbf{Ab},
+\]
+évidemment covariant et additif, que nous noterons aussi $T^{(B)}$ (pour des
+raisons typographiques) ou $T\otimes_A B$, et que nous dirons obtenu à partir
+de $T$ par extension des scalaires de $A$ à $B$. Bien entendu, si $B$ est
+commutative, on peut considérer $T_{(B)}$ comme un foncteur de
+$\mathbf{Ab}_B$ dans elle-même (7.1.2). Lorsque $B$ est commutative, et $C$
+une $B$-algèbre, on voit aussitôt que
+\[
+  T_{(C)}=(T_{(B)})_{(C)};
+\]
+il est immédiat que l'extension des scalaires est fonctorielle et additive en
+$T$; en outre, lorsque $T$ commute aux limites inductives ou aux sommes
+directes (resp. est exact à gauche, exact à droite, exact), il en est de même
+de $T_{(B)}$: en effet, $\rho_*$ est exact et commute aux limites inductives
+et aux sommes directes.
+\end{env}
+
+\begin{env}[7.1.4]
+Supposons toujours $A$ commutatif, et soit
+$T:\mathbf{Ab}_A\to\mathbf{Ab}_A$ un foncteur covariant additif
+$A$-linéaire, commutant aux limites inductives. Alors, pour toute partie
+multiplicative $S$ de $A$ et tout $A$-module $M$, on a un isomorphisme
+canonique fonctoriel de $A$-modules
+\[
+  T(S^{-1}M)\xrightarrow{\sim}S^{-1}T(M).
+  \tag{7.1.4.1}\label{III.7.1.4.1.fr}
+\]
+Supposons en effet d'abord que $S$ soit l'ensemble des puissances $f^n$
+$(n\geqslant0)$ d'un élément $f\in A$. On sait alors que
+\[
+  M_f=\varinjlim M_n,
+\]
+où $(M_n,\varphi_{nm})$ est le système inductif des $A$-modules $M_n=M$,
+avec
+\[
+  \varphi_{nm}:z\longmapsto f^{\,n-m}z
+  \qquad(0_{\mathrm I}, 1.6.1);
+\]
+d'où dans ce cas l'isomorphisme (7.1.4.1) en vertu de l'hypothèse sur $T$; si
+ensuite $S$ est quelconque, $S^{-1}M$ est limite inductive des $M_f$, pour
+$f\in S$ ($0_{\mathrm I}$, 1.4.5) et l'on conclut de la même façon. En outre,
+la fonctorialité de l'isomorphisme (7.1.4.1) montre que c'est un isomorphisme
+de $S^{-1}A$-modules, et qu'on peut donc écrire, à un isomorphisme canonique
+près
+\[
+  T_{(S^{-1}A)}(S^{-1}M)
+  =
+  S^{-1}T(M)
+  =
+  T(S^{-1}M).
+  \tag{7.1.4.2}\label{III.7.1.4.2.fr}
+\]
+Lorsque $S=A-\mathfrak p$ est le complémentaire d'un idéal premier
+$\mathfrak p$ de $A$, on écrit $T_{\mathfrak p}$ au lieu de
+$T_{(A_{\mathfrak p})}$.
+\end{env}
+
+\begin{proposition}[7.1.5]
+Sous les hypothèses de (7.1.4), si $T_{\mathfrak m}$ est exact à gauche
+(resp. exact à droite, exact) pour tout idéal maximal $\mathfrak m$ de $A$,
+$T$ est exact à gauche (resp. exact à droite, exact).
+\end{proposition}
+
+\begin{proof}
+On sait en effet que lorsque deux sous-modules $N$, $P$ d'un $A$-module $M$
+sont tels que $N_{\mathfrak m}=P_{\mathfrak m}$ pour tout idéal maximal
+$\mathfrak m$ de $A$, on a $N=P$ (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S~3, no~3, th.~1).
+\end{proof}
+
+\subsection{Caractérisations du foncteur produit tensoriel}
+\label{subsection:III.7.2.fr}
+
+\begin{env}[7.2.1]
+Soient $A$ un anneau (non nécessairement commutatif), $M$ (resp. $N$) un
+$A$-module à gauche (resp. à droite), $P$ un $\mathbf Z$-module. Rappelons
+que la donnée d'un $\mathbf Z$-homomorphisme
+\[
+  v:N\otimes_A M\longrightarrow P
+\]
+équivaut à la donnée d'une application $\mathbf Z$-bilinéaire
+\[
+  u:N\times M\longrightarrow P
+\]
+telle que
+\[
+  u(ta,x)=u(t,ax)
+  \qquad\text{pour }a\in A,\ t\in N,\ x\in M,
+\]
+les deux applications étant reliées par $v(t\otimes x)=u(t,x)$. D'autre part,
+la donnée de $u$ équivaut à celle d'un

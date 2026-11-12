@@ -1,0 +1,77 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{191}
+
+Reste à prouver que c) entraîne a). Raisonnons par récurrence sur
+$n=\dim(A)$, le théorème étant trivial pour $n=0$; on peut en outre se
+borner au cas où $A=B$ est intègre. Procédons en deux étapes, $n$ étant
+$\geqslant1$.
+
+\medskip\noindent
+I) \emph{Supposons d'abord que $A$ vérifie $(\mathrm S_2)$.} --- Posons
+$X=\operatorname{Spec}(A)$, $A'=\widehat A$,
+$X'=\operatorname{Spec}(A')$ et soit $u:X'\to X$ le morphisme canonique;
+il s'agit de montrer que pour tout élément
+$x'\in\operatorname{Ass}(\mathscr O_{X'})$, on a
+$\dim(\overline{\{x'\}})=n$. Soit $f\neq0$ un élément de l'idéal maximal
+de $A$, et posons $C=A/fA$; on sait (5.7.6) que $A/fA$ vérifie
+$(\mathrm S_1)$; en outre, comme les idéaux premiers minimaux de $A$ parmi
+ceux qui contiennent $f$ sont de hauteur 1 en vertu du Hauptidealsatz, et
+que $C$ est caténaire, $C=A/fA$ est \emph{strictement équidimensionnel} et
+$\dim(C)=n-1$. On a
+$\widehat C=C\otimes_AA'=A'/fA'$, et $f$ est $A'$-régulier par platitude
+(0$_{\mathrm I}$, 6.3.4); si l'on pose
+$Y'=V(fA')=\operatorname{Spec}(\widehat C)$, alors, pour tout point maximal
+$y'$ de $Y'\cap\overline{\{x'\}}$, on a
+$y'\in\operatorname{Ass}(\mathscr O_{Y'})$ en vertu de (3.4.3); d'autre
+part, on a $y'\neq x'$ car $u(x')$ est le point générique de $X$ (3.3.2)
+et l'on a $u(y')\in V(fA)$. On en conclut (5.1.8) que
+\begin{equation}
+\dim(\overline{\{y'\}})=\dim(\overline{\{x'\}})-1.
+\tag{7.2.5.1}
+\label{IV.2.eq.7.2.5.1-fr}
+\end{equation}
+
+Mais l'anneau quotient $C=A/fA$ vérifie aussi l'hypothèse c) de l'énoncé
+(5.6.1 et 5.11.7, (ii)); en vertu de l'hypothèse de récurrence, on a
+$\dim(\overline{\{y'\}})=\dim(C)=n-1$; la conclusion
+$\dim(\overline{\{x'\}})=n$ résulte donc dans ce cas de (7.2.5.1).
+
+\medskip\noindent
+II) \emph{Cas général.} --- Comme par hypothèse l'anneau $A^{(1)}$ est une
+$A$-algèbre finie, il vérifie $(\mathrm S_2)$ en vertu de (5.10.17, (i));
+il en est de même de chacun de ses anneaux locaux
+$(A^{(1)})_{\mathfrak n}$ en un idéal maximal $\mathfrak n$ et de plus,
+comme $A$ est universellement caténaire, les anneaux
+$(A^{(1)})_{\mathfrak n}$ (en nombre fini) sont tous de \emph{dimension}
+$n$ (5.6.10); en outre, ces anneaux vérifient l'hypothèse c) de l'énoncé
+(5.6.1 et 5.11.7, (ii)). On sait que le complété de $A^{(1)}$, égal à
+$\widehat A\otimes_AA^{(1)}$, est composé direct des complétés des anneaux
+locaux $(A^{(1)})_{\mathfrak n}$. Posons
+$X_1=\operatorname{Spec}(A^{(1)})$,
+$X'_1=\operatorname{Spec}(\widehat{A^{(1)}})=X'\times_XX_1$; pour tout
+$x'_1\in\operatorname{Ass}(\mathscr O_{X'_1})$, il résulte de ce qui
+précède et du cas I) que l'on a $\dim(\overline{\{x'_1\}})=n$. Soit
+$u_1=u_{(X_1)}:X'_1\to X_1$ le morphisme canonique; comme $A$ et $A^{(1)}$
+ont même corps des fractions, l'image réciproque du point générique $x$ de
+$X$ par la projection $X_1\to X$ se réduit au point générique $x_1$ de
+$X_1$, l'image réciproque par la projection $X'_1\to X'$ de la fibre
+$u^{-1}(x)$ est la fibre $u_1^{-1}(x_1)$ et cette projection induit un
+isomorphisme du préschéma $u_1^{-1}(x_1)$ sur $u^{-1}(x)$. Cela étant, les
+points de $\operatorname{Ass}(\mathscr O_{X'})$ (resp.
+$\operatorname{Ass}(\mathscr O_{X'_1})$) sont les points génériques des
+cycles premiers associés à $u^{-1}(x)$ (resp. $u_1^{-1}(x_1)$) (3.3.1).
+Pour tout $x'\in\operatorname{Ass}(\mathscr O_{X'})$, il y a donc un
+$x'_1\in\operatorname{Ass}(\mathscr O_{X'_1})$ au-dessus de $x'$, et si
+$Z'$ (resp. $Z'_1$) est le sous-préschéma fermé réduit de $X'$ (resp.
+$X'_1$) ayant $\overline{\{x'\}}$ (resp. $\overline{\{x'_1\}}$) pour
+espace sous-jacent, la projection $Z'_1\to Z'$ est un morphisme fini et
+surjectif; on en conclut (5.4.2) que
+$\dim(\overline{\{x'\}})=\dim(\overline{\{x'_1\}})=n$. C.Q.F.D.
+\end{proof}
+
+\begin{definition}[7.2.6]
+\label{IV.2.s7.2.6-fr}
+Lorsqu'un anneau local noethérien $A$ vérifie les conditions équivalentes de
+(7.2.5), on dit qu'il est \emph{strictement formellement caténaire}.
+\end{definition}
+

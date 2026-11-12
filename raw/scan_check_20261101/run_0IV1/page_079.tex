@@ -1,0 +1,103 @@
+% from ega0-19-fr.tex
+\oldpage[0\textsubscript{IV-1}]{79}
+
+\begin{proof}
+On vient de voir que la condition est suffisante. Inversement, supposons $M$
+formellement projectif et soit $(\mathfrak J_\lambda)$ un système fondamental
+d'idéaux ouverts dans $A$. Pour tout $\lambda$, soient $P$ un
+$(A/\mathfrak J_\lambda)$-module libre et
+$u:P\to M/\mathfrak J_\lambda M$ un
+$(A/\mathfrak J_\lambda)$-homomorphisme surjectif. Il existe donc un
+$\mathfrak J_\mu\subset\mathfrak J_\lambda$ tel que l'homomorphisme canonique
+$M/\mathfrak J_\mu M\to M/\mathfrak J_\lambda M$ se factorise en
+\[
+  M/\mathfrak J_\mu M\xrightarrow{w}P\xrightarrow{u}M/\mathfrak J_\lambda M;
+\]
+mais comme
+$w(\mathfrak J_\lambda(M/\mathfrak J_\mu M))\subset\mathfrak J_\lambda P=0$,
+$w$ se factorise en $M/\mathfrak J_\lambda M\xrightarrow{v}P$, et il est
+clair que $u\circ v$ est l'identité dans $M/\mathfrak J_\lambda M$, ce qui
+prouve que ce $(A/\mathfrak J_\lambda)$-module est projectif.
+\end{proof}
+
+\begin{proposition}[19.2.5]
+\label{0.19.2.5-fr}
+Soient $A$ un anneau topologique, $M$ un $A$-module topologique.
+\begin{enumerate}
+  \item[(i)] Pour que $M$ soit formellement projectif (resp. strictement
+  formellement projectif), il faut et il suffit que le $\hat A$-module
+  topologique $\hat M$ le soit.
+  \item[(ii)] Soit $A'$ une $A$-algèbre topologique. Si $M$ est formellement
+  projectif (resp. strictement formellement projectif), alors
+  $M\otimes_A A'$ (muni de la topologie produit tensoriel) est un $A'$-module
+  topologique formellement projectif (resp. strictement formellement
+  projectif).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Il suffit de remarquer que lorsque $\mathfrak J$ (resp. $V$)
+  parcourt l'ensemble des idéaux ouverts de $A$ (resp. l'ensemble des
+  sous-modules ouverts de $M$), le séparé complété $\hat{\mathfrak J}$
+  (resp. $\hat V$) parcourt l'ensemble des idéaux ouverts de $\hat A$
+  (resp. l'ensemble des sous-modules ouverts de $\hat M$), et
+  $\hat A/\hat{\mathfrak J}=A/\mathfrak J$ (resp.
+  $\hat M/\hat V=M/V$) à un isomorphisme canonique près~; comme la notion
+  de module formellement projectif (resp. strictement formellement projectif)
+  ne fait intervenir que les $A/\mathfrak J$ et les $M/V$, on en déduit
+  aussitôt (i).
+  \item[(ii)] Supposons d'abord $M$ formellement projectif et posons
+  $M'=M\otimes_A A'$~; soient $\mathfrak J'$ un idéal ouvert de $A'$, $P'$,
+  $Q'$ deux $(A'/\mathfrak J')$-modules discrets, $u':P'\to Q'$ un
+  $A'$-homomorphisme surjectif, $v':M'\to Q'$ un $A'$-homomorphisme continu.
+  Il y a un idéal ouvert $\mathfrak J$ de $A$ tel que
+  $\mathfrak JA'\subset\mathfrak J'$, donc $P'$ et $Q'$ sont aussi des
+  $(A/\mathfrak J)$-modules discrets. Si l'on considère le
+  $A$-homomorphisme composé $v:M\xrightarrow{j}M'\xrightarrow{v'}Q'$ qui est
+  continu, l'hypothèse entraîne qu'il existe un $A$-homomorphisme continu
+  $w:M\to P'$ tel que $v=u'\circ w$~; mais comme $P'$ est un $A'$-module
+  topologique, $w$ se factorise en
+  $M\xrightarrow{j}M'\xrightarrow{w'}P'$, où $w'$ est un $A'$-homomorphisme
+  continu, et comme $v'\circ j=(u'\circ w')\circ j$, on en conclut que
+  $v'=u'\circ w'$.
+
+  Supposons ensuite que $M$ soit strictement formellement projectif~; soit
+  $(\mathfrak J_\lambda)$ (resp. $(V_\lambda)$) un système fondamental
+  d'idéaux ouverts (resp. de sous-modules ouverts) dans $A$ (resp. $M$) tel
+  que $(M/V_\lambda)$ soit un $(A/\mathfrak J_\lambda)$-module projectif,
+  et soit $(\mathfrak J'_\mu)$ un système fondamental d'idéaux ouverts dans
+  $A'$. On a un système fondamental de voisinages de $0$ dans $M'$ en prenant
+  les sous-modules
+  \[
+    \operatorname{Im}(M\otimes_A\mathfrak J'_\mu)
+    +\operatorname{Im}(V_\lambda\otimes_A A')=W_{\lambda\mu},
+  \]
+  où $\lambda$ et $\mu$ sont tels que
+  $\mathfrak J_\lambda A'\subset\mathfrak J'_\mu$. Comme
+  \[
+    (M\otimes_A A')/W_{\lambda\mu}
+    =(M/V_\lambda)\otimes_{A/\mathfrak J_\lambda}
+      (A'/\mathfrak J'_\mu)
+  \]
+  et que $(M/V_\lambda)$ est un
+  $(A/\mathfrak J_\lambda)$-module projectif, $M'/W_{\lambda\mu}$
+  est un $(A'/\mathfrak J'_\mu)$-module projectif.
+\end{enumerate}
+\end{proof}
+
+\subsection{Algèbres formellement lisses}
+\label{subsection:0.19.3-fr}
+
+\begin{definition}[19.3.1]
+\label{0.19.3.1-fr}
+Soient $A$ un anneau topologique, $B$ une $A$-algèbre topologique. On dit que
+$B$ est une $A$-algèbre \emph{formellement lisse} si, pour toute
+$A$-algèbre topologique discrète $C$ et tout idéal nilpotent $\mathfrak J$ de
+$C$, tout $A$-homomorphisme continu $u:B\to C/\mathfrak J$ se factorise en
+\[
+  B\xrightarrow{v}C\xrightarrow{\varphi}C/\mathfrak J,
+\]
+où $v$ est un homomorphisme continu et $\varphi$ l'homomorphisme canonique.
+\end{definition}
+

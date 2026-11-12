@@ -1,0 +1,28 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{81}
+
+que $g$ est une immersion ouverte, et puisque $g$ est radiciel, il suffira, en vertu de (17.9.1), de prouver que $g$ est étale. En outre, comme l'ensemble des points où $g$ est étale est ouvert et que $X$ est un préschéma de Jacobson (10.4.7), il suffira de montrer que $g$ est étale en tout point \emph{fermé} $z$ de $X$ (10.3.1). Posons $z'=g(z)$; il résulte de (10.4.11.1, (i)) que $z'$ est aussi un point fermé de $X$ et puisque $g$ est un monomorphisme, l'application $k(z')\to k(z)$ déduite de $g$ est un \emph{isomorphisme}. Pour que $g$ soit étale au point $z$, il faut et il suffit donc que l'homomorphisme canonique $\widehat{\sh{O}}_{X,z'}\to\widehat{\sh{O}}_{X,z}$ soit bijectif (17.6.3, $e''$)). Nous allons pour cela prouver que pour tout entier $n$, l'homomorphisme canonique $\sh{O}_{X,z'}/\mathfrak m_{z'}^{n+1}\to\sh{O}_{X,z}/\mathfrak m_z^{n+1}$ est bijectif, d'où résultera aussitôt la conclusion. On peut supposer que $z$ appartient à l'ensemble fini $T_{p,d}$ des points fermés $t$ de $X$ tels que $k(t)$ soit une extension de $\mathbb{F}_p$ dont le degré divise $d$; auquel cas il en est de même de $z'$. Désignons par $\sh{J}$ l'idéal cohérent de $\sh{O}_X$ tel que $\sh{J}_x=\sh{O}_x$ pour $x\notin T_{p,d}$, et $\sh{J}_x=\mathfrak m_x^{n+1}$ pour $x\in T_{p,d}$. Soient $T_{p,d,n}$ le sous-préschéma fermé de $X$ défini par $\sh{J}$, $j:T_{p,d,n}\to X$ l'injection canonique; le morphisme composé $g\circ j:T_{p,d,n}\to X$ applique l'ensemble $T_{p,d}$ dans lui-même, et pour tout $x\in T_{p,d}$, l'homomorphisme $\sh{O}_{X,g(x)}\to\sh{O}_{X,x}/\mathfrak m_x^{n+1}$ se factorise en
+\[
+\sh{O}_{X,g(x)}\to\sh{O}_{X,g(x)}/\mathfrak m_{g(x)}^{n+1}\to\sh{O}_{X,x}/\mathfrak m_x^{n+1}.
+\]
+Donc (I, 4.9), il existe un unique endomorphisme $g'$ de $T_{p,d,n}$ tel que $j\circ g'=g\circ j$. Comme $j$ est un monomorphisme, et qu'il en est de même de $g$ par hypothèse, on en déduit que $g'$ est aussi un monomorphisme, et la proposition sera prouvée si l'on montre que $g'$ est un \emph{automorphisme} de $T_{p,d,n}$. Or, pour tout $x\in T_{p,d,n}$, on a vu que $k(x)$ est un corps fini, et comme $\sh{O}_{X,x}$ est noethérien, chacun des $\mathfrak m_x^h/\mathfrak m_x^{h+1}$ est un $k(x)$-espace vectoriel de rang fini; d'où l'on conclut aussitôt que l'anneau local $\sh{O}_{X,x}/\mathfrak m_x^{n+1}$ de $T_{p,d,n}$ au point $x$ a un nombre \emph{fini} d'éléments, et \emph{a fortiori} est un $\mathbb{Z}$-module de type fini. Comme $T_{p,d,n}$ est somme des préschémas $\Spec(\sh{O}_{X,x}/\mathfrak m_x^{n+1})$ en nombre fini, c'est un $\mathbb{Z}$-préschéma \emph{fini}; l'endomorphisme $g'$ est donc lui aussi \emph{fini} (II, 6.1.5, (v)), donc propre. Mais un monomorphisme propre est une \emph{immersion fermée} (8.11.5); si $T_{p,d,n}=\Spec(B)$, $g'$ correspond donc à un endomorphisme surjectif $\varphi:B\to B$ de l'anneau $B$. Or, l'ensemble $B$ est fini, donc $\varphi$ est nécessairement bijectif. C.Q.F.D.
+
+\subsection{Dimension relative d'un préschéma lisse sur un autre}
+\EGAReaderTarget{ega4.c04.subsec.17-10}{subsection:IV.17.10}
+
+\begin{definition}[17.10.1]
+\EGAReaderTarget{ega4.c04.def.17-10-1}{IV.17.10.1}
+Soit $f:X\to Y$ un morphisme localement de type fini. On appelle \emph{dimension relative de $f$ au point $x\in X$} (ou \emph{dimension relative de $X$ sur $Y$ au point $x$}) et l'on note $\dim_x f$ l'entier positif $\dim_x(f^{-1}(f(x)))$.
+\end{definition}
+
+Dire que $f$ est \emph{quasi-fini} au point $x$ (Err$_{\mathrm{III}}$, 20) équivaut donc à dire que $\dim_x f=0$. On a vu (13.1.3) que la fonction $x\mapsto\dim_x f$ est semi-continue supérieurement. On notera que, même lorsque le morphisme $f$ a la propriété $(S_1)$ (autrement dit (6.8.1) est plat et tel que ses fibres n'aient pas de cycle premier associé immergé), la fonction $x\mapsto\dim_x f$ n'est pas nécessairement continue, comme le montre l'exemple où $Y=\Spec(k)$, où $k$ est un corps, et $X=\Spec(k[U,V,W]/\mathfrak p\mathfrak q)$, où $\mathfrak p=(W)$ et $\mathfrak q=(U)+(V-W)$, idéaux premiers de $k[U,V,W]$ ($X$ étant donc la réunion, dans l'espace à 3 dimensions, d'un plan et d'une droite non parallèle à ce plan).
+
+Dire qu'un morphisme localement de présentation finie $f:X\to Y$ est étale au point $x\in X$ signifie encore que $f$ est lisse au point $x$ et que $\dim_x f=0$ (17.6.1).
+
+\begin{proposition}[17.10.2]
+\label{IV.17.10.2}
+Soit $f:X\to Y$ un morphisme lisse. Pour tout $x\in X$, le $\sh{O}_X$-Module localement libre $\Omega_f^1$ (17.2.3) a un rang en $x$ égal à $\dim_x f$ (ce qui entraîne que $x\mapsto\dim_x f$ est une fonction continue dans $X$).
+\end{proposition}
+
+En effet, si $y=f(x)$, $X_y=f^{-1}(y)$ est lisse sur $k(y)$, et si $f_y:X_y\to\Spec(k(y))$ est le morphisme structural, on a $\Omega_{f_y}^1=\Omega_f^1\otimes_{\sh{O}_X}\sh{O}_{X_y}$ (16.4.5); on peut donc se borner au cas où $Y=\Spec(k)$ est le spectre d'un corps; en outre, en vertu de (16.4.5) et (17.7.1), on peut remplacer $k$ par une extension algébriquement close, autrement dit
+

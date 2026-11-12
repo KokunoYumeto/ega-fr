@@ -1,0 +1,106 @@
+% from ega3-7-fr.tex
+\oldpage[III]{183}
+Par récurrence sur la longueur de $E$, cela prouve déjà la première assertion;
+en outre, les deux membres de (7.3.5.5) ne peuvent être égaux que si
+\[
+  \operatorname{long}\operatorname{Im}(F(u))=\operatorname{long}F(E')
+\]
+(ce qui équivaut à
+$\operatorname{long}\operatorname{Ker}(F(u))=0$, ou
+$\operatorname{Ker}(F(u))=0$) et
+\[
+  \operatorname{long}\operatorname{Im}(F(v))=\operatorname{long}F(E'')
+\]
+(ce qui équivaut à
+$\operatorname{long}\operatorname{Coker}(F(v))=0$, ou
+$\operatorname{Coker}(F(v))=0$).
+\end{proof}
+
+Notons maintenant que si $M$ est un $A$-module de longueur finie ($A$ étant
+commutatif), les quotients d'une suite de Jordan-Hölder de $M$ sont
+nécessairement isomorphes au $A$-module $k$, donc on déduit de (7.3.5.4), par
+récurrence sur la longueur de $M$
+\[
+  \operatorname{long}T_p(M)\leq d\mathbin{.}\operatorname{long}(M).
+  \tag{7.3.5.6}\label{III.7.3.5.6.fr}
+\]
+En outre, il résulte de (7.3.5.3) que si $T_p$ est exact, on a l'égalité
+(7.3.5.1); donc la condition $a)$ de (7.3.3) entraîne $i)$; il est clair que
+$i)$ entraîne $j)$, et il reste à prouver le
+
+\begin{lemma}[7.3.5.7]
+La relation
+\[
+  \operatorname{long}T_p(A)=d\mathbin{.}\operatorname{long}A
+\]
+entraîne que $T_p(\varepsilon)$ est un épimorphisme et que $T_p(A)$ est un
+$A$-module plat.
+\end{lemma}
+
+\begin{proof}
+En effet, partant de la suite exacte
+\[
+  0\longrightarrow\mathfrak m\longrightarrow A\longrightarrow k
+  \longrightarrow0,
+\]
+il résulte de (7.3.5.4) et (7.3.5.6) que l'on a
+\[
+  \operatorname{long}T_p(A)
+  \leq
+  \operatorname{long}T_p(\mathfrak m)+\operatorname{long}T_p(k)
+  \leq
+  d\bigl(\operatorname{long}\mathfrak m+\operatorname{long}k\bigr)
+  =d\mathbin{.}\operatorname{long}A
+\]
+et que l'égalité ne peut avoir lieu (7.3.5.3) que si la suite
+\[
+  0\longrightarrow T_p(\mathfrak m)\longrightarrow T_p(A)
+  \longrightarrow T_p(k)\longrightarrow0
+  \tag{7.3.5.8}\label{III.7.3.5.8.fr}
+\]
+est exacte. En vertu de (7.2.7) et (7.2.5), $T_p$ est isomorphe à un foncteur
+$M\mapsto N\otimes_A M$, et l'exactitude de la suite (7.3.5.8) montre, en vertu
+de la suite exacte des $\operatorname{Tor}$, que l'on a
+$\operatorname{Tor}_1^A(N,k)=0$. On en conclut que $N=T_p(A)$ est un
+$A$-module plat (0, 10.1.3).
+\end{proof}
+
+\begin{lemma}[7.3.6]
+Soient $A$ un anneau, $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. Supposons
+$T_p$ et $T_{p+1}$ définis, et $T_p$ exact à gauche. Pour que $T_{p+1}$ soit
+exact, il faut et il suffit que $T_{p+1}(A_s)$ soit un $A$-module à droite
+plat.
+\end{lemma}
+
+\begin{proof}
+En effet, on sait d'après (7.3.1) que l'homomorphisme canonique
+\[
+  T_{p+1}(A_s)\otimes_A M\longrightarrow T_{p+1}(M)
+\]
+est un isomorphisme de foncteurs; il suffit d'appliquer la définition d'un
+$A$-module plat.
+\end{proof}
+
+\begin{proposition}[7.3.7]
+Soient $A$ un anneau, $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. On suppose
+qu'il existe $i_0$ tel que $T_i$ soit exact pour $i\leq i_0$. Alors, pour tout
+entier $p>i_0$, les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_q$ est exact pour $q\leq p$.
+  \item[b)] $T_q(A_s)$ est un $A$-module à droite plat pour $q\leq p$.
+  \item[c)] Pour tout $A$-module $M$, l'homomorphisme canonique
+    \[
+      T_q(A_s)\otimes_A M\longrightarrow T_q(M)
+    \]
+    est surjectif pour $q\leq p+1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence de $a)$ et $b)$ résulte de (7.3.6) par récurrence sur $q$,
+puisque $T_{i_0}$ est exact par hypothèse; l'équivalence de $a)$ et $c)$
+résulte de l'équivalence des conditions $a)$ et $e')$ dans (7.3.3).
+\end{proof}
+

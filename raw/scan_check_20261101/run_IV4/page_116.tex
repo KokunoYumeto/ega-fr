@@ -1,0 +1,33 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{116}
+
+et comme $L_n=L_{n+1}/\mathfrak J^{n+1}L_{n+1}$ et $M_n=M_{n+1}/\mathfrak J^{n+1}M_{n+1}$, les flèches verticales dans le diagramme commutatif
+\[
+\xymatrix{
+0\ar[r] & N_{n+1}\ar[r]^{v_{n+1}}\ar[d] & L_{n+1}\ar[r]^{u_{n+1}}\ar[d] & M_{n+1}\ar[r]\ar[d] & 0\\
+0\ar[r] & N_n\ar[r]_{v_n} & L_n\ar[r]_{u_n} & M_n\ar[r] & 0
+}
+\]
+sont toutes trois surjectives. Or on a $M=\varprojlim M_n$ et $L=A^r=\varprojlim L_n$; si l'on pose $N=\varprojlim N_n$, $u=\varprojlim u_n$, $v=\varprojlim v_n$, on a, en vertu de ($0_{\mathrm{III}}$, 13.2.2), la suite exacte
+\begin{equation}
+  0\longrightarrow N\xrightarrow{v}L\xrightarrow{u}M\longrightarrow 0.
+  \tag{18.3.2.2}\label{IV.18.3.2.2}
+\end{equation}
+En outre, comme pour tout $n$, $v_n$ est inversible à gauche et que $M_n$ est un $A_n$-module projectif, il résulte de (0, 19.1.8) que la suite exacte (18.3.2.2) est scindée, ce qui prouve le lemme.
+
+Cela étant, montrons d'abord que le foncteur de l'énoncé de (18.3.2) est \emph{pleinement fidèle}. Posons, comme dans le lemme, $A_n=A/\mathfrak J^{n+1}$; soient $B$, $C$ deux $A$-algèbres finies et étales, et posons, pour tout $n$, $B_n=B\otimes_A A_n$, $C_n=C\otimes_A A_n$; en vertu de (18.3.1) et (18.3.2.1), $B$ et $C$ sont séparés et complets pour la topologie $\mathfrak J$-pré-adique, et l'on a $B=\varprojlim B_n$, $C=\varprojlim C_n$; en outre tout homomorphisme de $A$-algèbres $u:B\to C$ est continu pour les topologies $\mathfrak J$-pré-adiques, et donne donc un système projectif d'homomorphismes de $A_n$-algèbres $u_n=u\otimes 1:B_n\to C_n$, dont il est la limite projective; la réciproque étant évidente, on a donc une bijection canonique
+\[
+  \Hom_{A\text{-alg.}}(B,C)\xrightarrow{\sim}\varprojlim\Hom_{A_n\text{-alg.}}(B_n,C_n).
+\]
+Mais comme $B$ et $C$ sont des $A$-algèbres étales, il résulte aussitôt de (18.1.2) que l'application canonique
+\[
+  \Hom_{A_{n+1}\text{-alg.}}(B_{n+1},C_{n+1})\longrightarrow\Hom_{A_n\text{-alg.}}(B_n,C_n)
+\]
+est bijective pour $n\geq 0$, ce qui achève de prouver que l'application canonique
+\[
+  \Hom_{A\text{-alg.}}(B,C)\longrightarrow\Hom_{A_0\text{-alg.}}(B_0,C_0)
+\]
+est bijective.
+
+Pour achever de démontrer (18.3.2), il suffit de voir que pour toute $A_0$-algèbre finie et étale $B_0$, il existe une $A$-algèbre finie et étale $B$ et un $A_0$-isomorphisme $B_0\xrightarrow{\sim}B\otimes_A A_0$. Or, il résulte de (18.1.2) qu'il y a un système projectif $(B_n)$ tel que $B_n$ soit une $A_n$-algèbre étale et que les homomorphismes $B_{n+1}\otimes_{A_{n+1}}A_n\to B_n$ soient bijectifs. Il résulte de (18.3.1) et (18.3.2.1) que la $A$-algèbre $B=\varprojlim B_n$ est un $A$-module projectif de type fini et que $B_0$ est isomorphe à $B\otimes_A A_0$. Pour prouver que $B$ est une $A$-algèbre étale, il suffit, en vertu de (18.2.5), de montrer que pour tout idéal maximal $\mathfrak m$ de $A$, $B_{\mathfrak m}/\mathfrak mB_{\mathfrak m}$ est une $(A/\mathfrak m)$-algèbre séparable. Or, puisque $\mathfrak J$ est contenu dans le radical de $A$ ($0_{\mathrm I}$, 7.1.10),
+

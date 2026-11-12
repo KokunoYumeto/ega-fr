@@ -1,0 +1,551 @@
+\oldpage[0\textsubscript{IV-1}]{75}
+
+  \item[b)] L'homomorphisme
+  $u_0:M/\mathfrak QM\to N/\mathfrak QN$ déduit de $u$ par passage aux
+  quotients est inversible à gauche.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On a vu (19.1.7) que la condition a) équivaut à dire que $u_\lambda$ est
+inversible à gauche pour tout $\lambda$~; comme $\mathfrak Q$ est un idéal
+ouvert, donc contient un $\mathfrak J_\lambda$, on en déduit aussitôt que
+$u_0$ est inversible à gauche. Pour montrer inversement que b) entraîne a),
+notons que pour tout $\lambda$, $\mathfrak Q/\mathfrak J_\lambda$ est par
+hypothèse un idéal nilpotent de $A/\mathfrak J_\lambda$. Notre assertion
+résultera de la proposition suivante.
+\end{proof}
+
+\begin{proposition}[19.1.10]
+\label{0.19.1.10-fr}
+Soient $A$ un anneau, $M$, $N$ deux $A$-modules, $N$ étant projectif,
+$u:M\to N$ un $A$-homomorphisme. Soit $\mathfrak J$ un idéal de $A$~; on
+suppose vérifiée l'une des conditions suivantes~:
+\begin{enumerate}
+  \item[(i)] $\mathfrak J$ est nilpotent.
+  \item[(ii)] $\mathfrak J$ est contenu dans le radical de $A$ et $M$ est de
+  type fini.
+\end{enumerate}
+Alors, pour que $u$ soit inversible à gauche, il faut et il suffit que
+l'homomorphisme
+$u_0:M/\mathfrak JM\to N/\mathfrak JN$ de $(A/\mathfrak J)$-modules, déduit
+de $u$ par passage aux quotients, soit inversible à gauche.
+\end{proposition}
+
+\begin{proof}
+La condition étant évidemment nécessaire, prouvons qu'elle est suffisante.
+Soit $v_0$ un inverse à gauche de $u_0$~; l'homomorphisme composé
+$N\to N/\mathfrak JN\xrightarrow{v_0}M/\mathfrak JM$ se factorise en
+$N\xrightarrow{v}M\to M/\mathfrak JM$ puisque $N$ est projectif~; alors
+$w=v\circ u$ est un endomorphisme de $M$ tel que l'endomorphisme $w_0$ de
+$M/\mathfrak JM$ déduit par passage aux quotients soit l'identité, et il suffit
+de prouver que $w$ est lui-même bijectif (car alors $w^{-1}\circ v$ sera un
+inverse à gauche de $u$). Distinguons maintenant les deux cas.
+
+(i) Pour tout $n$ on a le diagramme commutatif
+\[
+  \xymatrix{
+    (\mathfrak J^n/\mathfrak J^{n+1})\otimes_{A/\mathfrak J}
+      (M/\mathfrak JM)\ar[r]\ar[d]_{1\otimes\operatorname{gr}^0(w)} &
+      \mathfrak J^nM/\mathfrak J^{n+1}M\ar[d]^{\operatorname{gr}^n(w)}\\
+    (\mathfrak J^n/\mathfrak J^{n+1})\otimes_{A/\mathfrak J}
+      (M/\mathfrak JM)\ar[r] & \mathfrak J^nM/\mathfrak J^{n+1}M
+  }
+\]
+où les flèches horizontales sont \emph{surjectives}, et comme
+$\operatorname{gr}^0(w)=w_0$ est l'identité, il en est de même de
+$\operatorname{gr}^n(w)$ qui, \emph{a fortiori}, est bijectif. La filtration
+$\mathfrak J$-préadique sur $M$ étant finie puisque $\mathfrak J$ est
+nilpotent, on en conclut que $w$ est bijectif (Bourbaki, \emph{Alg. comm.},
+chap.~III, §~2, n\textsuperscript{o}~8, cor.~3 du th.~1).
+
+(ii) Il suffit de montrer que pour tout idéal maximal $\mathfrak m$ de $A$,
+l'endomorphisme $w_{\mathfrak m}$ de $M_{\mathfrak m}$ est bijectif
+(Bourbaki, \emph{Alg. comm.}, chap.~II, §~3, n\textsuperscript{o}~3, th.~1)
+et comme $\mathfrak JA_{\mathfrak m}\subset\mathfrak mA_{\mathfrak m}$, et
+$A_{\mathfrak m}/\mathfrak JA_{\mathfrak m}=(A/\mathfrak J)_{\mathfrak m}$,
+on est ramené à prouver la proposition lorsque $A$ est un anneau local. En
+outre, on peut supposer que $\mathfrak J$ est l'idéal maximal
+$\mathfrak J_0$ de $A$, car si $u_0$ est inversible
+\oldpage[0\textsubscript{IV-1}]{76}
+à gauche, il en est de même de
+$u_{00}:M/\mathfrak J_0M\to N/\mathfrak J_0M$ obtenu par tensorisation de
+$u_0$ avec $1_{A/\mathfrak J_0}$, puisque l'on a
+$M/\mathfrak J_0M=(M/\mathfrak JM)\otimes_{A/\mathfrak J}(A/\mathfrak J_0)$.
+Supposons donc $\mathfrak J$ maximal, de sorte que $A/\mathfrak J$ est un
+corps. Il suffit évidemment de montrer que $M$ est un $A$-module \emph{libre}
+sous les conditions de l'énoncé~: en effet, $\det(w_0)$ est alors l'image
+canonique de $\det(w)$ dans $A/\mathfrak J$, donc $\det(w)$ n'appartient pas à
+l'idéal $\mathfrak J$ et est par suite inversible. Or le
+$(A/\mathfrak J)$-espace vectoriel $M/\mathfrak JM$ étant libre de type fini,
+il y a un $A$-module de type fini $L$ et un $A$-homomorphisme $f:L\to M$ tel
+que l'homomorphisme $f_0:L/\mathfrak JL\to M/\mathfrak JM$ déduit de $f$ par
+passage aux quotients soit bijectif. Comme $M$ est de type fini, on en conclut
+tout d'abord que $f$ est \emph{surjectif} par le lemme de Nakayama (Bourbaki,
+\emph{Alg. comm.}, chap.~II, §~3, n\textsuperscript{o}~2, cor.~1 de la
+prop.~4)~; en outre, si $g=u\circ f$, l'homomorphisme
+$g_0:L/\mathfrak JL\to N/\mathfrak JN$ déduit par passage aux quotients est
+inversible à gauche, et puisqu'ici $L$ est libre, la remarque du début prouve
+que $g$ est lui-même inversible à gauche~; or cela entraîne évidemment que
+$f$ est \emph{injectif}, ce qui achève la démonstration.
+\end{proof}
+
+Mentionnons en passant les corollaires suivants de (19.1.10)~:
+
+\begin{corollary}[19.1.11]
+\label{0.19.1.11-fr}
+Soient $A$ un anneau local, $k$ son corps résiduel, $M$ un $A$-module de type
+fini, $N$ un $A$-module projectif, $u:M\to N$ un homomorphisme. Pour que $u$
+soit inversible à gauche, il faut et il suffit qu'il existe un système de
+générateurs $(x_i)_{1\leq i\leq m}$ de $M$ tel que les images par
+$u\otimes 1:M\otimes_Ak\to N\otimes_Ak$ des $x_i\otimes1$ soient linéairement
+indépendantes dans $N\otimes_Ak$~; les $x_i$ forment alors une base de $M$.
+\end{corollary}
+
+La condition est évidemment nécessaire, car si $u$ est inversible à gauche,
+$M$ est un $A$-module projectif de type fini, donc libre. Inversement, si la
+condition est satisfaite, il est clair que les $x_i\otimes1$ forment une base
+de $M\otimes_Ak$ et que $u\otimes1$ est inversible à gauche~; il suffit donc
+d'appliquer (19.1.10) à l'idéal maximal $\mathfrak J$ de $A$.
+
+\begin{corollary}[19.1.12]
+\label{0.19.1.12-fr}
+Soient $A$ un anneau, $M$ un $A$-module de type fini, $N$ un $A$-module
+projectif, $u:M\to N$ un homomorphisme. Pour tout idéal premier
+$\mathfrak p\in\operatorname{Spec}(A)$, les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[\textup{a)}] L'homomorphisme
+  $u_{\mathfrak p}:M_{\mathfrak p}\to N_{\mathfrak p}$ est inversible à
+  gauche.
+  \item[\textup{b)}] L'homomorphisme
+  $u\otimes1:M\otimes_A\boldsymbol{k}(\mathfrak p)\to N\otimes_A\boldsymbol{k}(\mathfrak p)$ est
+  injectif \textup{(on rappelle que $\boldsymbol{k}(\mathfrak p)$ désigne le corps résiduel de $A$
+  en $\mathfrak p$)}.
+  \item[\textup{c)}] Il existe un système fini d'éléments $x_i\in M$
+  $(1\leq i\leq m)$ tel que les images des $x_i$ dans $M_{\mathfrak p}$
+  engendrent $M_{\mathfrak p}$, et un système de $m$ formes linéaires
+  $y_i^*$ sur $N$ $(1\leq i\leq m)$ tel que
+  $\det(\mathopen{<}y_i^*,u(x_j)\mathclose{>})\notin\mathfrak p$.
+  \item[\textup{d)}] Il existe $f\in A\setmin\mathfrak p$ tel que l'homomorphisme
+  $u_f:M_f\to N_f$ soit inversible à gauche.
+\end{enumerate}
+
+En outre, l'ensemble des $\mathfrak p\in\operatorname{Spec}(A)$ vérifiant ces
+conditions est ouvert dans $\operatorname{Spec}(A)$.
+\end{corollary}
+
+La dernière condition est conséquence triviale de \emph{d)}. Comme $N$ est
+projectif, il est facteur direct d'un $A$-module libre $A^{(I)}$~; en outre,
+comme $M$ est de type fini, $u(M)$ est contenu dans un sous-module de $A^{(I)}$
+de la forme $A^n$ pour $n$ fini~; comme chacun des énoncés \emph{a)}, \emph{b)}, \emph{c)}, \emph{d)} est
+équivalent à l'énoncé correspondant où l'on remplace $N$ par $N\oplus P$ ($u$
+étant toujours supposé appliquer $M$ dans $N$), on est ramené au cas où $N$
+est \emph{libre de type fini}. Il est trivial que \emph{d)} entraîne \emph{a)}, et \emph{a)} et \emph{b)}
+sont équivalentes en vertu de (19.1.11)~; d'ailleurs \emph{a)} entraîne que
+$M_{\mathfrak p}$ est libre (19.1.11), donc \emph{a)} entraîne \emph{c)}, en prenant pour les
+$x_i$ une famille dont les images dans $M_{\mathfrak p}$ forment une base de ce
+\oldpage[0\textsubscript{IV-1}]{77}
+$A_{\mathfrak p}$-module et en notant que (puisque $N$ est libre de type fini)
+toute forme linéaire sur le $A_{\mathfrak p}$-module $N_{\mathfrak p}$ s'écrit
+$u=v/f$, où $f\in A\setmin\mathfrak p$, et où $v$ est une forme linéaire sur le
+$A$-module $N$. Il est clair que \emph{c)} entraîne \emph{b)}, et il reste donc à voir que \emph{a)}
+entraîne \emph{d)}. Or, comme $N$ est de présentation finie,
+$(\operatorname{Hom}_A(N,M))_{\mathfrak p}$ s'identifie canoniquement à
+$\operatorname{Hom}_{A_{\mathfrak p}}(N_{\mathfrak p},M_{\mathfrak p})$
+(Bourbaki, \emph{Alg. comm.}, chap.~II, §~2, n\textsuperscript{o}~7,
+prop.~19). Si $w_{\mathfrak p}$ est inverse à gauche de $u_{\mathfrak p}$, il
+existe donc un homomorphisme $w:N\to M$ et un élément $f\in A\setmin\mathfrak p$
+tels que $w=w_{\mathfrak p}\otimes(1/f)1_{A_{\mathfrak p}}$. La relation
+$w_{\mathfrak p}\circ u_{\mathfrak p}=1_{M_{\mathfrak p}}$ s'écrit donc aussi
+$(w\circ u)\otimes1_{A_{\mathfrak p}}=f.1_{M_{\mathfrak p}}$. Mais comme $M$
+est un $A$-module de type fini, il existe $g\in A\setmin\mathfrak p$ tel que
+l'endomorphisme $g((w\circ u)\setmin f.1_M)$ s'annule en tous les générateurs de $M$,
+donc soit nul. Si on pose $h=fg$, et
+$u_h=u\otimes1_{A_h}$, $w_h=w\otimes1_{A_h}$, on a donc
+$w_h(u_h(z))=(f/1)z$ pour tout $z\in M_h$~; mais comme $h/1$ est inversible
+dans $A_h$, il en est de même de $f/1=f'$, et $f'^{-1}w_h$ est par suite
+inverse à gauche de $u_h$, ce qui achève la démonstration.
+
+\begin{proposition}[19.1.13]
+\label{0.19.1.13-fr}
+Supposons vérifiées les hypothèses de \textup{(19.1.9)} et supposons en outre que
+$(\mathfrak J_\lambda)$ soit une suite décroissante $(\mathfrak J_n)$ et que
+$M$ soit séparé et complet. Alors les conditions \textup{a)} et \textup{b)} de \textup{(19.1.9)} sont
+aussi équivalentes à~:
+\begin{enumerate}
+  \item[\textup{c)}] $u$ est inversible à gauche.
+\end{enumerate}
+\end{proposition}
+
+On sait déjà que \emph{c)} entraîne \emph{a)} (19.1.6). Inversement, si \emph{a)} est vérifiée, on
+sait (avec les notations de (19.1.8)) que $M_n$ est facteur direct du
+$(A/\mathfrak J_n)$-module projectif $N_n$, donc $P_n$ est aussi isomorphe à
+un facteur direct de $N_n$, et par suite est projectif~; il suffit donc
+d'appliquer (19.1.8).
+
+Notons enfin la proposition suivante~:
+
+\begin{proposition}[19.1.14]
+\label{0.19.1.14-fr}
+Soient $A$ un anneau, $M$ un $A$-module de type fini, $N$ un $A$-module
+projectif, $u:M\to N$ un $A$-homomorphisme.
+\begin{enumerate}
+  \item[\textup{(i)}] Pour que $u$ soit inversible à gauche, il faut et il suffit que,
+  pour tout idéal maximal $\mathfrak m$ de $A$,
+  $u_{\mathfrak m}:M_{\mathfrak m}\to N_{\mathfrak m}$ soit inversible à
+  gauche.
+  \item[\textup{(ii)}] Soit $A'$ une $A$-algèbre qui soit un $A$-module fidèlement
+  plat. Pour que $u$ soit inversible à gauche, il faut et il suffit que
+  $u\otimes1:M\otimes_AA'\to N\otimes_AA'$ soit inversible à gauche.
+\end{enumerate}
+\end{proposition}
+
+Comme dans (19.1.12), on peut se borner au cas où $N$ est libre de type fini~;
+dire que $u$ est inversible à gauche signifie alors que $u$ est injectif et
+que le module quotient $P=N/u(M)$ est \emph{projectif}, car $u(M)$ sera alors
+facteur direct de $N$. Notons en outre que puisque $M$ est de type fini, $P$
+est de \emph{présentation finie}. Cela étant~:
+
+(i) La condition est évidemment nécessaire. Inversement, si elle est
+satisfaite, on sait que $u$ est injectif (Bourbaki, \emph{Alg. comm.},
+chap.~II, §~3, n\textsuperscript{o}~3, th.~1) et comme
+$P_{\mathfrak m}=N_{\mathfrak m}/u_{\mathfrak m}(M_{\mathfrak m})$ est
+projectif pour tout $\mathfrak m$, on sait que cela entraîne que $P$ est
+projectif (\emph{loc. cit.}, §~5, n\textsuperscript{o}~2, th.~1).
+
+(ii) Ici encore, la condition est trivialement nécessaire. Inversement, si
+elle est remplie, on sait que $u$ est injectif ($\mathbf{0}_{\mathrm I}$,
+6.4.1) et comme $P\otimes_AA'=\operatorname{Coker}(u\otimes1)$ est projectif,
+donc plat, on en déduit que $P$ est un $A$-module plat
+($\mathbf{0}_{\mathrm I}$, 6.6.3), donc projectif puisqu'il est de présentation
+finie (Bourbaki, \emph{Alg. comm.}, chap.~II, §~5,
+n\textsuperscript{o}~2, cor.~2 du th.~1).
+
+\oldpage[0\textsubscript{IV-1}]{78}
+
+\begin{remark}[19.1.15]
+\label{0.19.1.15-fr}
+La notion «~duale~» de celle d'homomorphisme formellement inversible à gauche
+est celle d'homomorphisme \emph{formellement inversible à droite}~; un tel
+$A$-homomorphisme continu $u:M\to N$ vérifie, par définition, la condition
+suivante~: pour tout sous-module ouvert $W'$ de $N$, il existe un sous-module
+ouvert $V'\subset u^{-1}(W')$ de $M$, un sous-module ouvert $W''\subset W'$ de
+$N$ et un homomorphisme $h:N/W''\to M/V'$ tels que l'homomorphisme canonique
+$N/W''\to N/W'$ se factorise en
+\[
+  N/W''\xrightarrow{h}M/V'\xrightarrow{u'}N/W'
+\]
+où $u'$ est déduit de $u$ par passage aux quotients. Cela entraîne que $u$ est
+un épimorphisme formel~; s'il existe un $\widehat A$-homomorphisme continu
+$r:\widehat N\to\widehat M$ tel que $\widehat u\circ r=1_{\widehat N}$, on
+vérifie aussitôt que $u$ est formellement inversible à droite. Si les
+conditions de (19.1.7) sont remplies, pour que $u$ soit formellement inversible
+à droite, il faut et il suffit que les $u_\lambda$ soient inversibles à droite
+(c'est-à-dire que le noyau de $u_\lambda$ est facteur direct de
+$M/\mathfrak J_\lambda M$ et que $u_\lambda$ est un isomorphisme d'un
+supplémentaire de $\operatorname{Ker}(u_\lambda)$ sur
+$N/\mathfrak J_\lambda N$). Nous laissons au lecteur le soin d'énoncer et de
+démontrer les propositions correspondant à (19.1.8) et (19.1.9) (dans
+l'analogue de (19.1.8), il faut supposer $M$ séparé et complet et que $M_n$ est
+un $(A/\mathfrak J_n)$-module projectif~; dans l'analogue de (19.1.9), il faut
+supprimer l'hypothèse sur les $N/\mathfrak J_\lambda N$, mais supposer par
+contre que, pour tout $\lambda$, $M/\mathfrak J_\lambda M$ est un
+$(A/\mathfrak J_\lambda)$-module projectif).
+\end{remark}
+
+\subsection{Modules formellement projectifs.}
+\label{subsection:0.19.2-fr}
+
+\begin{definition}[19.2.1]
+\label{0.19.2.1-fr}
+Soient $A$ un anneau topologique. On dit qu'un $A$-module topologique $M$ est
+formellement projectif s'il vérifie la condition suivante~: pour tout
+idéal ouvert $\mathfrak J$ de $A$, tout couple de $(A/\mathfrak J)$-modules
+(discrets) $P$, $Q$, tout $A$-homomorphisme surjectif $u:P\to Q$ et tout
+$A$-homomorphisme continu $v:M\to Q$, il existe un $A$-homomorphisme continu
+$w:M\to P$ tel que $v=u\circ w$.
+\end{definition}
+
+\begin{env}[19.2.2]
+\label{0.19.2.2-fr}
+Pour vérifier la condition de (19.2.1), on peut évidemment se borner (en
+remplaçant $Q$ par $v(M)$ et $P$ par $u^{-1}(v(M))$) au cas où $v$ est
+lui-même surjectif~; alors $Q$ est isomorphe à $M/V$, où $V$ est un
+sous-module ouvert de $M$ tel que $\mathfrak JM\subset V$~; la condition de
+(19.2.1) équivaut alors à dire que pour tout $(A/\mathfrak J)$-module discret
+$P$ et tout $A$-homomorphisme surjectif $u:P\to M/V$, il existe un sous-module
+ouvert $V'\subset V$ dans $M$ et un $A$-homomorphisme $w:M/V'\to P$, tels que
+l'homomorphisme canonique $M/V'\to M/V$ se factorise en
+$M/V'\xrightarrow{w}P\xrightarrow{u}M/V$.
+On notera qu'il suffit de vérifier cette condition lorsque $\mathfrak J$
+parcourt un système fondamental de voisinages de 0 dans $A$ formé d'idéaux.
+\end{env}
+
+\begin{env}[19.2.3]
+\label{0.19.2.3-fr}
+Supposons qu'il existe un système fondamental $(\mathfrak J_\lambda)$ d'idéaux
+ouverts dans $A$ et un système fondamental $(V_\lambda)$ de sous-modules
+ouverts de $M$, ayant \emph{même} ensemble d'indices que
+$(\mathfrak J_\lambda)$ et tel que, pour tout $\lambda$, $M/V_\lambda$ soit un
+$(A/\mathfrak J_\lambda)$-module \emph{projectif}. Alors $M$ est formellement
+projectif~: il suffit en effet, avec les notations de (19.2.2), de prendre
+$\lambda$ tel que $\mathfrak J_\lambda\subset\mathfrak J$ et
+$V_\lambda\subset V$~; comme $P$ est aussi un
+$(A/\mathfrak J_\lambda)$-module, la factorisation de l'homomorphisme canonique
+$M/V_\lambda\to M/V$ en $M/V_\lambda\to P\to M/V$ résulte de ce qu'il s'agit
+d'un $(A/\mathfrak J_\lambda)$-homomorphisme et de ce que $M/V_\lambda$ est
+supposé être un $(A/\mathfrak J_\lambda)$-module projectif.
+
+Lorsque la condition plus stricte de ce numéro est satisfaite, on dit que $M$
+est \emph{strictement formellement projectif}.
+\end{env}
+
+\begin{proposition}[19.2.4]
+\label{0.19.2.4-fr}
+Soient $A$ un anneau topologique, $M$ un $A$-module topologique dont la
+topologie est déduite de celle de $A$. Pour que $M$ soit formellement
+projectif, il faut et il suffit qu'il soit strictement formellement projectif.
+\end{proposition}
+
+\oldpage[0\textsubscript{IV-1}]{79}
+
+\begin{proof}
+On vient de voir que la condition est suffisante. Inversement, supposons $M$
+formellement projectif et soit $(\mathfrak J_\lambda)$ un système fondamental
+d'idéaux ouverts dans $A$. Pour tout $\lambda$, soient $P$ un
+$(A/\mathfrak J_\lambda)$-module libre et
+$u:P\to M/\mathfrak J_\lambda M$ un
+$(A/\mathfrak J_\lambda)$-homomorphisme surjectif. Il existe donc un
+$\mathfrak J_\mu\subset\mathfrak J_\lambda$ tel que l'homomorphisme canonique
+$M/\mathfrak J_\mu M\to M/\mathfrak J_\lambda M$ se factorise en
+$M/\mathfrak J_\mu M\xrightarrow{w}P\xrightarrow{u}M/\mathfrak J_\lambda M$~;
+mais comme
+$w(\mathfrak J_\lambda(M/\mathfrak J_\mu M))\subset\mathfrak J_\lambda P=0$,
+$w$ se factorise en $M/\mathfrak J_\mu M\to M/\mathfrak J_\lambda M\xrightarrow{v}P$, et il est
+clair que $u\circ v$ est l'identité dans $M/\mathfrak J_\lambda M$, ce qui
+prouve que ce $(A/\mathfrak J_\lambda)$-module est projectif.
+\end{proof}
+
+\begin{proposition}[19.2.5]
+\label{0.19.2.5-fr}
+Soient $A$ un anneau topologique, $M$ un $A$-module topologique.
+\begin{enumerate}
+  \item[\textup{(i)}] Pour que $M$ soit formellement projectif \textup{(resp.} strictement
+  formellement projectif\textup{)}, il faut et il suffit que le $\hat A$-module
+  topologique $\hat M$ le soit.
+  \item[\textup{(ii)}] Soit $A'$ une $A$-algèbre topologique. Si $M$ est formellement
+  projectif \textup{(resp.} strictement formellement projectif\textup{)}, alors
+  $M\otimes_A A'$ (muni de la topologie produit tensoriel) est un $A'$-module
+  topologique formellement projectif \textup{(resp.} strictement formellement
+  projectif\textup{)}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] Il suffit de remarquer que lorsque $\mathfrak J$ (resp. $V$)
+  parcourt l'ensemble des idéaux ouverts de $A$ (resp. l'ensemble des
+  sous-modules ouverts de $M$), le séparé complété $\hat{\mathfrak J}$
+  (resp. $\hat V$) parcourt l'ensemble des idéaux ouverts de $\hat A$
+  (resp. l'ensemble des sous-modules ouverts de $\hat M$), et
+  $\hat A/\hat{\mathfrak J}=A/\mathfrak J$ (resp.
+  $\hat M/\hat V=M/V$) à un isomorphisme canonique près~; comme la notion
+  de module formellement projectif (resp. strictement formellement projectif)
+  ne fait intervenir que les $A/\mathfrak J$ et les $M/V$, on en déduit
+  aussitôt (i).
+  \item[(ii)] Supposons d'abord $M$ formellement projectif et posons
+  $M'=M\otimes_A A'$~; soient $\mathfrak J'$ un idéal ouvert de $A'$, $P'$,
+  $Q'$ deux $(A'/\mathfrak J')$-modules discrets, $u':P'\to Q'$ un
+  $A'$-homomorphisme surjectif, $v':M'\to Q'$ un $A'$-homomorphisme continu.
+  Il y a un idéal ouvert $\mathfrak J$ de $A$ tel que
+  $\mathfrak JA'\subset\mathfrak J'$, donc $P'$ et $Q'$ sont aussi des
+  $(A/\mathfrak J)$-modules discrets. Si l'on considère le
+  $A$-homomorphisme composé $v:M\xrightarrow{j}M'\xrightarrow{v}Q'$ qui est
+  continu, l'hypothèse entraîne qu'il existe un $A$-homomorphisme continu
+  $w:M\to P'$ tel que $v=u'\circ w$~; mais comme $P'$ est un $A'$-module
+  topologique, $w$ se factorise en
+  $M\xrightarrow{j}M'\xrightarrow{w'}P'$, où $w'$ est un $A'$-homomorphisme
+  continu, et comme $v'\circ j=(u'\circ w')\circ j$, on en conclut que
+  $v'=u'\circ w'$.
+
+  Supposons ensuite que $M$ soit strictement formellement projectif~; soit
+  $(\mathfrak J_\lambda)$ (resp. $(V_\lambda)$) un système fondamental
+  d'idéaux ouverts (resp. de sous-modules ouverts) dans $A$ (resp. $M$) tel
+  que $(M/V_\lambda)$ soit un $(A/\mathfrak J_\lambda)$-module projectif,
+  et soit $(\mathfrak J'_\mu)$ un système fondamental d'idéaux ouverts dans
+  $A'$. On a un système fondamental de voisinages de $0$ dans $M'$ en prenant
+  les sous-modules
+  $\operatorname{Im}(M\otimes_A\mathfrak J'_\mu)
+    +\operatorname{Im}(V_\lambda\otimes_A A')=W_{\lambda\mu}$,
+  où $\lambda$ et $\mu$ sont tels que
+  $\mathfrak J_\lambda A'\subset\mathfrak J'_\mu$. Comme
+  $(M\otimes_A A')/W_{\lambda\mu}
+    =(M/V_\lambda)\otimes_{A/\mathfrak J_\lambda}
+      (A'/\mathfrak J'_\mu)$
+  et que $(M/V_\lambda)$ est un
+  $(A/\mathfrak J_\lambda)$-module projectif, $M'/W_{\lambda\mu}$
+  est un $(A'/\mathfrak J'_\mu)$-module projectif.
+\end{enumerate}
+\end{proof}
+
+\subsection{Algèbres formellement lisses.}
+\label{subsection:0.19.3-fr}
+
+\begin{definition}[19.3.1]
+\label{0.19.3.1-fr}
+Soient $A$ un anneau topologique, $B$ une $A$-algèbre topologique. On dit que
+$B$ est une $A$-algèbre formellement lisse si, pour toute
+$A$-algèbre topologique \textup{discrète} $C$
+\oldpage[0\textsubscript{IV-1}]{80}
+et tout idéal \textup{nilpotent} $\mathfrak J$ de
+$C$, tout $A$-homomorphisme continu $u:B\to C/\mathfrak J$ se factorise en
+$B\xrightarrow{v}C\xrightarrow{\varphi}C/\mathfrak J$
+où $v$ est un homomorphisme continu et $\varphi$ l'homomorphisme canonique.
+\end{definition}
+
+La définition (19.3.1) revient à dire que la propriété suivante a lieu~:
+\begin{enumerate}
+  \item[(P)] Pour tout idéal \emph{ouvert} $\mathfrak K$ de la $A$-algèbre $B$ et
+  tout $A$-homomorphisme $u':B/\mathfrak K\to C/\mathfrak J$, il y a un
+  idéal ouvert $\mathfrak K'\subset\mathfrak K$ de $B$ tel que
+  l'homomorphisme
+  $B\to B/\mathfrak K\xrightarrow{u'}C/\mathfrak J$ se factorise en
+  $B\to B/\mathfrak K'\xrightarrow{v'}C\to C/\mathfrak J$,
+  où $v'$ est un $A$-homomorphisme.
+\end{enumerate}
+
+En effet, si $u:B\to C/\mathfrak J$ est un $A$-homomorphisme continu, il a
+pour noyau $\mathfrak K$ un idéal ouvert de $B$, donc $u$ se factorise en
+$B\to B/\mathfrak K\xrightarrow{u'}C/\mathfrak J$, et si (P) est
+vérifiée, il suffit de l'appliquer à $u'$ et de prendre pour $v$ la composée
+$B\to B/\mathfrak K'\xrightarrow{v'}C$ pour satisfaire aux conditions de
+(19.3.1). Inversement, supposons que $B$ soit une $A$-algèbre formellement
+lisse~; donnons-nous un idéal ouvert $\mathfrak K$ de $B$ et un
+$A$-homomorphisme $u':B/\mathfrak K\to C/\mathfrak J$, et appliquons la
+définition (19.3.1) à
+$u:B\to B/\mathfrak K\xrightarrow{u'}C/\mathfrak J$~; si
+$v:B\to C$ est un $A$-homomorphisme continu tel que $u$ se factorise en
+$B\xrightarrow{v}C\to C/\mathfrak J$, l'idéal
+$\mathfrak K'=\operatorname{Ker}(v)\cap\mathfrak K$ de $B$ est ouvert et
+contenu dans $\mathfrak K$~; par suite $v$ se factorise en
+$B\to B/\mathfrak K'\xrightarrow{v'}C$, et $v'$ vérifie bien la condition
+(P).
+
+\begin{proposition}[19.3.2]
+\label{0.19.3.2-fr}
+Soient $A$ un anneau discret, $V$ un $A$-module projectif~; l'algèbre
+symétrique $B=\mathbf S_A^\bullet(V)$, munie de la topologie discrète, est une
+$A$-algèbre formellement lisse.
+\end{proposition}
+
+\begin{proof}
+En effet, les notations $C$ et $\mathfrak J$ ayant le même sens que dans
+(19.3.1), soit $u:B\to C/\mathfrak J$ un homomorphisme de $A$-algèbres, qui
+par restriction à $V=\mathbf S_A^1(V)$, donne un homomorphisme de $A$-modules
+$u_1:V\to C/\mathfrak J$~; comme $V$ est projectif, $u_1$ se factorise en
+$V\xrightarrow{v_1}C\xrightarrow{\varphi}C/\mathfrak J$, et $v_1$ se
+prolonge en un homomorphisme de $A$-algèbres
+$v:\mathbf S_A^\bullet(V)\to C$, tel que le composé
+$\varphi\circ v$ coïncide avec $u$ dans $V$, donc
+$\varphi\circ v=u$, ce qui démontre la proposition.
+\end{proof}
+
+\begin{corollary}[19.3.3]
+\label{0.19.3.3-fr}
+Si $A$ est un anneau discret, toute algèbre de polynômes
+$B=A[T_\alpha]_{\alpha\in I}$, munie de la topologie discrète, est une
+$A$-algèbre formellement lisse.
+\end{corollary}
+
+\begin{proposition}[19.3.4]
+\label{0.19.3.4-fr}
+Soit $A$ un anneau topologique, et soit
+$B=A[[T_\alpha]]_{\alpha\in I}$ un anneau de séries formelles
+$\sum_{\lambda\in\mathbb{N}^{(I)}}c_\lambda T^\lambda$ (algèbre large sur
+$A$ du monoïde $\mathbb{N}^{(I)}$, identifié en tant que $A$-module au produit
+$A^{\mathbb{N}^{(I)}}$). Si l'on munit $B$ de la topologie produit, $B$ est une
+$A$-algèbre formellement lisse.
+\end{proposition}
+
+Soit $(\mathfrak L_\mu)_{\mu\in M}$ un système fondamental d'idéaux ouverts
+dans $A$. Pour toute partie finie $H$ de $I$, tout $\mu\in M$ et tout entier
+$n$, désignons par $\mathfrak K_{H,\mu,n}$ le voisinage de $0$ dans $B$ formé
+des $(c_\lambda)$ tels que pour tout
+$\lambda=(\lambda_\alpha)_{\alpha\in I}$ tel que
+$\lambda_\alpha=0$ pour $\alpha\notin H$ et
+$\sum_{\alpha\in H}\lambda_\alpha\leq n$, on ait
+$c_\lambda\in\mathfrak L_\mu$. On vérifie immédiatement que les
+$\mathfrak K_{H,\mu,n}$ forment un système fondamental de voisinages de $0$
+dans $B$ et sont des idéaux de $B$, donc la topologie produit est compatible
+avec la structure de $A$-algèbre de $B$.
+
+Notons d'abord, avec les mêmes notations, le
+\begin{lemma}[19.3.4.1]
+\label{0.19.3.4.1-fr}
+Soit $E$ une $A$-algèbre discrète.
+\begin{enumerate}
+  \item[\textup{(i)}] Si $f:B\to E$ est un $A$-homomorphisme continu, il existe une
+  partie finie $H$ de $I$ telle que $f(T_\alpha)=0$ pour $\alpha\notin H$,
+  et $f(T_\alpha)$ est nilpotent dans $E$ pour tout $\alpha\in H$.
+  \oldpage[0\textsubscript{IV-1}]{81}
+  \item[\textup{(ii)}] Inversement, soient $H$ une partie finie de $I$,
+  $(z_\alpha)_{\alpha\in H}$ une famille d'éléments nilpotents de $E$.
+  Il existe un $A$-homomorphisme continu $g:B\to E$ et un seul tel que
+  $g(T_\alpha)=z_\alpha$ pour $\alpha\in H$ et
+  $g(T_\alpha)=0$ pour $\alpha\notin H$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) résulte aussitôt de ce que $f^{-1}(0)$ est un voisinage de $0$ dans le
+$A$-module produit $A^{\mathbb{N}^{(I)}}$, d'où $f(T^\lambda)=0$ sauf pour un
+nombre fini de valeurs de $\lambda\in\mathbb{N}^{(I)}$. Pour prouver (ii), il
+suffit de remarquer que l'anneau de polynômes
+$B'=A[T_\alpha]_{\alpha\in I}$ est dense dans $B$~; l'existence et
+l'unicité de la restriction $g|B'$ sont triviales et sa continuité résulte de
+l'hypothèse que les $f(T_\alpha)$ pour $\alpha\in H$ sont nilpotents,
+car si $(f(T_\alpha))^n=0$ pour tout $\alpha\in H$, on a
+$g(T^\lambda)=0$ pour tout $\lambda=(\lambda_\alpha)_{\alpha\in I}$ de
+support fini sauf ceux tels que $\lambda_\alpha=0$ pour
+$\alpha\notin H$ et $\lambda_\alpha\leq n$ pour
+$\alpha\in H$, c'est-à-dire sauf pour un nombre fini de valeurs de
+$\lambda$.
+\end{proof}
+
+\begin{proof}[Démonstration de la proposition~{\rm(19.3.4)}]
+Ce lemme étant établi, et les notations $C$ et $\mathfrak J$ ayant le même
+sens que dans (19.3.1), on a $u(T_\alpha)=0$ sauf pour
+$\alpha\in H$, $H$ étant une partie finie de $I$, et les
+$z_\alpha=u(T_\alpha)$ pour $\alpha\in H$ sont nilpotents dans
+$C/\mathfrak J$~; comme $\mathfrak J$ est nilpotent, il existe une famille
+$(x_\alpha)_{\alpha\in H}$ d'éléments nilpotents de $C$ dont les images
+canoniques dans $C/\mathfrak J$ sont les $z_\alpha$~; si $v$ est le
+$A$-homomorphisme continu de $B$ dans $C$ tel que
+$v(T_\alpha)=0$ pour $\alpha\notin H$, $v(T_\alpha)=x_\alpha$ pour
+$\alpha\in H$, il est clair que $u$ se factorise en
+$B\xrightarrow{v}C\to C/\mathfrak J$.
+\end{proof}
+
+\begin{proposition}[19.3.5]
+\label{0.19.3.5-fr}
+Soit $A$ un anneau topologique.
+\begin{enumerate}
+  \item[(i)] $A$ est une $A$-algèbre formellement lisse.
+  \item[(ii)] Si $B$ est une $A$-algèbre formellement lisse et $C$ une
+  $B$-algèbre formellement lisse, alors $C$ est une $A$-algèbre formellement
+  lisse.
+  \item[(iii)] Soient $B$ une $A$-algèbre formellement lisse, $A'$ une
+  $A$-algèbre topologique~; alors la $A'$-algèbre topologique
+  $B\otimes_A A'$ ($\mathbf 0_{\rm I}$, 7.7.5 et 7.7.6) est formellement
+  lisse.
+  \item[(iv)] Soient $B$ une $A$-algèbre topologique, $S$ (resp. $T$) une
+  partie multiplicative de $A$ (resp. $B$) telle que l'image canonique de $S$
+  dans $B$ soit contenue dans $T$. Si $B$ est une $A$-algèbre formellement
+  lisse, alors $T^{-1}B$ est une $S^{-1}A$-algèbre formellement lisse.
+  \item[(v)] Soient $B_i$ ($1\leq i\leq n$) des $A$-algèbres topologiques.
+  Pour que $\prod_{i=1}^n B_i$ soit une $A$-algèbre formellement lisse, il
+  faut et il suffit que chacune des $B_i$ le soit.
+\end{enumerate}
+\end{proposition}
+

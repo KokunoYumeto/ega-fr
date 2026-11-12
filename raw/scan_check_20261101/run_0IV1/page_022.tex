@@ -1,0 +1,90 @@
+% from ega0-15-fr.tex
+\oldpage[0\textsubscript{IV-1}]{22}
+Soit $u=(\psi,\theta):X\to Y$ un morphisme plat d'espaces annelés
+($0_{\mathrm I}$, 6.7.1)~; soient $\mathscr{F}$ un
+$\mathcal{O}_Y$-Module, $\mathscr{G}=u^*(\mathscr{F})$,
+$(f_i)_{1\leq i\leq n}$ une suite d'éléments de
+$\Gamma(Y,\mathcal{O}_Y)$, $(g_i)_{1\leq i\leq n}$ la suite de leurs images
+$g_i=\theta(f_i)\in\Gamma(Y,u_*(\mathcal{O}_X))=\Gamma(X,\mathcal{O}_X)$. Si
+la suite $(f_i)$ est $\mathscr{F}$-régulière, la suite $(g_i)$ est
+$\mathscr{G}$-régulière. La réciproque est vraie si $u$ est un morphisme
+fidèlement plat ($0_{\mathrm I}$, 6.7.8).
+\end{proposition}
+
+\begin{proof}
+Soient $x$ un point de $X$, $y=u(x)=\psi(x)$~; on a
+\[
+  \mathscr{G}_x=\psi_x^*(\mathscr{F}_y)
+  \otimes_{\psi_x^*(\mathcal{O}_y)}\mathcal{O}_x,
+  \qquad\text{et}\qquad
+  (g_i)_x=\theta_x^\#(\psi_x^*((f_i)_y))~;
+\]
+comme par hypothèse
+$\theta_x^\#:\psi_x^*(\mathcal{O}_y)\to\mathcal{O}_x$ fait de
+$\mathcal{O}_x$ un $\psi_x^*(\mathcal{O}_y)$-module plat, et que le foncteur
+$\psi^*$ est exact, la première assertion résulte de l'assertion correspondante
+de (15.1.14)~; il en est de même de la seconde, compte tenu de ce que
+l'hypothèse que $u$ est fidèlement plat signifie que $\psi$ est surjectif et
+que $\theta_x^\#$ fait de $\mathcal{O}_x$ un
+$\psi_x^*(\mathcal{O}_y)$-module fidèlement plat.
+\end{proof}
+
+% (continued in ega0-16-fr.tex, before its first page marker)
+\section{Dimension et profondeur dans les anneaux locaux noethériens}
+\label{section:0.16-fr}
+
+\subsection{Dimension d'un anneau}
+\label{subsection:0.16.1-fr}
+
+\begin{env}[16.1.1]
+\label{0.16.1.1-fr}
+On appelle dimension (ou dimension de Krull) d'un anneau $A$ et on note
+$\dim A$ la dimension (combinatoire) de son spectre
+$\operatorname{Spec}(A)$ (14.2.1)~; comme les parties fermées irréductibles de
+$\operatorname{Spec}(A)$ sont les
+$V(\mathfrak{p})$, où $\mathfrak{p}$ est un idéal premier de $A$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~4, no~3, cor.~1 de la prop.~14), il revient au
+même de dire que $\dim(A)$ est la borne supérieure des longueurs des chaînes
+(14.1.1)
+\[
+  \mathfrak{p}_0\subset\mathfrak{p}_1\subset\cdots\subset\mathfrak{p}_n
+\]
+d'idéaux premiers de $A$. Si $A\neq0$, on a $\dim A\geq0$. Un anneau artinien
+$\neq0$ (en particulier un corps) est de dimension 0 (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~2, no~5, prop.~7)~; un anneau de Dedekind qui
+n'est pas un corps (en particulier $\mathbb{Z}$ ou un anneau $k[T]$ de
+polynômes à une indéterminée sur un corps $k$) est de dimension 1 (Bourbaki,
+\emph{Alg.~comm.}, chap.~VII, \S~2). Un anneau noethérien n'est pas
+nécessairement de dimension finie [30].
+
+Si $(\mathfrak{p}_\alpha)$ est la famille des idéaux premiers minimaux de $A$,
+on a (14.1.2.1)
+\[
+\label{0.16.1.1.1-fr}
+  \dim(A)=\sup_\alpha(\dim(A/\mathfrak{p}_\alpha)).
+\tag{16.1.1.1}
+\]
+\end{env}
+
+\begin{env}[16.1.2]
+\label{0.16.1.2-fr}
+Pour tout idéal $\mathfrak{a}$ de $A$, les idéaux premiers de
+$A/\mathfrak{a}$ correspondent biunivoquement aux idéaux premiers de $A$
+contenant $\mathfrak{a}$, donc
+\[
+\label{0.16.1.2.1-fr}
+  \dim(A/\mathfrak{a})\leq\dim(A).
+\tag{16.1.2.1}
+\]
+Si en outre $\mathfrak{a}$ n'est contenu dans aucun idéal premier minimal
+$\mathfrak{p}_\alpha$ de $A$, toute chaîne d'idéaux premiers de $A$ contenant
+$\mathfrak{a}$ peut être complétée par un des $\mathfrak{p}_\alpha$, donc on a
+\[
+\label{0.16.1.2.2-fr}
+  1+\dim(A/\mathfrak{a})\leq\dim(A).
+\tag{16.1.2.2}
+\]
+\end{env}
+
+\begin{env}[16.1.3]
+\label{0.16.1.3-fr}

@@ -1,0 +1,105 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{33}
+maximal (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2)~;
+autrement dit, il y a un élément $z\in N$ dont l'annulateur est
+$\mathfrak{m}$, et par suite le sous-module $Az$ de $N$ est isomorphe à
+$A/\mathfrak{m}=k$~; d'où le lemme.
+\end{proof}
+
+\begin{lemma}[16.4.3]
+\label{0.16.4.3-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel, $M$ un $A$-module,
+$(x_i)_{1\leq i\leq n}$ une suite $M$-régulière d'éléments de
+$\mathfrak{m}$. Alors les $A$-modules
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_nM))
+  \quad\text{et}\quad \operatorname{Ext}^n_A(k,M)
+\]
+sont isomorphes, et pour $n\geq1$, ils sont aussi isomorphes à
+$\operatorname{Ext}^{n-1}_A(k,M/x_1M)$.
+\end{lemma}
+
+\begin{proof}
+Raisonnons par récurrence sur $n$, la proposition étant évidente pour $n=0$.
+Posons $N=M/x_1M$~; la suite $(x_i)_{2\leq i\leq n}$ est $N$-régulière, donc
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_nM))
+  =\operatorname{Hom}_A(k,N/(x_2N+\cdots+x_nN))
+\]
+est isomorphe à $\operatorname{Ext}^{n-1}_A(k,N)$ en vertu de l'hypothèse de
+récurrence. Considérons alors la suite exacte
+$0\to M\xrightarrow{x_1}M\to M/x_1M=N\to0$~; on en déduit la suite exacte des
+Ext
+\begin{equation}
+\label{0.16.4.3.1-fr}
+\tag{16.4.3.1}
+  \operatorname{Ext}^{n-1}_A(k,M)
+  \to\operatorname{Ext}^{n-1}_A(k,N)
+  \to\operatorname{Ext}^n_A(k,M)
+  \xrightarrow{x_1}\operatorname{Ext}^n_A(k,M).
+\end{equation}
+En vertu de l'hypothèse de récurrence, $\operatorname{Ext}^{n-1}_A(k,M)$ est
+isomorphe à
+\[
+  \operatorname{Hom}_A(k,M/(x_1M+\cdots+x_{n-1}M)),
+\]
+qui est nul, puisque $(x_i)_{1\leq i\leq n-1}$ n'est pas une suite
+$M$-régulière maximale (16.4.2). D'autre part, comme
+$x_1\in\mathfrak{m}$, l'homothétie de rapport $x_1$ dans le $A$-module
+$\operatorname{Hom}_A(k,T)$ est nulle pour tout $A$-module $T$, donc il en est
+de même de l'homothétie de rapport $x_1$ dans tout $A$-module
+$\operatorname{Ext}^n_A(k,T)$~; les assertions du lemme découlent donc
+aussitôt de la suite exacte (16.4.3.1).
+\end{proof}
+
+\begin{corollary}[16.4.4]
+\label{0.16.4.4-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel, $M$ un $A$-module de type fini
+$\neq0$. Toutes les suites $M$-régulières maximales d'éléments de
+$\mathfrak{m}$ ont le même nombre d'éléments, qui est le plus petit entier $n$
+tel que $\operatorname{Ext}^n_A(k,M)\neq0$.
+\end{corollary}
+
+\begin{definition}[16.4.5]
+\label{0.16.4.5-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$ un
+$A$-module de type fini. On appelle \emph{profondeur} de $M$, et l'on note
+$\operatorname{prof}_A M$ ou $\operatorname{prof}(M)$ la borne supérieure du
+nombre d'éléments d'une suite $M$-régulière formée d'éléments de
+$\mathfrak{m}$. On a donc $\operatorname{prof}(M)=+\infty$ si et seulement si
+$M=0$, et, par (16.4.1)
+\begin{equation}
+\label{0.16.4.5.1-fr}
+\tag{16.4.5.1}
+  \operatorname{prof}(M)\leq\dim(M)\quad\text{si}\quad M\neq0.
+\end{equation}
+On a évidemment $\operatorname{prof}(M^k)=\operatorname{prof}(M)$ pour tout
+$k>0$.
+\end{definition}
+
+\begin{proposition}[16.4.6]
+\EGAReaderTarget{canon-ref.0.16.4.6-fr}{0.16.4.6-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $M$ un
+$A$-module de type fini.
+\begin{enumerate}
+  \item[\rm{(i)}] Pour que $\operatorname{prof}(M)=0$, il faut et il suffit que
+  $\mathfrak{m}\in\operatorname{Ass}(M)$ (ou encore qu'il existe un sous-module
+  de $M$ isomorphe au corps résiduel $k=A/\mathfrak{m}$ de $A$).
+  \item[\rm{(ii)}] Pour tout élément $M$-régulier $x$ appartenant à
+  $\mathfrak{m}$, on a
+  \begin{equation}
+  \label{0.16.4.6.1-fr}
+  \tag{16.4.6.1}
+    \operatorname{prof}(M/xM)=\operatorname{prof}(M)-1.
+  \end{equation}
+  \item[\rm{(iii)}] Si $M\neq0$, on a
+  \begin{equation}
+  \label{0.16.4.6.2-fr}
+  \tag{16.4.6.2}
+    \operatorname{prof}(M)
+    \leq\inf_{\mathfrak{p}\in\operatorname{Ass}(M)}\dim(A/\mathfrak{p})
+    \leq\dim(M).
+  \end{equation}
+  

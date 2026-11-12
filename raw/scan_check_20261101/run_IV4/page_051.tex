@@ -1,0 +1,81 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{51}
+évidemment de prouver que la suite des fibres des faisceaux figurant dans
+(16.9.13.1), en un point $x\in Y'$, est exacte. Or, si l'on pose
+$A=\mathcal{O}_{X,x}$, on peut écrire
+$\mathcal{O}_{Y,x}=A'=A/\mathfrak{I}$ où $\mathfrak{I}$ est un idéal contenu
+dans l'idéal maximal de $A$, puis
+$\mathcal{O}_{Y',x}=A'/\mathfrak{K}'$, où $\mathfrak{K}'$ est engendré par une
+suite $A'$-régulière d'éléments de $A'$, eux-mêmes images des éléments d'une
+suite $A'$-régulière d'éléments de $A$ appartenant à l'idéal maximal de $A$.
+Si $\mathfrak{K}$ est l'idéal engendré par ces derniers et
+$\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$, on a
+$\mathcal{O}_{Y',x}=A/\mathfrak{L}$, et comme on est dans la situation de
+(16.9.13.5), l'homomorphisme canonique
+\[
+  \mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow(\mathfrak{I}+\mathfrak{L}^2)/\mathfrak{L}^2
+\]
+est bijectif. Mais cela montre que la suite
+\[
+  0\longrightarrow\mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow\mathfrak{L}/\mathfrak{L}^2
+  \longrightarrow(\mathfrak{L}/\mathfrak{I})/
+    (\mathfrak{L}/\mathfrak{I})^2\longrightarrow0
+\]
+est exacte (voir la démonstration de (16.2.7)), et les modules figurant dans
+cette suite sont précisément les fibres en $x$ des faisceaux de (16.9.13.1).
+La seconde assertion résulte de ce que $\mathcal{N}_{Y'/Y}$ est un
+$\mathcal{O}_{Y'}$-Module localement \emph{libre} (16.9.8) et de Bourbaki,
+\emph{Alg.}, chap.~II, 3\textsuperscript{e} éd., §~1, n\textsuperscript{o}~11,
+prop.~21.
+
+\subsection{Morphismes différentiellement lisses}
+\EGAReaderTarget{ega4.c04.subsec.16-10}{IV.16.10}
+
+\begin{definition}[16.10.1]
+\EGAReaderTarget{ega4.c04.def.16-10-1}{IV.16.10.1}
+On dit qu'un morphisme de préschémas $f:X\to S$ est
+\emph{différentiellement lisse} (ou que $X$ est \emph{différentiellement
+lisse sur $S$}) s'il vérifie les conditions suivantes:
+\begin{enumerate}
+  \item[(i)] $\Omega_{X/S}^1$ est un $\mathcal{O}_X$-Module localement
+  projectif, c'est-à-dire que tout point de $X$ admet un voisinage ouvert
+  affine $U$ tel que $\Gamma(U,\Omega_{X/S}^1)$ soit un
+  $\Gamma(U,\mathcal{O}_X)$-module projectif (non nécessairement de type
+  fini).
+  \item[(ii)] L'homomorphisme canonique (16.3.1.1)
+  \[
+    \mathbf{S}_{\mathcal{O}_X}^{\bullet}(\Omega_{X/S}^1)
+    \longrightarrow\mathscr{G}r_{\bullet}(\mathscr{P}_{X/S})
+  \]
+  est bijectif.
+\end{enumerate}
+En particulier, si $\Omega_{X/S}^1$ est localement libre de rang fini, les
+$\mathscr{P}_{X/S}^n$ sont des $\mathcal{O}_X$-Modules localement libres de
+rang fini (étant des extensions de tels Modules).
+\end{definition}
+
+On dit que $f$ est \emph{différentiellement lisse en un point $x\in X$} (ou
+que $X$ est différentiellement lisse sur $S$ au point $x$) s'il existe un
+voisinage ouvert $U$ de $x$ dans $X$ tel que $f|U$ soit différentiellement
+lisse.
+
+Nous verrons plus loin (17.12.4) qu'un morphisme lisse est différentiellement
+lisse, ce qui justifie la terminologie; mais la réciproque est inexacte; en
+effet, un \emph{monomorphisme} $f:X\to S$ est différentiellement lisse,
+puisque $\Omega_{X/S}^1=0$ en vertu de (I, 5.3.8), et par suite
+l'homomorphisme surjectif (16.3.1.1) est évidemment bijectif; or un
+monomorphisme n'est même pas nécessairement plat, ni \emph{a fortiori} lisse.
+Bornons-nous ici à noter la proposition suivante:
+
+\begin{proposition}[16.10.2]
+\label{IV.16.10.2}
+Soient $A$ un anneau, $B$ une $A$-algèbre formellement lisse pour les
+topologies discrètes (0, 19.3.1). Alors $\operatorname{Spec}(B)$ est
+différentiellement lisse sur $\operatorname{Spec}(A)$.
+\end{proposition}
+
+En effet, $B\otimes_A B$ est alors (pour les topologies discrètes) une
+$B$-algèbre formellement lisse (pour l'un ou l'autre des homomorphismes
+canoniques $b\mapsto b\otimes1$, $b\mapsto1\otimes b$ de $B$

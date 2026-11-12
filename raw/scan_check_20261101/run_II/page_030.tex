@@ -1,0 +1,107 @@
+% from ega2-1-fr.tex
+\oldpage[II]{30}
+une $A$-algèbre, autrement dit on définit sur $S$ une structure de
+$A$-algèbre graduée en définissant une structure de $A$-algèbre sur $S_0$,
+et en posant, pour $\alpha\in A$, $x\in S_n$,
+$\alpha\cdot x=(\alpha\cdot1)x$.
+\end{env}
+
+\begin{proposition}[2.4.6]
+\label{II.2.4.6-fr}
+Supposons que $S$ soit une $A$-algèbre graduée. Alors sur
+$X=\operatorname{Proj}(S)$, le faisceau structural $\mathcal{O}_X$ est une
+$A$-Algèbre ($A$ étant considéré comme faisceau simple sur $X$)~; en
+d'autres termes, $X$ est un schéma au-dessus de $\operatorname{Spec}(A)$.
+\end{proposition}
+
+\begin{proof}
+Il suffit de noter que pour tout $f$ homogène dans $S_+$, $S_{(f)}$ est une
+algèbre sur $A$, et que le diagramme
+\[
+  \xymatrix{
+    S_{(f)}\ar[rr] && S_{(fg)}\\
+    & A\ar[ul]\ar[ur] &
+  }
+\]
+est commutatif, pour $f$, $g$ homogènes dans $S_+$.
+\end{proof}
+
+\begin{proposition}[2.4.7]
+\label{II.2.4.7-fr}
+Soit $S$ un anneau gradué à degrés positifs.
+\begin{enumerate}
+  \item[\rm(i)] Pour tout entier $d>0$, il existe un isomorphisme canonique
+    du schéma $\operatorname{Proj}(S)$ sur le schéma
+    $\operatorname{Proj}(S^{(d)})$.
+  \item[\rm(ii)] Soit $S'$ l'anneau gradué tel que $S'_0=\mathbf{Z}$,
+    $S'_n=S_n$ (considéré comme $\mathbf{Z}$-module) pour $n>0$. Il existe un
+    isomorphisme canonique du schéma $\operatorname{Proj}(S)$ sur le schéma
+    $\operatorname{Proj}(S')$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[\rm(i)] Montrons d'abord que l'application
+    $\mathfrak{p}\mapsto\mathfrak{p}\cap S^{(d)}$ est une bijection de
+    l'ensemble $\operatorname{Proj}(S)$ sur
+    $\operatorname{Proj}(S^{(d)})$. En effet, supposons donné un idéal
+    premier gradué $\mathfrak{p}'\in\operatorname{Proj}(S^{(d)})$, et posons
+    $\mathfrak{p}_{nd}=\mathfrak{p}'\cap S_{nd}$ ($n\geq0$). Pour tout
+    $n>0$, non multiple de $d$, définissons $\mathfrak{p}_n$ comme
+    l'ensemble des $x\in S_n$ tels que
+    $x^d\in\mathfrak{p}_{nd}$~; si $x\in\mathfrak{p}_n$,
+    $y\in\mathfrak{p}_n$, on a
+    $(x+y)^{2d}\in\mathfrak{p}_{2nd}$, donc
+    $(x+y)^d\in\mathfrak{p}_{nd}$ puisque $\mathfrak{p}'$ est premier~; il
+    est immédiat que les $\mathfrak{p}_n$ ainsi définis pour tout $n\geq0$
+    vérifient les conditions de
+    (\hyperref[II.2.1.9-fr]{2.1.9}), donc il existe un idéal premier unique
+    $\mathfrak{p}\in\operatorname{Proj}(S)$ tel que
+    $\mathfrak{p}\cap S^{(d)}=\mathfrak{p}'$. Comme pour tout $f$ homogène
+    dans $S_+$, on a
+    $V_+(f)=V_+(f^d)$ (\hyperref[II.2.3.2.3-fr]{2.3.2.3}), on voit que la
+    bijection précédente est un homéomorphisme d'espaces topologiques.
+    Enfin, avec les mêmes notations, $S_{(f)}$ et
+    $S^{(d)}_{(f^d)}$ s'identifient canoniquement
+    (\hyperref[II.2.2.2-fr]{2.2.2}), donc $\operatorname{Proj}(S)$ et
+    $\operatorname{Proj}(S^{(d)})$ s'identifient canoniquement en tant que
+    schémas.
+  \item[\rm(ii)] Si, à tout
+    $\mathfrak{p}\in\operatorname{Proj}(S)$ on fait correspondre l'unique
+    idéal premier $\mathfrak{p}'\in\operatorname{Proj}(S')$ tel que
+    $\mathfrak{p}'\cap S_n=\mathfrak{p}\cap S_n$ pour tout $n>0$
+    (\hyperref[II.2.1.9-fr]{2.1.9}), il est clair qu'on définit un
+    homéomorphisme canonique
+    $\operatorname{Proj}(S)\xrightarrow{\sim}\operatorname{Proj}(S')$ des
+    espaces sous-jacents, car $V_+(f)$ est le même ensemble pour $S$ et
+    $S'$ lorsque $f$ est un élément homogène de $S_+$. Comme en outre
+    $S_{(f)}=S'_{(f)}$, $\operatorname{Proj}(S)$ et
+    $\operatorname{Proj}(S')$ s'identifient en tant que schémas.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[2.4.8]
+\label{II.2.4.8-fr}
+Si $S$ est une $A$-algèbre graduée, $S'_A$ la $A$-algèbre graduée telle que
+$(S'_A)_0=A$, $(S'_A)_n=S_n$ pour $n>0$, il existe un isomorphisme canonique
+de $\operatorname{Proj}(S)$ sur $\operatorname{Proj}(S'_A)$.
+\end{corollary}
+
+\begin{proof}
+En effet, ces deux schémas sont isomorphes canoniquement à
+$\operatorname{Proj}(S')$, avec les notations de
+(\hyperref[II.2.4.7-fr]{2.4.7, (ii)}).
+\end{proof}
+
+\subsection{Faisceau associé à un module gradué.}
+\label{subsection:II.2.5-fr}
+
+\begin{env}[2.5.1]
+\label{II.2.5.1-fr}
+Soit $M$ un $S$-module gradué. Pour tout $f$ homogène dans $S_+$,
+$M_{(f)}$ est un $S_{(f)}$-module, et il lui correspond donc un faisceau
+quasi-cohérent associé $\widetilde{M_{(f)}}$ sur le schéma affine
+$\operatorname{Spec}(S_{(f)})$, identifié à $D_+(f)$
+(\hyperref[I.1.3.4-fr]{I, 1.3.4}).
+\end{env}

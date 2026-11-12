@@ -1,0 +1,57 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{234}
+\emph{factorisent} en $V\to\Spec(\bb{Z}[T,T^{-1}])\to\Spec(\bb{Z}[T])$.
+On en conclut que le faisceau ${\sh{M}'}^*_X$ des germes de sections inversibles de $\sh{M}'_X$ s'identifie canoniquement au faisceau $\mathscr{P}\!s.\!\operatorname{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T,T^{-1}])$.
+\end{env}
+
+\begin{lemma}[20.2.9]
+\label{IV.20.2.9}
+Soient $U$ un ouvert de $X$, $s$ un élément régulier de l'anneau $\Gamma(U,\sh{O}_X)$ ; alors l'ensemble ouvert $U_s$ des $x\in U$ tels que $s(x)\neq0$ est schématiquement dense dans $U$.
+\end{lemma}
+
+\begin{proof}
+En effet, soient $V$ un ouvert de $U$, $t$ une section de $\sh{O}_X$ au-dessus de $V$ telle que $t|(V\cap U_s)=0$.
+Pour tout ouvert affine $W\subset V$, il existe alors un entier $n$ tel que $s^nt|W=0$ \sref[I]{I.1.4.1} ; mais puisque $s$ est un élément \emph{régulier} de $\Gamma(U,\sh{O}_X)$, cela entraîne $t|W=0$, d'où $t=0$.
+\end{proof}
+
+\begin{env}[20.2.10]
+\label{IV.20.2.10}
+Considérons une fonction méromorphe $f\in M(X)$ \sref{IV.20.1.4} ; alors $\operatorname{dom}(f)$ est \emph{schématiquement dense} dans $X$ : en effet, tout point de $X$ admet un voisinage ouvert $U$ tel qu'il existe une section $s\in\Gamma(U,\sh{O}_X)$ qui est un élément régulier de cet anneau, et pour laquelle $s(f|U)\in\Gamma(U,\sh{O}_X)$ ; comme $s|U_s$ est inversible, on en conclut que $f|U_s\in\Gamma(U_s,\sh{O}_X)$, donc $U_s\subset\operatorname{dom}(f)$ par définition \sref{IV.20.1.4}, et notre assertion résulte donc du lemme \sref{IV.20.2.9}.
+On peut donc associer à $f$ la pseudo-fonction égale à la classe de la section de $\sh{O}_X$ au-dessus de $\operatorname{dom}(f)$, restriction de $f$ ; opérant de même en remplaçant $X$ par un ouvert quelconque de $X$, on obtient ainsi un \emph{homomorphisme canonique de $\sh{O}_X$-Algèbres}
+\[
+\label{IV.20.2.10.1}
+  \sh{M}_X\to\sh{M}'_X
+  \tag{20.2.10.1}
+\]
+qui, par restriction, donne évidemment un homomorphisme de faisceaux de groupes abéliens
+\[
+\label{IV.20.2.10.2}
+  \sh{M}_X^*\to{\sh{M}'}^*_X
+  \tag{20.2.10.2}
+\]
+pour les faisceaux de germes inversibles de sections de $\sh{M}_X$ et $\sh{M}'_X$.
+\end{env}
+
+\begin{proposition}[20.2.11]
+\EGAReaderTarget{ega4.c04.prop.20-2-11}{IV.20.2.11}
+\medskip
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item L'homomorphisme canonique \emph{\sref{IV.20.2.10.1}} (et par suite aussi \emph{\sref{IV.20.2.10.2}}) est \emph{injectif}.
+  \item Supposons, soit que $X$ soit localement noethérien, soit que $X$ soit réduit et que l'ensemble de ses composantes irréductibles soit localement fini.
+  Alors l'homomorphisme canonique \emph{\sref{IV.20.2.10.1}} (et par suite aussi \emph{\sref{IV.20.2.10.2}}) est \emph{bijectif}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Les questions envisagées étant locales sur $X$, on peut se borner à considérer le cas où $X=\Spec(A)$ est affine, et à montrer alors que l'homomorphisme canonique $M(X)\to M'(X)$ est toujours injectif, et qu'il est bijectif dans les cas considérés dans~(ii).
+Compte tenu de la définition du faisceau $\sh{M}_X$ \sref{IV.20.1.3}, on peut d'ailleurs remarquer que \sref{IV.20.2.10.1} provient en fait d'un homomorphisme de \emph{préfaisceaux}
+\[
+  \Gamma(U,\sh{O}_X)[\Gamma(U,\sh{S})^{-1}]\to\Gamma(U,\sh{M}'_X)
+\]
+et il suffit de montrer que, pour $U$ affine, ce dernier est injectif (resp. bijectif sous les hypothèses de~(ii)).
+Notant $S$ l'ensemble des éléments réguliers de $A$ (de sorte que $S^{-1}A$ est \emph{l'anneau total des fractions} de $A$), on doit donc considérer l'homomorphisme canonique
+\[
+\label{IV.20.2.11.1}
+  S^{-1}A\to M'(X)
+  \tag{20.2.11.1}
+\]

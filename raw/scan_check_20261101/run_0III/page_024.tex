@@ -1,0 +1,84 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{24}
+    Une famille $(E^n)$ d'objets de $\mathcal C$, dont chacun est muni d'une
+    \emph{filtration décroissante} $(F^p(E^n))_{p\in\mathbb Z}$. On désigne
+    comme d'ordinaire par $\operatorname{gr}(E^n)$ l'objet gradué associé à
+    l'objet filtré $E^n$, somme directe des
+    $\operatorname{gr}_p(E^n)=F^p(E^n)/F^{p+1}(E^n)$.
+  \item[(f)] Pour tout couple $(p,q)\in\mathbb Z\times\mathbb Z$, un
+    isomorphisme
+    $\beta^{pq}:E_\infty^{pq}\xrightarrow{\sim}
+    \operatorname{gr}_p(E^{p+q})$.
+\end{enumerate}
+
+La famille $(E^n)$, sans les filtrations, est appelée \emph{l'aboutissement}
+de la suite spectrale E.
+
+Supposons que la catégorie $\mathcal C$ admette des sommes directes infinies,
+ou que pour tout $r\geq2$ et tout $n\in\mathbb Z$, les couples $(p,q)$ tels
+que $p+q=n$ et $E_r^{pq}\ne0$ soient en nombre fini (il suffit qu'il en soit
+ainsi pour $r=2$). Alors les
+\[
+  E_r^{(n)}=\sum_{p+q=n}E_r^{pq}
+\]
+sont définis, et en désignant par $d_r^{(n)}$ le morphisme
+$E_r^{(n)}\to E_r^{(n+1)}$ dont la restriction à $E_r^{pq}$ est $d_r^{pq}$
+pour chaque couple $(p,q)$ tel que $p+q=n$, on a
+$d_r^{(n+1)}\circ d_r^{(n)}=0$, autrement dit $(E_r^{(n)})_{n\in\mathbb Z}$
+est un \emph{complexe $E_r^{(\bullet)}$} dans $\mathcal C$, à opérateur de
+dérivation de degré $+1$, et il résulte de c) que
+$\mathrm H^n(E_r^{(\bullet)})$ est isomorphe à $E_{r+1}^{(n)}$ pour tout
+$r\geq2$.
+\end{env}
+
+\begin{env}[11.1.2]
+\label{0.11.1.2-fr}
+Un \emph{morphisme $u:E\to E'$} d'une suite spectrale E dans une suite
+spectrale $E'=(E_r^{\prime pq},E^{\prime n})$ consiste en des systèmes de
+morphismes $u_r^{pq}:E_r^{pq}\to E_r^{\prime pq}$,
+$u^n:E^n\to E^{\prime n}$, les $u^n$ étant compatibles avec les filtrations
+de $E^n$ et $E^{\prime n}$, les diagrammes
+\[
+  \xymatrix{
+    E_r^{pq}\ar[r]^-{d_r^{pq}}\ar[d]_{u_r^{pq}} &
+    E_r^{p+r,q-r+1}\ar[d]^{u_r^{p+r,q-r+1}}\\
+    E_r^{\prime pq}\ar[r]_{d_r^{\prime pq}} &
+    E_r^{\prime p+r,q-r+1}
+  }
+\]
+étant commutatifs~; en outre, par passage aux quotients, $u_r^{pq}$ donne un
+morphisme
+\[
+  \overline u_r^{pq}:
+  Z_{r+1}(E_r^{pq})/B_{r+1}(E_r^{pq})\longrightarrow
+  Z_{r+1}(E_r^{\prime pq})/B_{r+1}(E_r^{\prime pq})
+\]
+et on doit avoir
+$\alpha_r^{\prime pq}\circ\overline u_r^{pq}
+=u_{r+1}^{pq}\circ\alpha_r^{pq}$~; enfin, on doit avoir
+$u_2^{pq}(B_\infty(E_2^{pq}))\subset B_\infty(E_2^{\prime pq})$,
+$u_2^{pq}(Z_\infty(E_2^{pq}))\subset Z_\infty(E_2^{\prime pq})$~; par
+passage aux quotients, $u_2^{pq}$ donne alors un morphisme
+$u_\infty^{pq}:E_\infty^{pq}\to E_\infty^{\prime pq}$, et le diagramme
+\[
+  \xymatrix{
+    E_\infty^{pq}\ar[r]^-{u_\infty^{pq}}\ar[d]_{\beta^{pq}} &
+    E_\infty^{\prime pq}\ar[d]^{\beta^{\prime pq}}\\
+    \operatorname{gr}_p(E^{p+q})
+      \ar[r]_{\operatorname{gr}_p(u^{p+q})} &
+    \operatorname{gr}_p(E^{\prime p+q})
+  }
+\]
+doit être commutatif.
+
+Les définitions précédentes montrent, par récurrence sur $r$, que si les
+$u_2^{pq}$ sont des \emph{isomorphismes}, il en est de même des $u_r^{pq}$
+pour $r\geq2$~; \emph{si l'on sait en outre que}
+$u_2^{pq}(B_\infty(E_2^{pq}))=B_\infty(E_2^{\prime pq})$ et
+$u_2^{pq}(Z_\infty(E_2^{pq}))=Z_\infty(E_2^{\prime pq})$ \emph{et que les
+$u^n$ sont des isomorphismes}, alors on peut conclure que $u$ est un
+\emph{isomorphisme}.
+\end{env}
+
+\begin{env}[11.1.3]
+\label{0.11.1.3-fr}

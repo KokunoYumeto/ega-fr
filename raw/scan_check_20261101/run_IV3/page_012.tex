@@ -1,0 +1,89 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{12}
+\begin{proposition}[8.2.13]
+\label{IV.8.2.13-fr}
+Supposons que les morphismes $u_{\lambda\mu}:S_\mu\to S_\lambda$ soient des
+immersions ouvertes, de sorte que $S_\mu$ s'identifie à un sous-préschéma
+induit sur un ouvert de $S_\lambda$ pour $\lambda\leq\mu$. Alors, pour tout
+$\alpha\in L$, l'espace sous-jacent au préschéma $S$ s'identifie au
+sous-espace de $S_\alpha$ intersection des $S_\lambda$ pour
+$\lambda\geq\alpha$, et le faisceau structural $\mathcal O_S$ au faisceau
+induit $(\mathrm G,\mathrm{II},1.5)$ par $\mathcal O_{S_\alpha}$ sur cette
+intersection~; plus généralement, pour tout $\mathcal O_{S_\alpha}$-Module
+$\mathscr F_\alpha$, $u_\alpha^*(\mathscr F_\alpha)$ s'identifie au
+$\mathcal O_S$-Module induit par $\mathscr F_\alpha$ sur $S$.
+\end{proposition}
+
+La première assertion résulte de (8.2.9), vu la définition d'une limite
+projective d'espaces topologiques~; en outre tous les
+$\psi_\lambda^*(\mathcal O_{S_\lambda})$ sont égaux au faisceau induit par
+$\mathcal O_{S_\alpha}$ sur $S$ par définition $(0_{\mathrm I},3.7.1)$ et,
+avec les notations de la démonstration de (8.2.9), les homomorphismes
+$(A_\lambda)_{\mathfrak p_\lambda}\to
+(A_\mu)_{\mathfrak p_\mu}$ sont bijectifs pour un système
+$(\mathfrak p_\lambda)$ d'idéaux premiers correspondant à un même point de
+$S$~; l'assertion relative à $\mathcal O_S$ se déduit donc de (8.2.12). La
+dernière assertion résulte alors de la définition de
+$u_\alpha^*(\mathscr F_\alpha)$ $(0_{\mathrm I},4.3.1)$.
+
+\begin{remark}[8.2.14]
+\label{IV.8.2.14-fr}
+Les résultats de (8.2.9) et (8.2.12) montrent que $S$ est limite projective du
+système projectif $(S_\lambda,u_{\lambda\mu})$ dans la catégorie de
+\emph{tous} les espaces annelés (ou de tous les espaces annelés en anneaux
+locaux). En effet, soit $Y$ un espace annelé, et considérons un système
+projectif de morphismes d'espaces annelés $w_\lambda:Y\to S_\lambda$. Si
+l'on pose $w_\lambda=(\rho_\lambda,\omega_\lambda)$, les $\rho_\lambda$
+forment un système projectif d'applications continues et, en vertu de
+(8.2.9), leur limite projective $\rho$ s'identifie à une application continue
+$Y\to S$ telle que $\rho_\lambda=\psi_\lambda\circ\rho$. D'autre part, les
+\[
+\omega_\lambda^\sharp:
+\rho_\lambda^*(\mathcal O_{S_\lambda})\to\mathcal O_Y
+\]
+forment un système inductif d'homomorphismes de faisceaux d'anneaux~; comme
+on peut écrire
+$\rho_\lambda^*(\mathcal O_{S_\lambda})=
+\rho^*(\psi_\lambda^*(\mathcal O_{S_\lambda}))$ et que le foncteur $\rho^*$
+est exact, la limite inductive des
+$\rho_\lambda^*(\mathcal O_{S_\lambda})$ est $\rho^*(\mathcal O_S)$ en
+vertu de (8.2.12), et il y a donc un homomorphisme unique
+$\omega^\sharp:\rho^*(\mathcal O_S)\to\mathcal O_Y$ tel que
+$\omega_\lambda^\sharp=\omega^\sharp\circ
+\rho^*(\theta_\lambda^\sharp)$, ce qui démontre notre assertion.
+\end{remark}
+
+\subsection{Parties constructibles dans une limite projective de préschémas}
+\label{subsection:IV.8.3-fr}
+
+\begin{env}[8.3.1]
+\label{IV.8.3.1-fr}
+Dans toute la suite de ce paragraphe, nous supposons remplies les conditions
+de (8.2.2), dont nous conservons les notations.
+\end{env}
+
+\begin{theorem}[8.3.2]
+\label{IV.8.3.2-fr}
+Pour tout $\lambda$, soient $E_\lambda$, $F_\lambda$ deux parties de
+$S_\lambda$. Posons
+\begin{equation}
+E=\bigcap_\lambda u_\lambda^{-1}(E_\lambda),\qquad
+F=\bigcup_\lambda u_\lambda^{-1}(F_\lambda).
+\tag{8.3.2.1}\label{IV.8.3.2.1-fr}
+\end{equation}
+On suppose vérifiées les conditions suivantes~:
+\begin{enumerate}
+\item[(i)] Pour tout $\lambda$, $E_\lambda$ est pro-constructible et
+$F_\lambda$ est ind-constructible (1.9.4).
+\item[(ii)] Pour $\lambda\leq\mu$, on a
+\[
+E_\mu\subset u_{\lambda\mu}^{-1}(E_\lambda),\qquad
+F_\mu\supset u_{\lambda\mu}^{-1}(F_\lambda).
+\]
+\item[(iii)] Il existe $\alpha\in L$ tel que $S_\alpha$ soit quasi-compact
+(ce qui entraîne que $S_\lambda$ est quasi-compact pour
+$\lambda\geq\alpha$).
+\end{enumerate}
+Alors, les propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\emph{a)}] $E\subset F$.

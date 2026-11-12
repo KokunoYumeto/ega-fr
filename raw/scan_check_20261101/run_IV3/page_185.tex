@@ -1,0 +1,77 @@
+% from ega4-12-fr.tex
+\oldpage[IV-3]{185}
+sont affines, puis au cas où $S$ est \emph{noethérien}~; en effet, par (8.9.1)
+et (8.5.2), on sait qu'il existe un préschéma noethérien
+$S'=\operatorname{Spec}(A')$, où $A'$ est un sous-anneau de $A$, un morphisme
+de type fini $f':X'\to S'$ et trois $\mathcal O_{X'}$-Modules cohérents
+$\mathcal L'_i$ ($0\leq i\leq2$) tels que $X=X'\times_{S'}S$,
+$f=f'_{(S)}$, $\mathcal L_i=\mathcal L'_i\otimes_{S'}S$, ainsi que deux
+homomorphismes $u'$, $v'$ tels que $u=u'\otimes1$, $v=v'\otimes1$ et
+$v'\circ u'=0$. On peut en outre supposer que $\mathcal L'_0$ est $f'$-plat
+(11.2.7), et que $\mathcal L'_1$ est $f'$-plat lorsque $\mathcal L_1$ est
+supposé $f$-plat. Par fidèle platitude, l'hypothèse
+$(\mathcal H_n((\mathcal L_\bullet)_{f(x)}))_x=0$ équivaut à
+$(\mathcal H_n((\mathcal L'_\bullet)_{f'(x')}))_{x'}=0$, si $x'$ est la
+projection de $x$ dans $X'$~; si $U'$ est l'ensemble des $x'\in X'$ tels que
+$(\mathcal H_n((\mathcal L'_\bullet)_{f'(x')}))_{x'}=0$, $U$ est donc l'image
+réciproque de $U'$ par la projection $X\to X'$, ce qui ramène, pour la première
+assertion, au cas où $S$ est noethérien. Pour la seconde assertion, on remarque
+en outre que $A$ est limite inductive de ses sous-anneaux $A_\lambda$ qui sont
+des $A'$-algèbres de type fini~; posons
+$X_\lambda=X'\times_{S'}S_\lambda$, où
+$S_\lambda=\operatorname{Spec}(A_\lambda)$,
+$\mathcal L_i^{(\lambda)}=\mathcal L'_i\otimes_{S'}S_\lambda$, et soient
+$u_\lambda=u'\otimes1:\mathcal L_2^{(\lambda)}\to\mathcal L_1^{(\lambda)}$,
+$v_\lambda=v'\otimes1:\mathcal L_1^{(\lambda)}\to\mathcal L_0^{(\lambda)}$,
+de sorte que l'on a
+$\mathcal H_1(\mathcal L_\bullet^{(\lambda)})
+=\operatorname{Ker}(v_\lambda)/\operatorname{Im}(u_\lambda)$. Or, comme le
+foncteur $\varinjlim$ est exact dans la catégorie des groupes commutatifs, on a
+$\operatorname{Ker}(v)=\varinjlim\operatorname{Ker}(v_\lambda)$,
+$\operatorname{Im}(u)=\varinjlim\operatorname{Im}(u_\lambda)$, et
+$\mathcal H_1(\mathcal L_\bullet)
+=\varinjlim\mathcal H_1(\mathcal L_\bullet^{(\lambda)})$. Si l'on a supposé
+que $\mathcal L_1$ est $f$-plat et (en se ramenant au cas où $X=U$) que l'on
+ait prouvé $\mathcal H_1(\mathcal L_\bullet^{(\lambda)})=0$ pour tout
+$\lambda$, on en déduira bien $\mathcal H_1(\mathcal L_\bullet)=0$.
+
+\medskip
+I) Supposons désormais $S$ noethérien. On sait (sans hypothèse de platitude sur
+$\mathcal L_0$) que l'ensemble $U$ est \emph{constructible} dans $X$ (9.9.6).
+Utilisant maintenant ($\mathbf 0_{\mathrm{III}}$, 9.2.5), il reste à montrer
+que pour toute \emph{générisation} $x'$ de $x\in U$ dans $X$, on a aussi
+$x'\in U$. La méthode exposée dans (12.0.2) s'applique sans changement (compte
+tenu du fait que pour un préschéma $Z$ sur un corps $k$ et une extension $k'$
+de $k$, la projection $Z\otimes_k k'\to Z$ est fidèlement plate). On peut donc
+supposer que $S$ est le spectre d'un anneau de valuation discrète $A$, dont on
+désigne par $t$ une uniformisante, $x$ étant au-dessus du point fermé de $S$ et
+$x'$ au-dessus du point générique de $S$. L'hypothèse que $\mathcal L_0$ est
+$f$-plat entraîne que $t$ est $\mathcal L_0$-régulier
+($\mathbf 0_{\mathrm I}$, 6.3.4). On est alors ramené à prouver le lemme suivant
+(où $B$, $M$, $N$, $P$ seront remplacés par $\mathcal O_x$,
+$(\mathcal L_2)_x$, $(\mathcal L_1)_x$ et $(\mathcal L_0)_x$ respectivement)~:
+
+\begin{lemma}[12.3.3.1]
+\label{IV.12.3.3.1-fr}
+Soient $B$ un anneau local noethérien, $M,N,P$ trois $B$-modules, $N$ étant
+supposé de type fini, $M\xrightarrow{u}N\xrightarrow{v}P$ deux homomorphismes
+tels que $v\circ u=0$. Soit $t$ un élément de l'idéal maximal de $B$ tel que
+$t$ soit $P$-régulier et que la suite
+\begin{equation}
+  \tag{12.3.3.2}
+  \label{IV.12.3.3.2-fr}
+  M/tM\xrightarrow{u\otimes1_{B/tB}}N/tN
+  \xrightarrow{v\otimes1_{B/tB}}P/tP
+\end{equation}
+soit exacte. Alors la suite $M\xrightarrow{u}N\xrightarrow{v}P$ est exacte.
+\end{lemma}
+
+Notons d'abord que si l'on remplace $M$ par son image $Q$ dans $N$ et $u$ par
+l'injection $j:Q\to N$, l'image de $j\otimes1$ est la même que celle de
+$u\otimes1$, donc on peut, sans changer ni l'hypothèse ni la conclusion,
+supposer $u$ injectif. D'autre part, si $R$ est l'image de $v$ et
+$\rho:N\to R$ la surjection canonique, $t$ est évidemment $R$-régulier, on a
+$\rho\circ u=0$, et le noyau de $\rho\otimes1$ est contenu dans celui de
+$v\otimes1$~; il lui est par suite égal si la suite (12.3.3.2) est exacte~;
+comme d'autre part on a évidemment $\operatorname{Ker}(\rho)
+=\operatorname{Ker}(v)$,

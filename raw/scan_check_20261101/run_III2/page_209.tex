@@ -1,0 +1,107 @@
+% from ega3-7-fr.tex
+\oldpage[III]{209}
+\[
+  y\longmapsto
+  \sum_i(-1)^i\operatorname{rang}_{\kappa(y)}
+  \mathscr T_i\bigl(\kappa(y)\bigr)
+  \tag{7.9.4.1}\label{III.7.9.4.1.fr}
+\]
+est localement constante dans $Y$.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $Y=\operatorname{Spec}(A)$ est affine d'anneau $A$
+noethérien. Comme le complexe $\mathscr P_\bullet$ est fini, on sait (7.7.12,
+(i)) qu'on a
+\[
+  \mathscr T_p(\mathscr M)
+  =\mathscr H_p(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M),
+  \qquad \mathscr L_\bullet=\widetilde{L_\bullet},
+\]
+$L_\bullet$ étant un complexe \emph{fini} de $A$-modules projectifs de type
+fini. Le théorème résulte alors de (7.9.3).
+\end{proof}
+
+\begin{env}[7.9.5]
+\label{III.7.9.5.fr}
+Sous les conditions de (7.9.4), la fonction (7.9.4.1) est \emph{constante}
+lorsque $Y$ est \emph{connexe}. Lorsque $Y$ est connexe et non vide, on désigne
+la valeur unique (entière) de (7.9.4.1) par
+\[
+  \operatorname{EP}(f,\mathscr P_\bullet)
+  \quad\text{ou}\quad
+  \operatorname{EP}(Y,\mathscr P_\bullet),
+  \quad\text{ou simplement}\quad
+  \operatorname{EP}(\mathscr P_\bullet)
+\]
+s'il ne peut en résulter de confusion, et l'on dit que cet entier est la
+\emph{caractéristique d'Euler-Poincaré de $\mathscr P_\bullet$} relativement à
+$f$ (ou à $Y$). Dans le cas général, on notera aussi
+\[
+  \operatorname{EP}(f,\mathscr P_\bullet;y)
+  \quad\text{ou}\quad
+  \operatorname{EP}(Y,\mathscr P_\bullet;y)
+  \quad\text{ou}\quad
+  \operatorname{EP}(\mathscr P_\bullet;y)
+\]
+le second membre de (7.9.4.1).
+\end{env}
+
+\begin{env}[7.9.6]
+\label{III.7.9.6.fr}
+Sous les hypothèses de (7.9.4) relativement à $X$, $Y$ et $f$, soit
+\[
+  0\longrightarrow\mathscr P'_\bullet
+  \xrightarrow{u}\mathscr P_\bullet
+  \xrightarrow{v}\mathscr P''_\bullet
+  \longrightarrow0
+\]
+une suite exacte de complexes finis de $\mathscr O_X$-Modules cohérents et
+$Y$-plats, les homomorphismes $u$ et $v$ étant de degrés \emph{pairs} $2d$,
+$2d'$ respectivement. Comme $\mathscr T_\bullet$ est un foncteur homologique
+(7.7.1), on a une suite exacte d'homologie
+\[
+  \cdots\longrightarrow
+  \mathscr T_i(\mathscr P'_\bullet,\kappa(y))
+  \longrightarrow
+  \mathscr T_{i+2d}(\mathscr P_\bullet,\kappa(y))
+  \longrightarrow
+  \mathscr T_{i+2d+2d'}(\mathscr P''_\bullet,\kappa(y))
+  \longrightarrow
+  \mathscr T_{i-1}(\mathscr P'_\bullet,\kappa(y))
+  \longrightarrow\cdots
+\]
+n'ayant d'ailleurs qu'un nombre fini de termes. En écrivant que la
+caractéristique d'Euler-Poincaré de ce complexe est nulle ($0_{\mathrm I}$,
+11.10.1), il vient aussitôt
+\[
+  \operatorname{EP}(\mathscr P_\bullet;y)
+  =\operatorname{EP}(\mathscr P'_\bullet;y)
+  +\operatorname{EP}(\mathscr P''_\bullet;y)
+  \tag{7.9.6.1}\label{III.7.9.6.1.fr}
+\]
+pour tout $y\in Y$. Or, si par exemple $\mathscr P_\bullet=(\mathscr P_i)$ avec
+$\mathscr P_i=0$ pour $i<0$, on a la suite exacte de complexes
+\[
+\xymatrix@C=2.4em{
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & 0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & \mathscr P_1 \ar[r]\ar[d] & \mathscr P_2 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r]\ar[d] & \mathscr P_0 \ar[r]\ar[d]
+    & 0 \ar[r]\ar[d] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r] & 0 \ar[r]
+    & 0 \ar[r] & 0 \ar[r] & \cdots
+}
+\]
+les flèches verticales non nulles étant les automorphismes identiques ; on peut
+appliquer (7.9.6.1) à cette suite exacte, d'où, par récurrence sur la longueur de
+$\mathscr P_\bullet$, la formule
+\[
+  \operatorname{EP}(\mathscr P_\bullet;y)
+  =\sum_i(-1)^i\operatorname{EP}(\mathscr P_i;y).
+  \tag{7.9.6.2}\label{III.7.9.6.2.fr}
+\]
+

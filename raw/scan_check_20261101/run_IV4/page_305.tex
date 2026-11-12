@@ -1,0 +1,74 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{305}
+Plus généralement, considérons un diagramme commutatif
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_f & U' \ar[d]^{f'} \\
+    X \ar[r]_u & X'
+  }
+\]
+où les morphismes $f$, $f'$ sont quasi-compacts et quasi-séparés et le morphisme $u$
+\emph{affine}. Si l'on pose $h=u\circ f$, on a
+$h_*(\mathcal O_U)=u_*(f_*(\mathcal O_U))=u_*(f^0_*(\mathcal O_{U^0}))$ et
+$u\circ f^0$ est un morphisme affine; on a par suite
+$U^0=\operatorname{Aff}(U/X')$ (relativement au morphisme $h$), d'où un unique
+$X'$-morphisme $v^0:U^0\to U'^0$ rendant commutatif le diagramme
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_{i_U} & U' \ar[d]^{i_{U'}} \\
+    U^0 \ar[r]_{v^0} & U'^0.
+  }
+\]
+
+\begin{proposition}[21.12.2]
+\label{IV.21.12.2}
+Soient $f:U\to X$ un morphisme quasi-compact et quasi-séparé,
+$h:X'\to X$ un morphisme plat; on pose $U'=U\times_X X'$,
+$f'=f_{\{X'\}}:U'\to X'$. Alors on a un $X'$-isomorphisme canonique
+\[
+\label{IV.21.12.2.1}
+  \operatorname{Aff}(U'/X')\xrightarrow{\sim}
+  \operatorname{Aff}(U/X)\times_X X'.
+  \tag{21.12.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, on a
+$\operatorname{Aff}(U'/X')=\operatorname{Spec}(f'_*(\mathcal O_{U'}))$, et
+$\operatorname{Aff}(U/X)\times_X X'=\operatorname{Spec}(h^*(f_*(\mathcal O_U)))$
+$(\mathbf{II}, 1.5.1)$; l'isomorphisme de l'énoncé provient de l'isomorphisme canonique
+$h^*(f_*(\mathcal O_U))\xrightarrow{\sim}f'_*(\mathcal O_{U'})$ (2.3.1).
+\end{proof}
+
+\begin{corollary}[21.12.3]
+\label{IV.21.12.3}
+Pour tout morphisme quasi-compact et quasi-séparé $f:U\to X$ et tout $x\in X$, on a,
+à un isomorphisme canonique près
+\[
+  U^0\times_X\operatorname{Spec}(\mathcal O_{X,x})
+  =(U\times_X\operatorname{Spec}(\mathcal O_{X,x}))^0.
+\]
+\end{corollary}
+
+Il résulte aussi de (21.12.2) que l'on a, à un isomorphisme canonique près, pour tout
+ouvert $V$ de $X$
+\[
+\label{IV.21.12.4}
+  (f^{-1}(V))^0=(f^0)^{-1}(V).
+  \tag{21.12.4}
+\]
+
+\begin{env}[21.12.5]
+\EGAReaderTarget{ega4.c04.statement.21-12-5}{IV.21.12.5}
+Nous allons considérer en particulier le cas où $f:U\to X$ est une \emph{immersion
+ouverte}, $U$ s'identifiant donc à un préschéma induit sur un ouvert de $X$. Comme le
+morphisme $f^{-1}(U)\to U$ est l'identité, il résulte de (21.12.4) que le morphisme
+$(f^0)^{-1}(U)\to U$ restriction de $f^0$ est un isomorphisme, $i_U:U\to U^0$ étant
+donc une \emph{immersion ouverte} permettant d'identifier $U$ à un préschéma induit
+sur un ouvert de $U^0$.
+
+Plus généralement, pour un ouvert $V$ de $X$, la restriction $(f^0)^{-1}(V)\to V$ de
+$f^0$ est un isomorphisme de $(f^0)^{-1}(V)$ sur le préschéma induit sur l'ouvert
+$V\cap U$ si et seulement si l'immersion ouverte $U\cap V\to V$ est un morphisme
+\emph{affine}. Il est clair $(\mathbf{II}, 1.2.1)$

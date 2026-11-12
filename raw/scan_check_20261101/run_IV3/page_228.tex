@@ -1,0 +1,93 @@
+% from ega4-15-fr.tex
+\oldpage[IV-3]{228}
+  libre de rang $1$ engendré par l'élément $1$ de $\mathcal O_x$ (Bourbaki,
+  \emph{Alg. comm.}, chap.~II, \S~3, n\textsuperscript{o}~2, prop.~5), ce qui est
+  absurde.
+
+  \item Montrons enfin que dans (15.2.2) ou (15.2.3), on ne peut remplacer
+  «~géométriquement réduit~» par «~réduit~». Nous allons en effet définir deux
+  anneaux $A$, $A'$ ayant les propriétés suivantes~:
+  \begin{enumerate}[label=\arabic*)]
+    \item $A$ est un anneau local noethérien d'idéal maximal $\mathfrak m$,
+    intègre, complet, de dimension $1$ et géométriquement unibranche.
+    \item $A'$ est la clôture intégrale de $A$, une $A$-algèbre finie dont
+    l'idéal maximal est $\mathfrak mA'$, et le corps résiduel $k'$ une extension
+    radicielle finie non triviale du corps résiduel $k=A/\mathfrak m$ de $A$.
+  \end{enumerate}
+  On peut alors prendre $Y=\operatorname{Spec}(A)$,
+  $X=\operatorname{Spec}(A')$, $\mathcal F=\mathcal O_X$, $y$ et $x$ étant les
+  points fermés de $Y$ et $X$ respectivement~; les hypothèses (i) et (iv) de
+  (15.2.2) sont trivialement vérifiées~; comme $A$ est de dimension $1$,
+  $f:X\to Y$ est radiciel, fini et surjectif, donc un homéomorphisme universel
+  (2.4.5), ce qui prouve l'hypothèse (i) de (15.2.3). Enfin, il est clair que
+  $f^{-1}(y)$ est réduit. Cependant $f$ n'est pas plat au point $x$, car si $A'$
+  était un $A$-module plat, ce serait un $A$-module libre de rang $1$ (puisqu'il
+  a même corps des fractions que $A$) engendré par l'élément $1$ de $A$
+  (Bourbaki, \emph{Alg. comm.}, chap.~II, \S~3, n\textsuperscript{o}~2,
+  prop.~5), ce qui est absurde.
+
+  Pour construire les anneaux $A$ et $A'$, partons d'un corps imparfait $k$ de
+  caractéristique $p>0$~; soient $K_0=k((T))$ le corps des séries formelles sur
+  $k$, $A_0$ l'anneau de valuation pour $K_0$ correspondant à la valuation
+  discrète égale à l'\emph{ordre} des séries formelles~; le corps résiduel de
+  $A_0$ est donc $k$. Soit $\alpha$ un élément de $k$ qui n'est pas puissance
+  $p$-ième, et prenons $k'=k(\alpha^{1/p})$~; $K=k'((T))$ est alors une extension
+  radicielle finie de $K_0$, et $A'=A_0\otimes_k k'$ l'anneau de valuation
+  discrète pour $K$ correspondant à l'ordre des séries formelles sur $K$. Si
+  $\mathfrak m'$ est l'idéal maximal de $A'$, on répondra aux conditions 1) et 2)
+  en prenant $A=A_0+\mathfrak m'$~: en effet, comme $A_0$ est noethérien et $A'$
+  un $A_0$-module de type fini, $A$ est une $A_0$-algèbre finie, donc un anneau
+  noethérien~; comme $A'$ est fini sur $A$, $\mathfrak m'$ est le seul idéal
+  maximal de $A$, qui est donc un anneau local complet, évidemment de dimension
+  $1$ (étant fini sur $A_0$) et géométriquement unibranche puisque $A'$ est
+  intégralement clos et a même corps de fractions $K$ que $A$.
+
+  \item La démonstration de (15.2.2) montre toutefois que l'on peut affaiblir la
+  condition (iii) en y remplaçant «~géométriquement réduit~» par «~réduit~»
+  lorsqu'on peut appliquer le critère valuatif de platitude (11.8.1) en utilisant
+  seulement des anneaux de valuation discrète $A'$ dont le corps résiduel $k'$
+  est séparable sur $\mathbf{k}(y)$~; en effet, si $x'$ et $z'$ ont les mêmes
+  significations que dans (15.2.2), les multiplicités radicielles
+  $\mu_i(\mathbf{k}(z')\mid k')$ et
+  $\mu_i(\mathbf{k}(z)\mid\mathbf{k}(y))$ sont les mêmes, en vertu de (4.7.3),
+  donc il résulte de (4.7.9) que $\operatorname{long}((\mathcal F_y)_z)$ et
+  $\operatorname{long}((\mathcal F'_{y'})_{z'})$ sont égales, et l'on est encore
+  ramené au cas où $Y$ est le spectre d'un anneau de valuation discrète et $y$
+  son point fermé. Par exemple, on pourra obtenir ce résultat plus fort lorsque
+  $\mathcal O_y$ est unibranche et dominé par un anneau de valuation discrète
+  dont le corps résiduel est extension séparable de $\mathbf{k}(y)$, en vertu de
+  (11.6.4). C'est le cas lorsque $\mathcal O_y$ est un anneau régulier, d'après
+  (15.1.1.6). Mais, comme nous l'a signalé Hironaka, il y a des anneaux locaux
+  intégralement clos noethériens, de dimension $2$ (provenant de schémas
+  algébriques sur des corps imparfaits) qui ne satisfont pas à la condition
+  précédente.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Applications : critères de réduction et d'irréductibilité}
+\label{subsection:IV.15.3-fr}
+
+\begin{proposition}[15.3.1]
+\label{IV.15.3.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement
+de type fini, $\mathcal F$ un $\mathcal O_X$-Module cohérent, $x$ un point de
+$X$, $y=f(x)$. Supposons vérifiées les conditions (i), (ii) et (iii) de
+(15.2.2). Alors~:
+\begin{enumerate}[label=(\roman*)]
+  \item Il existe un voisinage $U$ de $x$ dans $X$ tel que $f|U$ soit
+  universellement ouvert et que, pour tout $x'\in U$,
+  $\mathcal F_{f(x')}$ soit géométriquement réduit sur
+  $\mathbf{k}(f(x'))$ au point $x'$.
+  \item Si de plus $Y$ est réduit au point $y$, il existe un voisinage
+  $U_1\subset U$ de $x$ tel que $\mathcal F|U_1$ soit $f$-plat et réduit.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Compte tenu de (\textbf{I}, 5.1.8), (4.2.7) et (4.7.11), les hypothèses ne
+changent pas, ni la conclusion (i) de l'énoncé, si l'on remplace $Y$ par
+$Y_{\mathrm{red}}$ et $X$ par $X\times_Y Y_{\mathrm{red}}$, et l'on peut donc
+supposer $Y$ \emph{réduit}. Il résulte alors de (15.2.2) que $\mathcal F$ est
+$f$-plat au point $x$, donc aussi (11.1.1) dans un voisinage de $x$, et
+\emph{a fortiori} $f$ est universellement ouvert dans ce voisinage (2.4.6). Le
+fait que $\mathcal F_{f(x')}$ soit alors géométriquement réduit au point $x'$

@@ -1,0 +1,100 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{94}
+
+Supposons maintenant $f$ surjectif et fermé et démontrons l'existence de
+$x_i$ par récurrence descendante sur $i$, l'existence de $x_n$ tel que
+$f(x_n)=y_n$ résultant encore de ce que $f$ est surjectif. Si les $x_i$ ont
+été déterminés de façon à satisfaire aux conditions voulues pour $i>m$, on
+note que $f(\overline{\{x_{m+1}\}})$ est l'adhérence de
+$\{f(x_{m+1})\}=\{y_{m+1}\}$ puisque $f$ est fermé (Bourbaki,
+\emph{Top. gén.}, chap. I\textsuperscript{er}, 3\textsuperscript{e} éd.,
+\S~5, n\textsuperscript{o}~4, prop.~9); il existe donc
+$x_m\in\overline{\{x_{m+1}\}}$ tel que $f(x_m)=y_m$ et la récurrence
+descendante se poursuit encore.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[5.4.2]
+\label{IV.2.s5.4.2-fr}
+Si $X$, $Y$ sont deux préschémas localement noethériens, $f:X\to Y$ un
+morphisme fini (donc fermé), on a
+$\dim(X)=\dim(\overline{f(X)})$. Si en outre $f$ est surjectif, on a
+$\dim(X)=\dim(Y)$.
+\end{corollary}
+
+\begin{remarks}[5.4.3]
+\label{IV.2.s5.4.3-fr}
+\begin{enumerate}
+\item[(i)] On a vu dans (4.1.2) que si $X$ et $Y$ sont des préschémas
+localement de type fini sur un corps $k$ et $f$ un $k$-morphisme, l'inégalité
+$\dim(Y)\leq\dim(X)$ est déjà vérifiée lorsque $f$ est quasi-compact et
+dominant. Au contraire, on peut avoir $\dim(Y)>\dim(X)$ même lorsque $f$ est
+de type fini, bijectif et une immersion locale, si l'on suppose seulement
+$X$ et $Y$ localement noethériens. Par exemple soient $A$ un anneau de
+valuation discrète, $K$ son corps des fractions, $k$ son corps résiduel; si
+$Y=\operatorname{Spec}(A)$, et si $a$ est le point générique de $Y$ et $b$
+son point fermé, on a donc $k(a)=K$, $k(b)=k$. Soit alors $X$ le préschéma
+somme de $\operatorname{Spec}(K)$ et de $\operatorname{Spec}(k)$,
+$f:X\to Y$ le morphisme qui coïncide dans $\operatorname{Spec}(K)$ et
+$\operatorname{Spec}(k)$ avec les morphismes canoniques respectifs
+(I, 2.4.5); il est clair que $f$ est une immersion locale bijective, $\{a\}$
+étant ouvert dans $Y$; d'autre part, $f$ est de type fini, car
+$K=A[\pi^{-1}]$, où $\pi$ est une uniformisante de $A$, donc $K$ est une
+$A$-algèbre de type fini. Cependant on a $\dim(X)=0$ et $\dim(Y)=1$.
+
+\item[(ii)] Si $A$ et $B$ sont deux anneaux noethériens tels que $A\subset B$
+et que $B$ soit une $A$-algèbre finie, le corollaire (5.4.2) montre à nouveau
+que $\dim(B)=\dim(A)$ (0, 16.1.5). Supposons en outre que $A$ soit un anneau
+local noethérien; alors $B$ est un anneau noethérien semi-local (Bourbaki,
+\emph{Alg. comm.}, chap. IV, \S~2, n\textsuperscript{o}~5, cor.~3 de la
+prop.~9); si $\mathfrak n_i$ $(1\leq i\leq r)$ sont les idéaux maximaux de
+$B$, on a donc
+\begin{equation}
+\dim(A)=\sup_i\dim(B_{\mathfrak n_i}).
+\tag{5.4.3.1}\label{IV.2.s5.4.3.1-fr}
+\end{equation}
+On observera que, dans ces conditions, on n'a pas nécessairement
+$\dim(B_{\mathfrak n_i})=\dim(A)$ pour tout $i$: il suffit pour le voir de
+remplacer $B$ par la composée directe de $B$ et du corps résiduel $k$ de
+$A$. Mais on a même des exemples où $A$ et $B$ sont en outre des anneaux
+intègres de dimension $2$ et où certains des $B_{\mathfrak n_i}$ ont une
+dimension $<\dim(A)$ (5.6.11). Nous verrons toutefois plus loin ((5.6.4) et
+(5.6.10)) que ce dernier phénomène ne peut se présenter lorsqu'on suppose
+que $A$ est un quotient d'anneau local régulier.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Formule des dimensions pour un morphisme de type fini}
+\label{IV.2.s5.5-fr}
+
+\begin{env}[5.5.1]
+\label{IV.2.s5.5.1-fr}
+Rappelons (0, 16.3.9) que si $A$, $B$ sont deux anneaux locaux noethériens,
+$k$ le corps résiduel de $A$, $\varphi:A\to B$ un homomorphisme local, on a
+\begin{equation}
+\dim(B)\leq\dim(A)+\dim(B\otimes_A k).
+\tag{5.5.1.1}\label{IV.2.s5.5.1.1-fr}
+\end{equation}
+\end{env}
+
+On en déduit:
+
+\begin{proposition}[5.5.2]
+\label{IV.2.s5.5.2-fr}
+Soient $X$, $Y$ deux préschémas localement noethériens, $f:X\to Y$ un
+morphisme, $x$ un point de $X$, $y=f(x)$. Alors on a
+\begin{equation}
+\dim(\mathcal O_x)\leq\dim(\mathcal O_y)
++\dim(\mathcal O_x\otimes_{\mathcal O_y}k(y)).
+\tag{5.5.2.1}\label{IV.2.s5.5.2.1-fr}
+\end{equation}
+En particulier, si $x$ est point maximal de la fibre $f^{-1}(y)$, on a
+\begin{equation}
+\dim(\mathcal O_x)\leq\dim(\mathcal O_y)
+\tag{5.5.2.2}\label{IV.2.s5.5.2.2-fr}
+\end{equation}
+puisque $\mathcal O_x\otimes_{\mathcal O_y}k(y)
+=\mathcal O_x/\mathfrak m_y\mathcal O_x$ est l'anneau local de $x$ dans le
+préschéma $f^{-1}(y)$, et est donc de dimension $0$ par hypothèse.
+\end{proposition}
+

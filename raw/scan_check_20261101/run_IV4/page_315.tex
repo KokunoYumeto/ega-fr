@@ -1,0 +1,92 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{315}
+Inversement, supposons que $\mathscr E'=f^*(\mathscr E)$, avec $\mathscr E$ localement
+libre; la question étant locale sur $X$, on peut supposer que
+$\mathscr E=\mathcal O_X^n$, d'où $\mathscr E'=\mathcal O_{X'}^n$, et les conditions
+(i) et (ii) résultent de l'hypothèse que
+$\mathcal O_X\to f_*(\mathcal O_{X'})$ est un isomorphisme.
+\end{proof}
+
+Dans ce numéro, nous appliquerons le lemme précédent à une injection canonique
+$j:U\to X$, où $U$ est l'espace annelé induit par $X$ sur un \emph{ouvert} de $X$.
+Avec ces notations, (21.13.2) se traduit en :
+
+\begin{corollary}[21.13.3]
+\label{IV.21.13.3}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$, $U=X-Y$,
+$j:U\to X$ l'injection canonique. Les conditions suivantes sont équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Pour tout ouvert $V$ de $X$, le foncteur restriction
+  $\mathscr E\mapsto\mathscr E|(U\cap V)$ de la catégorie des
+  $\mathcal O_V$-Modules localement libres de rang fini dans la catégorie des
+  $\mathcal O_{U\cap V}$-Modules localement libres de rang fini est fidèle
+  (resp.\ pleinement fidèle).
+  \item[\emph{a')}] Pour tout ouvert $V$ de $X$, le foncteur restriction
+  $\mathscr L\mapsto\mathscr L|(U\cap V)$ de la catégorie des
+  $\mathcal O_V$-Modules localement libres de rang $1$ dans la catégorie des
+  $\mathcal O_{U\cap V}$-Modules localement libres de rang $1$ est fidèle
+  (resp.\ pleinement fidèle).
+  \item Pour tout ouvert $V$ de $X$, l'homomorphisme canonique
+  $\mathscr E\to(j_V)_*(\mathscr E|(U\cap V))$ est injectif (resp.\ bijectif) pour
+  tout $\mathcal O_V$-Module localement libre de rang fini $\mathscr E$.
+  \item[\emph{b')}] L'homomorphisme canonique
+  $\mathcal O_X\to j_*(\mathcal O_U)$ est injectif (resp.\ bijectif).
+\end{enumerate}
+
+Supposons que l'homomorphisme canonique $\mathcal O_X\to j_*(\mathcal O_U)$ soit
+bijectif. Alors, pour qu'un $\mathcal O_U$-Module localement libre de rang fini
+$\mathscr F$ soit de la forme $\mathscr E|U$, où $\mathscr E$ est un
+$\mathcal O_X$-Module localement libre de rang fini, il faut et il suffit que
+$j_*(\mathscr F)$ soit un $\mathcal O_X$-Module localement libre, et dans ce cas, on
+peut prendre $\mathscr E=j_*(\mathscr F)$.
+\end{corollary}
+
+\begin{lemma}[21.13.4]
+\label{IV.21.13.4}
+Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$,
+$U=X-Y$, $j:U\to X$ l'injection canonique. Pour que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ soit injectif (resp.\ bijectif), il faut et il
+suffit que $\operatorname{prof}_Y(\mathcal O_X)\geq1$
+(resp.\ $\operatorname{prof}_Y(\mathcal O_X)\geq2$) (autrement dit, que
+$\operatorname{prof}(\mathcal O_{X,x})\geq1$
+(resp.\ $\operatorname{prof}(\mathcal O_{X,x})\geq2$) pour tout $x\in Y$).
+\end{lemma}
+
+\begin{proof}
+Ces assertions sont en effet des cas particuliers de (5.10.2) et (5.10.5).
+\end{proof}
+
+\begin{proposition}[21.13.5]
+\label{IV.21.13.5}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$, $U=X-Y$,
+$j:U\to X$ l'injection canonique. Pour que le couple $(X,Y)$ soit parafactoriel, il
+faut et il suffit que l'homomorphisme canonique $\mathcal O_X\to j_*(\mathcal O_U)$
+soit bijectif, et que pour tout ouvert $V$ de $X$ et tout
+$\mathcal O_{U\cap V}$-Module inversible $\mathscr L$, $(j_V)_*(\mathscr L)$ soit un
+$\mathcal O_V$-Module inversible (notation de (21.13.3)).
+\end{proposition}
+
+\begin{proof}
+C'est une conséquence immédiate de la définition (21.13.1) et de (21.13.3).
+\end{proof}
+
+\begin{corollary}[21.13.6]
+\label{IV.21.13.6}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$.
+\begin{enumerate}[label=(\roman*)]
+  \item Si le couple $(X,Y)$ est parafactoriel, il en est de même de
+  $(W,Y\cap W)$ pour tout ouvert $W$ de $X$. Inversement, si $(W_\alpha)$ est un
+  recouvrement ouvert de $X$ tel que chacun des couples
+  $(W_\alpha,Y\cap W_\alpha)$ soit parafactoriel, alors le couple $(X,Y)$ est
+  parafactoriel.
+  \item Si le couple $(X,Y)$ est parafactoriel, il en est de même de $(X,Y')$ pour
+  toute partie fermée $Y'$ de $Y$.
+  \item Supposons que $X$ soit un préschéma, et soient $X'$ un préschéma,
+  $f:X'\to X$ un morphisme fidèlement plat et quasi-compact; posons
+  $Y'=f^{-1}(Y)$. Supposons que le couple $(X',Y')$ soit parafactoriel et que
+  l'ouvert $U=X-Y$ soit rétrocompact dans $X$ $(\mathbf 0_{\mathrm{III}}, 9.1.1)$.
+  Alors le couple $(X,Y)$ est parafactoriel.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}

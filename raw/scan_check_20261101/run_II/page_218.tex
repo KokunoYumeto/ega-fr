@@ -1,0 +1,107 @@
+% from ega2-errata-addenda-fr.tex
+\oldpage[II]{218}
+\markboth{A. GROTHENDIECK --- Chap. II}{A. GROTHENDIECK --- Chap. II}
+\[
+  \Gamma(S,\sh{O}_S)\to\Gamma(X,\sh{O}_X)
+\]
+sur l'ensemble des morphismes d'espaces annelés
+$(\psi,\theta):(X,\sh{O}_X)\to(S,\sh{O}_S)$ tels que, pour tout
+$x\in X$, $\theta_x^\sharp:\sh{O}_{\psi(x)}\to\sh{O}_x$ soit un
+homomorphisme local.
+\end{proposition}
+
+Notons d'abord que si $(X,\sh{O}_X)$, $(S,\sh{O}_S)$ sont deux espaces
+annelés quelconques, un morphisme $(\psi,\theta)$ de $(X,\sh{O}_X)$
+dans $(S,\sh{O}_S)$ définit canoniquement un homomorphisme d'anneaux
+$\Gamma(\theta):\Gamma(S,\sh{O}_S)\to\Gamma(X,\sh{O}_X)$; d'où une
+première application
+\begin{equation}
+\label{ega2:addendum:I.1.8.1.1-fr}
+  \rho:\Hom((X,\sh{O}_X),(S,\sh{O}_S))
+  \to\Hom(\Gamma(S,\sh{O}_S),\Gamma(X,\sh{O}_X)).
+\tag{1.8.1.1}
+\end{equation}
+Inversement, sous les hypothèses de l'énoncé, posons
+$A=\Gamma(S,\sh{O}_S)$, et considérons un homomorphisme d'anneaux
+$\vphi:A\to\Gamma(X,\sh{O}_X)$. Pour tout $x\in X$, il est clair que
+l'ensemble des $f\in A$ tels que $\vphi(f)(x)=0$ est un idéal premier
+de $A$, puisque $\sh{O}_x/\mathfrak m_x=\kres(x)$ est un corps; c'est
+donc un élément de $S=\Spec(A)$, que nous noterons encore
+${}^a\vphi(x)$. En outre, pour tout $f\in A$, on a par définition
+(0, 5.5.2)
+\[
+  {}^a\vphi^{-1}(D(f))=X_f,
+\]
+ce qui prouve que ${}^a\vphi$ est une application continue $X\to S$.
+Définissons ensuite un homomorphisme
+\[
+  \widetilde{\vphi}:\sh{O}_S\to{}^a\vphi_*(\sh{O}_X)
+\]
+de $\sh{O}_S$-Modules; pour tout $f\in A$, on a
+$\Gamma(D(f),\sh{O}_S)=A_f$ (I, 1.3.6); pour tout $s\in A$, on fera
+correspondre à $s/f\in A_f$ l'élément
+\[
+  (\vphi(s)|X_f)(\vphi(f)|X_f)^{-1}
+  \in\Gamma(X_f,\sh{O}_X)
+  =\Gamma(D(f),{}^a\vphi_*(\sh{O}_X)),
+\]
+et on vérifie aussitôt (par passage de $D(f)$ à $D(fg)$) que cela
+définit bien un homomorphisme de $\sh{O}_S$-Modules, d'où un morphisme
+$({}^a\vphi,\widetilde{\vphi})$ d'espaces annelés. En outre, avec les
+mêmes notations, et en posant pour simplifier $y={}^a\vphi(x)$, on voit
+aussitôt (0, 3.7.1) que l'on a
+\[
+  \widetilde{\vphi}_x^\sharp(s_y/f_y)
+  =(\vphi(s)_x)(\vphi(f)_x)^{-1};
+\]
+comme la relation $s_y\in\mathfrak m_y$ est par définition équivalente
+à $\vphi(s)_x\in\mathfrak m_x$, on voit que
+$\widetilde{\vphi}_x^\sharp$ est un homomorphisme local
+$\sh{O}_y\to\sh{O}_x$, et on a ainsi défini une seconde application
+\[
+  \sigma:\Hom(\Gamma(S,\sh{O}_S),\Gamma(X,\sh{O}_X))\to\mathfrak L,
+\]
+où $\mathfrak L$ est l'ensemble des morphismes
+$(\psi,\theta):(X,\sh{O}_X)\to(S,\sh{O}_S)$ tels que
+$\theta_x^\sharp$ soit local pour tout $x\in X$.
+
+Il reste à prouver que $\sigma$ et $\rho$ (restreint à $\mathfrak L$)
+sont réciproques l'une de l'autre; or, la définition de
+$\widetilde{\vphi}$ montre aussitôt que
+$\Gamma(\widetilde{\vphi})=\vphi$, et par suite $\rho\circ\sigma$ est
+l'identité. Pour voir que $\sigma\circ\rho$ est l'identité, partons
+d'un morphisme $(\psi,\theta)\in\mathfrak L$ et soit
+$\vphi=\Gamma(\theta)$; l'hypothèse sur $\theta_x^\sharp$ permet de
+déduire de cet homomorphisme, par passage aux quotients, un
+monomorphisme
+\[
+  \theta^x:\kres(\psi(x))\to\kres(x)
+\]
+tel que pour toute section $f\in A=\Gamma(S,\sh{O}_S)$, on ait
+$\theta^x(f(\psi(x)))=\vphi(f)(x)$; la relation $f(\psi(x))=0$ est donc
+équivalente à $\vphi(f)(x)=0$, ce qui prouve déjà que
+${}^a\vphi=\psi$. D'autre part, les définitions entraînent que le
+diagramme
+\[
+  \xymatrix{
+    A\ar[r]^\vphi\ar[d] &
+    \Gamma(X,\sh{O}_X)\ar[d]\\
+    A_{\psi(x)}\ar[r]^{\theta_x^\sharp} &
+    \sh{O}_x
+  }
+\]
+est commutatif, et il en est de même du diagramme analogue où
+$\theta_x^\sharp$ est remplacé par
+$\widetilde{\vphi}_x^\sharp$, d'où
+$\widetilde{\vphi}_x^\sharp=\theta_x^\sharp$ (0, 1.2.4), et par suite
+$\widetilde{\vphi}=\theta$.
+
+\begin{env}[1.8.2]
+\label{ega2:addendum:I.1.8.2-fr}
+Lorsque $(X,\sh{O}_X)$ et $(Y,\sh{O}_Y)$ sont des espaces annelés en
+anneaux locaux, nous aurons à considérer les morphismes
+$(\psi,\theta):(X,\sh{O}_X)\to(Y,\sh{O}_Y)$ tels que, pour tout
+$x\in X$, $\theta_x^\sharp$ soit un homomorphisme local
+$\sh{O}_{\psi(x)}\to\sh{O}_x$.
+
+Lorsque nous parlerons désormais

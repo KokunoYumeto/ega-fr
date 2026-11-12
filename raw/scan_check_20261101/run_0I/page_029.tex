@@ -1,0 +1,115 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{29}
+
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathcal{F}|U_\lambda
+  \arrow[r,"u|U_\lambda"] \arrow[d]
+  & \mathcal{G}|U_\lambda \arrow[d] \\
+\mathcal{F}_\lambda
+  \arrow[r,"u_\lambda"']
+  & \mathcal{G}_\lambda
+\end{tikzcd}
+\]
+soient commutatifs~; cela résulte aussitôt de (3.2.3). La correspondance entre
+la famille $(u_\lambda)$ et $u$ est une bijection fonctorielle de la partie de
+$\prod_\lambda\operatorname{Hom}(\mathcal{F}_\lambda,\mathcal{G}_\lambda)$
+vérifiant les conditions (3.3.2.1) sur
+$\operatorname{Hom}(\mathcal{F},\mathcal{G})$.
+\end{env}
+
+\begin{env}[3.3.3]
+\label{0.3.3.3-fr}
+Avec les notations de (3.3.1), soit $V$ un ouvert de $X$~; il est immédiat que
+les restrictions à $V\cap U_\lambda\cap U_\mu$ des $\theta_{\lambda\mu}$
+satisfont à la condition de recollement pour les faisceaux induits
+$\mathcal{F}_\lambda|(V\cap U_\lambda)$ et que le faisceau sur $V$ obtenu par
+recollement de ces derniers s'identifie canoniquement à $\mathcal{F}|V$.
+\end{env}
+
+\subsection{Images directes de préfaisceaux}
+\label{subsection:0.3.4-fr}
+
+\begin{env}[3.4.1]
+\label{0.3.4.1-fr}
+Soient $X$, $Y$ deux espaces topologiques, $\psi:X\to Y$ une application
+continue. Soit $\mathcal{F}$ un préfaisceau sur $X$ à valeurs dans une
+catégorie $\mathbf{K}$~; pour tout ouvert $U\subset Y$, soit
+\[
+  \mathcal{G}(U)=\mathcal{F}(\psi^{-1}(U)),
+\]
+et si $U$, $V$ sont deux parties ouvertes de $Y$ telles que $U\subset V$, soit
+$\rho_U^V$ le morphisme
+\[
+  \mathcal{F}(\psi^{-1}(V))\to\mathcal{F}(\psi^{-1}(U));
+\]
+il est immédiat que les $\mathcal{G}(U)$ et les $\rho_U^V$ définissent un
+\emph{préfaisceau} sur $Y$ à valeurs dans $\mathbf{K}$, que l'on appelle
+l'\emph{image directe de $\mathcal{F}$ par $\psi$} et que l'on note
+$\psi_*(\mathcal{F})$. Si $\mathcal{F}$ est un faisceau, on vérifie aussitôt
+l'axiome (F) pour le préfaisceau $\mathcal{G}(U)$, donc
+$\psi_*(\mathcal{F})$ est un faisceau.
+\end{env}
+
+\begin{env}[3.4.2]
+\label{0.3.4.2-fr}
+Soient $\mathcal{F}_1$, $\mathcal{F}_2$ deux préfaisceaux sur $X$ à valeurs
+dans $\mathbf{K}$, et soit $u:\mathcal{F}_1\to\mathcal{F}_2$ un morphisme.
+Lorsque $U$ parcourt l'ensemble des parties ouvertes de $Y$, la famille de
+morphismes
+\[
+  u_{\psi^{-1}(U)}:
+  \mathcal{F}_1(\psi^{-1}(U))\to\mathcal{F}_2(\psi^{-1}(U))
+\]
+satisfait aux conditions de compatibilité avec les morphismes de restriction,
+et définit par suite un morphisme
+\[
+  \psi_*(u):\psi_*(\mathcal{F}_1)\to\psi_*(\mathcal{F}_2).
+\]
+Si $v:\mathcal{F}_2\to\mathcal{F}_3$ est un morphisme de $\mathcal{F}_2$ dans
+un troisième préfaisceau sur $X$ à valeurs dans $\mathbf{K}$, on a
+\[
+  \psi_*(v\circ u)=\psi_*(v)\circ\psi_*(u);
+\]
+autrement dit, $\psi_*(\mathcal{F})$ est un \emph{foncteur covariant} en
+$\mathcal{F}$, de la catégorie des préfaisceaux (resp. faisceaux) sur $X$ à
+valeurs dans $\mathbf{K}$, dans celle des préfaisceaux (resp. faisceaux) sur
+$Y$ à valeurs dans $\mathbf{K}$.
+\end{env}
+
+\begin{env}[3.4.3]
+\label{0.3.4.3-fr}
+Soient $Z$ un troisième espace topologique, $\psi':Y\to Z$ une application
+continue, et soit $\psi''=\psi'\circ\psi$. Il est clair que l'on a
+\[
+  \psi_*''(\mathcal{F})=\psi_*'(\psi_*(\mathcal{F}))
+\]
+pour tout préfaisceau $\mathcal{F}$ sur $X$ à valeurs dans $\mathbf{K}$~; en
+outre, pour tout morphisme $u:\mathcal{F}\to\mathcal{G}$ de tels préfaisceaux,
+on a
+\[
+  \psi_*''(u)=\psi_*'(\psi_*(u)).
+\]
+En d'autres termes, $\psi_*''$ est le \emph{composé} des foncteurs $\psi_*'$
+et $\psi_*$, ce qu'on peut écrire
+\[
+  (\psi'\circ\psi)_*=\psi_*'\circ\psi_*.
+\]
+
+En outre, pour tout ouvert $U$ de $Y$, l'image par la restriction
+$\psi|\psi^{-1}(U)$ du préfaisceau induit
+$\mathcal{F}|\psi^{-1}(U)$ n'est autre que le préfaisceau induit
+$\psi_*(\mathcal{F})|U$.
+\end{env}
+
+\begin{env}[3.4.4]
+\label{0.3.4.4-fr}
+Supposons que la catégorie $\mathbf{K}$ admette des limites inductives, et soit
+$\mathcal{F}$ un préfaisceau sur $X$ à valeurs dans $\mathbf{K}$~; pour tout
+$x\in X$, les morphismes
+\[
+  \Gamma(\psi^{-1}(U),\mathcal{F})\to\mathcal{F}_x
+\]
+($U$ voisinage ouvert de $\psi(x)$ dans $Y$) forment un système inductif, qui
+donne par passage
+

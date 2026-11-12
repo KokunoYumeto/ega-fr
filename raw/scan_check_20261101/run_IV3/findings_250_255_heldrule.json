@@ -1,0 +1,226 @@
+[
+ {
+  "page": 250,
+  "where": "Index des notations, first entry (8.3.9), second notation",
+  "scan": "𝔒𝔠(X): Fraktur O followed by a full-size Fraktur c on the baseline (the same O as in '𝔒(X)' of the 10.1.1 entry)",
+  "tex": "$\\mathfrak D_c(X)$ (Fraktur D with a subscript italic c)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak D_c(X)$",
+   "new": "$\\mathfrak{Oc}(X)$"
+  },
+  "note": "Wrong Fraktur letter and wrong c: GLOBAL_ISSUES item 79 names this place (ega4-15-terminal-fr.tex, p. 250). Same form as the pp. 15-16 page fixes in ega4-8 (\\mathfrak{Oc}) and as the body text of (8.3.9)."
+ },
+ {
+  "page": 250,
+  "where": "Index des notations, first entry (8.3.9), third notation",
+  "scan": "𝔉𝔠(X): full-size Fraktur c on the baseline",
+  "tex": "$\\mathfrak F_c(X)$ (subscript italic c)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak F_c(X)$",
+   "new": "$\\mathfrak{Fc}(X)$"
+  },
+  "note": "GLOBAL_ISSUES item 79; same form as the ega4-8 page fixes and the body of (8.3.9)."
+ },
+ {
+  "page": 250,
+  "where": "Index des notations, first entry (8.3.9), fourth notation",
+  "scan": "𝔏𝔉𝔠(X): full-size Fraktur c on the baseline",
+  "tex": "$\\mathfrak{LF}_c(X)$ (subscript italic c)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak{LF}_c(X)$",
+   "new": "$\\mathfrak{LFc}(X)$"
+  },
+  "note": "GLOBAL_ISSUES item 79; same form as the ega4-8 page fixes and the body of (8.3.9)."
+ },
+ {
+  "page": 250,
+  "where": "Index des notations, entry 8.13.3, 'Pro'",
+  "scan": "Pro printed bold italic",
+  "tex": "$\\mathbf{Pro}$ (bold upright)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf{Pro}",
+   "new": "$\\boldsymbol{\\mathit{Pro}}"
+  },
+  "note": "As in the body of (8.13.3) after the p. 50 page fixes (\\boldsymbol{\\mathit{Pro}}). Does not overlap the next edit."
+ },
+ {
+  "page": 250,
+  "where": "Index des notations, entry 8.13.3, the category in Pro(C)",
+  "scan": "C printed bold italic (category letter)",
+  "tex": "(\\mathcal C) (calligraphic C)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mathcal C)$",
+   "new": "(\\boldsymbol{C})$"
+  },
+  "note": "Category letter C, bold italic in the print (\\boldsymbol{C}); the body of (8.13.3) has \\boldsymbol{C}."
+ },
+ {
+  "page": 250,
+  "where": "Index des notations, entry 8.13.3, '(C catégorie)'",
+  "scan": "C printed bold italic",
+  "tex": "($\\mathcal C$ catégorie)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "($\\mathcal C$ catégorie)",
+   "new": "($\\boldsymbol{C}$ catégorie)"
+  },
+  "note": "Same letter as in Pro(C)."
+ },
+ {
+  "page": 252,
+  "where": "printed p. 252 (between the Index terminologique and the Table des matières); the edit is in page_251.tex, between the \\oldpage[IV-3]{251} and {253} markers",
+  "scan": "p. 252 is blank (scan pdf page 251: no ink at all, no page number); no text is missing",
+  "tex": "blank page set by \\clearpage, \\thispagestyle{empty}, \\null, \\clearpage, with the comment '% La page imprimée 252 est blanche.', but no \\oldpage[IV-3]{252} marker",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "blanche.\n\\thispagestyle{empty}",
+   "new": "blanche.\n\\oldpage[IV-3]{252}\n\\thispagestyle{empty}"
+  },
+  "note": "Markers for every printed page, blank ones included (GLOBAL_ISSUES item 32); same order as the blank pages III 216 and III 160 (\\clearpage, \\oldpage, \\thispagestyle{empty}, \\null, \\clearpage). The finding carries page 252: apply_fixes.locate() finds no 252 marker and uses the gap between the 251 and 253 markers, where 'old' occurs once."
+ },
+ {
+  "page": 253,
+  "where": "Table des matières, top right above the page-number column (before the Chapitre IV line)",
+  "scan": "column head 'Pages' in small capitals, short rule under it",
+  "tex": "absent",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\setlength{\\parskip}{1.5pt}\n",
+   "new": "\\setlength{\\parskip}{1.5pt}\n\\hfill\\textsc{Pages}\\par\n"
+  },
+  "note": "GLOBAL_ISSUES item 45; same form as the EGA IV-2 contents (p. 229). Placed inside the group so that it gets \\small; it does not touch the \\newcommand line. The rule under it is layout."
+ },
+ {
+  "page": 253,
+  "where": "contents macro \\EGAIVthreeContentsLine (defined on p. 253): entry labels of every contents line, pp. 253-255",
+  "scan": "labels '§ 8.', '8.1.', ..., '15.7.' and 'Chapitre IV.' in medium weight",
+  "tex": "\\textbf{#1}: every label bold",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\newcommand{\\EGAIVthreeContentsLine}[3]{\\textbf{#1}\\quad",
+   "new": "\\newcommand{\\EGAIVthreeContentsLine}[3]{#1\\quad"
+  },
+  "note": "One edit for all labels of pp. 253-255 (no separate findings on pp. 254-255). Same fix as for the EGA IV-2 contents macro."
+ },
+ {
+  "page": 253,
+  "where": "contents line 'Chapitre IV. — Étude locale des schémas et des morphismes de schémas (suite) ... 5', label",
+  "scan": "'Chapitre' in small capitals, 'IV.' roman, medium weight",
+  "tex": "CHAPITRE IV. (full capitals, bold through the macro)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\EGAIVthreeContentsLine{CHAPITRE IV.}",
+   "new": "\\EGAIVthreeContentsLine{\\textsc{Chapitre IV.}}"
+  },
+  "note": "Same form as the EGA IV-2 contents (p. 229). Independent of the macro edit and of the dash edit (no overlap)."
+ },
+ {
+  "page": 253,
+  "where": "same line, between 'IV.' and 'Étude'",
+  "scan": "an em dash: 'Chapitre IV. — Étude locale ...'",
+  "tex": "no dash",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{\\textbf{Étude locale",
+   "new": "{--- \\textbf{Étude locale"
+  },
+  "note": "As in the EGA IV-1 and IV-2 contents. With the previous edit the line reads '\\textsc{Chapitre IV.}' + '--- \\textbf{Étude locale ...} \\emph{(suite)}'."
+ },
+ {
+  "page": 254,
+  "where": "top right above the page-number column (before the 9.4 entry)",
+  "scan": "column head 'Pages' in small capitals, short rule under it",
+  "tex": "absent",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\EGAIVthreeContentsLine{9.4.}",
+   "new": "\\hfill\\textsc{Pages}\n\n\\EGAIVthreeContentsLine{9.4.}"
+  },
+  "note": "Repeated on each contents page; GLOBAL_ISSUES item 45, same form as EGA IV-2 pp. 230-231. The rule under it is layout."
+ },
+ {
+  "page": 255,
+  "where": "top right above the page-number column (before the 12.2 entry)",
+  "scan": "column head 'Pages' in small capitals, short rule under it",
+  "tex": "absent",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\EGAIVthreeContentsLine{12.2.}",
+   "new": "\\hfill\\textsc{Pages}\n\n\\EGAIVthreeContentsLine{12.2.}"
+  },
+  "note": "GLOBAL_ISSUES item 45, as on p. 254."
+ },
+ {
+  "page": 255,
+  "where": "back-matter entry 'Bibliographie (suite) ... 249'",
+  "scan": "'Bibliographie' in small capitals; '(suite)' italic",
+  "tex": "BIBLIOGRAPHIE (full capitals)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "BIBLIOGRAPHIE",
+   "new": "\\textsc{Bibliographie}"
+  },
+  "note": "As in the EGA II, III, IV-1 and IV-2 contents. The \\emph{(suite)} matches the print."
+ },
+ {
+  "page": 255,
+  "where": "back-matter entry 'Index des notations ... 250'",
+  "scan": "small capitals",
+  "tex": "INDEX DES NOTATIONS (full capitals)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "INDEX DES NOTATIONS",
+   "new": "\\textsc{Index des notations}"
+  },
+  "note": "As in the EGA II, IV-1 and IV-2 contents."
+ },
+ {
+  "page": 255,
+  "where": "back-matter entry 'Index terminologique ... 251'",
+  "scan": "small capitals",
+  "tex": "INDEX TERMINOLOGIQUE (full capitals)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "INDEX TERMINOLOGIQUE",
+   "new": "\\textsc{Index terminologique}"
+  },
+  "note": "As in the EGA II, IV-1 and IV-2 contents."
+ }
+]

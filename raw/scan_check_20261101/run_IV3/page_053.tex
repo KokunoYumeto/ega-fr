@@ -1,0 +1,94 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{53}
+Supposons d'abord que $X$ soit aussi affine~; l'assertion à prouver est alors
+équivalente au
+
+\begin{corollary}[8.14.2.2]
+\label{IV.8.14.2.2-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre. Afin que, pour tout système
+inductif filtrant $(C_\lambda)$ de $A$-algèbres, l'application canonique
+\begin{equation}
+\label{IV.8.14.2.3-fr}
+\varinjlim_\lambda\operatorname{Hom}_{A\text{-}\mathrm{alg.}}(B,C_\lambda)
+\longrightarrow
+\operatorname{Hom}_{A\text{-}\mathrm{alg.}}
+(B,\varinjlim_\lambda C_\lambda) \tag{8.14.2.3}
+\end{equation}
+soit bijective, il faut et il suffit que $B$ soit une $A$-algèbre de
+présentation finie.
+\end{corollary}
+
+Il reste seulement à montrer que la condition est nécessaire. Prenons d'abord
+pour $(C_\lambda)$ le système inductif filtrant des sous-$A$-algèbres de type
+fini de $B$, de sorte que $\varinjlim_\lambda C_\lambda=B$. Le fait que (8.14.2.3)
+soit bijective entraîne en particulier que l'application identique
+$1_B$ se factorise en $B\to C_\lambda\to B$ pour un $\lambda$ convenable,
+ce qui entraîne $C_\lambda=B$, donc $B$ est une $A$-algèbre \emph{de type
+fini}. Posons alors $B=C/\mathfrak J$, où
+$C=A[T_1,\ldots,T_n]$ et $\mathfrak J$ est un idéal de $C$. Alors
+$\mathfrak J$ est limite inductive filtrante des idéaux de type fini
+$\mathfrak J_\lambda\subset\mathfrak J$ de $C$~; posant
+$C_\lambda=C/\mathfrak J_\lambda$, et utilisant l'exactitude du foncteur
+$\varinjlim$, on voit que $B$ est encore isomorphe à la limite inductive du
+système inductif filtrant $(C_\lambda)$. Il existe donc un $\lambda$ et un
+$A$-homomorphisme $u:B\to C_\lambda$ tels que le composé
+\[
+B\xrightarrow{u}C_\lambda\xrightarrow{p_\lambda}B
+\]
+(où $p_\lambda$ est l'homomorphisme canonique) soit l'identité. Soit
+$q_\lambda:C\to C_\lambda$ l'homomorphisme canonique, et posons
+$t_i=p_\lambda(q_\lambda(T_i))$~; on a donc
+$p_\lambda(u(t_i))=p_\lambda(q_\lambda(T_i))$, autrement dit
+\[
+u(t_i)-q_\lambda(T_i)\in\mathfrak J/\mathfrak J_\lambda.
+\]
+Il existe donc un $\mu\geqslant\lambda$ tel que les $n$ éléments
+$u(t_i)-q_\lambda(T_i)$ appartiennent à
+$\mathfrak J_\mu/\mathfrak J_\lambda$ $(1\leqslant i\leqslant n)$~; si
+$p_{\mu\lambda}:C_\lambda\to C_\mu$ est l'homomorphisme canonique, on a par
+suite
+\[
+p_{\mu\lambda}(u(t_i))
+=p_{\mu\lambda}(q_\lambda(T_i))=q_\mu(T_i).
+\]
+Remplaçant $\lambda$ par $\mu$ et $u$ par $p_{\mu\lambda}\circ u$, on peut
+donc supposer que $u(t_i)=q_\lambda(T_i)$ pour tout $i$, et si
+$r=p_\lambda\circ q_\lambda$ est l'homomorphisme canonique
+$C\to C/\mathfrak J=B$, on peut donc écrire
+$u(r(T_i))=q_\lambda(T_i)$ pour tout $i$, d'où
+$q_\lambda=u\circ r$. Mais cela entraîne nécessairement que
+$\mathfrak J=\mathfrak J_\lambda$, car si $z\in\mathfrak J$, on a
+$r(z)=0$~; donc on a $B=C_\lambda$.
+
+Passons maintenant au cas où $S$ est affine et $X$ quelconque~; tout revient à
+prouver qu'un ouvert affine $V$ de $X$ est de présentation finie sur $S$, et
+en vertu de ce qui vient d'être démontré, il suffit de prouver que pour tout
+système projectif filtrant $(Z_\lambda)$ de $S$-préschémas affines,
+l'application
+\begin{equation}
+\label{IV.8.14.2.4-fr}
+\varinjlim_\lambda\operatorname{Hom}_S(Z_\lambda,V)
+\longrightarrow
+\operatorname{Hom}_S(\varprojlim_\lambda Z_\lambda,V) \tag{8.14.2.4}
+\end{equation}
+est bijective. Il est immédiat que cette application est injective, car si
+$(v_\lambda)$, $(v'_\lambda)$ sont deux systèmes inductifs de
+$S$-homomorphismes $v_\lambda:Z_\lambda\to V$,
+$v'_\lambda:Z_\lambda\to V$ tels que les morphismes correspondants
+\[
+Z\xrightarrow{u_\lambda}Z_\lambda\xrightarrow{v_\lambda}V,
+\qquad
+Z\xrightarrow{u_\lambda}Z_\lambda\xrightarrow{v'_\lambda}V
+\]
+soient égaux ($u_\lambda$ étant le morphisme canonique), alors les morphismes
+\[
+Z\xrightarrow{u_\lambda}Z_\lambda\xrightarrow{v_\lambda}V
+\xrightarrow{j}X,
+\qquad
+Z\xrightarrow{u_\lambda}Z_\lambda\xrightarrow{v'_\lambda}V
+\xrightarrow{j}X
+\]
+(où $j$ est l'injection canonique) sont égaux, ce qui entraîne
+$j\circ v_\lambda=j\circ v'_\lambda$ par hypothèse pour un $\lambda$
+convenable, donc $v_\lambda=v'_\lambda$.
+

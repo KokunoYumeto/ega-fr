@@ -1,0 +1,102 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{53}
+
+La question étant locale, on peut se borner au cas où $S$ et $X$ sont
+affines, et par suite le sous-préschéma diagonal de $X\times_S X$ est fermé.
+L'hypothèse que $f$ est localement de type fini entraîne que $\Delta_f$ est
+localement de présentation finie (I, 4.3.1), donc le sous-préschéma diagonal
+de $X\times_S X$ est défini par un Idéal de type fini $\mathscr{I}$, et
+$\Omega_{X/S}^1=\mathscr{I}/\mathscr{I}^2$ est un $\mathcal{O}_X$-Module de
+type fini. La proposition résulte alors aussitôt de la comparaison des
+conditions dans (16.10.1) et (16.9.4).
+
+\begin{remark}[16.10.6]
+\label{IV.16.10.6}
+Soit $f:X\to S$ un morphisme tel que le $\mathcal{O}_X$-Module
+$\Omega_{X/S}^1$ soit localement libre de rang fini. Il résulte alors de
+(0, 20.4.7) que tout $x\in X$ possède un voisinage ouvert $U$ tel qu'il existe
+une famille finie $(z_\lambda)_{\lambda\in L}$ de sections de
+$\mathcal{O}_X$ au-dessus de $U$ pour lesquelles $(dz_\lambda)_{\lambda\in L}$
+forme une \emph{base} du $\Gamma(U,\mathcal{O}_X)$-module
+$\Gamma(U,\Omega_{X/S}^1)$.
+\end{remark}
+
+\subsection{\texorpdfstring{Opérateurs différentiels sur un $S$-préschéma différentiellement
+lisse}{Opérateurs différentiels sur un S-préschéma différentiellement lisse}}
+\EGAReaderTarget{ega4.c04.subsec.16-11}{IV.16.11}
+
+\begin{env}[16.11.1]
+\label{IV.16.11.1}
+Soient $f:X\to S$ un morphisme, $U$ un ouvert de $X$,
+$(z_\lambda)_{\lambda\in L}$ une famille de sections de $\mathcal{O}_X$
+au-dessus de $U$ telle que les $dz_\lambda$ forment un système de générateurs
+de $\Omega_{X/S}^1|U=\Omega_{U/S}^1$. Soit $m$ un entier ou le symbole
+$\infty$, et posons, pour tout $\lambda$
+\[
+  \zeta_\lambda=\delta z_\lambda=d^m z_\lambda-z_\lambda
+  \in\Gamma(U,\mathscr{P}_{X/S}^m).
+  \tag{16.11.1.1}
+  \label{IV.16.11.1.1}
+\]
+
+Nous utiliserons d'autre part les notations usuelles de l'analyse; pour tout
+$\mathbf{p}=(p_\lambda)\in\mathbb{N}^{(L)}$ (avec $p_\lambda=0$ sauf pour un
+nombre fini d'indices), nous poserons
+\[
+  |\mathbf{p}|=\sum_\lambda p_\lambda,
+  \qquad \mathbf{p}!=\prod_\lambda(p_\lambda!)
+  \tag{16.11.1.2}
+  \label{IV.16.11.1.2}
+\]
+\[
+  \binom{\mathbf{p}}{\mathbf{q}}
+  =\mathbf{p}!/(\mathbf{q}!(\mathbf{p}-\mathbf{q})!)
+  \quad\text{pour $\mathbf{p},\mathbf{q}$ dans $\mathbb{N}^{(L)}$,
+  $\mathbf{q}\leq\mathbf{p}$}
+  \tag{16.11.1.3}
+  \label{IV.16.11.1.3}
+\]
+et on convient que $\binom{\mathbf{p}}{\mathbf{q}}=0$ si
+$\mathbf{q}\nleq\mathbf{p}$,
+\[
+  \mathbf{z}^{\mathbf{p}}=\prod_\lambda(z_\lambda)^{p_\lambda},
+  \qquad
+  \boldsymbol{\zeta}^{\mathbf{p}}=\prod_\lambda(\zeta_\lambda)^{p_\lambda}.
+  \tag{16.11.1.4}
+  \label{IV.16.11.1.4}
+\]
+
+On aura donc, avec ces notations
+\[
+  d^m(\mathbf{z}^{\mathbf{p}})
+  =(d^m(\mathbf{z}))^{\mathbf{p}}
+  =(\boldsymbol{\zeta}+\mathbf{z})^{\mathbf{p}}
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}\boldsymbol{\zeta}^{\mathbf{q}}
+  \tag{16.11.1.5}
+  \label{IV.16.11.1.5}
+\]
+\[
+  \boldsymbol{\zeta}^{\mathbf{p}}
+  =(d^m\mathbf{z}-\mathbf{z})^{\mathbf{p}}
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    (-1)^{|\mathbf{p}-\mathbf{q}|}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}d^m(\mathbf{z}^{\mathbf{q}}).
+  \tag{16.11.1.6}
+  \label{IV.16.11.1.6}
+\]
+
+Comme les $dz_\lambda$ engendrent $\Omega_{X/S}^1$ et sont les images des
+$\delta z_\lambda$, et que l'homomorphisme canonique (16.3.1.1) est
+surjectif, on en conclut que pour $m$ fini, les $\delta z_\lambda$ engendrent
+la $\mathcal{O}_U$-Algèbre $\mathscr{P}_{U/S}^m$ (Bourbaki,
+\emph{Alg. comm.}, chap.~III, §~2, n\textsuperscript{o}~8, cor.~2 du th.~1).
+Donc les $\boldsymbol{\zeta}^{\mathbf{p}}$ (pour $|\mathbf{p}|\leq m$)
+engendrent le $\mathcal{O}_U$-Module $\mathscr{P}_{U/S}^m$. Un opérateur
+différentiel $D\in\operatorname{Diff}_{U/S}^m$ est par suite entièrement
+déterminé par les valeurs des
+$\langle\boldsymbol{\zeta}^{\mathbf{p}},D\rangle$ pour
+$|\mathbf{p}|\leq m$, ou, ce qui revient au même par (16.11.1.5) et
+(16.11.1.6), par les valeurs

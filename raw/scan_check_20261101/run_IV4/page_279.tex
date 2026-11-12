@@ -1,0 +1,59 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{279}
+de ces idéaux primaires \sref{IV.21.7.2}.
+Cela prouve que $Y(D)$ majore $Y(\operatorname{cyc}(D))$ et que ces deux sous-préschémas sont égaux si et seulement si $Y(D)$ n'a pas de cycle premier associé immergé (autrement dit vérifie $(\mathrm{S}_1)$).
+Comme pour tout $x\in Y(D)$, il y a par hypothèse un voisinage ouvert $U$ de $x$ dans $X$ et un élément régulier $t\in\Gamma(U,\sh{O}_X)$ tel que $\sh{O}_{Y(D)}|(U\cap Y(D))$ soit restriction à $Y(D)\cap U$ de $\sh{O}_U/t\sh{O}_U$, dire que $Y(D)$ vérifie $(\mathrm{S}_1)$ signifie aussi qu'en tout point $z\in Y(D)$ non maximal, on a $\operatorname{prof}(\sh{O}_{X,z}/t_z\sh{O}_{X,z})\geq1$, c'est-à-dire \sref[0]{0.16.4.6} $\operatorname{prof}(\sh{O}_{X,z})\geq2$.
+L'assertion concernant le cas où $X$ est normal est alors immédiate puisque $X$ vérifie $(\mathrm{S}_2)$ et qu'aux points non maximaux $z$ de $Y(D)$ on a $\dim(\sh{O}_{X,z})\geq2$ \sref[0]{0.16.3.4}.
+\end{proof}
+
+\begin{env}[21.7.3.1]
+\label{IV.21.7.3.1}
+On voit donc que lorsque $X$ est \emph{normal}, $\operatorname{Div}^+(X)$ s'identifie canoniquement à l'ensemble des sous-préschémas fermés $Y$ de $X$ vérifiant les conditions (i) et (ii) de \sref{IV.21.7.2} et \emph{régulièrement immergés} dans $X$.
+\end{env}
+
+\begin{proposition}[21.7.4]
+\label{IV.21.7.4}
+Soit $X$ un préschéma localement noethérien, réduit en chacun de ses points isolés.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] L'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ \sref{IV.21.6.4} est un isomorphisme de faisceaux de groupes ordonnés.
+  \item[\emph{a$'$)}] Tout cycle premier $1$-codimensionnel de $X$ est l'image par $\operatorname{cyc}$ d'un diviseur positif, et l'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ est injectif.
+  \item[\emph{a$''$)}] Pour tout sous-préschéma fermé intègre $Y$ de $X$, de codimension $1$, l'immersion canonique $Y\to X$ est régulière.
+  \item[\emph{b)}] $X$ est normal et l'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est bijectif.
+  \item[\emph{c)}] $X$ est localement factoriel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence de \emph{b)} et \emph{c)} a été démontrée dans \sref{IV.21.6.9}, ainsi que le fait que \emph{c)} entraîne \emph{a)}.
+De plus \emph{b)} entraîne \emph{a$''$)} en vertu de \sref{IV.21.7.3.1}, et \emph{a)} implique trivialement \emph{a$'$)}.
+Il reste à voir que \emph{a$'$)} ou \emph{a$''$)} entraîne \emph{c)}.
+
+Supposons donc vérifiée la condition \emph{a$'$)}, et montrons d'abord que $X$ est normal.
+Notons en premier lieu que si $X$ vérifie \emph{a$'$)}, il en est de même de tout schéma local $\Spec(\sh{O}_{X,x})$.
+Considérons alors $x\in X^{(1)}$, de sorte que $A=\sh{O}_{X,x}$ est un anneau local noethérien de dimension $1$.
+Appliquant la condition \emph{a$'$)} à $\Spec(A)$ et au cycle premier $1$-codimensionnel formé du point fermé de $\Spec(A)$, on voit que dans $A$ l'idéal maximal est engendré par un seul élément régulier dans $A$;
+donc \sref[0]{0.17.1.1} $A$ est un anneau régulier.
+Comme les anneaux localisés $A_{\mathfrak p}$ sont aussi réguliers \sref[0]{0.17.3.2}, on voit que $X$ est régulier en tous ses points maximaux non isolés;
+comme il est aussi réduit (donc régulier) en ses points isolés par hypothèse, on en conclut que $X$ vérifie la condition $(\mathrm{R}_1)$.
+Montrons en outre que $X$ vérifie aussi $(\mathrm{S}_1)$, autrement dit que pour tout $x\in X$ tel que $\dim(\sh{O}_{X,x})\geq1$, on a $\mathfrak{m}_x\notin\operatorname{Ass}(\sh{O}_{X,x})$ \sref[0]{0.16.4.6}.
+En effet, l'hypothèse \emph{a$'$)} appliquée à $X_1=\Spec(\sh{O}_{X,x})$ montre qu'il existe sur ce préschéma au moins un diviseur non nul, autrement dit que l'on a $\sh{M}_{X_1}^*\neq\sh{O}_{X_1}^*$, et il suffit d'appliquer \sref{IV.21.1.10}.
+On déduit donc déjà de ces résultats que $X$ est réduit \sref{IV.5.8.5}.
+Prouvons ensuite qu'il vérifie la condition $(\mathrm{S}_2)$ (ce qui établira que $X$ est normal, en vertu du critère de Serre \sref{IV.5.8.6}).
+Raisonnons par l'absurde en supposant que l'ensemble $E$ des points $x\in X$ où $X$ ne vérifie pas $(\mathrm{S}_2)$ soit non vide, et soit $x\in E$ un point pour lequel $\dim(\sh{O}_{X,x})$ est la plus petite possible;
+puisque $X$ vérifie $(\mathrm{S}_1)$, on a $\dim(\sh{O}_{X,x})\geq2$.
+Dans $X_1=\Spec(\sh{O}_{X,x})$, l'ouvert $U=X_1-\{x\}$ vérifie $(\mathrm{S}_2)$;
+montrons que $X_1$ vérifie $(\mathrm{S}_2)$, de sorte que l'on aura abouti à une contradiction.
+Il suffit, en vertu de \sref{IV.5.10.5}, de montrer que toute section $f$ de $\sh{O}_{X_1}$ au-dessus de $U$ se prolonge en une section de $\sh{O}_{X_1}$ au-dessus de $X_1$.
+Comme $X_1$ est réduit et $U$ dense dans $X_1$, $U$ est schématiquement dense dans $X_1$, et par suite $f$ est la restriction à $U$ d'une section méromorphe régulière $g\in M(X_1)$.
+En outre, comme $\dim(\sh{O}_{X,x})\geq2$, on a $\operatorname{cyc}(\operatorname{div}(g))\geq0$ puisque $g|U=f$;
+comme l'homomorphisme $\operatorname{cyc}$ est injectif, on a nécessairement $\operatorname{div}(g)\geq0$, donc \sref{IV.21.6.4} $g$ est une section de $\sh{O}_{X_1}$ au-dessus de $X_1$, ce qui établit notre assertion.
+
+Pour montrer que \emph{a$'$)} implique \emph{c)}, remarquons alors que la condition \emph{a$'$)} implique que l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est surjectif;
+puisque $X$ est normal, il suffit d'appliquer \sref{IV.21.6.9}.
+
+Prouvons maintenant que \emph{a$''$)} entraîne \emph{c)}.
+Il résulte de \sref{IV.21.6.5} que \emph{a$''$)} entraîne que tout cycle premier $1$-codimensionnel sur $X$ est l'image par $\operatorname{cyc}$ d'un diviseur positif;
+la première partie du raisonnement fait ci-dessus prouve donc encore que $X$ vérifie $(\mathrm{R}_1)$ et $(\mathrm{S}_1)$.
+Il reste encore à voir que $X$ est normal (la fin du raisonnement étant alors la même), c'est-à-dire que si $x\in X$ est tel que $\dim(\sh{O}_{X,x})\geq2$, on a $\operatorname{prof}(\sh{O}_{X,x})\geq2$.
+Or, si $y$ est une générisation de $x$ telle que $\overline{\{y\}}$ soit de codimension $1$ dans $X$, le sous-préschéma réduit $Y$ de $X$ ayant $\overline{\{y\}}$ pour espace

@@ -1,0 +1,98 @@
+% from ega3-6-fr.tex
+\oldpage[III]{146}
+
+est aussi un homomorphisme bijectif. Comme $A'$ est un $A$-module plat, la
+conclusion résulte de (6.3.9), et on a de même des isomorphismes canoniques
+pour les suites spectrales.
+\end{proof}
+
+\subsection{Foncteurs hypertor locaux de complexes de Modules quasi-cohérents : cas des schémas affines}
+
+\begin{env}[6.4.1]
+Soient $S$ un schéma affine d'anneau $A$, $X$, $Y$ deux $S$-schémas affines
+d'anneaux $B$, $C$ respectivement, de sorte que $B$ et $C$ sont des algèbres
+sur $A$. Tout complexe $\mathscr P_\bullet$ (resp. $\mathscr Q_\bullet$) de
+$\mathscr O_X$-Modules (resp. $\mathscr O_Y$-Modules) quasi-cohérents est de
+la forme $\widetilde{P_\bullet}$ (resp. $\widetilde{Q_\bullet}$), où
+$P_\bullet$ (resp. $Q_\bullet$) est un complexe de $B$-modules (resp.
+$C$-modules) (I, 1.3.7 et 1.3.8). On peut évidemment considérer $P_\bullet$
+et $Q_\bullet$ comme des complexes de $A$-modules et former les
+$\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$; en outre, en vertu du caractère
+bifonctoriel de $\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$, les $A$-algèbres
+$B$ et $C$ opèrent dans ce $A$-module, et ces opérations en font un
+$(B,C)$-bimodule, ou, ce qui revient au même, un module sur
+$B\otimes_A C=A(X\times_S Y)$. On a donc défini de la sorte un
+$\mathscr O_{X\times_S Y}$-Module quasi-cohérent
+\[
+  \mathscr{T}\!or_n^{\mathscr O_S}(\mathscr P_\bullet,\mathscr Q_\bullet)
+  =\bigl(\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)\bigr)^{\sim}
+  \tag{6.4.1.1}\label{III.6.4.1.1.fr}
+\]
+que l'on appelle l'\emph{hypertor local d'indice $n$} des complexes
+$\mathscr P_\bullet$ et $\mathscr Q_\bullet$ et que l'on note aussi
+$\mathscr{T}\!or_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$.
+\end{env}
+
+\begin{namedtheorem}[6.4.2]{Lemme}
+Avec les notations de (6.4.1), supposons que l'anneau $A$ soit de la forme
+$R^{-1}A'$, où $A'$ est un anneau et $R$ une partie multiplicative de $A'$.
+Soit $S'=\operatorname{Spec}(A')$, de sorte que $X$ et $Y$ peuvent être
+considérés comme des $S'$-préschémas et que l'on a
+$X\times_{S'}Y=X\times_S Y$ (I, 1.6.2 et 3.2.4). On a alors
+\[
+  \mathscr{T}\!or_\bullet^{S'}(\mathscr P_\bullet,\mathscr Q_\bullet)
+  =\mathscr{T}\!or_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet).
+\]
+\end{namedtheorem}
+
+\begin{proof}
+Cela résulte de la formule (6.4.1.1) et de (6.3.13).
+\end{proof}
+
+\begin{env}[6.4.3]
+Avec les notations et hypothèses de (6.4.1), soient
+$\mathscr F=\widetilde F$ un $\mathscr O_X$-Module quasi-cohérent,
+$\mathscr G=\widetilde G$ un $\mathscr O_Y$-Module quasi-cohérent;
+considérant $\mathscr F$ et $\mathscr G$ comme des complexes de Modules, on
+notera $\mathscr{T}\!or_n^{\mathscr O_S}(\mathscr F,\mathscr G)$ ou
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$ leur hypertor d'indice $n$; il
+résulte de (6.3.5 (ii)) que l'on a
+\[
+  \mathscr{T}\!or_n^{\mathscr O_S}(\mathscr F,\mathscr G)
+  =\bigl(\operatorname{Tor}_n^A(F,G)\bigr)^{\sim}.
+  \tag{6.4.3.1}\label{III.6.4.3.1.fr}
+\]
+
+Revenons alors au cas général de deux complexes de Modules quasi-cohérents
+$\mathscr P_\bullet$, $\mathscr Q_\bullet$. Les formules (6.4.1.1) et
+(6.4.3.1) montrent, compte tenu de la prop. (6.3.2), que
+$\mathscr{T}\!or_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ est
+l'aboutissement de deux suites spectrales
+$'\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$,
+$''\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$, dont les termes
+$E_2$ sont donnés par
+\[
+  '\mathscr E_{pq}^2
+  =\mathscr H_p\bigl(\mathscr{T}\!or_q^S
+    (\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+  \tag{6.4.3.2}\label{III.6.4.3.2.fr}
+\]
+\[
+  ''\mathscr E_{pq}^2
+  =\bigoplus_{q'+q''=q}
+  \mathscr{T}\!or_p^S
+  \bigl(\mathscr H_{q'}(\mathscr P_\bullet),
+        \mathscr H_{q''}(\mathscr Q_\bullet)\bigr)
+  \tag{6.4.3.3}\label{III.6.4.3.3.fr}
+\]
+où $\mathscr{T}\!or_q^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ est le
+bicomplexe de $\mathscr O_{X\times_S Y}$-Modules quasi-cohérents
+$\mathscr{T}\!or_q^S(\mathscr P_i,\mathscr Q_j)$.
+\end{env}
+
+\begin{env}[6.4.4]
+Considérons maintenant deux autres schémas affines
+$X^{(1)}=\operatorname{Spec}(B^{(1)})$,
+$Y^{(1)}=\operatorname{Spec}(C^{(1)})$, où $B^{(1)}$ et $C^{(1)}$ sont des
+$A$-algèbres, et supposons donnés deux
+

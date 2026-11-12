@@ -1,0 +1,78 @@
+% from ega4-13-fr.tex
+\oldpage[IV-3]{195}
+  \item Il existe un entier $e$ et un voisinage ouvert $U$ de $x$ tels que
+  l'image par $f$ de toute composante irréductible de $U$ soit dense dans un
+  $Y_\alpha$, et que, pour tout $x'\in U$, l'espace
+  $U\cap f^{-1}(f(x'))$ soit équidimensionnel et de dimension $e$.
+  \item[\emph{a$'$)}] Il existe un entier $e$ et un voisinage ouvert $U$ de
+  $x$ tels que l'image par $f$ de toute composante irréductible de $U$ soit
+  dense dans un $Y_\alpha$ et que, si on désigne par $y_\alpha$ le point
+  générique de $Y_\alpha$, toute composante irréductible des espaces
+  $U\cap f^{-1}(y)$, $U\cap f^{-1}(y_\alpha)$ soit de dimension $e$.
+  \item[\emph{a$''$)}] Il existe un entier $e$ et un voisinage ouvert $U$ de
+  $x$ tels que, pour chacune des composantes irréductibles $U_\lambda$ de
+  $U$, $f(U_\lambda)$ soit dense dans un $Y_\alpha$ et que, pour tout
+  $x'\in U_\lambda$, les composantes irréductibles de
+  $U_\lambda\cap f^{-1}(f(x'))$ soient toutes de dimension $e$.
+  \item Il existe un entier $e$, un voisinage ouvert $U$ de $x$ et un
+  $Y$-morphisme quasi-fini
+  \[
+    g:U\longrightarrow Y\otimes_{\mathbf Z}\mathbf Z[T_1,\ldots,T_e]
+  \]
+  (préschéma que nous noterons aussi $Y[T_1,\ldots,T_e]$ pour abréger) tels
+  que l'image par $g$ de toute composante irréductible de $U$ soit dense dans
+  une composante irréductible de $Y[T_1,\ldots,T_e]$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est immédiat que $a''$) entraîne $a$), car pour tout $x\in U$, les
+composantes irréductibles de $U\cap f^{-1}(f(x))$ sont chacune composante
+irréductible d'un des $U_\lambda\cap f^{-1}(f(x))$, d'où la conclusion par
+($\mathbf 0$, 14.1.4). La condition $a$) entraîne trivialement $a'$).
+Montrons ensuite que $a'$) entraîne $a''$)~; on peut se borner au cas où $f$
+est de type fini et $X$ et $Y$ réduits (1.5.4). Soit $U_\lambda$ une
+composante irréductible de $U$, et supposons que $f(U_\lambda)$ soit dense
+dans $Y_\alpha$~; alors la restriction de $f$ à $U_\lambda$ se factorise en
+$U_\lambda\xrightarrow{f_\alpha}Y_\alpha\to Y$, où $f_\alpha$ est de type
+fini et dominant (\textbf{I}, 5.2.2). Soit $x_\lambda$ le point générique de
+$U_\lambda$~; en vertu de ($\mathbf 0_{\mathrm I}$, 2.1.8),
+$U_\lambda\cap f_\alpha^{-1}(y_\alpha)$ est l'unique composante irréductible
+de $U\cap f^{-1}(y_\alpha)$ contenant $x_\lambda$ et est par hypothèse de
+dimension $e$, égale aux dimensions de toutes les composantes irréductibles
+de $U_\lambda\cap f^{-1}(y)$, en vertu de l'hypothèse et de (13.1.1). Mais en
+vertu du théorème de Chevalley (13.1.3) et de (13.1.1), l'ensemble $V_\lambda$
+des $x'\in U_\lambda$ tels que
+$\dim_{x'}(f_\lambda^{-1}(f_\lambda(x')))=e$ est ouvert et contient $x$, et il
+suffit de prendre la réunion des $V_\lambda$ pour obtenir un ensemble ouvert
+satisfaisant aux conditions de $a''$).
+
+Prouvons maintenant que $a$) entraîne $b$)~; on peut se limiter au cas où
+$Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$ sont affines et où
+$U=X$. Prouvons d'abord le lemme suivant~:
+
+\begin{lemma}[13.3.1.1]
+\label{IV.13.3.1.1-fr}
+Soient $Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$ deux schémas
+affines, $f:X\to Y$ un morphisme de type fini, $y$ un point de $f(X)$, et
+posons $e=\dim(f^{-1}(y))$. Alors il existe un $Y$-morphisme
+$g:X\to Y[T_1,\ldots,T_e]$ tel que (si l'on pose
+$X_y=X\times_Y\operatorname{Spec}(k(y))$), le morphisme
+$g_y:X_y\to\operatorname{Spec}(k(y)[T_1,\ldots,T_e])$ soit fini. En outre,
+pour un tel morphisme $g$, $g_y$ est nécessairement surjectif et il existe un
+voisinage ouvert $U$ de $f^{-1}(y)$ dans $X$ tel que $g|U$ soit quasi-fini.
+\end{lemma}
+
+Soit $\mathfrak p=\mathfrak j_y$~; l'anneau $B\otimes_Ak(\mathfrak p)$ est une
+$k(\mathfrak p)$-algèbre de type fini, donc le lemme de normalisation
+(Bourbaki, \emph{Alg. comm.}, chap.~V, \S~3, n\textsuperscript{o}~1, th.~1)
+prouve qu'il y a dans $B\otimes_Ak(\mathfrak p)$ une suite finie
+$(t_i)_{1\leq i\leq r}$ d'éléments algébriquement indépendants sur
+$k(\mathfrak p)$ et tels que si l'on pose
+$C'=k(\mathfrak p)[t_1,\ldots,t_r]$, $B\otimes_Ak(\mathfrak p)$ soit une
+$C'$-algèbre \emph{finie}~; on a donc
+$\dim(B\otimes_Ak(\mathfrak p))=\dim(C')$ ($\mathbf 0$, 16.1.5) et comme
+$\dim(C')=r$ (5.2.1), on a $r=e$. Comme
+$B\otimes_Ak(\mathfrak p)=(B/\mathfrak pB)\otimes_{A/\mathfrak p}k(\mathfrak p)$,
+on peut, en multipliant les $t_i$ par un élément $\neq0$
+

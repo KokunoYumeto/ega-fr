@@ -1,0 +1,89 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{124}
+
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item Soient $x$ un point de $X$, $x_\lambda$ sa projection canonique dans
+$X_\lambda$. Pour que $\mathcal F$ soit $f$-plat au point $x$, il faut et il
+suffit qu'il existe $\lambda\geq\alpha$ tel que $\mathcal F_\lambda$ soit
+$f_\lambda$-plat au point $x_\lambda$.
+\item Pour que $\mathcal F$ soit $f$-plat, il faut et il suffit qu'il existe
+$\lambda\geq\alpha$ tel que $\mathcal F_\lambda$ soit $f_\lambda$-plat.
+\end{enumerate}
+\end{theorem}
+
+On peut supposer que $S_\alpha=S_0$~; comme $Y_0$ est de présentation finie
+sur $S_0$, $Y_0$ est quasi-compact, et $f_0:X_0\to Y_0$ est un morphisme de
+présentation finie (1.6.2, (v)), donc on peut aussi se borner au cas où
+$S_0=Y_0$. En outre, en vertu de la quasi-compacité de $S_0$ et du fait que
+l'ensemble d'indices $L$ est filtrant, on peut se borner au cas où
+$S_0=\operatorname{Spec}(A_0)$ est affine. De plus $X_0$ est quasi-compact,
+donc le même raisonnement montre qu'on peut aussi supposer
+$X_0=\operatorname{Spec}(B_0)$ affine~; on a alors
+$\mathcal F_0=\widetilde M_0$, où $M_0$ est un $B_0$-module de présentation
+finie, et l'énoncé (11.2.6) est dans ce cas équivalent au suivant (compte tenu
+de ($\mathbf 0_{\mathrm I}$, 6.3.1))~:
+
+\begin{corollary}[11.2.6.1]
+\label{IV.11.2.6.1-fr}
+Soient $A_0$ un anneau, $(A_\lambda)_{\lambda\in L}$ un système inductif
+filtrant de $A_0$-algèbres, $B_0$ une $A_0$-algèbre de présentation finie,
+$M_0$ un $B_0$-module de présentation finie. On pose
+\[
+\begin{gathered}
+B_\lambda=B_0\otimes_{A_0}A_\lambda,\qquad
+M_\lambda=M_0\otimes_{A_0}A_\lambda=M_0\otimes_{B_0}B_\lambda,\\
+A=\varinjlim A_\lambda,\qquad
+B=\varinjlim B_\lambda=B_0\otimes_{A_0}A,\\
+M=\varinjlim M_\lambda=M_0\otimes_{A_0}A=M_0\otimes_{B_0}B.
+\end{gathered}
+\]
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item Soit $\mathfrak p$ un idéal premier de $B$, et pour tout $\lambda$,
+soit $\mathfrak p_\lambda$ son image réciproque dans $B_\lambda$. Pour que
+$M_{\mathfrak p}$ soit un $A$-module plat, il faut et il suffit qu'il existe
+$\lambda$ tel que $(M_\lambda)_{\mathfrak p_\lambda}$ soit un
+$A_\lambda$-module plat.
+\item Pour que $M$ soit un $A$-module plat, il faut et il suffit qu'il existe
+$\lambda$ tel que $M_\lambda$ soit un $A_\lambda$-module plat.
+\end{enumerate}
+\end{corollary}
+
+On doit seulement démontrer que les conditions sont nécessaires (2.1.4).
+Nous procéderons en plusieurs étapes.
+
+\medskip
+\noindent\textbf{I)} \emph{Réduction au cas où les $A_\lambda$ sont
+noethériens.} En vertu de (8.9.1), il existe un sous-anneau $A'_0$ de $A_0$,
+qui est une $\mathbf Z$-algèbre de type fini, une $A'_0$-algèbre de type fini
+$B'_0$ et un $B'_0$-module de type fini $M'_0$ tels que l'on ait
+$B_0=B'_0\otimes_{A'_0}A_0$ et $M_0=M'_0\otimes_{A'_0}A_0$~; comme on a
+$B_\lambda=B'_0\otimes_{A'_0}A_\lambda$ et
+$M_\lambda=M'_0\otimes_{A'_0}A_\lambda$, on peut remplacer $A_0$, $B_0$,
+$M_0$ par $A'_0$, $B'_0$, $M'_0$ dans l'énoncé de (11.2.6.1), en considérant
+les $A_\lambda$ comme des $A'_0$-algèbres~; on peut donc déjà supposer que
+$A_0$ est noethérien. Soit $H$ l'ensemble des couples
+$(\lambda,C_\lambda)$, où $C_\lambda$ est une sous-$A_0$-algèbre de
+\emph{type fini} de $A_\lambda$~; ordonnons $H$ en posant
+$(\lambda,C_\lambda)\leq(\mu,D_\mu)$ si $\lambda\leq\mu$ et si
+l'homomorphisme $\varphi_{\mu\lambda}:A_\lambda\to A_\mu$ est tel que
+$\varphi_{\mu\lambda}(C_\lambda)\subset D_\mu$~; pour cet ordre $H$ est
+filtrant croissant, car si $(\lambda,C_\lambda)$ et $(\mu,D_\mu)$ sont deux
+éléments quelconques de $H$, on les majorera par un $(\nu,E_\nu)$ en prenant
+$\nu\geq\lambda$, $\nu\geq\mu$ dans $L$, puis $E_\nu$ égal à la
+sous-$A_0$-algèbre de $A_\nu$ engendrée par
+$\varphi_{\nu\lambda}(C_\lambda)$ et $\varphi_{\nu\mu}(D_\mu)$. Pour un
+élément $\xi=(\lambda,C_\lambda)$ de $H$, on posera $A_\xi=C_\lambda$, et
+pour $\xi\leq\eta=(\mu,D_\mu)$ (donc $\lambda\leq\mu$ et
+$\varphi_{\mu\lambda}(C_\lambda)\subset D_\mu$),
+$\varphi_{\eta\xi}:A_\xi\to A_\eta$ sera la restriction à $C_\lambda$ de
+$\varphi_{\mu\lambda}$, considéré comme homomorphisme dans $D_\mu$~; il est
+clair que l'on obtient ainsi un système inductif filtrant de $A_0$-algèbres.
+On pose $B_\xi=B_0\otimes_{A_0}A_\xi$,
+$M_\xi=M_0\otimes_{A_0}A_\xi$~; cette fois les $A_\xi$ sont
+noethériens~; en outre la formule de la double limite inductive (Bourbaki,
+\emph{Alg.}, chap.~II, 3$^e$ éd., \S~6, n$^\circ$~4, prop.~7) prouve que
+l'on a encore
+$\varinjlim_HA_\xi=A$, $\varinjlim_HB_\xi=B$,
+$\varinjlim_HM_\xi=M$. Supposons (11.2.6.1) prouvé pour le système inductif
+$(A_\xi)_{\xi\in H}$~; soit $\mathfrak p$ un idéal premier de $B$,
+

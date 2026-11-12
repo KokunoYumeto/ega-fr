@@ -1,0 +1,104 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{20}
+démontrer que (16.4.8.1) est un isomorphisme, les filtrations des deux membres de
+(16.4.7.3) étant finies (Bourbaki, \emph{Alg. comm.}, chap. III, \S~2,
+n\textsuperscript{o} 8, cor. 3 du th. 1). Pour cela, considérons la suite exacte
+scindée de $\mathcal{O}_S$-Modules
+\[
+  \xymatrix{
+    0 \ar[r] & \mathscr{E} \ar[r]^{u} &
+    \mathscr{E}\oplus\mathscr{E} \ar[r]^{v} &
+    \mathscr{E} \ar[r] & 0
+  }
+  \tag{16.4.8.2}
+  \label{IV.16.4.8.2}
+\]
+où, pour tout couple de sections $s$, $t$ de $\mathscr{E}$ au-dessus d'un ouvert
+$U$ de $S$, on prend $u(s)=(-s,s)$ et $v(s,t)=s+t$. On a
+\[
+  X\times_S X=\operatorname{Spec}
+  (\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})\otimes_{\mathcal{O}_S}
+  \mathscr{S}_{\mathcal{O}_S}(\mathscr{E}))
+  =\operatorname{Spec}(\mathscr{S}_{\mathcal{O}_S}
+  (\mathscr{E}\oplus\mathscr{E}))
+\]
+(II, 1.4.6 et 1.7.11), et le morphisme diagonal $X\to X\times_S X$ correspond
+(II, 1.2.7) à l'homomorphisme de $\mathcal{O}_S$-Algèbres
+$\mathscr{S}(v):\mathscr{S}_{\mathcal{O}_S}(\mathscr{E}\oplus\mathscr{E})
+\to\mathscr{S}_{\mathcal{O}_S}(\mathscr{E})$ (II, 1.7.4), de sorte que si
+$\mathscr{I}$ est le noyau de cet homomorphisme, on a
+\[
+  \mathscr{P}_{X/S}^n=f^*(\mathscr{S}_{\mathcal{O}_S}
+  (\mathscr{E}\oplus\mathscr{E})/\mathscr{I}^{n+1}).
+\]
+
+La proposition sera conséquence du lemme suivant:
+
+\begin{lemma}[16.4.8.3]
+\label{IV.16.4.8.3}
+Soient $Y$ un espace annelé,
+$0\to\mathscr{F}'\xrightarrow{u}\mathscr{F}\xrightarrow{v}\mathscr{F}''\to0$
+une suite exacte de $\mathcal{O}_Y$-Modules telle que tout point $y\in Y$
+possède un voisinage ouvert $V$ tel que la suite
+$0\to\mathscr{F}'|V\to\mathscr{F}|V\to\mathscr{F}''|V\to0$ soit scindée.
+Soit $\mathscr{I}$ l'Idéal noyau de
+$\mathscr{S}(v):\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})\to
+\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}'')$, et soit
+$\operatorname{gr}_{\mathscr{I}}^\bullet
+(\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))$ la $\mathcal{O}_Y$-Algèbre graduée
+associée à la $\mathcal{O}_Y$-Algèbre
+$\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})$ munie de la filtration
+$\mathscr{I}$-préadique. Alors l'homomorphisme de $\mathcal{O}_Y$-Algèbres
+graduées
+\[
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')
+  \otimes_{\mathcal{O}_Y}
+  \mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')
+  \longrightarrow
+  \operatorname{gr}_{\mathscr{I}}^\bullet
+  (\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))
+  \tag{16.4.8.4}
+  \label{IV.16.4.8.4}
+\]
+(où le premier membre est le produit tensoriel gradué des
+$\mathcal{O}_Y$-Algèbres symétriques munies de leur graduation canonique
+(II, 1.7.4 et 2.1.2)), provenant de l'injection canonique
+\[
+  \mathscr{F}'\longrightarrow\mathscr{I}
+  =\operatorname{gr}_{\mathscr{I}}^1
+  (\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F})),
+\]
+est bijectif.
+\end{lemma}
+
+L'injection $\mathscr{F}'\to\mathscr{I}$ donne en effet canoniquement un
+homomorphisme de $\mathcal{O}_Y$-Algèbres graduées\linebreak
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')\to\allowbreak
+\operatorname{gr}_{\mathscr{I}}^\bullet
+(\mathscr{S}_{\mathcal{O}_Y}(\mathscr{F}))$, et comme le second membre est par
+définition une $\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$-Algèbre
+graduée, on en déduit l'homomorphisme canonique (16.4.8.4) par tensorisation du
+précédent avec $\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$. Pour
+prouver le lemme, on peut, la question étant locale, se borner au cas où
+$\mathscr{F}=\mathscr{F}'\oplus\mathscr{F}''$, $u$ et $v$ étant les
+homomorphismes canoniques. Alors l'Algèbre graduée
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F})$ s'identifie canoniquement au
+produit tensoriel gradué
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')
+\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$ (II, 1.7.4), et il est
+immédiat que $\mathscr{I}$ est alors l'Idéal
+$\mathscr{I}'\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, où $\mathscr{I}'$ est
+l'Idéal d'augmentation de
+$\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}')$, c'est-à-dire la somme
+(directe) des $\mathscr{S}_{\mathcal{O}_Y}^m(\mathscr{F}')$ pour $m\geq1$. On en
+conclut que $\mathscr{I}^n=\mathscr{I}'^n\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, où cette fois
+$\mathscr{I}'^n$ est la somme (directe) des
+$\mathscr{S}_{\mathcal{O}_Y}^m(\mathscr{F}')$ pour $m\geq n$; on a par suite
+$\mathscr{I}^n/\mathscr{I}^{n+1}=
+\mathscr{S}_{\mathcal{O}_Y}^n(\mathscr{F}')\otimes_{\mathcal{O}_Y}
+\mathscr{S}_{\mathcal{O}_Y}^{\bullet}(\mathscr{F}'')$, ce qui prouve que
+(16.4.8.4) est bijectif.
+

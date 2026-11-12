@@ -1,0 +1,109 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{325}
+en effet, soit $f_0$ un élément de $\mathfrak q$ n'appartenant pas à $\mathfrak mB$;
+c'est une série formelle dont la série réduite $\overline f_0$ n'est pas nulle; donc,
+en vertu du théorème de préparation (Bourbaki, \emph{Alg. comm.}, chap.~VII, \S3,
+n\textsuperscript{o}~8, prop.~5), pour tout $f\in\mathfrak q$, il existe $g\in B$ et
+un polynôme $r\in A[T]$ tels que $f=gf_0+r$ et on a donc
+$r\in\mathfrak q\cap A[T]$; d'autre part (\emph{loc. cit.}, prop.~6) il existe un
+polynôme distingué non constant $F_0\in A[T]$ et un élément inversible $u\in B$ tels
+que $f_0=uF_0$, donc on a aussi $F_0\in\mathfrak q\cap A[T]$, ce qui prouve que
+$\mathfrak q$ est engendré par $\mathfrak q\cap A[T]=\mathfrak q_1$. Puisque $B$
+est plat sur $A[T]$ $(\mathbf 0_{\mathrm I}, 7.3.3)$, il résulte de Bourbaki,
+\emph{Alg. comm.}, chap.~VII, \S1, n\textsuperscript{o}~10, prop.~15, que
+$\mathfrak q_1$ est un idéal premier de hauteur $1$ dans $A[T]$.
+
+En outre, on a nécessairement $\mathfrak q_1\cap A=0$; sinon,
+$\mathfrak q_1\cap A$ serait nécessairement de hauteur $\geq1$, et il résulterait de
+(5.5.3) que l'on aurait $\mathfrak q_1=(\mathfrak q_1\cap A)A[T]$. Mais alors,
+puisque $\mathfrak q_1\cap A\subset\mathfrak m$, on aurait
+$\mathfrak q_1\subset\mathfrak mA[T]$ contrairement à l'hypothèse sur
+$\mathfrak q$. Si $K$ est le corps des fractions de $A$, $\mathfrak q_1K[T]$ est
+donc un idéal premier distinct de $0$ et de $K[T]$ dans $K[T]$, donc de la forme
+$hK[T]$, où
+\[
+  h(T)=T^m+a_1T^{m-1}+\cdots+a_m,
+  \qquad m\geq1,
+\]
+avec les $a_i\in K$, $h$ étant irréductible dans $K[T]$. Mais on a vu plus haut qu'il
+existe dans $\mathfrak q_1$ un polynôme distingué non constant $F_0\in A[T]$. Si $t$
+est la classe de $T$ dans $K[T]/\mathfrak q_1K[T]$, $t$ est donc racine du polynôme
+$F_0$ dans une extension de $K$ et par suite $h$ divise $F_0$ dans $K[T]$; mais
+puisque $h$ et $F_0$ sont unitaires, cela entraîne que les coefficients $a_i$ de $h$
+sont entiers sur $A$ (Bourbaki, \emph{Alg. comm.}, chap.~V, \S1,
+n\textsuperscript{o}~3, prop.~11), donc appartiennent à $A$ puisque $A$ est
+intégralement clos. Autrement dit, on a
+\[
+  h\in A[T]\cap\mathfrak q_1K[T]=\mathfrak q_1
+\]
+(Bourbaki, \emph{Alg. comm.}, chap.~II, \S1, n\textsuperscript{o}~5, prop.~11);
+comme tout polynôme $g\in\mathfrak q_1$ est divisible par $h$ dans $K[T]$ et que $h$
+est unitaire, les coefficients de $g/h$ appartiennent à $A$, donc
+$\mathfrak q_1=hA[T]$. C.Q.F.D.
+\end{proof}
+
+L'énoncé (21.14.1) est \emph{équivalent} au suivant :
+
+\begin{corollary}[21.14.2]
+\label{IV.21.14.2}
+Sous les hypothèses de (21.14.1) sur $A$, $B$ et $\rho$ pour tout idéal premier
+$\mathfrak q$ de $B$ non contenu dans $\mathfrak p=\mathfrak mB$ et tel que
+$\dim(B_\mathfrak q)\geq2$, l'anneau $B_\mathfrak q$ est parafactoriel. En
+particulier, si $\dim(B\otimes_A k)>0$ (\emph{i.e.} $\dim B>\dim A$
+$((\mathbf 0, 19.7.1)$ et $(\mathbf 0, 6.1.1)))$, l'anneau $B$ est parafactoriel.
+\end{corollary}
+
+\begin{proof}
+En effet, on a vu dans la démonstration de (21.14.1) que les conditions de l'énoncé
+entraînent que $B$ est intègre et intégralement clos; l'équivalence des énoncés
+(21.14.1) et (21.14.2) résulte alors de (21.13.15) appliqué à
+$X=\operatorname{Spec}(B)$ et $S=\{\mathfrak p\}$.
+\end{proof}
+
+\begin{proposition}[21.14.3]
+\label{IV.21.14.3}
+Soient $S$ un préschéma normal, $f:X\to S$ un morphisme lisse.
+\begin{enumerate}[label=(\roman*)]
+  \item Si $S$ est localement noethérien (donc aussi $X$), alors, pour tout $x\in X$
+  tel que $\dim(\mathcal O_{X,x})\geq2$ et que $x$ ne soit pas point maximal de sa
+  fibre $f^{-1}(f(x))$, l'anneau $\mathcal O_{X,x}$ est parafactoriel. Tout cycle
+  $1$-codimensionnel $Z$ sur $X$ tel que $\operatorname{Supp}(Z)$ ne contienne aucune
+  composante irréductible d'une fibre $f^{-1}(s)=X_s$, est localement principal.
+  \item Soit $Y$ une partie fermée de $X$ ne contenant aucune composante irréductible
+  d'une fibre $X_s$, et telle que, pour tout point maximal $\eta$ de $S$,
+  $Y_\eta=Y\cap X_\eta$ soit de codimension $\geq2$ dans $X_\eta$. Alors le couple
+  $(X,Y)$ est parafactoriel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On notera que les conditions de (ii) sont remplies si $Y$ est une partie fermée de $X$
+telle que, pour tout $s\in S$, $Y_s=Y\cap X_s$ soit de codimension $\geq2$ dans
+$X_s$.
+
+Pour prouver (21.14.3), notons d'abord que sous les hypothèses de (i), si l'on pose
+$Y=\overline{\{x\}}$, il existe un voisinage ouvert $V$ de $x$ dans $X$ tel que
+$Y\cap V$ et $V$ vérifient les conditions de (ii) : en effet, il résulte de l'hypothèse
+et de (9.5.3) que l'on peut prendre $V$ tel que $V\cap Y$ ne contienne aucune
+composante irréductible d'un $X_s$; d'autre part, pour tout point maximal $\eta$ de
+$S$ tel que $Y\cap X_\eta\neq\varnothing$, les points de $Y\cap X_\eta$ sont des
+spécialisations de $x$, donc en un tel point $z$ on a
+$\dim(\mathcal O_{X,z})\geq2$, et comme
+$\mathcal O_{X,z}=\mathcal O_{X_\eta,z}$ ($S$ étant réduit au point $\eta$ en vertu
+de (2.1.13)), $Y\cap X_\eta$ est bien de codimension $\geq2$ dans $X_\eta$. Comme le
+couple $(V,Y\cap V)$ est alors parafactoriel en vertu de (ii), on conclut de (21.13.10)
+que l'anneau $\mathcal O_{X,x}$ est parafactoriel, c'est-à-dire la première assertion
+de (i). Pour prouver la seconde, on peut se borner au cas où
+$Z=\overline{\{z\}}$, où $z\in X^{(1)}$; comme $\mathcal O_{X,z}$ est un anneau local
+intégralement clos et de dimension $1$, c'est un anneau de valuation discrète et $Z$
+est donc principal au point $z$; pour tout autre point $x$ de
+$\operatorname{Supp}(Z)$, on a donc $\dim(\mathcal O_{X,x})\geq2$ et $x$ n'est pas
+point maximal de sa fibre par hypothèse, donc $\mathcal O_{X,x}$ est parafactoriel.
+Appliquons alors (21.13.15) en prenant pour $S$ l'ensemble formé de $z$ et des points
+maximaux des fibres de $f$; il est clair que $Z$ est principal aux points de $S$
+puisque $z$ est le seul point de $S$ appartenant à $\operatorname{Supp}(Z)$; comme
+d'autre part la condition $b)$ de (21.13.15) est évidemment remplie, on en conclut que
+$Z$ est localement principal.
+
+On est donc ramené à prouver (ii). Posons $U=X-Y$ et soit $j:U\to X$ l'injection
+canonique.

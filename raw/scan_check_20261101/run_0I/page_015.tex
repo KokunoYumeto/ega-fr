@@ -1,0 +1,66 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{15}
+si $N$ et $P$ sont deux sous-modules de $M$, $S^{-1}N$ et $S^{-1}P$ s'identifient canoniquement à des sous-modules de $S^{-1}M$, et l'on a
+\[
+  S^{-1}(N+P)=S^{-1}N+S^{-1}P
+  \quad\text{et}\quad
+  S^{-1}(N\cap P)=(S^{-1}N)\cap(S^{-1}P).
+\]
+\end{env}
+
+\begin{env}[1.3.3]
+\label{0.1.3.3-fr}
+Soit $(M_\alpha,\varphi_{\beta\alpha})$ un système inductif de $A$-modules; alors $(S^{-1}M_\alpha,S^{-1}\varphi_{\beta\alpha})$ est un système inductif de $S^{-1}A$-modules.
+Exprimant les $S^{-1}M_\alpha$ et $S^{-1}\varphi_{\beta\alpha}$ comme des produits tensoriels (1.2.5 et 1.3.1), il résulte de la permutabilité des opérations de produit tensoriel et de limite inductive, que l'on a un isomorphisme canonique
+\[
+  S^{-1}\varinjlim M_\alpha\xrightarrow{\sim}\varinjlim S^{-1}M_\alpha,
+\]
+ce qu'on exprime encore en disant que le foncteur $S^{-1}M$ (en $M$) \emph{commute avec les limites inductives}.
+\end{env}
+
+\begin{env}[1.3.4]
+\label{0.1.3.4-fr}
+Soient $M$, $N$ deux $A$-modules; il existe un isomorphisme canonique \emph{fonctoriel} (en $M$ et $N$)
+\[
+  (S^{-1}M)\otimes_{S^{-1}A}(S^{-1}N)
+  \xrightarrow{\sim}
+  S^{-1}(M\otimes_A N)
+\]
+qui transforme $(m/s)\otimes(n/t)$ en $(m\otimes n)/st$.
+\end{env}
+
+\begin{env}[1.3.5]
+\label{0.1.3.5-fr}
+On a de même un homomorphisme \emph{fonctoriel} (en $M$ et $N$)
+\[
+  S^{-1}\operatorname{Hom}_A(M,N)
+  \longrightarrow
+  \operatorname{Hom}_{S^{-1}A}(S^{-1}M,S^{-1}N)
+\]
+qui, à $u/s$, fait correspondre l'homomorphisme $m/t\mapsto u(m)/st$.
+Lorsque $M$ a une \emph{présentation finie}, l'homomorphisme précédent est un \emph{isomorphisme}~: c'est immédiat lorsque $M$ est de la forme $A^r$, et on passe de là au cas général en partant de la suite exacte $A^p\to A^q\to M\to 0$, et en utilisant l'exactitude du foncteur $S^{-1}M$ et l'exactitude à gauche du foncteur $\operatorname{Hom}_A(M,N)$ en $M$.
+On notera que ce cas se présente toujours lorsque $A$ est \emph{noethérien} et le $A$-module $M$ \emph{de type fini}.
+\end{env}
+
+\subsection{Changement de partie multiplicative}
+\label{subsection:0.1.4-fr}
+
+\begin{env}[1.4.1]
+\label{0.1.4.1-fr}
+Soient $S$, $T$ deux parties multiplicatives d'un anneau $A$ telles que $S\subset T$; il existe un homomorphisme canonique $\rho_A^{T,S}$ (ou simplement $\rho^{T,S}$) de $S^{-1}A$ dans $T^{-1}A$, faisant correspondre à l'élément noté $a/s$ de $S^{-1}A$ l'élément noté $a/s$ dans $T^{-1}A$; on a
+\[
+  i_A^T=\rho_A^{T,S}\circ i_A^S.
+\]
+Pour tout $A$-module $M$, il existe de même une application $S^{-1}A$-linéaire de $S^{-1}M$ dans $T^{-1}M$ (ce dernier étant considéré comme $S^{-1}A$-module grâce à l'homomorphisme $\rho_A^{T,S}$), qui fait correspondre à l'élément $m/s$ de $S^{-1}M$ l'élément $m/s$ de $T^{-1}M$; on note cette application $\rho_M^{T,S}$, ou simplement $\rho^{T,S}$, et on a encore
+\[
+  i_M^T=\rho_M^{T,S}\circ i_M^S;
+\]
+dans l'identification canonique (1.2.5), $\rho_M^{T,S}$ s'identifie à $\rho_A^{T,S}\otimes 1$.
+L'homomorphisme $\rho_M^{T,S}$ est un \emph{morphisme fonctoriel} (ou transformation naturelle) du foncteur $S^{-1}M$ dans le foncteur $T^{-1}M$, autrement dit, le diagramme
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+S^{-1}M \arrow[r,"S^{-1}u"] \arrow[d,"\rho_M^{T,S}"'] & S^{-1}N \arrow[d,"\rho_N^{T,S}"] \\
+T^{-1}M \arrow[r,"T^{-1}u"] & T^{-1}N
+\end{tikzcd}
+\]
+

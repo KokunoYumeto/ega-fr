@@ -1,0 +1,74 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{172}
+\begin{proof}
+Soit $r$ le rang de la famille $(a_i)_{1\leqslant i\leqslant n}$ sur $K$, et
+raisonnons par récurrence sur $n-r$~; la proposition est évidente pour $n=r$,
+car alors la famille $(a_i)_{1\leqslant i\leqslant r}$ est libre sur $K$, donc
+sur tout sous-corps de $K$. Supposons par exemple que
+$(a_i)_{1\leqslant i\leqslant r}$ soit libre sur $K$, et écrivons
+$a_{r+1}=\sum_{i=1}^r\lambda_i a_i$ avec $\lambda_i\in K$~; la famille
+$(a_i)_{1\leqslant i\leqslant r+1}$ étant libre sur $k$, les $\lambda_i$ ne
+peuvent tous appartenir à $k$~; supposons par exemple que
+$\lambda_{i_0}\notin k$. Alors il existe un indice $\beta$ tel que
+$\lambda_{i_0}\notin k_\beta$~; on en conclut que la famille $(a_i)_{1\leqslant i\leqslant r+1}$ est libre sur $k_\beta$~; en effet, comme la
+famille $(a_i)_{1\leqslant i\leqslant r}$ est libre sur tout sous-corps de
+$K$, si la famille $(a_i)_{1\leqslant i\leqslant r+1}$ n'était pas libre sur
+$k_\beta$, $a_{r+1}$ serait égal à une combinaison linéaire des $a_i$ à
+coefficients dans $k_\beta$, et comme ces coefficients sont nécessairement
+les $\lambda_i$, on aboutit à une contradiction. Il suffit maintenant
+d'appliquer l'hypothèse de récurrence en remplaçant $K$ par $k_\beta$ et la
+famille $(k_\alpha)_{\alpha\in I}$ par la sous-famille des $k_\alpha$
+contenus dans $k_\beta$.
+\end{proof}
+
+\begin{lemma}[21.8.2]
+\label{0.21.8.2-fr}
+Soient $K$ un corps, $p$ son exposant caractéristique, $k_0$ un sous-corps de
+$K$, $(k_\alpha)_{\alpha\in I}$ une famille filtrante décroissante de
+sous-corps de $K$ telle que $\bigcap_{\alpha\in I}k_\alpha(K^p)=k_0(K^p)$.
+Si $(x_i)_{1\leqslant i\leqslant n}$ est une famille finie d'éléments de $K$
+qui est $p$-libre sur $k_0$, il existe un indice $\alpha$ tel que $(x_i)$ soit
+$p$-libre sur $k_\alpha$.
+
+En effet, dire que la famille $(x_i)$ est $p$-libre sur un sous-corps $k$
+de $K$ signifie que la famille finie des monômes
+$\prod_{i=0}^n x_i^{m(i)}$ avec $0\leqslant m(i)<p$ est libre sur $k(K^p)$~;
+il suffit donc d'appliquer le lemme (21.8.1) à cette famille de monômes dans
+l'espace vectoriel $V=K$, et aux sous-corps $k_\alpha(K^p)$ et $k_0(K^p)$
+de $K$.
+\end{lemma}
+
+\begin{theorem}[21.8.3]
+\label{0.21.8.3-fr}
+Soient $K$ un corps de caractéristique $p>0$, $k_0$ un sous-corps de $K$,
+$(k_\alpha)_{\alpha\in I}$ une famille filtrante décroissante de sous-corps
+de $K$ contenant $k_0$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $\bigcap_{\alpha\in I}k_\alpha(K^p)=k_0(K^p)$.
+  \item[\rm b)] Pour toute extension $L$ de $K$ telle que
+  $\Upsilon_{L/K/k_\alpha}$ soit un $L$-espace vectoriel de rang fini
+  (ce qui a lieu en particulier si $L$ est une extension de type fini en
+  vertu de (21.7.2)), il existe $\alpha\in I$ tel que $k_\alpha$ soit
+  $k_0$-admissible pour l'extension $L$ de $K$.
+  \item[\rm b$'$)] Pour toute extension $L=K(x)$ de $K$, avec $x^p\in K$,
+  il existe $\alpha\in I$ tel que $k_\alpha$ soit $k_0$-admissible pour
+  l'extension $L$ de $K$.
+  \item[\rm c)] L'application canonique
+\begin{equation}
+\tag{21.8.3.1}
+\label{0.21.8.3.1-fr}
+\Omega^1_{K/k_0}\longrightarrow\varprojlim_{\alpha}\Omega^1_{K/k_\alpha}
+\end{equation}
+est injective.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+L'application canonique (21.8.3.1) est bien entendu obtenue par passage à la
+limite projective dans le système projectif d'homomorphismes
+$\Omega^1_{K/k_0}\to\Omega^1_{K/k_\alpha}$ (20.5.3.3). Nous allons prouver
+le théorème suivant le schéma logique $c)\Rightarrow b)\Rightarrow b')
+\Rightarrow a)\Rightarrow c)$.
+
+Dire que $k_\alpha$ est $k_0$-admissible pour l'extension $L$ de $K$ signifie
+que l'homomorphisme

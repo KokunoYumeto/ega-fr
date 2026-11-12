@@ -1,0 +1,75 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{157}
+\begin{lemma}[21.1.10]
+\label{0.21.1.10-fr}
+Soient $C$ une sous-$A$-algèbre de $B$ telle que $B^p\subset C$, $M$ une
+partie de $C$, $N$ une partie de $B$.
+\begin{enumerate}
+  \item[(i)] Si $M$ est un système de $p$-générateurs de $C$ sur $A$ et $N$
+  un système de $p$-générateurs de $B$ sur $C$, alors $M\cup N$ est un système
+  de $p$-générateurs de $B$ sur $A$.
+  \item[(ii)] Supposons que $M$ soit une $p$-base de $C$ sur $A$~; alors,
+  pour que $N$ soit $p$-libre sur $C$, il faut et il suffit que $M\cup N$
+  soit $p$-libre sur $A$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+On peut se borner au cas où $B^p\subset A\subset C\subset B$. Alors (i)
+est un cas particulier du fait que si $P$ (resp. $Q$) est un système de
+générateurs du $A$-module $C$ (resp. du $C$-module $B$), l'ensemble des
+produits $xy$, où $x\in P$ et $y\in Q$, est un système de générateurs du
+$A$-module $B$.
+
+Conservant les mêmes notations, si $P$ est une base du $A$-module $C$,
+dire que $Q$ est une famille libre sur $C$ signifie que la relation
+$\sum_{\lambda,\mu}a_{\lambda\mu}x_\lambda y_\mu=0$, où
+$a_{\lambda\mu}\in A$, $x_\lambda\in P$, $y_\mu\in Q$ (les $x_\lambda$
+(resp. les $y_\mu$) étant deux à deux distincts) équivaut à
+$a_{\lambda\mu}=0$ pour tout couple $(\lambda,\mu)$, ou encore à
+$\sum_\lambda a_{\lambda\mu}x_\lambda=0$ pour tout $\mu$~; d'où
+l'assertion (ii).
+\end{proof}
+
+\subsection{$p$-bases et lissité formelle}
+\label{0.21.2-fr}
+
+\begin{theorem}[21.2.1]
+\label{0.21.2.1-fr}
+Soient $B$ un anneau, $A$ un sous-anneau de $B$ tel que $B^p\subset A\subset B$,
+$(x_\alpha)_{\alpha\in I}$ une $p$-base de $B$ sur $A$.
+Soient $E$ une $A$-algèbre, $u:A\to E$ l'homomorphisme structural,
+$q:E\to B$ un $A$-homomorphisme surjectif, $\mathfrak R$ son noyau, et
+supposons que $\mathfrak R^p=0$. Alors~:
+\begin{enumerate}
+  \item[(i)] Pour qu'il existe un $A$-homomorphisme $v:B\to E$ inverse à
+  droite de l'homomorphisme $q:E\to B$, il faut et il suffit que
+  $u(q(z)^p)=z^p$ pour tout $z\in E$.
+  \item[(ii)] Lorsque la condition de (i) est satisfaite, pour toute famille
+  $(z_\alpha)_{\alpha\in I}$ d'éléments de $E$ telle que
+  $q(z_\alpha)=x_\alpha$ pour tout $\alpha\in I$, il existe un
+  $A$-homomorphisme $v:B\to E$ et un seul tel que $v(x_\alpha)=z_\alpha$
+  pour tout $\alpha\in I$, et $v$ est inverse à droite de $q$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+S'il existe un $A$-homomorphisme $v:B\to E$, on doit avoir $v(a)=u(a)$ pour
+tout $a\in A\subset B$, donc $v(q(z)^p)=u(q(z)^p)$ pour tout $z\in E$,
+puisque $B^p\subset A$. Mais on a $v(q(z)^p)=(v(q(z)))^p$ et, par définition,
+$v(q(z))\equiv z\pmod{\mathfrak R}$ si $q\circ v=1_B$, donc
+$(v(q(z)))^p=z^p$ puisque $\mathfrak R^p=0$~; d'où la nécessité de (i).
+La suffisance de la condition (i) résultera de (ii).
+
+Or, sous les hypothèses de (ii), l'unicité de $v$ est évidente puisque les
+monômes $\prod_\alpha x_\alpha^{n(\alpha)}$ engendrent le $A$-module $B$~;
+comme ces monômes forment en outre une \emph{base} du $A$-module $B$, il existe
+une application $A$-\emph{linéaire} $v$ de $B$ dans $E$ telle que
+$v(\prod_\alpha x_\alpha^{n(\alpha)})=\prod_\alpha z_\alpha^{n(\alpha)}$
+pour toute famille $(n(\alpha))_{\alpha\in I}$ à support fini avec
+$0\leq n(\alpha)<p$ pour tout $\alpha$. Reste à voir que $v$ est un
+homomorphisme d'anneaux. Or, on peut écrire
+$(\prod_\alpha x_\alpha^{m(\alpha)})(\prod_\alpha x_\alpha^{n(\alpha)})
+=a\prod_\alpha x_\alpha^{r(\alpha)}$, où
+$r(\alpha)=m(\alpha)+n(\alpha)$ si $m(\alpha)+n(\alpha)<p$,
+$r(\alpha)=m(\alpha)+n(\alpha)-p$ dans le cas contraire, et $a\in A$

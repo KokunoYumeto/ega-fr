@@ -1,0 +1,104 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{22}
+et $u_\nu^*(f_\nu\circ g_\nu)=1_{\mathcal G}$~; compte tenu de ce que
+$\mathcal F_\nu$ et $\mathcal G_\nu$ sont de type fini, on en conclut par
+(8.5.2, (i)) qu'il existe $\mu\geq\nu$ tel que l'on ait
+$g_\mu\circ f_\mu=1_{\mathcal F_\mu}$ et
+$f_\mu\circ g_\mu=1_{\mathcal G_\mu}$, d'où le corollaire.
+\end{proof}
+
+\begin{corollary}[8.5.2.5]
+\label{IV.8.5.2.5-fr}
+Supposons $S_0$ quasi-compact et quasi-séparé. Supposons que
+$\mathcal F_\lambda$, $\mathcal G_\lambda$ soient des
+$\mathcal O_{S_\lambda}$-Modules quasi-cohérents de présentation finie. Pour
+que $\mathcal F$ et $\mathcal G$ soient isomorphes, il faut et il suffit qu'il
+existe $\mu\geq\lambda$ tel que $\mathcal F_\mu$ et $\mathcal G_\mu$ soient
+isomorphes. De plus, pour tout isomorphisme
+$f:\mathcal F\xrightarrow{\sim}\mathcal G$, il existe un $\nu\geq\mu$ et un
+isomorphisme $f_\nu:\mathcal F_\nu\xrightarrow{\sim}\mathcal G_\nu$ tels que
+$f=u_\nu^*(f_\nu)$.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de (8.5.2.4) et de (8.5.2, (i)) puisque tout homomorphisme
+$f:\mathcal F\to\mathcal G$ est de la forme $u_\mu^*(f_\mu)$ pour un
+$\mu\geq\lambda$ et un homomorphisme
+$f_\mu:\mathcal F_\mu\to\mathcal G_\mu$.
+\end{proof}
+
+\par\medskip\noindent\textup{(ii)} Considérons encore en premier lieu le cas où
+$S_0=\operatorname{Spec}(A_0)$ est
+affine. Alors l'assertion équivaut au lemme (5.13.7.1).
+
+Dans le cas général, en partant d'un recouvrement ouvert affine fini $(U_i)$
+de $S_0$, on déduit de (5.13.7.1) que pour tout $i$, il existe un indice
+$\lambda(i)$ et un $\mathcal O_{U_{i,\lambda(i)}}$-Module quasi-cohérent de
+présentation finie $\mathcal F_i$ tels que
+$u_{\lambda(i)}^*(\mathcal F_i)=\mathcal F|V_i$ (avec les notations de (i)). En
+outre, comme $L$ est filtrant, on peut supposer que tous les $\lambda_i$ sont
+égaux à un même $\lambda$. Comme
+$U_{ij\lambda}=U_{i\lambda}\cap U_{j\lambda}$ est quasi-compact et
+quasi-séparé (1.2.7), il résulte de (8.5.2.5) que pour tout couple $(i,j)$, il
+existe un indice $\lambda_{ij}\geq\lambda$ et un isomorphisme
+\[
+  \theta_{ij}:u_{\lambda,\lambda_{ij}}^*(\mathcal F_i|U_{ij\lambda})
+  \xrightarrow{\sim}
+  u_{\lambda,\lambda_{ij}}^*(\mathcal F_j|U_{ij\lambda})
+\]
+tel que $u_{\lambda_{ij}}^*(\theta_{ij})$ soit l'automorphisme identique de
+$\mathcal F|(V_i\cap V_j)$~; on peut encore supposer tous les
+$\lambda_{ij}$ égaux à $\lambda$. Changeant les notations, on peut donc
+supposer qu'il existe pour tout couple $(i,j)$ un isomorphisme
+\[
+  \theta_{ij}:\mathcal F_i|U_{ij\lambda}
+  \xrightarrow{\sim}\mathcal F_j|U_{ij\lambda},
+\]
+tels que $u_\lambda^*(\theta_{ij})$ soit l'automorphisme identique de
+$\mathcal F|(V_i\cap V_j)$. Enfin, pour trois indices quelconques $i,j,k$, si
+l'on pose
+$U_{ijk,\lambda}=U_{i\lambda}\cap U_{j\lambda}\cap U_{k\lambda}$,
+$U_{ijk,\lambda}$ est quasi-compact, et si $\theta'_{ij}$, $\theta'_{jk}$ et
+$\theta'_{ik}$ désignent les restrictions de $\theta_{ij}$, $\theta_{jk}$ et
+$\theta_{ik}$ à $U_{ijk,\lambda}$, on a
+\[
+  u_\lambda^*(\theta'_{ij}\circ\theta'_{jk})=u_\lambda^*(\theta'_{ik}).
+\]
+Il y a donc, en vertu de (i), un indice $\mu\geq\lambda$ tel que l'on ait
+\[
+  u_{\lambda\mu}^*(\theta'_{ik})
+  =u_{\lambda\mu}^*(\theta'_{ij}\circ\theta'_{jk}),
+\]
+donc les isomorphismes
+\[
+  u_{\lambda\mu}^*(\theta'_{ij}):
+  u_{\lambda\mu}^*(\mathcal F_i)|U_{ij\mu}
+  \xrightarrow{\sim}
+  u_{\lambda\mu}^*(\mathcal F_j)|U_{ij\mu}
+\]
+vérifient la condition de recollement, et définissent par suite sur $S_\mu$ un
+$\mathcal O_{S_\mu}$-Module quasi-cohérent $\mathcal F_\mu$ de présentation
+finie $(0_{\mathrm I},3.3.1)$ tel que $\mathcal F$ soit isomorphe à
+$u_\mu^*(\mathcal F_\mu)$.
+
+\begin{env}[8.5.3]
+\label{IV.8.5.3-fr}
+Le résultat de (8.5.2) s'exprime encore en disant que si $S_0$ est
+quasi-compact et quasi-séparé, la catégorie des $\mathcal O_S$-Modules
+quasi-cohérents de présentation finie est déterminée à équivalence près par la
+donnée des catégories des $\mathcal O_{S_\lambda}$-Modules quasi-cohérents de
+présentation finie, des foncteurs $u_{\lambda\mu}^*$ entre ces catégories, et
+des isomorphismes de transition
+$u_{\mu\nu}^*\circ u_{\lambda\mu}^*\xrightarrow{\sim}u_{\lambda\nu}^*$. De façon
+imagée, on peut dire que la donnée d'un $\mathcal O_S$-Module quasi-cohérent de
+présentation finie $\mathcal F$ équivaut «~fonctoriellement~» à la donnée d'un
+$\mathcal O_{S_\lambda}$-Module de présentation finie $\mathcal F'_\lambda$
+pour $\lambda$ grand et que, si un $\mathcal O_{S_\mu}$-Module quasi-cohérent de
+présentation finie $\mathcal F''_\mu$ a aussi $\mathcal F$ comme image
+réciproque, alors $\mathcal F'_\lambda$ et $\mathcal F''_\mu$ ont même image
+réciproque dans un $S_\nu$ convenable ($\nu\geq\lambda$, $\nu\geq\mu$).
+
+Nous allons interpréter de ce point de vue diverses notions liées aux
+$\mathcal O_S$-Modules quasi-cohérents.
+\end{env}
+

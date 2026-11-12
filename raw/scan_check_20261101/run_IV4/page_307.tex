@@ -1,0 +1,59 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{307}
+(ii) Il s'agit de prouver que pour tout point $x\in T$, on a $x\in f^0(U^0)$; nous
+allons montrer d'abord qu'on peut se réduire au cas où $X=\operatorname{Spec}(A)$, où
+$A$ est un anneau local noethérien \emph{complet}, et $x$ le point fermé de $X$. Pour
+cela, il suffit de faire le changement de base
+$h:X'=\operatorname{Spec}(\widehat{\mathcal O}_{X,x})\to X$; si l'on pose
+$U'=h^{-1}(U)$, $f'=f_{\{X'\}}$ est l'injection canonique $U'\to X'$, et puisque le
+morphisme $h$ est plat, il résulte de (21.12.2) que si l'on prouve que $x$ appartient à
+$f^{\prime 0}(U^{\prime 0})$, on en déduira que $x\in f^0(U^0)$. En vertu de (6.1.1), on a
+bien opéré la réduction cherchée.
+
+Soit alors $X_1$ un sous-préschéma fermé réduit de $X$ ayant pour espace sous-jacent
+une composante irréductible de $X$, de dimension \emph{maximale}, parmi celles qui
+contiennent une composante irréductible de $T$, et posons
+$U_1=U\cap X_1$, $T_1=T\cap X_1=X_1-U_1$; on a donc
+$\operatorname{codim}(T_1,X_1)\geq2$ $(\mathbf 0, 14.2.1)$, et le couple $(U_1,X_1)$
+vérifie donc les mêmes hypothèses que le couple $(U,X)$ ($X_1$ étant spectre d'un
+anneau quotient de $A$, donc local noethérien et complet). On a par ailleurs un
+diagramme commutatif
+\[
+  \xymatrix{
+    U_1 \ar[r]^j \ar[d]_{f_1} & U \ar[d]^f \\
+    X_1 \ar[r]_i & X
+  }
+\]
+où $i$ et $j$ sont les injections canoniques, $i$ étant donc un morphisme affine; on en
+déduit (21.12.1) l'existence d'un morphisme $j^0:U_1^0\to U^0$ rendant commutatif le
+diagramme
+\[
+  \xymatrix{
+    U_1^0 \ar[r]^{j^0} \ar[d]_{f_1^0} & U^0 \ar[d]^{f^0} \\
+    X_1 \ar[r]_i & X
+  }
+\]
+et par suite, pour prouver que $x\in f^0(U^0)$, il suffit de prouver que
+$x\in f_1^0(U_1^0)$. On peut donc remplacer $X$ par $X_1$, et on peut par suite
+supposer que l'anneau $A$ est en outre \emph{intègre}. Mais $A$ est quotient d'un
+anneau noethérien régulier en vertu du théorème de Cohen $(\mathbf 0, 19.8.8$, (i)) et
+puisqu'il est intègre, on peut appliquer (5.11.1) avec la famille $(x_\alpha)$ réduite au
+seul point maximal de $X$; comme $\operatorname{codim}(T,X)\geq2$ par hypothèse, on
+voit que $f_*(\mathcal O_U)$ est un $\mathcal O_X$-Module \emph{cohérent}, donc le
+morphisme $f^0:U^0\to X$ est fini; comme ce morphisme est dominant ($U$ étant partout
+dense), il est surjectif $(\mathbf{II}, 6.1.10)$, et par suite $x\in f^0(U^0)$. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[21.12.7]
+\label{IV.21.12.7}
+Soient $X$ un préschéma localement noethérien, $U$ un sous-préschéma induit sur un
+ouvert de $X$, $j:U\to X$ l'immersion canonique; supposons que $j$ soit un morphisme
+affine. Alors toute composante irréductible de $T=X-U$ est de codimension $\leq1$
+(et par suite de codimension $1$ si $U$ est partout dense).
+\end{corollary}
+
+\begin{proof}
+Supposons en effet qu'une des composantes irréductibles $T_1$ de $T$ soit de
+codimension $\geq2$ dans $X$. Remplaçant au besoin $X$ par un voisinage ouvert du
+point générique de $T_1$, on peut supposer $T$ irréductible et de codimension $\geq2$.
+Mais alors l'hypothèse

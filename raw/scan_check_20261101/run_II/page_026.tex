@@ -1,0 +1,109 @@
+% from ega2-1-fr.tex
+\oldpage[II]{26}
+pour tout $n>0$~: en effet, si
+$\mathfrak{p}\in\operatorname{Proj}(S)$ contient les éléments homogènes de
+$\mathfrak{J}$ de degré $\geq n$, comme par hypothèse il existe un élément
+homogène $f\in S_d$ non contenu dans $\mathfrak{p}$, pour tout $m\geq 0$ et
+tout $x\in S_m\cap\mathfrak{J}$, on a
+$f^r x\in\mathfrak{J}\cap S_{m+rd}$ sauf pour un nombre fini de valeurs de
+$r$, donc $f^r x\in\mathfrak{p}\cap S_{m+rd}$, ce qui entraîne
+$x\in\mathfrak{p}\cap S_m$
+(\hyperref[II.2.1.9-fr]{2.1.9}).
+
+Enfin, on a, pour tout idéal gradué $\mathfrak{J}$ de $S$
+\[
+  \label{II.2.3.2.5-fr}
+  V_+(\mathfrak{J})=V_+(r_+(\mathfrak{J})).
+  \tag{2.3.2.5}
+\]
+\end{env}
+
+\begin{env}[2.3.3]
+\label{II.2.3.3-fr}
+Par définition, les $V_+(E)$ sont les parties fermées de
+$X=\operatorname{Proj}(S)$ pour la topologie induite par la topologie
+spectrale de $\operatorname{Spec}(S)$, et qu'on appellera encore
+\emph{topologie spectrale} sur $X$. On pose, pour tout $f\in S$
+\[
+  \label{II.2.3.3.1-fr}
+  D_+(f)=D(f)\cap\operatorname{Proj}(S)
+  =\operatorname{Proj}(S)\setminus V_+(f)
+  \tag{2.3.3.1}
+\]
+et on a par suite, pour deux éléments $f$, $g$ de $S$
+(\hyperref[I.1.1.9.1-fr]{I, 1.1.9.1})
+\[
+  \label{II.2.3.3.2-fr}
+  D_+(fg)=D_+(f)\cap D_+(g).
+  \tag{2.3.3.2}
+\]
+\end{env}
+
+\begin{proposition}[2.3.4]
+\label{II.2.3.4-fr}
+Lorsque $f$ parcourt l'ensemble des éléments homogènes de $S_+$, les
+$D_+(f)$ forment une base de la topologie de
+$X=\operatorname{Proj}(S)$.
+\end{proposition}
+
+\begin{proof}
+Il résulte en effet de (\hyperref[II.2.3.2.2-fr]{2.3.2.2}) et
+(\hyperref[II.2.3.2.4-fr]{2.3.2.4}) que toute partie fermée de $X$ est
+intersection d'ensembles de la forme $V_+(f)$, où $f$ est homogène de degré
+$>0$.
+\end{proof}
+
+\begin{env}[2.3.5]
+\label{II.2.3.5-fr}
+Soit $f$ un élément \emph{homogène} de $S_+$, de degré $d>0$~; pour tout
+idéal premier gradué $\mathfrak{p}$ de $S$, ne contenant pas $f$, on sait
+que l'ensemble des $x/f^n$, où $x\in\mathfrak{p}$ et $n\geq 0$, est un
+idéal premier de l'anneau de fractions $S_f$
+(\hyperref[0.1.2.6-fr]{0, 1.2.6})~; sa trace sur $S_{(f)}$ est donc un idéal
+premier de cet anneau, que nous désignerons par
+$\psi_f(\mathfrak{p})$~: c'est l'ensemble des $x/f^n$ pour $n\geq 0$,
+$x\in\mathfrak{p}\cap S_{nd}$. On a ainsi défini une application
+\[
+  \psi_f:D_+(f)\longrightarrow\operatorname{Spec}(S_{(f)})~;
+\]
+en outre, si $g\in S_e$ est un second élément homogène de $S_+$, on a un
+diagramme commutatif
+\[
+  \label{II.2.3.5.1-fr}
+  \xymatrix{
+    D_+(f)\ar[r]^{\psi_f}
+    & \operatorname{Spec}(S_{(f)})\\
+    D_+(fg)\ar[u]\ar[r]_{\psi_{fg}}
+    & \operatorname{Spec}(S_{(fg)})\ar[u]
+  }
+  \tag{2.3.5.1}
+\]
+où la flèche verticale de gauche est l'inclusion, et celle de droite est
+l'application ${}^a\omega_{fg,f}$ déduite de l'homomorphisme canonique
+$\omega=\omega_{fg,f}:S_{(f)}\to S_{(fg)}$
+(\hyperref[I.1.2.1-fr]{I, 1.2.1}). En effet, si
+$x/f^n\in\omega^{-1}(\psi_{fg}(\mathfrak{p}))$, où
+$fg\notin\mathfrak{p}$, on a par définition
+$g^n x/(fg)^n\in\psi_{fg}(\mathfrak{p})$, donc
+$g^n x\in\mathfrak{p}$ et par suite $x\in\mathfrak{p}$, et la réciproque
+est évidente.
+\end{env}
+
+\begin{proposition}[2.3.6]
+\label{II.2.3.6-fr}
+L'application $\psi_f$ est un homéomorphisme de $D_+(f)$ sur
+$\operatorname{Spec}(S_{(f)})$.
+\end{proposition}
+
+\begin{proof}
+En premier lieu, $\psi_f$ est continue~; car si $h\in S_{nd}$ est tel que
+$h/f^n\in\psi_f(\mathfrak{p})$, on a par définition
+$h\in\mathfrak{p}$ et réciproquement, donc
+\[
+  \psi_f^{-1}(D(h/f^n))=D_+(hf)
+\]
+et notre assertion résulte de la formule
+(\hyperref[II.2.3.3.2-fr]{2.3.3.2}). En outre, les $D_+(hf)$, où $h$
+parcourt les ensembles $S_{nd}$, forment une base de la topologie de
+$D_+(f)$, en vertu de (\hyperref[II.2.3.4-fr]{2.3.4}) et de la formule
+(\hyperref[II.2.3.3.2-fr]{2.3.3.2})~; ce

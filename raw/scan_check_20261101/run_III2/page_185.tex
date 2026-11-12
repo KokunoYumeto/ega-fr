@@ -1,0 +1,85 @@
+% from ega3-7-fr.tex
+\oldpage[III]{185}
+démontrée pour $B_{f_N}$, on aura un ouvert $W$ partout dense dans $V$ dans
+lequel les fonctions de l'énoncé seront constantes, puisque
+$A_x=(B_{f_N})_x$ pour tout $x\in W$. En faisant le même raisonnement pour
+toute composante irréductible de $\operatorname{Spec}(A)$, le corollaire sera
+démontré. On peut donc se borner au cas où $A$ est intègre; le raisonnement de
+(7.3.9) prouve alors l'existence d'un $f\in A-\{0\}$ tel que les $T_p(A_f)$
+soient des $A_f$-modules libres de type fini pour $p\leq N$, ce qui entraîne
+la conclusion de (7.3.10) en vertu de (7.3.4).
+\end{proof}
+
+\begin{proposition}[7.3.11]
+Soient $A$ un anneau commutatif local, $k$ son corps résiduel, $T_\bullet$ un
+foncteur homologique covariant de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$,
+commutant aux sommes directes. On suppose qu'il existe $i_0$ tel que $T_i$ soit
+exact pour $i\leq i_0$, et que tous les $T_n(A)$ soient des $A$-modules de
+présentation finie. Alors les conditions équivalentes $a)$, $b)$, $c)$ de
+(7.3.7) impliquent les deux suivantes, et leur sont équivalentes lorsque
+l'anneau est en outre réduit :
+\begin{enumerate}
+  \item[d)] Pour tout $x\in\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\kappa(x)}T_q(\kappa(x))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+  \item[$d'$)] Pour tout point générique $x_j$ d'une composante irréductible
+    de $\operatorname{Spec}(A)$, on a
+    \[
+      \operatorname{rang}_{\kappa(x_j)}T_q(\kappa(x_j))
+      =
+      \operatorname{rang}_kT_q(k)
+      \quad\text{pour }q\leq p.
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme $T_q(A)$ est un $A$-module de présentation finie, la condition $b)$ de
+(7.3.7) équivaut à dire que $T_q(A)$ est un $A$-module libre pour $q\leq p$
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5); la condition $c)$ implique que
+\[
+  T_q(\kappa(x))=T_q(A)\otimes_A\kappa(x)
+  \quad\text{pour }q\leq p,
+\]
+donc les conditions équivalentes de (7.3.7) impliquent $d)$, et il est trivial
+que $d)$ entraîne $d')$. Reste à prouver que $d')$ implique $a)$ lorsque $A$
+est réduit. Raisonnons par récurrence sur $q\leq p$, puisque $T_q$ est exact
+pour $q\leq i_0$. Supposons donc $T_k$ exact pour $k\leq q<p$ et montrons que
+$T_{q+1}(A)$ est un $A$-module libre. En vertu de l'hypothèse de récurrence,
+$T_{q+1}(A)\otimes_A M$ est isomorphe à $T_{q+1}(M)$ pour tout $A$-module $M$,
+par la condition $c)$ de (7.3.7) et (7.3.3); appliquant cette propriété à
+$M=\kappa(x_j)$ et $M=k$, on trouve, en vertu de l'hypothèse $d')$, que
+\[
+  \operatorname{rang}_{\kappa(x_j)}
+  \bigl(T_{q+1}(A)\otimes_A\kappa(x_j)\bigr)
+  =
+  \operatorname{rang}_kT_{q+1}(k)
+\]
+pour tout $i$; mais cela implique que $T_{q+1}(A)$ est libre (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, prop. 7), ce qui
+achève la démonstration.
+\end{proof}
+
+Les résultats précédents seront considérablement améliorés pour les foncteurs
+homologiques de type particulier que nous allons étudier dans (7.4); on
+obtiendra en effet des critères d'exactitude ne faisant intervenir qu'un seul
+des $T_p$.
+
+\subsection{Critères d'exactitude pour les foncteurs
+$H_\bullet(P_\bullet\otimes_A M)$}
+\label{subsection:III.7.4.fr}
+
+\begin{env}[7.4.1]
+Soient $A$ un anneau (non nécessairement commutatif), $P_\bullet$ un complexe
+de $A$-modules à droite plats. Comme le foncteur
+$M\mapsto P_k\otimes_A M$ est alors exact dans $\mathbf{Ab}_A$ pour tout $k$,
+le $\partial$-foncteur
+\[
+  T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)
+  \tag{7.4.1.1}\label{III.7.4.1.1.fr}
+\]

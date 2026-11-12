@@ -1,0 +1,91 @@
+% from ega3-1-fr.tex
+\oldpage[III]{116}
+l'égalité précédente résulte de (I, 5.2.1 et 1.1.5)~; si $z\notin Y''$, on a
+donc $\mathcal J'_z=\mathcal J_z$, d'où $\mathcal F'_z=\mathcal F_z$ et
+$\mathcal F''_z=0$, ce qui établit notre assertion dans ce cas~; on raisonne
+de même si $z\notin Y'$. Par suite, le noyau et le conoyau de $u$, qui sont
+dans $K$ (0\textsubscript{I}, 5.3.4) ont leurs supports dans $Y'\cap Y''$,
+et sont donc dans $K'$ par hypothèse~; pour la même raison, $\mathcal F'$ et
+$\mathcal F''$ sont dans $K'$, donc aussi $\mathcal F'\oplus\mathcal F''$,
+puisque $K'$ est exact. La conclusion résulte alors de la considération des
+deux suites exactes
+\[
+0\longrightarrow\operatorname{Im}u\longrightarrow
+\mathcal F'\oplus\mathcal F''\longrightarrow
+\operatorname{Coker}u\longrightarrow0,
+\]
+\[
+0\longrightarrow\operatorname{Ker}u\longrightarrow\mathcal F
+\longrightarrow\operatorname{Im}u\longrightarrow0
+\]
+et de l'hypothèse que $K'$ est exact.
+
+\item[b)] $Y$ est irréductible, et par suite le sous-préschéma $Y$ de $X$ est
+\emph{intègre}. Si $y$ est son point générique, on a
+$(\mathcal O_Y)_y=k(y)$, et comme $j^*(\mathcal F)$ est un
+$\mathcal O_Y$-Module cohérent, $\mathcal F_y=(j^*(\mathcal F))_y$ est un
+$k(y)$-espace vectoriel de dimension finie $m$. Par hypothèse, il y a un
+$\mathcal O_X$-Module cohérent $\mathcal G$ (nécessairement de support $Y$)
+tel que $\mathcal G_y$ soit un $k(y)$-espace vectoriel de dimension $1$. Par
+suite, il y a un $k(y)$-isomorphisme
+$(\mathcal G_y)^m\xrightarrow{\sim}\mathcal F_y$, qui est aussi un
+$\mathcal O_Y$-isomorphisme, et comme $\mathcal G^m$ et $\mathcal F$ sont
+cohérents, il existe un voisinage ouvert $W$ de $y$ dans $X$ et un
+isomorphisme $\mathcal G^m|W\xrightarrow{\sim}\mathcal F|W$
+(0\textsubscript{I}, 5.2.7). Soit $\mathcal H$ le graphe de cet isomorphisme,
+qui est un sous-$(\mathcal O_X|W)$-Module cohérent de
+$(\mathcal G^m\oplus\mathcal F)|W$, canoniquement isomorphe à
+$\mathcal G^m|W$ et à $\mathcal F|W$~; il existe donc un sous-$\mathcal O_X$-
+Module cohérent $\mathcal H_0$ de $\mathcal G^m\oplus\mathcal F$, induisant
+$\mathcal H$ sur $W$ et $0$ sur $X-Y$ puisque $\mathcal G^m$ et
+$\mathcal F$ ont pour support $Y$ (I, 9.4.7). Les restrictions
+$v:\mathcal H_0\to\mathcal G^m$ et $w:\mathcal H_0\to\mathcal F$ des
+projections canoniques de $\mathcal G^m\oplus\mathcal F$ sont alors des
+homomorphismes de $\mathcal O_X$-Modules cohérents, qui, dans $W$ et dans
+$X-Y$, se réduisent à des isomorphismes~; autrement dit, les noyaux et
+conoyaux de $v$ et $w$ ont leur support dans l'ensemble fermé
+$Y-(Y\cap W)$, distinct de $Y$. Ils appartiennent donc à $K'$~; d'autre
+part, on a $\mathcal G^m\in K'$ puisque $\mathcal G\in K'$ et que $K'$ est
+exact. On en conclut successivement, par l'exactitude de $K'$, que
+$\mathcal H_0\in K'$ puis que $\mathcal F\in K'$. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[3.1.3]
+\label{III.3.1.3-fr}
+Supposons que le sous-ensemble exact $K'$ de $K$ ait en outre la propriété
+que tout facteur direct cohérent d'un $\mathcal O_X$-Module cohérent
+$\mathcal M\in K'$ appartienne encore à $K'$. Dans ces conditions, la
+conclusion de (\hyperref[III.3.1.2-fr]{3.1.2}) subsiste encore lorsque la
+condition «~$\mathcal G_y$ est un $k(y)$-espace vectoriel de dimension $1$~»
+est remplacée par $\mathcal G_y\neq0$ (ce qui équivaut à
+$\operatorname{Supp}(\mathcal G)=Y$).
+\end{corollary}
+
+\begin{proof}
+En effet, le raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) ne doit être
+modifié que dans le cas b)~; cette fois $\mathcal G_y$ est un $k(y)$-espace
+vectoriel de dimension $q>0$, et on a par suite un $\mathcal O_Y$-
+isomorphisme $(\mathcal G_y)^m\xrightarrow{\sim}(\mathcal F_y)^q$~; la fin
+du raisonnement de (\hyperref[III.3.1.2-fr]{3.1.2}) prouve alors que
+$\mathcal F^q\in K'$, et l'hypothèse additionnelle sur $K'$ implique que
+$\mathcal F\in K'$.
+\end{proof}
+
+\subsection{Le théorème de finitude : cas des schémas usuels}
+\label{subsection:III.3.2-fr}
+
+\begin{theorem}[3.2.1]
+\label{III.3.2.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre. Pour tout $\mathcal O_X$-Module cohérent $\mathcal F$, les
+$\mathcal O_Y$-Modules $R^qf_*(\mathcal F)$ sont cohérents pour $q\geq0$.
+\end{theorem}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y$ noethérien, donc $X$
+noethérien (I, 6.3.7). Les $\mathcal O_X$-Modules cohérents $\mathcal F$ pour
+lesquels la conclusion du th. (\hyperref[III.3.2.1-fr]{3.2.1}) est vraie
+forment un sous-ensemble exact $K'$ de la catégorie $K$ des
+$\mathcal O_X$-Modules cohérents.
+

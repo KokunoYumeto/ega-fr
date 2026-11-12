@@ -1,0 +1,110 @@
+% from ega3-7-fr.tex
+\oldpage[III]{179}
+Posons
+\[
+  T'(M)=T(A_s)\otimes_A M
+\]
+pour tout $A$-module à gauche $M$. Il existe une suite exacte
+\[
+  L'\longrightarrow L\longrightarrow M\longrightarrow0,
+\]
+où $L$ et $L'$ sont deux $A$-modules à gauche libres; comme $T$ et $T'$ sont
+exacts à droite, on a donc le diagramme commutatif
+\[
+\xymatrix@C=22pt@R=25pt{
+  T'(L')\ar[r]\ar[d]^{t_{L'}}
+  &
+  T'(L)\ar[r]\ar[d]^{t_L}
+  &
+  T'(M)\ar[r]\ar[d]^{t_M}
+  &
+  0
+  \\
+  T(L')\ar[r]
+  &
+  T(L)\ar[r]
+  &
+  T(M)\ar[r]
+  &
+  0
+}
+\]
+où les deux lignes sont exactes; comme $t_L$ et $t_{L'}$ sont des
+isomorphismes en vertu de (7.2.4), il en est de même de $t_M$ par le lemme des
+cinq. Enfin, il est clair que $b)$ entraîne $b')$. Pour montrer que $b')$
+entraîne $a)$, il suffit de prouver le lemme suivant.
+\end{proof}
+
+\begin{lemma}[7.2.5.1]
+Soient $\mathcal K$, $\mathcal K'$ deux catégories abéliennes, $F$, $G$ deux
+foncteurs covariants additifs de $\mathcal K$ dans $\mathcal K'$,
+$f:F\to G$ un morphisme fonctoriel (T, I, 1.2) tel que, pour tout objet $E$
+de la catégorie $\mathcal K$,
+\[
+  f_E:F(E)\longrightarrow G(E)
+\]
+soit un épimorphisme. Alors, si $F$ est exact à droite et $G$ semi-exact,
+$G$ est exact à droite.
+\end{lemma}
+
+\begin{proof}
+Tout revient en effet à démontrer que pour tout épimorphisme
+$v:E'\to E$ dans $\mathcal K$,
+\[
+  G(v):G(E')\longrightarrow G(E)
+\]
+est un épimorphisme; or, on a le diagramme commutatif
+\[
+\xymatrix@C=35pt@R=30pt{
+  F(E')\ar[r]^{F(v)}\ar[d]_{f_{E'}}
+  &
+  F(E)\ar[d]^{f_E}
+  \\
+  G(E')\ar[r]_{G(v)}
+  &
+  G(E)
+}
+\]
+dans lequel $F(v)$, $f_{E'}$ et $f_E$ sont des épimorphismes; il en est donc
+de même de $G(v)$.
+\end{proof}
+
+\begin{remark}[7.2.6]
+Pour tout $A$-module à droite $N$, posons
+\[
+  T_N(M)=N\otimes_A M
+\]
+pour tout $A$-module à gauche $M$, de sorte que $T_N$ est un foncteur
+covariant additif de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$, exact à droite et
+commutant aux sommes directes. Si on identifie canoniquement $T_N(A_s)$ à
+$N$, on vérifie aussitôt que l'homomorphisme correspondant (7.2.2.1) devient
+l'identité. On en conclut que le $A$-module à droite $N$ de l'énoncé de
+(7.2.5, $c)$) est déterminé à un isomorphisme unique près et est
+canoniquement isomorphe à $T(A_s)$. On peut encore dire que les morphismes
+fonctoriels
+\[
+  T\longmapsto T(A_s),
+  \qquad
+  N\longmapsto T_N
+\]
+constituent une équivalence (T, I, 1.2) de la catégorie des $A$-modules à
+droite et de la catégorie des foncteurs covariants additifs
+$\mathbf{Ab}_A\to\mathbf{Ab}$ qui sont exacts à droite et commutent aux
+sommes directes.
+\end{remark}
+
+\begin{proposition}[7.2.7]
+Soient $A$ un anneau artinien à gauche, dont le quotient par son radical
+$\mathfrak m$ est un corps $k$. Soit $T$ un foncteur covariant additif de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. Les
+conditions de (7.2.5) sont alors aussi équivalentes à
+\begin{enumerate}
+  \item[d)] $T$ est semi-exact et l'homomorphisme
+    \[
+      T(\varepsilon):T(A_s)\longrightarrow T(k)
+    \]
+    déduit de l'homomorphisme canonique $\varepsilon:A_s\to k$ est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}

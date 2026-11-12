@@ -1,0 +1,516 @@
+\oldpage[IV-2]{174}
+La question étant locale sur $X$ et $Y$, on peut supposer que
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$, où $A$ et $B$ sont
+deux anneaux intègres et intégralement clos, de corps des fractions $K$ et
+$L$ respectivement; supposons d'abord que $A$ soit une $k$-algèbre de type
+fini, donc $K$ une extension de type fini de $k$. Par platitude,
+$A\otimes_k B$ est une sous-$k$-algèbre de $K\otimes_k L$; or
+$K\otimes_k L$ est un anneau noethérien normal (en vertu de (6.7.4.1) ou
+(6.14.2)), donc composé direct d'anneaux intègres $C_i$ en nombre fini, de
+sorte que si $E_i$ est le corps des fractions de $C_i$, le composé direct
+$E$ des $E_i$ est l'anneau total des fractions de $K\otimes_k L$; c'est
+d'ailleurs aussi l'anneau total des fractions de $A\otimes_k B$, puisque
+$K\otimes_k L$ est un anneau de fractions de $A\otimes_k B$. Cela étant,
+on peut écrire
+$A\otimes_k B=(A\otimes_k L)\cap(K\otimes_k B)$, et il résulte de (6.14.2)
+que $A\otimes_k L$ et $K\otimes_k B$ sont normaux, donc $A\otimes_k B$ est
+normal en vertu de (6.14.1.1).
+
+Considérons maintenant le cas général; $A$ est alors réunion de la famille
+filtrante croissante de ses sous-$k$-algèbres de type fini $A_\alpha$,
+donc $A\otimes_k B$ est limite inductive des anneaux normaux
+$A_\alpha\otimes_k B$. Pour prouver que $A\otimes_k B$ est normal, il
+suffit donc (5.13.6) de prouver que toute composante irréductible de
+$\operatorname{Spec}(A_\beta\otimes_k B)$ domine une composante
+irréductible de $\operatorname{Spec}(A_\alpha\otimes_k B)$ pour
+$A_\alpha\subset A_\beta$, ce qui résulte aussitôt de ce que $B$ est un
+$k$-module plat, de (2.3.7, (ii)) et du fait que $A_\alpha$ et $A_\beta$
+sont des anneaux intègres.
+\end{proof}
+
+\begin{proposition}[6.14.4]
+\EGAReaderTarget{ega4.c04.prop.6-14-4}{IV.2.s6.14.4-fr}
+Soient $A$ un anneau noethérien, $A'$ une $A$-algèbre noethérienne telle
+que le morphisme $\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ soit
+normal. Soient $B$ une $A$-algèbre, $C$ la fermeture intégrale de $A$ dans
+$B$; on pose $B'=B\otimes_A A'$, $C'=C\otimes_A A'$, $C'$ s'identifiant à
+un sous-anneau de $B'$; alors $C'$ est la fermeture intégrale de $A'$ dans
+$B'$.
+\end{proposition}
+
+\begin{proof}
+Nous procéderons en plusieurs étapes.
+
+I) \emph{Réduction au cas où l'anneau $B$ est réduit.} --- Posons
+$B_0=B_{\mathrm{red}}=B/\mathfrak N$, où $\mathfrak N$ est le nilradical
+de $B$, et soit $C_0$ la fermeture intégrale de $A$ dans $B_0$. On a le
+lemme suivant:
+
+\begin{lemma}[6.14.4.1]
+\label{IV.2.s6.14.4.1-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $B_0=B/\mathfrak n$ le quotient
+de $B$ par un nilidéal. Si $C_0$ est la fermeture intégrale de $A$ dans
+$B_0$, l'image réciproque $C$ de $C_0$ par l'homomorphisme canonique
+$\varphi:B\to B_0$ est la fermeture intégrale de $A$ dans $B$.
+\end{lemma}
+
+\begin{proof}
+En effet, si $x\in B$ est tel que $\varphi(x)$ vérifie une équation de
+dépendance intégrale à coefficients dans $A$, on en déduit que $x$ vérifie
+une relation de la forme
+$x^n+a_1x^{n-1}+\cdots+a_n\in\mathfrak n$ avec $a_k\in A$, d'où, en
+élevant à une puissance assez grande, une équation de dépendance intégrale
+pour $x$, à coefficients dans $A$.
+\end{proof}
+
+On a donc la suite exacte de $A$-modules
+\[
+0\longrightarrow C\longrightarrow B\longrightarrow B_0/C_0
+\]
+d'où, par platitude, la suite exacte
+\[
+0\longrightarrow C'\longrightarrow B'\longrightarrow B'_0/C'_0
+\]
+où l'on a posé $B'_0=B_0\otimes_A A'$, $C'_0=C_0\otimes_A A'$. Si l'on
+prouve que $C'_0$ est la fermeture intégrale de $A'$ dans $B'_0$, le lemme
+(6.14.4.1) prouvera que $C'$ est la fermeture intégrale de $A'$ dans $B'$.
+
+II) \emph{Réduction au cas où $B$ est une $A$-algèbre intègre de type fini
+contenant $A$.} --- Soit $(B_\alpha)$ la famille filtrante croissante des
+sous-$A$-algèbres de type fini de $B$, et soit $C_\alpha$ la fermeture
+\oldpage[IV-2]{175}
+intégrale de $A$ dans $B_\alpha$. Il résulte aussitôt de la définition de
+la fermeture intégrale que $C$ est réunion des $C_\alpha$; si l'on pose
+$B'_\alpha=B_\alpha\otimes_A A'$, $C'_\alpha=C_\alpha\otimes_A A'$,
+$C'_\alpha$ est contenu dans $B'_\alpha$ par platitude, et pour la même
+raison $B'$ est réunion de la famille filtrante croissante des
+$B'_\alpha$ et $C'$ réunion de la famille filtrante croissante des
+$C'_\alpha$. Si l'on prouve que $C'_\alpha$ est la fermeture intégrale de
+$A'$ dans $B'_\alpha$ il en résultera aussitôt que $C'$ est la fermeture
+intégrale de $A'$ dans $B'$. On peut donc se borner au cas où $B$ est une
+$A$-algèbre de type fini, donc noethérienne; soient $\mathfrak q_i$
+$(1\leqslant i\leqslant n)$ ses idéaux premiers minimaux; comme $B$ est
+supposé \emph{réduit}, il s'identifie à un \emph{sous-anneau} du produit $B_0$ des
+$B/\mathfrak q_i$; si $C_0$ est la fermeture intégrale de $A$ dans $B_0$,
+on a $C=B\cap C_0$; si l'on pose $B'_0=B_0\otimes_A A'$,
+$C'_0=C_0\otimes_A A'$, on a, par platitude,
+$C'=B'\cap C'_0$ ($\mathbf{0}_{\mathrm I}$, 6.1.3); il suffit donc de prouver que
+$C'_0$ est la fermeture intégrale de $A'$ dans $B'_0$. Mais $C_0$ est
+composé direct des $C_i$, fermetures intégrales de $A$ dans les
+$B_i=B/\mathfrak q_i$; par suite $C'_0$ est composé direct des
+$C'_i=C_i\otimes_A A'$ et il suffit de montrer que $C'_i$ est la fermeture
+intégrale de $A'$ dans $B'_i=B_i\otimes_A A'$. On est ainsi ramené au cas
+où $B$ est intègre et une $A$-algèbre de type fini; si $\mathfrak p$ est le
+noyau de l'homomorphisme $A\to B$, on a aussi
+$B'=B\otimes_{A/\mathfrak p}(A'/\mathfrak pA')$; comme le morphisme
+$\operatorname{Spec}(A'/\mathfrak pA')\to
+\operatorname{Spec}(A/\mathfrak p)$ est normal, on peut remplacer $A$ par
+$A/\mathfrak p$ et $A'$ par $A'/\mathfrak pA'$, et supposer par suite que
+$A\subset B$.
+
+III) \emph{Cas où $A$ est un corps, $B$ un corps, extension de type fini de
+$A$ et tel que $A$ soit algébriquement fermé dans $B$.} --- On a alors
+$C=A$, et $A'$ est une $A$-algèbre noethérienne géométriquement normale,
+donc composée directe d'anneaux intègres et intégralement clos $A'_i$, les
+corps des fractions $K'_i$ des $A'_i$ étant des extensions \emph{séparables} de
+$A$ (4.6.1). La $A'$-algèbre $B'$ est donc composée directe des
+$B\otimes_A A'_i=B'_i$ et l'on peut donc se borner au cas où $A'$ est
+intègre, son corps des fractions $K'$ étant une extension séparable de $A$.
+Or, comme $B$ est un $A$-module plat, $B\otimes_A A'=B'$ s'identifie à un
+sous-anneau de $B\otimes_A K'$; comme $K'$ est extension séparable de $A$,
+$B\otimes_A K'$ est réduit (4.3.7), et comme de plus $B$ est une extension
+primaire de $A$, $B\otimes_A K'$ est intègre (4.3.2); il en est par suite
+de même de $B'$. Soit $L'$ le corps des fractions de $B\otimes_A K'$ (qui
+est aussi celui de $B'$); c'est évidemment un corps composé $B(K')$ de ses
+sous-corps $B$ et $K'$; comme $A$ est algébriquement fermé dans $B$, que
+$K'$ est une extension séparable de $A$, et que $B$ et $K'$ sont
+linéairement disjoints sur $A$, $K'$ est algébriquement fermé dans
+$B(K')=L'$ (Bourbaki, \emph{Alg.}, chap. V, § 9, exerc. 2); \emph{a fortiori} $A'$, étant
+intégralement clos, est intégralement fermé dans $L'$, donc dans $B'$, ce
+qui prouve la proposition dans ce cas.
+
+IV) \emph{Cas où $A$ est intègre, $B$ un corps, extension finie du corps
+des fractions $K$ de $A$.} --- Alors
+$B'=(A'\otimes_A K)\otimes_K B$ est une $B$-algèbre noethérienne
+géométriquement normale, et par suite $B'$ est composé direct d'anneaux
+intègres; l'anneau total des fractions $L'$ de $B'$ est alors composé
+direct d'un nombre fini de corps. Cela étant, comme $B$ est le corps des
+fractions de $C$, $B'$ est un anneau de fractions de $C'$ et $L'$ est donc
+aussi l'anneau total des fractions de $C'$. Or (6.14.1) comme $C$ est un
+anneau normal et $\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ un
+morphisme normal d'anneaux noethériens, $C'$ est un anneau normal; mais il
+résulte de (6.14.1.1) que $C'$ est alors intégralement fermé dans $L'$, et
+\emph{a fortiori} dans $B'$, et par suite est la fermeture intégrale de $A'$ dans
+$B'$.
+
+\oldpage[IV-2]{176}
+V) \emph{Fin de la démonstration.} --- D'après II), on peut supposer que
+$B$ est une $A$-algèbre intègre de type fini contenant $A$. Soient $K$ le
+corps des fractions de $A$, $L$ celui de $B$, qui est une extension de type
+fini de $K$. Soit $M$ la fermeture algébrique de $K$ dans $L$, qui est une
+extension algébrique \emph{finie} de $K$; soit $C_0$ la fermeture intégrale de $A$
+dans $M$, qui est aussi la fermeture intégrale de $A$ dans $L$; on a donc
+$C=B\cap C_0$; si l'on pose $C'_0=C\otimes_A A'$, on a par suite
+$C'=B'\cap C'_0$ par platitude ($\mathbf{0}_{\mathrm I}$, 6.1.3). Or, il résulte de
+IV) que $C'_0$ est la fermeture intégrale de $A'$ dans
+$M'=M\otimes_A A'$; en outre, $M'$ est un anneau noethérien et le morphisme
+$\operatorname{Spec}(M')\to\operatorname{Spec}(M)$ est normal (comme on
+l'a vu dans IV)); appliquant III) à $M$ et $M'$ au lieu de $A$ et $A'$ et
+à $L$ au lieu de $B$, on en déduit que $M'$ est intégralement fermé dans
+$L'=L\otimes_A A'$; donc $C'_0$ est la fermeture intégrale de $A'$ dans
+$L'$, et $C'=C'_0\cap B'$ est la fermeture intégrale de $A'$ dans $B'$.
+C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[6.14.5]
+\label{IV.2.s6.14.5-fr}
+Soient $A$ un anneau noethérien, $A'$ une $A$-algèbre noethérienne telle
+que le morphisme $\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ soit
+normal. Soient $B$, $C$ deux $A$-algèbres,
+$\varphi:B\to C$ un $A$-homomorphisme faisant de $C$ une $B$-algèbre, $D$
+la fermeture intégrale de $B$ dans $C$. Si l'on pose
+$B'=B\otimes_A A'$, $C'=C\otimes_A A'$, $D'=D\otimes_A A'$, $D'$ est la
+fermeture intégrale de $B'$ dans $C'$.
+\end{corollary}
+
+\begin{proof}
+Soit $(B_\lambda)$ la famille filtrante croissante des sous-$A$-algèbres
+de type fini de $B$, et posons $B'_\lambda=B'_\lambda\otimes_A A'$, de
+sorte que $B'$ est réunion de la famille filtrante croissante des
+sous-$A'$-algèbres de type fini $B'_\lambda$. Soit $D_\lambda$ la
+fermeture intégrale de $B_\lambda$ dans $C$, et posons
+$D'_\lambda=D_\lambda\otimes_A A'$, de sorte que $D$ est réunion des
+$D_\lambda$ et $D'$ réunion des $D'_\lambda$; si nous prouvons que
+$D'_\lambda$ est la fermeture intégrale de $B'_\lambda$ dans $C'$, il en
+résultera que $D'$ est la fermeture intégrale de $B'$ dans $C'$. Or
+$B_\lambda$ et $B'_\lambda$ sont noethériens et le morphisme
+$\operatorname{Spec}(B'_\lambda)\to\operatorname{Spec}(B_\lambda)$ est
+normal (6.8.2); on peut donc appliquer (6.14.4) en remplaçant $A$, $A'$ et
+$B$ par $B_\lambda$, $B'_\lambda$ et $C$ respectivement, d'où le
+corollaire.
+\end{proof}
+
+On peut par exemple appliquer (6.14.5) lorsque $A$ est un anneau \emph{local
+excellent} et $A'$ son complété $\widehat A$, puisque dans ce cas
+$\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ est un morphisme
+régulier (7.8.2).
+
+\subsection{Préschémas géométriquement unibranches.}
+\label{IV.2.s6.15-fr}
+
+\begin{env}[6.15.1]
+\label{IV.2.s6.15.1-fr}
+Nous dirons qu'un préschéma $X$ est \emph{unibranche} (resp.
+\emph{géométriquement unibranche}) en un point $x$, ou que le point $x$
+est \emph{unibranche} (resp. \emph{géométriquement unibranche}) dans $X$ si l'anneau
+local $\mathcal O_{X,x}$ est \emph{unibranche} (resp. \emph{géométriquement
+unibranche}) (\textbf{0}, 23.2.1); nous dirons que $X$ est \emph{unibranche} (resp.
+\emph{géométriquement unibranche}) s'il l'est en tout point. Il suit de cette
+définition que, pour que $X$ soit unibranche (resp. géométriquement
+unibranche) en un point, il faut et il suffit que $X_{\mathrm{red}}$ le soit
+en ce point.
+\end{env}
+
+\begin{env}[6.15.2]
+\EGAReaderTarget{ega4.c04.statement.6-15-2}{IV.2.s6.15.2-fr}
+Il faut prendre garde qu'avec les définitions de (6.15.1), un \emph{anneau local}
+$A$ peut être unibranche (resp. géométriquement unibranche) \emph{sans que}
+$\operatorname{Spec}(A)$ \emph{le soit}; en d'autres termes, il peut se faire qu'il
+y ait des idéaux premiers $\mathfrak p$ de $A$ tels que $A_\mathfrak p$ ne
+soit pas unibranche; il revient aussi au même de dire que sur un préschéma
+la notion de point géométriquement unibranche \emph{n'est pas stable par
+générisation}. Nous allons le voir sur l'exemple suivant.
+\end{env}
+
+\oldpage[IV-2]{177}
+Soient $K$ un corps algébriquement clos de caractéristique 0, $B$ l'anneau
+intègre $K[U,V,W]/(U^2(U\setmin W)\setmin V^2(U+W))$
+($U$, $V$, $W$ indéterminées) de sorte que $Y=\operatorname{Spec}(B)$ est
+un « cône de sommet l'origine, ayant une génératrice double ». Nous
+désignerons par $u$, $v$, $w$ les images de $U$, $V$, $W$ dans $B$. Soit
+$R$ le corps des fractions de $B$, et considérons dans $R$ l'élément
+$t=v(u+w)/u$, qui n'appartient pas à $B$; montrons que $C=B[t]$ est la
+\emph{clôture intégrale} de $B$. On a en effet $t^2=u^2\setmin w^2$, donc $t$ est entier
+sur $B$, et $v=tu/(u+w)$; l'anneau $C_1=K[t,u,w]$ est intégralement clos,
+car il est isomorphe à
+$K[T,U,W]/(T^2\setmin U^2+W^2)$ et est donc la fermeture intégrale de l'anneau
+intégralement clos $K[U,W]$ dans l'extension quadratique
+$K(U,W)(\sqrt{U^2+W^2})$ de son corps des fractions (Bourbaki, \emph{Alg. comm.},
+chap. V, § 1, n\textsuperscript{o} 6, prop. 18). L'anneau de fractions
+$K[t,u,w,1/(u+w)]$ de $C_1$ est donc aussi intégralement clos. De la même
+manière, on voit que l'anneau $C_2=K[t,v,w]$ est intégralement clos, car
+$t$ est racine de l'équation
+$t(t\setmin v)\setmin w^2(2v\setmin t)=0$, et par suite
+$K[t,v,w,1/(t\setmin v)]=K[t,\frac{tu}{u+w},w,\frac{u+w}{tw}]$ est intégralement clos. Finalement, compte tenu de ce
+que $u$ et $w$ sont algébriquement indépendants sur $K$, on prouve aisément
+que $C=K[t,u,v,w]=K[t,u,w,1/(u+w)]\cap K[t,v,w,1/(t\setmin v)]$,
+ce qui achève de montrer que $C$ est la clôture intégrale de $B$. Il est
+immédiat que si $\mathfrak m_0$ est l'idéal maximal de $B$ engendré par
+$u$, $v$, $w$ (« sommet du cône ») il existe un seul idéal maximal
+$\mathfrak n_0$ de $C$ au-dessus de $\mathfrak m_0$, savoir l'idéal
+engendré par $t$, $u$, $v$, $w$. Si l'on pose $A=B_{\mathfrak m_0}$, on en
+déduit aisément que $A'=C_{\mathfrak n_0}$ est la clôture intégrale de
+$A$, qui est donc unibranche, et par suite aussi géométriquement unibranche
+puisque son corps résiduel $K$ est algébriquement clos. Mais dans $A$
+l'idéal premier $\mathfrak p$ engendré par $u$ et $v$ est tel que la
+clôture intégrale $A_\mathfrak p[t]$ de $A_\mathfrak p$ ne soit pas un
+anneau local.
+
+Nous verrons toutefois plus loin (9.7.10) que lorsque $X$ est un préschéma
+localement noethérien tel que, si $X'$ est le normalisé de
+$X_{\mathrm{red}}$, le morphisme canonique $X'\to X$ soit \emph{fini} (ce qui sera
+le cas si $X$ est tel que les anneaux de ses ouverts affines soient
+\emph{universellement japonais} (\textbf{0}, 23.1.1)), alors l'ensemble des points $x\in X$
+où $X$ est géométriquement unibranche est \emph{localement constructible}.
+
+\begin{env}[6.15.3]
+\label{IV.2.s6.15.3-fr}
+Nous dirons pour abréger qu'un morphisme $f:X\to Y$ est \emph{radiciel en
+un point} $y\in Y$, si $f^{-1}(y)$ est vide ou réduit à un seul point $x$
+et si $\boldsymbol{k}(x)$ est une extension radicielle de $\boldsymbol{k}(y)$. Il revient donc au
+même de dire que $f$ est radiciel en tous les points de $Y$ ou que $f$ est
+radiciel (\textbf{I}, 3.5.8). Si
+$g:f^{-1}(y)\to\operatorname{Spec}(\boldsymbol{k}(y))$ est le morphisme image réciproque
+de $f$ par le changement de base
+$\operatorname{Spec}(\boldsymbol{k}(y))\to Y$, il revient au même de dire que $f$ est
+radiciel au point $y\in Y$, ou que $g$ est \emph{radiciel}.
+\end{env}
+
+\begin{lemma}[6.15.3.1]
+\label{IV.2.s6.15.3.1-fr}
+\begin{enumerate}
+\item[\textup{(i)}] Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes. Si $f$ est
+radiciel en un point $y$ et $g$ radiciel au point $z=g(y)$, alors $g\circ f$
+est radiciel au point $g(y)$. La réciproque est vraie si $f$ est surjectif.
+\item[\textup{(ii)}] Soient $f:X\to Y$, $h:Y'\to Y$ deux morphismes, et soit
+$f'=f_{(Y')}:X\times_Y Y'\to Y'$. Soient $y'\in Y'$ et $y=h(y')$; alors
+pour que $f$ soit radiciel au point $y$, il faut et il suffit que $f'$ soit
+radiciel au point $y'$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\oldpage[IV-2]{178}
+(i) Si $f$ est radiciel au point $y$ et $g$ radiciel au point $z$,
+$g^{-1}(z)$ est réduit à $y$ et
+$f^{-1}(g^{-1}(z))=f^{-1}(y)$ vide ou réduit à un seul point $x$; en
+outre $\boldsymbol{k}(x)$ est extension radicielle de $\boldsymbol{k}(y)$ et $\boldsymbol{k}(y)$ extension
+radicielle de $\boldsymbol{k}(z)$, donc $\boldsymbol{k}(x)$ est extension radicielle de $\boldsymbol{k}(z)$.
+Inversement, supposons $f$ surjectif; si $g\circ f$ est radiciel au point
+$z=g(y)$, $g^{-1}(z)$ se réduit au seul point $y$, sans quoi
+$f^{-1}(g^{-1}(z))$ aurait au moins deux points distincts; en outre,
+$f^{-1}(y)=f^{-1}(g^{-1}(z))$ se réduit à un seul point $x$, et par
+hypothèse on a $\boldsymbol{k}(z)\subset \boldsymbol{k}(y)\subset \boldsymbol{k}(x)$, et $\boldsymbol{k}(x)$ est radiciel sur
+$\boldsymbol{k}(z)$, donc $\boldsymbol{k}(y)$ est radiciel sur $\boldsymbol{k}(z)$ et $\boldsymbol{k}(x)$ radiciel sur $\boldsymbol{k}(y)$.
+
+(ii) Soient $g:f^{-1}(y)\to\operatorname{Spec}(\boldsymbol{k}(y))$,
+$g':f'^{-1}(y')\to\operatorname{Spec}(\boldsymbol{k}(y'))$ les morphismes images
+réciproques de $f$ et $f'$ respectivement; comme
+$f'^{-1}(y')=f^{-1}(y)\otimes_{\mathbf{k}(y)}\boldsymbol{k}(y')$ (\textbf{I}, 3.6.4), $g'$ est image
+réciproque de $g$ et l'assertion se réduit à (2.6.1, (v)).
+\end{proof}
+
+Soit alors $X$ un préschéma \emph{réduit} n'ayant qu'un nombre \emph{fini} de
+composantes irréductibles, et soit $X'$ son \emph{normalisé} (\textbf{II}, 6.3.8); on sait
+\emph{(loc. cit.)} que le morphisme canonique $f:X'\to X$ est surjectif. La
+définition (6.15.1) montre alors que pour que $X$ soit géométriquement
+unibranche en un point $x$, il faut et il suffit que $f$ soit \emph{radiciel en ce
+point}; pour que $X$ soit géométriquement unibranche, il faut et il suffit
+donc que $f$ soit \emph{radiciel}.
+
+\begin{env}[6.15.4]
+\EGAReaderTarget{ega4.c04.statement.6-15-4}{IV.2.s6.15.4-fr}
+Généralisant la définition donnée dans (\textbf{I}, 2.2.9), nous dirons que, pour
+deux préschémas \emph{réduits} $X$, $Y$, un morphisme $f:X\to Y$ est
+\emph{birationnel} si la restriction de $f$ à l'ensemble des points
+maximaux de $X$ est une \emph{bijection} de cet ensemble sur l'ensemble des points
+maximaux de $Y$, et si, pour tout point maximal $y$ de $Y$, le morphisme
+$X\times_Y\operatorname{Spec}(\mathcal O_y)\to\operatorname{Spec}(\mathcal O_y)$ déduit de
+$f$ est un isomorphisme (autrement dit, si la fibre $f^{-1}(y)$ est réduite
+à un seul point $x$ (maximal dans $X$) et si l'homomorphisme
+$\boldsymbol{k}(y)\to \boldsymbol{k}(x)$ déduit de $f$ est bijectif); cette notion se réduit à celle
+de (\textbf{I}, 2.2.9) lorsque $X$ et $Y$ n'ont qu'un nombre \emph{fini} de composantes
+irréductibles.
+\end{env}
+
+\begin{lemma}[6.15.4.1]
+\label{IV.2.s6.15.4.1-fr}
+Soit $f:X\to Y$ un morphisme, $g:Y'\to Y$ un morphisme plat,
+$X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$. Si $f_{\mathrm{red}}$ est
+birationnel, il en est de même de $f'_{\mathrm{red}}$.
+\end{lemma}
+
+\begin{proof}
+En effet, si $y'$ est un point maximal de $Y'$, on sait (2.3.4, (ii)) que
+$y=g(y')$ est un point maximal de $Y$; il existe un seul point $x$ de $X$
+dans $f^{-1}(y)$ par hypothèse; de plus $x$ est maximal dans $X$ et tel que
+$\boldsymbol{k}(x)=\boldsymbol{k}(y)$. Il résulte donc de (\textbf{I}, 3.4.9) que $f'^{-1}(y')$ est réduit à
+un seul point $x'$ et que $\boldsymbol{k}(x')=\boldsymbol{k}(y')$. On conclut le raisonnement en
+remarquant que d'après (2.3.7, (ii)), toute composante irréductible de $X'$
+domine une composante irréductible de $Y'$.
+\end{proof}
+
+\begin{proposition}[6.15.5]
+\label{IV.2.s6.15.5-fr}
+Soit $f:X\to Y$ un morphisme tel que $f_{\mathrm{red}}$ soit entier et
+birationnel \textup{(6.15.4)}, donc surjectif.
+\begin{enumerate}
+\item[\textup{(i)}] Pour que $Y$ soit géométriquement unibranche en un point $y$,
+il faut et il suffit que $f$ soit radiciel au point $y$ et que $X$ soit
+géométriquement unibranche en l'unique point $x$ de $f^{-1}(y)$.
+\item[\textup{(ii)}] Pour que $Y$ soit géométriquement unibranche, il faut et il
+suffit que $X$ soit géométriquement unibranche et que $f$ soit radiciel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se borner au cas où $X$ et $Y$ sont \emph{réduits}; le fait
+que $f$ soit \emph{surjectif} résulte de ce que $f$ est un morphisme fermé (\textbf{II},
+6.1.10) et que $f(X)$ contient par hypothèse tous les points maximaux de
+$Y$. Cela montre aussitôt que (i) entraîne (ii). Utilisant (\textbf{I}, 3.6.5) et
+(\textbf{II}, 6.1.5), on peut supposer, pour prouver (i), que
+$Y=\operatorname{Spec}(\mathcal O_{Y,y})$,
+\oldpage[IV-2]{179}
+autrement dit
+$Y=\operatorname{Spec}(A)$, où $A$ est \emph{local}. Comme $f$ est affine, on a
+aussi $X=\operatorname{Spec}(B)$. Si $A$ est géométriquement unibranche,
+il est \emph{intègre}, donc il en est de même de $B$ puisque $f$ est birationnel;
+inversement, si $f$ est radiciel au point $y$ et $X$ géométriquement
+unibranche au point $x$, $B$ n'a qu'un seul idéal maximal (puisqu'il est
+entier sur $A$ et que tout idéal maximal de $B$ est donc au-dessus de celui
+de $A$), autrement dit $B$ est un anneau \emph{local}, et dire que $X$ est
+géométriquement unibranche au point $x$ signifie que $B$ est
+géométriquement unibranche, donc \emph{intègre}. Comme $f$ est dominant par
+hypothèse et que $A$ est réduit, on en conclut que $A\subset B$ (\textbf{I},
+1.2.7), donc $A$ est aussi \emph{intègre}. Ainsi, pour prouver (i), on peut se
+borner au cas où $A$ et $B$ sont locaux, intègres, $A$ étant contenu dans
+$B$ et ayant même corps des fractions, et par suite (puisque $B$ est entier
+sur $A$) même \emph{clôture intégrale} $C$. Mais alors l'assertion résulte de
+(6.15.3.1, (i)) appliqué aux morphismes
+$\operatorname{Spec}(C)\to\operatorname{Spec}(B)$ et
+$\operatorname{Spec}(B)\to\operatorname{Spec}(A)$, vu l'interprétation
+donnée dans (6.15.3) de la propriété d'être géométriquement unibranche en
+un point.
+\end{proof}
+
+\begin{proposition}[6.15.6]
+\label{IV.2.s6.15.6-fr}
+Soient $k$ un corps, $X$ un $k$-préschéma. Si $X$ est normal, alors, pour
+toute extension $k'$ de $k$, $X'=X\otimes_k k'$ est géométriquement
+unibranche.
+\end{proposition}
+
+\begin{proof}
+On sait que $k'$ est extension algébrique d'une extension pure $k_0$ de
+$k$, et si $k''$ est la plus grande extension séparable de $k_0$ contenue
+dans $k'$, $k'$ est une extension radicielle de $k''$ et $k''$ extension
+séparable de $k$. On sait (6.14.2) que $X''=X\otimes_k k''$ est normal;
+comme $X\otimes_k k'=X''\otimes_{k''}k'$, on voit qu'on peut se borner au
+cas où l'extension $k'$ de $k$ est \emph{radicielle}. En outre (\textbf{I}, 3.6.5), on peut
+supposer que $X=\operatorname{Spec}(A)$, où $A$ est un anneau \emph{local intègre
+et intégralement clos} (puisque $X$ est normal). Le morphisme projection
+$f:X'\to X$ est un homéomorphisme, puisque
+$\operatorname{Spec}(k')\to\operatorname{Spec}(k)$ est un homéomorphisme
+universel (2.4.5); comme $X'=\operatorname{Spec}(A')$ où
+$A'=A\otimes_k k'$, on voit donc que $A'$ est un anneau local dont le
+nilradical $\mathfrak N'$ est l'unique idéal premier minimal, d'où
+$X'_{\mathrm{red}}=\operatorname{Spec}(A'_0)$, où
+$A'_0=A'/\mathfrak N'$ est un anneau local intègre; en outre, si $K$ est
+le corps des fractions de $A$, le corps des fractions $K'_0$ de $A'_0$ est
+radiciel sur $K$, puisque le morphisme $f$ est radiciel. Comme $A'_0$ est
+entier sur $A$, sa clôture intégrale $B$ est aussi la fermeture intégrale
+de $A$ dans $K'_0$. Mais comme $A$ est intégralement clos, on sait
+(Bourbaki, \emph{Alg. comm.}, chap. V, § 2, n\textsuperscript{o} 3, lemme 3) que $B$ est
+l'ensemble des $x\in K'_0$ dont une puissance $p^m$-ème (pour un $m$ assez
+grand) appartient à $A$ ($p$ étant l'exposant caractéristique de $K$);
+en outre il n'existe qu'un seul idéal premier de $B$ au-dessus de tout idéal
+premier de $A$; en particulier $B$ est un anneau local et son corps résiduel
+est une extension radicielle de celui de $A$, et \emph{a fortiori} de celui de
+$A'_0$, ce qui prouve que $A'_0$ est géométriquement unibranche, et par
+suite il en est de même de $X'$.
+\end{proof}
+
+\begin{proposition}[6.15.7]
+\EGAReaderTarget{ega4.c04.prop.6-15-7}{IV.2.s6.15.7-fr}
+Soient $k$ un corps, $X$ un $k$-préschéma, $k'$ une extension de $k$,
+$X'=X\otimes_A k'$. Soient $x'$ un point de $X'$, $x$ sa projection dans
+$X$. Pour que $X$ soit géométriquement unibranche au point $x$, il faut et
+il suffit que $X'$ soit géométriquement unibranche au point $x'$. Pour que
+$X$ soit géométriquement unibranche, il faut et il suffit que $X'$ le soit.
+\end{proposition}
+
+\begin{proof}
+La seconde assertion résulte de la première et du fait que la projection
+$f:X'\to X$ est un morphisme surjectif. Pour démontrer la première
+assertion, on peut, en vertu de (\textbf{I}, 5.1.8), se borner au cas où $X$ est
+réduit, et en vertu de (\textbf{I}, 3.6.5), au cas
+\oldpage[IV-2]{180}
+où $X=\operatorname{Spec}(A)$ (avec $A=\mathcal O_{X,x}$) est un schéma local.
+Notons que $A'=\mathcal O_{X',x'}$ est par hypothèse un $A$-module
+fidèlement plat, donc contenant $A$, et par suite l'hypothèse que $X$ est
+géométriquement unibranche au point $x$, ou l'hypothèse que $X'$ est
+géométriquement unibranche au point $x'$, entraînent toutes deux que $A$
+est un anneau local intègre (puisque $A$, étant réduit, est aussi isomorphe
+à un sous-anneau de $A'_{\mathrm{red}}$). Soient $K$ le corps des fractions
+de $A$, $B$ la clôture intégrale de $A$, et posons
+$Y=\operatorname{Spec}(B)$; il revient au même de dire que $X$ est
+géométriquement unibranche au point $x$ ou que le morphisme $g:Y\to X$
+est radiciel au point $x$ (6.15.3). Soit
+$Y'=Y\otimes_k k'=Y\times_X X'$ de sorte que l'on a le diagramme
+commutatif
+\[
+\xymatrix{
+Y \ar[d]_g & Y' \ar[l]^h \ar[d]_{g'}\\
+X & X' \ar[l]_f
+}
+\]
+Notons que $f$ est un morphisme plat; donc (6.15.4.1) le morphisme entier
+$g'_{\mathrm{red}}$ est birationnel. D'autre part, comme $Y$ est normal,
+$Y'$ est géométriquement unibranche (6.15.6). Pour que $X'$ soit
+géométriquement unibranche en $x'$, il faut et il suffit donc que $g'$
+soit radiciel au point $x'$ (6.15.5). Or, $x$ est la projection de $x'$ dans
+$X$ et il est équivalent de dire que $g$ est radiciel au point $x$ ou que
+$g'$ est radiciel au point $x'$ (6.15.3.1); enfin, pour que $X$ soit
+géométriquement unibranche au point $x$, il faut et il suffit que $g$ soit
+radiciel en ce point, d'où la proposition.
+\end{proof}
+
+\begin{lemma}[6.15.8]
+\label{IV.2.s6.15.8-fr}
+Soient $k$ un corps séparablement clos (autrement dit, tel que la clôture
+algébrique de $k$ soit radicielle sur $k$), $X$ un $k$-préschéma localement
+de type fini sur $k$, $x$ un point fermé de $X$. Si $X$ est unibranche au
+point $x$, il est géométriquement unibranche en ce point.
+\end{lemma}
+
+\begin{proof}
+En effet, on sait (I, 6.4.2) que $k(x)$ est une extension algébrique de
+$k$; comme le corps résiduel de la clôture intégrale de
+$(\mathcal O_{X,x})_{\mathrm{red}}$ (clôture intégrale qui est par
+hypothèse un anneau local) est une extension algébrique de $k(x)$, c'est
+une extension radicielle de $k$ par hypothèse, donc aussi de $k(x)$.
+\end{proof}
+
+\begin{corollary}[6.15.9]
+\label{IV.2.s6.15.9-fr}
+Soient $k$ un corps, $X$ un $k$-préschéma localement de type fini sur $k$,
+$k'$ une extension séparablement close de $k$ (autrement dit, telle que la
+clôture algébrique de $k'$ soit radicielle sur $k'$); alors, pour que $X$
+soit géométriquement unibranche, il faut et il suffit que
+$X'=X\otimes_k k'$ soit unibranche.
+\end{corollary}
+
+\begin{proof}
+Compte tenu de (6.15.7), on est ramené à prouver que si $X$ est unibranche
+et $k$ séparablement clos, alors $X$ est géométriquement unibranche. Or, $X$
+est géométriquement unibranche en ses points fermés (6.15.8); nous en
+conclurons dans (10.4.9) que $X$ est géométriquement unibranche en tous ses
+points, en nous appuyant sur le fait (signalé à la fin de (6.15.2)) que
+l'ensemble des points où $X$ est géométriquement unibranche est
+constructible (bien entendu, le cor. (6.15.9) ne sera pas utilisé
+jusque-là).
+\end{proof}
+
+Ce résultat justifie, en une certaine mesure, la terminologie de
+« géométriquement unibranche ».
+

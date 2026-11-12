@@ -1,0 +1,100 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{49}
+\[
+\label{0.11.10.1.2-fr}
+\tag{11.10.1.2}
+\chi(M^\bullet)=\sum_{i=0}^{n}(-1)^i\operatorname{long}(M^i).
+\]
+\end{env}
+
+\begin{proposition}[11.10.2]
+\label{0.11.10.2-fr}
+\emph{Pour tout complexe fini $M^\bullet$ de $A$-modules à gauche de longueur
+finie, on a
+\[
+\chi(M^\bullet)=\chi(H^\bullet(M^\bullet))
+\]
+($H^\bullet(M^\bullet)$ étant considéré comme un complexe pour la dérivation
+triviale). En particulier, si la suite
+(\hyperref[0.11.10.1.1-fr]{11.10.1.1}) est exacte, on a
+$\chi(M^\bullet)=0$.}
+\end{proposition}
+
+\begin{proof}
+Posons pour abréger $B^i=B^i(M^\bullet)$, $Z^i=Z^i(M^\bullet)$,
+$H^i=H^i(M^\bullet)=Z^i/B^i$; les $B^i$, $Z^i$, $H^i$ sont de longueur
+finie. Des suites exactes
+\[
+0\longrightarrow B^i\longrightarrow Z^i\longrightarrow H^i
+\longrightarrow0,
+\qquad
+0\longrightarrow Z^i\longrightarrow M^i\longrightarrow B^{i+1}
+\longrightarrow0
+\]
+on tire les relations
+\[
+\operatorname{long}(Z^i)=\operatorname{long}(H^i)+
+\operatorname{long}(B^i),
+\qquad
+\operatorname{long}(M^i)=\operatorname{long}(Z^i)+
+\operatorname{long}(B^{i+1}),
+\]
+d'où
+\[
+\operatorname{long}(M^i)-\operatorname{long}(H^i)=
+\operatorname{long}(B^{i+1})+\operatorname{long}(B^i).
+\]
+Multiplions cette relation par $(-1)^i$ et faisons la somme des relations
+obtenues pour $0\leq i\leq n$, en notant que
+$B^0=B^{n+1}=0$, il vient l'égalité cherchée.
+\end{proof}
+
+\begin{corollary}[11.10.3]
+\label{0.11.10.3-fr}
+Soit $E=(E_r^{pq})$ une suite spectrale dans la catégorie des modules sur un
+anneau $A$. On suppose que les $E_2^{pq}$ sont des $A$-modules de longueur
+finie et qu'il n'y a qu'un nombre fini de couples $(p,q)$ tels que
+$E_2^{pq}\neq0$. Alors les caractéristiques d'Euler-Poincaré
+$\chi(E_r^\bullet)$ de tous les complexes
+$E_r^\bullet=(E_r^{(n)})_{n\in\mathbb Z}$
+(\hyperref[0.11.1.1-fr]{11.1.1}) sont toutes égales. Si, en outre, la suite
+$E$ est faiblement convergente et si on pose
+\[
+E_\infty^{(n)}=\bigoplus_{p+q=n}E_\infty^{pq}\quad(n\in\mathbb Z),
+\]
+on a aussi $\chi(E_\infty^\bullet)=\chi(E_2^\bullet)$,
+$E_\infty^\bullet=(E_\infty^{(n)})_{n\in\mathbb Z}$ étant considéré comme
+un complexe à dérivation triviale.
+\end{corollary}
+
+\begin{proof}
+Notons d'abord que si $E_2^{pq}=0$, on a $E_r^{pq}=0$ pour
+$2\leq r<+\infty$, donc tous les complexes $E_r^\bullet$ sont finis et
+formés de $A$-modules de longueur finie; la relation
+$\chi(E_r^\bullet)=\chi(E_{r+1}^\bullet)$ pour tout $r$ fini résulte donc de
+(\hyperref[0.11.10.2-fr]{11.10.2}) et de l'isomorphie entre
+$H^\bullet(E_r^\bullet)$ et $E_{r+1}^\bullet$ (en tant que complexes à
+dérivation triviale). L'hypothèse que les $E_r^{pq}$ sont de longueur finie
+entraîne que pour tout couple $(p,q)$, les suites
+$(B_k(E_2^{pq}))_{k\geq2}$ et $(Z_k(E_2^{pq}))_{k\geq2}$ sont stationnaires;
+l'hypothèse que $E$ est faiblement convergente et que $E_2^{pq}=0$, sauf
+pour un nombre fini de couples $(p,q)$, entraîne donc qu'il existe un entier
+$r\geq2$ tel que $E_\infty^{pq}=E_r^{pq}$ pour tout couple $(p,q)$; d'où
+l'assertion relative à $\chi(E_\infty^\bullet)$.
+\end{proof}
+
+\section{Compléments sur la cohomologie des faisceaux}
+\label{section:0.12-fr}
+
+\subsection{Cohomologie des faisceaux de modules sur les espaces annelés}
+\label{subsection:0.12.1-fr}
+
+\begin{env}[12.1.1]
+\label{0.12.1.1-fr}
+Soit $(X,\mathcal O_X)$ un espace annelé. Rappelons que pour tout
+$\mathcal O_X$-Module $\mathcal F$, on définit la cohomologie
+$H^\bullet(X,\mathcal F)$, qui est un foncteur cohomologique universel
+(T, 2.2) de la catégorie $C(X)$ des $\mathcal O_X$-Modules dans la catégorie
+des groupes abéliens; c'est le foncteur dérivé du foncteur exact à gauche
+$\mathcal F\to\Gamma(X,\mathcal F)$. Le foncteur $H^\bullet(X,\mathcal F)$
+est isomorphe

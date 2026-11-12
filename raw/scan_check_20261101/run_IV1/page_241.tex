@@ -1,0 +1,88 @@
+% from ega4-1-fr.tex
+\oldpage[IV-1]{241}
+
+\begin{proposition}[1.8.7]
+\label{IV.1.8.7-fr}
+Soient $S$ un préschéma, $g:X\to S$, $h:Y\to S$ deux morphismes de
+présentation finie, $f:X\to Y$ un $S$-morphisme. Pour tout $s\in S$, posons
+$X_s=g^{-1}(s)=X\times_S\operatorname{Spec}(k(s))$,
+$Y_s=h^{-1}(s)=Y\times_S\operatorname{Spec}(k(s))$,
+$f_s=f\times 1:X_s\to Y_s$. Alors l'ensemble des $s\in S$ tels que $f_s$
+soit surjectif (resp. radiciel) est localement constructible.
+\end{proposition}
+
+\begin{proof}
+Soit $E$ l'ensemble des $s\in S$ tels que $f_s$ soit surjectif~; l'ensemble
+$S-E$ est égal à $h(Y-f(X))$~; or $f$ est de présentation finie (1.6.2, (v))
+donc $f(X)$ est localement constructible dans $Y$ (1.8.4)~; comme $h$ est de
+présentation finie, $h(Y-f(X))$ est localement constructible dans $S$, donc
+aussi $E$.
+
+Pour montrer que l'ensemble $E'$ des $s\in S$ tels que $f_s$ soit radiciel
+est localement constructible, nous utiliserons le
+\end{proof}
+
+\begin{lemma}[1.8.7.1]
+\EGAReaderTarget{ega4.c04.lem.1-8-7-1}{IV.1.8.7.1-fr}
+Soient $U$, $V$ deux préschémas~; pour qu'un morphisme $f:U\to V$ soit
+radiciel, il faut et il suffit que le morphisme diagonal
+$\Delta_f:U\to U\times_VU$ soit surjectif. Par suite, tout morphisme radiciel
+est séparé.
+\end{lemma}
+
+\begin{proof}
+En effet, $\Delta_f$ étant une immersion (I, 5.3.9), est un morphisme
+localement de type fini (1.3.4)~; dire que $\Delta_f$ est surjectif signifie
+donc que pour tout corps algébriquement clos $K$, l'application
+correspondante $U(K)\to(U\times_VU)(K)=U(K)\times_{V(K)}U(K)$ est surjective
+(1.3.7 et I, 3.4.2.1)~; mais par définition d'un produit fibré d'ensembles,
+cela signifie que l'application $U(K)\to V(K)$ correspondant à $f$ est
+injective, et cela équivaut à dire que $f$ est radiciel (I, 3.5.5).
+
+Cela étant, $\Delta_{f_s}$ se déduit de $\Delta_f:X\to X\times_YX$ par le
+changement de base $\operatorname{Spec}(k(s))\to S$ (I, 5.3.4). Comme $f$
+est de présentation finie, il en est de même du morphisme structural
+$X\times_YX\to Y$ (1.6.2, (iv)), donc aussi de $\Delta_f$ (1.6.2, (v))~; il
+suffit donc d'appliquer la première partie de la proposition à $\Delta_f$,
+en utilisant le lemme (1.8.7.1).
+\end{proof}
+
+\subsection{Ensembles pro-constructibles et ind-constructibles}
+\label{subsection:IV.1.9-fr}
+
+\begin{lemma}[1.9.1]
+\label{IV.1.9.1-fr}
+Soit $(A_\alpha)_{\alpha\in I}$ un système inductif d'anneaux dont l'ensemble
+d'indices $I$ est filtrant à droite, et soit $A=\varinjlim A_\alpha$. Pour que
+$A=0$, il faut et il suffit qu'il existe un indice $\gamma$ tel que
+$A_\gamma=0$ (et l'on a alors $A_\beta=0$ pour tout $\beta\geq\gamma$).
+\end{lemma}
+
+\begin{proof}
+En effet, pour tout $\alpha\in I$, l'homomorphisme canonique
+$\varphi_\alpha:A_\alpha\to A$ transforme l'élément unité en élément unité~;
+dire que $A=0$ signifie que $\varphi_\alpha(1)=0$, ou encore
+$\varphi_\alpha(1)=\varphi_\alpha(0)$~; on sait que cela équivaut à dire
+qu'il existe un indice $\gamma\geq\alpha$ tel que l'homomorphisme
+$\varphi_{\gamma\alpha}:A_\alpha\to A_\gamma$ soit tel que
+$\varphi_{\gamma\alpha}(1)=\varphi_{\gamma\alpha}(0)$, et cette dernière
+relation équivaut à $A_\gamma=0$, d'où le lemme.
+\end{proof}
+
+\begin{proposition}[1.9.2]
+\label{IV.1.9.2-fr}
+Soient $B$ un anneau, $(A_\alpha)_{\alpha\in I}$ un système inductif de
+$B$-algèbres dont l'ensemble d'indices $I$ est filtrant à droite, et soit
+$A=\varinjlim A_\alpha$~; posons $Y=\operatorname{Spec}(B)$,
+$X_\alpha=\operatorname{Spec}(A_\alpha)$, $X=\operatorname{Spec}(A)$, et
+soient $u:X\to Y$, $u_\alpha:X_\alpha\to Y$ les morphismes correspondant aux
+homomorphismes structuraux $B\to A$, $B\to A_\alpha$. Alors~:
+\end{proposition}
+
+\begin{env}[1.9.2.i]
+\label{IV.1.9.2.i-fr}
+\emph{Pour que $X=\varnothing$, il faut et il suffit qu'il existe un
+$\gamma\in I$ tel que $X_\gamma=\varnothing$, et l'on a alors
+$X_\alpha=\varnothing$ pour $\alpha\geq\gamma$.}
+\end{env}
+

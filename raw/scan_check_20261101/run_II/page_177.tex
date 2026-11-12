@@ -1,0 +1,100 @@
+% from ega2-1-fr.tex
+\oldpage[II]{177}
+Si $Y$ est noethérien (non nécessairement affine) et $\mathcal{S}$ de type
+fini, il y a un recouvrement fini de $Y$ par des ouverts affines noethériens
+$U_i$, et on déduit alors de ce qui précède que pour tout $i$, il y a un
+entier $n_i$ tel que
+$\mathcal{S}_{n+1}|U_i=(\mathcal{S}_1|U_i)(\mathcal{S}_n|U_i)$ dès que
+$n\geqslant n_i$~; le plus grand des $n_i$ vérifie donc
+(\hyperref[II.8.7.5.1-fr]{8.7.5.1}).
+\end{proof}
+
+\begin{env}[8.7.6]
+\label{II.8.7.6-fr}
+Considérons maintenant le $C$-préschéma $Z$ obtenu en faisant \emph{éclater}
+dans le cône affine $C$ le \emph{sous-préschéma des sommets}
+$\varepsilon(Y)$~; par définition (\hyperref[II.8.1.3-fr]{8.1.3}) c'est donc
+le préschéma
+$\operatorname{Proj}(\bigoplus_{n\geqslant 0}\mathcal{S}_+^n)$~; l'injection
+canonique
+\begin{equation}
+\label{II.8.7.6.1-fr}
+  \iota:\bigoplus_{n\geqslant 0}\mathcal{S}_+^n
+  \longrightarrow\mathcal{S}^{\natural}
+\tag{8.7.6.1}
+\end{equation}
+définit (grâce à l'identification (\hyperref[II.8.7.3-fr]{8.7.3})) un
+$C$-morphisme dominant canonique
+\begin{equation}
+\label{II.8.7.6.2-fr}
+  G(\iota)\longrightarrow Z
+\tag{8.7.6.2}
+\end{equation}
+où $G(\iota)$ est un ouvert de $C_X$ (\hyperref[II.3.5.1-fr]{3.5.1})~; on
+notera qu'on peut avoir $G(\iota)\ne C_X$, comme le montre l'exemple où
+$Y=\operatorname{Spec}(K)$, $K$ étant un corps, $\mathcal{S}=\widetilde{S}$
+avec $S=K[\mathbf{y}]$, où $\mathbf{y}$ est une indéterminée \emph{de degré
+2}~; si $R_n$ désigne l'ensemble $(S_+)^n$, considéré comme partie de
+$S_{[n]}=S_n^{\natural}$, $S_+^{\natural}$ n'est pas la racine dans
+$S^{\natural}$ de l'idéal engendré par la réunion des $R_n$ (cf.
+(\hyperref[II.2.3.14-fr]{2.3.14})).
+\end{env}
+
+\begin{corollary}[8.7.7]
+\label{II.8.7.7-fr}
+Supposons qu'il existe $n_0>0$ tel que
+\begin{equation}
+\label{II.8.7.7.1-fr}
+  \mathcal{S}_n=\mathcal{S}_1^n
+  \qquad\text{pour }n\geqslant n_0.
+\tag{8.7.7.1}
+\end{equation}
+Alors le morphisme canonique (\hyperref[II.8.7.6.2-fr]{8.7.6.2}) est partout
+défini et est un isomorphisme $C_X\xrightarrow{\sim}Z$. Inversement, si cette
+propriété a lieu et si on suppose de plus $Y$ noethérien et $\mathcal{S}$ de
+type fini, il existe $n_0$ tel que l'on ait
+(\hyperref[II.8.7.7.1-fr]{8.7.7.1}).
+\end{corollary}
+
+\begin{proof}
+En effet, la première assertion est locale sur $Y$, et découle donc de
+(\hyperref[II.8.2.14-fr]{8.2.14})~; il en est de même de la réciproque, en
+raisonnant comme dans (\hyperref[II.8.7.5-fr]{8.7.5}).
+\end{proof}
+
+\begin{remark}[8.7.8]
+\label{II.8.7.8-fr}
+Comme la condition (\hyperref[II.8.7.7.1-fr]{8.7.7.1}) implique
+(\hyperref[II.8.7.5.1-fr]{8.7.5.1}), on voit que lorsqu'elle est vérifiée,
+non seulement $C_X$ s'identifie au préschéma obtenu en faisant éclater le
+sommet (identifié à $Y$) du cône affine $C$, mais encore le sommet (identifié
+à $X$) de $C_X$ s'identifie au sous-préschéma fermé image réciproque du
+sommet $Y$ de $C$. En outre, l'hypothèse
+(\hyperref[II.8.7.7.1-fr]{8.7.7.1}) implique que sur
+$X=\operatorname{Proj}(\mathcal{S})$, les $\mathcal{O}_X$-Modules
+$\mathcal{O}_X(n)$ sont inversibles (\hyperref[II.3.2.5-fr]{3.2.5} et
+\hyperref[II.3.2.9-fr]{3.2.9}) et que l'on a
+$\mathcal{O}_X(n)=\mathcal{L}^{\otimes n}$ avec
+$\mathcal{L}=\mathcal{O}_X(1)$ (\hyperref[II.3.2.7-fr]{3.2.7} et
+\hyperref[II.3.2.9-fr]{3.2.9})~; par définition
+(\hyperref[II.8.6.1.1-fr]{8.6.1.1}), $C_X$ est donc le \emph{fibré vectoriel}
+$\mathbf{V}(\mathcal{L})$ sur $X$, et son sommet la \emph{section nulle} de ce
+fibré vectoriel.
+\end{remark}
+
+\subsection{Faisceaux amples et contractions}
+\label{subsection:II.8.8-fr}
+
+\begin{env}[8.8.1]
+\label{II.8.8.1-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme \emph{séparé et
+quasi-compact}, $\mathcal{L}$ un $\mathcal{O}_X$-Module inversible \emph{ample
+relativement à $f$}. Considérons la $\mathcal{O}_Y$-Algèbre graduée à degrés
+positifs
+\begin{equation}
+\label{II.8.8.1.1-fr}
+  \mathcal{S}=\mathcal{O}_Y\oplus
+  \bigoplus_{n\geqslant 1}f_*(\mathcal{L}^{\otimes n})
+\tag{8.8.1.1}
+\end{equation}
+

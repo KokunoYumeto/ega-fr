@@ -1,0 +1,1403 @@
+[
+ {
+  "page": 61,
+  "where": "Proposition (12.3.4), first sentence",
+  "scan": "italic statement; 'plat' printed roman",
+  "tex": "\\emph{Soit ... Modules.} inside the italic proposition environment (comes out upright; 'plat' unmarked)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Soit $f:X\\to Y$ un morphisme plat d'espaces annelés, et soient\n$\\mathcal F$, $\\mathcal G$ deux $\\mathcal O_Y$-Modules.}",
+   "new": "Soit $f:X\\to Y$ un morphisme \\textup{plat} d'espaces annelés, et soient\n$\\mathcal F$, $\\mathcal G$ deux $\\mathcal O_Y$-Modules."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). 'plat' is roman in the print (crop), hence \\textup{plat}."
+ },
+ {
+  "page": 61,
+  "where": "Proposition (12.3.4) (i), opening of the italic text",
+  "scan": "(i) Il existe un homomorphisme ... (italic)",
+  "tex": "\\emph{Il existe ... 4.4.6}).} inside the italic environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[{\\rm(i)}] \\emph{Il existe un homomorphisme",
+   "new": "\\item[{\\rm(i)}] Il existe un homomorphisme"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Opening brace of the (i) wrapper; apply together with the next two fixes (closing braces)."
+ },
+ {
+  "page": 61,
+  "where": "Proposition (12.3.4), end of (i) / start of (ii)",
+  "scan": "(i) and (ii) statements italic",
+  "tex": "closing brace of the (i) wrapper and \\emph{ opening the (ii) wrapper",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "4.4.6}).}\n\n\\item[{\\rm(ii)}] \\emph{Il existe",
+   "new": "4.4.6}).\n\n\\item[{\\rm(ii)}] Il existe"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Apply together with the (i) opening fix and the (ii) closing fix."
+ },
+ {
+  "page": 61,
+  "where": "Proposition (12.3.4) (ii), end: 'déduits de (12.3.4.1) et de (12.1.3.1).'",
+  "scan": "italic statement",
+  "tex": "closing brace of the (ii) \\emph wrapper",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "{12.1.3.1}).}",
+   "new": "{12.1.3.1})."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Apply together with the two preceding fixes."
+ },
+ {
+  "page": 61,
+  "where": "Proposition (12.3.4) (i): 'à l'homomorphisme canonique (0_I, 4.4.6)'",
+  "scan": "bold 0 in (0_I, 4.4.6)",
+  "tex": "plain 0\\textsubscript{I}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "canonique\n(\\hyperref[0.4.4.6-fr]{0\\textsubscript{I}",
+   "new": "canonique\n(\\hyperref[0.4.4.6-fr]{\\textbf{0}\\textsubscript{I}"
+  },
+  "note": "Bold 0 in the print."
+ },
+ {
+  "page": 61,
+  "where": "(12.3.4.1)",
+  "scan": "f^*(Ext^._{O_Y}(F, G)) with an isomorphism arrow (tilde over the arrow) to Ext^._{O_X}(f^*(F), f^*(G))",
+  "tex": "\\xrightarrow{\\sim} (keeps the printed reading)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "\\longrightarrow",
+  "note": "Crop: the print has the tilde arrow. It overclaims: (i) speaks of a homomorphism, Proposition (12.3.5) proves bijectivity only under coherence hypotheses, and in degree 0 the map can fail to be bijective for flat f (Spec Q -> Spec Z, F = direct sum of countably many O_Y, G = O_Y: at the generic point the map is the inclusion of the sequences of rationals with bounded denominators into the product of Q). The diplomatic TeX keeps the printed tilde arrow; the corrected edition should have a plain arrow."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): 'catégorie des O_Y-Modules (0_I, 6.7.2)'",
+  "scan": "bold 0",
+  "tex": "plain 0\\textsubscript{I}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0\\textsubscript{I}, 6.7.2}",
+   "new": "{\\textbf{0}\\textsubscript{I}, 6.7.2}"
+  },
+  "note": "Bold 0 in the print."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): 'les foncteurs G ~> f^*(Hom(F, G)) et G ~> Hom(f^*(F), f^*(G)) sont exacts à gauche'",
+  "scan": "both formulas in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "les foncteurs\n\\[\n\\mathcal G\\leadsto\nf^*(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal G))\n\\quad\\hbox{et}\\quad\n\\mathcal G\\leadsto\n\\mathcal{H}om_{\\mathcal O_X}(f^*(\\mathcal F),f^*(\\mathcal G))\n\\]\nsont exacts",
+   "new": "les foncteurs\n$\\mathcal G\\leadsto f^*(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal G))$ et\n$\\mathcal G\\leadsto\\mathcal{H}om_{\\mathcal O_X}(f^*(\\mathcal F),f^*(\\mathcal G))$\nsont exacts"
+  },
+  "note": "Layout only (display vs inline); the formulas match."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): 'on déduit canoniquement de (0_I, 4.4.6) un homomorphisme'",
+  "scan": "bold 0",
+  "tex": "plain 0\\textsubscript{I}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0\\textsubscript{I}, 4.4.6}) un",
+   "new": "{\\textbf{0}\\textsubscript{I}, 4.4.6}) un"
+  },
+  "note": "Bold 0 in the print."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): '... leurs foncteurs dérivés. Pour calculer ces derniers'",
+  "scan": "same paragraph ('Pour' at the left margin, not indented)",
+  "tex": "blank line: new paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "foncteurs dérivés.\n\nPour calculer",
+   "new": "foncteurs dérivés.\nPour calculer"
+  },
+  "note": "The print has no paragraph break here."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): 'on a donc des morphismes H^p(...) -> H^p(...) de cohomologies'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "morphismes\n\\[\n\\mathcal H^p(f^*(\\mathcal{H}om_{\\mathcal O_Y}\n(\\mathcal F,\\mathcal L^\\bullet)))\n\\longrightarrow\n\\mathcal H^p(\\mathcal{H}om_{\\mathcal O_X}\n(f^*(\\mathcal F),f^*(\\mathcal L^\\bullet)))\n\\]\nde cohomologies",
+   "new": "morphismes\n$\\mathcal H^p(f^*(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal L^\\bullet)))\\longrightarrow\\mathcal H^p(\\mathcal{H}om_{\\mathcal O_X}(f^*(\\mathcal F),f^*(\\mathcal L^\\bullet)))$\nde cohomologies"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): 'on a H^p(...) = f^*(H^p(...)) = f^*(Ext^p(F, G)) par définition'",
+  "scan": "formula in the running text (justified line ending 'par définition.')",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a\n\\[\n\\mathcal H^p(f^*(\\mathcal{H}om_{\\mathcal O_Y}\n(\\mathcal F,\\mathcal L^\\bullet)))\n=f^*(\\mathcal H^p(\\mathcal{H}om_{\\mathcal O_Y}\n(\\mathcal F,\\mathcal L^\\bullet)))\n=f^*(\\mathcal{E}xt_{\\mathcal O_Y}^p(\\mathcal F,\\mathcal G))\n\\]\npar définition.",
+   "new": "on a\n$\\mathcal H^p(f^*(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal L^\\bullet)))=f^*(\\mathcal H^p(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal L^\\bullet)))=f^*(\\mathcal{E}xt_{\\mathcal O_Y}^p(\\mathcal F,\\mathcal G))$\npar définition."
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 61,
+  "where": "proof (i): 'f^*(L^.) est une résolution de f^*(G)'",
+  "scan": "'résolution' in italics",
+  "tex": "résolution upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "une résolution de $f^*(\\mathcal G)$",
+   "new": "une \\emph{résolution} de $f^*(\\mathcal G)$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 61,
+  "where": "proof (ii): 'de O_X-Modules f^*(Hom(F, L^.)) -> Hom(f^*(F), L'^.). Soit'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "faisceaux de $\\mathcal O_X$-Modules\n\\[\nf^*(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal L^\\bullet))\n\\longrightarrow\n\\mathcal{H}om_{\\mathcal O_X}(f^*(\\mathcal F),\\mathcal L'^\\bullet).\n\\]\nSoit",
+   "new": "faisceaux de $\\mathcal O_X$-Modules\n$f^*(\\mathcal{H}om_{\\mathcal O_Y}(\\mathcal F,\\mathcal L^\\bullet))\\longrightarrow\\mathcal{H}om_{\\mathcal O_X}(f^*(\\mathcal F),\\mathcal L'^\\bullet)$.\nSoit"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 61,
+  "where": "proof (ii): 'du complexe Hom_{O_X}(f^*(F), L'^.)), il y a donc (11.4.2)'",
+  "scan": "two closing parentheses after L'^. (one unmatched)",
+  "tex": "one closing parenthesis",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathcal L'^\\bullet)$, il y a",
+   "new": "\\mathcal L'^\\bullet))$, il y a"
+  },
+  "corrected": "\\mathcal L'^\\bullet)$, il y a",
+  "note": "Crop: the print has '))'; no parenthesis is open before 'Hom'. The TeX silently corrects; the fix restores the printed reading."
+ },
+ {
+  "page": 61,
+  "where": "proof (ii): 'un homomorphisme (déterminé à homotopie près) f^*(M^..) -> M'^.. compatible'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "homotopie près)\n\\[\nf^*(\\mathcal M^{\\bullet\\bullet})\\longrightarrow\n\\mathcal M'^{\\bullet\\bullet}\n\\]\ncompatible",
+   "new": "homotopie près)\n$f^*(\\mathcal M^{\\bullet\\bullet})\\longrightarrow\\mathcal M'^{\\bullet\\bullet}$\ncompatible"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 61,
+  "where": "Proposition (12.3.5)",
+  "scan": "italic statement",
+  "tex": "\\emph{Sous ... bijectifs.} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Sous les hypothèses de (\\hyperref[0.12.3.4-fr]{12.3.4}), supposons en\noutre le faisceau d'anneaux $\\mathcal O_Y$ cohérent; alors, pour tout\n$\\mathcal O_Y$-Module cohérent $\\mathcal F$, les homomorphismes canoniques\n(\\hyperref[0.12.3.4.1-fr]{12.3.4.1}) sont bijectifs.}",
+   "new": "Sous les hypothèses de (\\hyperref[0.12.3.4-fr]{12.3.4}), supposons en\noutre le faisceau d'anneaux $\\mathcal O_Y$ cohérent; alors, pour tout\n$\\mathcal O_Y$-Module cohérent $\\mathcal F$, les homomorphismes canoniques\n(\\hyperref[0.12.3.4.1-fr]{12.3.4.1}) sont bijectifs."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 62,
+  "where": "proof of (12.3.5): 'une suite exacte 0 -> R -> O_Y^n -> F -> 0, et R est alors'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "exacte\n\\[\n0\\longrightarrow\\mathcal R\\longrightarrow\\mathcal O_Y^n\n\\longrightarrow\\mathcal F\\longrightarrow0,\n\\]\net $\\mathcal R$",
+   "new": "exacte $0\\longrightarrow\\mathcal R\\longrightarrow\\mathcal O_Y^n\\longrightarrow\\mathcal F\\longrightarrow0$,\net $\\mathcal R$"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 62,
+  "where": "proof of (12.3.5): 'O_Y-Module cohérent (0_I, 5.3.4)'",
+  "scan": "bold 0",
+  "tex": "plain 0\\textsubscript{I}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0\\textsubscript{I}, 5.3.4}",
+   "new": "{\\textbf{0}\\textsubscript{I}, 5.3.4}"
+  },
+  "note": "Bold 0 in the print."
+ },
+ {
+  "page": 62,
+  "where": "proof of (12.3.5): 'la proposition résultant de (0_I, 6.7.6.1)'",
+  "scan": "bold 0",
+  "tex": "plain 0\\textsubscript{I}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0\\textsubscript{I}, 6.7.6.1}",
+   "new": "{\\textbf{0}\\textsubscript{I}, 6.7.6.1}"
+  },
+  "note": "Bold 0 in the print."
+ },
+ {
+  "page": 62,
+  "where": "commutative diagram, end of the bottom row: 'Ext^p_{O_X}(O_X^n, f^*(G))'",
+  "scan": "no full stop after the last entry (the sentence continues with 'puisque')",
+  "tex": "full stop after the last entry",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "f^*(\\mathcal G)).\n}",
+   "new": "f^*(\\mathcal G))\n}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 62,
+  "where": "'on a Ext^p_{O_Y}(O_Y^n, G) = 0 pour tout p>0 et de même Ext^p_{O_X}(O_X^n, f^*(G)) = 0 pour tout p>0 (T, 4.2.3)'",
+  "scan": "formulas in the running text (a justified line)",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a\n\\[\n\\mathcal{E}xt_{\\mathcal O_Y}^p(\\mathcal O_Y^n,\\mathcal G)=0\n\\quad\\hbox{pour tout }p>0\n\\quad\\hbox{et de même}\\quad\n\\mathcal{E}xt_{\\mathcal O_X}^p(\\mathcal O_X^n,f^*(\\mathcal G))=0\n\\quad\\hbox{pour tout }p>0\n\\]\n(T, 4.2.3).",
+   "new": "on a\n$\\mathcal{E}xt_{\\mathcal O_Y}^p(\\mathcal O_Y^n,\\mathcal G)=0$ pour tout $p>0$ et de même\n$\\mathcal{E}xt_{\\mathcal O_X}^p(\\mathcal O_X^n,f^*(\\mathcal G))=0$ pour tout $p>0$\n(T, 4.2.3)."
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 62,
+  "where": "end of the proof: 'donc f^*(Ext^p(F, G)) -> Ext^p(f^*(F), f^*(G)) est un isomorphisme.'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donc\n\\[\nf^*(\\mathcal{E}xt_{\\mathcal O_Y}^p(\\mathcal F,\\mathcal G))\n\\longrightarrow\n\\mathcal{E}xt_{\\mathcal O_X}^p(f^*(\\mathcal F),f^*(\\mathcal G))\n\\]\nest un isomorphisme.",
+   "new": "donc\n$f^*(\\mathcal{E}xt_{\\mathcal O_Y}^p(\\mathcal F,\\mathcal G))\\longrightarrow\\mathcal{E}xt_{\\mathcal O_X}^p(f^*(\\mathcal F),f^*(\\mathcal G))$\nest un isomorphisme."
+  },
+  "note": "Layout only (display vs inline). The earlier occurrence ('Pour prouver que les homomorphismes') is displayed in the print too."
+ },
+ {
+  "page": 62,
+  "where": "heading 12.4",
+  "scan": "'12.4. Hypercohomologie du foncteur image directe.' (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Hypercohomologie du foncteur image directe}",
+   "new": "\\subsection{Hypercohomologie du foncteur image directe.}"
+  },
+  "note": "None of the 56 \\subsection titles in ega3-1-fr.tex has the printed final full stop (see final message)."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'par rapport à un complexe quelconque de O_X-Modules'",
+  "scan": "'quelconque' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un complexe quelconque de",
+   "new": "un complexe \\emph{quelconque} de"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'Les O_Y-Modules d'hypercohomologie R^p f_*(K^.)'",
+  "scan": "bold upright R",
+  "tex": "plain R",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$R^p f_*(\\mathcal K^\\bullet)$",
+   "new": "$\\mathbf{R}^p f_*(\\mathcal K^\\bullet)$"
+  },
+  "note": "Crop: bold R here; the later R^p f_* in (12.4.1.2) and 'au lieu de R^p f_*(F)' are not bold."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'se noteront aussi H^p(f, K^.)'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\mathcal H^p(f,\\mathcal K^\\bullet)$ ou",
+   "new": "$\\mathscr H^p(f,\\mathcal K^\\bullet)$ ou"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'ou H_f^p(K^.)'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\mathcal H_f^p(\\mathcal K^\\bullet)$",
+   "new": "$\\mathscr H_f^p(\\mathcal K^\\bullet)$"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'Rappelons que H^.(f, K^.) est la cohomologie'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "Rappelons que\n$\\mathcal H^\\bullet(f,\\mathcal K^\\bullet)$",
+   "new": "Rappelons que\n$\\mathscr H^\\bullet(f,\\mathcal K^\\bullet)$"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'O_X-Modules; H^.(f, K^.) est l'aboutissement'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "Modules~; $\\mathcal H^\\bullet(f,\\mathcal K^\\bullet)$",
+   "new": "Modules~; $\\mathscr H^\\bullet(f,\\mathcal K^\\bullet)$"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'deux suites spectrales 'E(f, K^.) et ''E(f, K^.) dont'",
+  "scan": "script E (twice)",
+  "tex": "plain E",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "${}'E(f,\\mathcal K^\\bullet)$ et ${}''E(f,\\mathcal K^\\bullet)$ dont",
+   "new": "${}'\\mathcal E(f,\\mathcal K^\\bullet)$ et ${}''\\mathcal E(f,\\mathcal K^\\bullet)$ dont"
+  },
+  "note": "Crop: the spectral sequences 'E, ''E of (12.4.1) are printed with the script E (as in Ext); the E_2 of 'les termes E_2' is roman."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1.1)",
+  "scan": "script E in 'E_2^{pq}",
+  "tex": "plain E",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{}'E_2^{pq}",
+   "new": "{}'\\mathcal E_2^{pq}"
+  },
+  "note": "Crop: the spectral sequences 'E, ''E of (12.4.1) are printed with the script E (as in Ext); the E_2 of 'les termes E_2' is roman."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1.2)",
+  "scan": "script E in ''E_2^{pq}",
+  "tex": "plain E",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{}''E_2^{pq}",
+   "new": "{}''\\mathcal E_2^{pq}"
+  },
+  "note": "Crop: the spectral sequences 'E, ''E of (12.4.1) are printed with the script E (as in Ext); the E_2 of 'les termes E_2' is roman."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1.2): '(= R^p f_*(H^q(K^.)))'",
+  "scan": "no full stop after the formula",
+  "tex": "full stop after the closing parenthesis",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mathcal H^q(\\mathcal K^\\bullet))).",
+   "new": "(\\mathcal H^q(\\mathcal K^\\bullet)))"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): '... (12.4.1.2) / On a, dans ces formules, adopté'",
+  "scan": "'On a, dans ces formules' begins a new (indented) paragraph",
+  "tex": "no blank line after \\end{equation}: no paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\end{equation}\nOn a, dans ces formules",
+   "new": "\\end{equation}\n\nOn a, dans ces formules"
+  },
+  "note": "Paragraph break of the print (indented line)."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'la suite 'E(f, K^.) est toujours régulière'",
+  "scan": "script E",
+  "tex": "plain E",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "${}'E(f,\\mathcal K^\\bullet)$ est toujours",
+   "new": "${}'\\mathcal E(f,\\mathcal K^\\bullet)$ est toujours"
+  },
+  "note": "Crop: the spectral sequences 'E, ''E of (12.4.1) are printed with the script E (as in Ext); the E_2 of 'les termes E_2' is roman."
+ },
+ {
+  "page": 62,
+  "where": "(12.4.1): 'les deux suites spectrales 'E(f, K^.) et ''E(f, K^.) sont birégulières'",
+  "scan": "script E (twice)",
+  "tex": "plain E",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "${}'E(f,\\mathcal K^\\bullet)$ et\n${}''E(f,\\mathcal K^\\bullet)$ sont",
+   "new": "${}'\\mathcal E(f,\\mathcal K^\\bullet)$ et\n${}''\\mathcal E(f,\\mathcal K^\\bullet)$ sont"
+  },
+  "note": "Crop: the spectral sequences 'E, ''E of (12.4.1) are printed with the script E (as in Ext); the E_2 of 'les termes E_2' is roman."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.2): 'comme un cas particulier de H^.(f, K^.), où f'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\mathcal H^\\bullet(f,\\mathcal K^\\bullet)$, où",
+   "new": "$\\mathscr H^\\bullet(f,\\mathcal K^\\bullet)$, où"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.3), opening",
+  "scan": "italic statement",
+  "tex": "\\emph{Pour tout entier ... sur $Y$.} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Pour tout entier",
+   "new": "Pour tout entier"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Opening brace; apply together with the closing fix 'sur $Y$.}'."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.3), end: 'sur Y.'",
+  "scan": "italic statement",
+  "tex": "closing brace of the \\emph wrapper",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "sur $Y$.}",
+   "new": "sur $Y$."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Apply together with the opening fix '\\emph{Pour tout entier'."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.3): 'le O_Y-Module H^p(f, K^.) est canoniquement'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\mathcal H^p(f,\\mathcal K^\\bullet)$ est canoniquement",
+   "new": "$\\mathscr H^p(f,\\mathcal K^\\bullet)$ est canoniquement"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.3): 'au préfaisceau U ~> H^p(f^{-1}(U), K^.)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$U\\mapsto\\mathbf H^p",
+   "new": "$U\\leadsto\\mathbf H^p"
+  },
+  "note": "Crop: wavy arrow (edition point for this file)."
+ },
+ {
+  "page": 63,
+  "where": "proof of (12.4.3): 'est associé au préfaisceau U ~> H^p(Gamma(U, f_*(L^..))) = H^p(Gamma(f^{-1}(U), L^..)). Mais'",
+  "scan": "wavy arrow; the formula is in the running text",
+  "tex": "\\longmapsto; displayed with \\[ ... \\]",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "préfaisceau\n\\[\nU\\longmapsto H^p(\\Gamma(U,f_*(\\mathcal L^{\\bullet\\bullet})))\n=H^p(\\Gamma(f^{-1}(U),\\mathcal L^{\\bullet\\bullet})).\n\\]\nMais",
+   "new": "préfaisceau\n$U\\leadsto H^p(\\Gamma(U,f_*(\\mathcal L^{\\bullet\\bullet})))=H^p(\\Gamma(f^{-1}(U),\\mathcal L^{\\bullet\\bullet}))$.\nMais"
+  },
+  "note": "Crop: wavy arrow. The fix also sets the formula inline, as printed (display vs inline)."
+ },
+ {
+  "page": 63,
+  "where": "proof of (12.4.3): 'donc H^p(Gamma(f^{-1}(U), L^..)) = H^p(f^{-1}(U), K^.) par définition.'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donc\n\\[\nH^p(\\Gamma(f^{-1}(U),\\mathcal L^{\\bullet\\bullet}))\n=\\mathbf H^p(f^{-1}(U),\\mathcal K^\\bullet)\n\\]\npar définition.",
+   "new": "donc\n$H^p(\\Gamma(f^{-1}(U),\\mathcal L^{\\bullet\\bullet}))=\\mathbf H^p(f^{-1}(U),\\mathcal K^\\bullet)$\npar définition."
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.4), opening sentence",
+  "scan": "italic statement",
+  "tex": "\\emph{L'hypercohomologie ... suivants~:} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{L'hypercohomologie",
+   "new": "L'hypercohomologie"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Opening brace; apply together with the closing fix 'suivants~:}'."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.4): 'dans chacun des cas suivants :'",
+  "scan": "italic statement",
+  "tex": "closing brace of the \\emph wrapper",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "suivants~:}",
+   "new": "suivants~:"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Apply together with the opening fix '\\emph{L'hypercohomologie'."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.4): 'L'hypercohomologie H^.(f, K^.) est un foncteur cohomologique'",
+  "scan": "second (roundhand) script H",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\mathcal H^\\bullet(f,\\mathcal K^\\bullet)$ est\nun foncteur",
+   "new": "$\\mathscr H^\\bullet(f,\\mathcal K^\\bullet)$ est\nun foncteur"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.4) a)",
+  "scan": "italic (label a) upright)",
+  "tex": "\\emph{...} item body inside the italic environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{$\\mathcal K^\\bullet$ varie dans la catégorie des complexes limités\ninférieurement.}",
+   "new": "$\\mathcal K^\\bullet$ varie dans la catégorie des complexes limités\ninférieurement."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). The labels \\item[\\emph{a)}] come out upright, as printed."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.4) b)",
+  "scan": "italic",
+  "tex": "\\emph{...} item body inside the italic environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Il existe un entier $m$ tel que tout $\\mathcal O_X$-Module admette\nune résolution flasque de longueur $\\leq m$.}",
+   "new": "Il existe un entier $m$ tel que tout $\\mathcal O_X$-Module admette\nune résolution flasque de longueur $\\leq m$."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.4) c)",
+  "scan": "italic ('X' upright)",
+  "tex": "\\emph{...} item body inside the italic environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{$X$ est un espace noethérien.}",
+   "new": "$X$ est un espace noethérien."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 63,
+  "where": "proof of (12.4.4): 'Les cas a) et b) sont des cas particuliers'",
+  "scan": "a) and b) in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Les cas a) et b) sont",
+   "new": "Les cas \\emph{a)} et \\emph{b)} sont"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 63,
+  "where": "proof of (12.4.4): 'le cas c) se déduit'",
+  "scan": "c) in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "le cas c) se",
+   "new": "le cas \\emph{c)} se"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.5): 'le bicomplexe C^.(U, K^.), dont'",
+  "scan": "C^. without háček",
+  "tex": "\\check C^\\bullet",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "bicomplexe $\\check C^\\bullet(\\mathfrak U,\\mathcal K^\\bullet)$",
+   "new": "bicomplexe $C^\\bullet(\\mathfrak U,\\mathcal K^\\bullet)$"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.5): 'le composant d'indices (i, j) est C^i(U, K^j)'",
+  "scan": "C^i without háček",
+  "tex": "\\check C^i",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\check C^i(\\mathfrak U,\\mathcal K^j)$",
+   "new": "$C^i(\\mathfrak U,\\mathcal K^j)$"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.5): 'est l'hypercohomologie du recouvrement U à coefficients dans K^.'",
+  "scan": "only 'hypercohomologie' in italics",
+  "tex": "\\emph covers 'hypercohomologie du recouvrement U à coefficients dans K^.'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'\\emph{hypercohomologie du recouvrement $\\mathfrak U$ à coefficients dans\n$\\mathcal K^\\bullet$}",
+   "new": "l'\\emph{hypercohomologie} du recouvrement $\\mathfrak U$ à coefficients dans\n$\\mathcal K^\\bullet$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.5): 'et nous la noterons H^.(U, K^.) = H^.(C^.(U, K^.)). La suite spectrale'",
+  "scan": "C^. without háček; the formula is in the running text",
+  "tex": "\\check C^\\bullet; displayed with \\[ ... \\]",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "noterons\n\\[\n\\mathbf H^\\bullet(\\mathfrak U,\\mathcal K^\\bullet)\n=H^\\bullet(\\check C^\\bullet(\\mathfrak U,\\mathcal K^\\bullet)).\n\\]\nLa suite",
+   "new": "noterons\n$\\mathbf H^\\bullet(\\mathfrak U,\\mathcal K^\\bullet)=H^\\bullet(C^\\bullet(\\mathfrak U,\\mathcal K^\\bullet))$.\nLa suite"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check. The fix also sets the formula inline, as printed (display vs inline)."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.6), statement before (12.4.6.1)",
+  "scan": "italic statement",
+  "tex": "\\emph{Soit ... donné par} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Soit $\\mathcal K^\\bullet=(\\mathcal K^i)$ un complexe de\n$\\mathcal O_X$-Modules. Il existe un foncteur spectral régulier en\n$\\mathcal K^\\bullet$ ayant pour aboutissement l'hypercohomologie\n$\\mathbf H^\\bullet(X,\\mathcal K^\\bullet)$, et dont le terme $E_2$ est donné\npar}",
+   "new": "Soit $\\mathcal K^\\bullet=(\\mathcal K^i)$ un complexe de\n$\\mathcal O_X$-Modules. Il existe un foncteur spectral régulier en\n$\\mathcal K^\\bullet$ ayant pour aboutissement l'hypercohomologie\n$\\mathbf H^\\bullet(X,\\mathcal K^\\bullet)$, et dont le terme $E_2$ est donné\npar"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.6.1): left side E_2^{pq}",
+  "scan": "bold E (E_2^{pq} set in bold; the statement's 'le terme E_2' is roman)",
+  "tex": "plain E",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "E_2^{pq}=",
+   "new": "\\mathbf{E}_2^{pq}="
+  },
+  "note": "Crop at 7x: E clearly bold, like the bold H after it; the subscript 2 and pq also look heavier. Possibly a wrong-font slip (then also a MISPRINTS entry with the reading E_2^{pq}); the diplomatic text has the bold E either way."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.6.1): right side H^p(U, h^q(K^.))",
+  "scan": "bold H (the covering hypercohomology of (12.4.5)), no háček",
+  "tex": "\\check H^p",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\check H^p(\\mathfrak U,h^q",
+   "new": "\\mathbf H^p(\\mathfrak U,h^q"
+  },
+  "note": "Crop: bold H without háček, the notation H^.(U, K^.) of (12.4.5) applied to the complex of presheaves h^q(K^.)."
+ },
+ {
+  "page": 63,
+  "where": "(12.4.6.1): end of the formula",
+  "scan": "no comma after the formula",
+  "tex": "comma after the closing parenthesis",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mathcal K^\\bullet)),\n\\end{equation}",
+   "new": "(\\mathcal K^\\bullet))\n\\end{equation}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.6), after (12.4.6.1), opening",
+  "scan": "italic statement",
+  "tex": "\\emph{où ... inférieurement.} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{où $h^q(\\mathcal K^\\bullet)$",
+   "new": "où $h^q(\\mathcal K^\\bullet)$"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Opening brace; apply together with the closing fix 'est limité inférieurement.}'."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.6), end: 'si K^. est limité inférieurement.'",
+  "scan": "italic statement",
+  "tex": "closing brace of the \\emph wrapper",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "est limité inférieurement.}",
+   "new": "est limité inférieurement."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). Apply together with the opening fix '\\emph{où $h^q(\\mathcal K^\\bullet)$'."
+ },
+ {
+  "page": 63,
+  "where": "Proposition (12.4.6): 'le complexe de préfaisceaux V ~> H^q(V, K^.) sur X'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$V\\mapsto H^q(V",
+   "new": "$V\\leadsto H^q(V"
+  },
+  "note": "Crop: wavy arrow. The H^q here is not bold (same weight as the upright V beside it)."
+ },
+ {
+  "page": 63,
+  "where": "proof of (12.4.6): 'le tricomplexe C^.(U, L^..) = (C^i(U, L^{jk}))'",
+  "scan": "C^. and C^i without háček",
+  "tex": "\\check C^\\bullet, \\check C^i",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\check C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet})\n=(\\check C^i(\\mathfrak U,\\mathcal L^{jk}))$",
+   "new": "$C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet})\n=(C^i(\\mathfrak U,\\mathcal L^{jk}))$"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check."
+ },
+ {
+  "page": 63,
+  "where": "proof of (12.4.6): 'car on a H^q(U, L^{jk}) = 0 pour tout q>0'",
+  "scan": "bold H, no háček",
+  "tex": "\\check H^q",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\check H^q(\\mathfrak U,\\mathcal L^{jk})=0$",
+   "new": "$\\mathbf H^q(\\mathfrak U,\\mathcal L^{jk})=0$"
+  },
+  "note": "Crop: bold H without háček (notation of (12.4.5))."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.6): 'un isomorphisme canonique H^n(C^.(U, L^..)) ~-> H^n(Gamma(X, L^..)) (en vertu de'",
+  "scan": "C^. without háček; the formula is in the running text",
+  "tex": "\\check C^\\bullet; displayed with \\[ ... \\]",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "canonique\n\\[\nH^n(\\check C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet}))\n\\xrightarrow{\\sim}\nH^n(\\Gamma(X,\\mathcal L^{\\bullet\\bullet}))\n\\]\n(en vertu",
+   "new": "canonique\n$H^n(C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet}))\\xrightarrow{\\sim}H^n(\\Gamma(X,\\mathcal L^{\\bullet\\bullet}))$\n(en vertu"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check. The fix also sets the formula inline, as printed (display vs inline)."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.6): '(12.4.2) un isomorphisme H^n(C^.(U, L^..)) ~-> H^n(X, K^.). Considérons'",
+  "scan": "C^. without háček; the formula is in the running text",
+  "tex": "\\check C^\\bullet; displayed with \\[ ... \\]",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "isomorphisme\n\\[\nH^n(\\check C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet}))\n\\xrightarrow{\\sim}\\mathbf H^n(X,\\mathcal K^\\bullet).\n\\]\nConsidérons",
+   "new": "isomorphisme\n$H^n(C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet}))\\xrightarrow{\\sim}\\mathbf H^n(X,\\mathcal K^\\bullet)$.\nConsidérons"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check. The fix also sets the formula inline, as printed (display vs inline)."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.6): 'Considérons d'autre part le tricomplexe C^.(U, L^..) comme un bicomplexe'",
+  "scan": "C^.(U, L^..) with roman U and roman L (not Fraktur U and script L), no háček",
+  "tex": "\\check C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet}) (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\check C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet})$ comme un",
+   "new": "$C^\\bullet(U,L^{\\bullet\\bullet})$ comme un"
+  },
+  "corrected": "$C^\\bullet(\\mathfrak U,\\mathcal L^{\\bullet\\bullet})$ comme un",
+  "note": "Crop: plain roman U and L, same weight as the C (wrong-font slip; the same tricomplex is C^.(U, L^..) with Fraktur U and script L on p. 63). The fix restores the printed reading; the TeX's háček is not printed either."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.6): 'par suite, H^q(C^i(U, L^{j,.})) n'est autre'",
+  "scan": "C^i without háček",
+  "tex": "\\check C^i",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$H^q(\\check C^i(\\mathfrak U,\\mathcal L^{j,\\bullet}))$",
+   "new": "$H^q(C^i(\\mathfrak U,\\mathcal L^{j,\\bullet}))$"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.6): 'le complexe de cochaînes C^i(U, h^q(K^j))'",
+  "scan": "C^i without háček",
+  "tex": "\\check C^i",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\check C^i(\\mathfrak U,h^q(\\mathcal K^j))$",
+   "new": "$C^i(\\mathfrak U,h^q(\\mathcal K^j))$"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check."
+ },
+ {
+  "page": 64,
+  "where": "Corollaire (12.4.7)",
+  "scan": "italic statement",
+  "tex": "\\emph{Si, pour tout simplexe ... canonique} inside the italic corollary environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Si, pour tout simplexe $\\sigma$ du nerf de $\\mathfrak U$, et pour\ntout entier $i$, on a\n$H^q(U_\\sigma,\\mathcal K^i)=0$ pour $q>0$, alors on a un isomorphisme\ncanonique}",
+   "new": "Si, pour tout simplexe $\\sigma$ du nerf de $\\mathfrak U$, et pour\ntout entier $i$, on a\n$H^q(U_\\sigma,\\mathcal K^i)=0$ pour $q>0$, alors on a un isomorphisme\ncanonique"
+  },
+  "note": "The corollary environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.7): 'l'hypothèse entraîne que C^.(U, h^q(K^j)) = 0'",
+  "scan": "C^. without háček",
+  "tex": "\\check C^\\bullet",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\check C^\\bullet(\\mathfrak U,h^q",
+   "new": "$C^\\bullet(\\mathfrak U,h^q"
+  },
+  "note": "Crop: the print has a plain roman C (no háček) for the cochain complex in (12.4.5) and in the proof of (12.4.6); the TeX adds \\check."
+ },
+ {
+  "page": 64,
+  "where": "proof of (12.4.7): 'C^.(U, h^q(K^j)) = 0 pour q>0'",
+  "scan": "superscript j: h^q(K^j)",
+  "tex": "h^q(\\mathcal K^i)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "(\\mathcal K^i))=0$",
+   "new": "(\\mathcal K^j))=0$"
+  },
+  "note": "6x crop: the superscript has the descender with a leftward hook of the j in C^i(U, h^q(K^j)) a few lines above, unlike the i of 'H^q(U_sigma, K^i)' in the statement. Not a mathematical error (any index)."
+ },
+ {
+  "page": 64,
+  "where": "(12.4.8): '(12.4.8.1) / On part d'une résolution injective'",
+  "scan": "'On part d'une résolution' begins a new (indented) paragraph",
+  "tex": "no blank line after \\end{equation}: no paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\end{equation}\nOn part d'une",
+   "new": "\\end{equation}\n\nOn part d'une"
+  },
+  "note": "Paragraph break of the print (indented line)."
+ },
+ {
+  "page": 64,
+  "where": "(12.4.8): 'un morphisme pour la cohomologie : H^.(X, K^.) -> H^.(X', psi^*(K^.)); par composition'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "cohomologie~:\n\\[\n\\mathbf H^\\bullet(X,\\mathcal K^\\bullet)\n\\longrightarrow\\mathbf H^\\bullet(X',\\psi^*(\\mathcal K^\\bullet))~;\n\\]\npar composition",
+   "new": "cohomologie~: $\\mathbf H^\\bullet(X,\\mathcal K^\\bullet)\\longrightarrow\\mathbf H^\\bullet(X',\\psi^*(\\mathcal K^\\bullet))$~;\npar composition"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 64,
+  "where": "(12.4.8.2)",
+  "scan": "second (roundhand) script H, twice",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\mathcal H^n(g,f_*(\\mathcal K^\\bullet))\n\\longrightarrow\\mathcal H^n(h,\\mathcal K^\\bullet)",
+   "new": "\\mathscr H^n(g,f_*(\\mathcal K^\\bullet))\n\\longrightarrow\\mathscr H^n(h,\\mathcal K^\\bullet)"
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 64,
+  "where": "(12.4.8.3)",
+  "scan": "second (roundhand) script H, twice",
+  "tex": "\\mathcal H",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\mathcal H^n(h,\\mathcal K^\\bullet)\n\\longrightarrow g_*(\\mathcal H^n(f,\\mathcal K^\\bullet)).",
+   "new": "\\mathscr H^n(h,\\mathcal K^\\bullet)\n\\longrightarrow g_*(\\mathscr H^n(f,\\mathcal K^\\bullet))."
+  },
+  "note": "Crop: the hypercohomology H in the text of (12.4.1) ('se noteront aussi H^p(f, K^.) ou H_f^p(K^.)', 'Rappelons que H^.(f, K^.)', 'O_X-Modules; H^.(f, K^.) est') is a second, lighter roundhand script H, unlike the usual script H of Hom and of (12.4.1.1)-(12.4.1.2) and 'on écrit H^p(f, F)'. \\mathscr is proposed because ega3-1 uses \\mathcal for the usual script; this needs one decision (see final message)."
+ },
+ {
+  "page": 64,
+  "where": "(12.4.8): '(12.4.8.3) / Nous laissons au lecteur le détail des définitions.'",
+  "scan": "'Nous laissons' begins a new (indented) paragraph",
+  "tex": "no blank line after \\end{equation}: no paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\end{equation}\nNous laissons",
+   "new": "\\end{equation}\n\nNous laissons"
+  },
+  "note": "Paragraph break of the print (indented line)."
+ },
+ {
+  "page": 64,
+  "where": "heading 13.1",
+  "scan": "'13.1. La condition de Mittag-Leffler.' (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{La condition de Mittag-Leffler}",
+   "new": "\\subsection{La condition de Mittag-Leffler.}"
+  },
+  "note": "Same as heading 12.4 (p. 62)."
+ },
+ {
+  "page": 64,
+  "where": "(13.1.1): 'Soit C une catégorie abélienne'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Soit $\\mathcal C$ une",
+   "new": "Soit $\\boldsymbol{C}$ une"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 64,
+  "where": "(13.1.1): 'sous-objets d'un objet de C existe'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "objet de $\\mathcal C$ existe",
+   "new": "objet de $\\boldsymbol{C}$ existe"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 64,
+  "where": "(13.1.1): 'tout système projectif d'objets de C admet'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d'objets de $\\mathcal C$ admet",
+   "new": "d'objets de $\\boldsymbol{C}$ admet"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 64,
+  "where": "(13.1.1): '(axiome AB 3*) de T, 1.5));'",
+  "scan": "closing parenthesis after 'AB 3*' (the asterisk raised)",
+  "tex": "no parenthesis after 3*",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "AB~3* de T",
+   "new": "AB~3*) de T"
+  },
+  "note": "Crop: the print reads '(axiome AB 3*) de T, 1.5));' (Tohoku labels its axioms 'AB 3*)'); the parentheses of the print do not balance either way."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.1): 'un système projectif d'objets de C dont l'ensemble d'indices'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d'objets de $\\mathcal C$ dont",
+   "new": "d'objets de $\\boldsymbol{C}$ dont"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.1): 'l'ensemble d'indices I est filtrant à droite'",
+  "scan": "'filtrant' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est filtrant à droite",
+   "new": "est \\emph{filtrant} à droite"
+  },
+  "note": "Checked on the strip."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.1): 'soient A = lim A_alpha et pour tout alpha in I, soit'",
+  "scan": "no comma after 'et'",
+  "tex": "'et, pour tout'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A_\\alpha$ et, pour tout",
+   "new": "A_\\alpha$ et pour tout"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.1): 'le sous-objet A'_alpha = inf_{beta>=alpha} f_{alpha beta}(A_beta) est dit'",
+  "scan": "formula in the running text (index under inf)",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "le sous-objet\n\\[\nA'_\\alpha=\\inf_{\\beta\\geq\\alpha}f_{\\alpha\\beta}(A_\\beta)\n\\]\nest dit",
+   "new": "le sous-objet $A'_\\alpha=\\inf_{\\beta\\geq\\alpha}f_{\\alpha\\beta}(A_\\beta)$\nest dit"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.2): 'un système projectif (A_alpha, f_{alpha beta}) dans C, on appelle'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans\n$\\mathcal C$, on appelle",
+   "new": "dans\n$\\boldsymbol{C}$, on appelle"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.2): label of the condition '(ML) Pour tout indice ...'",
+  "scan": "(ML) in regular roman (same weight as '(ML)' in the running text)",
+  "tex": "\\item[\\textbf{(ML)}] (bold)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[\\textbf{(ML)}]",
+   "new": "\\item[(ML)]"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.2): '(ML) ... / Il est clair que si les f_{alpha beta}'",
+  "scan": "'Il est clair' begins a new (indented) paragraph",
+  "tex": "no blank line after \\end{itemize}: unindented continuation",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\end{itemize}\nIl est clair",
+   "new": "\\end{itemize}\n\nIl est clair"
+  },
+  "note": "Paragraph break of the print (indented line)."
+ },
+ {
+  "page": 65,
+  "where": "(13.1.2): 'les objets A_alpha sont artiniens dans C'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{artiniens} dans $\\mathcal C$",
+   "new": "\\emph{artiniens} dans $\\boldsymbol{C}$"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 65,
+  "where": "Remarque (13.1.3): 'lorsque C est par exemple la catégorie des ensembles'",
+  "scan": "bold italic C",
+  "tex": "\\mathcal C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "lorsque $\\mathcal C$ est par",
+   "new": "lorsque $\\boldsymbol{C}$ est par"
+  },
+  "note": "Category letter C printed bold italic (as in the rest of chapter 0 of EGA III); the TeX has the script \\mathcal C. \\boldsymbol{C} as in the p. 10 fixes; GLOBAL_ISSUES 35 (no blind replace)."
+ },
+ {
+  "page": 65,
+  "where": "heading 13.2",
+  "scan": "'13.2. La condition de Mittag-Leffler pour les groupes abéliens.' (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{La condition de Mittag-Leffler pour les groupes abéliens}",
+   "new": "\\subsection{La condition de Mittag-Leffler pour les groupes abéliens.}"
+  },
+  "note": "Same as heading 12.4 (p. 62)."
+ },
+ {
+  "page": 65,
+  "where": "Proposition (13.2.1): 'Soit'",
+  "scan": "italic",
+  "tex": "\\emph{Soit} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Soit}",
+   "new": "Soit"
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 65,
+  "where": "Proposition (13.2.1): 'une suite exacte de systèmes projectifs ... d'indices I).'",
+  "scan": "italic statement",
+  "tex": "\\emph{...} inside the italic proposition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{une suite exacte de systèmes projectifs de groupes abéliens (relatifs\nà un même ensemble filtrant d'indices $I$).}",
+   "new": "une suite exacte de systèmes projectifs de groupes abéliens (relatifs\nà un même ensemble filtrant d'indices $I$)."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 65,
+  "where": "Proposition (13.2.1) (i): 'Si (B_alpha) vérifie (ML), il en est de même de (C_alpha).'",
+  "scan": "italic; '(ML)' upright",
+  "tex": "\\emph{...} item body inside the italic environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Si $(B_\\alpha)$ vérifie (ML), il en est de même de $(C_\\alpha)$.}",
+   "new": "Si $(B_\\alpha)$ vérifie \\textup{(ML)}, il en est de même de $(C_\\alpha)$."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). '(ML)' is upright in the print (crop), hence \\textup."
+ },
+ {
+  "page": 65,
+  "where": "Proposition (13.2.1) (ii): 'Si (A_alpha) et (C_alpha) vérifient (ML), il en est de même de (B_alpha).'",
+  "scan": "italic; '(ML)' upright",
+  "tex": "\\emph{...} item body inside the italic environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Si $(A_\\alpha)$ et $(C_\\alpha)$ vérifient (ML), il en est de même de\n$(B_\\alpha)$.}",
+   "new": "Si $(A_\\alpha)$ et $(C_\\alpha)$ vérifient \\textup{(ML)}, il en est de même de\n$(B_\\alpha)$."
+  },
+  "note": "The proposition environment is \\itshape, so the \\emph wrapper sets the statement upright; the print sets it italic. Drop the wrapper (FIX_POLICY 2.6). '(ML)' is upright in the print (crop), hence \\textup."
+ },
+ {
+  "page": 65,
+  "where": "proof of (13.2.1) (i): 'on a h_{alpha beta}(C_beta) = ... = h_{alpha lambda}(C_lambda) pour lambda >= beta.'",
+  "scan": "formula in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a\n\\[\nh_{\\alpha\\beta}(C_\\beta)\n=v_\\alpha(g_{\\alpha\\beta}(B_\\beta))\n=v_\\alpha(g_{\\alpha\\lambda}(B_\\lambda))\n=h_{\\alpha\\lambda}(C_\\lambda)\n\\]\npour",
+   "new": "on a\n$h_{\\alpha\\beta}(C_\\beta)=v_\\alpha(g_{\\alpha\\beta}(B_\\beta))=v_\\alpha(g_{\\alpha\\lambda}(B_\\lambda))=h_{\\alpha\\lambda}(C_\\lambda)$\npour"
+  },
+  "note": "Layout only (display vs inline)."
+ },
+ {
+  "page": 65,
+  "where": "proof of (13.2.1) (ii): 'Soit alors v_alpha un élément de g_{alpha gamma}(B_gamma); on a donc y_alpha = ...'",
+  "scan": "v_alpha (italic v, no descender)",
+  "tex": "y_alpha (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$y_\\alpha$ un élément",
+   "new": "$v_\\alpha$ un élément"
+  },
+  "corrected": "$y_\\alpha$ un élément",
+  "note": "Crop: the letter has no descender and matches the v of v_beta on the same page; the next clause 'on a donc y_alpha = g_{alpha gamma}(y_gamma)' shows that y_alpha is meant. The fix restores the printed reading."
+ },
+ {
+  "page": 65,
+  "where": "proof of (13.2.1) (ii): 'd'où v_beta(y_beta — g_{beta lambda}(y_lambda)) = 0'",
+  "scan": "long dash for the subtraction",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "y_\\beta-g_{\\beta\\lambda}(y_\\lambda)",
+   "new": "y_\\beta\\setmin g_{\\beta\\lambda}(y_\\lambda)"
+  },
+  "note": "Subtraction, not set difference (GLOBAL_ISSUES 23); \\setmin as in the p. 13 fixes, pending the convention-7 decision."
+ }
+]

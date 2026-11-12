@@ -1,0 +1,508 @@
+\end{equation}
+\end{env}
+
+\oldpage[IV-3]{120}
+\noindent Comme les $L'_i$ sont des $A'$-modules \emph{libres}, on sait (M, V, 1.1) qu'il y a
+des $A'$-homomorphismes $u_i$ formant un diagramme commutatif
+\[
+\xymatrix{
+\ldots\ar[r]&L'_{i+1}\ar[r]^{f'_i}\ar[d]_{u_{i+1}}&
+L'_i\ar[r]\ar[d]_{u_i}&\ldots\ar[r]&
+L'_0\ar[r]^{\varepsilon'}\ar[d]_{u_0}&M'\ar[r]\ar[d]_{1_{M'}}&0\\
+\ldots\ar[r]&L''_{i+1}\ar[r]_{f''_i}&L''_i\ar[r]&\ldots\ar[r]&
+L''_0\ar[r]_{\varepsilon''}&M'\ar[r]&0
+}
+\]
+
+Si l'on compose l'homomorphisme $u_\bullet:L'_\bullet\to L''_\bullet$ de
+complexes ainsi défini avec l'homomorphisme canonique
+$L_\bullet\to L'_\bullet$, on obtient un homomorphisme de complexes de
+$A$-modules $L_\bullet\to L''_\bullet$~; en remarquant que l'on a
+$(L_i\otimes_AN)\otimes_AA'=L'_i\otimes_{A'}N'$, on en déduit un
+homomorphisme de complexes de $A$-modules
+$L_\bullet\otimes_AN\to L''_\bullet\otimes_{A'}N'$, d'où, en passant à
+l'homologie, les homomorphismes canoniques (11.2.1.1). Comme les $u_i$ sont
+bien déterminés à homotopie près (M, V, 1.1), les homomorphismes (11.2.1.1)
+ne dépendent pas du choix des $u_i$ ni du choix des résolutions libres
+$L_\bullet$ et $L''_\bullet$.
+
+\begin{sloppypar}
+Comme les $\operatorname{Tor}_i^{A'}(M',N')$ sont des $A'$-modules, on déduit
+canoniquement de (11.2.1.1) des $A'$-homomorphismes
+\begin{equation}
+\begin{gathered}
+\varphi_i:\operatorname{Tor}_i^A(M,N)\otimes_AA'\\[-2pt]
+\longrightarrow\operatorname{Tor}_i^{A'}(M',N').
+\end{gathered}
+\label{IV.11.2.1.5-fr}
+\tag{11.2.1.5}
+\end{equation}
+\end{sloppypar}
+
+Considérons maintenant deux homomorphismes d'anneaux
+\[
+\rho:A\to A^{(1)},\qquad \sigma:A^{(1)}\to A^{(2)},
+\]
+et leur composé $\sigma\circ\rho:A\to A^{(2)}$~; posons
+$M^{(j)}=M\otimes_AA^{(j)}$, $N^{(j)}=N\otimes_AA^{(j)}$ pour $j=1,2$.
+Alors l'homomorphisme canonique composé
+\[
+\operatorname{Tor}_i^A(M,N)\to
+\operatorname{Tor}_i^{A^{(1)}}(M^{(1)},N^{(1)})\to
+\operatorname{Tor}_i^{A^{(2)}}(M^{(2)},N^{(2)})
+\]
+est le même que l'homomorphisme canonique déduit de $\sigma\circ\rho$~;
+cela résulte de ce que, si $L_\bullet^{(j)}$ est une résolution libre de
+$M^{(j)}$, le diagramme
+\[
+\xymatrix{
+L_\bullet\ar[r]&L_\bullet\otimes_AA^{(1)}\ar[r]\ar[d]&
+L_\bullet^{(1)}\ar[d]\\
+&L_\bullet\otimes_AA^{(2)}\ar[r]&
+L_\bullet^{(1)}\otimes_{A^{(1)}}A^{(2)}\ar[r]&L_\bullet^{(2)}
+}
+\]
+est commutatif.
+
+\begin{env}[11.2.2]
+\label{IV.11.2.2-fr}
+Les notations étant celles de (11.2.1), considérons maintenant un
+\emph{système inductif} filtrant de $A$-algèbres
+$(A_\alpha,g_{\beta\alpha})$, et pour tout indice $\alpha$, posons
+$M_\alpha=M\otimes_AA_\alpha$, $N_\alpha=N\otimes_AA_\alpha$~; il résulte
+alors de (11.2.1) que pour chaque $i$,
+$(\operatorname{Tor}_i^{A_\alpha}(M_\alpha,N_\alpha),
+\psi_{i\beta\alpha})$, où $\psi_{i\beta\alpha}$ est l'homomorphisme
+canonique (11.2.1.1) correspondant à $g_{\beta\alpha}$, est un \emph{système
+\oldpage[IV-3]{121}
+inductif de $A_\alpha$-modules}. Posons
+$A'=\varinjlim A_\alpha$, $M'=\varinjlim M_\alpha=M\otimes_AA'$,
+$N'=\varinjlim N_\alpha=N\otimes_AA'$~; si on désigne par
+$g_\alpha:A_\alpha\to A'$ l'homomorphisme canonique, on en déduit des
+homomorphismes canoniques (11.2.1.1)
+$\psi_{i\alpha}:\operatorname{Tor}_i^{A_\alpha}(M_\alpha,N_\alpha)
+\to\operatorname{Tor}_i^{A'}(M',N')$ qui (toujours en vertu de (11.2.1))
+forment un système inductif d'homomorphismes~; nous nous proposons de
+compléter le résultat de (M, V, 9.4$^*$) en montrant que les
+\begin{equation}
+\psi_i=\varinjlim_\alpha\psi_{i\alpha}:
+\varinjlim_\alpha\operatorname{Tor}_i^{A_\alpha}(M_\alpha,N_\alpha)
+\to\operatorname{Tor}_i^{A'}(M',N')
+\label{IV.11.2.2.1-fr}
+\tag{11.2.2.1}
+\end{equation}
+sont des \emph{isomorphismes de $A'$-modules}. Pour cela, nous procédons
+comme dans (M, V, 9.5$^*$), en associant à chaque $M_\alpha$ sa
+\emph{résolution libre canonique}. Tout revient (compte tenu de l'exactitude
+du foncteur $\varinjlim$) à prouver le
+\end{env}
+
+\begin{lemma}[11.2.2.2]
+\label{IV.11.2.2.2-fr}
+Soient $(A_\alpha,g_{\beta\alpha})$ un système inductif filtrant d'anneaux,
+$(M_\alpha,h_{\beta\alpha})$ un système inductif d'ensembles,
+$A'=\varinjlim A_\alpha$, $M'=\varinjlim M_\alpha$,
+$g_\alpha:A_\alpha\to A'$, $h_\alpha:M_\alpha\to M'$ les applications
+canoniques. Pour tout $\alpha$, soit $F(M_\alpha)$ le $A_\alpha$-module des
+combinaisons linéaires formelles d'éléments de $M_\alpha$~; soit de même
+$F(M')$ le $A'$-module des combinaisons linéaires formelles d'éléments de
+$M'$~; si $h'_{\beta\alpha}:F(M_\alpha)\to F(M_\beta)$ (pour
+$\alpha\leq\beta$) et $h'_\alpha:F(M_\alpha)\to F(M')$ sont les
+$A_\alpha$-homomorphismes déduits de $h_{\beta\alpha}$ et $h_\alpha$
+respectivement, $(F(M_\alpha),h'_{\beta\alpha})$ est un système inductif
+de $A_\alpha$-modules et $(h'_\alpha)$ un système inductif
+d'homomorphismes. Alors
+\[
+h''=\varinjlim h'_\alpha:\varinjlim F(M_\alpha)\to
+F(M')=F(\varinjlim M_\alpha)
+\]
+est un isomorphisme.
+\end{lemma}
+
+Pour la démonstration, voir Bourbaki, \emph{Alg.}, chap.~II, 3\textsuperscript{e} éd.,
+\S~6, n\textsuperscript{o}~6, cor. de la prop.~10.
+
+\begin{env}[11.2.3]
+\label{IV.11.2.3-fr}
+Reprenons les notations de (11.2.1) et considérons particulièrement le cas
+$i=1$~; posons $T=\operatorname{Tor}_1^A(M,N)$, $T'=T\otimes_AA'$,
+$T''=\operatorname{Tor}_1^{A'}(M',N')$~; alors $\psi_1$ est
+l'homomorphisme
+$\operatorname{Ker}(f_0\otimes1_N)/\operatorname{Im}(f_1\otimes1_N)
+\to
+\operatorname{Ker}(f''_0\otimes1_{N'})/
+\operatorname{Im}(f''_1\otimes1_{N'})$
+qui se déduit par passage aux quotients de la restriction
+$\operatorname{Ker}(f_0\otimes1_N)\to
+\operatorname{Ker}(f''_0\otimes1_{N'})$ de
+\[
+u_1\otimes1:L_0\otimes_AN\to L''_0\otimes_{A'}N'=L''_0\otimes_AN.
+\]
+Posons $R=\operatorname{Ker}(\varepsilon)$,
+$R''=\operatorname{Ker}(\varepsilon'')$, de sorte que l'on a les suites
+exactes
+\[
+0\to R\xrightarrow{j}L_0\xrightarrow{\varepsilon}M\to0
+\qquad\text{et}\qquad
+0\to R''\xrightarrow{j''}L''_0\xrightarrow{\varepsilon''}M'\to0,
+\]
+d'où on déduit les suites exactes d'homologie
+\begin{equation}
+0=\operatorname{Tor}_1^A(L_0,N)\to T\xrightarrow{\partial}R\otimes_AN
+\xrightarrow{j\otimes1}L_0\otimes_AN\xrightarrow{\varepsilon\otimes1}
+M\otimes_AN\to0
+\label{IV.11.2.3.1-fr}
+\tag{11.2.3.1}
+\end{equation}
+\begin{equation}
+0=\operatorname{Tor}_1^{A'}(L''_0,N')\to T''\xrightarrow{\partial''}
+R''\otimes_{A'}N'\xrightarrow{j''\otimes1}L''_0\otimes_{A'}N'
+\xrightarrow{\varepsilon''\otimes1}M'\otimes_{A'}N'\to0
+\label{IV.11.2.3.2-fr}
+\tag{11.2.3.2}
+\end{equation}
+
+On a d'autre part un homomorphisme de $A'$-modules
+\[
+v:R'=\operatorname{Ker}(\varepsilon)\otimes_AA'
+\to\operatorname{Ker}(\varepsilon')\xrightarrow{u_0}
+\operatorname{Ker}(\varepsilon'')=R''.
+\]
+\end{env}
+
+\oldpage[IV-3]{122}
+
+Montrons que le diagramme
+\begin{equation}
+\xymatrix{
+&T'\ar[r]^{\partial\otimes1}\ar[d]_{\varphi_1}&
+R'\otimes_{A'}N'\ar[r]\ar[d]_{v\otimes1}&
+L'_0\otimes_{A'}N'\ar[r]\ar[d]_{u_0\otimes1}&
+M'\otimes_{A'}N'\ar[r]\ar@{=}[d]&0\\
+0\ar[r]&T''\ar[r]_{\partial''}&R''\otimes_{A'}N'\ar[r]&
+L''_0\otimes_{A'}N'\ar[r]&M'\otimes_{A'}N'\ar[r]&0
+}
+\label{IV.11.2.3.3-fr}
+\tag{11.2.3.3}
+\end{equation}
+est \emph{commutatif}. Pour cela, on vérifie aussitôt (M, IV, 1) que
+l'homomorphisme $\partial:T\to R\otimes_AN$ provient (dans le cas actuel)
+par passage au quotient de l'homomorphisme
+$w:\operatorname{Ker}(f_0\otimes1_N)\to R\otimes_AN$, restriction de
+l'homomorphisme $g_0\otimes1_N:L_1\otimes_AN\to R\otimes_AN$, où
+$g_0:L_1\to R$ est tel que $f_0=j\circ g_0$~; de même pour $\partial''$.
+Il suffit donc de voir que le diagramme
+\[
+\xymatrix{
+\operatorname{Ker}(f_0\otimes1_N)\ar[r]^w\ar[d]&R\otimes_AN\ar[r]&
+R'\otimes_{A'}N'=(R\otimes_AN)\otimes_AA'\ar[d]_{v\otimes1}\\
+\operatorname{Ker}(f''_0\otimes1_{N'})\ar[rr]&&R''\otimes_{A'}N'
+}
+\]
+est commutatif, ce qui résulte de la commutativité du diagrammc
+\[
+\xymatrix{
+L_1\ar[r]\ar[d]&R\ar[d]\\
+L''_1\ar[r]&R''
+}
+\]
+
+\begin{lemma}[11.2.4]
+\label{IV.11.2.4-fr}
+Soient $A$ un anneau, $C$ une $A$-algèbre, $M$ un $A$-module, $N$ un
+$C$-module, $A'$ une $A$-algèbre. Posons $C'=C\otimes_AA'$,
+$M'=M\otimes_AA'$, $N'=N\otimes_AA'=N\otimes_CC'$. Supposons que
+$M\otimes_AN$ soit un $C$-module plat. Alors l'homomorphisme canonique
+\[
+\varphi_1:\operatorname{Tor}_1^A(M,N)\otimes_AA'
+\to\operatorname{Tor}_1^{A'}(M',N')
+\]
+\textup{(cf. (11.2.1.5))} est surjectif.
+\end{lemma}
+
+Gardons les notations de (11.2.3)~; l'exactitude à droite du produit
+tensoriel montre que la suite
+$L'_1\xrightarrow{f'_0}L'_0\xrightarrow{\varepsilon'}M'\to0$ est exacte~;
+comme $L'_0$ et $L'_1$ sont des $A'$-modules libres, \emph{on peut supposer
+que l'on a pris} $L'_0=L''_0$, $L'_1=L''_1$, $u_0$ et $u_1$ étant les
+\emph{applications identiques} et $f''_0=f'_0$. Comme
+$R=\operatorname{Im}(f_0)$ et $R''=\operatorname{Im}(f''_0)=
+\operatorname{Im}(f'_0)$, l'homomorphisme $v$ est \emph{surjectif}, et il en est
+donc de même de $v\otimes1$. La démonstration sera achevée si l'on prouve que
+la première ligne de (11.2.3.3) est \emph{exacte}, $v\otimes1$ étant
+surjective et $u_0\otimes1$ injectif (Bourbaki, \emph{Alg. comm.},
+chap.~I$^{\mathrm{er}}$, \S~1, n\textsuperscript{o}~4, cor.~2 de la prop.~2).
+Utilisons pour cela
+\oldpage[IV-3]{123}
+l'hypothèse que $M\otimes_AN$ est un $C$-module \emph{plat}. Posant
+$Q=\operatorname{Ker}(\varepsilon\otimes1)=\operatorname{Im}(j\otimes1)$
+dans la suite exacte (11.2.3.1), on a les deux suites exactes
+$0\to Q\to L_0\otimes_AN\to M\otimes_AN\to0$ et
+$T\to R\otimes_AN\to Q\to0$, où les homomorphismes sont des homomorphismes
+de $C$-\emph{modules}~; utilisant l'hypothèse de platitude, on en déduit
+($\mathbf 0_{\mathrm I}$, 6.1.2) la suite exacte
+\[
+0\to Q\otimes_CC'\to(L_0\otimes_AN)\otimes_CC'
+\to(M\otimes_AN)\otimes_CC'\to0
+\]
+et d'autre part, le produit tensoriel étant exact à droite, on a la suite
+exacte
+\[
+T\otimes_CC'\to(R\otimes_AN)\otimes_CC'\to Q\otimes_CC'\to0
+\]
+d'où finalement la suite exacte
+\[
+T\otimes_CC'\to(R\otimes_AN)\otimes_CC'\to
+(L_0\otimes_AN)\otimes_CC'\to(M\otimes_AN)\otimes_CC'\to0
+\]
+Mais par définition, pour tout $C$-module $P$,
+$P\otimes_CC'=P\otimes_AA'$, d'où la conclusion.
+
+\begin{lemma}[11.2.5]
+\label{IV.11.2.5-fr}
+Soient $A$ un anneau, $\mathfrak J$ un idéal de $A$, $B$ une $A$-algèbre,
+$M$ un $B$-module, $A\to A'$ un homomorphisme d'anneaux. On pose
+$\mathfrak J'=\mathfrak JA'$, $B'=B\otimes_AA'$,
+$M'=M\otimes_AA'=M\otimes_BB'$. Soit $\mathfrak p'$ un idéal premier de
+$B'$ contenant $\mathfrak JB'$. On suppose vérifiée l'une des hypothèses
+suivantes~:
+\begin{enumerate}[label=\textit{\alph*)}]
+\item $\mathfrak J$ est nilpotent.
+\item $A'$ est noethérien, $B'$ est une $A'$-algèbre de type fini, $M'$ un
+$B'$-module de type fini.
+\end{enumerate}
+Dans ces conditions, supposons vérifiées les deux propriétés suivantes~:
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item $M\otimes_A(A/\mathfrak J)$ est un $(A/\mathfrak J)$-module plat.
+\item L'homomorphisme canonique composé
+\[
+\operatorname{Tor}_1^A(M,A/\mathfrak J)\xrightarrow{\psi_1}
+\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J')\xrightarrow{\theta}
+(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}
+\]
+(où $\psi_1$ est l'homomorphisme (11.2.1.1) et $\theta$ l'homomorphisme
+canonique d'un $B'$-module dans son localisé en $\mathfrak p'$) est nul.
+\end{enumerate}
+Alors $M'_{\mathfrak p'}$ est un $A'$-module plat.
+\end{lemma}
+
+Notons que dans l'hypothèse \emph{b)} $M'_{\mathfrak p'}$ est un
+$B'_{\mathfrak p'}$-module de type fini, $B'_{\mathfrak p'}$ une
+$A'$-algèbre noethérienne, et que $\mathfrak J'B'_{\mathfrak p'}$ est
+contenu dans le radical $\mathfrak p'B'_{\mathfrak p'}$ de
+$B'_{\mathfrak p'}$~; dans l'hypothèse \emph{a)}, $\mathfrak J'$ est nilpotent~;
+on va donc pouvoir appliquer le critère de platitude
+($\mathbf 0_{\mathrm{III}}$, 10.2.1) ou ($\mathbf 0_{\mathrm{III}}$, 10.2.2)
+suivant que \emph{a)} ou \emph{b)} est vérifiée. En premier lieu, on a
+$M'_{\mathfrak p'}\otimes_{A'}(A'/\mathfrak J')
+=(M'\otimes_{A'}(A'/\mathfrak J'))_{\mathfrak p'}
+=((M\otimes_A(A/\mathfrak J))\otimes_{A/\mathfrak J}
+(A'/\mathfrak J'))_{\mathfrak p'}$~;
+l'hypothèse (i) entraîne donc que
+$M'_{\mathfrak p'}\otimes_{A'}(A'/\mathfrak J')$ est un
+$(A'/\mathfrak J')$-module plat, compte tenu de
+($\mathbf 0_{\mathrm I}$, 6.2.1 et 6.3.2). Reste donc à voir que
+$\operatorname{Tor}_1^{A'}(M'_{\mathfrak p'},A'/\mathfrak J')=0$~; or ce
+$B'_{\mathfrak p'}$-module est égal à
+$(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}$ en vertu
+de la platitude de $B'_{\mathfrak p'}$ sur $B'$. Mais en vertu de
+l'hypothèse (ii), l'homomorphisme composé
+$\theta\circ\varphi_1:\operatorname{Tor}_1^A(M,A/\mathfrak J)\otimes_AA'
+\to(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}$ est
+nul~; par ailleurs, (11.2.4) appliqué à $C=A/\mathfrak J$ et $N=C$ montre
+(compte tenu de l'hypothèse (i)) que $\varphi_1$ est \emph{surjectif} (car
+$A'/\mathfrak J'=C\otimes_AA'$)~; donc l'homomorphisme $\theta$ est
+\emph{nul} et comme l'image par $\theta$ de
+$\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J')$ engendre le
+$B'_{\mathfrak p'}$-module
+$(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}$, ce
+dernier est nul. C.Q.F.D.
+
+\begin{theorem}[11.2.6]
+\label{IV.11.2.6-fr}
+Les notations étant celles de (8.5.1) et (8.8.1), on suppose $S_\alpha$
+quasi-compact, $X_\alpha$ et $Y_\alpha$ de présentation finie sur
+$S_\alpha$~; soient $f_\alpha:X_\alpha\to Y_\alpha$ un
+$S_\alpha$-morphisme, $\mathcal F_\alpha$ un
+$\mathcal O_{X_\alpha}$-Module quasi-cohérent de présentation finie.
+
+\oldpage[IV-3]{124}
+
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item Soient $x$ un point de $X$, $x_\lambda$ sa projection canonique dans
+$X_\lambda$. Pour que $\mathcal F$ soit $f$-plat au point $x$, il faut et il
+suffit qu'il existe $\lambda\geq\alpha$ tel que $\mathcal F_\lambda$ soit
+$f_\lambda$-plat au point $x_\lambda$.
+\item Pour que $\mathcal F$ soit $f$-plat, il faut et il suffit qu'il existe
+$\lambda\geq\alpha$ tel que $\mathcal F_\lambda$ soit $f_\lambda$-plat.
+\end{enumerate}
+\end{theorem}
+
+On peut supposer que $S_\alpha=S_0$~; comme $Y_0$ est de présentation finie
+sur $S_0$, $Y_0$ est quasi-compact, et $f_0:X_0\to Y_0$ est un morphisme de
+présentation finie (1.6.2, (v)), donc on peut aussi se borner au cas où
+$S_0=Y_0$. En outre, en vertu de la quasi-compacité de $S_0$ et du fait que
+l'ensemble d'indices $L$ est filtrant, on peut se borner au cas où
+$S_0=\operatorname{Spec}(A_0)$ est affine. De plus $X_0$ est quasi-compact,
+donc le même raisonnement montre qu'on peut aussi supposer
+$X_0=\operatorname{Spec}(B_0)$ affine~; on a alors
+$\mathcal F_0=\widetilde M_0$, où $M_0$ est un $B_0$-module de présentation
+finie, et l'énoncé (11.2.6) est dans ce cas équivalent au suivant (compte tenu
+de ($\mathbf 0_{\mathrm I}$, 6.3.1))~:
+
+\begin{corollary}[11.2.6.1]
+\label{IV.11.2.6.1-fr}
+Soient $A_0$ un anneau, $(A_\lambda)_{\lambda\in L}$ un système inductif
+filtrant de $A_0$-algèbres, $B_0$ une $A_0$-algèbre de présentation finie,
+$M_0$ un $B_0$-module de présentation finie. On pose
+$B_\lambda=B_0\otimes_{A_0}A_\lambda$,
+$M_\lambda=M_0\otimes_{A_0}A_\lambda=M_0\otimes_{B_0}B_\lambda$,
+$A=\varinjlim A_\lambda$, $B=\varinjlim B_\lambda=B_0\otimes_{A_0}A$,
+$M=\varinjlim M_\lambda=M_0\otimes_{A_0}A=M_0\otimes_{B_0}B$.
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item Soit $\mathfrak p$ un idéal premier de $B$, et pour tout $\lambda$,
+soit $\mathfrak p_\lambda$ son image réciproque dans $B_\lambda$. Pour que
+$M_{\mathfrak p}$ soit un $A$-module plat, il faut et il suffit qu'il existe
+$\lambda$ tel que $(M_\lambda)_{\mathfrak p_\lambda}$ soit un
+$A_\lambda$-module plat.
+\item Pour que $M$ soit un $A$-module plat, il faut et il suffit qu'il existe
+$\lambda$ tel que $M_\lambda$ soit un $A_\lambda$-module plat.
+\end{enumerate}
+\end{corollary}
+
+On doit seulement démontrer que les conditions sont nécessaires (2.1.4).
+Nous procéderons en plusieurs étapes.
+
+\medskip
+\noindent I) \emph{Réduction au cas où les $A_\lambda$ sont
+noethériens.} En vertu de (8.9.1), il existe un sous-anneau $A'_0$ de $A_0$,
+qui est une $\mathbf Z$-algèbre de type fini, une $A'_0$-algèbre de type fini
+$B'_0$ et un $B'_0$-module de type fini $M'_0$ tels que l'on ait
+$B_0=B'_0\otimes_{A'_0}A_0$ et $M_0=M'_0\otimes_{A'_0}A_0$~; comme on a
+$B_\lambda=B'_0\otimes_{A'_0}A_\lambda$ et
+$M_\lambda=M'_0\otimes_{A'_0}A_\lambda$, on peut remplacer $A_0$, $B_0$,
+$M_0$ par $A'_0$, $B'_0$, $M'_0$ dans l'énoncé de (11.2.6.1), en considérant
+les $A_\lambda$ comme des $A'_0$-algèbres~; on peut donc déjà supposer que
+$A_0$ est \emph{noethérien}. Soit $H$ l'ensemble des couples
+$(\lambda,C_\lambda)$, où $C_\lambda$ est une sous-$A_0$-algèbre \emph{de
+type fini} de $A_\lambda$~; ordonnons $H$ en posant
+$(\lambda,C_\lambda)\leq(\mu,D_\mu)$ si $\lambda\leq\mu$ et si
+l'homomorphisme $\varphi_{\mu\lambda}:A_\lambda\to A_\mu$ est tel que
+$\varphi_{\mu\lambda}(C_\lambda)\subset D_\mu$~; pour cet ordre $H$ est
+filtrant croissant, car si $(\lambda,C_\lambda)$ et $(\mu,D_\mu)$ sont deux
+éléments quelconques de $H$, on les majorera par un $(\nu,E_\nu)$ en prenant
+$\nu\geq\lambda$, $\nu\geq\mu$ dans $L$, puis $E_\nu$ égal à la
+sous-$A_0$-algèbre de $A_\nu$ engendrée par
+$\varphi_{\nu\lambda}(C_\lambda)$ et $\varphi_{\nu\mu}(D_\mu)$. Pour un
+élément $\xi=(\lambda,C_\lambda)$ de $H$, on posera $A_\xi=C_\lambda$, et
+pour $\xi\leq\eta=(\mu,D_\mu)$ (donc $\lambda\leq\mu$ et
+$\varphi_{\mu\lambda}(C_\lambda)\subset D_\mu$),
+$\varphi_{\eta\xi}:A_\xi\to A_\eta$ sera la restriction à $C_\lambda$ de
+$\varphi_{\mu\lambda}$, considéré comme homomorphisme dans $D_\mu$~; il est
+clair que l'on obtient ainsi un système inductif filtrant de $A_0$-algèbres.
+On pose $B_\xi=B_0\otimes_{A_0}A_\xi$,
+$M_\xi=M_0\otimes_{A_0}A_\xi$~; cette fois les $A_\xi$ sont
+\emph{noethériens}~; en outre la formule de la double limite inductive (Bourbaki,
+\emph{Alg.}, chap.~II, 3\textsuperscript{e} éd., \S~6, n\textsuperscript{o}~4, prop.~7) prouve que
+l'on a encore
+$\varinjlim_HA_\xi=A$, $\varinjlim_HB_\xi=B$,
+$\varinjlim_HM_\xi=M$. Supposons (11.2.6.1) prouvé pour le système inductif
+$(A_\xi)_{\xi\in H}$~; soit $\mathfrak p$ un idéal premier de $B$,
+tel que $M_{\mathfrak p}$ soit un $A$-module plat~; il existe alors
+$\xi\in H$ tel que, si $\mathfrak p_\xi$ est l'image
+\oldpage[IV-3]{125}
+réciproque de
+$\mathfrak p$ dans $B_\xi$, $(M_\xi)_{\mathfrak p_\xi}$ soit un
+$A_\xi$-module plat. Soit $\xi=(\lambda,C_\lambda)$, de sorte que
+l'injection $A_\xi=C_\lambda\to A_\lambda$ donne un homomorphisme
+$B_\xi=B_0\otimes_{A_0}C_\lambda\to B_\lambda=B_0\otimes_{A_0}A_\lambda$,
+et si $\mathfrak p_\lambda$ est l'image réciproque de $\mathfrak p$ dans
+$B_\lambda$, $\mathfrak p_\xi$ est l'image réciproque de
+$\mathfrak p_\lambda$ dans $B_\xi$~; on a par suite
+\[
+(M_\lambda)_{\mathfrak p_\lambda}
+=(M_\xi\otimes_{C_\lambda}A_\lambda)_{\mathfrak p_\lambda}
+=((M_\xi)_{\mathfrak p_\xi}\otimes_{C_\lambda}A_\lambda)_{\mathfrak p_\lambda},
+\]
+donc $(M_\lambda)_{\mathfrak p_\lambda}$ est un $A_\lambda$-module plat
+($\mathbf 0_{\mathrm I}$, 6.2.1 et 6.3.2). On traite de même le cas (ii) de
+l'énoncé. Nous pouvons donc par la suite supposer les $A_\lambda$
+noethériens pour $\lambda\in L$ (mais non nécessairement $A$ lui-même).
+
+\medskip
+\noindent\textbf{II)} \emph{Réduction de l'énoncé global (ii) à l'énoncé
+ponctuel (i).} Supposons que $\mathcal F$ soit $f$-plat. Pour tout $\lambda$,
+soit $U_\lambda$ l'ensemble des $x_\lambda\in X_\lambda$ tels que
+$\mathcal F_\lambda$ soit $f_\lambda$-plat au point $x_\lambda$~; on sait
+que $U_\lambda$ est \emph{ouvert} dans $X_\lambda$ puisque $S_\lambda$ est
+noethérien et $f_\lambda$ de type fini (11.1.1)~; soit
+$V_\lambda=v_\lambda^{-1}(U_\lambda)$ son image réciproque dans $X$. Comme,
+par hypothèse, pour tout $x\in X$, il y a un $\lambda$ tel que
+$\mathcal F_\lambda$ soit $f_\lambda$-plat au point $x_\lambda$, projection
+de $x$ dans $X_\lambda$, cela signifie que $x\in V_\lambda$ pour un
+$\lambda$~; autrement dit, $X$ est réunion des $V_\lambda$. D'ailleurs
+(2.1.4), pour $\lambda\leq\mu$, on a $V_\lambda\subset V_\mu$, donc, comme
+$X$ est quasi-compact, il existe un indice $\mu$ tel que $X=V_\mu$. Comme
+les $X_\lambda$ sont quasi-compacts, il résulte de (8.3.4) qu'il existe un
+indice $\nu\geq\mu$ tel que $v_{\mu\nu}^{-1}(U_\mu)=X_\nu$~; mais par
+(2.1.4), cela entraîne que $\mathcal F_\nu$ est $f_\nu$-plat.
+
+\medskip
+\noindent\textbf{III)} \emph{Fin de la démonstration.} Il reste à prouver
+(i) en supposant $S_0$ affine et noethérien~; si $y_0$ est la projection de
+$x$ dans $S_0$, on peut en outre, en vertu de (2.1.4) et de
+($\mathbf I$, 3.6.5), remplacer $S_0$ par
+$\operatorname{Spec}(\mathcal O_{y_0})$, autrement dit on peut se borner au
+cas où $A_0$ est un anneau \emph{local} noethérien, d'idéal maximal
+$\mathfrak m_0=\mathfrak j_{y_0}$~; par définition, $\mathfrak m_0$ est
+l'image réciproque de l'idéal premier $\mathfrak p=\mathfrak j_x$ de $B$,
+et $M_{\mathfrak p}$ est supposé être un $A$-module plat~; on a donc en
+particulier $\operatorname{Tor}_1^A(A/\mathfrak m_0A,M_{\mathfrak p})=0$,
+ce qui s'écrit aussi, puisque les $\operatorname{Tor}_1^A(A/\mathfrak m_0A,M)$
+sont des $B$-modules et que $B_{\mathfrak p}$ est plat sur $B$,
+$(\operatorname{Tor}_1^A(A/\mathfrak m_0A,M))_{\mathfrak p}=0$.
+Notons maintenant que $\operatorname{Tor}_1^{A_0}(A_0/\mathfrak m_0,M_0)$
+est un $B_0$-module \emph{de type fini}, car on peut le définir en prenant
+une résolution de $A_0/\mathfrak m_0$ par des $A_0$-modules libres
+\emph{de type fini} ($A_0$ étant noethérien) et en tensorisant par $M_0$, ce
+qui donne des $B_0$-modules de type fini~; comme $B_0$ est noethérien,
+l'homologie du complexe ainsi obtenu est bien formée de $B_0$-modules de
+type fini. Soit $(t_i^0)_{1\leq i\leq m}$ un système de générateurs du
+$B_0$-module $\operatorname{Tor}_1^{A_0}(A_0/\mathfrak m_0,M_0)$ et soit
+$t_i$ l'image canonique (11.2.1.1) de $t_i^0$ dans
+$\operatorname{Tor}_1^A(A/\mathfrak m_0A,M)$. L'hypothèse entraîne qu'il
+existe un $h\in B-\mathfrak p$ tel que $ht_i=0$ pour $1\leq i\leq m$. Or,
+on a (11.2.2.1)
+\[
+\operatorname{Tor}_1^A(A/\mathfrak m_0A,M)=
+\varinjlim\operatorname{Tor}_1^{A_\lambda}
+(A_\lambda/\mathfrak m_0A_\lambda,M_\lambda)~;
+\]
+il existe donc un $\lambda$ tel que, si les $t_i^\lambda$ sont les images
+des $t_i^0$ dans
+$\operatorname{Tor}_1^{A_\lambda}(A_\lambda/\mathfrak m_0A_\lambda,
+M_\lambda)$, il existe $h_\lambda\in B_\lambda$ d'image $h$, tel que
+$h_\lambda t_i^\lambda=0$ pour $1\leq i\leq m$. Soit
+$\mathfrak p_\lambda=\mathfrak j_{x_\lambda}$ l'idéal premier de
+$B_\lambda$ image réciproque de $\mathfrak p$~; on a
+$h_\lambda\in B_\lambda-\mathfrak p_\lambda$, donc les images canoniques
+des $t_i^0$ dans
+$(\operatorname{Tor}_1^{A_\lambda}(A_\lambda/\mathfrak m_0A_\lambda,
+M_\lambda))_{\mathfrak p_\lambda}$ sont nulles et par suite
+l'homomorphisme
+$\operatorname{Tor}_1^{A_0}(A_0/\mathfrak m_0,M_0)\to
+(\operatorname{Tor}_1^{A_\lambda}(A_\lambda/\mathfrak m_0A_\lambda,
+M_\lambda))_{\mathfrak p_\lambda}$ est nul. Les conditions du lemme
+(11.2.5) sont donc remplies ($A_0/\mathfrak m_0$ étant un corps), et
+$(M_\lambda)_{\mathfrak p_\lambda}$ est un $A_\lambda$-module plat, ce qui
+achève de démontrer le théorème.
+
+\begin{corollary}[11.2.7]
+\label{IV.11.2.7-fr}
+Soient $S=\operatorname{Spec}(A)$ un schéma affine, $f:X\to S$ un morphisme,
+$\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent, $x$ un point de $X$.
+Les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $f$ est un morphisme de présentation finie, $\mathcal F$ est un
+$\mathcal O_X$-Module de présentation finie et $\mathcal F$ est $f$-plat au
+point $x$ (resp. $f$-plat).

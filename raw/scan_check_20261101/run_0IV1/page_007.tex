@@ -1,0 +1,100 @@
+% from ega0-14-fr.tex
+\oldpage[0\textsubscript{IV-1}]{7}
+\begin{corollary}[14.1.5]
+\label{0.14.1.5-fr}
+Soient $X$ un espace topologique, $x$ un point de $X$, $U$ un voisinage de
+$x$, $Y_i$ ($1\leq i\leq n$) des parties fermées de $U$ telles que
+$x\in Y_i$ pour tout $i$ et que $U$ soit réunion des $Y_i$. Alors on a
+\[
+  \dim_x(X)=\sup_i\bigl(\dim_x(Y_i)\bigr).
+  \tag{14.1.5.1}\label{0.14.1.5.1-fr}
+\]
+\end{corollary}
+
+\begin{proof}
+Il résulte de (14.1.4, (ii)) que l'on a
+$\dim_x(X)=\inf_V(\sup_i(\dim(Y_i\cap V)))$ lorsque $V$ parcourt l'ensemble
+des voisinages ouverts de $x$ contenus dans $U$~; de même on a
+$\dim_x(Y_i)=\inf_V(\dim(Y_i\cap V))$ pour tout $i$. Le corollaire est donc
+évident si
+\[
+  \sup_i\bigl(\dim_x(Y_i)\bigr)=+\infty~;
+\]
+dans le cas contraire, il y a un voisinage ouvert $V_0\subset U$ de $x$ tel
+que $\dim(Y_i\cap V)=\dim_x(Y_i)$ pour $1\leq i\leq n$ et pour tout
+$V\subset V_0$, d'où la conclusion.
+\end{proof}
+
+\begin{proposition}[14.1.6]
+\label{0.14.1.6-fr}
+Pour tout espace topologique $X$, on a
+$\dim(X)=\sup_{x\in X}\dim_x(X)$.
+\end{proposition}
+
+\begin{proof}
+Il résulte de la définition (14.1.2) et de la prop. (14.1.4) que
+$\dim_x(X)\leq\dim(X)$ pour tout $x\in X$. D'autre part, soit
+$Z_0\subset Z_1\subset\cdots\subset Z_n$ une chaîne de parties fermées
+irréductibles de $X$, et soit $x\in Z_0$~; pour tout ouvert $U\subset X$
+contenant $x$, $U\cap Z_i$ est irréductible ($0_{\mathrm I}$, 2.1.6) et
+fermé dans $U$, et comme on a $\overline{U\cap Z_i}=Z_i$ dans $X$, les
+$U\cap Z_i$ sont distincts deux à deux~; donc on a $\dim(U)\geq n$, ce qui
+achève la démonstration.
+\end{proof}
+
+\begin{corollary}[14.1.7]
+\label{0.14.1.7-fr}
+Si $(X_\alpha)$ est un recouvrement ouvert de $X$, ou un recouvrement fermé
+localement fini de $X$, on a
+$\dim(X)=\sup_\alpha(\dim(X_\alpha))$.
+\end{corollary}
+
+\begin{proof}
+Si $X_\alpha$ est un voisinage de $x\in X$, on a
+$\dim_x(X)\leq\dim(X_\alpha)$, d'où la première assertion. D'autre part, si
+les $X_\alpha$ sont fermés et si $U$ est un voisinage de $x\in X$ qui ne
+rencontre qu'un nombre fini d'ensembles $X_\alpha$, on a
+\[
+  \dim_x(X)\leq\dim(U)=\sup_\alpha\bigl(\dim(U\cap X_\alpha)\bigr)
+  \leq\sup_\alpha\bigl(\dim(X_\alpha)\bigr)
+\]
+d'après (14.1.4), d'où la seconde assertion.
+\end{proof}
+
+\begin{corollary}[14.1.8]
+\label{0.14.1.8-fr}
+Soit $X$ un espace de Kolmogoroff ($0_{\mathrm I}$, 2.1.3) noethérien, et
+soit $F$ l'ensemble des points fermés de $X$. Alors
+$\dim(X)=\sup_{x\in F}\dim_x(X)$.
+\end{corollary}
+
+\begin{proof}
+Avec les notations de la démonstration de (14.1.6), il suffit de remarquer
+qu'il existe dans $Z_0$ un point fermé ($0_{\mathrm I}$, 2.1.3).
+\end{proof}
+
+\begin{proposition}[14.1.9]
+\label{0.14.1.9-fr}
+Soit $X$ un espace de Kolmogoroff noethérien non vide. Pour que
+$\dim(X)=0$, il faut et il suffit que $X$ soit fini et discret.
+\end{proposition}
+
+\begin{proof}
+Si un espace $X$ est séparé (et \emph{a fortiori} si $X$ est un espace
+discret), les seuls ensembles fermés irréductibles de $X$ sont réduits à un
+point, donc $\dim(X)=0$. Inversement, supposons que $X$ soit un espace de
+Kolmogoroff noethérien tel que $\dim(X)=0$~; comme toute composante
+irréductible de $X$ contient un point fermé ($0_{\mathrm I}$, 2.1.3), elle
+doit être réduite à ce point. Comme $X$ n'a qu'un nombre fini de composantes
+irréductibles, il est fini et discret.
+\end{proof}
+
+\begin{corollary}[14.1.10]
+\label{0.14.1.10-fr}
+Soit $X$ un espace de Kolmogoroff noethérien. Pour qu'un point $x\in X$ soit
+isolé, il faut et il suffit que $\dim_x(X)=0$.
+\end{corollary}
+
+\begin{proof}
+La condition est évidemment nécessaire (sans hypothèse sur $X$). Elle est
+suffisante,

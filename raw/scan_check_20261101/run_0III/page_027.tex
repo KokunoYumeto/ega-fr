@@ -1,0 +1,78 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{27}
+En effet, d'après les conditions a), b), c) de
+(\hyperref[0.11.1.1-fr]{11.1.1}), dire que
+$Z_{r+1}(E_2^{pq})=Z_r(E_2^{pq})$ équivaut à dire que $d_r^{pq}=0$, et dire
+que
+$B_r(E_2^{p+r,q-r+1})=B_{r+1}(E_2^{p+r,q-r+1})$ équivaut aussi à dire que
+$d_r^{pq}=0$~; le lemme résulte aussitôt de cette remarque.
+\end{proof}
+\subsection{La suite spectrale d'un complexe filtré}
+\label{subsection:0.11.2-fr}
+
+\begin{env}[11.2.1]
+\label{0.11.2.1-fr}
+Étant donnée une catégorie abélienne $\mathcal C$, nous conviendrons de
+désigner par des notations telles que $K^\bullet$ les \emph{complexes}
+$(K^i)_{i\in\mathbb Z}$ d'objets de $\mathcal C$ dans lesquels l'opérateur de
+dérivation est de degré $+1$, par des notations telles que $K_\bullet$ les
+complexes $(K_i)_{i\in\mathbb Z}$ d'objets de $\mathcal C$ dans lesquels
+l'opérateur de dérivation est de degré $-1$. À tout complexe
+$K^\bullet=(K^i)$ dont l'opérateur de dérivation $d$ est de degré $+1$, on
+peut associer un complexe $K'_\bullet=(K'_i)$ en posant $K'_i=K^{-i}$,
+l'opérateur de dérivation $K'_i\to K'_{i-1}$ étant l'opérateur
+$d:K^{-i}\to K^{-i+1}$~; et \emph{vice versa}, ce qui permettra suivant les
+circonstances de considérer l'un ou l'autre type de complexes et de traduire
+tout résultat pour l'un des types en résultats pour l'autre. Nous désignerons
+de même par des notations telles que $K^{\bullet\bullet}=(K^{ij})$ (resp.
+$K_{\bullet\bullet}=(K_{ij})$) des \emph{bicomplexes} d'objets de
+$\mathcal C$ dans lesquels les \emph{deux} opérateurs de dérivation sont de
+degré $+1$ (resp. $-1$)~; on passe encore de l'un à l'autre type en changeant
+les signes des indices, et on a des notations et remarques analogues pour des
+multicomplexes quelconques. La notation $K^\bullet$ ou $K_\bullet$ sera aussi
+utilisée pour des \emph{objets gradués} de $\mathcal C$, de type $\mathbb Z$,
+qui ne sont pas nécessairement des complexes (ou que l'on peut considérer
+comme tels pour des opérateurs de dérivation nuls)~; par exemple, nous
+écrirons
+$\mathrm H^\bullet(K^\bullet)=(\mathrm H^i(K^\bullet))_{i\in\mathbb Z}$ la
+\emph{cohomologie} d'un complexe $K^\bullet$ dont l'opérateur de dérivation
+est de degré $+1$, par
+$\mathrm H_\bullet(K_\bullet)=(\mathrm H_i(K_\bullet))_{i\in\mathbb Z}$
+l'\emph{homologie} d'un complexe $K_\bullet$ dont l'opérateur de dérivation
+est de degré $-1$~; quand on passe de $K^\bullet$ à $K'_\bullet$ par
+l'opération décrite ci-dessus, on a
+$\mathrm H_i(K'_\bullet)=\mathrm H^{-i}(K^\bullet)$.
+
+Rappelons à ce propos que pour un complexe $K^\bullet$ (resp. $K_\bullet$),
+nous écrirons en général
+$Z^i(K^\bullet)=\operatorname{Ker}(K^i\to K^{i+1})$ («~objet des cocycles~»)
+et $B^i(K^\bullet)=\operatorname{Im}(K^{i-1}\to K^i)$ («~objet des
+cobords~») (resp.
+$Z_i(K_\bullet)=\operatorname{Ker}(K_i\to K_{i-1})$ («~objet des cycles~»)
+et $B_i(K_\bullet)=\operatorname{Im}(K_{i+1}\to K_i)$ («~objet des
+bords~»)) de sorte que
+$\mathrm H^i(K^\bullet)=Z^i(K^\bullet)/B^i(K^\bullet)$ (resp.
+$\mathrm H_i(K_\bullet)=Z_i(K_\bullet)/B_i(K_\bullet)$).
+
+Si $K^\bullet=(K^i)$ (resp. $K_\bullet=(K_i)$) est un complexe dans
+$\mathcal C$, et $T:\mathcal C\to\mathcal C'$ un foncteur de $\mathcal C$
+dans une catégorie abélienne $\mathcal C'$, nous désignerons par
+$T(K^\bullet)$ (resp. $T(K_\bullet)$) le complexe $(T(K^i))$ (resp.
+$(T(K_i))$) dans $\mathcal C'$.
+
+Nous ne revenons pas sur la définition des $\partial$-foncteurs (T, 2.1),
+sauf pour signaler que nous dirons aussi $\partial$-foncteur au lieu de
+$\partial^*$-foncteur lorsque le morphisme $\partial$ diminue le degré d'une
+unité, le contexte devant chaque fois préciser ce point s'il peut y avoir
+doute.
+
+Enfin, nous dirons qu'un \emph{objet gradué} $(A_i)_{i\in\mathbb Z}$ de
+$\mathcal C$ est \emph{limité inférieurement} (resp. \emph{supérieurement})
+s'il existe $i_0$ tel que $A_i=0$ pour $i<i_0$ (resp. $i>i_0$).
+\end{env}
+
+\begin{env}[11.2.2]
+\label{0.11.2.2-fr}
+Soit $K^\bullet$ un complexe de $\mathcal C$ dont l'opérateur de dérivation
+$d$ est de degré $+1$, et supposons-le muni d'une \emph{filtration}
+$F(K^\bullet)=(F^p(K^\bullet))_{p\in\mathbb Z}$ formé de sous-

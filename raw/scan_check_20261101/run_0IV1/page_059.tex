@@ -1,0 +1,78 @@
+% from ega0-18-fr.tex
+\oldpage[0\textsubscript{IV-1}]{59}
+
+\begin{proof}
+En effet, $u$ ne peut être que l'application
+$(x,s)\mapsto(v(x),w(s))$ et il reste à vérifier que c'est un
+$A$-homomorphisme d'anneaux, ce qui résulte trivialement de la définition
+(18.2.3). On notera que $u$ rend aussi commutatif le diagramme
+\[
+  \xymatrix@C=2.2pc@R=1.5pc{
+    D_B(L)\ar[r]^u\ar[d] & D_{B'}(L')\ar[d]\\
+    B\ar[r]_v & B'
+  }
+\]
+où cette fois les flèches verticales sont les augmentations.
+\end{proof}
+
+\begin{proposition}[18.2.10]
+\label{0.18.2.10-fr}
+Soient $B$ un $A$-anneau, $L$ un $B$-bimodule, $E$ une $A$-extension de $B$
+par $L$. On définit une application bijective de l'ensemble $G$ des
+homomorphismes de $B$-anneaux de $B$ dans $E$ (autrement dit, l'ensemble des
+$A$-homomorphismes inverses à droite de l'augmentation $E\to B$) sur
+l'ensemble $G'$ des $A$-équivalences de $D_B(L)$ sur $E$ en faisant
+correspondre à tout $g\in G$ la $A$-équivalence
+$g':(x,s)\mapsto g(x)+s$~; l'application réciproque fait correspondre à tout
+$g'\in G'$ le $B$-homomorphisme $x\mapsto g'(x,0)$.
+\end{proposition}
+
+\begin{proof}
+Ceci résulte aussitôt des définitions.
+\end{proof}
+
+\subsection{Le groupe des classes de $A$-extensions}
+\label{subsection:0.18.3-fr}
+
+\begin{env}[18.3.1]
+\label{0.18.3.1-fr}
+Considérons un $A$-anneau $B$ et un $B$-bimodule $L$ fixés~; alors la relation
+«~$E$ et $E'$ sont $A$-équivalentes~» entre $A$-extensions $E$, $E'$ de $B$
+par $L$ est une relation d'équivalence, et pour cette relation on peut parler
+de l'\emph{ensemble} des classes de $A$-extensions $A$-équivalentes de $B$ par
+$L$. Il suffit pour le voir de remarquer que si, pour tout $x\in B$, $c_x$ est
+un élément de $E$ dont l'image dans $B$ est $x$, tout $z\in E$ s'écrit d'une
+manière et d'une seule sous la forme $c_x+t$, où $t\in L$, et l'on peut écrire
+\[
+  c_{x+y}=c_x+c_y+\varphi(x,y),\qquad
+  c_{xy}=c_xc_y+\psi(x,y),
+\]
+où $\varphi(x,y)$ et $\psi(x,y)$ sont des éléments de $L$, les applications
+$\varphi$ et $\psi$ de $B\times B$ dans $L$ devant vérifier des conditions
+exprimant que $E$ est un $A$-anneau, qu'il est inutile d'écrire ici. Toute
+$A$-extension de $B$ par $L$ est donc $A$-équivalente à une $A$-extension dont
+$B\times L$ est l'ensemble sous-jacent, d'où on tire aussitôt notre conclusion.
+\end{env}
+
+\begin{env}[18.3.2]
+\label{0.18.3.2-fr}
+Le $A$-anneau $B$ étant fixé, désignons provisoirement par $T(L)$ l'ensemble
+des classes de $A$-extensions de $B$ par $L$. Pour tout $B$-homomorphisme
+$w:L\to L'$ de $B$-bimodules, on définit canoniquement une application
+$T(w):T(L)\to T(L')$ en faisant correspondre à la classe d'une $A$-extension
+$E$ de $B$ par $L$ la classe de la $A$-extension $E\oplus_LL'$ déduite de $E$
+par $w$, en vertu de (18.2.8). Si $w':L'\to L''$ est un second homomorphisme
+de $B$-bimodules, on a en outre
+\begin{equation}
+\label{0.18.3.2.1-fr}
+\tag{18.3.2.1}
+  T(w'\circ w)=T(w')\circ T(w).
+\end{equation}
+En effet, on sait qu'il existe un isomorphisme canonique de $A$-bimodules
+\[
+  E\oplus_LL''\xrightarrow{\sim}(E\oplus_LL')\oplus_{L'}L''
+\]
+en vertu des propriétés générales de limites inductives (cf. par exemple
+($\mathrm{I}$, 3.3.9)), et il est immédiat de vérifier que c'est bien une
+$A$-équivalence de $A$-extensions, d'où
+

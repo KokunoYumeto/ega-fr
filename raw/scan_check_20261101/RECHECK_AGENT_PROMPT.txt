@@ -1,0 +1,34 @@
+EGA: DECIDE THE CANDIDATE MISPRINTS OF THE PRINT (FRENCH_RECHECK.md)
+
+The French EGA has two editions: a diplomatic one that keeps the print's misprints, and a corrected one that gives the
+correct reading at each misprint (recorded in user\Documents\ega_scan_check_20261101\MISPRINTS.json). The
+English and Spanish translations follow the corrected edition. FRENCH_RECHECK.md (same folder) lists places where the
+print may contain a misprint that the corrected edition does not yet correct: read every candidate in its "Further
+candidates" sections and the later bullets (not the four places at the top, which are settled).
+
+For each candidate:
+1. Read the print: the scan strips of the page are in the run folders of the scan check, e.g.
+   user\Documents\ega_scan_check_20261101\run_0IV1\page_089_s1.png ... _s4.png (four horizontal strips,
+   top to bottom; run_I_a, run_I_b, run_II, run_III1, run_III2, run_IV1, run_0IV1, run_IV2, run_IV3, run_IV4,
+   run_IVback ...: find the folder whose page_NNN.tex has the matching \oldpage[PART]{N} marker). If no strip exists,
+   say so.
+2. Read the corrected French at that place (ega-fr\editions\2026-10-24-r20\current\packages\...\native) and decide
+   with a complete mathematical argument whether the printed reading is wrong and what the correct reading is.
+   Typical: a letter, index, sign, reference number or word that the argument shows to be a slip. Do not "correct"
+   a statement that is merely weaker, unusual or differently normalized; do not correct the mathematics of the
+   original (a genuine error of Grothendieck-Dieudonné's argument is not a misprint): mark it "not a misprint" and
+   explain.
+3. Decision per candidate: "misprint" (with the exact correct reading), "not_misprint", or "unclear".
+
+Write user\Documents\ega_scan_check_20261101\RECHECK_DECISIONS.json: a JSON list, one object per candidate:
+  {"candidate": "<short name>", "part": "<as in \oldpage>", "page": N, "print": "<printed reading, verified on the
+   scan or 'no strip'>", "decision": "misprint|not_misprint|unclear", "correct": "<correct reading>",
+   "argument": "<the mathematical reason, complete but short>",
+   "edits": [{"file": "<absolute path>", "old": "<exact text, unique in the file>", "new": "<text>"} ...]}
+The "edits" (only for "misprint"): the corrected French file, and the same place in the English
+(ega-en\tex\...) and, if it exists, the Spanish corrected edition (ega-fga-es\editions\<part>_CURRENT or the
+single-edition folder): each "old" must occur exactly once in its file and change only the misprint. Do NOT edit any
+file yourself; the coordinator applies the edits and records the misprints.
+
+Economy: read only the strips and passages you need; no whole-file reads. Final answer: one line per candidate
+(name: decision, correct reading). Name any helper script with the prefix recheck_ (the scratchpad is shared).

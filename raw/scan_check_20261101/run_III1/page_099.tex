@@ -1,0 +1,106 @@
+% from ega3-1-fr.tex
+\oldpage[III]{99}
+\item[{\rm(iii)}] $H^r(X,\mathcal O_X(*))$ est un $A$-module libre ayant
+une base formée d'éléments $\xi_{p_0,\ldots,p_r}$, où $p_i>0$ pour
+$0\leq i\leq r$, $\xi_{p_0,\ldots,p_r}$ étant de degré
+$-|\mathbf p|=-(p_0+\cdots+p_r)$, et le produit
+$T_i\xi_{p_0,\ldots,p_r}$ étant
+$\xi_{p_0,\ldots,p_i-1,\ldots,p_r}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Remarquons en effet que, dans la suite exacte
+(\hyperref[III.2.1.5.2-fr]{2.1.5.2}) appliquée à
+$M=S=A[T_0,\ldots,T_r]$, on a
+$H^0((\mathbf T),S)=0$ et $H^1((\mathbf T),S)=0$ d'après
+(\hyperref[III.2.1.10.1-fr]{2.1.10.1}), et que la prop.
+(\hyperref[III.2.1.5-fr]{2.1.5}) s'applique à $U=X$, puisque $X$ est
+réunion des $D_+(T_i)$ (II, 2.3.14). Il reste à identifier l'application
+$S\to H^0(X,\mathcal O_X(*))$ de la suite exacte
+(\hyperref[III.2.1.5.2-fr]{2.1.5.2}) et l'application canonique $\alpha$~;
+mais cela résulte de l'identification canonique de
+$H^0(U,\mathcal O_X(*))$ et de $H^0(\mathfrak U,\mathcal O_X(*))$.
+\end{proof}
+
+\begin{corollary}[2.1.13]
+\label{III.2.1.13-fr}
+Les seules valeurs de $(i,n)$ pour lesquelles on puisse avoir
+$H^i(X,\mathcal O_X(n))\neq0$ sont les suivantes~:
+$i=0$ et $n\geq0$, $i=r$ et $n\leq-(r+1)$.
+\end{corollary}
+
+On notera que si $A\neq0$, on a effectivement
+$H^i(X,\mathcal O_X(n))\neq0$ pour les couples énumérés dans
+(\hyperref[III.2.1.13-fr]{2.1.13})~; cela résulte de
+(\hyperref[III.2.1.12-fr]{2.1.12}), puisque $S_n$ est alors $\neq0$ pour
+tous les degrés $n\geq0$.
+
+Dans les applications qui seront faites dans ce chapitre, nous utiliserons
+surtout le résultat moins précis~:
+
+\begin{corollary}[2.1.14]
+\label{III.2.1.14-fr}
+Les $A$-modules $H^i(X,\mathcal O_X(n))$ sont libres de type fini~; si
+$i>0$, ils sont nuls pour $n>0$.
+\end{corollary}
+
+\begin{proposition}[2.1.15]
+\label{III.2.1.15-fr}
+Soient $Y$ un préschéma, $\mathcal E$ un $\mathcal O_Y$-Module localement
+libre de rang $r+1$, $X=\mathbf P(\mathcal E)$ le fibré projectif défini
+par $\mathcal E$, $f:X\to Y$ le morphisme structural. Les seules valeurs de
+$i$ et $n$ pour lesquelles $R^if_*(\mathcal O_X(n))\neq0$ sont
+$i=0$ et $n\geq0$, $i=r$ et $n\leq-(r+1)$~; en outre, l'homomorphisme
+canonique (II, 3.3.2)
+\[
+\alpha:S_{\mathcal O_Y}(\mathcal E)
+\longrightarrow\Gamma_*(\mathcal O_X)
+=R^0f_*(\mathcal O_X(*))
+=\bigoplus_{n\in\mathbb Z}f_*(\mathcal O_X(n))
+\]
+est un isomorphisme.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y$ affine d'anneau
+$A$ et $\mathcal E=\widetilde E$, où $E=A^{r+1}$~; on est alors
+immédiatement ramené à (\hyperref[III.2.1.12-fr]{2.1.12}), compte tenu de
+(1.4.11).
+\end{proof}
+
+\begin{env}[2.1.16]
+\label{III.2.1.16-fr}
+\emph{Remarque.} --- Nous compléterons plus tard les résultats de
+(\hyperref[III.2.1.15-fr]{2.1.15}) en démontrant les propositions
+suivantes~: posons
+\[
+\boldsymbol\omega=f^*\left(\bigwedge^{r+1}\mathcal E\right)(-r-1),
+\]
+qui est un $\mathcal O_X$-Module inversible. Alors~:
+\begin{enumerate}
+\item[{\rm(i)}] On a un isomorphisme canonique
+\begin{equation}
+\label{III.2.1.16.1-fr}
+\tag{2.1.16.1}
+\rho:R^rf_*(\boldsymbol\omega)\xleftarrow{\sim}\mathcal O_Y.
+\end{equation}
+\item[{\rm(ii)}] L'accouplement par cup-produit (0, 12.2.2)
+\begin{equation}
+\label{III.2.1.16.2-fr}
+\tag{2.1.16.2}
+R^rf_*(\mathcal O_X(n))\times R^0f_*(\boldsymbol\omega(-n))
+\longrightarrow R^rf_*(\boldsymbol\omega)
+\end{equation}
+composé avec l'isomorphisme $\rho^{-1}$, définit un \emph{isomorphisme}
+de $R^rf_*(\mathcal O_X(n))$ sur le \emph{dual} du $\mathcal O_Y$-Module
+localement libre
+\[
+R^0f_*(\boldsymbol\omega(-n))
+=\left(\bigwedge^{r+1}\mathcal E\right)
+\otimes_{\mathcal O_Y}\bigl(S_{\mathcal O_Y}(\mathcal E)\bigr)_{-n}.
+\]
+\end{enumerate}
+\end{env}
+\subsection{Le théorème fondamental des morphismes projectifs}
+\label{subsection:III.2.2-fr}

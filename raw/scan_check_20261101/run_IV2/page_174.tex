@@ -1,0 +1,78 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{174}
+La question étant locale sur $X$ et $Y$, on peut supposer que
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(B)$, où $A$ et $B$ sont
+deux anneaux intègres et intégralement clos, de corps des fractions $K$ et
+$L$ respectivement; supposons d'abord que $A$ soit une $k$-algèbre de type
+fini, donc $K$ une extension de type fini de $k$. Par platitude,
+$A\otimes_k B$ est une sous-$k$-algèbre de $K\otimes_k L$; or
+$K\otimes_k L$ est un anneau noethérien normal (en vertu de (6.7.4.1) ou
+(6.14.2)), donc composé direct d'anneaux intègres $C_i$ en nombre fini, de
+sorte que si $E_i$ est le corps des fractions de $C_i$, le composé direct
+$E$ des $E_i$ est l'anneau total des fractions de $K\otimes_k L$; c'est
+d'ailleurs aussi l'anneau total des fractions de $A\otimes_k B$, puisque
+$K\otimes_k L$ est un anneau de fractions de $A\otimes_k B$. Cela étant,
+on peut écrire
+$A\otimes_k B=(A\otimes_k L)\cap(K\otimes_k B)$, et il résulte de (6.14.2)
+que $A\otimes_k L$ et $K\otimes_k B$ sont normaux, donc $A\otimes_k B$ est
+normal en vertu de (6.14.1.1).
+
+Considérons maintenant le cas général; $A$ est alors réunion de la famille
+filtrante croissante de ses sous-$k$-algèbres de type fini $A_\alpha$,
+donc $A\otimes_k B$ est limite inductive des anneaux normaux
+$A_\alpha\otimes_k B$. Pour prouver que $A\otimes_k B$ est normal, il
+suffit donc (5.13.6) de prouver que toute composante irréductible de
+$\operatorname{Spec}(A_\beta\otimes_k B)$ domine une composante
+irréductible de $\operatorname{Spec}(A_\alpha\otimes_k B)$ pour
+$A_\alpha\subset A_\beta$, ce qui résulte aussitôt de ce que $B$ est un
+$k$-module plat, de (2.3.7, (ii)) et du fait que $A_\alpha$ et $A_\beta$
+sont des anneaux intègres.
+\end{proof}
+
+\begin{proposition}[6.14.4]
+\EGAReaderTarget{ega4.c04.prop.6-14-4}{IV.2.s6.14.4-fr}
+Soient $A$ un anneau noethérien, $A'$ une $A$-algèbre noethérienne telle
+que le morphisme $\operatorname{Spec}(A')\to\operatorname{Spec}(A)$ soit
+normal. Soient $B$ une $A$-algèbre, $C$ la fermeture intégrale de $A$ dans
+$B$; on pose $B'=B\otimes_A A'$, $C'=C\otimes_A A'$, $C'$ s'identifiant à
+un sous-anneau de $B'$; alors $C'$ est la fermeture intégrale de $A'$ dans
+$B'$.
+\end{proposition}
+
+\begin{proof}
+Nous procéderons en plusieurs étapes.
+
+I) \emph{Réduction au cas où l'anneau $B$ est réduit.} --- Posons
+$B_0=B_{\mathrm{red}}=B/\mathfrak N$, où $\mathfrak N$ est le nilradical
+de $B$, et soit $C_0$ la fermeture intégrale de $A$ dans $B_0$. On a le
+lemme suivant:
+
+\begin{lemma}[6.14.4.1]
+\label{IV.2.s6.14.4.1-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $B_0=B/\mathfrak n$ le quotient
+de $B$ par un nilidéal. Si $C_0$ est la fermeture intégrale de $A$ dans
+$B_0$, l'image réciproque $C$ de $C_0$ par l'homomorphisme canonique
+$\varphi:B\to B_0$ est la fermeture intégrale de $A$ dans $B$.
+\end{lemma}
+
+\begin{proof}
+En effet, si $x\in B$ est tel que $\varphi(x)$ vérifie une équation de
+dépendance intégrale à coefficients dans $A$, on en déduit que $x$ vérifie
+une relation de la forme
+$x^n+a_1x^{n-1}+\cdots+a_n\in\mathfrak n$ avec $a_k\in A$, d'où, en
+élevant à une puissance assez grande, une équation de dépendance intégrale
+pour $x$, à coefficients dans $A$.
+\end{proof}
+
+On a donc la suite exacte de $A$-modules
+\[
+0\longrightarrow C\longrightarrow B\longrightarrow B_0/C_0
+\]
+d'où, par platitude, la suite exacte
+\[
+0\longrightarrow C'\longrightarrow B'\longrightarrow B'_0/C'_0
+\]
+où l'on a posé $B'_0=B_0\otimes_A A'$, $C'_0=C_0\otimes_A A'$. Si l'on
+prouve que $C'_0$ est la fermeture intégrale de $A'$ dans $B'_0$, le lemme
+(6.14.4.1) prouvera que $C'$ est la fermeture intégrale de $A'$ dans $B'$.
+

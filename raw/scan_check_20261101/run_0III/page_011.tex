@@ -1,0 +1,66 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{11}
+est commutatif, ou que le diagramme de morphismes
+\[
+  \xymatrix{
+    X\times X\times X
+      \ar[rr]^{c_X\times 1_X}\ar[dd]_{1_X\times c_X} &&
+    X\times X\ar[dd]^{c_X}\\\\
+    X\times X\ar[rr]_{c_X} && X
+  }
+\]
+est commutatif.
+\end{env}
+
+\begin{env}[8.2.6]
+\label{0.8.2.6-fr}
+Sous les hypothèses de (\hyperref[0.8.2.5-fr]{8.2.5}), si on veut exprimer
+que pour tout $Y\in C$, la loi interne $\gamma_X(Y)$ est une \emph{loi de
+groupe}, il faut d'une part exprimer qu'elle est associative, et de l'autre
+qu'il existe une application $\alpha_X(Y):h_X(Y)\to h_X(Y)$ ayant les
+propriétés de l'\emph{inverse} dans un groupe~; comme pour tout morphisme
+$u:Y\to Y'$ dans $C$, on a vu que $h_X(u)$ doit être un homomorphisme de
+groupes $h_X(Y')\to h_X(Y)$, on voit d'abord que $\alpha_X:h_X\to h_X$ doit
+être un \emph{morphisme fonctoriel}. On peut d'autre part exprimer les
+propriétés caractéristiques de l'inverse $s\mapsto s^{-1}$ dans un groupe
+$G$ sans faire intervenir l'élément neutre~: il suffit d'écrire que les deux
+applications composées
+\[
+  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,s^{-1}t)\mapsto s(s^{-1}t),
+\]
+\[
+  (s,t)\mapsto(s,s^{-1},t)\mapsto(s,ts^{-1})\mapsto(ts^{-1})s
+\]
+sont égales à la seconde projection $(s,t)\mapsto t$ de $G\times G$ dans
+$G$. En vertu de (\hyperref[0.8.1.3-fr]{8.1.3}), on a
+$\alpha_X=h_{a_X}$, où $a_X\in\operatorname{Hom}(X,X)$~; la première
+condition précédente exprime alors que le morphisme composé
+\[
+  X\times X\xrightarrow{(1_X,a_X)\times 1_X}X\times X\times X
+  \xrightarrow{1_X\times c_X}X\times X\xrightarrow{c_X}X
+\]
+est la seconde projection $X\times X\to X$ dans $C$, et la seconde condition
+se traduit de même.
+\end{env}
+
+\begin{env}[8.2.7]
+\label{0.8.2.7-fr}
+Supposons maintenant qu'il existe dans $C$ un \emph{objet final} $e$
+(\hyperref[0.8.1.10-fr]{8.1.10}). Supposons toujours que $\gamma_X(Y)$ soit
+une loi de groupe sur $h_X(Y)$ pour tout $Y\in C$, et désignons par
+$\eta_X(Y)$ l'élément neutre de $\gamma_X(Y)$. Comme, pour tout morphisme
+$u:Y\to Y'$ dans $C$, $h_X(u)$ est un homomorphisme de groupes, on a
+$\eta_X(Y)=(h_X(u))(\eta_X(Y'))$~; prenant en particulier $Y'=e$, auquel cas
+$u$ est l'unique élément $\varepsilon$ de $\operatorname{Hom}(Y,e)$, on voit
+que l'élément $\eta_X(e)$ détermine complètement $\eta_X(Y)$ pour tout
+$Y\in C$. Posons $e_X=\eta_X(X)$, élément neutre du groupe
+$h_X(X)=\operatorname{Hom}(X,X)$~; la commutativité du diagramme
+\[
+  \xymatrix{
+    h_X(e)\ar[r]^{h_X(\varepsilon)}\ar[d]_{h_{e_X}(e)} &
+    h_X(Y)\ar[d]^{h_{e_X}(Y)}\\
+    h_X(e)\ar[r]_{h_X(\varepsilon)} & h_X(Y)
+  }
+\]
+(cf. \hyperref[0.8.1.2-fr]{8.1.2}) montre que, dans l'ensemble $h_X(Y)$,
+l'application $h_{e_X}(Y)$ n'est autre que

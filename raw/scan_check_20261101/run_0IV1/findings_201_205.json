@@ -1,0 +1,902 @@
+[
+ {
+  "page": 201,
+  "where": "top of p. 201: '... t∈m, on a | D(ty)=tD(y)=0 puisque' (the sentence continues from p. 200)",
+  "scan": "no paragraph break: the line starts at the margin without indent (strip s1)",
+  "tex": "blank line after \\oldpage{201}: paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{201}\n\n$D(ty)",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{201}\n$D(ty)"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). The source has no blank line before the marker (ega0-22-fr.tex: '$t\\in\\mathfrak m$, on a' directly above it), so this edit alone completes the repair; \\oldpage ends with \\ignorespaces."
+ },
+ {
+  "page": 201,
+  "where": "Remarque (22.4.8), last paragraph: 'le critère (22.4.7), où l'on remplace'",
+  "scan": "(22.4.7) upright inside the italic emphasis (crop p201_emph)",
+  "tex": "(22.4.7) inside \\emph{...}: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "critère (22.4.7), où",
+   "new": "critère \\textup{(22.4.7)}, où"
+  },
+  "note": "Reference upright in the print inside the emphasised clause."
+ },
+ {
+  "page": 201,
+  "where": "Remarque (22.4.8), last paragraph: '(autrement dit, que p.1∈m dans A)'",
+  "scan": "p.1 with a baseline period (crop p201_p1, 2.5x)",
+  "tex": "p\\cdot1 (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$p\\cdot1\\in\\mathfrak m$ dans",
+   "new": "$p.1\\in\\mathfrak m$ dans"
+  },
+  "note": "GLOBAL_ISSUES 65 (ega0-22 p\\cdot1 to check); same form as the fixes on pp. 111-115."
+ },
+ {
+  "page": 201,
+  "where": "Remarque (22.4.8), last paragraph: 'de la forme plus générale (22.4.4.1) : en effet'",
+  "scan": "(22.4.4.1) upright after the italic clause (crop p201_emph)",
+  "tex": "(22.4.4.1) inside \\emph{...}: italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(22.4.4.1)}~:",
+   "new": "\\textup{(22.4.4.1)}}~:"
+  },
+  "note": "Reference upright in the print inside the emphasised clause."
+ },
+ {
+  "page": 201,
+  "where": "heading 22.5: 'Algèbres géométriquement régulières et algèbres formellement lisses.'",
+  "scan": "final full stop",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Algèbres géométriquement régulières et algèbres formellement lisses}",
+   "new": "\\subsection{Algèbres géométriquement régulières et algèbres formellement lisses.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58 (no \\subsection title in ega0-14 to ega0-23 has the printed full stop)."
+ },
+ {
+  "page": 201,
+  "where": "Proposition (22.5.1): 'm (resp. m') l'idéal maximal'",
+  "scan": "'(resp. m')' roman inside the italic statement (crop p201_prop)",
+  "tex": "italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. $\\mathfrak m'$) l'idéal",
+   "new": "\\textup{(resp. $\\mathfrak m'$)} l'idéal"
+  },
+  "note": ""
+ },
+ {
+  "page": 201,
+  "where": "Proposition (22.5.1): 'l'idéal maximal de A (resp. A'),'",
+  "scan": "'(resp. A')' roman inside the italic statement (crop p201_prop)",
+  "tex": "italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. $A'$),",
+   "new": "\\textup{(resp. $A'$)},"
+  },
+  "note": ""
+ },
+ {
+  "page": 201,
+  "where": "Proposition (22.5.1): 'K=A/m (resp. K'=A'/m') son corps résiduel'",
+  "scan": "'(resp. K'=A'/m')' roman inside the italic statement (crop p201_prop)",
+  "tex": "italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. $K'=A'/\\mathfrak m'$) son",
+   "new": "\\textup{(resp. $K'=A'/\\mathfrak m'$)} son"
+  },
+  "note": ""
+ },
+ {
+  "page": 201,
+  "where": "heading of Remarques (22.5.2)",
+  "scan": "'Remarques (22.5.2). —' (plural)",
+  "tex": "\\begin{remark}[22.5.2] prints 'Remarque (22.5.2)'",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{remark}[22.5.2]",
+   "new": "\\begin{remarks}[22.5.2]"
+  },
+  "note": "Apply together with the \\end{remark} -> \\end{remarks} fix on p. 202, where this remark ends (as EGA II pp. 175-176)."
+ },
+ {
+  "page": 201,
+  "where": "Remarques (22.5.2) (i): 'comme m²A'⊂m'², m'_1=m'/mA' est l'idéal maximal de A'_1'",
+  "scan": "m'/mA': no exponent on the second m (4x crop p201_mA_4x; m²A' at the start of the same line has it)",
+  "tex": "\\mathfrak m'/\\mathfrak m^2A': silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathfrak m'_1=\\mathfrak m'/\\mathfrak m^2A'",
+   "new": "\\mathfrak m'_1=\\mathfrak m'/\\mathfrak mA'"
+  },
+  "corrected": "\\mathfrak m'_1=\\mathfrak m'/\\mathfrak m^2A'",
+  "note": "A'_1=A'/m²A' (same sentence), so its maximal ideal is m'/m²A'; the isomorphism m'_1/m'_1²≅m'/m'² then follows from m²A'⊂m'². The fix restores the printed reading."
+ },
+ {
+  "page": 201,
+  "where": "Remarques (22.5.2) (i): 'de la structure de la A_1-algèbre A'_1'",
+  "scan": "'algèbre' italic (crop p201_alg)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A_1$-algèbre $A'_1$",
+   "new": "$A_1$-\\emph{algèbre} $A'_1$"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 202,
+  "where": "Remarques (22.5.2) (iii): 'comme A' est supposé être un anneau local, il en est de même'",
+  "scan": "'local' italic (crop p202_local)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un anneau local, il en est",
+   "new": "un anneau \\emph{local}, il en est"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 202,
+  "where": "Remarques (22.5.2) (iii): 'l'on a, sous les hypothèses de (22.4.1)' before (22.5.2.2)",
+  "scan": "no comma after (22.4.1) (crop p202_comma)",
+  "tex": "'(22.4.1),'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sous les hypothèses de (22.4.1),",
+   "new": "sous les hypothèses de (22.4.1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "end of Remarques (22.5.2)",
+  "scan": "plural heading 'Remarques (22.5.2)' (p. 201)",
+  "tex": "\\end{remark}",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\n\\end{remark}",
+   "new": "\\end{enumerate}\n\\end{remarks}"
+  },
+  "note": "Apply together with the \\begin{remark}[22.5.2] -> \\begin{remarks}[22.5.2] fix on p. 201."
+ },
+ {
+  "page": 202,
+  "where": "Corollaire (22.5.3) (ii): 'les classes ξ_i mod. m² des éléments'",
+  "scan": "'mod.' roman inside the italic statement (crop p202_mod)",
+  "tex": "italic (corollary environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\xi_i$ mod.~$\\mathfrak m^2$",
+   "new": "$\\xi_i$ \\textup{mod.}~$\\mathfrak m^2$"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "Théorème (22.5.4), display (22.5.4.1): '... c_{ik}T_i^{p-k} — f_i'",
+  "scan": "long dash before f_i: 39 px against 34 px for = and 36 px for + in the same display (crops p202_dash, p202_sum_hi)",
+  "tex": "-f_i",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "T_i^{p-k}-f_i",
+   "new": "T_i^{p-k}\\setmin f_i"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the fixes of pp. 24-37, pending the convention-7 decision. The small-type minus signs of p-1, p-k here and d_i-k in (22.5.3.1) measure 21-22 px against 20 px for the small = (like the ordinary minus of p. 21): ordinary minus signs, as in the TeX."
+ },
+ {
+  "page": 202,
+  "where": "Théorème (22.5.4), label a)",
+  "scan": "upright 'a)' (crop p202_labels)",
+  "tex": "\\item[a)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)] $B$ est",
+   "new": "\\item[\\textup{a)}] $B$ est"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 202,
+  "where": "Théorème (22.5.4), label b)",
+  "scan": "upright 'b)' (crop p202_labels)",
+  "tex": "\\item[b)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)] les éléments",
+   "new": "\\item[\\textup{b)}] les éléments"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 202,
+  "where": "Théorème (22.5.4), label c)",
+  "scan": "upright 'c)' (crop p202_labels)",
+  "tex": "\\item[c)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[c)] si",
+   "new": "\\item[\\textup{c)}] si"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 202,
+  "where": "Théorème (22.5.4) c): 'Ξ_{B_(K)/K}=Ξ_{B'_(K)/K} (22.4.5), l'homomorphisme caractéristique'",
+  "scan": "(22.4.5) upright (crop p202_labels)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(22.4.5), l'homomorphisme",
+   "new": "\\textup{(22.4.5)}, l'homomorphisme"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 202,
+  "where": "Théorème (22.5.4) c): '→m/m² (22.4.6.2) est injectif'",
+  "scan": "(22.4.6.2) upright (crop p202_labels)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(22.4.6.2) est injectif",
+   "new": "\\textup{(22.4.6.2)} est injectif"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "(22.5.5), line 2: 'k' une extension radicielle finie de k'",
+  "scan": "'radicielle' roman, only 'finie' italic (crop p203_radic)",
+  "tex": "\\emph{radicielle finie}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{radicielle finie}",
+   "new": "radicielle \\emph{finie}"
+  },
+  "note": ""
+ },
+ {
+  "page": 203,
+  "where": "(22.5.5), display after '(21.3.2.2)': 'π_{k'/k} : Θ_{k'/k} → Ω¹_K'",
+  "scan": "Ω¹ with a roman capital K subscript (4x crop p203_pi; the π and Θ subscripts are italic k)",
+  "tex": "\\Omega^1_k: silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Theta_{k'/k}\\longrightarrow\\Omega^1_k",
+   "new": "\\Theta_{k'/k}\\longrightarrow\\Omega^1_K"
+  },
+  "corrected": "\\pi_{k'/k}:\\Theta_{k'/k}\\longrightarrow\\Omega^1_k",
+  "note": "(21.3.2.2) defines π_{B/A}: Θ_{B/A} → Ω¹_{A/A^p}=Ω¹_A for the smaller ring A (B^p⊂A); here A=k, B=k', so the target is Ω¹_k, and the text below describes the image in Ω¹_k⊗_k K (printed with italic k). The fix restores the printed reading."
+ },
+ {
+  "page": 203,
+  "where": "(22.5.5), display (22.5.5.2): 'Θ_{A'_(K)/K} → Ω¹_K⊗_k K'",
+  "scan": "Ω¹ with a roman capital K subscript; the ⊗ subscript is italic k (4x crop p203_inj)",
+  "tex": "\\Omega^1_k\\otimes_kK: silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\longrightarrow\\Omega^1_k\\otimes_kK",
+   "new": "\\longrightarrow\\Omega^1_K\\otimes_kK"
+  },
+  "corrected": "\\Theta_{A'_{(K)}/K}\\longrightarrow\\Omega^1_k\\otimes_kK",
+  "note": "The injection is π_{k'/k}⊗1_K: Θ_{k'/k}⊗_k K → Ω¹_k⊗_k K; the explicit description after the display sends to 'd_k(x'^p)⊗1_K de Ω¹_k⊗_k K' (crop p203_text, italic k). The fix restores the printed reading."
+ },
+ {
+  "page": 203,
+  "where": "Lemme (22.5.6): 'Avec les notations de (22.5.5) :'",
+  "scan": "(22.5.5) upright",
+  "tex": "italic (lemma environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "notations de (22.5.5)~:",
+   "new": "notations de \\textup{(22.5.5)}~:"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "Lemme (22.5.6) (i): 'π_{A'_(K)/K} (21.3.2.2) s'identifie'",
+  "scan": "(21.3.2.2) upright",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(21.3.2.2) s'identifie",
+   "new": "\\textup{(21.3.2.2)} s'identifie"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "Lemme (22.5.6) (i): 's'identifie par (22.5.5.2) à'",
+  "scan": "(22.5.5.2) upright",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "par (22.5.5.2) à",
+   "new": "par \\textup{(22.5.5.2)} à"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "Lemme (22.5.6) (ii): 'χ'_{A'_1/A_1} (22.4.6.2) s'identifie'",
+  "scan": "(22.4.6.2) upright",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(22.4.6.2) s'identifie",
+   "new": "\\textup{(22.4.6.2)} s'identifie"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "Lemme (22.5.6) (ii): 'V=m/m² (20.6.24) à (Θ⊗K)∩Υ'",
+  "scan": "(20.6.24) upright",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathfrak m^2$\n  (20.6.24) à",
+   "new": "\\mathfrak m^2$\n  \\textup{(20.6.24)} à"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "proof of (22.5.6) (ii): 'Θ_{A'_(K)/K} s'identifie à Θ_{(A'_1)_(K)/K}, et la vérification'",
+  "scan": "comma after Θ_{(A'_1)_(K)/K} (crop p203_comma)",
+  "tex": "no comma",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Theta_{(A'_1)_{(K)}/K}$ et la vérification",
+   "new": "$\\Theta_{(A'_1)_{(K)}/K}$, et la vérification"
+  },
+  "note": ""
+ },
+ {
+  "page": 203,
+  "where": "Proposition (22.5.7): 'χ_{A/k} : Υ_{K/k}→V (20.6.24) à'",
+  "scan": "(20.6.24) upright",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "V$ (20.6.24) à",
+   "new": "V$ \\textup{(20.6.24)} à"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 203,
+  "where": "end of p. 203 / top of p. 204: '... isomorphe au quotient de l'anneau de | polynômes k[T_1, ..., T_r]'",
+  "scan": "one sentence across the page break (no indent at the top of p. 204)",
+  "tex": "blank line before \\oldpage{204}: paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "quotient de l'anneau de\n\n",
+   "new": "quotient de l'anneau de\n"
+  },
+  "note": "Spurious paragraph break mid-sentence (GLOBAL_ISSUES 20); the blank line is the last line of the p. 203 segment. Apply together with the p. 204 entry that removes the blank line after the marker (both blank lines must go)."
+ },
+ {
+  "page": 204,
+  "where": "top of p. 204: 'polynômes k[T_1, ..., T_r] par l'idéal ...' continues the sentence of p. 203",
+  "scan": "no indent: continuation line",
+  "tex": "blank line after \\oldpage{204}: paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{204}\n\npolynômes",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{204}\npolynômes"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20); apply together with the p. 203 entry that removes the blank line before the marker."
+ },
+ {
+  "page": 204,
+  "where": "proof of (22.5.7), line 1: 'F_i=T_i^p — b_i (1≤i≤r)'",
+  "scan": "long dash: 41 px against 34-35 px for the = of the same formula (crop p204_dash)",
+  "tex": "T_i^p-b_i",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$F_i=T_i^p-b_i$",
+   "new": "$F_i=T_i^p\\setmin b_i$"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the fixes of pp. 24-37, pending the convention-7 decision."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (22.5.8), label a)",
+  "scan": "upright 'a)' (crop p204_a_label)",
+  "tex": "\\item[a)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)] $A$ est une",
+   "new": "\\item[\\textup{a)}] $A$ est une"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (22.5.8), label b)",
+  "scan": "upright 'b)' (crop p204_bprime_label)",
+  "tex": "\\item[b)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)] $A$ est géométriquement",
+   "new": "\\item[\\textup{b)}] $A$ est géométriquement"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (22.5.8), label b')",
+  "scan": "upright 'b')' (crop p204_bprime_label)",
+  "tex": "\\item[b')] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b')] Pour toute",
+   "new": "\\item[\\textup{b')}] Pour toute"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (22.5.8) b'): 'A'=A⊗_K k' est un anneau régulier'",
+  "scan": "⊗ with a roman capital K subscript (3x crop p204_otimesK)",
+  "tex": "\\otimes_k: silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A'=A\\otimes_kk'",
+   "new": "A'=A\\otimes_Kk'"
+  },
+  "corrected": "A'=A\\otimes_kk'",
+  "note": "A is a k-algebra and k' an extension of k: A'=A⊗_k k', as in (22.5.5), (22.5.7) and the proof of (22.5.9) ('A⊗_k k'', italic k). The fix restores the printed reading."
+ },
+ {
+  "page": 204,
+  "where": "proof of (22.5.8): 'Le fait que a) implique b) n'est autre que (19.6.5), et b) entraîne trivialement b').'",
+  "scan": "the four labels italic (crop p204_proof1)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Le fait que a) implique b) n'est autre que (19.6.5), et b) entraîne\ntrivialement b').",
+   "new": "Le fait que \\emph{a)} implique \\emph{b)} n'est autre que (19.6.5), et \\emph{b)} entraîne\ntrivialement \\emph{b')}."
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (22.5.8): 'Montrons que b') entraîne'",
+  "scan": "'b')' italic (crop p204_proof1)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Montrons que b') entraîne",
+   "new": "Montrons que \\emph{b')} entraîne"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (22.5.8): 'puisque b') entraîne d'abord'",
+  "scan": "'b')' italic (crop p204_proof1)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "puisque b') entraîne",
+   "new": "puisque \\emph{b')} entraîne"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (22.5.8): 'que la condition b') entraîne que χ_{A/k} est injectif'",
+  "scan": "'b')' italic (crop p204_proof2)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "la condition b') entraîne",
+   "new": "la condition \\emph{b')} entraîne"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (22.5.9): 'avec les notations de (22.5.8, b'))'",
+  "scan": "'b')' italic (crop p204_cor)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(22.5.8, b'))",
+   "new": "(22.5.8, \\emph{b')})"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "heading of Remarques (22.5.10)",
+  "scan": "'Remarques (22.5.10). —' (plural; crop p204_rem)",
+  "tex": "\\begin{remark}[22.5.10] prints 'Remarque (22.5.10)'",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{remark}[22.5.10]",
+   "new": "\\begin{remarks}[22.5.10]"
+  },
+  "note": "Apply together with the \\end{remark} -> \\end{remarks} fix on p. 205, where this remark ends."
+ },
+ {
+  "page": 204,
+  "where": "Remarques (22.5.10) (i): 'dans la condition b'), on se borne'",
+  "scan": "'b')' italic (crop p204_rem)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "condition b'), on se borne",
+   "new": "condition \\emph{b')}, on se borne"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 204,
+  "where": "Remarques (22.5.10) (i): 'pour toutes ces extensions k''",
+  "scan": "'toutes' italic (crop p204_rem)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "pour toutes ces extensions",
+   "new": "pour \\emph{toutes} ces extensions"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 204,
+  "where": "Remarques (22.5.10) (i): 'Υ_{K/k}∩(Θ_{k'/k}⊗_k K)=0, bien que Υ_{K/k}≠0'",
+  "scan": "'bien que' italic (crop p204_rem)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=0$, bien que",
+   "new": "=0$, \\emph{bien que}"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item). The later 'bien que K soit une extension inséparable' is upright in the print, as in the TeX."
+ },
+ {
+  "page": 204,
+  "where": "Remarques (22.5.10) (i): 'pour h l'homomorphisme nul'",
+  "scan": "'nul' italic (crop p204_rem2)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'homomorphisme nul~;",
+   "new": "l'homomorphisme \\emph{nul}~;"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 204,
+  "where": "Remarques (22.5.10) (i), last line: 'A⊗_k k' est un anneau régulier pour toute extension monogène'",
+  "scan": "'régulier' italic (crop p204_rem2)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneau régulier pour toute",
+   "new": "anneau \\emph{régulier} pour toute"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 205,
+  "where": "end of Remarques (22.5.10)",
+  "scan": "plural heading 'Remarques (22.5.10)' (p. 204)",
+  "tex": "\\end{remark}",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\n\\end{remark}",
+   "new": "\\end{enumerate}\n\\end{remarks}"
+  },
+  "note": "Apply together with the \\begin{remark}[22.5.10] -> \\begin{remarks}[22.5.10] fix on p. 204."
+ },
+ {
+  "page": 205,
+  "where": "heading 22.6: 'Critère jacobien de Zariski.'",
+  "scan": "final full stop",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Critère jacobien de Zariski}",
+   "new": "\\subsection{Critère jacobien de Zariski.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58."
+ },
+ {
+  "page": 205,
+  "where": "Théorème (22.6.1): 'faisant de B une A-algèbre formellement lisse, J un idéal'",
+  "scan": "'formellement lisse' roman inside the italic statement, 'algèbre' italic (crop p205_thm)",
+  "tex": "italic (theorem environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$A$-algèbre formellement lisse, $\\mathfrak J$",
+   "new": "$A$-algèbre \\textup{formellement lisse}, $\\mathfrak J$"
+  },
+  "note": "Roman words inside the italic statement."
+ },
+ {
+  "page": 205,
+  "where": "Théorème (22.6.1): 'l'homomorphisme canonique (cf. (20.5.11.2))'",
+  "scan": "'(cf. (20.5.11.2))' upright (crop p205_cf)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "canonique (cf. (20.5.11.2))",
+   "new": "canonique \\textup{(cf. (20.5.11.2))}"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 205,
+  "where": "Théorème (22.6.1), end: 'soit formellement inversible à gauche'",
+  "scan": "italic like the rest of the statement, no change of face (crop p205_inv)",
+  "tex": "\\emph{...} inside the italic theorem: upright",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "soit \\emph{formellement inversible à gauche}",
+   "new": "soit formellement inversible à gauche"
+  },
+  "note": "Printed italic words left upright: \\emph dropped inside the italic environment (FIX_POLICY 2.6)."
+ },
+ {
+  "page": 205,
+  "where": "Théorème (22.6.1), end: '(cf. (19.1.5)).'",
+  "scan": "'(cf. (19.1.5))' upright (crop p205_inv)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(cf. (19.1.5)).",
+   "new": "\\textup{(cf. (19.1.5))}."
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 205,
+  "where": "proof of (22.6.1): 'Exalcotop_A(C, L)→Exalcotop_A(B, L) est injectif'",
+  "scan": "'injectif' italic (crop p205_inj)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est injectif, et le théorème",
+   "new": "est \\emph{injectif}, et le théorème"
+  },
+  "note": ""
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2): 'étant celles de (22.6.1), supposons'",
+  "scan": "(22.6.1) upright (crop p205_cor)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "celles de (22.6.1), supposons",
+   "new": "celles de \\textup{(22.6.1)}, supposons"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2): 'déduite de celle de B (19.0)'",
+  "scan": "(19.0) upright (crop p205_cor)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$B$ (19.0)",
+   "new": "$B$ \\textup{(19.0)}"
+  },
+  "note": "Reference upright in the print inside the italic statement."
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2): '(on notera que ces deux conditions ... topologie J-préadique)'",
+  "scan": "the parenthesis is roman with 'noethérien', 'préadique', 'préadique' italic; 0 of (0_I, 7.3.2) bold (crop p205_cor)",
+  "tex": "the whole parenthesis italic, plain 0",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(on notera que ces deux conditions sont vérifiées lorsque\n$B$ est noethérien et sa topologie préadique ($0_{\\mathrm I}$, 7.3.2), ou si la\ntopologie de $B$ est la topologie $\\mathfrak J$-préadique)",
+   "new": "\\textup{(on notera que ces deux conditions sont vérifiées lorsque\n$B$ est \\emph{noethérien} et sa topologie \\emph{préadique} ($\\mathbf{0}_{\\mathrm I}$, 7.3.2), ou si la\ntopologie de $B$ est la topologie $\\mathfrak J$-\\emph{préadique})}"
+  },
+  "note": "Both halves of convention 6 in one edit; the same edit sets the bold 0 of (0_I, 7.3.2) (convention 2), so that no second edit overlaps it."
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2) (i), label a)",
+  "scan": "upright 'a)' (crop p205_ab)",
+  "tex": "\\item[a)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)] $C$ est une",
+   "new": "\\item[\\textup{a)}] $C$ est une"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2) (i), label b)",
+  "scan": "upright 'b)' (crop p205_ab)",
+  "tex": "\\item[b)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)] Pour tout",
+   "new": "\\item[\\textup{b)}] Pour tout"
+  },
+  "note": "Label printed upright; \\item[..] comes out italic inside the italic statement environment."
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2) (i) b): '(autrement dit un isomorphisme sur un facteur direct de Ω¹_{B/A}⊗_B B_λ)'",
+  "scan": "the parenthesis is roman (crop p205_end)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(autrement dit un isomorphisme sur un facteur direct de\n    $\\Omega^1_{B/A}\\otimes_BB_\\lambda$)",
+   "new": "\\textup{(autrement dit un isomorphisme sur un facteur direct de\n    $\\Omega^1_{B/A}\\otimes_BB_\\lambda$)}"
+  },
+  "note": "Roman words inside the italic statement."
+ },
+ {
+  "page": 205,
+  "where": "Corollaire (22.6.2) (ii): 'soit préadmissible (0_I, 7.1.2) et'",
+  "scan": "upright reference with a bold 0 (crop p205_end)",
+  "tex": "italic, plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "préadmissible ($0_{\\mathrm I}$, 7.1.2)",
+   "new": "préadmissible \\textup{($\\mathbf{0}_{\\mathrm I}$, 7.1.2)}"
+  },
+  "note": "Also convention 6 (upright reference in the italic statement); one edit, as on p. 7."
+ },
+ {
+  "page": 205,
+  "where": "end of p. 205 / top of p. 206: '... soit préadmissible (0_I, 7.1.2) et | soit L un idéal de définition de C'",
+  "scan": "one sentence across the page break",
+  "tex": "blank line before \\oldpage{206}: paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": " et\n\n",
+   "new": " et\n"
+  },
+  "note": "Spurious paragraph break mid-sentence (GLOBAL_ISSUES 20); the blank line is the last line of the p. 205 segment. The source also has a blank line after \\oldpage{206} (ega0-22-fr.tex, in the p. 206 segment, outside pp. 201-205): both must go, so apply together with the p. 206 fix for it."
+ }
+]

@@ -1,0 +1,79 @@
+% from ega3-7-fr.tex
+\oldpage[III]{184}
+
+\begin{env}[7.3.8]
+Si $A$ est un anneau commutatif, $B$ une $A$-algèbre (non nécessairement
+commutative), $T_\bullet$ un foncteur homologique covariant de
+$\boldsymbol{Ab}_A$ dans $\boldsymbol{Ab}$, il résulte des définitions (7.1.3) que le
+foncteur de $\boldsymbol{Ab}_B$ dans $\boldsymbol{Ab}$ obtenu par extension des
+scalaires de $A$ à $B$, et que nous noterons
+$T_\bullet^{(B)}=(T_i^{(B)})$,
+est encore un foncteur \emph{homologique}.
+\end{env}
+
+\begin{corollary}[7.3.9]
+Supposons que $T_\bullet$ vérifie les conditions générales de \textup{(7.3.7)} et
+commute aux limites inductives, et en outre que $A$ soit un anneau intègre et
+tous les $T_n(A)$ des $A$-modules de présentation finie. Alors, pour tout
+entier $N$, il existe un $f\in A\setmin\{0\}$ tel que le foncteur
+$T_p^{(A_f)}:\boldsymbol{Ab}_{A_f}\longrightarrow\boldsymbol{Ab}$
+soit exact pour $p\leq N$.
+\end{corollary}
+
+\begin{proof}
+Par hypothèse, $T_i$ est exact pour $i\leq i_0$, donc $T_i(A)$ est plat pour
+ces valeurs de $i$. En vertu de (7.3.7, $b)$), il suffit de prendre $f$ tel que
+$T_p^{(A_f)}(A_f)=T_p(A_f)$
+soit un $A_f$-module \emph{libre} pour $i_0<p\leq N$. Or, on a
+$T_p(A_f)=(T_p(A))_f$ puisque $T_p$ commute aux limites inductives (7.1.4). Si
+$x$ est le point générique de $\operatorname{Spec}(A)$, $(T_p(A))_x$ est un
+espace vectoriel de dimension finie sur le corps des fractions de $A$. Comme
+chaque $T_p(A)$ est de présentation finie, il existe bien un $f$ ayant la
+propriété voulue (Bourbaki, \emph{Alg. comm.}, chap. II, \S 5,
+n\textsuperscript{o} 1, cor. de la prop. 2).
+
+On notera que s'il n'y a qu'un nombre \emph{fini} d'indices $i$ tels que $T_i\ne0$,
+il existe $f\in A\setmin\{0\}$ tel que \emph{tous} les $T_p^{(A_f)}$ soient exacts.
+\end{proof}
+
+\begin{corollary}[7.3.10]
+Supposons que $T_\bullet$ vérifie les conditions générales de \textup{(7.3.7)} et
+commute aux limites inductives, que $A$ soit commutatif et noethérien et les
+$T_n(A)$ des $A$-modules de type fini. Alors, pour tout entier $N$, il existe
+un ouvert dense $U$ de $\operatorname{Spec}(A)$ tel que, pour tout $p\leq N$,
+la fonction
+$x\leadsto\operatorname{rang}_{\mathbf{k}(x)}(T_p(\boldsymbol{k}(x)))$
+soit constante dans $U$.
+\end{corollary}
+
+\begin{proof}
+Soit $\mathfrak p$ un idéal premier minimal de $A$; par hypothèse, l'anneau
+$B=A/\mathfrak p$ est intègre et $\operatorname{Spec}(B)$ s'identifie à une
+composante irréductible de l'espace topologique $\operatorname{Spec}(A)$. Nous
+allons montrer par récurrence sur $p\leq N$ qu'il existe
+$f_p\in B\setmin\{0\}$ tel que si on pose $B'=B_{f_p}$, $T_i^{(B')}$ soit \emph{exact} et
+les $T_i(B')$ des $B'$-modules \emph{de type fini} pour $i\leq p$. La proposition est
+vraie pour $p\leq i_0$ en vertu de l'hypothèse, en prenant $f_p=1$ (donc
+$B'=B=A/\mathfrak p$) car $T_p$ étant alors exact, $T_p(B)$ est isomorphe à
+$T_p(A)/T_p(\mathfrak p)$, donc est un $A$-module (et \emph{a fortiori} un
+$B$-module) de type fini. Raisonnons par récurrence sur $p$; $f_p$ est l'image
+canonique dans $B$ d'un élément $g_p\in A$, et si l'on pose $A'=A_{g_p}$, on a
+$B'=A'/\mathfrak p'$ où $\mathfrak p'$ est un idéal premier minimal de $A'$,
+égal à $\mathfrak p_{g_p}$. Comme on a
+$T_i(A_{g_p})=(T_i(A))_{g_p}$,
+les $T_i(A')$ sont des $A'$-modules de type fini, donc le foncteur
+$T_\bullet^{(A')}$ vérifie les mêmes hypothèses que $T_\bullet$, mais en
+remplaçant $i_0$ par $p$. On peut donc se borner au cas où $A'=A$, et où $T_p$
+est exact; la suite exacte
+$0\longrightarrow\mathfrak p\longrightarrow A\longrightarrow A/\mathfrak p\longrightarrow0$
+donne alors la suite exacte
+$T_{p+1}(A)\longrightarrow T_{p+1}(A/\mathfrak p)\xrightarrow{\partial}T_p(\mathfrak p)\longrightarrow T_p(A)$,
+et comme $T_p$ est exact, la dernière flèche de droite est injective, donc
+$T_{p+1}(A/\mathfrak p)$ est un quotient de $T_{p+1}(A)$ et est par suite de
+type fini. Notons maintenant que le raisonnement de (7.3.9) n'a utilisé le fait
+que les $T_p(A)$ sont de type fini que pour $p\leq N$; on peut donc l'appliquer
+à l'anneau intègre $B$, au foncteur $T_\bullet^{(B)}$ et à $N=p+1$, ce qui
+achève le raisonnement par récurrence. Cela étant, il y a un
+$f_N\in B\setmin\{0\}$ tel que $\operatorname{Spec}(B_{f_N})$ soit un ouvert $V$
+partout dense dans $\operatorname{Spec}(B)$ ne rencontrant aucune autre
+composante irréductible de $\operatorname{Spec}(A)$. Si la proposition est

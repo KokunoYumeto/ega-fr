@@ -1,0 +1,34 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{136}
+
+étale (pour les topologies discrètes (17.1.3)); le morphisme $\Spec(C)\to\Spec(A)$ est donc étale au point $\mathfrak r$ (17.6.1), et il y a par suite un élément $g\in C$ tel que $C_g$ soit une $A$-algèbre étale, ce qui prouve que $A''$ est une $A$-algèbre essentiellement étale.
+
+Étant donné un anneau local $A$, il existe un \emph{ensemble} $\mathfrak E$ de $A$-algèbres locales essentiellement étales tel que toute $A$-algèbre locale essentiellement étale soit $A$-isomorphe à une algèbre appartenant à $\mathfrak E$. Il suffit évidemment pour le voir d'observer qu'il existe un ensemble $\mathfrak F$ de $A$-algèbres de type fini tel que toute $A$-algèbre de type fini soit isomorphe à une algèbre appartenant à $\mathfrak F$; on peut prendre $\mathfrak F$ égal à l'ensemble des quotients des algèbres de polynômes $A[T_1,\ldots,T_n]$ ($n\in\mathbf N$).
+
+Dans ce qui suit, si $A$ et $B$ sont deux anneaux locaux, nous noterons $\Hom.\operatorname{loc}(A,B)$ l'ensemble des homomorphismes \emph{locaux} de $A$ dans $B$.
+\end{env}
+
+\begin{lemma}[18.6.2]
+\EGAReaderTarget{ega4.c04.lem.18-6-2}{IV.18.6.2}
+Soient $A$, $A'$ deux anneaux locaux, $k$, $k'$ leurs corps résiduels respectifs, $\varphi:A\to A'$ un homomorphisme (local) faisant de $A'$ une $A$-algèbre essentiellement étale (18.6.1) et tel que l'homomorphisme correspondant $k\to k'$ soit bijectif. Alors, pour tout anneau local hensélien $B$, l'application canonique
+\[
+  \Hom(\varphi,1_B):\Hom.\operatorname{loc}(A',B)\longrightarrow\Hom.\operatorname{loc}(A,B)
+\]
+est bijective.
+\end{lemma}
+
+Posons $S=\Spec(A)$, $Y=\Spec(B)$, et soient $s$ et $y$ les points fermés de $S$ et $Y$ respectivement. Par hypothèse, $A'$ est isomorphe à un anneau local $\sh{O}_{X,x}$ d'un $S$-schéma $X$ étale sur $S$, en un point $x\in X$ au-dessus de $s$. Supposons donné un homomorphisme local $\psi:A\to B$, faisant de $Y$ un $S$-schéma; il s'agit de voir qu'il existe \emph{un et un seul} $S$-morphisme $f:Y\to X$ tel que $f(y)=x$. Posons $X'=X\times_S Y$, et notons que puisque $k(x)=k(s)$, il existe un seul point $x'\in X'$ au-dessus de $x$ et de $y$, et que $k(x')=k(y)$. Il faut prouver qu'il existe une seule $Y$-section $f'$ de $X'$ telle que $f'(y)=x'$. Or, le morphisme $g:X'\to Y$ est étale et séparé, et la fibre $X'_0=g^{-1}(y)$ a pour anneau local au point $x'$ le corps $k(x')=k(y)$. Si l'on pose $Y_0=\Spec(k(y))$, il existe donc une unique $Y_0$-section $f'_0$ de $X'_0$ telle que $f'_0(y)=x'$, et la conclusion résulte de ce que $B$ est supposé hensélien et de (18.5.11, $b)$).
+
+Nous dirons qu'une $A$-algèbre locale $A'$ vérifiant les conditions de (18.6.2) est \emph{strictement essentiellement étale}. Notons que le critère (18.5.11, $b)$) signifie que, \emph{pour que $A$ soit hensélien, il faut et il suffit que toute $A$-algèbre strictement essentiellement étale soit $A$-isomorphe à $A$}.
+
+\begin{lemma}[18.6.3]
+\label{IV.18.6.3}
+Soient $A$ un anneau local, $A_1$, $A_2$ deux $A$-algèbres locales strictement essentiellement étales.
+\begin{enumerate}
+  \item[(i)] Il existe au plus un $A$-homomorphisme (nécessairement local) de $A_1$ dans $A_2$.
+  \item[(ii)] Il existe une $A$-algèbre locale strictement essentiellement étale $A_3$ et deux $A$-homomorphismes $A_1\to A_3$, $A_2\to A_3$.
+\end{enumerate}
+\end{lemma}
+
+Posons $S=\Spec(A)$; par hypothèse il y a deux $S$-schémas étales sur $S$, $X_1$, $X_2$, et deux points $x_1\in X_1$, $x_2\in X_2$ au-dessus du point fermé $s$ de $S$ et tels que $A_1=\sh{O}_{X_1,x_1}$, $A_2=\sh{O}_{X_2,x_2}$. Posons $X_3=X_1\times_S X_2$; les hypothèses $k(x_1)=k(x_2)=k(s)$ entraînent qu'il existe un seul point $x_3\in X_3$ au-dessus de $x_1$ et $x_2$ et que $k(x_3)=k(s)$ (I, 3.4.9). En outre, $X_3$ est étale sur $S$ (17.3.3), donc $A_3=\sh{O}_{X_3,x_3}$ vérifie les conditions de (ii). Par ailleurs,
+

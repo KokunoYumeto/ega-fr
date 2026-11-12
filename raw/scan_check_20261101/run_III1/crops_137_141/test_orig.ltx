@@ -1,0 +1,726 @@
+\documentclass[10pt,oneside]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage{longtable}
+\usepackage[all]{xy}
+\usepackage{tikz-cd}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue,
+  hypertexnames=false,
+  unicode=true,
+  pdfencoding=auto
+]{hyperref}
+\input{user/Documents/ega_scan_check_20261101/ega-fr/editions/2026-10-24-r20/diplomatic/packages/BASE/native/preamble-base.tex}
+\hypersetup{
+  pdftitle={Éléments de géométrie algébrique -- édition française cumulative},
+  pdfauthor={Alexander Grothendieck et Jean Dieudonné},
+  pdfsubject={Texte diplomatique français cumulatif depuis l'autorité NUMDAM}
+}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\newcommand{\oldpage}[2][]{%
+  \setcounter{footnote}{0}%
+  \marginpar{\scriptsize\textbf{#1}~|~#2}\ignorespaces}
+\newenvironment{env}[1][]{\par\medskip\noindent\textbf{(#1)}\ }{\par}
+\newenvironment{definition}[1][]{%
+  \par\medskip\noindent\itshape Définition (#1). ---\ }{\par}
+\newenvironment{proposition}[1][]{%
+  \par\medskip\noindent\itshape Proposition (#1). ---\ }{\par}
+\newenvironment{theorem}[1][]{%
+  \par\medskip\noindent\itshape Théorème (#1). ---\ }{\par}
+\newenvironment{corollary}[1][]{%
+  \par\medskip\noindent\itshape Corollaire (#1). ---\ }{\par}
+\newenvironment{remark}[1][]{%
+  \par\medskip\noindent\itshape Remarque (#1). ---\ }{\par}
+\newenvironment{remarks}[1][]{%
+  \par\medskip\noindent\itshape Remarques (#1). ---\ }{\par}
+\newenvironment{scholium}[1][]{%
+  \par\medskip\noindent\textit{Scholie (#1). ---\ }}{\par}
+\newenvironment{lemma}[1][]{%
+  \par\medskip\noindent\itshape Lemme (#1). ---\ }{\par}
+\newenvironment{example}[1][]{%
+  \par\medskip\noindent\textit{Exemple (#1). ---\ }}{\par}
+\newenvironment{examples}[1][]{%
+  \par\medskip\noindent\textit{Exemples (#1). ---\ }}{\par}
+\newenvironment{notation}[1][]{%
+  \par\medskip\noindent\textit{Notations (#1). ---\ }}{\par}
+\newenvironment{proof}{%
+  \par\medskip\noindent\textit{Démonstration. ---\ }}{\par}
+\newenvironment{namedtheorem}[2][]{%
+  \par\medskip\noindent\itshape #2 (#1). ---\ }{\par}
+\newenvironment{namedlemma}[2][]{%
+  \par\medskip\noindent\itshape #2 (#1). ---\ }{\par}
+
+\makeatletter
+\newcommand{\EGAReaderTarget}[2]{\hypertarget{#1}{}\@bsphack\begingroup\def\@currentHref{#1}\label{#2}\endgroup\@esphack}
+\makeatother
+\begin{document}
+\setcounter{section}{4}\setcounter{subsection}{4}
+\oldpage[III]{137}
+
+\begin{corollary}[4.4.6]
+\label{III.4.4.6-fr}
+Soient $A$ un anneau noethérien, $B$ une $A$-algèbre de type fini,
+$\mathfrak q$ un idéal premier de $B$, $\mathfrak p$ son image réciproque
+dans $A$. On suppose que $\mathfrak q$ soit à la fois maximal et minimal dans
+l'ensemble des idéaux premiers de $B$ dont l'image réciproque est
+$\mathfrak p$. Alors il existe $g\in B-\mathfrak q$, une $A$-algèbre finie
+$A'$ et un élément $f'\in A'$ tels que les $A$-algèbres $B_g$ et $A'_{f'}$
+soient isomorphes.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet d'appliquer (\hyperref[III.4.4.5-fr]{4.4.5}) à
+$Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(B)$, l'hypothèse sur
+$\mathfrak q$ signifiant exactement qu'il est isolé dans sa fibre
+(I, 1.1.7).
+\end{proof}
+
+On en déduit le résultat suivant, moins général en apparence~:
+
+\begin{corollary}[4.4.7]
+\label{III.4.4.7-fr}
+Soient $A$ un anneau local noethérien, $B$ une $A$-algèbre de type fini,
+$\mathfrak n$ un idéal premier de $B$ dont l'image réciproque dans $A$ est
+l'idéal maximal $\mathfrak m$. On suppose que $\mathfrak n$ est maximal dans
+$B$ et est minimal dans l'ensemble des idéaux premiers de $B$ dont l'image
+réciproque est $\mathfrak m$ (ce qui signifie aussi que
+$B\mathfrak m$ est primaire pour $\mathfrak n$). Alors il existe une
+$A$-algèbre finie $A'$ et un idéal maximal $\mathfrak m'$ de $A'$ (dont
+$\mathfrak m$ est l'image réciproque dans $A$) tels que $B_{\mathfrak n}$
+soit isomorphe à la $A$-algèbre $A'_{\mathfrak m'}$.
+\end{corollary}
+
+Le cas particulier suivant de (\hyperref[III.4.4.7-fr]{4.4.7}) est aussi
+parfois appelé «~Main Theorem~»~:
+
+\begin{corollary}[4.4.8]
+\label{III.4.4.8-fr}
+Sous les conditions de (\hyperref[III.4.4.7-fr]{4.4.7}), supposons en outre
+$A$ et $B$ intègres et ayant même corps des fractions $K$. Alors, si $A$ est
+intégralement clos, on a $B=A$.
+\end{corollary}
+
+\begin{proof}
+En effet, la Remarque (\hyperref[III.4.4.4-fr]{4.4.4}) montre que l'on peut
+supposer, dans l'application de (\hyperref[III.4.4.7-fr]{4.4.7}) que $A'$ est
+intègre et a $K$ pour corps des fractions~; l'hypothèse sur $A$ entraîne alors
+$A'=A$, donc $B_{\mathfrak n}=A$~; comme on a
+$A\subset B\subset B_{\mathfrak n}$, on en conclut bien $A=B$.
+\end{proof}
+
+L'énoncé (\hyperref[III.4.4.8-fr]{4.4.8}) est la forme donnée par Zariski à
+son «~Main theorem~» (étendu aux anneaux locaux noethériens intègres
+quelconques).
+
+Les corollaires précédents étaient des variantes de nature locale de
+(\hyperref[III.4.4.3-fr]{4.4.3}), qui est un résultat global. Voici une autre
+conséquence de nature globale~:
+
+\begin{corollary}[4.4.9]
+\label{III.4.4.9-fr}
+Soient $Y$ un préschéma intègre localement noethérien, $f:X\to Y$ un
+morphisme séparé, de type fini et birationnel. Supposons en outre $Y$ normal
+et toutes les fibres $f^{-1}(y)$ finies pour $y\in Y$. Alors $f$ est une
+immersion ouverte~; si en outre $f$ est fermé (et en particulier si $f$ est
+propre), $f$ est un isomorphisme.
+\end{corollary}
+
+\begin{proof}
+Soit en effet $x\in X$, et posons $y=f(x)$. Comme $f^{-1}(y)$ est un schéma
+algébrique sur $k(y)$, l'hypothèse qu'il est fini entraîne qu'il est discret
+(I, 6.4.4)~; en outre $\mathcal O_y$ est intégralement clos et
+$\mathcal O_x$ et $\mathcal O_y$ ont même corps des fractions (I, 7.1.5).
+On peut donc appliquer (\hyperref[III.4.4.8-fr]{4.4.8}), et si
+$f=(\psi,\theta)$, l'homomorphisme
+$\theta_y^\#:\mathcal O_y\to\mathcal O_x$ est bijectif~; on en conclut
+(I, 6.5.4) que $f$ est un isomorphisme local. Mais comme $f$ est séparé et
+$X$ intègre, $f$ est une immersion ouverte (I, 8.2.8). La dernière assertion
+résulte de ce que $f$ est dominant.
+\end{proof}
+
+\begin{proposition}[4.4.10]
+\label{III.4.4.10-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+localement de type fini. L'ensemble $X'$ des $x\in X$ isolés dans leur fibre
+$f^{-1}(f(x))$ est ouvert dans $X$.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$ et $Y$, on peut supposer $X$ et $Y$ affines
+noethériens et $f$ de type fini~; $f$ est alors un morphisme affine de type
+fini, donc quasi-projectif (II, 5.3.4, (i)), et il suffit d'appliquer
+(\hyperref[III.4.4.3-fr]{4.4.3}).
+\end{proof}
+
+\oldpage[III]{138}
+
+\begin{corollary}[4.4.11]
+\label{III.4.4.11-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre. L'ensemble $U$ des points $y\in Y$ tels que $f^{-1}(y)$ soit discret
+est ouvert dans $Y$, et le morphisme $f^{-1}(U)\to U$ restriction de $f$ est
+fini. En particulier, un morphisme propre et quasi-fini $X\to Y$ est fini.
+\end{corollary}
+
+\begin{proof}
+En effet, le complémentaire de $U$ dans $Y$ est l'image par $f$ de $X-X'$ qui
+est fermé dans $X$ en vertu de (\hyperref[III.4.4.10-fr]{4.4.10})~; comme $f$
+est une application fermée, $U$ est ouvert. En outre, il résulte de
+(II, 6.2.2) que $f^{-1}(y)$ est fini pour tout $y\in U$~; comme le morphisme
+$f^{-1}(U)\to U$, restriction de $f$ est propre (II, 5.4.1), il est fini en
+vertu de (\hyperref[III.4.4.2-fr]{4.4.2}).
+\end{proof}
+
+\begin{env}[4.4.12]
+\label{III.4.4.12-fr}
+\emph{Remarques} (4.4.12). ---
+\begin{enumerate}
+\item[(i)] Comme on l'a annoncé dans (II, 6.2.7), nous montrerons au chap. V
+que si $Y$ est localement noethérien, tout morphisme quasi-fini et séparé
+$f:X\to Y$ est quasi-affine, donc quasi-projectif. Il s'ensuivra que, dans le
+Main Theorem (\hyperref[III.4.4.3-fr]{4.4.3}) la conclusion reste valable
+lorsqu'on suppose seulement $f$ séparé et de type fini. En effet, il résulte
+de (\hyperref[III.4.4.10-fr]{4.4.10}) que $X'$ est ouvert dans $X$, et comme
+$X$ est localement noethérien, la restriction de $f$ à $X'$ est encore de
+type fini (I, 6.3.5), donc quasi-fini par définition de $X'$, et évidemment
+séparé~; on peut donc appliquer (\hyperref[III.4.4.3-fr]{4.4.3}) à cette
+restriction, d'où la conclusion.
+
+\item[(ii)] Nous donnerons au chap. IV une démonstration plus élémentaire de
+(\hyperref[III.4.4.10-fr]{4.4.10}), utilisant la théorie de la dimension.
+\end{enumerate}
+\end{env}
+
+\subsection{Complétés de modules d'homomorphismes}
+\label{subsection:III.4.5-fr}
+
+\begin{proposition}[4.5.1]
+\label{III.4.5.1-fr}
+Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal de $A$, $X$ un
+$A$-préschéma de type fini, $\mathcal F$, $\mathcal G$ deux
+$\mathcal O_X$-Modules cohérents dont les supports ont une intersection
+propre sur $Y=\operatorname{Spec}(A)$ (II, 5.4.10). Alors, pour tout entier
+$n\geq0$, $\operatorname{Ext}^n_{\mathcal O_X}(X;\mathcal F,\mathcal G)$ est un $A$-module
+de type fini, et son séparé complété pour la topologie $\mathfrak J$-préadique
+s'identifie canoniquement (avec les notations de
+(\hyperref[III.4.1.7-fr]{4.1.7})) à
+$\operatorname{Ext}^n_{\mathcal O_{\widehat X}}(\widehat X;\widehat{\mathcal F},
+\widehat{\mathcal G})$.
+\end{proposition}
+
+\begin{proof}
+On sait (T, 4.2) qu'il existe une suite spectrale birégulière
+$\mathrm E(\mathcal F,\mathcal G)$ dont l'aboutissement est
+$\operatorname{Ext}_{\mathcal O_X}(X;\mathcal F,\mathcal G)$ et dont les termes
+$\mathrm E_2$ sont donnés par
+\[
+\mathrm E_2^{pq}=\mathrm H^p\bigl(X,
+\mathcal{E}\!xt^q_{\mathcal O_X}(\mathcal F,\mathcal G)\bigr).
+\]
+On sait que $\mathcal{E}\!xt^q_{\mathcal O_X}(\mathcal F,\mathcal G)$ est un
+$\mathcal O_X$-Module cohérent (0, 12.3.3) dont le support est contenu dans
+l'intersection de ceux de $\mathcal F$ et $\mathcal G$ (T, 4.2.2), et est
+par suite propre sur $Y$ (II, 5.4.10). On conclut de
+(\hyperref[III.3.2.4-fr]{3.2.4}) que les $\mathrm E_2^{pq}$ sont des
+$A$-modules de type fini, et par suite (0, 11.1.8) il en est de même de tous
+les termes $\mathrm E_r^{pq}$ de la suite spectrale et de son aboutissement.
+D'autre part, si $i:\widehat X\to X$ est le morphisme canonique,
+$\widehat{\mathcal F}$ et $\widehat{\mathcal G}$ s'identifient canoniquement
+à $i^*(\mathcal F)$ et $i^*(\mathcal G)$, et $i$ est plat (I, 10.8.8 et
+10.8.9). On sait alors (0, 12.3.4) qu'il existe, pour tout $q\geq0$, un
+$i$-morphisme canonique
+\[
+u_q:\mathcal{E}\!xt^q_{\mathcal O_X}(\mathcal F,\mathcal G)
+\longrightarrow
+\mathcal{E}\!xt^q_{\mathcal O_{\widehat X}}
+(\widehat{\mathcal F},\widehat{\mathcal G}),
+\]
+et que le $\mathcal O_{\widehat X}$-homomorphisme correspondant
+\[
+u_q^\#:i^*\bigl(\mathcal{E}\!xt^q_{\mathcal O_X}(\mathcal F,\mathcal G)\bigr)
+\longrightarrow
+\mathcal{E}\!xt^q_{\mathcal O_{\widehat X}}
+(\widehat{\mathcal F},\widehat{\mathcal G})
+\]
+est un isomorphisme (0, 12.3.5)~; autrement dit (I, 10.8.8),
+$\mathcal{E}\!xt^q_{\mathcal O_{\widehat X}}
+(\widehat{\mathcal F},\widehat{\mathcal G})$ s'identifie canoniquement au
+complété $(\mathcal{E}\!xt^q_{\mathcal O_X}(\mathcal F,\mathcal G))^\wedge$ (avec les
+notations de (\hyperref[III.4.1.7-fr]{4.1.7})). On conclut alors du th. de
+comparaison (\hyperref[III.4.1.10-fr]{4.1.10}) que pour tout $p\geq0$,
+\[
+\mathrm H^p\bigl(\widehat X,
+\mathcal{E}\!xt^q_{\mathcal O_{\widehat X}}
+(\widehat{\mathcal F},\widehat{\mathcal G})\bigr)
+\]
+s'identifie canoniquement au séparé complété de
+$\mathrm H^p\bigl(X,\mathcal{E}\!xt^q_{\mathcal O_X}
+(\mathcal F,\mathcal G)\bigr)$ pour la topologie $\mathfrak J$-préadique.
+
+\oldpage[III]{139}
+
+Si on désigne par $\mathrm E(\widehat{\mathcal F},
+\widehat{\mathcal G})$ la suite spectrale birégulière définie dans (T, 4.2)
+relative à $\widehat{\mathcal F}$ et $\widehat{\mathcal G}$, on voit donc que
+si $\widehat A$ désigne le séparé complété de $A$ pour la topologie
+$\mathfrak J$-préadique, on a, à un isomorphisme canonique près,
+\[
+\mathrm E_2^{pq}(\widehat{\mathcal F},\widehat{\mathcal G})
+=\mathrm E_2^{pq}(\mathcal F,\mathcal G)\otimes_A\widehat A
+\qquad (0\textsubscript{I}, 7.3.3).
+\]
+
+Cela étant, on sait que la donnée du morphisme plat $i$ définit un
+homomorphisme canonique de suites spectrales
+\[
+\varphi:\mathrm E(\mathcal F,\mathcal G)\longrightarrow
+\mathrm E(\widehat{\mathcal F},\widehat{\mathcal G})
+=\mathrm E(i^*(\mathcal F),i^*(\mathcal G))
+\]
+qui, pour les termes $\mathrm E_2$ (resp. l'aboutissement) se réduit à
+l'homomorphisme
+\[
+\varphi_2^{pq}:\mathrm H^p\bigl(X,
+\mathcal{E}\!xt^q_{\mathcal O_X}(\mathcal F,\mathcal G)\bigr)
+\longrightarrow
+\mathrm H^p\bigl(\widehat X,
+\mathcal{E}\!xt^q_{\mathcal O_{\widehat X}}
+(\widehat{\mathcal F},\widehat{\mathcal G})\bigr)
+\]
+\[
+\text{(resp. }\varphi^n:\operatorname{Ext}^n_{\mathcal O_X}
+(X;\mathcal F,\mathcal G)\longrightarrow
+\operatorname{Ext}^n_{\mathcal O_{\widehat X}}
+(\widehat X;\widehat{\mathcal F},\widehat{\mathcal G})\text{)}
+\]
+déduit de $u_q$ (resp. $u_0$) par fonctorialité (0, 12.3.4). Par
+tensorisation avec $\widehat A$, les $\varphi_r^{pq}$ et $\varphi^n$ donnent
+des homomorphismes de $\widehat A$-modules
+\[
+\psi_r^{pq}:\mathrm E_r^{pq}(\mathcal F,\mathcal G)
+\otimes_A\widehat A\longrightarrow
+\mathrm E_r^{pq}(\widehat{\mathcal F},\widehat{\mathcal G})
+\]
+\[
+\psi^n:\operatorname{Ext}^n_{\mathcal O_X}(X;\mathcal F,\mathcal G)
+\otimes_A\widehat A\longrightarrow
+\operatorname{Ext}^n_{\mathcal O_{\widehat X}}
+(\widehat X;\widehat{\mathcal F},\widehat{\mathcal G}).
+\]
+Comme $\widehat A$ est un $A$-module plat (0\textsubscript{I}, 7.3.3), les
+$\widehat A$-modules
+$\mathrm E_r^{pq}(\mathcal F,\mathcal G)\otimes_A\widehat A$ forment une
+suite spectrale birégulière d'aboutissement les
+$\operatorname{Ext}^n_{\mathcal O_X}(X;\mathcal F,\mathcal G)\otimes_A\widehat A$, et les
+$\psi_r^{pq}$ et $\psi^n$ un morphisme de suites spectrales. Comme les
+$\psi_2^{pq}$ sont des isomorphismes, il en est de même des $\psi^n$
+(0, 11.1.5).
+\end{proof}
+
+\begin{corollary}[4.5.2]
+\label{III.4.5.2-fr}
+Sous les hypothèses de (\hyperref[III.4.5.1-fr]{4.5.1}), supposons en outre
+que $A$ soit un anneau $\mathfrak J$-adique noethérien. Alors, pour tout
+entier $n\geq0$, $\operatorname{Ext}^n_{\mathcal O_X}(X;\mathcal F,\mathcal G)$
+s'identifie canoniquement à
+$\operatorname{Ext}^n_{\mathcal O_{\widehat X}}
+(\widehat X;\widehat{\mathcal F},\widehat{\mathcal G})$.
+\end{corollary}
+
+\begin{proof}
+Il suffit de remarquer que $\operatorname{Ext}^n_{\mathcal O_X}
+(X;\mathcal F,\mathcal G)$, étant un $A$-module de type fini, est séparé et
+complet pour la topologie $\mathfrak J$-préadique (0\textsubscript{I}, 7.3.6).
+\end{proof}
+
+Le cas particulier $n=0$ de (\hyperref[III.4.5.1-fr]{4.5.1}) s'énonce de la
+façon suivante~:
+
+\begin{corollary}[4.5.3]
+\label{III.4.5.3-fr}
+Sous les hypothèses de (\hyperref[III.4.5.1-fr]{4.5.1}), pour tout
+homomorphisme $u:\mathcal F\to\mathcal G$, désignons par
+$\widehat u:\widehat{\mathcal F}\to\widehat{\mathcal G}$ l'homomorphisme
+complété (I, 10.8.4). Alors on a un isomorphisme canonique
+\[
+\label{III.4.5.3.1-fr}
+\left(\operatorname{Hom}_{\mathcal O_X}(\mathcal F,\mathcal G)\right)^\wedge
+\xrightarrow{\sim}
+\operatorname{Hom}_{\mathcal O_{\widehat X}}
+(\widehat{\mathcal F},\widehat{\mathcal G}),
+\tag{4.5.3.1}
+\]
+où le premier membre est le séparé complété pour la topologie
+$\mathfrak J$-préadique du $A$-module
+$\operatorname{Hom}_{\mathcal O_X}(\mathcal F,\mathcal G)$, cet isomorphisme étant obtenu
+par passage aux séparés complétés à partir de l'homomorphisme
+$u\mapsto\widehat u$.
+\end{corollary}
+
+\subsection{Relations entre morphismes formels et morphismes usuels}
+
+\begin{proposition}[4.6.1]
+\label{III.4.6.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre, $\mathcal F$ un $\mathcal O_X$-Module cohérent et $f$-plat, $y$ un
+point de $Y$. Supposons que pour un entier $n$, on ait
+\[
+H^n\bigl(f^{-1}(y),\mathcal F\otimes_{\mathcal O_Y}k(y)\bigr)=0.
+\]
+Alors il existe un voisinage $U$ de $y$ dans $Y$ tel que
+$R^nf_*(\mathcal F)|U=0$, et pour tout entier $p\geq0$, l'homomorphisme
+canonique
+\[
+\bigl(R^{n-1}f_*(\mathcal F)\bigr)_y
+\longrightarrow
+H^{n-1}\bigl(f^{-1}(y),
+\mathcal F\otimes_{\mathcal O_Y}
+(\mathcal O_y/\mathfrak m_y^{p+1})\bigr)
+\]
+de (\hyperref[III.4.2.1.1-fr]{4.2.1.1}) est surjectif.
+\end{proposition}
+
+\begin{proof}
+Comme $R^nf_*(\mathcal F)$ est un $\mathcal O_Y$-Module cohérent
+(\hyperref[III.3.2.1-fr]{3.2.1}), la première assertion de la proposition
+sera établie si l'on prouve que l'on a
+$(R^nf_*(\mathcal F))_y=0$ (0\textsubscript{I}, 5.2.2)~; en vertu de
+(\hyperref[III.4.2.1-fr]{4.2.1}), il suffira de prouver que
+\[
+H^n\bigl(f^{-1}(y),\mathcal F\otimes_{\mathcal O_Y}
+(\mathcal O_y/\mathfrak m_y^{p+1})\bigr)=0
+\]
+pour tout $p$. C'est vrai par hypothèse pour $p=0$~; nous allons le démontrer
+par récurrence sur $p$. Posons
+\[
+X_p=X\times_Y\operatorname{Spec}
+(\mathcal O_y/\mathfrak m_y^{p+1}),
+\]
+de sorte que $X_{p-1}$ est un sous-préschéma fermé de $X_p$, ayant même
+espace sous-jacent (I, 3.6.1)~; l'hypothèse de récurrence
+\[
+H^n\bigl(X_{p-1},\mathcal F\otimes_{\mathcal O_Y}
+(\mathcal O_y/\mathfrak m_y^p)\bigr)=0
+\]
+entraîne donc
+\[
+H^n\bigl(X_p,\mathcal F\otimes_{\mathcal O_Y}
+(\mathcal O_y/\mathfrak m_y^p)\bigr)=0~;
+\]
+d'autre part, la suite exacte de cohomologie donne, à partir de la suite
+exacte
+\[
+0\longrightarrow
+\mathfrak m_y^p\mathcal F/\mathfrak m_y^{p+1}\mathcal F
+\longrightarrow
+\mathcal F/\mathfrak m_y^{p+1}\mathcal F
+\longrightarrow
+\mathcal F/\mathfrak m_y^p\mathcal F
+\longrightarrow0
+\]
+de $\mathcal O_{X_p}$-Modules, la suite exacte
+\[
+H^n\bigl(X_p,
+\mathfrak m_y^p\mathcal F/\mathfrak m_y^{p+1}\mathcal F\bigr)
+\longrightarrow
+H^n\bigl(X_p,\mathcal F/\mathfrak m_y^{p+1}\mathcal F\bigr)
+\longrightarrow
+H^n\bigl(X_p,\mathcal F/\mathfrak m_y^p\mathcal F\bigr)
+\]
+et il suffira de montrer que l'on a
+\[
+\label{III.4.6.1.1-fr}
+H^n\bigl(X_p,
+\mathfrak m_y^p\mathcal F/\mathfrak m_y^{p+1}\mathcal F\bigr)=0.
+\tag{4.6.1.1}
+\]
+car alors $H^n(X_p,\mathcal F/\mathfrak m_y^{p+1}\mathcal F)$ sera un
+sous-module de $H^n(X_p,\mathcal F/\mathfrak m_y^p\mathcal F)$, donc $0$ en
+vertu de l'hypothèse de récurrence.
+
+\oldpage[III]{140}
+
+Notons maintenant que la fibre
+$Z=f^{-1}(y)=X\times_Y\operatorname{Spec}(k(y))$ est un sous-préschéma fermé
+de $X_p$, et que
+$\mathfrak m_y^p\mathcal F/\mathfrak m_y^{p+1}\mathcal F$ est annulé par
+$\mathfrak m_y$, donc peut être considéré comme un $\mathcal O_Z$-Module, de
+sorte que
+\[
+H^n\bigl(Z,\mathfrak m_y^p\mathcal F/
+\mathfrak m_y^{p+1}\mathcal F\bigr)
+=H^n\bigl(X_p,\mathfrak m_y^p\mathcal F/
+\mathfrak m_y^{p+1}\mathcal F\bigr).
+\]
+Cela étant, nous allons montrer que le $\mathcal O_Z$-homomorphisme canonique
+\[
+\label{III.4.6.1.2-fr}
+(\mathcal F/\mathfrak m_y\mathcal F)
+\otimes_{k(y)}(\mathfrak m_y^p/\mathfrak m_y^{p+1})
+\longrightarrow
+\mathfrak m_y^p\mathcal F/\mathfrak m_y^{p+1}\mathcal F
+\tag{4.6.1.2}
+\]
+est bijectif~; cela établi, il en résultera, puisque
+$\mathfrak m_y^p/\mathfrak m_y^{p+1}$ est un $k(y)$-module libre, que l'on a
+\[
+\begin{split}
+H^n\bigl(Z,\mathfrak m_y^p\mathcal F/
+\mathfrak m_y^{p+1}\mathcal F\bigr)
+&=H^n\bigl(Z,\mathcal F/\mathfrak m_y\mathcal F\bigr)
+\otimes_{k(y)}(\mathfrak m_y^p/\mathfrak m_y^{p+1})\\
+&=0
+\end{split}
+\]
+(0, 12.2.3), puisque
+$H^n(Z,\mathcal F/\mathfrak m_y\mathcal F)=0$ par hypothèse, d'où
+(\hyperref[III.4.6.1.1-fr]{4.6.1.1}). Pour établir la première assertion, il
+reste donc à prouver que (\hyperref[III.4.6.1.2-fr]{4.6.1.2}) est bijectif~;
+comme la question est ponctuelle sur $X$ et que $\mathcal F_x$ est un
+$\mathcal O_y$-module plat par hypothèse pour tout $x\in f^{-1}(y)$, il
+suffit d'appliquer (0, 10.2.1, c)), car
+$\mathcal F_x/\mathfrak m_y\mathcal F_x$ est un module plat sur le corps
+$k(y)=\mathcal O_y/\mathfrak m_y$.
+
+Pour démontrer la seconde assertion de (\hyperref[III.4.6.1-fr]{4.6.1}), on
+se ramène aussitôt, comme dans (\hyperref[III.4.2.1-fr]{4.2.1}), au cas où
+$Y$ est affine et $y$ fermé. Notons que
+(\hyperref[III.4.6.1.1-fr]{4.6.1.1}) donne, par un raisonnement analogue,
+pour tout $k>0$, la relation
+\[
+\label{III.4.6.1.3-fr}
+H^n\bigl(X_{k+1},
+\mathfrak m_y^k\mathcal F/
+\mathfrak m_y^{k+p+1}\mathcal F\bigr)=0.
+\tag{4.6.1.3}
+\]
+
+\oldpage[III]{141}
+
+d'où on déduit, par (\hyperref[III.4.2.1-fr]{4.2.1}), que l'on a aussi
+\[
+\label{III.4.6.1.4-fr}
+\bigl(R^nf_*(\mathfrak m_y^k\mathcal F)\bigr)_y=0.
+\tag{4.6.1.4}
+\]
+Cela étant, on tire de la suite exacte de cohomologie l'exactitude de la
+suite
+\[
+\bigl(R^{n-1}f_*(\mathcal F)\bigr)_y
+\longrightarrow
+\bigl(R^{n-1}f_*(\mathcal F/\mathfrak m_y^p\mathcal F)\bigr)_y
+\longrightarrow
+\bigl(R^nf_*(\mathfrak m_y^p\mathcal F)\bigr)_y=0
+\]
+et comme $y$ est fermé et $Y$ affine, on a (\hyperref[III.1.4.11-fr]{1.4.11})
+\[
+R^{n-1}f_*(\mathcal F/\mathfrak m_y^p\mathcal F)
+=\bigl(H^{n-1}(X,\mathcal F/\mathfrak m_y^p\mathcal F)\bigr)^\sim
+=\bigl(H^{n-1}(f^{-1}(y),
+\mathcal F/\mathfrak m_y^p\mathcal F)\bigr)^\sim
+\]
+(G, II, 4.9.1)~; or
+$H^{n-1}(f^{-1}(y),\mathcal F/\mathfrak m_y^p\mathcal F)$ est un
+$(\mathcal O_y/\mathfrak m_y^p)$-module, d'où
+\[
+\bigl(R^{n-1}f_*(\mathcal F/\mathfrak m_y^p\mathcal F)\bigr)_y
+=H^{n-1}(f^{-1}(y),\mathcal F/\mathfrak m_y^p\mathcal F)
+\]
+et cela achève de prouver (\hyperref[III.4.6.1-fr]{4.6.1}).
+\end{proof}
+
+\begin{corollary}[4.6.2]
+\label{III.4.6.2-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre
+et plat, $\mathcal F$, $\mathcal G$ deux $\mathcal O_X$-Modules localement
+libres, $y$ un point de $Y$. Posons
+\[
+X_y=f^{-1}(y)=X\otimes_Yk(y),\qquad
+\mathcal F_y=\mathcal F\otimes_{\mathcal O_Y}k(y),\qquad
+\mathcal G_y=\mathcal G\otimes_{\mathcal O_Y}k(y),
+\]
+et supposons que l'on ait
+\[
+\label{III.4.6.2.1-fr}
+H^1\bigl(X_y,
+\mathcal{H}\!om_{\mathcal O_{X_y}}(\mathcal F_y,\mathcal G_y)\bigr)=0.
+\tag{4.6.2.1}
+\]
+Alors, pour tout homomorphisme $u_0:\mathcal F_y\to\mathcal G_y$, il existe
+un voisinage ouvert $U$ de $y$ et un homomorphisme
+\[
+u:\mathcal F|f^{-1}(U)\longrightarrow\mathcal G|f^{-1}(U)
+\]
+tels que $u_0$ soit égal à l'homomorphisme $u\otimes1$.
+\end{corollary}
+
+\begin{proof}
+En effet, l'hypothèse permet d'appliquer (\hyperref[III.4.6.1-fr]{4.6.1}) au
+$\mathcal O_X$-Module cohérent
+$\mathcal H=\mathcal{H}\!om_{\mathcal O_X}(\mathcal F,\mathcal G)$ pour
+$n=1$ et $p=0$, car $\mathcal H$ est localement libre et \emph{a fortiori}
+$f$-plat, et le $\mathcal O_{X_y}$-Module
+$\mathcal H\otimes_{\mathcal O_Y}k(y)$ s'identifie alors à
+$\mathcal{H}\!om_{\mathcal O_{X_y}}(\mathcal F_y,\mathcal G_y)$
+(0\textsubscript{I}, 6.2.2). On peut supposer $Y=\operatorname{Spec}(A)$
+affine, et alors (\hyperref[III.1.4.11-fr]{1.4.11})
+\[
+R^0f_*(\mathcal H)=
+\bigl(\operatorname{Hom}_{\mathcal O_X}(\mathcal F,\mathcal G)\bigr)^\sim,
+\]
+donc
+\[
+\bigl(R^0f_*(\mathcal H)\bigr)_y
+=\operatorname{Hom}_{\mathcal O_X}(\mathcal F,\mathcal G)
+\otimes_A\mathcal O_y~;
+\]
+l'homomorphisme canonique
+\[
+\operatorname{Hom}_{\mathcal O_X}(\mathcal F,\mathcal G)
+\otimes_A\mathcal O_y
+\longrightarrow
+\operatorname{Hom}_{\mathcal O_{X_y}}(\mathcal F_y,\mathcal G_y)
+\]
+étant surjectif par (\hyperref[III.4.6.1-fr]{4.6.1}), cela établit le
+corollaire, tout élément de
+$\operatorname{Hom}_{\mathcal O_X}(\mathcal F,\mathcal G)
+\otimes_A\mathcal O_y$ pouvant toujours se mettre sous la forme
+$u\otimes(1/s)$, où $s\notin\mathfrak m_y$ est un élément de $A$.
+\end{proof}
+
+Ce corollaire peut se compléter par le suivant~:
+
+\begin{corollary}[4.6.3]
+\label{III.4.6.3-fr}
+Sous les hypothèses de (\hyperref[III.4.6.2-fr]{4.6.2}), si $u_0$ est
+injectif (resp. surjectif, bijectif), on peut supposer qu'il en est de même de
+$u$.
+\end{corollary}
+
+\begin{proof}
+On peut se borner au cas où $U=Y$. Il suffit de prouver que si $u_0$ est
+injectif (resp. surjectif), $\operatorname{Ker}u_x=0$ (resp.
+$\operatorname{Coker}u_x=0$) pour tout $x\in f^{-1}(y)$~: en effet,
+$\operatorname{Ker}u$ et $\operatorname{Coker}u$ sont des
+$\mathcal O_X$-Modules cohérents (0\textsubscript{I}, 5.3.4), donc il
+existera un voisinage $V$ de $f^{-1}(y)$ dans $X$ tel que la restriction de
+$\operatorname{Ker}u$ (resp. $\operatorname{Coker}u$) à $V$ soit $0$
+(0\textsubscript{I}, 5.2.2)~; comme $f$ est fermé, il existera un voisinage
+$U'\subset U$ de $y$ tel que $f^{-1}(U')\subset V$, et
+(\hyperref[III.4.6.3-fr]{4.6.3}) sera démontré. Par hypothèse,
+\[
+u_x\otimes1:
+\mathcal F_x\otimes_{\mathcal O_y}k(y)
+\longrightarrow
+\mathcal G_x\otimes_{\mathcal O_y}k(y)
+\]
+est injectif (resp. surjectif), $\mathcal F_x$ et $\mathcal G_x$ sont des
+$\mathcal O_x$-modules libres de type fini et $\mathcal O_x$ est un
+$\mathcal O_y$-module plat. Lorsque l'on suppose $u_x\otimes1$ injectif, le
+fait que $u_x$ soit injectif résulte de (0, 10.2.4). Lorsque l'on suppose
+$u_x\otimes1$ surjectif, \emph{a fortiori} l'homomorphisme
+\[
+\mathcal F_x/\mathfrak m_x\mathcal F_x
+\longrightarrow
+\mathcal G_x/\mathfrak m_x\mathcal G_x,
+\]
+qui s'en déduit par passage aux quotients, est surjectif~; comme
+$\mathcal G_x$ est un $\mathcal O_x$-module de type fini et que
+$\mathcal O_x$ est un anneau local d'idéal maximal $\mathfrak m_x$, la
+conclusion résulte du lemme de Nakayama (Bourbaki, \emph{Alg.}, chap. VIII,
+\S\,6, no~3, cor. 4 de la prop. 6).
+\end{proof}
+
+On déduit en particulier de (\hyperref[III.4.6.3-fr]{4.6.3})~:
+
+\begin{corollary}[4.6.4]
+\label{III.4.6.4-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre
+et plat, $y$ un point de $Y$, $X_y=X\otimes_Yk(y)$. Soit $\mathcal E_0$ un
+$\mathcal O_{X_y}$-Module localement libre tel que
+\[
+\label{III.4.6.4.1-fr}
+H^1\bigl(X_y,
+\mathcal{H}\!om_{\mathcal O_{X_y}}(\mathcal E_0,\mathcal E_0)\bigr)=0.
+\tag{4.6.4.1}
+\]
+Soient $\mathcal F$, $\mathcal G$ deux $\mathcal O_X$-Modules localement
+libres tels que $\mathcal F_y$ et $\mathcal G_y$ (avec les notations de
+(\hyperref[III.4.6.2-fr]{4.6.2})) soient isomorphes à $\mathcal E_0$. Alors
+il existe un voisinage ouvert $U$ de $y$ tel que $\mathcal F|f^{-1}(U)$ et
+$\mathcal G|f^{-1}(U)$ soient isomorphes.
+\end{corollary}
+
+Plus particulièrement~:
+
+\begin{corollary}[4.6.5]
+\label{III.4.6.5-fr}
+Sous les hypothèses de (\hyperref[III.4.6.4-fr]{4.6.4}) sur $f$, $X$, $Y$,
+supposons que $H^1(X_y,\mathcal O_{X_y})=0$. Si $\mathcal F$ et $\mathcal G$
+sont deux $\mathcal O_X$-Modules inversibles tels que $\mathcal F_y$ et
+$\mathcal G_y$ soient isomorphes, il existe un voisinage ouvert $U$ de $y$
+tel que $\mathcal F|f^{-1}(U)$ et $\mathcal G|f^{-1}(U)$ soient isomorphes.
+\end{corollary}
+
+\begin{proof}
+Il suffit d'appliquer (\hyperref[III.4.6.4-fr]{4.6.4}) aux modules
+$\mathcal F^{-1}\otimes\mathcal G$ et $\mathcal O_X$.
+\end{proof}
+
+\begin{remarks}[4.6.6]
+\label{III.4.6.6-fr}
+\begin{enumerate}
+\item[(i)] En utilisant (\hyperref[III.4.6.5-fr]{4.6.5}), nous établirons au
+chap. V la classification des faisceaux inversibles sur un fibré projectif,
+annoncée dans (II, 4.2.7).
+\item[(ii)] Le résultat de (\hyperref[III.4.6.1-fr]{4.6.1}) apparaîtra au
+\S\,7 comme conséquence de propositions plus générales.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[4.6.7]
+\label{III.4.6.7-fr}
+Soient $Z$ un préschéma localement noethérien, $X$, $Y$ deux $Z$-préschémas
+tels que les morphismes structuraux $g:X\to Z$, $h:Y\to Z$ soient propres.
+Soient $f:X\to Y$ un $Z$-morphisme, $z$ un point de $Z$, et soit
+\[
+f_z=f\times_Z1:
+X\otimes_Zk(z)\longrightarrow Y\otimes_Zk(z).
+\]
+\begin{enumerate}
+\item[(i)] Si $f_z$ est un morphisme fini (resp. une immersion fermée), il
+existe un voisinage ouvert $U$ de $z$ tel que le morphisme
+$g^{-1}(U)\to h^{-1}(U)$, restriction de $f$, soit un morphisme fini (resp.
+une immersion fermée).
+\item[(ii)] On suppose de plus que $g$ soit un morphisme plat. Alors, si
+$f_z$ est un isomorphisme, il existe un voisinage ouvert $U$ de $z$ tel que
+le morphisme $g^{-1}(U)\to h^{-1}(U)$, restriction de $f$, soit un
+isomorphisme.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Dans les deux cas, il suffira de prouver que pour tout $y\in h^{-1}(z)$ il
+existe un voisinage $V_y$ de $y$ tel que la restriction
+$f^{-1}(V_y)\to V_y$ de $f$ soit un morphisme fini (resp. une immersion
+fermée, un isomorphisme)~; il en résultera alors en effet que si $V$ est la
+réunion des $V_y$, la restriction $f^{-1}(V)\to V$ de $f$ est un morphisme
+fini (resp. une immersion fermée, un isomorphisme) (II, 6.1.1 et I, 4.2.4).
+Comme $h$ est un morphisme fermé, il existera un voisinage ouvert $U$ de $z$
+tel que $h^{-1}(U)\subset V$, et la proposition sera démontrée.
+
+\noindent\textit{(i)} Notons tout d'abord que $f$ est un morphisme propre
+(II, 5.4.3)~; si on suppose $f_z$ fini, l'existence pour tout
+$y\in h^{-1}(z)$ d'un voisinage $V_y$ tel que $f^{-1}(V_y)\to V_y$ soit fini
+résulte de (\hyperref[III.4.4.11-fr]{4.4.11}).
+
+
+\end{proof}
+\end{document}

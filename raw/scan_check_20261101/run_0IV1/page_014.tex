@@ -1,0 +1,73 @@
+% from ega0-15-fr.tex
+\oldpage[0\textsubscript{IV-1}]{14}
+Supposons maintenant $M$ muni d'une \emph{filtration} $(M_k)$ telle que
+$M_0=M$, et désignons par
+$\gr_\bullet(M)=\bigoplus_{k\geq0}M_k/M_{k+1}$ le $A$-module gradué associé.
+Les notations étant celles de (15.1.1), posons, pour tout $k\geq0$,
+\[
+  M'_k=M_k+\mathfrak{J}M_{k-1}+\cdots+
+  \mathfrak{J}^{k-1}M_1+\mathfrak{J}^kM_0.
+  \tag{15.1.5.1}\label{0.15.1.5.1-fr}
+\]
+Il est clair que $(M'_k)$ est une filtration sur $M$. Lorsque
+$M_k=\mathfrak{Q}^kM$, où $\mathfrak Q$ est un idéal de $A$, la filtration
+$(M'_k)$ n'est autre que la filtration
+$(\mathfrak{J}+\mathfrak{Q})$-préadique. Nous noterons
+$\gr'_\bullet(M)$ le $A$-module gradué associé à $(M'_k)$. Notons encore
+\[
+  (\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))[T_1,\ldots,T_n]
+\]
+le produit tensoriel de $A$-modules gradués ($\mathrm{II}$, 2.1.2)
+\[
+  (\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))
+  \otimes_A A[T_1,\ldots,T_n].
+\]
+On définit un \emph{homomorphisme gradué surjectif de $A$-modules gradués}, de
+degré $0$,
+\[
+  \psi:(\gr_\bullet(M)\otimes_A(A/\mathfrak{J}))[T_1,\ldots,T_n]
+  \longrightarrow\gr'_\bullet(M)
+  \tag{15.1.5.2}\label{0.15.1.5.2-fr}
+\]
+de la façon suivante~: si $\alpha\in A/\mathfrak{J}$ est la classe d'un
+élément $a\in A$, $\xi\in M_k/M_{k+1}$ la classe d'un élément $x\in M_k$ et
+$P[T_1,\ldots,T_n]$ un polynôme homogène de degré $h$, on fait correspondre au
+triplet $(\alpha,\xi,P)$ la classe mod. $M'_{h+k+1}$ de
+$P(f_1,\ldots,f_n)ax$~; on vérifie encore aussitôt que cet élément ne dépend
+bien que de $\xi$, $\alpha$ et $P$, et cela définit l'homomorphisme gradué
+(15.1.5.2), qui est surjectif en vertu de la définition (15.1.5.1). On
+retrouve l'homomorphisme (15.1.1.1) en considérant la filtration sur $M$ telle
+que $M_1=0$.
+\end{env}
+
+\begin{lemma}[15.1.6]
+\label{0.15.1.6-fr}
+On garde les notations de (15.1.5) et on suppose $n=1$, en posant $f=f_1$. Si
+$f$ est $\gr_\bullet(M)$-régulier, l'homomorphisme (15.1.5.2) est bijectif.
+\end{lemma}
+
+\begin{proof}
+Soit $Q_k$ (resp. $Q'_k$) le sous-$A$-module des termes de degré $k$ au
+premier (resp. second) membre de (15.1.5.2). Munissons $Q_k$ de la filtration
+\[
+  (Q_k)_i=\sum_{j\leq k-i}
+  (\gr_{k-j}(M)\otimes_A(A/fA))T^j
+  \tag{15.1.6.1}\label{0.15.1.6.1-fr}
+\]
+de sorte que $(Q_k)_0=Q_k$ et $(Q_k)_{k+1}=0$, et pour cette filtration, on a
+\[
+  \gr_i(Q_k)=(\gr_i(M)\otimes_A(A/fA))T^{k-i}.
+\]
+Munissons $Q'_k$ de la filtration formée des
+$\psi((Q_k)_i)=(Q'_k)_i$. Comme ces filtrations sont \emph{finies}, il suffit
+de prouver que les homomorphismes
+$\psi_{ki}:\gr_i(Q_k)\to\gr_i(Q'_k)$ déduits de $\psi_k$ sont injectifs
+(Bourbaki, \emph{Alg.~comm.}, chap.~III, \S~3, no~8, cor.~1 du th.~1). Or on
+a
+\[
+  \gr_i(Q_k)=((M_i/M_{i+1})\otimes_A(A/fA))T^{k-i}~;
+\]
+d'autre part, $(Q'_k)_{i+1}$ est l'image de
+\[
+  M_k+fM_{k-1}+\cdots+f^{k-i-1}M_{i+1}
+\]

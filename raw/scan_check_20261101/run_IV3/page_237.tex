@@ -1,0 +1,34 @@
+% from ega4-15-fr.tex
+\oldpage[IV-3]{237}
+\begin{corollary}[15.6.2]
+\EGAReaderTarget{ega4.c04.cor.15-6-2}{IV.15.6.2-fr}
+Avec les notations de (15.6.1), supposons en outre que pour tout $y\in Y$, $X_y^0$ soit irréductible. Alors la fonction $z\mapsto\dim(X_z^0)$ est semi-continue supérieurement dans $Y$. Si en outre cette fonction est constante dans un voisinage d'un point $y\in Y$, alors on a $X_y^0\subset\overline{X_{y'}^0}$ pour toute générisation $y'$ de $y$.
+\end{corollary}
+
+\begin{proof}
+Soit $y$ un point de $Y$, et soit $U$ un voisinage ouvert affine de $g(y)$ dans $X$~; alors il y a un voisinage ouvert $V$ de $y$ dans $Y$ tel que $g(V)\subset U$, et pour tout $z\in V$, $U\cap X_z^0$ est dense dans $X_z^0$, donc $\dim(X_z^0)=\dim(U\cap X_z^0)$ (4.1.1.3). Remplaçant $X$ par $U$, on peut donc supposer que $f$ est un morphisme de type fini. On sait alors (9.7.10) que la fonction $z\mapsto\dim(X_z^0)$ est localement constructible, et les assertions du corollaire résultent donc de (15.6.1) et de ($\mathbf{0}_{\mathrm{III}}$, 9.3.4).
+\end{proof}
+
+\begin{proposition}[15.6.3]
+\label{IV.15.6.3-fr}
+Avec les notations de (15.6.1), supposons que pour tout $y\in Y$, $X_y^0$ soit géométriquement irréductible (4.5.2). Alors, pour tout $y\in Y$ tel que la fonction $z\mapsto\dim(X_z^0)$ soit constante dans un voisinage de $y$, $f$ est universellement ouvert aux points de $X_y^0$.
+\end{proposition}
+
+\begin{proof}
+Appliquons le critère (14.3.7). Soit donc $h:Y'\to Y$ un morphisme, $Y'$ étant le spectre d'un anneau de valuation discrète, dont nous désignerons par $t$, $t'$ le point fermé et le point générique respectivement, et supposons que $h(t)=y$, de sorte que $y'=h(t')$ est une générisation de $y$. Posons $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$, $g'=g_{(Y')}:Y'\to X'$. Avec les mêmes notations que dans (15.6.1), l'hypothèse faite sur les $X_y^0$ implique que
+\[
+  X_t^{\prime 0}=X_y^0\otimes_{\mathbf{k}(y)}\mathbf{k}(t)
+  \quad\text{et}\quad
+  X_{t'}^{\prime 0}=X_{y'}^0\otimes_{\mathbf{k}(y')}\mathbf{k}(t'),
+\]
+et que $X_t^{\prime 0}$ et $X_{t'}^{\prime 0}$ sont irréductibles (4.4.1)~; comme $\dim(X_y^0)=\dim(X_t^{\prime 0})$ et $\dim(X_{y'}^0)=\dim(X_{t'}^{\prime 0})$ (4.1.4), on voit qu'on est ramené à prouver la proposition pour $f'$ et $X_t^{\prime 0}$, autrement dit on peut se borner au cas où $Y$ est spectre d'un anneau de valuation discrète, $y$ son point fermé et $y'$ son point générique~; si $x'$ est le point générique de $X_{y'}^0$, il résulte alors de (15.6.2) que tout point de $X_y^0$ est spécialisation de $x'$, d'où la conclusion.
+\end{proof}
+
+\begin{proposition}[15.6.4]
+\label{IV.15.6.4-fr}
+Sous les hypothèses générales de (15.6.1), soit $X^0$ la réunion des $X_y^0$ lorsque $y$ parcourt $Y$. Si $y\in Y$ est tel que $X_y^0$ soit géométriquement réduit sur $\mathbf{k}(y)$ (4.6.2) et si $f$ est universellement ouvert en tout point de $X_y^0$, alors $X^0$ est un voisinage de $X_y^0$ dans $X$. En particulier, si $f$ est universellement ouvert et si, pour tout $y\in Y$, $X_y^0$ est géométriquement réduit sur $\mathbf{k}(y)$, $X^0$ est ouvert dans $X$.
+\end{proposition}
+
+\begin{proof}
+Montrons d'abord qu'on peut se ramener au cas où $f$ est un morphisme \emph{de type fini}. Soit $x$ un point de $X_y^0$~; il résulte de (5.10.8.1) (avec $\mathfrak F=\{\varnothing\}$) qu'il y a une suite finie $(Z_i)_{0\leqslant i\leqslant n}$ de composantes irréductibles de $f^{-1}(y)$ telle que $g(y)\in Z_0$, $x\in Z_n$ et $Z_i\cap Z_{i+1}\ne\varnothing$ pour $0\leqslant i\leqslant n-1$~; les $Z_i$ étant irréductibles, il y a une suite finie $(U_i)$ ($1\leqslant i\leqslant n$) d'ouverts affines dans $f^{-1}(y)$ tels que $g(y)\in U_1$, $x\in U_n$, $U_i$ étant un voisinage affine d'un point $x_i$ de $Z_i\cap Z_{i-1}$ pour $1\leqslant i\leqslant n$. Il y a pour chaque $i$ un ouvert quasi-compact $W_i$ dans $X$ tel que $U_i=f^{-1}(y)\cap W_i$~; soit $W$ l'ouvert quasi-compact de $X$ réunion des $W_i$. Comme $g$ est continue, il y a un voisinage ouvert affine $V$ de $y$ dans $Y$ tel que $g(V)\subset W$~; si $X'=W\cap f^{-1}(V)$, la restriction de $f$ à $X'$ est de type fini~; en outre, si, pour tout $z\in V$, $X_z^{\prime 0}$ est la composante connexe de $X'\cap f^{-1}(z)$ contenant $g(z)$, on a $X_z^{\prime 0}\subset X_z^0$, et $x$ appartient à $X_y^{\prime 0}$. En effet, chacun des $U_i$ contient les deux ensembles irréductibles $U_i\cap Z_{i-1}$ et $U_i\cap Z_i$ qui se rencontrent, et les ensembles irréductibles $U_i\cap Z_{i-1}$ et $U_{i-1}\cap Z_{i-1}$
+

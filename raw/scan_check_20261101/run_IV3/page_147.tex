@@ -1,0 +1,104 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{147}
+
+que les $A$-algèbres $A'$ pour lesquelles les $M_i\otimes_A A'$ sont des
+$A'$-modules libres (ou plats) sont exactement celles pour lesquelles
+$\mathfrak J_iA'=0$. Soit $\mathfrak J=\sum_i\mathfrak J_i$, qui est un idéal
+contenu dans $\mathfrak N$~; dire que $\mathcal F\otimes_A A'$ est $A'$-plat
+équivaut à dire que les $M_i\otimes_A A'$ sont tous des $A'$-modules plats,
+donc que $\mathfrak JA'=0$. Il en résulte que si l'on prend
+$Z=V(\mathfrak J)$, on répond à la question, car pour qu'un morphisme
+$U'\to U$ ait la propriété de l'énoncé, il faut et il suffit évidemment que
+pour tout ouvert affine $V'\subset U'$, le morphisme $V'\to U$ ait la même
+propriété.
+\end{proof}
+
+\begin{corollary}[11.4.6]
+\label{IV.11.4.6-fr}
+Soient $A$ un anneau tel que $\operatorname{Spec}(A)$ soit irréductible,
+$\mathfrak p$ son unique idéal premier minimal, $B$ une $A$-algèbre de
+présentation finie, $M$ un $B$-module de présentation finie. Supposons que
+$M_\mathfrak p$ soit un $A_\mathfrak p$-module plat~; alors il existe
+$t\in A-\mathfrak p$ tel que $M_t$ soit un $A_t$-module libre.
+\end{corollary}
+
+\begin{proof}
+Appliquant (11.4.5) à $Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$,
+$\mathcal F=\widetilde M$, on peut (en remplaçant au besoin $A$ par $A_h$, où
+$h\in A-\mathfrak p$) supposer qu'il existe un idéal de type fini
+$\mathfrak J$ dans $A$ tel que les $A$-algèbres $A'$ pour lesquelles
+$M\otimes_A A'$ soit un $A'$-module libre (ou plat) sont exactement celles
+telles que $\mathfrak JA'=0$. En particulier, l'hypothèse que
+$M_\mathfrak p$ soit un $A_\mathfrak p$-module plat entraîne
+$\mathfrak JA_\mathfrak p=0$, ou encore $\mathfrak J_\mathfrak p=0$. Mais
+comme $\mathfrak J$ est de type fini, il existe $t\in A-\mathfrak p$ tel que
+$\mathfrak J_t=0$, ou encore $\mathfrak JA_t=0$, et par suite $M_t$ est un
+$A_t$-module libre.
+\end{proof}
+
+\begin{proposition}[11.4.7]
+\label{IV.11.4.7-fr}
+Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal de $A$, $M$ un
+$A$-module idéalement séparé $(\mathbf 0_{\mathrm{III}},10.2.1)$ pour la
+topologie $\mathfrak J$-préadique. Soit $(\mathfrak p_i)_{1\leq i\leq r}$ une
+famille finie d'idéaux premiers de $A$ contenant $\mathfrak J$~; pour tout
+entier $n\geq0$, soit $\mathfrak p_i^{(n)}$ la puissance symbolique $n$-ième de
+$\mathfrak p_i$ (noyau de l'homomorphisme
+$A\to A_{\mathfrak p_i}/\mathfrak p_i^nA_{\mathfrak p_i}$)~; posons
+$\mathfrak J_n=\bigcap_{i=1}^{r}\mathfrak p_i^{(n)}$, de sorte que
+$\mathfrak J_n\supset\mathfrak J^n$, et supposons que la topologie définie par
+la filtration $(\mathfrak J_n)$ soit identique à la topologie
+$\mathfrak J$-préadique (autrement dit que, pour tout $n$, il existe $m$ tel
+que $\mathfrak J^n\supset\mathfrak J_m$). Pour que $M$ soit un $A$-module
+plat, il faut et il suffit que $M\otimes_A(A/\mathfrak J)$ soit un
+$(A/\mathfrak J)$-module plat et que, pour tout $i$,
+$M\otimes_AA_{\mathfrak p_i}=M_{\mathfrak p_i}$ soit un
+$A_{\mathfrak p_i}$-module plat.
+\end{proposition}
+
+\begin{proof}
+Comme $M$ est idéalement séparé, il suffit, en vertu de
+$(\mathbf 0_{\mathrm{III}},10.2.1)$, de montrer que, pour tout $n\geq0$,
+$M\otimes_A(A/\mathfrak J^n)$ est un $(A/\mathfrak J^n)$-module plat~;
+puisque tout $\mathfrak J^n$ contient un $\mathfrak J_m$, il revient au même
+de prouver que pour tout $n$, $M\otimes_A(A/\mathfrak J_n)$ est un
+$(A/\mathfrak J_n)$-module plat. Or, comme
+$\mathfrak J_1\supset\mathfrak J$, $M\otimes_A(A/\mathfrak J_1)$ est un
+$(A/\mathfrak J_1)$-module plat~; dans l'anneau $A/\mathfrak J_n$, l'idéal
+$\mathfrak J_1/\mathfrak J_n$ est nilpotent et enfin l'intersection des noyaux
+des homomorphismes
+\[
+A/\mathfrak J_n\longrightarrow
+A_{\mathfrak p_i}/\mathfrak p_i^nA_{\mathfrak p_i}
+\]
+est nulle dans $A/\mathfrak J_n$, par définition de $\mathfrak J_n$. Il suffit
+donc, par (11.4.1), de vérifier que
+\[
+M\otimes_A(A_{\mathfrak p_i}/\mathfrak p_i^nA_{\mathfrak p_i})
+\]
+est un $(A_{\mathfrak p_i}/\mathfrak p_i^nA_{\mathfrak p_i})$-module plat, ce
+qui résulte de l'hypothèse que $M\otimes_AA_{\mathfrak p_i}$ est un
+$A_{\mathfrak p_i}$-module plat.
+\end{proof}
+
+\begin{remark}[11.4.8]
+\label{IV.11.4.8-fr}
+L'hypothèse faite dans (11.4.7) sur la topologie définie par les
+$\mathfrak J_n$ est vérifiée si, pour tout $n$ assez grand,
+$\operatorname{Ass}(A/\mathfrak J^n)$ est contenu dans l'ensemble des
+$\mathfrak p_i$. En effet, $\mathfrak J^n$ est alors intersection d'idéaux
+primaires pour les $\mathfrak p_i$, dont chacun contient une puissance
+symbolique de $\mathfrak p_i$, d'où la conclusion. En particulier~:
+\end{remark}
+
+\begin{corollary}[11.4.9]
+\label{IV.11.4.9-fr}
+Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal nilpotent de $A$, $M$
+un $A$-module. Pour que $M$ soit un $A$-module plat (resp. libre), il faut et
+il suffit que $M\otimes_A(A/\mathfrak J)$ soit un $(A/\mathfrak J)$-module
+plat (resp. libre) et que pour tout idéal premier
+$\mathfrak p\in\operatorname{Ass}(A)$, $M_\mathfrak p$ soit un
+$A_\mathfrak p$-module plat.
+\end{corollary}
+% IV3_B22_APPEND_ANCHOR
+

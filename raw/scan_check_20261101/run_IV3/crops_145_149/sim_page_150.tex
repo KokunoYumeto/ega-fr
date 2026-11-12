@@ -1,0 +1,86 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{150}
+\begin{proof}
+Par hypothèse, l'intersection des noyaux des $u_\alpha$ est réduite à $0$~;
+comme $A$ est artinien, il y a déjà un nombre fini de ces noyaux dont
+l'intersection est $0$, donc on peut se borner au cas où la famille
+$(A'_\alpha)$ est finie. Soit $k'$ une clôture algébrique de $k$~; on sait
+$(\mathbf 0_{\mathrm{III}},10.3.1)$ qu'il existe un homomorphisme local
+$A\to B$ faisant de $B$ un $A$-module plat, tel que $B$ soit un anneau local
+artinien, entier sur $A$ et que $B\otimes_A k$ soit isomorphe à $k'$.
+
+Par platitude, les noyaux des homomorphismes
+$B\to B'_\alpha=B\otimes_A A'_\alpha$ se déduisent de ceux des $u_\alpha$ par
+tensorisation avec $B$, et comme ils sont en nombre fini, leur intersection est
+réduite à $0$ $(\mathbf 0_{\mathrm I},6.1.3)$. Considérons les anneaux
+$B'_{\alpha\beta}$, localisés de $B'_\alpha$ en ses idéaux maximaux~; on sait
+(Bourbaki, \emph{Alg. comm.}, chap.~II, \S~3, n$^\circ$~3, cor.~2 du th.~1)
+que l'intersection des noyaux des homomorphismes
+$B'_\alpha\to B'_{\alpha\beta}$ (pour un $\alpha$ donné) est réduite à $0$~;
+on en conclut que l'intersection des noyaux des homomorphismes composés
+$v_{\alpha\beta}:B\to B'_\alpha\to B'_{\alpha\beta}$ ($\alpha$ et $\beta$
+variables) est réduite à $0$. D'autre part, comme $B$ est entier sur $A$,
+$B'_\alpha$ est entier sur $A'_\alpha$, donc ses idéaux maximaux sont au-dessus
+de l'idéal maximal de $A'_\alpha$. Si l'on pose
+$Z'_{\alpha\beta}=\operatorname{Spec}(B'_{\alpha\beta})$,
+$T'_{\alpha\beta}=X'_\alpha\times_{Y'_\alpha}Z'_{\alpha\beta}$,
+$f'_{\alpha\beta}=f_{(Z'_{\alpha\beta})}$,
+$\mathcal G=\mathcal F\otimes_A B$ et
+$\mathcal G'_{\alpha\beta}=\mathcal G\otimes_B B'_{\alpha\beta}$, on voit donc
+que les hypothèses (i) et (ii) sont encore vérifiées lorsqu'on remplace
+respectivement $A$, $A'_\alpha$, $u_\alpha$, $\mathcal F$ et $x$ par $B$,
+$B'_{\alpha\beta}$, $v_{\alpha\beta}$, $\mathcal G$ et un point $t$ de
+$T=X\otimes_A B$ au-dessus de $x$. Comme le corps résiduel de $B$ est
+séparablement clos, on déduit de (11.4.11) que $\mathcal G$ est plat sur $B$ au
+point $t$. Mais puisque $B$ est un $A$-module fidèlement plat, on conclut de
+(2.1.4) que $\mathcal F$ est plat sur $A$ au point $x$, ce qui prouve (11.4.12).
+\end{proof}
+
+\begin{corollary}[11.4.13]
+\label{IV.11.4.13-fr}
+Soient $A$ un anneau artinien local, $Y=\operatorname{Spec}(A)$,
+$f:X\to Y$ un morphisme localement de type fini, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent. Soit $(Y'_\alpha)$ une famille de
+$Y$-préschémas, et pour tout $\alpha$, posons
+$X'_\alpha=X\times_Y Y'_\alpha$, $f'_\alpha=f_{(Y'_\alpha)}$,
+$\mathcal F'_\alpha=\mathcal F\otimes_Y Y'_\alpha$. Soit $x$ un point de $X$ et
+supposons vérifiées les hypothèses suivantes~:
+\begin{enumerate}[label=(\roman*)]
+  \item L'intersection des noyaux des homomorphismes
+  $A\to\Gamma(Y'_\alpha,\mathcal O_{Y'_\alpha})$ correspondant aux morphismes
+  structuraux est réduite à $0$.
+  \item Pour tout $\alpha$, $\mathcal F'_\alpha$ est $f'_\alpha$-plat en tous
+  les points $x'_\alpha\in X'_\alpha$ dont la projection dans $X$ est $x$.
+\end{enumerate}
+Alors $\mathcal F$ est $f$-plat au point $x$.
+\end{corollary}
+
+\begin{proof}
+En effet, pour tout $y'_\alpha\in Y'_\alpha$, considérons le schéma local
+$Y''_{\alpha,y'_\alpha}=\operatorname{Spec}(\mathcal O_{Y'_\alpha,y'_\alpha})$~;
+en vertu de (2.1.4),
+$\mathcal F'_\alpha\otimes_{Y'_\alpha}Y''_{\alpha,y'_\alpha}$ est
+$Y''_{\alpha,y'_\alpha}$-plat aux points dont les projections sur $X$ et
+$Y''_{\alpha,y'_\alpha}$ sont $x$ et le point fermé de
+$Y''_{\alpha,y'_\alpha}$. En outre le noyau de l'homomorphisme
+$A\to\Gamma(Y'_\alpha,\mathcal O_{Y'_\alpha})$ est l'intersection des noyaux
+des homomorphismes
+$A\to\Gamma(Y''_{\alpha,y'_\alpha},\mathcal O_{Y''_{\alpha,y'_\alpha}})$, car
+on se ramène aussitôt au cas où $Y'_\alpha$ est affine, et il suffit alors
+d'appliquer Bourbaki, \emph{Alg. comm.}, chap.~II, \S~3, n$^\circ$~3, cor.~2 du
+th.~1. En remplaçant la famille $(Y'_\alpha)$ par la famille des
+$Y''_{\alpha,y'_\alpha}$, on est donc ramené à (11.4.12).
+\end{proof}
+
+\subsection{Descente de la platitude par des morphismes quelconques : cas général}
+\label{subsection:IV.11.5-fr}
+
+\begin{theorem}[11.5.1]
+\label{IV.11.5.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+localement de type fini, $\mathcal F$ un $\mathcal O_X$-Module cohérent, $x$ un
+point de $X$, $y=f(x)$. Soit $(Y'_\alpha)$ une famille de $Y$-préschémas locaux
+$Y'_\alpha=\operatorname{Spec}(A'_\alpha)$ telle que les images des points
+fermés $y'_\alpha$ des $Y'_\alpha$ soient toutes égales à $y$. Pour tout
+$\alpha$, soient $\mathfrak m'_\alpha$ l'idéal maximal de $A'_\alpha$, et
+$u_\alpha:\mathcal O_y\to A'_\alpha$

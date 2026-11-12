@@ -1,0 +1,95 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{44}
+idéal de $A_{\mathfrak{m}}$ est de la forme $\mathfrak{J}A_{\mathfrak{m}}$
+pour un idéal convenable $\mathfrak{J}$ de $A$, on déduit la formule
+(17.2.5.1) de ce qui précède et de Bourbaki, \emph{Alg.~comm.}, chap.~II,
+\S~3, no~3, th.~1. On procède de même pour (17.2.5.2) en utilisant cette fois
+(17.2.4) et en échangeant les rôles de $M$ et de $N$.
+\end{proof}
+
+Pour les anneaux noethériens et les modules de type fini, l'étude de la
+dimension projective ou de la dimension injective est donc ramenée par
+(17.2.5) au cas des anneaux \emph{locaux}. On a alors le
+
+\begin{lemma}[17.2.6]
+\label{0.17.2.6-fr}
+Soient $A$ un anneau local noethérien, $k$ son corps résiduel, $M$ un
+$A$-module de type fini. Pour que $\operatorname{dim.proj}(M)\leq n$, il est
+nécessaire que $\operatorname{Tor}^A_i(M,k)=0$ pour $i>n$, et il suffit que
+$\operatorname{Tor}^A_{n+1}(M,k)=0$.
+\end{lemma}
+
+\begin{proof}
+La nécessité est un cas particulier de la remarque (17.2.2 (ii)), appliquée au
+foncteur covariant $M\mapsto k\otimes_A M$. Pour prouver que la condition est
+suffisante, il s'agit, avec les notations de (17.2.1), d'établir que $R$ est
+projectif lorsque les $P_i$ sont supposés de type fini~; or
+$\operatorname{Tor}^A_{n+1}(M,k)$ est isomorphe à
+$\operatorname{Tor}^A_1(R,k)$ (M, V, 7)~; et on sait que, puisque $R$ est de
+type fini, la condition $\operatorname{Tor}^A_1(R,k)=0$ entraîne que $R$ est
+libre (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~3, no~2, cor.~2 de la
+prop.~5).
+\end{proof}
+
+\begin{corollary}[17.2.7]
+\label{0.17.2.7-fr}
+Sous les hypothèses de (17.2.6), soit $x$ un élément $M$-régulier de $A$
+appartenant à l'idéal maximal de $A$~; alors on a
+\begin{equation}
+\label{0.17.2.7.1-fr}
+\tag{17.2.7.1}
+  \operatorname{dim.proj}(M/xM)=\operatorname{dim.proj}(M)+1.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En effet, de la suite exacte
+$0\longrightarrow M\xrightarrow{x}M\longrightarrow M/xM\longrightarrow0$
+définie par la multiplication par $x$ dans $M$, on déduit la suite exacte des
+Tor~:
+\[
+  \operatorname{Tor}^A_i(M,k)\xrightarrow{x}
+  \operatorname{Tor}^A_i(M,k)\longrightarrow
+  \operatorname{Tor}^A_i(M/xM,k)\longrightarrow
+  \operatorname{Tor}^A_{i-1}(M,k)\xrightarrow{x}
+  \operatorname{Tor}^A_{i-1}(M,k)
+\]
+pour tout $i\geq1$. Or, pour tout $A$-module $N$, l'homothétie de rapport $x$
+dans $M\otimes_A N$ provient aussi bien de l'homothétie de rapport $x$ dans
+$M$ que de l'homothétie de rapport $x$ dans $N$~; on en conclut aussitôt,
+puisque l'homothétie de rapport $x$ dans $k$ est nulle par définition, que,
+pour tout $i$, l'homomorphisme
+$\operatorname{Tor}^A_i(M,k)\xrightarrow{x}\operatorname{Tor}^A_i(M,k)$ est
+\emph{nul}~; autrement dit, on a la suite exacte
+\[
+  0\longrightarrow\operatorname{Tor}^A_i(M,k)\longrightarrow
+  \operatorname{Tor}^A_i(M/xM,k)\longrightarrow
+  \operatorname{Tor}^A_{i-1}(M,k)\longrightarrow0.
+\]
+Si $\operatorname{dim.proj}(M)=n$, on a
+$\operatorname{Tor}^A_n(M,k)\neq0$ et
+$\operatorname{Tor}^A_{n+1}(M,k)=\operatorname{Tor}^A_{n+2}(M,k)=0$ en vertu
+de (17.2.6). Il résulte donc de ce qui précède que l'on a
+$\operatorname{Tor}^A_{n+1}(M/xM,k)\neq0$ et
+$\operatorname{Tor}^A_{n+2}(M/xM,k)=0$, donc
+$\operatorname{dim.proj}(M/xM)=n+1$ par (17.2.6).
+\end{proof}
+
+\begin{proposition}[17.2.8]
+\label{0.17.2.8-fr}
+\textnormal{(M.~Auslander)} Soit $A$ un anneau. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] Tout $A$-module est de dimension projective $\leq n$.
+  \item[\rm a')] Tout $A$-module de type fini est de dimension projective
+  $\leq n$.
+  \item[\rm b)] Tout $A$-module est de dimension injective $\leq n$.
+  \item[\rm c)] Pour tout couple de $A$-modules $M$, $N$ on a
+  $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+  \item[\rm c')] Pour tout couple de $A$-modules $M$, $N$ tel que $M$ soit de
+  type fini (ou seulement monogène), on a
+  $\operatorname{Ext}^{n+1}_A(M,N)=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}

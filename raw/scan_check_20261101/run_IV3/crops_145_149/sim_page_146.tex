@@ -1,0 +1,80 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{146}
+Pour qu'un homomorphisme $u:A\to A'$ soit tel que $M\otimes_A A'$ soit un
+$A'$-module libre \textup{(resp.} un $A'$-module plat), il faut et il suffit que $u$ se
+factorise en $A\to A/\mathfrak K_0\to A'$ \textup{(ou encore que
+$\mathfrak K_0A'=0$)}.
+\end{corollary}
+
+\begin{proof}
+Le fait que l'intersection $\mathfrak K_0$ des idéaux $\mathfrak K$ pour
+lesquels $M\otimes_A(A/\mathfrak K)$ est un $(A/\mathfrak K)$-module libre
+soit le plus petit de ces idéaux résulte de (11.4.1) appliqué à l'anneau
+$A/\mathfrak K_0$, à son idéal nilpotent $\mathfrak J/\mathfrak K_0$ et aux
+homomorphismes $A/\mathfrak K_0\to A/\mathfrak K$, dont les noyaux ont $0$
+pour intersection. Si $A'$ est une $(A/\mathfrak K_0)$-algèbre, on a
+$M\otimes_A A'=
+(M\otimes_A(A/\mathfrak K_0))\otimes_{A/\mathfrak K_0}A'$,
+donc $M\otimes_A A'$ est un $A'$-module libre. Réciproquement, si $A'$ est
+une $A$-algèbre telle que $M\otimes_A A'$ soit un $A'$-module libre et si
+$\mathfrak K$ est le noyau de l'homomorphisme $A\to A'$, il résulte de
+(11.4.1) appliqué à l'anneau $A/\mathfrak K$, au
+$(A/\mathfrak K)$-module $M\otimes_A(A/\mathfrak K)$, à l'idéal nilpotent
+$\mathfrak J\mathfrak K/\mathfrak K$ et à l'homomorphisme \emph{injectif}
+$A/\mathfrak K\to A'$, que $M\otimes_A(A/\mathfrak K)$ est un
+$(A/\mathfrak K)$-module libre, donc que $\mathfrak K\supset\mathfrak K_0$.
+Le fait que l'on puisse remplacer «~libre~» par «~plat~» dans ce qui précède
+(en conservant naturellement l'hypothèse que $M\otimes_A(A/\mathfrak J)$ est
+un $(A/\mathfrak J)$-module \emph{libre}) résulte de
+$(\mathbf 0_{\mathrm{III}},10.1.2)$, comme on l'a vu au début de la
+démonstration de (11.4.1).
+\end{proof}
+
+\begin{proposition}[11.4.5]
+\label{IV.11.4.5-fr}
+Soient $Y$ un préschéma irréductible, $f:X\to Y$ un morphisme de présentation
+finie, $\mathcal F$ un $\mathcal O_X$-Module de présentation finie. Il existe
+alors un ouvert non vide $U$ dans $Y$ et un sous-schéma fermé $Z$ de $U$, de
+présentation finie sur $U$, ayant la propriété suivante~: pour tout changement
+de base $U'\to U$, si l'on pose $X'=X\times_YU'$, $f'=f_{(U')}$ et
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_Y}\mathcal O_{U'}$, alors, pour que
+$\mathcal F'$ soit $f'$-plat, il faut et il suffit que le morphisme $U'\to U$
+se factorise en $U'\to Z\to U$. Un tel schéma $Z$ a même espace sous-jacent que
+$U$. Supposons de plus $Y$ affine, et soit $(W_i)$ un recouvrement fini de $X$
+par des ouverts affines~; alors, on peut supposer $U$ choisi de sorte que, si
+$U'=\operatorname{Spec}(A')$ est un schéma affine et $U'\to U$ un morphisme qui
+se factorise en $U'\to Z\to U$, chacun des
+$\Gamma(W_i\times_YU',\mathcal F')$ est un $A'$-module libre.
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se borner au cas où $Y=\operatorname{Spec}(A)$ est affine.
+Utilisant (8.9.1), il y a un sous-anneau noethérien $A_1$ de $A$, un morphisme
+de type fini $f_1:X_1\to Y_1=\operatorname{Spec}(A_1)$ et un
+$\mathcal O_{X_1}$-Module cohérent $\mathcal F_1$ tels que $f=f_{(Y)}$ et
+$\mathcal F=\mathcal F_1\otimes_{\mathcal O_{Y_1}}\mathcal O_Y$~; on peut en
+outre supposer que les $W_i$ sont images réciproques d'ouverts affines de
+$X_1$. Notons en outre que $Y_1$ est irréductible, le morphisme $Y\to Y_1$
+étant dominant $(\mathbf I,1.2.7)$. Supposons la proposition démontrée pour
+$Y_1$, $X_1$ et $\mathcal F_1$, et soient $U_1$ l'ouvert de $Y_1$ et $Z_1$ le
+sous-schéma fermé de $U_1$ ayant les propriétés voulues, $U=U_1\times_{Y_1}Y$
+et $Z=Z_1\times_{Y_1}Y$ leurs images réciproques. Alors, si $U'\to U$ est un
+changement de base tel que
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_Y}\mathcal O_{U'}
+=\mathcal F_1\otimes_{\mathcal O_{Y_1}}\mathcal O_{U'}$ soit $f'$-plat, le
+morphisme $U'\to U_1$ se factorise en $U'\to Z_1\to U_1$~; mais comme
+$U'\to U_1$ se factorise aussi en $U'\to U\to U_1$, la définition du produit
+de préschémas montre que $U'\to U$ se factorise en $U'\to Z\to U$.
+
+On peut donc se borner au cas où $A$ est \emph{noethérien}~; soit
+$\mathfrak N$ son nilradical, qui est nilpotent, et posons
+$A_0=A_{\mathrm{red}}=A/\mathfrak N$,
+$Y_0=\operatorname{Spec}(A_0)=Y_{\mathrm{red}}$,
+$X_0=X\times_YY_0$, $\mathcal F_0=\mathcal F\otimes_{\mathcal O_Y}
+\mathcal O_{Y_0}$, $W_{i0}=W_i\times_YY_0$~; si
+$M_i=\Gamma(W_i,\mathcal F)$, $M_{i0}=\Gamma(W_{i0},\mathcal F_0)$ est donc
+égal à $M_i\otimes_A A_0$. Comme $A_0$ est \emph{intègre}, on peut, en vertu du
+théorème de platitude générique (6.9.2), en remplaçant au besoin $Y$ par un
+ouvert non vide de $Y$, supposer que les $M_{i0}$ soient des $A_0$-modules
+\emph{libres}. En vertu de (11.4.4), il y a donc pour chaque $i$ un idéal
+$\mathfrak J_i\subset\mathfrak N$ tel

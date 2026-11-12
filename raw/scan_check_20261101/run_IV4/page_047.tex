@@ -1,0 +1,89 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{47}
+
+Les deux conditions de l'énoncé ne font que traduire la définition donnée dans
+(0, 15.2.2), compte tenu de la définition des homomorphismes canoniques
+(0, 15.2.1.1). La dernière assertion résulte de ce que, si un module $M$ sur
+un anneau commutatif $A$ admet une base de $n$ éléments, tout système de
+générateurs de $M$ ayant $n$ éléments est une base de $M$ (Bourbaki,
+\emph{Alg. comm.}, chap.~II, §~3, cor.~5 du th.~1).
+
+\begin{corollary}[16.9.4]
+\label{IV.16.9.4}
+Soient $X$ un espace annelé en anneaux locaux, $\mathscr{I}$ un Idéal de
+$\mathcal{O}_X$. Pour que $\mathscr{I}$ soit quasi-régulier, il faut et il
+suffit qu'il vérifie les conditions suivantes:
+\begin{enumerate}
+  \item[(i)] $\mathscr{I}$ est de type fini.
+  \item[(ii)] $\mathscr{I}/\mathscr{I}^2$ est un
+  $(\mathcal{O}_X/\mathscr{I})$-Module localement libre.
+  \item[(iii)] L'homomorphisme canonique
+  \[
+    \mathbf{S}_{\mathcal{O}_X/\mathscr{I}}^{\bullet}
+    (\mathscr{I}/\mathscr{I}^2)
+    \longrightarrow\mathscr{G}r_{\mathscr{I}}^{\bullet}(\mathcal{O}_X)
+    \tag{16.9.4.1}
+    \label{IV.16.9.4.1}
+  \]
+  est bijectif.
+\end{enumerate}
+\end{corollary}
+
+La nécessité des conditions résulte aussitôt de (16.9.3). Pour voir que ces
+conditions sont suffisantes, il faut montrer, en vertu de (16.9.3), que si, en
+un point $x\in\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$, il existe un
+voisinage ouvert $U$ de $x$ dans $X$ et $n$ sections $f_i$ ($1\leq i\leq n$)
+de $\mathscr{I}$ au-dessus de $U$ dont les images canoniques dans
+$\mathscr{I}/\mathscr{I}^2$ forment une base de
+$(\mathscr{I}/\mathscr{I}^2)|U$ sur
+$(\mathcal{O}_X/\mathscr{I})|U$, alors il y a un voisinage ouvert
+$V\subset U$ de $x$ tel que les $f_i|V$ engendrent $\mathscr{I}|V$. Or, par
+hypothèse, on a $\mathscr{I}_x\neq\mathcal{O}_x$, donc $\mathscr{I}_x$ est
+contenu dans l'idéal maximal de $\mathcal{O}_x$; comme $\mathscr{I}_x$ est un
+$\mathcal{O}_x$-module de type fini et que les classes des $(f_i)_x$ dans
+$\mathscr{I}_x/\mathscr{I}_x^2$ engendrent cet
+$(\mathcal{O}_x/\mathscr{I}_x)$-module, le lemme de Nakayama montre que les
+$(f_i)_x$ engendrent $\mathscr{I}_x$. Comme $\mathscr{I}$ est de type fini,
+on conclut par (0\textsubscript{I}, 5.2.2).
+
+\begin{corollary}[16.9.5]
+\label{IV.16.9.5}
+Soient $X$ un espace annelé en anneaux locaux, $\mathscr{I}$ un Idéal
+quasi-régulier de $\mathcal{O}_X$, $(f_i)_{1\leq i\leq n}$ une suite de
+sections de $\mathscr{I}$ au-dessus de $X$,
+$x$ un point de $\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$. Les
+conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[(a)] Il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que les
+  $f_i|U$ forment une suite quasi-régulière d'éléments de
+  $\Gamma(U,\mathcal{O}_X)$ engendrant $\mathscr{I}|U$.
+  \item[(b)] Les $(f_i)_x$ forment un système de générateurs de
+  $\mathscr{I}_x$ dont le nombre d'éléments est le plus petit possible.
+  \item[(b')] Les $(f_i)_x$ forment un système minimal de générateurs de
+  $\mathscr{I}_x$.
+  \item[(c)] Si $\bar f_i$ est l'image canonique de $f_i$ dans
+  $\Gamma(X,\mathscr{I}/\mathscr{I}^2)$, les $(\bar f_i)_x$ forment une base
+  du $(\mathcal{O}_x/\mathscr{I}_x)$-module
+  $\mathscr{I}_x/\mathscr{I}_x^2$.
+\end{enumerate}
+\end{corollary}
+
+Par hypothèse, $\mathcal{O}_x$ est un anneau local, $\mathscr{I}_x$ un idéal
+de type fini de $\mathcal{O}_x$ contenu dans l'idéal maximal de
+$\mathcal{O}_x$; l'équivalence de b), b') et c) résulte donc du lemme de
+Nakayama (Bourbaki, \emph{Alg. comm.}, chap.~II, §~3,
+n\textsuperscript{o}~2, prop.~5). Il est clair que a) entraîne c) en vertu de
+(16.9.3); d'autre part, il résulte de (0\textsubscript{I}, 5.2.2) que si la
+condition c) est vérifiée (donc aussi b)), il y a un voisinage $U$ de $x$ dans
+$X$ tel que $(\mathscr{I}/\mathscr{I}^2)|U$ ait un rang constant égal à $n$,
+et que les $f_i|U$ engendrent $\mathscr{I}|U$; il suffit donc d'appliquer dans
+$U$ la dernière assertion de (16.9.3).
+
+\begin{remarks}[16.9.6]
+\label{IV.16.9.6}
+\begin{enumerate}
+  \item[(i)] Sous les hypothèses générales de (16.9.5), il ne suffit pas que
+  les $(\bar f_i)_y$ forment une base du
+  $(\mathcal{O}_y/\mathscr{I}_y)$-module
+  $\mathscr{I}_y/\mathscr{I}_y^2$ pour tout $y\in X$ pour que la suite
+  $(f_i)$ engendre $\mathscr{I}$. On en a un exemple en

@@ -1,0 +1,56 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{239}
+maximal de $X'$ appartenant à $f^{-1}(U)$ est un point maximal de $X$ appartenant à $U$, donc à $V$ puisque l'ensemble des composantes irréductibles de $X$ est localement fini.
+\end{proof}
+
+\begin{env}[20.3.6]
+\EGAReaderTarget{ega4.c04.statement.20-3-6}{IV.20.3.6}
+Soient $X$, $Y$ deux $S$-préschémas ; supposons que $X$ vérifie l'une des deux hypothèses suivantes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $X$ est localement noethérien ;
+  \item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.
+\end{enumerate}
+Alors, pour tout $x\in X$, le $S$-morphisme canonique $j:\Spec(\sh{O}_{X,x})\to X$ est plat et vérifie la condition~(ii) de \sref{IV.20.3.5} dans le cas~a), la condition~(iii) de \sref{IV.20.3.5} dans le cas~b).
+Pour tout pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, le composé $\omega\circ j$ est donc défini et est un pseudo-$S$-morphisme de $\Spec(\sh{O}_{X,x})$ dans $Y$, appelé la \emph{restriction} de $\omega$ à $\Spec(\sh{O}_{X,x})$.
+Notons maintenant que si $X$ vérifie la condition~a) (resp. b)) de \sref{IV.20.3.6}, il en est de même de tout préschéma induit sur un ouvert $U$ de $X$ contenant $x$.
+Par passage à la limite inductive, on déduit donc, des applications canoniques $\operatorname{Ps.hom}_S(U,Y)\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)$ ainsi obtenues, une application canonique
+\[
+\label{IV.20.3.6.1}
+  (\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y))_x\to\operatorname{Ps.hom}_S(\Spec(\sh{O}_{X,x}),Y)
+  \tag{20.3.6.1}
+\]
+où le premier membre est la fibre au point $x$ du faisceau $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$, ensemble des germes en $x$ de pseudo-$S$-morphismes de voisinages ouverts de $x$ dans $Y$.
+\end{env}
+
+\begin{proposition}[20.3.7]
+\label{IV.20.3.7}
+Sous les hypothèses de \sref{IV.20.3.6}, l'application canonique \sref{IV.20.3.6.1} est injective.
+Si en outre $Y$ est localement de présentation finie sur $S$, l'application \sref{IV.20.3.6.1} est bijective.
+\end{proposition}
+
+\begin{proof}
+Par application de la méthode de \sref{IV.8.1.2}[(a)], cette proposition sera un cas particulier de la suivante :
+\end{proof}
+
+\begin{proposition}[20.3.8]
+\EGAReaderTarget{ega4.c04.prop.20-3-8}{IV.20.3.8}
+Les notations étant celles de \sref{IV.8.8.1}, supposons $X_\alpha$ quasi-compact (resp. quasi-compact et quasi-séparé) et $Y_\alpha$ localement de type fini (resp. localement de présentation finie) sur $S_\alpha$.
+Supposons en outre que l'une des conditions suivantes soit vérifiée :
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item Les morphismes de transition $S_\mu\to S_\lambda$ (pour $\lambda\leq\mu$) sont plats, et les $X_\lambda$ et $X$ sont noethériens.
+  \item Les $X_\lambda$ sont réduits, l'ensemble des composantes irréductibles de $X$ et de chacun des $X_\lambda$ est fini, et, pour $\lambda\leq\mu$, toute composante irréductible de $X_\mu$ domine une composante irréductible de $X_\lambda$.
+\end{enumerate}
+Alors, l'application canonique
+\[
+\label{IV.20.3.8.1}
+  \varinjlim\operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_S(X,Y)
+  \tag{20.3.8.1}
+\]
+est injective (resp. bijective).
+\end{proposition}
+
+\begin{proof}
+Notons d'abord que, dans le cas~(i), les morphismes $X_\mu\to X_\lambda$ (pour $\lambda\leq\mu$) et $X\to X_\lambda$ sont plats, donc il résulte de \sref{IV.20.3.4} et \sref{IV.20.3.5} que les applications canoniques
+\[
+  \operatorname{Ps.hom}_{S_\lambda}(X_\lambda,Y_\lambda)\to\operatorname{Ps.hom}_{S_\mu}(X_\mu,Y_\mu)
+\]

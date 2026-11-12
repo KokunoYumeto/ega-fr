@@ -1,0 +1,85 @@
+% from ega3-7-fr.tex
+\oldpage[III]{192}
+Il est clair que (i) implique (ii) (cf. (7.3.3)). Pour prouver (i), remarquons
+que si $f$ est un générateur de l'idéal maximal de $A$ (« uniformisante » de
+$A$), pour qu'un $A$-module de type fini $M$ soit libre (ou plat, ce qui revient
+au même), il faut et il suffit que l'homothétie $h_f:x\mapsto fx$ de $M$ soit
+injective, car cela équivaut ici à dire que $M$ est sans torsion
+($0_{\mathrm I}$, 6.3.4). Considérons alors la suite exacte
+\[
+  0\longrightarrow A\xrightarrow{h_f}A\longrightarrow k\longrightarrow0,
+\]
+qui fournit la suite exacte d'homologie
+\[
+  T_p(A)
+  \longrightarrow T_p(k)
+  \longrightarrow T_{p-1}(A)
+  \xrightarrow{h_f}T_{p-1}(A).
+\]
+On voit que $T_{p-1}(A)$ est libre si et seulement si
+$T_p(A)\to T_p(k)$ est surjectif; la conclusion résulte alors de (7.5.2).
+\end{proof}
+
+\begin{remark}[7.5.7]
+On notera que, en vertu de (7.4.7), les hypothèses générales de (7.4.4)
+entraînent que le foncteur homologique $T_\bullet$ défini par (7.4.1.1)
+satisfait aux hypothèses générales de (7.5.4). Dans ce cas, (7.5.6) est donc
+contenu dans (7.4.3).
+\end{remark}
+
+\subsection{Descente des propriétés d'exactitude. Théorème de semi-continuité
+et critère d'exactitude de Grauert}
+\label{subsection:III.7.6.fr}
+
+\begin{proposition}[7.6.1]
+Sous les conditions de (7.4.1), soit $B$ une $A$-algèbre commutative. Si $T_p$
+est exact à droite (resp. exact à gauche, exact) il en est de même de
+$T_p^{(B)}$; la réciproque est vraie lorsque $B$ est un $A$-module fidèlement
+plat.
+\end{proposition}
+
+\begin{proof}
+La première assertion est un cas particulier d'une assertion triviale de
+(7.1.3). Inversement, supposons d'abord que $B$ soit un $A$-module plat. On a
+alors, pour tout $A$-module $M$,
+\[
+  H_\bullet\bigl(P_\bullet\otimes_A(M\otimes_A B)\bigr)
+  =
+  \bigl(H_\bullet(P_\bullet\otimes_A M)\bigr)\otimes_A B,
+\]
+ce qui s'écrit aussi, pour tout $p$,
+\[
+  T_p(M)\otimes_A B
+  =
+  T_p^{(B)}(M_{(B)})
+  \tag{7.6.1.1}\label{III.7.6.1.1.fr}
+\]
+à un isomorphisme canonique près. Supposons $T_p^{(B)}$ exact à droite (resp.
+exact à gauche, exact); comme $M\mapsto M_{(B)}$ est un foncteur exact, le
+premier membre de (7.6.1.1) est un foncteur exact à droite (resp. exact à
+gauche, exact) en $M$; si maintenant $B$ est fidèlement plat sur $A$, on en
+déduit que $T_p$ a la même propriété d'exactitude ($0_{\mathrm I}$, 6.4.1).
+\end{proof}
+
+\begin{proposition}[7.6.2]
+Sous les conditions de (7.4.1), on suppose en outre que $A$ soit un anneau
+noethérien réduit et que les $P_i$ soient des $A$-modules de type fini. Pour que
+$T_p$ soit exact à droite (resp. exact à gauche, exact), il faut et il suffit
+que, pour toute $A$-algèbre $B$ qui est un anneau de valuation discrète,
+$T_p^{(B)}$ le soit.
+\end{proposition}
+
+\begin{proof}
+En vertu de (7.3.1) et (7.3.3), on peut se borner à considérer l'exactitude à
+droite, et il n'y a naturellement qu'à prouver la suffisance de la condition
+(7.6.1). En vertu de (7.4.2), il suffit de montrer que
+$Z'_{p-1}(P_\bullet)$ est un $A$-module plat; comme $P_{p-1}$ est de type fini,
+$Z'_{p-1}(P_\bullet)$ est aussi de type fini; le critère ($0$, 10.2.8) montre
+qu'il suffit alors que $Z'_{p-1}(P_\bullet)\otimes_A B$ soit un $B$-module plat
+pour toute $A$-algèbre $B$ qui est un anneau de valuation discrète. Or, comme
+$P_\bullet$ est un complexe de $A$-modules plats, on a
+\[
+  Z'_{p-1}(P_\bullet)\otimes_A B
+  =
+  Z'_{p-1}(P_\bullet\otimes_A B);
+\]

@@ -1,0 +1,90 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{21}
+morphisme ouvert. Mais cela résulte du critère (1.10.4) pour les morphismes
+localement de présentation finie, les conditions \emph{b)}, \emph{b$'$)}, et
+\emph{c)} de (1.10.4) n'étant autre que les conditions (i), (ii), (iii) de
+(2.3.4).
+
+\begin{corollary}[2.4.7]
+\label{IV.2.4.7-fr}
+Pour tout préschéma $Y$, le morphisme structural $\mathbf V_Y^n\to Y$ (où
+\[
+\mathbf V_Y^n
+=Y\otimes_{\mathbf Z}\operatorname{Spec}
+  \bigl(\mathbf Z[T_1,\ldots,T_n]\bigr),
+\]
+aussi noté $Y[T_1,\ldots,T_n]$) est universellement ouvert.
+\end{corollary}
+
+En effet, pour $Y=\operatorname{Spec}(A)$,
+$Y[T_1,\ldots,T_n]=\operatorname{Spec}(A[T_1,\ldots,T_n])$, et
+$A[T_1,\ldots,T_n]$ est une $A$-algèbre libre de présentation finie.
+
+\begin{remark}[2.4.8]
+\label{IV.2.4.8-fr}
+\begin{enumerate}
+\item[(i)] On notera qu'un morphisme $f:X\to Y$ fidèlement plat et
+quasi-compact \emph{n'est pas nécessairement ouvert}, même lorsque $X$ et $Y$
+sont noethériens. Prenons par exemple pour $Y$ une courbe algébrique réduite
+irréductible (II, 7.4) de point générique $y$, et soit $X$ le préschéma somme
+$Y\amalg\operatorname{Spec}(k(y))$, $f$ étant le morphisme canonique~; il est
+clair que $f$ est plat et surjectif, donc fidèlement plat, et quasi-compact,
+mais l'image par $f$ de la partie ouverte $\operatorname{Spec}(k(y))$ de $X$
+est l'ensemble $\{y\}$, qui n'est pas ouvert dans $Y$ (II, 7.4.3).
+\item[(ii)] Pour tout préschéma $X$, le morphisme canonique
+$f:X_{\mathrm{red}}\to X$ est une immersion fermée et un
+\emph{homéomorphisme universel} (2.4.4, (vi))~; mais lorsque $X$ est
+localement noethérien, $f$ n'est plat que si $X$ est réduit, donc
+$f=1_X$ (2.2.17).
+\end{enumerate}
+\end{remark}
+
+\begin{proposition}[2.4.9]
+\label{IV.2.4.9-fr}
+Soit $Y$ un préschéma discret. Alors tout morphisme $f:X\to Y$ est
+universellement ouvert.
+\end{proposition}
+
+La question étant locale sur $Y$ (2.4.3, (vii)), on peut se borner au cas où
+l'espace sous-jacent $Y$ est réduit à un point~; remplaçant $f$ par
+$f_{\mathrm{red}}$ (2.4.3, (vi)), on peut en outre supposer que $Y$ est le
+spectre d'un \emph{corps} $k$~; d'autre part, pour tout changement de base
+$Y'\to Y$, les ouverts de $X'=X\times_Y Y'$ images réciproques des ouverts
+affines de $X$ recouvrent $X'$, donc on peut supposer
+$X=\operatorname{Spec}(B)$ affine, $B$ étant une $k$-algèbre. Il s'agit donc
+de prouver que pour toute $k$-algèbre $A'$, si l'on pose
+$B'=B\otimes_k A'$, l'image par
+$f':\operatorname{Spec}(B')\to\operatorname{Spec}(A')$ de tout ouvert de la
+forme $U=D(t)$ ($t\in B'$) est ouverte dans $\operatorname{Spec}(A')$. Or,
+$B$ est limite inductive de la famille filtrante croissante $(B_\alpha)$ de
+ses sous-$k$-algèbres \emph{de type fini}, donc (le foncteur
+$\varinjlim$ commutant au produit tensoriel), $B'$ est limite inductive des
+$A'$-algèbres $B_\alpha\otimes_k A'=B'_\alpha$~; il existe $\alpha$ tel que
+$t$ soit image dans $B'$ d'un élément $t_\alpha\in B'_\alpha$, donc $D(t)$
+est l'image réciproque par le morphisme canonique
+$u_\alpha:\operatorname{Spec}(B')\to\operatorname{Spec}(B'_\alpha)$ de
+l'ouvert $U_\alpha=D(t_\alpha)$ (I, 1.2.2.2). Mais comme $k$ est un corps,
+$B_\alpha$ est une $k$-algèbre de présentation finie et un $k$-module plat,
+donc $B'_\alpha$ est une $A'$-algèbre de présentation finie et un $A'$-module
+plat~; on conclut donc de (2.4.6) que l'image de $U_\alpha$ par
+$f'_\alpha:\operatorname{Spec}(B'_\alpha)\to\operatorname{Spec}(A')$ est
+\emph{ouverte} dans $\operatorname{Spec}(A')$. Tout revient par suite à voir
+que $f'(U)=f'_\alpha(U_\alpha)$~; il est clair que
+$f'(U)\subset f'_\alpha(U_\alpha)$ et il reste donc à voir que pour tout point
+$y'\in f'_\alpha(U_\alpha)$, l'intersection
+$V=U\cap f'^{-1}(y')$ n'est pas vide. Or on a
+$V=u_\alpha^{-1}(V_\alpha)$, où
+$V_\alpha=U_\alpha\cap f_\alpha'^{-1}(y')$~; autrement dit, $V_\alpha$ est
+un ouvert non vide (par définition de $y'$) du préschéma
+\[
+\operatorname{Spec}(B'_\alpha\otimes_{A'}k(y'))
+=\operatorname{Spec}(B_\alpha\otimes_k k(y'))
+\]
+et $V$ est son image réciproque par le morphisme
+\[
+v:\operatorname{Spec}(B\otimes_k k(y'))
+\longrightarrow\operatorname{Spec}(B_\alpha\otimes_k k(y')).
+\]
+Comme $B_\alpha$ est une sous-algèbre de $B$ et que $k$ est un corps,
+l'homomorphisme
+$B_\alpha\otimes_k k(y')\to B\otimes_k k(y')$

@@ -1,0 +1,108 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{71}
+Cela étant, supposons \emph{b)} vérifiée~; pour tout $p\in\mathbb Z$, et
+tout $k\geq p$, il existe un entier $\mathrm L(p,k)$ tel que le second
+membre de (\hyperref[0.13.4.3.2-fr]{13.4.3.2}) soit constant pour
+$h\geq\mathrm L(p,k)$~; comme $\operatorname{gr}^p(A_k)=0$ pour $p<k_0$,
+il n'y a (pour $k$ donné) qu'un nombre fini de $\mathrm L(p,k)$ non nuls
+lorsque $p$ parcourt l'ensemble des entiers $\leq k$. Soit
+$\mathrm L(k)=m$ le plus grand de ces entiers~; pour tout $h\geq m$, on a
+$A_{kh}\subset A_{km}$, et par définition de $m$, l'injection canonique
+$A_{kh}\to A_{km}$ définit un \emph{isomorphisme}
+$\operatorname{gr}^\bullet(A_{kh})\xrightarrow{\sim}
+\operatorname{gr}^\bullet(A_{km})$~; comme les filtrations sont
+\emph{finies}, on en conclut que l'injection précédente est elle-même
+bijective (Bourbaki, \emph{Alg. comm.}, chap.~III, §~2,
+n\textsuperscript{o}~8, th.~1), ce qui prouve que $\mathbf A$ vérifie
+(ML).
+\end{proof}
+
+\begin{env}[13.4.4]
+\label{0.13.4.4-fr}
+Supposons que dans $C$ la limite projective
+$A=\varprojlim_k A_k$ existe. Dans les définitions de
+(\hyperref[0.13.4.1-fr]{13.4.1}), on peut alors remplacer $A_k$ par $A$,
+et la filtration ainsi définie sur $A$ est encore telle que
+\begin{equation}
+\label{0.13.4.4.1-fr}
+\tag{13.4.4.1}
+\operatorname{gr}^p(A)=\operatorname{gr}^p(A_p)
+\cap\operatorname{Im}(A\longrightarrow A_p).
+\end{equation}
+\end{env}
+
+\begin{corollary}[13.4.5]
+\label{0.13.4.5-fr}
+\emph{Supposons que $C$ soit la catégorie des groupes abéliens. Si le
+système projectif $\mathbf A$ vérifie (ML) et si
+$A=\varprojlim_k A_k$, on a pour tout $p\in\mathbb Z$ un isomorphisme
+canonique}
+\begin{equation}
+\label{0.13.4.5.1-fr}
+\tag{13.4.5.1}
+\operatorname{gr}^p(A)\xrightarrow{\sim}
+\varprojlim_k\operatorname{gr}^p(A_k).
+\end{equation}
+\end{corollary}
+\begin{proof}
+En effet, on a
+$\operatorname{Im}(A_k\to A_p)=\operatorname{Im}(A\to A_p)$ dès que $k$
+est assez grand (Bourbaki, \emph{Top. gén.}, chap.~II,
+3\textsuperscript{e} éd., §~3, n\textsuperscript{o}~5, th.~1), et la
+conclusion résulte de
+(\hyperref[0.13.4.1.3-fr]{13.4.1.3}) et
+(\hyperref[0.13.4.4.1-fr]{13.4.4.1}).
+\end{proof}
+
+\subsection{Limites projectives de suites spectrales de complexes filtrés}
+\label{subsection:0.13.5-fr}
+\begin{env}[13.5.1]
+\label{0.13.5.1-fr}
+Soient $C$ une catégorie abélienne, $X^\bullet$ un complexe d'objets de
+$C$ muni d'une \emph{filtration}
+$(\mathrm F^p(X^\bullet))_{p\in\mathbb Z}$ telle que
+$\mathrm F^{p_0}(X^\bullet)=X^\bullet$ pour un indice $p_0$.
+Considérons pour chaque $k\in\mathbb Z$ le complexe
+$X_k^\bullet=X^\bullet/\mathrm F^{k+1}(X^\bullet)$~; il est canoniquement
+muni de la filtration formée des
+$\mathrm F^p(X_k^\bullet)=
+\mathrm F^p(X^\bullet)/\mathrm F^{k+1}(X^\bullet)$ pour $p\leq k$ et des
+$\mathrm F^p(X_k^\bullet)=0$ pour $p\geq k+1$. En outre, on a des
+morphismes canoniques $X_{k+1}^\bullet\to X_k^\bullet$, qui font de
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ un \emph{système
+projectif de complexes filtrés d'objets de $C$}. On notera que ce système
+projectif est \emph{strict} et tel que $X_k^\bullet=0$ pour $k<p_0$.
+\end{env}
+\begin{env}[13.5.2]
+\label{0.13.5.2-fr}
+Considérons plus généralement un système projectif \emph{strict}
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ de complexes d'objets de
+$C$, \emph{limité inférieurement}~; considérons sur chaque
+$X_k^\bullet$ la filtration définie dans
+(\hyperref[0.13.4.1-fr]{13.4.1}) (en se plaçant dans la catégorie abélienne
+des complexes de $C$ limités inférieurement). Les
+$X_k^\bullet\to X_p^\bullet$ $(p\leq k)$ deviennent des morphismes de
+complexes \emph{filtrés}, à filtrations finies. Le caractère fonctoriel des
+suites spectrales des complexes filtrés
+(\hyperref[0.11.2.3-fr]{11.2.3}) montre que les morphismes de définition du
+système projectif $\mathbf X^\bullet$ fournissent des morphismes faisant de
+$\mathrm E(\mathbf X^\bullet)=(\mathrm E(X_k^\bullet))$ un \emph{système
+projectif de suites spectrales}.
+\end{env}
+\begin{lemma}[13.5.3]
+\label{0.13.5.3-fr}
+\emph{Supposons que le système projectif
+$\mathbf X^\bullet=(X_k^\bullet)_{k\in\mathbb Z}$ de complexes filtrés soit
+obtenu comme dans (\hyperref[0.13.5.2-fr]{13.5.2}). Alors :}
+\begin{enumerate}
+\item[\emph{a)}]\emph{Pour $r\geq p-p_0$, on a
+$\mathrm B_r^{pq}(X_k^\bullet)=\mathrm B_\infty^{pq}(X_k^\bullet)$ pour
+tout $k\in\mathbb Z$.}
+\item[\emph{b)}]\emph{Pour $k+1\leq p+r$, on a
+$\mathrm Z_r^{pq}(X_k^\bullet)=\mathrm Z_\infty^{pq}(X_k^\bullet)$.}
+\item[\emph{c)}]\emph{Pour $k+1\geq p+r$, les morphismes
+$\mathrm Z_r^{pq}(X_h^\bullet)\to\mathrm Z_r^{pq}(X_k^\bullet)$ et
+$\mathrm B_r^{pq}(X_h^\bullet)\to\mathrm B_r^{pq}(X_k^\bullet)$ sont des
+isomorphismes pour tout $h\geq k$.}
+\end{enumerate}
+\end{lemma}

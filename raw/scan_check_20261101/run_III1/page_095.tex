@@ -1,0 +1,89 @@
+% from ega3-1-fr.tex
+\oldpage[III]{95}
+\begin{proof}
+La question étant locale sur $X$, on peut supposer
+$X=\operatorname{Spec}(A)$ affine et il suffit alors de prouver que
+$\mathcal G$ vérifie les conditions d~1) et d~2) de (I, 1.4.1) (avec
+$V=X$). La vérification de d~2) est immédiate, car si
+$t\in\Gamma(X,\mathcal G)$ a une restriction nulle à $D(f)$, il en est de
+même de son image $v(t)\in\Gamma(X,\mathcal H)$~; il y a donc $m>0$ tel que
+$f^mv(t)=v(f^mt)=0$ (I, 1.4.1), et comme $\Gamma$ est exact à gauche,
+$f^mt=u(s)$, où $s\in\Gamma(X,\mathcal F)$~; comme $u$ est injectif, la
+restriction de $s$ à $D(f)$ est nulle, d'où (I, 1.4.1) l'existence d'un
+entier $n>0$ tel que $f^ns=0$~; on en déduit finalement
+$f^{m+n}t=u(f^ns)=0$.
+
+Vérifions maintenant d~2), et soit $t'\in\Gamma(D(f),\mathcal G)$~; comme
+$\mathcal H$ est quasi-cohérent, il existe un entier $m$ tel que
+$f^mv(t')=v(f^mt')$ se prolonge en une section
+$z\in\Gamma(X,\mathcal H)$ (I, 1.4.1). Mais en vertu de
+(\hyperref[III.1.3.1-fr]{1.3.1}) (ou de (I, 5.1.9.2)) appliqué au
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$, la suite
+$\Gamma(X,\mathcal G)\to\Gamma(X,\mathcal H)\to0$ est exacte, donc il existe
+$t\in\Gamma(X,\mathcal G)$ tel que $z=v(t)$~; on voit donc que
+$v(f^mt'-t'')=0$, en désignant par $t''$ la restriction de $t$ à $D(f)$~;
+on a donc $f^mt'-t''=u(s')$, où $s'\in\Gamma(D(f),\mathcal F)$. Mais comme
+$\mathcal F$ est quasi-cohérent, il existe un entier $n>0$ tel que $f^ns'$
+se prolonge en une section $s\in\Gamma(X,\mathcal F)$~; comme
+$f^{m+n}t'-f^nt''=u(f^ns')$, on voit que $f^{m+n}t'$ est la restriction à
+$D(f)$ de la section $f^nt+u(f^ns)\in\Gamma(X,\mathcal G)$, ce qui achève
+la démonstration.
+\end{proof}
+
+\section{Étude cohomologique des morphismes projectifs}
+\label{section:III.2-fr}
+
+\subsection{Calculs explicites de certains groupes de cohomologie}
+\label{subsection:III.2.1-fr}
+
+\begin{env}[2.1.1]
+\label{III.2.1.1-fr}
+Soient $X$ un préschéma, $\mathcal L$ un $\mathcal O_X$-Module inversible~;
+considérons l'anneau gradué (0\textsubscript{I}, 5.4.6)
+\begin{equation}
+\label{III.2.1.1.1-fr}
+\tag{2.1.1.1}
+S=\Gamma_\bullet(X,\mathcal L)
+=\bigoplus_{n\in\mathbb Z}\Gamma(X,\mathcal L^{\otimes n}).
+\end{equation}
+Soit $(f_i)_{1\leq i\leq r}$ une famille finie d'éléments \emph{homogènes}
+de $S$, soit $f_i\in S_{d_i}$~; posons
+$U_i=X_{f_i}$, $U=\bigcup_iU_i$, et désignons par $\mathfrak U$ le
+recouvrement $(U_i)$ de $U$. Pour tout $\mathcal O_X$-Module quasi-cohérent
+$\mathcal F$, on posera
+\begin{align}
+\label{III.2.1.1.2-fr}
+\tag{2.1.1.2}
+H^\bullet(U,\mathcal F(*))
+&=\bigoplus_{n\in\mathbb Z}
+H^\bullet(U,\mathcal F\otimes\mathcal L^{\otimes n}),\\
+\label{III.2.1.1.3-fr}
+\tag{2.1.1.3}
+H^\bullet(\mathfrak U,\mathcal F(*))
+&=\bigoplus_{n\in\mathbb Z}
+H^\bullet(\mathfrak U,\mathcal F\otimes\mathcal L^{\otimes n}).
+\end{align}
+Les groupes abéliens (\hyperref[III.2.1.1.2-fr]{2.1.1.2}) et
+(\hyperref[III.2.1.1.3-fr]{2.1.1.3}) sont \emph{bigradués}, en prenant
+\[
+(H^\bullet(U,\mathcal F(*)))_{mn}
+=H^m(U,\mathcal F\otimes\mathcal L^{\otimes n})
+\]
+et une définition analogue pour
+(\hyperref[III.2.1.1.3-fr]{2.1.1.3}). Pour le deuxième degré, il est clair
+que ces groupes sont des $S$-modules gradués, comme il résulte par exemple du
+fait que $\mathcal F\mapsto H^m(U,\mathcal F)$ et
+$\mathcal F\mapsto H^m(\mathfrak U,\mathcal F)$ sont des foncteurs.
+\end{env}
+
+\begin{env}[2.1.2]
+\label{III.2.1.2-fr}
+Considérons maintenant le $S$-module gradué (0\textsubscript{I}, 5.4.6)
+\begin{equation}
+\label{III.2.1.2.1-fr}
+\tag{2.1.2.1}
+M=\Gamma_\bullet(\mathcal L,\mathcal F)
+=H^0(X,\mathcal F(*))
+=\bigoplus_{n\in\mathbb Z}
+\Gamma(X,\mathcal F\otimes\mathcal L^{\otimes n}).
+\end{equation}

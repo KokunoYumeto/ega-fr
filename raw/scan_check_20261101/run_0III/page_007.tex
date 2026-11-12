@@ -1,0 +1,82 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_C(X',Y')\times\operatorname{Hom}_C(Y',Z')
+  \to\operatorname{Hom}_C(X',Z').
+\]
+
+On dit que $C'$ est une \emph{sous-catégorie pleine} de $C$ si
+$\operatorname{Hom}_{C'}(X',Y')=\operatorname{Hom}_C(X',Y')$ pour tout
+couple d'objets de $C'$. La sous-catégorie $C''$ de $C$ formée des objets de
+$C$ isomorphes aux objets de $C'$ est encore alors une sous-catégorie pleine
+de $C$, \emph{équivalente} (T, 1.2) à $C'$ comme on le vérifie sans peine.
+
+Un foncteur covariant $F:C_1\to C_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'objets $X_1$, $Y_1$ de $C_1$, l'application
+$u\mapsto F(u)$ de $\operatorname{Hom}(X_1,Y_1)$ dans
+$\operatorname{Hom}(F(X_1),F(Y_1))$ est \emph{bijective}~; cela entraîne que
+la sous-catégorie $F(C_1)$ de $C_2$ est \emph{pleine}. En outre, si deux
+objets $X_1$, $X'_1$ ont même image $X_2$, il existe un isomorphisme unique
+$u:X_1\to X'_1$ tel que $F(u)=1_{X_2}$. Pour tout objet $X_2$ de $F(C_1)$,
+soit alors $G(X_2)$ un des objets $X_1$ de $C_1$ tel que $F(X_1)=X_2$
+($G$ étant défini au moyen de l'axiome de choix)~; pour tout morphisme
+$v:X_2\to Y_2$ dans $F(C_1)$, $G(v)$ sera l'unique morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F(u)=v$~; $G$ est alors un \emph{foncteur} de
+$F(C_1)$ dans $C_1$~; $FG$ est le foncteur identique dans $F(C_1)$, et ce
+qui précède montre qu'il existe un isomorphisme de foncteurs
+$\varphi:1_{C_1}\to GF$ tel que $F$, $G$, $\varphi$ et l'identité
+$1_{F(C_1)}\to FG$ définissent une \emph{équivalence} de la catégorie $C_1$
+et de la sous-catégorie pleine $F(C_1)$ de $C_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6-fr}
+Appliquons la prop. (\hyperref[0.8.1.4-fr]{8.1.4}) au cas où le foncteur $F$
+est $h_{X'}$, $X'$ étant un objet quelconque de $C$~; l'application
+$\beta:\operatorname{Hom}(X,X')\to\operatorname{Hom}(h_X,h_{X'})$ n'est
+autre ici que l'application $w\mapsto h_w$ définie dans
+(\hyperref[0.8.1.2-fr]{8.1.2})~; cette application étant \emph{bijective},
+on voit, avec la terminologie de (\hyperref[0.8.1.5-fr]{8.1.5}), que~:
+\end{env}
+
+\begin{proposition}[8.1.7]
+\label{0.8.1.7-fr}
+Le foncteur canonique
+$h:C\to\operatorname{Hom}(C^0,\mathrm{Ens})$ est pleinement fidèle.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8-fr}
+Soit $F$ un foncteur contravariant de $C$ dans $\mathrm{Ens}$~; on dit que
+$F$ est \emph{représentable} s'il existe un objet $X\in C$ tel que $F$ soit
+\emph{isomorphe} à $h_X$~; il résulte de
+(\hyperref[0.8.1.7-fr]{8.1.7}) que la donnée d'un $X\in C$ et d'un
+isomorphisme de foncteurs $g:h_X\to F$ détermine $X$ à un isomorphisme
+unique près. La prop. (\hyperref[0.8.1.7-fr]{8.1.7}) signifie encore que $h$
+définit une \emph{équivalence} de $C$ et de la sous-catégorie pleine de
+$\operatorname{Hom}(C^0,\mathrm{Ens})$ formée des \emph{foncteurs
+contravariants représentables}. Il résulte d'ailleurs de
+(\hyperref[0.8.1.4-fr]{8.1.4}) que la donnée d'un morphisme fonctoriel
+$g:h_X\to F$ équivaut à celle d'un élément $\xi\in F(X)$~; dire que $g$ est
+un \emph{isomorphisme} équivaut pour $\xi$ à la condition suivante~:
+\emph{pour tout objet $Y$ de $C$ l'application
+$v\mapsto(F(v))(\xi)$ de $\operatorname{Hom}(Y,X)$ dans $F(Y)$ est
+bijective}. Lorsque $\xi$ vérifie cette condition, on dira que le couple
+$(X,\xi)$ \emph{représente} le foncteur représentable $F$. Par abus de
+langage, on dira aussi que l'objet $X\in C$ représente $F$ s'il existe
+$\xi\in F(X)$ tel que $(X,\xi)$ représente $F$, autrement dit si $h_X$ est
+isomorphe à $F$.
+
+Soient $F$, $F'$ deux foncteurs contravariants représentables de $C$ dans
+$\mathrm{Ens}$, $h_X\to F$ et $h_{X'}\to F'$ deux isomorphismes de
+foncteurs. Alors il résulte de (\hyperref[0.8.1.6-fr]{8.1.6}) qu'il y a une
+correspondance biunivoque canonique entre $\operatorname{Hom}(X,X')$ et
+l'ensemble $\operatorname{Hom}(F,F')$ des morphismes fonctoriels $F\to F'$.
+\end{env}
+
+\begin{env}[8.1.9]
+\label{0.8.1.9-fr}
+\textit{Exemples. I : limites projectives.} La notion de foncteur
+contravariant représentable couvre en particulier la notion <<~duale~>> de
+la notion usuelle de <<~solution d'un

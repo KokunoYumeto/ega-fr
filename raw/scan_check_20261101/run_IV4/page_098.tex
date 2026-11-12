@@ -1,0 +1,28 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{98}
+
+Mais ici les $\sh{O}_T$-Modules des deux membres de (17.13.12.2) sont localement libres et \emph{de même rang} $\sum_i c_i$ (si $c_i$ est le rang de $\sh{N}_{Y_i/X}$), en vertu de (17.2.5) et de la condition a) de (17.13.10); on conclut donc de Bourbaki, \emph{Alg. comm.}, chap. II, § 3, n\textsuperscript{o} 2, cor. de la prop. 6, que (17.13.12.2) est bijectif, et (17.13.12.1) est l'isomorphisme réciproque.
+
+\subsection{Caractérisations locales et infinitésimales des morphismes lisses, des morphismes non ramifiés et des morphismes étales.}
+\EGAReaderTarget{ega4.c04.subsec.17-14}{subsection:IV.17.14}
+
+\begin{proposition}[17.14.1]
+\label{IV.17.14.1}
+Soit $f:X\to Y$ un morphisme localement de présentation finie, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit que la condition suivante soit vérifiée:
+
+Pour tout schéma local $Y'=\operatorname{Spec}(A')$ de point fermé $y'$, tout morphisme $h:Y'\to Y$ tel que $h(y')=y$, tout sous-schéma fermé $Y'_0=\operatorname{Spec}(A'/\mathfrak{J}')$ de $Y'$, où l'idéal $\mathfrak{J}'$ est de carré nul, et tout $Y$-morphisme $g_0:Y'_0\to X$ tel que $g_0(y')=x$, il existe au moins un (resp. au plus un, resp. un et un seul) $Y$-morphisme $g:Y'\to X$ dont $g_0$ soit la restriction à $Y'_0$.
+\end{proposition}
+
+Compte tenu des définitions (17.1.1 et 17.3.1), il s'agit de montrer que la condition de l'énoncé est \emph{suffisante} pour que $f$ soit lisse (resp. non ramifié) au point $x$.
+
+\emph{(i) Cas des morphismes lisses.} On peut se borner au cas où $Y=\operatorname{Spec}(A)$ et $X=\operatorname{Spec}(C)$ sont affines, avec $C=B/\mathfrak{R}$, où $B=A[T_1,\ldots,T_n]$ est une $A$-algèbre de polynômes et $\mathfrak{R}$ un idéal de type fini de $B$. Pour prouver que $f$ est lisse au point $x$, il suffit d'établir que $\sh{O}_{X,x}$ est une $\sh{O}_{Y,y}$-algèbre formellement lisse pour les topologies discrètes (17.5.1). Or on a $\sh{O}_{X,x}=B_{\mathfrak q}/\mathfrak{R}B_{\mathfrak q}$, où $\mathfrak q$ est un idéal premier de $B$, et si $\mathfrak p$ est l'image réciproque de $\mathfrak q$ dans $A$, $B_{\mathfrak q}$ est une $A_{\mathfrak p}$-algèbre formellement lisse pour les topologies discrètes (0, 19.3.2 et 19.3.5). Par application du critère jacobien (0, 22.6.1 et 20.5.12) il suffit donc de voir que $B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ est une extension $A_{\mathfrak p}$-triviale de $B_{\mathfrak q}/\mathfrak{R}B_{\mathfrak q}$ par $\mathfrak{R}B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$. Mais cela résulte précisément de l'hypothèse appliquée à $A'=B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ et $\mathfrak{J}'=\mathfrak{R}B_{\mathfrak q}/\mathfrak{R}^2B_{\mathfrak q}$ et au morphisme $g_0$ correspondant à l'automorphisme identique de $A'/\mathfrak{J}'=\sh{O}_{X,x}$.
+
+\emph{(ii) Cas des morphismes non ramifiés.} Posons ici $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, et notons qu'en vertu de (17.4.1, c')), il suffit de montrer que $\Omega^1_{B/A}=(\Omega^1_{X/Y})_x=0$. Or, avec les notations de (0, 20.4.1), l'anneau $C=\sh{P}^1_{B/A}=(B\otimes_A B)/\mathfrak{J}^2$ est local puisqu'il en est ainsi de $C/(\mathfrak{J}/\mathfrak{J}^2)$ isomorphe à $B$. L'hypothèse appliquée à $A'=C$ et $\mathfrak{J}'=\mathfrak{J}/\mathfrak{J}^2$ montre par définition que l'application $d_{B/A}:B\to\Omega^1_{B/A}$ est nulle (0, 20.4.6), donc que $\Omega^1_{B/A}=0$ par (0, 20.4.7).
+
+\begin{proposition}[17.14.2]
+\label{IV.17.14.2}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Pour que $f$ soit lisse (resp. non ramifié, resp. étale) au point $x$, il faut et il suffit qu'il vérifie la condition de (17.14.1) où l'on suppose de plus que l'anneau local $A'$ est artinien, que $\mathfrak m'\mathfrak{J}'=0$, où $\mathfrak m'$ est l'idéal maximal de $A'$, et que le corps résiduel $A'/\mathfrak m'$ de $A'$ est égal à $k(x)$.
+\end{proposition}
+
+Il s'agit encore de montrer que ces conditions sont suffisantes dans le cas des morphismes lisses et le cas des morphismes non ramifiés.
+

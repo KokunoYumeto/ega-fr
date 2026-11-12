@@ -1,0 +1,91 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{49}
+de b) et d) implique trivialement c), et en vertu de (i), c) entraîne d)~; on
+a donc prouvé l'équivalence de b), c), d) et e). En outre, il est clair que b)
+entraîne a), les classes des $x_i$ dans
+$\mathfrak{m}/\mathfrak{m}^2$ formant alors une base de ce $k$-espace
+vectoriel et les classes des $y_i$ dans $\mathfrak{n}/\mathfrak{n}^2$ un
+système libre de ce $k'$-espace vectoriel. Reste donc à prouver que a)
+entraîne e). Posons $V=\mathfrak{m}/\mathfrak{m}^2$,
+$W=\mathfrak{n}/\mathfrak{n}^2$~; il est immédiat que l'on a
+$\psi(V\otimes_k k')=(\mathfrak{n}^2+\mathfrak{m}B)/\mathfrak{n}^2$. On a
+d'une part, en vertu de (16.3.9)
+\begin{equation}
+\label{0.17.3.3.3-fr}
+\tag{17.3.3.3}
+  \dim(B)\leq\dim(A)+\dim(B\otimes_A k)~;
+\end{equation}
+en second lieu, d'après (16.2.6), on a
+\begin{equation}
+\label{0.17.3.3.4-fr}
+\tag{17.3.3.4}
+  \dim(A)\leq\operatorname{rg}_{k'}(V\otimes_k k').
+\end{equation}
+Enfin, dans l'anneau local $B\otimes_A k=B/\mathfrak{m}B$,
+$\mathfrak{n}'=\mathfrak{n}/\mathfrak{m}B$ est l'idéal maximal, $k'$ le corps
+résiduel et $\mathfrak{n}'/\mathfrak{n}'^2$ est isomorphe à
+$\mathfrak{n}/(\mathfrak{n}^2+\mathfrak{m}B)
+=W/\psi(V\otimes_k k')$~; on a donc, d'après (16.2.6)
+\begin{equation}
+\label{0.17.3.3.5-fr}
+\tag{17.3.3.5}
+  \dim(B\otimes_A k)
+  \leq\operatorname{rg}_{k'}W
+  -\operatorname{rg}_{k'}\psi(V\otimes_k k').
+\end{equation}
+Enfin, puisque $B$ est supposé régulier, on a
+$\dim(B)=\operatorname{rg}_{k'}W$ (17.1.1)~; on conclut donc de (17.3.3.3),
+(17.3.3.4) et (17.3.3.5) que l'on a
+\[
+  \operatorname{rg}_{k'}W
+  \leq\dim(A)+\dim(B\otimes_A k)
+  \leq\operatorname{rg}_{k'}W
+  +\operatorname{rg}_{k'}(V\otimes_k k')
+  -\operatorname{rg}_{k'}\psi(V\otimes_k k')
+\]
+et dire que les deux termes extrêmes de cette inégalité sont égaux signifie
+que $\psi$ est \emph{injectif}. La condition a) entraîne donc nécessairement
+que dans chacune des relations (17.3.3.3), (17.3.3.4) et (17.3.3.5), les deux
+membres sont \emph{égaux}~; or, l'égalité dans (17.3.3.4) (resp. (17.3.3.5))
+signifie que $A$ (resp. $B\otimes_A k$) est \emph{régulier} (17.1.1)~; on a
+donc bien prouvé que a) entraîne e).
+\end{proof}
+
+\begin{proposition}[17.3.4]
+\label{0.17.3.4-fr}
+Soient $A$ un anneau local régulier de dimension $n$, $\mathfrak{m}$ son idéal
+maximal. Pour tout $A$-module non nul de type fini $M$, on a
+\begin{equation}
+\label{0.17.3.4.1-fr}
+\tag{17.3.4.1}
+  \operatorname{prof}(M)+\operatorname{dim.proj}(M)=n.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Raisonnons par récurrence sur $m=\operatorname{prof}(M)$. Si $m=0$, on sait
+(16.4.6, (i)) qu'il existe un sous-$A$-module $N$ de $M$ isomorphe à
+$k=A/\mathfrak{m}$~; appliquant la suite exacte des Tor à la suite exacte
+$0\longrightarrow N\longrightarrow M\longrightarrow M/N\longrightarrow0$,
+on obtient une suite exacte
+\[
+  \operatorname{Tor}^A_{n+1}(M/N,k)\longrightarrow
+  \operatorname{Tor}^A_n(N,k)\longrightarrow
+  \operatorname{Tor}^A_n(M,k),
+\]
+et l'hypothèse que $A$ est régulier entraîne
+$\operatorname{Tor}^A_{n+1}(M/N,k)=0$ ((17.3.1.1) et (17.2.6)), donc
+$\operatorname{Tor}^A_n(k,k)$ est isomorphe à un sous-$A$-module de
+$\operatorname{Tor}^A_n(M,k)$~; appliquant de nouveau (17.3.1.1) et (17.2.6),
+on voit que $\operatorname{Tor}^A_n(M,k)\neq0$, donc
+$\operatorname{dim.proj}(M)\geq n$ (17.2.6)~; mais comme
+$\operatorname{dim.proj}(M)\leq n$ par (17.3.1.1), on a bien
+$\operatorname{dim.proj}(M)=n$.
+
+Supposons maintenant $m>0$, et soit $x$ un élément $M$-régulier appartenant à
+$\mathfrak{m}$~; on sait alors (16.4.6, (i)) que l'on a
+$\operatorname{prof}(M/xM)=m-1$, et d'autre part (17.2.7)
+$\operatorname{dim.proj}(M/xM)=\operatorname{dim.proj}(M)+1$~; l'hypothèse de
+récurrence prouve aussitôt la relation (17.3.4.1).
+\end{proof}
+

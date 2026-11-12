@@ -1,0 +1,87 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{147}
+
+pourvu que l'on prouve que $p^{-1}(x)$ est un préschéma régulier; autrement
+dit, on est ramené à prouver le lemme suivant.
+\end{proof}
+
+\begin{lemma}[6.7.4.1]
+\label{IV.2.s6.7.4.1-fr}
+Soient $K$, $L$ deux extensions d'un corps $k$, dont l'une est de type
+fini. Si $L$ est une extension séparable de $k$, l'anneau $K\otimes_kL$
+est régulier.
+\end{lemma}
+
+\begin{proof}
+Distinguons deux cas.
+
+\begin{enumerate}
+\item[A)] $L$ est une extension de type fini de $k$. Alors, avec les
+notations de (6.7.1.1), on peut supposer que $L$ est une extension finie
+séparable de $k(\boldsymbol t)$. Pour tout $s\in\operatorname{Spec}(A)$,
+$k(s)\otimes_{k(\boldsymbol t)}L$ est alors un composé direct d'un nombre
+fini de corps, extensions finies séparables de $k(s)$, donc un anneau
+régulier; il résulte alors de (6.5.2, (ii)) qu'il suffit de prouver que
+l'anneau $A$ est régulier. Comme $A=S^{-1}A'$, il suffit de prouver que
+$A'$ est régulier (0.17.3.6); mais on a vu qu'il en était bien ainsi dans
+la démonstration de (6.7.1.1).
+\item[B)] Soit $(L_\lambda)$ la famille filtrante des sous-extensions de
+$L$ qui sont de type fini sur $k$; en vertu de A), chacun des anneaux
+$C_\lambda=K\otimes_kL_\lambda$ est régulier; d'autre part, si
+$L_\lambda\subset L_\mu$, $L_\mu$ est un $L_\lambda$-module plat, donc
+$C_\mu$ est un $C_\lambda$-module plat (0.6.2.1). Comme
+$C=K\otimes_kL=\varinjlim(K\otimes_kL_\lambda)$ est noethérien, on peut
+appliquer (5.13.7), et $C$ est donc régulier.
+\end{enumerate}
+\end{proof}
+
+\begin{remarks}[6.7.5]
+\label{IV.2.s6.7.5-fr}
+\begin{enumerate}
+\item[(i)] Dans la démonstration du fait que $P(X,x)$ entraîne
+$P(X',x')$, on ne peut se dispenser de l'hypothèse que $k'$ est une
+extension séparable de $k$. On l'a déjà vu (4.6.1) lorsque $P$ est la
+propriété (d); mais même lorsque $X$ est géométriquement intègre (4.6.2),
+il peut se faire que $X$ soit régulier sans que $X'$ soit normal.
+
+Prenons par exemple pour $X$ une courbe algébrique normale sur $k$
+(II, 7.4.2); les anneaux locaux de $X$ étant intégralement clos et de
+dimension $1$, ce sont des anneaux de valuation discrète, donc réguliers
+(II, 7.1.6), et $X$ est donc un $k$-schéma régulier (et a fortiori
+vérifie $(R_n)$ pour tout $n\geqslant0$). Dire que $X$ est géométriquement
+intègre signifie alors que le corps $K$ des fonctions rationnelles sur
+$X$ est une extension séparable et primaire de $k$ (4.6.3).
+
+Or, prenons pour $k$ un corps non parfait de caractéristique $p>2$, et
+soit $a\in k$ un élément n'appartenant pas à $k^p$. Soit
+$B=k[S,T]$ l'anneau de polynômes en deux indéterminées $S$, $T$; le
+polynôme
+\[
+P(S,T)=T^2-S^p+a
+\]
+est irréductible dans $B$, car on vérifie aussitôt que $S^p-a$ n'est pas
+un carré dans $k[S]$; donc $X=\operatorname{Spec}(A)$, où $A=B/PB$,
+est une courbe affine irréductible sur $k$. Pour voir que le schéma $X$
+est régulier, il suffit de montrer qu'il est normal (II, 7.4.5); or
+$A=k[S][t]$, où $t$ est une racine du polynôme $P$ considéré comme
+polynôme en $T$ sur $k[S]$, de sorte que le corps $K=R(X)$ des fonctions
+rationnelles sur $X$ est le corps des fractions $k(S)[T]/(P)$ de $A$,
+extension quadratique de $k(S)$, donc séparable sur $k(S)$, et a fortiori
+sur $k$. Comme $2$ est inversible dans $k$, on vérifie aussitôt que $A$
+est la fermeture intégrale de $k[S]$ dans $K$, donc est intégralement clos,
+ce qui montre que $X$ est régulier. Par ailleurs, si un élément $f+tg$
+de $K$ (avec $f,g\in k(S)$) est algébrique sur $k$, il en est de même de
+sa norme et de sa trace sur $k(S)$, et comme $k(S)$ est une extension pure
+de $k$, on en conclut aisément que l'on doit avoir $f\in k$ et $g=0,
+$autrement dit $k$ est algébriquement fermé dans $K$, et a fortiori $K$
+est une extension primaire de $k$ (4.3.1). Cependant, si
+$k'=k(a^{1/p})$, $X'=X\otimes_k k'$ n'est pas normal, car dans $k'[S]$
+on peut écrire $S^p-a=(S-a^{1/p})^p$, et $X'$ est donc isomorphe à
+$\operatorname{Spec}(A')$, où $A'=k'[S][t']$ et $t'$ est racine du
+polynôme $T^2-S^p$. Or, $A'$ n'est pas intégralement clos: l'élément
+$t''=t'/S$ du corps des fractions $K'=k'(S)[t']$ de $A'$ vérifie
+l'équation de dépendance intégrale $(t'')^2-S^{p-2}=0$ sur $A'$, mais
+n'appartient pas à $A'$. Dans la théorie classique, cela s'exprime en
+disant que le «genre» sur $k'$ du corps des fonctions rationnelles $K'$ de
+$X'$ est strictement inférieur à celui de $K$ sur $k$.
+

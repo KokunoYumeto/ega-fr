@@ -1,0 +1,102 @@
+% from ega1-9-fr.tex
+\oldpage[I]{176}
+
+\begin{proof}
+Soit $(V_\lambda)_{\lambda\in L}$ un recouvrement de $X$ par des ouverts
+affines, $L$ étant supposé fini dans le cas b)~; $L$ étant muni d'une
+structure d'ensemble bien ordonné, il suffit de vérifier que les conditions
+du lemme (9.4.6) sont satisfaites. C'est évident dans l'hypothèse a), les
+espaces $V_\lambda$ étant noethériens. Dans l'hypothèse b), les
+$V_\lambda\cap V_\mu$ sont affines (\hyperref[I.5.5.6-fr]{5.5.6}), donc
+quasi-compacts, et comme $L$ est fini, $V_\lambda\cap W_\lambda$ est
+quasi-compact. D'où le théorème.
+\end{proof}
+
+\begin{corollary}[9.4.8]
+\label{I.9.4.8-fr}
+Sous les hypothèses de (9.4.7), pour tout $(\mathscr{O}_X|U)$-Module
+quasi-cohérent de type fini $\mathscr{G}$, il existe un
+$\mathscr{O}_X$-Module quasi-cohérent de type fini $\mathscr{G}'$ tel que
+$\mathscr{G}'|U=\mathscr{G}$.
+\end{corollary}
+
+\begin{proof}
+Il suffit d'appliquer (9.4.7) à $\mathscr{F}=j_*(\mathscr{G})$, qui est
+quasi-cohérent (9.4.2) et tel que $\mathscr{F}|U=\mathscr{G}$.
+\end{proof}
+
+\begin{corollary}[9.4.9]
+\label{I.9.4.9-fr}
+Soit $X$ un préschéma dont l'espace sous-jacent est localement noethérien, ou
+un schéma quasi-compact. Alors tout $\mathscr{O}_X$-Module quasi-cohérent est
+limite inductive de ses sous-$\mathscr{O}_X$-Modules quasi-cohérents de type
+fini.
+\end{corollary}
+
+\begin{proof}
+Cela résulte de (9.4.7) et de la remarque (9.4.4).
+\end{proof}
+
+\begin{corollary}[9.4.10]
+\label{I.9.4.10-fr}
+Sous les hypothèses de (9.4.9), si un $\mathscr{O}_X$-Module quasi-cohérent
+$\mathscr{F}$ est tel que tout sous-$\mathscr{O}_X$-Module quasi-cohérent de
+type fini de $\mathscr{F}$ soit engendré par ses sections au-dessus de $X$,
+alors $\mathscr{F}$ est engendré par ses sections au-dessus de $X$.
+\end{corollary}
+
+\begin{proof}
+En effet, soient $U$ un voisinage ouvert affine d'un point $x\in X$, et soit
+$s$ une section de $\mathscr{F}$ au-dessus de $U$~; le
+sous-$\mathscr{O}_X$-Module $\mathscr{G}$ de $\mathscr{F}|U$ engendré par
+$s$ est quasi-cohérent et de type fini, donc il existe un
+sous-$\mathscr{O}_X$-Module quasi-cohérent de type fini $\mathscr{G}'$ de
+$\mathscr{F}$ tel que $\mathscr{G}'|U=\mathscr{G}$ (9.4.7). Par hypothèse,
+il y a donc un nombre fini de sections $t_i$ de $\mathscr{G}'$ au-dessus de
+$X$ et des sections $a_i$ de $\mathscr{O}_X$ au-dessus d'un voisinage
+$V\subset U$ de $x$ telles que
+$s|V=\sum_i a_i\mathbin{\cdot}(t_i|V)$, ce qui démontre le corollaire.
+\end{proof}
+
+\subsection{Image fermée d'un préschéma. Adhérence d'un sous-préschéma.}
+\label{subsection:I.9.5-fr}
+
+\begin{proposition}[9.5.1]
+\label{I.9.5.1-fr}
+Soit $f:X\to Y$ un morphisme de préschémas tel que $f_*(\mathscr{O}_X)$ soit
+un $\mathscr{O}_Y$-Module quasi-cohérent (ce qui a lieu si $f$ est
+quasi-compact et si de plus $f$ est séparé ou $X$ localement noethérien
+(\hyperref[I.9.2.2-fr]{9.2.2})). Alors il existe un plus petit sous-préschéma
+$Y'$ de $Y$ tel que l'injection canonique $j:Y'\to Y$ majore $f$ (ou, ce qui
+revient au même (\hyperref[I.4.4.1-fr]{4.4.1}), tel que le sous-préschéma
+$f^{-1}(Y')$ de $X$ soit \emph{identique} à $X$).
+\end{proposition}
+
+De façon plus précise~:
+
+\begin{corollary}[9.5.2]
+\label{I.9.5.2-fr}
+Sous les conditions de (9.5.1), soit $f=(\psi,\theta)$ et soit $\mathscr{J}$
+le noyau (quasi-cohérent) de l'homomorphisme
+$\theta:\mathscr{O}_Y\to f_*(\mathscr{O}_X)$. Alors le sous-préschéma fermé
+$Y'$ de $Y$ défini par $\mathscr{J}$ vérifie les conditions de (9.5.1).
+\end{corollary}
+
+\begin{proof}
+Comme le foncteur $\psi^*$ est exact, la factorisation canonique
+$\theta:\mathscr{O}_Y\to\mathscr{O}_Y/\mathscr{J}
+\xrightarrow{\theta'}\psi_*(\mathscr{O}_X)$ donne
+(\hyperref[0.3.5.4.3-fr]{0, 3.5.4.3}) une factorisation
+\[
+  \theta^\sharp:\psi^*(\mathscr{O}_Y)
+  \to\psi^*(\mathscr{O}_Y)/\psi^*(\mathscr{J})
+  \xrightarrow{{\theta'}^\sharp}\mathscr{O}_X~;
+\]
+comme pour tout $x\in X$, $\theta_x^\sharp$ est un homomorphisme local, il
+en est de même de ${\theta'_x}^\sharp$~; si on désigne par $\psi_0$
+l'application continue $\psi$ considérée comme application de $X$ dans
+$X'$, par $\theta_0$ la restriction
+$\theta'|X':(\mathscr{O}_Y/\mathscr{J})|X'
+\to\psi_*(\mathscr{O}_X)|X'=(\psi_0)_*(\mathscr{O}_X)$, on voit donc que
+$f_0=(\psi_0,\theta_0)$ est un morphisme de préschémas $X\to X'$
+(\hyperref[I.2.2.1-fr]{2.2.1}) tel que $f=j\circ f_0$. Si maintenant $X''$

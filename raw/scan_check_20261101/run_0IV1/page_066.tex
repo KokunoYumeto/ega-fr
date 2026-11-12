@@ -1,0 +1,100 @@
+% from ega0-18-fr.tex
+\oldpage[0\textsubscript{IV-1}]{66}
+
+par
+\[
+  x(y_1\otimes y_2\otimes\cdots\otimes y_{n+1})
+  =(xy_1)\otimes y_2\otimes\cdots\otimes y_{n+1}\,;
+\]
+la dérivation, de degré $-1$, $d_n:\mathbf P_n\to\mathbf P_{n-1}$, est
+définie par
+\begin{align*}
+  d_n(x_1\otimes x_2\otimes\cdots\otimes x_{n+1})
+    &=(x_1x_2)\otimes x_3\otimes\cdots\otimes x_{n+1}
+      -x_1\otimes(x_2x_3)\otimes\cdots\otimes x_{n+1}+\cdots\\
+    &\quad+(-1)^{n-1}x_1\otimes x_2\otimes\cdots\otimes x_{n-1}
+      \otimes(x_nx_{n+1})
+      +(-1)^n(x_{n+1}x_1)\otimes x_2\otimes\cdots\otimes x_n,
+\end{align*}
+qui est bien $B$-linéaire puisque $B$ est commutatif.
+
+Un $2$-cocycle de ce complexe à valeurs dans $L$ est une application
+$B$-linéaire $h$ de $B\otimes B\otimes B$ dans $L$ telle que
+$h(d_3(x\otimes y\otimes z\otimes t))=0$~; mais comme
+$h(x\otimes y\otimes z)=xh(1\otimes y\otimes z)$, le cocycle $h$ est déterminé
+par l'application $A$-bilinéaire
+$(y,z)\longmapsto f(y,z)=h(1\otimes y\otimes z)$ de $B\times B$ dans $L$, et,
+en écrivant la condition précédente pour $h$, on retrouve pour $f$ la
+condition (18.4.3.1). De même, un $2$-cobord sera une application de la forme
+$x\otimes y\otimes z\longmapsto h'(d_2(x\otimes y\otimes z))$, où
+$h':B\otimes_A B\to L$ est linéaire, et ici encore $h'$ est déterminé par
+l'application $B$-linéaire $g:y\longmapsto h'(1\otimes y)$ de $B$ dans $L$~;
+on obtient alors
+$h'(d_2(1\otimes x\otimes y))=xg(y)-g(xy)+yg(x)$, ce qui redonne (18.4.3.2).
+On procède de même pour tout $i$, et l'on voit ainsi que l'on a
+\begin{equation}
+\label{0.18.4.4.1-fr}
+\tag{18.4.4.1}
+  \mathrm H_A^i(B,L)=\mathrm H^i(\operatorname{Hom}_B(\mathbf P_\bullet,L)).
+\end{equation}
+\end{env}
+
+\begin{env}[18.4.5]
+\label{0.18.4.5-fr}
+Sous les conditions de (18.4.4), on peut interpréter de la même façon le
+groupe $\mathrm H_A^2(B,L)^s$ (18.4.3). Pour cela, modifions le complexe
+$\mathbf P_\bullet$ en degré $3$, en considérant un nouveau complexe
+\[
+  \mathbf P'_\bullet:\mathbf P'_3\xrightarrow{d'_3}\mathbf P_2
+  \xrightarrow{d_2}\mathbf P_1\,;
+\]
+nous prendrons
+$\mathbf P'_3=\mathbf P_3\oplus(B\otimes_A B\otimes_A B)$, $d'_3$ coïncidant
+avec $d_3$ sur $\mathbf P_3$, et étant donné dans $B\otimes_A B\otimes_A B$
+par
+\[
+  d'_3(x\otimes y\otimes z)=x\otimes y\otimes z-x\otimes z\otimes y.
+\]
+
+La relation $d_2d'_3=0$ résulte de la commutativité de $B$. Avec les notations
+introduites ci-dessus, un $2$-cocycle de $\mathbf P'_\bullet$ correspond
+maintenant à une application $A$-bilinéaire $f:B\times B\to L$ qui est
+\emph{symétrique} et vérifie (18.4.3.1)~; par suite, on a
+\[
+  \mathrm H_A^2(B,L)^s
+  =\mathrm H^2(\operatorname{Hom}_B(\mathbf P'_\bullet,L)).
+\]
+\end{env}
+
+\begin{env}[18.4.6]
+\label{0.18.4.6-fr}
+Dans le cas particulier où l'on considère un \emph{corps} commutatif $k$, une
+\emph{extension} $K$ de $k$, on a $\operatorname{Ext}_K^1(M,L)=0$ quels que
+soient les $K$-espaces vectoriels $L$, $M$, et par suite (M, VI, 3.3 $a$)), on
+a un isomorphisme canonique
+\begin{equation}
+\label{0.18.4.6.1-fr}
+\tag{18.4.6.1}
+  \mathrm H_k^i(K,L)\xrightarrow{\sim}
+  \operatorname{Hom}_K(\mathrm H_i(\mathbf P_\bullet),L)
+\end{equation}
+et de même
+\begin{equation}
+\label{0.18.4.6.2-fr}
+\tag{18.4.6.2}
+  \mathrm H_k^2(K,L)^s\xrightarrow{\sim}
+  \operatorname{Hom}_K(\mathrm H_2(\mathbf P'_\bullet),L).
+\end{equation}
+\end{env}
+
+\subsection{Cas des anneaux topologiques}
+\label{subsection:0.18.5-fr}
+
+\begin{env}[18.5.1]
+\label{0.18.5.1-fr}
+Soient $A$, $B$ deux anneaux \emph{topologiques} dont la topologie est
+\emph{linéaire}, $\rho:A\to B$ un homomorphisme continu, $L$ un $B$-bimodule
+topologique, et supposons qu'il existe un idéal bilatère \emph{ouvert}
+$\mathfrak R_0$ de $B$ tel que
+$\mathfrak R_0.L=L.\mathfrak R_0=0$, de sorte que $L$ peut être
+

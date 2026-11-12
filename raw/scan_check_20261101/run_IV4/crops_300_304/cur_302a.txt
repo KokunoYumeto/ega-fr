@@ -1,0 +1,44 @@
+\oldpage[IV-4]{302}
+$\mathfrak{m}_{y'}\notin\operatorname{Ass}(\sh{O}_{Y',y'})$ résulte, par platitude, de la condition $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$ $(\mathbf{0},3.3.1)$.
+Le morphisme $g$ vérifie donc les mêmes conditions que $f$;
+si l'on prouve la formule \sref{IV.21.10.18.1} pour $g$ et $\overline{\{y\}}$, la même formule sera valable pour $f$ et $\overline{\{x\}}$, en vertu de \sref{IV.21.10.16.1}.
+
+On peut donc supposer que $A$ est \emph{complet};
+alors il en est de même de $A'$ qui est donc composé direct d'anneaux locaux complets;
+on peut par suite se borner au cas où $A'$ est un anneau \emph{local}, et il reste à vérifier \sref{IV.21.10.18.1} dans chacun des cas (ii), (iii), (iv) pour le point fermé $x'$ de $X'$.
+Dans le cas (ii), $A'$ étant un $A$-module plat de type fini, est un $A$-module \emph{libre} $(\mathbf{0}_{\mathrm{III}},10.1.3)$, de rang $n$ en vertu de l'hypothèse.
+Or, on a par définition \sref{IV.21.10.1} et \sref{IV.21.10.3}
+\[
+  f^*(Z)=\lambda_{x'}\cdot\overline{\{x'\}},
+\]
+où $\lambda_{x'}$ est la longueur du $A'$-module $A'/\mathfrak{m}_xA'$, puis
+\[
+  f_*(f^*(Z))=(\lambda_{x'}[\boldsymbol{k}(x'): \boldsymbol{k}(x)])\cdot\overline{\{x\}};
+\]
+mais $\lambda_{x'}[\boldsymbol{k}(x'): \boldsymbol{k}(x)]$ est la longueur de $A'/\mathfrak{m}_xA'=A'\otimes_A\boldsymbol{k}(x)$ en tant que $A$-module, ou encore son rang en tant que $\boldsymbol{k}(x)$-espace vectoriel, donc est égal à $n$.
+
+Dans le cas (iii), $A$ est un anneau de valuation discrète, donc régulier, et l'hypothèse $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$ entraîne que $A'$ est un anneau de Cohen--Macaulay $(\mathbf{0},16.4.6)$;
+comme $\dim(A')=\dim(A)=1$ et que $A'/\mathfrak{m}_xA'$ est un anneau artinien, il résulte de \sref{IV.6.1.5} que $A'$ est un $A$-module plat et on est ramené au cas (ii).
+
+Dans le cas (iv), si $K$ est l'anneau total des fractions de $A$, $K'=A'\otimes_AK$ est par hypothèse un $K$-module libre de rang $n$ et par définition \sref{IV.21.10.10}, on a
+\[
+  f^*(Z)=\frac{n}{[\boldsymbol{k}(x'): \boldsymbol{k}(x)]}\cdot\overline{\{x'\}},
+\]
+d'où $f_*(f^*(Z))=n\cdot\overline{\{x\}}$.
+\end{proof}
+
+On notera que la formule \sref{IV.21.10.18.1} est applicable en particulier lorsque le morphisme $f$ est \emph{fini} et \emph{plat} et tel que pour tout point maximal $x$ de $X$, $(f_*(\sh{O}_{X'}))_x$ soit un $\sh{O}_{X,x}$-module libre de rang $n$.
+
+\begin{corollary}[21.10.19]
+\label{IV.21.10.19}
+Sous les hypothèses de \sref{IV.21.10.18}, soit $D$ un diviseur sur $X$ tel que $f^*(D)$ soit défini \sref{IV.21.4.5}; alors on a
+\[
+\label{IV.21.10.19.1}
+  f_*(\operatorname{cyc}(f^*(D)))=n\cdot\operatorname{cyc}(D).
+  \tag{21.10.19.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Cela résulte de \sref{IV.21.10.18} et \sref{IV.21.10.13bis}.
+\end{proof}

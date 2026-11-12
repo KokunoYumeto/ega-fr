@@ -1,0 +1,47 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{228}
+$\Gamma(U,\sh{O}_X)$) est injectif ; ces homomorphismes définissent donc un \emph{homomorphisme canonique injectif}
+\[
+\label{IV.20.1.4.1}
+  i:\sh{O}_X\to\sh{M}_X
+  \tag{20.1.4.1}
+\]
+qui permet d'identifier $\sh{O}_X$ à un sous-faisceau de $\sh{M}_X$.
+Étant donnée une fonction méromorphe $\vphi\in M(X)$, on dit que $\vphi$ est \emph{définie} dans un ouvert $U$ de $X$ si $\vphi|U$ est une \emph{section de $\sh{O}_U$} au-dessus de $U$ ; les axiomes des faisceaux montrent qu'il y a, pour une section $\vphi$ donnée, un \emph{plus grand} ouvert dans lequel $\vphi$ est définie ; on l'appelle \emph{domaine de définition} de $\vphi$ et on le note $\operatorname{dom}(\vphi)$.
+\end{env}
+
+\begin{env}[20.1.5]
+\EGAReaderTarget{ega4.c04.statement.20-1-5}{IV.20.1.5}
+Pour tout $\sh{O}_X$-module $\sh{F}$, on déduit de \sref{IV.20.1.4.1} un di-homomorphisme formé de $i$ et de l'homomorphisme de faisceaux de groupes additifs
+\[
+\label{IV.20.1.5.1}
+  1_{\sh{F}}\otimes i:\sh{F}\to\sh{M}_X(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_X.
+  \tag{20.1.5.1}
+\]
+On notera que ce dernier n'est plus injectif en général ; lorsqu'il est injectif, on dit que $\sh{F}$ est \emph{strictement sans torsion} : cela signifie que pour tout ouvert $U$ de $X$ et toute section $s\in\Gamma(U,\sh{O}_X)$ qui est un élément régulier de cet anneau, l'homothétie $z\mapsto sz$ de $\Gamma(U,\sh{F})$ est injective ; cette condition est évidemment remplie si $\sh{F}$ est \emph{localement libre}.
+\end{env}
+
+\begin{proposition}[20.1.6]
+\label{IV.20.1.6}
+Soient $X$ un préschéma localement noethérien, $\sh{F}$ un $\sh{O}_X$-module quasi-cohérent.
+Pour que $\sh{F}$ soit strictement sans torsion, il faut et il suffit que $\operatorname{Ass}(\sh{F})\subset\operatorname{Ass}(\sh{O}_X)$.
+\end{proposition}
+
+\begin{proof}
+On est en effet aussitôt ramené au cas où $X=\Spec(A)$ est affine, $\sh{F}=\widetilde M$, et on sait que les éléments $s$ de $A$ appartenant à un idéal de $\operatorname{Ass}(M)$ sont exactement ceux pour lesquels l'homothétie $z\mapsto sz$ n'est pas injective (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection1, n\textsuperscript{o}1, cor.~2 de la prop.~2).
+\end{proof}
+
+\begin{env}[20.1.7]
+\EGAReaderTarget{ega4.c04.statement.20-1-7}{IV.20.1.7}
+Si $u$ est une section de $\sh{M}_X(\sh{F})$ au-dessus de $X$, on dit que $u$ est \emph{définie} en un point $x\in X$ s'il existe un voisinage ouvert $V$ de $x$ dans $X$ tel que $u|V$ soit l'image d'une section de $\sh{F}$ au-dessus de $V$ par le di-homomorphisme \sref{IV.20.1.5.1}.
+On dit que $u$ est \emph{définie} dans un ouvert $U$ de $X$ si elle est définie en tout point de $U$ ; il y a encore un plus grand ouvert dans lequel $u$ est définie, appelé \emph{domaine de définition} de $u$ et noté $\operatorname{dom}(u)$.
+Lorsque $\sh{F}$ est strictement sans torsion, de sorte que $\sh{F}$ s'identifie par \sref{IV.20.1.5.1} à un sous-faisceau de $\sh{M}_X(\sh{F})$, dire que $u$ est définie dans $U$ signifie que $u|U$ est une \emph{section de $\sh{F}$ au-dessus de $U$}.
+\end{env}
+
+\begin{env}[20.1.8]
+\EGAReaderTarget{ega4.c04.statement.20-1-8}{IV.20.1.8}
+Conformément aux notations générales \sref[0\textsubscript{I}]{0.5.4.7}, on note $\sh{M}_X^*$ le faisceau de groupes multiplicatifs tel que $\Gamma(U,\sh{M}_X^*)$ soit (pour tout ouvert $U$ de $X$) le groupe des \emph{éléments inversibles} de $\Gamma(U,\sh{M}_X)$.
+Ce faisceau n'est autre que le faisceau $\sh{S}(\sh{M}_X)$ défini en \sref{IV.20.1.3} : en effet, si $s\in\Gamma(U,\sh{S}(\sh{M}_X))$, pour tout $x\in U$, il existe un voisinage ouvert $V\subset U$ de $x$ tel que $s|V$ soit un élément régulier dans l'\emph{anneau total des fractions} de $\Gamma(V,\sh{O}_X)$ et on sait qu'un tel élément est nécessairement inversible dans cet anneau de fractions.
+Nous dirons que les sections de $\sh{M}_X^*$ au-dessus de $X$ sont les \emph{fonctions méromorphes régulières} (on notera que nous nous écartons ici de la terminologie suivie par certains auteurs, qui nomment fonctions méromorphes « régulières » celles qui sont des \emph{sections de $\sh{O}_X$}, identifié à un sous-faisceau de $\sh{M}_X$).
+
+Soit $\sh{L}$ un $\sh{O}_X$-module inversible \sref[0\textsubscript{I}]{0.5.4.1} ; alors il est clair que $\sh{M}_X(\sh{L})=\sh{L}\otimes_{\sh{O}_X}\sh{M}_X$

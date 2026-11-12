@@ -1,0 +1,89 @@
+% from ega3-1-fr.tex
+\oldpage[III]{115}
+\begin{env}[2.6.3]
+\label{III.2.6.3-fr}
+\emph{Remarque.} Lorsque $X$ est propre sur $Y$, on peut démontrer
+(\hyperref[III.2.6.2-fr]{2.6.2}) plus simplement, en raisonnant comme dans
+le th. de Chevalley (II, 6.7.1), à l'aide de
+(\hyperref[III.2.6.1-fr]{2.6.1}) et du lemme (II, 6.7.1.1).
+\end{env}
+
+\section{Le théorème de finitude pour les morphismes propres}
+\label{section:III.3-fr}
+
+\subsection{Le lemme de dévissage}
+\label{subsection:III.3.1-fr}
+
+\begin{definition}[3.1.1]
+\label{III.3.1.1-fr}
+Soit $K$ une catégorie abélienne. On dit qu'un sous-ensemble $K'$ de
+l'ensemble des objets de $K$ est \emph{exact} si $0\in K'$ et si, pour toute
+suite exacte
+\[
+0\longrightarrow A'\longrightarrow A\longrightarrow A''\longrightarrow0
+\]
+dans $K$ telle que deux des objets $A$, $A'$, $A''$ soit dans $K'$, alors le
+troisième est aussi dans $K'$.
+\end{definition}
+
+\begin{theorem}[3.1.2]
+\label{III.3.1.2-fr}
+Soit $X$ un préschéma noethérien~; on désigne par $K$ la catégorie abélienne
+des $\mathcal O_X$-Modules cohérents. Soient $K'$ un sous-ensemble exact de
+$K$, $X'$ une partie fermée de l'espace sous-jacent à $X$. On suppose que
+pour toute partie fermée irréductible $Y$ de $X'$, de point générique $y$, il
+existe un $\mathcal O_X$-Module $\mathcal G\in K'$ tel que $\mathcal G_y$ soit
+un $k(y)$-espace vectoriel de dimension $1$. Alors tout $\mathcal O_X$-Module
+cohérent de support contenu dans $X'$ appartient à $K'$ (et en particulier,
+si $X'=X$, on a $K'=K$).
+\end{theorem}
+
+\begin{proof}
+Considérons la propriété suivante $P(Y)$ d'une partie fermée $Y$ de $X'$~:
+tout $\mathcal O_X$-Module cohérent de support contenu dans $Y$ appartient à
+$K'$. En vertu du principe de récurrence noethérienne (0\textsubscript{I},
+2.2.2), on voit qu'on est ramené à démontrer que \emph{si $Y$ est une partie
+fermée de $X'$ telle que la propriété $P(Y')$ soit vraie pour toute partie
+fermée $Y'$ de $Y$, distincte de $Y$, alors $P(Y)$ est vraie}.
+
+Soit donc $\mathcal F\in K$ à support contenu dans $Y$ et prouvons que
+$\mathcal F\in K'$. Désignons encore par $Y$ le sous-préschéma fermé réduit de
+$X$ ayant $Y$ pour espace sous-jacent (I, 5.2.1)~; il est défini par un Idéal
+cohérent $\mathcal J$ de $\mathcal O_X$. On sait (I, 9.3.4) qu'il existe un
+entier $n>0$ tel que $\mathcal J^n\mathcal F=0$~; pour $1\leq k\leq n$, on a
+donc une suite exacte
+\[
+0\longrightarrow
+\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^k\mathcal F
+\longrightarrow \mathcal F/\mathcal J^{k-1}\mathcal F
+\longrightarrow0
+\]
+de $\mathcal O_X$-Modules cohérents (0\textsubscript{I}, 5.3.6 et 5.3.3)~;
+comme $K'$ est exact, on voit, par récurrence sur $k$, qu'il suffit de montrer
+que chacun des
+$\mathcal F_k=\mathcal J^{k-1}\mathcal F/\mathcal J^k\mathcal F$ est dans
+$K'$. On est donc ramené à prouver que $\mathcal F\in K'$ sous l'hypothèse
+supplémentaire que $\mathcal J\mathcal F=0$~; il revient au même de dire que
+$\mathcal F=j_*(j^*(\mathcal F))$, où $j$ est l'injection canonique
+$Y\to X$. Distinguons maintenant deux cas~:
+\begin{enumerate}
+\item[a)] $Y$ est \emph{réductible}. Soient $Y=Y'\cup Y''$, $Y'$ et $Y''$
+étant des parties fermées de $Y$, distinctes de $Y$~; soient encore $Y'$,
+$Y''$ les sous-préschémas fermés réduits de $X$ ayant pour espaces
+sous-jacents $Y'$, $Y''$ respectivement, qui sont définis respectivement par
+les Idéaux cohérents $\mathcal J'$, $\mathcal J''$ de $\mathcal O_X$. Posons
+\[
+\mathcal F'=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J'),\qquad
+\mathcal F''=\mathcal F\otimes_{\mathcal O_X}
+(\mathcal O_X/\mathcal J'').
+\]
+Les homomorphismes canoniques $\mathcal F\to\mathcal F'$,
+$\mathcal F\to\mathcal F''$ définissent donc un homomorphisme
+$u:\mathcal F\to\mathcal F'\oplus\mathcal F''$. Montrons que pour tout
+$z\notin Y'\cap Y''$, l'homomorphisme
+$u_z:\mathcal F_z\to\mathcal F'_z\oplus\mathcal F''_z$ est \emph{bijectif}.
+En effet, on a $\mathcal J'\cap\mathcal J''=\mathcal J$, car la question est
+locale et
+

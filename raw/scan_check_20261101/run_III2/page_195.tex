@@ -1,0 +1,93 @@
+% from ega3-7-fr.tex
+\oldpage[III]{195}
+En effet, pour tout $x'\in\operatorname{Spec}(A')$, on a, en posant
+$x=f(x')$,
+\[
+  H_\bullet(P_\bullet\otimes_A\kappa(x'))
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A\kappa(x))
+    \otimes_{\kappa(x)}\kappa(x')\bigr)
+  =
+  H_\bullet(P_\bullet\otimes_A\kappa(x))
+    \otimes_{\kappa(x)}\kappa(x'),
+\]
+puisque $\kappa(x')$ est plat sur $\kappa(x)$, d'où la relation (7.6.7.1).
+\end{proof}
+
+\begin{lemma}[7.6.8]
+Si l'anneau $A$ est noethérien et le complexe $P_\bullet$ formé de $A$-modules
+de type fini, la fonction $x\mapsto d_p^T(x)$ sur $\operatorname{Spec}(A)$ est
+constructible.
+\end{lemma}
+
+\begin{proof}
+Il faut prouver que pour toute partie fermée irréductible $Y$ de
+$X=\operatorname{Spec}(A)$, il existe un ouvert non vide $U$ de $Y$ dans lequel
+$d_p$ est constante ($0$, 9.2.2); comme
+$Y=\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a$ est un idéal de $A$ tel
+que $A/\mathfrak a$ soit réduit, on peut, en vertu de (7.6.7), se borner au cas
+où $Y=X$ et où $A$ est un anneau noethérien intègre; mais alors l'assertion
+résulte de (7.4.5).
+\end{proof}
+
+\begin{theorem}[7.6.9]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats de
+type fini, $T_\bullet(M)=H_\bullet(P_\bullet\otimes_A M)$ le foncteur homologique
+défini par $P_\bullet$; pour tout $x\in\operatorname{Spec}(A)$, soit
+\[
+  d_p(x)=\operatorname{rang}_{\kappa(x)}T_p(\kappa(x)).
+\]
+Alors :
+\begin{enumerate}
+  \item[(i)] La fonction $d_p$ est constructible et semi-continue
+    supérieurement dans $\operatorname{Spec}(A)$.
+  \item[(ii)] Si $T_p$ est exact, $d_p$ est continue (donc localement constante)
+    dans $\operatorname{Spec}(A)$; la réciproque est vraie lorsque l'anneau $A$
+    est réduit.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] La première assertion a été démontrée dans (7.6.8). Pour prouver
+    la seconde, il suffit donc ($0$, 9.2.4) de montrer que si $x'\ne x$ est une
+    générisation de $x$ dans $\operatorname{Spec}(A)$, on a
+    $d_p(x')\leq d_p(x)$. Or, il existe alors un anneau de valuation discrète
+    $B$ et un morphisme
+    \[
+      f:\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)
+    \]
+    tels que, si $a$ désigne le point fermé de $\operatorname{Spec}(B)$ et $b$
+    son point générique, on ait $f(a)=x$ et $f(b)=y$ (II, 7.1.9). En vertu de
+    la formule (7.6.7.1), on voit qu'on est ramené à démontrer l'inégalité
+    $d_p(a)\geq d_p(b)$ dans $\operatorname{Spec}(B)$; mais cela n'est autre que
+    l'inégalité (7.6.5.1)\footnote{Le principe de démonstration de (i) par
+    réduction au cas d'un anneau de valuation discrète nous a été communiqué
+    oralement par Hironaka.}.
+  \item[(ii)] La première assertion a déjà été démontrée (7.3.4). Pour démontrer
+    la réciproque, utilisons le critère valuatif (7.6.2); compte tenu de la
+    formule (7.6.7.1), on est donc ramené au cas où $A$ est un anneau de
+    valuation discrète; mais comme $\operatorname{Spec}(A)$ ne comporte alors
+    que deux points, l'hypothèse que $d_p$ est constante implique bien que $T_p$
+    est exact, en vertu de (7.6.5).
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[7.6.10]
+Soient $A$ un anneau noethérien, $\mathfrak p_i$ $(1\leq i\leq r)$ ses idéaux
+premiers minimaux, $k_i$ le corps résiduel de $A_{\mathfrak p_i}$
+$(1\leq i\leq r)$.
+\begin{enumerate}
+  \item[(i)] Pour tout $x\in\operatorname{Spec}(A)$, il existe un indice $i$
+    tel que
+    \[
+      d_p(x)\geq\operatorname{rang}_{k_i}T_p(k_i).
+      \tag{7.6.10.1}\label{III.7.6.10.1.fr}
+    \]
+\end{enumerate}
+En particulier, si $A$ est intègre et si $K$ est son corps des fractions, on a
+\[
+  d_p(x)\geq\operatorname{rang}_K T_p(K)
+  \tag{7.6.10.2}\label{III.7.6.10.2.fr}
+\]
+pour tout $x\in\operatorname{Spec}(A)$.

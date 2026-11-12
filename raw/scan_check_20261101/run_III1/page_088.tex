@@ -1,0 +1,78 @@
+% from ega3-1-fr.tex
+\oldpage[III]{88}
+est commutatif, on en conclut que les diagrammes
+\begin{equation}
+\label{III.1.2.5.1-fr}
+\tag{1.2.5.1}
+\xymatrix{
+H^p(\mathfrak U,\mathcal F'')\ar[r]^{\partial}\ar[d]
+&H^{p+1}(\mathfrak U,\mathcal F')\ar[d]\\
+H^{p+1}((\mathbf f),M'')\ar[r]^{\partial}
+&H^{p+2}((\mathbf f),M')
+}
+\end{equation}
+sont commutatifs pour tout $p$ (G, I, 2.1.1).
+\end{remark}
+
+\subsection{Cohomologie d'un schéma affine}
+\label{subsection:III.1.3-fr}
+
+\begin{theorem}[1.3.1]
+\label{III.1.3.1-fr}
+Soit $X$ un schéma affine. Pour tout $\mathcal O_X$-Module quasi-cohérent
+$\mathcal F$, on a $H^p(X,\mathcal F)=0$ pour tout $p>0$.
+\end{theorem}
+
+\begin{proof}
+Soit $\mathfrak U$ un recouvrement fini de $X$ par des ouverts affines
+$X_{f_i}=D(f_i)$ ($1\leq i\leq r$)~; on sait qu'alors l'idéal engendré dans
+$A=\Gamma(X,\mathcal O_X)$ par les $f_i$ est égal à $A$. On conclut donc de
+(\hyperref[III.1.2.4-fr]{1.2.4}) que l'on a
+$H^p(\mathfrak U,\mathcal F)=0$ pour $p>0$. Comme il y a des recouvrements
+finis de $X$ par des ouverts affines qui sont arbitrairement fins (I, 1.1.10),
+la définition de la cohomologie de Čech (G, II, 5.8) montre que l'on a aussi
+$\check H^p(X,\mathcal F)=0$ pour $p>0$. Mais ceci s'applique aussi à tout
+préschéma $X_f$ pour $f\in A$ (I, 1.3.6), donc
+$\check H^p(X_f,\mathcal F)=0$ pour $p>0$. Comme l'on a
+$X_f\cap X_g=X_{fg}$, on en déduit que l'on a aussi
+$H^p(X,\mathcal F)=0$ pour tout $p>0$, en vertu de (G, II, 5.9.2).
+\end{proof}
+
+\begin{corollary}[1.3.2]
+\label{III.1.3.2-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme affine (II, 1.6.1). Pour
+tout $\mathcal O_X$-Module quasi-cohérent $\mathcal F$, on a
+$R^qf_*(\mathcal F)=0$ pour $q>0$.
+\end{corollary}
+
+\begin{proof}
+En effet, par définition $R^qf_*(\mathcal F)$ est le $\mathcal O_Y$-Module
+associé au préfaisceau $U\mapsto H^q(f^{-1}(U),\mathcal F)$, $U$ parcourant
+les ouverts de $Y$. Mais les ouverts affines forment une base de $Y$, et pour
+un tel ouvert $U$, $f^{-1}(U)$ est affine (II, 1.3.2), donc
+$H^q(f^{-1}(U),\mathcal F)=0$ par
+(\hyperref[III.1.3.1-fr]{1.3.1}), ce qui démontre le corollaire.
+\end{proof}
+
+\begin{corollary}[1.3.3]
+\label{III.1.3.3-fr}
+Soient $Y$ un préschéma, $f:X\to Y$ un morphisme affine. Pour tout
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$, l'homomorphisme canonique
+$H^p(Y,f_*(\mathcal F))\to H^p(X,\mathcal F)$ (0, 12.1.3.1) est bijectif
+pour tout $p$.
+\end{corollary}
+
+\begin{proof}
+En effet, il suffit (en vertu de (0, 12.1.7)) de montrer que les
+edge-homomorphismes
+$''E_2^{p0}=H^p(Y,f_*(\mathcal F))\to H^p(X,\mathcal F)$ de la seconde suite
+spectrale du foncteur composé $\Gamma f_*$ sont bijectifs. Mais le terme
+$E_2$ de cette suite est donné par
+$''E_2^{pq}=H^p(Y,R^qf_*(\mathcal F))$ (G, II, 4.17.1), donc il résulte de
+(\hyperref[III.1.3.2-fr]{1.3.2}) que $''E_2^{pq}=0$ pour $q>0$, et la suite
+spectrale dégénère~; d'où notre assertion (0, 11.1.6).
+\end{proof}
+
+\begin{corollary}[1.3.4]
+\label{III.1.3.4-fr}
+Soient $f:X\to Y$ un morphisme affine, $g:Y\to Z$ un morphisme.

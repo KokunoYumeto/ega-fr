@@ -1,0 +1,97 @@
+% from ega4-12-fr.tex
+\oldpage[IV-3]{184}
+L'équivalence de $a)$ et $b)$ résulte de Bourbaki, \emph{Alg. comm.}, chap. II,
+\S~5, n\textsuperscript{o} 2, cor. 2 du th. 1. Comme $a)$ implique $c)$
+trivialement, il reste à prouver que $c)$ implique $b)$, ce qui résulte du
+critère de platitude par fibres (11.3.10), appliqué avec $g=h$, $f=1_X$.
+\end{proof}
+
+\begin{proposition}[12.3.2]
+\label{IV.12.3.2-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre de présentation finie qui soit un
+$A$-module plat, $M$ un $B$-module de présentation finie qui soit un
+$A$-module plat. Alors~:
+\begin{enumerate}[label=(\roman*)]
+  \item Il existe une résolution gauche de $M$ par des $B$-modules libres de
+  type fini.
+  \item On a
+  \begin{equation}
+    \tag{12.3.2.1}
+    \label{IV.12.3.2.1-fr}
+    \operatorname{dim.proj}_B(M)
+    =\sup_{y\in\operatorname{Spec}(A)}
+    \operatorname{dim.proj}_{B\otimes_Ak(y)}(M\otimes_Ak(y))
+    =\operatorname{Tor.dim}_B(M)
+  \end{equation}
+  où $\operatorname{Tor.dim}_B(M)$ est le \emph{plus petit entier} $i$ tel que
+  $\operatorname{Tor}^B_j(M,N)=0$ pour tout $j\geq i$ et tout $B$-module $N$
+  (et $+\infty$ si un tel entier $i$ n'existe pas).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item En vertu de (8.9.1), il existe un sous-anneau noethérien $A_0$ de $A$,
+  une $A_0$-algèbre de type fini $B_0$ et un $B_0$-module de type fini $M_0$
+  tels que $B$ soit isomorphe à $B_0\otimes_{A_0}A$ et $M$ à
+  $M_0\otimes_{A_0}A$. De plus (11.2.7) on peut supposer que $B_0$ et $M_0$
+  sont des $A_0$-modules plats. Il y a alors une résolution gauche
+  $(L_0)_\bullet$ de $M_0$ formée de $B_0$-modules libres de type fini, et
+  comme $M_0$ et les $L_{0i}$ sont des $A_0$-modules plats,
+  $(L_0)_\bullet\otimes_{A_0}A$ est une résolution gauche de $M$ formée de
+  $B$-modules libres de type fini (2.1.10).
+
+  \item En vertu de ($\mathbf 0$, 17.2.2, (ii)), on a
+  $\operatorname{Tor.dim}_B(M)\leq\operatorname{dim.proj}_B(M)$, et la
+  définition de la dimension projective prouve aussitôt que, pour tout
+  $y\in\operatorname{Spec}(A)$, on a
+  \[
+    \operatorname{dim.proj}_{B\otimes_Ak(y)}(M\otimes_Ak(y))
+    \leq\operatorname{dim.proj}_B(M).
+  \]
+  Pour prouver les inégalités inverses, considérons une résolution gauche
+  $(L_i)$ de $M$ par des $B$-modules libres de type fini, et supposons que
+  $\operatorname{Tor.dim}_B(M)=n$ (resp.
+  $\operatorname{dim.proj}_{B\otimes_Ak(y)}(M\otimes_Ak(y))\leq n$ pour tout
+  $y\in\operatorname{Spec}(A)$). Alors
+  $R=\operatorname{Im}(L_n\to L_{n-1})=\operatorname{Ker}(L_{n-1}\to L_{n-2})$
+  est un $B$-module de type fini et aussi un $A$-module plat, en vertu de
+  l'hypothèse sur $M$ et $B$ et de (2.1.10). En outre, on a
+  $\operatorname{Tor}^B_{n+1}(M,N)=\operatorname{Tor}^B_1(R,N)$ pour tout
+  $B$-module $N$ (M, V, 7). L'hypothèse $\operatorname{Tor.dim}_B(M)=n$
+  entraîne donc $\operatorname{Tor}^B_1(R,N)=0$ pour tout $B$-module $N$,
+  c'est-à-dire que $R$ est un $B$-module plat, donc projectif en vertu de
+  (12.3.1)~; cela établit que $\operatorname{dim.proj}_B(M)\leq n$.
+  L'hypothèse
+  $\operatorname{dim.proj}_{B\otimes_Ak(y)}(M\otimes_Ak(y))\leq n$ pour tout
+  $y\in\operatorname{Spec}(A)$ entraîne d'autre part, par tensorisation avec
+  $k(y)$, que dans chacune des suites (exactes en vertu de la platitude sur $A$
+  de $M$, des $L_i$ et de $R$ (2.1.10))
+  \[
+    0\to R\otimes_Ak(y)\to L_{n-1}\otimes_Ak(y)\to\cdots
+    \to L_0\otimes_Ak(y)\to M\otimes_Ak(y)\to0
+  \]
+  $R\otimes_Ak(y)$ est un $(B\otimes_Ak(y))$-module projectif (pour
+  $y\in\operatorname{Spec}(A)$). On conclut alors encore de (12.3.1) que $R$
+  est un $B$-module projectif, donc $\operatorname{dim.proj}_B(M)\leq n$.
+\end{enumerate}
+\end{proof}
+
+\begin{proposition}[12.3.3]
+\label{IV.12.3.3-fr}
+Soient $f:X\to S$ un morphisme localement de présentation finie,
+$\mathcal L_\bullet$ un complexe formé de $\mathcal O_X$-Modules
+quasi-cohérents de présentation finie~; pour tout $s\in S$, soit
+$(\mathcal L_\bullet)_s$ le complexe
+$\mathcal L_\bullet\otimes_{\mathcal O_S}k(s)$ de $\mathcal O_{X_s}$-Modules de
+type fini. Supposons que $\mathcal L_{n-1}$ soit $f$-plat. Alors l'ensemble $U$
+des $x\in X$ tels que $(\mathcal H_n((\mathcal L_\bullet)_{f(x)}))_x=0$ est
+ouvert dans $X$. Si de plus $\mathcal L_n$ est $f$-plat, alors on a
+$\mathcal H_n(\mathcal L_\bullet)|U=0$.
+\end{proposition}
+
+\begin{proof}
+On peut évidemment se limiter au cas où $n=1$ et où le complexe
+$\mathcal L_\bullet$ se réduit à
+$0\to\mathcal L_2\xrightarrow{u}\mathcal L_1\xrightarrow{v}\mathcal L_0\to0$.
+On peut d'abord se ramener au cas où $S=\operatorname{Spec}(A)$ et $X$

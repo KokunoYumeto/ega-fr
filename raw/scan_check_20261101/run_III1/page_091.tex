@@ -1,0 +1,83 @@
+% from ega3-1-fr.tex
+\oldpage[III]{91}
+\begin{lemma}[1.4.9]
+\label{III.1.4.9-fr}
+Soient $X$ un schéma quasi-compact,
+$\mathfrak U=(U_i)_{1\leq i\leq n}$ un recouvrement fini de $X$ par des
+ouverts affines, $\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent. Le
+complexe de faisceaux $\mathcal C^\bullet(\mathfrak U,\mathcal F)$ défini
+par le recouvrement $\mathfrak U$ (G, II, 5.2) est alors un
+$\mathcal O_X$-Module quasi-cohérent.
+\end{lemma}
+
+\begin{proof}
+Il résulte des définitions (G, II, 5.2) que
+$\mathcal C^p(\mathfrak U,\mathcal F)$ est somme directe des faisceaux
+images directes des $\mathcal F\vert U_{i_0\ldots i_p}$ par l'injection
+canonique $U_{i_0\ldots i_p}\to X$. Or, l'hypothèse que $X$ est un schéma
+entraîne que ces injections sont des morphismes affines (I, 5.5.6), donc les
+$\mathcal C^p(\mathfrak U,\mathcal F)$ sont quasi-cohérents (II, 1.2.6).
+\end{proof}
+
+\begin{proposition}[1.4.10]
+\label{III.1.4.10-fr}
+Soit $u:X\to Y$ un morphisme séparé et quasi-compact. Pour tout
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$, les
+$R^qu_*(\mathcal F)$ sont des $\mathcal O_Y$-Modules quasi-cohérents.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y$ affine. Alors $X$ est
+réunion finie d'ouverts affines $U_i$ ($1\leq i\leq n$)~; soit
+$\mathfrak U$ le recouvrement $(U_i)$. En outre, comme $Y$ est un schéma,
+il résulte de (I, 5.5.10) que pour tout ouvert affine $V\subset Y$,
+l'injection canonique $u^{-1}(V)\to X$ est un morphisme affine~; on en
+conclut ((\hyperref[III.1.4.1-fr]{1.4.1}) et (G, II, 5.2)) que l'on a un
+isomorphisme canonique
+\begin{equation}
+\label{III.1.4.10.1-fr}
+\tag{1.4.10.1}
+H^\bullet(u^{-1}(V),\mathcal F)
+\xrightarrow{\sim}H^\bullet(\Gamma(V,\mathcal K^\bullet))
+\end{equation}
+où l'on a posé
+$\mathcal K^\bullet=u_*(\mathcal C^\bullet(\mathfrak U,\mathcal F))$. En
+vertu de (\hyperref[III.1.4.9-fr]{1.4.9}) et (I, 9.2.2),
+$\mathcal K^\bullet$ est un $\mathcal O_Y$-Module quasi-cohérent~; par
+ailleurs, il constitue un \emph{complexe de faisceaux} puisqu'il en est
+ainsi de $\mathcal C^\bullet(\mathfrak U,\mathcal F)$. Il résulte alors de la
+définition de la cohomologie
+$\mathcal H^\bullet(\mathcal K^\bullet)$ (G, II, 4.1) que cette dernière est
+formée de $\mathcal O_Y$-Modules quasi-cohérents (I, 4.1.1). Comme (pour $V$
+affine dans $Y$) le foncteur $\Gamma(V,\mathcal G)$ est exact en
+$\mathcal G$ dans la catégorie des $\mathcal O_Y$-Modules quasi-cohérents,
+on a (G, II, 4.1)
+\begin{equation}
+\label{III.1.4.10.2-fr}
+\tag{1.4.10.2}
+H^\bullet(\Gamma(V,\mathcal K^\bullet))
+=\Gamma(V,\mathcal H^\bullet(\mathcal K^\bullet)).
+\end{equation}
+Notons enfin qu'il résulte de la définition de l'homomorphisme canonique
+\[
+H^\bullet(\mathfrak U,\mathcal F)\longrightarrow H^\bullet(X,\mathcal F)
+\]
+donnée dans (G, II, 5.2), que si $V'\subset V$ est un second ouvert affine
+de $Y$, le diagramme
+\[
+\xymatrix{
+H^\bullet(u^{-1}(V),\mathcal F)\ar[r]^{\sim}\ar[d]
+&H^\bullet(\Gamma(V,\mathcal K^\bullet))\ar[d]\\
+H^\bullet(u^{-1}(V'),\mathcal F)\ar[r]^{\sim}
+&H^\bullet(\Gamma(V',\mathcal K^\bullet))
+}
+\]
+est commutatif. On conclut donc de ce qui précède que les isomorphismes
+(\hyperref[III.1.4.10.1-fr]{1.4.10.1}) définissent un isomorphisme de
+$\mathcal O_Y$-Modules
+\begin{equation}
+\label{III.1.4.10.3-fr}
+\tag{1.4.10.3}
+R^\bullet u_*(\mathcal F)
+\xrightarrow{\sim}\mathcal H^\bullet(\mathcal K^\bullet)
+\end{equation}

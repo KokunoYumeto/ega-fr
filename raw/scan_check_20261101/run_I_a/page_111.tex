@@ -1,0 +1,88 @@
+% from ega1-3-fr.tex
+\oldpage[I]{111}
+Il en résulte que pour toute extension $S'\to S$ du préschéma de base,
+\phantomsection\label{I.3.3.12.base-change-monomorphism-fr}
+\[
+  f_{(S')}:X_{(S')}\to Y_{(S')}
+\]
+est un monomorphisme.
+\end{env}
+
+\begin{env}[3.3.13]
+\label{I.3.3.13-fr}
+Soient $S$, $S'$ deux schémas affines d'anneaux respectifs $A$, $A'$~; un
+morphisme $S'\to S$ correspond donc à un homomorphisme d'anneaux $A\to A'$.
+Si $X$ est un $S$-préschéma, on notera alors aussi $X_{(A')}$ ou
+$X\otimes_A A'$ le $S'$-préschéma $X_{(S')}$~; lorsque $X$ est lui-même
+affine d'anneau $B$, $X_{(A')}$ est affine d'anneau
+$B_{(A')}=B\otimes_A A'$ obtenu par extension à $A'$ de l'anneau des scalaires
+de la $A$-algèbre $B$.
+\end{env}
+
+\begin{env}[3.3.14]
+\label{I.3.3.14-fr}
+Avec les notations de (\hyperref[I.3.3.6-fr]{3.3.6}), pour tout
+\emph{$S$-morphisme} $f:S'\to X$, $f'=(f,1_{S'})_S$ est un $S'$-morphisme
+$S'\to X'=X_{(S')}$ tel que $p\circ f'=f$, $\pi'\circ f'=1_{S'}$, autrement
+dit une \emph{$S'$-section de $X'$}~; et réciproquement si $f'$ est une telle
+$S'$-section, $f=p\circ f'$ est un $S$-morphisme $S'\to X$. On définit donc
+ainsi une \emph{correspondance biunivoque} canonique
+\phantomsection\label{I.3.3.14.correspondence-fr}
+\[
+  \operatorname{Hom}_S(S',X)\overset{\sim}{\longrightarrow}
+  \operatorname{Hom}_{S'}(S',X').
+\]
+On dit que $f'$ est le \emph{morphisme graphe} de $f$, et on le désigne par
+$\Gamma_f$.
+\end{env}
+
+\begin{env}[3.3.15]
+\label{I.3.3.15-fr}
+Étant donné un préschéma $X$, qu'on peut toujours considérer comme un
+$\mathbf{Z}$-préschéma, il résulte en particulier de
+(\hyperref[I.3.3.14-fr]{3.3.14}) que les $X$-sections de
+$X\otimes_{\mathbf{Z}}\mathbf{Z}[T]$ (où $T$ est une indéterminée)
+correspondent biunivoquement aux \emph{morphismes}
+$\mathbf{Z}[T]\to X$. Montrons que ces $X$-sections correspondent
+biunivoquement aussi aux \emph{sections du faisceau structural
+$\mathcal{O}_X$ au-dessus de $X$}. En effet, soit $(U_\alpha)$ un recouvrement
+de $X$ par des ouverts affines~; soit
+$u:X\to X\otimes_{\mathbf{Z}}\mathbf{Z}[T]$ un $X$-morphisme et soit
+$u_\alpha$ sa restriction à $U_\alpha$~; si $A_\alpha$ est l'anneau du schéma
+affine $U_\alpha$, $U_\alpha\otimes_{\mathbf{Z}}\mathbf{Z}[T]$ est un schéma
+affine d'anneau $A_\alpha[T]$ (\hyperref[I.3.2.2-fr]{3.2.2}), et $u_\alpha$
+correspond canoniquement à un $A_\alpha$-homomorphisme
+$A_\alpha[T]\to A_\alpha$ (1.7.3). Or, un tel homomorphisme est complètement
+déterminé par la donnée de l'image de $T$ dans $A_\alpha$, soit
+$s_\alpha\in A_\alpha=\Gamma(U_\alpha,\mathcal{O}_X)$, et si on écrit que les
+restrictions de $u_\alpha$ et de $u_\beta$ à un ouvert affine
+$V\subset U_\alpha\cap U_\beta$ coïncident, on voit aussitôt que $s_\alpha$
+et $s_\beta$ coïncident dans $V$~; donc la famille $(s_\alpha)$ est formée des
+restrictions aux $U_\alpha$ d'une section $s$ de $\mathcal{O}_X$ au-dessus de
+$X$~; et réciproquement, il est clair qu'une telle section définit une famille
+$(u_\alpha)$ de morphismes qui sont les restrictions aux $U_\alpha$ d'un
+$X$-morphisme $X\to X\otimes_{\mathbf{Z}}\mathbf{Z}[T]$. Ce résultat sera
+généralisé dans II, 1.7.12.
+\end{env}
+
+\subsection{Points d'un préschéma à valeurs dans un préschéma~; points
+géométriques}
+\label{subsection:I.3.4-fr}
+
+\begin{env}[3.4.1]
+\label{I.3.4.1-fr}
+Soit $X$ un préschéma~; pour tout préschéma $T$, on note encore $X(T)$
+l'ensemble $\operatorname{Hom}(T,X)$ des morphismes $T\to X$, et les éléments de cet ensemble
+sont aussi appelés \emph{points de $X$ à valeurs dans $T$}. Si on associe à
+tout morphisme $f:T\to T'$ l'application $u'\mapsto u'\circ f$ de $X(T')$ dans
+$X(T)$, on voit que, pour $X$ fixé, $X(T)$ est un \emph{foncteur contravariant
+en $T$}, de la catégorie des préschémas dans celle des ensembles. En outre,
+tout morphisme de préschémas $g:X\to Y$ définit un homomorphisme fonctoriel
+$X(T)\to Y(T)$, faisant correspondre $g\circ v$ à $v\in X(T)$.
+\end{env}
+
+\begin{env}[3.4.2]
+\label{I.3.4.2-fr}
+Étant donnés trois ensembles $P$, $Q$, $R$ et deux applications
+$\varphi:P\to R$, $\psi:Q\to R$, on appelle \emph{produit fibré de $P$ et $Q$
+au-dessus de $R$} (relatif à $\varphi$ et $\psi$) la partie de

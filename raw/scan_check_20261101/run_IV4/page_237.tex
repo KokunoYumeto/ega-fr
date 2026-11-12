@@ -1,0 +1,45 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{237}
+maximaux $\mathfrak{m}'$, $\mathfrak{m}''$ (donc tel que $X$ ait exactement deux points fermés $x'$, $x''$), de sorte que $\mathfrak{m}'$ et $\mathfrak{m}''$ appartiennent à $\operatorname{Ass}(A)$ et que l'ouvert $U=X-\{x',x''\}$ soit \emph{intègre}.
+Soient $U'=X-\{x'\}$, $U''=X-\{x''\}$, de sorte que $U=U'\cap U''$.
+Notons que les seuls ouverts schématiquement denses dans $X$ sont ceux qui contiennent $x'$ et $x''$ \sref{IV.20.2.13}[(iv)], donc ils sont nécessairement identiques à $X$.
+Pour avoir un contre-exemple, il suffira donc de définir deux $S$-morphismes $u':U'\to Y$, $u'':U''\to Y$ (avec $S=X$) dont les restrictions à $U$ appartiennent au même pseudo-morphisme de $U$ dans $Y$, mais qui soient tels que, pour tout voisinage $V'$ de $x''$ dans $U'$ et tout voisinage $V''$ de $x'$ dans $U''$, les restrictions de $u'$ et $u''$ à $V'\cap V''$ soient distinctes.
+Pour cela, considérons une partie fermée irréductible $Z$ de $X$ contenant $x'$ et $x''$, distincte de $X$ ; soit $Y$ le $X$-préschéma obtenu en recollant deux préschémas $Y'$, $Y''$ isomorphes à $X$ le long de l'ouvert partout dense $X-Z$ \sref[I]{I.2.3.1}.
+On prendra alors pour $u'$ et $u''$ les restrictions respectives à $U'$ et $U''$ des isomorphismes réciproques des isomorphismes structuraux $Y'\to X$, $Y''\to X$.
+Comme $V'$ et $V''$ contiennent le point générique de $Z$, les restrictions de $u'$ et $u''$ à $V'\cap V''$ sont distinctes, mais les restrictions de $u'$ et $u''$ à $U-(U\cap Z)$ sont égales, et $U-(U\cap Z)$ est un ouvert dense dans $U$, donc schématiquement dense puisque $U$ est réduit.
+
+Reste donc seulement à définir $A$ et $Z$ de façon à avoir les propriétés précédentes.
+Soient $X_0=\Spec(B)$ un schéma affine intègre (par exemple le plan affine sur un corps $k$), $Y$ une partie fermée irréductible de $X_0$ (par exemple une droite affine) contenant deux points fermés distincts $x'$ et $x''$, correspondant aux idéaux maximaux $\mathfrak{n}'$, $\mathfrak{n}''$ de $B$.
+On considère l'anneau $C=B\oplus(B/\mathfrak{n}'\oplus B/\mathfrak{n}'')$ avec la multiplication $(b,z)(b',z')=(bb',bz'+b'z)$.
+Si $X_1=\Spec(C)$, on a $X_0=(X_1)_\mathrm{red}$ et $X_1$ est réduit sauf aux points $x'$, $x''$.
+Il suffit alors de prendre $A=R^{-1}C$, où $R$ est le complémentaire de la réunion des idéaux maximaux de $C$ aux points $x'$, $x''$, et pour $Z$ la trace de $Y$ sur $X=\Spec(A)$.
+\end{remark}
+
+\subsection{Composition des pseudo-morphismes}
+\EGAReaderTarget{ega4.c04.subsec.20-3}{IV.20.3}
+
+\begin{env}[20.3.1]
+\EGAReaderTarget{ega4.c04.statement.20-3-1}{IV.20.3.1}
+Soient $X$, $Y$, $Z$ trois préschémas, $\omega$ un pseudo-morphisme de $X$ dans $Y$, $f:Y\to Z$ un morphisme.
+Il est clair que si $U'$, $U''$ sont deux ouverts schématiquement denses dans $X$, $u':U'\to Y$, $u'':U''\to Y$ deux morphismes de la classe $\omega$, les morphismes $f\circ u'$ et $f\circ u''$ sont équivalents (pour la relation définie dans \sref{IV.20.2.1}), donc, pour tous les morphismes $u$ de la classe $\omega$, les morphismes $f\circ u$ appartiennent à une même classe d'équivalence, que l'on note $f\circ\omega$ et que l'on appelle le pseudo-morphisme de $X$ dans $Z$ \emph{composé de $f$ et de $\omega$}.
+On a $\operatorname{dom}(f\circ\omega)=\operatorname{dom}(\omega)$.
+Si $g:Z\to T$ est un morphisme, il est clair que l'on a $g\circ(f\circ\omega)=(g\circ f)\circ\omega$.
+\end{env}
+
+\begin{env}[20.3.2]
+\EGAReaderTarget{ega4.c04.statement.20-3-2}{IV.20.3.2}
+Supposons maintenant donnés un pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, où $Y$ est \emph{séparé sur $S$}, de sorte qu'il existe un $S$-morphisme $u:\operatorname{dom}_S(\omega)\to Y$ de la classe $\omega$ \sref{IV.20.2.4}.
+Soit $f:X'\to X$ un $S$-morphisme tel que l'ouvert $V'=f^{-1}(\operatorname{dom}_S(\omega))$ soit schématiquement dense dans $X'$ ; alors on dit que la classe (pour la relation d'équivalence de \sref{IV.20.2.1}) du $S$-morphisme $u\circ(f|U')$ (classe qui est définie en vertu de l'hypothèse précédente) est le pseudo-$S$-morphisme \emph{composé de $\omega$ et de $f$}, et on le note $\omega\circ f$ ; il est clair que l'on a
+\[
+\label{IV.20.3.2.1}
+  f^{-1}(\operatorname{dom}_S(\omega))\subset\operatorname{dom}_S(\omega\circ f)
+  \tag{20.3.2.1}
+\]
+
+Pour $f:X'\to X$ donné, on note $\operatorname{Ps.hom}_S(X,Y)^f$ l'ensemble des pseudo-$S$-morphismes $\omega$ de $X$ dans $Y$ qui vérifient la condition précédente.
+Si $\omega$ est un tel pseudo-$S$-morphisme, il est clair que pour tout ouvert $V$ de $X$,
+\[
+  f^{-1}(\operatorname{dom}_S(\omega|V))=f^{-1}(V\cap\operatorname{dom}_S(\omega))=f^{-1}(V)\cap f^{-1}(\operatorname{dom}_S(\omega))
+\]
+est schématiquement dense dans $f^{-1}(V)$, donc, si $f^V:f^{-1}(V)\to V$ est la restriction de $f$, le composé $(\omega|V)\circ f^V$ est défini et égal à $(\omega\circ f)|f^{-1}(V)$.
+On définit ainsi une

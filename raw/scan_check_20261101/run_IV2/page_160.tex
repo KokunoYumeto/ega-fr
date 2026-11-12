@@ -1,0 +1,158 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{160}
+
+\item[(ii)] Comme les $U_{C_n}(\mathcal F)$ sont ouverts pour tout $n$ par
+(i), les $Z_n=X-U_{C_n}(\mathcal F)$ sont fermés dans $X$; en outre il est
+clair que $Z_{n+1}\subset Z_n$, et comme $\dim(\mathcal F_x)$ est finie
+pour tout $x\in X$ et
+$\operatorname{coprof}(\mathcal F_x)\leq\dim(\mathcal F_x)$,
+l'intersection des $Z_n$ est vide; comme on peut se borner au cas où $X$
+est affine, donc quasi-compact, on peut supposer qu'il existe un $m$ tel
+que $Z_m=\varnothing$. Or, il résulte de (5.7.4) que la relation
+$x\in U_{S_k}(\mathcal F)$ équivaut à l'ensemble des relations
+\begin{equation}
+\operatorname{codim}_x(Z_n,S)>n+k
+\tag{6.11.2.2}\label{IV.2.s6.11.2.2-fr}
+\end{equation}
+pour tout $n\geq0$; mais pour $n\geq m$ cette relation est automatiquement
+vérifiée, donc on n'a en fait à considérer les relations (6.11.2.2) que
+pour $0\leq n<m$. Or (0, 14.2.6) l'ensemble $V_{n,k}$ des $x$ vérifiant
+(6.11.2.2) est ouvert, et $U_{S_k}(\mathcal F)$, intersection des $V_{n,k}$
+pour $0\leq n<m$, est aussi ouvert. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+Rappelons que l'hypothèse que $X$ est localement immersible dans un schéma
+régulier est toujours remplie lorsque $X$ est un préschéma localement de
+type fini sur un corps $k$ (5.8.3).
+
+\begin{corollary}[6.11.3]
+\label{IV.2.s6.11.3-fr}
+Sous les hypothèses de (6.11.2), l'ensemble $\operatorname{CM}(\mathcal F)$
+des points $x\in X$ tels que $\mathcal F_x$ soit un module de
+Cohen--Macaulay est ouvert dans $X$.
+\end{corollary}
+
+\begin{proof}
+En effet, c'est l'ensemble $U_{C_0}(\mathcal F)$.
+\end{proof}
+
+\begin{remarks}[6.11.4]
+\label{IV.2.s6.11.4-fr}
+\begin{enumerate}
+\item[(i)] Le raisonnement de (6.11.2, (ii)) prouve que (sans hypothèse sur
+$X$) lorsque $U_{C_n}(\mathcal F)$ est ouvert pour tout entier $n$, alors
+$U_{S_n}(\mathcal F)$ est ouvert pour tout entier $n$.
+\item[(ii)] On a
+$\operatorname{CM}(\mathcal F)=\bigcap_nU_{S_n}(\mathcal F)$. Si tout point
+$x\in X$ admet un voisinage ouvert $V$ qui soit de dimension finie, la
+suite des intersections $V\cap U_{S_n}(\mathcal F)$ est stationnaire
+puisqu'il existe un $m$ tel que $\dim(\mathcal F_x)\leq m$ pour tout
+$x\in V$; par suite, si les $U_{S_n}(\mathcal F)$ sont ouverts pour tout
+entier $n$, $\operatorname{CM}(\mathcal F)$ est alors ouvert dans $X$.
+\item[(iii)] On écrira $U_{S_n}(X)$, $U_{C_n}(X)$,
+$\operatorname{CM}(X)$ au lieu de $U_{S_n}(\mathcal O_X)$,
+$U_{C_n}(\mathcal O_X)$, $\operatorname{CM}(\mathcal O_X)$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[6.11.5]
+\label{IV.2.s6.11.5-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini. Pour
+tout idéal premier $\mathfrak p$ de $A$, on a
+\begin{equation}
+\operatorname{coprof}_{A_{\mathfrak p}}(M_{\mathfrak p})\leq
+\operatorname{coprof}_A(M).
+\tag{6.11.5.1}\label{IV.2.s6.11.5.1-fr}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On peut se borner au cas où $M_{\mathfrak p}\ne0$. Comme $\widehat A$ est
+un $A$-module fidèlement plat (0$_{\rm I}$, 7.3.5), il existe un idéal
+premier $\mathfrak q$ de $\widehat A$ au-dessus de $\mathfrak p$
+(0$_{\rm I}$, 6.5.1); comme
+$\widehat M_{\mathfrak q}=(M\otimes_A\widehat A)_{\mathfrak q}
+=M\otimes_A\widehat A_{\mathfrak q}$ et que
+$\widehat A_{\mathfrak q}$ est un $\widehat A$-module plat, donc un
+$A_{\mathfrak p}$-module plat (0$_{\rm I}$, 6.2.1), il résulte de (6.3.2),
+appliqué à l'homomorphisme local
+$A_{\mathfrak p}\to\widehat A_{\mathfrak q}$, à $M_{\mathfrak p}$ et
+$\widehat M_{\mathfrak q}$, que l'on a
+$\operatorname{coprof}_{A_{\mathfrak p}}(M_{\mathfrak p})\leq
+\operatorname{coprof}_{\widehat A_{\mathfrak q}}
+(\widehat M_{\mathfrak q})$. D'autre part,
+$X=\operatorname{Spec}(\widehat A)$ est isomorphe à un sous-schéma d'un
+schéma régulier en vertu du théorème de Cohen (0, 19.8.8, (i)). On déduit
+donc de (6.11.2) que l'on a
+$\operatorname{coprof}_{\widehat A_{\mathfrak q}}
+(\widehat M_{\mathfrak q})\leq
+\operatorname{coprof}_{\widehat A}(\widehat M)$; enfin, on sait que
+$\operatorname{coprof}_{\widehat A}(\widehat M)=
+\operatorname{coprof}_A(M)$ (0, 16.4.10), ce qui achève de démontrer
+(6.11.5).
+\end{proof}
+
+Cette proposition justifie la définition de la coprofondeur d'un
+$A$-module lorsque $A$ n'est pas un anneau local, donnée dans (5.7.12).
+
+\begin{proposition}[6.11.6]
+\label{IV.2.s6.11.6-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent, $n$ un entier $>0$. Supposons que pour tout
+sous-préschéma fermé intègre $Y$ de $X$, il existe une partie ouverte non
+vide $W$ de $Y$ telle que le sous-préschéma de $Y$ induit sur l'ouvert $W$
+vérifie $(S_n)$. Alors l'ensemble $U_{S_n}(\mathcal F)$ est ouvert dans
+$X$.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$, on peut se borner au cas où $X$ est
+noethérien. Nous allons raisonner par récurrence sur $n$: pour $n=1$,
+l'ensemble $U_{S_1}(\mathcal F)$ est ouvert dans $X$, car l'ensemble des
+$x\in X$ où $\mathcal F$ ne vérifie pas $(S_1)$ est l'ensemble des $x$ tels
+que $\mathcal F_x$ admette des idéaux premiers associés immergés (5.7.5);
+si $(Z_j)$ est la famille finie des cycles premiers associés à $\mathcal F$
+qui sont immergés, on a par suite
+$U_{S_1}(\mathcal F)=X-\bigcup_jZ_j$, d'où notre assertion puisque les
+$Z_j$ sont fermés. Nous supposerons donc désormais que $n>1$. En second
+lieu, on peut se borner au cas où
+$\operatorname{Supp}(\mathcal F)=X$, car il y a un sous-préschéma fermé
+$T$ de $X$ ayant $\operatorname{Supp}(\mathcal F)$ pour espace sous-jacent,
+et un $\mathcal O_T$-Module cohérent $\mathcal G$ tels que
+$\mathcal F=j_*(\mathcal G)$, $j:T\to X$ étant l'injection canonique
+(Err$_{\rm III}$, 30); comme il revient au même de prouver que $\mathcal F$
+ou $\mathcal G$ vérifie $(S_n)$ en un point
+$x\in\operatorname{Supp}(\mathcal F)$, on peut se borner à considérer le
+cas où $T=X$. Notons enfin que par définition (5.7.2),
+$U_{S_n}(\mathcal F)$ est stable par générisation. Nous allons utiliser le
+lemme suivant:
+
+\begin{lemma}[6.11.6.1]
+\label{IV.2.s6.11.6.1-fr}
+Soient $X$ un espace noethérien dans lequel toute partie fermée irréductible
+admet un point générique, $E$ une partie de $X$. Pour que $E$ soit ouverte
+dans $X$, il faut et il suffit que $E$ soit stable par générisation, et que,
+pour toute partie ouverte $V$ de $X$ et toute partie irréductible $Y$ fermée
+dans $V$, telles que $V-Y\subset E$ et que le point générique de $Y$
+appartienne à $E$, $E\cap Y$ contienne une partie ouverte non vide de $Y$.
+\end{lemma}
+
+\begin{proof}
+On observera que ce critère entraîne celui de (0$_{\rm III}$, 9.2.6)
+lorsque toute partie fermée irréductible de $X$ admet un point générique.
+Il n'y a évidemment à démontrer que la suffisance des conditions énoncées.
+
+Considérons l'intérieur $U$ de $E$; l'ensemble fermé $X-U$ est réunion de
+ses composantes irréductibles, qui sont en nombre fini et fermées dans $X$.
+Si on avait $E\ne U$, l'hypothèse que $E$ est stable par générisation
+entraînerait que le point générique $z$ d'une des composantes irréductibles
+de $X-U$ appartiendrait à $E$. Or, $z$ n'appartient qu'à une seule des
+composantes irréductibles de $X-U$; si $T$ est la réunion des autres
+composantes irréductibles de $X-U$, $V=X-T$ est ouvert dans $X$, réunion de
+$U$ et de l'ensemble $Y=\overline{\{z\}}\cap V$ fermé dans $V$ et
+irréductible. Par hypothèse $E\cap Y$ contient une partie $W$ ouverte dans
+$Y$; on en conclut que $U\cup W$ est ouvert dans $V$, donc dans $X$, ce qui
+est absurde puisque $U$ est supposé être l'intérieur de $E$.
+\end{proof}
+

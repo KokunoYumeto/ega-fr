@@ -1,0 +1,665 @@
+\subsection{Foncteurs hypertor locaux de complexes de Modules quasi-cohérents : cas des schémas affines.}
+
+\begin{env}[6.4.1]
+Soient $S$ un schéma affine d'anneau $A$, $X$, $Y$ deux $S$-schémas affines
+d'anneaux $B$, $C$ respectivement, de sorte que $B$ et $C$ sont des algèbres
+sur $A$. Tout complexe $\mathscr P_\bullet$ (resp. $\mathscr Q_\bullet$) de
+$\mathscr O_X$-Modules (resp. $\mathscr O_Y$-Modules) quasi-cohérents est de
+la forme $\widetilde{P}_\bullet$ (resp. $\widetilde{Q}_\bullet$), où
+$P_\bullet$ (resp. $Q_\bullet$) est un complexe de $B$-modules (resp.
+$C$-modules) (\textbf{I}, 1.3.7 et 1.3.8). On peut évidemment considérer $P_\bullet$
+et $Q_\bullet$ comme des complexes de $A$-modules et former les
+$\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$; en outre, en vertu du caractère
+bifonctoriel de $\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$, les $A$-algèbres
+$B$ et $C$ opèrent dans ce $A$-module, et ces opérations en font un
+$(B,C)$-bimodule, ou, ce qui revient au même, un module sur
+$B\otimes_A C=A(X\times_S Y)$. On a donc défini de la sorte un
+$\mathscr O_{X\times_S Y}$-Module quasi-cohérent
+\[
+  \boldsymbol{\mathscr{T}\!or}_n^{\mathscr O_S}(\mathscr P_\bullet,\mathscr Q_\bullet)
+  =\bigl(\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)\bigr)^{\sim}
+  \tag{6.4.1.1}\label{III.6.4.1.1.fr}
+\]
+que l'on appelle l'\emph{hypertor local} d'indice $n$ des complexes
+$\mathscr P_\bullet$ et $\mathscr Q_\bullet$ et que l'on note aussi
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$.
+\end{env}
+
+\begin{namedtheorem}[6.4.2]{Lemme}
+Avec les notations de \textup{(6.4.1)}, supposons que l'anneau $A$ soit de la forme
+$R^{-1}A'$, où $A'$ est un anneau et $R$ une partie multiplicative de $A'$.
+Soit $S'=\operatorname{Spec}(A')$, de sorte que $X$ et $Y$ peuvent être
+considérés comme des $S'$-préschémas et que l'on a
+$X\times_{S'}Y=X\times_S Y$ \textup{(\textbf{I}, 1.6.2} et \textup{3.2.4)}. On a alors
+$\boldsymbol{\mathscr{T}\!or}_\bullet^{S'}(\mathscr P_\bullet,\mathscr Q_\bullet)
+=\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)$.
+\end{namedtheorem}
+
+\begin{proof}
+Cela résulte de la formule (6.4.1.1) et de (6.3.13).
+\end{proof}
+
+\begin{env}[6.4.3]
+Avec les notations et hypothèses de (6.4.1), soient
+$\mathscr F=\widetilde F$ un $\mathscr O_X$-Module quasi-cohérent,
+$\mathscr G=\widetilde G$ un $\mathscr O_Y$-Module quasi-cohérent;
+considérant $\mathscr F$ et $\mathscr G$ comme des complexes de Modules, on
+notera $\mathscr{T}\!or_n^{\mathscr O_S}(\mathscr F,\mathscr G)$ ou
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$ leur hypertor d'indice $n$; il
+résulte de (6.3.5 (ii)) que l'on a
+\[
+  \mathscr{T}\!or_n^{\mathscr O_S}(\mathscr F,\mathscr G)
+  =\bigl(\operatorname{Tor}_n^A(F,G)\bigr)^{\sim}.
+  \tag{6.4.3.1}\label{III.6.4.3.1.fr}
+\]
+
+Revenons alors au cas général de deux complexes de Modules quasi-cohérents
+$\mathscr P_\bullet$, $\mathscr Q_\bullet$. Les formules (6.4.1.1) et
+(6.4.3.1) montrent, compte tenu de la prop. (6.3.2), que
+$\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ est
+l'aboutissement de deux suites spectrales
+$'\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$,
+$''\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$, dont les termes
+$E_2$ sont donnés par
+\[
+  '\mathscr E_{pq}^2
+  =\mathscr H_p\bigl(\mathscr{T}\!or_q^S
+    (\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+  \tag{6.4.3.2}\label{III.6.4.3.2.fr}
+\]
+\[
+  ''\mathscr E_{pq}^2
+  =\bigoplus_{q'+q''=q}
+  \mathscr{T}\!or_p^S
+  \bigl(\mathscr H_{q'}(\mathscr P_\bullet),
+        \mathscr H_{q''}(\mathscr Q_\bullet)\bigr)
+  \tag{6.4.3.3}\label{III.6.4.3.3.fr}
+\]
+où $\mathscr{T}\!or_q^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ est le
+bicomplexe de $\mathscr O_{X\times_S Y}$-Modules quasi-cohérents
+$\mathscr{T}\!or_q^S(\mathscr P_i,\mathscr Q_j)$.
+\end{env}
+
+\begin{env}[6.4.4]
+Considérons maintenant deux autres schémas affines
+$X^{(1)}=\operatorname{Spec}(B^{(1)})$,
+$Y^{(1)}=\operatorname{Spec}(C^{(1)})$, où $B^{(1)}$ et $C^{(1)}$ sont des
+$A$-algèbres, et supposons donnés deux
+\oldpage[III]{147}
+S-morphismes $u:X^{(1)}\to X$, $v:Y^{(1)}\to Y$, correspondant à des
+$A$-homomorphismes $\varphi:B\to B^{(1)}$, $\psi:C\to C^{(1)}$.
+Considérons les complexes
+$u^*(\mathscr P_\bullet)=(\mathscr P_\bullet\otimes_B B^{(1)})^{\sim}$ de
+$\mathscr O_{X^{(1)}}$-Modules,
+$v^*(\mathscr Q_\bullet)=(Q_\bullet\otimes_C C^{(1)})^{\sim}$ de
+$\mathscr O_{Y^{(1)}}$-Modules. Les $A$-homomorphismes canoniques
+\[
+  P_\bullet\longrightarrow P_\bullet\otimes_B B^{(1)},
+  \qquad
+  Q_\bullet\longrightarrow Q_\bullet\otimes_C C^{(1)}
+\]
+donnent par fonctorialité un $A$-homomorphisme
+\[
+  \mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)
+  \longrightarrow
+  \mathbf{Tor}_\bullet^A
+  (P_\bullet\otimes_B B^{(1)},Q_\bullet\otimes_C C^{(1)});
+\]
+en outre, toujours par fonctorialité, cet homomorphisme est en fait un
+homomorphisme de $(B\otimes_A C)$-modules. D'où l'on conclut que l'on a défini
+ainsi un $(u\times_S v)$-morphisme
+\[
+  \theta:\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)
+  \longrightarrow
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S
+  (u^*(\mathscr P_\bullet),v^*(\mathscr Q_\bullet))
+  \tag{6.4.4.1}\label{III.6.4.4.1.fr}
+\]
+et par suite, un homomorphisme de
+$\mathscr O_{X^{(1)}\times_S Y^{(1)}}$-Modules
+\[
+  \theta^\sharp:(u\times_S v)^*
+  \bigl(\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+  \longrightarrow
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S
+  (u^*(\mathscr P_\bullet),v^*(\mathscr Q_\bullet))
+  \tag{6.4.4.2}\label{III.6.4.4.2.fr}
+\]
+qui est évidemment un morphisme de \emph{bi-$\partial$-foncteurs} dans les catégories
+de Modules quasi-cohérents limités inférieurement.
+
+L'homomorphisme (6.4.4.2) n'est pas nécessairement bijectif; toutefois :
+\end{env}
+
+\begin{namedtheorem}[6.4.5]{Lemme}
+Avec les notations de \textup{(6.4.4)}, supposons que $u$ et $v$ soient des immersions
+ouvertes; alors l'homomorphisme \textup{(6.4.4.2)} est bijectif.
+\end{namedtheorem}
+
+\begin{proof}
+Identifions $X^{(1)}$ (resp. $Y^{(1)}$) à un ouvert de $X$ (resp. $Y$);
+$X^{(1)}$ (resp. $Y^{(1)}$) est alors réunion d'ouverts de la forme
+$\mathrm D(f)$ (resp. $\mathrm D(g)$), où $f\in B$ (resp. $g\in C$), et les
+préschémas induits $\mathrm D(\varphi(f))$ et $\mathrm D(f)$ (resp.
+$\mathrm D(\psi(g))$ et $\mathrm D(g)$) sont isomorphes. Il suffira de prouver
+le lemme lorsque $X^{(1)}$ (resp. $Y^{(1)}$) est de la forme $\mathrm D(f)$
+(resp. $\mathrm D(g)$); en effet, si ce point est établi, et si l'on revient au
+cas général, il suffira de prouver que la restriction de $\theta^\sharp$ à
+chaque ouvert $\mathrm D(f)\times_S\mathrm D(g)$ est un isomorphisme; or, si
+$u_1:\mathrm D(f)\to X^{(1)}$, $v_1:\mathrm D(g)\to Y^{(1)}$ sont les
+injections canoniques, la restriction précédente n'est autre que
+$(u_1\times_S v_1)^*(\theta^\sharp)$; mais il est immédiat, en vertu des
+définitions (6.4.4) et de ($\mathbf{0}_{\mathrm I}$, 4.4.8), qu'en la composant avec
+l'homomorphisme canonique
+\[
+  (u_1\times_S v_1)^*
+  \bigl(\boldsymbol{\mathscr{T}\!or}_\bullet^S
+    (u^*(\mathscr P_\bullet),v^*(\mathscr Q_\bullet))\bigr)
+  \longrightarrow
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S
+  (u'^*(\mathscr P_\bullet),v'^*(\mathscr Q_\bullet))
+  \tag{6.4.5.1}\label{III.6.4.5.1.fr}
+\]
+où $u'=u\circ u_1$ et $v'=v\circ v_1$, on obtient l'homomorphisme canonique
+\[
+  (u'\times_S v')^*
+  \bigl(\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+  \longrightarrow
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S
+  (u'^*(\mathscr P_\bullet),v'^*(\mathscr Q_\bullet))
+  \tag{6.4.5.2}\label{III.6.4.5.2.fr}
+\]
+et si l'on sait que (6.4.5.1) et (6.4.5.2) sont des isomorphismes, il en
+résultera qu'il en est de même de $(u_1\times_S v_1)^*(\theta^\sharp)$.
+
+Supposons donc que $X^{(1)}=\mathrm D(f)$ et $Y^{(1)}=\mathrm D(g)$, de sorte
+que $B^{(1)}=B_f$ et $C^{(1)}=C_g$; $u^*(\mathscr P_\bullet)$ (resp.
+$v^*(\mathscr Q_\bullet)$) s'identifie alors à
+$(P_\bullet)_f^{\sim}$ (resp. $(Q_\bullet)_g^{\sim}$); d'autre part,
+$X^{(1)}\times_S Y^{(1)}$ s'identifie au sous-schéma ouvert
+$\mathrm D(f\otimes g)$ de
+$X\times_S Y=\operatorname{Spec}(B\otimes_A C)$ (\textbf{II}, 4.3.2.4); il s'agit de
+prouver que l'homomorphisme
+\[
+  \bigl(\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)\bigr)_{f\otimes g}
+  \longrightarrow
+  \mathbf{Tor}_\bullet^A((P_\bullet)_f,(Q_\bullet)_g)
+  \tag{6.4.5.3}\label{III.6.4.5.3.fr}
+\]
+\oldpage[III]{148}
+déduit par fonctorialité des homomorphismes canoniques
+$P_\bullet\to(P_\bullet)_f$, $Q_\bullet\to(Q_\bullet)_g$, est bijectif. Or
+($\mathbf{0}_{\mathrm I}$, 1.6.1), on peut écrire
+$(P_\bullet)_f=\varinjlim P_\bullet^{(n)}$, où les $P_\bullet^{(n)}$ sont tous
+des complexes de $B$-modules identiques à $P_\bullet$, l'application
+$P_\bullet^{(m)}\to P_\bullet^{(n)}$ pour $m\leqslant n$ étant la
+multiplication par $f^{n-m}$; on a un résultat analogue pour $Q_\bullet$ en
+remplaçant $f$ par $g$; d'autre part, il est clair que l'homomorphisme
+\[
+  \mathbf{Tor}_\bullet^A(P_\bullet^{(m)},Q_\bullet^{(m)})
+  \longrightarrow
+  \mathbf{Tor}_\bullet^A(P_\bullet^{(n)},Q_\bullet^{(n)})
+\]
+correspondant aux homomorphismes
+$P_\bullet^{(m)}\to P_\bullet^{(n)}$ et
+$Q_\bullet^{(m)}\to Q_\bullet^{(n)}$ est par définition la multiplication
+par $(f\otimes g)^{n-m}$. La conclusion résulte alors de ($\mathbf{0}_{\mathrm I}$,
+1.6.1) appliqué au premier membre de (6.4.5.3) et de (6.3.6).
+\end{proof}
+
+\begin{env}[6.4.6]
+Avec les notations de (6.4.4), on définit de même des homomorphismes canoniques
+de foncteurs spectraux
+\[
+  \left\{
+  \begin{aligned}
+  (u\times_S \boldsymbol{v})^*\bigl('\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+    &\longrightarrow
+      '\mathscr E(u^*(\mathscr P_\bullet),v^*(\mathscr Q_\bullet))\\
+  (u\times_S v)^*\bigl(''\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+    &\longrightarrow
+      ''\mathscr E(u^*(\mathscr P_\bullet),v^*(\mathscr Q_\bullet))
+  \end{aligned}
+  \right.
+  \tag{6.4.6.1}\label{III.6.4.6.1.fr}
+\]
+et le raisonnement de (6.4.5) montre que lorsque $u$ et $v$ sont des
+\emph{immersions ouvertes}, les homomorphismes (6.4.6.1) sont \emph{bijectifs} : en effet,
+compte tenu de (6.3.6.2) et (6.3.6.3), il prouve que c'est un isomorphisme pour
+les termes $E^2$, et (6.4.5) montre que c'est un isomorphisme pour les
+aboutissements; on conclut donc à l'aide de (\textbf{0}, 11.1.2) et (\textbf{0}, 11.2.4).
+\end{env}
+
+\subsection{Foncteurs hypertor locaux de complexes de Modules quasi-cohérents : cas général.}
+
+\begin{env}[6.5.1]
+Considérons maintenant un préschéma $S$ quelconque et deux $S$-préschémas
+quelconques $X$, $Y$; soit $\mathscr P_\bullet$ (resp. $\mathscr Q_\bullet$)
+un complexe de $\mathscr O_X$-Modules (resp. $\mathscr O_Y$-Modules)
+quasi-cohérents. Posons $Z=X\times_S Y$; nous allons définir des
+$\mathscr O_Z$-Modules quasi-cohérents
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ dits
+\emph{hypertor locaux} de $\mathscr P_\bullet$ et $\mathscr Q_\bullet$ qui se
+réduiront à ceux déjà définis dans (6.4) lorsque $S$, $X$ et $Y$ sont affines.
+
+Lorsque $\mathscr P_\bullet$ et $\mathscr Q_\bullet$ se réduisent
+respectivement à leurs termes de degré 0, $\mathscr F$ et $\mathscr G$, (les
+autres étant nuls), on écrira
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$ au lieu de
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$.
+\end{env}
+
+\begin{env}[6.5.2]
+Supposons d'abord $S$ \emph{affine}, et soient $(X_\lambda)$, $(Y_\mu)$ des
+recouvrements de $X$ et $Y$ respectivement par des ouverts affines; alors les
+$Z_{\lambda\mu}=X_\lambda\times_S Y_\mu$ forment un recouvrement ouvert affine
+de $Z$. Posons
+$\mathscr P_{\lambda\bullet}=\mathscr P_\bullet|X_\lambda$,
+$\mathscr Q_{\mu\bullet}=\mathscr Q_\bullet|Y_\mu$; nous avons donc pour tout
+couple $(\lambda,\mu)$ un $\mathscr O_{Z_{\lambda\mu}}$-Module quasi-cohérent
+$\mathscr F_{\lambda\mu}
+  =\boldsymbol{\mathscr{T}\!or}_n^S
+   (\mathscr P_{\lambda\bullet},\mathscr Q_{\mu\bullet})$,
+et il faut montrer que les $\mathscr F_{\lambda\mu}$ vérifient la condition de
+recollement ($\mathbf{0}_{\mathrm I}$, 3.3.1). Pour cela, il suffit de vérifier que pour
+tout ouvert affine $U\subset X_\lambda\cap X_{\lambda'}$ (resp.
+$V\subset Y_\mu\cap Y_{\mu'}$), les restrictions de
+$\mathscr F_{\lambda\mu}$ et de $\mathscr F_{\lambda'\mu'}$ à $U\times_S V$
+sont canoniquement isomorphes; mais cela découle aussitôt de l'existence
+d'isomorphismes canoniques de ces restrictions sur
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$ (6.4.5). En
+outre, il résulte aussitôt de cette définition et de (6.4.5) que le
+$\mathscr O_Z$-\textbf{Module} ainsi défini ne dépend pas (à un isomorphisme près) des
+recouvrements ouverts $\boldsymbol{(}X_\lambda)$, $(Y_\mu)$ consi\oldpage[III]{149}dérés;
+nous le noterons donc
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$; il résulte enfin
+de (6.4.5) que pour \emph{toute} partie ouverte $U$ (resp. $V$) de $X$ (resp. $Y$), la
+restriction de $\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ à
+$U\times_S V$ est canoniquement isomorphe à
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$.
+\end{env}
+
+\begin{env}[6.5.3]
+Passons maintenant au cas général où $S$ est quelconque, \textbf{et} soit $(S_\alpha)$
+un recouvrement de $S$ formé d'ouverts affines; désignons par $X_\alpha$
+(resp. $Y_\alpha$) l'image réciproque \textbf{de} $S_\alpha$ dans $X$ (resp. $Y$); il
+faut encore prouver que les faisceaux
+$\boldsymbol{\mathscr{T}\!or}_n^{S_\alpha}
+  (\mathscr P_\bullet|X_\alpha,\mathscr Q_\bullet|Y_\alpha)
+  =\mathscr G_\alpha$
+vérifient la condition de recollement. Il suffit de définir, pour tout ouvert
+affine $T$ contenu dans $S_\alpha\cap S_\beta$, des isomorphismes canoniques des
+restrictions de $\mathscr G_\alpha$ et $\mathscr G_\beta$ à $U\times_S V$ (en
+désignant par $U$ et $V$ les images réciproques de $T$ dans $X$ et $Y$
+respectivement) sur
+$\boldsymbol{\mathscr{T}\!or}_n^T(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$; on peut, en
+outre, se borner au cas où $T$ s'écrit à la fois $\mathrm D(f_\alpha)$ et
+$\mathrm D(f_\beta)$, $f_\alpha$ (resp. $f_\beta$) étant une section de
+$\mathscr O_S$ au-dessus de $S_\alpha$ (resp. $S_\beta$); mais alors
+$\boldsymbol{\mathscr{T}\!or}_n^T(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$ est
+canoniquement isomorphe à
+$\boldsymbol{\mathscr{T}\!or}_n^{S_\alpha}(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$
+d'une part, à
+$\boldsymbol{\mathscr{T}\!or}_n^{S_\beta}(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$
+d'autre part, en vertu de (6.4.2); comme on vient de définir des isomorphismes
+canoniques de $\mathscr G_\alpha$ sur
+$\boldsymbol{\mathscr{T}\!or}_n^{S_\alpha}(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$ et
+de $\mathscr G_\beta$ sur
+$\boldsymbol{\mathscr{T}\!or}_n^{S_\beta}(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$
+(6.5.2), cela achève de définir le $\mathscr O_Z$-Module
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$. En outre, pour
+toute partie ouverte $U$ (resp. $V$) de $X$ (resp. $Y$),
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet|U,\mathscr Q_\bullet|V)$ est
+canoniquement isomorphe à la restriction de
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ à $U\times_S V$.
+
+Il est immédiat que l'on a ainsi défini (dans les catégories de complexes de
+Modules quasi-cohérents limités inférieurement) un \emph{bi-$\partial$-foncteur}
+$\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ à valeurs
+dans la catégorie des $\mathscr O_Z$-Modules, car il est clair que la question
+est locale sur $X$, $Y$ et $S$, en vertu de (6.4.5) et de la remarque que
+(6.4.4.2) est un morphisme de bi-$\partial$-foncteurs. On notera que si
+$\mathscr P_\bullet$ et $\mathscr Q_\bullet$ sont réduits respectivement à
+leurs termes de degré 0, $\mathscr F$ et $\mathscr G$,
+$\mathscr{T}\!or_0^S(\mathscr F,\mathscr G)$ n'est autre, en vertu de
+(6.4.1.1), que le produit tensoriel externe $\mathscr F\otimes_S\mathscr G$
+défini dans (\textbf{I}, 9.1.2); cela résulte en effet de (\textbf{I}, 9.1.3).
+\end{env}
+
+\begin{env}[6.5.4]
+Il résulte de la construction précédente et des remarques faites dans (6.4.6)
+que $\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ est
+l'aboutissement de deux foncteurs spectraux,
+$'\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$,
+$''\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$, de termes $E_2$ égaux à
+\[
+  '\mathscr E_{pq}^2
+  =\mathscr H_p\bigl(\mathscr{T}\!or_q^S
+    (\mathscr P_\bullet,\mathscr Q_\bullet)
+  \tag{6.5.4.1}\label{III.6.5.4.1.fr}
+\]
+\[
+  ''\mathscr E_{pq}^2
+  =\bigoplus_{q'+q''=q}
+   \mathscr{T}\!or_p^S
+   \bigl(\mathscr H_{q'}(\mathscr P_\bullet),
+         \mathscr H_{q''}(\mathscr Q_\bullet)\bigr)
+  \tag{6.5.4.2}\label{III.6.5.4.2.fr}
+\]
+
+La suite spectrale (6.5.4.2) est toujours régulière; les deux suites spectrales
+sont birégulières si $\mathscr P_\bullet$ et $\mathscr Q_\bullet$ sont \emph{limités
+inférieurement}. Un autre cas où les deux suites précédentes sont birégulières
+est le suivant :
+\end{env}
+
+\begin{env}[6.5.5]
+Nous dirons que sur un espace topologique $T$ un faisceau d'anneaux
+$\mathscr A$ est \emph{de dimension cohomologique $\leqslant n$} si, pour tout
+$t\in T$ l'anneau $\mathscr A_t$ est de dimension cohomologique $\leqslant n$;
+on dira alors aussi que l'\emph{espace annelé} $(T,\mathscr A)$ est
+\emph{de dimension cohomologique $\leqslant n$}. On dira qu'un faisceau
+d'anneaux (resp. un espace annelé) est de dimension cohomologique \emph{finie}
+s'il existe un entier $n$ tel qu'il soit de dimension cohomologique
+$\leqslant n$. On notera que si les $\mathscr A_t$ sont des \emph{anneaux locaux
+(commutatifs) noethériens},
+\oldpage[III]{150}
+dire qu'ils sont de dimension cohomologique $\leqslant n$ signifie qu'ils sont
+\emph{réguliers} et de \emph{dimension} (de Krull) $\leqslant n$ ($\mathbf{0}_{\mathrm{IV}}$, 17.3.1).
+Avec la terminologie de la théorie de la dimension que nous introduirons au
+chap. IV, il revient au même de dire qu'un \emph{préschéma localement noethérien} $T$
+est de \emph{dimension cohomologique} $\leqslant n$, ou de dire qu'il est \emph{régulier}
+($\mathbf{0}_{\mathrm I}$, 4.1.4) et de \emph{dimension} $\leqslant n$; cela signifie que pour
+tout ouvert affine $U$ de $T$, l'anneau $\Gamma(U,\mathscr O_T)$ est \emph{de
+dimension cohomologique} $\leqslant n$ ($\mathbf{0}_{\mathrm{IV}}$, 17.2.6). Cela étant,
+cette dernière remarque, jointe à (6.3.2), prouve que si $S$ est \emph{localement
+noethérien et de dimension cohomologique finie}, les suites spectrales
+$'\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$ et
+$''\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$ sont \emph{birégulières}.
+
+Il est clair que
+$\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ se
+transforme en
+$\boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr Q_\bullet,\mathscr P_\bullet)$ (à un
+isomorphisme près) par l'isomorphisme canonique de $X\times_S Y$ sur
+$Y\times_S X$.
+\end{env}
+
+\begin{proposition}[6.5.6]
+Soit $(\mathscr P_{\alpha\bullet})$ un système inductif filtrant de complexes
+de $\mathscr O_X$-Modules quasi-cohérents; il existe alors un isomorphisme
+canonique
+\[
+  \varinjlim
+  (\boldsymbol{\mathscr{T}\!or}_\bullet^S
+  (\mathscr P_{\alpha\bullet},\mathscr Q_\bullet))
+  \xrightarrow{\sim}
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S
+  \left(\varinjlim\mathscr P_{\alpha\bullet},\mathscr Q_\bullet\right).
+  \tag{6.5.6.1}\label{III.6.5.6.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $S$, $X$ et $Y$, on peut supposer $S$, $X$, $Y$
+affines et la proposition se réduit alors à (6.3.6).
+\end{proof}
+
+\begin{namedtheorem}[6.5.7]{Remarques}
+\textnormal{(i)} Considérons en particulier le cas où $S=X=Y$,
+$\mathscr P_\bullet$ et $\mathscr Q_\bullet$ étant donc deux complexes de
+$\mathscr O_S$-Modules quasi-cohérents; alors les
+$\boldsymbol{\mathscr{T}\!or}_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ sont des
+$\mathscr O_S$-Modules quasi-cohérents; en outre, pour tout point $z\in S$, il
+résulte de (6.5.6) que l'on a un isomorphisme canonique
+\[
+  \bigl(\boldsymbol{\mathscr{T}\!or}_n^S
+    (\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)_z
+  \xrightarrow{\sim}
+  \mathbf{Tor}_n^{\mathscr O_z}
+  \bigl((\mathscr P_\bullet)_z,(\mathscr Q_\bullet)_z\bigr)
+  \tag{6.5.7.1}\label{III.6.5.7.1.fr}
+\]
+car la question est locale et on est ramené au cas des modules, en vertu de
+(6.4.1.1).
+
+\textnormal{(ii)} On peut généraliser la définition des hypertor au cas de
+\emph{deux complexes de $\mathscr O_X$-Modules} $\mathscr P_\bullet$,
+$\mathscr Q_\bullet$ sur un même \emph{espace annelé} $(X,\mathscr O_X)$; pour tout
+ouvert $U$ de $X$, posons en effet
+$A(U)=\Gamma(U,\mathscr O_X)$,
+$P_\bullet(U)=\Gamma(U,\mathscr P_\bullet)$,
+$Q_\bullet(U)=\Gamma(U,\mathscr Q_\bullet)$; les $A(U)$-modules
+$\mathbf{Tor}_n^{A(U)}(P_\bullet(U),Q_\bullet(U))$
+forment alors un \emph{préfaisceau} sur $X$, et l'on désigne par
+$\boldsymbol{\mathscr{T}\!or}_n^X(\mathscr P_\bullet,\mathscr Q_\bullet)$ le
+$\mathscr O_X$-Module associé à ce préfaisceau. Lorsque $X$ est un \emph{préschéma},
+il résulte de (6.3.12) que ce $\mathscr O_X$-Module est canoniquement isomorphe
+à l'hypertor défini ci-dessus. Nous ne développerons pas davantage cette
+généralisation.
+\end{namedtheorem}
+
+\begin{proposition}[6.5.8]
+Soient $X$, $Y$ deux $S$-préschémas, $\mathscr F$ \textup{(resp.} $\mathscr G$\textup{)} un
+$\mathscr O_X$-Module \textup{(resp.} un $\mathscr O_Y$-Module\textup{)} quasi-cohérent. Si
+$\mathscr F$ ou $\mathscr G$ est $S$-plat, on a
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)=0$ pour $n\neq0$.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$ et $Y$, on peut supposer $X$, $Y$ et $S$
+affines, d'anneaux respectifs $B$, $C$, $A$, et
+$\mathscr F=\widetilde M$, $\mathscr G=\widetilde N$, $M$ (resp. $N$) étant
+un $B$-module (resp. un $C$-module). Supposons par exemple que $\mathscr F$
+soit $S$-plat, ce qui signifie que pour tout $s\in S$, $M_s$ est un
+$A_s$-module plat ($\mathbf{0}_{\mathrm I}$, 6.7.1); par suite $M$ est un $A$-module plat
+($\mathbf{0}_{\mathrm I}$, 6.3.3), et l'on sait que
+$\operatorname{Tor}_n^A(M,N)=0$ pour $n>0$ et pour tout $C$-module $N$
+($\mathbf{0}_{\mathrm I}$, 6.1.1), d'où la conclusion par (6.4.1.1).
+\end{proof}
+
+\begin{namedtheorem}[6.5.9]{Corollaire}
+Soient $X$, $Y$ deux $S$-préschémas, $\mathscr P_\bullet$ \textup{(resp.}
+$\mathscr Q_\bullet$\textup{)} un complexe de
+\oldpage[III]{151}
+$\mathscr O_X$-Modules \textup{(resp.} de $\mathscr O_Y$-Modules\textup{)} quasi-cohérents limité
+inférieurement. Supposons que tous les $\mathscr P_i$ soient $S$-plats. Alors
+il existe un isomorphisme canonique de $\partial$-foncteurs en
+$\mathscr Q_\bullet$
+\[
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S(\mathscr P_\bullet,\mathscr Q_\bullet)
+  \xrightarrow{\sim}
+  \mathscr H_\bullet(\mathscr P_\bullet\otimes_S\mathscr Q_\bullet).
+  \tag{6.5.9.1}\label{III.6.5.9.1.fr}
+\]
+\end{namedtheorem}
+
+\begin{proof}
+Ce n'est autre que (6.3.7) lorsque $S$, $X$, $Y$ sont affines; on passe de là
+au cas général par les raisonnements de (6.5.2) et (6.5.3).
+\end{proof}
+
+\begin{namedtheorem}[6.5.10]{Corollaire}
+Supposons que $X$ soit plat sur $S$ \textup{($\mathbf{0}_{\mathrm I}$, 6.7.1)}, que
+$\mathscr P_\bullet$ et $\mathscr Q_\bullet$ soient limités inférieurement et
+que tous les $\mathscr P_i$ soient des $\mathscr O_X$-Modules localement
+libres (non nécessairement de type fini). Alors l'homomorphisme \textup{(6.5.9.1)} est
+bijectif.
+\end{namedtheorem}
+
+\begin{proof}
+En effet, l'hypothèse de (6.5.9) est remplie, la platitude étant une propriété
+ponctuelle sur $X$ par définition et toute somme directe de modules plats étant
+un module plat ($\mathbf{0}_{\mathrm I}$, 6.1.2).
+\end{proof}
+
+\begin{proposition}[6.5.11]
+Soient $X'$, $Y'$ deux $S$-préschémas, $f:X\to X'$, $g:Y\to Y'$ deux
+$S$-morphismes affines. Soit $\mathscr P_\bullet$ \textup{(resp.}
+$\mathscr Q_\bullet$\textup{)} un complexe de $\mathscr O_X$-Modules \textup{(resp.} de
+$\mathscr O_Y$-Modules\textup{)} quasi-cohérents; on a alors un isomorphisme canonique
+fonctoriel
+\[
+  (f\times_S g)_*
+  \bigl(\boldsymbol{\mathscr{T}\!or}_\bullet^S
+    (\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+  \xrightarrow{\sim}
+  \boldsymbol{\mathscr{T}\!or}_\bullet^S
+  (f_*(\mathscr P_\bullet),g_*(\mathscr Q_\bullet)).
+  \tag{6.5.11.1}\label{III.6.5.11.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Comme $f$ et $g$ sont affines, $f_*(\mathscr P_\bullet)$ et
+$g_*(\mathscr Q_\bullet)$ sont des complexes de Modules quasi-cohérents
+(\textbf{II}, 1.2.6), et si l'on pose $Z'=X'\times_S Y'$, les deux membres de (6.5.11.1)
+sont des $\mathscr O_{Z'}$-Modules quasi-cohérents (6.5.1); on se ramène
+aisément au cas où $S$, $X'$ et $Y'$ sont affines; mais alors il en est de même
+par hypothèse de $X$ et $Y$ et la vérification résulte aussitôt de (6.4.1.1) et
+(\textbf{I}, 1.6.3).
+\end{proof}
+
+\begin{namedtheorem}[6.5.12]{Remarque}
+Soient $X'$, $Y'$ deux $S$-préschémas et supposons que $X'$ soit $S$-\emph{plat};
+soient $X$ un sous-préschéma fermé de $X'$, $i:X\to X'$ l'injection canonique,
+$\mathscr P_\bullet$ (resp. $\mathscr Q_\bullet$) un complexe de
+$\mathscr O_X$-Modules (resp. de $\mathscr O_{Y'}$-Modules) quasi-cohérents,
+limité inférieurement. Soit enfin $\mathscr L'_{\bullet\bullet}$ une résolution
+de $i_*(\mathscr P_\bullet)$ formé de $\mathscr O_{X'}$-Modules localement
+libres, telle que tout point de $X'$ ait un voisinage ouvert affine $U$ pour
+lequel $\mathscr L'_{j,\bullet}|U$ soit une résolution libre de
+$i_*(\mathscr P_j)|U$ pour tout $j$. On a alors un isomorphisme canonique
+\[
+  (i\times_S 1)_*
+  \bigl(\boldsymbol{\mathscr{T}\!or}_\bullet^{\mathbf S}
+    (\mathscr P_\bullet,\mathscr Q_\bullet)\bigr)
+  \xrightarrow{\sim}
+  \mathscr H_\bullet
+  (\mathscr L'_{\bullet\bullet}\otimes_S\mathscr Q_\bullet).
+  \tag{6.5.12.1}\label{III.6.5.12.1.fr}
+\]
+
+Si $S$, $X'$, $Y'$ sont affines et si $\mathscr L'_{j,\bullet}$ est une
+résolution libre de $i_*(\mathscr P_j)$ pour tout $j$, on est ramené, en vertu
+de (6.5.11), au cas où $X'=X$ est $S$-plat, et il suffit d'appliquer (6.3.4).
+Dans le cas général, on définit localement l'isomorphisme (6.5.12.1), et il
+s'agit de vérifier que cette définition donne bien un isomorphisme global.
+Pour cela, il faut se reporter à la définition du premier isomorphisme
+(6.3.4.1) qui provient d'un isomorphisme de suites spectrales (\textbf{0}, 11.6.5 et
+11.5.3), obtenu lui-même à partir d'un morphisme de bicomplexes
+$L_{\bullet\bullet}\to L''_{\bullet\bullet}$, où $L_{\bullet\bullet}$ est la
+résolution donnée de $P_\bullet$, $L''_{\bullet\bullet}$ une résolution
+projective de $P_\bullet$ dans la catégorie des complexes de $A$-modules
+limités
+\oldpage[III]{152}
+inférieurement (cf. (0, 11.5.2.2)); notre assertion résulte de ce que
+l'isomorphisme (6.3.4.1) ne dépend pas de la résolution projective
+$L''_{\bullet\bullet}$ choisie, en vertu de l'existence d'un homotopisme entre
+deux telles résolutions (M, V, 1.2).
+\end{namedtheorem}
+
+\begin{proposition}[6.5.13]
+Soient $X$, $Y$ deux $S$-préschémas, et supposons vérifiée l'une des conditions
+suivantes :
+\begin{enumerate}
+  \item[(i)] $X$ et $Z=X\times_S Y$ sont localement noethériens et $X$ est plat
+    sur $S$.
+  \item[(ii)] $S$ et $X$ sont localement noethériens et $Y$ est de type fini
+    sur $S$.
+\end{enumerate}
+Soit $\mathscr P_\bullet$ (resp. $\mathscr Q_\bullet$) un complexe de
+$\mathscr O_X$-Modules (resp. de $\mathscr O_Y$-Modules) quasi-cohérents,
+limité inférieurement. On suppose en outre que, pour tout $n$,
+$\mathscr H_n(\mathscr P_\bullet)$ (resp.
+$\mathscr H_n(\mathscr Q_\bullet)$) est un $\mathscr O_X$-Module (resp. un
+$\mathscr O_Y$-Module) de type fini. Alors les
+$\mathscr{T}\!or_n^S(\mathscr P_\bullet,\mathscr Q_\bullet)$ sont des
+$\mathscr O_Z$-Modules cohérents.
+\end{proposition}
+
+\begin{proof}
+Comme $\mathscr P_\bullet$ et $\mathscr Q_\bullet$ sont limités
+inférieurement, la suite spectrale
+$''\mathscr E(\mathscr P_\bullet,\mathscr Q_\bullet)$ est birégulière (6.5.4),
+et en vertu de (0, 11.1.8), il suffit (puisque dans les deux cas (i), (ii), $Z$
+est localement noethérien) de prouver que les termes
+$''\mathscr E_{pq}^2$ sont cohérents. L'hypothèse sur les
+$\mathscr H_n(\mathscr P_\bullet)$ et
+$\mathscr H_n(\mathscr Q_\bullet)$ et l'expression (6.5.4.2) des
+$''\mathscr E_{pq}^2$ montrent donc que la proposition est équivalente à son
+cas particulier correspondant à $\mathscr P_\bullet$ et
+$\mathscr Q_\bullet$ réduits à leurs termes de degré 0, autrement dit à son
+\end{proof}
+
+\begin{corollary}[6.5.14]
+Supposons vérifiée l'une des conditions (i), (ii) de (6.5.13), et soit
+$\mathscr F$ (resp. $\mathscr G$) un $\mathscr O_X$-Module (resp. un
+$\mathscr O_Y$-Module) quasi-cohérent de type fini; alors les
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$ sont des $\mathscr O_Z$-Modules
+cohérents.
+\end{corollary}
+
+\begin{proof}
+La question étant locale sur $X$ et $Y$, on peut supposer $S$, $X$, $Y$
+affines.
+
+\textnormal{(i)} Sous les hypothèses de (i), $S$, $X$ et $Z$ sont noethériens.
+Il existe donc une résolution localement libre $\mathscr L_\bullet$ de
+$\mathscr F$ formée de $\mathscr O_X$-Modules de type fini (I, 1.3.7); comme
+$X$ est plat sur $S$, il résulte de (6.3.4) que l'on a
+\[
+  \mathscr{T}\!or_n^S(\mathscr F,\mathscr G)
+  =\mathscr H_n(\mathscr L_\bullet\otimes_S\mathscr G);
+\]
+or, les $\mathscr L_i\otimes_S\mathscr G$ sont des $\mathscr O_Z$-Modules
+quasi-cohérents de type fini (I, 9.1.1), donc cohérents. On en conclut que
+$\mathscr H_n(\mathscr L_\bullet\otimes_S\mathscr G)$ est cohérent
+($0_{\mathrm I}$, 5.3.4).
+
+\textnormal{(ii)} Supposons maintenant vérifiées les conditions (ii). Comme
+l'anneau $A(Y)$ est quotient d'une $A(S)$-algèbre de polynômes à un nombre fini
+d'indéterminées (I, 6.3.3), $Y$ est un sous-$S$-préschéma fermé d'un
+$S$-préschéma affine $Y'$, plat et de type fini sur $S$; $Y'$ étant noethérien
+(I, 6.3.7), il existe une résolution localement libre $\mathscr M_\bullet$ de
+$j_*(\mathscr G)$ par des $\mathscr O_{Y'}$-Modules de type fini
+($j:Y\to Y'$ étant l'injection canonique); en vertu de (6.5.12),
+$\mathscr{T}\!or_n^S(\mathscr F,\mathscr G)$ est l'image réciproque par
+$1\times j$ du $\mathscr O_{Z'}$-Module
+$\mathscr H_n(\mathscr F\otimes_S\mathscr M_\bullet)$ (où
+$Z'=X\times_S Y'$); on voit comme dans (i) que les
+$\mathscr F\otimes_S\mathscr M_i$ sont des $\mathscr O_{Z'}$-Modules
+cohérents, et l'on en tire encore la conclusion par ($0_{\mathrm I}$, 5.3.4).
+\end{proof}
+
+\begin{env}[6.5.15]
+La théorie développée ci-dessus pour deux complexes $\mathscr P_\bullet$,
+$\mathscr Q_\bullet$ de faisceaux quasi-cohérents sur deux $S$-préschémas
+$X$, $Y$ se généralise sans peine au cas où l'on considère un nombre fini
+quelconque de $S$-préschémas $X^{(i)}$ ($1\leqslant i\leqslant m$) et sur
+chaque $X^{(i)}$ un complexe $\mathscr P_\bullet^{(i)}$ de
+$\mathscr O_{X^{(i)}}$-Modules quasi-cohérents; si
+$Z=X^{(1)}\times_S X^{(2)}\times_S\cdots\times_S X^{(m)}$, on définit ainsi un
+$\mathscr O_Z$-Module quasi-cohérent
+$\mathscr{T}\!or_q^S(\mathscr P_\bullet^{(1)},\mathscr P_\bullet^{(2)},
+\ldots,\mathscr P_\bullet^{(m)})$. Nous laissons au lecteur le soin de
+développer la théorie dans ce cas général et nous nous bornerons à écrire,
+pour référence ultérieure, le terme $E_2$ de la seconde suite spectrale
+(régulière) dont l'aboutissement est
+$\mathscr{T}\!or_\bullet^S(\mathscr P_\bullet^{(1)},
+\mathscr P_\bullet^{(2)},\ldots,\mathscr P_\bullet^{(m)})$ :
+
+\oldpage[III]{153}
+
+\[
+  ''\mathscr E_{pq}^2
+  =\bigoplus_{q_1+q_2+\cdots+q_m=q}
+   \mathscr{T}\!or_p^S
+   \bigl(\mathscr H_{q_1}(\mathscr P_\bullet^{(1)}),\ldots,
+         \mathscr H_{q_m}(\mathscr P_\bullet^{(m)})\bigr).
+  \tag{6.5.15.1}\label{III.6.5.15.1.fr}
+\]
+Nous étudierons dans (6.8) les suites spectrales d'associativité auxquelles
+donnent lieu ces foncteurs hypertor d'un nombre quelconque de complexes.
+\end{env}
+

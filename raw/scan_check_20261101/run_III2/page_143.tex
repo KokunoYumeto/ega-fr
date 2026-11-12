@@ -1,0 +1,98 @@
+% from ega3-6-fr.tex
+\oldpage[III]{143}
+
+des applications canoniques $P_\bullet^\lambda\to P_\bullet$,
+$Q_\bullet^\mu\to Q_\bullet$, forment un système inductif d'homomorphismes,
+d'où un homomorphisme canonique (6.3.6.1), et plus généralement un
+homomorphisme canonique
+\[
+  \varinjlim_{\lambda,\mu}''E(P_\bullet^\lambda,Q_\bullet^\mu)
+  \longrightarrow ''E(P_\bullet,Q_\bullet)
+\]
+dont (6.3.6.1) est l'homomorphisme des aboutissements. En outre, la suite
+spectrale $''E(P_\bullet,Q_\bullet)$ est régulière (6.3.2), et il en est de
+même de la suite spectrale
+$\varinjlim_{\lambda,\mu}''E(P_\bullet^\lambda,Q_\bullet^\mu)$, comme il
+résulte des définitions (0, 11.1.7) et de la démonstration de (0, 11.3.3);
+pour démontrer que (6.3.6.1) est bijectif, il suffit donc (0, 11.1.5) de
+prouver que l'homomorphisme
+\[
+  \varinjlim_{\lambda,\mu}''E(P_\bullet^\lambda,Q_\bullet^\mu)
+  \longrightarrow ''E(P_\bullet,Q_\bullet)
+  \tag{6.3.6.2}\label{III.6.3.6.2.fr}
+\]
+est bijectif pour les termes $E^2$. Comme le foncteur $H_\bullet$ commute à
+la limite inductive des complexes de modules, on est finalement ramené à
+prouver que pour deux systèmes inductifs filtrants $(F^\lambda)$,
+$(G^\mu)$ de $A$-modules, l'homomorphisme canonique
+\[
+  \varinjlim_{\lambda,\mu}\operatorname{Tor}_\bullet^A(F^\lambda,G^\mu)
+  \longrightarrow
+  \operatorname{Tor}_\bullet^A
+  \left(\varinjlim_\lambda F^\lambda,
+        \varinjlim_\mu G^\mu\right)
+\]
+est bijectif. Pour cela, considérons pour chaque $F^\lambda$ la résolution
+libre canonique
+\[
+  L_\bullet^\lambda:\quad
+  \cdots\longrightarrow L_{i+1}^\lambda
+  \longrightarrow L_i^\lambda\longrightarrow\cdots
+  \longrightarrow L_1^\lambda\longrightarrow L_0^\lambda\longrightarrow0
+\]
+où $L_0^\lambda$ est le $A$-module des combinaisons linéaires formelles
+d'éléments de $F^\lambda$ et $L_{i+1}^\lambda$ le $A$-module des combinaisons
+linéaires formelles d'éléments de
+$\operatorname{Ker}(L_i^\lambda\to L_{i-1}^\lambda)$; on vérifie
+immédiatement que les $L_\bullet^\lambda$ forment un système inductif de
+complexes, et si l'on pose
+$F=\varinjlim_\lambda F^\lambda$, $L_i=\varinjlim_\lambda L_i^\lambda$, les
+$L_i$ forment une résolution $L_\bullet$ de $F$, le foncteur
+$\varinjlim$ étant exact; en outre, les $L_i$, limites inductives de
+$A$-modules libres, sont plats (0\textsubscript{I}, 6.1.2). On considère de
+même pour chaque $\mu$ la résolution libre canonique $M_\bullet^\mu$ de
+$G^\mu$, et $M_\bullet=\varinjlim_\mu M_\bullet^\mu$ est une résolution plate
+de $G=\varinjlim_\mu G^\mu$. On a alors
+$\operatorname{Tor}_\bullet^A(\varinjlim_\lambda F^\lambda,
+\varinjlim_\mu G^\mu)=H_\bullet(L_\bullet\otimes_A M_\bullet)$ en vertu de
+(6.3.5) et (6.3.4); mais
+\[
+  H_\bullet(L_\bullet\otimes_A M_\bullet)
+  =\varinjlim_{\lambda,\mu}
+   H_\bullet(L_\bullet^\lambda\otimes_A M_\bullet^\mu)
+\]
+puisque $H_\bullet$ commute aux limites inductives de complexes de modules;
+comme $H_\bullet(L_\bullet^\lambda\otimes_A M_\bullet^\mu)
+=\operatorname{Tor}_\bullet^A(F^\lambda,G^\mu)$, cela termine la
+démonstration.
+
+Lorsqu'on suppose qu'il existe $i_0$ tel que
+$P_i^\lambda=Q_i^\mu=0$ pour $i<i_0$ quels que soient $\lambda$ et $\mu$, on
+démontre de la même manière que l'homomorphisme canonique
+\[
+  \varinjlim_{\lambda,\mu}'E(P_\bullet^\lambda,Q_\bullet^\mu)
+  \longrightarrow'E(P_\bullet,Q_\bullet)
+  \tag{6.3.6.3}\label{III.6.3.6.3.fr}
+\]
+est bijectif.
+\end{proof}
+
+\begin{proposition}[6.3.7]
+Supposons $P_\bullet$ et $Q_\bullet$ limités inférieurement. Si le complexe
+$P_\bullet$ est formé de $A$-modules plats, on a un $A$-isomorphisme
+canonique de $\partial$-foncteurs en $Q_\bullet$
+\[
+  \mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)
+  \xrightarrow{\sim}H_\bullet(P_\bullet\otimes_A Q_\bullet).
+  \tag{6.3.7.1}\label{III.6.3.7.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, la suite spectrale (6.3.2.1) est birégulière et dégénérée, et
+l'existence de l'isomorphisme (6.3.7.1) résulte de (0, 11.1.6). En outre, en
+calculant l'hypertor à partir d'une résolution projective de Cartan-Eilenberg
+de $P_\bullet$ (6.3.4), on voit aussitôt que l'isomorphisme ainsi défini est
+un isomorphisme de $\partial$-foncteurs en $Q_\bullet$.
+\end{proof}
+\begin{env}[6.3.8]

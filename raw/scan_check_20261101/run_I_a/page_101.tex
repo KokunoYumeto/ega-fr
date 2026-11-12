@@ -1,0 +1,75 @@
+% from ega1-2-fr.tex
+\oldpage[I]{101}
+Il résulte de la définition (\hyperref[I.2.1.2-fr]{2.1.2}) que tout espace
+annelé obtenu par \emph{recollement} de préschémas
+(\hyperref[0.4.1.6-fr]{0, 4.1.6}) est encore un préschéma. En particulier,
+puisque tout préschéma admet par définition un recouvrement formé d'ensembles
+ouverts affines, on voit que tout préschéma peut s'obtenir par
+\emph{recollement de schémas affines}.
+\end{env}
+
+\begin{example}[2.3.2]
+\label{I.2.3.2-fr}
+Soient $K$ un corps, $B=K[s]$, $C=K[t]$ deux anneaux de polynômes à une
+indéterminée sur $K$, et soient $X_1=\operatorname{Spec}(B)$,
+$X_2=\operatorname{Spec}(C)$, qui sont deux schémas affines isomorphes. Dans
+$X_1$ (resp. $X_2$), soit $U_{12}$ (resp. $U_{21}$) l'ouvert affine $D(s)$
+(resp. $D(t)$) dont l'anneau $B_s$ (resp. $C_t$) est formé des fractions
+rationnelles de la forme $f(s)/s^m$ (resp. $g(t)/t^n$) avec $f\in B$
+(resp. $g\in C$). Soit $u_{12}$ l'isomorphisme de préschémas
+$U_{21}\to U_{12}$ correspondant (\hyperref[I.2.2.4-fr]{2.2.4}) à
+l'isomorphisme de $B_s$ sur $C_t$ qui, à $f(s)/s^m$ fait correspondre la
+fraction rationnelle $f(1/t)/(1/t^m)$. On peut recoller $X_1$ et $X_2$ le long
+de $U_{12}$ et $U_{21}$ au moyen de $u_{12}$, car il n'y a évidemment pas de
+condition de recollement. Nous retrouverons plus tard le préschéma $X$ ainsi
+obtenu comme cas particulier d'une méthode de construction générale
+(\hyperref[II.2.4.3-fr]{II, 2.4.3}). Montrons seulement ici que $X$ \emph{n'est
+pas un schéma affine}~; cela résultera de ce que l'anneau
+$\Gamma(X,\mathscr{O}_X)$ est \emph{isomorphe} à $K$, donc a un spectre réduit
+à un point. En effet, une section de $\mathscr{O}_X$ au-dessus de $X$ a une
+restriction au-dessus de $X_1$ (resp. $X_2$), identifié à un ouvert affine de
+$X$, qui est un polynôme $f(s)$ (resp. $g(t)$), et il résulte des définitions
+que l'on doit avoir $g(t)=f(1/t)$, ce qui n'est possible que si $f=g\in K$.
+\end{example}
+
+\subsection{Schémas locaux}
+\label{subsection:I.2.4-fr}
+
+\begin{env}[2.4.1]
+\label{I.2.4.1-fr}
+On appelle \emph{schéma local} un schéma affine dont l'anneau $A$ est local~;
+il existe alors dans $X=\operatorname{Spec}(A)$ un seul \emph{point fermé}
+$a$, et pour tout autre point $b\in X$, on a
+$a\in\overline{\{b\}}$ (\hyperref[I.1.1.7-fr]{1.1.7}).
+\end{env}
+
+Pour tout préschéma $Y$ et tout point $y\in Y$, le schéma local
+$\operatorname{Spec}(\mathscr{O}_y)$ est appelé le \emph{schéma local de $Y$
+au point $y$}. Soient $V$ un ouvert affine de $Y$ contenant $y$, $B$ l'anneau
+du schéma affine $V$~; $\mathscr{O}_y$ s'identifie canoniquement à $B_y$
+(\hyperref[I.1.3.4-fr]{1.3.4}), et l'homomorphisme canonique $B\to B_y$
+correspond par suite (\hyperref[I.1.6.1-fr]{1.6.1}) à un morphisme de
+préschémas $\operatorname{Spec}(\mathscr{O}_y)\to V$. Si on compose ce
+morphisme avec l'injection canonique $V\to Y$, on obtient donc un morphisme
+$\operatorname{Spec}(\mathscr{O}_y)\to Y$, qui est \emph{indépendant} de
+l'ouvert affine $V$ (contenant $y$) choisi~: en effet, si $V'$ est un second
+ouvert affine contenant $y$, il existe un troisième ouvert affine $W$
+contenant $y$ et tel que $W\subset V\cap V'$
+(\hyperref[I.2.1.3-fr]{2.1.3})~; on peut donc se limiter au cas où
+$V\subset V'$, et si $B'$ est l'anneau de $V'$, tout revient à remarquer que
+le diagramme
+\phantomsection\label{I.2.4.1.diagram-fr}
+\[
+  \xymatrix{
+    B'\ar[rr]\ar[dr] & & B\ar[dl]\\
+    & \mathscr{O}_y
+  }
+\]
+est commutatif (\hyperref[0.1.5.1-fr]{0, 1.5.1}). Le morphisme
+\[
+  \operatorname{Spec}(\mathscr{O}_y)\to Y
+\]
+ainsi défini est dit \emph{canonique}.
+
+\begin{proposition}[2.4.2]
+\label{I.2.4.2-fr}

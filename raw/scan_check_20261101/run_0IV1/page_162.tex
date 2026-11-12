@@ -1,0 +1,123 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{162}
+Comme $B$ est réduit, $x\mapsto x^p$ est un isomorphisme de structure de
+$B$ sur $B^p$~; par transport de structure au moyen de cet isomorphisme,
+on voit que $(x_\lambda^p)_{\lambda\in L}$ et les $y_\mu$ forment une $p$-base
+de $B^p$ sur $A^p$ (21.1.10)~; on en conclut par (21.1.5), (ii), et (21.2.5)
+que les $d_A(x_\lambda^p)$ et les $d_A(y_\mu)$ forment une base du
+$A$-module $\Omega^1_A$. Or l'image de $d_A(x_\lambda^p)\otimes1$ par
+$i_{B/A}$ est $d_B(x_\lambda^p)=0$~; d'autre part, l'image de $d_A(y_\mu)$
+par $i_{B/A}$ est $d_B(i(y_\mu))$, et comme les $y_\mu$ et les $x_\lambda$
+forment une $p$-base de $B$ sur $B^p$ (21.1.10), les $d_B(y_\mu)$ sont une
+partie d'une base de $\Omega^1_B$ (21.2.5), donc sont linéairement indépendants
+sur $B$. On en déduit que le noyau de $i_{B/A}$ a pour base les
+$d_A(x_\lambda^p)\otimes1$~; comme ce sont les images par (21.3.5.1) des
+éléments correspondants de $(\Omega^1_{B/A})^{(p)}$, et que ces derniers
+forment une base du $B$-module $(\Omega^1_{B/A})^{(p)}$ (21.2.5),
+l'homomorphisme (21.3.5.1) de $B$-modules est bijectif.
+\end{proof}
+
+\begin{remarks}[21.3.6]
+\label{0.21.3.6-fr}
+\begin{enumerate}
+  \item[(i)] Soient $A'$, $B'$ deux anneaux de caractéristique $p$, et
+  supposons donnés deux homomorphismes $i':A'\to B'$, $j':B'\to A'$ vérifiant
+  (21.3.1.1) et (21.3.1.2), ainsi que des homomorphismes d'anneaux
+  $f:A\to A'$, $g:B\to B'$ rendant commutatif le diagramme
+  \[
+  \xymatrix{
+  A'\ar[r]^{i'}&B'\ar[r]^{j'}&A'\\
+  A\ar[u]^f\ar[r]^i&B\ar[u]^g\ar[r]^j&A\ar[u]^f
+  }
+  \]
+  Alors l'homomorphisme canonique $\Omega^1_{B/A}\to\Omega^1_{B'/A'}$
+  (20.5.4.3) donne un di-homomorphisme canonique
+  $\Theta_{B/A}\to\Theta_{B'/A'}$ rendant commutatif le diagramme
+  \[
+  \xymatrix{
+  0\ar[r]&\Xi_{B/A}\ar[r]\ar[d]&\Theta_{B/A}\ar[r]^{\pi_{B/A}}\ar[d]&\Omega^1_A\ar[d]\\
+  0\ar[r]&\Xi_{B'/A'}\ar[r]&\Theta_{B'/A'}\ar[r]^{\pi_{B'/A'}}&\Omega^1_{A'}
+  }
+  \]
+  \item[(ii)] Soit $A'$ une $A$-algèbre quelconque et posons
+  $B'=B\otimes_A A'$~; alors $i'=i\otimes1:A'\to B'$ et
+  $j'=j\otimes1:B'\to A'$ vérifient (21.3.1.1) et (21.3.1.2), et l'on a
+  $\Omega^1_{B'/A'}=\Omega^1_{B/A}\otimes_A A'=\Omega^1_{B/A}\otimes_B B'$
+  (20.5.5)~; on en déduit un $A'$-isomorphisme canonique
+  \begin{equation}
+  \tag{21.3.6.1}\label{0.21.3.6.1-fr}
+  \Theta_{B/A}\otimes_A A'\xrightarrow{\sim}\Theta_{B'/A'}
+  \end{equation}
+  et aussi un $B'$-homomorphisme canonique
+  \begin{equation}
+  \tag{21.3.6.2}\label{0.21.3.6.2-fr}
+  (\Omega^1_{B/A})^{(p)}\otimes_B B'\xrightarrow{\sim}
+  (\Omega^1_{B'/A'})^{(p)}.
+  \end{equation}
+\end{enumerate}
+\end{remarks}
+
+\subsection{Cas des extensions de corps}
+\label{0.21.4-fr}
+
+\begin{env}[21.4.0]
+\label{0.21.4.0-fr}
+Soient $K$ un corps de caractéristique $p>0$, $k$ un sous-corps de $K$~;
+alors l'anneau $k[K^p]$ est égal au corps $k(K^p)$ puisque $k$ est algébrique
+sur $K^p$. On pourra donc appliquer les résultats des numéros précédents en
+remplaçant partout $A$, $B$ et $A[B^p]$ par $k$, $K$ et $k(K^p)$.
+\end{env}
+
+\begin{lemma}[21.4.1]
+\label{0.21.4.1-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$.
+Pour qu'un élément $x\in K$ soit $p$-libre sur $k$, il faut et il suffit que
+$x\notin k(K^p)$.
+\end{lemma}
+
+\begin{proof}
+En effet, $x$ est racine du polynôme $X^p-x^p$ de $k(K^p)[X]$, et l'on sait
+(Bourbaki, \emph{Alg.}, chap.~V, §~8, n$^\circ$~1, prop.~1) que si
+$x\notin k(K^p)$ ce polynôme est irréductible, de sorte que les éléments
+$1,x,\ldots,x^{p-1}$ forment une base du $k(K^p)$-module $k(K^p)(x)$.
+\end{proof}
+
+\begin{theorem}[21.4.2]
+\label{0.21.4.2-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$,
+$S$ un système de $p$-générateurs de $K$ sur $k$, $L\subset S$ une partie
+$p$-libre sur $k$. Il existe alors une $p$-base $B$ de $K$ sur $k$ telle que
+$L\subset B\subset S$. En particulier, toute extension de $k$ admet une
+$p$-base sur $k$.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $K^p\subset k$. En vertu du théorème de Zorn,
+il existe dans $K$ une partie $B$ telle que $L\subset B\subset S$, $p$-libre
+sur $k$ et maximale parmi les parties de $S$ ayant ces propriétés. Il suffit
+de voir que le sous-corps $K'$ de $K$ engendré par $k$ et $B$ est égal à $K$.
+Dans le cas contraire, il existerait $x\in S$ non dans $K'$~; comme
+$K^p\subset k$, on a $K'=K'(K^p)$~; donc $x$ serait $p$-libre sur $K'$
+(21.4.1), et par suite $B\cup\{x\}$ serait $p$-libre sur $k$ (21.1.10),
+contrairement à la définition de $B$. La dernière assertion de (21.4.2)
+s'obtient en prenant $L=\varnothing$, $S=K$.
+\end{proof}
+
+\begin{corollary}[21.4.3]
+\label{0.21.4.3-fr}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$.
+Pour qu'une famille $(x_\alpha)$ d'éléments de $K$ soit $p$-libre sur $k$,
+il faut et il suffit que, pour tout $\alpha$, $x_\alpha$ n'appartienne pas au
+corps $K_\alpha$ engendré par $k(K^p)$ et par les $x_\beta$ d'indice
+$\beta\neq\alpha$.
+\end{corollary}
+
+\begin{proof}
+La condition est nécessaire en vertu de (21.1.10). Inversement, supposons-la
+remplie~; on peut se borner au cas où $(x_\alpha)$ est un système de
+$p$-générateurs de $K$. Il existe alors une sous-famille de $(x_\alpha)$ qui
+est une $p$-base de $K$ (21.4.2), mais cette famille ne peut être distincte de
+$(x_\alpha)$, sans quoi, en vertu de l'hypothèse, ce ne serait pas une famille
+de $p$-générateurs de $K$.
+\end{proof}
+

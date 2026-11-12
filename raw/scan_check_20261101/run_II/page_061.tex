@@ -1,0 +1,92 @@
+% from ega2-1-fr.tex
+\oldpage[II]{61}
+
+On en conclut que lorsque $Y$ est un préschéma quelconque, les trois
+conditions suivantes, pour un $\mathcal{O}_X$-Module quasi-cohérent
+$\mathcal{F}$ tel que $p_*(\mathcal{F})$ soit \emph{quasi-cohérent}, sont
+équivalentes~:
+\begin{enumerate}
+  \item[a)] \emph{L'homomorphisme canonique
+    $\sigma:p^*(p_*(\mathcal{F}))\to\mathcal{F}$ est surjectif.}
+  \item[b)] \emph{Il existe un $\mathcal{O}_Y$-Module quasi-cohérent
+    $\mathcal{G}$ et un homomorphisme surjectif
+    $p^*(\mathcal{G})\to\mathcal{F}$.}
+  \item[c)] \emph{Pour tout ouvert affine $U$ de $Y$,
+    $\mathcal{F}|p^{-1}(U)$ est engendré par ses sections au-dessus de
+    $p^{-1}(U)$.}
+\end{enumerate}
+On vient en effet de prouver l'équivalence de \emph{a)} et \emph{c)}. D'autre
+part, il est clair que \emph{a)} entraîne \emph{b)}, $p_*(\mathcal{F})$ étant
+par hypothèse quasi-cohérent. Inversement, tout homomorphisme
+$u:p^*(\mathcal{G})\to\mathcal{F}$ se factorise en
+$p^*(\mathcal{G})\to p^*(p_*(\mathcal{F}))\xrightarrow{\sigma}\mathcal{F}$
+(\hyperref[0.3.5.4.4-fr]{0, 3.5.4.4}), donc si $u$ est surjectif il en est de
+même de $\sigma$, ce qui prouve que \emph{b)} entraîne \emph{a)}.
+
+\begin{corollary}[3.4.8]
+\label{II.3.4.8-fr}
+Supposons vérifiées les hypothèses de (\hyperref[II.3.4.4-fr]{3.4.4}) et
+supposons en outre que $Y$ soit un schéma quasi-compact ou que l'espace
+sous-jacent à $Y$ soit noethérien. Soit $\mathcal{F}$ un
+$\mathcal{O}_X$-Module quasi-cohérent de type fini~; il existe alors un entier
+$n_0$ tel que pour $n\geq n_0$, $\mathcal{F}$ soit isomorphe à un quotient
+d'un $\mathcal{O}_X$-Module de la forme $(p^*(\mathcal{G}))(-n)$ où
+$\mathcal{G}$ est un $\mathcal{O}_Y$-Module quasi-cohérent de type fini
+(dépendant de $n$).
+\end{corollary}
+
+\begin{proof}
+Comme le morphisme structural $X\to Y$ est séparé et de type fini,
+$p_*(\mathcal{F}(n))$ est quasi-cohérent
+(\hyperref[I.9.2.2-fr]{I, 9.2.2, b)}), donc limite inductive de ses
+sous-$\mathcal{O}_Y$-Modules quasi-cohérents de type fini, en vertu de
+l'hypothèse sur $Y$ (\hyperref[I.9.4.9-fr]{I, 9.4.9}). On en déduit par
+(\hyperref[II.3.4.6-fr]{3.4.6}),
+(\hyperref[0.4.3.2-fr]{0, 4.3.2}) et
+(\hyperref[0.5.2.3-fr]{0, 5.2.3}) que $\mathcal{F}(n)$ est l'image canonique
+d'un $\mathcal{O}_X$-Module de la forme $p^*(\mathcal{G})$, où $\mathcal{G}$
+est un sous-$\mathcal{O}_Y$-Module quasi-cohérent de type fini de
+$p_*(\mathcal{F}(n))$~; le corollaire résulte alors de
+(\hyperref[II.3.2.5.2-fr]{3.2.5.2}) et
+(\hyperref[II.3.2.7.1-fr]{3.2.7.1}).
+\end{proof}
+
+\subsection{Comportements fonctoriels.}
+\label{subsection:II.3.5-fr}
+
+\begin{env}[3.5.1]
+\label{II.3.5.1-fr}
+Soient $Y$ un préschéma, $\mathcal{S}$, $\mathcal{S}'$ deux
+$\mathcal{O}_Y$-Algèbres graduées quasi-cohérentes à degrés positifs~; posons
+$X=\operatorname{Proj}(\mathcal{S})$, $X'=\operatorname{Proj}(\mathcal{S}')$,
+et soient $p$, $p'$ les morphismes structuraux de $X$ et $X'$ dans $Y$. Soit
+$\varphi:\mathcal{S}'\to\mathcal{S}$ un $\mathcal{O}_Y$-homomorphisme
+d'Algèbres graduées. Pour tout ouvert affine $U$ de $Y$, posons
+$S_U=\Gamma(U,\mathcal{S})$, $S'_U=\Gamma(U,\mathcal{S}')$~;
+l'homomorphisme $\varphi$ définit un homomorphisme
+$\varphi_U:S'_U\to S_U$ de $A_U$-algèbres graduées, en posant
+$A_U=\Gamma(U,\mathcal{O}_Y)$. Il lui correspond dans $p^{-1}(U)$ un ensemble
+ouvert $G(\varphi_U)$ et un morphisme
+$\Phi_U:G(\varphi_U)\to p'^{-1}(U)$
+(\hyperref[II.2.8.1-fr]{2.8.1}). En outre, si $V\subset U$ est un ouvert
+affine, le diagramme
+\[
+\label{II.3.5.1.1-fr}
+  \xymatrix{
+    S'_U\ar[r]^{\varphi_U}\ar[d]
+    & S_U\ar[d]\\
+    S'_V\ar[r]_{\varphi_V}
+    & S_V
+  }
+\tag{3.5.1.1}
+\]
+est commutatif, et on vérifie aussitôt, à partir des définitions
+(\hyperref[II.2.8.1-fr]{2.8.1}), que l'on a
+\[
+  G(\varphi_V)=G(\varphi_U)\cap p^{-1}(V)
+\]
+et que $\Phi_V$ est la restriction de $\Phi_U$ à $G(\varphi_V)$. On a ainsi
+défini une partie ouverte $G(\varphi)$ de $X$ telle que
+$G(\varphi)\cap p^{-1}(U)=G(\varphi_U)$ pour tout ouvert affine $U\subset Y$,
+et un $Y$-morphisme
+

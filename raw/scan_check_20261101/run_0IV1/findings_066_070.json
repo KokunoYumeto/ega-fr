@@ -1,0 +1,1370 @@
+[
+ {
+  "page": 66,
+  "where": "top of p. 66: 'par x(y_1...)' continues the sentence 'la structure de B-module étant définie' of p. 65",
+  "scan": "no paragraph break: 'par' is flush left and continues the sentence",
+  "tex": "blank line after \\oldpage[0\\textsubscript{IV-1}]{66} (and before it, at the end of p. 65's segment)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{66}\n\npar",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{66}\npar"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). The blank line BEFORE the marker ('étant définie' + blank line, p. 65's segment) is already removed in FIXLOG (findings_061_065)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'par x(y_1⊗y_2⊗...⊗y_{n+1}) = (xy_1)⊗y_2⊗...⊗y_{n+1}; la dérivation'",
+  "scan": "in the running text (first line of p. 66), with baseline dots",
+  "tex": "displayed with \\[ ... \\], centred \\cdots",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  x(y_1\\otimes y_2\\otimes\\cdots\\otimes y_{n+1})\n  =(xy_1)\\otimes y_2\\otimes\\cdots\\otimes y_{n+1}\\,;\n\\]",
+   "new": "$x(y_1\\otimes y_2\\otimes\\ldots\\otimes y_{n+1})=(xy_1)\\otimes y_2\\otimes\\ldots\\otimes y_{n+1}$~;"
+  },
+  "note": "Layout (display vs inline); the same edit replaces the two \\cdots by \\ldots for the print's baseline dots (checked on a crop; no separate finding)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'la dérivation, de degré —1'",
+  "scan": "long dash before 1 (enlarged crop)",
+  "tex": "$-1$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "de degré $-1$",
+   "new": "de degré $\\setmin 1$"
+  },
+  "note": "Long dash for a minus sign at full size (GLOBAL_ISSUES 23, unary minus included as in item 49); \\setmin as in the p. 65 fix 'xg(y)\\setmin g(xy)'. The minus signs in the sub- and superscripts (P_{n-1}, x_{n-1}, exponent n-1) are short in the print and stay '-'."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'la dérivation, de degré -1, d_n : P_n -> P_{n-1}'",
+  "scan": "P_n, P_{n-1}: roman P, same face and weight as B, L (enlarged crop)",
+  "tex": "\\mathbf P (bold)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$d_n:\\mathbf P_n\\to\\mathbf P_{n-1}$",
+   "new": "$d_n:P_n\\to P_{n-1}$"
+  },
+  "note": "The complex P_. of (18.4.4) is printed with a roman P like every other module letter; the TeX's \\mathbf P has no counterpart in the print. Plain P as for B, L, as in the p. 65 fix '$P_\\bullet=(P_n)_{n\\geqslant0}$' (FIXLOG). The 15 \\mathbf P left in ega0-18-fr.tex are all on this page."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n, first line: 'd_n(x_1⊗x_2⊗...⊗x_{n+1})'",
+  "scan": "baseline dots (crop)",
+  "tex": "\\cdots",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d_n(x_1\\otimes x_2\\otimes\\cdots\\otimes x_{n+1})",
+   "new": "d_n(x_1\\otimes x_2\\otimes\\ldots\\otimes x_{n+1})"
+  },
+  "note": "Baseline dots in the print; the TeX has centred \\cdots (GLOBAL_ISSUES 22)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n: '= (x_1x_2)⊗x_3⊗...⊗x_{n+1}'",
+  "scan": "baseline dots (crop)",
+  "tex": "\\cdots",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "&=(x_1x_2)\\otimes x_3\\otimes\\cdots\\otimes x_{n+1}",
+   "new": "&=(x_1x_2)\\otimes x_3\\otimes\\ldots\\otimes x_{n+1}"
+  },
+  "note": "Baseline dots in the print; the TeX has centred \\cdots."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n: '... ⊗x_{n+1} — x_1⊗(x_2x_3)'",
+  "scan": "long dash (enlarged crop)",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-x_1\\otimes(x_2x_3)",
+   "new": "\\setmin x_1\\otimes(x_2x_3)"
+  },
+  "note": "Long dash for a minus sign at full size (GLOBAL_ISSUES 23, unary minus included as in item 49); \\setmin as in the p. 65 fix 'xg(y)\\setmin g(xy)'. The minus signs in the sub- and superscripts (P_{n-1}, x_{n-1}, exponent n-1) are short in the print and stay '-'."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n: '- x_1⊗(x_2x_3)⊗...⊗x_{n+1} + ... +'",
+  "scan": "baseline dots, twice (crop)",
+  "tex": "\\cdots twice",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(x_2x_3)\\otimes\\cdots\\otimes x_{n+1}+\\cdots\\\\",
+   "new": "(x_2x_3)\\otimes\\ldots\\otimes x_{n+1}+\\ldots\\\\"
+  },
+  "note": "Baseline dots in the print, also between the two plus signs; the TeX has centred \\cdots."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n, second line: '(—1)^{n-1}x_1⊗...'",
+  "scan": "long dash inside (—1) (enlarged crop)",
+  "tex": "(-1)",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "&\\quad+(-1)^{n-1}",
+   "new": "&\\quad+(\\setmin 1)^{n-1}"
+  },
+  "note": "Long dash for a minus sign at full size (GLOBAL_ISSUES 23, unary minus included as in item 49); \\setmin as in the p. 65 fix 'xg(y)\\setmin g(xy)'. The minus signs in the sub- and superscripts (P_{n-1}, x_{n-1}, exponent n-1) are short in the print and stay '-'."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n, second line: '(-1)^{n-1}x_1⊗x_2⊗...⊗x_{n-1}'",
+  "scan": "baseline dots (crop)",
+  "tex": "\\cdots",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "x_1\\otimes x_2\\otimes\\cdots\\otimes x_{n-1}",
+   "new": "x_1\\otimes x_2\\otimes\\ldots\\otimes x_{n-1}"
+  },
+  "note": "Baseline dots in the print; the TeX has centred \\cdots."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n, second line: '+ (—1)^n(x_{n+1}x_1)⊗...'",
+  "scan": "long dash inside (—1)",
+  "tex": "(-1)",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "+(-1)^n",
+   "new": "+(\\setmin 1)^n"
+  },
+  "note": "Long dash for a minus sign at full size (GLOBAL_ISSUES 23, unary minus included as in item 49); \\setmin as in the p. 65 fix 'xg(y)\\setmin g(xy)'. The minus signs in the sub- and superscripts (P_{n-1}, x_{n-1}, exponent n-1) are short in the print and stay '-'."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), display of d_n, end: '(-1)^n(x_{n+1}x_1)⊗x_2⊗...⊗x_n'",
+  "scan": "baseline dots (crop)",
+  "tex": "\\cdots",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(x_{n+1}x_1)\\otimes x_2\\otimes\\cdots\\otimes x_n",
+   "new": "(x_{n+1}x_1)\\otimes x_2\\otimes\\ldots\\otimes x_n"
+  },
+  "note": "Baseline dots in the print; the TeX has centred \\cdots."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4), end of the display of d_n: '...⊗x_n' before 'qui est bien B-linéaire'",
+  "scan": "no punctuation after x_n (enlarged crop to the right margin)",
+  "tex": "comma after x_n",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "x_n,\n\\end{align*}",
+   "new": "x_n\n\\end{align*}"
+  },
+  "note": "Comma added in the TeX."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'l'application A-bilinéaire (y, z) ⇝ f(y, z) = h(1⊗y⊗z)'",
+  "scan": "(y, z)⇝f(y, z): wavy arrow (enlarged crop)",
+  "tex": "\\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(y,z)\\longmapsto f(y,z)",
+   "new": "$(y,z)\\leadsto f(y,z)"
+  },
+  "note": "The print's wavy arrow, neither a plain arrow nor ↦ (GLOBAL_ISSUES 33)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'de B×B dans L, et en écrivant la condition précédente'",
+  "scan": "no comma after 'et' (crop)",
+  "tex": "'et, en écrivant'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans $L$, et,\nen écrivant",
+   "new": "dans $L$, et\nen écrivant"
+  },
+  "note": "Comma added in the TeX."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'un 2-cobord sera une application de la forme x⊗y⊗z ⇝ h'(d_2(x⊗y⊗z))'",
+  "scan": "wavy arrow (enlarged crop)",
+  "tex": "\\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "z\\longmapsto h'(d_2",
+   "new": "z\\leadsto h'(d_2"
+  },
+  "note": "The print's wavy arrow (GLOBAL_ISSUES 33)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'l'application B-linéaire g : y ⇝ h'(1⊗y)'",
+  "scan": "wavy arrow (enlarged crop)",
+  "tex": "\\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$g:y\\longmapsto h'(1\\otimes y)$",
+   "new": "$g:y\\leadsto h'(1\\otimes y)$"
+  },
+  "note": "The print's wavy arrow (GLOBAL_ISSUES 33)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4): 'h'(d_2(1⊗x⊗y)) = xg(y) — g(xy) + yg(x)'",
+  "scan": "long dash",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "xg(y)-g(xy)",
+   "new": "xg(y)\\setmin g(xy)"
+  },
+  "note": "Long dash for a minus sign at full size (GLOBAL_ISSUES 23, unary minus included as in item 49); \\setmin as in the p. 65 fix 'xg(y)\\setmin g(xy)'. The minus signs in the sub- and superscripts (P_{n-1}, x_{n-1}, exponent n-1) are short in the print and stay '-'."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.4.1): 'H^i_A(B, L) = H^i(Hom_B(P_., L))'",
+  "scan": "roman P",
+  "tex": "\\mathbf P",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{Hom}_B(\\mathbf P_\\bullet,L)).",
+   "new": "\\operatorname{Hom}_B(P_\\bullet,L))."
+  },
+  "note": "Roman P as for B, L (see the finding on d_n : P_n -> P_{n-1})."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5): 'modifions le complexe P_. en degré 3'",
+  "scan": "roman P",
+  "tex": "\\mathbf P",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf P_\\bullet$ en degré",
+   "new": "$P_\\bullet$ en degré"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5), display 'P'_. : P'_3 -> P_2 -> P_1;'",
+  "scan": "roman P (4 times)",
+  "tex": "\\mathbf P (4 times)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf P'_\\bullet:\\mathbf P'_3\\xrightarrow{d'_3}\\mathbf P_2\n  \\xrightarrow{d_2}\\mathbf P_1\\,;",
+   "new": "P'_\\bullet:P'_3\\xrightarrow{d'_3}P_2\n  \\xrightarrow{d_2}P_1\\,;"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5): 'nous prendrons P'_3 = P_3⊕(B⊗_AB⊗_AB)'",
+  "scan": "roman P (twice; enlarged crop)",
+  "tex": "\\mathbf P (twice)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf P'_3=\\mathbf P_3\\oplus",
+   "new": "$P'_3=P_3\\oplus"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5): 'd'_3 coïncidant avec d_3 sur P_3'",
+  "scan": "roman P",
+  "tex": "\\mathbf P",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sur $\\mathbf P_3$",
+   "new": "sur $P_3$"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5), display 'd'_3(x⊗y⊗z) = x⊗y⊗z — x⊗z⊗y.'",
+  "scan": "long dash",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "z-x\\otimes z",
+   "new": "z\\setmin x\\otimes z"
+  },
+  "note": "Long dash for a minus sign at full size (GLOBAL_ISSUES 23, unary minus included as in item 49); \\setmin as in the p. 65 fix 'xg(y)\\setmin g(xy)'. The minus signs in the sub- and superscripts (P_{n-1}, x_{n-1}, exponent n-1) are short in the print and stay '-'."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5): 'un 2-cocycle de P'_. correspond maintenant'",
+  "scan": "roman P",
+  "tex": "\\mathbf P",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $\\mathbf P'_\\bullet$ correspond",
+   "new": "de $P'_\\bullet$ correspond"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.5), last sentence: 'par suite, on a H^2_A(B, L)^s = H^2(Hom_B(P'_., L)).'",
+  "scan": "in the running text (line starting at the left margin); roman P",
+  "tex": "displayed with \\[ ... \\]; \\mathbf P",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a\n\\[\n  \\mathrm H_A^2(B,L)^s\n  =\\mathrm H^2(\\operatorname{Hom}_B(\\mathbf P'_\\bullet,L)).\n\\]",
+   "new": "on a\n$\\mathrm H_A^2(B,L)^s=\\mathrm H^2(\\operatorname{Hom}_B(P'_\\bullet,L))$."
+  },
+  "note": "Layout (display vs inline); the same edit also writes the roman P (font, as in the other P findings; no separate finding)."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.6.1): 'Hom_K(H_i(P_.), L)'",
+  "scan": "roman P",
+  "tex": "\\mathbf P",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathrm H_i(\\mathbf P_\\bullet)",
+   "new": "\\mathrm H_i(P_\\bullet)"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "(18.4.6.2): 'Hom_K(H_2(P'_.), L)'",
+  "scan": "roman P",
+  "tex": "\\mathbf P",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathrm H_2(\\mathbf P'_\\bullet)",
+   "new": "\\mathrm H_2(P'_\\bullet)"
+  },
+  "note": "Roman P as for B, L."
+ },
+ {
+  "page": 66,
+  "where": "heading '18.5. Cas des anneaux topologiques.'",
+  "scan": "title ends with a full stop",
+  "tex": "\\subsection{Cas des anneaux topologiques}",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Cas des anneaux topologiques}",
+   "new": "\\subsection{Cas des anneaux topologiques.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58 (no \\subsection title in ega0-14 to ega0-23 has the printed full stop)."
+ },
+ {
+  "page": 66,
+  "where": "(18.5.1): '$\\mathfrak R_0$ de $B$ tel que'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R_0$ de $B$ tel que",
+   "new": "$\\mathfrak K_0$ de $B$ tel que"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 66,
+  "where": "(18.5.1): '$\\mathfrak R_0.L=L.\\mathfrak R_0=0$, de sorte que $L$ peut être'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R_0.L=L.\\mathfrak R_0=0$, de sorte que $L$ peut être",
+   "new": "$\\mathfrak K_0.L=L.\\mathfrak K_0=0$, de sorte que $L$ peut être"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 66,
+  "where": "end of p. 66: '... de sorte que L peut être' / p. 67 'considéré comme un ...'",
+  "scan": "the sentence runs on to p. 67 (first line of p. 67 flush left)",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{67}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "peut être\n\n",
+   "new": "peut être\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the p. 67 finding that removes the blank line after the marker."
+ },
+ {
+  "page": 67,
+  "where": "top of p. 67: 'considéré comme un (B/K)-bimodule' continues '... L peut être' of p. 66",
+  "scan": "no paragraph break: first line flush left, continues the sentence",
+  "tex": "blank line after \\oldpage[0\\textsubscript{IV-1}]{67}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{67}\n\nconsidéré",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{67}\nconsidéré"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 66 'peut être' finding (blank line before the marker)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'considéré comme un $(B/\\mathfrak R)$-bimodule pour tout idéal ouvert'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": " comme un $(B/\\mathfrak R)$-bimodule pour tout idéal ouvert",
+   "new": " comme un $(B/\\mathfrak K)$-bimodule pour tout idéal ouvert"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\mathfrak R\\subset\\mathfrak R_0$. Soient alors'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R\\subset\\mathfrak R_0$. Soient alors",
+   "new": "$\\mathfrak K\\subset\\mathfrak K_0$. Soient alors"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\mathfrak R\\subset\\mathfrak R_0$ un idéal bilatère ouvert de $B$,'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R\\subset\\mathfrak R_0$ un idéal bilatère ouvert de $B$,",
+   "new": "$\\mathfrak K\\subset\\mathfrak K_0$ un idéal bilatère ouvert de $B$,"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\rho(\\mathfrak J)\\subset\\mathfrak R$, de sorte que $B/\\mathfrak R$ peut être'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\rho(\\mathfrak J)\\subset\\mathfrak R$, de sorte que $B/\\mathfrak R$ peut être",
+   "new": "$\\rho(\\mathfrak J)\\subset\\mathfrak K$, de sorte que $B/\\mathfrak K$ peut être"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L)$ est défini~; en outre,'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L)$ est défini~; en outre,",
+   "new": "$\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak K,L)$ est défini~; en outre,"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'si $\\mathfrak R'\\subset\\mathfrak R$, $\\mathfrak J'\\subset\\mathfrak J$ sont'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si $\\mathfrak R'\\subset\\mathfrak R$, $\\mathfrak J'\\subset\\mathfrak J$ sont",
+   "new": "si $\\mathfrak K'\\subset\\mathfrak K$, $\\mathfrak J'\\subset\\mathfrak J$ sont"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\rho(\\mathfrak J')\\subset\\mathfrak R'$, on a par (18.3.5.1) un homomorphisme'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\rho(\\mathfrak J')\\subset\\mathfrak R'$, on a par (18.3.5.1) un homomorphisme",
+   "new": "$\\rho(\\mathfrak J')\\subset\\mathfrak K'$, on a par (18.3.5.1) un homomorphisme"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L)' (and the next line)",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L)\n  \\longrightarrow\n  \\operatorname{Exan}_{A/\\mathfrak J'}(B/\\mathfrak R',L).",
+   "new": "  \\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak K,L)\n  \\longrightarrow\n  \\operatorname{Exan}_{A/\\mathfrak J'}(B/\\mathfrak K',L)."
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'L'ensemble des couples d'idéaux ouverts $(\\mathfrak J,\\mathfrak R)$ tels que'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "L'ensemble des couples d'idéaux ouverts $(\\mathfrak J,\\mathfrak R)$ tels que",
+   "new": "L'ensemble des couples d'idéaux ouverts $(\\mathfrak J,\\mathfrak K)$ tels que"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\rho(\\mathfrak J)\\subset\\mathfrak R\\subset\\mathfrak R_0$ est évidemment'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\rho(\\mathfrak J)\\subset\\mathfrak R\\subset\\mathfrak R_0$ est évidemment",
+   "new": "$\\rho(\\mathfrak J)\\subset\\mathfrak K\\subset\\mathfrak K_0$ est évidemment"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'et $\\mathfrak R\\supset\\mathfrak R'$~» et les applications (18.5.1.1)'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et $\\mathfrak R\\supset\\mathfrak R'$~» et les applications (18.5.1.1)",
+   "new": "et $\\mathfrak K\\supset\\mathfrak K'$~» et les applications (18.5.1.1)"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '=\\varinjlim\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L).'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  =\\varinjlim\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L).",
+   "new": "  =\\varinjlim\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak K,L)."
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'tout couple d'idéaux ouverts $\\mathfrak J\\subset A$, $\\mathfrak R\\subset B$'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "tout couple d'idéaux ouverts $\\mathfrak J\\subset A$, $\\mathfrak R\\subset B$",
+   "new": "tout couple d'idéaux ouverts $\\mathfrak J\\subset A$, $\\mathfrak K\\subset B$"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'tels que $\\rho(\\mathfrak J)\\subset\\mathfrak R\\subset\\mathfrak R_0$ et toute'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "tels que $\\rho(\\mathfrak J)\\subset\\mathfrak R\\subset\\mathfrak R_0$ et toute",
+   "new": "tels que $\\rho(\\mathfrak J)\\subset\\mathfrak K\\subset\\mathfrak K_0$ et toute"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$(A/\\mathfrak J)$-extension $E$ de $B/\\mathfrak R$ par $L$, il existe deux'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(A/\\mathfrak J)$-extension $E$ de $B/\\mathfrak R$ par $L$, il existe deux",
+   "new": "$(A/\\mathfrak J)$-extension $E$ de $B/\\mathfrak K$ par $L$, il existe deux"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\mathfrak R'\\subset\\mathfrak R$ tels que'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R'\\subset\\mathfrak R$ tels que",
+   "new": "$\\mathfrak K'\\subset\\mathfrak K$ tels que"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\rho(\\mathfrak J')\\subset\\mathfrak R'$ et que l'image réciproque par'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\rho(\\mathfrak J')\\subset\\mathfrak R'$ et que l'image réciproque par",
+   "new": "$\\rho(\\mathfrak J')\\subset\\mathfrak K'$ et que l'image réciproque par"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): 'l'homomorphisme $B/\\mathfrak R'\\to B/\\mathfrak R$ de $E$ soit \\emph{triviale}.'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'homomorphisme $B/\\mathfrak R'\\to B/\\mathfrak R$ de $E$ soit \\emph{triviale}.",
+   "new": "l'homomorphisme $B/\\mathfrak K'\\to B/\\mathfrak K$ de $E$ soit \\emph{triviale}."
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\operatorname{Exal}_{A/\\mathfrak J}(B/\\mathfrak R,L)$ et de'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\operatorname{Exal}_{A/\\mathfrak J}(B/\\mathfrak R,L)$ et de",
+   "new": "$\\operatorname{Exal}_{A/\\mathfrak J}(B/\\mathfrak K,L)$ et de"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.1): '$\\operatorname{Exalcom}_{A/\\mathfrak J}(B/\\mathfrak R,L)$ pour le cas où $A$'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\operatorname{Exalcom}_{A/\\mathfrak J}(B/\\mathfrak R,L)$ pour le cas où $A$",
+   "new": "$\\operatorname{Exalcom}_{A/\\mathfrak J}(B/\\mathfrak K,L)$ pour le cas où $A$"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "(18.5.2): '\\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L)' (and the next line)",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak R,L)\n  \\longrightarrow\n  \\operatorname{Exan}_{A'/\\mathfrak J'}(B/\\mathfrak R,L)",
+   "new": "  \\operatorname{Exan}_{A/\\mathfrak J}(B/\\mathfrak K,L)\n  \\longrightarrow\n  \\operatorname{Exan}_{A'/\\mathfrak J'}(B/\\mathfrak K,L)"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 67,
+  "where": "end of p. 67: '... Enfin, si on a un homomorphisme' / p. 68 'continu de B-bimodules'",
+  "scan": "the sentence runs on to p. 68 (first line of p. 68 flush left)",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{68}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si on a un homomorphisme\n\n",
+   "new": "si on a un homomorphisme\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 68 top finding."
+ },
+ {
+  "page": 68,
+  "where": "top of p. 68: 'continu de B-bimodules L -> L'' continues '... si on a un homomorphisme' of p. 67",
+  "scan": "no paragraph break: first line flush left, continues the sentence",
+  "tex": "blank line after \\oldpage[0\\textsubscript{IV-1}]{68}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{68}\n\ncontinu",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{68}\ncontinu"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 67 end finding."
+ },
+ {
+  "page": 68,
+  "where": "(18.5.3.1): '\\varinjlim\\operatorname{Hom}_{C/\\mathfrak R}(E/V,L)'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\varinjlim\\operatorname{Hom}_{C/\\mathfrak R}(E/V,L)",
+   "new": "  \\varinjlim\\operatorname{Hom}_{C/\\mathfrak K}(E/V,L)"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "(18.5.3.1): 'ordonné filtrant des couples $(\\mathfrak R,V)$ tels que $\\mathfrak R$ soit un'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ordonné filtrant des couples $(\\mathfrak R,V)$ tels que $\\mathfrak R$ soit un",
+   "new": "ordonné filtrant des couples $(\\mathfrak K,V)$ tels que $\\mathfrak K$ soit un"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "(18.5.3.1): '$\\mathfrak R.L=L.\\mathfrak R=0$, $\\mathfrak R.E\\subset V$,'",
+  "scan": "Fraktur K (3 times)",
+  "tex": "\\mathfrak R (3 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R.L=L.\\mathfrak R=0$, $\\mathfrak R.E\\subset V$,",
+   "new": "$\\mathfrak K.L=L.\\mathfrak K=0$, $\\mathfrak K.E\\subset V$,"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "(18.5.3.1): '$E.\\mathfrak R\\subset V$.'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$E.\\mathfrak R\\subset V$.",
+   "new": "$E.\\mathfrak K\\subset V$."
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): 'Comme $C/\\mathfrak R$ et $E/V$ sont discrets, on a des homomorphismes'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Comme $C/\\mathfrak R$ et $E/V$ sont discrets, on a des homomorphismes",
+   "new": "Comme $C/\\mathfrak K$ et $E/V$ sont discrets, on a des homomorphismes"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '(avec $\\mathfrak R.L=L.\\mathfrak R=0$, $\\mathfrak R.E\\subset V'$,'",
+  "scan": "Fraktur K (3 times)",
+  "tex": "\\mathfrak R (3 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(avec $\\mathfrak R.L=L.\\mathfrak R=0$, $\\mathfrak R.E\\subset V'$,",
+   "new": "(avec $\\mathfrak K.L=L.\\mathfrak K=0$, $\\mathfrak K.E\\subset V'$,"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '$E.\\mathfrak R\\subset V'$) est injectif, et il en est évidemment de même de'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$E.\\mathfrak R\\subset V'$) est injectif, et il en est évidemment de même de",
+   "new": "$E.\\mathfrak K\\subset V'$) est injectif, et il en est évidemment de même de"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '\\operatorname{Hom}_{C/\\mathfrak R}(E/V,L)' (and the next line)",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\operatorname{Hom}_{C/\\mathfrak R}(E/V,L)\n  \\longrightarrow\\operatorname{Hom}_{C/\\mathfrak R'}(E/V,L)",
+   "new": "  \\operatorname{Hom}_{C/\\mathfrak K}(E/V,L)\n  \\longrightarrow\\operatorname{Hom}_{C/\\mathfrak K'}(E/V,L)"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): 'pour $\\mathfrak R'\\subset\\mathfrak R$~; on en conclut que l'homomorphisme'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "pour $\\mathfrak R'\\subset\\mathfrak R$~; on en conclut que l'homomorphisme",
+   "new": "pour $\\mathfrak K'\\subset\\mathfrak K$~; on en conclut que l'homomorphisme"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '$\\mathfrak R_0$ est un idéal bilatère ouvert de $C$ tel que'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R_0$ est un idéal bilatère ouvert de $C$ tel que",
+   "new": "$\\mathfrak K_0$ est un idéal bilatère ouvert de $C$ tel que"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '$\\mathfrak R_0.L=L.\\mathfrak R_0=0$ et $\\mathfrak R_0.E\\subset V_0$,'",
+  "scan": "Fraktur K (3 times)",
+  "tex": "\\mathfrak R (3 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak R_0.L=L.\\mathfrak R_0=0$ et $\\mathfrak R_0.E\\subset V_0$,",
+   "new": "$\\mathfrak K_0.L=L.\\mathfrak K_0=0$ et $\\mathfrak K_0.E\\subset V_0$,"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '$E.\\mathfrak R_0\\subset V_0$, il est clair que $u$ est l'image canonique d'un'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$E.\\mathfrak R_0\\subset V_0$, il est clair que $u$ est l'image canonique d'un",
+   "new": "$E.\\mathfrak K_0\\subset V_0$, il est clair que $u$ est l'image canonique d'un"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.3.1): '$(C/\\mathfrak R_0)$-homomorphisme de $E/V_0$ dans $L$, donc (18.5.3.2) est'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(C/\\mathfrak R_0)$-homomorphisme de $E/V_0$ dans $L$, donc (18.5.3.2) est",
+   "new": "$(C/\\mathfrak K_0)$-homomorphisme de $E/V_0$ dans $L$, donc (18.5.3.2) est"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.4): 'En effet, pour tout idéal ouvert $\\mathfrak R$ de $B$ tel que'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "En effet, pour tout idéal ouvert $\\mathfrak R$ de $B$ tel que",
+   "new": "En effet, pour tout idéal ouvert $\\mathfrak K$ de $B$ tel que"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.4): '$(\\mathfrak J+\\mathfrak R)/\\mathfrak J$ annule $L$, on a, d'après (18.3.9),'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(\\mathfrak J+\\mathfrak R)/\\mathfrak J$ annule $L$, on a, d'après (18.3.9),",
+   "new": "$(\\mathfrak J+\\mathfrak K)/\\mathfrak J$ annule $L$, on a, d'après (18.3.9),"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.4): '\\operatorname{Hom}_{B/(\\mathfrak J+\\mathfrak R)}'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\operatorname{Hom}_{B/(\\mathfrak J+\\mathfrak R)}",
+   "new": "  \\operatorname{Hom}_{B/(\\mathfrak J+\\mathfrak K)}"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.4): '((\\mathfrak J+\\mathfrak R)/(\\mathfrak J^2+\\mathfrak R),L)'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "    ((\\mathfrak J+\\mathfrak R)/(\\mathfrak J^2+\\mathfrak R),L)",
+   "new": "    ((\\mathfrak J+\\mathfrak K)/(\\mathfrak J^2+\\mathfrak K),L)"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of (18.5.4): '\\operatorname{Exan}_{B/\\mathfrak R}(B/(\\mathfrak J+\\mathfrak R),L)'",
+  "scan": "Fraktur K (2 times)",
+  "tex": "\\mathfrak R (2 times)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\operatorname{Exan}_{B/\\mathfrak R}(B/(\\mathfrak J+\\mathfrak R),L)",
+   "new": "  \\operatorname{Exan}_{B/\\mathfrak K}(B/(\\mathfrak J+\\mathfrak K),L)"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 68,
+  "where": "proof of Lemme (18.5.3.1): 'on a des homomorphismes canoniques w_{K,V} : Hom_{C/K}(E/V, L) -> Hom. cont_C(E, L) formant un système inductif'",
+  "scan": "in the running text; Fraktur K in Hom_{C/K}",
+  "tex": "displayed with \\[ ... \\]; \\mathfrak R twice",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  w_{\\mathfrak R,V}:\\operatorname{Hom}_{C/\\mathfrak R}(E/V,L)\n  \\longrightarrow\\operatorname{Hom.\\ cont}_C(E,L)\n\\]",
+   "new": "$w_{\\mathfrak K,V}:\\operatorname{Hom}_{C/\\mathfrak K}(E/V,L)\\longrightarrow\\operatorname{Hom.\\ cont}_C(E,L)$"
+  },
+  "note": "Layout (display vs inline); the same edit writes the Fraktur K for the TeX's \\mathfrak R (Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message)). The subscript of w is a misprint (next finding), whose edit applies after this one."
+ },
+ {
+  "page": 68,
+  "where": "proof of Lemme (18.5.3.1): 'w_{K,V}'",
+  "scan": "w_{K,V}: ROMAN capital K in the subscript, not the Fraktur letter of Hom_{C/K} beside it (enlarged crop)",
+  "tex": "w_{\\mathfrak R,V} (Fraktur)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$w_{\\mathfrak K,V}:",
+   "new": "$w_{K,V}:"
+  },
+  "note": "Wrong-fount letter in the print (roman K for Fraktur K); the TeX silently corrects it. 'old' is taken from the text after the preceding layout fix; restores the printed roman K in the diplomatic text.",
+  "corrected": "$w_{\\mathfrak K,V}$"
+ },
+ {
+  "page": 68,
+  "where": "proof of Lemme (18.5.3.1): 'que l'homomorphisme Hom_{C/K}(E/V, L) -> Hom_{C/K}(E/V', L) (avec ...) est injectif'",
+  "scan": "in the running text; Fraktur K twice",
+  "tex": "displayed with \\[ ... \\]; \\mathfrak R twice",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  \\operatorname{Hom}_{C/\\mathfrak R}(E/V,L)\n  \\longrightarrow\\operatorname{Hom}_{C/\\mathfrak R}(E/V',L)\n\\]",
+   "new": "$\\operatorname{Hom}_{C/\\mathfrak K}(E/V,L)\\longrightarrow\\operatorname{Hom}_{C/\\mathfrak K}(E/V',L)$"
+  },
+  "note": "Layout (display vs inline); the same edit writes the Fraktur K (no separate finding). The next display (Hom_{C/K}(E/V, L) -> Hom_{C/K'}(E/V, L)) is displayed in the print too."
+ },
+ {
+  "page": 68,
+  "where": "page-68 continuation (ega0-19-fr.tex, before its first marker): '\\section{...}' + '\\subsection{Introduction}'",
+  "scan": "printed p. 68 ends with the proof of (18.5.4); '§ 19. ALGÈBRES FORMELLEMENT LISSES ET ANNEAUX DE COHEN' and '19.0. Introduction.' head p. 69",
+  "tex": "the \\section and \\subsection stand before \\oldpage[0\\textsubscript{IV-1}]{69}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\section{Algèbres formellement lisses et anneaux de Cohen}\n\\label{section:0.19-fr}\n\\label{0.19-fr}\n\n\\setcounter{subsection}{-1}\n\\subsection{Introduction}\n\\label{subsection:0.19.0-fr}\n\\label{0.19.0-fr}\n\n",
+   "new": ""
+  },
+  "note": "OUTSIDE the page segment: text before the first marker of ega0-19-fr.tex (apply by hand). Move, part 1 of 2: deletes the headings here; the page-69 marker finding re-inserts them after \\oldpage[0\\textsubscript{IV-1}]{69}. Apply both or neither."
+ },
+ {
+  "page": 69,
+  "where": "top of p. 69: '§ 19. ALGÈBRES FORMELLEMENT LISSES ET ANNEAUX DE COHEN', '19.0. Introduction.'",
+  "scan": "p. 69 begins with the § 19 title and the heading 19.0",
+  "tex": "the headings stand before \\oldpage[0\\textsubscript{IV-1}]{69} (page-68 continuation)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{69}\n\n\\begin{env}[19.0.1]",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{69}\n\n\\section{Algèbres formellement lisses et anneaux de Cohen}\n\\label{section:0.19-fr}\n\\label{0.19-fr}\n\n\\setcounter{subsection}{-1}\n\\subsection{Introduction.}\n\\label{subsection:0.19.0-fr}\n\\label{0.19.0-fr}\n\n\\begin{env}[19.0.1]"
+  },
+  "note": "Move, part 2 of 2: re-inserts the headings deleted by the page-68 part-1 finding (which lies in ega0-19-fr.tex before its first marker). Apply both or neither. The re-inserted 19.0 title carries the printed full stop (next finding)."
+ },
+ {
+  "page": 69,
+  "where": "heading '19.0. Introduction.'",
+  "scan": "title ends with a full stop",
+  "tex": "\\subsection{Introduction}",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the page-69 marker edit (part 2), which re-inserts the title as \\subsection{Introduction.}. If the move is done differently, add the full stop by hand (GLOBAL_ISSUES 43/58)."
+ },
+ {
+  "page": 69,
+  "where": "(19.0.1): 'tout Y-morphisme Y'' -> X se factorise en Y'' ->^h Y' -> X'",
+  "scan": "'en' italic, like 'se factorise' (enlarged crop; 'se relève en' later has an upright 'en')",
+  "tex": "'en' outside \\emph",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "se factorise} en",
+   "new": "se factorise en}"
+  },
+  "note": ""
+ },
+ {
+  "page": 69,
+  "where": "(19.0.1): 'un foncteur contravariant représentable Y' ⇝ F(Y')'",
+  "scan": "wavy arrow (enlarged crop)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y'\\mapsto F(Y')$",
+   "new": "$Y'\\leadsto F(Y')$"
+  },
+  "note": "The print's wavy arrow (GLOBAL_ISSUES 33)."
+ },
+ {
+  "page": 69,
+  "where": "(19.0.2), item 'I. — Soient A, B deux anneaux locaux noethériens'",
+  "scan": "'I.' in roman, normal weight (enlarged crop)",
+  "tex": "\\textbf{I.}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{I.} ---",
+   "new": "I. ---"
+  },
+  "note": "Same for II.-V. (pp. 69-70)."
+ },
+ {
+  "page": 69,
+  "where": "(19.0.2), item 'II. — Soient k un corps'",
+  "scan": "'II.' in roman, normal weight",
+  "tex": "\\textbf{II.}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{II.} ---",
+   "new": "II. ---"
+  },
+  "note": ""
+ },
+ {
+  "page": 69,
+  "where": "end of p. 69: '... l'anneau semi-local A⊗_A k' soit' / p. 70 'régulier (22.5.8)'",
+  "scan": "the sentence runs on to p. 70 (first line of p. 70 flush left)",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{70}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit\n\n",
+   "new": "soit\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 70 top finding."
+ },
+ {
+  "page": 69,
+  "where": "(19.0.2) II: 'l'anneau semi-local A⊗_A k' soit régulier'",
+  "scan": "A⊗_A k': subscript capital A (enlarged crop)",
+  "tex": "A\\otimes_k k'",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A\\otimes_k k'$",
+   "new": "$A\\otimes_A k'$"
+  },
+  "note": "Misprint: A is a k-algebra and k' an extension of k, so the tensor product is over k. The TeX silently corrects it; the diplomatic text restores the printed A.",
+  "corrected": "$A\\otimes_k k'$"
+ },
+ {
+  "page": 70,
+  "where": "top of p. 70: 'régulier (22.5.8)' continues '... A⊗_A k' soit' of p. 69",
+  "scan": "no paragraph break: first line flush left, continues the sentence",
+  "tex": "blank line after \\oldpage[0\\textsubscript{IV-1}]{70}, then \\noindent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{70}\n\n\\noindent ",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{70}\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20); \\noindent only hid it. Apply together with the p. 69 'soit' finding."
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2) II, first word of p. 70: 'régulier (22.5.8)'",
+  "scan": "'régulier' italic (enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "régulier (22.5.8)",
+   "new": "\\emph{régulier} (22.5.8)"
+  },
+  "note": "Continues the italic 'géométriquement régulier' definition of p. 69."
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2) II: 'la structure de k-algèbre de A'",
+  "scan": "'k-algèbre' italic (enlarged crop)",
+  "tex": "'-algèbre' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $k$-algèbre de $A$",
+   "new": "de \\emph{$k$-algèbre} de $A$"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2) II: 'l'inégalité dim(A) >= rg_k(Υ_{K/k}), où Υ_{K/k} est le « module d'imperfection »'",
+  "scan": "capital upsilon Υ, twice (enlarged crop)",
+  "tex": "\\Gamma, twice",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  \\dim(A)\\geq \\operatorname{rg}_k(\\Gamma_{K/k}),\n\\]\noù $\\Gamma_{K/k}$",
+   "new": "$\\dim(A)\\geq \\operatorname{rg}_k(\\Upsilon_{K/k})$,\noù $\\Upsilon_{K/k}$"
+  },
+  "note": "The module d'imperfection is printed Υ_{K/k}. The same edit sets the inequality inline as printed (next finding)."
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2) II: the inequality 'dim(A) >= rg_k(Υ_{K/k}),'",
+  "scan": "in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Layout (display vs inline): covered by the edit of the preceding finding."
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2), item 'III. — Soient A un anneau local noethérien'",
+  "scan": "'III.' in roman, normal weight",
+  "tex": "\\textbf{III.}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{III.} ---",
+   "new": "III. ---"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2) III: 'un A_0-isomorphisme B⊗_A A_0 ⥲ B_0 (de sorte que, par I), ...'",
+  "scan": "in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  B\\otimes_A A_0\\xrightarrow{\\sim}B_0\n\\]",
+   "new": "$B\\otimes_A A_0\\xrightarrow{\\sim}B_0$"
+  },
+  "note": "Layout (display vs inline); the formula itself matches."
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2), item 'IV. — L'intérêt de l'étude'",
+  "scan": "'IV.' in roman, normal weight",
+  "tex": "\\textbf{IV.}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{IV.} ---",
+   "new": "IV. ---"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "(19.0.2), item 'V. — Enfin, nous verrons'",
+  "scan": "'V.' in roman, normal weight",
+  "tex": "\\textbf{V.}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{V.} ---",
+   "new": "V. ---"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "(19.0.3), last paragraph: 'M/N est annulé par un idéal ouvert de A'",
+  "scan": "'de' italic (enlarged crop)",
+  "tex": "'de' outside \\emph",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un idéal ouvert} de $A$",
+   "new": "un idéal ouvert de} $A$"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "(19.0.3): 'un idéal ouvert} de $A$, car par hypothèse il existe un tel idéal $\\mathfrak R$'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": ", car par hypothèse il existe un tel idéal $\\mathfrak R$",
+   "new": ", car par hypothèse il existe un tel idéal $\\mathfrak K$"
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ },
+ {
+  "page": 70,
+  "where": "(19.0.3): 'tel que $\\mathfrak R.M\\subset N$.'",
+  "scan": "Fraktur K",
+  "tex": "\\mathfrak R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "tel que $\\mathfrak R.M\\subset N$.",
+   "new": "tel que $\\mathfrak K.M\\subset N$."
+  },
+  "note": "Every Fraktur letter the TeX writes \\mathfrak R on pp. 66-70 is the printed Fraktur K (document-wide: see final message). Fraktur K: the same glyph the TeX writes \\mathfrak K on p. 80 (19.3.4, K_{H,mu,n}); the radical R of 0_I p. 12 (1.1.2) is a different glyph (crops)."
+ }
+]

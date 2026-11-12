@@ -1,0 +1,59 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{291}
+une générisation $y'$ de $x'$ dans $T'_0$, distincte de $x'$, et puisque $x'\in X'^{(1)}$, $y'$ serait nécessairement un point maximal de $X'$;
+par suite $y=f(y')$ serait point maximal de $X$ par hypothèse;
+mais cela est absurde puisque $y\in T_0$ et que $T_0$ est purement de codimension $1$ dans $X$.
+\end{env}
+
+\begin{env}[21.10.3]
+\EGAReaderTarget{ega4.c04.statement.21-10-3}{IV.21.10.3}
+On peut maintenant poser
+\[
+  f^*(Z)=\sum_{x'\in X'^{(1)}}n_{x'}\overline{\{x'\}},
+\]
+la somme du second membre ayant un sens en vertu de ce qu'on a prouvé dans \sref{IV.21.10.2};
+on dit que le cycle $1$-codimensionnel $f^*(Z)$ est l'\emph{image réciproque} de $Z$ par $f$.
+Il est immédiat que l'application $f^*$ ainsi définie est un homomorphisme de groupes ordonnés.
+En outre, si $U$ est un ouvert de $X$, $V$ un ouvert de $X'$ tel que $f(V)\subset U$ et $f':V\to U$ la restriction de $f$, il résulte aussitôt des définitions que l'on a
+\[
+\label{IV.21.10.3.1}
+  f'^*(Z|U)=f^*(Z)|V.
+  \tag{21.10.3.1}
+\]
+
+Désignons par $\Gamma_T(\mathscr{Z}^1_X)$ le plus grand sous-faisceau de groupes commutatifs de $\mathscr{Z}^1_X$ de support contenu dans $T$;
+il résulte de la relation \sref{IV.21.10.3.1} que les applications $\Gamma(U,\Gamma_T(\mathscr{Z}^1_X))\to\Gamma(V,\mathscr{Z}^1_{X'})$ que l'on vient de définir, définissent un homomorphisme de faisceaux de groupes commutatifs ordonnés sur $X'$
+\[
+  \psi^*(\Gamma_T(\mathscr{Z}^1_X))\to\mathscr{Z}^1_{X'}
+\]
+où $\psi$ est l'application continue sous-jacente au morphisme $f$.
+\end{env}
+
+\begin{proposition}[21.10.4]
+\label{IV.21.10.4}
+Supposons vérifiées les conditions de \sref{IV.21.10.1}.
+Alors, pour tout diviseur $D$ sur $X$ tel que $\Supp(D)\subset T$ et que $f^*(D)$ soit défini \sref{IV.21.4.2}, on a
+\[
+\label{IV.21.10.4.1}
+  \operatorname{cyc}(f^*(D))=f^*(\operatorname{cyc}(D)).
+  \tag{21.10.4.1}
+\]
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$, on peut se borner au cas où $X=\Spec(A)$ est affine, où $D=\operatorname{div}(t)$, où $t$ est un élément régulier non inversible de $A$, et où le sous-préschéma $Y(D)$ \sref{IV.21.2.12} n'a qu'un seul point maximal $y$, de sorte que $\operatorname{cyc}(D)=n_y\cdot\overline{\{y\}}$, où $n_y$ est la longueur de $\sh{O}_{X,y}/t_y\sh{O}_{X,y}$ \sref{IV.21.6.5.1}.
+On a vu dans la démonstration de \sref{IV.21.10.2}, B) que les points $x'\in X'$ tels que $\operatorname{mult}_{x'}(f^*(\operatorname{cyc}(D)))\neq0$ sont des points maximaux de $f^{-1}(\overline{\{y\}})$.
+Si le point $x'$ est dans le cas 3\textsuperscript{o} de \sref{IV.21.10.1}, l'égalité des multiplicités en $x'$ des deux membres de \sref{IV.21.10.4.1} résulte de la définition de $n_{x'}$ au moyen de l'homomorphisme \sref{IV.21.10.1.2}.
+Supposons au contraire que $x'$ soit dans le cas 2\textsuperscript{o} de \sref{IV.21.10.1}, et soit $x=f(x')$;
+puisque $x\in X^{(1)}\cap\overline{\{y\}}$, on a nécessairement $x=y$.
+Remarquons maintenant que $f^*(D)=\operatorname{div}(t')$, où $t'$ est l'image de $t$ dans $\Gamma(X',\sh{O}_{X'})$, et $Y(f^*(D))=f^{-1}(Y(D))$;
+la multiplicité de $f^*(D)$ au point $x'$ est donc la longueur $n'_{x'}$ du $\sh{O}_{X',x'}$-module
+\[
+  \sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}
+  =(\sh{O}_{X,y}/t_y\sh{O}_{X,y})\otimes_{\sh{O}_{X,y}}\sh{O}_{X',x'};
+\]
+comme il résulte de \sref{IV.4.7.1} que l'on a $n'_{x'}=\lambda_{x'}n_y$, les multiplicités au point $x'$ des deux membres de \sref{IV.21.10.4.1} sont encore égales, ce qui achève la démonstration.
+\end{proof}
+
+\begin{env}[21.10.5]
+\label{IV.21.10.5}

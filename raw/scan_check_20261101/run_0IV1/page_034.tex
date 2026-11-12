@@ -1,0 +1,98 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{34}
+  \item[\rm{(iv)}] On a
+  $\operatorname{prof}_A(M)=
+  \operatorname{prof}_{\widehat{A}}(\widehat{M})$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Dire que $\operatorname{prof}(M)=0$ signifie qu'il n'existe aucun
+$x\in\mathfrak{m}$ tel que l'homothétie de rapport $x$ dans $M$ soit
+injective, autrement dit que tout $x\in\mathfrak{m}$ appartient à un idéal
+premier associé à $M$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1,
+cor.~2 de la prop.~2)~; mais $\mathfrak{m}$ ne peut être réunion des idéaux
+premiers associés à $M$ que s'il est égal à l'un d'eux (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2).
+
+(ii) Si $(x_i)_{1\leq i\leq m}$ est une suite $(M/xM)$-régulière formée
+d'éléments de $\mathfrak{m}$, la suite formée de $x$ et des $x_i$ est
+$M$-régulière, et il résulte de la définition qu'elle est maximale lorsque la
+suite $(x_i)_{1\leq i\leq m}$ est une suite $(M/xM)$-régulière maximale, d'où
+la conclusion.
+
+(iii) Raisonnons par récurrence sur $n=\operatorname{prof}(M)$, l'assertion
+étant évidente pour $n=0$. Nous utiliserons le lemme suivant~:
+\end{proof}
+
+\begin{lemma}[16.4.6.3]
+\label{0.16.4.6.3-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini, $t\in A$ un
+élément $M$-régulier. Alors, pour tout
+$\mathfrak{p}\in\operatorname{Ass}(M)$, tout idéal premier minimal parmi ceux
+qui contiennent $\mathfrak{p}+At$ est associé à $M/tM$.
+\end{lemma}
+
+\begin{proof}
+On sait qu'il existe une suite exacte
+\[
+  0\to M'\to M\to M''\to0
+\]
+telle que $\operatorname{Ass}(M')=\{\mathfrak{p}\}$,
+$\operatorname{Ass}(M'')=\operatorname{Ass}(M)-\{\mathfrak{p}\}$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~1, prop.~4)~; comme $t$ est
+$M$-régulier, il est aussi $M'$-régulier et $M''$-régulier
+(\emph{loc.~cit.}, \S~1, no~1, cor.~2 de la prop.~2). On en déduit que la
+suite
+\[
+  0\to M'/tM'\to M/tM\to M''/tM''\to0
+\]
+est exacte (15.1.18). Par suite, on a
+$\operatorname{Ass}(M'/tM')\subset\operatorname{Ass}(M/tM)$. Mais les idéaux
+premiers de $A$ contenant $\mathfrak{p}$ sont les points de
+$\operatorname{Supp}(M')$ (\emph{loc.~cit.}, \S~1, no~3, prop.~7), donc les
+idéaux premiers contenant $\mathfrak{p}+At$ sont les points du support de
+$M'/tM'=M'\otimes_A(A/tA)$ ($0_{\mathrm I}$, 1.7.5)~; un élément minimal de
+l'ensemble de ces idéaux premiers appartient donc à
+$\operatorname{Ass}(M'/tM')$ (Bourbaki, \emph{loc.~cit.}, \S~1, no~3,
+cor.~1 de la prop.~7), et \emph{a fortiori} à
+$\operatorname{Ass}(M/tM)$.
+\end{proof}
+
+\begin{proof}[Suite de la démonstration de (16.4.6)]
+Ce lemme étant établi, revenons à la démonstration de (iii). Soit
+$x\in\mathfrak{m}$ un élément $M$-régulier, de sorte que
+$\operatorname{prof}(M/xM)=n-1$ par (ii)~; pour tout
+$\mathfrak{p}\in\operatorname{Ass}(M)$, il résulte du lemme qu'il y a un idéal
+$\mathfrak{p}'$ associé à $M/xM$ et contenant $\mathfrak{p}+xA$~; mais comme
+$x$ est $M$-régulier, on a $x\notin\mathfrak{p}$, d'où
+$\mathfrak{p}'\neq\mathfrak{p}$ et par suite
+$\dim(A/\mathfrak{p}')\leq\dim(A/\mathfrak{p})-1$. Or l'hypothèse de
+récurrence montre que $n-1\leq\dim(A/\mathfrak{p}')$~; on en conclut que
+$n\leq\dim(A/\mathfrak{p})$ pour tout
+$\mathfrak{p}\in\operatorname{Ass}(M)$.
+
+(iv) On peut se borner au cas où $M\neq0$. Rappelons que
+$\widehat{M}=M\otimes_A\widehat{A}$ à un isomorphisme canonique près
+($0_{\mathrm I}$, 7.3.3)~; comme $\widehat{A}$ est un $A$-module plat, on a des
+isomorphismes canoniques
+\[
+  \operatorname{Ext}^i_A(k,M)\otimes_A\widehat{A}
+  \xrightarrow{\sim}
+  \operatorname{Ext}^i_{\widehat{A}}
+  (k,M\otimes_A\widehat{A})
+\]
+puisque $k=k\otimes_A\widehat{A}$ à un isomorphisme canonique près
+($0_{\mathrm{III}}$, 12.3.5). L'assertion (iv) résulte donc de (16.4.4) et du
+fait que $\widehat{A}$ est un $A$-module fidèlement plat
+($0_{\mathrm I}$, 7.3.5).
+\end{proof}
+
+\begin{env}[16.4.6.4]
+\label{0.16.4.6.4-fr}
+On notera que si $\mathfrak{p}$ est un idéal premier de $A$, on peut avoir
+aussi bien
+$\operatorname{prof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+<\operatorname{prof}_A(M)$ que
+$\operatorname{prof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+>\operatorname{prof}_A(M)$~; pour un exemple du premier cas,

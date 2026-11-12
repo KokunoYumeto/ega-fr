@@ -1,0 +1,43 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{96}
+
+Soit alors $Y$ le produit des $S$-préschémas $Y_i$ (pour les morphismes composés $Y_i\xrightarrow{f_i}X\to S$), $T$ le produit des $X$-préschémas $Y_i$ (pour les morphismes $f_i$). On prouve comme dans (I, 5.3.5) que l'on a un diagramme commutatif
+\[
+\label{IV.17.13.9.1}
+\tag{17.13.9.1}
+\xymatrix{
+  X \ar[d]^{\Delta} & T \ar[l]_-v \ar[d]^{j}\\
+  X^I & Y \ar[l]^{u}
+}
+\]
+(où $u$ est le produit (sur $S$) des $f_i$), qui fait de $T$ le produit des $X^I$-préschémas $X$ et $Y$.
+
+Par récurrence sur le nombre d'éléments de $I$, il résulte de (16.4.23) que $\Omega^1_{X^I/S}$ (resp. $\Omega^1_{Y/S}$) s'identifie canoniquement à la somme directe des $p_i^*(\Omega^1_{X/S})$ (resp. des $q_i^*(\Omega^1_{Y_i/S})$, si $q_i:Y\to Y_i$ sont les projections canoniques).
+
+Supposons maintenant que $X$ soit \emph{lisse} sur $S$ en un point $x$ (donc dans un voisinage de ce point). Il en est alors de même de $X^I$ en ce point (17.3.3, (iv)), et restreignant $X$ à un voisinage de $x$, on a donc (17.2.5) une suite exacte de $\sh{O}_X$-Modules localement libres
+\[
+0\to\operatorname{gr}_1(\Delta)\to(\Omega^1_{X/S})^I\to\Omega^1_{X/S}\to0.
+\]
+Posons $\sh{J}=\operatorname{gr}_1(\Delta)$; on déduit de la suite précédente une suite exacte de $\sh{O}_T$-Modules localement libres
+\[
+\label{IV.17.13.9.1-seq}
+\tag{17.13.9.1}
+0\to\sh{J}\otimes_{\sh{O}_X}\sh{O}_T\to(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\xrightarrow{\sigma}\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T\to0
+\]
+qui correspond à la première ligne du diagramme (17.13.1.2), et où $\sigma$ n'est autre que l'homomorphisme canonique qui, à chaque famille de sections $(t_i)_{i\in I}$ de $\Omega^1_{X/S}\otimes_{\sh{O}_X}\sh{O}_T$ au-dessus d'un ouvert de $T$, fait correspondre sa \emph{somme}.
+
+D'autre part, ce qui correspond ici à la seconde flèche verticale du diagramme (17.13.1.2) est l'homomorphisme
+\[
+\label{IV.17.13.9.2}
+\tag{17.13.9.2}
+\tau:(\Omega^1_{X/S})^I\otimes_{\sh{O}_X}\sh{O}_T\to\bigoplus_{i\in I}(\Omega^1_{Y_i/S}\otimes_{\sh{O}_{Y_i}}\sh{O}_T)
+\]
+qui, à toute famille $(t'_i\otimes1)_{i\in I}$, où ici les $t'_i$ sont des sections au-dessus d'un ouvert de $X$ de $\Omega^1_{X/S}$, associe la somme des $((f_i)_{Y_i/X/S}(t'_i))\otimes1$, avec la notation de (16.4.18). L'homomorphisme $\rho$ qui correspond à l'homomorphisme $\alpha$ de (17.13.1.3) est donc la \emph{restriction} à $\sh{J}\otimes_{\sh{O}_X}\sh{O}_T$ de l'homomorphisme $\tau$ précédent.
+
+Ces hypothèses et notations étant précisées, on peut appliquer à la situation de (17.13.9.1) la prop. (17.13.2), ce qui donne le
+\end{env}
+
+\begin{corollary}[17.13.10]
+\EGAReaderTarget{ega4.c04.cor.17-13-10}{IV.17.13.10}
+Sous les hypothèses générales de (17.13.9), soit $t$ un point de $T$, $y_i$ ($i\in I$) ses projections dans les $Y_i$, $x$ le point de $X$ égal à chacun des $f_i(y_i)$. Supposons que $X$ soit lisse sur $S$ au point $x$ et de dimension relative $d$, et que chacun des $Y_i$ soit lisse sur $S$ au point $y_i$; soit $d+c_i$ ($c_i$ entier positif ou négatif) la dimension relative de $Y_i$ au point $y_i$. Alors les conditions suivantes sont équivalentes:
+

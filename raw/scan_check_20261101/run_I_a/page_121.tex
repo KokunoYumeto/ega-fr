@@ -1,0 +1,87 @@
+% from ega1-4-fr.tex
+\oldpage[I]{121}préschéma (resp. sous-préschéma fermé) de $X$
+s'identifie canoniquement à un sous-préschéma (resp. sous-préschéma fermé) de
+$X$.
+\end{proposition}
+
+Une partie localement fermée d'un sous-espace localement fermé de $X$ étant
+un sous-espace localement fermé de $X$, il est clair
+(\hyperref[I.4.1.5-fr]{4.1.5}) que la question est locale et qu'on peut donc
+supposer $X$ affine~; la proposition résulte alors de l'identification
+canonique de $A/\mathfrak{J}'$ et de
+$(A/\mathfrak{J})/(\mathfrak{J}'/\mathfrak{J})$ lorsque
+$\mathfrak{J}$, $\mathfrak{J}'$ sont deux idéaux d'un anneau $A$ tels que
+$\mathfrak{J}\subset\mathfrak{J}'$.
+
+Nous ferons toujours par la suite l'identification précédente.
+
+\begin{env}[4.1.7]
+\label{I.4.1.7-fr}
+Soit $Y$ un sous-préschéma d'un préschéma $X$, et désignons par $\psi$
+l'injection canonique $Y\to X$ des \emph{espaces sous-jacents}~; on sait que
+l'image réciproque $\psi^*(\mathscr{O}_X)$ est la restriction
+$\mathscr{O}_X|Y$ (\hyperref[0.3.7.1-fr]{0, 3.7.1}). Si, pour tout $y\in Y$,
+on désigne par $\omega_y$ l'homomorphisme canonique
+$(\mathscr{O}_X)_y\to(\mathscr{O}_Y)_y$, ces homomorphismes sont les
+restrictions aux fibres d'un homomorphisme \emph{surjectif} $\omega$ de
+faisceaux d'anneaux $\mathscr{O}_X|Y\to\mathscr{O}_Y$~: il suffit en effet de
+le vérifier localement sur $Y$, c'est-à-dire que l'on peut supposer $X$
+affine et le sous-préschéma $Y$ fermé~; si dans ce cas $\mathscr{I}$ est le
+faisceau d'idéaux dans $\mathscr{O}_X$ qui définit $Y$, les $\omega_y$ ne sont
+autres que les restrictions aux fibres de l'homomorphisme
+$\mathscr{O}_X|Y\to(\mathscr{O}_X/\mathscr{I})|Y$.
+
+Nous avons donc défini un \emph{monomorphisme d'espaces annelés}
+(\hyperref[0.4.1.1-fr]{0, 4.1.1}) $j=(\psi,\omega^b)$ qui est évidemment un
+morphisme $Y\to X$ de préschémas (\hyperref[I.2.2.1-fr]{2.2.1}), et que nous
+appellerons le \emph{morphisme d'injection canonique}.
+
+Si $f:X\to Z$ est un morphisme, nous dirons encore que le morphisme composé
+$Y\xrightarrow{j}X\xrightarrow{f}Z$ est la \emph{restriction} de $f$ au
+sous-préschéma $Y$.
+\end{env}
+
+\begin{env}[4.1.8]
+\label{I.4.1.8-fr}
+Conformément aux définitions générales (T, I, 1.1), nous dirons qu'un
+morphisme de préschémas $f:Z\to X$ est \emph{majoré} par le morphisme
+d'injection $j:Y\to X$ d'un sous-préschéma $Y$ de $X$ si $f$ se factorise en
+$Z\xrightarrow{g}Y\xrightarrow{j}X$, où $g$ est un morphisme de préschémas~;
+$g$ est nécessairement \emph{unique} puisque $j$ est un monomorphisme.
+\end{env}
+
+\begin{proposition}[4.1.9]
+\label{I.4.1.9-fr}
+Pour qu'un morphisme $f:Z\to X$ soit \emph{majoré par un morphisme
+d'injection} $j:Y\to X$, il faut et il suffit que $f(Z)\subset Y$ et que,
+pour tout $z\in Z$, si on pose $y=f(z)$, l'homomorphisme
+$(\mathscr{O}_X)_y\to\mathscr{O}_z$ correspondant à $f$ se factorise en
+$(\mathscr{O}_X)_y\to(\mathscr{O}_Y)_y\to\mathscr{O}_z$ (ou, ce qui revient
+au même, que le noyau de $(\mathscr{O}_X)_y\to\mathscr{O}_z$ contienne celui
+de $(\mathscr{O}_X)_y\to(\mathscr{O}_Y)_y$).
+\end{proposition}
+
+Les conditions sont évidemment nécessaires. Pour voir qu'elles sont
+suffisantes, on peut se ramener au cas où $Y$ est un sous-préschéma
+\emph{fermé} de $X$, en remplaçant au besoin $X$ par un ouvert $U$ tel que
+$Y$ soit fermé dans $U$ (\hyperref[I.4.1.3-fr]{4.1.3})~; $Y$ est alors défini
+par un faisceau quasi-cohérent $\mathscr{I}$ d'idéaux de $\mathscr{O}_X$.
+Posons $f=(\psi,\theta)$, et soit $\mathscr{J}$ le faisceau d'idéaux de
+$\psi^*(\mathscr{O}_X)$, noyau de
+$\theta^\sharp:\psi^*(\mathscr{O}_X)\to\mathscr{O}_Z$~; compte tenu des
+propriétés du foncteur $\psi^*$ (\hyperref[0.3.7.2-fr]{0, 3.7.2}),
+l'hypothèse entraîne que pour tout $z\in Z$, on a
+$(\psi^*(\mathscr{I}))_z\subset\mathscr{J}_z$, et par suite
+$\psi^*(\mathscr{I})\subset\mathscr{J}$. Par suite, $\theta^\sharp$ se
+factorise en
+\[
+  \psi^*(\mathscr{O}_X)\longrightarrow
+  \psi^*(\mathscr{O}_X)/\psi^*(\mathscr{I})
+  =\psi^*(\mathscr{O}_X/\mathscr{I})
+  \xrightarrow{\omega}\mathscr{O}_Z,
+\]
+la première flèche étant l'homomorphisme canonique. Soit $\psi'$ l'application
+continue $Z\to Y$ coïncidant avec $\psi$~; il est clair que l'on a
+${\psi'}^*(\mathscr{O}_Y)=\psi^*(\mathscr{O}_X/\mathscr{I})$~; d'autre part,
+$\omega$ est évidemment un homomorphisme local, donc
+$g=(\psi',\omega^b)$ est un morphisme $Z\to Y$

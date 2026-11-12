@@ -1,0 +1,672 @@
+[
+ {
+  "page": 69,
+  "where": "end of p. 69: 'remplaçant f par f_red, qui est de type fini (1.5.4, (vii)), on peut' | p. 70 'supposer A intègre'",
+  "scan": "the sentence runs on over the page break; p. 70 begins 'supposer A intègre ...' flush left",
+  "tex": "blank line before \\oldpage[IV-3]{70} (last line of the p. 69 segment)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "type fini (1.5.4, (vii)), on peut\n\n",
+   "new": "type fini (1.5.4, (vii)), on peut\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Outside pages 70-74 (end of page_069.tex); listed because the p. 70 top fix needs it. Apply together with the p. 70 top entry; drop it if the pp. 65-69 batch already has the same edit."
+ },
+ {
+  "page": 70,
+  "where": "top of page: 'supposer A intègre et X réduit' continues the sentence '... on peut' of p. 69",
+  "scan": "first line continues the sentence of p. 69, flush left (no new paragraph)",
+  "tex": "\\oldpage[IV-3]{70} followed by a blank line (and preceded by one at the end of p. 69)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{70}\n\nsupposer $A$",
+   "new": "\\oldpage[IV-3]{70}\nsupposer $A$"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the p. 69 entry (blank line before the marker)."
+ },
+ {
+  "page": 70,
+  "where": "l. 2: 'un k(η)-morphisme fini et surjectif'",
+  "scan": "'fini' and 'surjectif' italic, 'et' roman (crop p70_s1_fini_et.png)",
+  "tex": "\\emph{fini et surjectif} ('et' italic too)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{fini et surjectif}",
+   "new": "\\emph{fini} et \\emph{surjectif}"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "l. 2: 'un k(η)-morphisme'",
+  "scan": "bold italic k",
+  "tex": "$k(\\eta)$",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "$k(\\eta)$-morphisme",
+   "new": "$\\boldsymbol{k}(\\eta)$-morphisme"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "l. 3: 'h : W→V((k(η))^n)'",
+  "scan": "bold italic k",
+  "tex": "(k(\\eta))^n",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf V((k(\\eta))^n)",
+   "new": "\\mathbf V((\\boldsymbol{k}(\\eta))^n)"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "l. 3: 'B'=k(η)[T_1, ..., T_n]'",
+  "scan": "bold italic k",
+  "tex": "B'=k(\\eta)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "$B'=k(\\eta)[T_1",
+   "new": "$B'=\\boldsymbol{k}(\\eta)[T_1"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "'C_η=C⊗_A k(η) est donc un module'",
+  "scan": "bold italic k (crop p70_s2_sinS.png shows the same k in C⊗_A k(s))",
+  "tex": "C\\otimes_A k(\\eta)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "$C_\\eta=C\\otimes_A k(\\eta)$",
+   "new": "$C_\\eta=C\\otimes_A \\boldsymbol{k}(\\eta)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "'B_η=B'=B⊗_A k(η)=k(η)[T_1, ..., T_n]'",
+  "scan": "bold italic k, 2 times",
+  "tex": "k(\\eta) twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "B\\otimes_A k(\\eta)=k(\\eta)[T_1",
+   "new": "B\\otimes_A \\boldsymbol{k}(\\eta)=\\boldsymbol{k}(\\eta)[T_1"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "'dont les dénominateurs sont dans A—{0}⊂B—{0}'",
+  "scan": "long dash for the set difference, 2 times",
+  "tex": "minus signs",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$A-\\{0\\}\\subset B-\\{0\\}$",
+   "new": "$A\\setmin\\{0\\}\\subset B\\setmin\\{0\\}$"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 70,
+  "where": "proof of (9.5.6): 'il y a un voisinage U de η dans S tel que pour s∈S, C_s=C⊗_A k(s) soit ... sans torsion'",
+  "scan": "s∈S (crop p70_s2_sinS.png)",
+  "tex": "$s\\in S$ (keeps the print)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": null,
+  "corrected": "$s\\in U$",
+  "note": "The neighbourhood U just obtained from (9.4.8) is where C_s is torsion-free; with 's∈S' the U is never used. The TeX keeps the printed S (also in the r20 corrected edition); the corrected edition should read s∈U."
+ },
+ {
+  "page": 70,
+  "where": "'C_s=C⊗_A k(s) soit un module'",
+  "scan": "bold italic k (crop p70_s2_sinS.png)",
+  "tex": "C\\otimes_A k(s)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "$C_s=C\\otimes_A k(s)$",
+   "new": "$C_s=C\\otimes_A \\boldsymbol{k}(s)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "'sur B_s=B⊗_A k(s)=k(s)[T_1, ..., T_n]'",
+  "scan": "bold italic k, 2 times",
+  "tex": "k(s) twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "B\\otimes_A k(s)=k(s)[T_1",
+   "new": "B\\otimes_A \\boldsymbol{k}(s)=\\boldsymbol{k}(s)[T_1"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "Remarque (9.5.7): 'on a donc k(η)=K=k(T)'",
+  "scan": "first k bold italic (residue field); k(T) plain italic",
+  "tex": "$k(\\eta)=K=k(T)$",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "$k(\\eta)=K=k(T)$",
+   "new": "$\\boldsymbol{k}(\\eta)=K=k(T)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 70,
+  "where": "Remarque (9.5.7): 'B_s=B/j_sB est composée directe de [L : K] corps'",
+  "scan": "'composée directe' (crop p70_s3_composee.png)",
+  "tex": "composé direct",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est composé direct de",
+   "new": "est composée directe de"
+  },
+  "note": "The feminine form (agreeing with an implied 'algèbre') is not an evident misprint; the TeX normalised it."
+ },
+ {
+  "page": 70,
+  "where": "Remarque (9.5.7): 'tout idéal maximal de k[T] est de la forme (T—α)'",
+  "scan": "long dash for the subtraction T—α",
+  "tex": "(T-\\alpha)",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "forme $(T-\\alpha)$ avec",
+   "new": "forme $(T\\setmin\\alpha)$ avec"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 70,
+  "where": "Remarque (9.5.7): 'au-dessus de l'idéal (T—α) est l'idéal principal'",
+  "scan": "long dash for the subtraction T—α",
+  "tex": "(T-\\alpha)",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "l'idéal $(T-\\alpha)$ est",
+   "new": "l'idéal $(T\\setmin\\alpha)$ est"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 70,
+  "where": "Remarque (9.5.7): 'l'idéal principal (T^{1/p}—α^{1/p})'",
+  "scan": "long dash for the subtraction",
+  "tex": "(T^{1/p}-\\alpha^{1/p})",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$(T^{1/p}-\\alpha^{1/p})$",
+   "new": "$(T^{1/p}\\setmin\\alpha^{1/p})$"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 70,
+  "where": "end of page: '... (T^{1/p}—α^{1/p}) et il est immédiat' | p. 71 'que l'anneau quotient'",
+  "scan": "the sentence runs on over the page break; p. 71 begins 'que l'anneau quotient ...' flush left",
+  "tex": "blank line before \\oldpage[IV-3]{71} (and after it)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et il est immédiat\n\n",
+   "new": "et il est immédiat\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the p. 71 top entry."
+ },
+ {
+  "page": 71,
+  "where": "top of page: 'que l'anneau quotient B/(T—α)B admet ...' continues the sentence of p. 70",
+  "scan": "first line continues the sentence, flush left",
+  "tex": "\\oldpage[IV-3]{71} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{71}\n\nque l'anneau",
+   "new": "\\oldpage[IV-3]{71}\nque l'anneau"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the p. 70 end entry ('et il est immédiat')."
+ },
+ {
+  "page": 71,
+  "where": "l. 1: 'l'anneau quotient B/(T—α)B'",
+  "scan": "long dash for the subtraction T—α",
+  "tex": "B/(T-\\alpha)B",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$B/(T-\\alpha)B$",
+   "new": "$B/(T\\setmin\\alpha)B$"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 71,
+  "where": "subsection heading 9.6",
+  "scan": "'9.6. Constructibilité de certaines propriétés des morphismes.' (final full stop)",
+  "tex": "\\subsection{... des morphismes} (no full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Constructibilité de certaines propriétés des morphismes}",
+   "new": "\\subsection{Constructibilité de certaines propriétés des morphismes.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58: subsection titles lack the printed full stop."
+ },
+ {
+  "page": 71,
+  "where": "Proposition (9.6.1), labels (i)-(xii)",
+  "scan": "the twelve labels (i) ... (xii) upright",
+  "tex": "enumerate [label=(\\roman*)] inside the italic proposition: labels italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "[label=(\\roman*),widest=xii]",
+   "new": "[label=\\textup{(\\roman*)},widest=xii]"
+  },
+  "note": "GLOBAL_ISSUES 16; one edit covers all twelve labels."
+ },
+ {
+  "page": 71,
+  "where": "proof of (9.6.1) (iv): 'on doit prouver que E ou S—E est un voisinage de η'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$E$ ou $S-E$ est",
+   "new": "$E$ ou $S\\setmin E$ est"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 71,
+  "where": "end of page: 'qu'en remplaçant S par un voisinage de η, on peut' | p. 72 'supposer que f est lui-même'",
+  "scan": "the sentence runs on over the page break; p. 72 begins 'supposer que f ...' flush left",
+  "tex": "blank line before \\oldpage[IV-3]{72} (and after it)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $\\eta$, on peut\n\n",
+   "new": "de $\\eta$, on peut\n"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the p. 72 top entry."
+ },
+ {
+  "page": 72,
+  "where": "top of page: 'supposer que f est lui-même un morphisme propre' continues the sentence of p. 71",
+  "scan": "first line continues the sentence, flush left",
+  "tex": "\\oldpage[IV-3]{72} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{72}\n\nsupposer que",
+   "new": "\\oldpage[IV-3]{72}\nsupposer que"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the p. 71 end entry ('de $\\eta$, on peut')."
+ },
+ {
+  "page": 72,
+  "where": "(iv): 'Supposons au contraire que η∈S—E, et distinguons deux cas'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "contraire que $\\eta\\in S-E$",
+   "new": "contraire que $\\eta\\in S\\setmin E$"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 72,
+  "where": "(iv) 2°: 'tel que Z soit isomorphe à Y'_η et que g_η=h;'",
+  "scan": "no comma after Y'_η (crop p72_s2_isomorphe2.png)",
+  "tex": "$Y'_\\eta$, et que",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y'_\\eta$, et que $g_\\eta=h$",
+   "new": "$Y'_\\eta$ et que $g_\\eta=h$"
+  },
+  "note": ""
+ },
+ {
+  "page": 72,
+  "where": "(ix): 'et à prouver que E ou S—E est un voisinage de η'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "générique $\\eta$, et à prouver que $E$ ou $S-E$",
+   "new": "générique $\\eta$, et à prouver que $E$ ou $S\\setmin E$"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 72,
+  "where": "(ix): 'Supposons donc que η∈S—E et distinguons deux cas'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "Supposons donc que $\\eta\\in S-E$",
+   "new": "Supposons donc que $\\eta\\in S\\setmin E$"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 72,
+  "where": "(viii): 'et à prouver que E ou S—E est un voisinage de η. Si η∈E'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$E$ ou $S-E$ est un voisinage de $\\eta$. Si $\\eta\\in E$, on conclut",
+   "new": "$E$ ou $S\\setmin E$ est un voisinage de $\\eta$. Si $\\eta\\in E$, on conclut"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 72,
+  "where": "(viii): 'Si η∈S—E, on distingue de nouveau deux cas'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "Si $\\eta\\in S-E$, on distingue",
+   "new": "Si $\\eta\\in S\\setmin E$, on distingue"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 72,
+  "where": "page break 72/73 (edit 1 of 2, insert): (viii), item 1° 'f_η(X_η) n'est pas une partie localement fermée de Y_η'",
+  "scan": "printed p. 72 ends '... on distingue de nouveau deux cas :'; printed p. 73 begins with item 1° 'f_η(X_η) n'est pas une partie localement fermée de Y_η. Comme f(X) ...' (page_073_s1.png)",
+  "tex": "\\oldpage[IV-3]{73} stands at item 2° ('\\item\\oldpage[IV-3]{73} $f_\\eta(X_\\eta)$ est localement fermé'), one item (three printed lines) too late",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item $f_\\eta(X_\\eta)$ n'est pas une partie localement fermée de $Y_\\eta$.",
+   "new": "\\item\\oldpage[IV-3]{73} $f_\\eta(X_\\eta)$ n'est pas une partie localement fermée de $Y_\\eta$."
+  },
+  "note": "Marker move: apply together with the p. 73 entry that removes the old marker (edit 2 of 2). Same \\item\\oldpage form as the old placement. The item-1° text needs no other fix."
+ },
+ {
+  "page": 73,
+  "where": "page break 72/73 (edit 2 of 2, remove the old marker): item 2° 'f_η(X_η) est localement fermé dans Y_η'",
+  "scan": "item 2° stands on printed p. 73 below item 1°",
+  "tex": "\\item\\oldpage[IV-3]{73} at item 2°",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{73} $f_\\eta(X_\\eta)$ est localement fermé",
+   "new": " $f_\\eta(X_\\eta)$ est localement fermé"
+  },
+  "note": "Apply together with the p. 72 insert (edit 1 of 2); leaves '\\item $f_\\eta(X_\\eta)$ est localement fermé'."
+ },
+ {
+  "page": 73,
+  "where": "(x): 'et où η∈S—E. Distinguons trois cas'",
+  "scan": "long dash for the set difference",
+  "tex": "$S-E$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\eta\\in S-E$. Distinguons",
+   "new": "$\\eta\\in S\\setmin E$. Distinguons"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 73,
+  "where": "(x) 2°: 'f_η(X_η) est ouvert dans Y_η mais f_η n'est pas une immersion'",
+  "scan": "no comma before 'mais' (crop p73_s2_mais2.png)",
+  "tex": "$Y_\\eta$, mais",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ouvert dans $Y_\\eta$, mais $f_\\eta$",
+   "new": "ouvert dans $Y_\\eta$ mais $f_\\eta$"
+  },
+  "note": ""
+ },
+ {
+  "page": 73,
+  "where": "(x) 3°: 'supposer que f est une immersion fermée, et par suite'",
+  "scan": "'immersion fermée' both italic (crop p73_s3_immfermee.png)",
+  "tex": "immersion \\emph{fermée} ('immersion' upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est une immersion\n  \\emph{fermée}, et par suite",
+   "new": "est une \\emph{immersion\n  fermée}, et par suite"
+  },
+  "note": ""
+ },
+ {
+  "page": 73,
+  "where": "Proposition (9.6.2) I), labels (i)-(iv)",
+  "scan": "labels (i) ... (iv) upright",
+  "tex": "enumerate [label=(\\roman*)] inside the italic proposition: labels italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{enumerate}[label=(\\roman*)]",
+   "new": "\\begin{enumerate}[label=\\textup{(\\roman*)}]"
+  },
+  "note": "GLOBAL_ISSUES 16; one edit covers the four labels."
+ },
+ {
+  "page": 74,
+  "where": "Proposition (9.6.2) II): 'ample (resp. très ample) relativement à f_s'",
+  "scan": "'(resp.' and ')' roman inside the italic statement, 'très ample' italic (crop p74_s1_II.png)",
+  "tex": "all italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "ample (resp. très ample) relativement à $f_s$, est",
+   "new": "ample \\textup{(resp.} très ample\\textup{)} relativement à $f_s$, est"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "'On peut améliorer (9.6.2, II)) sous certaines conditions'",
+  "scan": "two closing parentheses: 'II))' (crop p74_s2_ameliorer.png)",
+  "tex": "(9.6.2, II) (one parenthesis)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(9.6.2, II) sous",
+   "new": "(9.6.2, II)) sous"
+  },
+  "note": "The label 'II)' keeps its own parenthesis inside the reference."
+ },
+ {
+  "page": 74,
+  "where": "Proposition (9.6.3): 'f : X→Y un S-morphisme propre'",
+  "scan": "'propre' roman inside the italic statement (crop p74_s2_963.png)",
+  "tex": "italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$S$-morphisme propre, $\\mathcal L$",
+   "new": "$S$-morphisme \\textup{propre}, $\\mathcal L$"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "Proposition (9.6.3): 'l'ensemble E (resp. E') des s∈S'",
+  "scan": "'(resp.' and ')' roman inside the italic statement (crop p74_s2_963.png)",
+  "tex": "italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "l'ensemble $E$ (resp. $E'$) des",
+   "new": "l'ensemble $E$ \\textup{(resp.} $E'$\\textup{)} des"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "Proposition (9.6.3): 'ample (resp. très ample) relativement à f_s : X_s→Y_s'",
+  "scan": "'(resp.' and ')' roman, 'très ample' italic (crop p74_s2_963.png)",
+  "tex": "all italic (proposition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "ample (resp. très ample) relativement à\n$f_s:X_s",
+   "new": "ample \\textup{(resp.} très ample\\textup{)} relativement à\n$f_s:X_s"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "proof of (9.6.3): 'si P(Z, T, M, g, k) désigne la relation'",
+  "scan": "bold italic P",
+  "tex": "\\mathbf P (bold upright)",
+  "kind": "convention",
+  "convention": 10,
+  "confidence": "high",
+  "fix": {
+   "old": "si $\\mathbf P(Z,T,\\mathcal M,g,k)$ désigne",
+   "new": "si $\\boldsymbol{P}(Z,T,\\mathcal M,g,k)$ désigne"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "proof of (9.6.3): 'que P(Z, T, M, g, k) vérifie la condition'",
+  "scan": "bold italic P",
+  "tex": "\\mathbf P (bold upright)",
+  "kind": "convention",
+  "convention": 10,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathbf P(Z,T,\\mathcal M,g,k)$ vérifie",
+   "new": "$\\boldsymbol{P}(Z,T,\\mathcal M,g,k)$ vérifie"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "proof of (9.6.3): 'si η∈S—E (resp. η∈S—E'), alors S—E (resp. S—E')'",
+  "scan": "long dash for the set difference, 4 times",
+  "tex": "minus signs",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\eta\\in S-E$ (resp. $\\eta\\in S-E'$), alors $S-E$ (resp. $S-E'$)",
+   "new": "$\\eta\\in S\\setmin E$ (resp. $\\eta\\in S\\setmin E'$), alors $S\\setmin E$ (resp. $S\\setmin E'$)"
+  },
+  "note": "\\setmin pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 74,
+  "where": "proof of (9.6.3) I): 'les R^q f_*(L) sont tous des O_Y-Modules cohérents (III, 3.2.1)'",
+  "scan": "'cohérents' italic (crop p74_s3_coherents.png)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal O_Y$-Modules cohérents",
+   "new": "$\\mathcal O_Y$-Modules \\emph{cohérents}"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "proof of (9.6.3) I): 'L et les R^q f_*(L) sont tous S-plats'",
+  "scan": "'tous' italic and 'plats' italic in S-plats (crop p74_s4_plats.png)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont tous $S$-plats",
+   "new": "sont \\emph{tous} $S$-\\emph{plats}"
+  },
+  "note": ""
+ },
+ {
+  "page": 74,
+  "where": "display (9.6.3.1): 'f_*(L)⊗_{O_S} k(s) → (f_s)_*(L_s)'",
+  "scan": "bold italic k",
+  "tex": "k(s)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\otimes_{\\mathcal O_S} k(s)",
+   "new": "\\otimes_{\\mathcal O_S} \\boldsymbol{k}(s)"
+  },
+  "note": ""
+ }
+]

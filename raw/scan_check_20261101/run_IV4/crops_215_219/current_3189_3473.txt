@@ -1,0 +1,285 @@
+\oldpage[IV-4]{215}
+
+Nous procéderons par récurrence sur $m$, supposant donc (19.7.1.6) vérifiée lorsqu'on remplace $m$ par un entier $m'<m$. Nous considérerons d'autre part, pour $m$ fixé et pour un entier $d\geq0$, la relation
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^dN\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$*_d$}
+\end{equation}
+
+Il est clair qu'il suffit de démontrer $(*_d)$ pour $d=m$, et d'autre part $(*_0)$ est trivialement vraie. Nous prouverons $(*_d)$ par récurrence sur $d$; autrement dit, nous supposons, pour un $d\geq0$ fixé (avec $d<m$), que $(*_d)$ est vraie, et nous voulons prouver
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^{d+1}N\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$*_{d+1}$}
+\end{equation}
+
+Considérons pour cela, pour un $h\geq0$, la relation
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$**_{d+1,h}$}
+\end{equation}
+
+L'hypothèse $(*_d)$ implique que $(**_{d+1,0})$ est vraie. Nous prouverons par récurrence sur $h$ que $(**_{d+1,h})$ est vraie pour tout $h\geq0$. Mais on a le
+
+\begin{lemma}[19.7.1.7]
+\label{IV.19.7.1.7}
+Soient $A$ un anneau noethérien, $N$ un $A$-module de type fini, $E$, $F$ deux sous-modules de $N$, $\mathfrak L$ un idéal de $A$. Pour tout $k>0$ il existe $h>0$ tel que
+\[
+  E\cap(F+\mathfrak L^hN)\subset(E\cap F)+\mathfrak L^kN.
+\]
+\end{lemma}
+
+En effet, soit $\varphi:N\to N/(E\cap F)=N_1$ l'homomorphisme canonique, et posons $E_1=\varphi(E)$, $F_1=\varphi(F)$, de sorte que $E_1\cap F_1=0$ et $\varphi(E\cap(F+\mathfrak L^hN))=E_1\cap(F_1+\mathfrak L^hN_1)$. On sait ($0_{\mathrm I}$, 7.3.2) qu'il existe $h$ tel que $(E_1+F_1)\cap\mathfrak L^hN_1\subset\mathfrak L^k(E_1+F_1)$; si $h$ est ainsi choisi et si $x_1\in E_1$ est tel qu'il existe $y_1\in F_1$ pour lequel $x_1-y_1\in\mathfrak L^hN_1$, on en déduit d'après ce qui précède qu'il existe $u_1\in\mathfrak L^kE_1$ et $v_1\in\mathfrak L^kF_1$ tels que $x_1=u_1$ et $y_1=v_1$; donc $E_1\cap(F_1+\mathfrak L^hN_1)\subset\mathfrak L^kN_1$, ce qui prouve le lemme.
+
+Il suffit alors d'appliquer ce lemme avec $E=R\cap\mathfrak L^mN$, $F=\mathfrak R^{d+1}N$ et de prendre $k=m+1$ pour en déduire qu'avec la valeur de $h$ correspondante, $(**_{d+1,h})$ entraîne $(*_{d+1})$.
+
+Nous supposons donc dans tout ce qui suit que $(**_{d+1,h})$ est vérifiée.
+
+\begin{env}[19.7.1.8]
+\label{IV.19.7.1.8}
+Démonstration de $(**_{d+1,h+1})$: Premier cas: $h\leq m-d$.
+\end{env}
+
+Partons donc d'un élément
+\begin{env}[19.7.1.9]
+\label{IV.19.7.1.9}
+\[
+  g\in R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\cap\mathfrak L^mN
+\]
+\end{env}
+congru mod. $\mathfrak L^{m+1}N$ à un élément $g_1\in R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)$; on a donc
+\begin{env}[19.7.1.10]
+\label{IV.19.7.1.10}
+\[
+  g\in\mathfrak R^mN+\mathfrak L^{m+1}N.
+\]
+\end{env}
+
+Il suffira de prouver que $g$ est aussi congru mod. $\mathfrak L^{m+1}N$ à un élément $g_2\in R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^{h+1}N)$, car cela entraînera $g_2\in\mathfrak L^mN$, puisque l'on aura $g\in\mathfrak L^mN$ et $g_2-g\in\mathfrak L^{m+1}N$. Dans le cas $h\leq m-d$ que nous considérons, il suffit de démontrer la relation
+\begin{env}[19.7.1.11]
+\label{IV.19.7.1.11}
+\[
+  (\mathfrak R^mN+\mathfrak L^{m+1}N)\cap\mathfrak R^dN\subset\mathfrak L^{m-d+1}\mathfrak R^dN+\mathfrak R^{d+1}N.
+\]
+\end{env}
+
+\oldpage[IV-4]{216}
+
+car les relations (19.7.1.9) et (19.7.1.10) entraînent que $g$ appartient au premier membre de (19.7.1.11), et comme $h\leq m-d$, on a $\mathfrak L^{m-d+1}\subset\mathfrak L^{h+1}$, ce qui établira $(**_{d+1,h+1})$. D'ailleurs on a $\mathfrak R^mN\subset\mathfrak R^dN$, et la relation
+\begin{env}[19.7.1.12]
+\label{IV.19.7.1.12}
+\[
+  \mathfrak L^{m+1}N\cap\mathfrak R^dN\subset\mathfrak L^{m-d+1}\mathfrak R^dN
+\]
+\end{env}
+entraînera (19.7.1.11). Comme $N$ est un $A$-module libre de type fini, on voit qu'il suffit donc de prouver
+\begin{env}[19.7.1.13]
+\label{IV.19.7.1.13}
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d.
+\]
+\end{env}
+
+Il suffira de prouver que, de façon générale, pour $d<m$, on a
+\begin{env}[19.7.1.14]
+\label{IV.19.7.1.14}
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak R^{d+1}.
+\]
+\end{env}
+En effet, comme $\mathfrak R\subset\mathfrak L$, donc $\mathfrak L^{m-d+1}\mathfrak R^d\subset\mathfrak L^{m+1}$, la relation précédente entraînera
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak L^{m+1}\cap\mathfrak R^{d+1}
+\]
+et par récurrence sur $d\leq m$, on en conclura
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak R^{m+1}
+\]
+d'où (19.7.1.13), puisque $\mathfrak R^{m+1}\subset\mathfrak L^{m-d+1}\mathfrak R^d$.
+
+Comme $\mathfrak L=\mathfrak J+\mathfrak R$, la relation (19.7.1.14) s'écrit aussi
+\begin{env}[19.7.1.15]
+\label{IV.19.7.1.15}
+\[
+\begin{aligned}
+  &(\mathfrak J^{m+1}+\mathfrak J^m\mathfrak R+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1})\cap\mathfrak R^d\\
+  &\quad\subset\mathfrak J^{m-d+1}\mathfrak R^d+\mathfrak J^{m-d}\mathfrak R^{d+1}+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1}+\mathfrak R^{d+1}\\
+  &\quad=\mathfrak J^{m-d+1}\mathfrak R^d+\mathfrak R^{d+1}.
+\end{aligned}
+\]
+\end{env}
+
+Nous allons voir que cette inclusion est elle-même conséquence de
+\begin{env}[19.7.1.16]
+\label{IV.19.7.1.16}
+\[
+  \mathfrak R^a\mathfrak J^b\cap\mathfrak R^{a+1}\subset\mathfrak R^{a+1}\mathfrak J^{b-1}
+\]
+\end{env}
+valable pour $a\geq0$, $b\geq1$. En effet, il suffit, pour prouver (19.7.1.15) de montrer que pour $0<q\leq d$, on a
+\begin{env}[19.7.1.17]
+\label{IV.19.7.1.17}
+\[
+\begin{aligned}
+  &(\mathfrak J^{m+1}+\mathfrak J^m\mathfrak R+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1})\cap\mathfrak R^d\\
+  &\quad\subset(\mathfrak J^{m+1-q}\mathfrak R^q+\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1})\cap\mathfrak R^d
+\end{aligned}
+\]
+\end{env}
+car pour $q=d$, cela entraînera (19.7.1.15). Or, pour prouver (19.7.1.17), il suffit de procéder par récurrence sur $q$ en supposant la relation vraie pour $q<d$; un élément du premier membre s'écrit donc par hypothèse $y+z$ avec $y\in\mathfrak J^{m+1-q}\mathfrak R^q$, $z\in\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1}$; comme $y+z\in\mathfrak R^d\subset\mathfrak R^{q+1}$, on en déduit $y\in\mathfrak R^{q+1}$, puisque $z\in\mathfrak R^{q+1}$; tenant compte de (19.7.1.16), on a $y\in\mathfrak J^{m-q}\mathfrak R^{q+1}$, donc
+\[
+  y+z\in\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1},\qquad\text{et}\qquad y+z\in\mathfrak R^d
+\]
+par hypothèse, ce qui prouve (19.7.1.17) où $q$ a été remplacé par $q+1$.
+
+Reste donc à établir (19.7.1.16). Un élément du premier membre s'écrit $a_1f_1+\cdots+a_nf_n$, où les $a_i$ appartiennent à $\mathfrak R^a\mathfrak J^{b-1}$; tenant compte de ce que la suite $\mathbf f$ est $(\mathfrak R^a/\mathfrak R^{a+1})$-régulière par hypothèse, donc aussi $(\mathfrak R^a/\mathfrak R^{a+1})$-quasi-régulière ($0$, 15.1.9), il résulte de la définition ($0$, 15.1.7) que la relation $a_1f_1+\cdots+a_nf_n\in\mathfrak R^{a+1}$, où les $a_i\in\mathfrak R^a$, entraîne nécessairement $a_i\in\mathfrak R^{a+1}$, donc $a_i\in\mathfrak R^a\mathfrak J^{b-1}\cap\mathfrak R^{a+1}$; il suffit de raisonner par
+
+\oldpage[IV-4]{217}
+
+récurrence sur $b$ pour $b\geq1$ (le cas $b=1$ étant trivial) pour achever de prouver (19.7.1.16) et par suite aussi $(**_{d+1,h+1})$ pour $h\leq m-d$.
+
+\begin{env}[19.7.1.18]
+\label{IV.19.7.1.18}
+Démonstration de $(**_{d+1,h+1})$; Deuxième cas: $h>m-d$.
+\end{env}
+
+Nous allons tout d'abord démontrer que, pour tout $h\geq0$, on a
+\begin{env}[19.7.1.19]
+\label{IV.19.7.1.19}
+\[
+  R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\subset\mathfrak J^h(R\cap\mathfrak R^dN)+\mathfrak L^{h+1}\mathfrak R^dN+\mathfrak R^{d+1}N.
+\]
+\end{env}
+
+Considérons pour cela un élément $z$ du premier membre de (19.7.1.19). Notons que l'on a $\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN=\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak J^hN$ puisque $\mathfrak L=\mathfrak R+\mathfrak J$; nous allons considérer la classe $\bar z$ de $z$ dans $\operatorname{gr}_{\mathfrak J}^h(\operatorname{gr}_{\mathfrak R}^d(N))$, qui, en vertu de (19.5.5) et de l'hypothèse sur $\mathbf f$, s'identifie à un sous-$(A/\mathfrak L)$-module de $\operatorname{gr}_{\mathfrak L}^{h+d}(N)$. Du fait que $z\in R$, nous allons montrer que l'on a même (avec l'identification précédente)
+\begin{env}[19.7.1.20]
+\label{IV.19.7.1.20}
+\[
+  \bar z\in\operatorname{gr}_{\mathfrak L}^{h+d}(R,N).
+\]
+\end{env}
+
+En effet, on a noté, dans la démonstration de (19.7.1.3) que, pour tout idéal premier $\mathfrak r$ de $A$ tel que $\mathfrak p=\mathfrak r/\mathfrak R\in\operatorname{Ass}_{A/\mathfrak R}(A/\mathfrak L)$, l'application $\psi_{R_{\mathfrak r}}'$ est bijective, et par suite la relation (19.7.1.6), où l'on remplace tous les modules par leurs localisés en $\mathfrak r$, est vraie. Comme $z$ appartient à $R\cap(\mathfrak R^dN+\mathfrak L^{d+1}N)$, son image $z/1$ dans $R_{\mathfrak r}$ appartient à $(R_{\mathfrak r}\cap\mathfrak R_{\mathfrak r}^dN_{\mathfrak r})+\mathfrak L_{\mathfrak r}^{d+1}N_{\mathfrak r}$, donc l'image $\bar z/1$ de $\bar z$ dans $\operatorname{gr}_{\mathfrak L_{\mathfrak r}}^{h+d}(N_{\mathfrak r})$ appartient à
+\[
+  \operatorname{gr}_{\mathfrak L_{\mathfrak r}}^{h+d}(R_{\mathfrak r},N_{\mathfrak r})
+  =(\operatorname{gr}_{\mathfrak L}^{h+d}(R,N))_{\mathfrak r}
+  =(\operatorname{gr}_{\mathfrak L}^{h+d}(R,N))_{\mathfrak q},
+\]
+où $\mathfrak q=\mathfrak r/\mathfrak L$. En d'autres termes l'image de $\bar z$ par l'application canonique
+\[
+  (\operatorname{gr}_{\mathfrak L}^{h+d}(N))_{\mathfrak q}\longrightarrow(\operatorname{gr}_{\mathfrak L}^{h+d}(M))_{\mathfrak q}
+\]
+est nulle pour tout $\mathfrak q\in\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L)$. Comme on a vu dans la démonstration de (19.7.1.3) que
+\[
+  \operatorname{Ass}_{A/\mathfrak L}(\operatorname{gr}_{\mathfrak L}^{h+d}(M))\subset\operatorname{Ass}_{A/\mathfrak L}(A/\mathfrak L),
+\]
+on en déduit bien (Bourbaki, \emph{Alg. comm.}, chap. IV, § 1, n\textsuperscript{o} 1, cor. 1 de la prop. 2 et n\textsuperscript{o} 3, prop. 7) que l'image de $\bar z$ par l'application canonique $\operatorname{gr}_{\mathfrak L}^{h+d}(N)\to\operatorname{gr}_{\mathfrak L}^{h+d}(M)$ est nulle, c'est-à-dire que l'on a la relation (19.7.1.20).
+
+Cela étant, on peut écrire par définition
+\begin{env}[19.7.1.21]
+\label{IV.19.7.1.21}
+\[
+  z\equiv\sum_{|\mathbf p|=h}c_{\mathbf p}\mathbf f^{\mathbf p}\pmod{\mathfrak R^{d+1}N}
+\]
+\end{env}
+où on pose comme d'ordinaire $\mathbf p=(p_1,\ldots,p_n)$, $\mathbf f^{\mathbf p}=f_1^{p_1}f_2^{p_2}\cdots f_n^{p_n}$, $|\mathbf p|=p_1+\cdots+p_n$ et où $c_{\mathbf p}\in\mathfrak R^dN$. En outre, comme $\psi_N$ identifie $\operatorname{gr}_{\mathfrak L}^*(N)$ à $(\operatorname{gr}_{\mathfrak R}^*(N)\otimes_{A/\mathfrak R}(A/\mathfrak L))[T_1,\ldots,T_n]$, les $c_{\mathbf p}$ sont déterminés mod. $\mathfrak R^d\mathfrak LN$, et si $\bar c_{\mathbf p}$ est la classe de $c_{\mathbf p}$ mod. $\mathfrak R^d\mathfrak LN$, on a, par l'identification précédente,
+\begin{env}[19.7.1.22]
+\label{IV.19.7.1.22}
+\[
+  \bar z=\sum_{|\mathbf p|=h}\bar c_{\mathbf p}T^{\mathbf p}.
+\]
+\end{env}
+Utilisant (19.7.1.3), on en déduit que l'on a nécessairement, pour tout $\mathbf p$ tel que $|\mathbf p|=h$ ($\bar c_{\mathbf p}$ étant cette fois identifié par $\psi_N$ à un élément de $\operatorname{gr}_{\mathfrak R}^d(N)$)
+\begin{env}[19.7.1.23]
+\label{IV.19.7.1.23}
+\[
+  \bar c_{\mathbf p}\in\operatorname{gr}_{\mathfrak R}^d(R,N).
+\]
+\end{env}
+Mais puisque $d<m$, l'hypothèse que $(*_d)$ est vraie implique que $\bar c_{\mathbf p}$ appartient à l'image de $\psi_R'$, donc qu'on peut supposer que $c_{\mathbf p}\in(R\cap\mathfrak R^dN)+\mathfrak R^d\mathfrak LN$. La relation (19.7.1.21) donne alors
+\[
+  z\in\mathfrak J^h(R\cap\mathfrak R^dN)+\mathfrak J^h\mathfrak R^d\mathfrak LN+\mathfrak R^{d+1}N
+\]
+et comme $\mathfrak J\subset\mathfrak L$, cela prouve (19.7.1.19).
+
+\oldpage[IV-4]{218}
+
+En particulier, on peut donc écrire
+\[
+  g=t+g_2
+\]
+avec $t\in\mathfrak J^h(R\cap\mathfrak R^dN)$ et $g_2\in\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN$; en outre, comme $t\in R$ et $g\in R$, on a $g_2\in R$. D'autre part, utilisant l'hypothèse $h\geq m-d+1$, on voit que $t\in\mathfrak L^{m+1}N$. L'élément $g_2$ répond donc à toutes les conditions énoncées au début de (19.7.1.8), ce qui achève la démonstration de (19.7.1).
+
+\begin{remarks}[19.7.2]
+\label{IV.19.7.2}
+\begin{enumerate}
+  \item[(i)] Lorsque l'on suppose que $\operatorname{gr}_{\mathfrak R}^*(A)$ est un $(A/\mathfrak R)$-module \emph{plat}, l'hypothèse que la suite $\mathbf f$ est $(A/\mathfrak R)$-régulière entraîne qu'elle est aussi $\operatorname{gr}_{\mathfrak R}^*(A)$-régulière ($0$, 15.1.14). On notera que ce sera le cas lorsque $A$ et $A/\mathfrak R$ sont des anneaux réguliers ($0$, 17.3.6): en effet, $\mathfrak R$ est alors un idéal régulier de $A$ (19.1.2), donc quasi-régulier, et en localisant aux idéaux maximaux de $A$ contenant $\mathfrak R$ et utilisant ($0$, 15.1.7), on voit que $\operatorname{gr}_{\mathfrak R}^*(A)$ est un $(A/\mathfrak R)$-module \emph{projectif}.
+  \item[(ii)] Il serait intéressant de pouvoir prouver la dernière conclusion de (19.7.1) en supposant seulement qu'il existe une $A$-algèbre $B$ qui est un anneau noethérien, pour lequel $\mathfrak JB$ est contenu dans le radical de $B$, et que $M$ est un $B$-module de type fini.
+\end{enumerate}
+\end{remarks}
+
+\begin{corollary}[19.7.3]
+\label{IV.19.7.3}
+Soient $A$ un anneau local noethérien, $\mathfrak m$ son idéal maximal, $\mathfrak R$ un idéal de $A$ tel que l'anneau $A/\mathfrak R$ soit régulier et de dimension $n$, $M$ un $A$-module de type fini. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $\operatorname{gr}_{\mathfrak R}^*(M)$ est un $(A/\mathfrak R)$-module plat.
+  \item[b)] Si $P(T)$ et $Q(T)$ sont les séries de Poincaré des $(A/\mathfrak m)$-modules gradués $\operatorname{gr}_{\mathfrak m}^*(M)$ et $\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak m)$, on a
+\end{enumerate}
+\begin{equation}
+  Q(T)=P(T)(1-T)^n.
+  \tag{19.7.3.1}\label{IV.19.7.3.1}
+\end{equation}
+
+Soit $\mathbf f=(f_1,\ldots,f_n)$ une suite d'éléments de $A$ tels que les images des $f_i$ dans $A/\mathfrak R$ forment un système régulier de paramètres de $A/\mathfrak R$ ($0$, 17.1.6), de sorte que $\mathbf f$ est une suite $(A/\mathfrak R)$-régulière; en outre, si $\mathfrak J$ est l'idéal engendré par $\mathbf f$, on a $\mathfrak J+\mathfrak R=\mathfrak m$, et comme $A/\mathfrak m$ est un corps, $\operatorname{gr}_{\mathfrak m}^*(M)$ est un $(A/\mathfrak m)$-module plat. Comme $A$ est noethérien et $M$ un $A$-module de type fini, on peut appliquer l'équivalence de $a)$ et $b)$ dans (19.7.1). En outre, comme $A/\mathfrak m$ est un corps, et que $\psi_M$ est surjectif, le fait que $\psi_M$ soit bijectif équivaut à dire que pour tout $h\geq0$, $\operatorname{gr}_{\mathfrak m}^h(M)$ et le sous-module des éléments de degré $h$ de $(\operatorname{gr}_{\mathfrak R}^*(M)\otimes_{A/\mathfrak R}(A/\mathfrak m))[T_1,\ldots,T_n]$ ont même rang sur $A/\mathfrak m$; mais pour le second de ces modules le rang en question est évidemment égal à
+\[
+  \sum_{r=0}^h\binom{r+n-1}{n-1}\operatorname{rg}(\operatorname{gr}_{\mathfrak R}^{h-r}(M)\otimes_{A/\mathfrak R}(A/\mathfrak m)).
+\]
+Comme
+\[
+  (1-T)^{-n}=\sum_{r=0}^{\infty}\binom{r+n-1}{n-1}T^r,
+\]
+cela prouve que la relation (19.7.3.1) est nécessaire et suffisante pour que $\psi_M$ soit bijectif.
+\end{corollary}
+
+\begin{corollary}[19.7.4]
+\label{IV.19.7.4}
+Soient $X$ un préschéma localement noethérien, $Y$ un sous-préschéma fermé de $X$, régulier et connexe, $\sh F$ un $\sh O_X$-Module cohérent normalement plat (6.10.1) le long de $Y$. Alors il existe une série formelle $R\in\mathbb{Q}[[T]]$ (indépendante de $x\in Y$) telle que, pour tout $x\in Y$, la série de Poincaré de $\operatorname{gr}_{\mathfrak m_x}^*(\sh F_x)$ soit donnée par la formule
+\begin{equation}
+  P_x(\sh F)(T)=R(T)(1-T)^{-n}\qquad\text{où }n=\dim(\sh O_{Y,x}).
+  \tag{19.7.4.1}\label{IV.19.7.4.1}
+\end{equation}
+
+\oldpage[IV-4]{219}
+
+Soit $\sh J$ l'Idéal cohérent de $\sh O_X$ définissant $Y$; l'hypothèse sur $\sh F$ signifie que $\operatorname{gr}_{\sh J}^*(\sh F)$ est un $\sh O_Y$-Module plat. On peut donc, pour tout $x\in Y$, appliquer (19.7.3) en prenant $A=\sh O_{X,x}$, $\mathfrak R=\sh J_x$, $M=\sh F_x$; l'hypothèse $a)$ étant remplie par hypothèse, la série de Poincaré $P_x(\sh F)(T)$ est donc égale à $R_x(T)(1-T)^{-n}$, où $R_x(T)$ est la série de Poincaré de $\operatorname{gr}_{\sh J_x}^*(\sh F_x)\otimes_{\sh O_{Y,x}}k(x)$. Or, chacun des $\sh O_Y$-Modules $\sh J^h\sh F/\sh J^{h+1}\sh F$ est plat et cohérent par hypothèse, donc localement libre (2.1.12), et puisque $Y$ est supposé connexe, chacun des $\sh J^h\sh F/\sh J^{h+1}\sh F$ est de rang constant dans $Y$, ce qui prouve que la série de Poincaré $R_x(T)$ est indépendante de $x\in Y$.
+\end{corollary}
+
+\begin{corollary}[19.7.5]
+\label{IV.19.7.5}
+Soient $X$ un préschéma localement noethérien, $Y$ un sous-préschéma fermé de $X$, $Z$ un sous-préschéma fermé de $Y$; on suppose $Y$ et $Z$ réguliers. Soit $\sh F$ un $\sh O_X$-Module cohérent.
+\begin{enumerate}
+  \item[(i)] Si $\sh F$ est normalement plat le long de $Y$ aux points de $Z$ (cf. (11.3.4) pour la définition de la platitude normale en un point), alors $\sh F$ est normalement plat le long de $Z$.
+  \item[(ii)] Supposons en outre que $Z$ soit connexe et que $\sh O_X$ soit normalement plat le long de $Y$ aux points de $Z$ (ce qui aura lieu en particulier si $X$ est régulier aux points de $Z$). Si $\sh F$ est normalement plat le long de $Z$ et s'il existe un point $z\in Z$ tel que $\sh F$ soit normalement plat le long de $Y$ au point $z$, alors $\sh F$ est normalement plat le long de $Y$ aux points de $Z$.
+\end{enumerate}
+
+Soient $\sh K$ et $\sh L\supset\sh K$ les Idéaux cohérents de $\sh O_X$ définissant respectivement $Y$ et $Z$. Pour tout point $z\in Z$, l'immersion canonique $Z\to Y$ est régulière au point $z$, puisque $Y$ et $Z$ sont réguliers en ce point (19.1.1); autrement dit, il existe une suite $(f_i)_{1\leq i\leq n}$ d'éléments de $\sh O_{X,z}$ qui est $\sh K_z$-régulière et est telle que $\sh L_z=\sh K_z+\sum_i f_i\sh O_{X,z}$.
+\begin{enumerate}
+  \item[(i)] L'hypothèse signifie que $\operatorname{gr}_{\sh K_z}^*(\sh F_z)$ est un $\sh O_{Y,z}$-module plat; elle entraîne donc que $\operatorname{gr}_{\sh L_z}^*(\sh F_z)$ est un $\sh O_{Z,z}$-module plat, en vertu du fait que dans (19.7.1), $a)$ entraîne $b)$.
+  \item[(ii)] L'hypothèse supplémentaire sur $X$ entraîne que la suite $(f_i)$ est $\operatorname{gr}_{\sh K_z}^*(\sh F_z)$-régulière en tout point $z\in Z$ (19.7.2). D'autre part, $Z$ étant régulier et connexe, est intègre, et si $\operatorname{gr}_{\sh K_z}^*(\sh F_z)$ est $\sh O_{Y,z}$-plat en un point $z\in Z$, alors, comme le point générique $\zeta$ de $Z$ est une générisation de $z$, on en conclut que $\operatorname{gr}_{\sh K_\zeta}^*(\sh F_\zeta)$ est $\sh O_{Y,\zeta}$-plat ($0_{\mathrm I}$, 6.3.1). On en déduit que si en tout point $z'$ de $Z$, $\operatorname{gr}_{\sh L_{z'}}^*(\sh F_{z'})$ est un $\sh O_{Z,z'}$-module plat, alors $\operatorname{gr}_{\sh K_{z'}}^*(\sh F_{z'})$ est un $\sh O_{Y,z'}$-module plat, car on peut appliquer l'équivalence de $a)$ et $d)$ dans (19.7.1).
+\end{enumerate}
+\end{corollary}
+
+\subsection{Propriétés de passage à la limite projective.}
+\EGAReaderTarget{ega4.c04.subsec.19-8}{subsection:IV.19.8}
+\label{IV.19.8}
+
+Dans ce numéro, les notations et conventions sur les limites projectives sont celles de (8.5.1) et de (8.8.1).
+
+\begin{proposition}[19.8.1]
+\label{IV.19.8.1}
+Supposons que les morphismes de transition $S_\mu\to S_\lambda$ $(\lambda\leq\mu)$ soient plats, et en outre que l'une des deux hypothèses suivantes soit vérifiée:
+\begin{enumerate}
+  \item[$1^\circ$] Les préschémas $S_\lambda$ sont localement noethériens.
+  \item[$2^\circ$] Les morphismes de transition $S_\mu\to S_\lambda$ sont surjectifs (donc fidèlement plats).
+\end{enumerate}
+
+\oldpage[IV-4]{220}

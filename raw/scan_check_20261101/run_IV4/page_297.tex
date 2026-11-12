@@ -1,0 +1,72 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{297}
+Soient $X$, $X'$, $X''$ trois préschémas localement noethériens, $f:X'\to X$, $g:X''\to X'$ deux morphismes vérifiant les conditions \emph{a)} et \emph{b)} de \sref{IV.21.10.14}.
+Alors $f\circ g$ vérifie les mêmes conditions, et pour tout cycle $1$-codimensionnel $Z''$ sur $X''$, on a
+\[
+  (f\circ g)_*(Z'')=f_*(g_*(Z'')).
+\]
+\end{proposition}
+
+\begin{proof}
+Cela résulte aussitôt des définitions.
+\end{proof}
+
+\begin{proposition}[21.10.16]
+\label{IV.21.10.16}
+Soient $X$, $X'$, $X_1$ trois préschémas localement noethériens, $f:X'\to X$ un morphisme vérifiant les conditions \emph{a)} et \emph{b)} de \sref{IV.21.10.14}, $g:X_1\to X$ un morphisme plat.
+On pose $X'_1=X'\times_XX_1$ (de sorte que $X'_1$ est localement noethérien) et on note $f_1:X'_1\to X_1$ et $g_1:X'_1\to X'$ les projections canoniques.
+Alors $f_1$ vérifie les conditions \emph{a)} et \emph{b)} de \sref{IV.21.10.14}, et pour tout $1$-cycle codimensionnel $Z'$ sur $X'$, on a
+\[
+\label{IV.21.10.16.1}
+  g^*(f_*(Z'))=(f_1)_*(g_1^*(Z')).
+  \tag{21.10.16.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Il est clair que $f_1$ est fini, et il vérifie la condition \emph{b)} de \sref{IV.21.10.14} en vertu de \sref{IV.2.3.7}.
+Pour prouver \sref{IV.21.10.16.1}, on est aussitôt ramené au cas où $X$, $X'$ et $X_1$ sont des spectres d'anneaux locaux noethériens de dimension $1$, $A$, $A'$ et $A_1$, $A'$ étant un $A$-module fini et $A_1$ un $A$-module plat.
+Désignant par $x$, $x'$ et $x_1$ les points fermés de $X$, $X'$ et $X_1$ respectivement, il s'agit de voir que l'on a
+\[
+\label{IV.21.10.16.2}
+  \sum_{x'_1}\lambda_{x'_1}[\boldsymbol{k}(x'_1):\boldsymbol{k}(x_1)]
+  =\lambda_{x_1}[\boldsymbol{k}(x'):\boldsymbol{k}(x)]
+  \tag{21.10.16.2}
+\]
+où $x'_1$ parcourt l'ensemble des points fermés de $X'_1$ (i.e. l'ensemble des points à la fois au-dessus de $x'$ et de $x_1$) et où $\lambda_{x'_1}=\operatorname{long}(\sh{O}_{X'_1,x'_1}/\mathfrak{m}_{x'}\sh{O}_{X'_1,x'_1})$ et $\lambda_{x_1}=\operatorname{long}(A_1/\mathfrak{m}_xA_1)$.
+Comme on a
+\[
+  [\boldsymbol{k}(x'_1):\boldsymbol{k}(x')]\cdot[\boldsymbol{k}(x'):\boldsymbol{k}(x)]
+  =[\boldsymbol{k}(x'_1):\boldsymbol{k}(x_1)]\cdot[\boldsymbol{k}(x_1):\boldsymbol{k}(x)],
+\]
+le premier membre de \sref{IV.21.10.16.2} s'écrit aussi
+\[
+  \frac{[\boldsymbol{k}(x'): \boldsymbol{k}(x)]}{[\boldsymbol{k}(x_1): \boldsymbol{k}(x)]}
+  \operatorname{long}_{A'}(A'_1/\mathfrak{m}_{x'}A'_1)
+  =\operatorname{long}_{A_1}(A'_1/\mathfrak{m}_{x'}A'_1),
+\]
+où on a posé $A'_1=A'\otimes_AA_1$.
+On a donc $A'_1/\mathfrak{m}_{x'}A'_1=(A'/\mathfrak{m}_{x'}A')\otimes_AA_1$, et comme $A_1$ est un $A$-module plat, on a par \sref{IV.4.7.1}
+\[
+  \operatorname{long}_{A_1}(A'_1/\mathfrak{m}_{x'}A'_1)
+  =\operatorname{long}_{A}(A'/\mathfrak{m}_{x'}A')\operatorname{long}_{A_1}(A_1/\mathfrak{m}_xA_1)
+  =[\boldsymbol{k}(x'): \boldsymbol{k}(x)]\cdot\lambda_{x_1},
+\]
+ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[21.10.17]
+\label{IV.21.10.17}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme fini localement libre.
+Alors $f$ vérifie la condition \emph{b)} de \sref{IV.21.10.14}, et pour tout diviseur $D'$ sur $X'$, on a
+\[
+\label{IV.21.10.17.1}
+  f_*(\operatorname{cyc}(D'))=\operatorname{cyc}(f_*(D')).
+  \tag{21.10.17.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Comme $f$ est plat et fini, la condition \emph{b)} de \sref{IV.21.10.14} et la relation $f(X'^{(1)})\subset X^{(1)}$ résultent de \sref{IV.6.1.1}.
+La définition \sref{IV.21.10.14.1} montre qu'on peut se ramener au cas où $X=\Spec(A)=\Spec(\sh{O}_{X,x})$ pour un $x\in X^{(1)}$;
+alors $X'=\Spec(A')$, où $A'$ est une

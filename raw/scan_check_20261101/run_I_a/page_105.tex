@@ -1,0 +1,90 @@
+% from ega1-3-fr.tex
+\oldpage[I]{105}
+$S$-préschémas $X$ et $Y$, si, pour tout $S$-préschéma $T$, l'application
+$f\mapsto(p_1\circ f,p_2\circ f)$ est une bijection de l'ensemble des
+$S$-morphismes de $T$ dans $Z$, sur l'ensemble des couples formés d'un
+$S$-morphisme $T\to X$ et d'un $S$-morphisme $T\to Y$ (autrement dit, une
+bijection
+\[
+  \operatorname{Hom}_S(T,Z)\xrightarrow{\sim}
+  \operatorname{Hom}_S(T,X)\times\operatorname{Hom}_S(T,Y)).
+\]
+\end{definition}
+
+Il s'agit donc là de la notion générale de \emph{produit} de deux objets d'une
+catégorie, appliquée à la catégorie des $S$-préschémas (T, I, 1.1)~; en
+particulier, un produit de deux $S$-préschémas est \emph{unique} à un
+$S$-isomorphisme unique près. En raison de cette unicité, on désigne le plus
+souvent un produit de deux $S$-préschémas $X$, $Y$ par la notation
+$X\times_S Y$ (ou simplement $X\times Y$ si aucune confusion n'est à craindre),
+les morphismes $p_1$, $p_2$ (appelés les \emph{projections canoniques} de
+$X\times_S Y$ dans $X$ et $Y$ respectivement) étant supprimés de la notation.
+Si $g:T\to X$, $h:T\to Y$ sont deux $S$-morphismes, on désignera par
+$(g,h)_S$, ou simplement $(g,h)$ le $S$-morphisme
+$f:T\to X\times_S Y$ tel que $p_1\circ f=g$, $p_2\circ f=h$. Si $X'$, $Y'$
+sont deux $S$-préschémas, $p'_1$, $p'_2$ les projections canoniques de
+$X'\times_S Y'$ (supposé exister), $u:X'\to X$, $v:Y'\to Y$ deux
+$S$-morphismes, on écrira $u\times_S v$ (ou simplement $u\times v$) le
+$S$-morphisme $(u\circ p'_1,v\circ p'_2)_S$ de $X'\times_S Y'$ dans
+$X\times_S Y$.
+
+Lorsque $S$ est un schéma affine d'anneau $A$, on remplace souvent $S$ par $A$
+dans les notations précédentes.
+
+\begin{proposition}[3.2.2]
+\label{I.3.2.2-fr}
+Soient $X$, $Y$, $S$ trois schémas affines, $B$, $C$, $A$ leurs anneaux
+respectifs. Soient $Z=\operatorname{Spec}(B\otimes_A C)$, $p_1$, $p_2$ les
+$S$-morphismes correspondant (\hyperref[I.2.2.4-fr]{2.2.4}) aux
+$A$-homomorphismes canoniques $u:b\mapsto b\otimes1$ et
+$v:c\mapsto1\otimes c$ de $B$ et $C$ dans $B\otimes_A C$~; alors
+$(Z,p_1,p_2)$ est un produit de $X$ et $Y$.
+\end{proposition}
+
+En vertu de (\hyperref[I.2.2.4-fr]{2.2.4}), tout revient à vérifier que si, à
+tout $A$-homomorphisme $f:B\otimes_A C\to L$ (où $L$ est une $A$-algèbre), on
+associe le couple $(f\circ u,f\circ v)$, on définit une bijection
+\[
+  \operatorname{Hom}_A(B\otimes_A C,L)\xrightarrow{\sim}
+  \operatorname{Hom}_A(B,L)\times\operatorname{Hom}_A(C,L)\footnotemark,
+\]
+\footnotetext{La notation $\operatorname{Hom}_A$ désigne ici l'ensemble des
+homomorphismes des $A$-algèbres.} ce qui résulte immédiatement des définitions
+et de la relation $b\otimes c=(b\otimes1)(1\otimes c)$.
+
+\begin{corollary}[3.2.3]
+\label{I.3.2.3-fr}
+Soient $T$ un schéma affine d'anneau $D$,
+$\alpha=({}^a\rho,\widetilde{\rho})$
+(resp. $\beta=({}^a\sigma,\widetilde{\sigma})$) un $S$-morphisme $T\to X$
+(resp. $T\to Y$), où $\rho$ (resp. $\sigma$) est un $A$-homomorphisme de $B$
+(resp. $C$) dans $D$~; alors
+$(\alpha,\beta)_S=({}^a\tau,\widetilde{\tau})$, où $\tau$ est l'homomorphisme
+$B\otimes_A C\to D$ tel que $\tau(b\otimes c)=\rho(b)\sigma(c)$.
+\end{corollary}
+
+\begin{proposition}[3.2.4]
+\label{I.3.2.4-fr}
+Soient $f:S'\to S$ un monomorphisme de préschémas (T, I, 1.1), $X$, $Y$ deux
+$S'$-préschémas, qui sont considérés aussi comme $S$-préschémas au moyen de
+$f$. Tout produit des $S$-préschémas $X$, $Y$ est alors un produit des
+$S'$-préschémas $X$, $Y$ et réciproquement.
+\end{proposition}
+
+Soient $\varphi:X\to S'$, $\psi:Y\to S'$ les morphismes structuraux. Si $T$
+est un $S$-préschéma, $u:T\to X$, $v:T\to Y$ deux $S$-morphismes, on a par
+définition $f\circ\varphi\circ u=f\circ\psi\circ v=\theta$, morphisme
+structural de $T$~; l'hypothèse sur $f$ entraîne
+$\varphi\circ u=\psi\circ v=\theta'$, et on voit qu'on peut considérer $T$
+comme $S'$-préschéma de morphisme structural $\theta'$, $u$ et $v$ comme des
+$S'$-morphismes. La conclusion de la proposition en résulte immédiatement,
+compte tenu de (\hyperref[I.3.2.1-fr]{3.2.1}).
+
+\begin{corollary}[3.2.5]
+\label{I.3.2.5-fr}
+Soient $X$, $Y$ deux $S$-préschémas, $\varphi:X\to S$, $\psi:Y\to S$ leurs
+morphismes structuraux, $S'$ une partie ouverte de $S$ telle que
+$\varphi(X)\subset S'$, $\psi(Y)\subset S'$. Tout produit des $S$-préschémas
+$X$, $Y$ est aussi un produit des $S'$-préschémas $X$, $Y$, et réciproquement.
+\end{corollary}
+

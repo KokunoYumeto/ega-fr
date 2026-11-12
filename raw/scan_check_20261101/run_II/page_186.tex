@@ -1,0 +1,95 @@
+% from ega2-1-fr.tex
+\oldpage[II]{186}
+soit $V'=V\times_X X'$, et soient $\pi':V'\to X'$,
+$g':V'\to V$ les projections canoniques, de sorte qu'on a le diagramme
+commutatif
+\[
+  \xymatrix{
+    V\ar[d]_{\pi} & V'\ar[l]^{g'}\ar[d]^{\pi'}\\
+    X & X'\ar[l]_{g}
+  }
+\]
+Alors $j'=j\times1_{X'}$ est une $X'$-section de $V'$ qui est une immersion
+fermée, et $\mathcal{J}'=(g')^*(\mathcal{J})\mathcal{O}_{V'}$ est l'Idéal
+quasi-cohérent de $\mathcal{O}_{V'}$ définissant le sous-préschéma fermé de
+$V'$ associé à $j'$. En outre, on a
+\[
+  \pi'_*(\mathcal{O}_{V'}/\mathcal{J}'^{n+1})
+  =g^*(\pi_*(\mathcal{O}_V/\mathcal{J}^{n+1})).
+\]
+Enfin, $\mathcal{J}'$ est un $\mathcal{O}_{V'}$-Module canoniquement isomorphe
+à $(g')^*(\mathcal{J})$ et est en particulier inversible si $\mathcal{J}$ est
+un $\mathcal{O}_V$-Module inversible.
+\end{lemma}
+
+\begin{proof}
+Le fait que $j'$ est une immersion fermée découle de
+(\hyperref[I.4.3.1-fr]{I, 4.3.1}), et c'est une $X'$-section de $V'$ par
+fonctorialité de l'extension du préschéma de base. En outre, si $Z$ (resp.
+$Z'$) est le sous-préschéma fermé de $V$ (resp. $V'$) associé à $j$ (resp.
+$j'$), on a $Z'=g'{}^{-1}(Z)$
+(\hyperref[I.4.3.1-fr]{I, 4.3.1}), et la seconde assertion résulte alors de
+(\hyperref[I.4.4.5-fr]{I, 4.4.5}). Pour démontrer les autres assertions, on
+voit comme dans (\hyperref[II.8.10.1-fr]{8.10.1}) qu'on peut se ramener au cas
+où $X$, $V$ et $X'$ (donc aussi $V'$) sont affines~; gardons les notations de
+la démonstration de (\hyperref[II.8.10.1-fr]{8.10.1}) et soit
+$X'=\operatorname{Spec}(A')$. On a alors $V'=\operatorname{Spec}(B')$ où
+$B'=B\otimes_A A'$, et $\mathcal{J}'=\widetilde{\mathfrak{J}'}$, avec
+$\mathfrak{J}'=\operatorname{Im}(\mathfrak{J}\otimes_A A')$. On a donc
+\[
+  B'/\mathfrak{J}'^{n+1}=(B/\mathfrak{J}^{n+1})\otimes_A A'~;
+\]
+en outre, comme $\mathfrak{J}$ est facteur direct (en tant que $A$-module) de
+$B$, $\mathfrak{J}\otimes_A A'$ est facteur direct (en tant que $A'$-module)
+de $B'$, donc s'identifie canoniquement à $\mathfrak{J}'$.
+\end{proof}
+
+\begin{corollary}[8.10.3]
+\label{II.8.10.3-fr}
+Supposons vérifiées les hypothèses de (\hyperref[II.8.10.1-fr]{8.10.1}) et
+supposons en outre que $\pi$ soit de type fini et que $\mathcal{J}$ soit un
+$\mathcal{O}_V$-Module inversible. Alors, pour tout $x\in X$, l'anneau local
+au point $j(x)$ de la fibre $\pi^{-1}(x)$ est un anneau régulier (donc
+intègre) de dimension 1, dont le complété est isomorphe à l'anneau de séries
+formelles $k(x)[[T]]$ ($T$ indéterminée)~; en outre il n'existe qu'une seule
+composante irréductible de $\pi^{-1}(x)$ contenant $j(x)$.
+\end{corollary}
+
+\begin{proof}
+Comme $\pi^{-1}(x)=V\times_X\operatorname{Spec}(k(x))$, on est ramené par
+(\hyperref[II.8.10.2-fr]{8.10.2}) au cas où $X$ est le spectre d'un corps
+$K$. Comme $\pi$ est de type fini
+(\hyperref[I.6.3.4-fr]{I, 6.3.4, (iv)}), $\mathcal{O}_{j(x)}$ est alors un
+anneau local noethérien, donc séparé pour la topologie
+$\mathfrak{m}_{j(x)}$-préadique
+(\hyperref[0.7.3.5-fr]{0, 7.3.5})~; il résulte de
+(\hyperref[II.8.10.1-fr]{8.10.1, (ii) et (iii)}) que le complété de cet anneau
+est isomorphe à $K[[T]]$, et par suite $\mathcal{O}_{j(x)}$ est régulier et de
+dimension 1 ([1], p.~17-01, th.~1)~; enfin, puisque $\mathcal{O}_{j(x)}$ est
+intègre, $j(x)$ n'appartient qu'à une seule des composantes irréductibles (en
+nombre fini) de $V$ (\hyperref[I.5.1.4-fr]{I, 5.1.4}).
+\end{proof}
+
+\begin{corollary}[8.10.4]
+\label{II.8.10.4-fr}
+Supposons vérifiées les hypothèses de (\hyperref[II.8.10.1-fr]{8.10.1}) et en
+outre supposons que $\mathcal{J}$ soit un $\mathcal{O}_V$-Module inversible.
+Soit $W=V-j(X)$~; pour tout Idéal quasi-cohérent $\mathcal{K}$ de
+$\mathcal{O}_X$, posons
+$\mathcal{K}_V=\pi^*(\mathcal{K})\mathcal{O}_V$ et
+$\mathcal{K}_W=\mathcal{K}_V|W$. Alors $\mathcal{K}_V$ est le plus grand
+Idéal quasi-cohérent de $\mathcal{O}_V$ dont la restriction à $W$ soit
+$\mathcal{K}_W$.
+\end{corollary}
+
+\begin{proof}
+En effet, on voit comme dans (\hyperref[II.8.10.1-fr]{8.10.1}) que la question
+est locale sur $X$ et sur $V$~; on peut donc garder les notations de la
+démonstration de (\hyperref[II.8.10.1-fr]{8.10.1}), avec
+$\mathfrak{J}=Bt$, où $t$ n'est pas diviseur de 0 dans $B$. En outre, on a
+$W=\operatorname{Spec}(B_t)$ et $\mathcal{K}=\widetilde{\mathfrak{K}}$, où
+$\mathfrak{K}$ est un idéal de $A$~; d'où
+$\pi^*(\mathcal{K})\mathcal{O}_V=(\mathfrak{K}.B)^{\sim}$
+(\hyperref[I.1.6.9-fr]{I, 1.6.9}),
+$\mathcal{K}_W=(\mathfrak{K}.B_t)^{\sim}$, et le plus grand idéal
+

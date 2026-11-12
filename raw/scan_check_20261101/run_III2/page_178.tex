@@ -1,0 +1,115 @@
+% from ega3-7-fr.tex
+\oldpage[III]{178}
+En particulier, si $B$ est une $A$-algèbre (non nécessairement commutative),
+on a un homomorphisme fonctoriel en $M$
+\[
+  (T(M))_{(B)}
+  =
+  T(M)\otimes_A B
+  \longrightarrow
+  T(M\otimes_A B)
+  =
+  T_{(B)}(M_{(B)})
+  \tag{7.2.3.2}\label{III.7.2.3.2.fr}
+\]
+qui, en vertu de la fonctorialité de (7.2.3.1) en $M$, est un homomorphisme
+de $B$-modules.
+
+On a en outre le diagramme commutatif
+\[
+\xymatrix@C=30pt@R=30pt{
+  T(A)\otimes_A M
+  \ar[r]^-{t_M}\ar[d]
+  &
+  T(M)\ar[d]
+  \\
+  T_{(B)}(B_s)\otimes_B M_{(B)}
+  \ar[r]_-{t_{M_{(B)}}}
+  &
+  T_{(B)}(M_{(B)})
+}
+\tag{7.2.3.3}\label{III.7.2.3.3.fr}
+\]
+où la flèche verticale de droite est l'homomorphisme composé
+\[
+  T(M)
+  \longrightarrow
+  T(M)\otimes_A B
+  \longrightarrow
+  T(M\otimes_A B)
+  =
+  T_{(B)}(M_{(B)})
+\]
+de (7.2.3.2) et de l'homomorphisme canonique; quant à la flèche verticale de
+gauche de (7.2.3.3), c'est l'homomorphisme
+\[
+  T(A)\otimes_A M
+  \longrightarrow
+  T_{(B)}(B_s)\otimes_B(B\otimes_A M)
+  =
+  T_{(B)}(B_s)\otimes_A M
+\]
+où
+\[
+  T(A)\longrightarrow T_{(B)}(B_s)=T(B)
+\]
+est $T(\rho)$, $\rho$ étant considéré comme homomorphisme de $A$-modules
+$A\to B_{[\rho]}$.
+\end{env}
+
+\begin{lemma}[7.2.4]
+Si $T$ est un foncteur covariant additif de $\mathbf{Ab}_A$ dans
+$\mathbf{Ab}$, commutant avec les sommes directes, l'homomorphisme canonique
+$t_L$ (7.2.2.1) est un isomorphisme pour tout $A$-module libre $L$.
+\end{lemma}
+
+\begin{proof}
+En effet, on a
+\[
+  L=\bigoplus_{\alpha\in I}L_\alpha
+\]
+où $L_\alpha$ est isomorphe à $A_s$ pour tout $\alpha\in I$; la définition de
+$t_M$ donnée dans (7.2.2) montre que
+\[
+  t_L=\bigoplus_{\alpha\in I}t_{L_\alpha},
+\]
+puisque
+\[
+  T:
+  \operatorname{Hom}_A(A_s,L)
+  \longrightarrow
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(L))
+\]
+est somme directe des applications $\mathbf Z$-linéaires
+\[
+  T_\alpha:
+  \operatorname{Hom}_A(A_s,L_\alpha)
+  \longrightarrow
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(L_\alpha))
+\]
+en vertu de l'hypothèse sur $T$. On est donc ramené à prouver le lemme pour
+$L=A_s$; mais $t_L$ n'est autre alors que l'isomorphisme canonique
+\[
+  T(A_s)\otimes_A A_s\xrightarrow{\sim}T(A_s)
+\]
+valable pour tout $A$-module à droite.
+\end{proof}
+
+\begin{proposition}[7.2.5]
+Soit $T$ un foncteur covariant additif de $\mathbf{Ab}_A$ dans
+$\mathbf{Ab}$, commutant aux sommes directes. Les conditions suivantes sont
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T$ est exact à droite.
+  \item[b)] L'homomorphisme canonique $t_M$ (7.2.2.1) est un isomorphisme pour
+    tout $A$-module à gauche $M$.
+  \item[$b'$)] $T$ est semi-exact et l'homomorphisme $t_M$ est surjectif pour
+    tout $A$-module à gauche $M$.
+  \item[c)] $T$ est isomorphe à un foncteur en $M$ de la forme
+    $N\otimes_A M$, où $N$ est un $A$-module à droite.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que $b)$ implique $c)$ et que $c)$ implique $a)$; montrons que
+$a)$ implique $b)$.

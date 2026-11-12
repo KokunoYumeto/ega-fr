@@ -1,0 +1,105 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{13}
+(0\textsubscript{I}, 6.1.2); en outre, on a alors des diagrammes commutatifs
+\[
+  \xymatrix{
+    0 \ar[r] &
+    (\mathscr{I}^n/\mathscr{I}^{n+1})
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] &
+    (\mathscr{I}/\mathscr{I}^{n+1})
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] &
+    (\mathscr{I}/\mathscr{I}^n)
+      \otimes_{\mathcal{O}_Y}\mathcal{O}_{Y'}
+      \ar[r]\ar[d] & 0 \\
+    0 \ar[r] &
+    \mathscr{I}'^n/\mathscr{I}'^{n+1}
+      \ar[r] &
+    \mathscr{I}'/\mathscr{I}'^{n+1}
+      \ar[r] &
+    \mathscr{I}'/\mathscr{I}'^n
+      \ar[r] & 0
+  }
+\]
+dans lesquels les lignes sont exactes (la première par platitude
+(0\textsubscript{I}, 6.1.2)) et les deux dernières flèches verticales sont
+bijectives en vertu de (16.2.3, (ii)); d'où la conclusion.
+
+\begin{remarks}[16.2.5]
+\label{IV.16.2.5}
+\begin{enumerate}
+\item[(i)] Le raisonnement de (16.2.2, (i)) s'applique encore lorsque dans
+(16.2.1.1) il s'agit de morphismes d'espaces annelés en anneaux locaux
+($\mathbf{Err}_{\mathrm{II}}$, (1.8.2)).
+\item[(ii)] Dans (16.2.2, (ii)), la conclusion n'est plus nécessairement valable
+lorsqu'on suppose seulement que $v$ et $f$ sont des morphismes de préschémas
+($f$ vérifiant la condition de (16.1.1)). Par exemple (avec les notations de la
+démonstration de (16.2.2, (ii)), il peut se faire que $\mathfrak{I}=0$ mais que
+le noyau $\mathfrak{I}'$ de $A'\to B'=B\otimes_A A'$ ne soit pas nul et que
+$B'\neq 0$, auquel cas on a $Y^{(n)}=Y$ pour tout $n$, mais
+$Y'^{(n)}\neq Y'$. On a un exemple de ce fait en prenant
+$A=\mathbb{Z}$, $B=\mathbb{Q}$,
+$A'=\prod_{h=1}^{\infty}(\mathbb{Z}/m^h\mathbb{Z})$ où $m>1$.
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[16.2.6]
+\label{IV.16.2.6}
+Considérons le cas particulier du diagramme (16.2.1.1) où $X'=X$, $v$ étant
+l'identité, $X$ est un préschéma, $Y$ un sous-préschéma de $X$, $Y'$ un
+sous-préschéma de $Y$, $f$, $u$ et $f'=f\circ u$ les injections canoniques; le
+di-homomorphisme (16.2.1.3) donne, par tensorisation avec
+$\mathcal{O}_{Y'}$ au-dessus de $\rho^*(\mathcal{O}_Y)$, un homomorphisme de
+$\mathcal{O}_{Y'}$-Algèbres graduées
+\[
+  u^*(\mathscr{G}r_\bullet(f))
+  \longrightarrow\mathscr{G}r_\bullet(f')
+  \tag{16.2.6.1}
+  \label{IV.16.2.6.1}
+\]
+D'autre part, on identifie $\mathcal{O}_Y$ à
+$\psi^*(\mathcal{O}_X)/\mathscr{I}_f$, $\mathcal{O}_{Y'}$ à
+$\rho^*(\mathcal{O}_Y)/\mathscr{I}_u$; comme $\rho^*$ est un foncteur exact,
+on a
+$\rho^*(\mathcal{O}_Y)=
+\rho^*(\psi^*(\mathcal{O}_X))/\rho^*(\mathscr{I}_f)=
+\psi'^*(\mathcal{O}_X)/\rho^*(\mathscr{I}_f)$, et comme
+$\mathcal{O}_{Y'}$ s'identifie par ailleurs à
+$\psi'^*(\mathcal{O}_X)/\mathscr{I}_{f'}$, on voit que l'on a
+$\mathscr{I}_u=\mathscr{I}_{f'}/\rho^*(\mathscr{I}_f)$. On en déduit pour
+tout entier $n$ un homomorphisme canonique
+$\mathscr{I}_{f'}^n/\mathscr{I}_{f'}^{n+1}\to
+\mathscr{I}_u^n/\mathscr{I}_u^{n+1}$, d'où un homomorphisme canonique de
+$\mathcal{O}_{Y'}$-Algèbres graduées
+\[
+  \mathscr{G}r_\bullet(f')
+  \longrightarrow\mathscr{G}r_\bullet(u).
+  \tag{16.2.6.2}
+  \label{IV.16.2.6.2}
+\]
+\end{env}
+
+\begin{proposition}[16.2.7]
+\label{IV.16.2.7}
+Soient $X$ un préschéma, $Y$ un sous-préschéma de $X$, $Y'$ un
+sous-préschéma de $Y$, $j:Y'\to Y$ l'injection canonique. On a alors une suite
+exacte de faisceaux conormaux ($\mathcal{O}_{Y'}$-Modules)
+\[
+  \xymatrix{
+    j^*(\mathscr{N}_{Y/X}) \ar[r] &
+    \mathscr{N}_{Y'/X} \ar[r] &
+    \mathscr{N}_{Y'/Y} \ar[r] & 0
+  }
+  \tag{16.2.7.1}
+  \label{IV.16.2.7.1}
+\]
+où les flèches sont les composantes de degré 1 des homomorphismes canoniques
+(16.2.6.1) et (16.2.6.2).
+\end{proposition}
+
+La question étant locale, on peut se borner au cas où
+$X=\operatorname{Spec}(A)$, $Y=\operatorname{Spec}(A/\mathfrak{I})$,
+$Y'=\operatorname{Spec}(A/\mathfrak{K})$, $\mathfrak{I}$ et $\mathfrak{K}$
+étant deux idéaux de $A$ tels que $\mathfrak{I}\subset\mathfrak{K}$; tout
+revient à voir alors

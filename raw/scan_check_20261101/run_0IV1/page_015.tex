@@ -1,0 +1,109 @@
+% from ega0-15-fr.tex
+\oldpage[0\textsubscript{IV-1}]{15}
+dans $M'_k/M'_{k+1}$. On est donc ramené à écrire que, pour $x\in M_i$, la
+relation
+\[
+  f^{k-i}x\in M_k+fM_{k-1}+\cdots+
+  f^{k-i-1}M_{i+1}+M'_{k+1}
+  \tag{15.1.6.2}\label{0.15.1.6.2-fr}
+\]
+implique $x\in fM_i+M_{i+1}$. Or, le second membre de (15.1.6.2) est contenu
+dans $M_{i+1}+M'_{k+1}$, et en vertu de (15.1.5.1), $M'_{k+1}$ est contenu
+dans $M_{i+1}+f^{k+1-i}M$. L'hypothèse sur $f$ entraîne que $f$ est non
+diviseur de zéro dans $M/M_h$ pour tout $h$ (Bourbaki, \emph{loc.~cit.}). La
+relation $f^{k-i}x\in f^{k+1-i}M+M_{i+1}$ entraîne donc (en raisonnant dans
+$M/M_{i+1}$) l'existence d'un $y\in M$ tel que $x-fy\in M_{i+1}$, et comme
+$x\in M_i$, on a $fy\in M_i$, d'où (en raisonnant dans $M/M_i$), $y\in M_i$,
+et finalement $x\in fM_i+M_{i+1}$. C.Q.F.D.
+\end{proof}
+
+\begin{definition}[15.1.7]
+\label{0.15.1.7-fr}
+Soit $(f_i)_{1\leq i\leq n}$ une suite d'éléments de $A$. On dit qu'elle est
+\emph{$M$-régulière} si, pour $1\leq i\leq n$, $f_i$ est
+$\left(M/(\sum_{1\leq j\leq i-1}f_jM)\right)$-régulier. On dit que la suite
+$(f_i)$ est \emph{$M$-quasi-régulière} si
+l'homomorphisme canonique $\varphi$ défini dans (15.1.1.1) est bijectif.
+
+Lorsque $M=A$, on dit simplement «~suite régulière~» et
+«~suite quasi-régulière~».
+\end{definition}
+
+\begin{proposition}[15.1.8]
+\label{0.15.1.8-fr}
+Les notations étant celles de (15.1.5), on suppose que la suite
+$(f_i)_{1\leq i\leq n}$ est $\gr_\bullet(M)$-régulière. Alors
+l'homomorphisme canonique (15.1.5.2) est bijectif.
+\end{proposition}
+
+\begin{proof}
+La proposition n'est autre que (15.1.6) pour $n=1$~; raisonnons par récurrence
+sur $n$. Posons
+\[
+  \mathfrak{J}''=\sum_{i=1}^{n-1}f_iA,
+\]
+de sorte que $\mathfrak{J}=\mathfrak{J}''+f_nA$, et soit
+\[
+  M''_k=M_k+\mathfrak{J}''M_{k-1}+\cdots+
+  \mathfrak{J}''^{k-1}M_1+\mathfrak{J}''^kM_0~;
+\]
+on peut donc écrire
+\[
+  M'_k=M''_k+f_nM''_{k-1}+\cdots+f_n^{k-1}M''_1+f_n^kM''_0.
+\]
+Notons $\gr''_\bullet(M)$ le $A$-module gradué associé à la filtration
+$(M''_k)$ de $M$. On peut écrire, à des isomorphismes canoniques près
+\[
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}))\otimes_A A[T_1,\ldots,T_n]
+  =
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}''))[T_1,\ldots,T_{n-1}]
+  \otimes(A/f_nA)\otimes_A A[T_n]
+\]
+et par suite (15.1.5.2) se factorise en
+\[
+  (\gr''_\bullet(M)\otimes(A/f_nA))[T_n]\longrightarrow\gr'_\bullet(M)
+  \tag{15.1.8.1}\label{0.15.1.8.1-fr}
+\]
+et
+\[
+  ((\gr_\bullet(M)\otimes(A/\mathfrak{J}''))[T_1,\ldots,T_{n-1}])
+  \otimes(A/f_nA)\otimes_A A[T_n]
+  \xrightarrow{\psi'\otimes1}
+  \gr''_\bullet(M)\otimes(A/f_nA)\otimes_A A[T_n]
+\]
+$\psi'$ étant l'application (15.1.5.2) où l'on remplace $n$ par $n-1$,
+$\mathfrak{J}$ par $\mathfrak{J}''$ et $\gr'_\bullet(M)$ par
+$\gr''_\bullet(M)$. L'hypothèse de récurrence entraîne que $\psi'$ est
+bijective et il reste donc à voir qu'il en est de même de (15.1.8.1). En
+appliquant (15.1.6), il suffit de montrer que $f_n$ est
+$\gr''_\bullet(M)$-régulier. Mais $\gr''_\bullet(M)$ s'identifie à
+\[
+  (\gr_\bullet(M)\otimes(A/\mathfrak{J}''))
+  [T_1,\ldots,T_{n-1}]~;
+\]
+par hypothèse, l'homothétie de rapport $f_n$ dans
+$\gr_\bullet(M)\otimes(A/\mathfrak{J}'')$ est bijective~; il en est par suite
+de même de l'homothétie de rapport $f_n$ dans $\gr''_\bullet(M)$, puisque
+$A[T_1,\ldots,T_{n-1}]$ est un $A$-module libre.
+\end{proof}
+
+\begin{proposition}[15.1.9]
+\label{0.15.1.9-fr}
+Soient $M$ un $A$-module, $(f_i)_{1\leq i\leq n}$ une suite d'éléments de $A$.
+Si la suite $(f_i)$ est $M$-régulière, elle est $M$-quasi-régulière. La
+réciproque est vraie lorsqu'on suppose en outre que les $A$-modules
+\[
+  M,\quad M/f_1M,\quad\ldots,\quad
+  M/\left(\sum_{1\leq j\leq n-1}f_jM\right)
+\]
+sont séparés pour la topologie $\mathfrak{J}$-préadique (où
+$\mathfrak{J}=\sum_{i=1}^n f_iA$).
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de (15.1.8), où l'on prend $M_1=0$, et par suite
+l'homomorphisme (15.1.5.2) se réduit à (15.1.1.1). Inversement, supposons que
+l'homomorphisme $\varphi$ de (15.1.1.1) soit bijectif. Notons que si on pose
+\[
+  \mathfrak{J}''=\sum_{i=1}^{n-1}f_iA,
+\]

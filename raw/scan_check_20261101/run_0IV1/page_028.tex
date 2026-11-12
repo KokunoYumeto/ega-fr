@@ -1,0 +1,111 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{28}
+
+\begin{proof}
+En effet, $M/\mathfrak{r}^nM$ et
+$\widehat{M}/\mathfrak{r}^n\widehat{M}$ sont isomorphes, donc
+$d(\widehat{M})=d(M)$.
+\end{proof}
+
+\begin{corollary}[16.2.5]
+\label{0.16.2.5-fr}
+La dimension d'un anneau semi-local noethérien $A$ est finie et égale au
+nombre minimum d'éléments du radical de $A$ engendrant un idéal de définition.
+\end{corollary}
+
+\begin{proof}
+C'est l'égalité $s(M)=\dim(M)$ pour $M=A$.
+\end{proof}
+
+En particulier~:
+
+\begin{corollary}[16.2.6]
+\label{0.16.2.6-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal,
+$k=A/\mathfrak{m}$ son corps résiduel~; on a
+\begin{equation}
+\label{0.16.2.6.1-fr}
+\tag{16.2.6.1}
+  \dim(A)\leq\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En effet, on sait que si les $x_i$ $(1\leq i\leq n)$ sont des éléments de
+$\mathfrak{m}$ dont les classes mod.~$\mathfrak{m}^2$ forment une base du
+$k$-espace vectoriel $\mathfrak{m}/\mathfrak{m}^2$, les $x_i$ engendrent
+$\mathfrak{m}$ (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~3, no~2, cor.~2 de
+la prop.~4).
+\end{proof}
+
+\begin{proposition}[16.2.7]
+\label{0.16.2.7-fr}
+Soient $k$ un corps, $B$ une $k$-algèbre graduée de type fini à degrés
+positifs engendrée par ses éléments homogènes de degré 1 et telle que $B_0=k$~;
+soit $E$ un $B$-module gradué de type fini, de sorte (III, 2.5.4) que, pour $n$
+assez grand, $\operatorname{rg}_k(E_n)=r(n)$ est de la forme
+$\Phi(n)-\Phi(n-1)$, où $\Phi$ est un polynôme en $n$ de degré $d$. Alors il
+existe dans $B$ une famille $(t_i)_{1\leq i\leq d}$ de $d$ éléments homogènes
+de degrés $\geq1$ tels que $E/(\sum_i t_iE)$ soit de rang fini sur $k$.
+\end{proposition}
+
+\begin{proof}
+Soit $\mathfrak{q}$ l'idéal maximal $\bigoplus_{n\geq1}B_n$ de $B$, et, pour
+tout $n$, soit $E'_n$ le sous-$B$-module $\bigoplus_{h\geq n+1}E_h$ de $E$.
+Tout élément de $B-\mathfrak{q}$ détermine une homothétie injective dans le
+$B$-module artinien $E/E'_n$, et cette homothétie est donc bijective
+(Bourbaki, \emph{Alg.}, chap.~VIII, \S~2, no~2, lemme~3), ce qui entraîne que
+$(E/E'_n)_{\mathfrak{q}}$ s'identifie à $E/E'_n$~; comme le corps résiduel de
+$B_{\mathfrak{q}}$ est $k$, on déduit de l'hypothèse que
+$\operatorname{long}_{B_{\mathfrak{q}}}((E/E'_n)_{\mathfrak{q}})$ est un
+polynôme en $n$ de degré $d$. D'autre part, comme $E$ est un $B$-module de
+type fini et que $B$ est engendré par ses éléments homogènes de degré 1, la
+filtration $(E'_n)$ sur $E$ est $\mathfrak{q}$-bonne (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~1, no~3, lemme~1), donc la filtration
+$((E'_n)_{\mathfrak{q}})$ sur $E_{\mathfrak{q}}$ est
+$\mathfrak{q}B_{\mathfrak{q}}$-bonne. Puisque $B_{\mathfrak{q}}$ est un anneau
+local noethérien, on conclut de (16.2.3) et de (16.2.2.1) que l'on a
+$\dim(E_{\mathfrak{q}})=d$. Raisonnons alors par récurrence sur $d$, le lemme
+étant évident si $d=0$. Supposons $d\geq1$, et observons que les idéaux premiers
+minimaux $\mathfrak{p}_i$ $(1\leq i\leq r)$ dans
+$\operatorname{Ass}(E)$ sont \emph{gradués} (Bourbaki, \emph{Alg.~comm.},
+chap.~IV, \S~3, no~1, prop.~1), et que $\mathfrak{q}$ est distinct de la
+réunion des $\mathfrak{p}_i$ puisque $d\geq1$~; il y a donc un élément
+\emph{homogène} $t_1\in\mathfrak{q}$ n'appartenant à aucun des
+$\mathfrak{p}_i$ (Bourbaki, \emph{Alg.~comm.}, chap.~III, \S~1, no~4,
+prop.~8). Comme les idéaux premiers $(\mathfrak{p}_i)_{\mathfrak{q}}$ sont les
+éléments minimaux de $\operatorname{Ass}(E_{\mathfrak{q}})$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~2, prop.~5), on a
+$\dim(E_{\mathfrak{q}}/t_1E_{\mathfrak{q}})=d-1$ (16.3.4). Il suffit alors
+d'appliquer l'hypothèse de récurrence au $B$-module gradué $E/t_1E$ pour
+obtenir la conclusion.
+\end{proof}
+
+\subsection{Systèmes de paramètres dans un anneau local noethérien}
+\label{subsection:0.16.3-fr}
+
+\begin{proposition}[16.3.1]
+\label{0.16.3.1-fr}
+Soient $A$ un anneau noethérien, $\mathfrak{p}$ un idéal premier de $A$, $n$ un
+entier. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[$a)$] $\operatorname{ht}(\mathfrak{p})=
+  \dim(A_{\mathfrak{p}})\leq n$~;
+  \item[$b)$] Il existe $n$ éléments $x_i$ de $A$ $(1\leq i\leq n)$ tels que
+  $\mathfrak{p}$ soit minimal dans l'ensemble des idéaux premiers contenant
+  l'idéal $\mathfrak{a}$ engendré par les $x_i$ (autrement dit
+  $V(\mathfrak{p})$ est une composante irréductible de $V(\mathfrak{a})$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La condition $b)$ entraîne que $\mathfrak{a}A_{\mathfrak{p}}$ est un idéal de
+définition de $A_{\mathfrak{p}}$, d'où $a)$ en vertu de (16.2.5).
+Inversement, si $a)$ est vérifiée, il existe un idéal de définition
+$\mathfrak{b}$ de $A_{\mathfrak{p}}$, engendré par $n$ éléments $x_i/s$, avec
+$s\in A-\mathfrak{p}$. En vertu de la correspondance biunivoque entre idéaux
+premiers de $A_{\mathfrak{p}}$ et idéaux premiers de $A$ contenus dans
+$\mathfrak{p}$, l'idéal $\mathfrak{a}$ de $A$ engendré par les $x_i$ vérifie
+$b)$.
+\end{proof}
+

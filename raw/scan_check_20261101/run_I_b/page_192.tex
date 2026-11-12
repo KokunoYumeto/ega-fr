@@ -1,0 +1,129 @@
+% from ega1-10-fr.tex
+\oldpage[I]{192}
+
+sont commutatifs pour $m\leq n$~; autrement dit, $(f_n)$ est un
+\emph{système inductif} de morphismes.
+\end{env}
+
+\begin{env}[10.6.8]
+\label{I.10.6.8-fr}
+Inversement, soit $(X_n)$ (resp. $(Y_n)$) un système inductif de
+préschémas (usuels) satisfaisant aux conditions b) et c) de
+(\hyperref[I.10.6.3-fr]{10.6.3}), et soit $\mathfrak{X}$ (resp.
+$\mathfrak{Y}$) sa limite inductive. Par définition des limites
+inductives, toute suite $(f_n)$ de morphismes $X_n\to Y_n$ formant un
+système inductif admet une \emph{limite inductive}
+$f:\mathfrak{X}\to\mathfrak{Y}$, qui est l'unique morphisme de
+préschémas formels rendant commutatifs les diagrammes
+\[
+  \xymatrix{
+    X_n\ar[r]^{f_n}\ar[d] &
+    Y_n\ar[d]\\
+    \mathfrak{X}\ar[r]_f &
+    \mathfrak{Y}
+  }
+\]
+\end{env}
+
+\begin{proposition}[10.6.9]
+\label{I.10.6.9-fr}
+Soient $\mathfrak{X}$, $\mathfrak{Y}$ deux préschémas formels
+localement noethériens, $\mathscr{J}$ (resp. $\mathscr{K}$) un Idéal
+de définition de $\mathfrak{X}$ (resp. $\mathfrak{Y}$)~;
+l'application $f\mapsto(f_n)$ définie dans
+(\hyperref[I.10.6.7-fr]{10.6.7}) est une bijection de l'ensemble des
+morphismes $f:\mathfrak{X}\to\mathfrak{Y}$ tels que
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$, sur
+l'ensemble des suites $(f_n)$ de morphismes rendant commutatifs les
+diagrammes (\hyperref[I.10.6.7.1-fr]{10.6.7.1}).
+\end{proposition}
+
+\begin{proof}
+Si $f$ est la limite inductive d'une telle suite, il faut montrer que
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$. La
+question étant locale sur $\mathfrak{X}$ et $\mathfrak{Y}$, on peut se
+borner au cas où $\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$ sont affines, $A$ et $B$ étant
+adiques noethériens,
+$\mathscr{J}=\mathfrak{J}^\Delta$,
+$\mathscr{K}=\mathfrak{K}^\Delta$, où $\mathfrak{J}$ (resp.
+$\mathfrak{K}$) est un idéal de définition de $A$ (resp. $B$). On a
+alors $X_n=\operatorname{Spec}(A_n)$,
+$Y_n=\operatorname{Spec}(B_n)$, avec
+$A_n=A/\mathfrak{J}^{n+1}$ et $B_n=B/\mathfrak{K}^{n+1}$, en vertu de
+(\hyperref[I.10.3.6-fr]{10.3.6}) et
+(\hyperref[I.10.3.2-fr]{10.3.2})~;
+$f_n=({}^a\varphi_n,\widetilde{\varphi_n})$, où les homomorphismes
+$\varphi_n:B_n\to A_n$ forment un système projectif, donc
+$f=({}^a\varphi,\widetilde{\varphi})$, où
+$\varphi=\varprojlim\varphi_n$. La commutativité du diagramme
+(\hyperref[I.10.6.7.1-fr]{10.6.7.1}) pour $m=0$ donne alors la
+condition
+$\varphi_n(\mathfrak{K}/\mathfrak{K}^{n+1})
+\subset\mathfrak{J}/\mathfrak{J}^{n+1}$ pour tout $n$, donc, en
+passant à la limite projective, $\varphi(\mathfrak{K})\subset
+\mathfrak{J}$, et cela entraîne
+$f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{J}$
+(\hyperref[I.10.5.6-fr]{10.5.6, (ii)}).
+\end{proof}
+
+\begin{corollary}[10.6.10]
+\label{I.10.6.10-fr}
+Soient $\mathfrak{X}$, $\mathfrak{Y}$ deux préschémas formels
+localement noethériens, $\mathscr{T}$ le plus grand Idéal de définition
+de $\mathfrak{X}$ (\hyperref[I.10.5.4-fr]{10.5.4}).
+\begin{enumerate}
+  \item[\rm{(i)}] Pour tout Idéal de définition $\mathscr{K}$ de
+  $\mathfrak{Y}$ et tout morphisme
+  $f:\mathfrak{X}\to\mathfrak{Y}$, on a
+  $f^*(\mathscr{K})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{T}$.
+  \item[\rm{(ii)}] Il y a correspondance biunivoque canonique entre
+  $\operatorname{Hom}(\mathfrak{X},\mathfrak{Y})$ et l'ensemble des
+  suites $(f_n)$ de morphismes rendant commutatifs les diagrammes
+  (\hyperref[I.10.6.7.1-fr]{10.6.7.1}), où
+  $X_n=(\mathfrak{X},
+  \mathscr{O}_{\mathfrak{X}}/\mathscr{T}^{n+1})$,
+  $Y_n=(\mathfrak{Y},
+  \mathscr{O}_{\mathfrak{Y}}/\mathscr{K}^{n+1})$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(ii) résulte aussitôt de (i) et de
+(\hyperref[I.10.6.9-fr]{10.6.9}). Pour démontrer (i), on peut se borner
+au cas où $\mathfrak{X}=\operatorname{Spf}(A)$,
+$\mathfrak{Y}=\operatorname{Spf}(B)$, $A$ et $B$ étant noethériens,
+$\mathscr{T}=\mathfrak{T}^\Delta$,
+$\mathscr{K}=\mathfrak{K}^\Delta$, où $\mathfrak{T}$ est le plus grand
+idéal de définition de $A$ et $\mathfrak{K}$ un idéal de définition de
+$B$. Soit $f=({}^a\varphi,\widetilde{\varphi})$, où
+$\varphi:B\to A$ est un homomorphisme continu~; comme les éléments de
+$\mathfrak{K}$ sont topologiquement nilpotents
+(\hyperref[0.7.1.4-fr]{0, 7.1.4, (ii)}), il en est de même de ceux de
+$\varphi(\mathfrak{K})$, donc
+$\varphi(\mathfrak{K})\subset\mathfrak{T}$ puisque $\mathfrak{T}$ est
+l'ensemble des éléments topologiquement nilpotents de $A$
+(\hyperref[0.7.1.6-fr]{0, 7.1.6})~; d'où la conclusion en vertu de
+(\hyperref[I.10.5.6-fr]{10.5.6, (ii)}).
+\end{proof}
+
+\begin{corollary}[10.6.11]
+\label{I.10.6.11-fr}
+Soient $\mathfrak{S}$, $\mathfrak{X}$, $\mathfrak{Y}$ trois
+préschémas formels localement noethériens,
+$f:\mathfrak{X}\to\mathfrak{S}$,
+$g:\mathfrak{Y}\to\mathfrak{S}$ des morphismes faisant de
+$\mathfrak{X}$ et $\mathfrak{Y}$ des $\mathfrak{S}$-préschémas
+formels. Soit $\mathscr{J}$ (resp. $\mathscr{K}$, $\mathscr{L}$) un
+Idéal de définition de $\mathfrak{S}$ (resp. $\mathfrak{X}$,
+$\mathfrak{Y}$), et supposons que
+$f^*(\mathscr{J})\mathscr{O}_{\mathfrak{X}}\subset\mathscr{K}$,
+$g^*(\mathscr{J})\mathscr{O}_{\mathfrak{Y}}=\mathscr{L}$~; posons
+$S_n=(\mathfrak{S},
+\mathscr{O}_{\mathfrak{S}}/\mathscr{J}^{n+1})$,
+$X_n=(\mathfrak{X},
+\mathscr{O}_{\mathfrak{X}}/\mathscr{K}^{n+1})$,
+$Y_n=(\mathfrak{Y},
+\mathscr{O}_{\mathfrak{Y}}/\mathscr{L}^{n+1})$. Il y a alors
+correspondance
+

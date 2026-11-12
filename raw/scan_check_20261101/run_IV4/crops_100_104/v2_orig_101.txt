@@ -1,0 +1,35 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{101}
+
+  \item[e)] Il existe une extension parfaite $k'$ de $k$ et un voisinage ouvert $U$ de $x$ dans $X$ tels que le préschéma $U\otimes_k k'$ soit régulier.
+\end{enumerate}
+\end{proposition}
+
+Le fait que $X$ soit lisse sur $k$ au point $x$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ qui est lisse sur $k$, donc $U\otimes_k k'$ est régulier pour toute extension $k'$ de $k$ (17.15.2), ce qui prouve que a) implique e). Inversement e) implique a), car alors $U\otimes_k k'$ est lisse sur $k'$ (17.15.2), donc $U$ est lisse sur $k$ (17.7.1, (ii)).
+
+On a déjà prouvé que a) entraîne c) (17.10.2); c) implique d) trivialement et le fait que d) implique a) résulte de (0, 20.4.7) et (17.15.3, c)).
+
+Enfin, on a déjà vu que a) implique b) (17.12.4). Inversement, pour prouver que b) entraîne a), on peut se borner au cas où $x$ est rationnel sur $k$, en considérant, comme dans la démonstration de (17.15.3), un point $x'$ de $X'=X\otimes_k k'$ au-dessus de $x$ et tel que $k(x')=k'=k(x)$, utilisant encore (17.7.1, (ii)) et le fait que si $X$ est différentiellement lisse au point $x$, $X'$ est différentiellement lisse au point $x'$ (16.10.4). Supposant donc $x$ rationnel sur $k$, le fait que $f$ soit lisse en $x$ résulte alors de l'hypothèse b) et de (17.12.5) appliqué à la $k$-section $u:\operatorname{Spec}(k)\to X$ telle que $u(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[17.15.6]
+\label{IV.17.15.6}
+Soit $X$ un préschéma de type fini sur un corps $k$. Pour que $X$ soit lisse sur $k$, il faut et il suffit que le $\sh{O}_X$-Module $\Omega^1_{X/k}$ soit localement libre, et que les anneaux locaux aux points maximaux de $X$ soient des corps, extensions séparables de $k$ (cette dernière condition étant automatiquement vérifiée si $k$ est un corps parfait et $X$ un préschéma réduit).
+\end{corollary}
+
+Les conditions sont nécessaires, car si $X$ est lisse sur $k$, il résulte de (17.10.2) que $\Omega^1_{X/k}$ est localement libre; d'autre part, $X$ est régulier, donc \emph{a fortiori} réduit, donc en tout point maximal $x$ de $X$, $\sh{O}_{X,x}$ est un corps, qui doit être une $k$-algèbre formellement lisse pour les topologies discrètes (17.5.1), donc une extension séparable de $k$ (0, 19.6.1).
+
+Les conditions sont suffisantes. On peut en effet se borner au cas où $X$ est connexe, donc $\Omega^1_{X/k}$ localement libre de rang constant $n$. Pour tout point maximal $x$ de $X$, on a alors $\operatorname{rg}_{k(x)}\Omega^1_{k(x)/k}=n$ puisque $\sh{O}_{X,x}=k(x)$; comme par hypothèse $k(x)$ est une extension séparable de $k$, on a $\Upsilon_{k(x)/k}=0$ (0, 20.6.3), donc $\deg.\operatorname{tr}_k k(x)=n$ par l'égalité de Cartier (0, 21.7.1). Toutes les composantes irréductibles de $X$ ont donc même dimension $n$ (5.2.1), et l'on conclut que $X$ est lisse sur $k$ en tout point en vertu de ce que c) entraîne a) dans (17.15.5).
+
+\begin{corollary}[17.15.7]
+\label{IV.17.15.7}
+Si $k$ est de caractéristique 0, alors, pour que $X$ soit lisse sur $k$ au point $x$, il faut et il suffit que $(\Omega^1_{X/k})_x$ soit un $\sh{O}_{X,x}$-module libre.
+\end{corollary}
+
+Cela résulte de (16.12.2) et de l'équivalence de b) et a) dans (17.15.5).
+
+\begin{proposition}[17.15.8]
+\label{IV.17.15.8}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$; posons $n=\dim_x(X)$, $r=\dim(\sh{O}_{X,x})$, de sorte que $n-r=\deg.\operatorname{tr}_k k(x)$ (5.2.3). Soit $(g_i)_{1\leq i\leq n}$ une famille de $n$ sections de $\sh{O}_X$ au-dessus de $X$, telles que $(g_i)_x\in\mathfrak m_x$ pour $1\leq i\leq r$; soit $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ le morphisme correspondant au $k$-homomorphisme $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$. Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ et que $k(x)$ est une extension séparable de $k$):
+\begin{enumerate}
+  \item[a)] $f$ est étale au point $x$.
+

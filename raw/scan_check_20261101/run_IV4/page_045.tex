@@ -1,0 +1,104 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{45}
+comme $B$-module à droite par son second facteur $B$ et
+$(B\otimes_A B)/\mathfrak{I}^{n+1}$ comme $B$-module à gauche par son premier
+facteur $B$ (16.7.2). Il revient au même de définir un homomorphisme de
+$B$-modules
+\[
+  \varphi_0:B\otimes_A B\longrightarrow
+  ((B\otimes_A B)/\mathfrak{I}^{n'+1})
+  \otimes_B((B\otimes_A B)/\mathfrak{I}^{n+1})
+\]
+et de prouver qu'il s'annule dans $\mathfrak{I}^{n+n'+1}$. Or, on définit
+aussitôt un tel homomorphisme par la condition que
+\[
+  \varphi_0(b\otimes b')
+  =\pi_{n'}(b\otimes1)\otimes\pi_n(1\otimes b')
+  \qquad\text{pour $b,b'$ dans $B$}
+\]
+avec les notations de (16.3.7). En outre, il est immédiat que $\varphi_0$ est
+un homomorphisme d'\emph{anneaux}. Or, on peut écrire
+\[
+  \begin{aligned}
+  \varphi_0(b\otimes1-1\otimes b)
+  ={}&\pi_{n'}(b\otimes1-1\otimes b)\otimes\pi_n(1\otimes1)\\
+  &+\pi_{n'}(1\otimes b)\otimes\pi_n(1\otimes1)
+  -\pi_{n'}(1\otimes1)\otimes\pi_n(1\otimes b)
+  \end{aligned}
+\]
+et on a
+\[
+  \begin{aligned}
+  \pi_{n'}(1\otimes b)\otimes\pi_n(1\otimes1)
+  &=\pi_{n'}(1\otimes1)b\otimes\pi_n(1\otimes1)\\
+  &=\pi_{n'}(1\otimes1)\otimes b\pi_n(1\otimes1)\\
+  &=\pi_{n'}(1\otimes1)\otimes\pi_n(b\otimes1)
+  \end{aligned}
+\]
+d'où finalement
+\[
+  \begin{aligned}
+  \varphi_0(b\otimes1-1\otimes b)
+  ={}&\pi_{n'}(b\otimes1-1\otimes b)\otimes\pi_n(1\otimes1)\\
+  &+\pi_{n'}(1\otimes1)\otimes\pi_n(b\otimes1-1\otimes b).
+  \end{aligned}
+  \tag{16.8.9.4}
+  \label{IV.16.8.9.4}
+\]
+Un produit de $n+n'+1$ termes de la forme (16.8.9.4) est donc
+nécessairement nul, car il en est ainsi d'un produit de $n+1$ termes de la
+forme $\pi_n(b\otimes1-1\otimes b)$ et d'un produit de $n'+1$ termes de la
+forme $\pi_{n'}(b\otimes1-1\otimes b)$. La conclusion résulte donc de
+(0, 20.4.4).
+
+\begin{corollary}[16.8.10]
+\label{IV.16.8.10}
+Le faisceau $\mathscr{D}\!iff_{X/S}(\mathcal{O}_X,\mathcal{O}_X)$ (aussi noté
+$\mathscr{D}\!iff_{X/S}$) est canoniquement muni d'une structure de faisceau
+d'anneaux, les $\mathscr{D}\!iff_{X/S}^n$ formant une filtration croissante
+compatible avec cette structure.
+\end{corollary}
+
+En particulier, $\mathscr{D}\!iff_{X/S}^0$ est un faisceau de sous-anneaux de
+$\mathscr{D}\!iff_{X/S}$, qui s'identifie canoniquement à $\mathcal{O}_X$
+(16.8.1). Les formules (16.8.5.1) et (16.8.5.2) montrent que la structure de
+$\mathcal{O}_X$-Bimodule de $\mathscr{D}\!iff_{X/S}$ provient de la
+multiplication à gauche et à droite par les sections de $\mathcal{O}_X$
+considéré comme faisceau de sous-anneaux de $\mathscr{D}\!iff_{X/S}$.
+
+\begin{remarks}[16.8.11]
+\label{IV.16.8.11}
+\begin{enumerate}
+  \item[(i)] Supposons que
+  $\mathscr{F}=\bigoplus_{\lambda\in L}\mathscr{F}_\lambda$; alors il est
+  clair (16.7.2.1) que
+  $\mathscr{P}_{X/S}^n(\mathscr{F})=
+  \bigoplus_{\lambda\in L}\mathscr{P}_{X/S}^n(\mathscr{F}_\lambda)$; comme le
+  foncteur $\mathscr{F}\mapsto\Gamma(U,\mathscr{F})$ commute à la formation
+  des sommes directes quelconques, $d_{X/S,\mathscr{F}}^n$ est
+  l'homomorphisme dont la restriction à chaque $\mathscr{F}_\lambda$ est
+  \[
+    d_{X/S,\mathscr{F}_\lambda}^n:\mathscr{F}_\lambda
+    \longrightarrow\mathscr{P}_{X/S}^n(\mathscr{F}_\lambda);
+  \]
+  on en conclut aussitôt que l'on a
+  \[
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\lambda\in L}
+    \operatorname{Diff}_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}),
+  \]
+  et par suite aussi (0\textsubscript{I}, 3.2.6)
+  \[
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\lambda\in L}
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F}_\lambda,\mathscr{G}).
+  \]
+  Par ailleurs, si $\mathscr{G}=\prod_{\mu\in M}\mathscr{G}_\mu$
+  (0\textsubscript{I}, 3.2.6), on a
+  \[
+    \operatorname{Hom}_{\mathcal{O}_X}
+    (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+    =\prod_{\mu\in M}\operatorname{Hom}_{\mathcal{O}_X}
+    (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G}_\mu),
+  \]
+  

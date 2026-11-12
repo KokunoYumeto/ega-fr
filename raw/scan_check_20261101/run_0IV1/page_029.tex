@@ -1,0 +1,85 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{29}
+
+Pour $n=1$, on obtient le cas particulier~:
+
+\begin{corollary}[16.3.2]
+\label{0.16.3.2-fr}
+\textup{(``Hauptidealsatz'').}
+Pour qu'un idéal premier dans un anneau noethérien soit de hauteur $\leq1$, il
+faut et il suffit qu'il soit minimal dans l'ensemble des idéaux premiers
+contenant un idéal principal convenable.
+\end{corollary}
+
+\begin{corollary}[16.3.3]
+\label{0.16.3.3-fr}
+\textup{(Artin-Tate).}
+Soit $A$ un anneau intègre noethérien. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[$a)$] $A$ est un anneau semi-local de dimension $\leq1$.
+  \item[$b)$] Il existe $f\neq0$ dans $A$ tel que $A_f$ soit un corps.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+La condition $a)$ équivaut à dire que $A$ n'a qu'un nombre fini d'idéaux
+premiers $\mathfrak{m}_i\neq0$, et que ces idéaux sont tous maximaux ($0$ étant
+un idéal premier). Comme le produit des $\mathfrak{m}_i$ n'est pas nul, puisque
+$A$ est intègre, un élément $f\neq0$ de ce produit appartient à tous les
+$\mathfrak{m}_i$, donc $(0)$ est le seul idéal premier de l'anneau intègre
+$A_f$, autrement dit $A_f$ est un corps. (On notera que cette partie de la
+démonstration n'utilise pas le fait que $A$ est noethérien.) Prouvons
+maintenant que $b)$ entraîne $a)$~; l'hypothèse $b)$ signifie que tout idéal
+premier $\mathfrak{p}\neq0$ de $A$ contient $f$. Soient $\mathfrak{p}_i$
+$(1\leq i\leq n)$ les idéaux premiers minimaux parmi ceux qui contiennent $f$
+(qui sont en nombre fini puisque $A/fA$ est noethérien)~; il suffit de prouver
+que les $\mathfrak{p}_i$ sont des idéaux \emph{maximaux}, car alors tout idéal
+premier $\neq0$ contient nécessairement un des $\mathfrak{p}_i$, donc lui est
+égal. Supposons donc qu'il existe un idéal maximal $\mathfrak{m}$ contenant un
+des $\mathfrak{p}_i$ et distinct des $\mathfrak{p}_i$~; $\mathfrak{m}$ n'est
+donc pas contenu dans la réunion des $\mathfrak{p}_i$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~II, \S~1, no~1, prop.~2), autrement dit il existe
+$g\in\mathfrak{m}$ n'appartenant à aucun des $\mathfrak{p}_i$. Soit
+$\mathfrak{q}$ un des idéaux premiers minimaux parmi ceux qui contiennent
+$g$~; il résulte du ``Hauptidealsatz'' (16.3.2) que $\mathfrak{q}$ est de
+hauteur 1, donc $\neq0$~; il contient par suite $f$, donc aussi un des
+$\mathfrak{p}_i$, et comme $g\in\mathfrak{q}$ et que $g$ n'appartient à aucun
+des $\mathfrak{p}_i$, $\mathfrak{q}$ est distinct des $\mathfrak{p}_i$~; il
+serait donc de hauteur $\geq2$, ce qui est contradictoire.
+\end{proof}
+
+\begin{proposition}[16.3.4]
+\label{0.16.3.4-fr}
+Soient $A$ un anneau semi-local noethérien, $\mathfrak{r}$ son radical, $M$ un
+$A$-module de type fini, $\mathfrak{p}_i$ les éléments de
+$\operatorname{Supp}(M)$ tels que
+$\dim(A/\mathfrak{p}_i)=\dim(M)$. Alors les $\mathfrak{p}_i$ sont des éléments
+minimaux de $\operatorname{Ass}(M)$, et l'on a
+$\dim(M/\mathfrak{p}_iM)=\dim(M)$. Pour tout $x\in\mathfrak{r}$, on a
+\begin{equation}
+\label{0.16.3.4.1-fr}
+\tag{16.3.4.1}
+  \dim(M/xM)\geq\dim(M)-1.
+\end{equation}
+En outre, pour que les deux membres de (16.3.4.1) soient égaux, il faut et il
+suffit que $x$ n'appartienne à aucun des $\mathfrak{p}_i$.
+\end{proposition}
+
+\begin{proof}
+La première assertion est immédiate, car les $\mathfrak{p}_i$ sont par
+définition des éléments minimaux de $\operatorname{Supp}(M)$ (16.1.6), et ces
+derniers sont aussi éléments minimaux de $\operatorname{Ass}(M)$ (Bourbaki,
+\emph{Alg.~comm.}, chap.~IV, \S~1, no~4, th.~2). En outre,
+$\operatorname{Supp}(M/\mathfrak{p}_iM)$ est l'ensemble des idéaux premiers
+contenant $\mathfrak{p}_i$ ($0_{\mathrm I}$, 1.7.5), donc
+$\dim(M/\mathfrak{p}_iM)=\dim(A/\mathfrak{p}_i)=\dim(M)$.
+
+Posons $N=M/xM$. Si $x_1,\ldots,x_n$ sont des éléments de $\mathfrak{r}$ tels
+que $N/(x_1N+\cdots+x_nN)$ soit de longueur finie, cela signifie que
+$M/(xM+x_1M+\cdots+x_nM)$ est de longueur finie, d'où l'inégalité (16.3.4.1)
+en vertu de (16.2.3).
+
+Le fait que les deux membres de (16.3.4.1) soient égaux lorsque $x$
+n'appartient à aucun des $\mathfrak{p}_i$ résulte de (16.3.4.1) et de
+(16.2.3.1). Inversement, si

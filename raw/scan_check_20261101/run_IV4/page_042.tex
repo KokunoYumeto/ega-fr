@@ -1,0 +1,95 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{42}
+est de même réunion de ses sous-groupes
+$\operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})$ (16.8.1). Les
+structures de $\mathcal{O}_X$-Bimodule sur les
+$\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})$ définissent donc une
+structure de $\mathcal{O}_X$-Bimodule sur
+$\mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})$, explicitée encore par
+(16.8.5.1) et (16.8.5.2).
+
+Notons que, pour $n\leq m$, on a un diagramme commutatif
+\[
+  \xymatrix{
+    \mathscr{H}\!om_{\mathcal{O}_X}
+      (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G})
+      \ar[r]^-{\sim}\ar[d]
+      &\mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})\ar[d]\\
+    \mathscr{H}\!om_{\mathcal{O}_X}
+      (\mathscr{P}_{X/S}^m(\mathscr{F}),\mathscr{G})
+      \ar[r]^-{\sim}
+      &\mathscr{D}\!iff_{X/S}^m(\mathscr{F},\mathscr{G})
+  }
+  \tag{16.8.7.1}
+  \label{IV.16.8.7.1}
+\]
+où les flèches horizontales sont les isomorphismes (16.8.4.2) et la flèche
+verticale de gauche provient de l'homomorphisme canonique
+$\mathscr{P}_{X/S}^m(\mathscr{F})\to
+\mathscr{P}_{X/S}^n(\mathscr{F})$ (16.7.7). Pour tout ouvert $U$ de $X$,
+munissons alors
+\[
+  \Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))
+  =\varprojlim\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))
+\]
+de la topologie limite projective des topologies discrètes sur les
+$\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))$, ce qui définit
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ comme un
+$\Gamma(U,\mathcal{O}_X)$-bimodule topologique, de sorte que
+$\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ apparaît comme un faisceau à valeurs
+dans la catégorie des groupes commutatifs topologiques
+(0\textsubscript{I}, 3.2.6). Alors (G, II, 1.11) la limite du système inductif
+de faisceaux de groupes commutatifs
+\[
+  (\mathscr{H}\!om_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^n(\mathscr{F}),\mathscr{G}))
+\]
+n'est autre que le faisceau des germes d'homomorphismes \emph{continus} de
+$\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ dans $\mathscr{G}$ (ce dernier
+étant muni de la topologie discrète): les homomorphismes continus de
+$\Gamma(U,\mathscr{P}_{X/S}^{\infty}(\mathscr{F}))$ dans le groupe discret
+$\Gamma(U,\mathscr{G})$ correspondent en effet biunivoquement aux systèmes
+inductifs d'homomorphismes de groupes
+$\Gamma(U,\mathscr{P}_{X/S}^n(\mathscr{F}))\to\Gamma(U,\mathscr{G})$. On peut
+donc encore exprimer (16.8.4) en disant qu'on a un isomorphisme canonique
+\[
+  \mathscr{H}\!om.\mathrm{cont}_{\mathcal{O}_X}
+  (\mathscr{P}_{X/S}^{\infty}(\mathscr{F}),\mathscr{G})
+  \xrightarrow{\sim}
+  \mathscr{D}\!iff_{X/S}(\mathscr{F},\mathscr{G})
+\]
+où le premier membre désigne le faisceau des germes d'homomorphismes continus
+de $\mathscr{P}_{X/S}^{\infty}(\mathscr{F})$ dans $\mathscr{G}$.
+\end{env}
+
+\begin{proposition}[16.8.8]
+\label{IV.16.8.8}
+Soient $\mathscr{F}$, $\mathscr{G}$ deux $\mathcal{O}_X$-Modules,
+$D:\mathscr{F}\to\mathscr{G}$ un homomorphisme de
+$\psi^*(\mathcal{O}_S)$-Modules, $n$ un entier $\geq0$. Les conditions
+suivantes sont équivalentes:
+\begin{enumerate}
+  \item[(a)] $D$ est un opérateur différentiel d'ordre $\leq n$.
+  \item[(b)] Pour toute section $a$ de $\mathcal{O}_X$ au-dessus d'un ouvert
+  $U$, l'homomorphisme $D_a:\mathscr{F}|U\to\mathscr{G}|U$ tel que, pour
+  toute section $t$ de $\mathscr{F}$ au-dessus d'un ouvert $V\subset U$, on
+  ait
+  \[
+    D_a(t)=D(at)-aD(t)
+    \tag{16.8.8.1}
+    \label{IV.16.8.8.1}
+  \]
+  est un opérateur différentiel d'ordre $\leq n-1$.
+  \item[(c)] Pour tout ouvert $U$ de $X$, toute famille
+  $(a_i)_{1\leq i\leq n+1}$ de $n+1$ sections de $\mathcal{O}_X$ au-dessus
+  de $U$ et toute section $t$ de $\mathscr{F}$ au-dessus de $U$, on a
+  l'identité
+  \[
+    \sum_{H\subset I_{n+1}}(-1)^{\operatorname{Card}(H)}
+    \left(\prod_{i\in H}a_i\right)
+    D\!\left(\left(\prod_{i\notin H}a_i\right)t\right)=0
+    \tag{16.8.8.2}
+    \label{IV.16.8.8.2}
+  \]
+  (où $I_{n+1}$ est l'intervalle $1\leq i\leq n+1$ de $\mathbb{N}$).
+\end{enumerate}

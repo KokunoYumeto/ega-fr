@@ -1,0 +1,444 @@
+Il suffit de prouver qu'un élément $f\ne0$ du premier membre de (21.8.8.4)
+appartient au second membre. Soient $\gamma$ un indice,
+$g\in k_\gamma[[T_1,\ldots,T_r]]$ tel
+\oldpage[0\textsubscript{IV-1}]{176}
+que
+$gf\in k_\gamma[[T_1,\ldots,T_r]]$~; quitte à remplacer $g$ par $g^q$, on
+peut supposer que $g\in k_0[[T_1,\ldots,T_r]]$. Alors, pour tout
+$\alpha\geqslant\gamma$, on a
+\[
+  gf\in k_\gamma[[T_1,\ldots,T_r]]\cap k_\alpha((T_1,\ldots,T_r))
+  =k_\alpha[[T_1,\ldots,T_r]]
+\]
+en vertu du lemme (21.8.8.2). Mais il est clair que l'intersection des
+anneaux $k_\alpha[[T_1,\ldots,T_r]]$ n'est autre que
+$k_0[[T_1,\ldots,T_r]]$, et l'on a donc bien
+$f\in k_0((T_1,\ldots,T_r))$.
+\end{proof}
+
+\subsection{Modules de différentielles complétés dans les anneaux de séries formelles}
+\label{subsection:0.21.9-fr}
+
+Dans ce numéro, les corps ne sont plus nécessairement supposés être de
+caractéristique $>0$.
+
+\begin{lemma}[21.9.1]
+\label{0.21.9.1-fr}
+Soient $k$ un corps, $A$ un anneau local noethérien complet qui est une
+$k$-algèbre, $K$ le corps résiduel de $A$. Si $K$ est une extension de type
+fini de $k$, le $A$-module $\widehat\Omega^1_{A/k}$ est de type fini.
+\end{lemma}
+
+\begin{proof}
+En vertu de (20.7.15), il suffit de prouver que $\Omega^1_{K/k}$ est un
+$K$-espace vectoriel de rang fini. Or, par hypothèse, $K$ est le corps des
+fractions d'une $k$-algèbre de type fini $B$~; comme $\Omega^1_{B/k}$ est un
+$B$-module de type fini en vertu de (20.4.7), la conclusion résulte de
+(20.5.9).
+\end{proof}
+
+\begin{proposition}[21.9.2]
+\label{0.21.9.2-fr}
+Soient $k_0$ un corps, $A$ un anneau local noethérien complet qui est une
+$k_0$-algèbre formellement lisse, $\mathfrak m$ son idéal maximal,
+$K=A/\mathfrak m$ son corps résiduel (de sorte qu'en tant qu'anneau $A$ est
+isomorphe à un anneau de séries formelles $K[[T_1,\ldots,T_r]]$ (19.6.5)).
+Si $K$ est une extension de type fini de $k_0$, alors
+$\widehat\Omega^1_{A/k_0}$ est un $A$-module libre de rang égal à
+$\dim(A)+\deg.\operatorname{tr}_{k_0}K$. En outre, pour tout sous-corps $k$
+de $k_0$ tel que $\Omega^1_{k_0/k}$ soit de rang fini,
+$\widehat\Omega^1_{A/k}$ est un $A$-module libre de rang égal à
+$\dim(A)+\deg.\operatorname{tr}_{k_0}K+\operatorname{rg}_{k_0}(\Omega^1_{k_0/k})$.
+\end{proposition}
+
+\begin{proof}
+Il est clair que, si $P$ est le sous-corps premier de $k_0$, $K$ est une
+$P$-algèbre formellement lisse (19.6.1). Notons d'autre part que l'on a
+$\Upsilon^K_{A/k_0/P}=0$~: en effet, cela revient à voir que l'homomorphisme
+\[
+  u_{A/k_0/P}\otimes1_K:
+  \Omega^1_{k_0/P}\otimes_{k_0}K
+  \longrightarrow \Omega^1_{A/P}\otimes_A K
+\]
+est injectif (20.6.14.5), $u$ désignant l'homomorphisme structural
+$k_0\to A$. Mais comme $A$ est une $k_0$-algèbre formellement lisse par
+hypothèse, il résulte de (20.7.2) que $u_{A/k_0/P}$ est formellement
+inversible à gauche, donc (19.1.7) $u_{A/k_0/P}\otimes1_K$ est inversible à
+gauche et \emph{a fortiori} injectif, ce qui prouve notre assertion.
+Appliquant la suite exacte (20.6.22.1), où $\Lambda,A,B,C$ sont remplacés par
+$P,k_0,A,K$, il vient la suite exacte
+\[
+  0\longrightarrow \Upsilon_{K/k_0}
+  \longrightarrow \mathfrak m/\mathfrak m^2
+  \longrightarrow \Omega^1_{A/k_0}\otimes_A K
+  \longrightarrow \Omega^1_{K/k_0}\longrightarrow0
+\]
+de sorte que l'on a
+\[
+\begin{split}
+  \operatorname{rg}_K(\Omega^1_{A/k_0}\otimes_AK)
+  &={\operatorname{rg}}_K(\mathfrak m/\mathfrak m^2)
+    +\bigl(\operatorname{rg}_K(\Omega^1_{K/k_0})
+    \setmin\operatorname{rg}_K(\Upsilon_{K/k_0})\bigr)\\
+  &={\operatorname{rg}}_K(\mathfrak m/\mathfrak m^2)
+    +\deg.\operatorname{tr}_{k_0}K
+\end{split}
+\]
+en vertu de (21.7.1). D'autre part, $\Omega^1_{A/k_0}$ est un
+$A$-module formellement projectif (20.4.9), et comme sa topologie est la
+topologie $\mathfrak m$-préadique (20.4.5),
+$\Omega^1_{A/k_0}/\mathfrak m^{j+1}\Omega^1_{A/k_0}$ est un
+$(A/\mathfrak m^{j+1})$-module projectif pour tout $j$ (19.2.4), donc libre
+($\mathbf 0_{\mathrm{III}}$, 10.1.2) et de rang
+\oldpage[0\textsubscript{IV-1}]{177}
+$n=\operatorname{rg}_K(\Omega^1_{A/k_0}\otimes_AK)$. En vertu de (21.9.1),
+$\widehat\Omega^1_{A/k_0}$ est un $A$-module de type fini, et en outre ce
+$A$-module est plat en vertu de ($\mathbf 0_{\mathrm{III}}$, 10.2.1)~; il est
+donc libre ($\mathbf 0_{\mathrm{III}}$, 10.1.3) de rang $n$, d'où la première
+assertion.
+
+Comme par hypothèse $\Omega^1_{k_0/k}$ est de rang fini sur $k_0$, le produit
+tensoriel complété
+$\widehat\Omega^1_{k_0/k}\widehat\otimes_{k_0}A$ s'identifie à
+$\Omega^1_{k_0/k}\otimes_{k_0}A$~; comme $A$ est une $k_0$-algèbre
+formellement lisse, il résulte de (20.7.18) que l'homomorphisme
+\[
+  \widehat u_{A/k_0/k}:
+  \Omega^1_{k_0/k}\otimes_{k_0}A
+  \longrightarrow\widehat\Omega^1_{A/k}
+\]
+admet un inverse à gauche qui est un $A$-homomorphisme continu, ce qui
+implique en particulier que son image est \emph{fermée} dans
+$\widehat\Omega^1_{A/k}$~; la suite exacte
+\[
+  0\longrightarrow \Omega^1_{k_0/k}\otimes_{k_0}A
+  \xrightarrow{\widehat u_{A/k_0/k}}\widehat\Omega^1_{A/k}
+  \longrightarrow\widehat\Omega^1_{A/k_0}\longrightarrow0
+\]
+est donc \emph{exacte et scindée} en vertu de (20.7.17) et de ce qui précède~; ce
+qui achève de prouver la proposition.
+\end{proof}
+
+\begin{corollary}[21.9.3]
+\label{0.21.9.3-fr}
+Soient $k$ un corps, $A$ l'anneau de séries formelles
+$k[[T_1,\ldots,T_r]]$, muni de sa structure usuelle de $k$-algèbre. Alors
+$\widehat\Omega^1_{A/k}$ est un $A$-module libre de rang $r=\dim(A)$.
+\end{corollary}
+
+\begin{proof}
+Il suffit de noter que $A$ est une $k$-algèbre formellement lisse (19.3.4),
+et d'appliquer (21.9.2) avec $k_0=k=K$.
+\end{proof}
+
+\begin{lemma}[21.9.4]
+\label{0.21.9.4-fr}
+Soient $k$ un corps de caractéristique $p>0$, $A$ une $k$-algèbre qui est un
+anneau local noethérien complet, $B$ une sous-$k$-algèbre de $A$ isomorphe à
+une $k$-algèbre topologique de la forme $k[[T_1,\ldots,T_r]]$ et telle que
+$A$ soit une $B$-algèbre de type fini. Si $B_1$ est la sous-algèbre
+$k[[T_1^p,\ldots,T_r^p]]$ de $B$, $\widehat\Omega^1_{A/k}$ s'identifie
+canoniquement à $\Omega^1_{A/B_1}$.
+\end{lemma}
+
+\begin{proof}
+Toute dérivation continue de $B_1$ dans un $A$-module topologique $P$, qui
+est restriction d'une $k$-dérivation continue de $A$ dans $P$, est \emph{nulle},
+car elle l'est dans le sous-anneau $k[T_1^p,\ldots,T_r^p]$ des polynômes, et
+ce dernier est dense dans $B_1$. La suite exacte (20.3.7.1) montre donc que
+l'homomorphisme canonique
+\[
+  \operatorname{D\acute{e}r.\,cont}_{B_1}(A,P)
+  \longrightarrow \operatorname{D\acute{e}r.\,cont}_k(A,P)
+\]
+est bijectif~; la conclusion résulte de (20.7.14.4), compte tenu de ce que
+$\Omega^1_{A/B_1}$ est un $A$-module de type fini (20.4.7), donc séparé et
+complet puisque $A$ est un anneau local noethérien complet.
+\end{proof}
+
+\begin{proposition}[21.9.5]
+\label{0.21.9.5-fr}
+Soient $A$ un anneau local noethérien complet intègre, $A_0$ un sous-anneau
+de $A$ isomorphe à un anneau de séries formelles $k[[T_1,\ldots,T_r]]$ sur
+un corps $k$, tel que $A$ soit une $A_0$-algèbre \textup{finie} et que le corps des
+fractions $E$ de $A$ soit une extension \textup{séparable} du corps des fractions
+$L_0$ de $A_0$. Alors on a
+\begin{equation}
+\tag{21.9.5.1}
+\label{0.21.9.5.1-fr}
+  \operatorname{rg}_A\widehat\Omega^1_{A/k}
+  =\operatorname{rg}_E(\widehat\Omega^1_{A/k}\otimes_AE)=\dim(A).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Notons que si $\mathfrak m_0$ est l'idéal maximal de $A_0$, la topologie de
+$A$ est la topologie $\mathfrak m_0$-adique puisque $A$ est une
+$A_0$-algèbre finie (Bourbaki, \emph{Alg. comm.}, chap.~IV, \S~2,
+n\textsuperscript{o}~5, cor.~3 de la prop.~9) et induit sur $A_0$ la topologie
+$\mathfrak m_0$-adique (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~3,
+n\textsuperscript{o}~4, th.~3). On sait (21.9.1) que
+$\widehat\Omega^1_{A/k}$ est un $A$-module de type fini et,
+\oldpage[0\textsubscript{IV-1}]{178}
+en vertu de (21.9.3) $\widehat\Omega^1_{A_0/k}$ est un $A_0$-module \emph{libre} de
+rang $r=\dim(A_0)=\dim(A)$ (16.1.5)~; le produit tensoriel
+$\widehat\Omega^1_{A_0/k}\otimes_{A_0}A$ est donc un $A$-module libre de rang
+$r$ identique à son séparé complété~; enfin $\Omega^1_{A/A_0}$ est
+un $A$-module de type fini (20.4.7), donc identique à son séparé complété
+($\mathbf 0_{\mathrm I}$, 7.3.6). Cela étant, dans la suite d'homomorphismes
+\begin{equation}
+\tag{21.9.5.2}
+\label{0.21.9.5.2-fr}
+  \widehat\Omega^1_{A_0/k}\otimes_{A_0}A
+  \xrightarrow{u}\widehat\Omega^1_{A/k}
+  \xrightarrow{v}\Omega^1_{A/A_0}\longrightarrow0
+\end{equation}
+on sait que $v$ est \emph{surjectif} et que $\operatorname{Im}(u)$ est \emph{dense} dans
+$\operatorname{Ker}(v)$ (20.7.17)~; mais tout sous-$A_0$-module de
+$\widehat\Omega^1_{A/k}$ est fermé pour la topologie $\mathfrak m_0$-adique
+($\mathbf 0_{\mathrm I}$, 7.3.5), donc la suite (21.9.5.2) est \emph{exacte}. Notons
+d'autre part que puisque $A$ est entier sur $A_0$, $A_0$ intégralement clos
+et $E$ séparable sur $L_0$, $\Omega^1_{A/A_0}$ est un $A$-\emph{module de
+torsion} (20.4.13, (iv))~; tensorisant la suite exacte (21.9.5.2) par $E$, il
+vient une suite exacte
+\[
+  \widehat\Omega^1_{A_0/k}\otimes_{A_0}E
+  \longrightarrow \widehat\Omega^1_{A/k}\otimes_AE\longrightarrow0
+\]
+d'où $\operatorname{rg}_E(\widehat\Omega^1_{A/k}\otimes_AE)\leqslant r$. Il
+reste donc à montrer qu'il existe, dans $\widehat\Omega^1_{A/k}\otimes_AE$,
+$r$ éléments linéairement indépendants sur $E$. Or, soient
+$D_i=\partial/\partial T_i$ les dérivations canoniques de $A_0$ dans lui-même
+$(1\leqslant i\leqslant r)$~; elles se prolongent de façon unique en des
+dérivations (encore notées $D_i$) de $E$ dans lui-même, puisque $E$ est
+extension séparable finie de $L_0$~; par restriction à $A$, ces dérivations
+donnent des dérivations de $A$ dans $E$, et il est immédiat que ces
+dérivations prennent leurs valeurs dans un même sous-$A$-module de \emph{type fini}
+de $E$~; comme elles sont continues dans $A_0$ et que la topologie de $A$ est
+la topologie $\mathfrak m_0$-adique, on a ainsi formé $r$ dérivations
+\emph{continues} de $A$ dans un $A$-module topologique, qui sont évidemment
+linéairement indépendantes puisque $D_i(T_j)=\delta_{ij}$~; ceci achève de
+prouver la proposition.
+\end{proof}
+
+La proposition suivante est un analogue «~formel~» de (21.7.3)~:
+
+\begin{proposition}[21.9.6]
+\label{0.21.9.6-fr}
+Soient $k_0\subset k\subset K_0$ trois corps de caractéristique $p>0$, tels
+que $[K_0:k]<+\infty$~; on pose
+\[
+  L_0=K_0((T_1,\ldots,T_r)),\qquad
+  M_0=K_0((T_1^p,\ldots,T_r^p))
+\]
+\[
+  L=k((T_1,\ldots,T_r)),\qquad
+  M=k((T_1^p,\ldots,T_r^p)),\qquad
+  N=k((T_1^{p^2},\ldots,T_r^{p^2})).
+\]
+Soit $E$ une extension de type fini de $L_0$.
+\begin{enumerate}
+  \item[\textup{(i)}] Si $\Upsilon_{K_0/k_0}$ est de rang fini, on a
+  \begin{equation}
+  \tag{21.9.6.1}
+  \label{0.21.9.6.1-fr}
+    \operatorname{rg}_E\Omega^1_{E/M}
+    \setmin\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+    =(r+\deg.\operatorname{tr}_{L_0}E)
+      +d(E/K_0,k_0)+d(E/M_0,N/k_0)
+  \end{equation}
+  (notations de (21.6.1)), et en particulier on a
+  \begin{equation}
+  \tag{21.9.6.2}
+  \label{0.21.9.6.2-fr}
+    \operatorname{rg}_E\Omega^1_{E/M}
+    \setmin\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+    \geqslant r+\deg.\operatorname{tr}_{L_0}E+d(E/K_0,k_0).
+  \end{equation}
+  En outre, si les deux membres de (21.9.6.2) sont égaux, ils le restent
+  lorsqu'on remplace $k$ par un corps $k'$ tel que $k_0\subset k'\subset k$.
+
+  \item[\textup{(ii)}] On suppose en outre que $[k_0:k_0^p]<+\infty$. Soit
+  $(k_\alpha)$ une famille filtrante décroissante de sous-corps de $K_0$
+  contenant $k_0$, tels que $[K_0:k_\alpha]<+\infty$ pour tout $\alpha$ et
+  que
+  $\bigcap_\alpha k_\alpha(K_0^p)=k_0(K_0^p)$~; alors il existe un $\alpha$
+  tel que, pour $k=k_\alpha$, les deux membres de (21.9.6.2) soient égaux.
+\end{enumerate}
+\end{proposition}
+
+  \oldpage[0\textsubscript{IV-1}]{179}
+\begin{proof}
+\begin{enumerate}
+  \item[(i)] On sait (21.1.5, (ii)) que
+  $\operatorname{rg}_E\Omega^1_{E/M}$ ne change pas quand on remplace $M$ par
+  $M(L_0^p)$~; comme
+  $L_0^p=K_0^p((T_1^p,\ldots,T_r^p))$ et que
+  $[k(K_0^p):k]<+\infty$, on a
+  \[
+    M(L_0^p)=k(K_0^p)((T_1^p,\ldots,T_r^p))~;
+  \]
+  de même $\Omega^1_{K_0/k}$ ne change pas quand on y remplace $k$ par
+  $k(K_0^p)$, si bien que l'on peut \emph{supposer que $K_0^p\subset k$}, ce
+  que nous ferons dans toute la suite. Nous introduirons aussi les corps
+  \[
+    k'_0=k_0(K_0^p),\qquad
+    N'=k'_0((T_1^{p^2},\ldots,T_r^{p^2}))
+  \]
+  de sorte que l'on a le diagramme de corps
+  \[
+    \xymatrix{
+      & K_0\ar[rr] & & M_0\ar[r] & L_0\ar[r] & E\\
+      & k\ar[u]\ar[r] & N\ar[r] & M\ar[u]\ar[r] & L\ar[u]\\
+      k_0\ar[r] & k'_0\ar[u]\ar[r] & N'\ar[u]
+    }
+  \]
+
+  Nous nous proposons d'évaluer la différence $\delta$ du premier et du
+  second membre de (21.9.6.2).
+
+  Il résulte de (21.7.3) que l'on a
+  \[
+    \operatorname{rg}_E\Omega^1_{E/M}
+    \setmin\operatorname{rg}_{M_0}\Omega^1_{M/M_0}
+    =\deg.\operatorname{tr}_{M_0}E+d(E/M_0,M)
+  \]
+  et comme $L_0$ est une extension finie de $M_0$, on a
+  $\deg.\operatorname{tr}_{L_0}E=\deg.\operatorname{tr}_{M_0}E$. D'autre
+  part, une $p$-base de $K_0$ sur $k=k(K_0^p)$ est aussi une $p$-base de
+  $M_0$ sur $M$, donc (21.4.5), on a
+  \[
+    \operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+    =\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+  \]
+  si bien que l'on a
+  \begin{equation}
+  \tag{21.9.6.3}
+  \label{0.21.9.6.3-fr}
+    \delta=d(E/M_0,M)\setmin d(E/K_0,k_0)\setmin r.
+  \end{equation}
+
+  Notons maintenant le lemme classique~:
+
+  \begin{lemma}[21.9.6.4]
+  \label{0.21.9.6.4-fr}
+  Pour tout corps $k$, le corps de séries formelles
+  $K=k((T_1,\ldots,T_r))$ est une extension séparable de $k$.
+  \end{lemma}
+
+  \begin{proof}
+  Rappelons rapidement la démonstration de ce lemme pour être complet. Il
+  suffit (Bourbaki, \emph{Alg.}, chap.~VIII, \S~7,
+  n\textsuperscript{o}~3, démonstration du th.~1) de prouver que pour toute
+  extension \emph{finie} $k'$ de $k$, $K\otimes_k k'$ est sans élément nilpotent~;
+  mais si l'on pose $A=k[[T_1,\ldots,T_r]]$ et $S=A\setmin\{0\}$,
+  $K\otimes_k k'$ est égal à $S^{-1}(A\otimes_k k')$, et
+  $A\otimes_k k'$ s'identifie canoniquement à l'anneau intègre
+  $A'=k'[[T_1,\ldots,T_r]]$ et $A$ à un sous-anneau de $A'$, d'où la
+  conclusion.
+  \end{proof}
+
+  Utilisant ce lemme et (21.6.2, (ii)), on a $d(L_0/K_0,k_0)=0$, et la
+  formule (21.6.4.4) donne donc
+  \[
+    d(E/K_0,k_0)=d(E/L_0,k_0).
+  \]
+
+  \oldpage[0\textsubscript{IV-1}]{180}
+  Les formules (21.6.4.4) et (21.6.4.2) donnent d'autre part
+  \[
+    d(E/M_0,M)=d(E/L_0,M)+d(L_0/M_0,M),
+  \]
+  \[
+    d(L_0/M_0,M)=d(L_0/M_0,M/N)+d(L_0/M_0,N)
+  \]
+  d'où
+  \[
+    \delta=d(E/L_0,M)+d(L_0/M_0,N)\setmin d(E/L_0,k_0)
+    +d(L_0/M_0,M/N)\setmin r.
+  \]
+
+  Nous allons montrer que l'on a la relation
+  \begin{equation}
+  \tag{21.9.6.5}
+  \label{0.21.9.6.5-fr}
+    d(L_0/M_0,M/N)=r.
+  \end{equation}
+
+  Pour cela, remarquons que, par définition, on a
+  \[
+    d(L_0/M_0,M/N)
+    =\operatorname{rg}_{L_0}\Upsilon_{L_0/M/N}
+    \setmin\operatorname{rg}_{M_0}\Upsilon_{M_0/M/N}.
+  \]
+
+  Compte tenu des deux suites exactes
+  \[
+  \begin{aligned}
+    0&\longrightarrow\Upsilon_{L_0/M/N}
+      \longrightarrow\Omega^1_{M/N}\otimes_ML_0
+      \longrightarrow\Omega^1_{L_0/N}
+      \longrightarrow\Omega^1_{L_0/M}\longrightarrow0\\
+    0&\longrightarrow\Upsilon_{M_0/M/N}
+      \longrightarrow\Omega^1_{M/N}\otimes_MM_0
+      \longrightarrow\Omega^1_{M_0/N}
+      \longrightarrow\Omega^1_{M_0/M}\longrightarrow0
+  \end{aligned}
+  \]
+  il vient
+  \[
+  \begin{split}
+    d(L_0/M_0,M/N)={}&\operatorname{rg}_{L_0}\Omega^1_{L_0/M}
+      \setmin\operatorname{rg}_{L_0}\Omega^1_{L_0/N}\\
+      &\setmin\operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+      +\operatorname{rg}_{M_0}\Omega^1_{M_0/N}.
+  \end{split}
+  \]
+  Or, on a $N(L_0^p)\supset M$, donc
+  $\Omega^1_{L_0/N}=\Omega^1_{L_0/M}$ (21.1.5, (ii)). D'autre part, les
+  $T_i^p$ $(1\leqslant i\leqslant r)$ forment une $p$-base de $M$ sur $N$,
+  et une $p$-base de $K_0$ sur $k$ est aussi une $p$-base de $M_0$ sur $M$,
+  donc, comme $M_0^p\subset N$,
+  \[
+    \operatorname{rg}_{M_0}\Omega^1_{M_0/N}
+    =r+\operatorname{rg}_{K_0}\Omega^1_{K_0/k}
+    =r+\operatorname{rg}_{M_0}\Omega^1_{M_0/M}
+  \]
+  en vertu de (21.4.5) et (21.1.10), ce qui prouve (21.9.6.5).
+
+  On a encore, par (21.6.4.2),
+  \[
+    d(E/L_0,M)-d(E/L_0,k_0)=d(E/L_0,M/k_0)
+  \]
+  et
+  \[
+    d(L_0/M_0,N)=d(L_0/M_0,N/k)+d(L_0/M_0,k).
+  \]
+
+  Mais comme $L_0$ est séparable sur $K_0$ (21.9.6.4), on a
+  $d(L_0/K_0,k)=0$, et par suite aussi $d(L_0/M_0,k)=0$ ((21.6.2) et
+  (21.6.4)). Il vient donc
+  \[
+    \delta=d(E/L_0,M/k_0)+d(L_0/M_0,N/k).
+  \]
+
+  Appliquons encore deux fois (21.6.4.2) au premier terme du second membre de
+  cette formule~; on obtient
+  \[
+    d(E/L_0,M/k_0)=d(E/L_0,M/N)+d(E/L_0,N/k)+d(E/L_0,k/k_0).
+  \]
+
+  Comme $M\subset N(L_0^p)$, on a $d(E/L_0,M/N)=0$ (21.6.2), donc (par
+  (21.6.4.4))
+  \[
+    \delta=d(E/L_0,k/k_0)+d(E/M_0,N/k).
+  \]
+
+  Mais $M_0$ et $L_0$ sont des extensions séparables de $K_0$ (21.9.6.4),
+  donc
+  $d(L_0/K_0,k/k_0)=d(M_0/K_0,k/k_0)=0$
+  (21.6.2), et appliquant encore deux fois (21.6.4.4),
+  \oldpage[0\textsubscript{IV-1}]{181}
+  on a
+  \[
+    d(E/L_0

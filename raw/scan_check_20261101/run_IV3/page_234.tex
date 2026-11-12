@@ -1,0 +1,34 @@
+% from ega4-15-fr.tex
+\oldpage[IV-3]{234}
+alors, avec les notations de (15.5.3), la fonction $z\mapsto n(z)$ est semi-continue inférieurement au point $y$.
+\end{corollary}
+
+\begin{proof}
+Avec les notations de (15.5.3), notons que dans la factorisation de Stein $f=g\circ f'$, $f'$ est surjectif~; comme $f$ est universellement ouvert aux points de $f^{-1}(y)$, $g$ est universellement ouvert aux points de $g^{-1}(y)$ (14.3.4, (i))~; il suffit alors d'appliquer à $g$ la proposition (15.5.1), (i) en tenant compte de (\textbf{III}, 4.3.4).
+\end{proof}
+
+\begin{remarks}[15.5.5]
+\label{IV.15.5.5-fr}
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item Même si $Y$ est intègre et normal, $X$ intègre, $f$ fini et surjectif (donc universellement ouvert en vertu du critère de Chevalley (14.4.4)), la fonction $y\mapsto n(y)$ n'est pas nécessairement localement constante. On en a un exemple en prenant $Y=\operatorname{Spec}(k[T])$ où $k$ est algébriquement clos, et $X=\operatorname{Spec}(A)$, où $A=k[S,T]/(S^2+T^2-1)$~; aux points $y',y''$ de $Y$ correspondant aux idéaux maximaux $(T-1)$ et $(T+1)$, on a $n(y')=n(y'')=1$, mais $n(y)=2$ en tous les autres points de $Y$. On va donner ci-dessous une condition supplémentaire assurant que $y\mapsto n(y)$ est localement constante (15.5.7).
+  \item L'exemple (14.4.10, (ii)) montre que dans (15.5.1, (iii)), on ne peut supprimer l'hypothèse que les points de $Y$ sont géométriquement unibranches.
+  \item L'exemple (11.7.5) montre que la conclusion de (15.5.1, (i)) n'est plus valable si on suppose seulement que le morphisme $f$ est ouvert (même si, comme c'est le cas dans l'exemple cité, $f$ est fini et surjectif).
+  \item Enfin, dans (15.5.1), on ne peut se dispenser de l'hypothèse que le morphisme $f$ est séparé, comme le montre l'exemple où $X$ est la droite affine dont on a «~dédoublé un point~» (\textbf{I}, 5.5.11), et $Y$ la droite affine~: ici $f$ est un isomorphisme local (donc est plat) et est quasi-fini, mais $z\mapsto n(z)$ n'est pas semi-continue inférieurement.
+\end{enumerate}
+\end{remarks}
+
+\begin{lemma}[15.5.6]
+\label{IV.15.5.6-fr}
+Soit $Y$ le spectre d'un anneau de valuation discrète, $a$ son point fermé, $b$ son point générique. Soit $f:X\to Y$ un morphisme localement de type fini et ouvert. Supposons que $X$ soit connexe et que la fibre $f^{-1}(a)$ soit un préschéma réduit. Alors $f^{-1}(b)$ est connexe.
+\end{lemma}
+
+\begin{proof}
+Nous utiliserons le lemme purement topologique suivant (cas particulier d'un résultat plus général du chap. III, 3\textsuperscript{e} Partie)~:
+\begin{lemma}[15.5.6.1]
+\label{IV.15.5.6.1-fr}
+Soit $X$ un espace localement noethérien, dont toute partie fermée irréductible admet un point générique. Soit $Z$ une partie fermée rare de $X$ ayant la propriété suivante~: pour tout $x\in Z$, si l'on désigne par $T_x$ l'ensemble des générisations de $x$ dans $X$, alors $T_x-\{x\}$ est connexe. Dans ces conditions, si $X$ est connexe, $X-Z$ est connexe.
+\end{lemma}
+
+\begin{proof}
+Donnons-en une démonstration indépendante. Raisonnant par l'absurde, supposons que l'ouvert $U=X-Z$, partout dense dans $X$, soit réunion de deux ouverts non vides sans point commun $U'$ et $U''$, et désignons par $X'$ et $X''$ les adhérences dans $X$ de $U'$ et $U''$. Comme $X=\overline{U}=X'\cup X''$ et que $X$ est connexe, on a $X'\cap X''\ne\varnothing$, et il est clair que $X'\cap X''\subset Z$. Soit $x$ un point générique d'une composante irréductible de $X'\cap X''$. Comme $X$ est localement noethérien, il y a un voisinage ouvert $V$ de $x$ dans $X$ tel que $V\cap U'$ et $V\cap U''$ n'aient qu'un nombre fini de composantes irréductibles~; comme $x$ est adhérent à $U'$ et à $U''$, il est nécessairement dans l'adhérence d'une composante irréductible $Z'$ de $V\cap U'$ et dans l'adhérence d'une composante irréductible $Z''$ de $V\cap U''$. Mais $\overline{Z'}$ (resp. $\overline{Z''}$) est fermé et irréductible dans $X$, donc admet un point générique $z'$ (resp. $z''$), et on a nécessairement $z'\in U'$ et $z''\in U''$. Ceci prouve que les intersections de $T_x-\{x\}$ avec $U'$ et $U''$ sont non vides. Mais par définition $(X'\cap X'')\cap(T_x-\{x\})=\varnothing$~; donc les intersections de $X'$ et de $X''$ avec $T_x-\{x\}$ sont deux fermés non vides disjoints dans $T_x-\{x\}$, dont la réunion est $T_x-\{x\}$~; or cela contredit l'hypothèse que $T_x-\{x\}$ est connexe. C.Q.F.D.
+\end{proof}

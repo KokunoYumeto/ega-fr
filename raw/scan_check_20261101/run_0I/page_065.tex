@@ -1,0 +1,81 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{65}
+
+il suffira de prouver que pour tout $m$, $\overline S_m$ est un système de
+générateurs du $A_0$-module
+$\mathfrak J^{(m)}/\mathfrak J^{(m+1)}$, ou encore que $\mathfrak J_m^m$ est
+engendré par les monômes de degré $m$ en les $a_{jm}$ ($1\leq j\leq r$).
+Pour cela, il reste à montrer que $\mathfrak J_m$ est (en tant que
+$A_m$-module) engendré par les monômes de degré $\leq m$ par rapport aux
+$a_{jm}$~; la proposition étant évidente par définition pour $m=1$,
+raisonnons par récurrence sur $m$, et soit $\mathfrak J'_m$ le sous-$A_m$-module
+de $\mathfrak J_m$ engendré par ces monômes. La relation
+$\mathfrak J_{m-1}=\mathfrak J_m/\mathfrak J_m^m$ et l'hypothèse de récurrence
+prouvent que $\mathfrak J_m=\mathfrak J'_m+\mathfrak J_m^m$ d'où, puisque
+$\mathfrak J_m^{m+1}=0$, l'on tire
+$\mathfrak J_m^m={\mathfrak J'_m}^{\,m}$, et finalement
+$\mathfrak J_m=\mathfrak J'_m$.
+
+\begin{corollary}[7.2.8]
+\label{0.7.2.8-fr}
+Sous les conditions de (7.2.7), pour que $A$ soit noethérien, il faut et il
+suffit que $A_0$ le soit.
+\end{corollary}
+
+Cela résulte aussitôt de (7.2.6).
+
+\begin{proposition}[7.2.9]
+\label{0.7.2.9-fr}
+Supposons vérifiées les hypothèses de (7.2.7)~: pour tout entier $i$, soit
+$M_i$ un $A_i$-module, et, pour $i\leq j$, soit
+$v_{ij}:M_j\to M_i$ un $u_{ij}$-homomorphisme, tels que $(M_i,v_{ij})$ soit un
+système projectif. Supposons en outre que $M_0$ soit un $A_0$-module de type
+fini, que $v_{ij}$ soit surjectif et que son noyau soit
+$\mathfrak J_j^{i+1}M_j$. Alors $M=\varprojlim M_i$ est un $A$-module de type
+fini, et le noyau du $u_n$-homomorphisme surjectif $v_n:M\to M_n$ est
+$\mathfrak J^{n+1}M$ (de sorte que $M_n$ s'identifie à
+$M/\mathfrak J^{n+1}M=M\otimes_A(A/\mathfrak J^{n+1})$).
+\end{proposition}
+
+Soient $z_h=(z_{hk})_{k\geq0}$ un système de $s$ éléments de $M$ tels que les
+$z_{h0}$ ($1\leq h\leq s$) forment un système de générateurs de $M_0$~; on va
+montrer que les $z_h$ engendrent le $A$-module $M$. Le $A$-module $M$ est
+séparé et complet pour la filtration formée par les $M^{(n)}$, où $M^{(n)}$
+est l'ensemble des $y=(y_k)_{k\geq0}$ de $M$ tels que $y_k=0$ pour $k<n$~;
+il est clair que l'on a $\mathfrak J^{(n)}M\subset M^{(n)}$ et que
+$M^{(n)}/M^{(n+1)}=\mathfrak J_n^nM_n$. On est donc ramené à montrer que les
+classes des $z_h$ mod. $M^{(0)}$ engendrent le module gradué
+$\operatorname{grad}(M)$ (pour la filtration précédente) sur l'anneau gradué
+$\operatorname{grad}(A)$ ([I], p.~18-06, lemme)~; pour cela, on constate
+aisément qu'il suffit encore de prouver que les $z_{hn}$ ($1\leq h\leq s$)
+engendrent le $A_n$-module $M_n$. On raisonne de nouveau par récurrence sur
+$n$, la proposition étant évidente par définition pour $n=0$~; la relation
+$M_{n-1}=M_n/\mathfrak J_n^nM_n$ et l'hypothèse de récurrence montrent que si
+$M'_n$ est le sous-module de $M_n$ engendré par les $z_{hn}$, on a
+$M_n=M'_n+\mathfrak J_n^nM_n$, et comme $\mathfrak J_n$ est nilpotent, cela
+entraîne $M_n=M'_n$. Le même raisonnement de passage aux modules gradués
+associés montre que l'application canonique de $\mathfrak J^{(n)}M$ dans
+$M^{(n)}$ est surjective (donc bijective), autrement dit que
+$\mathfrak J^{(n)}M=\mathfrak J^nM$ est le noyau de $M\to M_n$.
+
+\begin{corollary}[7.2.10]
+\label{0.7.2.10-fr}
+Soit $(N_i,w_{ij})$ un second système projectif de $A_i$-modules vérifiant les
+conditions de (7.2.9), et soit $N=\varprojlim N_i$. Il y a correspondance
+biunivoque entre les systèmes projectifs $(h_i)$ de $A_i$-homomorphismes
+$h_i:M_i\to N_i$ et les homomorphismes de $A$-modules $h:M\to N$ (qui sont
+nécessairement continus pour les topologies $\mathfrak J$-adiques).
+\end{corollary}
+
+Il est clair que si $h:M\to N$ est un $A$-homomorphisme, on a
+$h(\mathfrak J^nM)\subset\mathfrak J^nN$, d'où la continuité de $h$~; par
+passage aux quotients, il correspond donc à $h$ un système projectif de
+$A_i$-homomorphismes $h_i:M_i\to N_i$, dont $h$ est la limite projective,
+d'où le corollaire.
+
+\begin{remark}[7.2.11]
+\label{0.7.2.11-fr}
+Soit $A$ un anneau adique ayant un idéal de définition $\mathfrak J$ tel que
+$\mathfrak J/\mathfrak J^2$ soit un $(A/\mathfrak J)$-module de type fini~;
+il est clair que les $A_i=A/\mathfrak J^{i+1}$ vérifient
+

@@ -1,0 +1,72 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{216}
+
+car les relations (19.7.1.9) et (19.7.1.10) entraînent que $g$ appartient au premier membre de (19.7.1.11), et comme $h\leq m-d$, on a $\mathfrak L^{m-d+1}\subset\mathfrak L^{h+1}$, ce qui établira $(**_{d+1,h+1})$. D'ailleurs on a $\mathfrak R^mN\subset\mathfrak R^dN$, et la relation
+\begin{env}[19.7.1.12]
+\label{IV.19.7.1.12}
+\[
+  \mathfrak L^{m+1}N\cap\mathfrak R^dN\subset\mathfrak L^{m-d+1}\mathfrak R^dN
+\]
+\end{env}
+entraînera (19.7.1.11). Comme $N$ est un $A$-module libre de type fini, on voit qu'il suffit donc de prouver
+\begin{env}[19.7.1.13]
+\label{IV.19.7.1.13}
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d.
+\]
+\end{env}
+
+Il suffira de prouver que, de façon générale, pour $d<m$, on a
+\begin{env}[19.7.1.14]
+\label{IV.19.7.1.14}
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak R^{d+1}.
+\]
+\end{env}
+En effet, comme $\mathfrak R\subset\mathfrak L$, donc $\mathfrak L^{m-d+1}\mathfrak R^d\subset\mathfrak L^{m+1}$, la relation précédente entraînera
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak L^{m+1}\cap\mathfrak R^{d+1}
+\]
+et par récurrence sur $d\leq m$, on en conclura
+\[
+  \mathfrak L^{m+1}\cap\mathfrak R^d\subset\mathfrak L^{m-d+1}\mathfrak R^d+\mathfrak R^{m+1}
+\]
+d'où (19.7.1.13), puisque $\mathfrak R^{m+1}\subset\mathfrak L^{m-d+1}\mathfrak R^d$.
+
+Comme $\mathfrak L=\mathfrak J+\mathfrak R$, la relation (19.7.1.14) s'écrit aussi
+\begin{env}[19.7.1.15]
+\label{IV.19.7.1.15}
+\[
+\begin{aligned}
+  &(\mathfrak J^{m+1}+\mathfrak J^m\mathfrak R+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1})\cap\mathfrak R^d\\
+  &\quad\subset\mathfrak J^{m-d+1}\mathfrak R^d+\mathfrak J^{m-d}\mathfrak R^{d+1}+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1}+\mathfrak R^{d+1}\\
+  &\quad=\mathfrak J^{m-d+1}\mathfrak R^d+\mathfrak R^{d+1}.
+\end{aligned}
+\]
+\end{env}
+
+Nous allons voir que cette inclusion est elle-même conséquence de
+\begin{env}[19.7.1.16]
+\label{IV.19.7.1.16}
+\[
+  \mathfrak R^a\mathfrak J^b\cap\mathfrak R^{a+1}\subset\mathfrak R^{a+1}\mathfrak J^{b-1}
+\]
+\end{env}
+valable pour $a\geq0$, $b\geq1$. En effet, il suffit, pour prouver (19.7.1.15) de montrer que pour $0<q\leq d$, on a
+\begin{env}[19.7.1.17]
+\label{IV.19.7.1.17}
+\[
+\begin{aligned}
+  &(\mathfrak J^{m+1}+\mathfrak J^m\mathfrak R+\cdots+\mathfrak J\mathfrak R^m+\mathfrak R^{m+1})\cap\mathfrak R^d\\
+  &\quad\subset(\mathfrak J^{m+1-q}\mathfrak R^q+\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1})\cap\mathfrak R^d
+\end{aligned}
+\]
+\end{env}
+car pour $q=d$, cela entraînera (19.7.1.15). Or, pour prouver (19.7.1.17), il suffit de procéder par récurrence sur $q$ en supposant la relation vraie pour $q<d$; un élément du premier membre s'écrit donc par hypothèse $y+z$ avec $y\in\mathfrak J^{m+1-q}\mathfrak R^q$, $z\in\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1}$; comme $y+z\in\mathfrak R^d\subset\mathfrak R^{q+1}$, on en déduit $y\in\mathfrak R^{q+1}$, puisque $z\in\mathfrak R^{q+1}$; tenant compte de (19.7.1.16), on a $y\in\mathfrak J^{m-q}\mathfrak R^{q+1}$, donc
+\[
+  y+z\in\mathfrak J^{m-q}\mathfrak R^{q+1}+\cdots+\mathfrak R^{m+1},\qquad\text{et}\qquad y+z\in\mathfrak R^d
+\]
+par hypothèse, ce qui prouve (19.7.1.17) où $q$ a été remplacé par $q+1$.
+
+Reste donc à établir (19.7.1.16). Un élément du premier membre s'écrit $a_1f_1+\cdots+a_nf_n$, où les $a_i$ appartiennent à $\mathfrak R^a\mathfrak J^{b-1}$; tenant compte de ce que la suite $\mathbf f$ est $(\mathfrak R^a/\mathfrak R^{a+1})$-régulière par hypothèse, donc aussi $(\mathfrak R^a/\mathfrak R^{a+1})$-quasi-régulière ($0$, 15.1.9), il résulte de la définition ($0$, 15.1.7) que la relation $a_1f_1+\cdots+a_nf_n\in\mathfrak R^{a+1}$, où les $a_i\in\mathfrak R^a$, entraîne nécessairement $a_i\in\mathfrak R^{a+1}$, donc $a_i\in\mathfrak R^a\mathfrak J^{b-1}\cap\mathfrak R^{a+1}$; il suffit de raisonner par
+

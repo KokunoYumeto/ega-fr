@@ -1,0 +1,41 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{264}
+La proposition résulte aussitôt des définitions et de \sref{IV.21.2.10}.
+\end{proof}
+
+\begin{proposition}[21.3.4]
+\label{IV.21.3.4}
+Soit $X$ un préschéma vérifiant l'une des deux hypothèses suivantes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $X$ est localement noethérien et $\operatorname{Ass}(\sh{O}_X)$ est contenu dans un ouvert affine de $X$.
+  \item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.
+\end{enumerate}
+Alors l'homomorphisme canonique $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ est surjectif, et donne par passage au quotient un isomorphisme
+\[
+  \operatorname{Div}(X)/\operatorname{Div.princ}(X)\xrightarrow{\sim}\operatorname{Pic}(X).
+\]
+\end{proposition}
+
+\begin{proof}
+Il suffit de montrer que tout $\sh{O}_X$-Module inversible $\sh{L}$ admet une section méromorphe régulière au-dessus de $X$ \sref{IV.21.3.3}.
+Dans les deux cas, il suffira, grâce à \sref{IV.20.2.11},~(ii), de définir une section $s$ de $(\sh{M}_X(\sh{L}))^*$ au-dessus d'un ouvert schématiquement dense $U$ de $X$, ou encore dans le cas a), d'un ouvert $U$ contenant $\operatorname{Ass}(\sh{O}_X)$ \sref{IV.20.2.13},~(iv).
+En effet, soit alors $V$ un ouvert quelconque de $X$ tel que $\sh{L}|V$ soit isomorphe à $\sh{O}_V$, de sorte qu'il existe un isomorphisme de $\sh{M}_X(\sh{L})|V$ sur $\sh{M}_X|V$, transformant $s|(U\cap V)$ en une section $f_V$ de $\sh{M}_X^*$ au-dessus de $U\cap V$.
+Comme $U\cap V$ est schématiquement dense dans $V$, il résulte de \sref{IV.20.2.11} qu'il existe une fonction méromorphe régulière et une seule $g_V$ dans $V$ telle que $g_V|(U\cap V)=f_V$, et cette section correspond donc par l'isomorphisme considéré à une section méromorphe régulière $u_V$ de $\sh{L}$ au-dessus de $V$ telle que $u_V|(U\cap V)=s|(U\cap V)$.
+En outre, si $V'$ est un second ouvert de $X$ tel que $\sh{L}|V'$ soit isomorphe à $\sh{O}_{V'}$, les restrictions de $u_V$ et $u_{V'}$ à $V\cap V'$ sont égales, car elles correspondent par isomorphisme à deux fonctions méromorphes qui coïncident dans un ouvert schématiquement dense $U\cap V\cap V'$, et on conclut encore par \sref{IV.20.2.11};
+les $u_V$ sont donc bien les restrictions d'une section de $(\sh{M}_X(\sh{L}))^*$ au-dessus de $X$.
+
+Cela étant, dans le cas b), on prend pour chacun des points maximaux $x_\lambda$ de $X$ un ouvert $U_\lambda$ contenant $x_\lambda$, ne rencontrant aucune composante irréductible de $X$ distincte de $\overline{\{x_\lambda\}}$ et tel que $\sh{L}|U_\lambda$ soit isomorphe à $\sh{O}_{U_\lambda}$;
+on prendra pour $s$ la section telle que $s|U_\lambda$ soit la section de $\sh{L}|U_\lambda$ qui correspond par l'isomorphisme précédent à la section unité de $\sh{O}_{U_\lambda}$.
+
+Dans le cas a), on peut prendre pour $U$ par hypothèse un ouvert affine (donc noethérien), autrement dit, supposer que $X=\operatorname{Spec}(A)$, où $A$ est noethérien, et $\sh{L}=\widetilde{P}$, où $P$ est un $A$-module projectif de rang $1$.
+Si $S$ est l'ensemble des éléments réguliers de $A$, on a $\Gamma(X,\sh{M}_X)=S^{-1}A$ \sref{IV.20.2.12} et $\Gamma(X,\sh{M}_X(\sh{L}))=S^{-1}P$;
+or $S$ est l'ensemble des éléments n'appartenant à aucun des idéaux associés à $A$, donc $S^{-1}A$ est un anneau semi-local dont les idéaux maximaux proviennent des éléments maximaux de $\operatorname{Ass}(A)$, et $S^{-1}P$ est un $S^{-1}A$-module projectif de rang $1$, donc ici libre de rang $1$ (Bourbaki, \emph{Alg. comm.}, chap.~II, \textsection~5, n\textsuperscript{o}~3, prop.~5);
+un élément formant une base de ce $S^{-1}A$-module est par suite \sref{IV.20.1.8} une section méromorphe régulière de $\sh{L}$ au-dessus de $X$.
+\end{proof}
+
+\begin{corollary}[21.3.5]
+\label{IV.21.3.5}
+Si $X$ est un préschéma noethérien, tel qu'il existe un $\sh{O}_X$-Module inversible ample (\textbf{II}, 4.5.3) (par exemple un préschéma quasi-projectif sur un spectre d'anneau noethérien (\textbf{II}, 5.3.1 et 4.6.6)), l'homomorphisme canonique $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ est surjectif.
+\end{corollary}
+
+\begin{proof}

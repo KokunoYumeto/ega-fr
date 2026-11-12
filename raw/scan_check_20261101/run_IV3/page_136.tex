@@ -1,0 +1,82 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{136}
+
+\item $\mathcal F$ est $f$-plat au point $x$, et la suite
+$((g_i\otimes1)_x)$ d'éléments de $\mathcal O_{X_y,x}$ images des $(g_i)_x$ est
+$(\mathcal F_y)_x$-régulière.
+\item $\mathcal F$ est $f$-plat au point $x$, et pour tout morphisme
+$Y'\to Y$ et tout point $x'\in X'=X\times_YY'$ au-dessus de $x$, si l'on pose
+$\mathcal F'=\mathcal F\otimes_YY'$, la suite $(g_i\otimes1)_{x'}$
+d'éléments de $\mathcal O_{X',x'}$ est $\mathcal F'_{x'}$-régulière.
+\end{enumerate}
+En outre l'ensemble des $x\in X$ vérifiant ces conditions est ouvert dans
+l'ensemble $Z$ des $x$ tels que $g_i(x)=0$ pour tout $i$.
+\end{theorem}
+
+\begin{proof}
+Le fait que a) entraîne d) résulte aussitôt de $(\mathbf 0,15.1.15)$, et c) est
+un cas particulier de d)~; par ailleurs a) implique b) trivialement. Montrons
+que b) ou c) entraîne a). Les $\mathcal F_i$ sont de présentation finie~; le
+fait que c) implique a) résulte alors aussitôt de (11.3.7) par récurrence sur
+$n$, et cela montre aussi que l'ensemble des $x\in X$ vérifiant c) est ouvert
+dans $Z$. Pour montrer que b) entraîne a), on est aussitôt ramené, par
+récurrence sur $n$, au cas $n=1$~; nous écrirons $g$ au lieu de $g_1$. La
+question étant locale sur $X$ et $Y$, on peut supposer
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$ affines, $B$ étant une
+$A$-algèbre de présentation finie, $\mathcal F=\widetilde M$, où $M$ est un
+$B$-module de présentation finie. On peut alors (8.9.1) écrire
+$B=B_0\otimes_{A_0}A$, $M=M_0\otimes_{A_0}A$, où $A_0$ est un sous-anneau
+noethérien de $A$, $B_0$ une $A_0$-algèbre de type fini et $M_0$ un
+$B_0$-module de type fini. En outre $A$ est limite inductive filtrante de ses
+sous-anneaux $A_\lambda$ qui sont des $A_0$-algèbres de type fini (donc
+noethériens), et si l'on pose
+$B_\lambda=B_0\otimes_{A_0}A_\lambda$,
+$M_\lambda=M_0\otimes_{A_0}A_\lambda$, $B_\lambda$ est une
+$A_\lambda$-algèbre de type fini, $M_\lambda$ un $B_\lambda$-module de type
+fini et l'on a $B=\varinjlim B_\lambda$, $M=\varinjlim M_\lambda$. Il existe
+donc un indice $\lambda$ et un élément $g_\lambda\in B_\lambda$ tels que
+$g=g_\lambda\otimes1$~; revenant aux notations géométriques et posant
+$Y_\lambda=\operatorname{Spec}(A_\lambda)$,
+$X_\lambda=\operatorname{Spec}(B_\lambda)$ et
+$\mathcal F_\lambda=\widetilde{M_\lambda}$, il nous suffira de prouver qu'il y
+a un $\mu\geq\lambda$ tel qu'au point $x_\mu\in X_\mu$ projection de $x$,
+$(g_\mu)_{x_\mu}$ soit $(\mathcal F_\mu)_{x_\mu}$-régulier et
+$\mathcal F_\mu/g_\mu\mathcal F_\mu$ plat sur $Y_\mu$ au point $x_\mu$. On en
+déduira en effet, par $(\mathbf 0,15.1.16)$ que $\mathcal F_\mu$ est plat sur
+$Y_\mu$ au point $x_\mu$, donc $\mathcal F$ plat sur $Y$ au point $x$.
+
+Le fait que b) entraîne a) résultera donc de la proposition suivante~:
+
+\begin{proposition}[11.3.9]
+\label{IV.11.3.9-fr}
+Les notations et hypothèses générales étant celles de (8.5.1) et (8.8.1),
+supposons que $f_\alpha:X_\alpha\to Y_\alpha$ soit un morphisme localement de
+présentation finie. Soient $\mathcal F_\alpha$, $\mathcal G_\alpha$ deux
+$\mathcal O_{X_\alpha}$-Modules quasi-cohérents de présentation finie,
+$h_\alpha:\mathcal F_\alpha\to\mathcal G_\alpha$ un
+$\mathcal O_{X_\alpha}$-homomorphisme, $\mathcal H_\alpha$ son conoyau. Soient
+enfin $x$ un point de $X$, $x_\lambda$ sa projection dans $X_\lambda$ pour
+$\lambda\geq\alpha$. Pour que $h_x$ soit injectif et que
+$\mathcal H=\operatorname{Coker}h$ soit $f$-plat au point $x$, il faut et il
+suffit qu'il existe $\lambda\geq\alpha$ tel que $(h_\lambda)_{x_\lambda}$ soit
+injectif et que $\mathcal H_\lambda=\operatorname{Coker}h_\lambda$ soit
+$f_\lambda$-plat au point $x_\lambda$. En outre, l'ensemble des $x\in X$ ayant
+les propriétés précédentes est ouvert dans $X$.
+\end{proposition}
+
+Rappelons qu'en vertu de l'exactitude à droite du produit tensoriel, on a
+$\mathcal H_\mu=v_{\lambda\mu}^*(\mathcal H_\lambda)$ pour $\lambda\leq\mu$ et
+$\mathcal H=v_\lambda^*(\mathcal H_\lambda)$, ce qui justifie les notations.
+
+La suffisance de la condition provient de ce que, si la suite
+\[
+0\longrightarrow(\mathcal F_\lambda)_{x_\lambda}
+\longrightarrow(\mathcal G_\lambda)_{x_\lambda}
+\longrightarrow(\mathcal H_\lambda)_{x_\lambda}\longrightarrow0
+\]
+est exacte et $(\mathcal H_\lambda)_{x_\lambda}$ un
+$\mathcal O_{f_\lambda(x_\lambda)}$-module plat, $\mathcal H_x$ est un
+$\mathcal O_{f(x)}$-module plat par changement de base (2.1.4) et la suite
+$0\to\mathcal F_x\to\mathcal G_x\to\mathcal H_x\to0$ est exacte (2.1.8).
+Pour prouver que
+

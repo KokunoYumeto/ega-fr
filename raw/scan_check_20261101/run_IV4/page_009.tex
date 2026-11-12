@@ -1,0 +1,73 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{9}
+locale, et sans que $f$ soit injectif. On en a un exemple en prenant pour $Y$
+une somme de préschémas $Y_\lambda$ tous isomorphes à
+$\operatorname{Spec}(\mathcal{O}_x)$, où $x\in X$, et pour $f$ le morphisme
+égal au morphisme canonique dans chacun des $Y_\lambda$.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Propriétés fonctorielles des invariants normaux d'une immersion}
+\EGAReaderTarget{ega4.c04.subsec.16-2}{IV.16.2}
+
+\begin{env}[16.2.1]
+\label{IV.16.2.1}
+Soient $f=(\psi,\theta):Y\to X$,
+$f'=(\psi',\theta'):Y'\to X'$ deux morphismes d'espaces annelés tels que les
+homomorphismes $\theta^\#$ et $\theta'^\#$ soient surjectifs; considérons un
+diagramme commutatif de morphismes d'espaces annelés
+\[
+  \xymatrix{
+    Y \ar[r]^f & X \\
+    Y' \ar[r]_{f'} \ar[u]^u & X' \ar[u]_v
+  }
+  \tag{16.2.1.1}
+  \label{IV.16.2.1.1}
+\]
+Posons $u=(\rho,\lambda)$, $v=(\sigma,\mu)$. On a
+$\rho^*(\psi^*(\mathcal{O}_X))=
+\psi'^*(\sigma^*(\mathcal{O}_X))$ et on a par suite un diagramme commutatif
+d'homomorphismes de faisceaux d'anneaux sur $Y'$
+\[
+  \xymatrix{
+    \rho^*(\psi^*(\mathcal{O}_X))
+      =\psi'^*(\sigma^*(\mathcal{O}_X))
+      \ar[r]^-{\psi'^*(\mu^\#)}
+      \ar[d]_{\rho^*(\theta^\#)}
+      & \psi'^*(\mathcal{O}_{X'}) \ar[d]^{\theta'^\#} \\
+    \rho^*(\mathcal{O}_Y) \ar[r]_-{\lambda^\#}
+      & \mathcal{O}_{Y'}
+  }
+\]
+d'où l'on conclut, si $\mathscr{I}$ et $\mathscr{I}'$ sont les noyaux de
+$\theta^\#$ et $\theta'^\#$, que l'on a
+$\psi'^*(\mu^\#)(\rho^*(\mathscr{I}))\subset\mathscr{I}'$, compte tenu de
+l'exactitude du foncteur $\rho^*$. On en déduit aussitôt que pour tout entier
+$n$,
+$\psi'^*(\mu^\#)(\rho^*(\mathscr{I}^n))\subset\mathscr{I}'^n$, ce qui montre
+que $\psi'^*(\mu^\#)$ définit, par passage aux quotients, un homomorphisme de
+faisceaux d'anneaux
+\[
+  \nu_n:
+  \rho^*(\psi^*(\mathcal{O}_X)/\mathscr{I}^{n+1})
+  \longrightarrow
+  \psi'^*(\mathcal{O}_{X'})/\mathscr{I}'^{n+1}
+  \tag{16.2.1.2}
+  \label{IV.16.2.1.2}
+\]
+et par suite un morphisme d'espaces annelés
+$w_n=(\rho,\nu_n):Y'^{(n)}\to Y^{(n)}$ (qui, pour $n=0$, n'est autre que
+$u$). Il résulte aussitôt de cette définition que les diagrammes
+\[
+  \xymatrix@R=1pc{
+    Y^{(n)} \ar[r]^-{h_{mn}} & Y^{(m)} \ar[r]^-{h_m} & X \\
+    & & & (n\leq m) \\
+    Y'^{(n)} \ar[r]_-{h'_{mn}} \ar[uu]^-{w_n}
+      & Y'^{(m)} \ar[r]_-{h'_m} \ar[uu]^-{w_m}
+      & X' \ar[uu]_-v
+  }
+\]
+(où les flèches horizontales sont les morphismes canoniques (16.1.2)) sont
+commutatifs.
+
+Par passage aux quotients à partir des homomorphismes (16.2.1.2), et en tenant

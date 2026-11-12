@@ -1,0 +1,733 @@
+[
+ {
+  "page": 196,
+  "where": "top of p. 196: page break inside the sentence '... les colonnes extrêmes du diagramme (22.4.4.6) sont donc formées ...'",
+  "scan": "the display (22.4.4.6) heads the page and 'sont donc formées' follows flush left: the sentence of p. 195 runs on, no paragraph break",
+  "tex": "blank line after \\oldpage{196} (and one before it at the end of p. 195's segment): paragraph break before the display",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{196}\n\n\\begin{equation}",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{196}\n\\begin{equation}"
+  },
+  "note": "Spurious paragraph break at a mid-sentence page break (GLOBAL_ISSUES 20). Apply together with the removal of the blank line BEFORE the marker, which lies in page_195.tex (outside pp. 196-200): 'les colonnes extrêmes du diagramme\\n\\n' -> 'les colonnes extrêmes du diagramme\\n'."
+ },
+ {
+  "page": 196,
+  "where": "diagram (22.4.4.6), second row '0 → V_0⊗_K K' → V'_0 → 0': its two zeros",
+  "scan": "vertical arrows descend from both zeros: 0 → N (left column) and 0 → Ω^1_{A'/A}⊗_{A'}K' (right column) (crops)",
+  "tex": "the two zeros of the second row have no \\ar[d]",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "& 0 \\ar[r] & V_0\\otimes_KK' \\ar[r] \\ar[d] & V_0' \\ar[r] \\ar[d] & 0 & \\\\",
+   "new": "& 0 \\ar[r] \\ar[d] & V_0\\otimes_KK' \\ar[r] \\ar[d] & V_0' \\ar[r] \\ar[d] & 0 \\ar[d] & \\\\"
+  },
+  "note": "The outer columns begin with 0 (kernels/cokernels of the middle horizontal arrows, as the following sentence says)."
+ },
+ {
+  "page": 196,
+  "where": "diagram (22.4.4.6), bottom: below Υ_{K'/K} and Ω^1_{K'/K}",
+  "scan": "no arrows below Υ_{K'/K} and Ω^1_{K'/K}; the last row has only two zeros, under Ω^1_K⊗_K K' and Ω^1_{K'} (crop)",
+  "tex": "\\ar[d] from \\Upsilon_{K'/K} and from \\Omega^1_{K'/K} to two extra zeros; last row '& 0 & 0 & 0 & 0 &'",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Upsilon_{K'/K} \\ar[r] \\ar[d] &\n      \\Omega^1_K\\otimes_KK' \\ar[r] \\ar[d] & \\Omega^1_{K'} \\ar[r] \\ar[d] &\n      \\Omega^1_{K'/K} \\ar[r] \\ar[d] & 0 \\\\\n    & 0 & 0 & 0 & 0 &",
+   "new": "\\Upsilon_{K'/K} \\ar[r] &\n      \\Omega^1_K\\otimes_KK' \\ar[r] \\ar[d] & \\Omega^1_{K'} \\ar[r] \\ar[d] &\n      \\Omega^1_{K'/K} \\ar[r] & 0 \\\\\n    && 0 & 0 &&"
+  },
+  "note": "One edit for the two arrows and the two zeros (the middle line is unchanged)."
+ },
+ {
+  "page": 196,
+  "where": "after (22.4.4.6): 'des noyaux et des conoyaux des flèches horizontales'",
+  "scan": "'noyaux' and 'conoyaux' italic (crop)",
+  "tex": "des noyaux et des conoyaux (upright, proof text)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "des noyaux et des conoyaux",
+   "new": "des \\emph{noyaux} et des \\emph{conoyaux}"
+  },
+  "note": "Two words, one edit."
+ },
+ {
+  "page": 196,
+  "where": "'ce qui achève de prouver que le diagramme est commutatif. En outre :'",
+  "scan": "'commutatif' italic (crop)",
+  "tex": "commutatif (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "commutatif. En outre",
+   "new": "\\emph{commutatif}. En outre"
+  },
+  "note": null
+ },
+ {
+  "page": 196,
+  "where": "Lemme (22.4.4.7): 'du diagramme (22.4.4.6) sont bijectifs.'",
+  "scan": "the reference (22.4.4.6) is roman inside the italic statement",
+  "tex": "(22.4.4.6) italic inside the lemma environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "du diagramme (22.4.4.6) sont bijectifs.",
+   "new": "du diagramme \\textup{(22.4.4.6)} sont bijectifs."
+  },
+  "note": null
+ },
+ {
+  "page": 196,
+  "where": "end of the proof of (22.4.4): 'dans A' on a p.1∈𝔪A'⊂𝔪''",
+  "scan": "p.1 with a baseline period (crop at 2.5x)",
+  "tex": "p\\cdot1 (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "p\\cdot1\\in\\mathfrak mA'",
+   "new": "p.1\\in\\mathfrak mA'"
+  },
+  "note": "GLOBAL_ISSUES 65 (ega0-22: 7 to check); same fix as pp. 111-115."
+ },
+ {
+  "page": 196,
+  "where": "end of the proof of (22.4.4): 'cela prouve que les d_A f_i⊗1_K appartiennent à N'",
+  "scan": "d_A f_i⊗1_K: subscript K without prime (crops at 2.5x and 5x)",
+  "tex": "$d_Af_i\\otimes1_{K'}$ (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$d_Af_i\\otimes1_{K'}$ appartiennent",
+   "new": "$d_Af_i\\otimes1_K$ appartiennent"
+  },
+  "corrected": "$d_Af_i\\otimes1_{K'}$ appartiennent",
+  "note": "Silently corrected in the TeX; the fix restores the printed reading. N is a submodule of Ω^1_A⊗_A K' (kernel of Ω^1_A⊗_A K' → Ω^1_{A'}⊗_{A'}K' in (22.4.4.6)), and the preceding clause has d_{A'}f_i⊗1_{K'}=0, so the elements are d_A f_i⊗1_{K'}. Not in the IV errata list 3."
+ },
+ {
+  "page": 196,
+  "where": "end of the proof of (22.4.4): 'qui forment une base de Υ_{K'/K} sur K''",
+  "scan": "'base' italic (crop)",
+  "tex": "une base de (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "une base de",
+   "new": "une \\emph{base} de"
+  },
+  "note": null
+ },
+ {
+  "page": 196,
+  "where": "end of p. 196: page break inside the sentence '... deux homomorphismes A→B→A | vérifiant les conditions de (21.3.1)'",
+  "scan": "p. 197 begins flush left with 'vérifiant', continuing the sentence after the display",
+  "tex": "blank line after the display, before \\oldpage{197} (and another after the marker): paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A\\xrightarrow{i}B\\xrightarrow{j}A\n\\]\n\n",
+   "new": "A\\xrightarrow{i}B\\xrightarrow{j}A\n\\]\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 197 finding that removes the blank line after \\oldpage{197}."
+ },
+ {
+  "page": 197,
+  "where": "top of p. 197: 'vérifiant les conditions de (21.3.1)'",
+  "scan": "flush left: continues the sentence of p. 196 (no paragraph break)",
+  "tex": "blank line after \\oldpage{197}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{197}\n\nvérifiant",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{197}\nvérifiant"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 196 finding that removes the blank line before the marker."
+ },
+ {
+  "page": 197,
+  "where": "after the display j'(i'(x))=x^p ... y∈B_{(K)}: 'En posant, suivant les notations de (21.3.2)'",
+  "scan": "'En posant' begins a new indented paragraph",
+  "tex": "no blank line after \\]: same paragraph, no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nEn posant, suivant",
+   "new": "\\]\n\nEn posant, suivant"
+  },
+  "note": "Missing paragraph break after a display (cf. GLOBAL_ISSUES 47). Independent of the comma fix that follows."
+ },
+ {
+  "page": 197,
+  "where": "'En posant, suivant les notations de (21.3.2)' before the display Θ_{B_{(K)}/A}",
+  "scan": "no comma after (21.3.2) (crop at 2.2x)",
+  "tex": "(21.3.2),",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "les notations de (21.3.2),",
+   "new": "les notations de (21.3.2)"
+  },
+  "note": null
+ },
+ {
+  "page": 197,
+  "where": "display Θ_{B_{(K)}/A}=Ω^1_{B_{(K)}/A}⊗_{B_{(K)}}A_{[j']}=Ω^1_{B_{(K)}/K}⊗_{B_{(K)}}A_{[j']}",
+  "scan": "no punctuation at the end of the display (crop at 2.2x)",
+  "tex": "A_{[j']}, (final comma)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A_{[j']},",
+   "new": "A_{[j']}"
+  },
+  "note": null
+ },
+ {
+  "page": 197,
+  "where": "'(tenant compte de ce que j(i(𝔪))=0) des homomorphismes'",
+  "scan": "no comma after the closing parenthesis (crop at 2.2x)",
+  "tex": "=0$), des homomorphismes",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=0$), des homomorphismes",
+   "new": "=0$) des homomorphismes"
+  },
+  "note": null
+ },
+ {
+  "page": 197,
+  "where": "commutative diagram A→B→A / K→B_{(K)}→K: label ψ of the middle vertical arrow",
+  "scan": "ψ stands to the LEFT of the arrow B→B_{(K)} (both φ labels: left, right)",
+  "tex": "\\ar[d]^\\psi puts ψ on the right",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[d]^\\psi",
+   "new": "\\ar[d]_\\psi"
+  },
+  "note": "Label placement only (cf. GLOBAL_ISSUES 30 for wrong-side labels)."
+ },
+ {
+  "page": 197,
+  "where": "after the diagram: 'Il est clair en outre que l'on a'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]: same paragraph, no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nIl est clair",
+   "new": "\\]\n\nIl est clair"
+  },
+  "note": "Missing paragraph break after a display."
+ },
+ {
+  "page": 197,
+  "where": "after the display j_0(i_0(s))=s^p ...: 'On définit donc de même'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]: same paragraph, no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nOn définit donc",
+   "new": "\\]\n\nOn définit donc"
+  },
+  "note": "Missing paragraph break after a display."
+ },
+ {
+  "page": 197,
+  "where": "display Θ_{B_{(K)}/K}=Ω^1_{B_{(K)}/K}⊗_{B_{(K)}}K_{[j_0]}=Θ_{B_{(K)}/A}⊗_A K",
+  "scan": "no punctuation at the end of the display (crop at 2.2x)",
+  "tex": "\\otimes_AK, (final comma)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\Theta_{B_{(K)}/A}\\otimes_AK,",
+   "new": "=\\Theta_{B_{(K)}/A}\\otimes_AK"
+  },
+  "note": null
+ },
+ {
+  "page": 198,
+  "where": "(22.4.6), line 2: 'que 𝔪 soit un idéal maximal de carré nul, donc K un corps'",
+  "scan": "only 'maximal' italic; 'de carré nul' roman (crop at 2x)",
+  "tex": "\\emph{maximal de carré nul}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{maximal de carré nul}",
+   "new": "\\emph{maximal} de carré nul"
+  },
+  "note": null
+ },
+ {
+  "page": 198,
+  "where": "(22.4.6), after (22.4.6.1): 'On a donc par (22.4.5.3) un homomorphisme noté'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\end{equation}: same paragraph, no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{equation}\nOn a donc par (22.4.5.3)",
+   "new": "\\end{equation}\n\nOn a donc par (22.4.5.3)"
+  },
+  "note": "Missing paragraph break after a display."
+ },
+ {
+  "page": 198,
+  "where": "(22.4.6), last sentence: 'il faut et il suffit que π'_{B_{(K)}/K} soit injectif, le noyau'",
+  "scan": "the second 'injectif' italic too (crop)",
+  "tex": "soit injectif, (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit injectif, le noyau",
+   "new": "soit \\emph{injectif}, le noyau"
+  },
+  "note": null
+ },
+ {
+  "page": 198,
+  "where": "(22.4.7.1): 'F_i(T_i)=T_i^p—f_i'",
+  "scan": "long dash for the subtraction (crop at 2x)",
+  "tex": "T_i^p-f_i",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "T_i^p-f_i",
+   "new": "T_i^p\\setmin f_i"
+  },
+  "note": "Subtraction, not set difference (GLOBAL_ISSUES 23); \\setmin pending the convention-7 decision."
+ },
+ {
+  "page": 198,
+  "where": "Proposition (22.4.7) (ii): '(cf. (22.4.6.2)) soit injectif.'",
+  "scan": "'(cf. (22.4.6.2))' roman inside the italic statement; 'soit injectif.' italic (crop at 2.2x)",
+  "tex": "(cf. (22.4.6.2)) italic inside the proposition",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(cf. (22.4.6.2)) soit injectif.",
+   "new": "\\textup{(cf. (22.4.6.2))} soit injectif."
+  },
+  "note": null
+ },
+ {
+  "page": 198,
+  "where": "end of p. 198: page break inside the sentence '... que la sous-famille | (a_i)_{s+1⩽i⩽r} est p-libre'",
+  "scan": "p. 199 begins flush left with '(a_i)_{s+1⩽i⩽r} est p-libre': same sentence",
+  "tex": "blank line before \\oldpage{199} (and another after it): paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "que la sous-famille\n\n",
+   "new": "que la sous-famille\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 199 finding that removes the blank line after \\oldpage{199}."
+ },
+ {
+  "page": 199,
+  "where": "top of p. 199: '(a_i)_{s+1⩽i⩽r} est p-libre sur K^p'",
+  "scan": "flush left: continues the sentence of p. 198",
+  "tex": "blank line after \\oldpage{199}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{199}\n\n$(a_i)",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{199}\n$(a_i)"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 198 finding that removes the blank line before the marker."
+ },
+ {
+  "page": 199,
+  "where": "line 1: 'et forme une p-base sur K^p'",
+  "scan": "'p-base' italic, hyphen and 'base' included (crop)",
+  "tex": "$p$-base (upright 'base')",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$p$-base sur",
+   "new": "\\emph{$p$-base} sur"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "after the display a_i∈K^p(a_{s+1}, ..., a_r) pour 1⩽i⩽s: 'Désignons par A'' l'anneau quotient'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]: same paragraph, no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nDésignons par $A''$",
+   "new": "\\]\n\nDésignons par $A''$"
+  },
+  "note": "Missing paragraph break after a display."
+ },
+ {
+  "page": 199,
+  "where": "display G_i(T_i)=T_i^p+Σ_{k=1}^{p−1}(p k)g_i^{p−k}T^k—h_i (1⩽i⩽s)",
+  "scan": "T^k without the subscript i (crop at 3x)",
+  "tex": "T_i^k (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "g_i^{p-k}T_i^k",
+   "new": "g_i^{p-k}T^k"
+  },
+  "corrected": "g_i^{p-k}T_i^k",
+  "note": "Silently corrected in the TeX; the fix restores the printed reading. G_i(T_i)=F_i(T_i+g_i)=(T_i+g_i)^p−f_i, so the term is (p k)g_i^{p−k}T_i^k. Does not overlap the convention-7 fix of '—h_i' (either order)."
+ },
+ {
+  "page": 199,
+  "where": "same display: 'T^k—h_i'",
+  "scan": "long dash before h_i (the superscripts p−1, p−k have the short minus) (crop at 3x)",
+  "tex": "-h_i",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-h_i",
+   "new": "\\setmin h_i"
+  },
+  "note": "Subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 199,
+  "where": "'son corps résiduel K' est isomorphe à K''' (line break after 'isomorphe')",
+  "scan": "'isomorphe à' italic: the 'à' at the start of the next line is italic (crop)",
+  "tex": "\\emph{isomorphe} à",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{isomorphe} à",
+   "new": "\\emph{isomorphe à}"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "'par l'idéal engendré par les polynômes F̄_i=T_i^p—a_i'",
+  "scan": "long dash for the subtraction (crop at 2.2x)",
+  "tex": "T_i^p-a_i",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "T_i^p-a_i",
+   "new": "T_i^p\\setmin a_i"
+  },
+  "note": "Subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 199,
+  "where": "'la condition que π'_{B_{(K)}/K} soit injectif est donc équivalente au fait que'",
+  "scan": "'équivalente' italic (crop)",
+  "tex": "équivalente (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "injectif est donc équivalente au fait",
+   "new": "injectif est donc \\emph{équivalente} au fait"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "'le noyau de l'homomorphisme canonique Ω^1_A⊗_A K'→Ω^1_{A''}⊗_{A''}K' a pour base les'",
+  "scan": "'base' italic (crop)",
+  "tex": "base (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "a pour\nbase les",
+   "new": "a pour\n\\emph{base} les"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "'sont linéairement indépendants dans Ω^1_{A''}⊗_{A''}K''",
+  "scan": "'linéairement indépendants' italic; 'dans' roman (crop)",
+  "tex": "linéairement indépendants (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "linéairement indépendants dans",
+   "new": "\\emph{linéairement indépendants} dans"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "same sentence: '... ⊗_{A''}K' pour 1⩽i⩽s.'",
+  "scan": "'pour' italic (crop at 1.4x; italic p and slanted 'our'), while 'dans' between it and 'indépendants' is roman",
+  "tex": "pour (upright, the expected reading)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\otimes_{A''}K'$ pour",
+   "new": "\\otimes_{A''}K'$ \\emph{pour}"
+  },
+  "corrected": "\\otimes_{A''}K'$ pour",
+  "note": "Wrong-fount word (cf. GLOBAL_ISSUES 29): the emphasis is 'linéairement indépendants'; 'dans' is roman, so the italic 'pour' looks like a compositor's slip. The TeX has the roman reading; the fix reproduces the print in the diplomatic text, the corrected edition keeps roman. If judged intended emphasis instead, apply to both editions. Independent of the previous edit."
+ },
+ {
+  "page": 199,
+  "where": "'et la condition rg_{K'}(V')=rg_K(V) est donc équivalente à rg_{K'}(V'')=rg_{K'}(V')'",
+  "scan": "'équivalente' italic (crop)",
+  "tex": "équivalente (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est donc équivalente à",
+   "new": "est donc \\emph{équivalente} à"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "'cette dernière relation est équivalente au fait que les classes h_i'",
+  "scan": "'équivalente' italic (crop)",
+  "tex": "équivalente (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "relation est équivalente au fait",
+   "new": "relation est \\emph{équivalente} au fait"
+  },
+  "note": null
+ },
+ {
+  "page": 199,
+  "where": "end of p. 199: page break inside the sentence '... les classes h_i | dans V'' sont linéairement indépendantes'",
+  "scan": "p. 200 begins flush left with 'dans V''': same sentence",
+  "tex": "blank line before \\oldpage{200} (and another after it): paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "que les classes $h_i$\n\n",
+   "new": "que les classes $h_i$\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 200 finding that removes the blank line after \\oldpage{200}."
+ },
+ {
+  "page": 200,
+  "where": "top of p. 200: 'dans V'' sont linéairement indépendantes sur K''",
+  "scan": "flush left: continues the sentence of p. 199",
+  "tex": "blank line after \\oldpage{200}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{200}\n\ndans $V''$",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{200}\ndans $V''$"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the p. 199 finding that removes the blank line before the marker."
+ },
+ {
+  "page": 200,
+  "where": "end of the proof of (22.4.7): 'des h_i par l'injection V''→Ω^1_{A''}⊗_{A''}K''",
+  "scan": "'injection' italic (crop)",
+  "tex": "l'injection (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "par l'injection",
+   "new": "par l'\\emph{injection}"
+  },
+  "note": null
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8), line 3: 'p un nombre premier tel que p.1∈𝔪'",
+  "scan": "p.1 with a baseline period (crop at 2x)",
+  "tex": "p\\cdot1 (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$p\\cdot1\\in\\mathfrak m$ (autrement",
+   "new": "$p.1\\in\\mathfrak m$ (autrement"
+  },
+  "note": "GLOBAL_ISSUES 65."
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): '(y+y')^p—x—x'', first dash",
+  "scan": "long dash (crop)",
+  "tex": "(y+y')^p-x",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(y+y')^p-x",
+   "new": "(y+y')^p\\setmin x"
+  },
+  "note": "Subtraction (GLOBAL_ISSUES 23). Does not overlap the next edit."
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): '(y+y')^p—x—x'', second dash",
+  "scan": "long dash (crop)",
+  "tex": "-x'",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-x'$ et",
+   "new": "\\setmin x'$ et"
+  },
+  "note": "Subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): '(yy')^p—xx''",
+  "scan": "long dash (crop)",
+  "tex": "(yy')^p-xx'",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(yy')^p-xx'",
+   "new": "(yy')^p\\setmin xx'"
+  },
+  "note": "Subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): 'pour 1⩽i⩽p—1. L'application'",
+  "scan": "long dash (crop); the exponent in pt^{p−1} further down has the short minus",
+  "tex": "p-1",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "i\\leqslant p-1$",
+   "new": "i\\leqslant p\\setmin 1$"
+  },
+  "note": "Subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): 'il suffit (20.4.8) de définir une K-dérivation'",
+  "scan": "'dérivation' italic (crop)",
+  "tex": "$K$-dérivation (upright in a roman reading of the remark)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$K$-dérivation",
+   "new": "$K$-\\emph{dérivation}"
+  },
+  "note": null
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): 'Pour cela, il suffit de définir une A-dérivation'",
+  "scan": "'dérivation' italic (crop); the later 'donc D est une A-dérivation' is roman",
+  "tex": "$A$-dérivation (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "définir une $A$-dérivation",
+   "new": "définir une $A$-\\emph{dérivation}"
+  },
+  "note": null
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): 'ne dépend que de la classe j(y) mod. pA de x'",
+  "scan": "'classe' italic (crop)",
+  "tex": "la classe (upright)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de la classe $j(y)$",
+   "new": "de la \\emph{classe} $j(y)$"
+  },
+  "note": null
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8): 'puisque p.1∈𝔪. On peut donc prendre'",
+  "scan": "p.1 with a baseline period (crop at 2.5x)",
+  "tex": "p\\cdot1 (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$p\\cdot1\\in\\mathfrak m$. On peut",
+   "new": "$p.1\\in\\mathfrak m$. On peut"
+  },
+  "note": "GLOBAL_ISSUES 65."
+ },
+ {
+  "page": 200,
+  "where": "Remarque (22.4.8), after the display D(y)=d_A x⊗1_K: 'Le fait que D est une dérivation'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]: same paragraph, no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nLe fait que $D$",
+   "new": "\\]\n\nLe fait que $D$"
+  },
+  "note": "Missing paragraph break after a display."
+ },
+ {
+  "page": 200,
+  "where": "end of p. 200: page break inside the sentence '... si l'on a de plus t∈𝔪, on a | D(ty)=tD(y)=0 puisque ...'",
+  "scan": "p. 201 begins flush left with 'D(ty)=tD(y)=0 puisque': same sentence (checked on the p. 201 strip)",
+  "tex": "blank line before \\oldpage{201} (and another after it, in p. 201's segment): paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$t\\in\\mathfrak m$, on a\n\n",
+   "new": "$t\\in\\mathfrak m$, on a\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES 20). Apply together with the removal of the blank line AFTER \\oldpage{201}, which lies in page_201.tex (outside pp. 196-200): '\\oldpage[0\\textsubscript{IV-1}]{201}\\n\\n$D(ty)' -> '\\oldpage[0\\textsubscript{IV-1}]{201}\\n$D(ty)'."
+ }
+]

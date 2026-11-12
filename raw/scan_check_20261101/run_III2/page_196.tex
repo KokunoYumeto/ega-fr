@@ -1,0 +1,122 @@
+% from ega3-7-fr.tex
+\oldpage[III]{196}
+\begin{enumerate}
+  \item[(ii)] Supposons en outre que $A$ soit local et réduit, et soit $k$ son
+    corps résiduel. Alors, pour que $T_p$ soit exact, il faut et il suffit que
+    l'on ait
+    \[
+      \operatorname{rang}_k T_p(k)
+      =
+      \operatorname{rang}_{k_i}T_p(k_i)
+      \qquad\text{pour }1\leq i\leq r.
+      \tag{7.6.10.3}\label{III.7.6.10.3.fr}
+    \]
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) est immédiat puisque tout voisinage de $x$ contient un des $\mathfrak p_i$,
+et il suffit d'appliquer la définition de la semi-continuité. D'autre part, si
+$A$ est local, le seul voisinage dans $\operatorname{Spec}(A)$ de l'idéal
+maximal $\mathfrak m$ est $\operatorname{Spec}(A)$ tout entier, donc on a
+\[
+  d_p(x)\leq\operatorname{rang}_k T_p(k)
+\]
+pour tout $x\in\operatorname{Spec}(A)$; cette relation, jointe à (i), montre que
+la condition (7.6.10.3) entraîne que $d_p(x)$ est constante dans
+$\operatorname{Spec}(A)$, et par suite que $T_p$ est exact en vertu de
+(7.6.9, (ii)); la réciproque est évidente en vertu de (7.6.9, (ii)).
+\end{proof}
+
+\begin{remark}[7.6.11]
+On peut se demander si l'assertion de (7.6.9, (i)) ne peut être renforcée par
+l'inégalité
+\[
+  \operatorname{rang}_{\kappa(x)}T_p(\kappa(x))
+  \geq
+  \operatorname{rang}_{\kappa(x)}
+    \bigl(T_p(A)\otimes_A\kappa(x)\bigr)
+  \tag{7.6.11.1}\label{III.7.6.11.1.fr}
+\]
+pour tout $x\in\operatorname{Spec}(A)$, qui a lieu effectivement lorsque $A$
+est un anneau de valuation discrète et $x$ son idéal maximal (7.6.5).
+Bornons-nous au cas où $A$ est un anneau local noethérien, d'idéal maximal
+$\mathfrak m$ et de corps résiduel $k$. Alors, les conditions suivantes sont
+équivalentes :
+\begin{enumerate}
+  \item[a)] Pour tout complexe $P_\bullet$ de $A$-modules plats de type fini,
+    on a
+    \[
+      \operatorname{rang}_k T_p(k)
+      \geq
+      \operatorname{rang}_k\bigl(T_p(A)\otimes_A k\bigr)
+      \quad\text{pour tout entier }p.
+      \tag{7.6.11.2}\label{III.7.6.11.2.fr}
+    \]
+  \item[b)] Pour tout $A$-module $M$ de type fini, on a
+    \[
+      \operatorname{rang}_k(M\otimes_A k)
+      \geq
+      \operatorname{rang}_k(\check M\otimes_A k).
+      \tag{7.6.11.3}\label{III.7.6.11.3.fr}
+    \]
+  \item[c)] Pour tout $A$-module $N$ de type fini, on a
+    \[
+      \operatorname{rang}_k\bigl(\operatorname{Tor}_1^A(N,k)\bigr)
+      \geq
+      \operatorname{rang}_k\bigl(\operatorname{Tor}_2^A(N,k)\bigr).
+      \tag{7.6.11.4}\label{III.7.6.11.4.fr}
+    \]
+\end{enumerate}
+On notera qu'il revient au même, par décalage (M, V, 7.2), de dire que l'on a,
+pour tout $i\geq1$,
+\[
+  \operatorname{rang}_k\bigl(\operatorname{Tor}_i^A(N,k)\bigr)
+  \geq
+  \operatorname{rang}_k\bigl(\operatorname{Tor}_{i+1}^A(N,k)\bigr).
+  \tag{7.6.11.5}\label{III.7.6.11.5.fr}
+\]
+Donnons rapidement quelques indications sur la démonstration. Pour voir que a)
+entraîne b), on considère une suite exacte
+\[
+  L_1\xrightarrow{d}L_0\longrightarrow M\longrightarrow0
+\]
+où $L_0$ et $L_1$ sont libres de type fini, et on applique a) au complexe
+\[
+  P_1\xrightarrow{{}^t d}P_0,
+  \qquad
+  P_0=\check L_1,
+  \quad
+  P_1=\check L_0,
+\]
+les autres termes étant nuls; on a alors $T_1(A)=\check M$ et
+\[
+  T_1(k)
+  =
+  \operatorname{Hom}_A(M,k)
+  =
+  \operatorname{Hom}_k(M/\mathfrak mM,k),
+\]
+autrement dit $T_1(k)$ est le dual de l'espace vectoriel $M\otimes_A k$, et a
+donc même rang que ce dernier. Pour prouver que b) entraîne c), nous établissons
+d'abord le lemme suivant :
+
+\begin{lemma}[7.6.11.6]
+Étant donné un complexe
+\[
+  \cdots\longrightarrow0\longrightarrow
+  P_1\xrightarrow{d}P_0
+  \longrightarrow0\longrightarrow\cdots
+\]
+de $A$-modules plats, on a une suite exacte
+\[
+  0\longrightarrow\operatorname{Tor}_2^A(Z'_0,k)
+  \longrightarrow T_1(A)\otimes_A k
+  \longrightarrow T_1(k)
+  \longrightarrow\operatorname{Tor}_1^A(Z'_0,k)
+  \longrightarrow0.
+  \tag{7.6.11.7}\label{III.7.6.11.7.fr}
+\]
+\end{lemma}
+
+\begin{proof}

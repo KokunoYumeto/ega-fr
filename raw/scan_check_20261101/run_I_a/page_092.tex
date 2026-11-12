@@ -1,0 +1,86 @@
+% from ega1-1-fr.tex
+\oldpage[I]{92}
+prolonge en une section $s$ de $\mathscr{F}$ sur $V$~; appliquant
+\textit{d}\,2), on voit qu'il existe un entier $n\geq0$ tel que
+$f^n g^m t=0$, et comme l'image de $g$ dans $A_g$ est inversible, $f^n t=0$.
+
+Cela étant, comme $V$ est quasi-compact, le lemme
+(\hyperref[I.1.4.1.1-fr]{1.4.1.1}) prouve que les conditions
+\textit{d}'\,1) et \textit{d}'\,2) sont vérifiées. Considérons alors le
+$A$-module $M=\Gamma(V,\mathscr{F})$, et définissons un homomorphisme de
+$\widetilde{A}$-Modules $u:\widetilde{M}\to j_*(\mathscr{F})$, où $j$ est
+l'injection canonique $V\to X$. Comme les $D(f)$ forment une base de la
+topologie de $X$, il suffit, pour chaque $f\in A$, de définir un
+homomorphisme
+$u_f:M_f\to\Gamma(D(f),j_*(\mathscr{F}))=\Gamma(D(f)\cap V,\mathscr{F})$,
+avec les conditions de compatibilité usuelles
+(\hyperref[0.3.2.5-fr]{0, 3.2.5}). Comme l'image canonique de $f$ dans
+$A_f$ est inversible, l'homomorphisme de restriction
+$M=\Gamma(V,\mathscr{F})\to\Gamma(D(f)\cap V,\mathscr{F})$ se factorise en
+$M\longrightarrow M_f\xrightarrow{u_f}\Gamma(D(f)\cap V,\mathscr{F})$
+(\hyperref[0.1.2.4-fr]{0, 1.2.4}), et la vérification des conditions de
+compatibilité pour $D(g)\subset D(f)$ est immédiate. Cela étant, montrons
+que la condition \textit{d}'\,1) (resp. \textit{d}'\,2)) entraîne que chacun
+des $u_f$ est surjectif (resp. injectif), ce qui prouvera que $u$ est
+\emph{bijectif}, et par suite que $\mathscr{F}$ est la restriction à $V$
+d'un $\widetilde{A}$-Module isomorphe à $\widetilde{M}$. Or, si
+$s\in\Gamma(D(f)\cap V,\mathscr{F})$, il existe d'après \textit{d}'\,1) un
+entier $n\geq0$ tel que $f^n s$ se prolonge en une section $z\in M$~; on a
+alors $u_f(z/f^n)=s$, donc $u_f$ est surjectif. De même, si $z\in M$ est tel
+que $u_f(z/1)=0$, cela signifie que la restriction à $D(f)\cap V$ de la
+section $z$ est nulle~; d'après \textit{d}'\,2), il existe un entier
+$n\geq0$ tel que $f^n z=0$, d'où $z/1=0$ dans $M_f$, et $u_f$ est donc
+injectif.
+
+\par\hfill C.Q.F.D.\par
+
+\begin{corollary}[1.4.2]
+\label{I.1.4.2-fr}
+Tout faisceau quasi-cohérent sur un ouvert quasi-compact de $X$ est induit
+par un faisceau quasi-cohérent sur $X$.
+\end{corollary}
+
+\begin{corollary}[1.4.3]
+\label{I.1.4.3-fr}
+Toute $\mathscr{O}_X$-Algèbre quasi-cohérente sur
+$X=\operatorname{Spec}(A)$ est isomorphe à une $\mathscr{O}_X$-Algèbre de
+la forme $\widetilde{B}$, où $B$ est une algèbre sur $A$~; tout
+$\widetilde{B}$-Module quasi-cohérent est isomorphe à un
+$\widetilde{B}$-Module de la forme $\widetilde{N}$, où $N$ est un
+$B$-module.
+\end{corollary}
+
+En effet, une $\mathscr{O}_X$-Algèbre quasi-cohérente est un
+$\mathscr{O}_X$-Module quasi-cohérent, donc de la forme $\widetilde{B}$, où
+$B$ est un $A$-module~; le fait que $B$ soit une $A$-algèbre résulte de la
+caractérisation de la structure de $\mathscr{O}_X$-Algèbre à l'aide de
+l'homomorphisme
+$\widetilde{B}\otimes_{\widetilde{A}}\widetilde{B}\to\widetilde{B}$ de
+$\widetilde{A}$-Modules, ainsi que de
+(\hyperref[I.1.3.12-fr]{1.3.12}). Si $\mathscr{G}$ est un
+$\widetilde{B}$-Module quasi-cohérent, il suffit de montrer que $\mathscr{G}$
+est aussi un $\widetilde{A}$-Module quasi-cohérent pour conclure ensuite de
+la même façon~; comme la question est locale, on peut, en se restreignant à
+un ouvert de $X$ de la forme $D(f)$, supposer que $\mathscr{G}$ est le
+conoyau d'un homomorphisme
+$\widetilde{B}^{(I)}\to\widetilde{B}^{(J)}$ de $\widetilde{B}$-Modules (et
+\emph{a fortiori} de $\widetilde{A}$-Modules)~; la proposition résulte alors
+de (\hyperref[I.1.3.8-fr]{1.3.8}) et
+(\hyperref[I.1.3.9-fr]{1.3.9}).
+
+\subsection{Faisceaux cohérents sur un spectre premier.}
+\label{subsection:I.1.5-fr}
+
+\begin{theorem}[1.5.1]
+\label{I.1.5.1-fr}
+Soient $A$ un anneau \emph{noethérien}, $X=\operatorname{Spec}(A)$ son spectre
+premier, $V$ une partie ouverte de $X$, $\mathscr{F}$ un
+$(\mathscr{O}_X|V)$-Module. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\textit{a})] $\mathscr{F}$ est cohérent.
+  \item[\textit{b})] $\mathscr{F}$ est de type fini et quasi-cohérent.
+  \item[\textit{c})] Il existe un $A$-module $M$ de type fini tel que
+  $\mathscr{F}$ soit isomorphe au faisceau $\widetilde{M}|V$.
+\end{enumerate}
+\end{theorem}
+

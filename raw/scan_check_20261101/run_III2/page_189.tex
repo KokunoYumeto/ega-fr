@@ -1,0 +1,89 @@
+% from ega3-7-fr.tex
+\oldpage[III]{189}
+où $v'=\operatorname{Hom}({}^t d_p,1)$; lorsqu'on identifie canoniquement
+$P_i\otimes M$ à $\operatorname{Hom}(\check P_i,M)$, $v'$ s'identifie donc à
+$v=d_p\otimes1$, et l'on a par suite l'isomorphisme fonctoriel
+\[
+  T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M)
+\]
+cherché. En outre, $Q$, étant un quotient de $\check P_p$, est de type fini.
+\end{proof}
+
+\begin{proposition}[7.4.7]
+Supposons vérifiées les conditions générales de (7.4.4). Alors, pour tout
+$A$-module $M$ de type fini :
+\begin{enumerate}
+  \item[(i)] Les $T_i(M)$ sont des $A$-modules de type fini.
+  \item[(ii)] Pour tout idéal $\mathfrak m$ de $A$, l'homomorphisme canonique
+    \[
+      \widehat{T_i(M)}
+      \longrightarrow
+      \varprojlim_n T_i\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+      \tag{7.4.7.1}\label{III.7.4.7.1.fr}
+    \]
+    (où le premier membre est le séparé complété de $T_i(M)$ pour la topologie
+    $\mathfrak m$-préadique) est bijectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme dans (7.4.4), on se ramène d'abord au cas où les $P_i$ sont de type fini;
+$A$ étant noethérien, les sous-modules des $P_i\otimes_A M$ sont de type fini,
+d'où trivialement l'assertion (i). Quant à l'assertion (ii), elle résulte plus
+généralement du lemme suivant :
+\end{proof}
+
+\begin{lemma}[7.4.7.2]
+Soient $A$ un anneau noethérien, $u:E\to F$ un homomorphisme de $A$-modules de
+type fini. Pour tout $A$-module de type fini, posons
+\[
+  K(M)=\operatorname{Ker}(u\otimes1_M),
+  \qquad
+  C(M)=\operatorname{Coker}(u\otimes1_M);
+\]
+alors les homomorphismes canoniques
+\[
+  \widehat{K(M)}\longrightarrow\varprojlim_n K(M_n),
+  \qquad
+  \widehat{C(M)}\longrightarrow\varprojlim_n C(M_n)
+  \tag{7.4.7.3}\label{III.7.4.7.3.fr}
+\]
+(où l'on a posé
+$M_n=M\otimes_A(A/\mathfrak m^{n+1})=M/\mathfrak m^{n+1}M$) sont bijectifs
+pour tout idéal $\mathfrak m$ de $A$.
+\end{lemma}
+
+\begin{proof}
+Comme $E\otimes M$ et $F\otimes M$ sont de type fini, et que le foncteur
+$M\mapsto\widehat M$ est exact dans la catégorie des $A$-modules de type fini
+($0_{\mathrm I}$, 7.3.3), $\widehat{K(M)}$ et $\widehat{C(M)}$ sont
+respectivement le noyau et le conoyau de
+\[
+  \widehat{(u\otimes1)}:
+  \widehat{(E\otimes M)}\longrightarrow\widehat{(F\otimes M)}.
+\]
+L'exactitude à gauche du foncteur $\varprojlim$ montre donc que
+$\widehat{K(M)}=\varprojlim_n K(M_n)$; d'autre part, l'exactitude à droite du
+produit tensoriel prouve que
+$C(M_n)=C(M)\otimes_A(A/\mathfrak m^{n+1})$, donc
+$\widehat{C(M)}=\varprojlim_n C(M_n)$ par définition.
+\end{proof}
+
+\begin{remark}[7.4.8]
+Compte tenu de (6.10.5) et (6.10.6), on voit que, moyennant une hypothèse de
+platitude supplémentaire, (7.4.7) redonne le fait que (4.1.7.1) est un
+isomorphisme, c'est-à-dire l'essentiel du « premier théorème de comparaison »
+pour les morphismes propres; en outre, l'énoncé s'applique non plus seulement
+à un $\mathscr O_X$-Module cohérent, mais à un complexe de tels Modules. Il
+serait intéressant d'obtenir un énoncé comprenant à la fois (7.4.7) et
+(4.1.7.1) comme cas particuliers. On notera que lorsque les $P_i$ sont de type
+fini, la démonstration de (7.4.7) n'utilise pas le fait que ce sont des modules
+plats; il y aurait lieu d'examiner si la conclusion de (7.4.7) est encore
+valable lorsque les $P_i$ ne sont pas supposés plats ni de type fini, mais que
+les $H_i(P_\bullet)$ sont supposés de type fini pour tout $i$ et nuls pour
+$i<i_0$. Est-il alors possible de remplacer $P_\bullet$ par un complexe
+$P'_\bullet$ de $A$-modules de type fini tel que les foncteurs
+$H_\bullet(P_\bullet\otimes M)$ et $H_\bullet(P'_\bullet\otimes M)$ (qui ne
+sont plus homologiques) soient encore isomorphes ?
+\end{remark}
+

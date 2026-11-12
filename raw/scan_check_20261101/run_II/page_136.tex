@@ -1,0 +1,87 @@
+% from ega2-1-fr.tex
+\oldpage[II]{136}
+
+\begin{theorem}[6.7.1]
+\label{II.6.7.1-fr}
+Soient $X$ un schéma affine, $Y$ un préschéma noethérien, $f:X\to Y$ un
+morphisme fini surjectif. Alors $Y$ est un schéma affine.
+\end{theorem}
+
+Il est clair que
+$f_{\mathrm{red}}:X_{\mathrm{red}}\to Y_{\mathrm{red}}$ est fini
+(\hyperref[II.6.1.5-fr]{6.1.5, (vi)})~; comme $X_{\mathrm{red}}$ est un
+schéma affine, et qu'il revient au même de dire que $Y$ est affine ou que
+$Y_{\mathrm{red}}$ est affine, puisque $Y$ est noethérien
+(\hyperref[I.6.1.7-fr]{I, 6.1.7}), on voit qu'on peut supposer $Y$
+\emph{réduit}. Pour toute partie fermée $Y'$ de $Y$, il y a alors un seul
+sous-préschéma réduit de $Y$ ayant $Y'$ comme espace sous-jacent
+(\hyperref[I.5.1.2-fr]{I, 5.1.2})~; son image réciproque $f^{-1}(Y')$,
+canoniquement isomorphe à $X\times_Y Y'$
+(\hyperref[I.4.4.1-fr]{I, 4.4.1}), est affine comme sous-préschéma fermé de
+$X$, et la restriction de $f$ à $f^{-1}(Y')$, qui s'identifie à
+$f\times_Y 1_{Y'}$, est un morphisme fini surjectif
+(\hyperref[II.6.1.5-fr]{6.1.5, (iii)}). En vertu du principe de récurrence
+noethérienne (\hyperref[0.2.2.2-fr]{0, 2.2.2}), on peut donc (compte tenu de
+\hyperref[I.6.1.7-fr]{I, 6.1.7}) se ramener à démontrer le théorème sous
+l'hypothèse que pour \emph{toute partie fermée $Y'\neq Y$}, tout
+sous-préschéma fermé de $Y$ ayant $Y'$ pour espace sous-jacent est affine.
+On en conclut que, \emph{pour tout $\mathcal{O}_Y$-Module cohérent
+$\mathcal{F}$ dont le support (fermé) $Z$ est distinct de $Y$, on a
+$\mathrm{H}^1(Y,\mathcal{F})=0$}. En effet, il existe un sous-préschéma fermé
+$Y'$ de $Y$ ayant $Z$ pour espace sous-jacent et tel que, si $j:Y'\to Y$ est
+l'injection canonique, on ait
+$\mathcal{F}=j_*(j^*(\mathcal{F}))$
+(\hyperref[I.9.3.5-fr]{I, 9.3.5})~; par suite
+(\hyperref[II.5.2.3-fr]{5.2.3}),
+$\mathrm{H}^1(Y,\mathcal{F})
+=\mathrm{H}^1(Y',j^*(\mathcal{F}))=0$ d'après
+(\hyperref[I.5.1.9.2-fr]{I, 5.1.9.2}).
+
+Supposons d'abord que $Y$ ne soit pas irréductible, et soit $Y'$ une
+composante irréductible de $Y$, et $Y''=Y-Y'$~; on désignera encore par
+$Y'$ le sous-préschéma fermé réduit de $Y$ ayant $Y'$ pour espace
+sous-jacent, et par $j$ l'injection canonique $Y'\to Y$. Soit $\mathcal{F}$
+un $\mathcal{O}_Y$-Module cohérent, et considérons l'homomorphisme canonique
+\[
+\rho:\mathcal{F}\longrightarrow
+\mathcal{F}'=j_*(j^*(\mathcal{F}))
+\]
+(\hyperref[0.4.4.3-fr]{0, 4.4.3})~; $\mathcal{F}'$ est un
+$\mathcal{O}_Y$-Module cohérent en vertu de
+(\hyperref[0.5.3.10-fr]{0, 5.3.10}) et
+(\hyperref[0.5.3.12-fr]{0, 5.3.12}), car on a
+$j_*(\mathcal{O}_{Y'})=\mathcal{O}_Y/\mathcal{J}$, en désignant par
+$\mathcal{J}$ le faisceau d'idéaux de $\mathcal{O}_Y$ définissant le
+sous-préschéma $Y'$. Par suite $\mathcal{G}=\operatorname{Ker}\rho$ et
+$\mathcal{K}=\operatorname{Im}\rho$ sont aussi des $\mathcal{O}_Y$-Modules
+cohérents (\hyperref[0.5.3.4-fr]{0, 5.3.4})~; or par définition la fibre
+$\mathcal{F}'_y$ de $\mathcal{F}'$ au point générique $y$ de $Y'$ est égale
+à $\mathcal{F}_y$, car $y$ est intérieur à $Y'$ et on a donc
+$\mathcal{J}_y=0$, puisque $Y$ est réduit. On en conclut que $y$ n'est pas
+contenu dans le support (fermé) de $\mathcal{G}$~; par ailleurs, le support de
+$\mathcal{F}'$ (et \emph{a fortiori} celui de $\mathcal{K}$) est contenu
+dans $Y'$~; autrement dit les supports de $\mathcal{G}$ et de $\mathcal{K}$
+sont \emph{distincts de $Y$}. On en déduit que
+$\mathrm{H}^1(Y,\mathcal{G})=\mathrm{H}^1(Y,\mathcal{K})=0$, et la suite
+exacte de cohomologie appliquée à la suite exacte
+$0\to\mathcal{G}\to\mathcal{F}\to\mathcal{K}\to0$ montre que
+$\mathrm{H}^1(Y,\mathcal{F})=0$. On conclut alors par le critère de Serre
+(\hyperref[II.5.2.1-fr]{5.2.1}).
+
+Supposons donc $Y$ irréductible, et par suite \emph{intègre}. On peut aussi
+supposer que $X$ est \emph{intègre}~: en effet, si on désigne par $X_i$ les
+sous-préschémas fermés réduits de $X$ ayant pour espaces sous-jacents les
+composantes irréductibles de $X$ (\hyperref[I.5.2.1-fr]{I, 5.2.1}) et par
+$f_i$ la restriction de $f$ à $X_i$, un des $f_i$ au moins est dominant, et
+comme c'est un morphisme fini (\hyperref[II.6.1.5-fr]{6.1.5}), il est
+surjectif (\hyperref[II.6.1.10-fr]{6.1.10})~; comme d'autre part $X_i$ est un
+schéma affine, on voit qu'on peut remplacer $X$ par $X_i$ dans l'énoncé.
+
+\begin{lemma}[6.7.1.1]
+\label{II.6.7.1.1-fr}
+Soient $X$, $Y$ deux préschémas intègres noethériens, $x$ (resp. $y$) le
+point générique de $X$ (resp. $Y$), $f:X\to Y$ un morphisme fini surjectif.
+Soit $\mathcal{L}$ un $\mathcal{O}_X$-Module inversible tel qu'il existe un
+voisinage ouvert affine $U$ de $y$ et une section
+$g\in\Gamma(X,\mathcal{L})$ pour lesquels
+

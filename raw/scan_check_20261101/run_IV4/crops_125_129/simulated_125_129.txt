@@ -1,0 +1,130 @@
+\oldpage[IV-4]{125}
+
+\begin{enumerate}
+  \item[\textup{(i)}] Pour que $B$ soit une $A$-algèbre formellement non ramifiée, il faut et il suffit que $B\otimes_A k$ soit une $k$-algèbre étale.
+  \item[\textup{(ii)}] Pour que $B$ soit une $A$-algèbre étale, il faut et il suffit que $B\otimes_A k$ soit une $k$-algèbre étale et que $B$ soit un $A$-module plat \textup{(ce qui équivaut à dire ($\mathbf{0}_{\mathrm I}$, 6.3.3) que pour tout idéal maximal $\mathfrak n$ de $B$ (nécessairement au-dessus de $\mathfrak m$), $B_{\mathfrak n}$ est un $A$-module plat).}
+\end{enumerate}
+\end{corollary}
+
+On n'a évidemment à prouver que la suffisance des conditions énoncées. Il est clair que (ii) résulte de (i) et de (18.4.12, (ii)), compte tenu de (17.1.2, (i)). Pour prouver (i) remarquons que si $B\otimes_A k$ est une $k$-algèbre étale, on a $\Omega^1_{(B\otimes_A k)/k}=0$ (17.2.1). Or on a $\Omega^1_{(B\otimes_A k)/k}=\Omega^1_{B/A}\otimes_B k$ (\textbf{0}, 20.5.5) et puisque $B$ est une $A$-algèbre de type fini, $\Omega^1_{B/A}$ est un $B$-module de type fini (\textbf{0}, 20.4.7). Mais comme $B$ est une $A$-algèbre finie, $\mathfrak mB$ est contenu dans le radical de $B$ (Bourbaki, \emph{Alg. comm.}, chap. V, \textsection~2, n\textsuperscript{o}~1, prop. 1), donc le lemme de Nakayama prouve que $\Omega^1_{B/A}=0$, et par suite $B$ est une $A$-algèbre formellement non ramifiée (17.2.1).
+
+\subsection{Anneaux locaux henséliens\texorpdfstring{\protect\footnotemark}{}.}
+\footnotetext{La notion d'anneau local hensélien est due à \textsc{Azumaya}, celle de hensélisation à \textsc{Nagata}, à qui l'on doit aussi les principaux résultats de cette théorie.}
+\EGAReaderTarget{ega4.c04.subsec.18-5}{subsection:IV.18.5}
+
+\begingroup
+\newcommand{\shHom}{\mathscr{H}\!om}
+\begin{env}[18.5.1]
+\label{IV.18.5.1}
+Soient $X$ un préschéma, $\sh{E}$ un $\sh{O}_X$-Module \emph{localement libre} de rang fini; le dual $\check{\sh{E}}=\shHom_{\sh{O}_X}(\sh{E},\sh{O}_X)$ est donc un $\sh{O}_X$-Module localement libre dont le rang en tout point de $X$ est égal à celui de $\sh{E}$ en ce point, et l'homomorphisme canonique $\sh{E}\to\shHom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)=(\check{\sh{E}})^\vee$ est \emph{bijectif}. Pour tout morphisme $X'\to X$, posons $\sh{E}_{(X')}=\sh{E}\otimes_{\sh{O}_X}\sh{O}_{X'}$ qui est un $\sh{O}_{X'}$-Module localement libre, et considérons l'\emph{ensemble} $\Gamma(X',\sh{E}_{(X')})$ des sections de ce $\sh{O}_{X'}$-Module au-dessus de $X'$. Nous allons voir que l'on définit ainsi un \emph{foncteur contravariant représentable}
+\begin{equation}
+  {}^t\!V_{\sh{E}}:X'\leadsto\Gamma(X',\sh{E}_{(X')})
+  \tag{18.5.1.1}\label{IV.18.5.1.1}
+\end{equation}
+de la catégorie des $X$-\emph{préschémas} dans celle des \emph{ensembles} ($\mathbf{0}_{\mathrm{III}}$, 8.1.8).
+
+Tout d'abord, on a bien défini un foncteur, car si $f:X''\to X'$ est un $X$-morphisme de $X$-préschémas, on a $\sh{E}_{(X'')}=f^*(\sh{E}_{(X')})$, d'où ($\mathbf{0}_{\mathrm I}$, 4.4.3.2) une application $\Gamma(X',\sh{E}_{(X')})\to\Gamma(X',f_*(\sh{E}_{(X'')}))=\Gamma(X'',\sh{E}_{(X'')})$ qui achève de définir le foncteur ${}^t\!V$. Montrons ensuite que le $X$-préschéma $\mathbf V(\check{\sh{E}})$ (\textbf{II}, 1.7.8) \emph{représente} le foncteur ${}^t\!V$. Il est immédiat en effet que l'on a $(\sh{E}_{(X')})^\vee=(\check{\sh{E}})_{(X')}$, donc $\mathbf V(\check{\sh{E}})\times_X X'=\mathbf V((\sh{E}_{(X')})^\vee)$; compte tenu de (\textbf{I}, 3.3.14), on est ramené à définir une bijection $\Gamma(\mathbf V(\check{\sh{E}})/X)\xrightarrow{\sim}\Gamma(X,\sh{E})$, et à vérifier que la bijection $\Gamma(\mathbf V(\check{\sh{E}}_{(X')})/X')\xrightarrow{\sim}\Gamma(X',\sh{E}_{(X')})$ est fonctorielle en $X'$. Or, on a une bijection canonique de $\Gamma(\mathbf V(\check{\sh{E}})/X)$ sur $\Hom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)$ (\textbf{II}, 1.7.8), et la transposition $u\leadsto{}^t u$ est une bijection canonique de $\Hom_{\sh{O}_X}(\check{\sh{E}},\sh{O}_X)$ sur $\Hom_{\sh{O}_X}(\sh{O}_X,\sh{E})=\Gamma(X,\sh{E})$, en raison de l'identification de $(\check{\sh{E}})^\vee$ et de $\sh{E}$. La vérification de la propriété fonctorielle est immédiate.
+\end{env}
+\endgroup
+
+\oldpage[IV-4]{126}
+
+Notons encore que, conformément à la théorie générale ($\mathbf{0}_{\mathrm{III}}$, 8.1.6) l'automorphisme identique de $\mathbf V(\check{\sh{E}})$ correspond canoniquement à une section $c$ de $\sh{E}_{(\mathbf V(\check{\sh{E}}))}$ au-dessus de $\mathbf V(\check{\sh{E}})$, c'est-à-dire (\textbf{II}, 1.4.1) à un homomorphisme de $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$-Modules $u:\mathbf S_{\sh{O}_X}(\check{\sh{E}})\to\mathbf S_{\sh{O}_X}(\check{\sh{E}})\otimes_{\sh{O}_X}\sh{E}$; pour tout ouvert affine $W$ de $X$, si l'on pose $\Gamma(W,\sh{O}_X)=A$, si on identifie $\Gamma(W,\mathbf S_{\sh{O}_X}(\check{\sh{E}}))$ à une algèbre de polynômes $C=A[T_1,\ldots,T_n]$, de sorte que les $T_i$ forment une base de $\Gamma(W,\check{\sh{E}})$, et si enfin on désigne par $(e_i)$ la base duale de $(T_i)$ dans $\Gamma(W,\sh{E})=\Gamma(W,\check{\sh{E}})^\vee$, on voit aussitôt que $u$ correspond à l'homomorphisme de $C$-modules tel que $u(1)=\sum_{i=1}^n T_i\otimes e_i$.
+
+Si $X'=\Spec(A)$ est affine et tel que $\sh{E}_{(X')}$ soit isomorphe à $\sh{O}_{X'}^n$, $\Gamma(X',\sh{E}_{(X')})$ est un $A$-module libre de rang $n$; de façon imagée, on peut dire que l'objet $\mathbf V(\check{\sh{E}})$ représente « l'ensemble des points de l'espace affine tordu sur $X$ défini par $\sh{E}$ ».
+
+\begin{env}[18.5.2]
+\label{IV.18.5.2}
+Rappelons (\textbf{II}, 1.7.8) que l'on a par définition $\mathbf V(\check{\sh{E}})=\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}}))$. Soit $\mathscr J$ un Idéal quasi-cohérent de $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$, de sorte que $\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}})/\mathscr J)$ est un sous-préschéma fermé de $\mathbf V(\check{\sh{E}})$; nous allons l'interpréter comme \emph{représentant un foncteur} de la catégorie des $X$-préschémas dans celle des ensembles. Notons pour cela qu'une section $u\in\Gamma(X,\sh{E})$ s'identifie canoniquement à un $\sh{O}_X$-homomorphisme $u:\sh{O}_X\to\sh{E}$, auquel correspond par transposition un $\sh{O}_X$-homomorphisme ${}^t u:\check{\sh{E}}\to\sh{O}_X$, et par suite un homomorphisme de $\sh{O}_X$-Algèbres $v:\mathbf S_{\sh{O}_X}(\check{\sh{E}})\to\sh{O}_X$. Soit $\operatorname{Al}(X,\sh{E},\mathscr J)$ l'ensemble des $u\in\Gamma(X,\sh{E})$ tels que $\mathscr J$ soit \emph{contenu dans le noyau de} $v$; il résulte aussitôt de ces définitions que
+\[
+  X'\leadsto\operatorname{Al}(X',\sh{E}_{(X')},\mathscr J\otimes_{\sh{O}_X}\sh{O}_{X'})
+\]
+est un foncteur représenté par $\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}})/\mathscr J)$. Si $X'=\Spec(A)$ est affine et tel que $\sh{E}_{(X')}$ soit isomorphe à $\sh{O}_{X'}^n$, $\Gamma(X',\sh{E}_{(X')})$ peut s'identifier à l'ensemble $A^n$, et $\mathscr J\otimes_{\sh{O}_X}\sh{O}_{X'}$ à un $\sh{O}_{X'}$-Module de la forme $\widetilde{\mathfrak J}$, où $\mathfrak J$ est un idéal de l'anneau de polynômes $A[T_1,\ldots,T_n]$; l'ensemble $\operatorname{Al}(X',\sh{E}_{(X')},\mathscr J\otimes_{\sh{O}_X}\sh{O}_{X'})$ s'identifie alors à la partie de $A^{\boldsymbol{n}}$ formée des points $(t_1,\ldots,t_n)$ tels que $P(t_1,\ldots,t_n)=0$ pour tous les polynômes $P\in\mathfrak J$; de façon imagée on peut donc dire que l'objet $\Spec(\mathbf S_{\sh{O}_X}(\check{\sh{E}})/\mathscr J)$ représente « le sous-ensemble algébrique de l'espace affine tordu $\Gamma(X,\sh{E})$ formé des points annulant l'idéal $\Gamma(X,\mathscr J)$ ». On note encore ce $X$-préschéma $\mathbf{Al}(\sh{E},\mathscr J)$. On notera que si $\mathscr J$ est un Idéal de type fini de $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$, $\mathbf{Al}(\sh{E},\mathscr J)$ est un $X$-préschéma \emph{de présentation finie}, puisque $\mathbf S_{\sh{O}_X}(\check{\sh{E}})$ est une $\sh{O}_X$-Algèbre de présentation finie.
+\end{env}
+
+\begin{lemma}[18.5.3]
+\label{IV.18.5.3}
+Soient $S$ un préschéma, $f:X\to S$ un morphisme fini et localement libre \textup{(18.2.7)}. Considérons le foncteur contravariant de la catégorie des $S$-préschémas dans la catégorie des ensembles
+\begin{equation}
+  S'\leadsto\operatorname{Of}(X\times_S S')
+  \tag{18.5.3.1}\label{IV.18.5.3.1}
+\end{equation}
+où $\operatorname{Of}(X\times_S S')$ est l'ensemble des parties à la fois ouvertes et fermées de l'espace sous-jacent à $X\times_S S'$. Alors ce foncteur est représentable par un $S$-préschéma $\mathbf{Of}(X)$, qui est affine, étale et de présentation finie sur $S$.
+\end{lemma}
+
+\oldpage[IV-4]{127}
+
+On a par hypothèse $X=\Spec(\mathscr B)$, où $\mathscr B=f_*(\sh{O}_X)$ est une $\sh{O}_S$-Algèbre finie et localement libre. Posons $X'=X\times_S S'$, $f'=f_{(S')}$, $\mathscr B'=\mathscr B\otimes_{\sh{O}_S}\sh{O}_{S'}=f'_*(\sh{O}_{X'})$, de sorte que $X'=\Spec(\mathscr B')$; il y a alors une bijection canonique, fonctorielle en $S'$, de l'ensemble $\operatorname{Of}(X')$ sur l'ensemble $\operatorname{Id}(\mathscr B')$ des \emph{idempotents} de l'anneau $\Gamma(S',\mathscr B')=\Gamma(X',\sh{O}_{X'})$. En effet, en vertu de l'\emph{équivalence} de la catégorie des $S'$-schémas affines sur $S'$ et de la catégorie opposée de la catégorie des $\sh{O}_{S'}$-Algèbres quasi-cohérentes (\textbf{II}, 1.2.7 et 1.3.1), il y a correspondance biunivoque canonique entre les décompositions de $X'$ en \emph{somme} $X'_1\amalg X'_2$ de deux sous-préschémas induits sur des ouverts de $X'$ et les décompositions de $\mathscr B'$ en \emph{composée directe} de deux Idéaux $\mathscr B'_1$, $\mathscr B'_2$; ces dernières à leur tour forment un ensemble en correspondance biunivoque canonique (et fonctorielle en $S'$) avec $\operatorname{Id}(\mathscr B')$. Il suffit donc de prouver le lemme pour le foncteur $S'\leadsto\operatorname{Id}(\mathscr B')$.
+
+Pour cela, nous allons montrer qu'il existe un Idéal de type fini $\mathscr J$ de $\mathbf S_{\sh{O}_S}(\mathscr B)$ tel que $\operatorname{Id}(\mathscr B')$ soit de la forme $\operatorname{Al}(S',\check{\mathscr B}',\mathscr J\otimes_{\sh{O}_S}\sh{O}_{S'})$ (18.5.2). Notons à cet effet que puisque $\mathscr B$ est une $\sh{O}_S$-Algèbre, son image réciproque $\mathscr B_{(\mathbf V(\check{\mathscr B}))}$ est une $\sh{O}_{\mathbf V(\check{\mathscr B})}$-Algèbre, et l'on peut donc former le \emph{carré} $c^2$, dans cette Algèbre, de la section canonique $c$ (18.5.1); elle correspond canoniquement à un homomorphisme $u^{(2)}:\mathbf S_{\sh{O}_S}(\check{\mathscr B})\to\mathbf S_{\sh{O}_S}(\check{\mathscr B})\otimes_{\sh{O}_S}\mathscr B$ de $\mathbf S_{\sh{O}_S}(\check{\mathscr B})$-Modules, et on vérifie aussitôt que pour un ouvert affine $W$ de $S$, avec les notations de (18.5.1), $u^{(2)}$ correspond à l'homomorphisme de $C$-modules tel que $u^{(2)}(1)=\sum_k(\sum_{i,j}c_{ijk}T_iT_j)\otimes e_k$, où $(c_{ijk})$ est la table de multiplication de l'algèbre $\Gamma(W,\mathscr B)$. Montrons que l'Idéal $\mathscr J$ de $\mathbf S_{\sh{O}_S}(\check{\mathscr B})$ engendré par le \emph{noyau} de l'homomorphisme $u\setmin u^{(2)}$ répond à la question. Il suffit en effet de noter que l'idéal $\Gamma(W,\mathscr J)$ de $C$ est engendré par les polynômes $P_k(T_1,\ldots,T_n)=T_k\setmin\sum_{i,j}c_{ijk}T_iT_j$ et que les idempotents de $\Gamma(W,\mathscr B)$ sont précisément les éléments $\sum_i t_i e_i$ de cette algèbre tels que $(t_1,\ldots,t_n)$ annule tous les polynômes $P_k$ ($1\leq i\leq n$). On déduit donc de (18.5.2) que le $S$-préschéma affine de présentation finie $\mathbf{Of}(X)=\mathbf{Al}(\mathscr B,\mathscr J)$ représente bien le foncteur (18.5.3.1). Il reste à prouver que $\mathbf{Of}(X)$ est étale sur $S$, ou, ce qui revient au même, qu'il est \emph{formellement étale} sur $S$. Mais si $S'$ est un $S$-préschéma, $S'_0$ un sous-préschéma fermé de $S'$ défini par un Idéal localement nilpotent de $\sh{O}_{S'}$ (et ayant donc même espace sous-jacent que $S'$), il est clair que $X'=X\times_S S'$ et $X'_0=X\times_S S'_0$ ont même espace sous-jacent, donc l'application canonique $\operatorname{Of}(X')\to\operatorname{Of}(X'_0)$ est \emph{bijective}, ce qui achève la démonstration (17.1.1).
+
+\begin{proposition}[18.5.4]
+\label{IV.18.5.4}
+Soient $S$ un préschéma, $S_0$ un sous-préschéma fermé de $S$; considérons les propriétés suivantes:
+\begin{enumerate}
+  \item[\textup{a)}] Pour tout morphisme \textup{fini} $g:S'\to S$, l'application canonique
+  \begin{equation}
+    \operatorname{Of}(S')\longrightarrow\operatorname{Of}(S'\times_S S_0)\qquad\textup{(cf. (18.5.3))}
+    \tag{18.5.4.1}\label{IV.18.5.4.1}
+  \end{equation}
+  est bijective.
+  \item[\textup{a$'$)}] Pour tout morphisme \textup{fini et localement libre} $g:S'\to S$, l'application \textup{(18.5.4.1)} est bijective.
+
+\oldpage[IV-4]{128}
+
+  \item[\textup{b)}] Pour tout morphisme \textup{étale et séparé} $g:S'\to S$, l'application canonique
+  \begin{equation}
+    \Gamma(S'/S)\longrightarrow\Gamma(S'\times_S S_0/S_0)
+    \tag{18.5.4.2}\label{IV.18.5.4.2}
+  \end{equation}
+  est bijective.
+\end{enumerate}
+
+La condition \textup{b)} entraîne \textup{a$'$)}; si de plus $S$ est quasi-compact et quasi-séparé, la condition \textup{a)} entraîne \textup{b)}.
+\end{proposition}
+
+Prouvons d'abord que \emph{b)} entraîne \emph{a$'$)}. Supposons donc \emph{b)} vérifiée, et soit $g:S'\to S$ un morphisme fini et localement libre; posons $S'_0=S'\times_S S_0$, de sorte que $g_0=g_{(S_0)}:S'_0\to S_0$ est fini et localement libre. Alors il résulte de (18.5.3) que $P=\mathbf{Of}(S')$ est un $S$-préschéma \emph{étale et séparé}; en outre, la définition du foncteur $\operatorname{Of}$ montre aussitôt que si l'on pose $P_0=\mathbf{Of}(S'_0)$ (pour la catégorie des $S_0$-préschémas), on a $P_0=P\times_S S_0$. Cela étant, on a par définition le diagramme commutatif
+\[
+\xymatrix{
+  \Gamma(P/S)\ar[r]\ar[d]^{\wr} & \Gamma(P_0/S_0)\ar[d]^{\wr}\\
+  \operatorname{Of}(S')\ar[r] & \operatorname{Of}(S'_0)
+}
+\]
+où les flèches verticales sont les bijections canoniques. Comme l'hypothèse \emph{b)}, appliquée au morphisme $P\to S$, entraîne que la première ligne est une bijection, il en est de même de la seconde, ce qui établit notre assertion.
+
+Avant de prouver que \emph{a)} entraîne \emph{b)} lorsque $S$ est quasi-compact et quasi-séparé, nous établirons le
+
+\begin{lemma}[18.5.4.3]
+\label{IV.18.5.4.3}
+Si $S$ et $S_0$ vérifient la condition \textup{a)} de \textup{(18.5.4)}, alors, pour tout morphisme \textup{fini} $g:S'\to S$, $S'$ est l'unique voisinage de $S'_0=g^{-1}(S_0)=S'\times_S S_0$ dans $S'$.
+\end{lemma}
+
+En effet, il revient au même de dire que si $T'$ est une partie fermée de $S'$ telle que $T'\cap S'_0=\varnothing$, alors $T'=\varnothing$. Or, si l'on désigne encore par $T'$ un sous-préschéma fermé de $S'$ ayant $T'$ pour espace sous-jacent, le morphisme composé $h:T'\to S'\xrightarrow{g}S$ est fini et $h^{-1}(S_0)$ est vide; la condition \emph{a)} appliquée au morphisme $h$ entraîne que $T'$ est nécessairement vide.
+
+Ce lemme étant démontré, prouvons d'abord que, sous l'hypothèse \emph{a)}, l'application (18.5.4.2) est \emph{injective}. En effet, si $u'$, $u''$ sont deux $S$-sections de $S'$, le fait que le morphisme $S'\to S$ soit non ramifié entraîne que le préschéma des coïncidences de $u'$ et $u''$ est induit sur un ouvert $U$ de $S$ (17.4.6). Si les restrictions à $S_0$ de $u'$ et $u''$ sont les mêmes, le fait que $u'$ et $u''$ sont des immersions ouvertes (17.4.1) entraîne que $U$ contient $S_0$, donc est égal à $S$ en vertu du lemme (18.5.4.3) appliqué au cas où $S'=S$.
+
+Reste à montrer que sous l'hypothèse \emph{a)}, l'application (18.5.4.2) est \emph{surjective} ($S$ étant quasi-compact et quasi-séparé). Soit donc $u_0:S_0\to S'_0$ une $S_0$-section de $S'_0$; $u_0(S_0)$ étant quasi-compact dans $S'$, peut être recouvert par un nombre fini d'ouverts
+\oldpage[IV-4]{129}
+affines $V_i$ tels que la restriction $g|V_i$ soit un morphisme de type fini; si $V$ est la réunion des $V_i$, on en conclut que $g|V:V\to S$ est un morphisme \emph{de présentation finie}, étant séparé et localement de présentation finie par hypothèse (1.6.1). Remplaçant $S'$ par $V$, on peut donc supposer que $g$ est de présentation finie. Comme $S$ est quasi-compact et quasi-séparé et $g$ quasi-fini et séparé (17.6.1), il résulte du « Main theorem » (8.12.6) que $g$ se factorise en $S'\xrightarrow{j}S''\xrightarrow{f}S$, où $j$ est une immersion ouverte et $f$ un morphisme \emph{fini}. Posons $S''_0=S''\times_S S_0$, $j_0=j_{(S_0)}:S'_0\to S''_0$, qui est une immersion ouverte et $f_0=f_{(S_0)}:S''_0\to S_0$, qui est un morphisme fini. Alors $u_0$ est aussi une $S_0$-section de $S''_0$. Comme $g_0:S'_0\to S_0$ est étale, $u_0$ est une immersion ouverte de $S_0$ dans $S'_0$ (17.4.1), donc $u_0(S_0)$ est ouvert dans $S'_0$, et \emph{a fortiori} dans $S''_0$; mais d'autre part, comme $f_0$ est un morphisme fini, donc séparé, $u_0$ est une immersion fermée de $S_0$ dans $S''_0$ (\textbf{I}, 5.4.6), donc $X_0=u_0(S_0)$ est \emph{à la fois ouvert et fermé} dans $S''_0$. En vertu de l'hypothèse \emph{a)}, il existe un sous-ensemble à la fois ouvert et fermé $X$ de $S''$ tel que $X\cap S''_0=X_0$. Montrons d'abord que le morphisme $f:S''\to S$ est \emph{étale aux points de $X$}: en effet, l'ensemble $U$ des points de $X$ où $f|X$ est étale est ouvert et contient par hypothèse $X_0\subset S'_0$. Mais le lemme (18.5.4.3) appliqué au morphisme fini $f|X$ prouve que $U=X$. D'autre part, $S'\cap X$ est ouvert dans $X$ et contient $X_0$ par hypothèse, donc le même raisonnement prouve que $S'\cap X=X$, c'est-à-dire $X\subset S'$. Il reste à montrer que, pour tout $s\in S$, le nombre géométrique $n(s)$ de points de $X\cap f^{-1}(s)$ est égal à $1$, car il en résultera que $f|X$ est radiciel et surjectif, et comme $f|X$ est étale, on aura montré (17.9.1) que $f|X$ est un isomorphisme de l'ouvert $X\subset S'$ sur $S$, dont l'isomorphisme réciproque $u$ sera la $S$-section cherchée prolongeant $u_0$. Mais comme $f|X$ est étale et \emph{fini}, $s\leadsto n(s)$ est continue dans $S$ (18.2.8), et comme $X\cap S'_0=X_0$, on a $n(s)=1$ dans $S_0$; l'ensemble des points $s\in S$ tels que $n(s)=1$ étant ouvert dans $S$ et contenant $S_0$, il est égal à $S$ par (18.5.4.3). C.Q.F.D.
+
+\begin{remark}[18.5.4.4]
+\label{IV.18.5.4.4}
+On peut montrer que l'énoncé (18.5.4) reste valable lorsque, dans la condition \emph{b)}, on suppose seulement le morphisme $g$ étale (mais non nécessairement séparé) [43, exp. XII].
+\end{remark}
+
+\begin{definition}[18.5.5]
+\EGAReaderTarget{ega4.c04.def.18-5-5}{IV.18.5.5}
+On dit qu'un préschéma $S$ et un sous-préschéma fermé $S_0$ de $S$ forment un \emph{couple hensélien} s'ils vérifient la condition \textup{a)} de \textup{(18.5.4)}.
+\end{definition}
+
+Compte tenu de (\textbf{I}, 5.1.8), il revient au même de dire que $(S,S_0)$ est un couple hensélien ou que $(S_{\mathrm{red}},(S_0)_{\mathrm{red}})$ en est un.
+
+\begin{proposition}[18.5.6]
+\label{IV.18.5.6}
+\begin{enumerate}
+  \item[\textup{(i)}] Si $(S,S_0)$ est un couple hensélien, alors, pour tout morphisme fini $f:S'\to S$, si $S'_0$ est le sous-préschéma $f^{-1}(S_0)$ de $S'$, le couple $(S',S'_0)$ est hensélien.
+  \item[\textup{(ii)}] Soient $S=\coprod_\alpha S^{(\alpha)}$ une somme de préschémas, $S_0$ un sous-préschéma fermé de $S$, somme des sous-préschémas fermés $S_0^{(\alpha)}$ des $S^{(\alpha)}$. Pour que le couple $(S,S_0)$ soit hensélien, il faut et il suffit que chacun des couples $(S^{(\alpha)},S_0^{(\alpha)})$ le soit.
+\end{enumerate}
+\end{proposition}
+
+L'assertion (i) est conséquence immédiate de la définition, puisque pour tout morphisme fini $g:S''\to S'$, $f\circ g:S''\to S$ est un morphisme fini. De même, sous les conditions de (ii), pour qu'un morphisme $g:S'\to S$ soit fini, il faut et il suffit que chacune

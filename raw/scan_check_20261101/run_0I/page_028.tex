@@ -1,0 +1,103 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{28}
+
+que $\mathcal{H}_\lambda$ soit un \emph{sous-faisceau} de
+$\mathcal{F}_\lambda$ pour tout $\lambda$,
+$\varprojlim_\lambda\mathcal{H}_\lambda$ s'identifie canoniquement à un
+\emph{sous-faisceau} de $\varprojlim_\lambda\mathcal{F}_\lambda$. Si
+$\mathbf{K}$ est la catégorie des groupes commutatifs, le foncteur covariant
+$\varprojlim_\lambda\mathcal{F}_\lambda$ est \emph{additif et exact à gauche}.
+\end{env}
+
+\subsection{Recollement de faisceaux}
+\label{subsection:0.3.3-fr}
+
+\begin{env}[3.3.1]
+\label{0.3.3.1-fr}
+Supposons encore que la catégorie $\mathbf{K}$ admette des limites projectives
+(généralisées). Soient $X$ un espace topologique,
+$\mathfrak{U}=(U_\lambda)_{\lambda\in L}$ un recouvrement ouvert de $X$, et
+pour chaque $\lambda\in L$, soit $\mathcal{F}_\lambda$ un faisceau sur
+$U_\lambda$, à valeurs dans $\mathbf{K}$~; pour tout couple d'indices
+$(\lambda,\mu)$, supposons donné un \emph{isomorphisme}
+\[
+  \theta_{\lambda\mu}:
+  \mathcal{F}_\mu|(U_\lambda\cap U_\mu)
+  \xrightarrow{\sim}
+  \mathcal{F}_\lambda|(U_\lambda\cap U_\mu);
+\]
+en outre, supposons que pour tout triplet $(\lambda,\mu,\nu)$, en désignant par
+$\theta'_{\lambda\mu}$, $\theta'_{\mu\nu}$, $\theta'_{\lambda\nu}$ les
+restrictions de $\theta_{\lambda\mu}$, $\theta_{\mu\nu}$,
+$\theta_{\lambda\nu}$ à $U_\lambda\cap U_\mu\cap U_\nu$, on ait
+\[
+  \theta'_{\lambda\nu}
+  =\theta'_{\lambda\mu}\circ\theta'_{\mu\nu}
+\]
+(\emph{condition de recollement pour les $\theta_{\lambda\mu}$}). Alors, il
+existe un faisceau $\mathcal{F}$ sur $X$, à valeurs dans $\mathbf{K}$, et pour
+chaque $\lambda$ un isomorphisme
+\[
+  \eta_\lambda:\mathcal{F}|U_\lambda\xrightarrow{\sim}\mathcal{F}_\lambda
+\]
+tels que, pour tout couple $(\lambda,\mu)$, en désignant par
+$\eta'_\lambda$ et $\eta'_\mu$ les restrictions de $\eta_\lambda$ et
+$\eta_\mu$ à $U_\lambda\cap U_\mu$, on ait
+\[
+  \theta_{\lambda\mu}=\eta'_\lambda\circ{\eta'_\mu}^{-1};
+\]
+en outre, $\mathcal{F}$ et les $\eta_\lambda$ sont déterminés à un
+isomorphisme unique près par ces conditions. L'unicité résulte en effet
+aussitôt de (3.2.5). Pour établir l'existence de $\mathcal{F}$, désignons par
+$\mathfrak{B}$ la base d'ouverts formée des ouverts contenus dans un
+$U_\lambda$ au moins, et pour tout $U\in\mathfrak{B}$, choisissons (par la
+fonction $\tau$ de Hilbert) un des $\mathcal{F}_\lambda(U)$ pour un des
+$\lambda$ tels que $U\subset U_\lambda$~; si on désigne cet objet par
+$\mathcal{F}(U)$, les $\rho_U^V$ pour $U\subset V$, $U\in\mathfrak{B}$,
+$V\in\mathfrak{B}$ se définissent de façon évidente (au moyen des
+$\theta_{\lambda\mu}$), et la condition de transitivité est conséquence de la
+condition de recollement~; en outre, la vérification de
+(F\textsubscript{0}) est immédiate, donc le préfaisceau sur $\mathfrak{B}$
+ainsi défini est bien un faisceau, et on en déduit par le procédé général
+(3.2.1) un faisceau (ordinaire) encore noté $\mathcal{F}$ et qui répond à la
+question. On dit que $\mathcal{F}$ est obtenu par \emph{recollement des
+$\mathcal{F}_\lambda$ au moyen des $\theta_{\lambda\mu}$} et on identifiera
+d'ordinaire $\mathcal{F}_\lambda$ et $\mathcal{F}|U_\lambda$ au moyen de
+$\eta_\lambda$.
+
+Il est clair que tout faisceau $\mathcal{F}$ sur $X$ à valeurs dans
+$\mathbf{K}$ peut être considéré comme obtenu par recollement des faisceaux
+$\mathcal{F}_\lambda=\mathcal{F}|U_\lambda$ (où $(U_\lambda)$ est un
+recouvrement ouvert arbitraire de $X$), au moyen des isomorphismes
+$\theta_{\lambda\mu}$ réduits à l'identité.
+\end{env}
+
+\begin{env}[3.3.2]
+\label{0.3.3.2-fr}
+Avec les mêmes notations, soit $\mathcal{G}_\lambda$ un second faisceau sur
+$U_\lambda$ (pour tout $\lambda\in L$) à valeurs dans $\mathbf{K}$, et soit
+donné pour tout couple $(\lambda,\mu)$ un isomorphisme
+\[
+  \omega_{\lambda\mu}:
+  \mathcal{G}_\mu|(U_\lambda\cap U_\mu)
+  \xrightarrow{\sim}
+  \mathcal{G}_\lambda|(U_\lambda\cap U_\mu),
+\]
+ces isomorphismes vérifiant la condition de recollement. Supposons enfin donné
+pour tout $\lambda$ un morphisme
+$u_\lambda:\mathcal{F}_\lambda\to\mathcal{G}_\lambda$, et que les diagrammes
+\begin{equation}
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathcal{F}_\mu|(U_\lambda\cap U_\mu)
+  \arrow[r,"u_\mu"] \arrow[d]
+  & \mathcal{G}_\mu|(U_\lambda\cap U_\mu) \arrow[d] \\
+\mathcal{F}_\lambda|(U_\lambda\cap U_\mu)
+  \arrow[r,"u_\lambda"']
+  & \mathcal{G}_\lambda|(U_\lambda\cap U_\mu)
+\end{tikzcd}
+\tag{3.3.2.1}\label{0.3.3.2.1-fr}
+\end{equation}
+soient commutatifs. Alors, si $\mathcal{G}$ est obtenu par recollement des
+$\mathcal{G}_\lambda$ au moyen des $\omega_{\lambda\mu}$, il existe un
+morphisme $u:\mathcal{F}\to\mathcal{G}$ et un seul tel que les diagrammes
+

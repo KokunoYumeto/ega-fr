@@ -1,0 +1,84 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{47}
+
+\begin{enumerate}
+\item[$\alpha$)] $t$ est $M$-régulier~;
+\item[$\beta$)] pour tout $i$ tel que $M_{\mathfrak p_i}\neq0$, l'image de $t$
+dans $A/\mathfrak p_i$ engendre l'idéal maximal de cet anneau (ce qui entraîne
+que $A/\mathfrak p_i$ est un anneau de valuation discrète).
+\end{enumerate}
+
+\begin{proof}
+Comme $A$ n'est pas de dimension $0$ et que $A/tA$ est artinien, on a
+nécessairement $\dim(A)=1$ $(0,16.3.4)$ et $t\notin\mathfrak p_i$ pour tout
+$i$~: l'idéal principal $(t)$ est donc un idéal de définition de $A$, et
+contient par suite une puissance de son idéal maximal $\mathfrak m$. Soit $N$
+le sous-module des éléments de $M$ annulés par une puissance de $t$ (ou par
+une puissance de $\mathfrak m$, ce qui revient au même comme on vient de le
+voir)~; si l'on pose $P=M/N$, $t$ est $P$-régulier, car la relation $tx\in N$
+pour un $x\in M$ entraîne $t^k(tx)=0$ pour un entier $k$, donc $x\in N$. Cela
+étant, on a le
+
+\begin{lemma}[3.4.1.4]
+\label{IV.2.3.4.1.4-fr}
+Soient $A$ un anneau,
+\[
+0\longrightarrow M'\longrightarrow M\longrightarrow M''\longrightarrow0
+\]
+une suite exacte de $A$-modules. Si $t\in A$ est $M''$-régulier, la suite
+\[
+0\longrightarrow M'/tM'\longrightarrow M/tM
+\longrightarrow M''/tM''\longrightarrow0
+\]
+est exacte.
+\end{lemma}
+
+\begin{proof}
+Comme $M/tM=M\otimes_A(A/tA)$, il suffit de prouver l'exactitude en $M'/tM'$~;
+or, si l'image $x\in M$ d'un élément $x'$ de $M'$ est telle que $x=ty$ avec
+$y\in M$, on en déduit, pour les images $x''$, $y''$ de $x$, $y$ dans $M''$,
+$x''=ty''$~; mais comme $x''=0$, l'hypothèse entraîne $y''=0$, donc $y$ est
+l'image d'un élément $y'\in M'$, et la relation $x=ty$ entraîne $x'=ty'$
+puisque $M'\to M$ est injectif.
+\end{proof}
+
+Ce lemme étant établi, on en tire la relation
+\end{proof}
+
+\begin{env}[3.4.1.5]
+\label{IV.2.3.4.1.5-fr}
+\[
+\operatorname{long}(M/tM)
+=\operatorname{long}(N/tN)+\operatorname{long}(P/tP).
+\]
+\end{env}
+
+D'autre part, pour tout $i$, on a $N_{\mathfrak p_i}=0$ puisque
+$t\notin\mathfrak p_i$~; donc $M_{\mathfrak p_i}=P_{\mathfrak p_i}$~; pour
+prouver (3.4.1.3), il suffit donc de le faire en y remplaçant $M$ par $P$~;
+d'autre part, si les deux membres de (3.4.1.3) sont égaux, il résulte de la
+même inégalité pour $P$ et de (3.4.1.5) que l'on a nécessairement
+$\operatorname{long}(N/tN)=0$, donc $N/tN=0$ et finalement $N=0$, par le lemme
+de Nakayama, $N$ étant de type fini~; or, $N=0$ signifie que $t$ est
+$M$-régulier. On peut donc se ramener au cas où $M=P$, c'est-à-dire supposer
+déjà que $t$ est $M$-régulier. Notons que cela entraîne que
+$\mathfrak m\notin\operatorname{Ass}(M)$, puisque $t$ ne peut annuler un
+élément $\neq0$ de $M$. Comme $A$ est de dimension $1$, on a donc
+nécessairement
+\[
+\operatorname{Ass}(M)\subset\bigcup_i\{\mathfrak p_i\}.
+\]
+
+Procédons alors par récurrence sur
+$n=\sum_i\operatorname{long}(M_{\mathfrak p_i})$. Si $n=0$, on a
+nécessairement $M_{\mathfrak p_i}=0$ pour tout $i$, donc $M=0$ puisque aucun
+des $\mathfrak p_i$ n'appartient à $\operatorname{Ass}(M)$~; les deux membres
+de (3.4.1.3) sont alors nuls, et l'assertion $\beta$) de (3.4.1.2) est
+triviale. Si $n>0$, le raisonnement du début de la démonstration de (3.4.1)
+permet de supposer en outre que le $A$-module $M$ est fidèle~; cela entraîne
+$M_{\mathfrak p_i}\neq0$ pour tout $i$ (Bourbaki, \emph{Alg. comm.}, chap.~II,
+\S~2, n\textsuperscript{o}~2, cor.~2 de la prop.~4), et par suite
+\[
+\operatorname{Ass}(M)=\bigcup_i\{\mathfrak p_i\}.
+\]
+

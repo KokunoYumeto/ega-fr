@@ -1,0 +1,72 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{203}
+on voit qu'on peut se borner à démontrer le corollaire lorsque $Y$ est
+irréductible~; soit $\eta$ son point générique. Il résulte de (14.2.4) que
+$d(y)\leq d(\eta)$~; d'autre part, comme $f$ est propre, on déduit de (13.1.5) que
+$z\mapsto\dim(f^{-1}(z))$ est semi-continue supérieurement~; en particulier
+$d(y)\geq d(\eta)$, donc $d(y)=d(\eta)$. De plus, il y a un voisinage $V$ de $y$
+tel que $d(z)\leq d(y)$ pour tout $z\in V$~; mais comme $z$ est spécialisation de
+$\eta$, on a d'autre part $d(z)\geq d(\eta)$, d'où finalement $d(z)=d(y)$ pour
+$z\in V$.
+\end{proof}
+
+\begin{corollary}[14.2.6]
+\label{IV.14.2.6-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme ouvert de
+type fini, $y$ un point de $Y$. Soient $y_i$ ($1\leq i\leq n$) les points
+génériques des composantes irréductibles de $Y$ contenant $y$. Alors, avec les
+notations de (14.2.4)~:
+\begin{enumerate}[label=(\roman*)]
+  \item Si pour $1\leq i\leq n$, on a $E(y)=E(y_i)$ (resp. $d(y)=d(y_i)$), la
+  fonction $E$ (resp. $d$) est constante dans un voisinage de $y$.
+  \item Il existe un voisinage ouvert $U$ de $f^{-1}(y)$ tel que la fonction
+  $z\mapsto\dim(U\cap f^{-1}(z))$ soit constante dans un voisinage de $y$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Le même raisonnement que dans (14.2.5) montre qu'on peut se borner à
+  considérer le cas où $Y$ est irréductible, de point générique $\eta$. Si $y'$
+  est une générisation quelconque de $y$, on a alors (en appliquant (14.2.4) à la
+  restriction $f^{-1}(Y')\to Y'$ de $f$, où $Y'=\overline{\{y'\}}$, et utilisant
+  (14.1.2)) $E(y)\subset E(y')\subset E(\eta)$ et
+  $d(y)\leq d(y')\leq d(\eta)$~; cela montre que la relation $E(y)=E(\eta)$
+  (resp. $d(y)=d(\eta)$) entraîne $E(y)=E(y')$ (resp. $d(y)=d(y')$) pour toute
+  générisation $y'$ de $y$. Or, en vertu de (9.5.5), les fonctions $E$ et $d$ sont
+  localement constructibles, donc il résulte de ($\mathbf{0}_{\mathrm{III}}$,
+  9.2.5) appliqué à l'ensemble des $z$ tels que $E(z)=E(y)$ (resp.
+  $d(z)=d(y)$) que cet ensemble est un voisinage de $y$.
+
+  \item Pour chacun des $y_i$, $f^{-1}(y_i)$ est un espace noethérien puisque $f$
+  est de type fini~; soient $x_{ij}$ ($1\leq j\leq m_i$) les points génériques de
+  ses composantes irréductibles, et posons $X'_{ij}=\overline{\{x_{ij}\}}$~;
+  montrons que le complémentaire $U$ dans $X$ de la réunion des $X'_{ij}$ qui ne
+  rencontrent pas $f^{-1}(y)$ (qui est évidemment un voisinage ouvert de
+  $f^{-1}(y)$) répond à la question. En effet, la restriction $f|U:U\to Y$ de $f$
+  est un morphisme ouvert de type fini (I, 6.3.5)~; pour tout couple $(i,j)$ tel
+  que $x_{ij}\in U$, $x_{ij}$ est point maximal de $U\cap f^{-1}(y_i)$, et il
+  résulte de (13.1.1) appliqué à la restriction
+  $X'_{ij}\to Y_i=\overline{\{y_i\}}$ de $f$ (compte tenu de (I, 5.2.2) et de
+  (1.5.4)) que toutes les composantes irréductibles de
+  $X'_{ij}\cap f^{-1}(y)$ ont une dimension
+  $\geq\dim(X'_{ij}\cap f^{-1}(y_i))$. Compte tenu de (14.2.3) appliqué à la
+  restriction $f^{-1}(Y_i)\to Y_i$ de $f$, qui est un morphisme ouvert (14.1.2),
+  $f^{-1}(y)$ est, pour chaque $i$, la réunion des composantes irréductibles de
+  $X'_{ij}\cap f^{-1}(y)$ ($1\leq j\leq m_i$), donc
+  $\dim(f^{-1}(y))\geq\dim(U\cap f^{-1}(y_i))$~; mais comme $f|U$ est ouvert, on a
+  aussi $\dim(f^{-1}(y))\leq\dim(f^{-1}(y_i)\cap U)$ en vertu de (14.2.4)~; on voit
+  donc qu'on peut appliquer (i) à $f|U$, d'où la conclusion.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[14.2.7]
+\label{IV.14.2.7-fr}
+L'exemple (13.2.12, (iii)) montre que sous les hypothèses de (14.2.5) ou
+(14.2.6, (ii)), on ne peut, dans la conclusion, remplacer la fonction
+$z\mapsto\dim(f^{-1}(z))$ par la fonction $z\mapsto E(z)$~; en effet, dans cet
+exemple, $f$ est propre et plat (donc universellement ouvert (2.4.6)) et tout
+voisinage de l'unique point de $f^{-1}(y_0)$ contient les points génériques des
+composantes irréductibles de $f^{-1}(\eta)$.
+\end{remark}
+

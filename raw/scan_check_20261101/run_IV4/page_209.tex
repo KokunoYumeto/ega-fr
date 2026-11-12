@@ -1,0 +1,41 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{209}
+
+et, par récurrence sur $j$, on voit donc que cette condition est vérifiée pour tout $j$ tel que $1\leq j\leq q$. On a donc
+\[
+  m\in\sum_{i=1}^q\mathfrak J^{q-i}(\mathfrak JM_{p+i}+M_{p+i+1})=\sum_{i=1}^{q+1}\mathfrak J^{q-i+1}M_{p+i}
+\]
+et on a ainsi prouvé $(\mathrm A_{q+1,p})$ et terminé la démonstration de (19.5.5).
+\end{env}
+
+\begin{remarks}[19.5.6]
+\label{IV.19.5.6}
+\begin{enumerate}
+  \item[(i)] Les résultats de ce numéro gardent un sens et sont valables lorsque, au lieu d'un $A$-module $M$ et d'éléments $f_i\in A$, on prend un objet $M$ d'une catégorie abélienne quelconque, et $n$ endomorphismes $f_i$ de $M$ qui commutent deux à deux; les démonstrations s'adaptent sans peine à ce cas plus général. L'hypothèse de séparation pour un $A$-module $N$ relativement à la topologie $\mathfrak J$-préadique doit ici être remplacée par l'hypothèse que tout sous-objet de $N$ contenu dans tous les $\sum_i f_i^r(N)$ ($r$ entier arbitraire) est nécessairement nul. La même remarque s'applique aux résultats de 19.7.
+  \item[(ii)] Supposons que $A$ soit un anneau \emph{gradué} à degrés $\geq0$. Si $M$ (resp. chaque $\operatorname{gr}_p(M)$) est un $A$-module gradué à degrés bornés inférieurement et si les $f_i$ ne contiennent pas de composant homogène de degré $0$, l'hypothèse de séparation de ($0$, 15.1.9) est \emph{ipso facto} vérifiée pour $M$ (resp. chaque $\operatorname{gr}_p(M)$), et on voit donc que dans ce cas on a l'implication $c)\Rightarrow a)$ dans (19.5.1) (resp. (19.5.5)).
+  \item[(iii)] Rappelons que, sans hypothèse de séparation, l'implication $c)\Rightarrow b)$ n'est plus valable même pour $n=1$ ($0$, 15.1.12, (iii)).
+\end{enumerate}
+\end{remarks}
+
+\subsection{Suites régulières relativement à un module filtré quotient.}
+\EGAReaderTarget{ega4.c04.subsec.19-6}{subsection:IV.19.6}
+
+\begin{env}[19.6.1]
+\label{IV.19.6.1}
+Soient $A$ un anneau, $\mathbf f=(f_1,\ldots,f_n)$ une suite finie d'éléments de $A$, $\mathfrak J=f_1A+\cdots+f_nA$ l'idéal qu'elle engendre, et considérons une suite exacte de $A$-modules
+\[
+  0\longrightarrow R\xrightarrow{j}N\xrightarrow{p}M\longrightarrow0
+\]
+où l'on suppose que $N$ est muni d'une filtration décroissante $(N_k)$ formée de sous-$A$-modules, avec $N_0=N$. On pose $R_k=R\cap N_k$ (filtration induite par $(N_k)$), $M_k=p(N_k)$ (filtration quotient de $(N_k)$), et on désigne par $\operatorname{gr}_\bullet(N)$, $\operatorname{gr}_\bullet(R)$ et $\operatorname{gr}_\bullet(M)$ les $A$-modules gradués associés à ces trois filtrations. On pose d'autre part pour tout $k$,
+\[
+  N_k'=N_k+\mathfrak JN_{k-1}+\cdots+\mathfrak J^{k-1}N_1+\mathfrak J^kN_0
+\]
+de sorte que $M_k'=p(N_k')=M_k+\mathfrak JM_{k-1}+\cdots+\mathfrak J^{k-1}M_1+\mathfrak J^kM_0$; on pose d'autre part $R_k'=R\cap N_k'$ (filtration \emph{induite} par $(N_k')$), et on note $\operatorname{gr}_\bullet'(N)$, $\operatorname{gr}_\bullet'(M)$ et $\operatorname{gr}_\bullet'(R)$ les $A$-modules gradués associés à ces trois filtrations; on a donc un diagramme commutatif de suites exactes
+\begin{equation}
+\xymatrix{
+  0 \ar[r] & \operatorname{gr}_\bullet(R) \ar[r]^-{\operatorname{gr}(j)} \ar[d] & \operatorname{gr}_\bullet(N) \ar[r]^-{\operatorname{gr}(p)} \ar[d] & \operatorname{gr}_\bullet(M) \ar[r] \ar[d] & 0 \\
+  0 \ar[r] & \operatorname{gr}_\bullet'(R) \ar[r]^-{\operatorname{gr}'(j)} & \operatorname{gr}_\bullet'(N) \ar[r]^-{\operatorname{gr}'(p)} & \operatorname{gr}_\bullet'(M) \ar[r] & 0
+}
+\tag{19.6.1.1}\label{IV.19.6.1.1}
+\end{equation}
+

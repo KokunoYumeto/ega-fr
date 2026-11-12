@@ -1,0 +1,1464 @@
+[
+ {
+  "page": 200,
+  "where": "top of p. 200: page break 199/200 inside '(II, 2.3.6), un | voisinage ouvert affine'",
+  "scan": "p. 200 begins mid-sentence: 'voisinage ouvert affine' starts at the left margin like the lines below (x 416 px); p. 199 ends '(II, 2.3.6), un' at the right margin",
+  "tex": "blank lines before and after \\oldpage[IV-4]{200}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{200}\n\nvoisinage ouvert",
+   "new": "\\oldpage[IV-4]{200}\nvoisinage ouvert"
+  },
+  "note": "BOUNDARY FIX (page break with p. 199). The marker is at the right place. This removes the blank line after it; the blank line BEFORE it, at the end of the p. 199 segment, must go too: 'un\\n\\n\\oldpage[IV-4]{200}' -> 'un\\n\\oldpage[IV-4]{200}' (\\oldpage ends with \\ignorespaces, which does not skip a \\par). Apply both."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.6) (ii), l. 4: 'que gr•_{𝔍_0}(B_0) soit un A_0-module plat'",
+  "scan": "gr with a raised bullet (gr•)",
+  "tex": "\\operatorname{gr}_{\\mathfrak J_0}^*",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{gr}_{\\mathfrak J_0}^*(B_0)$ soit un",
+   "new": "\\operatorname{gr}_{\\mathfrak J_0}^\\bullet(B_0)$ soit un"
+  },
+  "note": "GLOBAL_ISSUES 60/83: the print's gr• is gr^\\bullet, not ^*."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.6) (ii), l. 5: 'gr•_𝔍(B)=gr•_{𝔍_0}(B_0)⊗_{A_0}A'",
+  "scan": "gr with a raised bullet (gr•), twice",
+  "tex": "^* twice",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{gr}_{\\mathfrak J}^*(B)=\\operatorname{gr}_{\\mathfrak J_0}^*(B_0)",
+   "new": "\\operatorname{gr}_{\\mathfrak J}^\\bullet(B)=\\operatorname{gr}_{\\mathfrak J_0}^\\bullet(B_0)"
+  },
+  "note": "Two occurrences in one edit. GLOBAL_ISSUES 60/83: the print's gr• is gr^\\bullet, not ^*."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.6) (ii), l. 9: 'le morphisme Proj(⊕_{n≥0}𝔍^n) → Spec(B_0)'",
+  "scan": "Proj(⊕𝔍^n) with no subscript 0 on the Fraktur J (crop c200_proj.png)",
+  "tex": "\\mathfrak J_0^n (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathfrak J_0^n)\\to\\Spec(B_0)",
+   "new": "\\mathfrak J^n)\\to\\Spec(B_0)"
+  },
+  "corrected": "\\operatorname{Proj}(\\bigoplus_{n\\geq0}\\mathfrak J_0^n)\\to\\Spec(B_0)",
+  "note": "The morphism over Spec(B_0) whose base change is X'→X is Proj of the Rees algebra of 𝔍_0, so the correct reading is 𝔍_0^n; the print drops the subscript (clean blank where it would stand, not a broken sort). The TeX silently corrected; the fix restores the printed reading and changes only the subscript."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.6) (ii): 'est de type fini (II, 2.7.1)'",
+  "scan": "bold II",
+  "tex": "plain II",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "de type fini (II, 2.7.1)",
+   "new": "de type fini (\\textbf{II}, 2.7.1)"
+  },
+  "note": "A real EGA II reference (bold II in the print)."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.6) (ii), last lines: 'le fait que gr•_𝒥(𝒪_X) est une'",
+  "scan": "gr with a raised bullet (gr•)",
+  "tex": "^*",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "le fait que $\\operatorname{gr}_{\\mathscr J}^*(\\sh{O}_X)$",
+   "new": "le fait que $\\operatorname{gr}_{\\mathscr J}^\\bullet(\\sh{O}_X)$"
+  },
+  "note": "GLOBAL_ISSUES 60/83: the print's gr• is gr^\\bullet, not ^*."
+ },
+ {
+  "page": 200,
+  "where": "Corollaire (19.4.7): 'normalement plat le long de Y (11.3.4).'",
+  "scan": "reference upright inside the italic statement",
+  "tex": "italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "normalement plat le long de $Y$ (11.3.4).",
+   "new": "normalement plat le long de $Y$ \\textup{(11.3.4)}."
+  },
+  "note": ""
+ },
+ {
+  "page": 200,
+  "where": "Corollaire (19.4.7): 'Alors (avec les notations de (19.4.1)), le morphisme'",
+  "scan": "'(avec les notations de (19.4.1))' roman inside the italic statement (crop c200_alors.png)",
+  "tex": "italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "Alors (avec les notations de (19.4.1)), le morphisme",
+   "new": "Alors \\textup{(avec les notations de (19.4.1))}, le morphisme"
+  },
+  "note": ""
+ },
+ {
+  "page": 200,
+  "where": "Corollaire (19.4.7): 'des points de X (resp. X') où X (resp. X') est S-plat est un voisinage de Y (resp. Y').'",
+  "scan": "'(resp. X')' twice and '(resp. Y')' roman (crops c200_resp.png, c200_respY.png)",
+  "tex": "italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. $X'$) où $X$ (resp. $X'$) est $S$-plat est un voisinage de $Y$ (resp. $Y'$).",
+   "new": "\\textup{(resp. $X'$)} où $X$ \\textup{(resp. $X'$)} est $S$-plat est un voisinage de $Y$ \\textup{(resp. $Y'$)}."
+  },
+  "note": "Three occurrences in one edit (the shorter strings also occur in (19.4.6) on p. 199)."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.7), l. 1: 'par hypothèse gr•_𝒥(𝒪_X) est un'",
+  "scan": "gr with a raised bullet (gr•)",
+  "tex": "^*",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "par hypothèse $\\operatorname{gr}_{\\mathscr J}^*(\\sh{O}_X)$",
+   "new": "par hypothèse $\\operatorname{gr}_{\\mathscr J}^\\bullet(\\sh{O}_X)$"
+  },
+  "note": "GLOBAL_ISSUES 60/83: the print's gr• is gr^\\bullet, not ^*."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.7): 'Y-isomorphe à Proj(gr•_𝒥(𝒪_X))'",
+  "scan": "gr with a raised bullet (gr•)",
+  "tex": "^*",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "isomorphe à $\\operatorname{Proj}(\\operatorname{gr}_{\\mathscr J}^*(\\sh{O}_X))$ (19.4.2)",
+   "new": "isomorphe à $\\operatorname{Proj}(\\operatorname{gr}_{\\mathscr J}^\\bullet(\\sh{O}_X))$ (19.4.2)"
+  },
+  "note": "GLOBAL_ISSUES 60/83: the print's gr• is gr^\\bullet, not ^*."
+ },
+ {
+  "page": 200,
+  "where": "proof of (19.4.7), last words: 'montre que Y' est Y-plat.'",
+  "scan": "'plat' italic (crop c200_plat.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "montre que $Y'$ est $Y$-plat.",
+   "new": "montre que $Y'$ est $Y$-\\emph{plat}."
+  },
+  "note": "GLOBAL_ISSUES 83 (italics lost in 18.10 and later)."
+ },
+ {
+  "page": 200,
+  "where": "Proposition (19.4.8), l. 1: 'les hypothèses de (19.4.7)'",
+  "scan": "reference upright (crop c200_1948.png)",
+  "tex": "italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "les hypothèses de (19.4.7) et en outre",
+   "new": "les hypothèses de \\textup{(19.4.7)} et en outre"
+  },
+  "note": ""
+ },
+ {
+  "page": 200,
+  "where": "last line of p. 200: '(17.5.1) et (17.7.1), | il suffit de considérer' (page break 200/201)",
+  "scan": "p. 201 begins mid-sentence: 'il suffit de considérer' at the left margin (x 340 px like the lines below)",
+  "tex": "blank lines before and after \\oldpage[IV-4]{201}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(17.5.1) et (17.7.1),\n\n",
+   "new": "(17.5.1) et (17.7.1),\n"
+  },
+  "note": "The marker is at the right place. Part 1 of 2: the first p. 201 finding removes the blank line after \\oldpage[IV-4]{201}; apply both (\\oldpage ends with \\ignorespaces, which does not skip a \\par)."
+ },
+ {
+  "page": 201,
+  "where": "top of p. 201: '\\oldpage[IV-4]{201}' + blank line before 'il suffit'",
+  "scan": "mid-sentence page break (see the last p. 200 finding)",
+  "tex": "blank line after the marker",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{201}\n\nil suffit",
+   "new": "\\oldpage[IV-4]{201}\nil suffit"
+  },
+  "note": "Part 2 of 2 with the last p. 200 finding; both blank lines must go."
+ },
+ {
+  "page": 201,
+  "where": "paragraph 'Lorsque X→S...': 'et que gr•_𝒥(𝒪_X) est isomorphe'",
+  "scan": "gr with a raised bullet (gr•)",
+  "tex": "^*",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et que $\\operatorname{gr}_{\\mathscr J}^*(\\sh{O}_X)$ est isomorphe",
+   "new": "et que $\\operatorname{gr}_{\\mathscr J}^\\bullet(\\sh{O}_X)$ est isomorphe"
+  },
+  "note": "GLOBAL_ISSUES 60/83: the print's gr• is gr^\\bullet, not ^*."
+ },
+ {
+  "page": 201,
+  "where": "same sentence: 'isomorphe à S•_{𝒪_Y}(𝒩_{Y/X})'",
+  "scan": "bold S with a raised bullet (crop c201_S.png)",
+  "tex": "\\mathbf S_{\\sh{O}_Y}^*",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf S_{\\sh{O}_Y}^*(\\sh{N}_{Y/X})$, donc est",
+   "new": "\\mathbf S_{\\sh{O}_Y}^\\bullet(\\sh{N}_{Y/X})$, donc est"
+  },
+  "note": "Same form as the earlier IV-4 page fixes (\\mathbf{S}_{...}^{\\bullet})."
+ },
+ {
+  "page": 201,
+  "where": "Corollaire (19.4.9), l. 1: 'Sous les hypothèses générales de (19.4.8),'",
+  "scan": "reference upright inside the italic statement",
+  "tex": "italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "Sous les hypothèses générales de (19.4.8),",
+   "new": "Sous les hypothèses générales de \\textup{(19.4.8)},"
+  },
+  "note": ""
+ },
+ {
+  "page": 201,
+  "where": "Corollaire (19.4.9), last line: 'aux points de U—Y.'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "lisse sur $S$ aux points de $U-Y$.",
+   "new": "lisse sur $S$ aux points de $U\\setmin Y$."
+  },
+  "note": "\\setmin as in the earlier IV-4 fixes."
+ },
+ {
+  "page": 201,
+  "where": "Proposition (19.4.11), l. 2: 'l'Idéal quasi-cohérent de 𝒪_X image de u'",
+  "scan": "the subscript X of this 𝒪_X is visibly bolder than the subscript X of '𝒪_X-Modules' earlier on the same line (side-by-side crops c201_OX1.png, c201_OX2.png); mid-line, not at the line end",
+  "tex": "\\sh{O}_X (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "de $\\sh{O}_X$ image de $u$",
+   "new": "de $\\sh{O}_{\\mathbf X}$ image de $u$"
+  },
+  "corrected": "de $\\sh{O}_X$ image de $u$",
+  "note": "Wrong-fount letter recorded as a misprint (GLOBAL_ISSUES 29/99). The fix restores the printed reading."
+ },
+ {
+  "page": 201,
+  "where": "Proposition (19.4.11): 'le fibré projectif sur X défini par ℰ (II, 4.1.1)'",
+  "scan": "bold II, reference upright",
+  "tex": "plain II, italic (environment)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "défini par $\\mathscr E$ (II, 4.1.1),",
+   "new": "défini par $\\mathscr E$ \\textup{(\\textbf{II}, 4.1.1)},"
+  },
+  "note": "One edit for convention 2 (bold II) and convention 6 (upright reference inside the italic statement). The P of P(ℰ) is bold UPRIGHT here (crop c201_PP.png): \\mathbf P is right, no convention-10 change."
+ },
+ {
+  "page": 201,
+  "where": "Proposition (19.4.11): 'α_1^♯ : p^*(ℰ) → 𝒪_P(1)'",
+  "scan": "sharp sign ♯ (crop c201_PP.png)",
+  "tex": "^{\\#}",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\alpha_1^{\\#}:p^*(\\mathscr E)",
+   "new": "$\\alpha_1^{\\sharp}:p^*(\\mathscr E)"
+  },
+  "note": ""
+ },
+ {
+  "page": 201,
+  "where": "Proposition (19.4.11): 'l'homomorphisme canonique (II, 4.1.5.1) et ℋ son noyau'",
+  "scan": "bold II, reference upright",
+  "tex": "plain II, italic (environment)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "l'homomorphisme canonique (II, 4.1.5.1) et",
+   "new": "l'homomorphisme canonique \\textup{(\\textbf{II}, 4.1.5.1)} et"
+  },
+  "note": "One edit for convention 2 (bold II) and convention 6 (upright reference inside the italic statement)."
+ },
+ {
+  "page": 201,
+  "where": "Proposition (19.4.11), display: arrow label α_1^♯",
+  "scan": "sharp sign ♯ (crop c201_disp.png)",
+  "tex": "^{\\#}",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\xrightarrow{\\alpha_1^{\\#}}\\sh{O}_P(1)",
+   "new": "\\xrightarrow{\\alpha_1^{\\sharp}}\\sh{O}_P(1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "Proposition (19.4.11) (i): item label",
+  "scan": "'(i)' upright",
+  "tex": "\\item[(i)] italic inside the statement",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(i)] L'image de $X'$",
+   "new": "\\item[\\textup{(i)}] L'image de $X'$"
+  },
+  "note": "Roman-numeral labels in italic statements are upright (GLOBAL_ISSUES 16)."
+ },
+ {
+  "page": 202,
+  "where": "Proposition (19.4.11) (ii): item label",
+  "scan": "'(ii)' upright",
+  "tex": "\\item[(ii)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(ii)] Si $\\mathscr E$ est un",
+   "new": "\\item[\\textup{(ii)}] Si $\\mathscr E$ est un"
+  },
+  "note": "GLOBAL_ISSUES 16."
+ },
+ {
+  "page": 202,
+  "where": "Proposition (19.4.11) (iii): item label",
+  "scan": "'(iii)' upright",
+  "tex": "\\item[(iii)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(iii)] On suppose que $X$",
+   "new": "\\item[\\textup{(iii)}] On suppose que $X$"
+  },
+  "note": "GLOBAL_ISSUES 16."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (i), l. 2: '⊕_{n≥0}𝒥^n (II, 3.6.2) est un sous-préschéma'",
+  "scan": "bold II, reference upright (crop c202_i.png)",
+  "tex": "plain II, italic (environment)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathscr J^n$ (II, 3.6.2) est un sous-préschéma",
+   "new": "\\mathscr J^n$ \\textup{(\\textbf{II}, 3.6.2)} est un sous-préschéma"
+  },
+  "note": "One edit for convention 2 (bold II) and convention 6 (upright reference inside the italic statement). The P of P(ℰ) in (i) is bold upright (crop c202_i.png): no convention-10 change."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (ii): 'localement libre de rang m—1.'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "localement libre de rang $m-1$.",
+   "new": "localement libre de rang $m\\setmin 1$."
+  },
+  "note": "Long dash for subtraction (GLOBAL_ISSUES 23); \\setmin pending the convention-7 decision."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (iii), l. 3: 'de codimension égale à rg_{𝒪_x}(ℰ_x)'",
+  "scan": "rg_{𝒪_x}: the subscript of 𝒪 is a single italic x (crop c202_rg1.png)",
+  "tex": "\\operatorname{rg}_{\\sh{O}_{X,x}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{rg}_{\\sh{O}_{X,x}}(\\mathscr E_x)",
+   "new": "\\operatorname{rg}_{\\sh{O}_x}(\\mathscr E_x)"
+  },
+  "note": "The TeX rewrote the print's notation (GLOBAL_ISSUES 102); 𝒪_x is EGA's usual name for the local ring at x, not a misprint."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (iii): '(ce que nous exprimerons en disant que l'homomorphisme u est régulier au point x (cf. chap. V))'",
+  "scan": "the parenthesis is roman with 'régulier' italic (crop c202_iii.png)",
+  "tex": "all italic (environment), 'régulier' upright through \\emph",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(ce que nous exprimerons en disant que l'homomorphisme $u$ est \\emph{régulier} au point $x$ (cf. chap. V))",
+   "new": "\\textup{(ce que nous exprimerons en disant que l'homomorphisme $u$ est \\emph{régulier} au point $x$ (cf. chap. V))}"
+  },
+  "note": "Inside \\textup the existing \\emph{régulier} comes out italic, as printed."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (iii): 'en tous les points de X'—Y''",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "; en tous les points de $X'-Y'$",
+   "new": "; en tous les points de $X'\\setmin Y'$"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (iii): '(Y' image réciproque de Y dans X')'",
+  "scan": "both parentheses upright, next to the upright letters Y', X' (crops c202_par1.png, c202_par2.png; compare the italic parentheses of '(donc S-plat)', p. 200, crop c200_donc.png)",
+  "tex": "italic parentheses (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "medium",
+  "fix": {
+   "old": "($Y'$ image réciproque de $Y$ dans $X'$)",
+   "new": "\\textup{(}$Y'$ image réciproque de $Y$ dans $X'$\\textup{)}"
+  },
+  "note": "GLOBAL_ISSUES 26/101: parentheses are upright next to formulas; the words inside stay italic."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (iii), l. 7: 'de codimension rg_{𝒪_P}(ℋ_z) où z=j(x')'",
+  "scan": "rg_{𝒪_P}: the subscript of 𝒪 is P alone (crop c202_rg2.png)",
+  "tex": "\\operatorname{rg}_{\\sh{O}_{P,z}}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{rg}_{\\sh{O}_{P,z}}(\\mathscr H_z)",
+   "new": "\\operatorname{rg}_{\\sh{O}_P}(\\mathscr H_z)"
+  },
+  "note": "The TeX rewrote the print's subscript (GLOBAL_ISSUES 102). Possibly the authors meant 𝒪_z (as 𝒪_x in rg_{𝒪_x}(ℰ_x) above), but rg_{𝒪_P}(ℋ_z) is intelligible; not recorded as a misprint."
+ },
+ {
+  "page": 202,
+  "where": "(19.4.11) (iii), end: '(autrement dit l'homomorphisme v : ℋ→𝒪_P est régulier en z).'",
+  "scan": "roman parenthesis with 'régulier' italic (crop c202_iii2.png)",
+  "tex": "all italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(autrement dit l'homomorphisme $v:\\mathscr H\\to\\sh{O}_P$ est régulier en $z$)",
+   "new": "\\textup{(autrement dit l'homomorphisme $v:\\mathscr H\\to\\sh{O}_P$ est \\emph{régulier} en $z$)}"
+  },
+  "note": "One edit: the roman parenthesis (convention 6) and the italic 'régulier' inside it."
+ },
+ {
+  "page": 202,
+  "where": "proof of (19.4.11), l. 3: 't∈E=S^1_A(E) (II, 2.3.14)'",
+  "scan": "bold II",
+  "tex": "plain II",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 2.3.14)",
+   "new": "(\\textbf{II}, 2.3.14)"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 4: 'Γ(D_+(t), 𝒪_P)=S_{(t)} (II, 2.4.1)'",
+  "scan": "bold II",
+  "tex": "plain II",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 2.4.1)",
+   "new": "(\\textbf{II}, 2.4.1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 5: 'la définition de α_1^♯'",
+  "scan": "sharp sign ♯",
+  "tex": "^{\\#}",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "la définition de $\\alpha_1^{\\#}$",
+   "new": "la définition de $\\alpha_1^{\\sharp}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 6: '(II, 2.6.2.2), on voit'",
+  "scan": "bold II",
+  "tex": "plain II",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 2.6.2.2)",
+   "new": "(\\textbf{II}, 2.6.2.2)"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 6: 'on voit qu'à tout élément a=Σ_i x^{(i)}⊗((x_1^{(i)}x_2^{(i)}...x_n^{(i)})/t^n) de E⊗_A S_{(t)}'",
+  "scan": "set in the line, with a slash, double parentheses and baseline dots (crop c202_a2.png)",
+  "tex": "displayed, with \\frac and \\cdots",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on voit qu'à tout élément\n\\[\n  a=\\sum_i x^{(i)}\\otimes\\frac{x_1^{(i)}x_2^{(i)}\\cdots x_n^{(i)}}{t^n}\n\\]\nde $E\\otimes_A S_{(t)}$",
+   "new": "on voit qu'à tout élément $a=\\sum_i x^{(i)}\\otimes((x_1^{(i)}x_2^{(i)}\\ldots x_n^{(i)})/t^n)$ de $E\\otimes_A S_{(t)}$"
+  },
+  "note": "Formula displayed where the print has it inline (GLOBAL_ISSUES 21); the TeX also rewrote the slash as \\frac and the baseline dots as \\cdots."
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 7: 'α_1^♯ fait correspondre'",
+  "scan": "sharp sign ♯",
+  "tex": "^{\\#}",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\alpha_1^{\\#}$ fait correspondre",
+   "new": "$\\alpha_1^{\\sharp}$ fait correspondre"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 7-8: 'l'élément Σ_i(x^{(i)}x_1^{(i)}...x_n^{(i)})/t^n de (S(1))_{(t)}'",
+  "scan": "set in the line, with parentheses, a slash and baseline dots (crop c202_a3.png)",
+  "tex": "displayed, with \\frac and \\cdots",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'élément\n\\[\n  \\sum_i\\frac{x^{(i)}x_1^{(i)}\\cdots x_n^{(i)}}{t^n}\n\\]\nde $(S(1))_{(t)}$.",
+   "new": "l'élément $\\sum_i(x^{(i)}x_1^{(i)}\\ldots x_n^{(i)})/t^n$ de $(S(1))_{(t)}$."
+  },
+  "note": "Formula displayed where the print has it inline (GLOBAL_ISSUES 21)."
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 9: 'alors il en est de même l'image de a''",
+  "scan": "'il en est de même l'image de' without 'de' before 'l'image' (crop c202_s3a.png)",
+  "tex": "'il en est de même de l'image de' (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de même de l'image",
+   "new": "de même l'image"
+  },
+  "corrected": "de même de l'image",
+  "note": "The construction needs 'de' ('il en est de même de l'image'); the print drops it. The fix changes only the word; independent of the next finding (adjacent text, no overlap)."
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 9: 'a'=v(a)=Σ_i u(x^{(i)})(x_1^{(i)}..x_n^{(i)})/t^n par l'homomorphisme canonique'",
+  "scan": "set in the line, with a slash (crops c202_s3a.png, c202_dots.png)",
+  "tex": "displayed, with \\frac",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": " de\n\\[\n  a'=v(a)=\\sum_i u(x^{(i)})\\frac{x_1^{(i)}\\cdots x_n^{(i)}}{t^n}\n\\]\npar l'homomorphisme canonique",
+   "new": " de $a'=v(a)=\\sum_i u(x^{(i)})(x_1^{(i)}\\ldots x_n^{(i)})/t^n$ par l'homomorphisme canonique"
+  },
+  "note": "Formula displayed where the print has it inline (GLOBAL_ISSUES 21). This edit writes the regular three dots; the print's two dots are restored by the next finding (a misprint), which must be applied after this one."
+ },
+ {
+  "page": 202,
+  "where": "same formula: 'x_1^{(i)}..x_n^{(i)}' with two dots",
+  "scan": "two baseline dots between x_1^{(i)} and x_n^{(i)}, evenly spaced, no room for a third (crop c202_dots2.png)",
+  "tex": "\\cdots (three dots, silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "(x_1^{(i)}\\ldots x_n^{(i)})/t^n$ par",
+   "new": "(x_1^{(i)}\\mathinner{\\ldotp\\ldotp}x_n^{(i)})/t^n$ par"
+  },
+  "corrected": "(x_1^{(i)}\\ldots x_n^{(i)})/t^n",
+  "note": "'old' is the text AFTER the previous finding (apply that first). \\mathinner{\\ldotp\\ldotp} is the two-dot form of \\ldots (same spacing). Every other product on the page has three dots."
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 10: 'l'homomorphisme canonique S_{(t)} → (u(E))^n_{(t)} (II, 3.6.2)'",
+  "scan": "(u(E))^n_{(t)}: superscript n and subscript (t) on (u(E)); no ⊕ (crop c202_s3a.png)",
+  "tex": "(\\bigoplus_{n\\geq0}(u(E))^n)_{(u(t))}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$S_{(t)}\\to(\\bigoplus_{n\\geq0}(u(E))^n)_{(u(t))}$",
+   "new": "$S_{(t)}\\to(u(E))^n_{(t)}$"
+  },
+  "note": "The TeX replaced the print's abbreviated notation by an explicit form (GLOBAL_ISSUES 46/102). The print's (u(E))^n_{(t)} stands for the degree-0 part of the Rees algebra ⊕(u(E))^n localised at u(t); kept as printed (an abbreviation, not recorded as a misprint)."
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 10: '(II, 3.6.2). Or, cette image'",
+  "scan": "bold II",
+  "tex": "plain II",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 3.6.2). Or, cette image",
+   "new": "(\\textbf{II}, 3.6.2). Or, cette image"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 11: 'n'est autre que Σ_i u(x^{(i)})u(x_1^{(i)})...u(x_n^{(i)})/(u(t))^n dans l'anneau A_{u(t)}'",
+  "scan": "set in the line, with a slash and baseline dots (crop c202_s3b.png)",
+  "tex": "displayed, with \\frac and \\cdots",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "n'est autre que\n\\[\n  \\sum_i\\frac{u(x^{(i)})u(x_1^{(i)})\\cdots u(x_n^{(i)})}{(u(t))^n}\n\\]\ndans l'anneau",
+   "new": "n'est autre que $\\sum_i u(x^{(i)})u(x_1^{(i)})\\ldots u(x_n^{(i)})/(u(t))^n$ dans l'anneau"
+  },
+  "note": "Formula displayed where the print has it inline (GLOBAL_ISSUES 21)."
+ },
+ {
+  "page": 202,
+  "where": "proof, l. 13: 'l'image canonique de Σ_i(x^{(i)}x_1^{(i)}...x_n^{(i)})/t^{n+1}'",
+  "scan": "parentheses around the product; baseline dots (crop c202_s3b.png)",
+  "tex": "no parentheses; \\cdots",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\sum_i x^{(i)}x_1^{(i)}\\cdots x_n^{(i)}/t^{n+1}$",
+   "new": "$\\sum_i(x^{(i)}x_1^{(i)}\\ldots x_n^{(i)})/t^{n+1}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof of (ii): 'puisque α_1^♯ : E⊗_A S_{(t)} → (S(1))_{(t)}'",
+  "scan": "sharp sign ♯",
+  "tex": "^{\\#}",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "puisque $\\alpha_1^{\\#}:E\\otimes_A",
+   "new": "puisque $\\alpha_1^{\\sharp}:E\\otimes_A"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof of (ii), display: arrow label α_1^♯",
+  "scan": "sharp sign ♯",
+  "tex": "^{\\#}",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\xrightarrow{\\alpha_1^{\\#}}(S(1))_{(t)}",
+   "new": "\\xrightarrow{\\alpha_1^{\\sharp}}(S(1))_{(t)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof of (ii), end: 'projectif de rang m—1, d'où (ii)'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "projectif de rang $m-1$, d'où (ii)",
+   "new": "projectif de rang $m\\setmin 1$, d'où (ii)"
+  },
+  "note": "Long dash for subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 202,
+  "where": "proof of (iii), l. 1: 'au-dessus d'un point x∈X—Y.'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "au-dessus d'un point $x\\in X-Y$.",
+   "new": "au-dessus d'un point $x\\in X\\setmin Y$."
+  },
+  "note": ""
+ },
+ {
+  "page": 202,
+  "where": "proof of (iii), l. 2: 'restreint à un voisinage de x, est surjectif,'",
+  "scan": "'surjectif' italic",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "restreint à un voisinage de $x$, est surjectif,",
+   "new": "restreint à un voisinage de $x$, est \\emph{surjectif},"
+  },
+  "note": "GLOBAL_ISSUES 83."
+ },
+ {
+  "page": 202,
+  "where": "last line of p. 202: '(les valeurs de t∈E | qui vérifient' (page break 202/203)",
+  "scan": "p. 203 begins mid-sentence: 'qui vérifient' at the left margin (x 322 px like the lines below)",
+  "tex": "blank lines before and after \\oldpage[IV-4]{203}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(les valeurs de $t\\in E$\n\n",
+   "new": "(les valeurs de $t\\in E$\n"
+  },
+  "note": "The marker is at the right place. Part 1 of 2: the first p. 203 finding removes the blank line after \\oldpage[IV-4]{203}; apply both."
+ },
+ {
+  "page": 203,
+  "where": "top of p. 203: '\\oldpage[IV-4]{203}' + blank line before 'qui vérifient'",
+  "scan": "mid-sentence page break (see the last p. 202 finding)",
+  "tex": "blank line after the marker",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{203}\n\nqui vérifient",
+   "new": "\\oldpage[IV-4]{203}\nqui vérifient"
+  },
+  "note": "Part 2 of 2 with the last p. 202 finding; both blank lines must go."
+ },
+ {
+  "page": 203,
+  "where": "l. 2: 'u(T_i)=0 pour 1≤i≤m—1'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "pour $1\\leq i\\leq m-1$, de sorte",
+   "new": "pour $1\\leq i\\leq m\\setmin 1$, de sorte"
+  },
+  "note": "Long dash for subtraction (GLOBAL_ISSUES 23)."
+ },
+ {
+  "page": 203,
+  "where": "l. 4: 'les éléments de la forme Σ_α L_α(T)⊗T^α de E⊗_A A[T_1, ..., T_{m-1}]'",
+  "scan": "set in the line",
+  "tex": "displayed",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de la forme\n\\[\n  \\sum_\\alpha L_\\alpha(\\mathbf T)\\otimes\\mathbf T^\\alpha\n\\]\nde $E\\otimes_A",
+   "new": "de la forme $\\sum_\\alpha L_\\alpha(\\mathbf T)\\otimes\\mathbf T^\\alpha$ de $E\\otimes_A"
+  },
+  "note": "Layout only (display vs inline, GLOBAL_ISSUES 21)."
+ },
+ {
+  "page": 203,
+  "where": "l. 5: 'L_α(T)=λ_{α0}+λ_{α1}T_1+...+λ_{α,m-1}T_{m-1}'",
+  "scan": "baseline dots (crop c203_L.png)",
+  "tex": "\\cdots",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\lambda_{\\alpha1}T_1+\\cdots+\\lambda_{\\alpha,m-1}",
+   "new": "\\lambda_{\\alpha1}T_1+\\ldots+\\lambda_{\\alpha,m-1}"
+  },
+  "note": "\\cdots where the print has baseline dots."
+ },
+ {
+  "page": 203,
+  "where": "l. 6: 'lorsque la condition λ_{00}=0 est remplie'",
+  "scan": "λ_{00}: two zeros of the same weight, no comma (crop c203_lam00.png)",
+  "tex": "\\lambda_{\\mathbf0,0} (bold zero and a comma)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\lambda_{\\mathbf0,0}=0$",
+   "new": "$\\lambda_{00}=0$"
+  },
+  "note": "Both subscript zeros print alike (small-type weight); the TeX added the comma and set the first zero bold."
+ },
+ {
+  "page": 203,
+  "where": "l. 7: 'pour |α|≥1'",
+  "scan": "bold alpha at full size (crop c203_alpha.png)",
+  "tex": "light \\alpha",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "pour $|\\alpha|\\geq1$",
+   "new": "pour $|\\boldsymbol{\\alpha}|\\geq1$"
+  },
+  "note": "The multi-index α between the bars is bold; the subscript and exponent α elsewhere are small type and are left as they are."
+ },
+ {
+  "page": 203,
+  "where": "l. 9: 'Les éléments de l'idéal 𝔎 correspondants'",
+  "scan": "Fraktur K (crop c203_frak.png)",
+  "tex": "\\mathscr K (script K)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'idéal $\\mathscr K$ correspondants",
+   "new": "l'idéal $\\mathfrak K$ correspondants"
+  },
+  "note": "The print has the Fraktur letter (the ideal of S_{(t)} defined by 𝒦), not the script 𝒦 of the statement; its shape is the Fraktur K that GLOBAL_ISSUES 63 says is often misread as R."
+ },
+ {
+  "page": 203,
+  "where": "l. 13: 'en tous les points de X'—Y' et que j(X')=Z'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "en tous les points de $X'-Y'$ et que",
+   "new": "en tous les points de $X'\\setmin Y'$ et que"
+  },
+  "note": ""
+ },
+ {
+  "page": 203,
+  "where": "l. 16: '(en vertu de (19.1.1) et de (0, 17.1.7))'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "et de ($0$, 17.1.7)) à dire",
+   "new": "et de (\\textbf{0}, 17.1.7)) à dire"
+  },
+  "note": "Bare bold 0 in the print (no subscript)."
+ },
+ {
+  "page": 203,
+  "where": "l. 17: 'et que l'homomorphisme u_X⊗1 : ℰ_X⊗_{𝒪_{X,x}}k(x) → 𝔪_x/𝔪_x^2 est injectif'",
+  "scan": "set in the line; k(x) bold italic (crop c203_ux.png)",
+  "tex": "displayed; \\mathbf k(x) bold upright",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et que l'homomorphisme\n\\[\n  u_x\\otimes1:\\mathscr E_x\\otimes_{\\sh{O}_{X,x}}\\mathbf k(x)\\longrightarrow\\mathfrak m_x/\\mathfrak m_x^2\n\\]\nest \\emph{injectif}. Cela",
+   "new": "et que l'homomorphisme $u_x\\otimes1:\\mathscr E_x\\otimes_{\\sh{O}_{X,x}}\\boldsymbol{k}(x)\\to\\mathfrak m_x/\\mathfrak m_x^2$ est \\emph{injectif}. Cela"
+  },
+  "note": "Formula displayed where the print has it inline (GLOBAL_ISSUES 21). One edit, which also writes the k bold italic (convention 1; not in a subscript). The print's u_X, ℰ_X are restored by the next finding (a misprint), which must be applied after this one."
+ },
+ {
+  "page": 203,
+  "where": "same formula: 'u_X⊗1 : ℰ_X⊗...'",
+  "scan": "roman capital X as the subscript of u and of ℰ (crop c203_ux.png), the same letter as the X of 𝒪_{X,x}",
+  "tex": "u_x, \\mathscr E_x (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "u_x\\otimes1:\\mathscr E_x",
+   "new": "u_X\\otimes1:\\mathscr E_X"
+  },
+  "corrected": "u_x\\otimes1:\\mathscr E_x",
+  "note": "The stalks at the point x are meant (u_x : ℰ_x → 𝒪_{X,x}, as ℰ_x in the displays below). Apply AFTER the previous finding (its 'old' contains this text). The fix changes only the two subscripts."
+ },
+ {
+  "page": 203,
+  "where": "l. 18: 'pour tout z∈P au-dessus de x, P est régulier au point z (17.5.8)'",
+  "scan": "'régulier' italic",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$P$ est régulier au point $z$",
+   "new": "$P$ est \\emph{régulier} au point $z$"
+  },
+  "note": "GLOBAL_ISSUES 83."
+ },
+ {
+  "page": 203,
+  "where": "l. 19: 'en outre (0, 17.3.3) l'homomorphisme canonique'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "en outre ($0$, 17.3.3) l'homomorphisme",
+   "new": "en outre (\\textbf{0}, 17.3.3) l'homomorphisme"
+  },
+  "note": ""
+ },
+ {
+  "page": 203,
+  "where": "(19.4.11.1): '(𝔪_x/𝔪_x^2)⊗_{k(x)}k(z) → 𝔪_z/𝔪_z^2'",
+  "scan": "k(z) bold italic; the subscript k(x) bold upright (crop c203_eq.png)",
+  "tex": "\\mathbf k(z)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf k(z)\\longrightarrow\\mathfrak m_z/\\mathfrak m_z^2\n  \\tag{19.4.11.1}",
+   "new": "\\boldsymbol{k}(z)\\longrightarrow\\mathfrak m_z/\\mathfrak m_z^2\n  \\tag{19.4.11.1}"
+  },
+  "note": "The TeX has bold upright \\mathbf k; outside subscripts the print sets the residue-field k bold italic. The subscript \\mathbf k(x) stays."
+ },
+ {
+  "page": 203,
+  "where": "display after (19.4.11.1): '(ℰ_x⊗𝒪_{P,z})⊗_{𝒪_{P,z}}k(z) → 𝔪_z/𝔪_z^2'",
+  "scan": "k(z) bold italic (crop c203_d1.png)",
+  "tex": "\\mathbf k(z)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\otimes_{\\sh{O}_{P,z}}\\mathbf k(z)\\longrightarrow",
+   "new": "\\otimes_{\\sh{O}_{P,z}}\\boldsymbol{k}(z)\\longrightarrow"
+  },
+  "note": ""
+ },
+ {
+  "page": 203,
+  "where": "display 'le composé': '(ℰ_x⊗k(x))⊗_{k(x)}k(z) → (𝔪_x/𝔪_x^2)⊗_{k(x)}k(z) → ...'",
+  "scan": "k(x) and the two k(z) bold italic; the two subscripts k(x) bold upright (crop c203_d2.png)",
+  "tex": "\\mathbf k throughout",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf k(x))\\otimes_{\\mathbf k(x)}\\mathbf k(z)\\longrightarrow(\\mathfrak m_x/\\mathfrak m_x^2)\\otimes_{\\mathbf k(x)}\\mathbf k(z)",
+   "new": "\\boldsymbol{k}(x))\\otimes_{\\mathbf k(x)}\\boldsymbol{k}(z)\\longrightarrow(\\mathfrak m_x/\\mathfrak m_x^2)\\otimes_{\\mathbf k(x)}\\boldsymbol{k}(z)"
+  },
+  "note": "Three occurrences in one edit; the subscripts stay \\mathbf k (GLOBAL_ISSUES 48)."
+ },
+ {
+  "page": 203,
+  "where": "'l'homomorphisme v_z⊗1 : ℋ_z⊗_{𝒪_{P,z}}k(z) → 𝔪_z/𝔪_z^2'",
+  "scan": "k(z) bold italic",
+  "tex": "\\mathbf k(z)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\otimes_{\\sh{O}_{P,z}}\\mathbf k(z)\\to\\mathfrak m_z",
+   "new": "\\otimes_{\\sh{O}_{P,z}}\\boldsymbol{k}(z)\\to\\mathfrak m_z"
+  },
+  "note": ""
+ },
+ {
+  "page": 203,
+  "where": "last line of p. 203: 'il suffit donc de montrer que les dimen-| sions' (page break 203/204)",
+  "scan": "p. 204 begins with 'sions' at the left margin (x 414 px like the lines below)",
+  "tex": "blank lines before and after \\oldpage[IV-4]{204}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "il suffit donc de montrer que les\n\n",
+   "new": "il suffit donc de montrer que les\n"
+  },
+  "note": "The marker stands before the whole word 'dimensions' (the print breaks inside the word); that place is right. Part 1 of 2: the first p. 204 finding removes the blank line after \\oldpage[IV-4]{204}; apply both."
+ },
+ {
+  "page": 204,
+  "where": "top of p. 204: '\\oldpage[IV-4]{204}' + blank line before 'dimensions'",
+  "scan": "mid-word page break (see the last p. 203 finding)",
+  "tex": "blank line after the marker",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{204}\n\ndimensions",
+   "new": "\\oldpage[IV-4]{204}\ndimensions"
+  },
+  "note": "Part 2 of 2 with the last p. 203 finding; both blank lines must go."
+ },
+ {
+  "page": 204,
+  "where": "l. 1: 'sont égales (0, 17.1.9)'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "sont égales ($0$, 17.1.9)",
+   "new": "sont égales (\\textbf{0}, 17.1.9)"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "l. 1: 'Mais en vertu de (0, 17.3.3),'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "Mais en vertu de ($0$, 17.3.3)",
+   "new": "Mais en vertu de (\\textbf{0}, 17.3.3)"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "l. 2: '𝒪_{Z,z}⊗_{𝒪_{X,x}}k(x)'",
+  "scan": "k(x) bold italic",
+  "tex": "\\mathbf k(x)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sh{O}_{Z,z}\\otimes_{\\sh{O}_{X,x}}\\mathbf k(x)$",
+   "new": "\\sh{O}_{Z,z}\\otimes_{\\sh{O}_{X,x}}\\boldsymbol{k}(x)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "l. 3: '𝒪_{X',x'}⊗_{𝒪_{X,x}}k(x)'",
+  "scan": "k(x) bold italic",
+  "tex": "\\mathbf k(x)",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sh{O}_{X',x'}\\otimes_{\\sh{O}_{X,x}}\\mathbf k(x)$",
+   "new": "\\sh{O}_{X',x'}\\otimes_{\\sh{O}_{X,x}}\\boldsymbol{k}(x)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "l. 7: 'un système régulier de paramètres (t_j)_{1≤j≤n} de B'",
+  "scan": "index j (crop c204_tj.png)",
+  "tex": "(t_i)_{1\\leq i\\leq n}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(t_i)_{1\\leq i\\leq n}$ de $B$",
+   "new": "$(t_j)_{1\\leq j\\leq n}$ de $B$"
+  },
+  "note": "The TeX renamed the print's index (GLOBAL_ISSUES 102)."
+ },
+ {
+  "page": 204,
+  "where": "l. 8: 'pour 1≤i≤m (0, 17.1.7);'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0$, 17.1.7); soit",
+   "new": "(\\textbf{0}, 17.1.7); soit"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "l. 9: '𝔍^n⊗_B(B/𝔪)=𝔍^n/𝔪𝔍^n'",
+  "scan": "parentheses around B/𝔪 (crop c204_Jn.png)",
+  "tex": "\\otimes_B B/\\mathfrak m without parentheses",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak J^n\\otimes_B B/\\mathfrak m=",
+   "new": "$\\mathfrak J^n\\otimes_B(B/\\mathfrak m)="
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "l. 9-10: '(⊕𝔍^n)⊗_B k(x) s'identifie à k(x)[T_1, ..., T_m]'",
+  "scan": "both k bold italic",
+  "tex": "\\mathbf k twice",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "\\otimes_B\\mathbf k(x)$ s'identifie à $\\mathbf k(x)[T_1",
+   "new": "\\otimes_B\\boldsymbol{k}(x)$ s'identifie à $\\boldsymbol{k}(x)[T_1"
+  },
+  "note": "Two occurrences in one edit."
+ },
+ {
+  "page": 204,
+  "where": "19.5, introduction: 'déjà étudiés dans (0, 15.1).'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "dans ($0$, 15.1).",
+   "new": "dans (\\textbf{0}, 15.1)."
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "19.5, introduction, l. 3 (first word of the line): 'étudiés'",
+  "scan": "the first é of 'étudiés' is bold: heavy bowl and accent, unlike the second é of the same word and the rest of the line (crops c204_etudies.png, c204_e1.png)",
+  "tex": "étudiés (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "déjà étudiés",
+   "new": "déjà \\textbf{é}tudiés"
+  },
+  "corrected": "déjà étudiés",
+  "note": "Wrong-fount letter recorded as a misprint (GLOBAL_ISSUES 29/99): a single letter at the start of the line, so not the line-end heaviness of item 100. The fix restores the printed reading; it does not touch the convention-2 edit of '(0, 15.1)' on the same line."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): label a)",
+  "scan": "'a)' upright (crop c204_items.png)",
+  "tex": "\\item[a)] italic inside the statement",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[a)] La suite $\\mathbf f$ est M-régulière.",
+   "new": "\\item[\\textup{a)}] La suite $\\mathbf f$ est M-régulière."
+  },
+  "note": "GLOBAL_ISSUES 88: labels are upright inside italic statements."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): label b)",
+  "scan": "'b)' upright",
+  "tex": "\\item[b)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b)] On a $\\operatorname{H}_i(\\mathbf f,M)=0$",
+   "new": "\\item[\\textup{b)}] On a $\\operatorname{H}_i(\\mathbf f,M)=0$"
+  },
+  "note": "GLOBAL_ISSUES 88."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): label b')",
+  "scan": "\"b')\" upright",
+  "tex": "\\item[b$'$)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[b$'$)] On a $\\operatorname{H}_1(\\mathbf f,M)=0$.",
+   "new": "\\item[\\textup{b$'$)}] On a $\\operatorname{H}_1(\\mathbf f,M)=0$."
+  },
+  "note": "GLOBAL_ISSUES 88 (hand-set \\item[b$'$)] labels need \\textup)."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): label c)",
+  "scan": "'c)' upright (crop c204_items2.png)",
+  "tex": "\\item[c)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[c)] La suite $\\mathbf f$ est M-quasi-régulière.",
+   "new": "\\item[\\textup{c)}] La suite $\\mathbf f$ est M-quasi-régulière."
+  },
+  "note": "GLOBAL_ISSUES 88."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1) b): 'pour tout i>0 (III, 1.1.3).'",
+  "scan": "bold III, reference upright",
+  "tex": "plain III, italic (environment)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "pour tout $i>0$ (III, 1.1.3).",
+   "new": "pour tout $i>0$ \\textup{(\\textbf{III}, 1.1.3)}."
+  },
+  "note": "One edit for convention 2 (bold III) and convention 6 (upright reference inside the italic statement)."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): 'Alors on a les implications' after the list",
+  "scan": "indented new paragraph (first line at x 532 px, the paragraph indent; left margin 419 px)",
+  "tex": "follows \\end{enumerate} without a blank line (no indent)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\nAlors on a les implications\n\\[\n",
+   "new": "\\end{enumerate}\n\nAlors on a les implications\n\\[\n"
+  },
+  "note": "GLOBAL_ISSUES 80 pattern (text after \\end{enumerate} loses the print's indent)."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1), display: 'a)⇒b)⇒b') et a)⇒c).'",
+  "scan": "the labels are wholly italic, parentheses included (crop c204_par_c.png)",
+  "tex": "math labels: italic letters, upright parentheses",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  a)\\Rightarrow b)\\Rightarrow b')\\qquad\\text{et}\\qquad a)\\Rightarrow c).",
+   "new": "  \\textit{a)}\\Rightarrow\\textit{b)}\\Rightarrow\\textit{b$'$)}\\qquad\\text{et}\\qquad\\textit{a)}\\Rightarrow\\textit{c)}."
+  },
+  "note": "In this display, part of the italic statement, the print sets the labels italic (unlike the upright labels of the list and of the last sentence of the statement)."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): 'Posons 𝔍=Σ f_iA.' after the display",
+  "scan": "indented new paragraph (x 532 px)",
+  "tex": "follows \\] without a blank line (no indent)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nPosons $\\mathfrak J",
+   "new": "\\]\n\nPosons $\\mathfrak J"
+  },
+  "note": "Item 47 pattern (no blank line after \\] where the print starts a new indented paragraph)."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1): '𝔍-préadique (resp. si tout module quotient'",
+  "scan": "'(resp.' upright; the closing parenthesis after the second 'préadique' is italic (crops c204_resp1.png, c204_par_a.png)",
+  "tex": "italic (environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "medium",
+  "fix": {
+   "old": "préadique (resp. si tout module",
+   "new": "préadique \\textup{(resp.} si tout module"
+  },
+  "note": "Same form as the earlier page fixes of '(resp. ...)' in italic statements; the closing parenthesis stays italic (it follows the italic 'préadique' and slants like it)."
+ },
+ {
+  "page": 204,
+  "where": "Théorème (19.5.1), last line: 'l'implication c)⇒a) (resp. b')⇒a)).'",
+  "scan": "two closing parentheses after the last a) (one closes '(resp.'); labels and '(resp.' upright (crops c204_resp.png, c204_par_b.png)",
+  "tex": "'(resp. $b')\\Rightarrow a)$.': one closing parenthesis; labels with italic letters",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'implication $c)\\Rightarrow a)$ (resp. $b')\\Rightarrow a)$.",
+   "new": "l'implication \\textup{c)}$\\Rightarrow$\\textup{a)} \\textup{(resp. b$'$)}$\\Rightarrow$\\textup{a))}."
+  },
+  "note": "One edit: the parenthesis that closes '(resp.' is missing in the TeX; the same edit sets the labels upright (GLOBAL_ISSUES 88) and '(resp.' roman (convention 6). The heavier 'a)).' at the line end is line-end impression (item 100), not reported."
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1), l. 1: 'Les implications a)⇒c), et c)⇒a) lorsque'",
+  "scan": "labels wholly italic in roman text",
+  "tex": "$a)\\Rightarrow c)$: italic letters, upright parentheses",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Les implications $a)\\Rightarrow c)$, et $c)\\Rightarrow a)$ lorsque",
+   "new": "Les implications \\emph{a)}$\\Rightarrow$\\emph{c)}, et \\emph{c)}$\\Rightarrow$\\emph{a)} lorsque"
+  },
+  "note": "GLOBAL_ISSUES 88."
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1), l. 2: 'ont déjà été prouvées (0, 15.1.9)'",
+  "scan": "bold 0",
+  "tex": "plain $0$",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "prouvées ($0$, 15.1.9)",
+   "new": "prouvées (\\textbf{0}, 15.1.9)"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1), l. 3: 'On a aussi montré (III, 1.1.4 et 1.1.3.3)'",
+  "scan": "bold III",
+  "tex": "plain III",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(III, 1.1.4 et 1.1.3.3)",
+   "new": "(\\textbf{III}, 1.1.4 et 1.1.3.3)"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1), l. 3-4: 'que a) entraîne b), et b) implique trivialement b').'",
+  "scan": "labels wholly italic",
+  "tex": "$a)$ etc.: italic letters, upright parentheses",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "que $a)$ entraîne $b)$, et $b)$ implique trivialement $b')$.",
+   "new": "que \\emph{a)} entraîne \\emph{b)}, et \\emph{b)} implique trivialement \\emph{b$'$)}."
+  },
+  "note": "GLOBAL_ISSUES 88."
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1), l. 5: 'préadique, b') entraîne a).'",
+  "scan": "labels wholly italic",
+  "tex": "$b')$, $a)$",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "préadique, $b')$ entraîne $a)$.",
+   "new": "préadique, \\emph{b$'$)} entraîne \\emph{a)}."
+  },
+  "note": "GLOBAL_ISSUES 88."
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1): 'le noyau de l'homothétie z⇝f_1z dans M'",
+  "scan": "wavy arrow (crop c204_wavy.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$z\\mapsto f_1z$",
+   "new": "$z\\leadsto f_1z$"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1): '(III, 1.1.1 et 1.1.2)'",
+  "scan": "bold III",
+  "tex": "plain III",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(III, 1.1.1 et 1.1.2)",
+   "new": "(\\textbf{III}, 1.1.1 et 1.1.2)"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1): 'avec les notations de (III, 1.1.2),'",
+  "scan": "bold III",
+  "tex": "plain III",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "notations de (III, 1.1.2),",
+   "new": "notations de (\\textbf{III}, 1.1.2),"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "proof of (19.5.1): 'On a donc (III, 1.1.4.1) la suite exacte'",
+  "scan": "bold III",
+  "tex": "plain III",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "On a donc (III, 1.1.4.1)",
+   "new": "On a donc (\\textbf{III}, 1.1.4.1)"
+  },
+  "note": ""
+ },
+ {
+  "page": 204,
+  "where": "end of p. 204: display (19.5.1.1) | 'La relation H_1(f, M)=0 implique donc' (page break 204/205)",
+  "scan": "p. 205 begins 'La relation' at the left margin (x 349 px like the lines below): the sentence after the display continues without a paragraph break",
+  "tex": "blank lines before and after \\oldpage[IV-4]{205}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\tag{19.5.1.1}\\label{IV.19.5.1.1}\n\\end{equation}\n\n",
+   "new": "\\tag{19.5.1.1}\\label{IV.19.5.1.1}\n\\end{equation}\n"
+  },
+  "note": "BOUNDARY FIX (page break with p. 205). The marker is at the right place. Part 1 of 2: the blank line AFTER \\oldpage[IV-4]{205} lies in the p. 205 segment (outside these pages) and must go too: '\\oldpage[IV-4]{205}\\n\\nLa relation' -> '\\oldpage[IV-4]{205}\\nLa relation'."
+ }
+]

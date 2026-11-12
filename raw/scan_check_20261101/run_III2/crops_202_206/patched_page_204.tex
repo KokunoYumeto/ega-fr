@@ -1,0 +1,83 @@
+% from ega3-7-fr.tex
+\oldpage[III]{204}
+\begin{proof}
+La première assertion est conséquence immédiate de (7.6.1) et du fait que la
+question est locale sur $Y$ et $Y'$, d'après (7.7.5, \emph{c)} et \emph{b)}). Pour démontrer
+la seconde assertion, il suffit de voir que pour tout $y\in Y$,
+$T_p^{\mathscr O_y}$ est exact à droite (resp. à gauche), en vertu de (7.7.10).
+Mais par hypothèse, il existe $y'\in Y'$ tel que $g(y')=y$, et
+$\mathscr O_{y'}$ est un $\mathscr O_y$-module fidèlement plat ; la conclusion
+résulte alors de l'hypothèse et de (7.6.1).
+\end{proof}
+
+\begin{remarks}[7.7.12]
+\textnormal{(i)} Sous les hypothèses de (7.7.4), supposons en outre que
+$\mathscr P_\bullet$ soit un complexe \emph{fini} ; alors il résulte de (7.7.1)
+(puisqu'on peut prendre pour $\mathfrak U$ un recouvrement ouvert affine
+\emph{fini} de $X$) que le bicomplexe
+$C^\bullet(\mathfrak U,\mathscr P^\bullet\otimes_{\mathscr O_Y}\mathscr M)$ est
+aussi \emph{fini}, et de façon précise qu'il existe un ensemble fini $E$ de couples,
+\emph{indépendant de $\mathscr M$}, tel que
+$C^h(\mathfrak U,\mathscr P^k\otimes_{\mathscr O_Y}\mathscr M)=0$ pour tous les couples $(h,k)\notin E$.
+On en conclut qu'il existe $i_1$ tel que, pour $i\geq i_1$, on ait
+$\mathscr T_i(\mathscr M)=0$ pour \emph{tout} $\mathscr O_Y$-Module
+quasi-cohérent $\mathscr M$. En particulier, $\mathscr T_i$ est trivialement un
+foncteur exact en $\mathscr M$ pour ces valeurs de $i$, et par suite (7.4.1),
+$Z'_i(L_\bullet)$ est un $A$-module \emph{plat} de type fini (donc
+\emph{projectif} de type fini, puisque $A$ est noethérien) pour ces valeurs de
+$i$. Considérons alors le complexe $(L'_\bullet)$ de $A$-modules tel que
+$L'_i=L_i$ pour $i<i_1$, $L'_{i_1}=Z'_{i_1}(L_\bullet)$ et $L'_i=0$ pour
+$i>i_1$ et soit $\mathscr L'_\bullet=\widetilde{L}'_\bullet$. Il est clair que
+$  \mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+  =
+  \mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)$
+pour $i<i_1-1$ et aussi pour $i\geq i_1$ (les deux membres étant alors nuls) ;
+enfin, comme
+$\operatorname{Im}(Z'_{i_1}\otimes_A M)=\operatorname{Im}(L_{i_1}\otimes_A M)$
+par définition, on a aussi
+$\mathscr H_i(\mathscr L'_\bullet\otimes_{\mathscr O_Y}\mathscr M)
+=\mathscr H_i(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M)$ pour
+$i=i_1-1$. On voit donc qu'on peut supposer dans (7.7.4) que
+$\mathscr L_\bullet$ est aussi un complexe \emph{fini}, à condition d'exiger
+seulement que les $\mathscr L_i$ soient des $\mathscr O_Y$-Modules
+\emph{localement libres} (associés à des $A$-modules projectifs de type fini).
+
+Ce raisonnement s'applique en particulier au cas où $\mathscr P_\bullet$ est
+réduit à \emph{un seul} terme $\mathscr F\ne0$, de degré 0 (auquel cas
+$\mathscr T_n(\mathscr M)=\mathrm R^{-n}f_*
+(\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$) ; on peut alors supposer que les
+$\mathscr L_i$ sont nuls pour $i>0$ ; on utilisera de préférence dans ce cas les
+notations cohomologiques, écrivant donc $\mathscr T^{-p}$ au lieu de
+$\mathscr T_p$.
+
+\medskip
+\textnormal{(ii)} Lorsque dans l'énoncé de (7.7.5), on ne suppose plus que les
+$\mathscr P_i$ sont $Y$-plats, les conclusions restent valables à condition de
+poser cette fois
+\[
+  \mathscr T_p(\mathscr M)
+  =
+  \boldsymbol{\mathscr{T}\!or}^Y_p
+    (f,1_Y;\mathscr P_\bullet,\mathscr M).
+  \tag{7.7.12.1}\label{III.7.7.12.1.fr}
+\]
+En effet, $\boldsymbol{\mathscr{T}\!or}^Y_n(f,1_Y;\mathscr P_\bullet,\mathscr O_Y)$ est
+alors un $\mathscr O_Y$-Module \emph{cohérent} en vertu de (6.7.9). La
+démonstration de (6.10.5) s'applique sans changement, compte tenu de (6.10.1)
+et montre encore que lorsque $Y=\operatorname{Spec}(A)$ est affine, l'on a
+$\mathscr T_p(\mathscr M)=\mathscr H_p(\mathscr L_\bullet\otimes_{\mathscr O_Y}\mathscr M)$,
+avec $\mathscr L_\bullet=\widetilde{L}_\bullet$,
+où $L_\bullet$ est un complexe de $A$-modules libres de type fini ; cela prouve
+notre assertion.
+\end{remarks}
+
+\subsection{Application aux morphismes propres : II. Critères de platitude
+cohomologique.}
+\label{subsection:III.7.8.fr}
+
+\begin{definition}[7.8.1]
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme quasi-compact et
+séparé, $\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules
+quasi-cohérents et $Y$-plats, $\mathscr T_\bullet$ le foncteur homologique de
+$\mathscr O_Y$-Modules quasi-cohérents défini par \textup{(7.7.1.1)}, $y$ un point de $Y$.
+On dit que $\mathscr P_\bullet$ est

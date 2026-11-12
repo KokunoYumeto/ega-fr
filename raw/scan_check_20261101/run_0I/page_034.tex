@@ -1,0 +1,82 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{34}
+
+\begin{env}[3.7.1]
+\label{0.3.7.1-fr}
+Nous allons montrer que lorsqu'on prend pour $\mathbf{K}$ la catégorie des
+ensembles, l'image réciproque par $\psi$ de tout préfaisceau $\mathcal{G}$ à
+valeurs dans $\mathbf{K}$ \emph{existe toujours} (les notations et hypothèses
+sur $X$, $Y$, $\psi$ étant celles de (3.5.3)). En effet, pour tout ouvert
+$U\subset X$, définissons $\mathcal{G}'(U)$ comme suit~: un élément $s'$ de
+$\mathcal{G}'(U)$ est une famille $(s'_x)_{x\in U}$, où
+$s'_x\in\mathcal{G}_{\psi(x)}$ pour tout $x\in U$, et où, pour tout $x\in U$,
+la condition suivante est remplie~: il existe un voisinage ouvert $V$ de
+$\psi(x)$ dans $Y$, un voisinage $W\subset\psi^{-1}(V)\cap U$ de $x$ et un
+élément $s\in\mathcal{G}(V)$ tels que $s'_z=s_{\psi(z)}$ pour tout $z\in W$.
+On vérifie immédiatement que $U\mapsto\mathcal{G}'(U)$ satisfait bien aux axiomes
+des \emph{faisceaux}.
+
+Soit maintenant $\mathcal{F}$ un faisceau d'ensembles sur $X$, et soient
+$u:\mathcal{G}\to\psi_*(\mathcal{F})$,
+$v:\mathcal{G}'\to\mathcal{F}$ des morphismes. On définit $u^\sharp$ et $v^b$
+de la façon suivante~: si $s'$ est une section de $\mathcal{G}'$ au-dessus
+d'un voisinage $U$ de $x\in X$ et si $V$ est un voisinage ouvert de $\psi(x)$
+et $s\in\mathcal{G}(V)$ tel que l'on ait $s'_z=s_{\psi(z)}$ pour $z$ dans un
+voisinage de $x$ contenu dans $\psi^{-1}(V)\cap U$, on prend
+$u_x^\sharp(s'_x)=u_{\psi(x)}(s_{\psi(x)})$. De même, si
+$s\in\mathcal{G}(V)$ ($V$ ouvert dans $Y$), $v^b(s)$ est la section de
+$\mathcal{F}$ au-dessus de $\psi^{-1}(V)$, image par $v$ de la section $s'$ de
+$\mathcal{G}'$ telle que $s'_x=s_{\psi(x)}$ pour tout
+$x\in\psi^{-1}(V)$. En outre, l'homomorphisme canonique (3.5.3)
+$\rho:\mathcal{G}\to\psi_*(\psi^*(\mathcal{G}))$ se définit de la façon
+suivante~: pour tout ouvert $V\subset Y$ et toute section
+$s\in\Gamma(V,\mathcal{G})$, $\rho(s)$ est la section
+$(s_{\psi(x)})_{x\in\psi^{-1}(V)}$ de $\psi^*(\mathcal{G})$ au-dessus de
+$\psi^{-1}(V)$. La vérification des relations
+$(u^\sharp)^b=u$, $(v^b)^\sharp=v$ et
+$v^b=\psi_*(v)\circ\rho$ est immédiate, et démontre notre assertion.
+
+On vérifie que, si $w:\mathcal{G}_1\to\mathcal{G}_2$ est un homomorphisme de
+préfaisceaux d'ensembles sur $Y$, $\psi^*(w)$ s'explicite de la façon
+suivante~: si $s'=(s'_x)_{x\in U}$ est une section de
+$\psi^*(\mathcal{G}_1)$ au-dessus d'un ouvert $U$ de $X$,
+$(\psi^*(w))(s')$ est la famille
+$(w_{\psi(x)}(s'_x))_{x\in U}$. Enfin, il est immédiat que pour tout ouvert
+$V$ de $Y$, l'image réciproque de $\mathcal{G}|V$ par la restriction de
+$\psi$ à $\psi^{-1}(V)$ est identique au faisceau induit
+$\psi^*(\mathcal{G})|\psi^{-1}(V)$.
+
+Lorsque $\psi$ est l'identité $1_X$, on retrouve la définition d'un faisceau
+d'ensembles associé à un préfaisceau (G, II, 1.2). Les considérations
+précédentes s'appliquent sans changement lorsque $\mathbf{K}$ est la
+catégorie des groupes ou des anneaux (non nécessairement commutatifs).
+
+Lorsque $X$ est une partie quelconque d'un espace topologique $Y$, et $j$
+l'injection canonique $X\to Y$, pour tout faisceau $\mathcal{G}$ sur $Y$ à
+valeurs dans une catégorie $\mathbf{K}$, on appelle faisceau \emph{induit} sur
+$X$ par $\mathcal{G}$ l'image réciproque $j^*(\mathcal{G})$ (lorsqu'elle
+existe)~; pour les faisceaux d'ensembles (ou de groupes, ou d'anneaux) on
+retrouve la définition usuelle (G, II, 1.5).
+\end{env}
+
+\begin{env}[3.7.2]
+\label{0.3.7.2-fr}
+Conservant les notations et hypothèses de (3.5.3), supposons que
+$\mathcal{G}$ soit un \emph{faisceau} de groupes (resp. d'anneaux) sur $Y$.
+La définition des sections de $\psi^*(\mathcal{G})$ (3.7.1) montre (compte
+tenu de (3.4.4)) que l'homomorphisme de fibres
+$\psi_x\circ\rho_{\psi(x)}:\mathcal{G}_{\psi(x)}\to
+(\psi^*(\mathcal{G}))_x$ est un \emph{isomorphisme fonctoriel en
+$\mathcal{G}$}, qui permet d'identifier ces deux fibres~; avec cette
+identification, $u_x^\sharp$ est identique à l'homomorphisme défini dans
+(3.5.1), et en particulier, on a
+$\operatorname{Supp}(\psi^*(\mathcal{G}))=
+\psi^{-1}(\operatorname{Supp}(\mathcal{G}))$.
+
+Une conséquence immédiate de ce résultat est que \emph{le foncteur
+$\psi^*(\mathcal{G})$ est exact en $\mathcal{G}$} dans la catégorie abélienne
+des faisceaux de groupes commutatifs.
+\end{env}
+
+\subsection{Faisceaux d'espaces pseudo-discrets}
+

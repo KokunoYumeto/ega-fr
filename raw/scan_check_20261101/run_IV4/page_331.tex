@@ -1,0 +1,82 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{331}
+\begin{proposition}[21.15.5]
+\label{IV.21.15.5}
+Soient $D$ un diviseur sur $X$, $\mathcal O_X(D)$ l'Idéal fractionnaire inversible et
+$s_D$ la section méromorphe régulière de $\mathcal O_X(D)$ définis canoniquement par
+$D$ (21.2.8 et 21.2.9). Pour que $D\in\operatorname{Div}(X/S)$, il faut et il suffit
+que $s_D\in\Gamma(X,\mathscr M_{X/S}(\mathcal O_X(D)))$.
+\end{proposition}
+
+\begin{proof}
+En effet, si $U$ est un ouvert de $X$ tel que $D|U=\operatorname{div}_U(f)$, où
+$f\in\Gamma(U,\mathscr M_X^*)$, dire que
+$s_D\in\Gamma(U,\mathscr M_{X/S}(\mathcal O_X(D)))$ signifie, en vertu des
+définitions (20.6.2), que $f^{-1}\in\Gamma(U,\mathscr M_{X/S})$, d'où la
+proposition.
+\end{proof}
+
+L'interprétation des diviseurs sur $X$ à l'aide des classes
+$\operatorname{cl}(\mathscr L,s)$ (21.2.11) permet donc d'interpréter les éléments de
+$\operatorname{Div}(X/S)$ comme les couples (à isomorphisme près) $(\mathscr L,s)$
+tels que $\mathscr L$ soit un $\mathcal O_X$-Module inversible et que $s$ soit une
+section méromorphe de $\mathscr L$ au-dessus de $X$, \emph{régulière relativement à
+$S$} (20.6.5, (iii)).
+
+\begin{proposition}[21.15.6]
+\label{IV.21.15.6}
+Soit $D$ un diviseur sur $X$ relatif à $S$, et supposons que pour tout $x\in X$ tel
+que $\operatorname{prof}(\mathcal O_{X_{f(x)},x})=1$, on ait $D_x\geq0$
+(resp. $D_x=0$). Alors on a $D\geq0$ (resp. $D=0$).
+\end{proposition}
+
+\begin{proof}
+Comme dans (21.1.8), on peut se borner au cas où $D=\operatorname{div}(\varphi)$, où
+$\varphi$ est une fonction méromorphe régulière relative à $S$, et tout revient à voir
+que si $D_x\geq0$ en tout point $x\in X$ tel que
+$\operatorname{prof}(\mathcal O_{X_{f(x)},x})=1$, $\varphi$ est partout définie dans
+$X$. Mais cette hypothèse signifie que, si $T=X-\operatorname{dom}(\varphi)$, on a
+$\operatorname{prof}(\mathcal O_{X_{f(x)},x})\geq2$ pour tout $x\in T$, et il suffit
+pour conclure d'appliquer (20.6.6).
+\end{proof}
+
+\begin{env}[21.15.7]
+\label{IV.21.15.7}
+Soit $X'$ un second $S$-préschéma plat et localement de présentation finie sur $S$, et
+soit $g:X'\to X$ un $S$-morphisme. Si le $S$-morphisme $g$ est \emph{plat}, on sait
+(21.4.5) que l'image réciproque par $g$ de tout diviseur sur $X$ est définie; si de
+plus $D\in\operatorname{Div}(X/S)$, il résulte de la définition (21.15.2) et de
+(20.6.8) que l'on a alors $g^*(D)\in\operatorname{Div}(X'/S)$.
+\end{env}
+
+\begin{env}[21.15.8]
+\label{IV.21.15.8}
+Soit $X'$ un second $S$-préschéma plat et localement de présentation finie sur $S$, et
+soit $g:X'\to X$ un $S$-morphisme \emph{fini et plat}. Notons que $g$ est alors
+nécessairement de présentation finie (1.4.3, 1.4.6 et 1.6.3), donc
+$g_*(\mathcal O_{X'})$ est un $\mathcal O_X$-Module plat et de présentation finie, et
+par suite \emph{localement libre} (2.1.12), autrement dit $g$ est un morphisme
+localement libre (18.2.7); pour tout $s\in S$, le morphisme correspondant
+$g_s:X'_s\to X_s$ est donc aussi fini et localement libre. On déduit alors de (21.5.2)
+et (20.6.1) que pour tout ouvert $U$ de $X$ et toute section
+$t'\in\Gamma(g^{-1}(U),\mathscr T_{X'/S})$, la norme $N_{X'/X}(t')$ appartient à
+$\Gamma(U,\mathscr T_{X/S})$; le raisonnement de (21.5.3) prouve ensuite que pour tout
+$\mathcal O_{X'}$-Module inversible $\mathscr L'$ et toute section méromorphe $u'$ de
+$\mathscr L'$ au-dessus de $X'$, \emph{régulière relativement à $S$}, la norme
+$N_{X'/X}(u')$ est une section méromorphe de
+$\mathscr L=N_{X'/X}(\mathscr L')$ au-dessus de $X$, régulière relativement à $S$.
+L'interprétation des diviseurs relatifs à $S$ donnée dans (21.15.5) et la définition de
+l'image directe d'un diviseur (21.5.5) prouvent alors que \emph{pour tout diviseur}
+$D'\in\operatorname{Div}(X'/S)$, on a $g_*(D')\in\operatorname{Div}(X/S)$.
+\end{env}
+
+\begin{env}[21.15.9]
+\EGAReaderTarget{ega4.c04.statement.21-15-9}{IV.21.15.9}
+Considérons enfin un morphisme quelconque $S'\to S$, et (sous les hypothèses de
+(21.15.1)) posons $X'=X\times_S S'$, qui est plat et localement de présentation finie
+sur $S'$; si $p:X'\to X$ est la projection canonique, on a vu (20.6.9) qu'on a un
+homomorphisme canonique
+$p^*(\mathscr M_{X/S})\to\mathscr M_{X'/S'}$, qui transforme évidemment toute
+section de $\mathscr M_{X/S}$ au-dessus d'un ouvert $U$, \emph{régulière relativement
+à $S$}, en une section de $\mathscr M_{X'/S'}$ au-dessus de $p^{-1}(U)$, régulière
+relativement à $S$ (20.6.5, (iii)); on conclut alors de la

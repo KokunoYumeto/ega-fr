@@ -1,0 +1,84 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{45}
+\begin{enumerate}
+\item[(i)] Supposons $f$ pseudo-fini. Alors, pour tout morphisme $Y'\to Y$,
+où $Y'$ est quasi-compact et quasi-séparé,
+$f_{(Y')}:X'=X_{(Y')}\to Y'$ est pseudo-fini.
+\item[(ii)] Soit $(U_\lambda)$ un recouvrement de $Y$ formé d'ouverts
+quasi-compacts. Pour que $f$ soit pseudo-fini, il faut et il suffit que pour
+tout $\lambda$, la restriction
+$f_\lambda:f^{-1}(U_\lambda)\to U_\lambda$ de $f$ soit un morphisme
+pseudo-fini.
+\item[(iii)] Supposons en outre $Y$ noethérien, et $f$ de type fini. Alors,
+pour que $f$ soit pseudo-fini, il faut et il suffit que, pour tout $y\in Y$,
+le morphisme
+$f_y=f\times 1:X_y=X\times_Y\operatorname{Spec}(\mathcal O_y)
+\to\operatorname{Spec}(\mathcal O_y)$ le soit.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) Il est clair que $f_{(Y')}$ est de type fini (1.5.4)~; en outre, une
+factorisation
+$X\xrightarrow{g}Z\xrightarrow{u}Y$, où $g$ est une immersion et $u$ est
+fini, donne une factorisation
+$X'\xrightarrow{g'}Z'\xrightarrow{u'}Y'$ de $f_{(Y')}$, où
+$Z'=Z_{(Y')}$, $g'=g_{(Y')}$ et $u'=u_{(Y')}$~; $g'$ est une immersion
+(I, 4.3.2) et $u'$ est fini (II, 6.1.5)~; donc $f_{(Y')}$ est pseudo-fini.
+
+(ii) La condition est nécessaire en vertu de (i), les $U_\lambda$ étant
+quasi-séparés puisque $Y$ l'est. Pour voir qu'elle est suffisante, observons
+(avec les notations de (8.12.3)) que si l'on pose
+$X_\lambda=f^{-1}(U_\lambda)$, on a
+$\mathcal B|U_\lambda=(f_\lambda)_*(\mathcal O_{X_\lambda})$,
+$\mathcal C|U_\lambda$ est la fermeture intégrale de $\mathcal O_{U_\lambda}$
+dans $\mathcal B|U_\lambda$ et par suite, si $h:Z\to Y$ est le morphisme
+canonique, $Z_\lambda=\operatorname{Spec}(\mathcal C|U_\lambda)$ s'identifie à
+$h^{-1}(U_\lambda)$. Or, pour que $g:X\to Z$ soit une immersion, il faut et
+il suffit que pour tout $\lambda$, la restriction
+$g_\lambda:f^{-1}(U_\lambda)\to h^{-1}(U_\lambda)$ de $g$ le soit
+(I, 4.2.4). Cela entraîne la conclusion en vertu de (8.12.3).
+
+(iii) Il suffit, en vertu de (ii), de prouver que $y$ admet un voisinage $U$
+tel que la restriction $f^{-1}(U)\to U$ de $f$ soit un morphisme pseudo-fini.
+Désignons par $(U_\lambda)$ le système projectif filtrant décroissant des
+voisinages ouverts affines de $y$, et appliquons la méthode de (8.1.2,
+\emph{a)}). Puisque $Y$ est noethérien, les restrictions
+$f_\lambda:f^{-1}(U_\lambda)\to U_\lambda$ de $f$ sont de présentation
+finie et il en est de même de $f_y$. Par hypothèse $f_y$ se factorise en
+$X_y\xrightarrow{g_y}Z_y\xrightarrow{u_y}\operatorname{Spec}(\mathcal O_y)$,
+où $u_y$ est fini et $g_y$ est une immersion. Comme $\mathcal O_y$ est
+noethérien, il en est de même de $Z_y$, et comme $Z_y$ est de présentation
+finie sur $\operatorname{Spec}(\mathcal O_y)$, il existe un $\lambda$ et un
+morphisme de présentation finie $u_\lambda:Z_\lambda\to U_\lambda$ tels que
+$Z_y$ s'identifie à
+$Z_\lambda\times_{U_\lambda}\operatorname{Spec}(\mathcal O_y)$ et $u_y$ à
+$u_\lambda\times 1$ (8.8.2, (ii))~; en outre, il existe un morphisme
+$g_\lambda:X_\lambda\to Z_\lambda$ tel que $g_y=g_\lambda\times 1$ et que
+$f_\lambda=u_\lambda\circ g_\lambda$ (8.8.2, (i)). De plus, on peut supposer
+$\lambda$ pris de sorte que $g_\lambda$ soit une immersion et $u_\lambda$ un
+morphisme fini (8.10.5, (ii) et (x)), ce qui prouve que $f_\lambda$ est
+pseudo-fini.
+\end{proof}
+
+\begin{env}[8.12.5]
+\label{IV.8.12.5-fr}
+Nous pouvons maintenant donner du «~Main theorem~» de Zariski (III, 4.4.3),
+une démonstration n'utilisant pas les résultats cohomologiques de nature
+«~globale~» du chap.~III, mais faisant appel par contre aux propriétés plus
+fines des anneaux locaux noethériens~; nous généraliserons en outre l'énoncé
+du théorème en le débarrassant des hypothèses noethériennes~:
+\end{env}
+
+\begin{theorem}[8.12.6]
+\label{IV.8.12.6-fr}
+(«~Main Theorem~» de Zariski). --- Soit $Y$ un préschéma quasi-compact et
+quasi-séparé. Si un morphisme $f:X\to Y$ est quasi-fini, séparé et de
+présentation finie, il existe une factorisation de $f$
+\begin{equation}
+\label{IV.8.12.6.1-fr}
+X\xrightarrow{f'}Y'\xrightarrow{u}Y. \tag{8.12.6.1}
+\end{equation}
+où $f'$ est une immersion ouverte et $u$ un morphisme fini.
+\end{theorem}
+

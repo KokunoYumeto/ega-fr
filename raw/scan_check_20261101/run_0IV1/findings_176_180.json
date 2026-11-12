@@ -1,0 +1,784 @@
+[
+ {
+  "page": 176,
+  "where": "page break inside the proof of (21.8.8.3): '... g∈k_γ[[T_1, ..., T_r]] tel | que gf∈k_γ[[T_1, ..., T_r]] ;'",
+  "scan": "p. 176 begins 'que gf∈k_γ[[T_1, ..., T_r]] ; quitte à remplacer g par g^q'; 'Il suffit de prouver ... Soient γ un indice, g∈k_γ[[T_1, ..., T_r]] tel' are the last two lines of p. 175 (p. 175 strip 4 checked)",
+  "tex": "\\oldpage[0\\textsubscript{IV-1}]{176} stands right after \\begin{proof}, before 'Il suffit de prouver'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{176}\nIl suffit de prouver qu'un élément $f\\ne0$ du premier membre de (21.8.8.4)\nappartient au second membre. Soient $\\gamma$ un indice,\n$g\\in k_\\gamma[[T_1,\\ldots,T_r]]$ tel que\n",
+   "new": "Il suffit de prouver qu'un élément $f\\ne0$ du premier membre de (21.8.8.4)\nappartient au second membre. Soient $\\gamma$ un indice,\n$g\\in k_\\gamma[[T_1,\\ldots,T_r]]$ tel\n\\oldpage[0\\textsubscript{IV-1}]{176}\nque\n"
+  },
+  "note": "One edit inside the p. 176 segment that moves the marker down three lines. Identical to the p. 175 marker finding in findings_171_175.json: apply only one of the two."
+ },
+ {
+  "page": 176,
+  "where": "end of Proposition (21.9.2): '... est un A-module libre de rang égal à dim(A)+deg. tr_{k_0}K+rg_{k_0}(Ω^1_{k_0/k}).'",
+  "scan": "the formula is in the running text, on the same line as 'est un A-module libre de rang égal à'",
+  "tex": "set as a display \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "égal à\n\\[\n  \\dim(A)+\\deg.\\operatorname{tr}_{k_0}K\n  +\\operatorname{rg}_{k_0}(\\Omega^1_{k_0/k}).\n\\]",
+   "new": "égal à\n$\\dim(A)+\\deg.\\operatorname{tr}_{k_0}K+\\operatorname{rg}_{k_0}(\\Omega^1_{k_0/k})$."
+  },
+  "note": "Display the print sets inline (GLOBAL_ISSUES 21); no connecting word lost or added."
+ },
+ {
+  "page": 176,
+  "where": "proof of (21.9.2): the exact sequence obtained from (20.6.22.1), first term",
+  "scan": "0→Υ_{K/k_0}→𝔪/𝔪²→Ω^1_{A/k_0}⊗_A K→Ω^1_{K/k_0}→0 (crop: subscript K/k_0, no superscript)",
+  "tex": "0\\longrightarrow \\Upsilon^K_{A/k_0}\\longrightarrow \\mathfrak m/\\mathfrak m^2 ...",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "0\\longrightarrow \\Upsilon^K_{A/k_0}",
+   "new": "0\\longrightarrow \\Upsilon_{K/k_0}"
+  },
+  "note": "The printed reading is right: (20.6.22.1) with Λ, A, B, C replaced by P, k_0, A, K gives 0→Υ^K_{A/k_0/P}→Υ_{K/k_0/P}→𝔪/𝔪²→..., Υ^K_{A/k_0/P}=0 was just shown, and the next formula uses rg_K(Υ_{K/k_0})."
+ },
+ {
+  "page": 176,
+  "where": "proof of (21.9.2): end of the same exact sequence '... → Ω^1_{K/k_0} → 0'",
+  "scan": "no punctuation after the final 0 (crop of the whole line)",
+  "tex": "\\Omega^1_{K/k_0}\\longrightarrow0,",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Omega^1_{K/k_0}\\longrightarrow0,",
+   "new": "\\Omega^1_{K/k_0}\\longrightarrow0"
+  },
+  "note": ""
+ },
+ {
+  "page": 176,
+  "where": "proof of (21.9.2), rank formula: '(rg_K(Ω^1_{K/k_0}) — rg_K(Υ_{K/k_0}))'",
+  "scan": "long dash for the subtraction (crop: longer than the + signs on the same line)",
+  "tex": "-\\operatorname{rg}_K(\\Upsilon_{K/k_0})",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-\\operatorname{rg}_K(\\Upsilon_{K/k_0})",
+   "new": "\\setmin\\operatorname{rg}_K(\\Upsilon_{K/k_0})"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 176,
+  "where": "proof of (21.9.2): 'D'autre part, Ω^1_{A/k_0} est un A-module formellement projectif (20.4.9)'",
+  "scan": "Ω^1_{A/k_0} without a hat (crop)",
+  "tex": "$\\widehat\\Omega^1_{A/k_0}$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "D'autre part, $\\widehat\\Omega^1_{A/k_0}$ est un",
+   "new": "D'autre part, $\\Omega^1_{A/k_0}$ est un"
+  },
+  "note": "Not a misprint: (20.4.9) and (20.4.5), cited in this sentence, are statements about the uncompleted Ω^1_{B/A} (formally projective; its topology)."
+ },
+ {
+  "page": 176,
+  "where": "proof of (21.9.2): 'Ω^1_{A/k_0}/𝔪^{j+1}Ω^1_{A/k_0} est un (A/𝔪^{j+1})-module projectif'",
+  "scan": "both Ω without a hat (crop)",
+  "tex": "$\\widehat\\Omega^1_{A/k_0}/\\mathfrak m^{j+1}\\widehat\\Omega^1_{A/k_0}$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat\\Omega^1_{A/k_0}/\\mathfrak m^{j+1}\\widehat\\Omega^1_{A/k_0}$",
+   "new": "$\\Omega^1_{A/k_0}/\\mathfrak m^{j+1}\\Omega^1_{A/k_0}$"
+  },
+  "note": "Same as the previous finding (the quotient by 𝔪^{j+1} is the same for Ω and its completion)."
+ },
+ {
+  "page": 176,
+  "where": "last line of p. 176: '... donc libre (0_III, 10.1.2) et de rang | n=rg_K(...)'; the sentence continues on p. 177",
+  "scan": "p. 177 begins at the left margin with 'n=rg_K(Ω^1_{A/k_0}⊗_A K).': no paragraph break",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{177}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "10.1.2) et de rang\n\n",
+   "new": "10.1.2) et de rang\n"
+  },
+  "note": "Spurious paragraph break mid-sentence (GLOBAL_ISSUES 20); the blank line is the last line of the p. 176 segment."
+ },
+ {
+  "page": 177,
+  "where": "proof of (21.9.2), second part: 'le produit tensoriel complété Ω̂^1_{k_0/k}⊗̂_{k_0}A s'identifie à Ω^1_{k_0/k}⊗_{k_0}A'",
+  "scan": "hat over the first Ω (and over ⊗); the second Ω has none (crop)",
+  "tex": "$\\Omega^1_{k_0/k}\\widehat\\otimes_{k_0}A$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Omega^1_{k_0/k}\\widehat\\otimes_{k_0}A$",
+   "new": "$\\widehat\\Omega^1_{k_0/k}\\widehat\\otimes_{k_0}A$"
+  },
+  "note": ""
+ },
+ {
+  "page": 177,
+  "where": "proof of (21.9.2): 'ce qui implique en particulier que son image est fermée dans Ω̂^1_{A/k}'",
+  "scan": "fermée italic (crop)",
+  "tex": "fermée upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "son image est fermée dans",
+   "new": "son image est \\emph{fermée} dans"
+  },
+  "note": ""
+ },
+ {
+  "page": 177,
+  "where": "proof of (21.9.2): 'la suite exacte ... est donc exacte et scindée en vertu de (20.7.17)'",
+  "scan": "exacte et scindée italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est donc exacte et scindée",
+   "new": "est donc \\emph{exacte et scindée}"
+  },
+  "note": ""
+ },
+ {
+  "page": 177,
+  "where": "Proposition (21.9.5): 'tel que A soit une A_0-algèbre finie et que ...'",
+  "scan": "finie upright inside the italic statement (crop)",
+  "tex": "finie italic (statement environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$A_0$-algèbre finie et que",
+   "new": "$A_0$-algèbre \\textup{finie} et que"
+  },
+  "note": "FIX_POLICY 2.6 (\\textup); \\emph would give the same output."
+ },
+ {
+  "page": 177,
+  "where": "Proposition (21.9.5): '... soit une extension séparable du corps des fractions L_0 de A_0'",
+  "scan": "séparable upright inside the italic statement (crop)",
+  "tex": "séparable italic (statement environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "extension séparable du corps",
+   "new": "extension \\textup{séparable} du corps"
+  },
+  "note": "FIX_POLICY 2.6 (\\textup); \\emph would give the same output."
+ },
+ {
+  "page": 177,
+  "where": "last line of p. 177: 'On sait (21.9.1) que Ω̂^1_{A/k} est un A-module de type fini et, | en vertu de (21.9.3) ...'",
+  "scan": "p. 178 begins at the left margin with 'en vertu de (21.9.3)': no paragraph break",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{178}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de type fini et,\n\n",
+   "new": "de type fini et,\n"
+  },
+  "note": "Spurious paragraph break mid-sentence (GLOBAL_ISSUES 20); the blank line is the last line of the p. 177 segment."
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5), first line: 'Ω̂^1_{A_0/k} est un A_0-module libre de rang r=dim(A_0)=dim(A)'",
+  "scan": "libre italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A_0$-module libre de",
+   "new": "$A_0$-module \\emph{libre} de"
+  },
+  "note": "The second 'libre' two lines below is upright in the print, as in the TeX."
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): 'enfin Ω^1_{A/A_0} est un A-module de type fini (20.4.7), donc identique à son séparé complété'",
+  "scan": "Ω^1_{A/A_0} without a hat (crop)",
+  "tex": "$\\widehat\\Omega^1_{A/A_0}$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "enfin $\\widehat\\Omega^1_{A/A_0}$",
+   "new": "enfin $\\Omega^1_{A/A_0}$"
+  },
+  "note": "Not a misprint: the sentence says that the uncompleted Ω^1_{A/A_0} (finite type by 20.4.7) equals its separated completion, which is why the print writes it without a hat here and in (21.9.5.2)."
+ },
+ {
+  "page": 178,
+  "where": "(21.9.5.2): last term before →0",
+  "scan": "Ω̂^1_{A_0/k}⊗_{A_0}A →(u) Ω̂^1_{A/k} →(v) Ω^1_{A/A_0} → 0; no hat on the third module (crop)",
+  "tex": "\\xrightarrow{v}\\widehat\\Omega^1_{A/A_0}\\longrightarrow0",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\xrightarrow{v}\\widehat\\Omega^1_{A/A_0}",
+   "new": "\\xrightarrow{v}\\Omega^1_{A/A_0}"
+  },
+  "note": "See the previous finding."
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): 'on sait que v est surjectif et que Im(u) est dense dans Ker(v)'",
+  "scan": "surjectif italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est surjectif et que",
+   "new": "est \\emph{surjectif} et que"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): '... et que Im(u) est dense dans Ker(v) (20.7.17)'",
+  "scan": "dense italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est dense dans",
+   "new": "est \\emph{dense} dans"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): 'donc la suite (21.9.5.2) est exacte.'",
+  "scan": "exacte italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(21.9.5.2) est exacte.",
+   "new": "(21.9.5.2) est \\emph{exacte}."
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): 'et E séparable sur L_0, Ω^1_{A/A_0} est un A-module de torsion (20.4.13, (iv))'",
+  "scan": "Ω^1_{A/A_0} without a hat (crop)",
+  "tex": "$\\widehat\\Omega^1_{A/A_0}$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$L_0$, $\\widehat\\Omega^1_{A/A_0}$",
+   "new": "$L_0$, $\\Omega^1_{A/A_0}$"
+  },
+  "note": "As in the two hat findings above (Ω^1_{A/A_0} is identical to its completion)."
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): '... est un A-module de torsion (20.4.13, (iv))'",
+  "scan": "'module de torsion' italic, the A and hyphen roman (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A$-module de\ntorsion",
+   "new": "$A$-\\emph{module de\ntorsion}"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): 'dans un même sous-A-module de type fini de E'",
+  "scan": "'type fini' italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sous-$A$-module de type fini",
+   "new": "sous-$A$-module de \\emph{type fini}"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "proof of (21.9.5): 'on a ainsi formé r dérivations continues de A dans un A-module topologique'",
+  "scan": "continues italic (crop); the earlier 'comme elles sont continues dans A_0' is upright",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dérivations\ncontinues de $A$",
+   "new": "dérivations\n\\emph{continues} de $A$"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "Proposition (21.9.6), first display: 'L_0=K_0((T_1, ..., T_r)),   M_0=K_0((T_1^p, ..., T_r^p))'",
+  "scan": "no punctuation after M_0=K_0((T_1^p, ..., T_r^p)) (crop of the whole line)",
+  "tex": "M_0=K_0((T_1^p,\\ldots,T_r^p)),",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "M_0=K_0((T_1^p,\\ldots,T_r^p)),",
+   "new": "M_0=K_0((T_1^p,\\ldots,T_r^p))"
+  },
+  "note": ""
+ },
+ {
+  "page": 178,
+  "where": "Proposition (21.9.6): label '(i) Si Υ_{K_0/k_0} est de rang fini'",
+  "scan": "label (i) upright",
+  "tex": "\\item[(i)] inside the italic proposition: label italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(i)] Si",
+   "new": "\\item[\\textup{(i)}] Si"
+  },
+  "note": "Label printed upright; \\item[...] comes out italic inside the italic statement environment (same form as the label fixes on pp. 20, 36-38, 101-102; GLOBAL_ISSUES 16)."
+ },
+ {
+  "page": 178,
+  "where": "(21.9.6.1): 'rg_E Ω^1_{E/M} — rg_{K_0} Ω^1_{K_0/k} = ...'",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    =(r",
+   "new": "\\setmin\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    =(r"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 178,
+  "where": "(21.9.6.2): 'rg_E Ω^1_{E/M} — rg_{K_0} Ω^1_{K_0/k} ⩾ ...'",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    \\geqslant",
+   "new": "\\setmin\\operatorname{rg}_{K_0}\\Omega^1_{K_0/k}\n    \\geqslant"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 178,
+  "where": "Proposition (21.9.6): label '(ii) On suppose en outre que'",
+  "scan": "label (ii) upright",
+  "tex": "\\item[(ii)] inside the italic proposition: label italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(ii)] On suppose",
+   "new": "\\item[\\textup{(ii)}] On suppose"
+  },
+  "note": "As for label (i)."
+ },
+ {
+  "page": 178,
+  "where": "end of the p. 178 segment: the proof of (21.9.6) opens before the p. 179 marker",
+  "scan": "printed p. 178 ends with the statement of (21.9.6) ('... soient égaux.'); the proof begins at the top of p. 179 with '(i) On sait (21.1.5, (ii)) que'",
+  "tex": "\\begin{proof}\\n\\begin{enumerate} stand before \\oldpage[0\\textsubscript{IV-1}]{179} (marker inside the enumerate, before \\item[(i)])",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{proposition}\n\n\\begin{proof}\n\\begin{enumerate}\n",
+   "new": "\\end{proposition}\n\n"
+  },
+  "note": "Move, part 1 of 2 (the openings move, not the marker, so each edit stays in its own page segment): deletes the two openings here; the p. 179 marker finding re-inserts them after \\oldpage[0\\textsubscript{IV-1}]{179}. Apply both or neither."
+ },
+ {
+  "page": 179,
+  "where": "top of the p. 179 segment: re-insert the proof openings after the marker",
+  "scan": "p. 179 begins with the proof of (21.9.6): '(i) On sait (21.1.5, (ii)) que'",
+  "tex": "\\oldpage[0\\textsubscript{IV-1}]{179} followed by \\item[(i)]",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{IV-1}]{179}\n  \\item[(i)] On sait",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{179}\n\\begin{proof}\n\\begin{enumerate}\n  \\item[(i)] On sait"
+  },
+  "note": "Move, part 2 of 2: re-inserts the openings deleted by the p. 178 marker finding. Apply both or neither."
+ },
+ {
+  "page": 179,
+  "where": "proof of (21.9.6) (i): the diagram of fields",
+  "scan": "rows: K_0 → M_0 → L_0 → E; k → N → M → L; k_0 → k'_0 → N'. Vertical arrows only k→K_0, M→M_0, L→L_0 (top) and k'_0→k, N'→N (bottom); k'_0 stands under k, N' under N, k_0 to the left of k'_0, M_0 above M (crop)",
+  "tex": "4-column xymatrix with \\ar[u] on every lower entry: arrows N→M_0, M→L_0, L→E, k_0→k, k'_0→N, N'→M that the print does not have, and the printed M→M_0, L→L_0, k'_0→k, N'→N missing",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "      K_0\\ar[r] & M_0\\ar[r] & L_0\\ar[r] & E\\\\\n      k\\ar[u]\\ar[r] & N\\ar[u]\\ar[r] & M\\ar[u]\\ar[r] & L\\ar[u]\\\\\n      k_0\\ar[u]\\ar[r] & k'_0\\ar[u]\\ar[r] & N'\\ar[u] &",
+   "new": "      & K_0\\ar[rr] & & M_0\\ar[r] & L_0\\ar[r] & E\\\\\n      & k\\ar[u]\\ar[r] & N\\ar[r] & M\\ar[u]\\ar[r] & L\\ar[u]\\\\\n      k_0\\ar[r] & k'_0\\ar[u]\\ar[r] & N'\\ar[u]"
+  },
+  "note": "Columns of the new matrix: k_0 | K_0, k, k'_0 | N, N' | M_0, M | L_0, L | E, as printed. The printed inclusions are k'_0=k_0(K_0^p)⊂k and N'⊂N."
+ },
+ {
+  "page": 179,
+  "where": "formula from (21.7.3): 'rg_E Ω^1_{E/M} — rg_{M_0} Ω^1_{M/M_0} = deg. tr_{M_0}E + d(E/M_0, M)'",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-\\operatorname{rg}_{M_0}...",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Omega^1_{E/M}\n    -",
+   "new": "\\Omega^1_{E/M}\n    \\setmin"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7). Listed before the misprint finding on the same formula; the two edits do not overlap."
+ },
+ {
+  "page": 179,
+  "where": "formula from (21.7.3): subscript of the second Ω",
+  "scan": "rg_{M_0} Ω^1_{M/M_0} (crop: subscript M/M_0)",
+  "tex": "\\Omega^1_{M_0/M} (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Omega^1_{M_0/M}\n    =\\deg",
+   "new": "\\Omega^1_{M/M_0}\n    =\\deg"
+  },
+  "corrected": "\\Omega^1_{M_0/M}",
+  "note": "(21.7.3.1) with L, K, k = E, M_0, M gives rg_{M_0} Ω^1_{M_0/M}, as in the formula three lines further on (rg_{M_0} Ω^1_{M_0/M} = rg_{K_0} Ω^1_{K_0/k}). The TeX silently corrects; the fix restores the printed reading."
+ },
+ {
+  "page": 179,
+  "where": "(21.9.6.3): 'δ = d(E/M_0, M) — d(E/K_0, k_0) — r.', first dash",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "\\delta=d(E/M_0,M)-d(E/K_0,k_0)-r.",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "\\delta=d(E/M_0,M)-d",
+   "new": "\\delta=d(E/M_0,M)\\setmin d"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 179,
+  "where": "(21.9.6.3): second dash ('— r')",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-r.",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "k_0)-r.",
+   "new": "k_0)\\setmin r."
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 179,
+  "where": "proof of Lemme (21.9.6.4): 'pour toute extension finie k' de k'",
+  "scan": "finie italic (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "extension finie $k'$",
+   "new": "extension \\emph{finie} $k'$"
+  },
+  "note": ""
+ },
+ {
+  "page": 179,
+  "where": "proof of Lemme (21.9.6.4): 'S=A—{0}'",
+  "scan": "long dash for the set difference (crop)",
+  "tex": "S=A-\\{0\\}",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "S=A-\\{0\\}",
+   "new": "S=A\\setmin\\{0\\}"
+  },
+  "note": "Set difference; \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "second display at the top: 'd(L_0/M_0, M) = d(L_0/M_0, M/N) + d(L_0/M_0, N)'",
+  "scan": "no comma at the end (crop); the first display ends with a comma, as in the TeX",
+  "tex": "d(L_0/M_0,M)=d(L_0/M_0,M/N)+d(L_0/M_0,N),",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d(L_0/M_0,M)=d(L_0/M_0,M/N)+d(L_0/M_0,N),",
+   "new": "d(L_0/M_0,M)=d(L_0/M_0,M/N)+d(L_0/M_0,N)"
+  },
+  "note": ""
+ },
+ {
+  "page": 180,
+  "where": "display 'δ = d(E/L_0, M) + d(L_0/M_0, N) — d(E/L_0, k_0) + d(L_0/M_0, M/N) — r.', first dash",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-d(E/L_0,k_0)",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "d(L_0/M_0,N)-d(E/L_0,k_0)",
+   "new": "d(L_0/M_0,N)\\setmin d(E/L_0,k_0)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "same display, second dash ('— r.')",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-r.",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "M/N)-r.",
+   "new": "M/N)\\setmin r."
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "after (21.9.6.5): 'Pour cela, remarquons que, par définition, on a'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\end{equation}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{equation}\n  Pour cela",
+   "new": "\\end{equation}\n\n  Pour cela"
+  },
+  "note": "Paragraph break the print has (the next line is indented) and the TeX lacks (no blank line after the display; GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 180,
+  "where": "'d(L_0/M_0, M/N) = rg_{L_0} Υ_{L_0/M/N} — rg_{M_0} Υ_{M_0/M/N}.'",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-\\operatorname{rg}_{M_0}\\Upsilon_{M_0/M/N}",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-\\operatorname{rg}_{M_0}\\Upsilon_{M_0/M/N}",
+   "new": "\\setmin\\operatorname{rg}_{M_0}\\Upsilon_{M_0/M/N}"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "'Compte tenu des deux suites exactes'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\n  Compte tenu",
+   "new": "\\]\n\n  Compte tenu"
+  },
+  "note": "Paragraph break the print has (the next line is indented) and the TeX lacks (no blank line after the display; GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 180,
+  "where": "first exact sequence '0 → Υ_{L_0/M/N} → ... → Ω^1_{L_0/M} → 0'",
+  "scan": "no punctuation at the end of the line (crop)",
+  "tex": "\\Omega^1_{L_0/M}\\longrightarrow0,\\\\",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Omega^1_{L_0/M}\\longrightarrow0,\\\\",
+   "new": "\\Omega^1_{L_0/M}\\longrightarrow0\\\\"
+  },
+  "note": ""
+ },
+ {
+  "page": 180,
+  "where": "second exact sequence '0 → Υ_{M_0/M/N} → ... → Ω^1_{M_0/M} → 0'",
+  "scan": "no punctuation at the end of the line (crop)",
+  "tex": "\\Omega^1_{M_0/M}\\longrightarrow0,",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Omega^1_{M_0/M}\\longrightarrow0,",
+   "new": "\\Omega^1_{M_0/M}\\longrightarrow0"
+  },
+  "note": ""
+ },
+ {
+  "page": 180,
+  "where": "'d(L_0/M_0, M/N) = rg_{L_0}Ω^1_{L_0/M} — rg_{L_0}Ω^1_{L_0/N} — rg_{M_0}Ω^1_{M_0/M} + rg_{M_0}Ω^1_{M_0/N}.', first dash",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "-\\operatorname{rg}_{L_0}\\Omega^1_{L_0/N}",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-\\operatorname{rg}_{L_0}\\Omega^1_{L_0/N}",
+   "new": "\\setmin\\operatorname{rg}_{L_0}\\Omega^1_{L_0/N}"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "same display, second dash",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "&-\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "&-\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}",
+   "new": "&\\setmin\\operatorname{rg}_{M_0}\\Omega^1_{M_0/M}"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "'On a encore, par (21.6.4.2),' first display",
+  "scan": "d(E/L_0, M) — d(E/L_0, k_0) = d(E/L_0, M/k_0) (crop)",
+  "tex": "d(E/L_0,M)=d(E/L_0,k_0)+d(E/L_0,M/k_0) (same content, rearranged)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d(E/L_0,M)=d(E/L_0,k_0)+d(E/L_0,M/k_0)",
+   "new": "d(E/L_0,M)-d(E/L_0,k_0)=d(E/L_0,M/k_0)"
+  },
+  "note": "The TeX rewrote the printed equation. The restored minus is the print's long dash: see the next (convention-7) finding."
+ },
+ {
+  "page": 180,
+  "where": "same display: 'd(E/L_0, M) — d(E/L_0, k_0)'",
+  "scan": "long dash for the subtraction (crop)",
+  "tex": "no minus in the TeX until the previous finding is applied",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": null,
+  "note": "No fix of its own: the '-' exists only after the previous (formula) finding. In the convention-7 pass replace 'd(E/L_0,M)-d(E/L_0,k_0)=' with 'd(E/L_0,M)\\setmin d(E/L_0,k_0)='. Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision (FIX_POLICY 2.7)."
+ },
+ {
+  "page": 180,
+  "where": "'Mais comme L_0 est séparable sur K_0 (21.9.6.4), on a'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\n  Mais comme $L_0$",
+   "new": "\\]\n\n  Mais comme $L_0$"
+  },
+  "note": "Paragraph break the print has (the next line is indented) and the TeX lacks (no blank line after the display; GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 180,
+  "where": "'Appliquons encore deux fois (21.6.4.2) au premier terme'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\n  Appliquons encore",
+   "new": "\\]\n\n  Appliquons encore"
+  },
+  "note": "Paragraph break the print has (the next line is indented) and the TeX lacks (no blank line after the display; GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 180,
+  "where": "'Comme M⊂N(L_0^p), on a d(E/L_0, M/N)=0'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\n  Comme $M\\subset",
+   "new": "\\]\n\n  Comme $M\\subset"
+  },
+  "note": "Paragraph break the print has (the next line is indented) and the TeX lacks (no blank line after the display; GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 180,
+  "where": "'Mais M_0 et L_0 sont des extensions séparables de K_0'",
+  "scan": "new indented paragraph",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\n  Mais $M_0$ et $L_0$",
+   "new": "\\]\n\n  Mais $M_0$ et $L_0$"
+  },
+  "note": "Paragraph break the print has (the next line is indented) and the TeX lacks (no blank line after the display; GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 180,
+  "where": "'donc d(L_0/K_0, k/k_0)=d(M_0/K_0, k/k_0)=0 (21.6.2), et appliquant encore deux fois (21.6.4.4),'",
+  "scan": "the formula is in the running text, at the start of the last line, followed by '(21.6.2), et appliquant'",
+  "tex": "set as a display \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donc\n  \\[\n    d(L_0/K_0,k/k_0)=d(M_0/K_0,k/k_0)=0\n  \\]\n  (21.6.2)",
+   "new": "donc\n  $d(L_0/K_0,k/k_0)=d(M_0/K_0,k/k_0)=0$\n  (21.6.2)"
+  },
+  "note": "Display the print sets inline (GLOBAL_ISSUES 21); no connecting word lost or added."
+ },
+ {
+  "page": 180,
+  "where": "last line of p. 180: '... et appliquant encore deux fois (21.6.4.4), | on a ...' (sentence continues on p. 181)",
+  "scan": "p. 181 begins at the left margin with 'on a d(E/L_0, k/k_0) = ...': no paragraph break",
+  "tex": "blank line before \\oldpage[0\\textsubscript{IV-1}]{181}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "deux fois (21.6.4.4),\n\n",
+   "new": "deux fois (21.6.4.4),\n"
+  },
+  "note": "Spurious paragraph break mid-sentence (GLOBAL_ISSUES 20); the blank line is the last line of the p. 180 segment."
+ }
+]

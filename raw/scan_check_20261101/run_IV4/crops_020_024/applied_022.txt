@@ -1,0 +1,76 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{22}
+identifient $S$ au produit des $(X\times_S X)$-préschémas $X$ et $X$ pour les
+morphismes $\Delta_f$ et $(g\circ f,1_X)_S$ (resp.\ $(1_X,g\circ f)_S$).
+D'autre part, les diagrammes
+\[
+  \xymatrix@=3pc{
+    X\ar[r]^{(g\circ f,1_X)_S}\ar[d]_-f&X\times_S X\ar[d]^-{p_1}
+      &X\ar[r]^{(1_X,g\circ f)_S}\ar[d]_-f&X\times_S X\ar[d]^-{p_2}\\
+    S\ar[r]_{g}&X&S\ar[r]_{g}&X
+  }
+  \tag{16.4.11.4}
+  \label{IV.16.4.11.4}
+\]
+identifient $X$ au produit des $X$-préschémas $S$ et $X\times_S X$ pour les
+morphismes $g$ et $p_1$ (resp.\ $p_2$) (cas particulier de la formule
+d'associativité (\textbf{I}, 3.3.9.1)). On peut dire que $\Delta_f$, considéré comme
+$X$-section de $X\times_S X$ (relativement à $p_1$ ou $p_2$) joue le rôle
+d'une «\emph{section universelle}» pour les $S$-sections de $X$: chacune de ces
+sections $g$ s'en déduit en effet par le \emph{changement de base}
+$(g\circ f,1_X)_S:X\to X\times_S X$. La définition de l'homomorphisme
+$\varpi_n$ et le fait qu'il est bijectif résultent donc de ces remarques et de
+(16.2.3, (ii)) appliqué au premier diagramme (16.4.11.4). La commutativité du
+diagramme (16.4.11.2) résulte de même de (16.2.3, (ii)) appliqué cette fois au
+second diagramme (16.4.11.4). Pour expliciter $\varpi_n$, on peut se borner au
+cas où $g$ est une immersion \emph{fermée}: en effet, pour tout $s\in S$, il y
+a un voisinage ouvert $W$ de $s$ dans $S$ tel que $g(W)$ soit fermé dans un
+ouvert $U$ de $X$, et il est clair que $g|W$ est une $W$-section du morphisme
+$U\cap f^{-1}(W)\to W$, restriction de $f$, et $g(W)$ est \emph{a fortiori}
+fermé dans $U\cap f^{-1}(W)$. On peut donc supposer que $S$ est un
+sous-préschéma fermé de $X$ défini par un Idéal quasi-cohérent $\mathscr{K}$.
+Alors les définitions précédentes montrent que si $W$ est un ouvert de $S$,
+$t$ une section de $\mathcal{O}_X$ au-dessus de $f^{-1}(W)$,
+$\varpi_n(d^n t|W)$ est égal à l'image canonique de $t$ dans
+$\Gamma(W,(\mathcal{O}_X/\mathscr{K}^{n+1})|W)$. L'unicité de $\varpi_n$
+résulte donc de ce que l'image de $\mathcal{O}_X$ par $d_{X/S}^n$ engendre le
+$\mathcal{O}_X$-Module $\mathscr{P}_{X/S}^n$ (16.3.8).
+
+\begin{corollary}[16.4.12]
+\label{IV.16.4.12}
+Soient $k$ un corps, $X$ un $k$-préschéma, $x$ un point de $X$ \textup{rationnel sur}
+$k$. Alors $(\mathscr{P}_{X/k}^n)_x\otimes_{\mathcal{O}_x}\boldsymbol{k}(x)$ est
+canoniquement isomorphe (en tant que $\boldsymbol{k}(x)$-algèbre augmentée) à
+$\mathcal{O}_x/\mathfrak{m}_x^{n+1}$.
+\end{corollary}
+
+Il suffit de considérer l'unique $k$-section $g$ de $X$ telle que
+$g(\operatorname{Spec}(k))=\{x\}$.
+
+\begin{corollary}[16.4.13]
+\label{IV.16.4.13}
+Soient $f:X\to S$ un morphisme, $s$ un point de $S$,
+$X_s=X\times_S\operatorname{Spec}(\boldsymbol{k}(s))$ la fibre de $f$ en $s$. Si
+$x\in X_s$ est \textup{rationnel sur} $\boldsymbol{k}(s)$,
+$(\mathscr{P}_{X/S}^n)_x\otimes_{\mathcal{O}_s}\boldsymbol{k}(s)$ est canoniquement
+isomorphe à $\mathcal{O}_{X_s,x}/\mathfrak{m}'_x{}^{\,n+1}$, où
+$\mathfrak{m}'_x$ est l'idéal maximal de $\mathcal{O}_{X_s,x}$; de façon
+précise, cet isomorphisme fait correspondre à $(d^n t)_x\otimes1$ \textup{(où $t$ est
+une section de $\mathcal{O}_X$ au-dessus d'un voisinage ouvert de $x$ dans
+$X$)} la classe de $t_x\otimes1$ modulo $\mathfrak{m}'_x{}^{\,n+1}$.
+\end{corollary}
+
+Cela résulte de (16.4.5) et (16.4.12).
+
+Les corollaires précédents justifient la terminologie de «faisceau des parties
+principales d'ordre $n$».
+
+\begin{proposition}[16.4.14]
+\label{IV.16.4.14}
+Soit $\rho:A\to B$ un homomorphisme d'anneaux, $S$ une partie
+multiplicativement stable de $B$. Alors les homomorphismes canoniques
+\[
+  S^{-1}P_{B/A}^n\longrightarrow P_{S^{-1}B/A}^n
+  \tag{16.4.14.1}
+  \label{IV.16.4.14.1}
+\]

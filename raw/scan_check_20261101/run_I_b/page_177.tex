@@ -1,0 +1,93 @@
+% from ega1-9-fr.tex
+\oldpage[I]{177}
+est un second sous-préschéma fermé de $Y$, défini par un faisceau
+quasi-cohérent d'idéaux $\mathscr{J}'$ de $\mathscr{O}_Y$, et tel que
+l'injection $j':X''\to Y$ majore $f$, on doit tout d'abord avoir
+$X''\supset\psi(X)$, donc $X'\subset X''$ puisque $X''$ est fermé. En outre,
+pour tout $y\in X''$, $\theta$ doit se factoriser en
+$\mathscr{O}_y\to\mathscr{O}_y/\mathscr{J}'_y
+\to(\psi_*(\mathscr{O}_X))_y$, ce qui par définition entraîne
+$\mathscr{J}'_y\subset\mathscr{J}_y$, et par suite $X'$ est un
+sous-préschéma fermé de $X''$ (\hyperref[I.4.1.10-fr]{4.1.10}).
+\end{proof}
+
+\begin{definition}[9.5.3]
+\label{I.9.5.3-fr}
+Lorsqu'il existe un plus petit sous-préschéma fermé $Y'$ de $Y$ tel que
+l'injection canonique $j:Y'\to Y$ majore $f$, on dit que $Y'$ est le
+préschéma image fermée de $X$ par le morphisme $f$.
+\end{definition}
+
+\begin{proposition}[9.5.4]
+\label{I.9.5.4-fr}
+Si $f_*(\mathscr{O}_X)$ est un $\mathscr{O}_Y$-Module quasi-cohérent,
+l'espace sous-jacent de l'image fermée de $X$ par $f$ est l'adhérence
+$\overline{f(X)}$ dans $Y$.
+\end{proposition}
+
+\begin{proof}
+Comme le support de $f_*(\mathscr{O}_X)$ est contenu dans
+$\overline{f(X)}$, on a (avec les notations de
+(\hyperref[I.9.5.2-fr]{9.5.2})) $\mathscr{J}_y=\mathscr{O}_y$ pour
+$y\notin\overline{f(X)}$, donc le support de
+$\mathscr{O}_Y/\mathscr{J}$ est contenu dans $\overline{f(X)}$. En outre, ce
+support est fermé et contient $f(X)$~: en effet, si $y\in f(X)$, l'élément
+unité de l'anneau $(\psi_*(\mathscr{O}_X))_y$ n'est pas nul, étant le germe
+en $y$ de la section
+\[
+  1\in\Gamma(X,\mathscr{O}_X)=\Gamma(Y,\psi_*(\mathscr{O}_X))~;
+\]
+comme il est l'image par $\theta$ de l'élément unité de $\mathscr{O}_y$, ce
+dernier n'appartient pas à $\mathscr{J}_y$, donc
+$\mathscr{O}_y/\mathscr{J}_y\neq0$~; ceci achève la démonstration.
+\end{proof}
+
+\begin{proposition}[9.5.5]
+\label{I.9.5.5-fr}
+\emph{(transitivité des images fermées).} Soient $f:X\to Y$ et $g:Y\to Z$
+deux morphismes de préschémas~; on suppose que l'image fermée $Y'$ de $X$
+par $f$ existe, et que, si $g'$ est la restriction de $g$ à $Y'$, l'image
+fermée $Z'$ de $Y'$ par $g'$ existe. Alors l'image fermée de $X$ par
+$g\circ f$ existe et est égale à $Z'$.
+\end{proposition}
+
+\begin{proof}
+Il suffit (\hyperref[I.9.5.1-fr]{9.5.1}) de montrer que $Z'$ est le plus
+petit sous-préschéma fermé $Z_1$ de $Z$ tel que le sous-préschéma fermé
+$(g\circ f)^{-1}(Z_1)$ de $X$ (égal à $f^{-1}(g^{-1}(Z_1))$ par
+(\hyperref[I.4.4.2-fr]{4.4.2})) soit égal à $X$~; il revient au même de dire
+que $Z'$ est le plus petit sous-préschéma fermé de $Z$ tel que $f$ soit
+majoré par l'injection $g^{-1}(Z_1)\to Y$
+(\hyperref[I.4.4.1-fr]{4.4.1}). Or, en vertu de l'existence de l'image
+fermée $Y'$, tout $Z_1$ ayant cette propriété est tel que $g^{-1}(Z_1)$
+majore $Y'$, ce qui équivaut à dire que
+$j^{-1}(g^{-1}(Z_1))=g'^{-1}(Z_1)=Y'$, en désignant par $j$ l'injection
+$Y'\to Y$. Par définition de $Z'$, on en conclut bien que $Z'$ est le plus
+petit sous-préschéma fermé de $Z$ vérifiant la condition précédente.
+\end{proof}
+
+\begin{corollary}[9.5.6]
+\label{I.9.5.6-fr}
+Soit $f:X\to Y$ un $S$-morphisme tel que $Y$ soit l'image fermée de $X$ par
+$f$. Soit $Z$ un $S$-schéma~; si deux $S$-morphismes $g_1$, $g_2$ de $Y$
+dans $Z$ sont tels que $g_1\circ f=g_2\circ f$, alors $g_1=g_2$.
+\end{corollary}
+
+\begin{proof}
+Soit $h=(g_1,g_2)_S:Y\to Z\times_S Z$~; comme la diagonale
+$T=\Delta_Z(Z)$ est un sous-préschéma fermé de $Z\times_S Z$,
+$Y'=h^{-1}(T)$ est un sous-préschéma fermé de $Y$
+(\hyperref[I.4.4.1-fr]{4.4.1}). Posons $u=g_1\circ f=g_2\circ f$~; on a
+alors par définition du produit $h'=h\circ f=(u,u)_S$, donc
+$h\circ f=\Delta_Z\circ u$~; comme $\Delta_Z^{-1}(T)=Z$, on a
+$h'^{-1}(T)=u^{-1}(Z)=X$, donc $f^{-1}(Y')=X$. On en conclut
+(\hyperref[I.4.4.1-fr]{4.4.1}) que l'injection canonique $Y'\to Y$ majore
+$f$, donc $Y'=Y$ par hypothèse~; par suite
+(\hyperref[I.4.4.1-fr]{4.4.1}), $h$ se factorise en $\Delta_Z\circ v$, où
+$v$ est un morphisme $Y\to Z$, ce qui entraîne $g_1=g_2=v$.
+\end{proof}
+
+\begin{remark}[9.5.7]
+\label{I.9.5.7-fr}
+Si $X$ et $Y$ sont des $S$-schémas, la prop.
+(\hyperref[I.9.5.6-fr]{9.5.6}) signifie que

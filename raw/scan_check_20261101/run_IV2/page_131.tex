@@ -1,0 +1,99 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{131}
+
+et $\mathfrak q$ est induit sur $A$ par un idéal premier de
+$A_{\mathfrak p}$, minimal parmi ceux qui contiennent
+$\mathfrak J'A_{\mathfrak p}$. Mais en vertu de l'hypothèse (ii) et de (0,
+17.1.7), $\mathfrak J'A_{\mathfrak p}$ est premier dans $A_{\mathfrak p}$,
+donc
+\[
+\mathfrak q=A\cap\mathfrak J'A_{\mathfrak p}
+\]
+est l'unique idéal premier non immergé associé à $A/\mathfrak J'$ et il est de
+hauteur $n-1$, puisque $\mathfrak J'A_{\mathfrak p}$ est de hauteur $n-1$ et
+$\mathfrak q$ de hauteur $\leq n-1$. En outre
+$\mathfrak qA_{\mathfrak q}=\mathfrak J'A_{\mathfrak q}$ et comme
+$A_{\mathfrak q}=(A_{\mathfrak p})_{\mathfrak qA_{\mathfrak p}}$, l'idéal
+maximal $\mathfrak qA_{\mathfrak q}$ est engendré par $\mathfrak J'$. On voit
+donc que la suite $(x_i)_{1\leq i\leq n-1}$ vérifie déjà les conditions (i) et
+(ii) de l'énoncé. Montrons qu'elle vérifie aussi (iii). Considérons pour cela
+l'anneau intègre $B=A/\mathfrak q$, et soit $t$ l'image canonique de $x_n$ dans
+$B$. Il est immédiat (cf. (5.6.3, (iv))) que si $A$ vérifie l'hypothèse a)
+(resp. b)), il en est de même de $B$; comme $x_n\notin\mathfrak q$, on a
+$t\neq0$; montrons que $B$ et $t$ vérifient les hypothèses du lemme de
+Hironaka. En effet, un idéal premier $\mathfrak n$ de $B$ minimal parmi ceux
+contenant $t$ est l'image d'un idéal premier de $A$ minimal parmi ceux
+contenant $\mathfrak q+x_nA$, et l'on a vu que $\mathfrak p$ est cet unique
+idéal; comme
+\[
+B_{\mathfrak n}=A_{\mathfrak p}/\mathfrak qA_{\mathfrak p},\qquad
+\mathfrak nB_{\mathfrak n}
+=\mathfrak pA_{\mathfrak p}/\mathfrak qA_{\mathfrak p},
+\]
+le fait que $\mathfrak qA_{\mathfrak p}=\mathfrak J'A_{\mathfrak p}$ et que
+$\mathfrak pA_{\mathfrak p}$ soit engendré par $\mathfrak J$ entraîne que
+$\mathfrak nB_{\mathfrak n}$ est engendré par $t$. Enfin,
+$B/\mathfrak n=A/\mathfrak p$ est intégralement clos. L'application de
+(5.12.8) prouve donc que $B=A/\mathfrak q$ est intégralement clos et que
+$\mathfrak p=\mathfrak q+x_nA$. Utilisons maintenant l'hypothèse de récurrence,
+qui montre que $A/(x_1A+\cdots+x_iA)$ est intégralement clos et de dimension
+$\dim(A)-i$ pour $0\leq i\leq n-1$ et que $\mathfrak q=\mathfrak J'$, d'où
+$\mathfrak p=\mathfrak J'+x_nA=\mathfrak J$. On en conclut que
+$A/\mathfrak J=A/\mathfrak p$ est intégralement clos; comme
+$\dim(A_{\mathfrak p})=n$ et que
+$\dim(A/\mathfrak p)=\dim(A)-\dim(A_{\mathfrak p})$ puisque $A$ est
+biéquidimensionnel, cela achève la démonstration.
+
+\subsection{Propriétés de permanence par passage à la limite inductive}
+
+Dans tout ce numéro, $(A_\alpha,\varphi_{\beta\alpha})$ désigne un système
+inductif d'anneaux dont l'ensemble d'indices est préordonné filtrant; on pose
+$A=\varinjlim A_\alpha$ et on désigne par $\varphi_\alpha$ l'homomorphisme
+canonique $A_\alpha\to A$.
+
+\begin{proposition}[5.13.1]
+\label{IV.2.s5.13.1-fr}
+\begin{enumerate}
+\item[(i)] Pour tout indice $\alpha$, soit $\mathfrak a_\alpha$ un idéal de
+$A_\alpha$ tel que, pour $\alpha\leq\beta$, on ait
+$\varphi_{\beta\alpha}(\mathfrak a_\alpha)\subset\mathfrak a_\beta$. Alors
+les $\mathfrak a_\alpha$ forment un système inductif pour les restrictions des
+$\varphi_{\beta\alpha}$, $\mathfrak a=\varinjlim\mathfrak a_\alpha$
+s'identifie canoniquement à un idéal de $A$, $A/\mathfrak a$ à
+$\varinjlim(A_\alpha/\mathfrak a_\alpha)$. Si de plus on a
+$\mathfrak a_\alpha=\varphi_{\beta\alpha}^{-1}(\mathfrak a_\beta)$ pour
+$\alpha\leq\beta$, alors
+$\mathfrak a_\alpha=\varphi_\alpha^{-1}(\mathfrak a)$ pour tout $\alpha$.
+\item[(ii)] Inversement, pour tout idéal $\mathfrak a$ de $A$, si l'on pose
+$\mathfrak a_\alpha=\varphi_\alpha^{-1}(\mathfrak a)$ pour tout $\alpha$, les
+$\mathfrak a_\alpha$ forment un système inductif tel que
+$\mathfrak a=\varinjlim\mathfrak a_\alpha$.
+\end{enumerate}
+\end{proposition}
+
+Il est clair que (ii) est un cas particulier de (i). Dans (i), le fait que
+$\mathfrak a$ s'identifie canoniquement à un idéal de $A$ et $A/\mathfrak a$ à
+$\varinjlim(A_\alpha/\mathfrak a_\alpha)$ provient de l'exactitude du foncteur
+$\varinjlim$ dans la catégorie des groupes abéliens. En outre, $\mathfrak a$
+est réunion de la famille croissante des $\varphi_\alpha(\mathfrak a_\alpha)$;
+donc, si $x_\alpha\in A_\alpha$ est tel que
+$\varphi_\alpha(x_\alpha)\in\mathfrak a$, il existe $\beta\geq\alpha$ tel que
+$\varphi_\alpha(x_\alpha)=\varphi_\beta(y_\beta)$ pour un
+$y_\beta\in\mathfrak a_\beta$, donc
+$\varphi_\beta(\varphi_{\beta\alpha}(x_\alpha))=\varphi_\beta(y_\beta)$; mais
+cela entraîne l'existence d'un $\gamma\geq\beta$ tel que
+\[
+\varphi_{\gamma\alpha}(x_\alpha)=\varphi_{\gamma\beta}(y_\beta),
+\]
+et par suite $\varphi_{\gamma\alpha}(x_\alpha)\in\mathfrak a_\gamma$, d'où
+$x_\alpha\in\mathfrak a_\alpha$ si l'on a
+$\mathfrak a_\alpha=\varphi_{\gamma\alpha}^{-1}(\mathfrak a_\gamma)$.
+
+\begin{corollary}[5.13.2]
+\label{IV.2.s5.13.2-fr}
+Si $\mathfrak N_\alpha$ est le nilradical de $A_\alpha$, le nilradical de $A$
+s'identifie à $\varinjlim\mathfrak N_\alpha$, et $A_{\mathrm{red}}$ à
+$\varinjlim(A_\alpha)_{\mathrm{red}}$. En particulier, si les $A_\alpha$ sont
+réduits, il en est de même de $A$.
+\end{corollary}
+

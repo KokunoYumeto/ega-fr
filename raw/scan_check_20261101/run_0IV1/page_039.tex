@@ -1,0 +1,99 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{39}
+
+\begin{corollary}[16.5.11]
+\label{0.16.5.11-fr}
+Soit $A$ un anneau local noethérien~; supposons qu'il existe un $A$-module de
+type fini $M$ de support $\operatorname{Spec}(A)$, qui soit un module de
+Cohen-Macaulay. Alors, pour tout idéal premier $\mathfrak{p}$ de $A$ on a
+\begin{equation}
+\label{0.16.5.11.1-fr}
+\tag{16.5.11.1}
+  \dim(A)=\dim(A/\mathfrak{p})+\dim(A_{\mathfrak{p}}).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En effet, $\operatorname{Supp}(M/\mathfrak{p}M)
+=\operatorname{Spec}(A/\mathfrak{p})$ ($0_{\mathrm I}$, 1.7.5) et
+$\operatorname{Supp}(M_{\mathfrak{p}})
+=\operatorname{Spec}(A_{\mathfrak{p}})$~; la relation (16.5.11.1) est donc un
+cas particulier de (16.5.10.1).
+\end{proof}
+
+\begin{corollary}[16.5.12]
+\label{0.16.5.12-fr}
+Tout anneau quotient d'un anneau local noethérien $A$ vérifiant les conditions
+de (16.5.11) (en particulier tout anneau quotient d'un anneau local de
+Cohen-Macaulay) est \emph{caténaire}.
+\end{corollary}
+
+\begin{proof}
+Il suffit évidemment de prouver que $A$ lui-même est caténaire c'est-à-dire
+que, pour deux idéaux premiers $\mathfrak{p}\subset\mathfrak{q}$ de $A$, on a
+(16.1.4.2)
+\[
+  \dim(A_{\mathfrak{q}})
+  =\dim(A_{\mathfrak{p}})
+  +\dim(A_{\mathfrak{q}}/\mathfrak{p}A_{\mathfrak{q}}).
+\]
+Or, en vertu de (16.5.10, (i)) $A_{\mathfrak{q}}$ vérifie les mêmes
+hypothèses que $A$, et la relation précédente n'est donc autre que
+(16.5.11.1) appliquée à $A_{\mathfrak{q}}$ et à l'idéal premier
+$\mathfrak{p}A_{\mathfrak{q}}$ de $A_{\mathfrak{q}}$.
+\end{proof}
+
+\begin{env}[16.5.13]
+\label{0.16.5.13-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini. On dit que
+$M$ est un \emph{$A$-module de Cohen-Macaulay} si, pour tout idéal premier
+$\mathfrak{p}$ de $A$, $M_{\mathfrak{p}}$ est un $A_{\mathfrak{p}}$-module
+de Cohen-Macaulay~; en vertu de (16.5.10) cette définition coïncide avec
+(16.5.1) lorsque $A$ est \emph{local}. On dit que $A$ est un
+\emph{anneau de Cohen-Macaulay} si tous les $A_{\mathfrak{p}}$ le sont. Il est
+clair que si $M$ (resp. $A$) est un $A$-module de Cohen-Macaulay (resp. un
+anneau de Cohen-Macaulay), $S^{-1}M$ est un $S^{-1}A$-module de Cohen-Macaulay
+(resp. $S^{-1}A$ est un anneau de Cohen-Macaulay) pour toute partie
+multiplicative $S$ de $A$.
+\end{env}
+
+% (continued in ega0-17-fr.tex, before its first page marker)
+\section{Anneaux réguliers}
+\label{section:0.17-fr}
+
+\subsection{Définition des anneaux réguliers}
+\label{subsection:0.17.1-fr}
+
+\begin{proposition}[17.1.1]
+\label{0.17.1.1-fr}
+Soient $A$ un anneau local noethérien de dimension $n$, $\mathfrak{m}$ son
+idéal maximal, $k=A/\mathfrak{m}$ son corps résiduel. Les conditions suivantes
+sont équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] L'homomorphisme canonique surjectif de $k$-modules gradués
+  (15.1.1.1)
+  \[
+    \varphi:\mathbf{S}^*_k(\mathfrak{m}/\mathfrak{m}^2)
+    \longrightarrow\operatorname{gr}^*_{\mathfrak{m}}(A)
+  \]
+  (où le second membre est le $k$-module gradué associé à $A$ muni de la
+  filtration $\mathfrak{m}$-préadique) est bijectif.
+  \item[\rm b)] On a
+  $\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)=n$.
+  \item[\rm c)] L'idéal $\mathfrak{m}$ admet un système de générateurs de $n$
+  éléments.
+  \item[\rm d)] L'idéal $\mathfrak{m}$ admet un système de générateurs qui est
+  une suite $A$-régulière.
+\end{enumerate}
+\end{proposition}
+
+
+\begin{proof}
+En vertu du lemme de Nakayama,
+$\operatorname{rg}_k(\mathfrak{m}/\mathfrak{m}^2)$ est le plus petit nombre
+d'éléments d'un système de générateurs de $\mathfrak{m}$, donc b) et c) sont
+équivalentes. D'autre part, si $(x_i)_{1\leq i\leq r}$ est un système de
+générateurs de $\mathfrak{m}$ dont les classes $\overline{x}_i$ mod.
+$\mathfrak{m}^2$ forment une base du $k$-espace vectoriel
+$\mathfrak{m}/\mathfrak{m}^2$, $\mathbf{S}^*(\mathfrak{m}/\mathfrak{m}^2)$
+est isomorphe à l'anneau de

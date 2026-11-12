@@ -1,0 +1,119 @@
+% from ega1-9-fr.tex
+\oldpage[I]{171}
+\[
+  \xymatrix{
+    X_{(S')}\ar[r]^{f_{(S')}}\ar[d] &
+    Y_{(S')}\ar[d]\\
+    X\ar[r]_f &
+    Y
+  }
+\]
+\end{proof}
+
+\begin{corollary}[9.1.11]
+\label{I.9.1.11-fr}
+Soient $X$, $Y$ deux $S$-préschémas, $\mathscr{F}$ (resp. $\mathscr{G}$) un
+$\mathscr{O}_X$-Module (resp. $\mathscr{O}_Y$-Module) quasi-cohérent.
+L'image réciproque du faisceau
+$(\mathscr{F}_{(S')}\otimes_{S'}\mathscr{G}_{(S')})$ par l'isomorphisme
+canonique
+$(X\times_S Y)_{(S')}\xrightarrow{\sim}
+(X_{(S')})\times_{S'}(Y_{(S')})$
+(\hyperref[I.3.3.10-fr]{3.3.10}) est égale à
+$(\mathscr{F}\otimes_S\mathscr{G})_{(S')}$.
+\end{corollary}
+
+\begin{proof}
+Si $p$, $q$ sont les projections de $X\times_S Y$, l'isomorphisme en
+question n'est autre que $(p_{(S')},q_{(S')})_{S'}$~; le corollaire résulte
+des prop. (\hyperref[I.9.1.4-fr]{9.1.4}) et
+(\hyperref[I.9.1.10-fr]{9.1.10}).
+\end{proof}
+
+\begin{proposition}[9.1.12]
+\label{I.9.1.12-fr}
+Avec les notations de (\hyperref[I.9.1.2-fr]{9.1.2}) soient $z$ un point de
+$X\times_S Y$, $x=p(z)$, $y=q(z)$~; la fibre
+$(\mathscr{F}\otimes_S\mathscr{G})_z$ est isomorphe à
+$(\mathscr{F}_x\otimes_{\mathscr{O}_x}\mathscr{O}_z)
+\otimes_{\mathscr{O}_z}
+(\mathscr{G}_y\otimes_{\mathscr{O}_y}\mathscr{O}_z)
+=\mathscr{F}_x\otimes_{\mathscr{O}_x}\mathscr{O}_z
+\otimes_{\mathscr{O}_y}\mathscr{G}_y$.
+\end{proposition}
+
+\begin{proof}
+Comme on peut se ramener au cas affine, la proposition résulte de la formule
+(\hyperref[I.1.6.5.1-fr]{1.6.5.1}).
+\end{proof}
+
+\begin{corollary}[9.1.13]
+\label{I.9.1.13-fr}
+Si $\mathscr{F}$ et $\mathscr{G}$ sont de type fini, on a
+\[
+  \operatorname{Supp}(\mathscr{F}\otimes_S\mathscr{G})
+  =p^{-1}(\operatorname{Supp}(\mathscr{F}))
+  \cap q^{-1}(\operatorname{Supp}(\mathscr{G})).
+\]
+\end{corollary}
+
+\begin{proof}
+Comme $p^*(\mathscr{F})$ et $q^*(\mathscr{G})$ sont de type fini sur
+$\mathscr{O}_{X\times_S Y}$, on est ramené, par
+(\hyperref[I.9.1.12-fr]{9.1.12}) et
+(\hyperref[0.1.7.5-fr]{0, 1.7.5}), au cas particulier où
+$\mathscr{G}=\mathscr{O}_Y$, c'est-à-dire à démontrer la formule
+\[
+  \operatorname{Supp}(p^{-1}(\mathscr{F}))
+  =p^{-1}(\operatorname{Supp}(\mathscr{F})).
+  \tag{9.1.13.1}\label{I.9.1.13.1-fr}
+\]
+
+Le même raisonnement que dans (\hyperref[0.1.7.5-fr]{0, 1.7.5}) ramène à
+vérifier que l'on a, pour tout $z\in X\times_S Y$,
+$\mathscr{O}_z/\mathfrak{m}_x\mathscr{O}_z\neq0$ (avec $x=p(z)$), ce qui
+découle du fait que l'homomorphisme
+$\mathscr{O}_x\to\mathscr{O}_z$ est \emph{local} par hypothèse.
+\end{proof}
+
+Nous laissons au lecteur le soin d'étendre à un produit d'un nombre
+quelconque de facteurs les résultats démontrés dans ce numéro pour deux
+facteurs.
+
+\subsection{Image directe d'un faisceau quasi-cohérent.}
+\label{subsection:I.9.2-fr}
+
+\begin{proposition}[9.2.1]
+\label{I.9.2.1-fr}
+Soit $f:X\to Y$ un morphisme de préschémas. On suppose qu'il existe un
+recouvrement $(Y_\alpha)$ de $Y$ par des ouverts affines ayant la propriété
+suivante~: chacun des $f^{-1}(Y_\alpha)$ admet un recouvrement fini
+$(X_{\alpha i})$ par des ouverts affines contenus dans
+$f^{-1}(Y_\alpha)$, tel que chacune des intersections
+$X_{\alpha i}\cap X_{\alpha j}$ soit elle-même réunion finie d'ouverts
+affines. Dans ces conditions, pour tout $\mathscr{O}_X$-Module
+quasi-cohérent $\mathscr{F}$, $f_*(\mathscr{F})$ est un
+$\mathscr{O}_Y$-Module quasi-cohérent.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y$ égal à l'un des
+$Y_\alpha$, donc supprimer les indices $\alpha$.
+
+\begin{enumerate}
+\item[a)] Supposons d'abord que les $X_i\cap X_j$ soient eux-mêmes des
+ouverts \emph{affines}. Posons
+$\mathscr{F}_i=\mathscr{F}|X_i$,
+$\mathscr{F}_{ij}=\mathscr{F}|(X_i\cap X_j)$, et soient
+$\mathscr{F}'_i$ et $\mathscr{F}'_{ij}$ les images de $\mathscr{F}_i$ et
+$\mathscr{F}_{ij}$ respectivement par les restrictions de $f$ à $X_i$ et
+$X_i\cap X_j$~; on sait que les $\mathscr{F}'_i$ et
+$\mathscr{F}'_{ij}$ sont quasi-cohérents
+(\hyperref[I.1.6.3-fr]{1.6.3}). Posons
+$\mathscr{G}=\bigoplus_i\mathscr{F}'_i$,
+$\mathscr{H}=\bigoplus_{i,j}\mathscr{F}'_{ij}$~; $\mathscr{G}$ et
+$\mathscr{H}$ sont des $\mathscr{O}_Y$-Modules quasi-cohérents~; nous allons
+définir un homomorphisme $u:\mathscr{G}\to\mathscr{H}$ tel que
+$f_*(\mathscr{F})$ soit le \emph{noyau} de $u$~; il en résultera que
+$f_*(\mathscr{F})$ est quasi-cohérent
+(\hyperref[I.1.3.9-fr]{1.3.9}). Il suffit de définir $u$

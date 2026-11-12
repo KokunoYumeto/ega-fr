@@ -1,0 +1,260 @@
+\oldpage[IV-4]{270}
+
+La question est évidemment locale sur $X$, et on peut donc se borner au cas où $X=\operatorname{Spec}(A)$ est affine;
+on a alors $X'=\operatorname{Spec}(A')$ et $X''=\operatorname{Spec}(A'')$, et on peut supposer que $A''$ est un $A'$-module projectif de rang $n$.
+Lorsque $f$ est localement libre, on peut supposer que $A'$ est un $A$-module libre de rang $m$, et alors $A''$ est un $A$-module projectif de rang $mn$, et en restreignant $X$ à un ouvert convenable, on peut supposer que $A''$ est un $A$-module libre de rang $mn$;
+la formule \sref{IV.21.5.7.4} résulte alors de la transitivité de la norme (Bourbaki, \emph{Alg.}, chap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7).
+Lorsque $f$ vérifie l'hypothèse II), $A$ est noethérien réduit, et si $R$ est son anneau total de fractions, $A'\otimes_A R$ est un $R$-module libre de rang $m$, donc $A''\otimes_A R=A''\otimes_{A'}(A'\otimes_A R)$ est un $R$-module projectif de rang $mn$, et comme $R$ est alors un anneau semi-local, ce $R$-module est libre;
+la proposition résulte alors encore de la transitivité des normes.
+
+\begin{proposition}[21.5.8]
+\label{IV.21.5.8}
+Soient $f:X'\to X$ un morphisme fini, $g:Y\to X$ un morphisme;
+on pose $Y'=X'\times_XY$, $f'=f_{(Y)}:Y'\to Y$, $g'=g_{(X)}:Y'\to X'$.
+On suppose vérifiée l'une des conditions suivantes :
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item $f$ est localement libre et $g$ est plat.
+  \item $f$ est localement libre, $X$ et $Y$ sont localement noethériens, $g(\operatorname{Ass}(\sh{O}_Y))\subset\operatorname{Ass}(\sh{O}_X)$ et $g'(\operatorname{Ass}(\sh{O}_{Y'}))\subset\operatorname{Ass}(\sh{O}_{X'})$.
+  \item $f$ vérifie l'hypothèse \textup{II)} de \sref{IV.21.5.3}, $Y$ est localement noethérien, $Y$ et $Y'$ sont réduits et toute composante irréductible de $Y$ \textup{(resp.} $Y'$\textup{)} domine une composante irréductible de $X$ \textup{(resp.} $X'$\textup{)}.
+\end{enumerate}
+
+Alors, pour tout diviseur $D'$ sur $X'$, $g'^*(D')$ est défini, $g^*(f_*(D'))$ est défini et l'on a
+\[
+\label{IV.21.5.8.1}
+  g^*(f_*(D'))=f_*'(g'^*(D')).
+  \tag{21.5.8.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, dans tous les cas, il résulte de (\textbf{II}, 6.5.8) que l'on a un isomorphisme fonctoriel
+\[
+  g^*(\mathrm{N}_{X'/X}(\sh{L}'))\xrightarrow{\sim}\mathrm{N}_{Y'/Y}(g'^*(\sh{L}'))
+\]
+dans la catégorie des $\sh{O}_{X'}$-Module inversibles;
+en outre (\textbf{II}, 6.5.4), si $s'$ est une section de $\sh{O}_{X'}$ au-dessus de $f^{-1}(U)$, $s''$ la section correspondante de $\sh{O}_{Y'}$ au-dessus de $g'^{-1}(f^{-1}(U))$ ($U$ ouvert de $X$), $\mathrm{N}_{Y'/Y}(s'')$ est la section de $\sh{O}_Y$ au-dessus de $g^{-1}(U)$ qui correspond à la section $\mathrm{N}_{X'/X}(s')$ de $\sh{O}_X$ au-dessus de $U$.
+La formule \sref{IV.21.5.8.1} résultera donc des définitions si l'on prouve que $g'^*(D')$ et $g^*(D)$ sont définis, quels que soient les diviseurs $D'$ sur $X'$ et $D$ sur $X$.
+En ce qui concerne $D$, cela résulte des hypothèses faites et de \sref{IV.21.4.5}.
+En ce qui concerne $D'$, dans le cas (i) $g'$ est plat, donc dans tous les cas $g'^*(D')$ est défini en vertu de \sref{IV.21.4.5}.
+\end{proof}
+
+%%%%% ega4-21b
+\subsection{Cycle 1-codimensionnel associé à un diviseur.}
+\EGAReaderTarget{ega4.c04.subsec.21-6}{subsection:IV.21.6}
+\label{IV.21.6}
+
+\begin{env}[21.6.1]
+\EGAReaderTarget{ega4.c04.statement.21-6-1}{IV.21.6.1}
+Soit $X$ un \emph{préschéma localement noethérien}, et soit $\mathfrak{I}(X)$ l'ensemble des \emph{parties fermées irréductibles} de $X$ (qui est en correspondance biunivoque avec $X$ par l'application $x\leadsto\overline{\{x\}}$).
+Dans le groupe produit $\bb{Z}^X$, considérons le sous-groupe $\mathfrak{Z}(X)$ des éléments $(n_x)_{x\in X}$ tels que l'ensemble des $\overline{\{x\}}\in\mathfrak{I}(X)$ tels que $n_x\neq0$ (ou, ce qui revient
+\oldpage[IV-4]{271}
+au même, l'ensemble des $x\in X$ tels que $n_x\neq0$) soit \emph{localement fini}.
+Il est clair que $\mathfrak{Z}(X)$ est un \emph{sous-groupe} de $\bb{Z}^X$, qui contient le groupe somme directe $\bb{Z}^{(X)}$ (groupe libre ayant pour base $\mathfrak{I}(X)$), et lui est égal lorsque $X$ est \emph{noethérien}.
+Les éléments de $\mathfrak{Z}(X)$ sont appelés \emph{cycles} sur $X$ et ceux de $\mathfrak{I}(X)$ \emph{cycles premiers} (ils ne forment pas en général une base de $\mathfrak{Z}(X)$ lorsque $X$ n'est pas noethérien).
+On considère toujours $\mathfrak{Z}(X)$ comme \emph{ordonné} par l'ordre induit sur ce sous-groupe par l'ordre produit de $\bb{Z}^X$, et on notera $\mathfrak{Z}^+(X)$ l'ensemble des cycles $\geq0$.
+
+Pour tout cycle $Z\in\mathfrak{Z}(X)$, égal à $(n_x)_{x\in X}$, on écrira par abus de langage,
+\[
+  Z=\sum_{x\in X}n_x.\overline{\{x\}};
+\]
+on appelle \emph{multiplicité de $Z$ au point $x$} et on note $\operatorname{mult}_x(Z)$ l'entier $n_x$ (positif ou négatif).
+Dire que $Z\geq0$ signifie que $\operatorname{mult}_x(Z)\geq0$ pour tout $x\in X$.
+On appelle \emph{support de $Z$} et on note $\Supp(Z)$ la réunion des $\overline{\{x\}}$ tels que $\operatorname{mult}_x(Z)\neq0$;
+par définition de $\mathfrak{Z}(X)$, c'est une partie \emph{fermée} de $X$, comme réunion d'une famille localement finie de parties fermées.
+On appelle \emph{dimension} (resp.\ \emph{codimension}) de $Z$ et on note $\dim(Z)$ (resp.\ $\codim(Z)$) la dimension (resp.\ codimension dans $X$) de $\Supp(Z)$.
+\end{env}
+
+\begin{env}[21.6.2]
+\EGAReaderTarget{ega4.c04.statement.21-6-2}{IV.21.6.2}
+On dit qu'une partie fermée $Y$ de $X$ est \emph{purement de codimension $p$} (dans $X$) si \emph{chacune} de ses composantes irréductibles est de codimension $p$ dans $X$.
+On dit qu'un cycle est \emph{purement de codimension $p$}, ou (par abus de langage) est un \emph{cycle $p$-codimensionnel} si son support est \emph{purement} de codimension $p$.
+On note $X^{(p)}$ l'ensemble des $x\in X$ tels que $\codim(\overline{\{x\}},X)=p$, ou, ce qui revient au même \sref{IV.5.1.2.1}, $\dim(\sh{O}_{X,x})=p$:
+les cycles purement de codimension $p$ forment un sous-groupe $\mathfrak{Z}^p(X)$ de $\mathfrak{Z}(X)$, isomorphe au sous-groupe de $\bb{Z}^{X^{(p)}}$ formé des $(n_x)_{x\in X^{(p)}}$ tels que l'ensemble des $\overline{\{x\}}$ (ou l'ensemble des $x$) pour lesquels $n_x\neq0$ soit localement fini;
+ce sous-groupe contient le groupe libre $\bb{Z}^{(X^{(p)})}$ et lui est identique lorsque $X$ est noethérien.
+On note $\mathfrak{Z}^{p+}(X)$ l'ensemble des éléments $\geq0$ de $\mathfrak{Z}^p(X)$.
+Il est clair que le groupe ordonné $\mathfrak{Z}(X)$ contient la somme directe des sous-groupes ordonnés $\mathfrak{Z}^p(X)$, et est identique à cette somme directe lorsque $X$ est noethérien;
+dans ce dernier cas, on considère $\mathfrak{Z}(X)$ comme \emph{gradué} par les $Z^p(X)$ pour $p\in\bb{N}$.
+\end{env}
+
+\begin{env}[21.6.3]
+\EGAReaderTarget{ega4.c04.statement.21-6-3}{IV.21.6.3}
+Soient $Z=\sum_{x\in X}n_x.\overline{\{x\}}$ un cycle sur $X$, $U$ un ouvert de $X$;
+on appelle \emph{restriction} de $Z$ à $U$ et on note $Z|U$ le cycle $\sum_{x\in U}n_x.(U\cap\overline{\{x\}})$ sur $U$;
+on a $\Supp(Z|U)=\Supp(Z)\cap U$.
+Il est clair que $Z\leadsto Z|U$ est un homomorphisme de groupes ordonnés de $\mathfrak{Z}(X)$ dans $\mathfrak{Z}(U)$ (resp.\ de $\mathfrak{Z}^p(X)$ dans $\mathfrak{Z}^p(U)$), et que si $V$ est un ouvert contenu dans $U$, on a $Z|V=(Z|U)|V$;
+l'application $U\leadsto\mathfrak{Z}(U)$ (resp.\ $U\leadsto\mathfrak{Z}^p(U)$) est donc un \emph{préfaisceau} sur $X$ de groupes ordonnés commutatifs.
+En fait ce préfaisceau est un \emph{faisceau}, somme directe des faisceaux $(i_x)_*(\bb{Z}_{\overline{\{x\}}})$, où $x$ parcourt $X$ (resp.\ $X^{(p)}$) et pour chaque $x\in X$, $i_x$ est l'injection canonique $\overline{\{x\}}\to X$ et $\bb{Z}_{\overline{\{x\}}}$ est le faisceau simple associé au faisceau constant $\bb{Z}$ sur l'espace $\overline{\{x\}}$:
+cela résulte aussitôt de la description des sections d'une somme directe de faisceaux de groupes commutatifs (G, II, 2.7).
+On note ce faisceau $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+On note $\mathscr{Z}_X^+$ (resp.\ $\mathscr{Z}_X^{p+}$) le sous-faisceau
+\oldpage[IV-4]{272}
+de monoïdes $U\leadsto\mathfrak{Z}^+(U)$ (resp.\ $U\leadsto\mathfrak{Z}^{p+}(U)$) de $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+Le faisceau $\mathscr{Z}_X$ est évidemment \emph{somme directe} des faisceaux $\mathscr{Z}_X^p$.
+
+Notons enfin que les faisceaux $\mathscr{Z}_X^p$ (donc aussi $\mathscr{Z}_X$) sont \emph{flasques}.
+Supposons en effet donnée une section $Z$ de $\mathscr{Z}_X^p$ au-dessus d'un ouvert $U$, de sorte que l'ensemble $S$ des $x\in U$ tels que $\operatorname{mult}_x(Z)\neq0$ est localement fini \emph{dans} $U$;
+cet ensemble est aussi localement fini \emph{dans} $X$, car pour tout $z\in X$ et tout voisinage ouvert noethérien $V$ de $z$, $U\cap V$ est noethérien, donc ne contient qu'un nombre fini de points de $S$.
+On définit donc une section $Z'$ de $\mathscr{Z}_X^p$ au-dessus de $X$ en posant $Z'=\sum_{x\in U}\operatorname{mult}_x(Z).\overline{\{x\}}$ et puisque l'adhérence de $x$ dans $U$ est $\overline{\{x\}}\cap U$, on a bien $Z'|U=Z$, d'où notre assertion.
+\end{env}
+
+\begin{env}[21.6.4]
+\label{IV.21.6.4}
+Nous nous proposons de définir un homomorphisme canonique
+\[
+\label{IV.21.6.4.1}
+  c:\sh{D}iv_X\to\mathscr{Z}_X^1
+  \tag{21.6.4.1}
+\]
+de faisceaux de groupes commutatifs.
+Il suffit évidemment de définir un homomorphisme de $\sh{M}_X^*$ dans $\mathscr{Z}_X^1$, qui s'annule dans $\sh{O}_X^*$ \sref{IV.21.1.2};
+or, par définition, $\sh{M}_X^*$ est le \emph{symétrisé} du faisceau de monoïdes $\sh{S}(\sh{O}_X)=\sh{O}_X\cap\sh{M}_X^*$, et un homomorphisme $\sh{M}_X^*\to\mathscr{Z}_X^1$ est déterminé de façon unique par la donnée de sa restriction $\sh{S}(\sh{O}_X)\to\mathscr{Z}_X^1$, qui est un homomorphisme de faisceau de \emph{monoïdes} soumis à la seule condition d'être nul dans $\sh{O}_X^*$;
+il revient au même de dire que pour définir $c$, il suffit de définir un homomorphisme de \emph{faisceau de monoïdes}
+\[
+\label{IV.21.6.4.2}
+  c:\sh{D}iv_X^+\to\mathscr{Z}_X^1.
+  \tag{21.6.4.2}
+\]
+\end{env}
+
+\begin{env}[21.6.5]
+\label{IV.21.6.5}
+Or, on a vu qu'à tout diviseur positif $D$ sur $X$ on fait correspondre le sous-préschéma fermé $\boldsymbol{\mathsf{Y}}(D)$ de $X$, défini par l'Idéal $\sh{I}_X(D)\subset\sh{O}_X$, et qui est régulièrement immergé et de codimension $1$.
+En chacun des points maximaux $x$ de $\boldsymbol{\mathsf{Y}}(D)$, on a donc (\sref{IV.19.1.4} et \sref{IV.5.1.2}) $\codim(\overline{\{x\}},X)=\dim(\sh{O}_{X,x})=1$, autrement dit $x\in X^{(1)}$;
+d'ailleurs l'ensemble de ces points maximaux est localement fini dans $X$ \sref{IV.3.1.6}, et $\sh{O}_{\boldsymbol{\mathsf{Y}}(D),x}$ est un anneau \emph{artinien}.
+En tout point $x\in X^{(1)}$ qui n'est pas point maximal de $\boldsymbol{\mathsf{Y}}(D)$, on a nécessairement $x\notin\boldsymbol{\mathsf{Y}}(D)$, donc $\sh{O}_{\boldsymbol{\mathsf{Y}}(D),x}=0$.
+Posons
+\[
+\label{IV.21.6.5.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{long}(\sh{O}_{\boldsymbol{\mathsf{Y}}(D),x}).\overline{\{x\}}
+  \tag{21.6.5.1}
+\]
+qui est donc un élément de $\mathfrak{Z}^1(X)$.
+\end{env}
+
+\begin{proposition}[21.6.6]
+\label{IV.21.6.6}
+L'application $D\leadsto\operatorname{cyc}(D)$ est un homomorphisme du monoïde $\operatorname{Div}^+(X)$ dans $\mathfrak{Z}^1(X)$.
+\end{proposition}
+
+\begin{proof}
+Tout revient à voir que pour deux diviseurs \emph{positifs} $D$, $D'$, on a
+\[
+  \operatorname{cyc}(D+D')=\operatorname{cyc}(D)+\operatorname{cyc}(D').
+\]
+Or, on a \sref{IV.21.2.5} $\sh{I}_X(D+D')=\sh{I}_X(D)\sh{I}_X(D')$;
+tout revient à voir que si $x\in X^{(1)}$, si l'on pose $A=\sh{O}_{X,x}$, et si $t$ et $t'$ sont deux éléments réguliers de $A$, on a $\operatorname{long}(A/tt'A)=\operatorname{long}(A/tA)+\operatorname{long}(A/t'A)$;
+mais puisque $t$ est régulier, $tA/tt'A$ est isomorphe à $A/t'A$, d'où aussitôt la proposition.
+\end{proof}
+
+\oldpage[IV-4]{273}
+
+Il résulte aussitôt des définitions que pour tout ouvert $U\subset X$, on a
+\[
+  \boldsymbol{\mathsf{Y}}(D|U)=\boldsymbol{\mathsf{Y}}(D)\cap U,
+\]
+donc $\operatorname{cyc}(D|U)=\operatorname{cyc}(D)|U$, et les homomorphismes $\operatorname{cyc}:\operatorname{Div}^+(U)\to\mathfrak{Z}^1(U)$ définissent donc un homomorphisme de faisceaux de monoïdes \sref{IV.21.6.4.3}, d'où l'homomorphisme cherché \sref{IV.21.6.4.1} de faisceaux de groupes.
+
+On a $\Supp(\operatorname{cyc}(D))\subset\Supp(D)$ pour tout diviseur $D$ et
+\begin{equation}
+  \Supp(\operatorname{cyc}(D))=\Supp(D)\quad\text{lorsque}\quad D\geq0;
+  \tag{21.6.6.2}\label{IV.21.6.6.2}
+\end{equation}
+on a déjà vu en effet la seconde relation \sref{IV.21.2.12};
+lorsque $D$ est quelconque, la relation $D_x=0$ entraîne l'existence d'un voisinage ouvert $U$ de $x$ tel que $D|U=0$, d'où $\operatorname{cyc}(D)|U=0$, ce qui prouve notre assertion.
+
+\begin{env}[21.6.7]
+\EGAReaderTarget{ega4.c04.statement.21-6-7}{IV.21.6.7}
+L'homomorphisme \sref{IV.21.6.4.1} donne, par passage aux groupes de sections au-dessus de $X$, un \emph{homomorphisme croissant de groupes ordonnés} $\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$, que nous noterons encore $D\leadsto\operatorname{cyc}(D)$;
+le nombre $\operatorname{mult}_x(\operatorname{cyc}(D))$ pour $x\in X^{(1)}$ se note encore $\operatorname{mult}_x(D)$ ou $\operatorname{mult}_{\overline{\{x\}}}(D)$ et s'appelle \emph{multiplicité du diviseur $D$ au point $x$}, ou \emph{multiplicité du cycle premier $\overline{\{x\}}$ dans $D$};
+c'est un entier positif ou négatif, égal comme on l'a vu à $\operatorname{long}(\sh{O}_{\boldsymbol{\mathsf{Y}}(D),x})$ lorsque $D$ est un diviseur \emph{positif};
+on a donc par définition
+\[
+\label{IV.21.6.7.1}
+  \operatorname{cyc}(D)=\sum_{x\in X^{(1)}}\operatorname{mult}_x(D).\overline{\{x\}},
+  \tag{21.6.7.1}
+\]
+et en vertu du fait que $D\leadsto\operatorname{cyc}(D)$ est un homomorphisme, on a
+\[
+\label{IV.21.6.7.2}
+  \operatorname{mult}_x(\setmin D)=\setmin\operatorname{mult}_x(D),\qquad
+  \operatorname{mult}_x(D+D')=\operatorname{mult}_x(D)+\operatorname{mult}_x(D')
+  \tag{21.6.7.2}
+\]
+pour deux diviseurs quelconques $D$, $D'$.
+
+Pour toute fonction méromorphe régulière $f$ sur $X$, on pose en particulier, pour $x\in X^{(1)}$
+\[
+\label{IV.21.6.7.3}
+  o_x(f)=\operatorname{mult}_x(\operatorname{div}(f))
+  \tag{21.6.7.3}
+\]
+et on dit que $o_x(f)$ (entier positif ou négatif) est l'\emph{ordre de $f$ au point} $x\in X^{(1)}$.
+Si $f_x\in\sh{O}_{X,x}$ (élément \emph{régulier} de cet anneau local par hypothèse), on a donc
+\[
+\label{IV.21.6.7.4}
+  o_x(f)=\operatorname{long}(\sh{O}_{X,x}/f_x\sh{O}_{X,x});
+  \tag{21.6.7.4}
+\]
+pour deux fonctions méromorphes régulières $f$, $f'$ sur $X$, on a
+\[
+\label{IV.21.6.7.5}
+  o_x(ff')=o_x(f)+o_x(f'),\qquad o_x(f^{-1})=\setmin o_x(f)
+  \tag{21.6.7.5}
+\]
+pour tout $x\in X^{(1)}$.
+Les cycles $1$-codimensionnels
+\[
+  Z^+(f)=\sum_{x\in X^{(1)}}(o_x(f))^+.\overline{\{x\}},\qquad
+  Z^-(f)=\sum_{x\in X^{(1)}}(o_x(f))^-.\overline{\{x\}}
+\]
+sont appelés respectivement le \emph{cycle des zéros} et le \emph{cycle des pôles} (ou \emph{cycle polaire}) de $f$, et l'on a évidemment $\operatorname{cyc}(\operatorname{div}(f))=Z^+(f)\setmin Z^-(f)$.
+Les cycles $1$-codimensionnels de la forme $\operatorname{cyc}(\operatorname{div}(f))$ sont appelés \emph{principaux} (ou \emph{linéairement équivalents à} $0$) et forment un sous-groupe $\mathfrak{Z}^1_\mathrm{princ}(X)$ de $\mathfrak{Z}^1(X)$.
+Les sections au-dessus de $X$ de l'image $c(\sh{D}iv_X)\subset\mathscr{Z}_X^1$ sont
+\oldpage[IV-4]{274}
+appelées \emph{cycles localement principaux};
+un tel cycle $Z$ est donc caractérisé par le fait que, pour tout $y\in X$, il y a un voisinage ouvert $U$ de $y$ dans $X$ et une fonction méromorphe régulière $f$ sur $U$ telle que $Z|U=\sum_{x\in U\cap X^{(1)}}o_x(f)(\overline{\{x\}}\cap U)$.
+Si $Z=\sum_{x\in X^{(1)}}n_x.\overline{\{x\}}$, il revient au même de dire que, pour tout $y\in X$, si l'on pose $T_y=\Spec(\sh{O}_{X,x})$ et $Z_y=\sum_{x\in X^{(1)}\cap T_y}n_x(\overline{\{x\}}\cap T_y)$, $Z_y$ est \emph{principal}, autrement dit il existe une fonction méromorphe régulière $g$ sur $T_y$ telle que $Z_y=\operatorname{cyc}(\operatorname{div}(g))$.
+Cela résulte aussitôt en effet de la définition précédente et de \sref{IV.20.3.7} qui établit une correspondance biunivoque entre les fonctions méromorphes régulières sur $T_y$ et les germes de fonctions méromorphes régulières sur les voisinages ouverts de $y$ dans $X$ lorsque $X$ est localement noethérien.
+On exprime encore le fait que $Z_y$ est principal en disant que $Z$ est \emph{principal au point $y$}.
+L'ensemble des points où $Z$ est principal est évidemment \emph{ouvert}, en vertu de ce qui précède.
+
+On déduit de l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ un homomorphisme canonique $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$, en vertu de la définition de $\mathfrak{Z}^1_\mathrm{princ}(X)$.
+On dit que le groupe $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$ est le \emph{groupe des classes de cycles $1$-codimensionnels} de $X$ et on le note $\mathfrak{Cl}(X)$.
+Deux éléments de $\mathfrak{Z}^1(X)$ ayant même image dans $\mathfrak{Cl}(X)$ sont appelés \emph{linéairement équivalents}.
+\end{env}
+
+\begin{env}[21.6.8]
+\label{IV.21.6.8}
+Considérons en particulier le cas où $X=\Spec(A)$, où $A$ est un \emph{anneau noethérien intègre et intégralement clos}.
+Alors $X^{(1)}$ est l'ensemble des \emph{idéaux premiers de hauteur $1$} de $A$, et $\mathfrak{Z}^1(X)$ s'identifie donc au \emph{groupe des diviseurs} (au sens de N.~Bourbaki) de l'anneau de Krull $A$ (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~1, n\textsuperscript{o}~3, cor.\ du th.~2 et n\textsuperscript{o}~6, th.~3).
+
+Comme d'autre part, les fonctions méromorphes régulières sur $X$ s'identifient alors aux éléments $\neq0$ du corps des fractions $K$ de $A$, l'application $f\leadsto\operatorname{cyc}(\operatorname{div}(f))$ de $M(X)$ dans $\mathfrak{Z}^1(X)$ s'identifie à l'application notée $f\leadsto\operatorname{div}(f)$ dans Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~1);
+$\mathfrak{Z}^1_\mathrm{princ}(X)$ s'identifie donc au \emph{groupe des diviseurs principaux} de $A$ au sens de Bourbaki, et $\mathfrak{Cl}(X)$ au \emph{groupe des classes de diviseurs de} $A$ au sens de Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~2 et n\textsuperscript{o}~10).
+\end{env}
+
+\begin{theorem}[21.6.9]
+\EGAReaderTarget{ega4.c04.thm.21-6-9}{IV.21.6.9}
+Soit $X$ un préschéma localement noethérien \textup{normal}.
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item L'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est injectif et son image est formée des cycles localement principaux.
+  \item Les conditions suivantes sont équivalentes:
+  \begin{enumerate}[label=\emph{\alph*)}]
+    \item L'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est bijectif.
+    \item Tout cycle $1$-codimensionnel est localement principal.
+    \item Pour tout $x\in X$, l'anneau local $\sh{O}_{X,x}$ est factoriel.
+  \end{enumerate}
+  \textup{(On dit alors que $X$ est un préschéma \emph{localement factoriel}.)}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Il suffit de démontrer que
+\[
+\label{IV.21.6.9.1}
+  \operatorname{cyc}^{-1}(\mathfrak{Z}^{1+}(X))=\operatorname{Div}^+(X),
+  \tag{21.6.9.1}
+\]
+puisque l'on a $\operatorname{Div}^+(X)\cap(\setmin\operatorname{Div}^+(X))=0$ et $\mathfrak{Z}^{1+}(X)\cap(\setmin\mathfrak{Z}^{1+}(X))=0$.
+On est donc ramené à prouver que si $D$ est un diviseur sur $X$ tel que $\operatorname{mult}_x(D)\geq0$ pour tout $x\in X^{(1)}$, on a $D\geq0$.
+Or, pour tout $x\notin X^{(1)}$, l'anneau local $\sh{O}_{X,x}$ est intègre et intégralement clos et

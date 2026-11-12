@@ -1,0 +1,29 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{233}
+schématiquement dense $U_0$ de $X$ dans $Y$ est tel que le composé $v_0:U_0\xrightarrow{u_0}Y\to S$ coïncide avec la restriction du morphisme structural $w_0:U_0\to S$ dans un ouvert $U\subset U_0$ schématiquement dense dans $X$, alors on a $v_0=w_0$.
+Mais en vertu de l'hypothèse que le morphisme $S\to S_0$ est séparé, cela résulte encore de \sref{IV.11.10.1}[(d)].
+\end{proof}
+
+\begin{corollary}[20.2.6]
+\label{IV.20.2.6}
+Sous les hypothèses de \sref{IV.20.2.4}, le préfaisceau $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ est un faisceau.
+\end{corollary}
+
+\begin{proof}
+En effet, soient $U$ un ouvert de $X$, $(U_\alpha)$ un recouvrement de $U$ par des ouverts de $U$ ; supposons donné pour chaque $\alpha$ un pseudo-$S$-morphisme $\omega_\alpha$ de $U_\alpha$ dans $Y$, de sorte que pour tout couple d'indices $\alpha$, $\beta$, les restrictions \sref{IV.20.2.2} des pseudo-$S$-morphismes $\omega_\alpha$ et $\omega_\beta$ à $U_\alpha\cap U_\beta$ soient égales ; en vertu de \sref{IV.20.2.3.1}, cela entraîne que $\operatorname{dom}_S(\omega_\alpha)\cap U_\beta=\operatorname{dom}_S(\omega_\beta)\cap U_\alpha$.
+Soit alors $W$ la réunion des ouverts $\operatorname{dom}_S(\omega_\alpha)$, et, pour tout $\alpha$, soit $u_\alpha$ le $S$-morphisme unique $\operatorname{dom}_S(\omega_\alpha)\to Y$ appartenant à la classe $\omega_\alpha$ \sref{IV.20.2.4} ; en raison de l'hypothèse et de \sref{IV.20.2.4}, les restrictions de $u_\alpha$ et $u_\beta$ à $\operatorname{dom}_S(\omega_\alpha)\cap\operatorname{dom}_S(\omega_\beta)$ sont égales, donc il existe un morphisme $u:W\to Y$ dont la restriction à chaque ouvert $\operatorname{dom}_S(\omega_\alpha)$ est égale à $u_\alpha$ ; il est clair que $W$ est schématiquement dense dans $U$, donc définit un pseudo-$S$-morphisme $\omega$ de $U$ dans $Y$ dont les restrictions aux $U_\alpha$ sont les $\omega_\alpha$.
+\end{proof}
+
+\begin{remark}[20.2.7]
+\label{IV.20.2.7}
+On sait \sref{IV.11.10.4} que lorsque $X$ est \emph{réduit}, il revient au même de dire qu'un ouvert de $X$ est dense dans $X$ ou qu'il est schématiquement dense dans $X$ ; la notion de pseudo-morphisme (resp. pseudo-$S$-morphisme) de $X$ dans $Y$ coïncide alors avec celle d'\emph{application rationnelle} (resp. $S$-\emph{application rationnelle}) de $X$ dans $Y$ \sref[I]{I.7.1.2}.
+Dans le cas général, la notion de pseudo-morphisme semble plus utile que celle d'application rationnelle.
+\end{remark}
+
+\begin{env}[20.2.8]
+\EGAReaderTarget{ega4.c04.statement.20-2-8}{IV.20.2.8}
+On appelle \emph{pseudo-fonction} sur $X$ un pseudo-morphisme de $X$ dans $\Spec(\bb{Z}[T])$ ($T$ indéterminée), ou, ce qui revient au même, un $X$-pseudo-morphisme de $X$ dans $X\otimes_{\bb{Z}}\bb{Z}[T]$ ; il revient aussi au même \sref[I]{I.3.3.15} de dire qu'une pseudo-fonction sur $X$ est une \emph{classe d'équivalence de sections de $\sh{O}_X$ au-dessus d'ouverts schématiquement denses de $X$}, deux sections $g\in\Gamma(U,\sh{O}_X)$, $g'\in\Gamma(U',\sh{O}_X)$ au-dessus de tels ouverts étant équivalentes s'il existe un ouvert $U''\subset U\cap U'$, schématiquement dense dans $X$, où $g$ et $g'$ coïncident.
+On peut ici appliquer \sref{IV.20.2.4} avec $S=X$ et $Y=X\otimes_{\bb{Z}}\bb{Z}[T]$ ; donc, pour toute pseudo-fonction $\vphi$ sur $X$, il existe un \emph{plus grand} ouvert schématiquement dense $\operatorname{dom}(\vphi)$ dans $X$ tel qu'il y ait une section de $\sh{O}_X$ au-dessus de $\operatorname{dom}(\vphi)$ appartenant à la classe $\vphi$.
+Il est clair que le faisceau $\mathscr{P}\!s.\!\operatorname{hom}_X(X,X\otimes_{\bb{Z}}\bb{Z}[T])$ est ici un \emph{faisceau d'anneaux}, et même une $\sh{O}_X$-\emph{Algèbre}, que nous noterons $\sh{M}'_X$ ; il résulte de \sref{IV.20.2.6} que, pour tout ouvert $U$ de $X$, $\Gamma(U,\sh{M}'_X)$ est égal à l'ensemble des pseudo-morphismes de $U$ dans $\Spec(\bb{Z}[T])$ ; on pose $M'(X)=\Gamma(X,\sh{M}'_X)$.
+Dire qu'une section $\vphi$ de $\sh{M}'_X$ au-dessus de $U$ est \emph{inversible} dans l'anneau $\Gamma(U,\sh{M}'_X)$ signifie qu'il existe un ouvert $U'$ schématiquement dense dans $\operatorname{dom}(\vphi)$, donc dans $U$, tel que, si $g$ est l'unique section de $\sh{O}_X$ au-dessus de $\operatorname{dom}(\vphi)$ appartenant à $\vphi$, $g|U'$ soit \emph{inversible} dans $\Gamma(U',\sh{O}_X)$.
+Il résulte de \sref[I]{I.3.3.15} que, dans la correspondance canonique entre $\Gamma(V,\sh{O}_X)$ et $\Hom(V,\bb{Z}[T])$ ($V$ ouvert de $X$), les éléments inversibles de $\Gamma(V,\sh{O}_X)$ correspondent aux morphismes qui se

@@ -1,0 +1,79 @@
+% from ega4-12-fr.tex
+\oldpage[IV-3]{176}
+contenant $x'$, et soit $Z'$ l'adhérence de $z'$ dans $X$, de sorte que l'on a
+$x\in Z'$. Pour traiter le cas (i), il va suffire de prouver la
+
+\begin{proposition}[12.1.1.5]
+\label{IV.12.1.1.5-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+localement de type fini, $\mathcal F$ un $\mathcal O_X$-Module cohérent et
+$f$-plat~; pour tout $y\in Y$, posons
+$\mathcal F_y=\mathcal F\otimes_{\mathcal O_Y}k(y)$. Soient $z'$ un point de
+$X$, $y'=f(z')$, et supposons que $z'\in\operatorname{Ass}(\mathcal F_{y'})$.
+Soient $Z'$ (resp. $Y'$) le sous-préschéma réduit de $X$ (resp. $Y$) ayant
+pour espace sous-jacent l'adhérence de $\{z'\}$ dans $X$ (resp. de $\{y'\}$
+dans $Y$). Alors, pour tout $y\in f(Z')$, les dimensions de toutes les
+composantes irréductibles de $Z'_y$ sont égales à $\dim(Z'_{y'})$ (dimension
+de l'adhérence de $z'$ dans $X_{y'}$) (ce que nous exprimerons plus tard
+(13.2.2) en disant que la restriction $Z'\to Y'$ de $f$ est un morphisme
+équidimensionnel)~; en outre, en tout point maximal $z$ de $Z'_y$, on a
+$z\in\operatorname{Ass}(\mathcal F_y)$.
+\end{proposition}
+
+Pour cela, nous allons nous ramener au cas où $Y$ est spectre d'un anneau de
+valuation discrète. Prenons un spectre d'anneau de valuation discrète $Y_1$ et
+un morphisme $h:Y_1\to X$ tel que $h(y_1)=z$, $h(y'_1)=z'$, $y_1$ et $y'_1$
+étant le point fermé et le point générique de $Y_1$ respectivement
+($\mathbf{II}$, 7.1.7). Soient $g=f\circ h:Y_1\to Y$,
+$X_1=X\times_YY_1$, et soient $f_1:X_1\to Y_1$, $g_1:X_1\to X$ les projections
+canoniques~; il y a une $Y_1$-section $h_1:Y_1\to X_1$ telle que
+$h=g_1\circ h_1$ ($\mathbf I$, 3.3.14). Si
+$Z'_1=Z'_{y'}\otimes_{k(y')}k(y'_1)$, on sait (4.2.6) que les composantes
+irréductibles de $Z'_1$ dominent $Z'_{y'}$~; soit $z'_1$ le point générique de
+l'une de ces composantes qui contient $h_1(y'_1)$, de sorte que
+$f_1(z'_1)=y'_1$ et $g_1(z'_1)=z'$. Comme $h_1(y_1)$ est spécialisation de
+$h_1(y'_1)$, il est \emph{a fortiori} spécialisation de $z'_1$~; soit $z_1$ un
+point générique d'une des composantes irréductibles de
+$\overline{\{z'_1\}}\cap(X_1)_{y_1}$ contenant $h_1(y_1)$. Alors $g_1(z_1)$
+est spécialisation de $g_1(z'_1)=z'$ dans $X$, et
+$z=h(y_1)=g_1(h_1(y_1))$ est spécialisation de $g_1(z_1)$~; mais comme
+$f(g_1(z_1))=y$ et que $z$ est point générique de $Z'_y$, on a nécessairement
+$z=g_1(z_1)$.
+
+Supposons maintenant que l'on ait prouvé que, si l'on pose
+$\mathcal F_1=\mathcal F\otimes_{\mathcal O_Y}\mathcal O_{Y_1}$, on a
+$z_1\in\operatorname{Ass}((\mathcal F_1)_{y_1})$~; il résultera de (4.2.7) que
+$z\in\operatorname{Ass}(\mathcal F_y)$~; en outre, les dimensions de
+$\overline{\{z_1\}}\cap(X_1)_{y_1}$ et de $\overline{\{z\}}\cap X_y$ sont
+égales, et de même les dimensions de
+$\overline{\{z'_1\}}\cap(X_1)_{y'_1}$ et de
+$\overline{\{z'\}}\cap X_{y'}$ (4.2.7)~; on s'est donc bien ramené, comme
+annoncé, au cas où $Y$ est spectre d'un anneau de valuation discrète $A$, $y$
+et $y'$ étant son point fermé et son point générique respectivement.
+
+Cela étant, comme $z'\in\operatorname{Ass}(\mathcal F_{y'})$, on a
+\emph{a fortiori} $z'\in\operatorname{Ass}(\mathcal F)$. Si $t$ est une
+uniformisante de $A$, $t$ est $\mathcal F$-régulier par platitude, donc (3.4.3)
+on a $z\in\operatorname{Ass}(\mathcal F/t\mathcal F)
+=\operatorname{Ass}(\mathcal F_y)$. Quant à l'assertion relative aux
+dimensions, elle résulte de (7.1.13), appliqué à un sous-préschéma fermé de $X$
+ayant $Z'$ pour espace sous-jacent.
+
+Abordons enfin le cas (ii) de (12.1.1). Avec les mêmes notations, il faut
+prouver que si tous les cycles premiers associés à $\mathcal F_y$ et contenant
+$x$ ont la dimension $k$, il en est de même de tous les cycles premiers
+associés à $\mathcal F_{y'}$ et contenant $x'$. Or on vient de voir que tout
+cycle premier associé à $\mathcal F_{y'}$ et contenant $x'$ a même dimension
+que l'un des cycles premiers associés à $\mathcal F_y$ et contenant $x$~; cela
+démontre donc (ii).
+\end{env}
+\end{proof}
+
+\begin{remarks}[12.1.2]
+\EGAReaderTarget{ega4.c04.item.12-1-2}{IV.12.1.2-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item Sous les conditions de (12.1.1.5) avec $\mathcal F=\mathcal O_X$ (de
+  sorte que $f$ est plat), on ne peut en général affirmer que la restriction
+  $Z'\to Y'$ de $f$ est un morphisme plat ni même un morphisme ouvert. C'est ce
+  que montre l'exemple (6.5.5,
+  

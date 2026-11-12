@@ -1,0 +1,87 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{29}
+finie, $\mathfrak{G}_{X/S}$ est un $\mathcal{O}_X$-Module quasi-cohérent; si
+de plus $S$ est localement noethérien, $\mathfrak{G}_{X/S}$ est cohérent
+(16.5.6).
+\end{env}
+
+\begin{env}[16.5.8]
+\label{IV.16.5.8}
+Supposons plus particulièrement que $\Omega_{X/S}^1$ soit un
+$\mathcal{O}_X$-Module \emph{localement libre} (de rang fini) (ce qui sera le
+cas lorsque $f$ est \emph{lisse} (17.2.3)); alors $\mathfrak{G}_{X/S}$ est un
+$\mathcal{O}_X$-Module localement libre et a même rang que $\Omega_{X/S}^1$
+en chaque point. De façon plus précise, supposons que $\Omega_{X/S}^1$ soit de
+rang $n$ en un point $x$; il y a alors $n$ sections $s_i$ ($1\leq i\leq n$)
+de $\mathcal{O}_X$ au-dessus d'un voisinage affine $U$ de $x$ telles que les
+images canoniques des $ds_i$ dans
+$\Omega_{X/S}^1\otimes_{\mathcal{O}_X}k(x)$ forment une base de ce
+$k(x)$-espace vectoriel; en vertu du lemme de Nakayama, les germes
+$(ds_i)_x=d(s_i)_x$ des $ds_i$ au point $x$ forment une base du
+$\mathcal{O}_x$-module $(\Omega_{X/S}^1)_x$, donc, en restreignant $U$, on
+peut supposer que les $ds_i$ forment une \emph{base} du
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\Omega_{X/S}^1)$. Alors le
+$\Gamma(U,\mathcal{O}_X)$-module $\Gamma(U,\mathfrak{G}_{X/S})$ est dual du
+précédent; on note $(D_i)_{1\leq i\leq n}$ ou
+$\left(\frac{\partial}{\partial s_i}\right)_{1\leq i\leq n}$ la base duale de
+$(ds_i)_{1\leq i\leq n}$, de sorte que, par (16.5.3), on a
+\[
+  D_is_j=\langle D_i,ds_j\rangle
+  =\left\langle\frac{\partial}{\partial s_i},ds_j\right\rangle
+  =\delta_{ij}\qquad\text{(indice de Kronecker).}
+  \tag{16.5.8.1}
+  \label{IV.16.5.8.1}
+\]
+Toute $\Gamma(S,\mathcal{O}_S)$-dérivation de la
+$\Gamma(S,\mathcal{O}_S)$-algèbre $\Gamma(U,\mathcal{O}_X)$ s'écrit donc
+d'une seule manière
+\[
+  D=\sum_{i=1}^n a_iD_i=\sum_{i=1}^n a_i\frac{\partial}{\partial s_i}
+\]
+où les $a_i$ ($1\leq i\leq n$) sont des sections de $\mathcal{O}_X$ au-dessus
+de $U$. Pour toute section $g\in\Gamma(U,\mathcal{O}_X)$, si l'on pose
+$dg=\sum_{i=1}^n c_i ds_i$, on a
+$c_i=\langle D_i,dg\rangle=D_ig$ en vertu de (16.5.8.1), autrement dit
+\[
+  dg=\sum_{i=1}^n(D_ig)ds_i
+  =\sum_{i=1}^n\frac{\partial g}{\partial s_i}ds_i.
+  \tag{16.5.8.2}
+  \label{IV.16.5.8.2}
+\]
+\end{env}
+
+\begin{env}[16.5.9]
+\label{IV.16.5.9}
+Soient $D_1$, $D_2$ deux $S$-dérivations de $\mathcal{O}_X$. Pour tout ouvert
+$U$ de $X$, si $D_1^U$, $D_2^U$ sont les dérivations correspondantes de
+l'anneau $\Gamma(U,\mathcal{O}_X)$, le \emph{crochet}
+\[
+  [D_1^U,D_2^U]=D_1^U\circ D_2^U-D_2^U\circ D_1^U
+\]
+est aussi une dérivation de cet anneau, donc le
+$\psi^*(\mathcal{O}_S)$-endomorphisme de $\mathcal{O}_X$
+\[
+  [D_1,D_2]=D_1\circ D_2-D_2\circ D_1
+  \tag{16.5.9.1}
+  \label{IV.16.5.9.1}
+\]
+est encore une $S$-dérivation; comme on vérifie aussitôt que ce crochet
+vérifie l'identité de Jacobi, on voit qu'on a ainsi défini sur
+$\operatorname{D\acute{e}r}_S(\mathcal{O}_X,\mathcal{O}_X)$ une structure de
+$\Gamma(S,\mathcal{O}_S)$-algèbre de Lie. Comme la définition de cette
+structure commute à la restriction à un ouvert de $X$, on voit que
+$\mathfrak{G}_{X/S}$ est canoniquement muni d'une structure de
+$\psi^*(\mathcal{O}_S)$-Algèbre de Lie. On notera que l'application
+$(D_1,D_2)\mapsto[D_1,D_2]$ n'est pas
+$\Gamma(X,\mathcal{O}_X)$-bilinéaire.
+\end{env}
+
+\begin{env}[16.5.10]
+\label{IV.16.5.10}
+Pour tout changement de base $g:S'\to S$, si l'on pose $X'=X\times_S S'$, on
+a vu (16.4.5) que l'on a un isomorphisme canonique
+\[
+  \Omega_{X/S}^1\otimes_S S'\xrightarrow{\sim}\Omega_{X'/S'}^1
+  \tag{16.5.10.1}
+  \label{IV.16.5.10.1}
+\]

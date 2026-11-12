@@ -1,0 +1,117 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{24}
+Reste à prouver (2.5.5.1)~; on a
+\[
+(\mathscr E\otimes_Y\mathscr F)_x
+=\mathscr E_y\otimes_{\mathcal O_{Y,y}}\mathscr F_x
+\quad\text{(I, 9.1.12)}
+\]
+et
+$(\mathscr F_y)_x=\mathscr F_x/\mathfrak m_y\mathscr F_x$~; on est donc
+ramené à prouver le
+
+\begin{lemma}[2.5.5.2]
+\label{IV.2.5.5.2-fr}
+Soient $A$, $B$ deux anneaux locaux, $\rho:A\to B$ un homomorphisme local,
+$\mathfrak m$ l'idéal maximal de $A$. Soient $M$ un $A$-module, $N$ un
+$B$-module qui est un $A$-module fidèlement plat et tel que
+$N/\mathfrak mN$ soit un $B$-module de longueur finie~; alors on a
+\end{lemma}
+
+\begin{env}[2.5.5.3]
+\label{IV.2.5.5.3-fr}
+\[
+\operatorname{long}_B(M\otimes_A N)
+=\operatorname{long}_A(M)\,
+ \operatorname{long}_B(N/\mathfrak mN).
+\]
+\end{env}
+
+Si $M$ est de longueur infinie, il en est de même de $M\otimes_A N$, car
+pour toute suite strictement croissante de $n$ sous-modules $M_i$ de $M$
+($1\leq i\leq n$), les $M_i\otimes_A N$ s'identifient à des sous-$B$-modules
+de $M\otimes_A N$ deux à deux distincts~; comme
+$N\ne\mathfrak mN$ puisque $N$ est un $A$-module fidèlement plat, la formule
+(2.5.5.3) est vraie dans ce cas. Supposons donc $M$ de longueur finie. Si
+$M=0$ les deux membres de (2.5.5.3) sont nuls, donc on peut supposer
+$M\ne0$. Les $\mathfrak m^kM$ sont des sous-modules de $M$, donc de longueur
+finie, et si $\mathfrak m^kM\ne0$, il résulte du lemme de Nakayama que
+$\mathfrak m^{k+1}M\ne\mathfrak m^kM$~; donc il y a nécessairement un entier
+$r$ tel que $\mathfrak m^rM=0$. Les
+$\mathfrak m^kM\otimes_A N$ s'identifient alors à des sous-$B$-modules de
+$M\otimes_A N$,
+\[
+\frac{\mathfrak m^kM\otimes_A N}{\mathfrak m^{k+1}M\otimes_A N}
+\]
+étant isomorphe à
+\[
+(\mathfrak m^kM/\mathfrak m^{k+1}M)\otimes_A N,
+\]
+donc aussi à
+\[
+(\mathfrak m^kM/\mathfrak m^{k+1}M)
+\otimes_{A/\mathfrak m}(N/\mathfrak mN)
+\quad(0\leq k\leq r-1)~;
+\]
+la longueur de ce dernier, considéré comme $B$-module, est donc le produit de
+$\operatorname{long}_B(N/\mathfrak mN)$ et du rang du
+$(A/\mathfrak m)$-espace vectoriel
+$\mathfrak m^kM/\mathfrak m^{k+1}M$, rang qui est aussi la longueur du
+$A$-module $\mathfrak m^kM/\mathfrak m^{k+1}M$. Par addition (pour
+$0\leq k\leq r-1$), on en déduit aussitôt la formule (2.5.5.3).
+
+\begin{remark}[2.5.5.4]
+\label{IV.2.5.5.4-fr}
+On notera que lorsque $N$ est un $A$-module \emph{de type fini} dire que $N$
+est un $A$-module fidèlement plat équivaut à dire que $N\ne0$ et que $N$ est
+un $A$-module plat~; en effet le lemme de Nakayama montre alors que
+$\mathfrak mN\ne N$.
+\end{remark}
+
+\begin{lemma}[2.5.6]
+\label{IV.2.5.6-fr}
+Soient $B$ un anneau non nécessairement commutatif, $V$, $W$ deux
+$B$-modules à gauche isomorphes, $C$ l'anneau
+$\operatorname{End}_B(V)$, et soit
+$M=\operatorname{Hom}_B(V,W)$, muni de sa structure canonique de
+$C$-module à droite. Alors $M$ est un $C$-module isomorphe à $C_d$~; en
+outre, pour tout $u\in M$, les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+\item[\emph{a)}] $\{u\}$ est une base du $C$-module $M$.
+\item[\emph{b)}] $u$ est un isomorphisme de $V$ sur $W$.
+\end{enumerate}
+\end{lemma}
+
+Si $u$ est un isomorphisme de $V$ sur $W$, l'application
+$v\mapsto u\circ v$ de $C$ dans $M$ est évidemment une bijection, donc
+\emph{b)} entraîne \emph{a)}. Inversement, supposons que $\{u\}$ soit une
+base du $C$-module $M$. Par hypothèse, il existe un isomorphisme $u'$ de $V$
+sur $W$, et $\{u'\}$ est par suite une base de $M$~; il y a donc un élément
+inversible $w$ de $C$ (c'est-à-dire un automorphisme de $V$) tel que
+$u=u'\circ w$, ce qui entraîne que $u$ est un isomorphisme de $V$ sur $W$.
+
+\begin{corollary}[2.5.7]
+\label{IV.2.5.7-fr}
+Les hypothèses sur $B$, $V$ et $W$ étant celles de (2.5.6), supposons en
+outre vérifiée l'une des conditions suivantes~:
+\begin{enumerate}
+\item[(i)] $V$ et $W$ sont des $B$-modules noethériens~;
+\item[(ii)] $V$ et $W$ sont des modules de présentation finie sur un
+sous-anneau commutatif de $B$.
+\end{enumerate}
+Alors les conditions \emph{a)} et \emph{b)} de (2.5.6) sont aussi
+équivalentes aux suivantes~:
+\begin{enumerate}
+\item[\emph{a}$'$)] $u$ est un générateur du $C$-module $M$.
+\item[\emph{b}$'$)] $u$ est un épimorphisme de $V$ sur $W$.
+\end{enumerate}
+\end{corollary}
+
+On sait en effet qu'un épimorphisme d'un $A$-module $E$ sur lui-même est
+bijectif dans les deux cas suivants~: $1^\circ$ $E$ est un $A$-module
+noethérien (Bourbaki, \emph{Alg.}, chap.~VIII, \S~2,
+n\textsuperscript{o}~2, lemme~3)~; $2^\circ$ $A$ est commutatif et $E$ est
+un $A$-module de présentation finie (8.9.3)\footnote{Le lecteur pourra
+vérifier que (2.5.7) et (2.5.8) ne sont pas utilisés avant le \S~9.}~; donc
+\emph{b)} et \emph{b}$'$) sont équivalentes. D'autre part, si $u$ engendre
+$M$

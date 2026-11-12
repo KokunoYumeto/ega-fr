@@ -1,0 +1,109 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{73}
+s'identifie canoniquement à
+$\mathrm E_\infty^{pq}(\mathbf X^\bullet)=
+\mathrm Z_\infty^{pq}(\mathbf X^\bullet)/
+\mathrm B_\infty^{pq}(\mathbf X^\bullet)$. On remarquera que les objets
+$\mathrm Z_r^{pq}(\mathbf X^\bullet)$,
+$\mathrm B_r^{pq}(\mathbf X^\bullet)$,
+$\mathrm E_r^{pq}(\mathbf X^\bullet)$ $(1\leq r\leq+\infty)$ et
+$d_r^{pq}$ dépendent \emph{fonctoriellement} du système projectif
+$\mathbf X^\bullet$ soumis aux restrictions de
+(\hyperref[0.13.5.5-fr]{13.5.5}), et que les morphismes définis dans
+(\hyperref[0.13.5.5-fr]{13.5.5}) et
+(\hyperref[0.13.5.6-fr]{13.5.6}) sont fonctoriels.
+\end{env}
+
+\subsection{Suite spectrale d'un foncteur relative à un objet muni d'une filtration finie}
+\label{subsection:0.13.6-fr}
+
+\begin{env}[13.6.1]
+\label{0.13.6.1-fr}
+Soient $C$, $C'$ deux catégories abéliennes, $\mathrm T:C\to C'$ un
+foncteur additif covariant. Supposons que tout objet de $C$ soit isomorphe
+à un sous-objet d'un objet injectif, de sorte que les foncteurs dérivés
+droits $\mathrm R^p\mathrm T$ $(p\geq0)$ existent.
+\end{env}
+
+\begin{lemma}[13.6.2]
+\label{0.13.6.2-fr}
+\emph{Soit $A$ un objet de $C$, muni d'une filtration finie
+$(\mathrm F^i(A))_{i\in\mathbb Z}$. Il existe une résolution injective
+$X^\bullet=(X^j)_{j\geq0}$ de $A$ munie d'une filtration finie
+$(\mathrm F^i(X^\bullet))_{i\in\mathbb Z}$ telle que la relation
+$\mathrm F^i(A)=A$ (resp. $\mathrm F^i(A)=0$) entraîne
+$\mathrm F^i(X^\bullet)=X^\bullet$ (resp. $\mathrm F^i(X^\bullet)=0$) et
+que, pour tout $i\in\mathbb Z$, $\mathrm F^i(X^\bullet)$ soit une
+résolution injective de $\mathrm F^i(A)$.}
+\end{lemma}
+\begin{proof}
+Soit $p$ (resp. $q>p$) le plus grand indice tel que
+$\mathrm F^p(A)=A$ (resp. le plus petit indice pour lequel
+$\mathrm F^q(A)=0$). On raisonne par récurrence sur $q-p$, le lemme étant
+évident pour $q-p=1$. Ayant formé une résolution injective
+${X''}^\bullet$ de $A/\mathrm F^{q-1}(A)$ ayant les propriétés voulues,
+on considère la suite exacte
+\[
+0\to\mathrm F^{q-1}(A)\to A\to A/\mathrm F^{q-1}(A)\to0,
+\]
+on prend une résolution injective ${X'}^\bullet$ de
+$\mathrm F^{q-1}(A)$, puis on détermine une résolution injective
+$X^\bullet$ de $A$ de façon à avoir une suite exacte
+\[
+0\to {X'}^\bullet\to X^\bullet\to {X''}^\bullet\to0
+\]
+compatible avec la précédente (M, V, 2.2)~; il est clair que
+$X^\bullet$ répond à la question.
+\end{proof}
+
+\begin{corollary}[13.6.3]
+\label{0.13.6.3-fr}
+\emph{Soit $B$ un second objet de $C$, muni d'une filtration finie
+$(\mathrm F^i(B))_{i\in\mathbb Z}$, $s$ un entier, et soit $u:A\to B$
+un morphisme tel que $u(\mathrm F^i(A))\subset\mathrm F^{i+s}(B)$ pour
+tout $i\in\mathbb Z$. Si $Y^\bullet=(Y^j)_{j\geq0}$ est une résolution
+injective de $B$ munie d'une filtration
+$(\mathrm F^i(Y^\bullet))_{i\in\mathbb Z}$ ayant les propriétés énoncées
+en (\hyperref[0.13.6.2-fr]{13.6.2}), il existe un morphisme
+$v:X^\bullet\to Y^\bullet$ compatible avec $u$ et tel que
+$v(\mathrm F^i(X^\bullet))\subset\mathrm F^{i+s}(Y^\bullet)$ pour tout
+$i\in\mathbb Z$. En outre, deux tels morphismes $v$, $v'$ sont
+homotopes.}
+\end{corollary}
+
+Cela résulte aussitôt par récurrence sur $q-p$ de la construction
+précédente et de (M, V, 2.3).
+
+\begin{env}[13.6.4]
+\label{0.13.6.4-fr}
+Sous les hypothèses de (\hyperref[0.13.6.2-fr]{13.6.2}), considérons
+maintenant le complexe $\mathrm T(X^\bullet)$ dans $C'$, qui est
+évidemment filtré par les complexes
+$\mathrm T(\mathrm F^i(X^\bullet))$, puisque
+$\mathrm F^i(X^\bullet)$ est facteur direct de $X^\bullet$. Il résulte de
+(\hyperref[0.13.6.3-fr]{13.6.3}) que la \emph{suite spectrale} de ce
+complexe filtré ne dépend que de l'objet filtré $A$, à un isomorphisme
+près. Son aboutissement est la cohomologie $\mathrm R^\bullet\mathrm T(A)$,
+avec la filtration
+\begin{equation}
+\label{0.13.6.4.1-fr}
+\tag{13.6.4.1}
+\begin{split}
+\mathrm F^p(\mathrm R^n\mathrm T(A))
+&=\operatorname{Im}\bigl(\mathrm R^n\mathrm T(\mathrm F^p(A))
+\longrightarrow\mathrm R^n\mathrm T(A)\bigr)\\
+&=\operatorname{Ker}\bigl(\mathrm R^n\mathrm T(A)
+\longrightarrow\mathrm R^n\mathrm T(A/\mathrm F^p(A))\bigr)
+\end{split}
+\end{equation}
+(\hyperref[0.11.2.2-fr]{11.2.2}), et son terme $\mathrm E_1$ est donné
+par
+\begin{equation}
+\label{0.13.6.4.2-fr}
+\tag{13.6.4.2}
+\mathrm E_1^{pq}=\mathrm R^{p+q}\mathrm T(\operatorname{gr}^p(A))
+\end{equation}
+$\operatorname{gr}^p(A)$ désignant comme d'ordinaire
+$\mathrm F^p(A)/\mathrm F^{p+1}(A)$. Il est clair, d'après
+(\hyperref[0.11.2.2-fr]{11.2.2}), que la filtration de l'aboutissement
+est finie, et que pour $p$, $q$ donnés, les suites des

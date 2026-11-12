@@ -1,0 +1,42 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{232}
+Il résulte de la définition rappelée ci-dessus que si $U$ est un ouvert schématiquement dense dans $X$, alors, pour tout ouvert $V$ de $X$, $U\cap V$ est schématiquement dense dans $V$.
+Si deux morphismes $u:U\to Y$, $u':U'\to Y$ d'ouverts schématiquement denses de $X$ dans $Y$ sont équivalents il s'ensuit donc que leurs restrictions $u|(V\cap U)$ et $u'|(V\cap U')$ sont aussi des morphismes équivalents (pour le préschéma induit sur $V$) ; leur classe est dite la \emph{restriction} à $V$ du pseudo-morphisme $\omega$, classe de $u$, et on note ce pseudo-morphisme $\omega|V$.
+Si $W\subset V$ est un ouvert de $X$, il est clair que $(\omega|V)|W=\omega|W$.
+Ceci montre que les applications de restriction définissent un \emph{préfaisceau} d'ensembles $U\mapsto\operatorname{Ps.hom}(U,Y)$ ; on notera que ce préfaisceau \emph{n'est pas} un faisceau en général (cf. \sref{IV.20.2.16}) ; le faisceau associé se note $\mathscr{P}\!s.\!\operatorname{hom}(X,Y)$.
+Pour les pseudo-$S$-morphismes, on voit de même que $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ est un préfaisceau d'ensembles, dont on note $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$ le faisceau associé.
+
+Si $V$ est un ouvert \emph{schématiquement dense} dans $X$, alors, pour tout ouvert $U$ schématiquement dense dans $X$, $U\cap V$ est aussi schématiquement dense dans $X$, donc l'application $\omega\mapsto\omega|V$ est une \emph{bijection} de l'ensemble $\operatorname{Ps.hom}(X,Y)$ (resp. $\operatorname{Ps.hom}_S(X,Y)$) sur $\operatorname{Ps.hom}(V,Y)$ (resp. $\operatorname{Ps.hom}_S(V,Y)$).
+\end{env}
+
+\begin{env}[20.2.3]
+\EGAReaderTarget{ega4.c04.statement.20-2-3}{IV.20.2.3}
+Étant donné un pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, on dit qu'il est \emph{défini} en un point $x\in X$ s'il existe un voisinage ouvert $V$ de $x$ dans $X$, un ouvert $U\subset V$ \emph{contenant $x$ et schématiquement dense dans $V$}, et enfin un $S$-morphisme $u:U\to Y$ dont la classe dans $\operatorname{Ps.hom}_S(V,Y)$ soit égale à $\omega|V$ \sref{IV.20.2.2} ; on appelle \emph{domaine de définition} de $\omega$ et on note $\operatorname{dom}_S(\omega)$ (ou simplement $\operatorname{dom}(\omega)$ si $S=\Spec(\bb{Z})$) l'ensemble des $x\in X$ où $\omega$ est défini ; c'est évidemment un \emph{ouvert} de $X$.
+En outre, pour tout ouvert $W$ de $X$, on a
+\[
+\label{IV.20.2.3.1}
+  \operatorname{dom}_S(\omega|W)=(\operatorname{dom}_S(\omega))\cap W
+  \tag{20.2.3.1}
+\]
+en vertu de la propriété des ouverts schématiquement denses rappelée dans \sref{IV.20.2.2}.
+\end{env}
+
+\begin{proposition}[20.2.4]
+\label{IV.20.2.4}
+Supposons que $X$, $Y$ soient des $S$-préschémas tels que le morphisme structural $Y\to S$ soit séparé ; alors, si $\omega$ est un pseudo-$S$-morphisme de $X$ dans $Y$, $\operatorname{dom}_S(\omega)$ est le plus grand des ouverts schématiquement denses $U$ de $X$ tels qu'il y ait un $S$-morphisme $u:U\to Y$ appartenant à la classe $\omega$.
+\end{proposition}
+
+\begin{proof}
+Il suffit évidemment de prouver que si $U$, $U'$ sont deux ouverts schématiquement denses dans $X$ tels que deux $S$-morphismes $u:U\to Y$ et $u':U'\to Y$ soient équivalents, alors les restrictions de $u$ et $u'$ à $U\cap U'$ sont égales.
+Or il existe par hypothèse un ouvert $U''\subset U\cap U'$, schématiquement dense dans $X$ et dans lequel $u$ et $u'$ coïncident ; comme $U''$ est aussi schématiquement dense dans $U\cap U'$, notre assertion résulte de \sref{IV.11.10.1}[(d)].
+\end{proof}
+
+\begin{corollary}[20.2.5]
+\label{IV.20.2.5}
+Soient $S$ un $S_0$-schéma, $X$, $Y$ deux $S$-préschémas tels que le morphisme composé $Y\to S\to S_0$ soit séparé (ce qui implique \sref[I]{I.5.5.1} que $Y\to S$ l'est aussi).
+Pour tout pseudo-$S$-morphisme $\omega$ de $X$ dans $Y$, on a alors $\operatorname{dom}_S(\omega)=\operatorname{dom}_{S_0}(\omega)$.
+En particulier, si $Y$ est un schéma, on a $\operatorname{dom}_S(\omega)=\operatorname{dom}(\omega)$.
+\end{corollary}
+
+\begin{proof}
+En effet, il est clair que $\operatorname{dom}_S(\omega)\subset\operatorname{dom}_{S_0}(\omega)$ sans hypothèse de séparation ; en vertu de \sref{IV.20.2.4}, il suffit de prouver que si un $S_0$-morphisme $u_0:U_0\to Y$ d'un ouvert

@@ -1,0 +1,101 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{56}
+un $A$-module plat, le $B$-module $M_{(B)}=M\otimes_A B$ est plat. Enfin, si
+$B$ est une $A$-algèbre qui est plate en tant que $A$-module, et si $N$ est
+un $B$-module plat, alors $N$ est aussi $A$-plat.
+\end{env}
+
+\begin{env}[6.2.2]
+\label{0.6.2.2-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre plate en tant que $A$-module.
+Soient $M$, $N$ deux $A$-modules, tels que $M$ admette une présentation
+finie~; alors l'homomorphisme canonique
+\[
+  \operatorname{Hom}_A(M,N)\otimes_A B
+  \longrightarrow
+  \operatorname{Hom}_B(M\otimes_A B,N\otimes_A B)
+  \tag{6.2.2.1}
+\]
+(transformant $u\otimes b$ en l'homomorphisme
+$m\otimes b'\longmapsto u(m)\otimes b'b$) est un isomorphisme.
+\end{env}
+
+\begin{env}[6.2.3]
+\label{0.6.2.3-fr}
+Soit $(A_\lambda,\varphi_{\mu\lambda})$ un système inductif filtrant
+d'anneaux~; soit $A=\varinjlim A_\lambda$. Soit d'autre part, pour chaque
+$\lambda$, $M_\lambda$ un $A_\lambda$-module et pour $\lambda\leq\mu$ soit
+$\theta_{\mu\lambda}:M_\lambda\to M_\mu$ un
+$\varphi_{\mu\lambda}$-homomorphisme, tel que
+$(M_\lambda,\theta_{\mu\lambda})$ soit un système inductif~;
+$M=\varinjlim M_\lambda$ est alors un $A$-module. Cela étant, si pour tout
+$\lambda$, $M_\lambda$ est un $A_\lambda$-module \emph{plat}, alors $M$ est
+un $A$-module \emph{plat}. En effet, soit $\mathfrak{J}$ un idéal \emph{de
+type fini} de $A$~; par définition de la limite inductive, il existe un
+indice $\lambda$ et un idéal $\mathfrak{J}_\lambda$ de $A_\lambda$ tels que
+$\mathfrak{J}=\mathfrak{J}_\lambda A$. Si on pose
+$\mathfrak{J}'_\mu=\mathfrak{J}_\lambda A_\mu$ pour $\mu\geq\lambda$, on a
+aussi $\mathfrak{J}=\varinjlim\mathfrak{J}'_\mu$ (où $\mu$ parcourt les
+indices $\geq\lambda$), d'où (le foncteur $\varinjlim$ étant exact et
+commutant au produit tensoriel)
+\[
+  M\otimes_A\mathfrak{J}
+  =\varinjlim(M_\mu\otimes_{A_\mu}\mathfrak{J}'_\mu)
+  =\varinjlim\mathfrak{J}'_\mu M_\mu
+  =\mathfrak{J}M.
+\]
+\end{env}
+
+\subsection{Localisation de la platitude}
+\label{subsection:0.6.3-fr}
+
+\begin{env}[6.3.1]
+\label{0.6.3.1-fr}
+Si $A$ est un anneau, $S$ une partie multiplicative de $A$, $S^{-1}A$ est
+un $A$-module \emph{plat}. En effet, pour tout $A$-module $N$,
+$N\otimes_A S^{-1}A$ s'identifie à $S^{-1}N$ (1.2.5) et on sait (1.3.2)
+que $S^{-1}N$ est un foncteur exact en $N$.
+
+Si maintenant $M$ est un $A$-module plat,
+$S^{-1}M=M\otimes_A S^{-1}A$ est un $S^{-1}A$-module plat (6.2.1), donc
+est aussi $A$-plat en vertu de ce qui précède et de (6.2.1). En particulier,
+si $P$ est un $S^{-1}A$-module, on peut le considérer comme un $A$-module
+isomorphe à $S^{-1}P$~; pour que $P$ soit $A$-plat, il faut et il suffit
+qu'il soit $S^{-1}A$-plat.
+\end{env}
+
+\begin{env}[6.3.2]
+\label{0.6.3.2-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $T$ une partie multiplicative de
+$B$. Si $P$ est un $B$-module qui est $A$-plat, $T^{-1}P$ est $A$-plat. En
+effet, pour tout $A$-module $N$, on a
+\[
+  (T^{-1}P)\otimes_A N
+  =(T^{-1}B\otimes_B P)\otimes_A N
+  =T^{-1}B\otimes_B(P\otimes_A N)
+  =T^{-1}(P\otimes_A N)~;
+\]
+or, $T^{-1}(P\otimes_A N)$ est un foncteur exact en $N$, étant composé des
+deux foncteurs exacts $P\otimes_A N$ (en $N$) et $T^{-1}Q$ (en $Q$). Si $S$
+est une partie multiplicative de $A$ dont l'image dans $B$ est
+\emph{contenue dans $T$}, $T^{-1}P$ est égal à $S^{-1}(T^{-1}P)$, donc est
+aussi $S^{-1}A$-plat en vertu de (6.3.1).
+\end{env}
+
+\begin{env}[6.3.3]
+\label{0.6.3.3-fr}
+Soient $\varphi:A\to B$ un homomorphisme d'anneaux, $M$ un $B$-module. Les
+propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[$a)$] $M$ est un $A$-module plat.
+  \item[$b)$] Pour tout idéal maximal $\mathfrak{n}$ de $B$,
+    $M_\mathfrak{n}$ est un $A$-module plat.
+  \item[$c)$] Pour tout idéal maximal $\mathfrak{n}$ de $B$, en posant
+    $\mathfrak{m}=\varphi^{-1}(\mathfrak{n})$, $M_\mathfrak{n}$ est un
+    $A_\mathfrak{m}$-module plat.
+\end{enumerate}
+
+En effet, comme $M_\mathfrak{n}=(M_\mathfrak{n})_\mathfrak{m}$,
+l'équivalence de $b)$ et $c)$ résulte de (6.3.1), et le fait que $a)$
+entraîne $b)$ est un cas particulier de (6.3.2). Reste à voir que $b)$
+entraîne $a)$,

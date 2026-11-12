@@ -1,0 +1,107 @@
+% from ega3-6-fr.tex
+\oldpage[III]{175}
+propriété particulière, en dehors de la restriction précédente sur les
+degrés. On peut alors se demander si inversement, étant donné un complexe
+$\mathscr L_\bullet$ formé de $\mathscr O_Y$-Modules associés à des
+$A$-modules projectifs de type fini, limité inférieurement et dont les termes
+de degré $>0$ sont nuls, il existe un $Y$-schéma $X$, projectif et plat sur
+$Y$ et un $\mathscr O_X$-Module localement libre $\mathscr F$, tels qu'il y
+ait un isomorphisme
+\[
+  \mathscr H^\bullet
+  (f,\mathscr F\otimes_Y\mathscr Q_\bullet)
+  \xrightarrow{\sim}
+  \mathscr H_\bullet
+  (\mathscr L_\bullet\otimes_Y\mathscr Q_\bullet)
+\]
+fonctoriel en $\mathscr Q_\bullet$. L'intérêt d'un tel résultat serait de
+réduire complètement la théorie cohomologique des Modules cohérents et
+$Y$-plats sur des $Y$-schémas propres, à la théorie « à homotopie près » des
+complexes de $A$-modules projectifs de type fini sur un anneau noethérien
+$A$.
+\end{remark}
+
+% (continued in ega3-7-fr.tex, before its first page marker)
+\section{Étude du changement de base dans les foncteurs homologiques covariants de Modules}
+\label{section:III.7.fr}
+
+\subsection{Foncteurs de $A$-modules}
+\label{subsection:III.7.1.fr}
+
+\begin{env}[7.1.1]
+Étant donné un anneau $A$ (non nécessairement commutatif), nous noterons
+$\mathbf{Ab}_A$ la catégorie des $A$-modules à gauche, et nous noterons
+simplement $\mathbf{Ab}$ la catégorie des $\mathbf Z$-modules, identiques aux
+groupes commutatifs. Soit
+\[
+  T:\mathbf{Ab}_A\longrightarrow\mathbf{Ab}
+\]
+un foncteur covariant additif, et soit $M$ un $(A,A)$-bimodule; $T(M)$ est
+alors muni de façon naturelle d'une structure de $A$-module à droite. En
+effet, pour tout $a\in A$, notons $h_{a,M}$ (ou simplement $h_a$)
+l'endomorphisme $x\mapsto xa$ du $A$-module à gauche $M$. Par hypothèse,
+$T(h_a)$ est un endomorphisme du $\mathbf Z$-module $T(M)$; en outre, comme
+$T$ est un foncteur covariant additif, on a, pour $a\in A$, $b\in A$,
+\[
+  T(h_{ab})
+  =
+  T(h_b\circ h_a)
+  =
+  T(h_b)\circ T(h_a),
+  \qquad\text{et}\qquad
+  T(h_{a+b})
+  =
+  T(h_a+h_b)
+  =
+  T(h_a)+T(h_b);
+\]
+cela prouve que l'application
+\[
+  (a,y)\longmapsto T(h_a)(y)
+\]
+est une loi externe de $A$-module à droite sur $T(M)$. En particulier,
+$T(A_s)$ est un $A$-module à droite.
+\end{env}
+
+\begin{env}[7.1.2]
+Lorsque $A$ est un anneau commutatif, il résulte de (7.1.1) que pour tout
+$A$-module $M$, $T(M)$ est naturellement muni d'une structure de $A$-module;
+en outre, si $u:M\to N$ est un homomorphisme de $A$-modules, on a, pour tout
+$a\in A$,
+\[
+  u\circ h_{a,M}=h_{a,N}\circ u,
+\]
+d'où
+\[
+  T(u)\circ T(h_{a,M})
+  =
+  T(h_{a,N})\circ T(u),
+\]
+ce qui prouve que $T(u):T(M)\to T(N)$ est un homomorphisme de $A$-modules; on
+voit donc que $T$ peut être considéré comme un foncteur covariant additif de
+la catégorie $\mathbf{Ab}_A$ dans elle-même. De façon précise, on a ainsi
+défini une équivalence canonique entre la catégorie des foncteurs covariants
+additifs $\mathbf{Ab}_A\to\mathbf{Ab}$ et la catégorie des foncteurs
+covariants $A$-linéaires
+\[
+  T:\mathbf{Ab}_A\longrightarrow\mathbf{Ab}_A,
+\]
+c'est-à-dire tels que
+\[
+  T(h_{a,M})=h_{a,T(M)}
+  \qquad\text{pour tout }a\in A.
+\]
+Comme le foncteur d'inclusion
+\[
+  I:\mathbf{Ab}_A\longrightarrow\mathbf{Ab},
+\]
+faisant correspondre à tout $A$-module le $\mathbf Z$-module sous-jacent, est
+exact et fidèle, les propriétés d'exactitude des deux foncteurs associés par
+l'équivalence précédente sont les mêmes.
+\end{env}
+
+\begin{env}[7.1.3]
+L'anneau $A$ étant toujours supposé commutatif, soit $B$ une $A$-algèbre (non
+nécessairement commutative), et soit $\rho:A\to B$ l'homomorphisme d'anneaux
+correspondant à cette structure d'algèbre; cet homomorphisme définit un
+foncteur covariant

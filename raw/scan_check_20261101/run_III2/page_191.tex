@@ -1,0 +1,92 @@
+% from ega3-7-fr.tex
+\oldpage[III]{191}
+Comme $k$ est le seul $A$-module simple, on déduit de (7.3.5.4) que $T(E)=0$
+pour tout $A$-module de longueur finie $E$. Si maintenant $M$ est de type fini,
+$\widehat{T(M)}$ est isomorphe à $\varprojlim_n T(M_n)$, et comme les $M_n$ sont
+de longueur finie, on a $\widehat{T(M)}=0$; comme $T(M)$ est de type fini par
+hypothèse, il est isomorphe à un sous-module de $\widehat{T(M)}$
+($0_{\mathrm I}$, 7.3.5), donc on a $T(M)=0$. Enfin, pour un $A$-module $M$
+quelconque, $T(M)$ est limite inductive des $T(N_\alpha)$ pour les sous-modules
+de type fini $N_\alpha$ de $M$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[7.5.4]
+Soient $A$ un anneau local noethérien d'idéal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ son corps résiduel, $T_\bullet$ un foncteur homologique de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux limites inductives. On suppose
+en outre que pour tout $i$ et tout $A$-module $M$ de type fini, $T_i(M)$ est de
+type fini et l'homomorphisme canonique
+\[
+  \widehat{T_i(M)}
+  \longrightarrow
+  \varprojlim_n T_i(M_n)
+\]
+est bijectif. Pour un entier $p$ donné, les conditions suivantes sont alors
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact.
+  \item[b)] $T_p$ est exact à droite, et $T_p(A)$ est un $A$-module libre.
+  \item[c)] Les homomorphismes canoniques
+    \[
+      T_{p+1}(A)\longrightarrow T_{p+1}(k)
+      \quad\text{et}\quad
+      T_p(A)\longrightarrow T_p(k)
+    \]
+    sont surjectifs.
+  \item[d)] Pour tout $n$, les homomorphismes canoniques
+    \[
+      T_{p+1}(A_n)\longrightarrow T_{p+1}(k)
+      \quad\text{et}\quad
+      T_p(A_n)\longrightarrow T_p(k)
+    \]
+    sont surjectifs.
+  \item[e)] Pour tout $n$, le foncteur $N\mapsto T_p(N)$ est exact dans la
+    catégorie des $A_n$-modules de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On sait (7.3.3) que a) équivaut à dire que $T_{p+1}$ et $T_p$ sont exacts à
+droite; comme $T_\bullet$ est un foncteur homologique dans la catégorie
+$\mathbf{Ab}_{A_n}$, le même raisonnement que dans (7.3.1) montre que e)
+équivaut à dire que $T_p$ et $T_{p+1}$ sont exacts à droite dans la catégorie
+des $A_n$-modules de type fini. On déduit donc de (7.5.2) que a) et e) sont
+équivalentes; l'équivalence de a), c) et d) résulte aussi de (7.5.2). Enfin, on
+sait que tout $A$-module plat de type fini est libre (Bourbaki,
+\emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de la prop.
+5); l'équivalence de a) et b) résulte alors de (7.3.1) et (7.3.3).
+\end{proof}
+
+\begin{corollary}[7.5.5]
+Supposons vérifiées les conditions générales de (7.5.4).
+\begin{enumerate}
+  \item[(i)] Si $T_p(k)=0$, on a $T_p=0$, $T_{p+1}$ est exact à droite et
+    $T_{p-1}$ est exact à gauche.
+  \item[(ii)] Si $T_{p-1}(k)=T_{p+1}(k)=0$, $T_p$ est exact,
+    l'homomorphisme canonique
+    \[
+      T_p(A)\otimes_A M\longrightarrow T_p(M)
+    \]
+    est bijectif et $T_p(A)$ est un $A$-module libre.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) découle aussitôt de (7.5.3) puisque $T_p$ est semi-exact, la dernière
+assertion résultant de la définition d'un foncteur homologique. On conclut
+aussitôt de (i) les deux premières assertions de (ii), compte tenu de (7.3.3);
+le fait que $T_p(A)$ soit libre résulte de (7.5.4).
+\end{proof}
+
+\begin{corollary}[7.5.6]
+Supposons vérifiées les hypothèses générales de (7.5.4), et supposons de plus
+que $A$ soit un anneau de valuation discrète.
+\begin{enumerate}
+  \item[(i)] Pour que $T_p$ soit exact à droite, il faut et il suffit que
+    $T_{p-1}(A)$ soit un $A$-module libre.
+  \item[(ii)] Pour que $T_p$ soit exact, il faut et il suffit que $T_p(A)$ et
+    $T_{p-1}(A)$ soient des $A$-modules libres.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}

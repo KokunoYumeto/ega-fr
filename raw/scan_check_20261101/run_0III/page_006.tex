@@ -1,0 +1,82 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ est donc une application $h_X(Y)\to F(Y)$ telle que pour tout morphisme
+$u:Y\to Y'$ dans $C$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{g(Y')} &
+    h_X(Y)\ar[d]^{g(Y)}\\
+    F(Y')\ar[r]_{F(u)} & F(Y)
+  }
+  \tag{8.1.3.1}\label{0.8.1.3.1-fr}
+\]
+soit commutatif. En particulier, on a une application
+$g(X):h_X(X)=\operatorname{Hom}(X,X)\to F(X)$, d'où un élément
+\[
+  \alpha(g)=(g(X))(1_X)\in F(X)
+  \tag{8.1.3.2}
+\]
+et par suite une application canonique
+\[
+  \alpha:\operatorname{Hom}(h_X,F)\to F(X).
+  \tag{8.1.3.3}
+\]
+
+Inversement, considérons un élément $\xi\in F(X)$~; pour tout morphisme
+$v:Y\to X$ dans $C$, $F(v)$ est une application $F(X)\to F(Y)$~;
+considérons l'application
+\[
+  v\mapsto(F(v))(\xi)
+  \tag{8.1.3.4}
+\]
+de $h_X(Y)$ dans $F(Y)$~; si on désigne par $(\beta(\xi))(Y)$ cette
+application,
+\[
+  \beta(\xi):h_X\to F
+  \tag{8.1.3.5}
+\]
+est un \emph{morphisme fonctoriel}, car on a pour tout morphisme
+$u:Y\to Y'$ dans $C$,
+$(F(vu))(\xi)=(F(v)\circ F(u))(\xi)$, ce qui vérifie la commutativité de
+(\hyperref[0.8.1.3.1-fr]{8.1.3.1}) pour $g=\beta(\xi)$. On a ainsi défini
+une application canonique
+\[
+  \beta:F(X)\to\operatorname{Hom}(h_X,F).
+  \tag{8.1.3.6}
+\]
+\end{env}
+
+\begin{proposition}[8.1.4]
+\label{0.8.1.4-fr}
+Les applications $\alpha$ et $\beta$ sont des bijections réciproques l'une de
+l'autre.
+\end{proposition}
+
+Calculons $\alpha(\beta(\xi))$ pour $\xi\in F(X)$~; pour tout $Y\in C$,
+$(\beta(\xi))(Y)$ est l'application
+$g_1(Y):v\mapsto(F(v))(\xi)$ de $h_X(Y)$ dans $F(Y)$. On a donc
+\[
+  \alpha(\beta(\xi))=(g_1(X))(1_X)=(F(1_X))(\xi)
+  =1_{F(X)}(\xi)=\xi.
+\]
+Calculons maintenant $\beta(\alpha(g))$ pour
+$g\in\operatorname{Hom}(h_X,F)$~; pour tout $Y\in C$,
+$(\beta(\alpha(g)))(Y)$ est l'application
+$v\mapsto(F(v))((g(X))(1_X))$~; en vertu de la commutativité de
+(\hyperref[0.8.1.3.1-fr]{8.1.3.1}), cette application n'est autre que
+$v\mapsto(g(Y))((h_X(v))(1_X))=(g(Y))(v)$ par définition de $h_X(v)$,
+autrement dit, elle est égale à $g(Y)$, ce qui démontre la proposition.
+
+\begin{env}[8.1.5]
+\label{0.8.1.5-fr}
+Rappelons qu'une \emph{sous-catégorie} $C'$ d'une catégorie $C$ est définie
+par la condition que ses objets soient des objets de $C$, et que si $X'$,
+$Y'$ sont deux objets de $C'$, l'ensemble
+$\operatorname{Hom}_{C'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$C'$} est une partie de l'ensemble $\operatorname{Hom}_C(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $C$}, l'application canonique de
+<<~composition des morphismes~>>
+\[
+  \operatorname{Hom}_{C'}(X',Y')\times\operatorname{Hom}_{C'}(Y',Z')
+  \to\operatorname{Hom}_{C'}(X',Z')
+\]

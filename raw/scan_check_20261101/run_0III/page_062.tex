@@ -1,0 +1,104 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{62}
+La question étant locale sur $Y$, on peut supposer qu'il existe une suite
+exacte
+\[
+0\longrightarrow\mathcal R\longrightarrow\mathcal O_Y^n
+\longrightarrow\mathcal F\longrightarrow0,
+\]
+et $\mathcal R$ est alors aussi un $\mathcal O_Y$-Module cohérent
+(\hyperref[0.5.3.4-fr]{0\textsubscript{I}, 5.3.4}). Pour prouver que les
+homomorphismes
+\[
+f^*(\mathcal{E}xt_{\mathcal O_Y}^p(\mathcal F,\mathcal G))
+\longrightarrow
+\mathcal{E}xt_{\mathcal O_X}^p(f^*(\mathcal F),f^*(\mathcal G))
+\]
+sont bijectifs, raisonnons par récurrence sur $p$, la proposition résultant de
+(\hyperref[0.6.7.6.1-fr]{0\textsubscript{I}, 6.7.6.1}) lorsque $p=0$. Or, on
+a le diagramme commutatif
+\[
+\hbox{\tiny$
+\xymatrix@C=2pt@R=24pt{
+f^*(\mathcal{E}xt_{\mathcal O_Y}^{p-1}(\mathcal O_Y^n,\mathcal G))
+\ar[r]\ar[d]&
+f^*(\mathcal{E}xt_{\mathcal O_Y}^{p-1}(\mathcal R,\mathcal G))
+\ar[r]^\partial\ar[d]&
+f^*(\mathcal{E}xt_{\mathcal O_Y}^{p}(\mathcal F,\mathcal G))
+\ar[r]\ar[d]&
+f^*(\mathcal{E}xt_{\mathcal O_Y}^{p}(\mathcal O_Y^n,\mathcal G))
+\ar[d]\\
+\mathcal{E}xt_{\mathcal O_X}^{p-1}(\mathcal O_X^n,f^*(\mathcal G))
+\ar[r]&
+\mathcal{E}xt_{\mathcal O_X}^{p-1}(f^*(\mathcal R),f^*(\mathcal G))
+\ar[r]^\partial&
+\mathcal{E}xt_{\mathcal O_X}^{p}(f^*(\mathcal F),f^*(\mathcal G))
+\ar[r]&
+\mathcal{E}xt_{\mathcal O_X}^{p}(\mathcal O_X^n,f^*(\mathcal G)).
+}
+$}
+\]
+puisque $f^*(\mathcal O_Y)=\mathcal O_X$; comme $f^*$ est exact, les deux
+lignes sont exactes. En outre, on a
+\[
+\mathcal{E}xt_{\mathcal O_Y}^p(\mathcal O_Y^n,\mathcal G)=0
+\quad\hbox{pour tout }p>0
+\quad\hbox{et de même}\quad
+\mathcal{E}xt_{\mathcal O_X}^p(\mathcal O_X^n,f^*(\mathcal G))=0
+\quad\hbox{pour tout }p>0
+\]
+(T, 4.2.3). Vu l'hypothèse de récurrence, les deux premières flèches
+verticales du diagramme précédent sont des isomorphismes, et les termes de
+droite sont 0, donc
+\[
+f^*(\mathcal{E}xt_{\mathcal O_Y}^p(\mathcal F,\mathcal G))
+\longrightarrow
+\mathcal{E}xt_{\mathcal O_X}^p(f^*(\mathcal F),f^*(\mathcal G))
+\]
+est un isomorphisme.
+\end{proof}
+
+\subsection{Hypercohomologie du foncteur image directe}
+\label{subsection:0.12.4-fr}
+
+\begin{env}[12.4.1]
+\label{0.12.4.1-fr}
+Soient $(X,\mathcal O_X)$, $(Y,\mathcal O_Y)$ deux espaces annelés,
+$f:X\to Y$ un morphisme d'espaces annelés. On peut prendre
+l'\emph{hypercohomologie} de $f_*$ par rapport à un complexe quelconque de
+$\mathcal O_X$-Modules
+$\mathcal K^\bullet=(\mathcal K^i)_{i\in\mathbb Z}$
+(\hyperref[0.11.4.4-fr]{11.4.4}), car dans la catégorie abélienne des
+$\mathcal O_Y$-Modules, les limites inductives filtrantes existent et sont
+exactes (T, 3.1.1). Les $\mathcal O_Y$-Modules d'hypercohomologie
+$R^p f_*(\mathcal K^\bullet)$ se noteront aussi
+$\mathcal H^p(f,\mathcal K^\bullet)$ ou
+$\mathcal H_f^p(\mathcal K^\bullet)$. Rappelons que
+$\mathcal H^\bullet(f,\mathcal K^\bullet)$ est la cohomologie du bicomplexe
+de $\mathcal O_Y$-Modules $f_*(\mathcal L^{\bullet\bullet})$, où
+$\mathcal L^{\bullet\bullet}$ est une résolution injective de
+Cartan-Eilenberg de $\mathcal K^\bullet$ dans la catégorie des
+$\mathcal O_X$-Modules~; $\mathcal H^\bullet(f,\mathcal K^\bullet)$ est
+l'aboutissement de deux suites spectrales
+${}'E(f,\mathcal K^\bullet)$ et ${}''E(f,\mathcal K^\bullet)$ dont les
+termes $E_2$ sont donnés par
+\begin{equation}
+\label{0.12.4.1.1-fr}
+\tag{12.4.1.1}
+{}'E_2^{pq}=\mathcal H^p(\mathcal H^q(f,\mathcal K^\bullet))
+\end{equation}
+\begin{equation}
+\label{0.12.4.1.2-fr}
+\tag{12.4.1.2}
+{}''E_2^{pq}=\mathcal H^p(f,\mathcal H^q(\mathcal K^\bullet))
+\quad(=R^p f_*(\mathcal H^q(\mathcal K^\bullet))).
+\end{equation}
+On a, dans ces formules, adopté la notation générale $T(A^\bullet)$ pour
+le transformé d'un complexe par un foncteur
+(\hyperref[0.11.2.1-fr]{11.2.1}), et on écrit
+$\mathcal H^p(f,\mathcal F)$ au lieu de $R^p f_*(\mathcal F)$ pour un
+$\mathcal O_X$-Module $\mathcal F$. Rappelons encore que la suite
+${}'E(f,\mathcal K^\bullet)$ est toujours \emph{régulière}~; les deux
+suites spectrales ${}'E(f,\mathcal K^\bullet)$ et
+${}''E(f,\mathcal K^\bullet)$ sont \emph{birégulières} lorsque
+$\mathcal K^\bullet$ est limité inférieurement,

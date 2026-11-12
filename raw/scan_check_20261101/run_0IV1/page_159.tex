@@ -1,0 +1,77 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{159}
+\begin{env}[21.2.6]
+\label{0.21.2.6-fr}
+Soient $A$, $B$ deux anneaux, $u:A\to B$ un homomorphisme d'anneaux~; on a
+(avec les notations de (21.1.4)) le diagramme commutatif
+\begin{equation}
+\tag{21.2.6.1}
+\label{0.21.2.6.1-fr}
+\xymatrix{
+ A^{(p)} \ar[r]^{u} & B^{(p)}\\
+ A \ar[u]^{F_A} \ar[r]^{u} & B \ar[u]_{F_B}
+}
+\end{equation}
+On en déduit canoniquement un homomorphisme de $B$-algèbres
+\begin{equation}
+\tag{21.2.6.2}
+\label{0.21.2.6.2-fr}
+u\otimes1:A^{(p)}\otimes_A B\longrightarrow B^{(p)}
+\end{equation}
+dont l'image est l'anneau $A[B^p]$ (qui est une $B$-algèbre pour
+l'homomorphisme $F_B:B\to B^p$).
+\end{env}
+
+\begin{theorem}[21.2.7]
+\label{0.21.2.7-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $u:A\to B$ l'homomorphisme
+structural. On suppose vérifiées les conditions suivantes~:
+\begin{enumerate}
+  \item[(i)] L'homomorphisme (21.2.6.2) déduit de $u$ est injectif.
+  \item[(ii)] $B$ admet une $p$-base $(x_\alpha)_{\alpha\in I}$ par rapport à $A$.
+\end{enumerate}
+Alors $B$ est une $A$-algèbre formellement lisse (pour les topologies
+discrètes). De façon plus précise, munissons $A$ et $B$ des topologies
+discrètes~; soient $E$ une $A$-algèbre topologique admissible
+(0$_I$, 7.1.2), $\mathfrak R$ un idéal de définition de $E$, $C=E/\mathfrak R$,
+$v:B\to C$ un $A$-homomorphisme, $q:E\to C$ l'augmentation. Alors, pour
+toute famille $(z_\alpha)_{\alpha\in I}$ d'éléments de $E$ telle que
+$q(z_\alpha)=v(x_\alpha)$ pour tout $\alpha\in I$, il existe un
+$A$-homomorphisme $w:B\to E$ et un seul tel que $v=q\circ w$ et
+$w(x_\alpha)=z_\alpha$ pour tout $\alpha\in I$.
+\end{theorem}
+
+\begin{proof}
+Considérons d'abord le cas où $E$ est discret, donc $\mathfrak R$ nilpotent.
+On peut se borner au cas où $v$ est surjectif ; en outre, le raisonnement de
+(19.4.3) permet de supposer $\mathfrak R^2=0$ et par suite $\mathfrak R^p=0$.
+Enfin, en considérant l'image réciproque par $v$ de l'extension $E$ de $C$
+par $\mathfrak R$, on peut se borner au cas où $C=B$ et où $v$ est l'identité
+(19.4.4). Comme l'homomorphisme d'anneaux $F_E:z\rightsquigarrow z^p$
+s'annule dans $\mathfrak R$, il se factorise en
+$E\xrightarrow q B\xrightarrow{F'}E$,
+et $F'$, considéré comme homomorphisme de $B$ dans $E^{(p)}$, est un
+\emph{$A$-homomorphisme} par définition de la structure de $A$-algèbre de $E^{(p)}$
+à l'aide de l'homomorphisme composé
+$A\xrightarrow r E\xrightarrow{F_E}E^{(p)}$, où $r:A\to E$ est l'homomorphisme
+structural de la $A$-algèbre $E$ ; d'ailleurs
+$r:A^{(p)}\to E^{(p)}$ est aussi un $A$-homomorphisme. Il y a donc un unique
+$A$-homomorphisme $f:A^{(p)}\otimes_A B\to E^{(p)}$ tel que les composés de $f$
+et des homomorphismes canoniques $A^{(p)}\to A^{(p)}\otimes_A B$ et
+$B\to A^{(p)}\otimes_A B$ soient respectivement $r$ et $F'$. Or, par hypothèse,
+on peut identifier $A^{(p)}\otimes_A B$ à $A[B^p]$, les homomorphismes canoniques
+$A^{(p)}\to A^{(p)}\otimes_A B$ et $B\to A^{(p)}\otimes_A B$ s'identifiant
+respectivement à $u$ et à $F_B$. On peut donc maintenant considérer $E$ comme
+une $A[B^p]$-algèbre au moyen de l'homomorphisme $f$, et, par construction, on a
+$f(q(z)^p)=z^p$ pour tout $z\in E$ ; on est donc dans les conditions
+d'application de (21.2.1), d'où le théorème dans ce cas.
+
+Pour passer au cas général, considérons un système fondamental
+$(\mathfrak J_\lambda)$ d'idéaux ouverts de $E$, et posons
+$E_\lambda=E/\mathfrak J_\lambda$,
+$\mathfrak R_\lambda=(\mathfrak R+\mathfrak J_\lambda)/\mathfrak J_\lambda$,
+$C_\lambda=E_\lambda/\mathfrak R_\lambda=E/(\mathfrak R+\mathfrak J_\lambda)$ ;
+comme $E$ est admissible, on a $E=\varprojlim E_\lambda$ (0$_I$, 7.2.2).
+Pour tout couple $(\alpha,\lambda)$, désignons par $z_{\alpha\lambda}$
+l'image canonique de $z_\alpha$ dans $E_\lambda$, par
+$p_\lambda:C\to C_\lambda$ l'homomorphisme canonique,

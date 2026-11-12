@@ -1,0 +1,50 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{284}
+nombre $>1$) de $X'$ au-dessus de $s$.
+Il est immédiat que cet homomorphisme ne peut être bijectif que si $\boldsymbol{k}(s)$ et tous les $\boldsymbol{k}(s'_j)$ sont égaux au corps $\bb{F}_2$ à $2$ éléments;
+de plus, si cette condition est vérifiée, il faut en outre que le groupe multiplicatif $1+\mathfrak{m}_s$ ait pour image $1+\mathfrak{r}$, où $\mathfrak{r}$ est le radical de $\sh{O}'_{X,s}$, ou encore que $\mathfrak{m}_s=\mathfrak{r}$, ce qui entraîne que $\sh{O}'_{X,s}\otimes_{\sh{O}_{X,s}}\boldsymbol{k}(s)$ est composé direct de corps isomorphes à $\boldsymbol{k}(s)$ (ce qui, lorsque le morphisme $f$ est fini, entraîne qu'il est non ramifié aux points $s'_j$ \sref{IV.17.4.1}).
+Si par exemple \emph{aucun} corps résiduel de $X$ n'est isomorphe à $\bb{F}_2$, l'homomorphisme canonique $\operatorname{Div}(X)\to\operatorname{Div}(X')$ ne peut être bijectif que si $f$ est un \emph{isomorphisme}.
+Dans le cas où l'homomorphisme canonique $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ est bijectif, on conclut de ce qui précède et de (ii) que dans les considérations précédentes, on peut remplacer l'homomorphisme $\operatorname{Div}(X)\to\operatorname{Div}(X')$ par l'homomorphisme $\operatorname{Pic}(X)\to\operatorname{Pic}(X')$.
+\end{enumerate}
+\end{remark}
+
+\subsection{Diviseurs sur les préschémas de dimension 1}
+\EGAReaderTarget{ega4.c04.subsec.21-9}{subsection:IV.21.9}
+\label{IV.21.9}
+
+\begin{env}[21.9.1]
+\label{IV.21.9.1}
+Soient $X$ un espace topologique, $x$ un point de $X$, $i_x:\{x\}\to X$ l'injection canonique.
+Si $A(x)$ est un groupe commutatif, on peut le considérer comme un faisceau de groupes commutatifs sur l'espace $\{x\}$ réduit à un seul point, et prendre son image directe $(i_x)_*(A(x))$ qui est un faisceau de groupes commutatifs sur $X$ \sref[0]{0.3.4.1};
+il résulte aussitôt des définitions que pour tout ouvert $U$ de $X$, $\Gamma(U,(i_x)_*(A(x)))=A(x)$ si $x\in U$, et est réduit à $0$ dans le cas contraire;
+donc, pour $y\in\overline{\{x\}}$ on a $((i_x)_*(A(x)))_y=A(x)$, et pour $y\notin\overline{\{x\}}$, $((i_x)_*(A(x)))_y=0$.
+
+Si maintenant $\sh{F}$ est un faisceau de groupes commutatifs sur $X$ et $Y$ une partie de $X$, pour tout ouvert $U$ de $X$, on a un homomorphisme canonique
+\[
+\label{IV.21.9.1.1}
+  \Gamma(U,\sh{F})\to\prod_{x\in U\cap Y}\sh{F}_x
+  =\prod_{x\in Y}\Gamma(U,(i_x)_*(\sh{F}_x))
+  \tag{21.9.1.1}
+\]
+et comme ces homomorphismes commutent aux opérateurs de restriction, ils définissent un homomorphisme canonique de \emph{faisceaux}
+\[
+\label{IV.21.9.1.2}
+  j_Y:\sh{F}\to\prod_{x\in Y}(i_x)_*(\sh{F}_x).
+  \tag{21.9.1.2}
+\]
+\end{env}
+
+\begin{lemma}[21.9.2]
+\label{IV.21.9.2}
+Soient $X$ un espace topologique localement noethérien, $X_0$ l'ensemble de ses points fermés, $\sh{F}$ un faisceau de groupes commutatifs sur $X$.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item L'homomorphisme canonique $j_{X_0}:\sh{F}\to\prod_{x\in X_0}(i_x)_*(\sh{F}_x)$ est injectif et a pour image $\bigoplus_{x\in X_0}(i_x)_*(\sh{F}_x)$.
+  \item[\rm a$'$)] Il existe une famille de groupes commutatifs $(A(x))_{x\in X_0}$ telle que $\sh{F}$ soit isomorphe à $\bigoplus_{x\in X_0}(i_x)_*(A(x))$.
+  \item Toute section de $\sh{F}$ au-dessus d'un ouvert $U$ de $X$ a un support discret contenu dans $X_0$.
+\end{enumerate}
+Lorsqu'il en est ainsi, pour tout $x\in X_0$, le groupe $A(x)$ est déterminé à isomorphisme unique près et est isomorphe à $\sh{F}_x$.
+En outre, le faisceau $\sh{F}$ est alors flasque.
+\end{lemma}
+
+\begin{proof}

@@ -1,0 +1,92 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{314}
+  isomorphe à $\mathscr L|(U\cap V)$; cela s'exprime encore en disant que
+  l'homomorphisme canonique (21.3.2.4)
+  \[
+    \operatorname{Pic}(V)\longrightarrow\operatorname{Pic}(U\cap V)
+  \]
+  est \emph{surjectif}.
+\end{enumerate}
+
+\begin{lemma}[21.13.2]
+\label{IV.21.13.2}
+Soit $f:X'\to X$ un morphisme d'espaces annelés; pour tout ouvert $V$ de $X$, on
+note $f_V:f^{-1}(V)\to V$ la restriction de $f$. Les conditions suivantes sont
+équivalentes :
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item Pour tout ouvert $V$ de $X$, le foncteur
+  $\mathscr E\mapsto f_V^*(\mathscr E)$ de la catégorie des $\mathcal O_V$-Modules
+  localement libres de rang fini dans la catégorie des
+  $\mathcal O_{f^{-1}(V)}$-Modules localement libres de rang fini, est fidèle
+  (resp.\ pleinement fidèle).
+  \item[\emph{a')}] Pour tout ouvert $V$ de $X$, le foncteur
+  $\mathscr L\mapsto f_V^*(\mathscr L)$ de la catégorie des $\mathcal O_V$-Modules
+  localement libres de rang $1$ dans la catégorie des
+  $\mathcal O_{f^{-1}(V)}$-Modules localement libres de rang $1$ est fidèle
+  (resp.\ pleinement fidèle).
+  \item Pour tout ouvert $V$ de $X$, l'homomorphisme canonique
+  $(\mathbf 0_{\mathrm I}, 4.4.3.2)$
+  $\mathscr E\to(f_V)_*(f_V^*(\mathscr E))$ est un monomorphisme
+  (resp.\ un isomorphisme) pour tout $\mathcal O_V$-Module localement libre
+  $\mathscr E$ de rang fini.
+  \item[\emph{b')}] L'homomorphisme canonique
+  $\mathcal O_X\to f_*(\mathcal O_{X'})$ est un monomorphisme
+  (resp.\ un isomorphisme).
+\end{enumerate}
+
+Supposons que l'homomorphisme canonique $\mathcal O_X\to f_*(\mathcal O_{X'})$ soit
+bijectif; alors, pour qu'un $\mathcal O_{X'}$-Module localement libre de rang fini
+$\mathscr E'$ soit isomorphe à un $\mathcal O_{X'}$-Module de la forme
+$f^*(\mathscr E)$, où $\mathscr E$ est un $\mathcal O_X$-Module localement libre de
+rang fini, il faut et il suffit que les deux conditions suivantes soient remplies :
+\begin{enumerate}[label=(\roman*)]
+  \item $f_*(\mathscr E')$ est un $\mathcal O_X$-Module localement libre;
+  \item l'homomorphisme canonique $(\mathbf 0_{\mathrm I}, 4.4.3.3)$
+  $f^*(f_*(\mathscr E'))\to\mathscr E'$ est un isomorphisme.
+\end{enumerate}
+Lorsque ces deux conditions sont remplies, $\mathscr E$ est isomorphe à
+$f_*(\mathscr E')$.
+\end{lemma}
+
+\begin{proof}
+Dire que le foncteur $\mathscr E\mapsto f_V^*(\mathscr E)$ est fidèle
+(resp.\ pleinement fidèle) signifie que pour deux $\mathcal O_V$-Modules localement
+libres de rang fini $\mathscr E_1$, $\mathscr E_2$, l'application
+\[
+  \operatorname{Hom}_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)
+  \longrightarrow
+  \operatorname{Hom}_{\mathcal O_{f^{-1}(V)}}
+  (f_V^*(\mathscr E_1),f_V^*(\mathscr E_2))
+\]
+est injective (resp.\ bijective); comme ceci doit avoir lieu en remplaçant $V$ par un
+ouvert $W\subset V$ et $\mathscr E_1$, $\mathscr E_2$ par $\mathscr E_1|W$,
+$\mathscr E_2|W$, et que
+\[
+  \operatorname{Hom}_{\mathcal O_W}(\mathscr E_1|W,\mathscr E_2|W)
+  =\Gamma(W,\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)),
+\]
+la condition signifie encore que l'homomorphisme canonique de faisceaux
+\[
+\label{IV.21.13.2.1}
+  \mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)
+  \longrightarrow
+  (f_V)_*(f_V^*(\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)))
+  \tag{21.13.2.1}
+\]
+est injectif (resp.\ bijectif). Mais puisque $\mathscr E_1$ et $\mathscr E_2$ sont
+localement libres de rang fini,
+$\mathscr Hom_{\mathcal O_V}(\mathscr E_1,\mathscr E_2)$, isomorphe à
+$\mathscr E_1^\vee\otimes_{\mathcal O_V}\mathscr E_2$
+$(\mathbf 0_{\mathrm I}, 5.4.2)$, est aussi localement libre de rang fini; cela montre
+déjà que $b)$ entraîne $a)$, et inversement $b)$ est un cas particulier de $a)$,
+compte tenu de l'isomorphisme
+$\mathscr E\xrightarrow{\sim}\mathscr Hom_{\mathcal O_V}(\mathcal O_V,\mathscr E)$.
+Il est clair que $a')$ est un cas particulier de $a)$ et $b')$ un cas particulier de
+$a')$. Inversement, comme $b)$ est une propriété locale, on peut, pour la vérifier,
+se borner au cas où $\mathscr E=\mathcal O_V^n$, et cela montre que $b')$ entraîne
+$b)$.
+
+Si l'homomorphisme canonique $\mathcal O_X\to f_*(\mathcal O_{X'})$ est bijectif,
+et si les conditions (i) et (ii) sont remplies, il est clair que
+$\mathscr E'=f^*(\mathscr E)$ avec $\mathscr E=f_*(\mathscr E')$, à un isomorphisme
+près.

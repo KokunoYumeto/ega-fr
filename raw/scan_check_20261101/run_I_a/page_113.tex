@@ -1,0 +1,77 @@
+% from ega1-3-fr.tex
+\oldpage[I]{113}
+localité $x$ dans l'espace sous-jacent à $X$, et d'une \emph{extension} $K$ de
+$k(x)$~; $K$ sera appelé le \emph{corps des valeurs} du point géométrique
+correspondant, et on dit encore que ce point géométrique est \emph{localisé en
+$x$}. On définit ainsi une application $X(K)\to X$, appliquant un point
+géométrique à valeurs dans $K$ sur sa localité.
+
+Si $S'=\operatorname{Spec}(K)$ est un $S$-préschéma (autrement dit, si $K$ est
+considéré comme extension d'un corps résiduel $k(s)$, où $s\in S$) et si $X$
+est un $S$-préschéma, un élément de $X(K)_S$, ou, comme on dit encore, un
+\emph{point géométrique de $X$ au-dessus de $s$ à valeurs dans $K$}, consiste
+en la donnée d'un $k(s)$-monomorphisme d'un corps résiduel $k(x)$ dans $K$, où
+$x$ est un point de $X$ \emph{au-dessus de $s$} (donc $k(x)$ une extension de
+$k(s)$).
+
+Plus particulièrement, si $S=\operatorname{Spec}(K)=\{\xi\}$, \emph{les points
+géométriques de $X$ à valeurs dans $K$ s'identifient aux points $x\in X$ tels
+que $k(x)=K$}~; on dit encore que ces derniers sont les \emph{points du
+$K$-préschéma $X$ rationnels sur $K$}~; si $K'$ est une extension de $K$, les
+points géométriques de $X$ à valeurs dans $K'$ correspondent donc
+biunivoquement aux points de $X'=X_{(K')}$ rationnels sur $K'$
+(\hyperref[I.3.3.14-fr]{3.3.14}).
+\end{env}
+
+\begin{lemma}[3.4.6]
+\label{I.3.4.6-fr}
+Soient $X_i$ ($1\leq i\leq n$) des $S$-préschémas, $s$ un point de $S$, $x_i$
+($1\leq i\leq n$) un point de $X_i$ au-dessus de $s$. Il existe alors une
+extension $K$ de $k(s)$ et un point géométrique du produit
+$Y=X_1\times_S X_2\times_S\cdots\times_S X_n$, à valeurs dans $K$, dont les
+projections soient localisées aux $x_i$.
+\end{lemma}
+
+En effet, il existe des $k(s)$-monomorphismes $k(x_i)\to K$ dans une même
+extension $K$ de $k(s)$ (Bourbaki, \emph{Alg.}, chap. V, \S~4, prop. 2). Les
+composés $k(s)\to k(x_i)\to K$ sont tous identiques, donc les morphismes
+$\operatorname{Spec}(K)\to X_i$ correspondant à $k(x_i)\to K$ sont des
+$S$-morphismes, et on en conclut qu'ils définissent un morphisme unique
+$\operatorname{Spec}(K)\to Y$. Si $y$ est le point correspondant de $Y$, il
+est clair que sa projection dans chacun des $X_i$ est $x_i$.
+
+\begin{proposition}[3.4.7]
+\label{I.3.4.7-fr}
+Soient $X_i$ ($1\leq i\leq n$) des $S$-préschémas, et pour chaque indice $i$,
+soit $x_i$ un point de $X_i$. Pour qu'il existe un point $y$ de
+$Y=X_1\times_S X_2\times_S\cdots\times_S X_n$ dont $x_i$ soit la projection
+d'indice $i$ pour $1\leq i\leq n$, il faut et il suffit que les $x_i$ soient
+au-dessus d'un même point $s$ de $S$.
+\end{proposition}
+
+La condition est évidemment nécessaire~; le lemme
+(\hyperref[I.3.4.6-fr]{3.4.6}) prouve qu'elle est suffisante.
+
+\phantomsection\label{I.3.4.7.underlying-map-fr}
+En d'autres termes, si on désigne par $(X)$ l'ensemble sous-jacent à $X$, on
+voit qu'on a une application \emph{surjective} canonique
+$(X\times_S Y)\to (X)\times_{(S)}(Y)$~; il faut noter que cette application
+\emph{n'est pas injective} en général~; autrement dit, \emph{il peut exister
+plusieurs points $z$ distincts dans $X\times_S Y$ ayant mêmes projections
+$x\in X$, $y\in Y$}~; c'est ce qu'on voit déjà lorsque $S$, $X$, $Y$ sont des
+spectres premiers de corps $k$, $K$, $K'$, car le produit tensoriel
+$K\otimes_k K'$ a en général plusieurs idéaux premiers distincts
+(cf. \hyperref[I.3.4.9-fr]{3.4.9}).
+
+\begin{corollary}[3.4.8]
+\label{I.3.4.8-fr}
+Soient $f:X\to Y$ un $S$-morphisme, $f_{(S')}:X_{(S')}\to Y_{(S')}$ le
+$S'$-morphisme déduit de $f$ par une extension $S'\to S$ du préschéma de base.
+Soit $p$ (resp. $q$) la projection $X_{(S')}\to X$ (resp.
+$Y_{(S')}\to Y$)~; pour toute partie $M$ de $X$, on a
+\phantomsection\label{I.3.4.8.base-change-image-fr}
+\[
+  q^{-1}(f(M))=f_{(S')}(p^{-1}(M)).
+\]
+\end{corollary}
+

@@ -1,0 +1,83 @@
+% from ega3-7-fr.tex
+\oldpage[III]{180}
+Il est clair que la condition $b')$ de (7.2.5) entraîne $d)$; prouvons que
+$d)$ entraîne $b')$.
+
+Il existe un entier $n$ tel que $\mathfrak m^n=0$; posons, pour tout
+$A$-module $M$, $M_h=\mathfrak m^hM$; nous prouverons par récurrence
+descendante sur $h$ que $t_{M_h}$ est surjectif. La proposition est évidente
+pour $h=n$; pour $h<n$, on a une suite exacte
+\[
+  0\longrightarrow M_{h+1}
+  \longrightarrow M_h
+  \longrightarrow M_h/M_{h+1}
+  \longrightarrow 0
+\]
+et l'hypothèse de récurrence entraîne que $t_{M_{h+1}}$ est surjectif.
+D'autre part, $M_h/M_{h+1}$ est annulé par $\mathfrak m$ et est donc un
+$(A/\mathfrak m)$-module, autrement dit est somme directe de $A$-modules
+isomorphes à $k$. Pour prouver que $t_{M_h/M_{h+1}}$ est surjectif, il suffit
+donc de prouver que $t_k$ l'est, puisque $T$ commute aux sommes directes. Or,
+en vertu de la commutativité du diagramme
+\[
+\xymatrix@C=35pt@R=30pt{
+  T(A_s)\otimes_A A_s
+  \ar[r]^-{t_{A_s}}\ar[d]_{1\otimes\varepsilon}
+  &
+  T(A_s)\ar[d]^{T(\varepsilon)}
+  \\
+  T(A_s)\otimes_A k
+  \ar[r]_-{t_k}
+  &
+  T(k)
+}
+\]
+et de (7.2.4), l'hypothèse $d)$ entraîne que $t_k$ est bien surjectif. Pour
+terminer la démonstration, il suffira de prouver que si l'on a une suite
+exacte
+\[
+  0\longrightarrow M'
+  \longrightarrow M
+  \xrightarrow{v}M''
+  \longrightarrow 0
+\]
+de $A$-modules, telle que $t_{M'}$ et $t_{M''}$ sont surjectifs, alors $t_M$
+est surjectif. Or, on a un diagramme commutatif
+\[
+\xymatrix@C=27pt@R=30pt{
+  T'(M')\ar[r]\ar[d]_{t_{M'}}
+  &
+  T'(M)\ar[r]\ar[d]_{t_M}
+  &
+  T'(M'')\ar[r]\ar[d]_{t_{M''}}
+  &
+  0\ar[d]
+  \\
+  T(M')\ar[r]
+  &
+  T(M)\ar[r]_-{T(v)}
+  &
+  T(M'')\ar[r]
+  &
+  \operatorname{Coker}(T(v))
+}
+\]
+dans lequel les deux lignes sont exactes, en vertu de l'hypothèse que $T$ est
+semi-exact. Comme par l'hypothèse de récurrence $t_{M'}$ et $t_{M''}$ sont
+des épimorphismes et que la dernière flèche verticale est un monomorphisme,
+le lemme des cinq (M, I, 1.1) montre que $t_M$ est un épimorphisme.
+\end{proof}
+
+\subsection{Critères d'exactitude des foncteurs homologiques de modules}
+\label{subsection:III.7.3.fr}
+
+\begin{proposition}[7.3.1]
+Soient $A$ un anneau (non nécessairement commutatif), $T_\bullet$ un foncteur
+homologique covariant (T, II, 2.1) de la catégorie $\mathbf{Ab}_A$ dans la
+catégorie $\mathbf{Ab}$, commutant aux sommes directes. Soit $p$ un entier tel
+que $T_p$ et $T_{p-1}$ soient définis. Les conditions suivantes sont
+équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact à droite.
+  \item[b)] $T_{p-1}$ est exact à gauche.
+  

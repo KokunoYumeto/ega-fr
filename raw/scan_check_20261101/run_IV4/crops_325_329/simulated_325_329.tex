@@ -1,0 +1,338 @@
+\oldpage[IV-4]{325}
+en effet, soit $f_0$ un élément de $\mathfrak q$ n'appartenant pas à $\mathfrak mB$;
+c'est une série formelle dont la série réduite $\overline f_0$ n'est pas nulle; donc,
+en vertu du théorème de préparation (Bourbaki, \emph{Alg. comm.}, chap.~VII, \S3,
+n\textsuperscript{o}~8, prop.~5), pour tout $f\in\mathfrak q$, il existe $g\in B$ et
+un polynôme $\boldsymbol{r}\in A[T]$ tels que $f=gf_0+r$ et on a donc
+$r\in\mathfrak q\cap A[T]$; d'autre part (\emph{loc. cit.}, prop.~6) il existe un
+polynôme distingué non constant $F_0\in A[T]$ et un élément inversible $u\in B$ tels
+que $f_0=uF_0$, donc on a aussi $F_0\in\mathfrak q\cap A[T]$, ce qui prouve que
+$\mathfrak q$ est engendré par $\mathfrak q\cap A[T]=\mathfrak q_1$. Puisque $B$
+est plat sur $A[T]$ $(\mathbf 0_{\mathrm I}, 7.3.3)$, il résulte de Bourbaki,
+\emph{Alg. comm.}, chap.~VII, \S1, n\textsuperscript{o}~10, prop.~15, que
+$\mathfrak q_1$ est un idéal premier de hauteur $1$ dans $A[T]$.
+En outre, on a nécessairement $\mathfrak q_1\cap A=0$; sinon,
+$\mathfrak q_1\cap A$ serait nécessairement de hauteur $\geq1$, et il résulterait de
+(5.5.3) que l'on aurait $\mathfrak q_1=(\mathfrak q_1\cap A)A[T]$. Mais alors,
+puisque $\mathfrak q_1\cap A\subset\mathfrak m$, on aurait
+$\mathfrak q_1\subset\mathfrak mA[T]$ contrairement à l'hypothèse sur
+$\mathfrak q$. Si $K$ est le corps des fractions de $A$, $\mathfrak q_1K[T]$ est
+donc un idéal premier distinct de $0$ et de $K[T]$ dans $K[T]$, donc de la forme
+$h.K[T]$, où $h(T)=T^m+a_1T^{m-1}+\ldots+a_m$ avec $m\geq1$
+et les $a_i\in K$, $h$ étant irréductible dans $K[T]$. Mais on a vu plus haut qu'il
+existe dans $\mathfrak q_1$ un polynôme distingué non constant $F_0\in A[T]$. Si $t$
+est la classe de $T$ dans $K[T]/\mathfrak q_1K[T]$, $t$ est donc racine du polynôme
+$F_0$ dans une extension de $K$ et par suite $h$ divise $F_0$ \emph{dans} $K[T]$; mais
+puisque $h$ et $F_0$ sont unitaires, cela entraîne que les coefficients $a_i$ de $h$
+sont entiers sur $A$ (Bourbaki, \emph{Alg. comm.}, chap.~V, \S1,
+n\textsuperscript{o}~3, prop.~11), donc appartiennent à $A$ puisque $A$ est
+intégralement clos. Autrement dit, on a $h\in A[T]\cap\mathfrak q_1K[T]=\mathfrak q_1$
+(Bourbaki, \emph{Alg. comm.}, chap.~II, \S1, n\textsuperscript{o}~5, prop.~11);
+comme tout polynôme $g\in\mathfrak q_1$ est divisible par $h$ \emph{dans} $K[T]$ et que $h$
+est unitaire, les coefficients de $g/h$ appartiennent à $A$, donc
+$\mathfrak q_1=h.A[T]$. C.Q.F.D.
+\end{proof}
+
+L'énoncé (21.14.1) est \emph{équivalent} au suivant :
+
+\begin{corollary}[21.14.2]
+\label{IV.21.14.2}
+Sous les hypothèses de \textup{(21.14.1)} sur $A$, $B$ et $\rho$ pour tout idéal premier
+$\mathfrak q$ de $B$ non contenu dans $\mathfrak p=\mathfrak mB$ et tel que
+$\dim(B_\mathfrak q)\geq2$, l'anneau $B_\mathfrak q$ est parafactoriel. En
+particulier, si $\dim(B\otimes_A k)>0$ \textup{(}i.e.\ $\dim B>\dim A$
+$((\mathbf 0, 19.7.1)$ et $(6.1.1)))$, l'anneau $B$ est parafactoriel.
+\end{corollary}
+
+\begin{proof}
+En effet, on a vu dans la démonstration de (21.14.1) que les conditions de l'énoncé
+entraînent que $B$ est intègre et intégralement clos; l'équivalence des énoncés
+(21.14.1) et (21.14.2) résulte alors de (21.13.15) appliqué à
+$X=\operatorname{Spec}(B)$ et $S=\{\mathfrak p\}$.
+\end{proof}
+
+\begin{proposition}[21.14.3]
+\label{IV.21.14.3}
+Soient $S$ un préschéma normal, $f:X\to S$ un morphisme lisse.
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item Si $S$ est localement noethérien \textup{(}donc aussi $X$\textup{)}, alors, pour tout $x\in X$
+  tel que $\dim(\mathcal O_{X,x})\geq2$ et que $x$ ne soit pas point maximal de sa
+  fibre $f^{-1}(f(x))$, l'anneau $\mathcal O_{X,x}$ est parafactoriel. Tout cycle
+  $1$-codimensionnel $Z$ sur $X$ tel que $\operatorname{Supp}(Z)$ ne contienne aucune
+  composante irréductible d'une fibre $f^{-1}(s)=X_s$, est localement principal.
+  \item Soit $Y$ une partie fermée de $X$ ne contenant aucune composante irréductible
+  d'une fibre $X_s$, et telle que pour tout point maximal $\eta$ de $S$,
+  $Y_\eta=Y\cap X_\eta$ soit de codimension $\geq2$ dans $X_\eta$. Alors le couple
+  $(X,Y)$ est parafactoriel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On notera que les conditions de (ii) sont remplies si $Y$ est une partie fermée de $X$
+telle que, pour \emph{tout} $s\in S$, $Y_s=Y\cap X_s$ soit de codimension $\geq2$ dans
+$X_s$.
+
+Pour prouver (21.14.3), notons d'abord que sous les hypothèses de (i), si l'on
+\oldpage[IV-4]{326}
+pose $Y=\overline{\{x\}}$, il existe un voisinage ouvert $V$ de $x$ dans $X$ tel que
+$Y\cap V$ et $V$ vérifient les conditions de (ii) : en effet, il résulte de l'hypothèse
+et de (9.5.3) que l'on peut prendre $V$ tel que $V\cap Y$ ne contienne aucune
+composante irréductible d'un $X_s$; d'autre part, pour tout point maximal $\eta$ de
+$S$ tel que $Y\cap X_\eta\neq\varnothing$, les points de $Y\cap X_\eta$ sont des
+spécialisations de $x$, donc en un tel point $z$ on a
+$\dim(\mathcal O_{X,z})\geq2$, et comme
+$\mathcal O_{X,z}=\mathcal O_{X_\eta,z}$ ($S$ étant réduit au point $\eta$ en vertu
+de (2.1.13)), $Y\cap X_\eta$ est bien de codimension $\geq2$ dans $X$. Comme le
+couple $(V,Y\cap V)$ est alors parafactoriel en vertu de (ii), on conclut de (21.13.10)
+que l'anneau $\mathcal O_{X,x}$ est parafactoriel, c'est-à-dire la première assertion
+de (i). Pour prouver la seconde, on peut se borner au cas où
+$Z=\overline{\{z\}}$, où $z\in X^{(1)}$; comme $\mathcal O_{X,z}$ est un anneau local
+intégralement clos et de dimension $1$, c'est un anneau de valuation discrète et $Z$
+est donc principal au point $z$; pour tout autre point $x$ de
+$\operatorname{Supp}(Z)$, on a donc $\dim(\mathcal O_{X,x})\geq2$ et $x$ n'est pas
+point maximal de sa fibre par hypothèse, donc $\mathcal O_{X,x}$ est parafactoriel.
+Appliquons alors (21.13.15) en prenant pour $S$ l'ensemble formé de $z$ et des points
+maximaux des fibres de $f$; il est clair que $Z$ est principal aux points de $S$
+puisque $z$ est le seul point de $S$ appartenant à $\operatorname{Supp}(Z)$; comme
+d'autre part la condition \emph{b)} de (21.13.15) est évidemment remplie, on en conclut que
+$Z$ est localement principal.
+
+On est donc ramené à prouver (ii). Posons $U=X\setmin Y$ et soit $j:U\to X$ l'injection
+canonique.
+
+Comme les hypothèses et la conclusion sont locales sur $S$ et sur $X$ en vertu de
+(21.13.6, (i)), on peut se borner au cas où $S$ et $X$ sont affines, $f$ étant donc de
+présentation finie. Puisque les fibres de $f$ sont régulières, l'hypothèse sur $Y$
+entraîne que, pour tout point $x\in Y$, on a $\operatorname{prof}(\mathcal O_{X_{f(x)},x})=\dim(\mathcal O_{X_{f(x)},x})\geq1$;
+il résulte de (19.9.8) que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ est \emph{injectif}. De plus, remplaçant $Y$ par
+une partie fermée plus grande suivant la méthode de la démonstration de (19.9.8), et
+utilisant (21.13.6, (ii)), on peut supposer que $Y$ est défini par un idéal \emph{de
+type fini} de l'anneau de $X$, donc l'ouvert $U=X\setmin Y$ est \emph{quasi-compact et
+quasi-séparé} et l'ensemble fermé $Y$ est \emph{constructible}.
+
+Pour prouver (ii), il suffit, pour tout $\mathcal O_U$-Module inversible $\mathscr L$
+et tout point $x\in Y$ donnés, d'établir l'existence d'un voisinage ouvert $V$ de $x$
+dans $X$ tel que : $1^{\mathrm o}$ l'homomorphisme canonique
+$\mathcal O_V\to(j_V)_*(\mathcal O_{U\cap V})$ est surjectif;
+$2^{\mathrm o}$ il existe un $\mathcal O_V$-Module inversible $\mathscr L'_V$ tel que
+$\mathscr L'_V|(U\cap V)=\mathscr L|(U\cap V)$ ((21.13.5) et (21.13.3)).
+
+Posons $s=f(x)$; nous allons voir qu'on peut se borner au cas où
+$S=S_0=\operatorname{Spec}(\mathcal O_{S,s})$. Soit en effet $(S_\nu)$ un système
+fondamental de voisinages ouverts affines de $s$ dans $S$, et posons
+$X_\nu=f^{-1}(S_\nu)$, $Y_\nu=Y\cap X_\nu$, $U_\nu=X_\nu\setmin Y_\nu$,
+$j_\nu:U_\nu\to X_\nu$ étant l'injection canonique; $X_0=X\times_S S_0$ est alors
+limite projective des $X_\nu$ (8.1.2, \emph{a)}); supposons la proposition vraie pour le
+morphisme $f_0:X_0\to S_0$ et pour $Y_0=Y\cap X_0$, et posons $U_0=X_0\setmin Y_0$,
+$j_0:U_0\to X_0$ étant l'injection canonique. La projection
+$p_\nu:X_0\to X_\nu$ étant un morphisme affine, on a $(j_0)_*(\mathcal O_{U_0})=p_\nu^*((j_\nu)_*(\mathcal O_{U_\nu}))$
+$(\mathbf{II}, 1.5.2)$ et l'homomorphisme canonique
+$\rho_0:\mathcal O_{X_0}\to(j_0)_*(\mathcal O_{U_0})$ n'est autre que
+$p_\nu^*(\rho_\nu)$, où
+$\rho_\nu:\mathcal O_{X_\nu}\to(j)_*(\mathcal O_{U_\nu})$ est l'homomorphisme
+canonique; comme par hypothèse $\rho_0$ est surjectif, il en est de même de $\rho_\nu$
+pour $\nu$ assez
+\oldpage[IV-4]{327}
+grand (8.5.7). Soit d'autre part $\mathscr L_0$ le
+$\mathcal O_{U_0}$-Module inversible restriction de $\mathscr L$, et notons que les
+$X_\nu$ sont affines, donc quasi-compacts et quasi-séparés; puisque par hypothèse il
+existe un $\mathcal O_{X_0}$-Module inversible $\mathscr L'_0$ tel que
+$\mathscr L'_0|U_0=\mathscr L_0$, il existe un $\nu$ assez grand et un
+$\mathcal O_{X_\nu}$-Module quasi-cohérent $\mathscr L'_\nu$ de présentation finie
+tels que $\mathscr L'_0$ soit isomorphe à $p_\nu^*(\mathscr L'_\nu)$ (8.5.2, (ii));
+de plus (8.5.5) on peut supposer que $\mathscr L'_\nu$ est inversible. Enfin, comme
+les $U_\nu$ sont quasi-compacts et quasi-séparés et que
+$\mathscr L'_0|U_0=\mathscr L_0$, il existe $\nu$ assez grand tel que
+$\mathscr L'_\nu|U_\nu$ et $\mathscr L_\nu=\mathscr L|U_\nu$ soient isomorphes (8.5.2.5).
+
+On est ainsi ramené au cas où $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(B)$, où $A$ est un anneau \emph{local}; puisque $X$ est
+normal et $f$ lisse, $S$ est normal (17.5.7), donc $A$ est \emph{intègre} et
+\emph{intégralement clos}. Considérons alors $A$ comme limite inductive de ses
+\emph{sous-$\mathbb Z$-algèbres de type fini}; comme la clôture intégrale d'une telle
+sous-$\mathbb Z$-algèbre est un sous-anneau de $A$ et est aussi une
+$\mathbb Z$-algèbre \emph{de type fini} (7.8.3, (ii), (iii) et (vi)), $A$ est limite inductive
+filtrante des sous-$\mathbb Z$-algèbres de type fini $A_\lambda$ de $A$ qui sont des
+anneaux \emph{intégralement clos}. En vertu de (1.8.4.2), il existe un indice
+$\lambda$ et une $A_\lambda$-algèbre de type fini $B_\lambda$ tels que $B=B_\lambda\otimes_{A_\lambda}A$
+à un $A$-isomorphisme près. Posons $S_\lambda=\operatorname{Spec}(A_\lambda)$,
+$X_\lambda=\operatorname{Spec}(B_\lambda)$; si $p_\lambda:X\to X_\lambda$ est la
+projection canonique, on peut en outre supposer (puisque $Y$ est
+\emph{constructible}) que $Y=p_\lambda^{-1}(Y_\lambda)$, où $Y_\lambda$ est une
+partie fermée de $X_\lambda$ (8.3.11). Soit $f_\lambda$ le morphisme
+$X_\lambda\to S_\lambda$; en vertu de la transitivité des fibres et de (4.2.6),
+$Y_\lambda$ ne contient aucune composante irréductible des fibres
+$f_\lambda^{-1}(s_\lambda)$ pour aucun $s_\lambda\in S_\lambda$. Puisque $f$ est
+lisse, on peut aussi supposer que $f_\lambda$ est lisse (17.7.8); enfin, l'image du
+point générique $\eta$ de $S$ dans $S_\lambda$ est le point générique $\eta_\lambda$
+de $S_\lambda$, et on a
+$\operatorname{codim}((Y_\lambda)_{\eta_\lambda},(X_\lambda)_{\eta_\lambda})=\operatorname{codim}(Y_\eta,X_\eta)\geq2$
+en vertu de (6.1.4). On voit donc que $S_\lambda$, $X_\lambda$ et $Y_\lambda$
+vérifient toutes les hypothèses de (ii), et en posant
+$X_\mu=X_\lambda\times_{S_\lambda}S_\mu$ pour $\lambda\leq\mu$, il en est de même de
+$S_\mu$, $X_\mu$ et $Y_\mu$. Montrons que si l'on prouve que le couple
+$(X_\mu,Y_\mu)$ est parafactoriel pour tout $\mu\geq\lambda$, il en est de même de
+$(X,Y)$. En effet, soient $U=X\setmin Y$, $U_\lambda=X_\lambda\setmin Y_\lambda$, $j:U\to X$,
+$j_\lambda:U_\lambda\to X_\lambda$ les injections canoniques; la projection
+$p_\lambda:X\to X_\lambda$ étant un morphisme affine, on a
+$j_*(\mathcal O_U)=p_\lambda^*((j_\lambda)_*(\mathcal O_{U_\lambda}))$ $(\mathbf{II}, 1.5.2)$,
+et par suite l'homomorphisme canonique
+$\rho:\mathcal O_X\to j_*(\mathcal O_U)$ n'est autre que $p_\lambda^*(\rho_\lambda)$, où
+$\rho_\lambda:\mathcal O_{X_\lambda}\to(j_\lambda)_*(\mathcal O_{U_\lambda})$ est l'homomorphisme
+canonique; ce dernier étant par hypothèse bijectif, il en est de même de $\rho$.
+D'autre part, pour tout $\mathcal O_U$-Module inversible $\mathscr L$, il existe un
+$\mu\geq\lambda$ et un $\mathcal O_{U_\mu}$-Module inversible $\mathscr L_\mu$ tels
+que $\mathscr L=p_\mu'^*(\mathscr L_\mu)$ (en désignant par
+$p_\mu':U\to U_\mu$ la restriction de $p_\mu$) (8.5.2 et 8.5.5), $U_\lambda$ étant
+quasi-compact puisque $X_\lambda$ est noethérien. Par hypothèse, il existe un
+$\mathcal O_{X_\mu}$-Module inversible $\mathscr L'_\mu$ tel que
+$\mathscr L'_\mu|U_\mu$ soit isomorphe à $\mathscr L_\mu$;
+$\mathscr L'=p_\mu^*(\mathscr L_\mu)$ est alors un $\mathcal O_X$-Module
+inversible tel que $\mathscr L'|U$ soit isomorphe à $\mathscr L$, ce qui prouve notre
+assertion.
+
+On est ainsi ramené à prouver (ii) lorsque l'anneau $A$ est une
+$\mathbb Z$-algèbre de type fini intégralement close; comme les anneaux locaux
+$\mathcal O_{S,s}$ de $S$ sont alors des anneaux excellents intégralement clos, leurs
+\emph{complétés} sont aussi intégralement clos (7.8.3, (ii), (iii) et (vii)). Pour
+prouver que le couple $(X,Y)$ est parafactoriel, il suffit de montrer que pour tout
+$x\in Y$, l'anneau $\mathcal O_{X,x}$ est parafactoriel (21.13.10). Soit $y$ un point
+fermé de $Y_{f(x)}$, qui soit spécialisation de $x$ (5.1.11); si l'on pose
+$s=f(x)=f(y)$, $\mathcal O_{S,s}$ a un
+\oldpage[IV-4]{328}
+complété intégralement clos, et $\mathcal O_{X,y}$ est une
+$\mathcal O_{S,s}$-algèbre formellement lisse pour les topologies préadiques
+(17.5.3); puisque $Y_s$ ne contient aucune composante irréductible de $X_s$, on a
+$\dim(\mathcal O_{X,x})>\dim(\mathcal O_{S,s})$ (17.5.8). Si $s\neq\eta$, on a
+$\dim(\mathcal O_{S,s})\geq1$; si au contraire $s=\eta$, on a par hypothèse
+$\dim(\mathcal O_{X,x})\geq2$; donc dans tous les cas
+$\dim(\mathcal O_{X,x})\geq2$. En outre, l'idéal premier de $\mathcal O_{X,y}$
+correspondant au point $x$ n'est pas contenu dans
+$\mathfrak m_s\mathcal O_{X,y}$ puisque $Y$ ne contient aucune composante
+irréductible de $X_s$. Enfin, puisque $y$ est fermé dans $X_s$, $\boldsymbol{k}(y)$ est extension
+finie de $\boldsymbol{k}(s)$ $(\mathbf I, 6.4.2)$. Dans tous les cas, on peut appliquer à
+$A=\mathcal O_{S,s}$, $B=\mathcal O_{X,y}$ et
+$B_\mathfrak q=\mathcal O_{X,x}$ le résultat de (21.14.2), ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{env}[21.14.4]
+\label{IV.21.14.4}
+\emph{Remarques}. ---
+(i) Il se peut que les énoncés (21.14.1) et (21.14.2) restent valables \emph{sans
+hypothèse} sur le corps résiduel de $B$. Énoncé avec cette généralité, le résultat
+équivaudrait, en vertu de (21.13.15) et (21.13.12.1) au suivant : Soient $A$ un
+anneau local noethérien complet, intègre et intégralement clos, $B$ un anneau local
+noethérien qui est une $A$-algèbre formellement lisse, tel que
+$\dim(B)>\dim(A)$; alors $B$ est parafactoriel.
+
+(ii) Nous verrons au chap.~VI, en employant une technique de « descente finie »
+appliquée au morphisme $Y'\to Y=\operatorname{Spec}(A)$, où $Y'$ est le normalisé de
+$Y$, que la conclusion de (21.14.1) (ou de (21.14.2)) reste valable en remplaçant
+l'hypothèse que $\widehat A$ est intégralement clos par l'hypothèse que
+$\widehat A$ est \emph{réduit}, pourvu que $\dim B\geq\dim A+2$. Si on remplace cette
+dernière condition par $\dim B\geq\dim A+3$, on peut même supprimer l'hypothèse que
+$\widehat A$ est réduit. De même, la conclusion de (21.14.3) reste valable en
+remplaçant l'hypothèse que $X$ est normal par l'hypothèse que $X$ est réduit, pourvu
+que $\dim(\mathcal O_{X,x})\geq\dim(\mathcal O_{S,f(x)})+2$.
+
+(iii) Au chap.~III, 3\textsuperscript{e} partie, on prouve que si $f:X\to S$ un
+morphisme lisse, $Y$ une partie fermée localement constructible de $X$ telle que,
+pour tout $s\in S$, on ait (avec les notations de (21.14.3))
+$\operatorname{codim}(Y_s,X_s)\geq3$, alors le couple $(X,Y)$ est parafactoriel
+([41], XII, 4.8). Cette conclusion n'est plus valable lorsqu'on suppose seulement que
+$\operatorname{codim}(Y_s,X_s)\geq2$ pour tout $s\in S$ et lorsqu'on ne suppose plus
+$X$ réduit. Par exemple, soient $k$ un corps, $A=k[T]/(T^2)$, algèbre des nombres
+duaux sur $k$, $S=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(A[T_1,T_2])$ ($T_1$, $T_2$ indéterminées), de sorte que
+$X=\mathbf V_S^2$, $Y$ étant la « section nulle » de ce fibré; si $s$ est l'unique
+point fermé de $S$, on a $X_s=\mathbf V_k^2$ et $Y_s$ est la « section nulle » de
+$X_s$. Pour voir que le couple $(X,Y)$ n'est pas parafactoriel, il suffit de montrer
+que l'anneau $B=A[T_1,T_2]_\mathfrak m$, où $\mathfrak m$ est l'idéal
+$(T_1)+(T_2)$ qui définit $Y$, n'est pas parafactoriel (21.13.10). Soit
+$B_0=B_{\mathrm{red}}$, et notons $U$ et $U_0$ les complémentaires du point fermé
+dans $\operatorname{Spec}(B)$ et $\operatorname{Spec}(B_0)$; en raisonnant comme
+dans (21.13.9), on a la suite exacte, extension de (21.13.9.1)
+\[
+  \Gamma(U,\mathcal O_U)^*\longrightarrow\Gamma(U_0,\mathcal O_{U_0})^*
+  \longrightarrow\mathrm H^1(U_0,\mathcal O_{U_0})
+  \longrightarrow\operatorname{Pic}(U)\longrightarrow\operatorname{Pic}(U_0).
+\]
+Or, on a $\Gamma(U,\mathcal O_U)=B$, $\Gamma(U_0,\mathcal O_{U_0})=B_0$ puisque
+$\operatorname{prof}(B)=\operatorname{prof}(B_0)=2$ (5.10.5). Par ailleurs
+$\operatorname{Pic}(U_0)=0$ puisque $B_0$ est factoriel, et
+$\mathrm H^1(U_0,\mathcal O_{U_0})\neq0$ [41, 3, Exemple III-1]; comme
+l'homomorphisme $B^*\to B_0^*$ est surjectif, on en conclut que
+$\operatorname{Pic}(U)\neq0$, donc que $B$ n'est pas parafactoriel.
+\oldpage[IV-4]{329}
+(iv) Le résultat (21.14.3) a d'abord été démontré par C.~Seshadri [44] dans le cas
+particulier où $S$ est un schéma algébrique normal sur un corps algébriquement clos
+$k$ et $X=S\times_k T$, où $T$ est un $k$-préschéma algébrique lisse sur $k$. La
+démonstration de Seshadri [44, p.~188-189] est de nature globale et utilise la
+théorie des schémas de Picard. Elle donne en outre \emph{(loc. cit.)} des résultats
+tels que le suivant (pour lequel on ne possède pas à l'heure actuelle de démonstration
+par voie locale). Soient $S$, $T$ deux préschémas localement de type fini sur un
+corps $k$, $X=S\times_k T$, $Z$ un cycle $1$-codimensionnel sur $X$ (considéré comme
+$S$-préschéma); supposons vérifiées les conditions suivantes :
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item $S$ et $T$ sont géométriquement normaux sur $k$ (6.7.6);
+  \item Pour tout point maximal $\eta$ de $S$, le cycle $1$-codimensionnel $Z_\eta$
+  sur la fibre $X_\eta$, ayant même multiplicité que $Z$ en tout point de
+  $X^{(1)}\cap X_\eta$, est localement principal (autrement dit, est l'image d'un
+  diviseur de $X_\eta$, puisque $X_\eta$ est normal);
+  \item Pour tout $s\in S$, $Z$ est principal aux points maximaux de la fibre $X_s$.
+\end{enumerate}
+
+Alors $Z$ est localement principal. En d'autres termes, $X$ étant normal (6.14.1),
+pour tout $x\in X$ qui n'est pas maximal dans sa fibre $X_s$ et qui n'appartient à
+aucune des « fibres génériques » $X_\eta$ (ce qui implique
+$\dim(\mathcal O_{X,x})\geq2$ en vertu de (6.1.1)), l'anneau local
+$\mathcal O_{X,x}$ est parafactoriel, en vertu de (21.12.15)\footnote{En fait, dans l'article précité, Seshadri suppose que $k$ est algébriquement
+clos, $T$ séparé et « semi-complet » (i.e.\ tel que
+$\Gamma(T,\mathcal O_T)$ soit $k$-isomorphe à $k$) et remplace l'hypothèse
+$3^{\mathrm o}$ par l'hypothèse plus forte que $\operatorname{Supp}(Z)$ ne contient
+aucune des fibres $X_s$ pour $s\in S$. Mais comme l'énoncé est local sur $S$, on en
+conclut aussitôt qu'il suffit de faire l'hypothèse $3^{\mathrm o}$, et cela prouve que
+la conclusion (interprétée comme ci-dessus en termes de propriété de parafactorialité
+des anneaux $\mathcal O_{X,x}$) est locale sur $S$ \emph{et sur} $T$, ce qui permet
+d'éliminer complètement l'hypothèse que $T$ est « semi-complet » et que $k$ est
+algébriquement clos, puisque (quitte à passer d'abord à la clôture algébrique de $k$)
+on peut supposer d'abord $T$ affine, ce qui permet de le plonger comme ouvert d'un
+schéma projectif et normal sur $k$, auquel le résultat de Seshadri s'applique. Notons
+aussi que, grâce à cette réduction, il suffit de faire la démonstration de Seshadri dans
+le cas où $T$ est \emph{projectif} (et non seulement « semi-complet »), cas où la
+théorie du schéma de Picard utilisée par Seshadri est contenue dans celle qui sera
+développée au chap.~VI de notre Traité.}.
+\end{env}
+
+\subsection{Diviseurs relatifs.}
+\EGAReaderTarget{ega4.c04.subsec.21-15}{subsection:IV.21.15}
+\label{IV.21.15}
+
+\begin{env}[21.15.1]
+\label{IV.21.15.1}
+Soient $S$ un préschéma, $f:X\to S$ un morphisme \emph{plat et localement de
+présentation finie}. On a défini dans (20.6.1) le faisceau d'anneaux
+$\mathscr M_{X/S}$ des \emph{germes de fonctions méromorphes sur $X$ relatives à
+$S$}, sous-faisceau de $\mathscr M_X$; il est clair que l'injection canonique
+$\mathcal O_X\to\mathscr M_X$ (20.1.4.1) applique $\mathcal O_X$ sur un
+sous-faisceau de $\mathscr M_{X/S}$, avec lequel on l'identifie. Soit
+$\mathscr M_{X/S}^*$ le faisceau (en groupes multiplicatifs) des germes de sections
+inversibles de $\mathscr M_{X/S}$ qui est donc un sous-faisceau de $\mathscr M_X^*$
+et contient $\mathcal O_X^*$ comme sous-faisceau.
+\end{env}
+
+\begin{definition}[21.15.2]
+\EGAReaderTarget{ega4.c04.def.21-15-2}{IV.21.15.2}
+On appelle faisceau des diviseurs sur $X$ relativement à $S$, ou
+faisceau des diviseurs sur $X$ transversaux à $f$, et on note
+$\mathscr{D}iv_{X/S}$ le faisceau quotient (de groupes commutatifs)
+$\mathscr M_{X/S}^*/\mathcal O_X^*$; les sections de ce faisceau au-dessus de $X$ se
+nomment diviseurs sur $X$ relatifs à $S$, ou diviseurs sur $X$
+transversaux à $f$; ils forment un groupe commutatif noté $\operatorname{Div}(X/S)$.
+\end{definition}
+
+Il est clair que $\mathscr{D}iv_{X/S}$ s'identifie canoniquement à un sous-faisceau de
+$\mathscr{D}iv_X$, et par suite $\operatorname{Div}(X/S)$ à un sous-groupe de
+$\operatorname{Div}(X)$, que l'on note encore \emph{additivement}. Pour

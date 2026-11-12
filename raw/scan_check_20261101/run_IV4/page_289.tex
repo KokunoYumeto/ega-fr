@@ -1,0 +1,37 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{289}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme, $T$ une partie de $X$;
+supposons que l'image par $f$ de tout point maximal de $X'$ soit un point maximal de $X$, et que, pour tout $x'\in X'^{(1)}$ (i.e.\ tel que $\dim(\sh{O}_{X',x'})=1$), on ait l'une des trois conditions suivantes pour le point $x=f(x')$:
+\begin{enumerate}[label=(\roman*)]
+  \item $x\notin T$;
+  \item $x\in X^{(1)}$ et $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat;
+  \item l'anneau $\sh{O}_{X,x}$ est factoriel et $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$.
+\end{enumerate}
+Sous ces conditions, nous nous proposons, pour tout cycle $1$-codimensionnel $Z$ sur $X$ de support contenu dans $T$, de définir un cycle $1$-codimensionnel $Z'=f^*(Z)$, de sorte que $Z\mapsto f^*(Z)$ soit un homomorphisme de groupes ordonnés du sous-groupe de $\mathfrak{Z}^1(X)$ formé des cycles de support contenu dans $T$, dans le groupe ordonné $\mathfrak{Z}^1(X')$.
+Pour cela, soit
+\[
+\label{IV.21.10.1.1}
+  Z=\sum_{x\in T\cap X^{(1)}}n_x\cdot\overline{\{x\}}
+  \tag{21.10.1.1}
+\]
+où la famille des $x\in T\cap X^{(1)}$ tels que $n_x\neq0$ est localement finie.
+Pour tout $x'\in X'^{(1)}$, définissons un entier $n_{x'}$ de la façon suivante, en posant $x=f(x')$:
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item si $x\notin T$, on prend $n_{x'}=0$;
+  \item si $x\in X^{(1)}$ et si $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat, on sait \sref{IV.6.1.1} que $\dim(\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'})=0$, autrement dit $\sh{O}_{X',x'}/\mathfrak{m}_x\sh{O}_{X',x'}$ est un $\sh{O}_{X',x'}$-module de longueur finie $\lambda_{x'}$, et on prend $n_{x'}=\lambda_{x'}n_x$;
+  \item si $\sh{O}_{X,x}$ est factoriel et $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, on sait \sref{IV.21.6.9} que l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(\sh{O}_{X,x})\to\mathfrak{Z}^1(\Spec(\sh{O}_{X,x}))$ est bijectif, et d'autre part comme $\dim(\sh{O}_{X',x'})=1$ et $\mathfrak{m}_{x'}\notin\operatorname{Ass}(\sh{O}_{X',x'})$, $\operatorname{Ass}(\sh{O}_{X',x'})$ se compose uniquement des points maximaux de $\Spec(\sh{O}_{X',x'})$, donc l'hypothèse sur $f$ implique que $f(\operatorname{Ass}(\sh{O}_{X',x'}))\subset\operatorname{Ass}(\sh{O}_{X,x})$ et il résulte de \sref{IV.21.4.5}, (ii) que l'homomorphisme $f^*:\operatorname{Div}(\sh{O}_{X,x})\to\operatorname{Div}(\sh{O}_{X',x'})$ est défini;
+enfin, $x'$ étant l'unique point fermé de $\Spec(\sh{O}_{X',x'})$, $\mathfrak{Z}^1(\Spec(\sh{O}_{X',x'}))$ est canoniquement isomorphe à $\bb{Z}$.
+\end{enumerate}
+On a donc un homomorphisme canonique composé
+\[
+\label{IV.21.10.1.2}
+  \mathfrak{Z}^1(\Spec(\sh{O}_{X,x}))
+  \xrightarrow{\operatorname{cyc}^{-1}}\operatorname{Div}(\sh{O}_{X,x})
+  \xrightarrow{f^*}\operatorname{Div}(\sh{O}_{X',x'})
+  \xrightarrow{\operatorname{cyc}}\mathfrak{Z}^1(\Spec(\sh{O}_{X',x'}))
+  \xrightarrow{\sim}\bb{Z}
+  \tag{21.10.1.2}
+\]
+Si $Z_x$ est le cycle $\sum_{y\in\Spec(\sh{O}_{X,x})\cap X^{(1)}}n_y(\overline{\{y\}}\cap\Spec(\sh{O}_{X,x}))$ sur $\Spec(\sh{O}_{X,x})$, on prend alors pour $n_{x'}$ l'\emph{image} de $Z_x$ par l'homomorphisme \sref{IV.21.10.1.2}.
+\end{env}
+

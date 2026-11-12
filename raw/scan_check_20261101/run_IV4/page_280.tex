@@ -1,0 +1,62 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{280}
+sous-jacent est intègre, donc régulièrement immergé dans $X$ par hypothèse.
+Cela entraîne qu'il existe un élément régulier $t$ de $\sh{O}_{X,x}$ tel que l'idéal $t\sh{O}_{X,x}$ soit l'idéal premier définissant le préschéma $Y_1$ image réciproque de $Y$ dans $X_1=\Spec(\sh{O}_{X,x})$.
+Comme $\sh{O}_{X,x}/t\sh{O}_{X,x}$ est intègre, cela prouve que $\operatorname{prof}(\sh{O}_{X,x})\geq2$ et termine la preuve de \sref{IV.21.7.4}.
+\end{proof}
+
+\begin{remark}[21.7.5]
+\label{IV.21.7.5}
+On ne peut dans \sref{IV.21.7.4} remplacer la condition \emph{a$'$)} par la condition plus faible que tout cycle premier $1$-codimensionnel de $X$ soit l'image par $\operatorname{cyc}$ d'un diviseur positif.
+C'est ce que montre l'exemple où $X$ est le schéma affine défini dans \sref{IV.14.1.5} (« réunion d'un plan et d'une droite qui le coupe ») \emph{qui n'est pas normal};
+avec les notations introduites dans \sref{IV.14.1.5}, les cycles premiers $1$-codimensionnels de $X$ sont ceux du plan $X_1$ et les points fermés de la droite $X_2$ distincts du point commun à $X_1$ et $X_2$;
+si $t_1$, $t_2$, $t_3$ sont les images de $T_1$, $T_2$, $T_3$ dans $A/\mathfrak a$, on voit donc que les cycles premiers $1$-codimensionnels de $X$ sont définis par les idéaux premiers monogènes de générateurs $P(t_1,t_2)$ ($P$ irréductible dans $K[T_1,T_2]$) ou $t_3-a$, avec $a\neq0$ dans $K$;
+ces éléments étant réguliers dans $A/\mathfrak a$, tout cycle $1$-codimensionnel est bien l'image canonique d'un diviseur positif.
+\end{remark}
+
+\begin{corollary}[21.7.6]
+\label{IV.21.7.6}
+Soit $X$ un préschéma localement noethérien, réduit en chacun de ses points isolés.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\emph{a)}] L'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ est un isomorphisme de faisceaux de groupes ordonnés, et on a $\operatorname{Div}(X)=\operatorname{Div.princ}(X)$.
+  \item[\emph{a$'$)}] L'homomorphisme canonique $c:\sh{D}iv_X\to\mathscr{Z}_X^1$ est injectif, et tout cycle premier $1$-codimensionnel est l'image par $\operatorname{cyc}$ d'un diviseur positif principal, autrement dit est de la forme $\operatorname{cyc}(\operatorname{div}(f))$, où $f$ est une section régulière de $\sh{O}_X$ au-dessus de $X$.
+  \item[\emph{a$''$)}] Pour tout sous-préschéma fermé intègre $Y$ de $X$, de codimension $1$, il existe une section régulière $f$ de $\sh{O}_X$ au-dessus de $X$ telle que $Y$ soit défini par l'Idéal $f\sh{O}_X$.
+  \item[\emph{b)}] $X$ est normal et tout cycle premier $1$-codimensionnel sur $X$ est principal.
+  \item[\emph{c)}] $X$ est localement factoriel et $\operatorname{Pic}(X)=0$.
+  \item[\emph{d)}] $X$ est normal, et pour tout ouvert $U$ de $X$, on a $\operatorname{Pic}(U)=0$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+L'équivalence de \emph{a)}, \emph{a$'$)}, \emph{a$''$)}, \emph{b)} et \emph{c)} résulte aussitôt de \sref{IV.21.7.4} et de \sref{IV.21.6.11}.
+En outre, il résulte aussitôt de \emph{a$''$)} que tout ouvert non vide $U$ de $X$ vérifie encore les mêmes conditions, autrement dit ces conditions impliquent \emph{d)}.
+Reste à voir que \emph{d)} entraîne \emph{b)}.
+Or, désignons par $U_\lambda$ les ouverts complémentaires des réunions finies d'ensembles de la forme $\overline{\{x\}}$, où $\dim(\sh{O}_{X,x})\geq2$;
+il est clair que les $U_\lambda$ forment une famille filtrante décroissante et que pour tout $x\in\bigcap_\lambda U_\lambda$, on a $\dim(\sh{O}_{X,x})\leq1$, donc $\sh{O}_{X,x}$ est un anneau principal en vertu de l'hypothèse.
+On peut donc appliquer à la famille $(U_\lambda)$ la proposition \sref{IV.21.6.12}, qui montre que $\mathfrak{Cl}(X)$ est isomorphe à $\varinjlim\operatorname{Pic}(U_\lambda)$, donc $\mathfrak{Cl}(X)=0$ en vertu de l'hypothèse, ce qui prouve \emph{b)} par définition.
+\end{proof}
+
+\begin{remark}[21.7.7]
+\label{IV.21.7.7}
+Lorsque $X=\Spec(A)$, où $A$ est un anneau noethérien intègre, les conditions équivalentes de \sref{IV.21.7.6} équivalent à dire que $A$ est un anneau \emph{factoriel}.
+\end{remark}
+
+\subsection{Diviseurs et normalisation}
+\EGAReaderTarget{ega4.c04.subsec.21-8}{subsection:IV.21.8}
+
+\begin{lemma}[21.8.1]
+\label{IV.21.8.1}
+Soit $f:X'\to X$ un morphisme entier de préschémas.
+Pour tout $\sh{O}_{X'}$-Module localement libre $E'$ de rang constant $n$ et tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que, si l'on pose $U'=f^{-1}(U)$, $E'|U'$ soit isomorphe à $\sh{O}_{U'}^n$.
+\end{lemma}
+
+\begin{proof}
+La question étant locale sur $X$, on peut se borner au cas où $X=\Spec(A)$ est affine, auquel cas on a $X'=\Spec(A')$, où $A'$ est une $A$-algèbre entière.
+Alors $A'$ est limite inductive de ses sous-$A$-algèbres \emph{finies} $A'_\lambda$.
+Posant $X'_\lambda=\Spec(A'_\lambda)$ et désignant par $p_\lambda:X'\to X'_\lambda$ le morphisme structural, il résulte de \sref{IV.8.5.2} et \sref{IV.8.5.5} qu'il existe un indice $\lambda$ et un $\sh{O}_{X'_\lambda}$-Module localement libre $E'_\lambda$ de rang $n$ tel que $E'=p_\lambda^*(E'_\lambda)$ et il suffira évidemment de prouver le lemme pour $X'_\lambda$ et $E'_\lambda$;
+autrement dit, on peut se borner au cas où le morphisme $f$ est \emph{fini}.
+Posons $B=\sh{O}_{X,x}$ et soit $B'$ l'anneau du schéma affine $X'_0=X'\times_X\Spec(\sh{O}_{X,x})$;
+comme $B$ est un anneau local et que $B'$ est une $B$-algèbre finie, $B'$ est un anneau semi-local (Bourbaki, \emph{Alg.\ comm.}, chap.~V, \textsection~2, n\textsuperscript{o}~1, prop.~3);
+on en conclut que le $\sh{O}_{X'_0}$-Module localement libre $E'_0=E'\otimes_{\sh{O}_{X'}}\sh{O}_{X'_0}$ est isomorphe à $\sh{O}_{X'_0}^n$ (Bourbaki, \emph{Alg.\ comm.}, chap.~II, \textsection~5, n\textsuperscript{o}~3, prop.~5).
+Considérant $X'_0$ comme limite

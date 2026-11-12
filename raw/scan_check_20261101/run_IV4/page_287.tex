@@ -1,0 +1,42 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{287}
+$\operatorname{Div}(A)$ peut s'obtenir comme \emph{extension} de $\operatorname{Div}(A')$ et ce dernier groupe est de la forme $\bb{Z}^r$.
+\end{env}
+
+\begin{proposition}[21.9.11]
+\label{IV.21.9.11}
+Soient $X$ un préschéma noethérien, $X_0$ un sous-préschéma fermé de $X$ ayant les propriétés suivantes:
+\begin{enumerate}
+  \item[\rm 1\textsuperscript{o}] $\dim(X_0)\leq1$.
+  \item[\rm 2\textsuperscript{o}] Pour toute partie localement fermée $Y$ de $X$ telle que $Y\cap X_0$ soit discret, il existe une partie $Y'$ de $Y$, fermée dans $X$ et ouverte dans $Y$, contenant $Y\cap X_0$.
+\end{enumerate}
+Dans ces conditions:
+\begin{enumerate}[label=(\roman*)]
+  \item Soit $Z_0$ la réunion des ensembles $\overline{\{x\}}\cap X_0$ lorsque $x$ parcourt la partie de $\operatorname{Ass}(\sh{O}_X)$ formée des points tels que $\overline{\{x\}}\cap X_0$ soit fini.
+Alors, pour tout diviseur $D_0$ sur $X_0$, dont le support ne rencontre pas $Z_0$, il existe un diviseur $D$ sur $X$ dont l'image réciproque par l'injection canonique $X_0\to X$ existe \sref{IV.21.4} et est égale à $D_0$;
+si de plus $D_0\geq0$, on peut supposer $D\geq0$.
+
+  \item Supposons en outre qu'il existe dans $X_0$ un ouvert affine $U_0$ contenant $\operatorname{Ass}(\sh{O}_{X_0})\cup Z_0$ (condition automatiquement vérifiée lorsqu'il existe un $\sh{O}_{X_0}$-Module ample \sref[II]{II.4.5.4}).
+Alors l'homomorphisme canonique \sref{IV.21.3.2.4} $\operatorname{Pic}(X)\to\operatorname{Pic}(X_0)$ est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Compte tenu de \sref{IV.21.9.6}, on peut se borner à prouver l'assertion relative aux diviseurs $D_0\geq0$;
+en vertu de \sref{IV.21.9.4}, le support $T$ de $D_0$ est un ensemble discret et fermé dans $X_0$.
+On peut supposer $D_0\neq0$, c'est-à-dire $T\neq\emp$, sans quoi il n'y a rien à démontrer.
+Pour tout $x\in T$, il existe un élément $s_x\in\sh{O}_{X_0,x}$ qui est non diviseur de zéro dans cet anneau, appartient à son idéal maximal, et dont l'image dans $(\sh{D}iv_{X_0})_x$ est $(D_0)_x$.
+Il existe un voisinage ouvert affine $U^{(x)}$ de $x$ dans $X$ et une section $g^{(x)}$ de $\sh{O}_X$ au-dessus de $U^{(x)}$ tels que $s_x$ soit l'image dans $\sh{O}_{X_0,x}$ du germe $(g^{(x)})_x\in\sh{O}_{X,x}$;
+nous allons voir qu'en prenant $U^{(x)}$ assez petit, on peut faire en sorte que $g^{(x)}$ ne soit pas diviseur de zéro dans $\Gamma(U^{(x)},\sh{O}_X)$, autrement dit \sref{IV.3.1.9}, en désignant par $V^{(x)}$ la partie fermée de $U^{(x)}$ formée des $y$ tels que $g^{(x)}(y)=0$, que l'on ait $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
+
+Or, si $z\in\operatorname{Ass}(\sh{O}_X)$, l'hypothèse $x\notin Z_0$ entraîne que l'on a, ou bien $x\notin\overline{\{z\}}$, ou bien que $x$ n'est pas isolé dans $\overline{\{z\}}\cap X_0$.
+En remplaçant $U^{(x)}$ par un ouvert plus petit, on peut supposer que c'est le second cas qui se produit pour un $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$.
+$V^{(x)}$ contiendrait donc une composante irréductible de dimension $1$ de $X_0\cap U^{(x)}$, contenant $x$;
+mais cela signifierait que l'image $\overline{g}^{(x)}$ de $g^{(x)}$ dans $\Gamma(U^{(x)}\cap X_0,\sh{O}_{X_0})$ serait dans le nilradical de cet anneau, et par suite $s_x$ appartiendrait au nilradical de $\sh{O}_{X_0,x}$, ce qui est absurde.
+On a donc $x\notin\overline{\{z\}}$ pour tout point $z\in V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)$, et comme cet ensemble est fini, on peut, en remplaçant $U^{(x)}$ par un voisinage ouvert plus petit de $x$, supposer que $V^{(x)}\cap\operatorname{Ass}(\sh{O}_X)=\emp$.
+
+En vertu du choix de $U^{(x)}$, on peut définir un diviseur $D'^{(x)}$ sur $U^{(x)}$ par $D'^{(x)}=\operatorname{div}(g^{(x)})$;
+d'ailleurs on a vu ci-dessus que $x$ est nécessairement isolé dans $V^{(x)}\cap X_0$, donc en remplaçant encore $U^{(x)}$ par un voisinage ouvert plus petit de $x$, on peut supposer que $V^{(x)}\cap X_0$ est réduit au point $x$.
+Mais il existe alors, en vertu de la condition 2\textsuperscript{o}, une partie $W^{(x)}$ de $V^{(x)}$, fermée dans $X$ et ouverte dans $V^{(x)}$, telle que $W^{(x)}\cap X_0=\{x\}$.
+Remplaçant encore $U^{(x)}$ par un voisinage ouvert plus petit de $x$, on peut donc supposer

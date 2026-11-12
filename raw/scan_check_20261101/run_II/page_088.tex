@@ -1,0 +1,102 @@
+% from ega2-1-fr.tex
+\oldpage[II]{88}
+
+puisque $\mathcal{F}(n)$ est un foncteur exact en $\mathcal{F}$~; d'où la
+suite exacte de cohomologie
+\[
+  0\longrightarrow\Gamma(X,\mathcal{J}(n))\longrightarrow
+  \Gamma(X,\mathcal{L}^{\otimes n})\longrightarrow
+  \Gamma(X,\mathcal{L}'^{\otimes n})\xrightarrow{\partial}
+  \mathrm{H}^1(X,\mathcal{J}(n))
+\]
+qui associe en particulier à $g$ un élément
+$\partial g\in\mathrm{H}^1(X,\mathcal{J}(n))$.
+
+Notons que puisque $\mathcal{J}^2=0$, $\mathcal{J}$ peut être considéré
+comme un $\mathcal{O}_Z$-Module quasi-cohérent et l'on a, pour tout $k$,
+$\mathcal{L}'^{\otimes k}\otimes_{\mathcal{O}_Z}\mathcal{J}(n)
+=\mathcal{J}(n+k)$~; pour toute section
+$s\in\Gamma(X,\mathcal{L}'^{\otimes k})$ la multiplication tensorielle par
+$s$ est donc un homomorphisme $\mathcal{J}(n)\to\mathcal{J}(n+k)$ de
+$\mathcal{O}_Z$-Modules, qui donne par suite un homomorphisme
+$\mathrm{H}^i(X,\mathcal{J}(n))\to
+\mathrm{H}^i(X,\mathcal{J}(n+k))$ de groupes de cohomologie.
+
+Cela étant, nous allons voir que l'on a
+\begin{equation}
+\label{II.4.5.13.2-fr}
+  g^{\otimes m}\otimes\partial g=0
+\tag{4.5.13.2}
+\end{equation}
+pour un $m>0$ assez grand. En effet, $Z_g$ est un ouvert affine de $Z$ et
+on a donc $\mathrm{H}^1(Z_g,\mathcal{J}(n))=0$ quand $\mathcal{J}(n)$ est
+considéré comme un $\mathcal{O}_Z$-Module
+(\hyperref[I.5.1.9.2-fr]{I, 5.1.9.2}). En particulier, si on pose
+$g'=g|Z_g$, et si on considère son image par l'application
+$\partial:\Gamma(Z_g,\mathcal{L}'^{\otimes n})\to
+\mathrm{H}^1(Z_g,\mathcal{J}(n))$, on a $\partial g'=0$. Pour expliciter
+cette relation, observons qu'en dimension $1$ la cohomologie d'un faisceau
+de groupes abéliens est la même que sa cohomologie de Čech (G, II, 5.9)~;
+pour former $\partial g$, il faut donc considérer un recouvrement ouvert
+$(U_\alpha)$ assez fin de $X$, que l'on peut supposer fini et formé
+d'ouverts affines, prendre pour chaque $\alpha$ une section
+$g_\alpha\in\Gamma(U_\alpha,\mathcal{L}^{\otimes n})$ dont l'image
+canonique dans $\Gamma(U_\alpha,\mathcal{L}'^{\otimes n})$ est
+$g|U_\alpha$, et considérer la classe du cocycle
+$(g_{\alpha|\beta}-g_{\beta|\alpha})$, $g_{\alpha|\beta}$ étant la
+restriction de $g_\alpha$ à $U_\alpha\cap U_\beta$ (ce cocycle étant à
+valeurs dans $\mathcal{J}(n)$). On peut en outre supposer que $\partial g'$
+est calculé de la même manière à l'aide du recouvrement formé des
+$U_\alpha\cap Z_g$ et des restrictions $g_\alpha|(U_\alpha\cap Z_g)$ (en
+remplaçant au besoin $(U_\alpha)$ par un recouvrement plus fin)~; la
+relation $\partial g'=0$ signifie alors qu'il existe pour chaque $\alpha$
+une section $h_\alpha\in\Gamma(U_\alpha\cap Z_g,\mathcal{J}(n))$ telle que
+\[
+  (g_{\alpha|\beta}-g_{\beta|\alpha})
+  |(U_\alpha\cap U_\beta\cap Z_g)
+  =h_{\alpha|\beta}-h_{\beta|\alpha}
+\]
+en désignant par $h_{\alpha|\beta}$ la restriction de $h_\alpha$ à
+$U_\alpha\cap U_\beta\cap Z_g$ (G, II, 5.11). Cela étant, il y a un entier
+$m>0$ tel que $g^{\otimes m}\otimes h_\alpha$ soit la restriction à
+$U_\alpha\cap Z_g$ d'une section
+$t_\alpha\in\Gamma(U_\alpha,\mathcal{J}(n+nm))$ pour tout $\alpha$
+(\hyperref[I.9.3.1-fr]{I, 9.3.1})~; on a donc
+\[
+  g^{\otimes m}\otimes(g_{\alpha|\beta}-g_{\beta|\alpha})
+  =t_{\alpha|\beta}-t_{\beta|\alpha}
+\]
+pour tout couple d'indices, ce qui prouve
+(\hyperref[II.4.5.13.2-fr]{4.5.13.2}).
+
+Remarquons d'autre part que si
+$s\in\Gamma(X,\mathcal{O}_Z(p))$,
+$t\in\Gamma(X,\mathcal{O}_Z(q))$, on a, dans le groupe
+$\mathrm{H}^1(X,\mathcal{J}(p+q))$
+\begin{equation}
+\label{II.4.5.13.3-fr}
+  \partial(s\otimes t)=(\partial s)\otimes t+s\otimes(\partial t).
+\tag{4.5.13.3}
+\end{equation}
+
+En effet, on peut encore, pour calculer les deux membres, considérer un
+recouvrement ouvert $(U_\alpha)$ de $X$, pour chaque $\alpha$ une section
+$s_\alpha\in\Gamma(U_\alpha,\mathcal{O}_X(p))$ (resp.
+$t_\alpha\in\Gamma(U_\alpha,\mathcal{O}_X(q))$ dont l'image canonique dans
+$\Gamma(U_\alpha,\mathcal{O}_Z(p))$ (resp.
+$\Gamma(U_\alpha,\mathcal{O}_Z(q))$ soit $s|U_\alpha$ (resp.
+$t|U_\alpha$)~; la relation
+(\hyperref[II.4.5.13.3-fr]{4.5.13.3}) résulte alors des relations
+\[
+  (s_{\alpha|\beta}\otimes t_{\alpha|\beta})
+  -(s_{\beta|\alpha}\otimes t_{\beta|\alpha})
+  =(s_{\alpha|\beta}-s_{\beta|\alpha})\otimes t_{\alpha|\beta}
+  +s_{\beta|\alpha}\otimes(t_{\alpha|\beta}-t_{\beta|\alpha})
+\]
+avec les mêmes notations que ci-dessus. Par récurrence sur $k$, on a donc
+\begin{equation}
+\label{II.4.5.13.4-fr}
+  \partial(g^{\otimes k})=(kg^{\otimes(k-1)})\otimes(\partial g)
+\tag{4.5.13.4}
+\end{equation}
+

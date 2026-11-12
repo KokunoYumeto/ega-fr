@@ -1,0 +1,77 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{170}
+\subsection{Familles schématiquement dominantes de morphismes et familles
+schématiquement denses de sous-préschémas}
+\label{subsection:IV.11.10-fr}
+
+\begin{proposition}[11.10.1]
+\label{IV.11.10.1-fr}
+Soient $X$ un préschéma, $(Z_\lambda)_{\lambda\in L}$ une famille de
+préschémas, et pour tout $\lambda\in L$, soit
+$f_\lambda=(\psi_\lambda,\theta_\lambda):Z_\lambda\to X$ un morphisme. Les
+conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item La famille des homomorphismes
+  $\theta_\lambda:\mathcal O_X\to(f_\lambda)_*(\mathcal O_{Z_\lambda})$ est
+  séparante (autrement dit (11.9.1), l'intersection des noyaux des
+  $\theta_\lambda$ est nulle).
+  \item Pour tout ouvert $U$ de $X$, toute section $t$ de $\mathcal O_X$
+  au-dessus de $U$ dont toutes les images par les homomorphismes canoniques
+  \[
+  (\theta_\lambda)_U:\Gamma(U,\mathcal O_X)
+  \longrightarrow\Gamma(f_\lambda^{-1}(U),\mathcal O_{Z_\lambda})
+  \tag{11.10.1.1}
+  \label{IV.11.10.1.1-fr}
+  \]
+  sont nulles, est elle-même nulle.
+  \item Pour tout ouvert $U$ de $X$, et tout sous-préschéma fermé $Y$ de $U$
+  tel que pour tout $\lambda\in L$, il existe une factorisation
+  \[
+  f_\lambda^{-1}(U)\xrightarrow{g_\lambda}Y\xrightarrow{j}U
+  \tag{11.10.1.2}
+  \label{IV.11.10.1.2-fr}
+  \]
+  de la restriction $f_\lambda^{-1}(U)\to U$ de $f_\lambda$ (où $j$ est
+  l'injection canonique), on a $Y=U$.
+\end{enumerate}
+
+Si de plus $X$ est un $S$-préschéma, ces conditions sont aussi équivalentes à
+la suivante~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\setcounter{enumi}{3}
+  \item Pour tout morphisme séparé $g:X'\to S$ et tout couple de
+  $S$-morphismes $u$, $v$ d'un ouvert $U$ de $X$ dans $X'$, tel que pour tout
+  $\lambda$, les composés de $u$ et $v$ avec le morphisme
+  $f_\lambda^{-1}(U)\to U$, restriction de $f_\lambda$, soient égaux, on a
+  $u=v$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence de a) et b) résulte des définitions. Pour voir que b) entraîne
+c), il suffit de considérer l'Idéal quasi-cohérent $\mathcal J$ de
+$\mathcal O_U$ définissant $Y$, et de noter que, pour tout ouvert $V\subset U$,
+l'hypothèse entraîne que le morphisme $(\theta_\lambda)_V$ se factorise en
+\[
+\Gamma(V,\mathcal O_U)\longrightarrow
+\Gamma(V,\mathcal O_U/\mathcal J)\longrightarrow
+\Gamma(f_\lambda^{-1}(V),\mathcal O_{Z_\lambda}).
+\]
+On en conclut que toute section $t$ de $\mathcal J$ au-dessus de $V$ a pour
+image 0 dans tous les $\Gamma(f_\lambda^{-1}(V),\mathcal O_{Z_\lambda})$,
+donc, en vertu de b), $\mathcal J=0$ et $Y=U$. Inversement, si c) est vérifiée,
+il suffit, pour prouver b), d'appliquer c) au sous-préschéma fermé $Y$ de $U$
+défini par l'Idéal $t\mathcal O_U$~: l'hypothèse que les images de $t$ par les
+$(\theta_\lambda)_U$ sont toutes nulles entraîne que l'on a des factorisations
+(11.10.1.2) pour tout $\lambda$ ($\mathbf I$, 4.1.9). Pour prouver que c)
+entraîne d), il suffit d'appliquer c) au sous-préschéma fermé $Y$ de $U$, image
+réciproque de la diagonale de $X'\times_SX'$ par $(u,v)_S$ et d'utiliser
+($\mathbf I$, 4.4.1). Inversement, on déduit b) de d) en considérant le
+$S$-schéma $X'=S[T]=S\otimes_{\mathbf Z}\mathbf Z[T]$ ($T$ indéterminée) et en
+se rappelant que les sections de $\mathcal O_U$ au-dessus de $U$ correspondent
+biunivoquement aux $S$-morphismes $U\to S[T]$ ($\mathbf I$, 3.3.15)~; dire que
+deux sections de $\mathcal O_U$ au-dessus de $U$ ont mêmes images par tous les
+$(\theta_\lambda)_U$ équivaut à dire que les composés des deux morphismes
+correspondants avec tous les morphismes $f_\lambda^{-1}(U)\to U$ sont égaux.
+\end{proof}
+

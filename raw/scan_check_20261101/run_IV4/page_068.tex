@@ -1,0 +1,32 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{68}
+Notons maintenant que si $g:\Spec(B)\to\Spec(A)$ est le morphisme structural, la fibre $g^{-1}(y)$ est le spectre de l'anneau régulier $k(y)[T_1,\ldots,T_n]$ (0, 17.3.7), donc l'anneau local noethérien $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ en un point de cette fibre est régulier. Or, la condition (17.5.1.1) entraîne que les images canoniques $v_i$ des $u_i$ dans l'idéal maximal $\mathfrak m$ de $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ sont \emph{linéairement indépendantes} mod. $\mathfrak m^2$: sinon, en effet, il existerait des polynômes $w_i\in B$ ($1\leq i\leq r$) n'appartenant pas tous à $\mathfrak q$ et tels que $\sum_{i=1}^r w_i u_i\in\mathfrak q^2$. En dérivant par rapport aux $T_{j_k}$, on en conclurait que $\sum_{i=1}^r w_i(\partial u_i/\partial T_{j_k})\in\mathfrak q$ pour $1\leq k\leq r$, ce qui contredirait (17.5.1.1) puisque $\mathfrak q$ est premier. On conclut donc de (0, 17.1.7) que $(v_i)$ est une \emph{suite régulière} dans $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$. Mais comme le morphisme $g$ est localement de présentation finie et que $B$ est un $A$-module plat, il résulte de (11.3.8) que les images canoniques $u'_i$ des $u_i$ dans $B_{\mathfrak q}$ forment aussi une \emph{suite régulière} et que $B_{\mathfrak q}/(\sum_i u'_iB_{\mathfrak q})$ est un $A_{\mathfrak r}$-module \emph{plat}. Comme les images des $u'_i$ dans $\mathfrak J_{\mathfrak q}/\mathfrak J_{\mathfrak q}^2$ engendrent ce $B_{\mathfrak q}$-module, il résulte du lemme de Nakayama que l'on a $\sum_i u'_iB_{\mathfrak q}=\mathfrak J_{\mathfrak q}$, et $C_{\mathfrak p}=B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ est donc bien un $A_{\mathfrak r}$-module plat.
+
+Prouvons enfin que b) implique a). Avec les mêmes notations, l'hypothèse que $B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ est un $A_{\mathfrak r}$-module plat entraîne que l'homomorphisme canonique $\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q}\to B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ est \emph{injectif} ($0_{\mathrm I}$, 6.1.2), de sorte que $\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q}$ est identifié à un idéal de $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$. Comme $B_{\mathfrak q}/\mathfrak rB_{\mathfrak q}$ est une $A_{\mathfrak r}$-algèbre formellement lisse pour les topologies discrètes, on peut appliquer à $C_{\mathfrak p}=(B_{\mathfrak q}/\mathfrak rB_{\mathfrak q})/(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})$, le critère jacobien (0, 22.6.4); joint à (0, 19.1.12), ce dernier prouve, en vertu de l'hypothèse b), l'existence de $r$ polynômes $v_i\in k(y)[T_1,\ldots,T_n]$ tels que leurs images dans $(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})/(\mathfrak J_{\mathfrak q}/\mathfrak r\mathfrak J_{\mathfrak q})^2$ engendrent ce $(B_{\mathfrak q}/\mathfrak rB_{\mathfrak q})$-module et que l'on ait
+\[
+\label{IV.17.5.1.2}
+\det(\partial v_i/\partial T_{j_k})\notin\mathfrak qB_{\mathfrak q}/\mathfrak rB_{\mathfrak q}.
+\tag{17.5.1.2}
+\]
+Si, pour tout $i$, on désigne alors par $u_i$ un élément de $\mathfrak J$ dont $v_i$ est l'image canonique, il résulte de (17.5.1.2) que les $u_i$ vérifient la condition (17.5.1.1); d'autre part, en vertu du lemme de Nakayama, les images $u'_i$ des $u_i$ dans $\mathfrak J_{\mathfrak q}$ engendrent ce $B_{\mathfrak q}$-module. Le critère jacobien (0, 22.6.4) joint à (0, 19.1.12), prouve alors que $C_{\mathfrak p}=B_{\mathfrak q}/\mathfrak J_{\mathfrak q}$ est une $A_{\mathfrak r}$-algèbre formellement lisse pour les topologies discrètes. C.Q.F.D.
+
+\begin{corollary}[17.5.2]
+\label{IV.17.5.2}
+Soit $f:X\to Y$ un morphisme localement de présentation finie. Pour que $f$ soit lisse (au sens de (17.3.1)), il faut et il suffit que $f$ soit régulier (6.8.1), autrement dit que $f$ soit plat et que pour tout $y\in Y$, $f^{-1}(y)$ soit un $k(y)$-préschéma géométriquement régulier (6.7.6).
+\end{corollary}
+
+On a ainsi établi l'équivalence des deux définitions de « morphisme lisse » données dans (6.8.1) et (17.3.1).
+
+\begin{proposition}[17.5.3]
+\label{IV.17.5.3}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $x$ un point de $X$, $y=f(x)$. Posons $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$, qui sont des anneaux locaux noethériens. Alors les conditions équivalentes a) à c) de (17.5.1) sont aussi équivalentes à chacune des suivantes:
+\begin{enumerate}
+  \item[d)] $B$ est une $A$-algèbre formellement lisse pour les topologies préadiques.
+  \item[d')] $\widehat B$ est une $\widehat A$-algèbre formellement lisse pour les topologies adiques.
+\end{enumerate}
+Si de plus $k(x)=k(y)$, ces conditions équivalent aussi à:
+\begin{enumerate}
+  \item[d'')] $\widehat B$ est une $\widehat A$-algèbre isomorphe à une algèbre de séries formelles $\widehat A[[T_1,\ldots,T_n]]$.
+\end{enumerate}
+\end{proposition}
+

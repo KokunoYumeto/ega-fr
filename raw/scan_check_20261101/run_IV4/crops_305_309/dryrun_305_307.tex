@@ -1,0 +1,209 @@
+\oldpage[IV-4]{305}
+Plus généralement, considérons un diagramme commutatif
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_f & U' \ar[d]^{f'} \\
+    X \ar[r]_u & X'
+  }
+\]
+où les morphismes $f$, $f'$ sont quasi-compacts et quasi-séparés et le morphisme $u$
+\emph{affine}. Si l'on pose $h=u\circ f$, on a
+$h_*(\mathcal O_U)=u_*(f_*(\mathcal O_U))=u_*(f^0_*(\mathcal O_{U^0}))$ et
+$u\circ f^0$ est un morphisme affine; on a par suite
+$U^0=\operatorname{Aff}(U/X')$ (relativement au morphisme $h$), d'où un unique
+$X'$-morphisme $v^0:U^0\to U'^0$ rendant commutatif le diagramme
+\[
+  \xymatrix{
+    U \ar[r]^v \ar[d]_{i_U} & U' \ar[d]^{i_{U'}} \\
+    U^0 \ar[r]_{v^0} & U'^0
+  }
+\]
+
+\begin{proposition}[21.12.2]
+\label{IV.21.12.2}
+Soient $f:U\to X$ un morphisme quasi-compact et quasi-séparé,
+$h:X'\to X$ un morphisme \textup{plat}; on pose $U'=U\times_X X'$,
+$f'=f_{(X')}:U'\to X'$. Alors on a un $X'$-isomorphisme canonique
+\[
+\label{IV.21.12.2.1}
+  \operatorname{Aff}(U'/X')\xrightarrow{\sim}
+  \operatorname{Aff}(U/X)\times_X X'.
+  \tag{21.12.2.1}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, on a
+$\operatorname{Aff}(U'/X')=\operatorname{Spec}(f'_*(\mathcal O_{U'}))$, et
+$\operatorname{Aff}(U/X)\times_X X'=\operatorname{Spec}(h^*(f_*(\mathcal O_U)))$
+$(\mathbf{II}, 1.5.1)$; l'isomorphisme de l'énoncé provient de l'isomorphisme canonique
+$h^*(f_*(\mathcal O_U))\xrightarrow{\sim}f'_*(\mathcal O_{U'})$ (2.3.1).
+\end{proof}
+
+\begin{corollary}[21.12.3]
+\label{IV.21.12.3}
+Pour tout morphisme quasi-compact et quasi-séparé $f:U\to X$ et tout $x\in X$, on a,
+à un isomorphisme canonique près
+\[
+  U^0\times_X\operatorname{Spec}(\mathcal O_{X,x})
+  =(U\times_X\operatorname{Spec}(\mathcal O_{X,x}))^0.
+\]
+\end{corollary}
+
+Il résulte aussi de (21.12.2) que l'on a, à un isomorphisme canonique près, pour tout
+ouvert $V$ de $X$
+\[
+\label{IV.21.12.4}
+  (f^{-1}(V))^0=(f^0)^{-1}(V).
+  \tag{21.12.4}
+\]
+
+\begin{env}[21.12.5]
+\EGAReaderTarget{ega4.c04.statement.21-12-5}{IV.21.12.5}
+Nous allons considérer en particulier le cas où $f:U\to X$ est une \emph{immersion
+ouverte}, $U$ s'identifiant donc à un préschéma induit sur un ouvert de $X$. Comme le
+morphisme $f^{-1}(U)\to U$ est l'identité, il résulte de (21.12.4) que le morphisme
+$(f^0)^{-1}(U)\to U$ restriction de $f^0$ est un isomorphisme, $i_U:U\to U^0$ étant
+donc une \emph{immersion ouverte} permettant d'identifier $U$ à un préschéma induit
+sur un ouvert de $U^0$.
+
+Plus généralement, pour un ouvert $V$ de $X$, la restriction $(f^0)^{-1}(V)\to V$ de
+$f^0$ est un isomorphisme de $(f^0)^{-1}(V)$ sur le préschéma induit sur l'ouvert
+$V\cap U$ si et seulement si l'immersion ouverte $U\cap V\to V$ est un morphisme
+\emph{affine}. Il est clair $(\mathbf{II}, 1.2.1)$
+\oldpage[IV-4]{306}
+que la réunion de ces ouverts $V$ est le \emph{plus grand} d'entre eux, $U_1$, qui
+contient $U$; en vertu de ce qui précède, $U_1$ est aussi le plus grand ouvert ne
+rencontrant pas l'ensemble
+\[
+  \operatorname{Daf}(U/X)=f^0(U^0)\setmin U
+\]
+(« défaut d'affinité » de l'ouvert $U$ relativement à $X$, qui est vide si et seulement
+si $U$ est affine sur $X$); autrement dit, l'ensemble fermé $Z=X\setmin U_1$ est
+l'\emph{adhérence} de l'ensemble $\operatorname{Daf}(U/X)$.
+
+On notera que pour tout morphisme \emph{plat} $h:X'\to X$, si l'on pose
+$U'=h^{-1}(U)$, on a
+\[
+\label{IV.21.12.5.1}
+  \operatorname{Daf}(U'/X')=h^{-1}(\operatorname{Daf}(U/X))
+  \tag{21.12.5.1}
+\]
+comme il résulte aussitôt de (21.12.2.1) et de $(\mathbf I, 3.4.8)$. En particulier,
+pour tout ouvert $V$ de $X$, on a
+\[
+\label{IV.21.12.5.2}
+  \operatorname{Daf}((U\cap V)/V)=\operatorname{Daf}(U/X)\cap V
+  \tag{21.12.5.2}
+\]
+et pour tout $x\in X$,
+\[
+\label{IV.21.12.5.3}
+  \operatorname{Daf}((U\cap\operatorname{Spec}(\mathcal O_{X,x}))
+  /\operatorname{Spec}(\mathcal O_{X,x}))
+  =\operatorname{Daf}(U/X)\cap\operatorname{Spec}(\mathcal O_{X,x}).
+  \tag{21.12.5.3}
+\]
+\end{env}
+
+Nous allons, lorsque $X$ est localement noethérien, donner des précisions sur la nature
+de l'ensemble $\operatorname{Daf}(U/X)$, qui montreront par exemple que lorsque $U$ est
+partout dense dans $X$, $\operatorname{Daf}(U/X)$ n'est pas un ensemble fermé rare
+quelconque :
+
+\begin{theorem}[21.12.6]
+\label{IV.21.12.6}
+Soient $X$ un préschéma localement noethérien, $U$ un ouvert non vide de $X$,
+$f:U\to X$ l'injection canonique. Alors :
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item L'adhérence $Z=X\setmin U_1$ de $\operatorname{Daf}(U/X)$ est de codimension
+  $\geq2$ dans $X$.
+  \item Si $T=X\setmin U\supset Z$ est de codimension $\geq2$, le morphisme
+  $f^0:U^0\to X$ est surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Montrons d'abord que pour tout point $x\in\operatorname{Daf}(U/X)$ on a
+nécessairement $\dim(\mathcal O_{X,x})>1$. En effet, $x$ ne peut évidemment être point
+maximal de $X$, étant contenu dans $\overline U\setmin U$; il s'agit donc de voir que l'on ne
+peut avoir $\dim(\mathcal O_{X,x})=1$. Or, cette relation entraînerait, par (21.12.5.3),
+$x\in\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))$, où
+$U^{(x)}=U\cap\operatorname{Spec}(\mathcal O_{X,x})$. Mais les seuls ouverts de
+$\operatorname{Spec}(\mathcal O_{X,x})$ sont $\operatorname{Spec}(\mathcal O_{X,x})$
+lui-même et les parties de l'ensemble (fini) des points maximaux de
+$\operatorname{Spec}(\mathcal O_{X,x})$. Or, l'ensemble ouvert réduit à un point maximal
+de $\operatorname{Spec}(\mathcal O_{X,x})$ est affine, par définition des préschémas; on
+en conclut que \emph{tous} les ensembles ouverts dans
+$\operatorname{Spec}(\mathcal O_{X,x})$ sont affines, donc
+$\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))=\varnothing$
+contrairement à l'hypothèse faite.
+
+Pour prouver (i) il faut montrer davantage, savoir que si $x\in X$ est tel que
+$\dim(\mathcal O_{X,x})=1$, il existe un voisinage ouvert $W$ de $x$ dans $X$ tel que
+$W$ ne rencontre pas $\operatorname{Daf}(U/X)$, c'est-à-dire tel que l'injection
+canonique $f_W:U\cap W\to W$ soit affine. Mais, avec les mêmes notations que ci-dessus,
+on vient de voir que l'injection canonique
+$f^{(x)}:U^{(x)}\to\operatorname{Spec}(\mathcal O_{X,x})$ est affine. On peut
+évidemment se borner au cas où $X$ est noethérien; comme le morphisme $f$ est de
+présentation finie, la conclusion résulte de (8.10.5, (viii)) appliqué suivant la
+méthode de (8.1.2, \emph{a)}).
+
+\oldpage[IV-4]{307}
+(ii) Il s'agit de prouver que pour tout point $x\in T$, on a $x\in f^0(U^0)$; nous
+allons montrer d'abord qu'on peut se réduire au cas où $X=\operatorname{Spec}(A)$, où
+$A$ est un anneau local noethérien \emph{complet}, et $x$ le point fermé de $X$. Pour
+cela, il suffit de faire le changement de base
+$h:X'=\operatorname{Spec}(A)\to X$, où $A=\widehat{\mathcal O}_{X,x}$; si l'on pose
+$U'=h^{-1}(U)$, $f'=f_{(X')}$ est l'injection canonique $U'\to X'$, et puisque le
+morphisme $h$ est \emph{plat}, il résulte de (21.12.2) que si l'on prouve que $x$ appartient à
+$f^{\prime 0}(U^{\prime 0})$, on en déduira que $x\in f^0(U^0)$. En vertu de (6.1.1), on a
+bien opéré la réduction cherchée.
+
+Soit alors $X_1$ un sous-préschéma fermé réduit de $X$ ayant pour espace sous-jacent
+une composante irréductible de $X$, de dimension \emph{maximale}, parmi celles qui
+contiennent une composante irréductible de $T$, et posons
+$U_1=U\cap X_1$, $T_1=T\cap X_1=X_1\setmin U_1$; on a donc
+$\operatorname{codim}(T_1,X_1)\geq2$ $(\mathbf 0, 14.2.1)$, et le couple $(U_1,X_1)$
+vérifie donc les mêmes hypothèses que le couple $(U,X)$ ($X_1$ étant spectre d'un
+anneau quotient de $A$, donc local noethérien et complet). On a par ailleurs un
+diagramme commutatif
+\[
+  \xymatrix{
+    U_1 \ar[r]^j \ar[d]_{f_1} & U \ar[d]^f \\
+    X_1 \ar[r]_i & X
+  }
+\]
+où $i$ et $j$ sont les injections canoniques, $i$ étant donc un morphisme \emph{affine}; on en
+déduit (21.12.1) l'existence d'un morphisme $j^0:U_1^0\to U^0$ rendant commutatif le
+diagramme
+\[
+  \xymatrix{
+    U_1^0 \ar[r]^{j^0} \ar[d]_{f_1^0} & U^0 \ar[d]^{f^0} \\
+    X_1 \ar[r]_i & X
+  }
+\]
+et par suite, pour prouver que $x\in f^0(U^0)$, il suffit de prouver que
+$x\in f_1^0(U_1^0)$. On peut donc remplacer $X$ par $X_1$, et on peut par suite
+supposer que l'anneau $A$ est en outre \emph{intègre}. Mais $A$ est quotient d'un
+anneau noethérien régulier en vertu du théorème de Cohen $(\mathbf 0, 19.8.8$, (i)) et
+puisqu'il est intègre, on peut appliquer (5.11.1) avec la famille $(x_\alpha)$ réduite au
+seul point maximal de $X$; comme $\operatorname{codim}(T,X)\geq2$ par hypothèse, on
+voit que $f_*(\mathcal O_U)$ est un $\mathcal O_X$-Module \emph{cohérent}, donc le
+morphisme $f^0:U^0\to X$ est \emph{fini}; comme ce morphisme est dominant ($U$ étant partout
+dense), il est surjectif $(\mathbf{II}, 6.1.10)$, et par suite $x\in f^0(U^0)$. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[21.12.7]
+\label{IV.21.12.7}
+Soient $X$ un préschéma localement noethérien, $U$ un sous-préschéma induit sur un
+ouvert de $X$, $j:U\to X$ l'immersion canonique; supposons que $j$ soit un morphisme
+\textup{affine}. Alors toute composante irréductible de $T=X\setmin U$ est de codimension $\leq1$
+(et par suite de codimension $1$ si $U$ est partout dense).
+\end{corollary}
+
+\begin{proof}
+Supposons en effet qu'une des composantes irréductibles $T_1$ de $T$ soit de
+codimension $\geq2$ dans $X$. Remplaçant au besoin $X$ par un voisinage ouvert du
+point générique de $T_1$, on peut supposer $T$ irréductible et de codimension $\geq2$.
+Mais alors l'hypothèse

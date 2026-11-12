@@ -1,0 +1,112 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{69}
+En effet, si $\mathcal N_{hk}$ est le noyau de $u_{hk}$ pour $h\leq k$, la
+suite
+\[
+0\longrightarrow\mathcal N_{hk}\longrightarrow\mathcal F_k
+\longrightarrow\mathcal F_h\longrightarrow0
+\]
+est exacte d'après (iii), et notre assertion résulte de ce que le foncteur
+$\mathcal A\mapsto\mathcal C^i(X,\mathcal A)$ est exact (G, II, 4.3).
+Soit
+$\mathcal G^i=\varprojlim_k\mathcal C^i(X,\mathcal F_k)$~; on a donc
+$H^j(X,\mathcal G^i)=0$ pour $j>0$ et $i\geq0$ en vertu de \emph{a)}. Nous
+allons montrer que $\mathcal G^\bullet=(\mathcal G^i)_{i\geq0}$ est une
+résolution du faisceau $\mathcal F$~; comme
+$H^j(X,\mathcal G^i)=0$ pour $j>0$, la cohomologie $H^\bullet(X,\mathcal F)$
+sera égale à $H^\bullet(\Gamma(X,\mathcal G^\bullet))$ (G, II, 4.7.1).
+
+Il est clair que, par passage à la limite projective, on déduit des suites
+exactes
+\[
+0\longrightarrow\mathcal F_k
+\longrightarrow\mathcal C^0(X,\mathcal F_k)
+\longrightarrow\mathcal C^1(X,\mathcal F_k)\longrightarrow\cdots
+\]
+un complexe de faisceaux de groupes abéliens
+\[
+0\longrightarrow\mathcal F\longrightarrow\mathcal G^0
+\longrightarrow\mathcal G^1\longrightarrow\cdots.
+\]
+Pour prouver notre assertion, il faut établir que
+$\mathcal H^i(\mathcal G^\bullet)=0$ pour $i>0$. Ce faisceau est engendré
+par le préfaisceau
+$U\mapsto H^i(\Gamma(U,\mathcal G^\bullet))$ (G, II, 4.1)~; or, le complexe
+$\Gamma(U,\mathcal G^\bullet)$ est la limite projective du système
+projectif de complexes de groupes abéliens
+\[
+(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))_{k\in\mathbb N}
+\]
+(0\textsubscript{I}, 3.2.6). On a vu dans \emph{a)} que pour chaque
+$i\geq0$, les applications
+$\Gamma(U,\mathcal C^i(X,\mathcal F_k))\to
+\Gamma(U,\mathcal C^i(X,\mathcal F_h))$ $(h\leq k)$ sont surjectives~;
+d'autre part, on a
+$H^i(U,\mathcal F_k)=
+H^i(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))$, la résolution canonique
+$\mathcal C^\bullet(U,\mathcal F_k|U)$ étant induite sur $U$ par
+$\mathcal C^\bullet(X,\mathcal F_k)$~; en vertu de l'hypothèse (i), pour
+tout $U\in\mathfrak B$, on peut appliquer
+(\hyperref[0.13.2.3-fr]{13.2.3}) au système projectif de complexes
+$(\Gamma(U,\mathcal C^\bullet(X,\mathcal F_k)))_{k\in\mathbb N}$, et on a
+donc
+\[
+H^i(\Gamma(U,\mathcal G^\bullet))
+=\varprojlim_k H^i(U,\mathcal F_k)
+\quad\hbox{pour tout }i\geq0.
+\]
+L'hypothèse (ii) prouve bien alors, par définition, que les faisceaux
+$\mathcal H^i(\mathcal G^\bullet)$ sont nuls pour $i>0$.
+
+On a alors pour tout $i\geq0$,
+\[
+H^i(X,\mathcal F)=H^i(\Gamma(X,\mathcal G^\bullet))
+\quad\hbox{et}\quad
+\Gamma(X,\mathcal G^\bullet)
+=\varprojlim_k\Gamma(X,\mathcal C^\bullet(X,\mathcal F_k)).
+\]
+On vient de remarquer que les applications
+$\Gamma(X,\mathcal C^i(X,\mathcal F_k))\to
+\Gamma(X,\mathcal C^i(X,\mathcal F_h))$ $(h\leq k)$ sont toutes
+surjectives~; la conclusion résulte donc encore de
+(\hyperref[0.13.2.3-fr]{13.2.3}).
+\end{proof}
+
+\begin{env}[13.3.2]
+\label{0.13.3.2-fr}
+\emph{Remarques} (13.3.2).
+\begin{enumerate}
+\item[\emph{(i)}]
+L'énoncé (\hyperref[0.13.3.1-fr]{13.3.1}) n'a d'intérêt que pour $i>0$,
+puisque pour $i=0$, $h_i$ est toujours un isomorphisme sans hypothèse
+(0\textsubscript{I}, 3.2.6).
+\item[\emph{(ii)}]
+Les conditions (i) et (ii) de (\hyperref[0.13.3.1-fr]{13.3.1}) seront en
+particulier vérifiées si $H^i(U,\mathcal F_k)=0$ pour tout $k$, tout $i>0$
+et tout $U\in\mathfrak B$, et si pour $U\in\mathfrak B$, les applications
+$\Gamma(U,\mathcal F_k)\to\Gamma(U,\mathcal F_h)$ sont surjectives. Ce sera
+le cas le plus fréquent d'application de
+(\hyperref[0.13.3.1-fr]{13.3.1}).
+\end{enumerate}
+\end{env}
+
+\subsection{Condition de Mittag-Leffler et objets gradués associés aux systèmes projectifs}
+\label{subsection:0.13.4-fr}
+\label{0.13.4-fr}
+
+\begin{env}[13.4.1]
+\label{0.13.4.1-fr}
+Soit $\mathbf A=(A_k,u_{kh})_{k\in\mathbb Z}$ un système projectif dans une
+catégorie abélienne $C$~; nous dirons qu'il est \emph{limité inférieurement}
+s'il existe $k_0$ tel que $A_k=0$ pour $k<k_0$. Nous définirons sur chaque
+$A_k$ une \emph{filtration} $(\mathrm F^p(A_k))_{p\in\mathbb Z}$ par les
+formules
+\begin{equation}
+\label{0.13.4.1.1-fr}
+\tag{13.4.1.1}
+\mathrm F^p(A_k)=
+\begin{cases}
+\operatorname{Ker}(A_k\longrightarrow A_{p-1})&\text{pour }p\leq k+1,\\
+0&\text{pour }p\geq k+1.
+\end{cases}
+\end{equation}

@@ -1,0 +1,85 @@
+% from ega2-1-fr.tex
+\oldpage[II]{101}
+
+Il suffit de démontrer (i), (ii) et (iii) (\hyperref[I.3.5.1-fr]{I, 3.5.1}).
+Dans chacun de ces trois cas, la vérification de la condition a) de
+(\hyperref[II.5.4.1-fr]{5.4.1}) découle de résultats antérieurs
+(\hyperref[I.5.5.1-fr]{I, 5.5.1} et \hyperref[I.6.3.4-fr]{6.3.4})~; reste à
+vérifier la condition b). C'est immédiat dans le cas (i), car si $X\to Y$
+est une immersion fermée, il en est de même de
+$X\times_YY'\to Y\times_YY'=Y'$ (\hyperref[I.4.3.2-fr]{I, 4.3.2} et
+\hyperref[II.3.3.3-fr]{3.3.3}). Pour démontrer (ii), considérons deux
+morphismes propres $X\to Y$, $Y\to Z$, et un morphisme $Z'\to Z$. On peut
+écrire $X\times_ZZ'=X\times_Y(Y\times_ZZ')$
+(\hyperref[I.3.3.9.1-fr]{I, 3.3.9.1}), et par suite la projection
+$X\times_ZZ'\to Z'$ se factorise en
+$X\times_Y(Y\times_ZZ')\to Y\times_ZZ'\to Z'$. Compte tenu de la remarque
+du début, (ii) résulte donc de ce que le composé de deux morphismes fermés
+est fermé. Enfin, pour tout morphisme $S'\to S$, $X_{(S')}$ s'identifie à
+$X\times_YY_{(S')}$ (\hyperref[I.3.3.11-fr]{I, 3.3.11})~; pour tout
+morphisme $Z\to Y_{(S')}$, on peut écrire
+\[
+  X_{(S')}\times_{Y_{(S')}}Z
+  =(X\times_YY_{(S')})\times_{Y_{(S')}}Z=X\times_YZ~;
+\]
+$X\times_YZ\to Z$ est fermé par hypothèse, donc cela prouve (iii).
+
+\begin{corollary}[5.4.3]
+\label{II.5.4.3-fr}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes tels que $g\circ f$ soit
+propre.
+\begin{enumerate}
+  \item[\rm{(i)}] Si $g$ est séparé, $f$ est propre.
+  \item[\rm{(ii)}] Si $g$ est séparé et de type fini, et si $f$ est
+  surjectif, $g$ est propre.
+\end{enumerate}
+\end{corollary}
+
+(i) découle de (\hyperref[II.5.4.2-fr]{5.4.2}) par le procédé général
+(\hyperref[I.5.5.12-fr]{I, 5.5.12}). Pour démontrer (ii), il n'y a à
+vérifier que la condition b) de la déf. (\hyperref[II.5.4.1-fr]{5.4.1}).
+Pour tout morphisme $Z'\to Z$, le diagramme
+\[
+  \xymatrix{
+    X\times_ZZ'\ar[r]^{f\times1_{Z'}}\ar[dr]_p &
+    Y\times_ZZ'\ar[d]^{p'}\\
+    & Z'
+  }
+\]
+(où $p$ et $p'$ sont les projections) est commutatif
+(\hyperref[I.3.2.1-fr]{I, 3.2.1})~; en outre, $f\times1_{Z'}$ est surjectif
+puisqu'il en est ainsi de $f$ (\hyperref[I.3.5.2-fr]{I, 3.5.2}), et $p$ est
+un morphisme fermé par hypothèse. Toute partie fermée $F$ de
+$Y\times_ZZ'$ est alors l'image par $f\times1_{Z'}$ d'une partie fermée $E$
+de $X\times_ZZ'$, donc $p'(F)=p(E)$ est fermé dans $Z'$ par hypothèse, d'où
+le corollaire.
+
+\begin{corollary}[5.4.4]
+\label{II.5.4.4-fr}
+Si $X$ est un préschéma propre au-dessus de $Y$, et $\mathcal{S}$ une
+$\mathcal{O}_Y$-Algèbre quasi-cohérente, tout $Y$-morphisme
+$f:X\to\operatorname{Proj}(\mathcal{S})$ est propre (et a fortiori fermé).
+\end{corollary}
+
+En effet, le morphisme structural
+$p:\operatorname{Proj}(\mathcal{S})\to Y$ est séparé, et $p\circ f$ est
+propre par hypothèse.
+
+\begin{corollary}[5.4.5]
+\label{II.5.4.5-fr}
+Soit $f:X\to Y$ un morphisme séparé de type fini. Soient
+$(X_i)_{1\leq i\leq n}$ (resp. $(Y_i)_{1\leq i\leq n}$) une famille finie
+de sous-préschémas fermés de $X$ (resp. $Y$), $j_i$ (resp. $h_i$)
+l'injection canonique $X_i\to X$ (resp. $Y_i\to Y$). Supposons que l'espace
+sous-jacent $X$ soit réunion des $X_i$, et que pour tout $i$, il y ait un
+morphisme $f_i:X_i\to Y_i$ tel que le diagramme
+\[
+  \xymatrix{
+    X_i\ar[r]^{f_i}\ar[d]_{j_i} & Y_i\ar[d]^{h_i}\\
+    X\ar[r]_f & Y
+  }
+\]
+soit commutatif. Alors, pour que $f$ soit propre, il faut et il suffit que
+chacun des $f_i$ le soit.
+\end{corollary}
+

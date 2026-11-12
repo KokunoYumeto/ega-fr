@@ -1,0 +1,69 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{211}
+
+$f':X'\to Y'=Y[T_1,\ldots,T_n]$, déduit de $f$ par changement de base, est ouvert
+au point $x'$. Compte tenu du lemme (14.4.1.1), de (2.3.4) et (4.2.7), on est donc
+ramené à prouver que $f$ est \emph{ouvert} au point $x$~: en outre, il suffit
+évidemment (14.1.2, (iii)) de montrer que la restriction de $f$ à un
+sous-préschéma fermé de $X$ ayant $Z$ pour espace sous-jacent est ouverte au point
+$x$, si bien qu'on peut se borner au cas où $X=Z$ est irréductible. Quitte à
+remplacer $X$ par un voisinage ouvert $V$ de $x$ tel que $V\cap X_y$ soit
+irréductible, on peut supposer, en vertu de (13.3.1), que le morphisme $f$ se
+factorise en
+\[
+  X\xrightarrow{g}Y''=Y[T_1,\ldots,T_m]\to Y,
+\]
+où $g$ est quasi-fini, dominant et localement de type fini. Comme le morphisme
+structural $Y''\to Y$ est ouvert (2.4.6), on est ramené à prouver que $g:X\to Y''$
+est ouvert au point $x$. D'ailleurs, en vertu de (14.4.1.1), $g(x)$ est un point
+géométriquement unibranche de $Y''$. On est donc ramené à prouver le lemme suivant~:
+
+\begin{lemma}[14.4.1.3]
+\label{IV.14.4.1.3-fr}
+Soient $X$, $Y$ deux préschémas irréductibles, $f:X\to Y$ un morphisme localement
+quasi-fini et dominant. Si $x\in X$ est tel que $y=f(x)$ soit unibranche sur $Y$,
+alors $f$ est ouvert au point $x$.
+\end{lemma}
+
+Il suffit de prouver que
+$f(\operatorname{Spec}(\mathcal O_{X,x}))=\operatorname{Spec}(\mathcal O_{Y,y})$
+(1.10.3). On peut donc se borner, par le changement de base
+$\operatorname{Spec}(\mathcal O_{Y,y})\to Y$, au cas où $Y=\operatorname{Spec}(A)$,
+où $A$ est un anneau local et $y$ est le point fermé de $Y$ (tenant compte de
+(I, 3.6.5) et ($\mathbf{0}_{\mathrm I}$, 2.1.8), qui prouvent que
+$X\times_Y\operatorname{Spec}(\mathcal O_{Y,y})$ est irréductible)~; remplaçant $f$
+par $f_{\mathrm{red}}$, on peut supposer $X$ et $Y$ réduits, donc intègres.
+Remplaçant éventuellement $X$ et $Y$ par des voisinages affines de $x$ et $y$
+respectivement, on peut supposer (8.12.9) que le morphisme $f$ se factorise en
+$X\xrightarrow{j}X_1\xrightarrow{g}Y$, où $j$ est une immersion ouverte et $g$ un
+morphisme \emph{fini} (évidemment dominant)~; comme $X$ et $X_1$ sont affines, $j$
+est affine, donc séparé et quasi-compact, et par suite se factorise en
+$X\xrightarrow{u}X_2\xrightarrow{h}X_1$, où $X_2$ est l'image fermée de $X$ par
+$j$, $h$ l'injection canonique et $u$ une immersion ouverte (I, 9.5.3). En d'autres
+termes, on peut supposer que $X_1$ est intègre, ou encore de la forme
+$X_1=\operatorname{Spec}(B)$, où $B$ est une $A$-algèbre intègre et finie, contenant
+$A$ puisque $g$ est dominant. Si $\mathfrak n$ est l'idéal premier de $B$
+correspondant au point $x$, l'hypothèse que $A$ est unibranche implique alors
+(14.4.1.2) que le morphisme
+$\operatorname{Spec}(B_{\mathfrak n})\to\operatorname{Spec}(A)$ est surjectif,
+c'est-à-dire que
+$\operatorname{Spec}(\mathcal O_{X,x})\to\operatorname{Spec}(\mathcal O_{Y,y})$
+est surjectif. C.Q.F.D.
+
+\begin{corollary}[14.4.2]
+\label{IV.14.4.2-fr}
+Soient $f:X\to Y$ un morphisme localement de type fini, $y$ un point
+géométriquement unibranche de $Y$, $\eta$ le point générique de l'unique composante
+irréductible $Y_0$ de $Y$ contenant $y$. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert en tous les points de $X_y$ (ou, ce qui
+  revient au même (14.3.3.1, (ii)), aux points maximaux de $X_y$).
+  \item Pour tout $x\in X_y$, il existe une composante irréductible $Z$ de $X$
+  contenant $x$ et équidimensionnelle sur $Y$ au point $x$ (13.2.2).
+  \item[b$'$)] Pour tout $x\in X_y$ et tout voisinage ouvert $U$ de $x$ dans $X$,
+  on a $\dim(U\cap X_\eta)\geq\dim_x(U\cap X_y)$.
+  \item[b$''$)] Pour tout ouvert $U$ de $X$, on a
+  $\dim(U\cap X_\eta)\geq\dim(U\cap X_y)$.
+\end{enumerate}
+

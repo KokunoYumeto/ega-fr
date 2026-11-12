@@ -1,0 +1,83 @@
+% from ega2-1-fr.tex
+\oldpage[II]{39}
+\begin{proof}
+\begin{enumerate}
+  \item[\rm(i)] Si $S$ est noethérien, l'idéal $S_+$ admet un système fini de
+    générateurs homogènes $f_i$ ($1\leq i\leq p$), donc
+    (\hyperref[II.2.3.14-fr]{2.3.14}) l'espace sous-jacent $X$ est réunion des
+    $D_+(f_i)=\operatorname{Spec}(S_{(f_i)})$, et tout revient à voir que
+    chacun des $S_{(f_i)}$ est noethérien, ce qui résulte de
+    (\hyperref[II.2.2.6-fr]{2.2.6}).
+  \item[\rm(ii)] L'hypothèse entraîne que $S_0$ est une $A$-algèbre de type
+    fini et $S$ une $S_0$-algèbre de type fini, donc $S_+$ est un idéal de
+    type fini (\hyperref[II.2.1.4-fr]{2.1.4}). On est alors ramené, comme dans
+    (i), à prouver que pour $f\in S_d$, $S_{(f)}$ est une $A$-algèbre de type
+    fini. En vertu de (\hyperref[II.2.2.5-fr]{2.2.5}), il suffit de montrer
+    que $S^{(d)}$ est une $A$-algèbre de type fini, ce qui résulte de
+    (\hyperref[II.2.1.6-fr]{2.1.6}).
+\end{enumerate}
+\end{proof}
+
+\begin{env}[2.7.2]
+\label{II.2.7.2-fr}
+Nous considérerons dans ce qui suit les conditions de finitude suivantes pour
+un $S$-module gradué $M$~:
+\begin{enumerate}
+  \item[\rm(TF)] Il existe un entier $n$ tel que le sous-module
+    $\bigoplus_{k\geq n}M_k$ soit un $S$-module de type fini.
+  \item[\rm(TN)] Il existe un entier $n$ tel que $M_k=0$ pour $k\geq n$.
+\end{enumerate}
+
+Si $M$ vérifie (TN), on a $M_{(f)}=0$ pour tout $f$ homogène dans $S_+$,
+donc $\widetilde{M}=0$.
+
+Soient $M$, $N$ deux $S$-modules gradués~; on dit qu'un homomorphisme
+$u:M\to N$ de degré $0$ est (TN)-\emph{injectif} (resp.
+(TN)-\emph{surjectif}, (TN)-\emph{bijectif}) s'il existe un entier $n$ tel
+que $u_k:M_k\to N_k$ soit injectif (resp. surjectif, bijectif) pour
+$k\geq n$. Dire que $u$ est (TN)-injectif (resp. (TN)-surjectif) revient donc
+à dire que $\operatorname{Ker}u$ (resp. $\operatorname{Coker}u$) vérifie
+(TN). En vertu de (\hyperref[II.2.5.4-fr]{2.5.4}), si $u$ est (TN)-injectif
+(resp. (TN)-surjectif, (TN)-bijectif), $\widetilde{u}$ est injectif (resp.
+surjectif, bijectif)~; lorsque $u$ est (TN)-bijectif, on dit encore que $u$
+est un (TN)-\emph{isomorphisme}.
+\end{env}
+
+\begin{proposition}[2.7.3]
+\label{II.2.7.3-fr}
+Soient $S$ un anneau gradué tel que l'idéal $S_+$ soit de type fini, $M$ un
+$S$-module gradué.
+\begin{enumerate}
+  \item[\rm(i)] Si $M$ vérifie la condition (TF), le $\mathcal{O}_X$-Module
+    $\widetilde{M}$ est de type fini.
+  \item[\rm(ii)] Supposons que $M$ vérifie (TF)~; pour que $\widetilde{M}=0$,
+    il faut et il suffit que $M$ vérifie (TN).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+On vient de voir que la condition (TN) implique $\widetilde{M}=0$. Si $M$
+vérifie (TF), le sous-module gradué $M'=\bigoplus_{k\geq n}M_k$ qui est par
+hypothèse de type fini, est tel que $M/M'$ satisfasse à (TN)~; on a par suite
+$\widetilde{M/M'}=0$, et l'exactitude du foncteur
+$M\mapsto\widetilde{M}$ (\hyperref[II.2.5.4-fr]{2.5.4}) entraîne
+$\widetilde{M}=\widetilde{M'}$~; pour prouver que $\widetilde{M}$ est de type
+fini, on est donc ramené au cas où $M$ est de type fini. La question étant
+locale, il suffit de prouver que $M_{(f)}$ est un $S_{(f)}$-module de type
+fini (\hyperref[I.1.3.9-fr]{I, 1.3.9})~; mais $M^{(d)}$ est un
+$S^{(d)}$-module de type fini (\hyperref[II.2.1.6-fr]{2.1.6, (iii)}) et notre
+assertion résulte alors de (\hyperref[II.2.2.5-fr]{2.2.5}).
+
+Supposons maintenant que $M$ vérifie (TF) et que $\widetilde{M}=0$~; alors,
+avec les mêmes notations que ci-dessus, on a $\widetilde{M'}=0$, et la
+condition (TN) pour $M'$ est équivalente à la condition (TN) pour $M$, donc
+pour prouver que $\widetilde{M}=0$ implique que $M$ vérifie (TN), on peut
+encore se borner au cas où $M$ est engendré par un nombre fini d'éléments
+homogènes $x_i$ ($1\leq i\leq p$)~; soit d'autre part
+$(f_j)_{1\leq j\leq q}$ un système de générateurs homogènes de l'idéal $S_+$.
+On a par hypothèse $M_{(f_j)}=0$ pour tout $j$, donc il existe un entier $n$
+tel que $f_j^nx_i=0$ quels que soient $i$ et $j$. Soit $n_j$ le degré de
+$f_j$, et soit $m$ la plus grande valeur de $\sum_jr_jn_j$ pour les systèmes
+d'entiers $(r_j)$ en nombre fini tels que $\sum_jr_j\leq nq$~; il est clair
+alors
+

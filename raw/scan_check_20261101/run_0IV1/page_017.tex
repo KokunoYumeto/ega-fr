@@ -1,0 +1,105 @@
+% from ega0-15-fr.tex
+\oldpage[0\textsubscript{IV-1}]{17}
+  Dans (15.1.6), on ne peut en général remplacer l'hypothèse que $f$ est
+  $\gr_\bullet(M)$-régulier par l'hypothèse qu'il est
+  $\gr_\bullet(M)$-quasi-régulier. Pour le voir, reprenons l'exemple (15.1.4)
+  où $A$ est un anneau principal de corps des fractions $K\neq A$ et prenons
+  $M=K$, la filtration $(M_k)$ de $M$ étant définie par
+  $M_0=M=K$, $M_1=A$, $M_k=0$ pour $k\geq2$, d'où
+  $\gr_0(M)=K/A$, $\gr_1(M)=A$, $\gr_k(M)=0$ pour $k\geq2$. Si $f\neq0$ dans
+  $A$, on a vu que $f$ n'est pas $\gr_\bullet(M)$-régulier, mais comme on a
+  \[
+    f^k\gr_\bullet(M)/f^{k+1}\gr_\bullet(M)=f^kA/f^{k+1}A,
+  \]
+  il est immédiat que l'homomorphisme (15.1.2.1) (où $M$ est remplacé par
+  $\gr_\bullet(M)$) est injectif, donc $f$ est
+  $\gr_\bullet(M)$-quasi-régulier. Mais avec les notations de (15.1.6), on a
+  alors $M'_k=K$ pour tout $k\geq0$, donc $\gr'_\bullet(M)=0$, tandis que le
+  premier membre de (15.1.5.2) n'est pas réduit à $0$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[15.1.13]
+\label{0.15.1.13-fr}
+Soient $A$ un anneau, $M$, $N$ deux $A$-modules, $(f_i)_{1\leq i\leq n}$ une
+suite d'éléments de $A$. Si la suite $(f_i)$ est $M$-régulière et si $N$ est
+un $A$-module plat, alors la suite $(f_i)$ est
+$M\otimes_A N$-régulière. La réciproque est vraie si $N$ est un $A$-module
+fidèlement plat.
+\end{proposition}
+
+\begin{proof}
+En effet (sans hypothèse sur $N$),
+\[
+  (M\otimes_A N)/
+  \left(\sum_{j=1}^{i-1}f_j(M\otimes_A N)\right)
+\]
+est isomorphe à
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A N~;
+\]
+il suffit alors d'appliquer ($0_{\mathrm I}$, 6.1.1) et
+($0_{\mathrm I}$, 6.4.1) à l'homothétie de rapport $f_i$ dans
+$M/(\sum_{j=1}^{i-1}f_jM)$.
+\end{proof}
+
+\begin{corollary}[15.1.14]
+\label{0.15.1.14-fr}
+Soient $A$ un anneau, $M$ un $A$-module, $(f_i)_{1\leq i\leq n}$ une suite
+finie d'éléments de $A$. Soient $\rho:A\to B$ un homomorphisme d'anneaux,
+$M'=M_{(B)}=M\otimes_A B$, $f'_i=\rho(f_i)$ pour $1\leq i\leq n$. Si $B$ est
+un $A$-module plat et si la suite $(f_i)$ est $M$-régulière, alors la suite
+$(f'_i)$ est $M'$-régulière~; la réciproque est vraie si $B$ est un
+$A$-module fidèlement plat.
+\end{corollary}
+
+\begin{proof}
+En effet,
+\[
+  M'/\left(\sum_{j=1}^{i-1}f'_jM'\right)
+\]
+s'identifie à
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A B,
+\]
+et l'homothétie de rapport $f'_i$ dans le $B$-module
+$M'/(\sum_{j=1}^{i-1}f'_jM')$ à l'homothétie de rapport $f_i$ dans le
+$A$-module
+\[
+  \left(M/\left(\sum_{j=1}^{i-1}f_jM\right)\right)\otimes_A B~;
+\]
+l'assertion résulte donc de (15.1.13).
+\end{proof}
+
+\begin{proposition}[15.1.15]
+\label{0.15.1.15-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre commutative,
+$(f_i)_{1\leq i\leq n}$ une suite finie d'éléments de $B$, $M$ un
+$B$-module. Supposons que la suite $(f_i)$ soit $M$-régulière et que chacun
+des $A$-modules
+\[
+  M/\left(\sum_{j=1}^{i-1}f_jM\right)\quad(1\leq i\leq n)
+\]
+soit plat. Alors, pour tout homomorphisme d'anneaux $\rho:A\to A'$, si l'on
+pose $B'=B\otimes_A A'$, $M'=M\otimes_A A'$ et $f'_i=f_i\otimes1$
+($1\leq i\leq n$), la suite $(f'_i)$ est $M'$-régulière et les
+$A'$-modules
+\[
+  M'/\left(\sum_{j=1}^{i-1}f'_jM'\right)\quad(1\leq i\leq n)
+\]
+sont plats.
+\end{proposition}
+
+\begin{proof}
+Considérons la suite (exacte par hypothèse)
+\[
+  0\longrightarrow M\xrightarrow{f_1}M\longrightarrow M/f_1M
+  \longrightarrow0
+\]
+(la flèche $M\xrightarrow{f_1}M$ étant l'homothétie de rapport $f_1$ dans
+$M$). L'hypothèse que $M/f_1M$ est $A$-plat entraîne que la suite
+\[
+  0\longrightarrow M\otimes_A A'
+  \xrightarrow{f_1\otimes1}M\otimes_A A'
+  \longrightarrow(M/f_1M)\otimes_A A'\longrightarrow0
+\]

@@ -1,0 +1,90 @@
+% from ega1-5-fr.tex
+\oldpage[I]{135}
+et $y=p_1(z)\in X$, donc $y=f(y)$, et $z=\Delta_Y(f(y))$ appartient à
+$\Delta_X(X)$ en vertu de la commutativité du diagramme
+(\hyperref[I.5.3.15.1-fr]{5.3.15.1}).
+
+\begin{corollary}[5.3.17]
+\label{I.5.3.17-fr}
+Soient $f_1:Y\to X$, $f_2:Y\to X$ deux $S$-morphismes, $y$ un point de $Y$
+tel que $f_1(y)=f_2(y)=x$ et que les homomorphismes $k(x)\to k(y)$
+correspondant à $f_1$ et $f_2$ soient identiques. Alors, si
+$f=(f_1,f_2)_S$, le point $f(y)$ appartient à la diagonale
+$\Delta_{X|S}(X)$.
+\end{corollary}
+
+Les deux homomorphismes $k(x)\to k(y)$ correspondant à $f_i$ ($i=1,2$)
+définissent deux $S$-morphismes
+$g_i:\operatorname{Spec}(k(y))\to\operatorname{Spec}(k(x))$ tels que les
+diagrammes
+\[
+  \xymatrix{
+    \operatorname{Spec}(k(y))\ar[r]^{g_i}\ar[d] &
+    \operatorname{Spec}(k(x))\ar[d]\\
+    Y\ar[r]_{f_i} & X
+  }
+\]
+soient commutatifs. Le diagramme
+\[
+  \xymatrix{
+    \operatorname{Spec}(k(y))\ar[rr]^{(g_1,g_2)_S}\ar[d] & &
+    \operatorname{Spec}(k(x))\times_S\operatorname{Spec}(k(x))\ar[d]\\
+    Y\ar[rr]_{(f_1,f_2)_S} & & X\times_S X
+  }
+\]
+est donc aussi commutatif. Or il résulte de l'égalité $g_1=g_2$ que l'image
+par $(g_1,g_2)_S$ de l'unique point de $\operatorname{Spec}(k(y))$
+appartient à la diagonale de
+$\operatorname{Spec}(k(x))\times_S\operatorname{Spec}(k(x))$~; la conclusion
+résulte donc de (\hyperref[I.5.3.15-fr]{5.3.15}).
+
+\subsection{Morphismes et préschémas séparés.}
+\label{subsection:I.5.4-fr}
+
+\begin{definition}[5.4.1]
+\label{I.5.4.1-fr}
+On dit qu'un morphisme de préschémas $f:X\to Y$ est \emph{séparé} si le
+morphisme diagonal $X\to X\times_Y X$ est une \emph{immersion fermée}~; on
+dit alors aussi que $X$ est un \emph{préschéma séparé au-dessus de $Y$}, ou un
+\emph{$Y$-schéma}. On dit qu'un préschéma $X$ est séparé s'il est séparé
+au-dessus de $\operatorname{Spec}(\mathbf{Z})$~; on dit aussi alors que $X$
+est un \emph{schéma} (cf. (\hyperref[I.5.5.7-fr]{5.5.7})).
+\end{definition}
+
+En vertu de (\hyperref[I.5.3.9-fr]{5.3.9}), pour que $X$ soit séparé au-dessus
+de $Y$, il faut et il suffit que $\Delta_X(X)$ soit un \emph{sous-espace
+fermé} de l'espace sous-jacent à $X\times_Y X$.
+
+\begin{proposition}[5.4.2]
+\label{I.5.4.2-fr}
+Soit $S\to T$ un morphisme séparé. Si $X$ et $Y$ sont deux $S$-préschémas,
+l'immersion canonique $X\times_S Y\to X\times_T Y$
+(\hyperref[I.5.3.10-fr]{5.3.10}) est fermée.
+\end{proposition}
+
+En effet, si on se reporte au diagramme
+(\hyperref[I.5.3.5.1-fr]{5.3.5.1}), on voit que $(p,q)_T$ peut être considéré
+comme obtenu à partir de $\Delta_{S|T}$ par l'extension
+$f\times_T g:X\times_T Y\to S\times_T S$ du préschéma de base $S\times_T S$~;
+la proposition résulte alors de (\hyperref[I.4.3.2-fr]{4.3.2}).
+
+\begin{corollary}[5.4.3]
+\label{I.5.4.3-fr}
+Soient $Y$ un $S$-schéma, $f:X\to Y$ un $S$-morphisme. Alors le morphisme
+graphe $\Gamma_f:X\to X\times_S Y$ (\hyperref[I.5.3.11-fr]{5.3.11}) est une
+immersion fermée.
+\end{corollary}
+
+C'est le cas particulier de (\hyperref[I.5.4.2-fr]{5.4.2}) où l'on remplace
+$S$ par $Y$ et $T$ par $S$.
+
+\begin{corollary}[5.4.4]
+\label{I.5.4.4-fr}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes, $g$ étant séparé. Si $g\circ f$
+est une immersion fermée, il en est de même de $f$.
+\end{corollary}
+
+La démonstration à partir de (\hyperref[I.5.4.3-fr]{5.4.3}) est la même que
+celle de (\hyperref[I.5.3.13-fr]{5.3.13}) à partir de
+(\hyperref[I.5.3.11-fr]{5.3.11}).
+

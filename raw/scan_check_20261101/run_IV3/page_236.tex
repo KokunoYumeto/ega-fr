@@ -1,0 +1,53 @@
+% from ega4-15-fr.tex
+\oldpage[IV-3]{236}
+\begin{proposition}[15.5.9]
+\label{IV.15.5.9-fr}
+Soit $f:X\to Y$ un morphisme plat et localement de présentation finie~; pour tout $y\in Y$, soit $n(y)$ le nombre géométrique de composantes connexes de $f^{-1}(y)$.
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item Si $f$ est séparé et quasi-fini, la fonction $y\mapsto n(y)$ (égale alors au nombre géométrique des points de $f^{-1}(y)$) est semi-continue inférieurement dans $Y$~; si elle est constante dans un voisinage de $y_0$, $f$ est propre au point $y_0$.
+  \item Si $f$ est propre, la fonction $y\mapsto n(y)$ est semi-continue inférieurement dans $Y$~; si de plus $f^{-1}(y_0)$ est géométriquement réduit sur $\mathbf{k}(y_0)$, $n(y)$ est constante dans un voisinage de $y_0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Dans tous les cas, les questions sont locales sur $Y$, donc on peut supposer $Y$ affine et $f$ de présentation finie~; utilisant (8.9.1), (8.10.5) et (11.2.7), on se ramène au cas où $Y$ est noethérien (en utilisant en outre (8.2.11) pour la seconde assertion de (i)). Comme de plus $f$ est alors universellement ouvert (2.4.6), il suffit d'appliquer (15.5.1), (15.5.4) et (15.5.7) pour conclure.
+\end{proof}
+
+\begin{remark}[15.5.10]
+\label{IV.15.5.10-fr}
+On notera qu'on a ainsi obtenu une autre démonstration de (12.2.4, (vi)). Inversement, on peut déduire (15.5.7) de (12.2.4, (vi))~: en effet, on peut se borner au cas où $Y$ est réduit (en remplaçant $f$ par $f_{\mathrm{red}}$), et il résulte alors des hypothèses de (15.5.7) et de (15.2.3) que $f$ est plat dans un voisinage ouvert de $f^{-1}(y)$~; comme de plus $f$ est propre, on peut supposer que ce voisinage est de la forme $f^{-1}(U)$, où $U$ est un voisinage ouvert de $y$ dans $Y$. On conclut alors par (12.2.4, (vi)). La démonstration de (15.5.7) donnée plus haut a l'avantage de mettre en évidence le résultat (15.5.6), qui a un intérêt indépendant.
+\end{remark}
+
+% IV3_B33_P236_END_BEFORE_SUBSECTION_15.6
+
+\subsection{Composantes connexes des fibres le long d'une section}
+\label{subsection:IV.15.6-fr}
+
+\begin{proposition}[15.6.1]
+\label{IV.15.6.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme localement de type fini, $g:Y\to X$ une $Y$-section de $X$ (\textbf{I}, 2.5.5). Pour tout $y\in Y$, désignons par $X_y^0$ la composante connexe de $f^{-1}(y)$ contenant le point $g(y)$. Soient $y$ un point de $Y$, $y'$ une générisation de $y$ dans $Y$. Alors :
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item S'il existe une composante irréductible $Z$ de $X_{y'}^0$, de dimension égale à $\dim(X_{y'}^0)$ et contenant $g(y')$ (ce qui sera le cas si $X_{y'}^0$ est irréductible), on a
+\begin{equation}
+\tag{15.6.1.1}
+\label{IV.15.6.1.1-fr}
+  \dim(X_y^0)\geqslant\dim(X_{y'}^0).
+\end{equation}
+  \item Si de plus $X_y^0$ est irréductible et si les deux membres de (15.6.1.1) sont égaux, alors $X_y^0\subset\overline{X_{y'}^0}$ (adhérence dans $X$).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Soit $\overline Z$ l'adhérence de $Z$ dans $X$~; comme $y$ est adhérent à $y'$ et $g$ continue, on a $g(y)\in\overline Z$. Comme $Z=\overline Z\cap f^{-1}(y')$, il résulte du théorème de semi-continuité de Chevalley (13.1.3) appliqué à la restriction de $f$ au sous-préschéma fermé réduit de $X$ ayant $\overline Z$ pour espace sous-jacent, que l'on a
+\[
+  \dim_{g(y)}(\overline Z\cap f^{-1}(y))\geqslant\dim(Z)~;
+\]
+mais les composantes irréductibles de $\overline Z\cap f^{-1}(y)$ contenant $g(y)$ sont évidemment contenues dans $X_y^0$, d'où \emph{a fortiori} l'inégalité (15.6.1.1).
+
+(ii) Le raisonnement de (i) montre en outre que si les deux membres de (15.6.1.1) sont égaux, on a nécessairement
+\[
+  \dim_{g(y)}(\overline Z\cap f^{-1}(y))=\dim_{g(y)}(X_y^0)~;
+\]
+si $X_y^0$ est irréductible, cela entraîne $\overline Z\cap f^{-1}(y)=X_y^0$, donc $X_y^0$ est contenu dans $\overline Z$, et \emph{a fortiori} dans $\overline{X_{y'}^0}$.
+\end{proof}
+

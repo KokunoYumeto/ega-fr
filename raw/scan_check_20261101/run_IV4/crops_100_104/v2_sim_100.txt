@@ -1,0 +1,28 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{100}
+que l'hypothèse entraîne que l'homomorphisme $(f^*(\varOmega^1_{Y/k}))_x\to(\varOmega^1_{X/k})_x$ est surjectif, donc, en remplaçant $X$ par un voisinage ouvert de $x$, on peut supposer que l'homomorphisme $f^*(\varOmega^1_{Y/k})\to\varOmega^1_{X/k}$ est surjectif (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 1, prop. 2); par suite $f$ est \emph{non ramifié} (17.2.2). Nous allons voir d'abord qu'on peut se borner au cas où $x$ est \emph{rationnel sur $k$}. En effet, si l'on pose $k'=\boldsymbol{k}(x)$, et $X'=X\otimes_k k'$, $Y'=Y\otimes_k k'=\operatorname{Spec}(k'[T_1,\ldots,T_n])$, il existe un point $x'\in X'$ au-dessus de $x$, tel que $\boldsymbol{k}(x')=k'$. Pour prouver que $f$ est étale au point $x$, il suffit de montrer que $f'=f_{(k')}:X'\to Y'$ est étale au point $x'$ (17.7.1, (ii)); d'ailleurs $f'$ est non ramifié (17.3.3, (iii)) et l'on a $\dim_{x'}(X')=n$ (4.2.7). De la même manière on peut, en remplaçant $k'$ par une extension algébriquement close de $k'$, supposer que $k$ est \emph{algébriquement clos}. Posons alors $y=f(x)$, $A=\sh{O}_{Y,y}$, $B=\sh{O}_{X,x}$; comme le corps résiduel de $B$ est égal à $k$, il en est de même de celui de $A$, donc $x$ (resp. $y$) est un point fermé de $X$ (resp. $Y$) (\textbf{I}, 6.4.2) et l'on a par suite $\dim(A)=\dim(B)=n$. Puisque $f$ est non ramifié, l'homomorphisme $\widehat A\to\widehat B$ est \emph{surjectif} (17.4.4, \emph{f'')}); mais comme $\dim(\widehat A)=\dim(\widehat B)=n$, et que $\widehat A$, étant un anneau régulier, est intègre, l'homomorphisme $\widehat A\to\widehat B$ est aussi \emph{injectif} (\textbf{0}, 16.3.10). Cet homomorphisme est donc bijectif, ce qui achève de prouver que $f$ est étale au point $x$ (17.6.3, \emph{e'')}).
+
+\begin{corollary}[17.15.4]
+\label{IV.17.15.4}
+Sous les hypothèses générales de \textup{(17.15.3)}, supposons en outre que $\boldsymbol{k}(x)$ soit une extension \textup{finie} et \textup{séparable} de $k$ et que les germes $(g_i)_x$ appartiennent à $\mathfrak m_x$. Alors les conditions \textup{a), b), c)} de \textup{(17.15.3)} équivalent aussi à chacune des suivantes:
+\begin{enumerate}
+  \item[\textup{d)}] Les $n$ germes $(g_i)_x$ engendrent l'idéal maximal $\mathfrak m_x$ de $\sh{O}_{X,x}$.
+  \item[\textup{d$'$)}] L'anneau $\sh{O}_{X,x}$ est régulier et les $(g_i)_x$ forment un système régulier de paramètres pour cet anneau \textup{(\textbf{0}, 17.1.6)}.
+\end{enumerate}
+\end{corollary}
+
+En effet, \emph{d')} entraîne trivialement \emph{d)}. D'autre part, comme $\boldsymbol{k}(x)$ est une extension finie et séparable de $k$, on a $\Omega^1_{\mathbf{k}(x)/k}=0$ (\textbf{0}, 20.6.20) et $\boldsymbol{k}(x)=\sh{O}_{X,x}/\mathfrak m_x$ est une $k$-algèbre formellement lisse pour les topologies discrètes (\textbf{0}, 19.6.1), donc la suite exacte (\textbf{0}, 20.5.14.1) s'applique à $A=k$, $B=\sh{O}_{X,x}$, $\mathfrak{K}=\mathfrak m_x$, et fournit un isomorphisme canonique
+\[
+\delta:\mathfrak m_x/\mathfrak m_x^2\xrightarrow{\sim}(\varOmega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}\boldsymbol{k}(x).
+\]
+De là on déduit d'abord l'équivalence des conditions \emph{c)} et \emph{d)}, compte tenu du lemme de Nakayama. D'autre part, si $f$ est étale au point $x$, l'anneau $\sh{O}_{X,x}$ est régulier et de dimension $n$, puisque $x$ est un point fermé de $X$ (\textbf{I}, 6.4.2), et $n$ éléments de $\mathfrak m_x$ qui engendrent cet idéal maximal forment alors nécessairement un système régulier de paramètres pour $\sh{O}_{X,x}$ (\textbf{0}, 17.1.6), ce qui prouve que \emph{a)} entraîne \emph{d')}.
+
+\begin{proposition}[17.15.5]
+\label{IV.17.15.5}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$, $n=\dim_x(X)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $X$ est lisse sur $k$ au point $x$.
+  \item[\textup{b)}] $X$ est différentiellement lisse sur $k$ au point $x$.
+  \item[\textup{c)}] $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module libre de rang $n$.
+  \item[\textup{d)}] $(\varOmega^1_{X/k})_x$ est un $\sh{O}_{X,x}$-module admettant un système de $n$ générateurs.
+

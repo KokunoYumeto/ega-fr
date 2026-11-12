@@ -1,0 +1,95 @@
+% from ega3-7-fr.tex
+\oldpage[III]{187}
+est nul par définition (M, IV, 1), donc $T_p$ est exact à gauche. Montrons
+inversement que $b)$ implique $c)$. Si
+\[
+  Z_{p+1}(P_\bullet)=\operatorname{Ker}(P_{p+1}\longrightarrow P_p),
+\]
+on a une suite exacte
+\[
+  0\longrightarrow Z_{p+1}(P_\bullet)\longrightarrow P_{p+1}
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0
+\]
+dans laquelle $P_{p+1}$ et $Z'_p(P_\bullet)$ sont plats, donc
+$Z_{p+1}(P_\bullet)$ est plat ($0_{\mathrm I}$, 6.1.2). On va prendre
+\[
+  P'_i=P_i\quad\text{pour }i\ne p\text{ et }i\ne p+1,
+  \qquad
+  P'_p=Z'_p(P_\bullet),
+  \qquad
+  P'_{p+1}=Z_{p+1}(P_\bullet);
+\]
+pour différentielle $d'_i:P'_i\to P'_{i-1}$, on prendra celle du complexe
+$P_\bullet$ pour $i\ne p$ et $i\ne p+1$, $0$ pour $i=p+1$ et pour $i=p$
+l'homomorphisme $Z'_p(P_\bullet)\to P_{p-1}$ déduit de $d_p$ par passage au
+quotient. Comme les $P_i$ sont plats, on a
+\[
+  Z'_i(P_\bullet\otimes M)=Z'_i(P_\bullet)\otimes M,
+  \qquad
+  Z_i(P_\bullet\otimes M)=Z_i(P_\bullet)\otimes M
+\]
+et
+\[
+  B_i(P_\bullet\otimes M)=B_i(P_\bullet)\otimes M
+\]
+(en posant $B_i(P_\bullet)=\operatorname{Im}(P_{i+1}\to P_i)$); on en conclut
+aussitôt pour tout $M$ des isomorphismes fonctoriels
+\[
+  H_i(P_\bullet\otimes M)\xrightarrow{\sim}H_i(P'_\bullet\otimes M)
+\]
+pour tout $i$, et la vérification du fait qu'il s'agit d'un isomorphisme de
+$\partial$-foncteurs découle sans peine de la définition de $\partial$
+(M, IV, 1).
+\end{proof}
+
+On remarquera que les conditions de (7.4.2) impliquent aussi que
+$B_p(P_\bullet)$ est plat, car on a une suite exacte
+\[
+  0\longrightarrow B_p(P_\bullet)\longrightarrow P_p
+  \longrightarrow Z'_p(P_\bullet)\longrightarrow0,
+\]
+dans laquelle $P_p$ et $Z'_p(P_\bullet)$ sont plats ($0_{\mathrm I}$, 6.1.2).
+
+\begin{corollary}[7.4.3]
+Supposons que $A$ soit un anneau noethérien régulier de dimension $1$
+(autrement dit un produit d'anneaux de Dedekind
+($0_{\mathrm{IV}}$, 17.1.3 et 17.3.7), par exemple un anneau principal). Alors,
+pour que $T_p$ soit exact à gauche, il faut et il suffit que $T_p(A)$ soit un
+$A$-module plat. Pour que $T_p$ soit exact, il faut et il suffit que $T_p(A)$
+et $T_{p-1}(A)$ soient des $A$-modules plats.
+\end{corollary}
+
+\begin{proof}
+Rappelons que pour un module $M$ sur un anneau de Dedekind, il revient au même
+de dire que $M$ est plat ou qu'il est sans torsion ($0_{\mathrm I}$, 6.3.3 et
+6.3.4); sous les hypothèses de (7.4.3), tout sous-module d'un $A$-module plat
+est donc plat.
+
+La seconde assertion de (7.4.3) résulte de la première, puisque dire que $T_p$
+est exact signifie que $T_p$ et $T_{p-1}$ sont exacts à gauche. Pour démontrer
+la première assertion, notons que l'on a une suite exacte
+\[
+  0\longrightarrow H_p(P_\bullet)\longrightarrow Z'_p(P_\bullet)
+  \longrightarrow B_{p-1}(P_\bullet)\longrightarrow0
+\]
+dans laquelle $B_{p-1}(P_\bullet)$ est un $A$-module plat, en tant que
+sous-module du $A$-module plat $P_{p-1}$. Il est donc équivalent de dire que
+$H_p(P_\bullet)$ est plat ou que $Z'_p(P_\bullet)$ est plat
+($0_{\mathrm I}$, 6.1.2).
+\end{proof}
+
+Les applications les plus importantes de (7.4.2) sont les suivantes :
+
+\begin{proposition}[7.4.4]
+Soient $A$ un anneau noethérien, $P_\bullet$ un complexe de $A$-modules plats;
+on suppose, soit que les $P_i$ sont de type fini, soit que les
+$H_i(P_\bullet)$ sont des $A$-modules de type fini et qu'il existe $i_0$ tel
+que $H_i(P_\bullet)=0$ pour $i<i_0$. Soit $T$ le foncteur homologique défini
+par (7.4.1.1). Alors l'ensemble $U$ des
+$y\in\operatorname{Spec}(A)$ tels que $(T_p)_y$ (7.1.4) soit exact à droite
+(resp. exact à gauche, exact) est ouvert dans $\operatorname{Spec}(A)$.
+\end{proposition}
+
+\begin{proof}
+Dans la seconde hypothèse sur $P_\bullet$, on peut remplacer $P_\bullet$ par
+un complexe $P'_\bullet$ de

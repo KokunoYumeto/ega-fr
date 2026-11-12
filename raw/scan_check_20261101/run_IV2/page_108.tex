@@ -1,0 +1,79 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{108}
+
+nilradical de $X$ étant un $\mathcal O_X$-Module cohérent (I, 6.1.1 et
+$0_{\mathrm I}$, 5.2.2)), il revient au même de dire que $X$ possède la
+propriété $(R_0)$ ou que l'ensemble $U$ est partout dense. Par suite:
+\end{env}
+
+\begin{proposition}[5.8.5]
+\label{IV.2.s5.8.5-fr}
+Pour qu'un préschéma localement noethérien $X$ soit réduit, il faut et il
+suffit qu'il vérifie les propriétés $(S_1)$ et $(R_0)$.
+\end{proposition}
+
+Compte tenu de (5.7.5), cela résulte de la remarque précédente et de (3.2.1).
+
+\begin{theorem}[5.8.6]
+\EGAReaderTarget{ega4.c04.thm.5-8-6}{IV.2.s5.8.6-fr}
+(critère de Serre). Soit $X$ un préschéma localement noethérien. Pour que
+$X$ soit normal, il faut et il suffit que $X$ vérifie les propriétés $(S_2)$
+et $(R_1)$, autrement dit, que pour tout $x\in X$, on ait les propriétés
+suivantes:
+\begin{enumerate}
+\item[(i)] Si $\dim(\mathcal O_x)\leq1$, $\mathcal O_x$ est régulier
+(c'est-à-dire est un corps ou un anneau de valuation discrète (0, 17.1.4)).
+\item[(ii)] Si $\dim(\mathcal O_x)\geq2$, alors
+$\operatorname{prof}(\mathcal O_x)\geq2$.
+\end{enumerate}
+\end{theorem}
+
+Les conditions sont nécessaires. En effet, dire que $X$ est normal signifie
+que pour tout $x\in X$, $\mathcal O_x$ est un anneau local noethérien
+intégralement clos. Si $\dim(\mathcal O_x)=0$ (resp.
+$\dim(\mathcal O_x)=1$), on en conclut que $\mathcal O_x$ est un corps
+puisque $\mathcal O_x$ est intègre (resp. que $\mathcal O_x$ est un anneau
+de valuation discrète, en vertu de (II, 7.1.6)). D'autre part, pour tout
+élément $f_x\neq0$ de $\mathcal O_x$, on sait (Bourbaki, \emph{Alg. comm.},
+chap. VII, § 1, n° 4, prop. 8) que les idéaux premiers associés à
+$\mathcal O_x/f_x\mathcal O_x$ sont non immergés, donc $\mathcal O_x$
+vérifie $(S_2)$ (5.7.7).
+
+Les conditions sont suffisantes. En effet, il résulte d'abord de (5.8.5) que
+$X$ est réduit. La question étant locale, on peut en outre supposer que
+$X=\operatorname{Spec}(A)$, où $A$ est un anneau noethérien réduit
+(I, 5.1.4); si $R$ est l'anneau total des fractions de $A$, $R$ est composé
+direct d'un nombre fini de corps, et (compte tenu de (II, 6.3.6)), il suffira
+de prouver que $A$ est intégralement fermé dans $R$. Soit donc $h=f/g$ un
+élément de $R$ entier sur $A$, $g$ et $f$ étant des éléments de $A$ tels que
+$g$ soit non diviseur de 0. On a une relation de la forme
+\begin{equation}
+f^n+\sum_{i=1}^n a_i f^{n-i}g^i=0
+\qquad\text{avec }a_i\in A\quad\text{pour }1\leq i\leq n.
+\tag{5.8.6.1}\label{IV.2.s5.8.6.1-fr}
+\end{equation}
+
+Soit $\mathfrak p$ un idéal premier de $A$ tel que
+$\dim(A_{\mathfrak p})=1$; si $f_{\mathfrak p}$ et $g_{\mathfrak p}$ sont
+les images de $f$ et $g$ dans $A_{\mathfrak p}$, il résulte de (5.8.6.1) que
+$f_{\mathfrak p}/g_{\mathfrak p}$ (qui appartient à l'anneau total des
+fractions de $A_{\mathfrak p}$, puisque $g_{\mathfrak p}$ est non diviseur
+de 0 dans $A_{\mathfrak p}$ par platitude $(0_{\mathrm I},5.3.1)$) est entier
+sur $A_{\mathfrak p}$; mais comme $A_{\mathfrak p}$ est régulier, donc
+intégralement clos, on a $f_{\mathfrak p}/g_{\mathfrak p}\in A_{\mathfrak p}$.
+En d'autres termes, on a
+$(fA)_{\mathfrak p}\subset(gA)_{\mathfrak p}$. Mais l'hypothèse $(S_2)$
+entraîne (5.7.7), puisque $g$ est non diviseur de 0 dans $A$, que $A/gA$
+n'a que des idéaux premiers associés non immergés $\mathfrak p_i$
+($1\leq i\leq n$); or, $gA$ est l'intersection d'idéaux primaires
+$\mathfrak q_i$ correspondant aux $\mathfrak p_i$, et d'après ce qu'on vient
+de voir, les $\mathfrak q_i$ sont les images réciproques dans $A$, par les
+homomorphismes $A\to A_{\mathfrak p_i}$, des idéaux
+$(gA)_{\mathfrak p_i}$ (Bourbaki, \emph{Alg. comm.}, chap. IV, § 2, n° 3,
+prop. 5). Mais en vertu du Hauptidealsatz (0, 16.3.2) on a
+$\dim(A_{\mathfrak p_i})=1$ pour $1\leq i\leq n$, donc
+$(fA)_{\mathfrak p_i}\subset(gA)_{\mathfrak p_i}$ pour tout $i$ d'après ce
+qui précède; comme $fA$ est contenu dans l'intersection des images
+réciproques des $(fA)_{\mathfrak p_i}$ ($1\leq i\leq n$), on a
+$fA\subset gA$, c'est-à-dire $f/g\in A$. C.Q.F.D.
+

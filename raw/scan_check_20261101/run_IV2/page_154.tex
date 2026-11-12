@@ -1,0 +1,70 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{154}
+Désignons par $K$ le corps des fractions de $A$; alors $B\otimes_AK$ est une
+algèbre de type fini sur $K$ et $M\otimes_AK$ un $(B\otimes_AK)$-module de
+type fini. Nous raisonnerons par récurrence sur la dimension $n$ du support de
+$M\otimes_AK$, qui est $-\infty$ ou finie et $\geq0$. Supposons d'abord
+$n=-\infty$, c'est-à-dire $M\otimes_AK=0$; si $(m_i)_{1\leq i\leq r}$ est
+un système de générateurs du $B$-module $M$, il existe donc un $f\ne0$ dans
+$A$ tel que $fm_i=0$ pour $1\leq i\leq r$; donc $M_f=0$ et le lemme est vrai
+dans ce cas. Supposons maintenant $n\geq0$. On sait qu'il existe une suite de
+composition $M=M_1\supset M_2\supset\cdots\supset M_q=0$ du $B$-module $M$
+telle que chacun des quotients $N_i=M_i/M_{i+1}$ soit isomorphe à un
+$B$-module de la forme $B/\mathfrak p_i$, où $\mathfrak p_i$ est un idéal
+premier de $B$ (Bourbaki, \emph{Alg. comm.}, chap. IV, \S~1, n°~4, th.~1).
+Si le théorème est vrai pour chacun des $N_i$, il y a pour chaque $i$ un
+$f_i\ne0$ dans $A$ tel que $(N_i)_{f_i}$ soit libre sur $A_{f_i}$; posant
+$f=f_1f_2\cdots f_{q-1}$, il en résulte que $(N_i)_f$ est un $A_f$-module
+libre pour $1\leq i\leq q-1$. Mais $(N_i)_f=(M_i)_f/(M_{i+1})_f$
+$(0_{\mathrm I},1.3.2)$ et comme une extension de modules libres est libre, on
+en déduit alors que $M_f$ est un $A_f$-module libre. Remplaçant $B$ par
+$B/\mathfrak p$ ($\mathfrak p$ idéal premier de $B$), qui est encore de type
+fini sur $A$, on voit qu'on peut se borner au cas où $M=B$ et $B$ est intègre.
+On sait alors (Bourbaki, \emph{Alg. comm.}, chap. V, \S~3, n°~1, cor. 1 du
+th. 1) qu'il existe un élément $g\ne0$ dans $A$ et des éléments $t_i$
+$(1\leq i\leq m)$ de $B$, algébriquement indépendants sur $A$ et tels que
+$B_g$ soit entier sur $A_g[t_1,\ldots,t_m]$. On peut remplacer $A$ par $A_g$,
+$B$ par $B_g$ et supposer par suite que $B$ est entier sur
+$C=A[t_1,\ldots,t_m]$, donc un $C$-module de type fini et sans torsion. On sait
+en outre (4.1.2) que la dimension de $\operatorname{Spec}(B\otimes_AK)$ est
+égale à $m$, donc on a $m=n$.
+
+Cela étant, si $h$ est le rang du $C$-module sans torsion $B$, il existe une
+suite exacte de $C$-modules
+\[
+0\longrightarrow C^h\longrightarrow B\longrightarrow M'\longrightarrow0
+\]
+où $M'$ est un $C$-module de torsion de type fini; le support de $M'$ ne
+contient donc pas le point générique de $\operatorname{Spec}(C)$ (I, 7.4.6)
+et par suite le support de $M'\otimes_AK$ ne contient pas le point générique
+de $\operatorname{Spec}(C\otimes_AK)$ (I, 9.1.13.1); on en conclut (4.1.2.1)
+que sa dimension est $<n$. En vertu de l'hypothèse de récurrence, il existe un
+$f\ne0$ dans $A$ tel que $M'_f$ soit un $A_f$-module libre; par ailleurs
+$C_f^h$ est un $A_f$-module libre; donc il en est de même de $B_f$, qui en
+vertu de $(0_{\mathrm I},1.3.2)$ est une extension de modules libres. C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[6.9.3]
+\label{IV.2.s6.9.3-fr}
+Soient $S$ un préschéma noethérien, $u:X\to S$ un morphisme de type fini,
+$\mathcal F$ un $\mathcal O_X$-Module cohérent. Il y a alors une partition
+$(S_i)_{1\leq i\leq n}$ de $S$ en un nombre fini d'ensembles localement fermés
+dans $S$, telle que, si on désigne encore par $S_i$ le sous-préschéma réduit
+de $S$ ayant pour espace sous-jacent $S_i$, et si on pose
+$X_i=X\times_S S_i$, le $\mathcal O_{X_i}$-Module
+$\mathcal F_i=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S_i}$ soit plat
+sur $S_i$.
+\end{corollary}
+
+\begin{proof}
+Procédons par récurrence noethérienne $(0_{\mathrm I},2.2.2)$ sur l'ensemble
+des parties fermées $T$ de $S$ telles que le sous-préschéma réduit de $S$
+ayant $T$ pour espace sous-jacent vérifie la conclusion de (6.9.3). On peut
+donc se borner à démontrer le corollaire pour $S$ en supposant qu'il soit vrai
+pour tout sous-préschéma fermé réduit de $S$ ayant pour espace sous-jacent une
+partie fermée $\ne S$. Comme le morphisme $S_{\mathrm{red}}\to S$ est de type
+fini et surjectif, on peut remplacer $S$ par $S_{\mathrm{red}}$, donc supposer
+$S$ réduit et non vide. Comme $S$ est noethérien, l'intérieur $T$ d'une
+composante irréductible de $S$ est non vide, et le préschéma induit sur $T$
+est intègre; il y a donc en vertu de (6.9.1) un ouvert non vide $U\subset T$
+

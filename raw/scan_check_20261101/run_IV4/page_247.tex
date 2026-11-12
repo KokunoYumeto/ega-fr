@@ -1,0 +1,34 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{247}
+Notons que pour tout $x'\in U$, $h(x')$ est une spécialisation de $h'_x(x)=y$.
+En effet, il existe un spectre $S_1$ d'anneau de valuation discrète et un morphisme $u:S_1\to X$ tel que $u(a)=x$, $u(b)=x'$ \sref[II]{II.7.1.9}.
+Appliquant la condition de l'énoncé, on obtient aussitôt notre assertion, puisque $h(x')=h_1(b)=h'_1(b)$ et $y=h'_1(a)$.
+Si $Y'$ est un voisinage ouvert affine de $y$, on a donc $h(X\cap U)\subset Y'$ ; on peut par suite remplacer $Y$ par $Y'$, autrement dit supposer $Y$ \emph{affine}, donc séparé sur $X$.
+Soit $\omega$ la $X$-section rationnelle de $Y$ à laquelle $h$ appartient, de sorte que son graphe a ici pour ensemble sous-jacent l'adhérence de $h(U)$ dans $Y$.
+Puisque $Y$ est séparé sur $X$, on peut appliquer \sref{IV.20.4.4} à $\omega$ : il suffira de prouver que, si $p:\Gamma_\omega\to X$ est la projection canonique, $p^{-1}(x)$ est réduit à un seul point $y$ et que $h'_x(x)=y$.
+En effet, par \sref{IV.20.4.4} $h$ se prolongera en une section $h'$ au-dessus d'un ouvert $U'$ contenant $U\cup\{x\}$, telle que $h'(x)=y$, et comme alors il n'existe qu'un seul $X$-morphisme $\Spec(k(x))\to Y$ transformant $x$ en $y$, cela prouvera l'identité de $h'_x$ et du composé de $h'$ et de $\Spec(k(x))\to U'$.
+
+Puisque pour $x'\in X\cap U$, $h(x')$ est une spécialisation de $y$, on a $y\in p^{-1}(x)$.
+Supposons alors que $z$ soit un point quelconque de $p^{-1}(x)$.
+Comme $\Gamma_\omega$ est l'adhérence de $h(U)$ et que $h(U)$ est formé de points adhérents à $h(\xi)$, où $\xi$ est le point générique de $X$, $\Gamma_\omega$ est l'adhérence de $h(\xi)$ dans $Y$.
+On prend alors un spectre $S_1$ d'anneau de valuation discrète et un morphisme $v:S_1\to Y$ tels que $v(a)=z$, $v(b)=h(\xi)$ \sref[II]{II.7.1.9}, et on pose $u=p\circ v$, de sorte que $u(a)=x$, $u(b)=\xi$.
+Appliquant à $u$ la condition de l'énoncé, on voit que l'on obtient un morphisme $h'_1:S_1\to Y$ tel que $h'_1(a)=y$ et $h'_1(b)=h(\xi)$ ; mais cela entraîne $z=y$ en vertu de \sref[II]{II.7.2.3}, puisque $Y$ est séparé sur $X$ et que $v$ et $h'_1$ doivent donc coïncider, puisqu'ils sont égaux au point $b$.
+C.Q.F.D.
+\end{proof}
+
+\begin{corollary}[20.4.7]
+\EGAReaderTarget{ega4.c04.cor.20-4-7}{IV.20.4.7}
+Les hypothèses sur $S$, $X$, $Y$, $U$ et $h$ étant celles de \sref{IV.20.4.6}, soit $E$ une partie de $X-U$ telle que $X$ soit normal en tout point de $E$, et pour chaque $x\in E$, soit $h'_x:\Spec(k(x))\to Y$ un $S$-morphisme, tel que la condition~(P) de \sref{IV.20.4.6} soit vérifiée.
+On suppose en outre que la réunion $F$ des graphes des $h'_x$ (identifiés à des parties de $X\times_S Y$) pour $x\in E$, soit contenue dans la réunion d'un nombre fini d'ouverts $V_i$ de $X\times_S Y$ qui sont \emph{séparés} sur $X$ (condition automatiquement vérifiée si $Y$ est \emph{séparé} sur $S$, ou si $X$ est \emph{quasi-compact} et $Y$ de \emph{type fini} sur $S$).
+Alors il existe un $S$-morphisme $h':U'\to Y$, où $U'$ est un ouvert de $X$ contenant $U\cup E$, tel que, pour tout $x\in E$, le composé
+\[
+  \Spec(k(x))\to U'\xrightarrow{h'}Y
+\]
+soit égal à $h'_x$.
+\end{corollary}
+
+\begin{proof}
+Notons d'abord que, dans \sref{IV.20.4.6}, si $Y$ est supposé \emph{séparé}, il y a un plus grand ouvert $U_0\supset U$, égal au domaine de la $S$-application rationnelle correspondant à $h$, dans lequel $h$ peut être prolongé, et ce prolongement est unique \sref[I]{I.7.2.2} ; d'où la conclusion dans ce cas, grâce à \sref{IV.20.4.6}.
+Dans le cas général, soit $E_i$ l'ensemble des $x\in E$ tels que $(x,h'_x(x))\in V_i$.
+En vertu de \sref{IV.20.4.6}, pour tout $x\in E$, il y a un prolongement $h^{(x)}$ de $h$ à $U\cup W^{(x)}$, où $W^{(x)}$ est un voisinage de $x$ dans $X$ tel que le graphe de $h^{(x)}|W^{(x)}$ soit contenu dans \emph{tous} les $V_i$ tels que $x\in E_i$.
+Puisque $V_i$ est séparé sur $X$ et $X$ réduit, pour deux points $x'$, $x''$ de $E_i$, $h^{(x')}$ et $h^{(x'')}$ coïncident dans $W^{(x')}\cap W^{(x'')}$ puisqu'ils

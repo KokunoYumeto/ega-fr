@@ -1,0 +1,95 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{42}
+
+\begin{corollary}[17.1.8]
+\label{0.17.1.8-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $t$ un
+élément de $\mathfrak{m}$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] $A/tA$ est régulier et $t$ est non diviseur de zéro dans $A$.
+  \item[\rm b)] $A$ est régulier et $t\notin\mathfrak{m}^2$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+C'est le cas particulier $r=1$ de (17.1.7) (compte tenu de ce qu'un élément de
+$\mathfrak{m}$ non diviseur de zéro fait partie d'un système de paramètres
+(16.4.1)).
+\end{proof}
+
+\begin{corollary}[17.1.9]
+\label{0.17.1.9-fr}
+Soient $A$ un anneau local régulier, $\mathfrak{m}$ son idéal maximal,
+$\mathfrak{J}$ un idéal de $A$ contenu dans $\mathfrak{m}$. Les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[\rm a)] L'anneau $A/\mathfrak{J}$ est régulier.
+  \item[\rm b)] $\mathfrak{J}$ est engendré par une suite
+  $(x_i)_{1\leq i\leq r}$ faisant partie d'un système régulier de paramètres
+  de $A$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+On a déjà vu (17.1.7) que b) entraîne a). Inversement, supposons que
+$A/\mathfrak{J}$ soit régulier (ce qui entraîne que $\mathfrak{J}$ est premier)
+et soient $n=\dim(A)$, $n-r=\dim(A/\mathfrak{J})$~; avec les notations de
+(17.1.7), la suite exacte (17.1.7.1) donne
+$\operatorname{rg}_k((\mathfrak{m}^2+\mathfrak{J})/\mathfrak{m}^2)=r$, donc il
+existe une suite $(x_i)_{1\leq i\leq r}$ d'éléments de $\mathfrak{J}$ faisant
+partie d'un système régulier de paramètres de $A$. Posons
+$\mathfrak{J}'=x_1A+\cdots+x_rA$~; il résulte de (17.1.7) que $\mathfrak{J}'$
+est un idéal premier de $A$ et que $A/\mathfrak{J}'$ est régulier et de
+dimension $n-r$~; mais comme
+$A/\mathfrak{J}=(A/\mathfrak{J}')/(\mathfrak{J}/\mathfrak{J}')$ et que
+$\mathfrak{J}/\mathfrak{J}'$ est premier dans l'anneau intègre
+$A/\mathfrak{J}'$, les dimensions de $A/\mathfrak{J}$ et de
+$A/\mathfrak{J}'$ ne peuvent être égales que si
+$\mathfrak{J}=\mathfrak{J}'$ (16.1.2.2).
+\end{proof}
+
+\subsection{Rappels sur la dimension projective et la dimension injective des
+modules}
+\label{subsection:0.17.2-fr}
+
+\begin{env}[17.2.1]
+\label{0.17.2.1-fr}
+Soient $A$ un anneau, $M$ un $A$-module. Rappelons (M, VI, 2) qu'on appelle
+\emph{dimension projective} (resp. \emph{dimension injective}) de $M$ et que
+l'on note $\operatorname{dim.proj}(M)$ ou
+$\operatorname{dim.proj}_A(M)$ (resp. $\operatorname{dim.inj}(M)$ ou
+$\operatorname{dim.inj}_A(M)$) le plus petit $n$ (entier ou égal à $+\infty$)
+tel qu'il existe une résolution projective gauche (resp. une résolution
+injective droite) de $M$ qui soit \emph{de longueur $n$}. Il revient au même
+(\emph{loc. cit.}) de dire que $n$ est le plus petit nombre tel que pour tout
+$A$-module $N$, on ait $\operatorname{Ext}^i_A(M,N)=0$ (resp.
+$\operatorname{Ext}^i_A(N,M)=0$) pour tout $i>n$, ou seulement pour $i=n+1$.
+Pour tout \emph{facteur direct} $M'$ de $M$, on a donc
+$\operatorname{dim.proj}(M')\leq\operatorname{dim.proj}(M)$ puisque
+$\operatorname{Ext}^i_A(M',N)$ est facteur direct de
+$\operatorname{Ext}^i_A(M,N)$~; de même
+$\operatorname{dim.inj}(M')\leq\operatorname{dim.inj}(M)$. Une condition
+équivalente à $\operatorname{dim.proj}(M)=n$ (resp.
+$\operatorname{dim.inj}(M)=n$) est que $n$ est le plus petit nombre tel que,
+pour toute suite exacte
+\[
+  0\longrightarrow R\longrightarrow P_{n-1}\longrightarrow\cdots
+  \longrightarrow P_0\longrightarrow M\longrightarrow0
+\]
+(resp.
+$0\longrightarrow M\longrightarrow Q_0\longrightarrow\cdots
+\longrightarrow Q_{n-1}\longrightarrow C\longrightarrow0$), où tous les
+$P_i$ pour $0\leq i<n$ sont projectifs (resp. tous les $Q_i$ pour $0\leq i<n$
+sont injectifs), alors $R$ est projectif (resp. $C$ est injectif).
+\end{env}
+
+\begin{remarks}[17.2.2]
+\label{0.17.2.2-fr}
+\begin{enumerate}
+  \item[\rm (i)] Dire que $M$ est un $A$-module \emph{projectif} (resp.
+  \emph{injectif}) équivaut donc à dire que
+  $\operatorname{dim.proj}(M)=0$ (resp. $\operatorname{dim.inj}(M)=0$).
+  \item[\rm (ii)] Soit $T$ un \emph{foncteur covariant} additif de la catégorie
+  des $A$-modules dans une catégorie abélienne. Il résulte aussitôt des
+  définitions de (17.2.1) et de celle des
+  

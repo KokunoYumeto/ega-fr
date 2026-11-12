@@ -1,0 +1,90 @@
+% from ega3-7-fr.tex
+\oldpage[III]{188}
+$A$-modules libres de type fini pour lequel le foncteur
+$H_\bullet(P'_\bullet\otimes_A M)$ est isomorphe (en tant que
+$\partial$-foncteur) à $T_\bullet(M)$ (0, 11.9.3). On peut donc toujours se
+ramener à la première hypothèse et dans ce cas les $Z'_i(P_\bullet)$ sont de
+type fini; en outre, on peut se borner à démontrer les assertions relatives à
+l'exactitude à gauche (cf. (7.4.2, $a)$). Cela étant, soit $x\in U$; comme le
+foncteur $M\mapsto M_x$ est exact, on a
+\[
+  (Z'_p(P_\bullet))_x=Z'_p((P_\bullet)_x),
+\]
+et (en tenant compte de (7.4.1.3)) l'hypothèse entraîne, en vertu de
+(7.4.2, $b)$) que $(Z'_p(P_\bullet))_x$ est un $A_x$-module plat, donc libre
+puisqu'il est de type fini et que $A_x$ est un anneau local noethérien
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2
+de la prop. 5). On en conclut qu'il y a un $f\in A$ tel que
+$(Z'_p(P_\bullet))_f$ soit libre sur $A_f$ (Bourbaki, \emph{Alg. comm.},
+chap. II, \S 5, n\textsuperscript{o} 1, cor. de la prop. 2), et \emph{a
+fortiori} $(Z'_p(P_\bullet))_y$ est libre sur $A_y$ pour tout $y\in D(f)$, ce
+qui achève la démonstration en vertu de (7.4.2, $b)$).
+\end{proof}
+
+\begin{corollary}[7.4.5]
+Sous les hypothèses de (7.4.4), supposons en outre que $A$ soit intègre. Alors
+l'ensemble $U$ des $x\in\operatorname{Spec}(A)$ tels que $(T_p)_x$ soit exact
+est ouvert non vide.
+\end{corollary}
+
+\begin{proof}
+Il suffit en effet de prouver que $(T_p)_x$ est exact pour le point générique
+$x$ de $\operatorname{Spec}(A)$, ce qui est immédiat puisque $A_x$ est un
+corps, donc tout foncteur additif sur $\mathbf{Ab}_{A_x}$ est exact.
+\end{proof}
+
+\begin{proposition}[7.4.6]
+Sous les hypothèses générales de (7.4.4), les conditions $a)$, $b)$ et $c)$ de
+(7.4.2) sont aussi équivalentes à :
+\begin{enumerate}
+  \item[d)] Il existe un $A$-module $Q$ et un isomorphisme fonctoriel
+    \[
+      T_p(M)\xrightarrow{\sim}\operatorname{Hom}_A(Q,M).
+      \tag{7.4.6.1}\label{III.7.4.6.1.fr}
+    \]
+    En outre, le $A$-module $Q$ est déterminé à isomorphisme unique près par
+    cette propriété, et il est de type fini.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'unicité de $Q$ est un cas particulier de l'unicité d'un objet représentatif
+d'un foncteur représentable (0, 8.1.5). Il est clair que le second membre de
+(7.4.6.1) est exact à gauche. Inversement, pour démontrer l'existence de $Q$,
+lorsque $T_p$ est exact à gauche, on peut d'abord, comme dans (7.4.4), se
+ramener au cas où les $P_i$ sont plats et de type fini, donc (puisque $A$ est
+noethérien) projectifs de type fini (Bourbaki, \emph{Alg. comm.}, chap. II,
+\S 5, n\textsuperscript{o} 2, cor. du th. 1). Le dual $\check P_i$ de $P_i$
+est alors aussi un $A$-module projectif de type fini, $P_i$ est canoniquement
+isomorphe au dual de $\check P_i$, et l'homomorphisme canonique
+\[
+  P_i\otimes_A M\longrightarrow\operatorname{Hom}_A(\check P_i,M)
+\]
+est bijectif (Bourbaki, \emph{Alg.}, chap. II, 3\textsuperscript{e} éd.,
+\S 4, n\textsuperscript{o} 2, prop. 2). On sait d'autre part (7.4.2, $c)$)
+qu'on peut supposer que $d_{p+1}:P_{p+1}\to P_p$ est nulle, donc que l'on a une
+suite exacte
+\[
+  0\longrightarrow T_p(M)\xrightarrow{u}P_p\otimes M
+  \xrightarrow{v}P_{p-1}\otimes M
+\]
+où $v=d_p\otimes1$. Posons alors $Q'=\operatorname{Ker}(d_p)$, de sorte qu'on
+a la suite exacte
+\[
+  0\longrightarrow Q'\xrightarrow{w}P_p\xrightarrow{d_p}P_{p-1},
+\]
+d'où, par transposition, la suite exacte
+\[
+  \check P_{p-1}\xrightarrow{{}^t d_p}\check P_p
+  \xrightarrow{{}^t w}\check Q'\longrightarrow0.
+\]
+Nous allons voir que
+\[
+  Q=\check Q'=\operatorname{Coker}({}^t d_p)
+\]
+répond à la question. En effet, on a la suite exacte
+\[
+  0\longrightarrow\operatorname{Hom}_A(Q,M)
+  \longrightarrow\operatorname{Hom}_A(\check P_p,M)
+  \xrightarrow{v'}\operatorname{Hom}_A(\check P_{p-1},M)
+\]

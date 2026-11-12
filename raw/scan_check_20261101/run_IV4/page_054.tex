@@ -1,0 +1,98 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{54}
+des $\langle d^m(\mathbf{z}^{\mathbf{p}}),D\rangle=D(\mathbf{z}^{\mathbf{p}})$
+pour $|\mathbf{p}|\leq m$; de façon précise, il résulte de (16.11.1.5) que
+l'on a
+\[
+  D(\mathbf{z}^{\mathbf{p}})
+  =\langle d^m(\mathbf{z}^{\mathbf{p}}),D\rangle
+  =\sum_{\mathbf{q}\leq\mathbf{p}}
+    \binom{\mathbf{p}}{\mathbf{q}}
+    \langle\boldsymbol{\zeta}^{\mathbf{q}},D\rangle
+    \mathbf{z}^{\mathbf{p}-\mathbf{q}}.
+  \tag{16.11.1.7}
+  \label{IV.16.11.1.7}
+\]
+\end{env}
+
+\begin{theorem}[16.11.2]
+\label{IV.16.11.2}
+Soient $f:X\to S$ un morphisme, $U$ un ouvert de $X$,
+$(z_\lambda)_{\lambda\in L}$ une famille de sections de $\mathcal{O}_X$
+au-dessus de $U$ telle que la famille $(dz_\lambda)_{\lambda\in L}$ engendre
+$\Omega_{X/S}^1|U=\Omega_{U/S}^1$. Les conditions suivantes sont
+équivalentes:
+\begin{enumerate}
+  \item[a)] $f|U$ est différentiellement lisse et $(dz_\lambda)$ est une base
+  du $\mathcal{O}_U$-Module $\Omega_{U/S}^1$.
+  \item[b)] Il existe une famille
+  $(D_{\mathbf{p}})_{\mathbf{p}\in\mathbb{N}^{(L)}}$ d'opérateurs
+  différentiels de $\mathcal{O}_U$ dans lui-même vérifiant les conditions
+  \[
+    D_{\mathbf{p}}(\mathbf{z}^{\mathbf{q}})
+    =\binom{\mathbf{q}}{\mathbf{p}}
+      \mathbf{z}^{\mathbf{q}-\mathbf{p}}
+    \quad(\mathbf{p},\mathbf{q}\text{ dans }\mathbb{N}^{(L)}).
+    \tag{16.11.2.1}
+    \label{IV.16.11.2.1}
+  \]
+\end{enumerate}
+De plus, lorsque ces conditions sont vérifiées, la famille
+$(D_{\mathbf{p}})$ est déterminée de façon unique par les conditions
+(16.11.2.1) et vérifie les relations
+\[
+  D_{\mathbf{p}}\circ D_{\mathbf{q}}
+  =D_{\mathbf{q}}\circ D_{\mathbf{p}}
+  =\frac{(\mathbf{p}+\mathbf{q})!}{\mathbf{p}!\mathbf{q}!}
+    D_{\mathbf{p}+\mathbf{q}}
+  \quad(\mathbf{p},\mathbf{q}\text{ dans }\mathbb{N}^{(L)}).
+  \tag{16.11.2.2}
+  \label{IV.16.11.2.2}
+\]
+Enfin, si $L$ est fini, pour tout entier $m$, les $D_{\mathbf{p}}$ tels que
+$|\mathbf{p}|\leq m$ forment une base du $\mathcal{O}_U$-Module
+$\operatorname{Diff}_{U/S}^m$, autrement dit, tout opérateur différentiel
+d'ordre $\leq m$ sur $U$ s'écrit d'une seule façon sous la forme
+\[
+  D=\sum_{|\mathbf{p}|\leq m}a_{\mathbf{p}}D_{\mathbf{p}}
+\]
+où les $a_{\mathbf{p}}$ sont des sections de $\mathcal{O}_X$ au-dessus de
+$U$.
+\end{theorem}
+
+Notons d'abord qu'en vertu de (16.11.1.6) et (16.11.1.5), on vérifie aussitôt
+que les conditions (16.11.2.1) sont équivalentes à
+\[
+  \langle\boldsymbol{\zeta}^{\mathbf{p}},D_{\mathbf{q}}\rangle
+  =\delta_{\mathbf{p}\mathbf{q}}
+  \quad\text{(indice de Kronecker)}.
+  \tag{16.11.2.3}
+  \label{IV.16.11.2.3}
+\]
+L'existence de la famille $(D_{\mathbf{p}})$ vérifiant ces relations entraîne
+donc d'abord (en prenant $|\mathbf{p}|=1$) que les $dz_\lambda$ sont
+linéairement indépendants, donc forment une \emph{base} du
+$\mathcal{O}_U$-Module $\Omega_{U/S}^1$. Puis, pour tout entier $m\geq1$, on
+déduit de même de (16.11.2.3) que les $\boldsymbol{\zeta}^{\mathbf{p}}$ tels
+que $|\mathbf{p}|\leq m$ sont linéairement indépendants; par suite
+l'homomorphisme canonique (16.3.1.1) est injectif, donc bijectif, et cela
+prouve que b) entraîne a). La réciproque découle aussitôt de la définition
+(16.10.1), le fait que les $\boldsymbol{\zeta}^{\mathbf{p}}$ forment une base
+de $\mathscr{P}_{U/S}^m$ pour $|\mathbf{p}|\leq m$ entraînant l'existence et
+l'unicité d'une famille d'homomorphismes
+$u_{\mathbf{q},m}:\mathscr{P}_{U/S}^m\to\mathcal{O}_U$
+($|\mathbf{q}|\leq m$) tels que
+$\langle\boldsymbol{\zeta}^{\mathbf{p}},u_{\mathbf{q},m}\rangle
+=\delta_{\mathbf{p}\mathbf{q}}$ pour $|\mathbf{p}|\leq m$,
+$|\mathbf{q}|\leq m$. Pour une valeur de $\mathbf{q}$ donnée, les opérateurs
+différentiels correspondant aux $u_{\mathbf{q},m}$ pour
+$m\geq|\mathbf{q}|$ sont identifiés à un même opérateur $D_{\mathbf{q}}$.
+Cela prouve donc que a) entraîne b), et en outre que la famille
+$(D_{\mathbf{p}})$ est déterminée de façon unique et que, si $L$ est fini,
+pour $|\mathbf{p}|\leq m$, les $D_{\mathbf{p}}$ forment une base du dual
+$\operatorname{Diff}_{U/S}^m$ de $\mathscr{P}_{U/S}^m$. Enfin, les relations
+(16.11.2.2) découlent aussitôt de l'expression des valeurs des trois
+opérateurs considérés pour les $\mathbf{z}^{\mathbf{r}}$, et du fait que les
+$\boldsymbol{\zeta}^{\mathbf{r}}$ pour $|\mathbf{r}|\leq m$ engendrent
+$\mathscr{P}_{U/S}^m$.
+

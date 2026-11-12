@@ -1,0 +1,76 @@
+% from ega1-5-fr.tex
+\oldpage[I]{130}
+Soient $X$ un préschéma, $\mathscr{J}$ un faisceau quasi-cohérent d'idéaux de
+$\mathscr{O}_X$ tel que $\mathscr{J}^n=0$ pour un entier $n>0$. Soit $X_0$ le
+sous-préschéma fermé $(X,\mathscr{O}_X/\mathscr{J})$ de $X$~; pour que $X$
+soit un schéma affine, il faut et il suffit que $X_0$ le soit.
+\end{proposition}
+
+La condition étant évidemment nécessaire, prouvons qu'elle est suffisante.
+Si on pose $X_k=(X,\mathscr{O}_X/\mathscr{J}^{k+1})$, tout revient à prouver
+par récurrence sur $k$ que les $X_k$ sont affines, donc on est ramené au cas
+où $\mathscr{J}^2=0$. Posons
+\[
+  A=\Gamma(X,\mathscr{O}_X),\qquad
+  A_0=\Gamma(X_0,\mathscr{O}_{X_0})
+      =\Gamma(X,\mathscr{O}_X/\mathscr{J}).
+\]
+On déduit de l'homomorphisme canonique
+$\mathscr{O}_X\to\mathscr{O}_X/\mathscr{J}$ un homomorphisme d'anneaux
+$\varphi:A\to A_0$. Nous verrons ci-dessous que $\varphi$ est
+\emph{surjectif}, de sorte que la suite
+\[
+  0\to\Gamma(X,\mathscr{J})\to\Gamma(X,\mathscr{O}_X)
+  \to\Gamma(X,\mathscr{O}_X/\mathscr{J})\to 0
+  \tag{5.1.9.1}\label{I.5.1.9.1-fr}
+\]
+est \emph{exacte}. Supposons ce point établi, et montrons que cela entraîne la
+proposition. Notons que $\mathfrak{K}=\Gamma(X,\mathscr{J})$ est un idéal de
+carré nul dans $A$, et est donc un module sur $A_0=A/\mathfrak{K}$. Par
+hypothèse, on a $X_0=\operatorname{Spec}(A_0)$, et comme les espaces
+topologiques sous-jacents $X_0$ et $X$ sont identiques,
+$\mathfrak{K}=\Gamma(X_0,\mathscr{J})$~; par ailleurs, comme
+$\mathscr{J}^2=0$, $\mathscr{J}$ est un
+$(\mathscr{O}_X/\mathscr{J})$-Module quasi-cohérent, donc on a
+$\mathscr{J}\simeq\widetilde{\mathfrak{K}}$ et
+$\mathfrak{K}_x=\mathscr{J}_x$ pour tout $x\in X_0$
+(\hyperref[I.1.4.1-fr]{1.4.1}).
+
+Cela étant, soit $X'=\operatorname{Spec}(A)$, et considérons le morphisme
+$f=(\psi,\theta):X\to X'$ de préschémas correspondant à l'application
+identique $A\to\Gamma(X,\mathscr{O}_X)$
+(\hyperref[I.2.2.4-fr]{2.2.4}). Pour tout ouvert affine $V$ dans $X$, le
+diagramme
+\[
+  \xymatrix{
+    A\ar[r]\ar[d] & \Gamma(V,\mathscr{O}_X|V)\ar[d]\\
+    A_0=A/\mathfrak{K}\ar[r] & \Gamma(V,\mathscr{O}_{X_0}|V)
+  }
+\]
+est commutatif, d'où on conclut que le diagramme
+\[
+  \xymatrix{
+    X' & X\ar[l]_f\\
+    X'_0\ar[u]^{j'} & X_0\ar[l]^{f_0}\ar[u]_j
+  }
+\]
+est commutatif, $X'_0$ étant le sous-préschéma fermé de $X'$ défini par le
+faisceau quasi-cohérent d'idéaux $\widetilde{\mathfrak{K}}$, $j$, $j'$ les
+morphismes d'injection canoniques. Mais puisque $X_0$ est affine, $f_0$ est un
+isomorphisme et comme les applications continues sous-jacentes à $j$ et $j'$
+sont les applications identiques, on voit tout d'abord que
+$\psi:X\to X'$ est un homéomorphisme. En outre, la relation
+$\mathfrak{K}_x=\mathscr{J}_x$ montre que la restriction de
+$\theta^\sharp:\psi^*(\mathscr{O}_{X'})\to\mathscr{O}_X$ est un
+\emph{isomorphisme} de $\psi^*(\widetilde{\mathfrak{K}})$ sur $\mathscr{J}$~;
+d'autre part, par passage aux quotients, $\theta^\sharp$ donne un
+\emph{isomorphisme}
+$\psi^*(\mathscr{O}_{X'}/\widetilde{\mathfrak{K}})
+\to\mathscr{O}_X/\mathscr{J}$, puisque $f_0$ est un isomorphisme~; on en
+conclut aussitôt par le lemme des 5 (M, I, 1.1) que $\theta^\sharp$ est
+lui-même un isomorphisme, donc que $f$ est un \emph{isomorphisme}, et par suite
+que $X$ est affine.
+
+Tout revient donc à démontrer l'exactitude de
+(\hyperref[I.5.1.9.1-fr]{5.1.9.1}), ce qui résultera de
+

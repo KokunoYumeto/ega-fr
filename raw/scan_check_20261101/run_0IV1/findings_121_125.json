@@ -1,0 +1,947 @@
+[
+ {
+  "page": 121,
+  "where": "(20.2.3.1), second line: the arrow before Exalcom_B(C, L)",
+  "scan": "→ with ∂ above it (the label ∂ is repeated at the start of the continuation line)",
+  "tex": "&\\to\\operatorname{Exalcom}_B(C,L) (no label)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "&\\to\\operatorname{Exalcom}_B(C,L)",
+   "new": "&\\xrightarrow{\\partial}\\operatorname{Exalcom}_B(C,L)"
+  },
+  "note": "Same in (20.3.6.1) and (20.3.7.1) on p. 123."
+ },
+ {
+  "page": 121,
+  "where": "Corollaire (20.2.4), line 1: '(resp. (20.2.3)), on a une'",
+  "scan": "'(resp.' upright in the italic statement",
+  "tex": "(resp. inside the italic corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp.\n\\sref{0.20.2.3-fr})",
+   "new": "\\textup{(resp.}\n\\sref{0.20.2.3-fr})"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "Corollaire (20.2.4): '(resp.' on its own line before (20.2.4.2)",
+  "scan": "'(resp.' upright",
+  "tex": "(resp. inside the italic corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp.\n\\begin{equation}",
+   "new": "\\textup{(resp.}\n\\begin{equation}"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "after (20.2.4.2): 'Cela résulte de la définition de Exan_{B/A}(C, L) (resp. Exalcom_{B/A}(C, L)) ((18.3.7) et (18.4.2)).'",
+  "scan": "roman (the proof), continuing flush left after the display",
+  "tex": "the sentence is inside \\begin{corollary}...\\end{corollary}, so it is set italic",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{equation}\nCela résulte de la définition de $\\operatorname{Exan}_{B/A}(C,L)$ (resp.\n$\\operatorname{Exalcom}_{B/A}(C,L)$) ((18.3.7) et (18.4.2)).\n\\end{corollary}",
+   "new": "\\end{equation}\n\\end{corollary}\n\\noindent Cela résulte de la définition de $\\operatorname{Exan}_{B/A}(C,L)$ (resp.\n$\\operatorname{Exalcom}_{B/A}(C,L)$) ((18.3.7) et (18.4.2))."
+  },
+  "note": "Moves \\end{corollary} before the proof sentence (as in the (16.4.5) fix); \\noindent because the print does not indent it. Its 'resp.' is then upright, as printed. No \\begin{proof}: the print has no heading here."
+ },
+ {
+  "page": 121,
+  "where": "diagram of Remarque (20.2.5), bottom row: arrow Dér_{A'}(B', L) → Exan_{B'}(C', L)",
+  "scan": "∂ below the arrow",
+  "tex": "\\ar[r]^-\\partial (label above)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(B',L) \\ar[r]^-\\partial",
+   "new": "(B',L) \\ar[r]_-\\partial"
+  },
+  "note": "Label side (cf. GLOBAL_ISSUES 30); in the top row ∂ is above, as in the TeX."
+ },
+ {
+  "page": 121,
+  "where": "Remarque (20.2.5): 'Alors on a un diagramme commutatif'",
+  "scan": "new indented paragraph after the first diagram",
+  "tex": "no blank line after \\]: the paragraph continues",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nAlors on a",
+   "new": "\\]\n\nAlors on a"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "heading of 20.3",
+  "scan": "20.3. Dérivations continues dans les anneaux topologiques.",
+  "tex": "\\subsection{Dérivations continues dans les anneaux topologiques}",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Dérivations continues dans les anneaux topologiques}",
+   "new": "\\subsection{Dérivations continues dans les anneaux topologiques.}"
+  },
+  "note": "Printed final full stop (GLOBAL_ISSUES 43/58; page fix as for 18.1 and 18.2)."
+ },
+ {
+  "page": 121,
+  "where": "(20.3.1): 'la catégorie des A-anneaux topologiques se définit'",
+  "scan": "A-*anneaux topologiques* (italic)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "des $A$-anneaux topologiques se définit",
+   "new": "des $A$-\\emph{anneaux topologiques} se définit"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "end of the page-121 text, mid-sentence ('; si B / et C sont deux A-anneaux topologiques'); affects the first line of p. 122",
+  "scan": "p. 122 begins 'et C sont deux ...' at the left margin: the sentence continues",
+  "tex": "blank line between 'si $B$' and the page-122 marker (paragraph break)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "continu » ; si $B$\n\n",
+   "new": "continu » ; si $B$\n"
+  },
+  "note": "Removes the blank line before \\oldpage[0\\textsubscript{IV-1}]{122} (GLOBAL_ISSUES 20); the edit lies in the page-121 segment."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.3), line 1: 'si 𝔎 est un idéal bilatère ouvert'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si $\\mathfrak{R}$ est un idéal",
+   "new": "si $\\mathfrak{K}$ est un idéal"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.3): 'D(𝔎²)⊂𝔎.D(𝔎)+D(𝔎).𝔎=0'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$D(\\mathfrak{R}^2)\\subset\\mathfrak{R}.D(\\mathfrak{R})+\nD(\\mathfrak{R}).\\mathfrak{R}=0$",
+   "new": "$D(\\mathfrak{K}^2)\\subset\\mathfrak{K}.D(\\mathfrak{K})+\nD(\\mathfrak{K}).\\mathfrak{K}=0$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "(20.3.5.1): 'Dér_{A/𝔍}(B/𝔎, L)'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(B/\\mathfrak{R},L)\\xrightarrow{\\sim}",
+   "new": "(B/\\mathfrak{K},L)\\xrightarrow{\\sim}"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "(20.3.5): 'des couples (𝔍, 𝔎)'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(\\mathfrak{J},\\mathfrak{R})$",
+   "new": "$(\\mathfrak{J},\\mathfrak{K})$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "(20.3.5): 'tels que 𝔎.L=L.𝔎=0, 𝔍.B⊂𝔎, B.𝔍⊂𝔎'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "tels que $\\mathfrak{R}.L=L.\\mathfrak{R}=0$,\n$\\mathfrak{J}.B\\subset\\mathfrak{R}$,\n$B.\\mathfrak{J}\\subset\\mathfrak{R}$.",
+   "new": "tels que $\\mathfrak{K}.L=L.\\mathfrak{K}=0$,\n$\\mathfrak{J}.B\\subset\\mathfrak{K}$,\n$B.\\mathfrak{J}\\subset\\mathfrak{K}$."
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5), line 1: 'Comme A/𝔍 et B/𝔎 sont discrets'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et $B/\\mathfrak{R}$ sont discrets",
+   "new": "et $B/\\mathfrak{K}$ sont discrets"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5), line 2: 'w_{𝔍,𝔎} : Dér_{A/𝔍}(B/𝔎, L)'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$w_{\\mathfrak{J},\\mathfrak{R}}:\n\\operatorname{D\\acute{e}r}_{A/\\mathfrak{J}}(B/\\mathfrak{R},L)",
+   "new": "$w_{\\mathfrak{J},\\mathfrak{K}}:\n\\operatorname{D\\acute{e}r}_{A/\\mathfrak{J}}(B/\\mathfrak{K},L)"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): 'B/𝔎'→B/𝔎'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$B/\\mathfrak{R}'\\to B/\\mathfrak{R}$",
+   "new": "$B/\\mathfrak{K}'\\to B/\\mathfrak{K}$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): 'pour 𝔎⊃𝔎''",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak{R}\\supset\\mathfrak{R}'$",
+   "new": "$\\mathfrak{K}\\supset\\mathfrak{K}'$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): 'Dér_{A/𝔍}(B/𝔎, L)→Dér_{A/𝔍}(B/𝔎', L)'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(B/\\mathfrak{R},L)\\to\n\\operatorname{D\\acute{e}r}_{A/\\mathfrak{J}}(B/\\mathfrak{R}',L)$",
+   "new": "(B/\\mathfrak{K},L)\\to\n\\operatorname{D\\acute{e}r}_{A/\\mathfrak{J}}(B/\\mathfrak{K}',L)$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): '(avec 𝔎.L=L.𝔎=0, 𝔍.B⊂𝔎', B.𝔍⊂𝔎')'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(avec\n$\\mathfrak{R}.L=L.\\mathfrak{R}=0$,\n$\\mathfrak{J}.B\\subset\\mathfrak{R}'$,\n$B.\\mathfrak{J}\\subset\\mathfrak{R}'$)",
+   "new": "(avec\n$\\mathfrak{K}.L=L.\\mathfrak{K}=0$,\n$\\mathfrak{J}.B\\subset\\mathfrak{K}'$,\n$B.\\mathfrak{J}\\subset\\mathfrak{K}'$)"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): 'Dér_{A/𝔍}(B/𝔎, L)→Dér_{A/𝔍'}(B/𝔎, L)'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(B/\\mathfrak{R},L)\\to\n\\operatorname{D\\acute{e}r}_{A/\\mathfrak{J}'}(B/\\mathfrak{R},L)$",
+   "new": "(B/\\mathfrak{K},L)\\to\n\\operatorname{D\\acute{e}r}_{A/\\mathfrak{J}'}(B/\\mathfrak{K},L)$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): 'un idéal bilatère ouvert 𝔎_0 de B'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak{R}_0$ de $B$",
+   "new": "$\\mathfrak{K}_0$ de $B$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): '𝔍_0B⊂𝔎_0 et B𝔍_0⊂𝔎_0'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak{J}_0B\\subset\\mathfrak{R}_0$ et\n$B\\mathfrak{J}_0\\subset\\mathfrak{R}_0$",
+   "new": "$\\mathfrak{J}_0B\\subset\\mathfrak{K}_0$ et\n$B\\mathfrak{J}_0\\subset\\mathfrak{K}_0$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5), last line: 'de B/𝔎_0 dans L'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$B/\\mathfrak{R}_0$ dans",
+   "new": "$B/\\mathfrak{K}_0$ dans"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.3): '... .𝔎=0 (20.1.1.1) donc D est continue.'",
+  "scan": "no comma after (20.1.1.1)",
+  "tex": "\\sref{0.20.1.1.1-fr}, donc",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{0.20.1.1.1-fr}, donc",
+   "new": "\\sref{0.20.1.1.1-fr} donc"
+  },
+  "note": "2.5x crop."
+ },
+ {
+  "page": 122,
+  "where": "proof of (20.3.5): 'est surjectif pour 𝔎⊃𝔎' il résulte aussitôt'",
+  "scan": "no comma after 𝔎⊃𝔎'",
+  "tex": "$\\mathfrak{R}\\supset\\mathfrak{R}'$, il résulte",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": ", il résulte aussitôt",
+   "new": " il résulte aussitôt"
+  },
+  "note": "2.5x crop."
+ },
+ {
+  "page": 122,
+  "where": "Proposition (20.3.5): 'des couples (𝔍, 𝔎) d'idéaux bilatères tels que'",
+  "scan": "d'idéaux bilatères (without 'ouverts')",
+  "tex": "d'idéaux bilatères",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "low",
+  "fix": null,
+  "corrected": "d'idéaux bilatères ouverts",
+  "note": "The TeX keeps the printed reading. The pairs must consist of open ideals: the proof begins 'Comme A/𝔍 et B/𝔎 sont discrets', and with all ideals the pair (0, 0) would make the limit Dér_A(B, L). Authors' omission, not in the authors' errata (Err_IV); for the corrected edition only, if accepted."
+ },
+ {
+  "page": 123,
+  "where": "(20.3.6.1), second line: the arrow before Exantop_B(C, L)",
+  "scan": "→ with ∂ above it (label repeated at the start of the continuation line)",
+  "tex": "&\\to\\operatorname{Exantop}_B(C,L) (no label)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "&\\to\\operatorname{Exantop}_B(C,L)",
+   "new": "&\\xrightarrow{\\partial}\\operatorname{Exantop}_B(C,L)"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "(20.3.7.1), second line: the arrow before Exalcotop_B(C, L)",
+  "scan": "→ with ∂ above it (label repeated at the start of the continuation line)",
+  "tex": "&\\to\\operatorname{Exalcotop}_B(C,L) (no label)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "&\\to\\operatorname{Exalcotop}_B(C,L)",
+   "new": "&\\xrightarrow{\\partial}\\operatorname{Exalcotop}_B(C,L)"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "Corollaire (20.3.8), line 1: '(resp. (20.3.6)) on a une suite'",
+  "scan": "'(resp.' upright in the italic statement",
+  "tex": "(resp. inside the italic corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp.\n\\sref",
+   "new": "\\textup{(resp.}\n\\sref"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "Corollaire (20.3.8), line 1: 'Sous les hypothèses de (20.3.5) (resp. (20.3.6))'",
+  "scan": "(20.3.5) (resp. (20.3.6))",
+  "tex": "\\sref{0.20.3.5-fr} \\textup{(resp.}\n\\sref{0.20.3.6-fr})",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "\\sref{0.20.3.6-fr} \\textup{(resp.}\n\\sref{0.20.3.7-fr})",
+  "note": "The TeX keeps the printed reading. Wrong references, off by one: (20.3.5) concerns lim Dér_{A/𝔍}(B/𝔎, L) and has no C, u, v; the sequences (20.3.8.1) (Exantop) and (20.3.8.2) (Exalcotop) need the hypotheses of (20.3.6) (resp. (20.3.7)), exactly as (20.2.4) cites (20.2.2) (resp. (20.2.3)). Not in the authors' errata. 'tex' is the text after the convention-6 fix just above; apply that first."
+ },
+ {
+  "page": 123,
+  "where": "Corollaire (20.3.8): '(resp.' on its own line before (20.3.8.2)",
+  "scan": "'(resp.' upright",
+  "tex": "(resp. inside the italic corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp.\n\\begin{equation}",
+   "new": "\\textup{(resp.}\n\\begin{equation}"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "heading of 20.4",
+  "scan": "20.4. Parties principales et différentielles.",
+  "tex": "\\subsection{Parties principales et différentielles}",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Parties principales et différentielles}",
+   "new": "\\subsection{Parties principales et différentielles.}"
+  },
+  "note": "Printed final full stop (GLOBAL_ISSUES 43/58)."
+ },
+ {
+  "page": 123,
+  "where": "opening sentence of 20.4: 'Dans toute la suite de ce paragraphe ... tous les anneaux sont supposés commutatifs.'",
+  "scan": "the whole sentence italic (including 'commutatifs')",
+  "tex": "roman sentence with \\emph{commutatifs}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Dans toute la suite de ce paragraphe et dans les trois suivants, tous les\nanneaux sont supposés \\emph{commutatifs}.",
+   "new": "\\textit{Dans toute la suite de ce paragraphe et dans les trois suivants, tous les\nanneaux sont supposés commutatifs.}"
+  },
+  "note": "1.2x crop."
+ },
+ {
+  "page": 124,
+  "where": "Définition (20.4.2): 'B-algèbre augmentée des parties principales d'ordre 1 de B par rapport à A'",
+  "scan": "italic like the rest of the statement (no change of face)",
+  "tex": "\\emph{...} inside the italic definition environment (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{$B$-algèbre augmentée des parties principales d'ordre $1$ de\n$B$ par rapport à $A$}",
+   "new": "$B$-algèbre augmentée des parties principales d'ordre $1$ de\n$B$ par rapport à $A$"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "after Définition (20.4.2): 'Comme p(b⊗1)=b par définition, il est clair que ε est bien une augmentation de B-algèbre.'",
+  "scan": "new indented paragraph in roman (outside the statement)",
+  "tex": "inside \\begin{definition}...\\end{definition}, so it is set italic",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "par passage au quotient.\n\nComme $p(b\\otimes1)=b$ par définition, il est clair que $\\varepsilon$ est\nbien une augmentation de $B$-algèbre.\n\\end{definition}",
+   "new": "par passage au quotient.\n\\end{definition}\n\nComme $p(b\\otimes1)=b$ par définition, il est clair que $\\varepsilon$ est\nbien une augmentation de $B$-algèbre."
+  },
+  "note": "The definition environment runs on over the roman sentence (GLOBAL_ISSUES 58). Apply before the misprint fix that follows (its 'old' lies inside this one)."
+ },
+ {
+  "page": 124,
+  "where": "same sentence: 'de B-algèbre.'",
+  "scan": "B-*algèbre.* with 'algèbre' italic in the roman sentence (wrong fount)",
+  "tex": "$B$-algèbre. (no change of face; silently corrected once the sentence is roman)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "une augmentation de $B$-algèbre.",
+   "new": "une augmentation de $B$-\\emph{algèbre}."
+  },
+  "corrected": "une augmentation de $B$-algèbre.",
+  "note": "2x crop: 'de B-' roman, 'algèbre.' italic. Wrong-fount word (GLOBAL_ISSUES 29), reproduced in the diplomatic text. Apply after the previous finding."
+ },
+ {
+  "page": 124,
+  "where": "Définition (20.4.3): 'le B-module des 1-différentielles (ou simplement des différentielles) de B'",
+  "scan": "'1-différentielles' and 'différentielles' italic like the statement; '(ou simplement des' upright",
+  "tex": "\\emph{$1$-différentielles} and \\emph{différentielles} come out upright; '(ou simplement des' italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{$1$-différentielles} (ou simplement des \\emph{différentielles}) de $B$",
+   "new": "$1$-différentielles \\textup{(ou simplement des} différentielles) de $B$"
+  },
+  "note": "Both halves of convention 6 in one edit (1.1x crop)."
+ },
+ {
+  "page": 124,
+  "where": "Lemme (20.4.4): '1⊗s—s⊗1'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "1\\otimes s-s\\otimes1",
+   "new": "1\\otimes s\\setmin s\\otimes1"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "proof of (20.4.4), line 1: 'x⊗1—1⊗x∈𝔍'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "x\\otimes1-1\\otimes x\\in",
+   "new": "x\\otimes1\\setmin 1\\otimes x\\in"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "proof of (20.4.4), line 2: '(1⊗y—y⊗1)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(1\\otimes y-y\\otimes1)",
+   "new": "(1\\otimes y\\setmin y\\otimes1)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "(20.4.4.1): '(1⊗y_i—y_i⊗1)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(1\\otimes y_i-y_i\\otimes1)",
+   "new": "(1\\otimes y_i\\setmin y_i\\otimes1)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "proof of (20.4.4): 'engendré par les éléments 1⊗x—x⊗1'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "1\\otimes x-x\\otimes1",
+   "new": "1\\otimes x\\setmin x\\otimes1"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "(20.4.4.2): 'x⊗1—1⊗x=' (left-hand side)",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "x\\otimes1-1\\otimes x=",
+   "new": "x\\otimes1\\setmin 1\\otimes x="
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "(20.4.4.2): '(t⊗1—1⊗t)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(t\\otimes1-1\\otimes t)",
+   "new": "(t\\otimes1\\setmin 1\\otimes t)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "(20.4.4.2): '(s⊗1—1⊗s)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(s\\otimes1-1\\otimes s)",
+   "new": "(s\\otimes1\\setmin 1\\otimes s)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 124,
+  "where": "end of the page-124 text, mid-sentence ('la topologie induite sur 𝔍=𝔍_{B/A} / par celle de B⊗_A B'); affects the first line of p. 125",
+  "scan": "p. 125 begins 'par celle de B⊗_A B est moins fine ...' at the left margin: the sentence continues",
+  "tex": "blank line between '$\\mathfrak{J}=\\mathfrak{J}_{B/A}$' and the page-125 marker (paragraph break)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak{J}=\\mathfrak{J}_{B/A}$\n\n",
+   "new": "$\\mathfrak{J}=\\mathfrak{J}_{B/A}$\n"
+  },
+  "note": "Removes the blank line before \\oldpage[0\\textsubscript{IV-1}]{125} (GLOBAL_ISSUES 20); the edit lies in the page-124 segment."
+ },
+ {
+  "page": 125,
+  "where": "display before 'dans le B-module': '(xy)⊗z—x⊗(yz)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "z-x\\otimes(yz)",
+   "new": "z\\setmin x\\otimes(yz)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "same display: '(1⊗z)(y⊗1—1⊗y)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(y\\otimes1-1\\otimes y)\\\\",
+   "new": "(y\\otimes1\\setmin 1\\otimes y)\\\\"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "same display: 'xz.(y⊗1—1⊗y)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "xz.(y\\otimes1-1\\otimes y)",
+   "new": "xz.(y\\otimes1\\setmin 1\\otimes y)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "same display: '—x.(z⊗1 ...'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "-x.(",
+   "new": "\\setmin x.("
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "same display: '(z⊗1—1⊗z)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(z\\otimes1-1\\otimes z)",
+   "new": "(z\\otimes1\\setmin 1\\otimes z)"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "same display, last factor: '(y⊗1—1⊗y)'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "(y\\otimes1-1\\otimes y)\n\\end{aligned}",
+   "new": "(y\\otimes1\\setmin 1\\otimes y)\n\\end{aligned}"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "(20.4.6.1): 'd_{B/A}=p_1—p_2'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "p_1-p_2",
+   "new": "p_1\\setmin p_2"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.7): 'x⊗1—1⊗x dans Ω^1_{B/A}'",
+  "scan": "long dash for the minus sign",
+  "tex": "-",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "x\\otimes1-1\\otimes x$ dans",
+   "new": "x\\otimes1\\setmin 1\\otimes x$ dans"
+  },
+  "note": "Long dash used for a subtraction (GLOBAL_ISSUES 23); \\setmin as in the earlier fixes, pending the convention-7 decision."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.5): 'que, si 𝔎 est un idéal de B'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si $\\mathfrak{R}$ est un idéal de",
+   "new": "si $\\mathfrak{K}$ est un idéal de"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.5), display: '((𝔎²⊗B)+(B⊗𝔎²))∩𝔍⊂(𝔎⊗𝔎)∩𝔍+𝔎𝔍+𝔍²'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "((\\mathfrak{R}^2\\otimes B)+(B\\otimes\\mathfrak{R}^2))\\cap\\mathfrak{J}\n  \\subset(\\mathfrak{R}\\otimes\\mathfrak{R})\\cap\\mathfrak{J}\n  +\\mathfrak{R}\\mathfrak{J}+\\mathfrak{J}^2",
+   "new": "((\\mathfrak{K}^2\\otimes B)+(B\\otimes\\mathfrak{K}^2))\\cap\\mathfrak{J}\n  \\subset(\\mathfrak{K}\\otimes\\mathfrak{K})\\cap\\mathfrak{J}\n  +\\mathfrak{K}\\mathfrak{J}+\\mathfrak{J}^2"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.5): 'des éléments de 𝔎 tels que'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "éléments de $\\mathfrak{R}$ tels",
+   "new": "éléments de $\\mathfrak{K}$ tels"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.5): 'Σ(x_i⊗y_i)∈𝔎𝔍'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\in\\mathfrak{R}\\mathfrak{J}$, si bien",
+   "new": "\\in\\mathfrak{K}\\mathfrak{J}$, si bien"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "(20.4.5.1)",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mathfrak{R}^2\\otimes B+B\\otimes\\mathfrak{R}^2)\\cap\\mathfrak{J}\n  \\subset\\mathfrak{R}\\mathfrak{J}+\\mathfrak{J}^2.",
+   "new": "(\\mathfrak{K}^2\\otimes B+B\\otimes\\mathfrak{K}^2)\\cap\\mathfrak{J}\n  \\subset\\mathfrak{K}\\mathfrak{J}+\\mathfrak{J}^2."
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.5): 'les ensembles (𝔎⊗B+B⊗𝔎)∩𝔍'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(\\mathfrak{R}\\otimes B+B\\otimes\\mathfrak{R})\\cap\\mathfrak{J}$",
+   "new": "$(\\mathfrak{K}\\otimes B+B\\otimes\\mathfrak{K})\\cap\\mathfrak{J}$"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.5): 'où 𝔎 parcourt'",
+  "scan": "𝔎 (Fraktur K)",
+  "tex": "\\mathfrak{R}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathfrak{R}$ parcourt",
+   "new": "$\\mathfrak{K}$ parcourt"
+  },
+  "note": "Fraktur K: the print has 𝔎 (same glyph as the 𝔎 of pp. 52-54, GLOBAL_ISSUES 63; the ideals come as the pair (𝔍, 𝔎)). All 45 \\mathfrak{R} on pp. 122 and 125 are 𝔎 in the print (31 on p. 122, 14 on p. 125); none is a genuine Fraktur R, and pp. 121, 123, 124 have none. Apply all of them together."
+ },
+ {
+  "page": 125,
+  "where": "Définition (20.4.6): 'ε∘p_1=ε∘p_2=1_B'",
+  "scan": "1_B: the old-style figure one (as in x⊗1)",
+  "tex": "\\mathrm{I}_B (capital I)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\mathrm{I}_B$",
+   "new": "=1_B$"
+  },
+  "note": "Identity map 1_B; the glyph is the print's old-style 1, smaller than the capitals (2.5x crop). ega0-20-fr.tex writes \\mathrm{I}_X for the identity 12 times."
+ },
+ {
+  "page": 125,
+  "where": "(20.4.6.1): 'd_{B/A}=p_1—p_2'",
+  "scan": "d_{B/A}=p_1—p_2",
+  "tex": "d_{B/A}=p_1\\setmin p_2",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "d_{B/A}=p_2\\setmin p_1",
+  "note": "Authors' errata Err_IV 12 (IV part 4, p. 347). The errata line reads 'remplacer p_2—p_1 par p_1—p_2', the reverse of the print, which has p_1—p_2; its second half (p. 125: 1⊗x—x⊗1) and Err_IV 13 (p. 126: p_1=p_2—d_{B/A}) both give d_{B/A}=p_2—p_1, so that is the corrected reading. 'tex' is the text after the convention-7 fix of this formula; apply that first."
+ },
+ {
+  "page": 125,
+  "where": "Définition (20.4.6): 'la différentielle extérieure de B relative à A'",
+  "scan": "italic like the statement (no change of face)",
+  "tex": "\\emph{...} inside the italic definition (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{différentielle extérieure de $B$ relative à $A$}",
+   "new": "différentielle extérieure de $B$ relative à $A$"
+  },
+  "note": ""
+ },
+ {
+  "page": 125,
+  "where": "Définition (20.4.6): 'la différentielle de x (relativement à A)'",
+  "scan": "italic like the statement (no change of face)",
+  "tex": "\\emph{différentielle de $x$} (comes out upright)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{différentielle de $x$}",
+   "new": "différentielle de $x$"
+  },
+  "note": ""
+ },
+ {
+  "page": 125,
+  "where": "proof of (20.4.7): 'l'image canonique de x⊗1—1⊗x' (line 10 from the bottom)",
+  "scan": "x⊗1—1⊗x",
+  "tex": "$x\\otimes1\\setmin 1\\otimes x$ dans",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "$1\\otimes x\\setmin x\\otimes1$ dans",
+  "note": "Authors' errata Err_IV 12 (IV part 4, p. 347): 'ligne 10 du bas de la p. 125, remplacer x⊗1—1⊗x par 1⊗x—x⊗1'. 'tex' is the text after the convention-7 fix of this formula; apply that first."
+ },
+ {
+  "page": 125,
+  "where": "Théorème (20.4.8) (ii): 'l'application u⇝u∘d_{B/A}'",
+  "scan": "wavy arrow ⇝",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "u\\mapsto u\\circ d_{B/A}",
+   "new": "u\\leadsto u\\circ d_{B/A}"
+  },
+  "note": "Wavy arrow (GLOBAL_ISSUES 33)."
+ }
+]

@@ -1,0 +1,37 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{271}
+
+Pour tout cycle $Z\in\mathfrak{Z}(X)$, égal à $(n_x)_{x\in X}$, on écrira par abus de langage,
+\[
+  Z=\sum_{x\in X}n_x\cdot\overline{\{x\}}.
+\]
+On appelle \emph{multiplicité de $Z$ au point $x$} et on note $\operatorname{mult}_x(Z)$ l'entier $n_x$ (positif ou négatif).
+Dire que $Z\geq0$ signifie que $\operatorname{mult}_x(Z)\geq0$ pour tout $x\in X$.
+On appelle \emph{support de $Z$} et on note $\Supp(Z)$ la réunion des $\overline{\{x\}}$ tels que $\operatorname{mult}_x(Z)\neq0$;
+par définition de $\mathfrak{Z}(X)$, c'est une partie fermée de $X$, comme réunion d'une famille localement finie de parties fermées.
+On appelle \emph{dimension} (resp.\ \emph{codimension}) de $Z$ et on note $\dim(Z)$ (resp.\ $\codim(Z)$) la dimension (resp.\ codimension dans $X$) de $\Supp(Z)$.
+\end{env}
+
+\begin{env}[21.6.2]
+\EGAReaderTarget{ega4.c04.statement.21-6-2}{IV.21.6.2}
+On dit qu'une partie fermée $Y$ de $X$ est \emph{purement de codimension $p$} (dans $X$) si \emph{chacune} de ses composantes irréductibles est de codimension $p$ dans $X$.
+On dit qu'un cycle est \emph{purement de codimension $p$}, ou (par abus de langage) est un \emph{cycle $p$-codimensionnel}, si son support est purement de codimension $p$.
+On note $X^{(p)}$ l'ensemble des $x\in X$ tels que $\codim(\overline{\{x\}},X)=p$, ou, ce qui revient au même \sref{IV.5.1.2}, $\dim(\sh{O}_{X,x})=p$:
+les cycles purement de codimension $p$ forment un sous-groupe $\mathfrak{Z}^p(X)$ de $\mathfrak{Z}(X)$, isomorphe au sous-groupe de $\bb{Z}^{X^{(p)}}$ formé des $(n_x)_{x\in X^{(p)}}$ tels que l'ensemble des $\overline{\{x\}}$ (ou l'ensemble des $x$) pour lesquels $n_x\neq0$ soit localement fini;
+ce sous-groupe contient le groupe libre $\bb{Z}^{(X^{(p)})}$ et lui est identique lorsque $X$ est noethérien.
+On note $\mathfrak{Z}^{p+}(X)$ l'ensemble des éléments $\geq0$ de $\mathfrak{Z}^p(X)$.
+Il est clair que le groupe ordonné $\mathfrak{Z}(X)$ contient la somme directe des sous-groupes ordonnés $\mathfrak{Z}^p(X)$, et est identique à cette somme directe lorsque $X$ est noethérien;
+dans ce dernier cas, on considère $\mathfrak{Z}(X)$ comme \emph{gradué} par les $\mathfrak{Z}^p(X)$ pour $p\in\bb{N}$.
+\end{env}
+
+\begin{env}[21.6.3]
+\EGAReaderTarget{ega4.c04.statement.21-6-3}{IV.21.6.3}
+Soient $Z=\sum_{x\in X}n_x\cdot\overline{\{x\}}$ un cycle sur $X$, $U$ un ouvert de $X$;
+on appelle \emph{restriction} de $Z$ à $U$ et on note $Z|U$ le cycle $\sum_{x\in U}n_x\cdot(U\cap\overline{\{x\}})$ sur $U$;
+on a $\Supp(Z|U)=\Supp(Z)\cap U$.
+Il est clair que $Z\mapsto Z|U$ est un homomorphisme de groupes ordonnés de $\mathfrak{Z}(X)$ dans $\mathfrak{Z}(U)$ (resp.\ de $\mathfrak{Z}^p(X)$ dans $\mathfrak{Z}^p(U)$), et que si $V$ est un ouvert contenu dans $U$, on a $Z|V=(Z|U)|V$;
+l'application $U\mapsto\mathfrak{Z}(U)$ (resp.\ $U\mapsto\mathfrak{Z}^p(U)$) est donc un \emph{préfaisceau} sur $X$ de groupes ordonnés commutatifs.
+En fait ce préfaisceau est un \emph{faisceau}, somme directe des faisceaux $(i_x)_*(\bb{Z}_{\overline{\{x\}}})$, où $x$ parcourt $X$ (resp.\ $X^{(p)}$) et pour chaque $x\in X$, $i_x$ est l'injection canonique $\overline{\{x\}}\to X$ et $\bb{Z}_{\overline{\{x\}}}$ est le faisceau simple associé au faisceau constant $\bb{Z}$ sur l'espace $\overline{\{x\}}$:
+cela résulte aussitôt de la description des sections d'une somme directe de faisceaux de groupes commutatifs (G, II, 2.7).
+On note ce faisceau $\mathscr{Z}_X$ (resp.\ $\mathscr{Z}_X^p$).
+On note $\mathscr{Z}_X^+$ (resp.\ $\mathscr{Z}_X^{p+}$) le sous-faisceau

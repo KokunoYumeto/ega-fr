@@ -1,0 +1,82 @@
+% from ega0-14-fr.tex
+\oldpage[0\textsubscript{IV-1}]{8}
+car il en résulte que $\dim(U)=0$ pour un voisinage ouvert $U$ de $x$, et
+comme $U$ est un espace de Kolmogoroff noethérien, $U$ est fini et discret.
+\end{proof}
+
+\begin{proposition}[14.1.11]
+\label{0.14.1.11-fr}
+La fonction $x\mapsto\dim_x(X)$ est semi-continue supérieurement dans $X$.
+\end{proposition}
+
+\begin{proof}
+Il est clair que cette fonction est semi-continue supérieurement en tout
+point où elle vaut $+\infty$. Supposons donc $\dim_x(X)=n<+\infty$~; alors,
+la formule (14.1.4.1) montre qu'il existe un voisinage ouvert $U_0$ de $x$ tel
+que $\dim(U)=n$ pour tout voisinage ouvert $U\subset U_0$ de $x$. Cela étant,
+pour tout $y\in U_0$ et tout voisinage ouvert $V\subset U_0$ de $y$, on a
+$\dim(V)\leq\dim(U_0)=n$ (14.1.4)~; on déduit donc de (14.1.4.1) que
+$\dim_y(X)\leq n$.
+\end{proof}
+
+\begin{remark}[14.1.12]
+\label{0.14.1.12-fr}
+Si $X$, $Y$ sont deux espaces topologiques, et $f:X\to Y$ une application
+continue, on peut avoir $\dim(f(X))>\dim(X)$~; on en a un exemple en prenant
+pour $X$ un espace discret à 2 éléments $a$, $b$, pour $Y$ l'ensemble
+$\{a,b\}$ muni de la topologie pour laquelle les ensembles fermés sont
+$\varnothing$, $\{a\}$ et $\{a,b\}$~; si $f:X\to Y$ est l'application
+identique, on a $\dim(Y)=1$ et $\dim(X)=0$. On notera que $Y$ est le spectre
+d'un anneau de valuation discrète $A$, dont $a$ est l'unique point fermé et
+$b$ le point générique~; si $K$ et $k$ sont le corps des fractions et le
+corps résiduel de $A$, $X$ est le spectre de l'anneau $k\times K$ et $f$
+l'application continue correspondant à l'homomorphisme
+$(\varphi,\psi):A\to k\times K$, où $\varphi:A\to k$ et $\psi:A\to K$ sont
+les homomorphismes canoniques (cf. IV, 5.4.3).
+\end{remark}
+
+\subsection{Codimension d'une partie fermée}
+\label{subsection:0.14.2-fr}
+
+\begin{definition}[14.2.1]
+\label{0.14.2.1-fr}
+Étant donnée une partie fermée irréductible $Y$ d'un espace topologique $X$,
+on appelle \emph{codimension combinatoire} (ou simplement \emph{codimension})
+de $Y$ dans $X$, et on note $\operatorname{codim}(Y,X)$ la borne supérieure
+des longueurs des chaînes de parties fermées irréductibles de $X$, dont $Y$
+est le plus petit élément. Si $Y$ est une partie fermée quelconque de $X$, on
+appelle \emph{codimension de $Y$ dans $X$}, et on note encore
+$\operatorname{codim}(Y,X)$ la borne inférieure des codimensions dans $X$ des
+composantes irréductibles de $Y$. On dit que $X$ est
+\emph{équicodimensionnel} si toutes les parties fermées irréductibles minimales
+de $X$ ont même codimension dans $X$.
+\end{definition}
+
+Il résulte de cette définition que
+$\operatorname{codim}(\varnothing,X)=+\infty$, la borne inférieure de la
+partie vide de $\overline{\mathbb R}$ étant $+\infty$. Si $Y$ est fermé dans
+$X$ et si $(X_\alpha)$ (resp. $(Y_\beta)$) est la famille des composantes
+irréductibles de $X$ (resp. $Y$), tout $Y_\beta$ est contenu dans un
+$X_\alpha$, et plus généralement toute chaîne de parties fermées
+irréductibles de $X$ dont $Y_\beta$ est le plus petit élément est formée de
+parties d'un $X_\alpha$~; on a donc
+\[
+  \operatorname{codim}(Y,X)=
+  \inf_\beta\left(\sup_\alpha
+  \bigl(\operatorname{codim}(Y_\beta,X_\alpha)\bigr)\right)
+  \tag{14.2.1.1}\label{0.14.2.1.1-fr}
+\]
+où pour chaque $\beta$, $\alpha$ parcourt l'ensemble des indices tels que
+$Y_\beta\subset X_\alpha$.
+
+\begin{proposition}[14.2.2]
+\label{0.14.2.2-fr}
+Soit $X$ un espace topologique.
+\begin{enumerate}
+  \item[\rm(i)] Si $\Phi$ est l'ensemble des parties fermées irréductibles de
+  $X$, on a
+  \[
+    \dim(X)=\sup_{Y\in\Phi}\bigl(\operatorname{codim}(Y,X)\bigr).
+    \tag{14.2.2.1}\label{0.14.2.2.1-fr}
+  \]
+  

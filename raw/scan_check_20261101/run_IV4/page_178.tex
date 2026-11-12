@@ -1,0 +1,41 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{178}
+
+d'ailleurs, en vertu de (18.11.5.1) et de l'hypothèse $\dim(A/\mathfrak q)=n$, on conclut que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ est un $A_{\mathfrak p}$-module libre de rang $n$. C.Q.F.D.
+
+\begin{theorem}[18.11.10]
+\label{IV.18.11.10}
+Soient $k$ un corps d'exposant caractéristique $p$, $A$ une $k$-algèbre locale noethérienne complète, dont le corps résiduel est une extension finie de $k$, $\mathfrak p$ un idéal premier de $A$ distinct de l'idéal maximal. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[$a)$] Pour toute extension $k'$ de $k$, et tout idéal premier $\mathfrak p'$ de $A'=A\widehat{\otimes}_k k'$ au-dessus de $\mathfrak p$, $A'_{\mathfrak p'}$ est un anneau régulier.
+  \item[$a')$] Il existe une extension parfaite $k'$ de $k$ et un idéal premier $\mathfrak p'$ de $A'=A\widehat{\otimes}_k k'$ au-dessus de $\mathfrak p$, tels que $A'_{\mathfrak p'}$ soit régulier.
+  \item[$b)$] Soit $n$ la plus grande des dimensions des composantes irréductibles de $\Spec(A)$ auxquelles appartient $\mathfrak p$; alors $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ est un $A_{\mathfrak p}$-module libre de rang $n$.
+\end{enumerate}
+Supposons en outre que $n=\dim(A)$ (ce qui sera le cas si $A$ est équidimensionnel); alors les conditions précédentes sont aussi équivalentes à:
+\begin{enumerate}
+  \item[$c)$] Il existe un $k$-homomorphisme local $u:B\to A$, où $B=k[[T_1,\ldots,T_n]]$, faisant de $A$ une $B$-algèbre finie, et tel que le morphisme correspondant $\Spec(A)\to\Spec(B)$ soit étale au point $\mathfrak p$.
+\end{enumerate}
+Chacune des conditions $a)$, $a')$, $b)$ entraîne la suivante:
+\begin{enumerate}
+  \item[$d)$] L'anneau $A_{\mathfrak p}$ est géométriquement régulier sur $k$.
+\end{enumerate}
+Si de plus $[k:k^p]<+\infty$, la condition $d)$ est équivalente à $a)$, $a')$ et $b)$.
+\end{theorem}
+
+Le fait que $d)$ entraîne $b)$ lorsque $[k:k^p]<+\infty$ n'est autre que (18.11.3). Il est clair que $a)$ entraîne trivialement $a')$; montrons que $c)$ entraîne $a)$ lorsque $\dim(A)=n$. Avec les notations de $a)$, on a alors
+\[
+  A'=A\otimes_B B',\qquad B'=B\widehat{\otimes}_k k'=k'[[T_1,\ldots,T_n]]
+\]
+(7.5.7.1). Le morphisme $\Spec(A')\to\Spec(B')$ est alors fini et étale au point $\mathfrak p'$, et le raisonnement qui prouve (18.11.9, (iii)) montre que $A'_{\mathfrak p'}$ est régulier.
+
+Le fait que $b)$ entraîne $c)$ lorsque $\dim(A)=n$ résulte de (18.11.9). Montrons que $a')$ entraîne $b)$ lorsque $\dim(A)=n$. On sait que $A'$ est un $A$-module plat (18.11.4) et $\dim(A')=\dim(A)=n$; il résulte de (2.3.4) et de (6.1.1) qu'il existe un idéal premier minimal $\mathfrak q'$ de $A'$ contenu dans $\mathfrak p'$, au-dessus de $\mathfrak q$ et tel que $\dim(A'/\mathfrak q')=\dim(A/\mathfrak q)=n$. Par ailleurs, il résulte de (18.11.4) que
+\[
+  (\hat{\Omega}^1_{A'/k'})_{\mathfrak p'}=(\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}A'_{\mathfrak p'};
+\]
+comme $k'$ est parfait, l'hypothèse que $A'_{\mathfrak p'}$ est régulier entraîne qu'il est géométriquement régulier sur $k'$ (6.7.7). Puisque $k'^p=k'$, on peut appliquer à $A'$ et $\mathfrak p'$ le fait que $d)$ entraîne $b)$, donc $(\hat{\Omega}^1_{A'/k'})_{\mathfrak p'}$ est un $A'_{\mathfrak p'}$-module libre de rang $n$; par fidèle platitude (18.11.4 et 2.5.2), on en conclut que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ est un $A_{\mathfrak p}$-module libre de rang $n$.
+
+Ceci montre l'équivalence de $a)$, $a')$, $b)$ et $c)$ lorsque $\dim(A)=n$. Il reste à prouver que $a)$, $a')$ et $b)$ sont encore équivalentes dans le cas général. Soit $\mathfrak J$ l'idéal de $A$, noyau de l'homomorphisme canonique $A\to A_{\mathfrak p}$, et posons $A_1=A/\mathfrak J$; on a nécessairement $\mathfrak J\subset\mathfrak p$, et si l'on pose $\mathfrak p_1=\mathfrak p/\mathfrak J$, l'homomorphisme canonique $A_{\mathfrak p}\to(A_1)_{\mathfrak p_1}$ est bijectif; on en conclut (I, 6.5.4) que l'injection canonique $\Spec(A_1)\to\Spec(A)$ est un isomorphisme local au point $\mathfrak p_1$, et l'on a $\mathfrak J_{\mathfrak p}=0$. On voit comme dans (18.11.3) que l'on a une suite exacte
+\[
+  \mathfrak J/\mathfrak J^2\longrightarrow\hat{\Omega}^1_{A/k}\otimes_A A_1\longrightarrow\hat{\Omega}^1_{A_1/k}\longrightarrow0.
+\]
+

@@ -1,0 +1,73 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{320}
+à $V-(V\cap\overline{\{y\}})$ est inversible; donc, avec les notations introduites
+ci-dessus, le $\mathcal O_{U_y}$-Module $\mathscr L_0$ induit par $j_*(\mathscr L)$
+sur $U_y$ est inversible. Puisque $\mathcal O_{X,y}$ est parafactoriel,
+$\mathscr L_0$ est induit par un $\mathcal O_{T_y}$-Module inversible $\mathscr L'$;
+mais comme $T_y$ est limite projective des voisinages ouverts $W$ de $y$ dans $X$,
+on peut de nouveau appliquer (8.5.2, (ii)) et (8.5.5), prouvant l'existence d'un tel
+voisinage $W$ et d'un $\mathcal O_W$-Module inversible $\mathscr L''$ induisant
+$\mathscr L'$ sur $T_y$, donc induisant $\mathscr L_0$ sur $U_y$; appliquant cette
+fois (8.5.2.5) et (8.5.2, (i)), on en déduit qu'en remplaçant au besoin $W$ par un
+voisinage ouvert plus petit de $y$, on peut supposer que les restrictions de
+$j_*(\mathscr L)$ et de $\mathscr L''$ à
+$W-(W\cap\overline{\{y\}})$ soient égales. Si l'on pose alors $V_1=V\cup W$ et si
+l'on désigne par $\mathscr L_1$ le $\mathcal O_{V_1}$-Module inversible égal à
+$\mathscr L''$ dans $W$, à $j_*(\mathscr L)|V$ dans $V$, on a $U\subset V_1$ et
+$\mathscr L_1|U=\mathscr L$. On conclut alors du fait que l'homomorphisme
+$\mathcal O_X\to j_*(\mathcal O_U)$ est bijectif et de (21.13.2, $b$)) que
+$j_*(\mathscr L)|V_1$ est isomorphe à $\mathscr L_1$, donc inversible. Mais cela
+contredit la définition de $V$, et conclut donc la démonstration de (21.13.10).
+\end{proof}
+
+\begin{corollary}[21.13.11]
+\label{IV.21.13.11}
+Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$,
+$U=X-Y$. Supposons que le couple $(X,Y)$ soit parafactoriel et que $U$ soit
+localement factoriel; en d'autres termes (21.13.10), pour tout $x\in X$, l'anneau
+$\mathcal O_{X,x}$ est : $1^{\mathrm o}$ parafactoriel si $x\in Y$;
+$2^{\mathrm o}$ factoriel si $x\notin Y$. Alors $X$ est localement factoriel
+(autrement dit, $\mathcal O_{X,x}$ est en fait factoriel pour tout $x\in X$).
+\end{corollary}
+
+\begin{proof}
+Supposons en effet le contraire, et soit $y$ un point de $Y$ tel que
+$\mathcal O_{X,y}$ ne soit pas factoriel et ait une dimension \emph{minima} parmi
+tous les points de $Y$ ayant cette propriété. Alors, si l'on pose
+$T_y=\operatorname{Spec}(\mathcal O_{X,y})$, $U_y=T_y-\{y\}$, l'hypothèse que
+$\mathcal O_{X,y}$ est parafactoriel entraîne $\operatorname{Pic}(U_y)=0$ et
+$\operatorname{prof}(\mathcal O_{X,y})\geq2$ (21.13.8); de plus le choix de $y$
+entraîne que $U_y$ est localement factoriel. Mais alors (21.6.14) prouve que
+$\mathcal O_{X,y}$ est factoriel, contrairement à l'hypothèse.
+\end{proof}
+
+\begin{proposition}[21.13.12]
+\label{IV.21.13.12}
+Soient $A$, $B$ deux anneaux locaux noethériens,
+$\rho:A\to B$ un homomorphisme local faisant de $B$ un $A$-module plat. Alors, si
+$B$ est factoriel, il en est de même de $A$.
+\end{proposition}
+
+\begin{proof}
+On sait déjà que $A$ est intègre et intégralement clos (6.5.4), donc on peut se borner
+au cas où $\dim(A)\geq2$, et raisonner par récurrence sur $n=\dim(A)$. Soient
+$X=\operatorname{Spec}(A)$, $a$ le point fermé de $X$,
+$X'=\operatorname{Spec}(B)$, $f:X'\to X$ le morphisme structural,
+$U=X-\{a\}$, $U'=f^{-1}(U)$.
+
+Les anneaux locaux $\mathcal O_{X',x'}$ aux points $x'\in f^{-1}(a)$ sont factoriels
+et de dimension $\geq2$ (6.1.2), donc parafactoriels (21.13.9, (ii)); on en conclut
+(21.13.10) que le couple $(X',f^{-1}(a))$ est parafactoriel. En vertu de (21.13.6,
+(iii)), cela montre que l'anneau $A$ est parafactoriel, donc
+$\operatorname{prof}(A)\geq2$ et $\operatorname{Pic}(U)=0$ (21.13.8). Enfin, les
+anneaux locaux de $U$ étant de dimension $<n$, l'hypothèse de récurrence prouve que
+$U$ est \emph{localement factoriel}; la conclusion résulte alors de (21.6.14).
+\end{proof}
+
+\begin{env}[21.13.12.1]
+\label{IV.21.13.12.1}
+On notera que l'énoncé (21.13.12) où on remplace « factoriel » par « parafactoriel »
+n'est plus exact, comme le montre l'exemple où $A=k$ est un corps et $B$ l'anneau
+local factoriel $k[[T_1,T_2]]$. Cependant, il résulte de (21.13.6, (iii)) que, sous
+les conditions de (21.13.12), si $\mathfrak m$ désigne l'idéal maximal de $A$ et si
+$\mathfrak mB$ est un \emph{idéal}

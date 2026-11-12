@@ -1,0 +1,100 @@
+\oldpage[0\textsubscript{III}]{66}
+tel que
+$y_\beta=g_{\beta\lambda}(y_\lambda)+u_\beta(x_\beta)$. On en déduit
+$y_\alpha=g_{\alpha\lambda}(y_\lambda)+u_\alpha(f_{\alpha\beta}(x_\beta))$~;
+mais comme $\lambda\geq\beta$, il existe $x_\lambda\in A_\lambda$ tel que
+$f_{\alpha\beta}(x_\beta)=f_{\alpha\lambda}(x_\lambda)$, et finalement
+$y_\alpha=g_{\alpha\lambda}(y_\lambda+u_\lambda(x_\lambda))\in g_{\alpha\lambda}(B_\lambda)$,
+ce qui achève la démonstration.
+\end{proof}
+
+\begin{proposition}[13.2.2]
+\label{0.13.2.2-fr}
+Soit $I$ un ensemble ordonné filtrant ayant une partie cofinale
+\textup{dénombrable.} Soit
+\[
+0\longrightarrow A_\alpha\xrightarrow{u_\alpha}B_\alpha
+\xrightarrow{v_\alpha}C_\alpha\longrightarrow0
+\]
+une suite exacte de systèmes projectifs de groupes abéliens ayant
+$I$ pour ensemble d'indices. Si $(A_\alpha)$ satisfait à la condition
+\textup{(ML)}, la suite
+\[
+0\longrightarrow\varprojlim A_\alpha
+\longrightarrow\varprojlim B_\alpha
+\longrightarrow\varprojlim C_\alpha\longrightarrow0
+\]
+est exacte.
+\end{proposition}
+
+\begin{proof}
+Tout revient à prouver que l'homomorphisme
+$v=\varprojlim v_\alpha:\varprojlim B_\alpha\to\varprojlim C_\alpha$
+est surjectif. Soit $z=(z_\alpha)$ un élément de
+$\varprojlim C_\alpha$, et posons
+$E_\alpha=v_\alpha^{-1}(z_\alpha)$~; il est clair que les $E_\alpha$
+forment un système projectif d'ensembles non vides pour les restrictions
+des homomorphismes $g_{\alpha\beta}:B_\beta\to B_\alpha$. Montrons que ce
+système projectif vérifie la condition (ML)~; identifiant $A_\alpha$ à une
+partie de $B_\alpha$ par $u_\alpha$, pour tout $\alpha\in I$, il existe
+$\beta\geq\alpha$ tel que
+$g_{\alpha\beta}(A_\beta)=g_{\alpha\lambda}(A_\lambda)$ pour
+$\lambda\geq\beta$~; montrons que l'on a aussi
+$g_{\alpha\beta}(E_\beta)=g_{\alpha\lambda}(E_\lambda)$ pour
+$\lambda\geq\beta$. En effet, prenons un $y_\lambda\in E_\lambda$ et
+posons $y_\beta=g_{\beta\lambda}(y_\lambda)$,
+$y_\alpha=g_{\alpha\lambda}(y_\lambda)$~; soit
+$y'_\alpha\in g_{\alpha\beta}(E_\beta)$, de sorte que
+$y'_\alpha=g_{\alpha\beta}(y'_\beta)$ pour un $y'_\beta\in E_\beta$~;
+on a $y'_\beta\setmin y_\beta=x_\beta\in A_\beta$, et par hypothèse il existe
+$x_\lambda\in A_\lambda$ tel que
+$g_{\alpha\beta}(x_\beta)=g_{\alpha\lambda}(x_\lambda)$~; donc
+\[
+y'_\alpha=g_{\alpha\beta}(y_\beta)+g_{\alpha\beta}(x_\beta)
+=g_{\alpha\lambda}(y_\lambda)+g_{\alpha\lambda}(x_\lambda)
+=g_{\alpha\lambda}(y_\lambda+x_\lambda)
+\in g_{\alpha\lambda}(E_\lambda),
+\]
+ce qui démontre notre assertion. Cela étant, on sait (Bourbaki,
+\emph{Top. gén.}, chap.~II, 3\textsuperscript{e} éd., §~3, th.~1) que sous
+les hypothèses faites sur $I$, un système projectif d'ensembles non vides
+vérifiant (ML) a une limite projective non vide~; par suite, il existe un
+point $y=(y_\alpha)\in\varprojlim E_\alpha$, et comme
+$v_\alpha(y_\alpha)=z_\alpha$ par définition pour tout $\alpha$, on a
+$z=v(y)$, C.Q.F.D.
+\end{proof}
+
+\begin{proposition}[13.2.3]
+\label{0.13.2.3-fr}
+Les hypothèses sur $I$ étant celles de
+\textup{(\hyperref[0.13.2.2-fr]{13.2.2})}, soit
+$(K_\alpha^\bullet)_{\alpha\in I}$ un système projectif de complexes de
+groupes abéliens
+$K_\alpha^\bullet=(K_\alpha^n)_{n\in\mathbb Z}$ dont l'opérateur de
+dérivation est de degré $+1$. Pour chaque $n$, il existe un homomorphisme
+canonique fonctoriel
+\begin{equation}
+\label{0.13.2.3.1-fr}
+\tag{13.2.3.1}
+h_n:H^n(\varprojlim K_\alpha^\bullet)
+\longrightarrow\varprojlim H^n(K_\alpha^\bullet).
+\end{equation}
+
+Si, pour tout degré $n$, le système projectif de groupes abéliens
+$(K_\alpha^n)_{\alpha\in I}$ vérifie \textup{(ML)}, alors tous les homomorphismes
+$h_n$ sont surjectifs. Si en outre, pour un degré $n$, le système
+projectif $(H^{n-1}(K_\alpha^\bullet))_{\alpha\in I}$ vérifie \textup{(ML)},
+l'homomorphisme $h_n$ est bijectif.
+\end{proposition}
+
+\begin{proof}
+Posons, pour tout $n$, $K^n=\varprojlim K_\alpha^n$~; la définition des
+homomorphismes $h_n$ provient de la commutativité des diagrammes
+\[
+\xymatrix{
+\ldots\ar[r]&K^{n-1}\ar[r]\ar[d]&K^n\ar[r]\ar[d]
+&K^{n+1}\ar[r]\ar[d]&\ldots\\
+\ldots\ar[r]&K_\alpha^{n-1}\ar[r]&K_\alpha^n\ar[r]
+&K_\alpha^{n+1}\ar[r]&\ldots
+}
+\]

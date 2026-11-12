@@ -1,0 +1,39 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{99}
+
+\emph{(i) Cas des morphismes lisses.} Si l'on pose $A=\sh{O}_{Y,y}$ et $B=\sh{O}_{X,x}$, il s'agit ici de prouver, compte tenu de (17.5.3), que $B$ est une $A$-algèbre formellement lisse pour les topologies préadiques. Or, en vertu de (0, 22.1.4), cela découle de l'hypothèse lorsqu'on remplace dans celle-ci la condition $\mathfrak m'\mathfrak{J}'=0$ par $\mathfrak{J}'\subset\mathfrak m'$. Mais comme $\mathfrak m'$ est nilpotent, on voit que la condition de l'énoncé est déjà suffisante en considérant les anneaux $A'/\mathfrak m'^{,j}\mathfrak{J}'$ et en raisonnant par récurrence sur $j$ comme dans (0, 19.4.3).
+
+\emph{(ii) Cas des morphismes non ramifiés.} Reprenons les notations de la démonstration de (17.14.1, (ii)); pour prouver que l'idéal $\mathfrak{J}/\mathfrak{J}^2$ de $C$ est nul, notons que $C$ est alors un anneau local noethérien, étant anneau local de l'anneau d'un ouvert affine d'un sous-préschéma de $X\times_YX$, qui est localement de type fini sur $X$, donc aussi sur $Y$. Si $\mathfrak r$ est l'idéal maximal de $C$, il suffit donc de vérifier que l'on a $\mathfrak{J}/\mathfrak{J}^2\subset\mathfrak r^n$ pour tout $n$ (0$_{\mathrm I}$, 7.3.5), ou encore que $\mathfrak r^n=\mathfrak r^n+(\mathfrak{J}/\mathfrak{J}^2)$. Avec les notations de (0, 20.4.6), cela signifie encore que pour tout $n$, les deux applications composées $B\xrightarrow{p_1}C\to C/\mathfrak r^n$ et $B\xrightarrow{p_2}C\to C/\mathfrak r^n$ sont identiques; mais comme $C/\mathfrak r^n$ est artinien, cette identité résulte de l'hypothèse appliquée, par récurrence sur $n$, à $A'=C/\mathfrak r^n$ et $\mathfrak{J}'=(\mathfrak r^n+(\mathfrak{J}/\mathfrak{J}^2))/\mathfrak r^n$.
+
+\begin{remark}[17.14.3]
+\label{IV.17.14.3}
+On notera que, sous les hypothèses de (17.14.2), si de plus le corps $k(x)$ est une extension \emph{finie} de $k(y)$, alors les $A'$-modules $\mathfrak m'^{,j}/\mathfrak m'^{,j+1}$ sont des $k(y)$-espaces vectoriels de rang fini, donc \emph{a fortiori} $A'$ est une $\sh{O}_{Y,y}$-algèbre finie.
+\end{remark}
+
+\subsection{Cas des préschémas sur un corps de base.}
+\EGAReaderTarget{ega4.c04.subsec.17-15}{subsection:IV.17.15}
+
+Rappelons d'abord (6.7.7, 6.7.8 et 6.8.1) la
+
+\begin{proposition}[17.15.1]
+\label{IV.17.15.1}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$. Pour que $X$ soit lisse en un point $x$, il faut et il suffit que pour toute extension radicielle $k'$ de $k$ (ou seulement pour toute extension finie radicielle de $k$), l'anneau local $\sh{O}_{X,x}\otimes_k k'$ soit régulier. Si $k(x)$ est une extension séparable de $k$ (en particulier si $k$ est parfait), il revient au même de dire que $\sh{O}_{X,x}$ est régulier.
+\end{proposition}
+
+\begin{corollary}[17.15.2]
+\label{IV.17.15.2}
+Sous les conditions de (17.15.1), pour que $X$ soit lisse sur $k$, il faut et il suffit que $X$ soit géométriquement régulier sur $k$ (6.7.6), ce qui entraîne que $X$ est régulier. Si $k$ est parfait, alors $X$ est lisse sur $k$ si et seulement si $X$ est régulier.
+\end{corollary}
+
+\begin{proposition}[17.15.3]
+\label{IV.17.15.3}
+Soient $k$ un corps, $X$ un préschéma localement de type fini sur $k$, $x$ un point de $X$, $n=\dim_x(X)$. Soit $(g_i)_{1\leq i\leq n}$ une famille de $n$ sections de $\sh{O}_X$ au-dessus de $X$, et soit $f:X\to Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ le morphisme correspondant au $k$-homomorphisme $k[T_1,\ldots,T_n]\to\Gamma(X,\sh{O}_X)$ transformant $T_i$ en $g_i$ (I, 2.2.4). Les conditions suivantes sont équivalentes (et impliquent que $X$ est lisse sur $k$ au point $x$ et par suite régulier au point $x$):
+\begin{enumerate}
+  \item[a)] $f$ est étale au point $x$.
+  \item[b)] Les images des $d_{X/k}g_i$ forment une base du $\sh{O}_{X,x}$-module $(\Omega^1_{X/k})_x$.
+  \item[c)] Les images des $d_{X/k}g_i$ engendrent le $\sh{O}_{X,x}$-module $(\Omega^1_{X/k})_x$.
+\end{enumerate}
+\end{proposition}
+
+Si $f$ est étale au point $x$, $X$ est lisse sur $k$ au point $x$ puisque $Y=\operatorname{Spec}(k[T_1,\ldots,T_n])$ est lisse sur $k$ (17.3.8); le fait que a) entraîne b) est donc un cas particulier de (17.11.3). Comme b) entraîne trivialement c), il reste à voir que c) implique a). Notons d'abord
+

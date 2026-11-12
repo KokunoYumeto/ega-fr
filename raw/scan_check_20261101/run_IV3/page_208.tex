@@ -1,0 +1,70 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{208}
+
+\begin{proposition}[14.3.11]
+\label{IV.14.3.11-fr}
+Soient $f:X\to S$ un morphisme de type fini, $(g_\lambda)_{\lambda\in L}$ une
+famille de morphismes universellement ouverts $g_\lambda:Y_\lambda\to S$, et pour
+tout $\lambda\in L$, soit $u_\lambda:Y_\lambda\to X$ un $S$-morphisme. Pour tout
+$s\in S$, posons $X_s=X\times_S\operatorname{Spec}(k(s))$,
+$(Y_\lambda)_s=Y_\lambda\times_S\operatorname{Spec}(k(s))$, et soit
+$(u_\lambda)_s:(Y_\lambda)_s\to X_s$ le morphisme $u_\lambda\times 1$ déduit de
+$u_\lambda$ par changement de base. Soit $Z(s)$ l'adhérence dans $X_s$ de la
+réunion des ensembles $(u_\lambda)_s((Y_\lambda)_s)$, et posons
+$d(s)=\dim(Z(s))$. Alors, pour toute générisation $s'$ d'un point $s\in S$, on a
+$d(s)\leq d(s')$.
+\end{proposition}
+
+\begin{proof}
+On sait (\textbf{II}, 7.1.4) qu'il existe un anneau de valuation $A'$ et un
+morphisme $h:S'=\operatorname{Spec}(A')\to S$ tels que si $a$ (resp. $b$) est le
+point fermé (resp. le point générique) de $S'$, on ait $h(a)=s$, $h(b)=s'$. En
+outre, le morphisme projection
+$p:X_s\otimes_{k(s)}k(a)\to X_s$ est surjectif et ouvert (2.4.10), donc fait de
+$X_s$ un espace quotient de $X_s\otimes_{k(s)}k(a)$ par une relation d'équivalence
+ouverte~; pour toute partie $M$ de $X_s$, $p^{-1}(\overline M)$ est donc égal à
+l'adhérence $\overline{p^{-1}(M)}$ (Bourbaki, \emph{Top. gén.}, chap.~I\textsuperscript{er},
+4\textsuperscript{e} éd., \S~5, n\textsuperscript{o}~3, prop.~7)~; on raisonne de
+même pour $X_{s'}$, et compte tenu de (I, 3.4.8), de (4.2.7) et du fait que les
+$g_\lambda$ sont universellement ouverts, on voit qu'on peut se ramener à prouver
+la proposition sur la situation obtenue après changement de base $S'\to S$.
+Supposons donc $S'=S$, $s$ étant le point fermé et $s'$ le point générique de $S$.
+L'hypothèse que $g_\lambda$ est ouvert entraîne que toute composante irréductible
+de $Y_\lambda$ domine $S$ (1.10.4), donc que son point générique est un point
+maximal de $(Y_\lambda)_{s'}$~; si $Z$ désigne l'adhérence dans $X$ de $Z(s')$, on
+a donc $u_\lambda(Y_\lambda)\subset Z$, et par suite
+$(u_\lambda)_s((Y_\lambda)_s)\subset Z_s=Z\cap X_s$~; autrement dit, on a
+$Z(s)\subset Z_s$, d'où $\dim(Z(s))\leq\dim(Z_s)$. Mais en appliquant (14.3.10) à
+un sous-préschéma réduit de $X$ ayant pour espace sous-jacent une composante
+irréductible de $Z$, on obtient $\dim(Z_s)\leq\dim(Z_{s'})$ (l'inégalité provenant
+de ce qu'il peut y avoir des composantes irréductibles de $Z$ ne rencontrant pas
+$X_s$). D'autre part, comme $Z(s')$ est par définition fermé dans $X_{s'}$, on a
+$Z_{s'}=Z(s')$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{remark}[14.3.12]
+\label{IV.14.3.12-fr}
+Le cas envisagé par M.~Artin était celui où $Y_\lambda=S$ pour tout $\lambda$,
+autrement dit le cas où $(u_\lambda)$ est une famille de $S$-sections de $X$. Un
+autre cas utile est celui où la famille $(u_\lambda)$ est réduite à un seul
+élément~; on peut d'ailleurs toujours se ramener à ce cas en considérant le
+préschéma $Y$ somme des $Y_\lambda$ et les morphismes $g:Y\to S$ et $u:Y\to X$
+dont les restrictions à chaque $Y_\lambda$ sont respectivement $g_\lambda$ et
+$u_\lambda$.
+\end{remark}
+
+\begin{proposition}[14.3.13]
+\label{IV.14.3.13-fr}
+Soient $f:X\to Y$ un morphisme localement de type fini, $y$ un point de $Y$, $x$
+un point maximal de la fibre $X_y=X\times_Y\operatorname{Spec}(k(y))$.
+Considérons les conditions suivantes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est universellement ouvert au point $x$ (ou encore en tout point de la
+  composante irréductible de $X_y$ de point générique $x$ (14.3.3.1, (ii))).
+  \item Pour toute composante irréductible $Y_0$ de $Y$ contenant $y$, il existe
+  une composante irréductible $Z$ de $X$ contenant $x$, dominant $Y_0$ et telle que
+  $\dim_x(X_y)=\dim_x(Z\cap X_y)=\dim(Z\cap X_\eta)$, où $\eta$ est le point
+  générique de $Y_0$ (ce qui entraîne que $Z$ est équidimensionnelle sur $Y_0$ au
+  point $x$ (13.2.2)).
+\end{enumerate}
+

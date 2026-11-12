@@ -1,0 +1,80 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{201}
+on ait $V\cap Y_i\subset\psi(U)\cap Y_i$ et comme la réunion des $V\cap Y_i$ pour
+ces indices est $V$, on a $V\subset\psi(U)$, donc $\psi(U)$ est un voisinage de
+$\psi(x)$ dans $Y$. L'assertion (iii) est triviale.
+\end{proof}
+
+\begin{remarks}[14.1.3]
+\label{IV.14.1.3-fr}
+\begin{enumerate}[label=(\roman*)]
+  \item L'ensemble $Z$ des points $x\in X$ où un morphisme est ouvert
+  \emph{n'est pas nécessairement ouvert}. Par exemple, soient $K$ un corps, $A$
+  l'anneau de polynômes $K[S,T]$, $V$ le plan affine $\operatorname{Spec}(A)$,
+  $X$ le sous-préschéma fermé de $V$ «~réunion de la droite $X_1$ définie par
+  $T=0$ et de la droite $X_2$ définie par $S=0$~», c'est-à-dire
+  $\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a=AST$~; prenons
+  $Y=X_2=\operatorname{Spec}(A/AS)$ et pour $f$ la projection correspondant à
+  l'injection canonique $K[T]\to A/\mathfrak a$~; alors on a $Z=X_2$, qui n'est
+  pas ouvert dans $X$.
+
+  \item Soient $X$, $Y$ deux préschémas noethériens irréductibles de points
+  génériques $\xi$, $\eta$ respectivement, $f:X\to Y$ un morphisme
+  \emph{dominant localement de type fini}~; alors $f$ \emph{est ouvert au point
+  $\xi$}. En effet, on peut évidemment se borner au cas où $X$ et $Y$ sont réduits
+  (donc intègres) (1.5.4) et affines~; en vertu du théorème de platitude générique
+  (6.9.1), il existe un ouvert non vide $V$ de $Y$ tel que la restriction
+  $f^{-1}(V)\to V$ de $f$ soit un morphisme \emph{plat}, et on conclut de (2.4.6)
+  que cette restriction est un morphisme ouvert. Toutefois, comme il y a des
+  morphismes dominants de type fini $f:X\to Y$ (où $X$ et $Y$ sont
+  \emph{irréductibles}) qui ne sont pas ouverts (voir par exemple (\textbf{II},
+  8.1)), l'ensemble des points où un tel morphisme est ouvert n'est pas
+  nécessairement \emph{fermé} dans $X$.
+
+  \item Nous ignorons si, lorsque $X$ et $Y$ sont localement noethériens et
+  $f:X\to Y$ un morphisme localement de type fini, l'ensemble des points de $X$
+  où $f$ est ouvert est ou non \emph{localement constructible}.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[14.1.4]
+\label{IV.14.1.4-fr}
+Soient $X$, $Y$ deux espaces topologiques, $\psi:X\to Y$ une application
+continue. Pour tout $y\in Y$, l'ensemble des $x\in\psi^{-1}(y)$ où $\psi$ est
+ouvert est une partie fermée de $\psi^{-1}(y)$.
+\end{proposition}
+
+\begin{proof}
+En effet, supposons que $\psi$ ne soit pas ouvert en un point
+$x\in\psi^{-1}(y)$~; il existe alors un voisinage ouvert $V$ de $x$ dans $X$ tel
+que $\psi(V)$ ne soit pas un voisinage de $y$~; il en résulte que pour tout
+$x'\in V\cap\psi^{-1}(y)$, $\psi$ n'est pas ouvert au point $x'$.
+\end{proof}
+
+\begin{remark}[14.1.5]
+\label{IV.14.1.5-fr}
+Même si $X$ et $Y$ sont localement noethériens et $f$ un morphisme \emph{fini},
+il peut se faire que $f$ soit ouvert en tous les points d'une fibre $f^{-1}(y)$,
+sans qu'il existe un \emph{voisinage} de $f^{-1}(y)$ en tous les points duquel $f$
+soit ouvert. Soient par exemple $K$ un corps, $A$ l'anneau de polynômes
+$K[T_1,T_2,T_3]$, $V=\operatorname{Spec}(A)$ l'espace affine à 3 dimensions sur
+$K$, $X=\operatorname{Spec}(A/\mathfrak a)$, où $\mathfrak a=\mathfrak b\mathfrak c$,
+avec $\mathfrak b=(T_3)$ et $\mathfrak c=(T_1)+(T_2-T_3)$ dans $A$, de sorte que
+$X$ est réunion du plan $X_1=\operatorname{Spec}(A/\mathfrak b)$ («~plan
+d'équation $T_3=0$~») et de la droite $X_2=\operatorname{Spec}(A/\mathfrak c)$
+(«~droite d'équations $T_1=0$, $T_2=T_3$~») qui sont ses composantes
+irréductibles. Prenons $Y=X_1$ et soit $f:X\to Y$ la projection correspondant à
+l'injection canonique $K[T_1,T_2]\to A/\mathfrak a$~; si $y$ est le point commun
+à $X_1$ et $X_2$, $f^{-1}(y)$ est réduit à $y$ et $f$ est ouvert en ce point mais
+n'est ouvert en aucun point de $X_2$ dans un voisinage de $y$ et distinct de $y$.
+\end{remark}
+
+\begin{env}[14.1.6]
+\label{IV.14.1.6-fr}
+Dans ce qui suit, le rôle essentiel sera joué par le critère (1.10.3)
+caractérisant les morphismes \emph{localement de présentation finie} $f:X\to Y$
+qui sont ouverts en un point $x$ par le «~relèvement des générisations~»~: pour
+toute générisation $y'$ de $y=f(x)$, il existe $x'\in X$, générisation de $x$, tel
+que $y'=f(x')$.
+\end{env}
+

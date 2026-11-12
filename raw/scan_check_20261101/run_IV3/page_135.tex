@@ -1,0 +1,104 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{135}
+
+\begin{proposition}[11.3.7]
+\label{IV.11.3.7-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie,
+$\mathcal F$, $\mathcal F'$ deux $\mathcal O_X$-Modules quasi-cohérents de
+présentation finie, $u:\mathcal F'\to\mathcal F$ un
+$\mathcal O_X$-homomorphisme, $x$ un point de $X$ et $y=f(x)$~; on suppose que
+$\mathcal F$ est $f$-plat au point $x$. Les conditions suivantes sont alors
+équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\item On a $(\ker u)_x=0$ et $\operatorname{Coker}u$ est un
+$\mathcal O_X$-Module $f$-plat au point $x$.
+\item L'homomorphisme
+\[
+(u\otimes1)_x:(\mathcal F'\otimes_{\mathcal O_Y}k(y))_x
+\longrightarrow(\mathcal F\otimes_{\mathcal O_Y}k(y))_x
+\]
+est injectif.
+\end{enumerate}
+Si de plus $\mathcal F$ est $f$-plat, l'ensemble des points $x$ vérifiant les
+conditions équivalentes précédentes est ouvert dans $X$.
+\end{proposition}
+
+\begin{proof}
+La condition a) entraîne b) en vertu de $(\mathbf 0_{\mathrm I},6.1.2)$, sans
+hypothèse sur $\mathcal F$. Pour démontrer la réciproque, on peut se borner au
+cas où $X$ et $Y$ sont affines, puis, en vertu de (8.9.1) et (11.2.7), supposer
+que l'on a
+\[
+X=X_0\times_{Y_0}Y,\quad f=f_0\times1,\quad
+\mathcal F=\mathcal F_0\otimes_{\mathcal O_{Y_0}}\mathcal O_Y,
+\]
+\[
+\mathcal F'=\mathcal F'_0\otimes_{\mathcal O_{Y_0}}\mathcal O_Y,
+\qquad u=u_0\otimes1_Y,
+\]
+où $Y_0$ est noethérien, $f_0:X_0\to Y_0$ un morphisme de type fini,
+$\mathcal F_0$, $\mathcal F'_0$ deux $\mathcal O_{X_0}$-Modules cohérents,
+$u_0:\mathcal F'_0\to\mathcal F_0$ un homomorphisme~; en outre, si $x_0$ est la
+projection de $x$ dans $X_0$, on peut supposer que $\mathcal F_0$ est
+$f_0$-plat au point $x_0$. Posons $y_0=f_0(x_0)$~; en vertu de la transitivité
+des fibres $(\mathbf I,3.6.4)$, le morphisme projection
+$f^{-1}(y)\to f_0^{-1}(y_0)$ est fidèlement plat (2.2.13), et comme
+\[
+(u\otimes1)_x=((u_0\otimes1)_{x_0})\otimes1_{k(y)},
+\]
+l'hypothèse que $(u\otimes1)_x$ est injectif entraîne qu'il en est de même de
+$(u_0\otimes1)_{x_0}$ (2.2.7). Or, cela entraîne, par
+$(\mathbf 0_{\mathrm{III}},10.2.4)$ appliqué aux anneaux locaux noethériens
+$\mathcal O_{Y_0,y_0}$ et $\mathcal O_{X_0,x_0}$ et aux
+$\mathcal O_{X_0,x_0}$-modules $(\mathcal F'_0)_{x_0}$ et
+$(\mathcal F_0)_{x_0}$ (dont le second est plat sur $\mathcal O_{Y_0,y_0}$),
+que l'on a $(\ker u_0)_{x_0}=0$ et que $\operatorname{Coker}u_0$ est
+$f_0$-plat au point $x_0$. On déduit d'abord de là que
+$\operatorname{Coker}u$ est $f$-plat au point $x$ (2.1.4)~; en vertu de
+l'exactitude à droite du produit tensoriel, on a d'ailleurs
+\[
+\operatorname{Coker}u=(\operatorname{Coker}u_0)
+ \otimes_{\mathcal O_{Y_0}}\mathcal O_Y~;
+\]
+appliquant alors $(\mathbf 0_{\mathrm I},6.1.2)$ à la suite (exacte par
+hypothèse)
+\[
+0\longrightarrow(\mathcal F'_0)_{x_0}\longrightarrow
+(\mathcal F_0)_{x_0}\longrightarrow(\operatorname{Coker}u_0)_{x_0}
+\longrightarrow0,
+\]
+on en déduit que $u_x$ est un homomorphisme injectif.
+
+Enfin, il résulte de (11.1.2) que l'ensemble $U_0$ des points $z_0\in X_0$ tels
+que le morphisme $(u_0\otimes1)_{z_0}$ soit injectif est ouvert~; par platitude
+on en déduit que pour tout $z\in X$ au-dessus de $z_0\in U_0$ le morphisme
+$(u\otimes1)_z$ est injectif, donc l'ensemble de ces points contient l'image
+réciproque $U$ de $U_0$ dans $X$ et est par suite un voisinage de $x$, ce qui
+achève la démonstration.
+\end{proof}
+
+\begin{theorem}[11.3.8]
+\label{IV.11.3.8-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie,
+$\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent de présentation finie,
+$(g_i)_{1\leq i\leq n}$ une suite de sections de $\mathcal O_X$ au-dessus de
+$X$~; posons
+\[
+\mathcal F_i=\mathcal F\big/\sum_{j=1}^{i}g_j\mathcal F
+\quad\text{pour }0\leq i\leq n
+\quad(\text{avec }\mathcal F_0=\mathcal F).
+\]
+Soient $x$ un point de $X$, $y=f(x)$, et posons
+$X_y=f^{-1}(y)=X\times_Y\operatorname{Spec}(k(y))$,
+$\mathcal F_y=\mathcal F\otimes_{\mathcal O_Y}k(y)$, qui est un
+$\mathcal O_{X_y}$-Module. On suppose que les $(g_i)_x$ appartiennent à l'idéal
+maximal $\mathfrak m_x$. Les conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\item La suite $((g_i)_x)$ est $\mathcal F_x$-régulière et les $\mathcal F_i$
+$(0\leq i\leq n)$ sont $f$-plats au point $x$.
+\item La suite $((g_i)_x)$ est $\mathcal F_x$-régulière et $\mathcal F_n$ est
+$f$-plat au point $x$.
+\item[\emph{b$'$)}] Il existe un voisinage $U$ de $x$ tel que la suite
+$(g_i|U)$ soit $(\mathcal F|U)$-quasi-régulière, et $\mathcal F_n$ est
+$f$-plat au point $x$.
+

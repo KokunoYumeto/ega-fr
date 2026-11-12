@@ -1,0 +1,89 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{68}
+\emph{Soient $X$ un espace topologique,
+$(\mathcal F_k)_{k\in\mathbb N}$ un système projectif de faisceaux de
+groupes abéliens sur $X$, et soit
+$\mathcal F=\varprojlim_k\mathcal F_k$. On suppose vérifiées les conditions
+suivantes :}
+\begin{enumerate}
+\item[\emph{(i)}]
+\emph{Il existe une base $\mathfrak B$ de la topologie de $X$ telle que,
+pour tout $U\in\mathfrak B$ et tout $i\geq0$, le système projectif
+$(H^i(U,\mathcal F_k))_{k\in\mathbb N}$ vérifie (ML).}
+\item[\emph{(ii)}]
+\emph{Pour tout $x\in X$ et tout $i>0$, on a}
+\[
+\varinjlim_U\bigl(\varprojlim_k H^i(U,\mathcal F_k)\bigr)=0
+\]
+\emph{lorsque $U$ parcourt l'ensemble des voisinages de $x$ appartenant à
+$\mathfrak B$.}
+\item[\emph{(iii)}]
+\emph{Les homomorphismes
+$u_{hk}:\mathcal F_k\to\mathcal F_h$ $(h\leq k)$ définissant le système
+projectif $(\mathcal F_k)$ sont surjectifs.}
+\end{enumerate}
+\emph{Dans ces conditions, pour tout $i>0$, l'homomorphisme canonique}
+\[
+h_i:H^i(X,\mathcal F)\longrightarrow
+\varprojlim_k H^i(X,\mathcal F_k)
+\]
+\emph{est surjectif~; si en outre, pour une valeur de $i$, le système
+projectif $(H^{i-1}(X,\mathcal F_k))_{k\in\mathbb N}$ vérifie (ML), $h_i$
+est bijectif.}
+\end{proposition}
+
+\begin{proof}
+\emph{a)} Nous allons d'abord supposer que les $\mathcal F_k$ sont flasques
+ainsi que les noyaux $\mathcal N_{hk}$ des $u_{hk}$~; nous allons montrer
+alors que la condition (iii) de l'énoncé entraîne que
+$H^i(X,\mathcal F)=0$ pour $i>0$. Il suffira de prouver que pour tout ouvert
+$U$ de $X$ et tout recouvrement $\mathfrak U$ de $U$ par des ouverts de
+$U$, on a $\check H^i(\mathfrak U,\mathcal F)=0$ pour $i>0$. Il en résultera
+en effet tout d'abord que pour la cohomologie de Čech, on a
+$\check H^i(U,\mathcal F)=0$ pour tout $i>0$, puis (en vertu de
+(G, II, 5.9.2) appliqué à l'ensemble de tous les ouverts de $X$) que
+$H^i(X,\mathcal F)=0$ pour tout $i>0$. Comme les $\mathcal F_k$ sont
+flasques, on a $\check H^i(\mathfrak U,\mathcal F_k)=0$ pour $i>0$
+(G, II, 5.2.3)~; considérons pour chaque $k$ le complexe
+$\check C^\bullet(\mathfrak U,\mathcal F_k)$ des cochaînes alternées du nerf
+du recouvrement $\mathfrak U$ (G, II, 5.1), qui forment évidemment un
+système projectif de complexes de groupes abéliens. Montrons que toutes les
+applications
+$\check C^\bullet(\mathfrak U,\mathcal F_k)\to
+\check C^\bullet(\mathfrak U,\mathcal F_h)$ $(h\leq k)$ sont surjectives.
+Il suffit évidemment, par définition, de montrer que pour tout ouvert $V$
+de $X$, l'application
+$\Gamma(V,\mathcal F_k)\to\Gamma(V,\mathcal F_h)$ est surjective~; mais la
+suite
+\[
+0\longrightarrow\mathcal N_{hk}\longrightarrow\mathcal F_k
+\longrightarrow\mathcal F_h\longrightarrow0
+\]
+étant exacte par hypothèse, donne la suite exacte de cohomologie
+\[
+\Gamma(V,\mathcal F_k)\longrightarrow\Gamma(V,\mathcal F_h)
+\longrightarrow H^1(V,\mathcal N_{hk})=0
+\]
+puisque $\mathcal N_{hk}$ est flasque. Le système projectif
+$(\check C^\bullet(\mathfrak U,\mathcal F_k))_{k\in\mathbb N}$ vérifie donc
+(ML)~; il en est de même de
+$(\check H^i(\mathfrak U,\mathcal F_k))_{k\in\mathbb N}$ pour tout
+$i\geq0$, car cela est trivial pour $i>0$, et comme
+$\check H^0(\mathfrak U,\mathcal F_k)=\Gamma(U,\mathcal F_k)$
+(G, II, 5.2.2), la condition (ML) est aussi remplie pour $i=0$ d'après ce
+qui précède. On peut donc appliquer
+(\hyperref[0.13.2.3-fr]{13.2.3}), qui montre que
+\[
+\check H^i(\mathfrak U,\mathcal F)
+=\varprojlim_k\check H^i(\mathfrak U,\mathcal F_k)=0
+\quad\hbox{pour tout }i>0.
+\]
+
+\emph{b)} Passons au cas général, et considérons pour chaque $k\in\mathbb N$,
+la résolution canonique
+$\mathcal C^\bullet(X,\mathcal F_k)
+=(\mathcal C^i(X,\mathcal F_k))_{i\geq0}$ de $\mathcal F_k$ par des
+faisceaux flasques (G, II, 4.3). Pour chaque $i\geq0$, il est clair que
+$(\mathcal C^i(X,\mathcal F_k))_{k\in\mathbb N}$ est un système projectif
+de faisceaux flasques~; montrons qu'il satisfait aux conditions de
+\emph{a)}.

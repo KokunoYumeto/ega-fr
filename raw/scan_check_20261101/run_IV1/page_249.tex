@@ -1,0 +1,88 @@
+% from ega4-1-fr.tex
+\oldpage[IV-1]{249}
+
+\subsection{Application aux morphismes ouverts}
+\label{subsection:IV.1.10-fr}
+
+\begin{theorem}[1.10.1]
+\label{IV.1.10.1-fr}
+Soient $X$ un préschéma, $E$ une partie ind-constructible de $X$ (1.9.4), $x$
+un point de $X$. Pour que $x$ soit intérieur à $E$, il faut et il suffit que
+toute générisation ($0_{\mathrm I}$, 2.1.2) $x'$ de $x$ appartienne à $E$,
+autrement dit (I, 2.4.2) que l'on ait
+$\operatorname{Spec}(\mathcal O_{X,x})\subset E$.
+\end{theorem}
+
+\begin{proof}
+La condition est évidemment nécessaire, tout voisinage de $x$ contenant les
+générisations de $x$. Pour voir qu'elle est suffisante, on peut évidemment se
+borner au cas où $X=\operatorname{Spec}(A)$ est affine, $x$ étant un idéal premier
+$\mathfrak p$ de $A$. On sait alors (1.9.5, (ix)) qu'il existe un schéma affine
+$X'=\operatorname{Spec}(A')$ et un morphisme $f:X'\to X$ tels que
+$f(X')=X-E$. Posons $Y=\operatorname{Spec}(\mathcal O_{X,x})$ et
+$Y'=X'\times_XY$~; l'hypothèse signifie (en
+vertu de (I, 3.6.5)) que l'on a $Y'=\varnothing$, autrement dit
+$A'\otimes_AA_{\mathfrak p}=0$. Comme
+$A_{\mathfrak p}=\varinjlim A_t$, où $t$ parcourt $A-\mathfrak p$
+($0_{\mathrm I}$, 1.4.5), on a $\varinjlim A_t'=0$, le foncteur
+$\varinjlim$ commutant au produit tensoriel. Par suite (1.9.1), il existe un
+$t\in A-\mathfrak p$ tel que $A_t'=0$, et $\mathrm D(t)$ est alors un
+voisinage ouvert de $x$ dans $X$ contenu dans $E$.
+\end{proof}
+
+\begin{corollary}[1.10.2]
+\label{IV.1.10.2-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, et soit
+$y\in Y$. Pour que $y$ soit intérieur à $f(X)$ il faut et il suffit que toute
+générisation $y'$ de $y$ appartienne à $f(X)$.
+\end{corollary}
+
+\begin{proof}
+On sait en effet (1.9.5, (viii)) que $f(X)$ est ind-constructible dans $Y$ et
+il suffit d'appliquer (1.10.1).
+\end{proof}
+
+Nous dirons qu'une application continue $f:X\to Y$ est \emph{ouverte en un
+point} $x\in X$ si l'image par $f$ de \emph{tout} voisinage de $x$ dans $X$
+est un voisinage de $f(x)$ dans $Y$.
+
+\begin{proposition}[1.10.3]
+\EGAReaderTarget{ega4.c04.prop.1-10-3}{IV.1.10.3-fr}
+Soient $f:X\to Y$ un morphisme, $x$ un point de $X$, $y=f(x)$. Considérons
+les conditions suivantes~:
+\begin{enumerate}
+  \item[a)] $f$ est ouvert au point $x$.
+  \item[b)] Pour toute générisation $y'$ de $y$, il existe une générisation
+  $x'$ de $x$ telle que $f(x')=y'$.
+  \item[b')] L'image par $f$ de $\operatorname{Spec}(\mathcal O_{X,x})$ est
+  $\operatorname{Spec}(\mathcal O_{Y,y})$.
+  \item[c)] Pour toute partie fermée irréductible $Y'$ de $Y$ contenant $y$,
+  il existe une composante irréductible de $X'=f^{-1}(Y')$ contenant $x$ et
+  dominant $Y'$.
+\end{enumerate}
+Alors on a les implications
+$\mathrm{a)}\Rightarrow\mathrm{b)}\Leftrightarrow\mathrm{b')}
+\Leftrightarrow\mathrm{c)}$. Si en outre $f$ est localement de présentation
+finie, les quatre conditions sont équivalentes.
+\end{proposition}
+
+\begin{proof}
+Par définition d'une générisation, l'image par $f$ de
+$\operatorname{Spec}(\mathcal O_{X,x})$ est toujours contenue dans
+$\operatorname{Spec}(\mathcal O_{Y,y})$, donc b) et b') sont équivalentes. Il
+est immédiat
+que c) entraîne b), car si $y'$ est une générisation de $y$,
+$Y'=\overline{\{y'\}}$ est une partie irréductible de $Y$ contenant $y$~; si
+$x'$ est le point générique d'une composante irréductible de $f^{-1}(Y')$ qui
+contient $x$ et domine $Y'$, on a $f(x')=y'$ ($0_{\mathrm I}$, 2.1.5) et $x'$
+est une générisation de $x$. Inversement, b) entraîne c)~: en effet, soit
+$y'$ le point générique de $Y'$ et soit $x'$ une générisation de $x$ telle
+que $f(x')=y'$~; soit $Z'$ une composante irréductible de $f^{-1}(Y')$
+contenant $x'$ (donc $x$)~; comme $f(x')$ est déjà dense dans $Y'$, il en est
+ainsi \emph{a fortiori} de $f(Z')$.
+
+Pour voir que a) entraîne b'), on peut évidemment se borner au cas où
+$X=\operatorname{Spec}(B)$ et $Y=\operatorname{Spec}(A)$ sont affines, $x$
+étant un idéal premier
+$\mathfrak q$ de $B$, de sorte que
+$\mathcal O_{X,x}=B_{\mathfrak q}=\varinjlim B_t$,

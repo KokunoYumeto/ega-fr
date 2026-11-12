@@ -1,0 +1,96 @@
+% from ega0-16-fr.tex
+\oldpage[0\textsubscript{IV-1}]{38}
+pour $M$, il résulte de (16.3.7) et (16.3.4) que $y_1$ n'appartient à aucun
+des $\mathfrak{p}_j$, donc est $M$-régulier. Si on pose $P=M/y_1M$,
+$(y_i)_{2\leq i\leq n}$ est un système de paramètres pour $P$, et il est
+immédiat que $P$ vérifie l'hypothèse de l'énoncé~; appliquant l'hypothèse de
+récurrence, on voit donc que $(y_i)_{2\leq i\leq n}$ est une suite
+$P$-régulière, ce qui démontre la proposition.
+\end{proof}
+
+\begin{proposition}[16.5.9]
+\label{0.16.5.9-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini~; on
+suppose que $M$ soit un module de Cohen-Macaulay. Soit
+$\mathfrak{p}\in\operatorname{Supp}(M)$, et posons
+$r=\dim(M)-\dim(M/\mathfrak{p}M)$. Alors il existe une suite $M$-régulière
+$(x_i)_{1\leq i\leq r}$ formée d'éléments de $\mathfrak{p}$~; pour toute
+suite ayant ces propriétés, on a
+\[
+  \dim(M/(x_1M+\cdots+x_rM))
+  =\dim(M/\mathfrak{p}M)=\dim(A/\mathfrak{p}),
+\]
+et $\mathfrak{p}$ est un élément minimal de
+$\operatorname{Ass}(M/(x_1M+\cdots+x_rM))$.
+\end{proposition}
+
+\begin{proof}
+Prouvons d'abord l'existence des $x_i$~; il n'y a rien à démontrer pour
+$r=0$. Pour $r>0$, procédons par récurrence sur $r$. Comme pour tout idéal
+premier $\mathfrak{q}_i$ associé à $M$ on a
+$\dim(A/\mathfrak{q}_i)=\dim(M)$ (16.5.4), l'hypothèse
+$\dim(M/\mathfrak{p}M)<\dim(M)$ entraîne que $\mathfrak{p}$ ne peut être
+contenu dans un des $\mathfrak{q}_i$, ces derniers étant les idéaux premiers
+minimaux parmi ceux qui contiennent $\operatorname{Ann}(M)$ (16.1.2.2 et
+16.1.7)~; on en conclut que $\mathfrak{p}$ n'est pas non plus contenu dans la
+réunion des $\mathfrak{q}_i$ (Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~1,
+no~1, prop.~2), et par suite il existe un $x_1\in\mathfrak{p}$ qui est
+$M$-régulier (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \S~1, no~1, cor.~2 de
+la prop.~2). On déduit donc de (16.5.5) que $N=M/x_1M$ est un module de
+Cohen-Macaulay, de dimension $\dim(M)-1$~; comme $x_1\in\mathfrak{p}$, on a
+d'ailleurs $N/\mathfrak{p}N=M/\mathfrak{p}M$, d'où
+$\dim(N)-\dim(N/\mathfrak{p}N)=r-1$~; on peut par suite appliquer à $N$
+l'hypothèse de récurrence, et si $(x_i)_{2\leq i\leq r}$ est une suite
+$N$-régulière formée d'éléments de $\mathfrak{p}$, il est clair que
+$(x_i)_{1\leq i\leq r}$ est une suite $M$-régulière formée d'éléments de
+$\mathfrak{p}$.
+
+Si on pose $P=M/(x_1M+\cdots+x_rM)$, on a
+$P/\mathfrak{p}P=M/\mathfrak{p}M$ puisque les $x_i$ sont dans
+$\mathfrak{p}$, et $\dim(P)=\dim(P/\mathfrak{p}P)$ par (16.5.6)~; mais comme
+$P$ est un module de Cohen-Macaulay, on a aussi
+$\dim(P)=\dim(A/\mathfrak{p}')$ pour tout
+$\mathfrak{p}'\in\operatorname{Ass}(P)$ (16.5.4). Comme
+$\mathfrak{p}\in\operatorname{Supp}(P)$ ($0_{\mathrm I}$, 1.7.5),
+$\mathfrak{p}$ contient un des idéaux
+$\mathfrak{p}'\in\operatorname{Ass}(P)$ (Bourbaki, \emph{Alg.~comm.},
+chap.~IV, \S~1, no~4, th.~2), et comme
+\[
+  \dim(P)=\dim(P/\mathfrak{p}P)
+  \leq\dim(A/\mathfrak{p})
+  \leq\dim(A/\mathfrak{p}')=\dim(P),
+\]
+on a nécessairement $\mathfrak{p}=\mathfrak{p}'$ (16.1.2.2), ce qui achève
+la démonstration.
+\end{proof}
+
+\begin{corollary}[16.5.10]
+\label{0.16.5.10-fr}
+Sous les mêmes hypothèses que dans (16.5.9)~:
+\begin{enumerate}
+  \item[(i)] $M_{\mathfrak{p}}$ est un $A_{\mathfrak{p}}$-module de
+  Cohen-Macaulay.
+  \item[(ii)] On a
+  \begin{equation}
+  \label{0.16.5.10.1-fr}
+  \tag{16.5.10.1}
+    \dim(M)=\dim_A(M/\mathfrak{p}M)
+    +\dim_{A_{\mathfrak{p}}}(M_{\mathfrak{p}}).
+  \end{equation}
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Avec les notations de (16.5.9), soient $x_i'$ les images canoniques des $x_i$
+dans $A_{\mathfrak{p}}$ $(1\leq i\leq r)$~; comme les $x_i'$ appartiennent à
+l'idéal maximal de $A_{\mathfrak{p}}$ et forment une suite
+$M_{\mathfrak{p}}$-régulière par platitude (15.1.14), on a
+\[
+  \operatorname{prof}_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+  \geq r=\dim(M)-\dim(M/\mathfrak{p}M)
+  \geq\dim_{A_{\mathfrak{p}}}(M_{\mathfrak{p}})
+\]
+(en vertu de (16.1.8.1)). Mais compte tenu de (16.4.5.1), les trois termes de
+cette inégalité sont nécessairement égaux, d'où le corollaire.
+\end{proof}
+

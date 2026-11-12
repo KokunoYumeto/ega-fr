@@ -1,0 +1,76 @@
+% from ega0-14-fr.tex
+\oldpage[0\textsubscript{IV-1}]{6}
+\begin{env}[14.1.1]
+\label{0.14.1.1-fr}
+Soit $I$ un ensemble ordonné~; une \emph{chaîne} d'éléments de $I$ est par
+définition une suite finie strictement croissante
+$i_0<i_1<\cdots<i_n$ d'éléments de $I$ ($n\geq 0$)~; par définition la
+\emph{longueur} de cette chaîne est $n$. Si $X$ est un espace topologique,
+l'ensemble de ses parties \emph{fermées irréductibles} est ordonné par
+inclusion, d'où la notion de \emph{chaîne} de parties fermées irréductibles de
+$X$.
+\end{env}
+
+\begin{definition}[14.1.2]
+\label{0.14.1.2-fr}
+Soit $X$ un espace topologique. On appelle \emph{dimension combinatoire de
+$X$} (ou simplement \emph{dimension de $X$} s'il ne peut y avoir de
+confusion) et on note $\dim_c(X)$, ou simplement $\dim(X)$, la borne
+supérieure des longueurs des chaînes de parties fermées irréductibles de $X$.
+Pour tout $x\in X$, on appelle \emph{dimension combinatoire de $X$ en $x$}
+(ou simplement \emph{dimension de $X$ en $x$}) et on note $\dim_x(X)$ le
+nombre $\inf_U(\dim(U))$, où $U$ parcourt l'ensemble des voisinages ouverts de
+$x$ dans $X$.
+\end{definition}
+
+Il résulte de cette définition que l'on a
+\[
+  \dim(\varnothing)=-\infty
+\]
+(la borne supérieure dans $\overline{\mathbb R}$ de la partie vide étant
+$-\infty$). Si $(X_\alpha)$ est la famille des composantes irréductibles de
+$X$, on a
+\[
+  \dim(X)=\sup_\alpha\dim(X_\alpha)
+  \tag{14.1.2.1}\label{0.14.1.2.1-fr}
+\]
+car toute chaîne de parties fermées irréductibles de $X$ est par définition
+contenue dans une composante irréductible de $X$, et inversement ces
+composantes sont fermées dans $X$, donc toute partie fermée irréductible d'un
+$X_\alpha$ est une partie fermée irréductible de $X$.
+
+\begin{definition}[14.1.3]
+\label{0.14.1.3-fr}
+On dit qu'un espace topologique $X$ est \emph{équidimensionnel} si toutes ses
+composantes irréductibles ont même dimension (égale alors à $\dim(X)$ par
+(14.1.2.1)).
+\end{definition}
+
+\begin{proposition}[14.1.4]
+\label{0.14.1.4-fr}
+\begin{enumerate}
+  \item[\rm(i)] Pour toute partie $Y$ d'un espace topologique $X$, on a
+  $\dim(Y)\leq\dim(X)$.
+  \item[\rm(ii)] Si un espace topologique $X$ est réunion finie de parties
+  fermées $X_i$, on a $\dim(X)=\sup_i\dim(X_i)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Pour toute partie fermée irréductible $Z$ de $Y$, l'adhérence $\overline Z$ de
+$Z$ dans $X$ est irréductible ($0_{\mathrm I}$, 2.1.2) et
+$\overline Z\cap Y=Z$, d'où (i). D'autre part, si
+$X=\bigcup_{i=1}^n X_i$, où les $X_i$ sont fermés, toute partie fermée
+irréductible de $X$ est contenue dans un des $X_i$ ($0_{\mathrm I}$, 2.1.1),
+et par suite toute chaîne de parties fermées irréductibles de $X$ est contenue
+dans un des $X_i$~; d'où (ii).
+\end{proof}
+
+On déduit de (14.1.4, (i)) que pour tout $x\in X$, on peut aussi écrire
+\[
+  \dim_x(X)=\lim_U\dim(U)
+  \tag{14.1.4.1}\label{0.14.1.4.1-fr}
+\]
+la limite étant prise suivant l'ensemble filtrant décroissant des voisinages
+ouverts de $x$ dans $X$.
+

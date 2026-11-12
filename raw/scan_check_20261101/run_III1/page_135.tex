@@ -1,0 +1,85 @@
+% from ega3-1-fr.tex
+\oldpage[III]{135}
+
+déduit que si $X\xrightarrow{f'}Y'\xrightarrow{g}Y$ est la factorisation
+de Stein de $f$ (\hyperref[III.4.3.3-fr]{4.3.3}), $g^{-1}(y)$ se réduit à
+un seul point $y'$~; en outre, on a
+\[
+\mathcal O_y\subset\mathcal O_{y'}=(f_*(\mathcal O_X))_y
+\subset\mathrm R(X),
+\]
+et comme $\mathcal O_{y'}$ est fini sur $\mathcal O_y$ (et \emph{a
+fortiori} sur $\mathrm R(Y)$), il est contenu dans $\mathrm R(Y)$ en vertu
+de l'hypothèse~; comme $y$ est normal, on a nécessairement
+$\mathcal O_{y'}=\mathcal O_y$~; on en conclut que $g$ est un isomorphisme
+local au point $y'$ (I, 6.5.4), ce qui achève de prouver la première partie
+du corollaire. La seconde résulte de la première, car l'hypothèse
+supplémentaire entraîne que $g$ est bijective et un isomorphisme local au
+voisinage de tout point de $Y'$, donc un isomorphisme.
+\end{proof}
+
+Le fait que (\hyperref[III.4.3.7-fr]{4.3.7}) soit établi dans le cadre des
+schémas permet des applications telles que la suivante~:
+
+\begin{proposition}[4.3.13]
+\label{III.4.3.13-fr}
+Soient $A$ un anneau local noethérien unibranche, $\mathfrak a$ un idéal de
+définition de $A$, $A_0=A/\mathfrak a$,
+$S=\operatorname{gr}_{\mathfrak a}(A)$ l'anneau gradué associé à $A$ pour
+la filtration $\mathfrak a$-préadique~; $S$ est une $A_0$-algèbre graduée
+engendrée par $S_1$, $S_1$ étant un $A_0$-module de type fini. Alors
+$\operatorname{Proj}(S)$ est un $A_0$-schéma connexe.
+\end{proposition}
+
+\begin{proof}
+Soit $\mathfrak m$ l'idéal maximal de $A$~; $Y=\operatorname{Spec}(A)$ est
+un schéma intègre dont le point $y$ correspondant à $\mathfrak m$ est
+l'unique point fermé. Par hypothèse, on a
+$\mathfrak m^p\subset\mathfrak a\subset\mathfrak m$ pour un entier $p$,
+donc $V(\mathfrak a)=\{\mathfrak m\}$. Soit
+$S'=\bigoplus_{n\geq0}\mathfrak a^n$, et soit
+$X=\operatorname{Proj}(S')$, qui est le $Y$-schéma obtenu en faisant éclater
+l'idéal $\mathfrak a$~; $X$ est intègre et le morphisme structural
+$f:X\to Y$ est birationnel (II, 8.1.4) et évidemment projectif. Par suite,
+(\hyperref[III.4.3.7-fr]{4.3.7}) est applicable et montre que $f^{-1}(y)$
+est connexe~; mais l'espace $f^{-1}(y)$ est sous-jacent à
+$\operatorname{Proj}(S'\otimes_AA_0)$ (I, 3.6.1 et II, 2.8.10)~; comme
+$S'\otimes_AA_0=S$ par définition, la proposition est démontrée.
+\end{proof}
+
+
+\subsection{Le «~main theorem~» de Zariski}
+\label{subsection:III.4.4-fr}
+
+\begin{proposition}[4.4.1]
+\label{III.4.4.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+propre. Soit $X'$ l'ensemble des points $x\in X$ qui sont isolés dans leur
+fibre $f^{-1}(f(x))$. Alors l'ensemble $X'$ est ouvert dans $X$, et si
+$f=gf'$ est la factorisation de Stein de $f$
+(\hyperref[III.4.3.3-fr]{4.3.3}), la restriction de $f'$ à $X'$ est un
+isomorphisme de $X'$ sur un sous-préschéma induit sur un ouvert $U$ de $Y'$,
+et on a $X'=f'^{-1}(U)$.
+\end{proposition}
+
+\begin{proof}
+Comme $g^{-1}(f(x))$ est fini et discret
+(\hyperref[III.4.3.3-fr]{4.3.3} et II, 6.1.7), pour que $x$ soit isolé dans
+$f^{-1}(f(x))$, il faut et il suffit qu'il le soit dans
+$f'^{-1}(f'(x))$~; on peut donc se borner au cas où $f'=f$, donc
+$f_*(\mathcal O_X)=\mathcal O_Y$. Alors, si $x\in X'$,
+$f^{-1}(f(x))$, qui est connexe (\hyperref[III.4.3.2-fr]{4.3.2}), est
+nécessairement réduit au point $x$. Comme $f$ est fermé, pour tout voisinage
+ouvert $V$ de $x$ dans $X$, $f(X-V)$ est fermé dans $Y$ et ne contient pas
+$y=f(x)$, puisque $f^{-1}(y)=\{x\}$~; si $U$ est le complémentaire de
+$f(X-V)$ dans $Y$, on a $f^{-1}(U)\subset V$, et on en conclut que les
+images réciproques par $f$ d'un système fondamental de voisinages ouverts de
+$y$ forment un système fondamental de voisinages ouverts de $x$. L'hypothèse
+$f_*(\mathcal O_X)=\mathcal O_Y$ et la définition de l'image directe d'un
+faisceau (0\textsubscript{I}, 3.4.1 et 4.2.1) entraînent alors que, si
+$f=(\psi,\theta)$, l'homomorphisme
+$\theta_y^\#:\mathcal O_y\to\mathcal O_x$ est un isomorphisme. On en conclut
+qu'il existe un voisinage ouvert $V$ de $x$ et un voisinage ouvert $U$ de
+$y$ tels que la restriction de $f$ à $V$ soit un isomorphisme de $V$ sur
+$U$ (I, 6.5.4)~; en outre, d'après ce qu'on vient de voir,
+

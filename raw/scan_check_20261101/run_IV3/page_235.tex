@@ -1,0 +1,26 @@
+% from ega4-15-fr.tex
+\oldpage[IV-3]{235}
+Pour prouver (15.5.6), nous appliquerons le lemme (15.5.6.1) à $X$ et à sa partie fermée $Z=f^{-1}(a)$ qui est rare puisque $f$ est ouvert. Notons que l'hypothèse, compte tenu de (15.2.2.1), implique que $f$ est plat aux points de $f^{-1}(a)$. Pour un tel point $x$, $\mathcal O_x$ est donc un $\mathcal O_a$-module sans torsion ($\mathbf{0}_{\mathrm I}$, 6.3.4), et en particulier, si $t$ est une uniformisante de $\mathcal O_a$, $t$ est $\mathcal O_x$-régulier. En outre $\mathcal O_x/t\mathcal O_x$ est réduit par hypothèse~; s'il est de profondeur $0$, c'est donc un corps ($\mathbf{0}$, 16.4.7), et comme $t\mathcal O_x$ est alors l'idéal maximal de $\mathcal O_x$, $\mathcal O_x$ est un anneau de valuation discrète ($\mathbf{0}$, 17.1.4), donc $\operatorname{Spec}(\mathcal O_x)-\{x\}$ est réduit à un point, et a fortiori est connexe. Si au contraire $\operatorname{prof}(\mathcal O_x/t\mathcal O_x)\geqslant 1$, on a $\operatorname{prof}(\mathcal O_x)\geqslant 2$ puisque $t$ est $\mathcal O_x$-régulier ($\mathbf{0}$, 16.4.6)~; il résulte alors du théorème de Hartshorne (5.10.7) que $\operatorname{Spec}(\mathcal O_x)-\{x\}$ est connexe, ce qui termine la démonstration.
+\end{proof}
+
+\begin{proposition}[15.5.7]
+\label{IV.15.5.7-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre. Pour tout $z\in Y$, soit $n(z)$ le nombre géométrique de composantes connexes de $f^{-1}(z)$. Soit $y$ un point de $Y$ tel que $f$ soit universellement ouvert aux points de $f^{-1}(y)$ et que $f^{-1}(y)$ soit géométriquement réduit sur $\mathbf{k}(y)$ (4.6.2). Alors la fonction $z\mapsto n(z)$ est constante dans un voisinage de $y$.
+\end{proposition}
+
+\begin{proof}
+On sait déjà (15.5.4) que sous les conditions de l'énoncé, $z\mapsto n(z)$ est semi-continue inférieurement au point $y$~; tout revient à voir qu'elle est aussi semi-continue supérieurement, et par le même raisonnement qu'au début de la démonstration de (15.5.1, (i)), il suffit de montrer que si $y'$ est une générisation de $y$, on a
+\begin{equation}
+\tag{15.5.7.1}
+\label{IV.15.5.7.1-fr}
+  n(y')\leqslant n(y).
+\end{equation}
+
+Utilisant le raisonnement du début de la démonstration de (15.5.2) et le lemme (15.5.2.2) appliqué au morphisme fini $g$ de la factorisation de Stein $f=g\circ f'$ de $f$ (en se souvenant que le nombre géométrique de points de $g^{-1}(y)$ est égal à celui des composantes connexes de $f^{-1}(y)$ ($\mathbf{III}$, 4.3.4)), on se ramène au cas où $n(y)$ et $n(y')$ sont respectivement le nombre de composantes connexes de $f^{-1}(y)$ et $f^{-1}(y')$, et où $Y$ est le spectre d'un anneau de valuation discrète, $y$ le point fermé et $y'$ le point générique de $Y$. On peut en outre remplacer $X$ par une quelconque de ses composantes connexes, ces dernières étant ouvertes et fermées dans $X$, et propres sur $Y$. Supposons donc $X$ connexe~; l'hypothèse que $f$ est ouvert aux points de $f^{-1}(y)$ entraîne que si $f^{-1}(y)\ne\varnothing$, on a aussi $f^{-1}(y')\ne\varnothing$ (1.10.3)~; l'hypothèse que $f$ est fermé entraîne que si $f^{-1}(y')\ne\varnothing$, on a aussi $f^{-1}(y)\ne\varnothing$ (\textbf{II}, 7.2.1). Donc, si $X\ne\varnothing$ (ce qu'on peut évidemment supposer, la proposition étant triviale dans le cas contraire), $f^{-1}(y)$ et $f^{-1}(y')$ sont tous deux non vides. En outre, l'hypothèse entraîne que le préschéma $f^{-1}(y)$ est réduit (4.6.1)~; comme $f$ est ouvert aux points de $f^{-1}(y)$, le lemme (15.5.6) implique que $f^{-1}(y')$ est connexe, autrement dit $n(y')=1$. Comme $f^{-1}(y)$ n'est pas vide, cela prouve (15.5.7.1).
+\end{proof}
+
+\begin{remark}[15.5.8]
+\label{IV.15.5.8-fr}
+La relation (15.5.7.1) n'est plus nécessairement valable si $f$ n'est pas supposé propre, même s'il vérifie les autres hypothèses de (15.5.7). Avec les notations de (15.5.5, (i)), il suffit pour le voir de considérer la restriction de $f$ à $X-\{x'\}$, où $x'$ est un des deux points de $X$ au-dessus d'un point $y$ distinct de $y'$ et $y''$~; on a alors $n(y)=1$, tandis que si $\eta$ est le point générique de $Y$, $n(\eta)=2$.
+\end{remark}
+

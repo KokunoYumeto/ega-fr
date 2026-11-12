@@ -1,0 +1,41 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{236}
+  où $S$ est l'ensemble des éléments réguliers de $A$, complémentaire de la réunion des idéaux $\mathfrak{p}\in\operatorname{Ass}(A)$ ; par contre, $R(X)$ s'identifie à $Q^{-1}A$, où $Q$ est le complémentaire de la réunion des idéaux premiers \emph{minimaux} de $A$ \sref[I]{I.7.1.9}, et l'homomorphisme canonique $A\to Q^{-1}A$ (et \emph{a fortiori} $S^{-1}A\to Q^{-1}A$) n'est donc pas injectif, puisqu'il existe dans $A-Q$ des éléments $\neq0$ de $A$ annulés par des éléments de $Q$ (Bourbaki, \emph{Alg.~comm.}, chap.~IV, \textsection1, n\textsuperscript{o}~1, cor.~2 de la prop.~1).
+
+  \item On notera que même lorsque $X$ est localement noethérien, le $\sh{O}_X$-Module $\sh{M}'_X$ \emph{n'est pas nécessairement quasi-cohérent}.
+  Considérons par exemple un anneau local noethérien $A$ de dimension $\geq2$, dont l'idéal maximal $\mathfrak{m}$ est tel que $\mathfrak{m}\in\operatorname{Ass}(A)$ et que si l'on pose $X=\Spec(A)$, le schéma induit sur l'ouvert $U$ de $X$, complémentaire de $\{\mathfrak{m}\}$, soit \emph{intègre}.
+  Les seuls éléments réguliers de $A$ sont alors les éléments inversibles, donc $\Gamma(X,\sh{M}'_X)=M'(X)=A$ ; si $\sh{M}'_X$ était quasi-cohérent, il serait donc égal à $\sh{O}_X$ ; mais comme $U$ est un schéma intègre, $\sh{M}'_X|U=R(U)$ est un faisceau \emph{simple} \sref[I]{I.7.3.5}, alors que $\sh{O}_U$ n'est pas un faisceau simple puisque $\dim(A)\geq2$.
+
+  Reste à donner un exemple d'anneau $A$ ayant les propriétés précédentes.
+  Il suffit de considérer un anneau local intègre $B$ de dimension $\geq2$ et de corps résiduel $k$, et de prendre $A=B\oplus k$ avec la loi de multiplication $(b,x)(b',x')=(bb',bx'+b'x)$.
+
+  \item Si $X$ est localement noethérien, il résulte de \sref{IV.5.10.2} que les ouverts schématiquement denses dans $X$ sont ceux qui \emph{contiennent} l'ensemble $\operatorname{Ass}(\sh{O}_X)$.
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[20.2.14]
+\EGAReaderTarget{ega4.c04.statement.20-2-14}{IV.20.2.14}
+Soient $X$ un préschéma, $\sh{F}$ un $\sh{O}_X$-Module quasi-cohérent et \emph{strictement sans torsion} \sref{IV.20.1.5}, de sorte que $\sh{F}$ s'identifie à un sous-$\sh{O}_X$-Module de $\sh{M}_X(\sh{F})$.
+Pour toute section méromorphe $u$ de $\sh{F}$ au-dessus de $X$, on appelle l'\emph{Idéal des dénominateurs de $u$} l'annulateur $\sh{J}$ de la section $\overline{u}$ image de $u$ dans $\sh{M}_X(\sh{F})/\sh{F}$.
+L'Idéal $\sh{J}$ est \emph{quasi-cohérent} : en effet, la question étant locale sur $X$, on peut se borner au cas où $X$ est affine, et il existe une section $s\in\Gamma(X,\sh{S}(\sh{O}_X))$ telle que $v=su\in\Gamma(X,\sh{F})$.
+Dire que, pour un ouvert $U\subset X$, une section $f\in\Gamma(U,\sh{O}_X)$ appartient à $\Gamma(U,\sh{J})$ signifie que $f(u|U)\in\Gamma(U,\sh{F})$, et puisque $s|U$ est un élément régulier de $\Gamma(U,\sh{O}_X)$ et que $\sh{F}$ est strictement sans torsion, la relation précédente équivaut encore à $f((su)|U)\in\Gamma(U,s\sh{F})$ ; si $\overline{v}$ est la section de $\sh{F}/s\sh{F}$, image canonique de $v$, on voit donc que $\sh{J}$ est le noyau de l'homomorphisme $\sh{O}_X\to\sh{F}/s\sh{F}$ obtenu par multiplication par la section $\overline{v}$.
+Comme $\sh{F}/s\sh{F}$ est quasi-cohérent, il en est de même de $\sh{J}$.
+
+Il résulte aussitôt de la définition précédente que $\operatorname{dom}(u)$ est \emph{l'ouvert complémentaire du sous-préschéma fermé de $X$ défini par l'Idéal des dénominateurs de $u$}.
+\end{env}
+
+\begin{proposition}[20.2.15]
+\label{IV.20.2.15}
+Soient $f:X'\to X$ un morphisme, $\sh{F}$ un $\sh{O}_X$-Module quasi-cohérent, $\vphi$ une section de $\sh{M}_f(\sh{F})$ au-dessus de $X$ \sref{IV.20.1.11}.
+Alors $f^{-1}(\operatorname{dom}(\vphi))$ est schématiquement dense dans $X'$.
+\end{proposition}
+
+\begin{proof}
+La question étant évidemment locale sur $X$ et $X'$, on peut supposer $X=\Spec(A)$, $X'=\Spec(A')$ affines, $\sh{F}=\widetilde{M}$, et $\vphi=h\otimes(1/s)$, où $h\in M$ et $s$ est un élément régulier de $A$ dont l'image $s'$ dans $A'$ est un élément régulier.
+On sait alors \sref{IV.20.2.9} que $\mathrm{D}(s')$ est un ouvert schématiquement dense dans $X'$, et c'est l'image réciproque par $f$ de $\mathrm{D}(s)$, qui est contenu dans $\operatorname{dom}(\vphi)$.
+\end{proof}
+
+\begin{remark}[20.2.16]
+\label{IV.20.2.16}
+Lorsque $Y$ n'est pas séparé, le préfaisceau $U\mapsto\operatorname{Ps.hom}_S(U,Y)$ sur $X$ n'est pas nécessairement un faisceau, même lorsque $X$ est noethérien, comme le montre l'exemple suivant.
+Nous allons prendre pour $X$ un spectre d'un anneau semi-local noethérien $A$ de dimension $\geq2$, ayant exactement deux idéaux

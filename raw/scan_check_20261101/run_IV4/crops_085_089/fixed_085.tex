@@ -1,0 +1,28 @@
+\oldpage[IV-4]{85}
+
+La condition est évidemment suffisante puisque le morphisme structural $S[T_1,\ldots,T_n]\to S$ est lisse (17.3.8). Pour montrer qu'elle est nécessaire, notons que puisque $h$ est lisse au point $x$, il existe un voisinage ouvert $U$ de $x$ tel que $\varOmega^1_{X/S}|U$ soit localement libre (17.2.3); il suffit alors d'utiliser (16.10.6) pour obtenir (en restreignant au besoin $U$) des sections $s_i$ de $\sh{O}_X$ au-dessus de $U$ telles que les $d_{X/S}(s_i)$ forment une base de $\varOmega^1_{X/S}|U$; on conclut en appliquant (17.11.3).
+
+\begin{proposition}[17.11.5]
+\label{IV.17.11.5}
+Soient $f:Y\to S$, $h:X\to S$ deux morphismes lisses. Pour qu'un $S$-morphisme $g:X\to Y$ soit une immersion ouverte, il faut et il suffit que $g$ soit un monomorphisme de préschémas et que pour tout $x\in X$, si l'on pose $y=g(x)$, on ait $\dim_y(f)=\dim_x(h)$ \textup{(pour une généralisation de cette proposition, voir (18.10.5))}.
+\end{proposition}
+
+La condition est évidemment nécessaire; prouvons qu'elle est suffisante.
+
+En vertu de (17.9.5), on est aussitôt ramené au cas où $S=\Spec(k)$ est le spectre d'un corps, et en vertu de (2.7.1, (x)), on peut supposer $k$ algébriquement clos. Compte tenu de (17.9.1), il suffit alors de prouver que $g$ est étale, et comme l'ensemble des points où $g$ est étale est ouvert, il suffit de montrer que $g$ est étale aux points \emph{fermés} (ou encore, rationnels sur $k$) de $X$ (10.4.8). Soit donc $x$ un tel point, et posons $y=g(x)$, qui est aussi rationnel sur $k$; par hypothèse, l'anneau $A=\sh{O}_{Y,y}$ est régulier et de corps résiduel $k$; soient $d=\dim(A)$ et $(t_i)_{1\leq i\leq d}$ un système régulier de paramètres pour $A$. Posons $B=\sh{O}_{X,x}$, $C=B/\mathfrak m_yB$. Comme $g$ est un monomorphisme, il en est de même du morphisme $\Spec(C)\to\Spec(\boldsymbol{k}(y))=\Spec(k)$ déduit de $g$ par changement de base (\textbf{I}, 3.3.12); mais cela signifie que l'homomorphisme correspondant $u:k\to C$ est \emph{surjectif} (donc bijectif), car $u$ admet un inverse à gauche $v:C\to k$, et $u\circ v$ et l'identité de $C$, composés avec $u$, donnent le même morphisme $u:k\to C$. Comme par hypothèse $B$ est un anneau régulier de dimension $d$, les images des $t_i$ dans $B$ forment un système régulier de paramètres pour $B$ (\textbf{0}, 17.1.7); la condition (17.6.3, \emph{e$''$)}) est donc vérifiée par $g$ au point $x$ (\textbf{0}, 17.1.1 et Bourbaki, \emph{Alg. comm.}, chap. III, § 2, n\textsuperscript{o} 8, cor. 3 du th. 1), ce qui achève la démonstration.
+
+\subsection{Sous-préschémas lisses d'un préschéma lisse. Morphismes lisses et morphismes différentiellement lisses.}
+\EGAReaderTarget{ega4.c04.subsec.17-12}{subsection:IV.17.12}
+
+\begin{theorem}[17.12.1]
+\label{IV.17.12.1}
+Soient $f:X\to S$, $h:Y\to S$ deux morphismes localement de présentation finie, $j:Y\to X$ une immersion, $y$ un point de $Y$, $x=j(y)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $h$ est lisse au point $y$ et $f$ est lisse au point $x$.
+  \item[\textup{b)}] $f$ est lisse au point $x$, et l'homomorphisme canonique \textup{(16.4.21)}
+  \[
+  (\sh{N}_{Y/X})_y\to(j^*(\varOmega^1_{X/S}))_y
+  \]
+  est inversible à gauche.
+  \item[\textup{c)}] $h$ est lisse au point $y$ et il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que $j|U:U\to X$ soit une immersion régulière \textup{(16.9.2)}.
+

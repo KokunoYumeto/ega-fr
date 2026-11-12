@@ -1,0 +1,126 @@
+% from ega1-10-fr.tex
+\oldpage[I]{204}
+
+\subsection{Faisceaux cohérents sur les préschémas formels.}
+\label{subsection:I.10.11-fr}
+
+\begin{proposition}[10.11.1]
+\label{I.10.11.1-fr}
+Si $\mathfrak{X}$ est un préschéma formel localement noethérien, le
+faisceau d'anneaux $\mathscr{O}_{\mathfrak{X}}$ est cohérent et tout
+faisceau d'idéaux de définition de $\mathfrak{X}$ est cohérent.
+\end{proposition}
+
+La question étant locale, on est ramené au cas d'un schéma formel affine
+noethérien, et la proposition résulte donc de
+(\hyperref[I.10.10.3-fr]{10.10.3}) et
+(\hyperref[I.10.10.5-fr]{10.10.5}).
+
+\begin{env}[10.11.2]
+\label{I.10.11.2-fr}
+Soient $\mathfrak{X}$ un préschéma formel localement noethérien,
+$\mathscr{J}$ un faisceau d'idéaux de définition de $\mathfrak{X}$,
+$X_n$ le préschéma (usuel) localement noethérien
+$(\mathfrak{X},\mathscr{O}_{\mathfrak{X}}/\mathscr{J}^{n+1})$, de
+sorte que $\mathfrak{X}$ est limite inductive de la suite $(X_n)$ pour
+les morphismes canoniques $u_{mn}:X_m\to X_n$
+(\hyperref[I.10.6.3-fr]{10.6.3}). Avec ces notations~:
+\end{env}
+
+\begin{theorem}[10.11.3]
+\label{I.10.11.3-fr}
+Pour qu'un $\mathscr{O}_{\mathfrak{X}}$-Module $\mathscr{F}$ soit
+cohérent, il faut et il suffit qu'il soit isomorphe à une limite
+projective d'une suite $(\mathscr{F}_n)$, où $\mathscr{F}_n$ est un
+$\mathscr{O}_{X_n}$-Module cohérent, tel que
+$u_{mn}^*(\mathscr{F}_n)=\mathscr{F}_m$ pour $m\leq n$
+(\hyperref[I.10.6.6-fr]{10.6.6}). Le système projectif
+$(\mathscr{F}_n)$ est alors isomorphe au système des
+$u_n^*(\mathscr{F})=\mathscr{F}
+\otimes_{\mathscr{O}_{\mathfrak{X}}}\mathscr{O}_{X_n}$, $u_n$ étant
+le morphisme canonique $X_n\to\mathfrak{X}$.
+\end{theorem}
+
+La question étant locale, on est ramené au cas où $\mathfrak{X}$ est
+un schéma formel affine noethérien, et le théorème est alors conséquence
+de (\hyperref[I.10.10.5-fr]{10.10.5}) et
+(\hyperref[I.10.10.6-fr]{10.10.6}).
+
+On peut donc dire que \emph{la donnée d'un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent équivaut à celle d'un
+système projectif $(\mathscr{F}_n)$ de
+$\mathscr{O}_{X_n}$-Modules cohérents tels que
+$u_{mn}^*(\mathscr{F}_n)=\mathscr{F}_m$ pour $m\leq n$}.
+
+\begin{corollary}[10.11.4]
+\label{I.10.11.4-fr}
+Si $\mathscr{F}$ et $\mathscr{G}$ sont deux
+$\mathscr{O}_{\mathfrak{X}}$-Modules cohérents, on peut (avec les
+notations de (\hyperref[I.10.11.3-fr]{10.11.3})) définir un
+isomorphisme canonique fonctoriel
+\[
+  \label{I.10.11.4.1-fr}
+  \operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+  (\mathscr{F},\mathscr{G})
+  \xrightarrow{\sim}
+  \varprojlim_n
+  \operatorname{Hom}_{\mathscr{O}_{X_n}}
+  (\mathscr{F}_n,\mathscr{G}_n).
+  \tag{10.11.4.1}
+\]
+\end{corollary}
+
+La limite projective du second membre doit s'entendre pour les
+applications
+$\theta_n\mapsto u_{mn}^*(\theta_n)$ ($m\leq n$) de
+$\operatorname{Hom}_{\mathscr{O}_{X_n}}
+(\mathscr{F}_n,\mathscr{G}_n)$ dans
+$\operatorname{Hom}_{\mathscr{O}_{X_m}}
+(\mathscr{F}_m,\mathscr{G}_m)$. L'homomorphisme
+(\hyperref[I.10.11.4.1-fr]{10.11.4.1}) fait correspondre à un élément
+$\theta\in\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$ la suite $(u_n^*(\theta))$~; on voit
+aussitôt qu'on en définit un homomorphisme réciproque du précédent en
+faisant correspondre au système projectif
+$(\theta_n)\in\varprojlim_n
+\operatorname{Hom}_{\mathscr{O}_{X_n}}
+(\mathscr{F}_n,\mathscr{G}_n)$
+sa limite projective dans
+$\operatorname{Hom}_{\mathscr{O}_{\mathfrak{X}}}
+(\mathscr{F},\mathscr{G})$, compte tenu de
+(\hyperref[I.10.11.3-fr]{10.11.3}).
+
+\begin{corollary}[10.11.5]
+\label{I.10.11.5-fr}
+Pour qu'un homomorphisme $\theta:\mathscr{F}\to\mathscr{G}$ soit
+surjectif, il faut et il suffit que l'homomorphisme correspondant
+$\theta_0=u_0^*(\theta):\mathscr{F}_0\to\mathscr{G}_0$ le soit.
+\end{corollary}
+
+La question étant locale, on est ramené au cas où
+$\mathfrak{X}=\operatorname{Spf}(A)$, $A$ étant adique noethérien,
+$\mathscr{F}=M^\Delta$, $\mathscr{G}=N^\Delta$ et $\theta=u^\Delta$,
+où $M$ et $N$ sont des $A$-modules de type fini et $u$ un
+homomorphisme $M\to N$~; on a en outre alors
+$\theta_0=\widetilde{u_0}$, où $u_0$ est l'homomorphisme
+$u\otimes1:M\otimes_A A/\mathfrak{J}\to
+N\otimes_A A/\mathfrak{J}$~;
+la conclusion résulte de ce que $\theta$ et $u$ (resp. $\theta_0$ et
+$u_0$) sont simultanément surjectifs
+(\hyperref[I.1.3.9-fr]{1.3.9} et
+\hyperref[I.10.10.2-fr]{10.10.2}) et de ce que $u$ et $u_0$ sont
+simultanément surjectifs (\hyperref[0.7.1.14-fr]{0, 7.1.14}).
+
+\begin{env}[10.11.6]
+\label{I.10.11.6-fr}
+Le th. (\hyperref[I.10.11.3-fr]{10.11.3}) montre qu'on peut considérer
+tout $\mathscr{O}_{\mathfrak{X}}$-Module cohérent $\mathscr{F}$ comme
+un $\mathscr{O}_{\mathfrak{X}}$-Module \emph{topologique}, en le
+considérant comme limite projective des faisceaux de groupes
+\emph{pseudo-discrets} $\mathscr{F}_n$
+(\hyperref[0.3.8.1-fr]{0, 3.8.1}). Il résulte alors de
+(\hyperref[I.10.11.4-fr]{10.11.4}) que tout homomorphisme
+$u:\mathscr{F}\to\mathscr{G}$ de
+$\mathscr{O}_{\mathfrak{X}}$-Modules cohérents est automatiquement
+\emph{continu}
+

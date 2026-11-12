@@ -1,0 +1,1763 @@
+[
+ {
+  "page": 137,
+  "where": "chapter heading, ega3-6-fr.tex l. 1 (before the file's first marker)",
+  "scan": "CHAPITRE III (suite), with '(suite)' in italics (parentheses included)",
+  "tex": "\\chapter*{CHAPITRE III (suite)\\\\[1.2ex] ...}: '(suite)' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "CHAPITRE III (suite)",
+   "new": "CHAPITRE III \\emph{(suite)}"
+  },
+  "note": "OUTSIDE page_137.tex: 'old' is in ega3-6-fr.tex l. 1, before \\oldpage[III]{137}. Checked on an enlarged crop."
+ },
+ {
+  "page": 137,
+  "where": "heading 6.1, ega3-6-fr.tex l. 7 (before the file's first marker)",
+  "scan": "6.1. Introduction. (with a final full stop)",
+  "tex": "\\subsection{Introduction}",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Introduction}",
+   "new": "\\subsection{Introduction.}"
+  },
+  "note": "OUTSIDE page_137.tex (ega3-6-fr.tex l. 7). Same pattern as GLOBAL_ISSUES item 43 (ega3-1)."
+ },
+ {
+  "page": 137,
+  "where": "position of \\oldpage[III]{137} (part 1 of 2: remove it after the headings)",
+  "scan": "printed p. 137 begins with the chapter heading 'CHAPITRE III (suite)', then '§ 6. FONCTEURS « TOR » LOCAUX ET GLOBAUX; FORMULE DE KÜNNETH' and '6.1. Introduction.'",
+  "tex": "the marker stands after \\chapter*, \\section and \\subsection (ega3-6-fr.tex l. 10)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\oldpage[III]{137}\n\n",
+   "new": ""
+  },
+  "note": "Apply together with part 2 (insert the marker before \\section). The strict place would be before \\chapter*, but \\chapter* begins a new page (the driver also has \\clearpage before \\input{ega3/ega3-6-fr.tex}), so a \\marginpar placed before it would leave the marker on a page of its own; after the \\chapter* heading it lands on the chapter's first page. Alternative: the ega3-1 pattern (\\clearpage, marker, hand-made heading)."
+ },
+ {
+  "page": 137,
+  "where": "position of \\oldpage[III]{137} (part 2 of 2: insert it before the § 6 heading)",
+  "scan": "see part 1",
+  "tex": "see part 1",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\section{Foncteurs « Tor » locaux et globaux; formule de Künneth}",
+   "new": "\\oldpage[III]{137}\n\n\\section{Foncteurs « Tor » locaux et globaux; formule de Künneth}"
+  },
+  "note": "OUTSIDE page_137.tex (ega3-6-fr.tex l. 4). Apply together with part 1."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'on pose X'=X_(Y')=X×_Y Y', F'=F⊗_Y O_Y', f'=f_(Y') : X'→Y', et l'on'",
+  "scan": "in the running text",
+  "tex": "displayed",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on pose\n\\[\n  X'=X_{(Y')}=X\\times_Y Y',\\qquad\n  \\mathscr F'=\\mathscr F\\otimes_Y\\mathscr O_{Y'},\\qquad\n  f'=f_{(Y')}:X'\\to Y',\n\\]\net l'on",
+   "new": "on pose\n$X'=X_{(Y')}=X\\times_Y Y'$, $\\mathscr F'=\\mathscr F\\otimes_Y\\mathscr O_{Y'}$, $f'=f_{(Y')}:X'\\to Y'$,\net l'on"
+  },
+  "note": "Layout: the print sets this formula in the running text; the TeX displays it. The formula itself matches."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'pour un O_Y-Module quasi-cohérent variable G'",
+  "scan": "'Module' in italics (enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr O_Y$-Module quasi-cohérent variable",
+   "new": "$\\mathscr O_Y$-\\emph{Module} quasi-cohérent variable"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'autrement dit le foncteur G⇝R^n f_*(F⊗_{O_Y}G).'",
+  "scan": "wavy arrow; formula in the running text",
+  "tex": "displayed, with \\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "foncteur\n\\[\n  \\mathscr G\\longmapsto\n  \\mathrm R^n f_*(\\mathscr F\\otimes_{\\mathscr O_Y}\\mathscr G).\n\\]\nSi",
+   "new": "foncteur\n$\\mathscr G\\leadsto\\mathrm R^n f_*(\\mathscr F\\otimes_{\\mathscr O_Y}\\mathscr G)$.\nSi"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33. The fix also sets the formula inline, as printed."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'Si F est plat sur Y'",
+  "scan": "'plat' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est plat sur",
+   "new": "est \\emph{plat} sur"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'le foncteur G⇝F⊗_{O_Y}G est exact'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr G\\mapsto\\mathscr F\\otimes",
+   "new": "$\\mathscr G\\leadsto\\mathscr F\\otimes"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'est exact (0_I, 6.7.4)'",
+  "scan": "'exact' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathscr G$ est exact",
+   "new": "\\mathscr G$ est \\emph{exact}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): '(0_I, 6.7.4)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0\\textsubscript{I}, 6.7.4)",
+   "new": "(\\textbf{0}\\textsubscript{I}, 6.7.4)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'le foncteur composé G⇝R•f_*(F⊗_{O_Y}G)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "composé\n$\\mathscr G\\mapsto",
+   "new": "composé\n$\\mathscr G\\leadsto"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'le foncteur composé G⇝R•f_*(F⊗_{O_Y}G) est encore un foncteur cohomologique'",
+  "scan": "R with a bullet superscript: R•f_* (enlarged crop)",
+  "tex": "R^n f_*",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathrm R^n f_*(\\mathscr F\\otimes_{\\mathscr O_Y}\\mathscr G)$\nest encore",
+   "new": "\\mathrm R^\\bullet f_*(\\mathscr F\\otimes_{\\mathscr O_Y}\\mathscr G)$\nest encore"
+  },
+  "note": "The cohomological functor is the whole family R•; the other occurrences on the page have R^n, as printed."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'est encore un foncteur cohomologique'",
+  "scan": "'cohomologique' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "foncteur cohomologique. Mais",
+   "new": "foncteur \\emph{cohomologique}. Mais"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'substituer à G⇝R^n f_*(F⊗_{O_Y}G)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "substituer à\n$\\mathscr G\\mapsto",
+   "new": "substituer à\n$\\mathscr G\\leadsto"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'qui cette fois sont toujours des foncteurs cohomologiques'",
+  "scan": "'toujours' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont toujours des",
+   "new": "sont \\emph{toujours} des"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.1): 'une « formule de Künneth » exprimant R^n(f_1×f_2)_*(F_1⊗_Y F_2) à l'aide'",
+  "scan": "in the running text",
+  "tex": "displayed",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "exprimant\n\\[\n  \\mathrm R^n(f_1\\times f_2)_*(\\mathscr F_1\\otimes_Y\\mathscr F_2)\n\\]\nà l'aide",
+   "new": "exprimant\n$\\mathrm R^n(f_1\\times f_2)_*(\\mathscr F_1\\otimes_Y\\mathscr F_2)$\nà l'aide"
+  },
+  "note": "Layout: the print sets this formula in the running text; the TeX displays it. The formula itself matches."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.2): 'les foncteurs cohomologiques G⇝T•(G)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr G\\mapsto\\mathscr T_\\bullet",
+   "new": "$\\mathscr G\\leadsto\\mathscr T_\\bullet"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.2): 'sont localement (sur Y) du type'",
+  "scan": "'localement' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont\nlocalement (sur",
+   "new": "sont\n\\emph{localement} (sur"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.2): 'du type G⇝H•(L•⊗_Y G), où'",
+  "scan": "wavy arrow; formula in the running text",
+  "tex": "displayed, with \\longmapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "du type\n\\[\n  \\mathscr G\\longmapsto\n  \\mathscr H_\\bullet(\\mathscr L_\\bullet\\otimes_Y\\mathscr G),\n\\]\noù",
+   "new": "du type\n$\\mathscr G\\leadsto\\mathscr H_\\bullet(\\mathscr L_\\bullet\\otimes_Y\\mathscr G)$,\noù"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33. The fix also sets the formula inline, as printed."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.2): 'un complexe de O_Y-Modules localement libres'",
+  "scan": "'Modules' with a capital M",
+  "tex": "'modules'",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr O_Y$-modules",
+   "new": "$\\mathscr O_Y$-Modules"
+  },
+  "note": "The print writes O_Y-Modules (sheaves of modules), as everywhere on the page."
+ },
+ {
+  "page": 137,
+  "where": "(6.1.2): 'localement libres'",
+  "scan": "'localement libres' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "localement\nlibres",
+   "new": "\\emph{localement\nlibres}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 137,
+  "where": "end of the page: 'et à étudier de' / p. 138 'façon générale'",
+  "scan": "the sentence runs on to p. 138; no paragraph break",
+  "tex": "blank lines before and after \\oldpage[III]{138} make a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et à étudier de\n\n",
+   "new": "et à étudier de\n"
+  },
+  "note": "Spurious paragraph break (GLOBAL_ISSUES item 20). Apply together with the p. 138 finding that removes the blank line after the marker."
+ },
+ {
+  "page": 138,
+  "where": "top of the page: 'façon générale' (continuation of (6.1.2))",
+  "scan": "first line not indented, same paragraph",
+  "tex": "blank line after \\oldpage[III]{138}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{138}\n\nfaçon",
+   "new": "\\oldpage[III]{138}\nfaçon"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 137 finding (blank line before the marker)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'les foncteurs de la forme précédente G⇝H•(L•⊗_Y G)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr G\\mapsto\\mathscr H_\\bullet",
+   "new": "$\\mathscr G\\leadsto\\mathscr H_\\bullet"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'les propriétés d'exactitude'",
+  "scan": "'exactitude' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "propriétés d'exactitude",
+   "new": "propriétés d'\\emph{exactitude}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'que le foncteur G⇝R^n f_*(F⊗_{O_Y}G) est exact'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr G\\mapsto\\mathrm R^n",
+   "new": "$\\mathscr G\\leadsto\\mathrm R^n"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'est exact (ce qu'on exprimera'",
+  "scan": "'exact' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est exact (ce qu'on",
+   "new": "est \\emph{exact} (ce qu'on"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'F est cohomologiquement plat sur Y'",
+  "scan": "'cohomologiquement plat' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "cohomologiquement plat",
+   "new": "\\emph{cohomologiquement plat}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'une propriété de semi-continuité'",
+  "scan": "'semi-continuité' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de semi-continuité de",
+   "new": "de \\emph{semi-continuité} de"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'de la fonction y⇝dim_{k(y)}(T_i(k(y)))'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$y\\mapsto",
+   "new": "$y\\leadsto"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'dim_{k(y)}' (subscript)",
+  "scan": "bold k in the subscript k(y) (enlarged crop)",
+  "tex": "plain k",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "_{k(y)}",
+   "new": "_{\\boldsymbol{k}(y)}"
+  },
+  "note": "Residue field k(y) printed bold."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'T_i(k(y))'",
+  "scan": "bold italic k",
+  "tex": "plain k",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "(T_i(k(y)))",
+   "new": "(T_i(\\boldsymbol{k}(y)))"
+  },
+  "note": "Residue field k(y) printed bold italic."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'lorsque T_i est exact, cette propriété'",
+  "scan": "'exact' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est exact, cette",
+   "new": "est \\emph{exact}, cette"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.2): 'une propriété de continuité'",
+  "scan": "'continuité' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de continuité, la",
+   "new": "de \\emph{continuité}, la"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.3): 'fait usage de l'hypercohomologie'",
+  "scan": "'hypercohomologie' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'hypercohomologie, en prenant",
+   "new": "l'\\emph{hypercohomologie}, en prenant"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.3): 'comme arguments des complexes de faisceaux'",
+  "scan": "'complexes' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "arguments des complexes de",
+   "new": "arguments des \\emph{complexes} de"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.3): 'bien que la nécessité de ce point de vue n'apparaîtra que dans des chapitres ultérieurs'",
+  "scan": "n'apparaîtra (future indicative; enlarged crop)",
+  "tex": "n'apparaisse (subjunctive)",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "n'apparaisse que",
+   "new": "n'apparaîtra que"
+  },
+  "note": "The TeX normalizes the mood after 'bien que'; the print has the indicative future, an attested usage (not a typographical misprint)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'est un homotopisme s'il existe'",
+  "scan": "'homotopisme' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un homotopisme s'il",
+   "new": "est un \\emph{homotopisme} s'il"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'dans une catégorie abélienne C, nous dirons'",
+  "scan": "C bold italic",
+  "tex": "plain $C$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "abélienne $C$, nous",
+   "new": "abélienne $\\boldsymbol{C}$, nous"
+  },
+  "note": "Category letter printed bold italic (as GLOBAL_ISSUES item 33 for ega3-1)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'soient tous deux homotopes à l'identité'",
+  "scan": "'homotopes à l'identité' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "homotopes à l'identité",
+   "new": "\\emph{homotopes à l'identité}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'K• et K'• sont homotopes)'",
+  "scan": "'homotopes' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont homotopes)",
+   "new": "sont \\emph{homotopes})"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'Lorsqu'on peut définir l'hypercohomologie d'un foncteur'",
+  "scan": "'hypercohomologie' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "définir l'hypercohomologie d'un",
+   "new": "définir l'\\emph{hypercohomologie} d'un"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'additif T de C dans'",
+  "scan": "C bold italic",
+  "tex": "plain $C$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "additif $T$ de $C$ dans",
+   "new": "additif $T$ de $\\boldsymbol{C}$ dans"
+  },
+  "note": "Category letter printed bold italic (as GLOBAL_ISSUES item 33 for ega3-1)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'une catégorie abélienne C''",
+  "scan": "C' bold italic",
+  "tex": "plain $C'$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "abélienne $C'$",
+   "new": "abélienne $\\boldsymbol{C}'$"
+  },
+  "note": "Category letter printed bold italic (as GLOBAL_ISSUES item 33 for ega3-1)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'par rapport à un complexe de C (0, 11.4.3)'",
+  "scan": "C bold italic",
+  "tex": "plain $C$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un complexe de $C$",
+   "new": "un complexe de $\\boldsymbol{C}$"
+  },
+  "note": "Category letter printed bold italic (as GLOBAL_ISSUES item 33 for ega3-1)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): '(0, 11.4.3)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.4.3)",
+   "new": "(\\textbf{0}, 11.4.3)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'de complexes de C définit canoniquement'",
+  "scan": "C bold italic",
+  "tex": "plain $C$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de complexes de $C$ définit",
+   "new": "de complexes de $\\boldsymbol{C}$ définit"
+  },
+  "note": "Category letter printed bold italic (as GLOBAL_ISSUES item 33 for ega3-1)."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'définit canoniquement un isomorphisme'",
+  "scan": "'isomorphisme' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "canoniquement un\nisomorphisme",
+   "new": "canoniquement un\n\\emph{isomorphisme}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'un isomorphisme R•T(K•)→R•T(K'•) pour l'hypercohomologie'",
+  "scan": "plain arrow (no tilde; enlarged crop), bold R twice, formula in the running text",
+  "tex": "displayed; \\xrightarrow{\\sim}; \\mathrm R",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n  \\mathrm R^\\bullet T(K^\\bullet)\\xrightarrow{\\sim}\n  \\mathrm R^\\bullet T(K'^\\bullet)\n\\]",
+   "new": "$\\mathbf R^\\bullet T(K^\\bullet)\\to\\mathbf R^\\bullet T(K'^\\bullet)$"
+  },
+  "note": "One fix for three differences in the same formula: the print's arrow has no tilde, R is bold (hypercohomology, cf. GLOBAL_ISSUES item 39), and the formula is in the running text."
+ },
+ {
+  "page": 138,
+  "where": "(6.1.4): 'pour l'hypercohomologie (loc. cit.).'",
+  "scan": "'(loc. cit.)' italic, parentheses included",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(loc. cit.)",
+   "new": "\\emph{(loc. cit.)}"
+  },
+  "note": "Italic in the print; upright in the TeX. Same form as the earlier fix (EGA II p. 9)."
+ },
+ {
+  "page": 138,
+  "where": "heading 6.2",
+  "scan": "6.2. Hypercohomologie des complexes de modules sur un préschéma. (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Hypercohomologie des complexes de modules sur un préschéma}",
+   "new": "\\subsection{Hypercohomologie des complexes de modules sur un préschéma.}"
+  },
+  "note": ""
+ },
+ {
+  "page": 138,
+  "where": "(6.2.1): 'on a défini (0, 12.4.1)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 12.4.1)",
+   "new": "(\\textbf{0}, 12.4.1)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 138,
+  "where": "(6.2.1): 'les O_Y-Modules d'hypercohomologie'",
+  "scan": "'Modules d'hypercohomologie' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr O_Y$-Modules d'hypercohomologie",
+   "new": "$\\mathscr O_Y$-\\emph{Modules d'hypercohomologie}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 138,
+  "where": "(6.2.1): '(aussi notés H^n_f(K•) ou R^n f_*(K•))'",
+  "scan": "bold R (enlarged crop)",
+  "tex": "\\mathrm R",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathrm R^n f_*(\\mathscr K^\\bullet)$",
+   "new": "$\\mathbf R^n f_*(\\mathscr K^\\bullet)$"
+  },
+  "note": "Hypercohomology R printed bold, as for R•T in (6.1.4); the R^p f_* of (6.2.1.2) is plain in the print."
+ },
+ {
+  "page": 138,
+  "where": "(6.2.1.1)",
+  "scan": "no punctuation after the formula",
+  "tex": "comma",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(f,\\mathscr K^\\bullet)\\bigr),",
+   "new": "(f,\\mathscr K^\\bullet)\\bigr)"
+  },
+  "note": ""
+ },
+ {
+  "page": 138,
+  "where": "(6.2.1.2)",
+  "scan": "no full stop after the formula",
+  "tex": "full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mathscr K^\\bullet)\\bigr).",
+   "new": "(\\mathscr K^\\bullet)\\bigr)"
+  },
+  "note": ""
+ },
+ {
+  "page": 138,
+  "where": "end of the page, after (6.2.1.2) / p. 139 'où H^q(f, K•) est le complexe'",
+  "scan": "the sentence continues on p. 139 ('où ...'), first line not indented",
+  "tex": "blank lines after \\end{align} and after \\oldpage[III]{139} make a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{align}\n\n",
+   "new": "\\end{align}\n"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 139 finding (blank line after the marker)."
+ },
+ {
+  "page": 139,
+  "where": "top of the page: 'où H^q(f, K•) est le complexe'",
+  "scan": "continuation, first line not indented",
+  "tex": "blank line after \\oldpage[III]{139}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{139}\n\noù",
+   "new": "\\oldpage[III]{139}\noù"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 138 finding (blank line after \\end{align})."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'est le complexe dont le composant'",
+  "scan": "'complexe' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est le complexe dont",
+   "new": "est le \\emph{complexe} dont"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'R^q f_*(K^i) (loc. cit.).'",
+  "scan": "'(loc. cit.)' italic, parentheses included",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(loc. cit.)",
+   "new": "\\emph{(loc. cit.)}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'qui est formée de modules sur'",
+  "scan": "'modules' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "formée de modules sur",
+   "new": "formée de \\emph{modules} sur"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): after the display H^n(f, K•)=R^{n-i_0}f_*(K^{i_0}).",
+  "scan": "'La suite spectrale ...' starts a new, indented paragraph",
+  "tex": "no blank line after \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nLa suite spectrale",
+   "new": "\\]\n\nLa suite spectrale"
+  },
+  "note": "Paragraph break as printed (indented line)."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'est toujours régulière'",
+  "scan": "'régulière' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "régulière; les deux",
+   "new": "\\emph{régulière}; les deux"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'sont birégulières lorsque'",
+  "scan": "'birégulières' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont birégulières",
+   "new": "sont \\emph{birégulières}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'lorsque K• est limité inférieurement'",
+  "scan": "roman K• (not script; enlarged crop)",
+  "tex": "$\\mathscr K^\\bullet$",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr K^\\bullet$ est limité inférieurement",
+   "new": "$K^\\bullet$ est limité inférieurement"
+  },
+  "corrected": "$\\mathscr K^\\bullet$",
+  "note": "Wrong-font letter in the print (the complex is script K•). The TeX silently corrected it; the fix restores the printed reading (roman capitals are italic in the TeX, item 17)."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): '(0, 12.4.1)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 12.4.1)",
+   "new": "(\\textbf{0}, 12.4.1)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'Tout homotopisme h : K•→K'•'",
+  "scan": "'homotopisme' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Tout homotopisme",
+   "new": "Tout \\emph{homotopisme}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): '(6.1.4) donne un isomorphisme'",
+  "scan": "'isomorphisme' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donne un isomorphisme",
+   "new": "donne un \\emph{isomorphisme}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'H•(h) : H•(K•)→H•(K'•) est un isomorphisme et que'",
+  "scan": "'isomorphisme' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un isomorphisme et que",
+   "new": "est un \\emph{isomorphisme} et que"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): 'sont limités inférieurement, comme il résulte'",
+  "scan": "'limités inférieurement' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont limités inférieurement,",
+   "new": "sont \\emph{limités inférieurement},"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): '(0, 11.1.5)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.1.5)",
+   "new": "(\\textbf{0}, 11.1.5)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "(6.2.1): '(0, 12.4.5)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 12.4.5)",
+   "new": "(\\textbf{0}, 12.4.5)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.2): '(I, 5.5.6)'",
+  "scan": "bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 5.5.6)",
+   "new": "(\\textbf{I}, 5.5.6)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.2): '(0, 12.4.7)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 12.4.7)",
+   "new": "(\\textbf{0}, 12.4.7)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): 'Comme les H^q(f, K^i)=R^q f_*(K_i)'",
+  "scan": "R^q f_*(K_i) with a subscript i (enlarged crop)",
+  "tex": "\\mathrm R^q f_*(\\mathscr K_i)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "\\mathrm R^q f_*(\\mathscr K^i)",
+  "note": "Misprint in the print (the left side has K^i); the TeX keeps the printed reading."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): 'par une image d'un tel homomorphisme (I, 4.1.1)'",
+  "scan": "bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "homomorphisme (I, 4.1.1)",
+   "new": "homomorphisme (\\textbf{I}, 4.1.1)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): 'tous les O_Y-Modules 'E_r^pq, B_k('E_r^pq), Z_k('E_r^pq)'",
+  "scan": "B_k('E^pq_r) with the index r (enlarged crop)",
+  "tex": "B_k('E_2^{pq})",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$B_k('\\mathscr E_2^{pq})$",
+   "new": "$B_k('\\mathscr E_r^{pq})$"
+  },
+  "note": "Not a misprint: B_k(E_r^pq) and Z_k(E_r^pq) are defined for every r in (0, 11.1.1); the TeX changed r to 2."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): same list, Z_k('E_r^pq)",
+  "scan": "Z_k('E^pq_r) with the index r (enlarged crop)",
+  "tex": "Z_k('E_2^{pq})",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$Z_k('\\mathscr E_2^{pq})$ de la",
+   "new": "$Z_k('\\mathscr E_r^{pq})$ de la"
+  },
+  "note": "As for B_k in the same list."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): '(0, 11.2.4 et I, 4.1.1)', first reference",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.2.4 et",
+   "new": "(\\textbf{0}, 11.2.4 et"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): '(0, 11.2.4 et I, 4.1.1)', second reference",
+  "scan": "bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "I, 4.1.1);",
+   "new": "\\textbf{I}, 4.1.1);"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): 'et comme H^n(f, K•)=lim G_k'",
+  "scan": "lim with only the arrow under it, no index k",
+  "tex": "\\varinjlim_k",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\varinjlim_k\\mathscr G_k",
+   "new": "\\varinjlim\\mathscr G_k"
+  },
+  "note": "Enlarged crop; the lim of B_∞('E_2^pq) above has its index k, as in the TeX."
+ },
+ {
+  "page": 139,
+  "where": "proof of (6.2.3): 'la proposition est démontrée (I, 4.1.1)'",
+  "scan": "bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "démontrée (I, 4.1.1)",
+   "new": "démontrée (\\textbf{I}, 4.1.1)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.4): 'K• par f_*(C•(U, K•))'",
+  "scan": "script C (the sheaf cochain complex; enlarged crop)",
+  "tex": "roman/italic C",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$f_*(C^\\bullet(\\mathfrak U,\\mathscr K^\\bullet))$",
+   "new": "$f_*(\\mathscr C^\\bullet(\\mathfrak U,\\mathscr K^\\bullet))$"
+  },
+  "note": "Only this C is script on the page; the C•(U, ...) and C^i(U, ...) of (6.2.5)-(6.2.6) are roman, as in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'supposer que U est fini'",
+  "scan": "'fini' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est fini, puisque",
+   "new": "est \\emph{fini}, puisque"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'étant alternées par définition'",
+  "scan": "'alternées' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "alternées par définition",
+   "new": "\\emph{alternées} par définition"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): '(0, 11.3.3)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.3.3)",
+   "new": "(\\textbf{0}, 11.3.3)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'sont birégulières. Comme les'",
+  "scan": "'birégulières' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont birégulières. Comme",
+   "new": "sont \\emph{birégulières}. Comme"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): '(I, 5.5.6)'",
+  "scan": "bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 5.5.6)",
+   "new": "(\\textbf{I}, 5.5.6)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'chaque foncteur F⇝C^i(U, F)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr F\\mapsto C^i",
+   "new": "$\\mathscr F\\leadsto C^i"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): '(0, 11.3.2)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.3.2)",
+   "new": "(\\textbf{0}, 11.3.2)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5), display ''E_2^pq = ... = H^p(U, H^q(K•)) = ...'",
+  "scan": "middle H^p(U, ...) plain, like the two other H of the display",
+  "tex": "\\mathbf H^p",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\mathbf H^p(\\mathfrak U,\\mathscr H^q(\\mathscr K^\\bullet))",
+   "new": "=\\mathrm H^p(\\mathfrak U,\\mathscr H^q(\\mathscr K^\\bullet))"
+  },
+  "note": "Measured on the scan: the three H of the display have 5-6 px stems; the bold H of (6.2.4.1) has 8-9 px."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'Γ(Y, O_Y)-modules de type fini (3.2.1)'",
+  "scan": "'de type fini' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "modules de type fini (3.2.1)",
+   "new": "modules \\emph{de type fini} (3.2.1)"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): '(0, 11.1.8)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.1.8)",
+   "new": "(\\textbf{0}, 11.1.8)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5), last paragraph: 'A fortiori'",
+  "scan": "'A fortiori' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "A fortiori, si",
+   "new": "\\emph{A fortiori}, si"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'complexe de O_X-Modules cohérents'",
+  "scan": "'cohérents' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Modules cohérents, les",
+   "new": "Modules \\emph{cohérents}, les"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): 'sont cohérents sous les hypothèses'",
+  "scan": "'cohérents' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont cohérents sous",
+   "new": "sont \\emph{cohérents} sous"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "proof of (6.2.5): '(0_I, 5.3.4)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0\\textsubscript{I}, 5.3.4)",
+   "new": "(\\textbf{0}\\textsubscript{I}, 5.3.4)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'est un foncteur cohomologique dans la catégorie'",
+  "scan": "'cohomologique' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un foncteur\ncohomologique",
+   "new": "est un foncteur\n\\emph{cohomologique}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'Modules limités inférieurement (0, 12.4.4)'",
+  "scan": "'limités inférieurement' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Modules\nlimités inférieurement",
+   "new": "Modules\n\\emph{limités inférieurement}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): '(0, 12.4.4)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 12.4.4)",
+   "new": "(\\textbf{0}, 12.4.4)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'dans la catégorie de tous les complexes'",
+  "scan": "'tous' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "catégorie de tous les",
+   "new": "catégorie de \\emph{tous} les"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'le morphisme f est quasi-compact'",
+  "scan": "'quasi-compact' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est quasi-compact et l'espace",
+   "new": "est \\emph{quasi-compact} et l'espace"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'sous-jacent à X localement noethérien'",
+  "scan": "'localement noethérien' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$X$ localement\nnoethérien",
+   "new": "$X$ \\emph{localement\nnoethérien}"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): '(0, 11.5.2)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.5.2)",
+   "new": "(\\textbf{0}, 11.5.2)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6), 2nd paragraph: 'si f est séparé'",
+  "scan": "'séparé' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est séparé,",
+   "new": "est \\emph{séparé},"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'complexes de O_X-Modules quasi-cohérents. C'est immédiat'",
+  "scan": "'quasi-cohérents' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Modules quasi-cohérents. C'est",
+   "new": "Modules \\emph{quasi-cohérents}. C'est"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'car alors X est un schéma'",
+  "scan": "'schéma' italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un schéma, donc",
+   "new": "est un \\emph{schéma}, donc"
+  },
+  "note": "Italic in the print; upright in the TeX."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'on est ramené à voir que K•⇝H•(U, K•)'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr K^\\bullet\\mapsto\\mathbf H^\\bullet",
+   "new": "$\\mathscr K^\\bullet\\leadsto\\mathbf H^\\bullet"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): 'le foncteur K•⇝C•(U, K•) est exact'",
+  "scan": "wavy arrow",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr K^\\bullet\\mapsto\nC^\\bullet",
+   "new": "$\\mathscr K^\\bullet\\leadsto\nC^\\bullet"
+  },
+  "note": "Wavy arrow in the print (\\leadsto), not convention 3; GLOBAL_ISSUES item 33."
+ },
+ {
+  "page": 140,
+  "where": "(6.2.6): '(I, 1.3.7)'",
+  "scan": "bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 1.3.7)",
+   "new": "(\\textbf{I}, 1.3.7)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 140,
+  "where": "end of the page: 'pour tout ouvert affine V' / p. 141 'de Y, ...'",
+  "scan": "the sentence runs on to p. 141; no paragraph break",
+  "tex": "blank lines before and after \\oldpage[III]{141} make a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "pour tout ouvert affine $V$\n\n",
+   "new": "pour tout ouvert affine $V$\n"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 141 finding (blank line after the marker)."
+ },
+ {
+  "page": 141,
+  "where": "top of the page: 'de Y, f^{-1}(Y) est un schéma' (continuation of (6.2.6))",
+  "scan": "first line not indented, same paragraph",
+  "tex": "blank line after \\oldpage[III]{141}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{141}\n\nde $Y$",
+   "new": "\\oldpage[III]{141}\nde $Y$"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 140 finding (blank line before the marker)."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6): 'pour tout ouvert affine V de Y, f^{-1}(Y) est un schéma'",
+  "scan": "f^{-1}(Y) (enlarged crop)",
+  "tex": "$f^{-1}(Y)$",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "$f^{-1}(V)$",
+  "note": "Misprint in the print: f^{-1}(V) is the scheme meant (f separated, V affine; the next lines use f^{-1}(V)). The TeX keeps the printed reading."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6): 'pour une suite exacte 0→K'•→K•→K''•→0 de complexes'",
+  "scan": "in the running text",
+  "tex": "displayed",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "suite exacte\n\\[\n  0\\longrightarrow\\mathscr K'^\\bullet\n  \\longrightarrow\\mathscr K^\\bullet\n  \\longrightarrow\\mathscr K''^\\bullet\n  \\longrightarrow0\n\\]\nde complexes",
+   "new": "suite exacte\n$0\\longrightarrow\\mathscr K'^\\bullet\\longrightarrow\\mathscr K^\\bullet\\longrightarrow\\mathscr K''^\\bullet\\longrightarrow0$\nde complexes"
+  },
+  "note": "Layout: the print sets this formula in the running text; the TeX displays it. The formula itself matches."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6): 'l'homomorphisme ∂ : H^n(f, K''•)|V→H^{n+1}(f, K'•)|V ne dépend pas'",
+  "scan": "in the running text",
+  "tex": "displayed",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'homomorphisme\n\\[\n  \\partial:\n  \\mathscr H^n(f,\\mathscr K''^\\bullet)|V\n  \\longrightarrow\n  \\mathscr H^{n+1}(f,\\mathscr K'^\\bullet)|V\n\\]\nne dépend",
+   "new": "l'homomorphisme\n$\\partial:\\mathscr H^n(f,\\mathscr K''^\\bullet)|V\\longrightarrow\\mathscr H^{n+1}(f,\\mathscr K'^\\bullet)|V$\nne dépend"
+  },
+  "note": "Layout: the print sets this formula in the running text; the TeX displays it. The formula itself matches."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6), first diagram: vertical arrow H•(U, K•)→H•(U', K•)",
+  "scan": "label ≀ on the right of the arrow",
+  "tex": "\\ar[dd]^{\\iota}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[dd]^{\\iota}",
+   "new": "\\ar[dd]^{\\wr}"
+  },
+  "note": "The print marks the vertical isomorphism with ≀ (vertical tilde, \\wr), on the right of the arrow; \\iota gives a Greek iota."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6), first diagram: arrow H•(U', K•)→H•(f^{-1}(V), K•)",
+  "scan": "tilde above (upper left of) the rising arrow",
+  "tex": "\\ar[rru]_-{\\sim}: xy-pic puts a _ label below right of a rising arrow",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\ar[rru]_-{\\sim}",
+   "new": "\\ar[rru]^-{\\sim}"
+  },
+  "note": "Label side only (cf. GLOBAL_ISSUES item 30); the falling arrow's ^-{\\sim} matches the print."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6), second diagram: left vertical arrow",
+  "scan": "label ≀ on the right of the arrow",
+  "tex": "\\ar[d]^{\\iota}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[r]^-{\\partial}\\ar[d]^{\\iota}",
+   "new": "\\ar[r]^-{\\partial}\\ar[d]^{\\wr}"
+  },
+  "note": "The print marks the vertical isomorphism with ≀ (vertical tilde, \\wr), on the right of the arrow; \\iota gives a Greek iota."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6), second diagram: right vertical arrow",
+  "scan": "label ≀ on the right of the arrow",
+  "tex": "\\ar[d]^{\\iota}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf H^{n+1}(\\mathfrak U,\\mathscr K'^\\bullet)\n      \\ar[d]^{\\iota}",
+   "new": "\\mathbf H^{n+1}(\\mathfrak U,\\mathscr K'^\\bullet)\n      \\ar[d]^{\\wr}"
+  },
+  "note": "The print marks the vertical isomorphism with ≀ (vertical tilde, \\wr), on the right of the arrow; \\iota gives a Greek iota."
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6), second diagram, bottom right entry",
+  "scan": "no full stop after the diagram",
+  "tex": "full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathbf H^{n+1}(\\mathfrak U',\\mathscr K'^\\bullet).",
+   "new": "\\mathbf H^{n+1}(\\mathfrak U',\\mathscr K'^\\bullet)"
+  },
+  "note": ""
+ },
+ {
+  "page": 141,
+  "where": "(6.2.6), last paragraph: '(0, 11.4.4)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.4.4)",
+   "new": "(\\textbf{0}, 11.4.4)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 141,
+  "where": "heading 6.3",
+  "scan": "6.3. Hypertor de deux complexes de modules. (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Hypertor de deux complexes de modules}",
+   "new": "\\subsection{Hypertor de deux complexes de modules.}"
+  },
+  "note": ""
+ },
+ {
+  "page": 141,
+  "where": "(6.3.1): '(0, 11.6.1)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.6.1)",
+   "new": "(\\textbf{0}, 11.6.1)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 141,
+  "where": "(6.3.1): '(0, 11.6.5)'",
+  "scan": "bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0, 11.6.5)",
+   "new": "(\\textbf{0}, 11.6.5)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 141,
+  "where": "end of the page, after (6.3.1.1) / p. 142 'et nous dirons que cet A-module'",
+  "scan": "the sentence continues on p. 142 ('et nous dirons ...'), first line not indented",
+  "tex": "blank lines after \\] and after \\oldpage[III]{142} make a paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\label{III.6.3.1.1.fr}\n\\]\n\n",
+   "new": "\\label{III.6.3.1.1.fr}\n\\]\n"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 142 fix '\\oldpage[III]{142}\\n\\net nous dirons' -> '\\oldpage[III]{142}\\net nous dirons' (page_142.tex)."
+ }
+]

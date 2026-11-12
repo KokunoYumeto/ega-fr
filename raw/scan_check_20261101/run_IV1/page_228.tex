@@ -1,0 +1,88 @@
+% from ega4-1-fr.tex
+\oldpage[IV-1]{228}
+
+Pour vérifier qu'un morphisme est quasi-séparé, on est donc ramené à donner
+des critères pour qu'un préschéma soit quasi-séparé~:
+
+\begin{proposition}[1.2.7]
+\label{IV.1.2.7-fr}
+Soient $X$ un préschéma, $(U_\alpha)$ un recouvrement de $X$ formé d'ouverts
+quasi-compacts. Les propriétés suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $X$ est quasi-séparé.
+  \item[b)] Pour tout ouvert quasi-compact $U$ de $X$, l'immersion canonique
+  $U\to X$ est quasi-compacte (autrement dit, $U$ est rétrocompact dans $X$).
+  \item[b')] L'intersection de deux ouverts quasi-compacts de $X$ est
+  quasi-compacte.
+  \item[c)] Pour tout couple d'indices $(\alpha,\beta)$, l'intersection
+  $U_\alpha\cap U_\beta$ est quasi-compacte.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Les propriétés \emph{b)} et \emph{b')} sont trivialement équivalentes par
+définition d'un morphisme quasi-compact. Comme un ouvert quasi-compact est
+réunion finie d'ouverts affines, pour deux ouverts quasi-compacts $U$, $V$ de
+$X$, $U\times_{\mathbf Z}V$ est un ouvert quasi-compact de
+$X\times_{\mathbf Z}X$ (I, 3.2.7), dont l'image réciproque par $\Delta_X$ est
+$U\cap V$, donc \emph{a)} entraîne \emph{b')}. Il est trivial que \emph{b')}
+entraîne \emph{c)}~; enfin, si \emph{c)} est vérifiée, les
+$U_\alpha\times_{\mathbf Z}U_\beta$ forment un recouvrement de
+$X\times_{\mathbf Z}X$ par des ouverts quasi-compacts, et l'on sait que pour
+que le morphisme $\Delta_X:X\to X\times_{\mathbf Z}X$ soit quasi-compact, il
+suffit que les images réciproques $U_\alpha\cap U_\beta$ des
+$U_\alpha\times_{\mathbf Z}U_\beta$ par $\Delta_X$ soient quasi-compactes
+(1.1.1)~; donc \emph{c)} entraîne \emph{a)}.
+\end{proof}
+
+\begin{corollary}[1.2.8]
+\label{IV.1.2.8-fr}
+Tout préschéma $X$ dont l'espace sous-jacent est localement noethérien (par
+exemple un préschéma localement noethérien) est quasi-séparé~; tout morphisme
+$f:X\to Y$ est alors quasi-séparé.
+\end{corollary}
+
+\begin{proposition}[1.2.9]
+\label{IV.1.2.9-fr}
+Soient $X'$, $X''$ deux préschémas, $X=X'\coprod X''$ leur somme,
+$f':X'\to Y$, $f'':X''\to Y$ deux morphismes, $f:X\to Y$ le morphisme qui
+coïncide avec $f'$ dans $X'$ et avec $f''$ dans $X''$. Pour que $f$ soit
+quasi-séparé il faut et il suffit que $f'$ et $f''$ le soient.
+\end{proposition}
+
+\begin{proof}
+En effet, $X\times_YX$ est somme des quatre préschémas
+$X'\times_YX'$, $X'\times_YX''$, $X''\times_YX'$ et $X''\times_YX''$, et
+$\Delta_f$ est le morphisme qui coïncide avec $\Delta_{f'}$ dans $X'$ et avec
+$\Delta_{f''}$ dans $X''$~; la proposition résulte donc aussitôt des
+définitions.
+\end{proof}
+
+\subsection{Morphismes localement de type fini}
+\label{subsection:IV.1.3-fr}
+
+\begin{env}[1.3.1]
+\label{IV.1.3.1-fr}
+Rappelons que si $A$ est un anneau, une $A$-algèbre (commutative) $B$ est dite
+\emph{de type fini} si elle est engendrée par un nombre fini d'éléments de
+$B$, ou, ce qui revient au même, si elle est isomorphe au quotient d'une
+algèbre de polynômes $A[T_1,\ldots,T_n]$ par un idéal de cette algèbre. Il est
+clair que pour toute $A$-algèbre (commutative) $A'$,
+$B\otimes_AA'$ est alors une $A'$-algèbre de type fini. Si $B$ est une
+$A$-algèbre de type fini et $C$ une $B$-algèbre de type fini, $C$ est une
+$A$-algèbre de type fini, car si $C$ est un quotient de
+$B[T_1,\ldots,T_n]$ et $B$ un quotient de $A[S_1,\ldots,S_m]$,
+$B[T_1,\ldots,T_n]=B\otimes_AA[T_1,\ldots,T_n]$ est un quotient de
+$A[S_1,\ldots,S_m,T_1,\ldots,T_n]$, donc il en est de même de $C$.
+\end{env}
+
+\begin{definition}[1.3.2]
+\label{IV.1.3.2-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $x$ un point de $X$,
+$y=f(x)$. On dit que $f$ est \emph{de type fini en $x$} s'il existe un
+voisinage ouvert affine $V$ de $y$ et un voisinage ouvert affine $U$ de $x$
+tels que $f(U)\subset V$ et que l'anneau $A(U)$ soit une $A(V)$-algèbre de
+type fini. On dit que $f$ est \emph{localement de type fini} s'il est de type
+fini en tout point de $X$.
+\end{definition}
+

@@ -1,0 +1,75 @@
+\oldpage[IV-4]{269}
+
+\begin{definition}[21.5.5]
+\EGAReaderTarget{ega4.c04.def.21-5-5}{IV.21.5.5}
+Étant donné un morphisme fini $f:X'\to X$ de préschémas, vérifiant l'une des conditions \textup{I), II)} de \sref{IV.21.5.3}, on appelle image directe (ou norme) d'un diviseur $D'$ sur $X'$ par $f$, et l'on note $f_*(D')$ \textup{(}ou $\mathrm{N}_{X'/X}(D')$\textup{)}, le diviseur sur $X$ qui correspond canoniquement \sref{IV.21.2.11} à la classe du couple $(\mathrm{N}_{X'/X}(\sh{O}_{X'}(D')),\mathrm{N}_{X'/X}(s_{D'}))$.
+\end{definition}
+
+Il résulte aussitôt de cette définition, compte tenu de \sref{IV.21.2.9.4} et de \sref{IV.21.5.3.2}, que si $D_1'$, $D_2'$, $D'$ sont des diviseurs sur $X'$, on a
+\[
+\label{IV.21.5.5.1}
+  f_*(D_1'+D_2')=f_*(D_1')+f_*(D_2')
+  \tag{21.5.5.1}
+\]
+et $D'\geq0$ entraîne $f_*(D')\geq0$, autrement dit, $D'\leadsto f_*(D')$ est un \emph{homomorphisme croissant} du groupe ordonné $\operatorname{Div}(X')$ dans le groupe ordonné $\operatorname{Div}(X)$.
+La définition \sref{IV.21.5.5} montre d'ailleurs aussitôt que pour tout ouvert $U$ de $X$, on a $f_*^U(D'|f^{-1}(U))=f_*(D')|U$ ($f^U$ étant la restriction $f^{-1}(U)\to U$ de $f$), et les homomorphismes $f_*^U$, pour $U$ variable, définissent donc un \emph{homomorphisme de faisceaux de groupes ordonnés}
+\[
+\label{IV.21.5.5.2}
+  \mathrm{N}_{X'/X}:f_*(\sh{D}iv_{X'})\to\sh{D}iv_X.
+  \tag{21.5.5.2}
+\]
+
+En outre, pour tout ouvert $U$ de $X$, tout $\sh{O}_{X'}$-Module inversible $\sh{L}'$ et toute section méromorphe régulière $s'$ de $\sh{L}'$ au-dessus de $f^{-1}(U)$, on a, d'après les définitions précédentes et \sref{IV.21.1.4}
+\[
+\label{IV.21.5.5.3}
+  \operatorname{div}_U(\mathrm{N}(s'))=f_*^U(\operatorname{div}_{f^{-1}(U)}(s')).
+  \tag{21.5.5.3}
+\]
+
+\begin{proposition}[21.5.6]
+\label{IV.21.5.6}
+Soit $f:X'\to X$ un morphisme fini localement libre et supposons que $f_*(\sh{O}_{X'})$ soit de rang constant $n$.
+Alors, pour tout diviseur $D$ sur $X$, $f_*(D)$ est défini et l'on a
+\[
+\label{IV.21.5.6.1}
+  f_*(f^*(D))=nD.
+  \tag{21.5.6.1}
+\]
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de ce que $f$ est plat \sref{IV.21.4.5}, et la seconde est conséquence immédiate des définitions et de (\textbf{II}, 6.5.3.2).
+\end{proof}
+
+\begin{proposition}[21.5.7]
+\label{IV.21.5.7}
+Soient $f:X'\to X$ un morphisme fini vérifiant l'une des hypothèses \textup{I), II)} de \sref{IV.21.5.3}, $f':X''\to X'$ un morphisme fini localement libre de rang constant $n$.
+Alors $f''=f\circ f':X''\to X$ vérifie la même hypothèse que $f$, et pour tout diviseur $D''$ sur $X''$, on a
+\[
+\label{IV.21.5.7.1}
+  f_*''(D'')=f_*(f_*'(D'')).
+  \tag{21.5.7.1}
+\]
+\end{proposition}
+
+Compte tenu de la définition \sref{IV.21.5.5}, il suffit de prouver le résultat suivant :
+
+\begin{lemma}[21.5.7.2]
+\label{IV.21.5.7.2}
+Sous les hypothèses de \sref{IV.21.5.7}, on a un isomorphisme fonctoriel
+\[
+\label{IV.21.5.7.3}
+  \mathrm{N}_{X''/X}(\sh{L}'')\xrightarrow{\sim}\mathrm{N}_{X'/X}(\mathrm{N}_{X''/X'}(\sh{L}''))
+  \tag{21.5.7.3}
+\]
+dans la catégorie des $\sh{O}_{X''}$-Modules inversibles.
+\end{lemma}
+
+En effet, compte tenu de la définition de la norme d'une section de $\sh{L}''$ (\textbf{II}, 6.5.3) et de la définition \sref{IV.21.5.5}, on obtiendra aussitôt \sref{IV.21.5.7.1}.
+Pour prouver \sref{IV.21.5.7.2}, il suffit, compte tenu des définitions de (\textbf{II}, 6.5.2 et 6.5.3) de prouver que pour toute section $s$ de $f_*''(\sh{O}_{X''})=f_*(f_*'(\sh{O}_{X''}))$ au-dessus d'un ouvert $U$ de $X$, on a
+\[
+\label{IV.21.5.7.4}
+  \mathrm{N}_{f_*''(\sh{O}_{X''})/\sh{O}_X}(s)=\mathrm{N}_{f_*(\sh{O}_{X'})/\sh{O}_X}(\mathrm{N}_{f_*''(\sh{O}_{X''})/f_*(\sh{O}_{X'})}(s))
+  \tag{21.5.7.4}
+\]
+

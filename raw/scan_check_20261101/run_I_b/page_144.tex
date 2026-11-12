@@ -1,0 +1,83 @@
+% from ega1-6-fr.tex
+\oldpage[I]{144}
+\begin{proposition}[6.2.2]
+\label{I.6.2.2-fr}
+Étant donné un préschéma $X$, les conditions suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $X$ est un schéma artinien~;
+  \item[b)] $X$ est noethérien et son espace sous-jacent est discret~;
+  \item[c)] $X$ est noethérien et les points de son espace sous-jacent sont
+    fermés (condition $\mathrm{T}_1$).
+\end{enumerate}
+
+Lorsqu'il en est ainsi, l'espace sous-jacent à $X$ est fini, et l'anneau $A$
+de $X$ est composé direct des anneaux locaux (artiniens) des points de $X$.
+\end{proposition}
+
+On sait que a) entraîne la dernière assertion (\cite{I-13}, p.~205, th.~3),
+tout idéal premier de $A$ est alors maximal et est l'image réciproque de
+l'idéal maximal de l'un des composants locaux de $A$, donc l'espace $X$ est
+fini et discret~; a) entraîne donc b) et b) entraîne évidemment c). Pour voir
+que c) entraîne a), montrons d'abord que $X$ est alors fini~; on peut en effet
+se ramener au cas où $X$ est affine, et on sait qu'un anneau noethérien dont
+tous les idéaux premiers sont maximaux est artinien (\cite{I-13}, p.~203),
+d'où notre assertion. L'espace sous-jacent $X$ est alors discret, somme
+topologique d'un nombre fini de points $x_i$, et les anneaux locaux
+$\mathscr{O}_{x_i}=A_i$ sont artiniens~; il est clair que $X$ est isomorphe au
+schéma affine spectre premier de l'anneau $A$ composé direct des $A_i$
+(\hyperref[I.1.7.3-fr]{1.7.3}).
+
+\subsection{Morphismes de type fini.}
+\label{subsection:I.6.3-fr}
+
+\begin{definition}[6.3.1]
+\label{I.6.3.1-fr}
+On dit qu'un morphisme $f:X\to Y$ est \emph{de type fini} si $Y$ est réunion
+d'une famille $(V_\alpha)$ d'ouverts affines ayant la propriété suivante~:
+\begin{enumerate}
+  \item[(P)] $f^{-1}(V_\alpha)$ est réunion finie d'ouverts affines
+    $U_{\alpha i}$ tels que chacun des anneaux $A(U_{\alpha i})$ soit une
+    algèbre de type fini sur $A(V_\alpha)$.
+\end{enumerate}
+On dit alors aussi que $X$ est un préschéma de type fini sur $Y$, ou un
+$Y$-préschéma de type fini.
+\end{definition}
+
+\begin{proposition}[6.3.2]
+\label{I.6.3.2-fr}
+Si $f:X\to Y$ est un morphisme de type fini, tout ouvert affine $W$ de $Y$
+possède la propriété (P) de la déf. (\hyperref[I.6.3.1-fr]{6.3.1}).
+\end{proposition}
+
+Nous démontrerons d'abord le
+
+\begin{lemma}[6.3.2.1]
+\label{I.6.3.2.1-fr}
+Si $T\subset Y$ est un ouvert affine, possédant la propriété (P), alors, pour
+tout $g\in A(T)$, $D(g)$ possède la propriété (P).
+\end{lemma}
+
+En effet, par hypothèse, $f^{-1}(T)$ est réunion finie d'ouverts affines
+$Z_j$ tels que $A(Z_j)$ soit une algèbre de type fini sur $A(T)$~; soit
+$\varphi_j:A(T)\to A(Z_j)$ l'homomorphisme d'anneaux correspondant à la
+restriction de $f$ à $Z_j$ (\hyperref[I.2.2.4-fr]{2.2.4}), et posons
+$g_j=\varphi_j(g)$~; on a alors
+$f^{-1}(D(g))\cap Z_j=D(g_j)$
+(\hyperref[I.1.2.2.2-fr]{1.2.2.2}). Or,
+$A(D(g_j))=A(Z_j)_{g_j}=A(Z_j)[1/g_j]$ est de type fini sur $A(Z_j)$ et
+\emph{a fortiori} sur $A(T)$ en vertu de l'hypothèse, donc aussi sur
+$A(D(g))=A(T)[1/g]$, ce qui démontre le lemme.
+
+Ce lemme étant établi, comme $W$ est quasi-compact
+(\hyperref[I.1.1.10-fr]{1.1.10}), il existe un recouvrement fini de $W$ par
+des ensembles de la forme $D(g_i)$, où chaque $g_i$ appartient à un anneau
+$A(V_{\alpha(i)})$. Chaque $D(g_i)$, étant quasi-compact, est réunion finie
+d'ensembles $D(h_{ik})$ où $h_{ik}\in A(W)$~; si
+$\varphi_i:A(W)\to A(D(g_i))$ est l'application canonique, on a
+$D(h_{ik})=D(\varphi_i(h_{ik}))$ en vertu de
+(\hyperref[I.1.2.2.2-fr]{1.2.2.2}). En vertu de
+(\hyperref[I.6.3.2.1-fr]{6.3.2.1}), chacun des
+$f^{-1}(D(h_{ik}))$ admet un recouvrement fini par des ouverts affines
+$U_{ijk}$ tels que $A(U_{ijk})$ soit une algèbre de type fini sur
+$A(D(h_{ik}))=A(W)[1/h_{ik}]$, d'où la proposition.
+

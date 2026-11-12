@@ -1,0 +1,38 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{243}
+  \item $f$ est un morphisme ouvert, ou surjectif et quasi-compact, et $\operatorname{dom}_S(\omega)$ contient un ouvert $U$ schématiquement dense dans $X$ et rétrocompact dans $X$.
+  \item $f$ est localement de présentation finie.
+  \item $Y$ est localement de présentation finie sur $S$, et $X$ vérifie l'une des conditions~a),~b) de \sref{IV.20.3.6}.
+\end{enumerate}
+Alors, $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X'$, de sorte que $\omega\circ f$ est défini \sref{IV.20.3.2} et l'on a
+\[
+\label{IV.20.3.11.1}
+  \operatorname{dom}_S(\omega\circ f)=f^{-1}(\operatorname{dom}_S(\omega)).
+  \tag{20.3.11.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Prouvons d'abord que $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X'$.
+La question étant locale sur $X$ et $X'$, on peut supposer $X$ et $X'$ affines et puisque $f$ est plat, il suffit de voir, en vertu de \sref{IV.11.10.5}[(ii), (a)] que $\operatorname{dom}_S(\omega)$ contient un ensemble ouvert $U$ rétrocompact et schématiquement dense dans $X$.
+Cela résulte de l'hypothèse dans le cas~(i), et de \sref{IV.20.2.12} dans le cas~(iii), compte tenu du fait que dans un schéma affine, tout ouvert de la forme $\mathrm{D}(t)$ est rétrocompact ; enfin, dans le cas~(ii), on voit directement que $f^{-1}(\operatorname{dom}_S(\omega))$ est schématiquement dense dans $X'$ en appliquant \sref{IV.20.3.5}[(i)].
+
+Prouvons maintenant \sref{IV.20.3.11.1}, autrement dit que, pour tout point $x'\in\operatorname{dom}_S(\omega\circ f)$, on a $x=f(x')\in\operatorname{dom}_S(\omega)$.
+Notons d'abord qu'on peut se borner au cas où $f$ est \emph{fidèlement plat et quasi-compact}.
+C'est en effet l'hypothèse dans le second cas de~(i) ; dans les autres cas, la question est locale sur $X'$, et on peut donc supposer déjà $X$ et $X'$ affines, donc $f$ quasi-compact.
+Dans le premier cas de~(i) et dans le cas~(ii), $f$ est un morphisme ouvert \sref{IV.11.3.1}, donc on peut, en remplaçant $X$ par l'ouvert $f(X')$, supposer $f$ surjectif, donc fidèlement plat.
+Dans le cas~(iii), en utilisant \sref{IV.20.3.9}, on peut se borner à prouver que la restriction de $\omega$ à $\Spec(\sh{O}_{X,x})$ est partout définie, et on peut donc remplacer $X$ par $\Spec(\sh{O}_{X,x})$, $X'$ par $X'\times_X\Spec(\sh{O}_{X,x})$ et $f$ par sa restriction à ce dernier préschéma, qui est un morphisme surjectif \sref{IV.2.3.4}, donc fidèlement plat.
+
+Supposons donc $f$ fidèlement plat et quasi-compact ; avec les notations du lemme \sref{IV.20.3.10}, il suffit de voir alors que $U''$ est schématiquement dense dans $X''$, en prenant pour $U$ un ouvert schématiquement dense dans $X$, contenu dans $\operatorname{dom}_S(\omega)$ ; cela sera le cas, en vertu de \sref{IV.11.10.5}[(ii), (a)] si $U$ est pris rétrocompact dans $X$ (puisque le morphisme $f'':X''\to X$ est plat).
+Or l'existence d'un tel ouvert $U$ fait partie de l'hypothèse dans le cas~(i) ; dans le cas~(iii) elle résulte de \sref{IV.20.2.12} et du fait que dans un schéma affine $\Spec(A)$, tout ouvert de la forme $\mathrm{D}(t)$ est rétrocompact.
+Enfin, dans le cas~(ii), prenons $U=\operatorname{dom}_S(\omega)$ et montrons directement que $U''$ est schématiquement dense dans $X''$ : il suffit pour cela de remarquer que $f'':X''\to X$ est plat et localement de présentation finie et d'appliquer \sref{IV.11.10.5}[(ii), (b)].
+\end{proof}
+
+\begin{corollary}[20.3.12]
+\label{IV.20.3.12}
+Soit $\vphi$ une pseudo-fonction sur un préschéma $X$.
+Alors, pour tout morphisme plat et localement de présentation finie $f:X'\to X$, la pseudo-fonction $\vphi\circ f$ est définie et l'on a $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$.
+\end{corollary}
+
+\begin{remark}[20.3.13]
+\label{IV.20.3.13}

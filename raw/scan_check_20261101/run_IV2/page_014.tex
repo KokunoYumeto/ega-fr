@@ -1,0 +1,82 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{14}
+En vertu de Bourbaki, \emph{Alg. comm.}, chap.~II, \S~3,
+n\textsuperscript{o}~3, prop.~12, il suffit de prouver la proposition lorsque
+$A$ est un anneau local~; on sait alors (\emph{loc. cit.},
+n\textsuperscript{o}~2, cor.~2 de la prop.~5) que $B$ est un $A$-module libre
+de type fini, et la conclusion résulte de \emph{loc. cit.}, prop.~5.
+
+\subsection{Propriétés topologiques des morphismes plats}
+\label{subsection:IV.2.3-fr}
+
+\begin{lemma}[2.3.1]
+\EGAReaderTarget{ega4.c04.lem.2-3-1}{IV.2.3.1-fr}
+Soient $f:X\to Y$ un morphisme quasi-compact et quasi-séparé,
+$g:Y'\to Y$ un morphisme plat~; posons $X'=X\times_Y Y'$,
+$f'=f_{(Y')}:X'\to Y'$. Alors, pour tout $\mathcal O_X$-Module quasi-cohérent
+$\mathscr F$, l'homomorphisme canonique
+\begin{equation}
+\tag{2.3.1.1}
+\label{IV.2.3.1.1-fr}
+  g^*(f_*(\mathscr F))\to
+  f'_*(\mathscr F\otimes_{\mathcal O_Y}\mathcal O_{Y'})
+\end{equation}
+est bijectif.
+\end{lemma}
+
+C'est un cas particulier de (III, 1.4.15) (amélioré en (1.7.21)).
+
+\begin{proposition}[2.3.2]
+\label{IV.2.3.2-fr}
+Soient $S$ un préschéma, $f:X\to Y$ un $S$-morphisme quasi-compact et
+quasi-séparé~; soient $Z$ le sous-préschéma de $Y$, image fermée de $X$ par
+$f$ ((I, 9.5.3) et (1.7.8)), et soit $j:Z\to Y$ l'injection canonique, de
+sorte que l'on a $f=j\circ g$, où $g:X\to Z$ est un morphisme
+(\emph{loc. cit.}). Soit $h:S'\to S$ un morphisme plat, et posons
+$f'=f_{(S')}:X_{(S')}\to Y_{(S')}$~; alors
+$j'=j_{(S')}:Z_{(S')}\to Y_{(S')}$ s'identifie à l'injection canonique du
+sous-préschéma de $Y_{(S')}$, image fermée de $X_{(S')}$ par $f'$.
+\end{proposition}
+
+Comme le morphisme $Y_{(S')}\to Y$ est plat (2.1.4), on peut se borner au cas
+où $S=Y$ (I, 3.3.11)~; si $f=(\psi,\theta)$, on sait que $Z$ est le
+sous-préschéma fermé de $S$ défini par l'Idéal (quasi-cohérent) $\mathscr J$
+de $\mathcal O_S$, noyau de l'homomorphisme
+$\theta:\mathcal O_S\to f_*(\mathcal O_X)$ (I, 9.5.2). Comme $h$ est un
+morphisme plat, l'Idéal quasi-cohérent $\mathscr J\mathcal O_{S'}$ de
+$\mathcal O_{S'}$ s'identifie au noyau de
+$h^*(\theta):\mathcal O_{S'}\to h^*(f_*(\mathcal O_X))$. Or, si
+$f'=(\psi',\theta')$, on vérifie facilement (par exemple en se ramenant au
+cas où $Y$ et $Y'$ sont affines et utilisant (I, 2.2.4)) que
+$\theta':\mathcal O_{S'}\to f'_*(\mathcal O_{X'})$ est composé de
+l'homomorphisme canonique (2.3.1.1)
+$h^*(f_*(\mathcal O_X))\to f'_*(\mathcal O_{X'})$ et de $h^*(\theta)$~; la
+conclusion résulte donc de (2.3.1) et de (I, 9.5.2), puisque $f'$ est
+quasi-compact et quasi-séparé (1.1.2 et 1.2.2).
+
+\begin{env}[2.3.3]
+\label{IV.2.3.3-fr}
+Nous dirons qu'un morphisme $f:X\to Y$ est \emph{quasi-plat} s'il existe un
+$\mathcal O_X$-Module quasi-cohérent $\mathscr F$ \emph{de type fini} qui soit
+$f$-plat et dont le support soit égal à $X$. Nous dirons que $f$ est
+\emph{quasi-fidèlement plat} s'il est quasi-plat et surjectif. Tout morphisme
+plat (resp. fidèlement plat) est quasi-plat (resp. quasi-fidèlement plat), car
+alors $\mathscr F=\mathcal O_X$ vérifie les conditions précédentes.
+\end{env}
+
+Il résulte aussitôt de (2.1.4) et de (I, 9.1.13), que si $f$ est quasi-plat,
+alors, pour tout morphisme $Y'\to Y$, le morphisme
+$f_{(Y')}:X\times_Y Y'\to Y'$ est quasi-plat. De même (compte tenu de
+(I, 3.5.2)), si $f$ est quasi-fidèlement plat, il en est de même de
+$f_{(Y')}$.
+
+\begin{proposition}[2.3.4]
+\EGAReaderTarget{ega4.c04.prop.2-3-4}{IV.2.3.4-fr}
+Soit $f:X\to Y$ un morphisme quasi-plat (2.3.3). Alors $f$ possède les
+propriétés suivantes (qui sont équivalentes en vertu de (1.10.4))~:
+\begin{enumerate}
+  \item[(i)] Pour tout $x\in X$ et toute générisation $y'$ de $y=f(x)$, il
+  existe une générisation $x'$ de $x$ telle que $f(x')=y'$.
+  \item[(ii)] Pour tout $x\in X$, l'image par $f$ de
+  $\operatorname{Spec}(\mathcal O_{X,x})$ est
+  $\operatorname{Spec}(\mathcal O_{Y,y})$.

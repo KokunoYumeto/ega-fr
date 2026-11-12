@@ -1,0 +1,54 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{295}
+et puisque $\operatorname{Tor}_i^A(M,A)=0$ pour $i\geq1$, la suite exacte des Tor donne d'une part la suite exacte
+\[
+  0\to\operatorname{Tor}_1^A(M,A/tA)\to M\xrightarrow{t_M}M\to M/tM\to0
+\]
+et d'autre part, pour $i\geq2$,
+\[
+  0=\operatorname{Tor}_i^A(M,A)\to\operatorname{Tor}_i^A(M,A/tA)\to\operatorname{Tor}_{i-1}^A(M,A)=0,
+\]
+donc on a $N_t(M)=\operatorname{Tor}_1^A(M,A/tA)$ et $\operatorname{Tor}_i^A(M,A/tA)=0$ pour $i\geq2$;
+la suite exacte des Tor donne une suite exacte
+\[
+  0\to\operatorname{Tor}_1^A(M',A/tA)\to\operatorname{Tor}_1^A(M,A/tA)\to\operatorname{Tor}_1^A(M'',A/tA)\to
+\]
+\[
+  M'\otimes_A(A/tA)\to M\otimes_A(A/tA)\to M''\otimes_A(A/tA)\to0
+\]
+et cette suite s'écrit, d'après ce qui précède,
+\[
+  0\to N_t(M')\to N_t(M)\to N_t(M'')\to P_t(M')\to P_t(M)\to P_t(M'')\to0,
+\]
+ce qui prouve (ii).
+
+Pour prouver (iii), notons qu'il y a une suite de composition $(M_h)$ de $M$ dont les quotients $M_h/M_{h+1}$ sont isomorphes à $A/\mathfrak{m}$ ou à un des $A/\mathfrak{p}_i$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~1, n\textsuperscript{o}~4, th.~1), et pour que $M$ soit de longueur finie, il faut et il suffit que tous ces quotients soient isomorphes à $A/\mathfrak{m}$.
+Tout revient donc (en vertu de (ii)) à prouver que $d_t(A/\mathfrak{m})=0$ et $d_t(A/\mathfrak{p}_i)>0$.
+Or, l'image de $t$ dans $A/\mathfrak{m}$ étant $0$, on a $N_t(A/\mathfrak{m})=A/\mathfrak{m}$ et $P_t(A/\mathfrak{m})=A/\mathfrak{m}$, d'où la première assertion;
+d'autre part, l'image de $t$ dans $A/\mathfrak{p}_i$ est régulière, donc $N_t(A/\mathfrak{p}_i)=0$ et $P_t(A/\mathfrak{p}_i)=A/(tA+\mathfrak{p}_i)$ qui n'est pas réduit à $0$, d'où la seconde assertion.
+
+(iv) Il y a une base de $M\otimes_AK$ de la forme $(x_j/s)_{1\leq j\leq n}$, où $s$ est un élément régulier de $A$ et $x_j\in M$.
+Considérons l'homomorphisme $u:A^n\to M$ qui transforme l'élément $e_j$ $(1\leq j\leq n)$ de la base canonique de $A^n$ en $x_j$ et montrons que $\operatorname{Ker}(u)$ et $\operatorname{Coker}(u)$ sont de \emph{longueur finie};
+en effet, pour tout $i$, l'image de $s$ dans $A_{\mathfrak{p}_i}$ est inversible, et comme $K_{\mathfrak{p}_i}=A_{\mathfrak{p}_i}$, les images des $x_j/s$ dans $M_{\mathfrak{p}_i}$ forment une base de ce $A_{\mathfrak{p}_i}$-module;
+donc $u_{\mathfrak{p}_i}:A_{\mathfrak{p}_i}^n\to M_{\mathfrak{p}_i}$ est bijectif.
+Comme dans (i), on en conclut que les supports de $\operatorname{Ker}(u)$ et de $\operatorname{Coker}(u)$ sont contenus dans $\{\mathfrak{m}\}$, donc que ces modules sont de longueur finie.
+Cela étant, il résulte de (ii) et (iii) que l'on a $d_t(M)=d_t(A^n)=n\cdot d_t(A)=n\cdot\operatorname{long}(A/tA)$ puisque $t$ est régulier.
+
+Enfin, il est clair que (v) se déduit aussitôt de (iv), puisque alors $N_t(M)=0$.
+\end{proof}
+
+Ce lemme permet de généraliser \sref{IV.21.10.4}:
+
+\begin{proposition}[21.10.13]
+\label{IV.21.10.13bis}
+Supposons que $f$ vérifie les conditions de \sref{IV.21.10.10}.
+Alors, pour tout diviseur $D$ sur $X$ tel que $\Supp(D)\subset T$ et que $f^*(D)$ soit défini, on a
+\[
+\label{IV.21.10.13.1}
+  \operatorname{cyc}(f^*(D))=f^*(\operatorname{cyc}(D)).
+  \tag{21.10.13.1}
+\]
+\end{proposition}
+
+\begin{proof}
+Raisonnant comme dans \sref{IV.21.10.4}, tout revient à voir (avec les mêmes notations) que si $x'$ est dans le cas $4\textsuperscript{o}$ de \sref{IV.21.10.10} et si $n_y$ est la longueur de $\sh{O}_{X,y}/t_y\sh{O}_{X,y}$, alors la

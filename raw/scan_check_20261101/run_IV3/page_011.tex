@@ -1,0 +1,92 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{11}
+Soit $T$ l'espace topologique limite du système
+$(S_\lambda,\psi_{\lambda\mu})$ et posons
+$\psi=\varprojlim\psi_\lambda:S\to T$. On peut se borner au cas où
+$S_0=S_\alpha$ pour un $\alpha\in L$, et $\lambda\geq\alpha$.
+
+\medskip
+\noindent
+(i) Montrons en premier lieu que la topologie de $S$ est image réciproque par
+$\psi$ de la topologie de $T$~; autrement dit, si
+$\pi_\lambda:T\to S_\lambda$ est l'application canonique, il faut montrer
+que tout ouvert de $S$ est réunion d'ouverts de la forme
+$\psi^{-1}(\pi_\lambda^{-1}(U_\lambda))$, où $U_\lambda$ est ouvert dans
+$S_\lambda$. Or tout ouvert de $S$ est par définition réunion d'ouverts
+obtenus de la façon suivante~: on considère un ouvert affine $U_0$ de $S_0$,
+d'anneau $A_0$, de sorte que $\psi_\alpha^{-1}(U_0)$ est l'ouvert affine de
+$S$ d'anneau $A=\Gamma(U_0,\mathscr A)$, puis on prend un élément $f\in A$ et
+on considère dans $\operatorname{Spec}(A)$, identifié à
+$\psi_\alpha^{-1}(U_0)$, l'ouvert $D(f)$. Ce sont ces ouverts $D(f)$ qui
+forment une base de la topologie de $S$ (II, 1.3.1). Or, si on pose
+$A_\lambda=\Gamma(U_0,\mathscr A_\lambda)$, on a
+$A=\varinjlim A_\lambda$ (I, 1.3.9), donc il existe un indice $\lambda$ tel
+que $f$ soit l'image canonique d'un élément $f_\lambda\in A_\lambda$~; on a
+alors $D(f)=\psi_\lambda^{-1}(D(f_\lambda))$ (I, 1.2.2), et comme
+$\psi_\lambda=\pi_\lambda\circ\psi$, notre assertion est démontrée.
+
+\medskip
+\noindent
+(ii) Prouvons maintenant que $\psi$ est \emph{bijective}, ce qui achèvera la
+démonstration. Comme $S$ est un espace de Kolmogoroff, il résulte déjà de (i)
+que $\psi$ est injective, et il reste donc à montrer que $\psi$ est
+surjective. On peut évidemment remplacer pour cela $T$ par un ouvert
+$\pi_\alpha^{-1}(U_0)$, où $U_0$ est ouvert affine dans $S_\alpha=S_0$, donc
+on peut se limiter au cas où les $S_\lambda$ et $S$ sont affines, autrement
+dit $\mathscr A_\lambda$ est le faisceau associé à une $A_0$-algèbre
+$A_\lambda$, et $\mathscr A$ le faisceau d'algèbres associé à
+$A=\varinjlim A_\lambda$~; nous noterons encore
+$\varphi_{\mu\lambda}:A_\lambda\to A_\mu$ et
+$\varphi_\lambda:A_\lambda\to A$ les homomorphismes canoniques. Par
+définition, un élément de $T$ est une famille
+$(\mathfrak p_\lambda)_{\lambda\in L}$, où $\mathfrak p_\lambda$ est un
+idéal premier de $A_\lambda$ et où l'on a
+$\mathfrak p_\lambda=\varphi_{\mu\lambda}^{-1}(\mathfrak p_\mu)$ pour
+$\lambda\leq\mu$. On sait alors (5.13.3 et 5.13.1) qu'il y a un idéal premier
+$\mathfrak p$ de $A$ tel que
+$\mathfrak p_\lambda=\varphi_\lambda^{-1}(\mathfrak p)$ pour tout
+$\lambda\in L$, ce qui achève la démonstration.
+
+En particulier, on a ainsi démontré le
+
+\begin{corollary}[8.2.10]
+\label{IV.8.2.10-fr}
+Soit $(A_\lambda)_{\lambda\in L}$ un système inductif filtrant d'anneaux, et
+soient $A=\varinjlim A_\lambda$, $\varphi_\lambda:A_\lambda\to A$ les
+homomorphismes canoniques. L'application canonique
+$\mathfrak p\mapsto(\varphi_\lambda^{-1}(\mathfrak p))$ est un
+homéomorphisme de $\operatorname{Spec}(A)$ sur l'espace topologique
+$\varprojlim\operatorname{Spec}(A_\lambda)$.
+\end{corollary}
+
+\begin{corollary}[8.2.11]
+\EGAReaderTarget{ega4.c04.cor.8-2-11}{IV.8.2.11-fr}
+Avec les notations de (8.2.8), pour tout ouvert quasi-compact $U$ de $S$, il
+existe un indice $\lambda$ et un ouvert quasi-compact $U_\lambda$ de
+$S_\lambda$ tel que $U=\psi_\lambda^{-1}(U_\lambda)$.
+\end{corollary}
+
+Cela résulte de ce que, par définition de la topologie limite projective, les
+$\psi_\lambda^{-1}(U_\lambda)$ ($U_\lambda$ ouvert quasi-compact de
+$S_\lambda$) forment une base de la topologie de $S$, et de ce que l'ensemble
+d'indices $L$ est filtrant.
+
+\begin{corollary}[8.2.12]
+\label{IV.8.2.12-fr}
+Avec les notations de (8.2.8), la limite inductive du système inductif
+d'homomorphismes
+$\theta_\lambda^\sharp:\psi_\lambda^*(\mathcal O_{S_\lambda})\to
+\mathcal O_S$ de faisceaux d'anneaux sur $S$ est un isomorphisme
+\begin{equation}
+\varinjlim_\lambda\psi_\lambda^*(\mathcal O_{S_\lambda})
+\xrightarrow{\sim}\mathcal O_S.
+\tag{8.2.12.1}\label{IV.8.2.12.1-fr}
+\end{equation}
+\end{corollary}
+
+On peut évidemment supposer les $S_\lambda$ affines~; avec les notations de
+la démonstration de (8.2.9), tout revient à voir que la limite inductive du
+système d'applications canoniques
+$(A_\lambda)_{\mathfrak p_\lambda}\to A_{\mathfrak p}$ est un isomorphisme,
+ce qui n'est autre que (5.13.3, (ii)).
+

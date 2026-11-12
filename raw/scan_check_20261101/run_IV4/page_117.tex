@@ -1,0 +1,26 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{117}
+
+on a $\mathfrak J\subset\mathfrak m$ et si $\mathfrak m_0=\mathfrak m/\mathfrak J$, on a $A_0/\mathfrak m_0=A/\mathfrak m$ et $B_{\mathfrak m}/\mathfrak mB_{\mathfrak m}=(B_0)_{\mathfrak m_0}/\mathfrak m_0(B_0)_{\mathfrak m_0}$; la conclusion résulte donc du fait que $B_0$ est une $A_0$-algèbre étale (18.2.5).
+
+\begin{env}[18.3.3]
+\label{IV.18.3.3}
+\emph{Exemple.} --- La prop. (18.3.2) s'applique en particulier lorsque $A$ est un \emph{anneau local} séparé et complet, $\mathfrak J$ étant l'idéal maximal de $A$, de sorte que $A_0$ est un \emph{corps} et la catégorie des $A_0$-algèbres finies et étales identique à celle des $A_0$-algèbres finies et séparables, donc isomorphes à des composées directes de corps, extensions séparables et finies de $A_0$. En particulier, si le corps $A_0$ est \emph{séparablement clos}, ces extensions sont toutes identiques à $A_0$, et par suite tout revêtement étale de $\Spec(A)$ est \emph{trivial} (18.2.7) en vertu de (18.3.2).
+\end{env}
+
+\begin{theorem}[18.3.4]
+\label{IV.18.3.4}
+Soient $A$ un anneau noethérien, $\mathfrak J$ un idéal de $A$ tel que $A$ soit séparé et complet pour la topologie $\mathfrak J$-pré-adique, $A_0=A/\mathfrak J$. Posons $S=\Spec(A)$, $S_0=\Spec(A_0)$. Soit $X$ un $S$-schéma propre sur $S$, et posons $X_0=X\times_S S_0$. Alors le foncteur
+\[
+  Z\longmapsto Z\times_X X_0
+\]
+de la catégorie des $X$-schémas finis et étales sur $X$ dans la catégorie des $X_0$-schémas finis et étales sur $X_0$, est une équivalence de catégories.
+\end{theorem}
+
+Montrons d'abord que ce foncteur est \emph{pleinement fidèle}. Soient donc $Z'$ et $Z''$ deux $X$-schémas finis et étales sur $X$. Posons $S_n=\Spec(A/\mathfrak J^{n+1})$, $X_n=X\times_S S_n$, $Z'_n=Z'\times_S S_n$, $Z''_n=Z''\times_S S_n$ pour tout $n\geq 0$. Il résulte de (III, 5.4.1) que l'on a une bijection canonique $\Hom_X(Z',Z'')\xrightarrow{\sim}\varprojlim\Hom_{X_n}(Z'_n,Z''_n)$. Or, en vertu de (18.1.2), l'application canonique $\Hom_{X_{n+1}}(Z'_{n+1},Z''_{n+1})\to\Hom_{X_n}(Z'_n,Z''_n)$ est bijective, ce qui achève de prouver notre assertion.
+
+Il reste à prouver que si $\sh{B}_0$ est une $\sh{O}_{X_0}$-Algèbre finie et étale, il existe une $\sh{O}_X$-Algèbre finie et étale $\sh{B}$ et un isomorphisme $\sh{B}_0\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_0}$. Il résulte de (18.1.2) qu'il y a un système projectif $(\sh{B}_n)$, où $\sh{B}_n$ est une $\sh{O}_{X_n}$-Algèbre finie et étale, et le deuxième théorème de comparaison (III, 5.1.4) prouve l'existence d'un $\sh{O}_X$-Module cohérent $\sh{B}$ et d'un système projectif d'isomorphismes $\sh{B}_n\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_n}$. La donnée d'une structure d'Algèbre sur un Module $\sh{F}$ étant équivalente à celle d'un homomorphisme $\sh{F}\otimes\sh{F}\to\sh{F}$ rendant commutatifs des diagrammes où n'interviennent que des puissances tensorielles de $\sh{F}$, il résulte de (III, 5.1.3), (I, 10.11.4) et (I, 10.11.7) que $\sh{B}$ est muni de façon naturelle d'une structure de $\sh{O}_X$-Algèbre pour laquelle l'isomorphisme $\sh{B}_0\xrightarrow{\sim}\sh{B}\otimes_{\sh{O}_X}\sh{O}_{X_0}$ est un isomorphisme d'Algèbres. De plus, $\sh{B}$ est un $\sh{O}_X$-Module \emph{localement libre}; cela résulte encore de (III, 5.1.3), (I, 10.11.4), (I, 10.11.7) et du fait que, dans la catégorie des $\sh{O}_X$-Modules cohérents, les $\sh{O}_X$-Modules localement libres $\sh{F}$ peuvent être définis comme ceux pour lesquels le foncteur $\sh{G}\mapsto\mathscr{H}\!om_{\sh{O}_X}(\sh{F},\sh{G})$ est \emph{exact}. Enfin, pour voir que $\sh{B}$ est une $\sh{O}_X$-Algèbre étale, il suffit (18.2.5) de montrer que pour tout point \emph{fermé} $x\in X$, $\sh{B}_x\otimes_{\sh{O}_{X,x}}\kappa(x)$ est une $\kappa(x)$-algèbre séparable. Mais comme le morphisme structural $f:X\to S$ est \emph{propre}, $f(x)$ est un point fermé de $S$, donc appartient à $S_0$, puisque $\mathfrak J$ est contenu dans le radical de $A$ ($0_{\mathrm I}$, 7.1.10); la conclusion résulte donc de ce que $X_0=f^{-1}(S_0)$ et de ce que $\sh{B}_0$ est une $\sh{O}_{X_0}$-Algèbre finie et étale.
+
+\subsection{Structure locale des morphismes non ramifiés et des morphismes étales.}
+\EGAReaderTarget{ega4.c04.subsec.18-4}{subsection:IV.18.4}
+

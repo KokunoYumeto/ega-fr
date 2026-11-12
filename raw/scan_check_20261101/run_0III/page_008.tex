@@ -1,0 +1,86 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{8}
+problème universel~>>. Plus généralement, nous allons voir que la notion de
+\emph{limite projective} est un cas particulier de celle de foncteur
+représentable. Rappelons que dans une catégorie $C$, on définit un
+\emph{système projectif} par la donnée d'un ensemble préordonné $I$, d'une
+famille $(A_\alpha)_{\alpha\in I}$ d'objets de $C$, et, pour tout couple
+d'indices $(\alpha,\beta)$ tel que $\alpha\leq\beta$, d'un morphisme
+$u_{\alpha\beta}:A_\beta\to A_\alpha$. Une \emph{limite projective} de ce
+système dans $C$ est constituée par un objet $B$ de $C$ (noté
+$\varprojlim A_\alpha$), et, pour chaque $\alpha\in I$, un morphisme
+$u_\alpha:B\to A_\alpha$, tels que~: 1\textsuperscript{o}
+$u_\alpha=u_{\alpha\beta}u_\beta$ pour $\alpha\leq\beta$~;
+2\textsuperscript{o} Pour tout objet $X$ de $C$ et toute famille
+$(v_\alpha)_{\alpha\in I}$ de morphismes $v_\alpha:X\to A_\alpha$, telle
+que $v_\alpha=u_{\alpha\beta}v_\beta$ pour $\alpha\leq\beta$, il existe un
+morphisme unique $v:X\to B$ (noté $\varprojlim v_\alpha$) tel que
+$v_\alpha=u_\alpha v$ pour tout $\alpha\in I$ (T, 1.8). Ceci s'interprète de
+la façon suivante~: les $u_{\alpha\beta}$ définissent canoniquement des
+applications
+\[
+  \overline{u}_{\alpha\beta}:\operatorname{Hom}(X,A_\beta)
+  \to\operatorname{Hom}(X,A_\alpha)
+\]
+qui définissent un \emph{système projectif} d'ensembles
+$(\operatorname{Hom}(X,A_\alpha),\overline{u}_{\alpha\beta})$, et
+$(v_\alpha)$ est par définition un élément de l'ensemble
+$\varprojlim_\alpha\operatorname{Hom}(X,A_\alpha)$~; il est clair que
+$X\mapsto\varprojlim_\alpha\operatorname{Hom}(X,A_\alpha)$ est un
+\emph{foncteur contravariant} de $C$ dans $\mathrm{Ens}$, et l'existence de
+la limite projective $B$ équivaut à dire que
+$(v_\alpha)\mapsto\varprojlim v_\alpha$ est un \emph{isomorphisme} de
+foncteurs en $X$
+\[
+  \varprojlim_\alpha\operatorname{Hom}(X,A_\alpha)
+  \xrightarrow{\sim}\operatorname{Hom}(X,B)
+  \tag{8.1.9.1}
+\]
+autrement dit que le foncteur
+$X\mapsto\varprojlim_\alpha\operatorname{Hom}(X,A_\alpha)$ est
+\emph{représentable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10-fr}
+\textit{Exemples. II : Objet final.} Soient $C$ une catégorie, $\{a\}$ un
+ensemble réduit à un seul élément. Considérons le foncteur contravariant
+$F:C\to\mathrm{Ens}$ qui, à tout objet $X$ de $C$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $C$ l'unique
+application $\{a\}\to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $e\in C$ tel que pour tout $Y\in C$,
+$\operatorname{Hom}(Y,e)=h_e(Y)$ soit \emph{réduit à un élément}~; on dit
+que $e$ est un \emph{objet final} de $C$, et il est clair que deux objets
+finaux de $C$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axiome de choix, un objet final de $C$ qu'on note alors $e_C$). Par
+exemple, dans la catégorie $\mathrm{Ens}$, les objets finaux sont les
+ensembles réduits à un élément~; dans la catégorie des \emph{algèbres
+augmentées} sur un corps $K$ (où les morphismes sont les homomorphismes
+d'algèbres compatibles avec les augmentations), $K$ est un objet final~;
+dans la catégorie des \emph{$S$-préschémas} (I, 2.5.1), $S$ est un objet
+final.
+\end{env}
+
+\begin{env}[8.1.11]
+\label{0.8.1.11-fr}
+Pour deux objets $X$, $Y$ d'une catégorie $C$, posons
+$h'_X(Y)=\operatorname{Hom}(X,Y)$ et pour tout morphisme $u:Y\to Y'$, soit
+$h'_X(u)$ l'application $v\mapsto uv$ de $\operatorname{Hom}(X,Y)$ dans
+$\operatorname{Hom}(X,Y')$~; $h'_X$ est alors un \emph{foncteur covariant}
+$C\to\mathrm{Ens}$, d'où l'on déduit comme dans
+(\hyperref[0.8.1.2-fr]{8.1.2}) la définition d'un foncteur covariant
+canonique $h':C^0\to\operatorname{Hom}(C,\mathrm{Ens})$~; un \emph{foncteur
+covariant} $F$ de $C$ dans $\mathrm{Ens}$, autrement dit un objet de
+$\operatorname{Hom}(C,\mathrm{Ens})$ est alors dit \emph{représentable}
+s'il existe un objet $X\in C$ (nécessairement unique à isomorphisme unique
+près) tel que $F$ soit \emph{isomorphe à $h'_X$}~; nous laissons au lecteur
+le soin de développer les considérations <<~duales~>> des précédentes pour
+cette notion, qui couvre cette fois celle de \emph{limite inductive}, et en
+particulier la notion usuelle de <<~solution de problème universel~>>.
+\end{env}
+
+\subsection{Structures algébriques dans les catégories}
+\label{subsection:0.8.2-fr}
+
+\begin{env}[8.2.1]
+\label{0.8.2.1-fr}

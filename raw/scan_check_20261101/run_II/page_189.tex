@@ -1,0 +1,90 @@
+% from ega2-1-fr.tex
+\oldpage[II]{189}
+et on désigne par $V$ le schéma déduit de $C'$ par éclatement de $b$~; $X$ est
+le sous-préschéma fermé de $V$, image réciproque de $a$ par le morphisme
+structural $q:V\to C$. On montre que $X$ est réunion de deux composantes
+irréductibles $X_1$, $X_2$, où $X_1$ est l'image réciproque de $b$ dans $V$.
+Il est immédiat que l'Idéal $\mathcal{J}$ de $\mathcal{O}_V$ qui définit $X$
+est encore inversible, mais on prouve que
+$j^*(\mathcal{J})=\mathcal{L}$ ($j$ injection canonique $X\to V$) n'est pas
+ample, par la considération du «~degré~» de l'image réciproque de
+$\mathcal{L}$ sur $X_1$, qui devrait être $>0$ si $\mathcal{L}$ était ample,
+et qu'on montre (par un calcul élémentaire d'intersections) être égal à 0.
+\end{remark}
+
+\subsection{Unicité des contractions}
+\label{subsection:II.8.11-fr}
+
+\begin{lemma}[8.11.1]
+\label{II.8.11.1-fr}
+Soient $U$, $V$ deux préschémas,
+$h=(h_0,\lambda):U\to V$ un morphisme surjectif. On suppose que~:
+\begin{enumerate}
+  \item[$1^\circ$]
+  $\lambda:\mathcal{O}_V\to h_*(\mathcal{O}_U)
+  =(h_0)_*(\mathcal{O}_U)$ est un isomorphisme.
+  \item[$2^\circ$] L'espace sous-jacent à $V$ s'identifie à l'espace quotient
+  de l'espace sous-jacent à $U$ par la relation
+  $R:h_0(x)=h_0(y)$ (condition toujours vérifiée lorsque le morphisme $h$ est
+  ouvert, ou fermé, ou a fortiori lorsque $h$ est propre).
+\end{enumerate}
+Alors, pour tout préschéma $W$, l'application
+\begin{equation}
+\label{II.8.11.1.1-fr}
+  \operatorname{Hom}(V,W)\longrightarrow\operatorname{Hom}(U,W)
+\tag{8.11.1.1}
+\end{equation}
+qui, à tout morphisme $v=(v_0,\nu)$ de $V$ dans $W$, fait correspondre le
+morphisme $u=v\circ h=(u_0,\mu)$, est une bijection de
+$\operatorname{Hom}(V,W)$ sur l'ensemble des $u$ tels que $u_0$ soit
+constante sur toute fibre $h_0^{-1}(x)$.
+\end{lemma}
+
+\begin{proof}
+Il est clair que si $u=v\circ h$, donc $u_0=v_0\circ h_0$, $u_0$ est
+constante sur tout ensemble $h_0^{-1}(x)$. Inversement, si $u$ a cette
+propriété, montrons qu'il existe un $v\in\operatorname{Hom}(V,W)$ et un seul
+tel que $u=v\circ h$. L'existence et l'unicité de l'application continue
+$v_0:V\to W$ telle que $u_0=v_0\circ h_0$ résultent de l'hypothèse, puisque
+$h_0$ s'identifie à l'application canonique de $U$ sur $U/R$. On peut d'autre
+part, en remplaçant au besoin $V$ par un préschéma isomorphe, supposer que
+$\lambda$ est l'identité~; par hypothèse, $\mu$ est alors un homomorphisme
+\[
+  \mu:\mathcal{O}_W\longrightarrow(u_0)_*(\mathcal{O}_U)
+  =(v_0)_*((h_0)_*(\mathcal{O}_U))
+\]
+tel que l'homomorphisme correspondant
+$\mu^\sharp:u_0^*(\mathcal{O}_W)\to\mathcal{O}_U$ soit local sur chaque
+fibre. Comme
+$(v_0)_*((h_0)_*(\mathcal{O}_U))=(v_0)_*(\mathcal{O}_V)$, on doit
+nécessairement avoir $\nu=\mu$, et tout revient à voir que l'homomorphisme
+correspondant $\nu^\sharp:v_0^*(\mathcal{O}_W)\to\mathcal{O}_V$ est local sur
+chaque fibre. Or, tout $y\in V$ est de la forme $h_0(x)$ pour un $x\in U$~;
+posons $z=v_0(y)=u_0(x)$. Alors
+(\hyperref[0.3.5.5-fr]{0, 3.5.5}) l'homomorphisme $\mu_x^\sharp$ se factorise
+en
+\[
+  \mu_x^\sharp:\mathcal{O}_z
+  \xrightarrow{\nu_y^\sharp}\mathcal{O}_y
+  \xrightarrow{\lambda_x^\sharp}\mathcal{O}_x.
+\]
+Par hypothèse $\lambda_x^\sharp$ et $\mu_x^\sharp$ sont des homomorphismes
+locaux~; donc $\lambda_x^\sharp$ transforme tout élément inversible de
+$\mathcal{O}_y$ en un élément inversible de $\mathcal{O}_x$~; si
+$\nu_y^\sharp$ transformait un élément non inversible de $\mathcal{O}_z$ en
+un élément inversible de $\mathcal{O}_y$, $\mu_x^\sharp$ transformerait cet
+élément de $\mathcal{O}_z$ en un élément inversible de $\mathcal{O}_x$,
+contrairement à l'hypothèse, d'où le lemme.
+\end{proof}
+
+\begin{corollary}[8.11.2]
+\label{II.8.11.2-fr}
+Soient $U$ un préschéma intègre, $V$ un préschéma normal~; alors tout morphisme
+$h:U\to V$ qui est universellement fermé, birationnel et radiciel est un
+isomorphisme.
+\end{corollary}
+
+\begin{proof}
+Si $h=(h_0,\lambda)$, il résulte des hypothèses que $h_0$ est injectif et
+fermé, et que $h_0(U)$
+

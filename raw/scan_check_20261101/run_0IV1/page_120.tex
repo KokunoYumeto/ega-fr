@@ -1,0 +1,89 @@
+% from ega0-20-fr.tex
+\oldpage[0\textsubscript{IV-1}]{120}
+\begin{theorem}[20.2.2]
+\label{0.20.2.2-fr}
+Soient $u:A\to B$, $v:B\to C$ deux homomorphismes d'anneaux, $L$ un
+$C$-bimodule. On a une suite exacte canonique de groupes commutatifs
+\begin{align}
+\tag{20.2.2.1}
+\label{0.20.2.2.1-fr}
+  0\to\operatorname{D\acute{e}r}_B(C,L)\xrightarrow{u^0}
+  \operatorname{D\acute{e}r}_A(C,L)&\xrightarrow{v^0}
+  \operatorname{D\acute{e}r}_A(B,L)\xrightarrow{\partial} \\
+  &\to\operatorname{Exan}_B(C,L)\xrightarrow{u^1}
+  \operatorname{Exan}_A(C,L)\xrightarrow{v^1}
+  \operatorname{Exan}_A(B,L) \notag
+\end{align}
+où $u^0$, $v^0$ sont les homomorphismes (20.2.1.3) et (20.2.1.2)
+respectivement, $u^1$, $v^1$ les homomorphismes définis dans (18.3.4.1) et
+(18.3.3.1) respectivement, et où $\partial$ est défini comme suit : pour
+toute $A$-dérivation $D$ de $B$ dans $L$, $\partial(D)$ est la classe de la
+$B$-extension de $C$ par $L$ définie sur l'anneau $D_C(L)$ par le
+$A$-homomorphisme $\alpha:x\mapsto(v(x),D(x))$ (cf.
+\sref{0.20.1.5-fr}). En outre, la suite exacte \sref{0.20.2.2.1-fr} est
+fonctorielle en $L$ (pour les homomorphismes définis dans (20.2.1.1) et
+(18.3.1.1) respectivement).
+\end{theorem}
+
+\begin{proof}
+Comme $D$ est une $A$-dérivation (et \emph{a fortiori} une
+$\mathbf{Z}$-dérivation) de $B$ dans $L$, le $A$-homomorphisme
+$\alpha:x\mapsto(v(x),D(x))$ définit bien sur $D_C(L)$ une structure de
+$B$-extension, donc $\partial(D)$ est bien définie \sref{0.20.1.5-fr}. Il
+faut vérifier l'exactitude en $5$ endroits :
+
+\medskip
+\noindent 1)\enspace
+L'exactitude en $\operatorname{D\acute{e}r}_B(C,L)$ est triviale (cf.
+\sref{0.20.2.1-fr}).
+
+\medskip
+\noindent 2)\enspace
+Par définition \sref{0.20.2.1-fr} le noyau de $v^0$ est l'ensemble des
+$A$-dérivations de $C$ dans $L$ qui s'annulent dans $v(B)$, c'est-à-dire
+celles des $A$-dérivations qui sont aussi des $B$-dérivations
+\sref{0.20.1.1-fr} ; d'où l'exactitude en $\operatorname{D\acute{e}r}_A(C,L)$.
+
+\medskip
+\noindent 3)\enspace
+Le noyau de $\partial$ est formé des dérivations
+$D\in\operatorname{D\acute{e}r}_A(B,L)$ pour lesquelles la $B$-extension définie par
+$\alpha:x\mapsto(v(x),D(x))$ est $B$-triviale ; cela signifie (18.2.3) qu'il
+existe un $B$-homomorphisme $z\mapsto(z,w(z))$ de $C$ dans $D_C(L)$ (la
+structure de $B$-anneau de $D_C(L)$ étant définie par $\alpha$) ; mais un tel
+homomorphisme, étant \emph{a fortiori} un $A$-homomorphisme, est de la forme
+$z\mapsto(z,D'(z))$ où $D'\in\operatorname{D\acute{e}r}_A(C,L)$
+\sref{0.20.1.6-fr} ; et en écrivant que c'est un $B$-homomorphisme, il vient
+\[
+  D(x)z+v(x)D'(z)=D'(v(x)z)=v(x)D'(z)+D'(v(x))z
+\]
+pour $x\in B$, $z\in C$, ce qui donne $D'(v(x))=D(x)$ ; le noyau de
+$\partial$ est donc l'image de $v^0$.
+
+\medskip
+\noindent 4)\enspace
+Le noyau de $u^1$ est l'ensemble des classes de $B$-extensions de $C$ par
+$L$ qui sont $A$-triviales (18.3.7), donc (à équivalence près) de la forme
+$D_C(L)$, où la structure de $A$-anneau est définie par l'homomorphisme
+$t\mapsto(u(t),0)$. Or, toute structure de $B$-extension sur $D_C(L)$ est
+définie par un homomorphisme $\alpha:x\mapsto(v(x),D(x))$, où $D$ est une
+$\mathbf{Z}$-dérivation de $B$ dans $L$ \sref{0.20.1.5-fr} ; dire que la
+structure de $A$-anneau de cette $B$-extension est déduite de sa structure de
+$B$-anneau au moyen de $u:A\to B$ signifie que $D(u(t))=0$ pour $t\in A$,
+donc que $D$ est une $A$-dérivation ou encore que la classe de la $B$-extension
+considérée est de la forme $\partial(D)$ ; d'où l'exactitude en
+$\operatorname{Exan}_B(C,L)$.
+
+\medskip
+\noindent 5)\enspace
+Le noyau de $v^1$ est l'ensemble des classes des $A$-extensions $E$ de $C$
+par $L$ qui se trivialisent sur $v(B)$, c'est-à-dire pour lesquelles il y a un
+$A$-homomorphisme $w:B\to E$ tel que $v$ se factorise en
+$B\xrightarrow{w}E\to C$ ; or un tel $A$-homomorphisme définit sur $E$ une
+structure de $B$-extension dont la classe a pour image par $u^1$ la classe de
+la $A$-extension donnée ; la réciproque étant triviale, on a prouvé
+l'exactitude en $\operatorname{Exan}_A(C,L)$.
+
+Enfin, la fonctorialité en $L$ découle trivialement des définitions.
+\end{proof}
+

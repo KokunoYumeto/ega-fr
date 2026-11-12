@@ -1,0 +1,63 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{82}
+
+supposer $k$ algébriquement clos. L'ensemble des points de $X$ rationnels sur $k$ étant alors dense dans $X$ (10.4.8), on peut se borner au cas où $x$ est rationnel sur $k$. Or (16.4.12) $(\Omega^1_{X/k})_x\otimes_{\sh{O}_{X,x}}k(x)$ est alors $k$-isomorphe à $\mathfrak m_x/\mathfrak m_x^2$, et puisque $\sh{O}_x$ est un anneau local régulier (17.5.1), $\operatorname{rg}_{k(x)}(\mathfrak m_x/\mathfrak m_x^2)=\dim(\sh{O}_x)$ (0, 17.1.1); donc $\operatorname{rg}_{\sh{O}_x}(\Omega^1_{X/k})_x=\dim(\sh{O}_x)$. Mais puisque $k(x)=k$, on a $\dim_x f=\dim(\sh{O}_x)$ (5.2.3). C.Q.F.D.
+
+Nous démontrerons plus loin une réciproque de ce résultat (17.15.5).
+
+\begin{corollary}[17.10.3]
+\label{IV.17.10.3}
+Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes lisses. Alors, pour tout $x\in X$, on a
+\begin{equation}
+\label{IV.17.10.3.1}
+\tag{17.10.3.1}
+\dim_x(g\circ f)=\dim_x f+\dim_{f(x)}g.
+\end{equation}
+\end{corollary}
+
+En effet, $g\circ f$ est lisse (17.3.3), donc les trois $\sh{O}_X$-Modules $\Omega^1_{X/Y}$, $\Omega^1_{X/Z}$ et $f^*(\Omega^1_{Y/Z})$ sont localement libres (17.2.3 et $0_{\mathrm I}$, 5.4.5); en outre le rang en $x$ de $f^*(\Omega^1_{Y/Z})$ est égal au rang en $y=f(x)$ de $\Omega^1_{Y/Z}$. L'égalité (17.10.3.1) est donc conséquence de (17.10.2) et de l'exactitude de la suite (17.2.3.1).
+
+\begin{corollary}[17.10.4]
+\label{IV.17.10.4}
+Soient $f:X\to Y$ un morphisme lisse, $X'$ un sous-préschéma de $X$ tel que le morphisme composé $X'\xrightarrow{j}X\xrightarrow{f}Y$ (où $j$ est l'injection canonique) soit lisse. Alors le faisceau conormal $\sh{N}_{X'/X}$ est un $\sh{O}_{X'}$-Module localement libre, et pour tout $x\in X'$, on a
+\begin{equation}
+\label{IV.17.10.4.1}
+\tag{17.10.4.1}
+\dim_x f=\dim_x(f\circ j)+\operatorname{rg}_{\sh{O}_{X',x}}(\sh{N}_{X'/X})_x.
+\end{equation}
+\end{corollary}
+
+En effet, $\Omega^1_{X/Y}\otimes_{\sh{O}_X}\sh{O}_{X'}$ et $\Omega^1_{X'/Y}$ sont alors localement libres et la suite exacte (17.2.5.1) est scindée dans un voisinage convenable de chaque point de $X'$, donc $\sh{N}_{X'/X}$ est localement libre (Bourbaki, \emph{Alg. comm.}, chap. II, § 5, n\textsuperscript{o} 2, th. 1), et la relation (17.10.4.1) résulte aussitôt de l'exactitude de la suite (17.2.5.1).
+
+\subsection{Morphismes lisses de préschémas lisses}
+\EGAReaderTarget{ega4.c04.subsec.17-11}{subsection:IV.17.11}
+
+\begin{theorem}[17.11.1]
+\label{IV.17.11.1}
+Soient $f:Y\to S$ et $h:X\to S$ deux morphismes localement de présentation finie, $g:X\to Y$ un $S$-morphisme, $x$ un point de $X$; posons $y=g(x)$, $s=f(y)=h(x)$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[a)] $f$ est lisse au point $y$ et $g$ est lisse au point $x$.
+  \item[b)] $g$ et $h$ sont lisses au point $x$.
+  \item[c)] $h$ est lisse au point $x$, et l'homomorphisme canonique (16.4.18)
+  \begin{equation}
+  \label{IV.17.11.1.1}
+  \tag{17.11.1.1}
+  (g^*(\Omega^1_{Y/S}))_x\to(\Omega^1_{X/S})_x
+  \end{equation}
+  est inversible à gauche (autrement dit est un isomorphisme sur un \emph{facteur direct} de $(\Omega^1_{X/S})_x$).
+  \item[c')] $h$ est lisse au point $x$, et l'homomorphisme canonique
+  \begin{equation}
+  \label{IV.17.11.1.2}
+  \tag{17.11.1.2}
+  ((\Omega^1_{Y/S})_y\otimes_{\sh{O}_{Y,y}}k(y))\otimes_{k(y)}k(x)\to(\Omega^1_{X/S})_x\otimes_{\sh{O}_{X,x}}k(x)
+  \end{equation}
+  est injectif.
+\end{enumerate}
+Supposons en outre que l'homomorphisme $k(y)\to k(x)$ soit bijectif. Alors les conditions précédentes sont aussi équivalentes à la suivante:
+\begin{enumerate}
+  \item[d)] $h$ est lisse au point $x$, et l'application canonique $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ de l'espace vectoriel tangent en $x$ à $X$ dans l'espace vectoriel tangent en $y$ à $Y$ (16.5.12) est surjective.
+\end{enumerate}
+\end{theorem}
+
+Le fait que a) entraîne b) résulte trivialement de (17.3.3, (iii)); b) entraîne c) par application de (17.2.3, (ii)). Pour voir que c) est équivalente à c'), notons qu'en vertu de (17.2.3, (i)), $\Omega^1_{X/S}$ est un $\sh{O}_X$-Module localement libre de type fini; il suffit alors d'appliquer (0, 19.1.12) à l'anneau local $\sh{O}_{X,x}$ et à l'homomorphisme (17.11.1.1) de $\sh{O}_{X,x}$-modules de type fini. Lorsque $k(x)=k(y)$, l'application linéaire tangente $\mathrm{T}_{X/S}(x)\to\mathrm{T}_{Y/S}(y)$ est transposée de (17.11.1.2), par (16.5.12), ce qui établit dans ce cas l'équivalence de c') et d).
+

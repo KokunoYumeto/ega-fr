@@ -1,0 +1,77 @@
+% from ega1-6-fr.tex
+\oldpage[I]{145}
+On peut donc dire que la notion de préschéma de type fini sur $Y$ est
+\emph{locale sur $Y$}.
+
+\begin{proposition}[6.3.3]
+\label{I.6.3.3-fr}
+Soient $X$, $Y$ deux schémas affines~; pour que $X$ soit de type fini sur
+$Y$, il faut et il suffit que $A(X)$ soit une algèbre de type fini sur
+$A(Y)$.
+\end{proposition}
+
+La condition étant évidemment suffisante, prouvons qu'elle est nécessaire.
+Posons $A=A(Y)$, $B=A(X)$~; en vertu de
+(\hyperref[I.6.3.2-fr]{6.3.2}), il existe un recouvrement ouvert affine fini
+$(V_i)$ de $X$ tel que chacun des anneaux $A(V_i)$ soit une $A$-algèbre de
+type fini. En outre, les $V_i$ étant quasi-compacts, on peut recouvrir chacun
+d'eux par un nombre fini d'ouverts de la forme $D(g_{ij})\subset V_i$, où
+$g_{ij}\in B$~; si $\varphi_i$ est l'homomorphisme $B\to A(V_i)$ correspondant
+à l'injection canonique $V_i\to X$, on a
+\[
+  B_{g_{ij}}=(A(V_i))_{\varphi_i(g_{ij})}
+  =A(V_i)[1/\varphi_i(g_{ij})],
+\]
+donc $B_{g_{ij}}$ est une $A$-algèbre de type fini. On peut donc se ramener
+au cas où $V_i=D(g_i)$ avec $g_i\in B$. Par hypothèse, il existe une partie
+finie $F_i$ de $B$ et un entier $n_i\geq 0$ tels que $B_{g_i}$ soit l'algèbre
+engendrée sur $A$ par les éléments $b_i/g_i^{n_i}$, où $b_i$ parcourt $F_i$.
+Comme les $g_i$ sont en nombre fini, on peut d'ailleurs supposer tous les
+$n_i$ égaux à un même entier $n$. En outre, comme les $D(g_i)$ forment un
+recouvrement de $X$, l'idéal engendré dans $B$ par les $g_i$ est égal à $B$,
+autrement dit, il existe des $h_i\in B$ tels que
+$\sum_i h_i g_i=1$. Soit alors $F$ la partie finie de $B$, réunion des $F_i$,
+de l'ensemble des $g_i$ et de l'ensemble des $h_i$~; montrons que le
+sous-anneau $B'=A[F]$ de $B$ est égal à $B$. Par hypothèse, pour tout $b\in B$
+et tout $i$, l'image canonique de $b$ dans $B_{g_i}$ est de la forme
+$b'_i/g_i^{m_i}$, où $b'_i\in B'$~; en multipliant les $b'_i$ par des
+puissances convenables des $g_i$, on peut encore supposer tous les $m_i$
+égaux à un même entier $m$. Par définition des anneaux de fractions, il y a
+donc un entier $N$ (dépendant de $b$) tel que $N\geq m$ et $g_i^N b\in B'$ pour
+tout $i$~; or, \emph{dans l'anneau $B'$}, les $g_i^N$ engendrent l'idéal $B'$,
+puisqu'il en est ainsi des $g_i$ (les $h_i$ appartenant à $B'$)~; il y a donc
+des $c_i\in B'$ tels que $\sum_i c_i g_i^N=1$, d'où
+$b=\sum_i c_i g_i^N b\in B'$, C.Q.F.D.
+
+\begin{proposition}[6.3.4]
+\label{I.6.3.4-fr}
+\begin{enumerate}
+  \item[(i)] Toute immersion fermée est de type fini.
+  \item[(ii)] Le composé de deux morphismes de type fini est de type fini.
+  \item[(iii)] Si $f:X\to X'$, $g:Y\to Y'$ sont deux $S$-morphismes de type
+    fini, $f\times_S g$ est de type fini.
+  \item[(iv)] Si $f:X\to Y$ est un $S$-morphisme de type fini, $f_{(S')}$ est
+    de type fini pour toute extension $g:S'\to S$ du préschéma de base.
+  \item[(v)] Si le composé $g\circ f$ de deux morphismes est de type fini, et
+    si $g$ est séparé, $f$ est de type fini.
+  \item[(vi)] Si un morphisme $f$ est de type fini, il en est de même de
+    $f_{\mathrm{red}}$.
+\end{enumerate}
+\end{proposition}
+
+En vertu de (\hyperref[I.5.5.12-fr]{5.5.12}), il suffit de démontrer (i),
+(ii) et (iv).
+
+Pour établir (i), on peut se borner au cas d'une injection canonique
+$X\to Y$, $X$ étant un sous-préschéma fermé de $Y$~; en outre
+(\hyperref[I.6.3.2-fr]{6.3.2}), on peut supposer $Y$ affine, auquel cas $X$
+est aussi affine (\hyperref[I.4.2.3-fr]{4.2.3}) et son anneau est isomorphe à
+un anneau quotient $A/\mathfrak{J}$, où $A$ est l'anneau de $Y$ et
+$\mathfrak{J}$ un idéal de $A$~; comme $A/\mathfrak{J}$ est de type fini sur
+$A$, la conclusion en résulte.
+
+Démontrons maintenant (ii). Soient $f:X\to Y$, $g:Y\to Z$ deux morphismes de
+type fini, et soit $U$ un ouvert affine de $Z$~; $g^{-1}(U)$ admet un
+recouvrement fini par des ouverts affines $V_i$ tels que $A(V_i)$ soit une
+algèbre de type fini sur $A(U)$ (\hyperref[I.6.3.2-fr]{6.3.2})~; de même,
+

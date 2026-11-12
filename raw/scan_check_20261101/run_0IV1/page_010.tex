@@ -1,0 +1,91 @@
+% from ega0-14-fr.tex
+\oldpage[0\textsubscript{IV-1}]{10}
+\begin{proposition}[14.2.5]
+\label{0.14.2.5-fr}
+Si $(Y_i)_{1\leq i\leq n}$ est une famille finie de parties fermées d'un
+espace topologique $X$, et $Y$ la réunion de cette famille, on a
+\[
+  \operatorname{codim}(Y,X)=
+  \inf_i\bigl(\operatorname{codim}(Y_i,X)\bigr).
+  \tag{14.2.5.1}\label{0.14.2.5.1-fr}
+\]
+\end{proposition}
+
+\begin{proof}
+En effet, toute composante irréductible de l'un des $Y_i$ est contenue dans
+une composante irréductible de $Y$, et inversement toute composante
+irréductible de $Y$ est aussi composante irréductible de l'un des $Y_i$
+($0_{\mathrm I}$, 2.1.1)~; la conclusion résulte donc de la définition
+(14.2.1) et de l'inégalité (14.2.2.3).
+\end{proof}
+
+\begin{corollary}[14.2.6]
+\label{0.14.2.6-fr}
+Soient $X$ un espace topologique, $Y$ un sous-espace fermé localement
+noethérien de $X$.
+\begin{enumerate}
+  \item[\rm(i)] Pour tout $x\in X$, il n'existe qu'un nombre fini de
+  composantes irréductibles $Y_i$ ($1\leq i\leq n$) de $Y$ contenant $x$,
+  et l'on a
+  $\operatorname{codim}_x(Y,X)=
+  \inf_i(\operatorname{codim}(Y_i,X))$.
+  \item[\rm(ii)] La fonction
+  $x\mapsto\operatorname{codim}_x(Y,X)$ est semi-continue inférieurement
+  dans $X$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+En effet, par hypothèse il y a un voisinage ouvert $U_0$ de $x$ dans $X$ tel
+que $Y\cap U_0$ soit noethérien, donc n'ait qu'un nombre fini de composantes
+irréductibles, qui sont traces sur $U_0$ de composantes irréductibles de $Y$~;
+\emph{a fortiori} il n'y a qu'un nombre fini de composantes irréductibles
+$Y_i$ ($1\leq i\leq n$) de $Y$ contenant $x$, et on peut, en remplaçant $U_0$
+par un voisinage ouvert $U\subset U_0$ de $x$ ne rencontrant aucun des $Y_j$
+qui ne contiennent pas $x$, supposer que les $Y_i\cap U$ sont les composantes
+irréductibles de $Y\cap U$~; pour tout voisinage ouvert $V\subset U$ de $x$
+dans $X$, les $Y_i\cap V$ sont alors les composantes irréductibles de
+$Y\cap V$, et (14.2.3) montre alors que
+$\operatorname{codim}(Y_i,X)=\operatorname{codim}(Y_i\cap V,V)$, ce qui
+prouve (i). En outre, pour tout $x'\in U$, les composantes irréductibles de
+$Y$ contenant $x'$ sont certaines des $Y_i$, donc
+$\operatorname{codim}_{x'}(Y,X)\geq\operatorname{codim}_x(Y,X)$, ce qui
+démontre (ii).
+\end{proof}
+
+\subsection{La condition des chaînes}
+\label{subsection:0.14.3-fr}
+
+\begin{env}[14.3.1]
+\label{0.14.3.1-fr}
+Dans un espace topologique $X$, nous dirons qu'une chaîne
+$Z_0\subset Z_1\subset\cdots\subset Z_n$ de parties fermées irréductibles est
+\emph{saturée} s'il n'existe pas de partie fermée irréductible $Z'$ distincte
+des $Z_i$ et telle que $Z_k\subset Z'\subset Z_{k+1}$ pour un indice $k$.
+\end{env}
+
+\begin{proposition}[14.3.2]
+\label{0.14.3.2-fr}
+Soit $X$ un espace topologique tel que, pour deux parties fermées
+irréductibles quelconques $Y$, $Z$ de $X$ telles que $Y\subset Z$, on ait
+$\operatorname{codim}(Y,Z)<+\infty$. Les deux conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[\rm(a)] Deux chaînes saturées de parties fermées irréductibles de $X$,
+  ayant mêmes extrémités, ont même longueur.
+  \item[\rm(b)] Si $Y$, $Z$, $T$ sont trois parties fermées irréductibles de
+  $X$ telles que $Y\subset Z\subset T$, on a
+  \[
+    \operatorname{codim}(Y,T)=
+    \operatorname{codim}(Y,Z)+\operatorname{codim}(Z,T).
+    \tag{14.3.2.1}\label{0.14.3.2.1-fr}
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est immédiat que a) entraîne b). Réciproquement, supposons b) vérifiée, et
+démontrons que si deux chaînes saturées de mêmes extrémités ont pour longueurs
+$m$ et $n\leq m$, on a nécessairement $m=n$. Raisonnons par récurrence sur
+$n$, la proposition étant évidente pour $n=1$. Supposons donc $n>1$, $n<m$,
+et soit $Z_0\subset Z_1\subset\cdots\subset Z_n$ une

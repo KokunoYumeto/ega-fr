@@ -1,0 +1,103 @@
+% from ega3-7-fr.tex
+\oldpage[III]{190}
+\subsection{Cas des anneaux locaux noethériens}
+\label{subsection:III.7.5.fr}
+
+\begin{env}[7.5.1]
+Soient $A$ un anneau local noethérien, $\mathfrak m$ son idéal maximal, et pour
+tout $A$-module $M$, désignons par $\widehat M$ son séparé complété pour la
+topologie $\mathfrak m$-préadique, isomorphe à
+\[
+  \varprojlim_n\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+  =
+  \varprojlim_n\bigl(M/\mathfrak m^{n+1}M\bigr).
+\]
+Soit $T$ un foncteur covariant additif de $\mathbf{Ab}_A$ dans $\mathbf{Ab}$;
+les homomorphismes canoniques (7.2.3.1)
+\[
+  T(M)\otimes_A(A/\mathfrak m^{n+1})
+  \longrightarrow
+  T\bigl(M\otimes_A(A/\mathfrak m^{n+1})\bigr)
+\]
+forment évidemment un système projectif de $A$-homomorphismes, qui donnent donc
+à la limite un $\widehat A$-homomorphisme fonctoriel en $M$
+\[
+  \widehat{T(M)}
+  \longrightarrow
+  \varprojlim_n T(M_n)
+  \tag{7.5.1.1}\label{III.7.5.1.1.fr}
+\]
+où l'on a posé
+\[
+  M_n=M\otimes_A(A/\mathfrak m^{n+1}),
+  \qquad
+  A_n=A/\mathfrak m^{n+1}.
+\]
+\end{env}
+
+\begin{proposition}[7.5.2]
+Soient $A$ un anneau local noethérien d'idéal maximal $\mathfrak m$,
+$k=A/\mathfrak m$ son corps résiduel, $T$ un foncteur covariant additif de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, semi-exact et commutant aux limites
+inductives. On suppose en outre que pour tout $A$-module de type fini $M$,
+$T(M)$ est un $A$-module de type fini et que l'homomorphisme canonique
+(7.5.1.1) est un isomorphisme. Sous ces conditions, les propriétés suivantes
+sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T$ est exact à droite.
+  \item[b)] Pour tout $n$, le foncteur $N\mapsto T(N)$ est exact à droite dans
+    la catégorie des $A_n$-modules de type fini (ce qui revient à dire que $T$
+    est exact à droite dans la catégorie des $A$-modules de longueur finie).
+  \item[c)] L'homomorphisme canonique
+    \[
+      T(\varepsilon):T(A)\longrightarrow T(k)
+    \]
+    est surjectif.
+  \item[d)] Pour tout $n$ assez grand, l'homomorphisme canonique
+    \[
+      T(A_n)\longrightarrow T(k)
+    \]
+    est surjectif.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il est clair que a) entraîne b). Montrons que b) entraîne a), c'est-à-dire que
+si $u:M\to N$ est un épimorphisme de $A$-modules, $T(u)$ est un épimorphisme.
+Comme $T$ commute aux limites inductives et que le foncteur $\varinjlim$ est
+exact dans la catégorie des modules (pour des ensembles d'indices filtrants),
+on peut se borner au cas où $M$ et $N$ sont de type fini. Comme $T(M)$ et
+$T(N)$ sont alors de type fini, et que $A$ est un anneau local noethérien, il
+suffit de montrer que
+\[
+  \widehat{T(u)}:
+  \widehat{T(M)}
+  \longrightarrow
+  \widehat{T(N)}
+\]
+est surjectif ($0_{\mathrm I}$, 7.3.5 et $0_{\mathrm I}$, 6.4.1). Par hypothèse,
+$\widehat{T(M)}$ et $\widehat{T(N)}$ sont respectivement $\varprojlim_n T(M_n)$
+et $\varprojlim_n T(N_n)$, donc $\widehat{T(u)}$ est limite du système projectif
+d'homomorphismes
+\[
+  T(u\otimes1_{A_n}):T(M_n)\longrightarrow T(N_n).
+\]
+Or, b) signifie que ces homomorphismes sont surjectifs; en outre, $T(M_n)$ est
+un $A_n$-module de type fini, et $A_n$ est un anneau artinien par hypothèse; on
+en conclut que $\widehat{T(u)}$ est surjectif ($0_{\mathrm I}$, 13.1.2 et
+13.2.2). Il est clair que a) entraîne c), et comme $T(\varepsilon)$ se factorise
+en
+\[
+  T(A)\longrightarrow T(A_n)\longrightarrow T(k),
+\]
+c) implique d); enfin, il résulte de (7.2.7) que b) et d) sont équivalentes
+puisque $T$ est semi-exact dans $\mathbf{Ab}_{A_n}$, ce qui achève la
+démonstration.
+\end{proof}
+
+\begin{corollary}[7.5.3]
+Sous les hypothèses générales de (7.5.2), si $T(k)=0$, alors $T(M)=0$ pour tout
+$A$-module $M$.
+\end{corollary}
+
+\begin{proof}

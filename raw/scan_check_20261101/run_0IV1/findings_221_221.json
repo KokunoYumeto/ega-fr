@@ -1,0 +1,101 @@
+[
+ {
+  "page": 221,
+  "where": "page marker \\oldpage[0\\textsubscript{IV-1}]{221}, new place: proof of (23.2.9), '... en vertu de (23.2.7), une A_m-algèbre | finie B contenue dans A'_m'",
+  "scan": "printed p. 221 begins 'finie B contenue dans A'_m telle que A'_m soit l'intersection'; printed p. 220 ends '... Or, il y a alors, en vertu de (23.2.7), une A_m-algèbre' (checked on the p. 220 scan, strip 4)",
+  "tex": "the marker stands six source lines too early, before 'il suffira donc de prouver que' (text printed at the bottom of p. 220)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {"old": "$A_{\\mathfrak m}$-algèbre finie $B$", "new": "$A_{\\mathfrak m}$-algèbre\n\\oldpage[0\\textsubscript{IV-1}]{221}\nfinie $B$"},
+  "note": "Move, part 1 of 2: insert the marker here first; the next entry removes the old one. Apply in this order: ega0-23-fr.tex has no 0_IV-1 marker after {221}, so with the old marker removed first p. 221 cannot be located. The moved lines 'il suffira donc ... une $A_{\\mathfrak m}$-algèbre' match the p. 220 scan word for word and symbol for symbol."
+ },
+ {
+  "page": 221,
+  "where": "page marker \\oldpage[0\\textsubscript{IV-1}]{221}, old place: before 'il suffira donc de prouver que A'_m est l'intersection des A'_p'",
+  "scan": "this text is printed at the bottom of p. 220 and continues, flush left, the paragraph ending '(Bourbaki, Alg. comm., chap. II, § 3, n° 3, cor. 4 du th. 1);'",
+  "tex": "\\oldpage[0\\textsubscript{IV-1}]{221} with a blank line before and after it (paragraph break the print lacks)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {"old": "\\oldpage[0\\textsubscript{IV-1}]{221}\n\nil suffira donc", "new": "il suffira donc"},
+  "note": "Move, part 2 of 2: removes the old marker and the blank line after it, after the insertion above. The blank line before it is the last line of the p. 220 segment and must go too (next entry, page 220), or a paragraph break remains (GLOBAL_ISSUES item 20)."
+ },
+ {
+  "page": 220,
+  "where": "end of the p. 220 segment, proof of (23.2.9): '... cor. 4 du th. 1); | il suffira donc de prouver'",
+  "scan": "no paragraph break: 'il suffira donc' starts flush left in the same paragraph (p. 220, bottom)",
+  "tex": "blank line after 'cor.~4 du th.~1)~;' before the old \\oldpage[0\\textsubscript{IV-1}]{221}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {"old": "cor.~4 du th.~1)~;\n\n", "new": "cor.~4 du th.~1)~;\n"},
+  "note": "OUTSIDE p. 221: 'old' lies in page_220.tex (its last line). Apply together with the two marker entries above; it occurs once in the p. 220 segment before and after the move. \\oldpage ends with \\ignorespaces, so the joined lines keep one space."
+ },
+ {
+  "page": 221,
+  "where": "first line of p. 221: 'finie B contenue dans A'_m telle que A'_m soit l'intersection'",
+  "scan": "no comma after 'contenue dans A'_m'",
+  "tex": "contenue dans $A'_{\\mathfrak m}$, telle",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {"old": "dans $A'_{\\mathfrak m}$, telle", "new": "dans $A'_{\\mathfrak m}$ telle"},
+  "note": ""
+ },
+ {
+  "page": 221,
+  "where": "line 2: 'des clôtures intégrales des anneaux B_q, où q parcourt l'ensemble'",
+  "scan": "comma after B_q",
+  "tex": "$B_{\\mathfrak q}$ où $\\mathfrak q$ parcourt, no comma",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {"old": "$B_{\\mathfrak q}$ où", "new": "$B_{\\mathfrak q}$, où"},
+  "note": ""
+ },
+ {
+  "page": 221,
+  "where": "Remarques (23.2.10) (i): 'Nous verrons (IV, 5.6.3 et 5.6.10)'",
+  "scan": "bold IV",
+  "tex": "(IV, 5.6.3 et 5.6.10), plain IV",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {"old": "(IV, 5.6.3 et 5.6.10)", "new": "(\\textbf{IV}, 5.6.3 et 5.6.10)"},
+  "note": "GLOBAL_ISSUES 4."
+ },
+ {
+  "page": 221,
+  "where": "Remarques (23.2.10) (i): 'en particulier (IV, 5.10.17 et 5.11.2)'",
+  "scan": "bold IV",
+  "tex": "(IV, 5.10.17 et 5.11.2), plain IV",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {"old": "(IV, 5.10.17 et 5.11.2)", "new": "(\\textbf{IV}, 5.10.17 et 5.11.2)"},
+  "note": "GLOBAL_ISSUES 4."
+ },
+ {
+  "page": 221,
+  "where": "Remarques (23.2.10) (i), end: 'en particulier si ce morphisme est radiciel (23.2.2).'",
+  "scan": "radiciel in italics",
+  "tex": "est radiciel (23.2.2), no \\emph",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {"old": "est radiciel (23.2.2)", "new": "est \\emph{radiciel} (23.2.2)"},
+  "note": "Judged with the remark body roman (document-wide remark item): the print italicises 'radiciel' like 'universellement caténaire' and 'quotient d'un anneau régulier', which the TeX already has as \\emph."
+ },
+ {
+  "page": 221,
+  "where": "Remarques (23.2.10) (ii): 'A_p soit intégralement clos (IV, 5.6.11);'",
+  "scan": "bold IV",
+  "tex": "(IV, 5.6.11), plain IV",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {"old": "(IV, 5.6.11)", "new": "(\\textbf{IV}, 5.6.11)"},
+  "note": "GLOBAL_ISSUES 4."
+ }
+]

@@ -1,0 +1,89 @@
+% from ega0-19-fr.tex
+\oldpage[0\textsubscript{IV-1}]{72}
+
+  \noindent se factorise en
+  $M/V_\mu\xrightarrow{u_\mu}N/W_\mu\to M/V_\lambda$ (où
+  l'homomorphisme $N/W_\mu\to M/V_\lambda$ est nécessairement unique).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'assertion (i) est immédiate~; d'autre part,
+$\operatorname{Ker}(u_\mu)=u^{-1}(W_\mu)/V_\mu$, et le noyau de l'application
+canonique $M/V_\mu\to M/V_\lambda$ est $V_\lambda/V_\mu$~; la condition de
+(ii) revient donc à dire que $u^{-1}(W_\mu)\subset V_\lambda$, et l'assertion
+(ii) en découle aussitôt~; enfin, lorsque $u_\mu$ est surjectif, il revient au
+même de dire que $\operatorname{Ker}(u_\mu)$ est contenu dans
+$V_\lambda/V_\mu$, ou de dire que $M/V_\mu\to M/V_\lambda$ se factorise en
+$v\circ u_\mu$, où $v$ est un homomorphisme
+$N/W_\mu\to M/V_\lambda$, puisque $N/W_\mu$ s'identifie alors à
+$(M/V_\mu)/\operatorname{Ker}(u_\mu)$.
+\end{proof}
+
+\begin{corollary}[19.1.4]
+\label{0.19.1.4-fr}
+Soient $A$ un anneau topologique, $M$, $N$ deux $A$-modules topologiques dont
+les topologies sont déduites de celle de $A$, $u:M\to N$ un épimorphisme
+formel. Soit $(\mathfrak J_\lambda)$ un système fondamental d'idéaux ouverts
+dans $A$. Pour que $u$ soit un bimorphisme formel, il faut et il suffit que pour
+tout $\lambda$, l'homomorphisme
+$u_\lambda:M/\mathfrak J_\lambda M\to N/\mathfrak J_\lambda N$ déduit de $u$
+par passage aux quotients soit bijectif.
+\end{corollary}
+
+\begin{proof}
+On a en effet $u(\mathfrak J_\lambda M)\subset\mathfrak J_\lambda N$ et on
+peut appliquer le critère (19.1.3, (iii))~; mais si l'on a une factorisation
+\[
+  M/\mathfrak J_\mu M\xrightarrow{u_\mu}
+  N/\mathfrak J_\mu N\xrightarrow{v}M/\mathfrak J_\lambda M,
+\]
+l'image de $\mathfrak J_\lambda M/\mathfrak J_\mu M$ par $u_\mu$ est
+$\mathfrak J_\lambda N/\mathfrak J_\mu N$, donc l'image de
+$\mathfrak J_\lambda N/\mathfrak J_\mu N$ par $v$ est 0 et $v$ se factorise en
+\[
+  N/\mathfrak J_\mu N\longrightarrow N/\mathfrak J_\lambda N
+  \xrightarrow{v'}M/\mathfrak J_\lambda M~;
+\]
+mais alors l'automorphisme identique de $M/\mathfrak J_\lambda M$ se factorise
+en
+\[
+  M/\mathfrak J_\lambda M\xrightarrow{u_\lambda}
+  N/\mathfrak J_\lambda N\xrightarrow{v'}M/\mathfrak J_\lambda M,
+\]
+ce qui montre que $u_\lambda$ est injectif, et comme on sait déjà qu'il est
+surjectif, cela prouve le corollaire.
+\end{proof}
+
+\begin{proposition}[19.1.5]
+\label{0.19.1.5-fr}
+Soient $A$ un anneau topologique, $M$, $N$ deux $A$-modules topologiques,
+$u:M\to N$ un $A$-homomorphisme continu. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+  \item[a)] Pour tout $A$-module topologique discret $E$ et tout
+  $A$-homomorphisme continu $v:M\to E$, il existe un $A$-homomorphisme continu
+  $w:N\to E$ tel que $v=w\circ u$.
+  \item[b)] Pour tout sous-module ouvert $V'$ de $M$, il existe un sous-module
+  ouvert $W''$ de $N$, un sous-module ouvert
+  $V''\subset V'\cap u^{-1}(W'')$ et un homomorphisme
+  $h:N/W''\to M/V'$ tels que l'homomorphisme canonique
+  $M/V''\to M/V'$ se factorise en
+  \[
+    M/V''\xrightarrow{u''}N/W''\xrightarrow{h}M/V',
+  \]
+  où $u''$ est déduit de $u$ par passage aux quotients.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Pour voir que a) entraîne b), il suffit d'appliquer a) à $E=M/V'$ et à
+l'homomorphisme canonique $v:M\to M/V'$~; alors $W''=w^{-1}(0)$ est un
+sous-module ouvert de $N$ et $V''=u^{-1}(W'')$ un sous-module ouvert de $M$
+contenu dans $V'$~; ces sous-modules et l'homomorphisme
+$h:N/W''\to M/V'$ déduit de $w$ par passage au quotient répondent à la
+question. Inversement, pour montrer que b) entraîne a), on peut se limiter au
+cas où $v$ est surjectif, en remplaçant $E$ par $v(M)$~; alors
+$V'=\operatorname{Ker}(v)$ est un sous-module ouvert de $M$, donc $E$ est
+isomorphe au $A$-module discret $M/V'$, et en appliquant b), on obtient
+

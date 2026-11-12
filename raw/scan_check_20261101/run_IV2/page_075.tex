@@ -1,0 +1,99 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{75}
+
+Si $\mathscr F$ est réduit en $x$, il y a un voisinage ouvert $U$ de $x$ tel
+que $\mathscr F|U$ soit réduit (3.2.2). En raisonnant comme dans (4.6.16), on
+voit que dire que $\mathscr F$ est géométriquement réduit au point $x$
+équivaut à dire que $\mathscr F$ est réduit au point $x$ et que le
+sous-préschéma fermé $Y$ défini par l'annulateur $\mathscr J$ de $\mathscr F$
+est géométriquement réduit au point $x$; il en résulte qu'il y a un voisinage
+ouvert $U$ de $x$ tel que $\mathscr F|U$ soit géométriquement réduit (4.6.11).
+Les raisonnements de (4.6.16) et (4.6.18) montrent aussi que si $X$ est
+localement de type fini sur $k$, dire que $\mathscr F$ est géométriquement
+ponctuellement intègre au point $x$ équivaut à dire que $\mathscr F$ est
+réduit au point $x$ et que le sous-préschéma $Y$ est géométriquement
+ponctuellement intègre au point $x$.
+
+\subsection{Multiplicités dans la décomposition primaire sur un préschéma
+algébrique}
+\label{subsection:IV.4.7-fr}
+
+\begin{lemma}[4.7.1]
+\label{IV.2.4.7.1-fr}
+Soient $A$, $B$ deux anneaux locaux, $\mathfrak m$ l'idéal maximal de $A$,
+$\rho:A\to B$ un homomorphisme local. On suppose que $B$ soit un $A$-module
+plat, et $B/\mathfrak mB$ un $B$-module de longueur finie. Alors, pour qu'un
+$A$-module $M$ soit de longueur finie, il faut et il suffit que $M_{(B)}$ soit
+un $B$-module de longueur finie, et on a
+\begin{equation}
+\operatorname{long}_B(M_{(B)})
+=\operatorname{long}_A(M)\cdot\operatorname{long}_B(B/\mathfrak mB).
+\tag{4.7.1.1}
+\label{IV.2.4.7.1.1-fr}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+C'est un cas particulier de (2.5.5.2).
+\end{proof}
+
+
+\begin{corollary}[4.7.2]
+\label{IV.2.4.7.2-fr}
+Soient $A$, $B$ deux anneaux noethériens, $\rho:A\to B$ un homomorphisme
+d'anneaux tel que $B$ soit un $A$-module plat. Soient $\mathfrak q$ un idéal
+premier minimal de $B$, $\mathfrak p=\rho^{-1}(\mathfrak q)$, $M$ un
+$A$-module de type fini; alors $\mathfrak p$ est un idéal premier minimal de
+$A$, $M_{\mathfrak p}$ est un $A_{\mathfrak p}$-module de longueur finie et
+l'on a
+\begin{equation}
+\operatorname{long}_{B_{\mathfrak q}}((M_{(B)})_{\mathfrak q})
+=\operatorname{long}_{A_{\mathfrak p}}(M_{\mathfrak p})
+ \operatorname{long}_{B_{\mathfrak q}}
+ (B_{\mathfrak q}/\mathfrak pB_{\mathfrak q}).
+\tag{4.7.2.1}
+\label{IV.2.4.7.2.1-fr}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+En effet, $B_{\mathfrak q}$ est un $A_{\mathfrak p}$-module plat
+$(0_{\mathrm I},6.3.2)$ et l'homomorphisme
+$A_{\mathfrak p}\to B_{\mathfrak q}$ est local, donc $B_{\mathfrak q}$ est
+un $A_{\mathfrak p}$-module fidèlement plat $(0_{\mathrm I},6.6.2)$; le fait
+que $\mathfrak p$ est minimal dans $A$ résulte de (2.3.5). En outre,
+$A_{\mathfrak p}$ est alors un anneau artinien (Bourbaki, \emph{Alg. comm.},
+chap.~IV, \S~2, n\textsuperscript{o}~5, prop.~9) et $M_{\mathfrak p}$ est donc
+un $A_{\mathfrak p}$-module de longueur finie; la formule (4.7.2.1) est donc
+un cas particulier de (4.7.1.1).
+\end{proof}
+
+\begin{proposition}[4.7.3]
+\EGAReaderTarget{ega4.c04.prop.4-7-3}{IV.2.4.7.3-fr}
+Soient $k$ un corps d'exposant caractéristique $p$, $X$ un préschéma intègre
+localement noethérien, $K=\mathrm R(X)$ le corps des fonctions rationnelles
+sur $X$. Soient $k'$ une extension de $k$, $(X'_\alpha)$ la famille des
+composantes irréductibles de $X'=X_{(k')}$, $x'_\alpha$ le point générique de
+$X'_\alpha$.
+\begin{enumerate}
+\item[(i)] On suppose que $X'$ soit localement noethérien (ce qui a lieu si
+$X$ est localement de type fini sur $k$, ou si $k'$ est une extension de type
+fini de $k$). Soient alors $k''$ une extension quelconque de $k'$,
+$X''=X\otimes_k k''$, $(X''_\beta)$ la famille des composantes irréductibles
+de $X''$, $x''_\beta$ le point générique de $X''_\beta$. Si $x''_\beta$ est
+au-dessus de $x'_\alpha$, on a
+\begin{equation}
+\operatorname{long}(\mathcal O_{x''_\beta})
+=\operatorname{long}(\mathcal O_{x'_\alpha})
+ \operatorname{long}(\mathcal O_{Z'',x''_\beta})
+\tag{4.7.3.1}
+\label{IV.2.4.7.3.1-fr}
+\end{equation}
+où l'on a posé $Z''=(X'_{\mathrm{red}})\otimes_{k'}k''$. En particulier, si
+$k''$ est une extension séparable de $k'$ telle que $Z''$ soit localement
+noethérien, on a
+\[
+\operatorname{long}(\mathcal O_{x''_\beta})
+=\operatorname{long}(\mathcal O_{x'_\alpha}).
+\]
+

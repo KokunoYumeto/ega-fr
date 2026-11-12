@@ -1,0 +1,36 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{223}
+
+peut appliquer (19.9.2) à l'anneau $\sh O_{X,y}$, au $\sh O_{X,y}$-module $\sh F_y$ et à l'idéal $\sh J_y$ de $\sh O_{X,y}$, donc il existe une suite $\sh F_y$-régulière $(t_i)_{1\leq i\leq n}$ de $n$ éléments de $\sh J_y$. Il y a donc un voisinage ouvert $U$ de $y$ dans $X$ et une suite $(f_i)_{1\leq i\leq n}$ de sections de $\sh J$ au-dessus de $U$ telles que les $t_i$ soient les germes des $f_i$ au point $y$; utilisant ($0$, 15.2.4), on en déduit qu'il existe un voisinage ouvert $U'\subset U$ de $y$ dans $X$ tel que les $f_i|U'$ forment une suite $(\sh F|U')$-régulière.
+
+\begin{corollary}[19.9.4]
+\label{IV.19.9.4}
+Avec les notations de (19.9.3), la fonction $y\mapsto\operatorname{prof}_{Y,y}(\sh F)$ est semi-continue inférieurement dans $Y$.
+\end{corollary}
+
+\begin{proposition}[19.9.5]
+\label{IV.19.9.5}
+Avec les notations de (19.9.3), soient $X'$ un préschéma localement noethérien, $g:X'\to X$ un morphisme plat, $Y'=g^{-1}(Y)$, $\sh F'=g^*(\sh F)$. Alors, pour tout point $y'\in Y'$ au-dessus de $y$, on a $\operatorname{prof}_{Y',y'}(\sh F')=\operatorname{prof}_{Y,y}(\sh F)$.
+\end{proposition}
+
+En effet, pour tout $z'\in\Spec(\sh O_{X',y'})$, il résulte de (6.3.1) que l'on a $\operatorname{prof}(\sh F'_{z'})\geq\operatorname{prof}(\sh F_{g(z')})$, et si $z''$ est un point maximal de la fibre $g^{-1}(g(z'))$, générisation de $z'$ (donc appartenant aussi à $\Spec(\sh O_{X',y'})$), on a (\emph{loc. cit.}) $\operatorname{prof}(\sh F'_{z''})=\operatorname{prof}(\sh F_{g(z')})$. La proposition résulte alors de ce que l'on a $g(\Spec(\sh O_{X',y'}))=\Spec(\sh O_{X,g(y')})$ puisque $g$ est plat (2.3.4).
+
+\begin{proposition}[19.9.6]
+\label{IV.19.9.6}
+Soient $f:X\to S$ un morphisme localement de présentation finie, $Y$ une partie fermée de $X$, $\sh F$ un $\sh O_X$-Module de présentation finie et $f$-plat, $n$ un entier $>0$. Pour tout point $y\in Y$, les conditions suivantes sont équivalentes (en désignant par $X_{f(y)}$ la fibre de $f$ au point $f(y)$, par $\sh F_{f(y)}$ l'image réciproque de $\sh F$ dans $X_{f(y)}$, et en posant $Y_{f(y)}=X_{f(y)}\cap Y$):
+\begin{enumerate}
+  \item[a)] On a $\operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})\geq n$.
+  \item[b)] Il existe un voisinage ouvert $U$ de $y$ dans $X$ et une suite $(g_i)_{1\leq i\leq n}$ de $n$ sections de $\sh O_X$ au-dessus de $U$, qui soit transversalement $\sh F$-régulière relativement à $S$ (cf. (19.2.1) pour la terminologie) et telle que $g_i(x)=0$ pour $1\leq i\leq n$ et pour tout $x\in U\cap Y$.
+\end{enumerate}
+L'ensemble $V_n$ des $y\in Y$ vérifiant ces conditions est ouvert dans $Y$; si de plus $Y$ est localement constructible dans $X$, $V_n$ est rétrocompact dans $X$ ($0_{\mathrm{III}}$, 9.1.1).
+\end{proposition}
+
+En vertu de (19.9.3), la condition $a)$ équivaut à l'existence d'un voisinage ouvert $U$ de $y$ dans $X$ et d'une suite $(\sh F_{f(y)}|(U\cap X_{f(y)}))$-régulière $(h_i)_{1\leq i\leq n}$ de sections de $\sh O_{X_{f(y)}}$ au-dessus de $U\cap X_{f(y)}$ telles que $h_i(z)=0$ pour tout $z\in U\cap Y_{f(y)}$. Si on désigne encore par $Y$ un sous-préschéma fermé de $X$ ayant $Y$ pour espace sous-jacent, par $\sh J$ l'Idéal quasi-cohérent de $\sh O_X$ définissant $Y$, on peut encore dire que l'on a $h_i\in\sh J_{f(y)}$ pour $1\leq i\leq n$. Comme on peut remplacer $U$ par un voisinage affine plus petit de $y$, on peut supposer que les $h_i$ sont les images d'une suite $(g_i)_{1\leq i\leq n}$ de sections de $\sh J$ au-dessus de $U$, de sorte que les germes $(g_i)_y$ appartiennent à l'idéal maximal $\mathfrak m_y$ de $\sh O_{X,y}$. L'équivalence de $a)$ et $b)$ résulte alors de (11.3.8), qui prouve aussi que l'ensemble $V_n$ est ouvert dans $Y$.
+
+Reste à prouver la dernière assertion; comme il s'agit encore de propriétés locales sur $X$, on peut supposer $S=\Spec(A)$ affine et $X$ de présentation finie sur $S$; il existe alors un sous-anneau noethérien $A_0$ de $A$, un préschéma $X_0$ de type fini sur $S_0=\Spec(A_0)$ et un $\sh O_{X_0}$-Module cohérent $\sh F_0$ tels que $X=X_0\times_{S_0}S$ et $\sh F=\sh F_0\otimes_{\sh O_{X_0}}\sh O_X$ (8.9.1); on peut en outre supposer que, si $f_0:X_0\to S_0$ est le morphisme structural, $\sh F_0$ est $f_0$-plat (11.2.6). Puisque $Y$ est constructible, on peut en outre (8.3.11) supposer que $Y=p^{-1}(Y_0)$, où $p:X\to X_0$ est la projection canonique. Alors, pour tout $y\in Y$, il résulte de (19.9.5) et de la transitivité des fibres que l'on a
+\[
+  \operatorname{prof}_{Y_{f(y)},y}(\sh F_{f(y)})
+  =\operatorname{prof}_{(Y_0)_{f_0(y_0)},y_0}((\sh F_0)_{f_0(y_0)}),
+\]
+en posant $y_0=p(y)$; si $V_n^0$ est l'ensemble des $y_0\in Y_0$ pour lesquels le second membre de cette relation est $\geq n$, on a donc $V_n=p^{-1}(V_n^0)$. Comme $X_0$ est noethérien, $V_n^0$ est un ouvert rétrocompact dans $X_0$, et par suite (cf. démonstration de (1.8.2)) $V_n$ est rétrocompact dans $X$.
+

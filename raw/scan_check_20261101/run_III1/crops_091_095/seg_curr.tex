@@ -1,0 +1,428 @@
+\oldpage[III]{91}
+\begin{lemma}[1.4.9]
+\label{III.1.4.9-fr}
+Soient $X$ un schéma quasi-compact,
+$\mathfrak U=(U_i)_{1\leq i\leq n}$ un recouvrement fini de $X$ par des
+ouverts affines, $\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent. Le
+complexe de faisceaux $\mathcal C^\bullet(\mathfrak U,\mathcal F)$ défini
+par le recouvrement $\mathfrak U$ (G, II, 5.2) est alors un
+$\mathcal O_X$-Module quasi-cohérent.
+\end{lemma}
+
+\begin{proof}
+Il résulte des définitions (G, II, 5.2) que
+$\mathcal C^p(\mathfrak U,\mathcal F)$ est somme directe des faisceaux
+images directes des $\mathcal F\vert U_{i_0\ldots i_p}$ par l'injection
+canonique $U_{i_0\ldots i_p}\to X$. Or, l'hypothèse que $X$ est un schéma
+entraîne que ces injections sont des morphismes affines (I, 5.5.6), donc les
+$\mathcal C^p(\mathfrak U,\mathcal F)$ sont quasi-cohérents (II, 1.2.6).
+\end{proof}
+
+\begin{proposition}[1.4.10]
+\label{III.1.4.10-fr}
+Soit $u:X\to Y$ un morphisme séparé et quasi-compact. Pour tout
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$, les
+$R^qu_*(\mathcal F)$ sont des $\mathcal O_Y$-Modules quasi-cohérents.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut supposer $Y$ affine. Alors $X$ est
+réunion finie d'ouverts affines $U_i$ ($1\leq i\leq n$)~; soit
+$\mathfrak U$ le recouvrement $(U_i)$. En outre, comme $Y$ est un schéma,
+il résulte de (I, 5.5.10) que pour tout ouvert affine $V\subset Y$,
+l'injection canonique $u^{-1}(V)\to X$ est un morphisme affine~; on en
+conclut ((\hyperref[III.1.4.1-fr]{1.4.1}) et (G, II, 5.2)) que l'on a un
+isomorphisme canonique
+\begin{equation}
+\label{III.1.4.10.1-fr}
+\tag{1.4.10.1}
+H^\bullet(u^{-1}(V),\mathcal F)
+\xrightarrow{\sim}H^\bullet(\Gamma(V,\mathcal K^\bullet))
+\end{equation}
+où l'on a posé
+$\mathcal K^\bullet=u_*(\mathcal C^\bullet(\mathfrak U,\mathcal F))$. En
+vertu de (\hyperref[III.1.4.9-fr]{1.4.9}) et (I, 9.2.2),
+$\mathcal K^\bullet$ est un $\mathcal O_Y$-Module quasi-cohérent~; par
+ailleurs, il constitue un \emph{complexe de faisceaux} puisqu'il en est
+ainsi de $\mathcal C^\bullet(\mathfrak U,\mathcal F)$. Il résulte alors de la
+définition de la cohomologie
+$\mathcal H^\bullet(\mathcal K^\bullet)$ (G, II, 4.1) que cette dernière est
+formée de $\mathcal O_Y$-Modules quasi-cohérents (I, 4.1.1). Comme (pour $V$
+affine dans $Y$) le foncteur $\Gamma(V,\mathcal G)$ est exact en
+$\mathcal G$ dans la catégorie des $\mathcal O_Y$-Modules quasi-cohérents,
+on a (G, II, 4.1)
+\begin{equation}
+\label{III.1.4.10.2-fr}
+\tag{1.4.10.2}
+H^\bullet(\Gamma(V,\mathcal K^\bullet))
+=\Gamma(V,\mathcal H^\bullet(\mathcal K^\bullet)).
+\end{equation}
+Notons enfin qu'il résulte de la définition de l'homomorphisme canonique
+\[
+H^\bullet(\mathfrak U,\mathcal F)\longrightarrow H^\bullet(X,\mathcal F)
+\]
+donnée dans (G, II, 5.2), que si $V'\subset V$ est un second ouvert affine
+de $Y$, le diagramme
+\[
+\xymatrix{
+H^\bullet(u^{-1}(V),\mathcal F)\ar[r]^{\sim}\ar[d]
+&H^\bullet(\Gamma(V,\mathcal K^\bullet))\ar[d]\\
+H^\bullet(u^{-1}(V'),\mathcal F)\ar[r]^{\sim}
+&H^\bullet(\Gamma(V',\mathcal K^\bullet))
+}
+\]
+est commutatif. On conclut donc de ce qui précède que les isomorphismes
+(\hyperref[III.1.4.10.1-fr]{1.4.10.1}) définissent un isomorphisme de
+$\mathcal O_Y$-Modules
+\begin{equation}
+\label{III.1.4.10.3-fr}
+\tag{1.4.10.3}
+R^\bullet u_*(\mathcal F)
+\xrightarrow{\sim}\mathcal H^\bullet(\mathcal K^\bullet)
+\end{equation}
+\oldpage[III]{92}
+et par suite $R^\bullet u_*(\mathcal F)$ est quasi-cohérent.
+\end{proof}
+
+Il résulte en outre de (\hyperref[III.1.4.10.3-fr]{1.4.10.3}),
+(\hyperref[III.1.4.10.2-fr]{1.4.10.2}) et
+(\hyperref[III.1.4.10.1-fr]{1.4.10.1}) que~:
+
+\begin{corollary}[1.4.11]
+\label{III.1.4.11-fr}
+Sous les hypothèses de (\hyperref[III.1.4.10-fr]{1.4.10}), pour tout ouvert
+affine $V$ de $Y$, l'homomorphisme canonique
+\begin{equation}
+\label{III.1.4.11.1-fr}
+\tag{1.4.11.1}
+H^q(u^{-1}(V),\mathcal F)\longrightarrow
+\Gamma(V,R^qu_*(\mathcal F))
+\end{equation}
+est un isomorphisme pour tout $q\geq0$.
+\end{corollary}
+
+\begin{corollary}[1.4.12]
+\label{III.1.4.12-fr}
+Supposons vérifiées les hypothèses de
+(\hyperref[III.1.4.10-fr]{1.4.10}) et supposons en outre que $Y$ soit
+quasi-compact. Alors il existe un entier $r>0$ tel que pour tout
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$ et tout entier $q>r$, on
+ait $R^qu_*(\mathcal F)=0$. Si $Y$ est affine, on peut prendre pour $r$ un
+entier tel qu'il existe un recouvrement de $X$ formé de $r$ ouverts affines.
+\end{corollary}
+
+\begin{proof}
+Comme on peut recouvrir $Y$ par un nombre fini d'ouverts affines, on est
+ramené à démontrer la seconde assertion, en vertu de
+(\hyperref[III.1.4.11-fr]{1.4.11}). Or, si $\mathfrak U$ est un
+recouvrement de $X$ par $r$ ouverts affines, on a
+$H^q(\mathfrak U,\mathcal F)=0$ pour $q>r$, puisque les cochaînes de
+$C^q(\mathfrak U,\mathcal F)$ sont alternées~; la conclusion résulte donc de
+(\hyperref[III.1.4.1-fr]{1.4.1}).
+\end{proof}
+
+\begin{corollary}[1.4.13]
+\label{III.1.4.13-fr}
+Supposons vérifiées les hypothèses de
+(\hyperref[III.1.4.10-fr]{1.4.10}) et en outre supposons que
+$Y=\operatorname{Spec}(A)$ soit affine. Alors, pour tout
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$ et tout $f\in A$, on a
+\[
+\Gamma(Y_f,R^qu_*(\mathcal F))
+=(\Gamma(Y,R^qu_*(\mathcal F)))_f
+\]
+à un isomorphisme canonique près.
+\end{corollary}
+
+\begin{proof}
+En effet, cela résulte de ce que $R^qu_*(\mathcal F)$ est un
+$\mathcal O_Y$-Module quasi-cohérent (I, 1.3.7).
+\end{proof}
+
+\begin{proposition}[1.4.14]
+\label{III.1.4.14-fr}
+Soient $f:X\to Y$ un morphisme séparé quasi-compact, $g:Y\to Z$ un
+morphisme affine. Pour tout $\mathcal O_X$-Module quasi-cohérent
+$\mathcal F$, l'homomorphisme canonique
+$R^p(g\circ f)_*(\mathcal F)\to g_*(R^pf_*(\mathcal F))$ (0, 12.2.5.2) est
+bijectif pour tout $p$.
+\end{proposition}
+
+\begin{proof}
+En effet, pour tout ouvert affine $W$ de $Z$, $g^{-1}(W)$ est un ouvert
+affine de $Y$. L'homomorphisme de préfaisceaux définissant l'homomorphisme
+canonique
+\[
+R^p(g\circ f)_*(\mathcal F)\longrightarrow g_*(R^pf_*(\mathcal F))
+\]
+(0, 12.2.5) est donc bijectif en vertu de
+(\hyperref[III.1.4.11-fr]{1.4.11}).
+\end{proof}
+
+\begin{proposition}[1.4.15]
+\label{III.1.4.15-fr}
+Soient $u:X\to Y$ un morphisme séparé quasi-compact, $v:Y'\to Y$ un
+morphisme plat de préschémas (0\textsubscript{I}, 6.7.1)~; soit
+$u'=u_{(Y')}$, de sorte qu'on a le diagramme commutatif
+\begin{equation}
+\label{III.1.4.15.1-fr}
+\tag{1.4.15.1}
+\xymatrix{
+X\ar[d]_u & X'=X_{(Y')}\ar[l]_{v'}\ar[d]^{u'}\\
+Y & Y'\ar[l]_v
+}
+\end{equation}
+Alors, pour tout $\mathcal O_X$-Module quasi-cohérent $\mathcal F$,
+$R^qu_*'(\mathcal F')$, où
+$\mathcal F'=v'^*(\mathcal F)=\mathcal F\otimes_{\mathcal O_Y}\mathcal O_{Y'}$,
+est canoniquement isomorphe à
+$R^qu_*(\mathcal F)\otimes_{\mathcal O_Y}\mathcal O_{Y'}
+=v^*(R^qu_*(\mathcal F))$ pour tout $q\geq0$.
+\end{proposition}
+
+\oldpage[III]{93}
+\begin{proof}
+L'homomorphisme canonique
+$\rho:\mathcal F\to v_*'(v'^*(\mathcal F))$ (0\textsubscript{I}, 4.4.3.2)
+définit par fonctorialité un homomorphisme
+\begin{equation}
+\label{III.1.4.15.2-fr}
+\tag{1.4.15.2}
+R^qu_*(\mathcal F)\longrightarrow R^qu_*(v_*'(\mathcal F')).
+\end{equation}
+D'autre part, on a, en posant $w=u\circ v'=v\circ u'$, les homomorphismes
+canoniques (0, 12.2.5.1 et 12.2.5.2)
+\begin{equation}
+\label{III.1.4.15.3-fr}
+\tag{1.4.15.3}
+R^qu_*(v_*'(\mathcal F'))\longrightarrow R^qw_*(\mathcal F')
+\longrightarrow v_*(R^qu_*'(\mathcal F')).
+\end{equation}
+Composant (\hyperref[III.1.4.15.3-fr]{1.4.15.3}) et
+(\hyperref[III.1.4.15.2-fr]{1.4.15.2}), on a un homomorphisme
+\[
+\psi:R^qu_*(\mathcal F)\longrightarrow v_*(R^qu_*'(\mathcal F'))
+\]
+et finalement on en déduit l'homomorphisme canonique (dont la définition ne
+fait intervenir \emph{aucune hypothèse sur $v$})
+\begin{equation}
+\label{III.1.4.15.4-fr}
+\tag{1.4.15.4}
+\psi^\sharp:v^*(R^qu_*(\mathcal F))\longrightarrow R^qu_*'(\mathcal F')
+\end{equation}
+dont il s'agit de prouver que c'est un isomorphisme lorsque $v$ est
+\emph{plat}. Il est clair que la question est locale sur $Y$ et $Y'$ et l'on
+peut donc supposer que $Y=\operatorname{Spec}(A)$,
+$Y'=\operatorname{Spec}(B)$~; nous utiliserons en outre le
+
+\begin{lemma}[1.4.15.5]
+\label{III.1.4.15.5-fr}
+Soient $\varphi:A\to B$ un homomorphisme d'anneaux,
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$,
+$f:X\to Y$ le morphisme correspondant à $\varphi$, $M$ un $B$-module. Pour
+que le $\mathcal O_X$-Module $\widetilde M$ soit $f$-plat
+(0\textsubscript{I}, 6.7.1), il faut et il suffit que $M$ soit un $A$-module
+plat. En particulier, pour que le morphisme $f$ soit plat, il faut et il
+suffit que $B$ soit un $A$-module plat.
+\end{lemma}
+
+En effet, cela résulte de la définition (0\textsubscript{I}, 6.7.1) et de
+(0\textsubscript{I}, 6.3.3), compte tenu de (I, 1.3.4).
+
+Cela étant, il résulte de
+(\hyperref[III.1.4.11.1-fr]{1.4.11.1}) et des définitions des
+homomorphismes (\hyperref[III.1.4.15.3-fr]{1.4.15.3})
+(cf. 0, 12.2.5) que $\psi$ correspond alors au morphisme composé
+\[
+H^q(X,\mathcal F)\xrightarrow{\rho_q}
+H^q(X,v_*'(v'^*(\mathcal F)))\xrightarrow{\theta_q}
+H^q(X',v'^*(v_*'(v'^*(\mathcal F))))\xrightarrow{\sigma_q}
+H^q(X',v'^*(\mathcal F))
+\]
+où $\rho_q$ et $\sigma_q$ sont les homomorphismes correspondant dans la
+cohomologie aux morphismes canoniques $\rho$ et
+$\sigma:v'^*(v_*'(\mathcal G'))\to\mathcal G'$, et $\theta_q$ est le
+$\varphi$-morphisme (0, 12.1.3.1) relatif au $\mathcal O_X$-Module
+$v_*'(v'^*(\mathcal F))$. Mais par fonctorialité de $\theta_q$, on a le
+diagramme commutatif
+\[
+\xymatrix{
+H^q(X,\mathcal F)\ar[rr]^{\rho_q}\ar[dd]_{\theta_q}
+&&H^q(X,v_*'(v'^*(\mathcal F)))\ar[dd]^{\theta_q}\\\\
+H^q(X',v'^*(\mathcal F))\ar[rr]^{v'^*(\rho_q)}
+&&H^q(X',v'^*(v_*'(v'^*(\mathcal F))))
+}
+\]
+\oldpage[III]{94}
+et comme par définition (0\textsubscript{I}, 4.4.3), $v'^*(\rho)$ est
+l'inverse de $\sigma$, on voit que le morphisme composé considéré plus haut
+n'est autre finalement que $\theta_q$~; $\psi^\sharp$ est par suite le
+$B$-homomorphisme associé
+\[
+H^q(X,\mathcal F)\otimes_A B\longrightarrow H^q(X',\mathcal F').
+\]
+Comme $u$ est quasi-compact, $X$ est réunion finie d'ouverts affines $U_i$
+($1\leq i\leq r$)~; soit $\mathfrak U$ le recouvrement $(U_i)$. D'ailleurs
+$v$ est un morphisme affine, donc il en est de même de $v'$ (II, 1.6.2,
+(iii)), et les $U_i'=v'^{-1}(U_i)$ forment par suite un recouvrement ouvert
+affine $\mathfrak U'$ de $X'$. On sait alors (0, 12.1.4.2) que le diagramme
+\[
+\xymatrix{
+H^q(\mathfrak U,\mathcal F)\ar[r]^{\theta_q}\ar[d]
+&H^q(\mathfrak U',\mathcal F')\ar[d]\\
+H^q(X,\mathcal F)\ar[r]^{\theta_q}&H^q(X',\mathcal F')
+}
+\]
+est commutatif, et les flèches verticales sont des isomorphismes puisque
+$X$ et $X'$ sont des schémas (\hyperref[III.1.4.1-fr]{1.4.1}). Il suffit par
+suite de prouver que le $\varphi$-morphisme canonique
+$\theta_q:H^q(\mathfrak U,\mathcal F)\to H^q(\mathfrak U',\mathcal F')$
+est tel que le $B$-homomorphisme associé
+\[
+H^q(\mathfrak U,\mathcal F)\otimes_A B
+\longrightarrow H^q(\mathfrak U',\mathcal F')
+\]
+soit un isomorphisme. Pour toute suite
+$\mathbf s=(i_k)_{0\leq k\leq p}$ de $p+1$ indices de $[1,r]$, posons
+\[
+U_{\mathbf s}=\bigcap_{k=0}^pU_{i_k},\qquad
+U_{\mathbf s}'=\bigcap_{k=0}^pU_{i_k}'=v'^{-1}(U_{\mathbf s}),\qquad
+M_{\mathbf s}=\Gamma(U_{\mathbf s},\mathcal F),\qquad
+M_{\mathbf s}'=\Gamma(U_{\mathbf s}',\mathcal F').
+\]
+L'application canonique
+$M_{\mathbf s}\otimes_A B\to M_{\mathbf s}'$ est un isomorphisme
+(I, 1.6.5), donc l'application canonique
+$C^p(\mathfrak U,\mathcal F)\otimes_A B\to
+C^p(\mathfrak U',\mathcal F')$ est un isomorphisme, par lequel
+$d\otimes1$ s'identifie à l'opérateur cobord
+$C^p(\mathfrak U',\mathcal F')\to C^{p+1}(\mathfrak U',\mathcal F')$.
+Comme $B$ est un $A$-module \emph{plat}, il résulte aussitôt de la définition
+des modules de cohomologie que l'application canonique
+$H^q(\mathfrak U,\mathcal F)\otimes_A B\to
+H^q(\mathfrak U',\mathcal F')$ est un isomorphisme
+(0\textsubscript{I}, 6.1.1). Ce résultat sera généralisé plus tard (\S~6).
+\end{proof}
+
+\begin{corollary}[1.4.16]
+\label{III.1.4.16-fr}
+Soient $A$ un anneau, $X$ un $A$-schéma de type fini, $B$ une $A$-algèbre
+fidèlement plate sur $A$. Pour que $X$ soit affine, il faut et il suffit que
+$X\otimes_A B$ le soit.
+\end{corollary}
+
+\begin{proof}
+La condition est évidemment nécessaire (I, 3.2.2)~; montrons qu'elle est
+suffisante. Comme $X$ est séparé sur $A$ et que le morphisme
+$\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ est plat, il résulte de
+(1.4.15) que l'on a
+\begin{equation}
+\label{III.1.4.16.1-fr}
+\tag{1.4.16.1}
+H^i(X\otimes_A B,\mathcal F\otimes_A B)
+=H^i(X,\mathcal F)\otimes_A B
+\end{equation}
+pour tout $i\geq0$ et tout $\mathcal O_X$-Module quasi-cohérent $\mathcal F$.
+Si $X\otimes_A B$ est affine, le premier membre de
+(\hyperref[III.1.4.16.1-fr]{1.4.16.1}) est nul pour $i=1$, donc il en est de
+même de $H^1(X,\mathcal F)$ puisque $B$ est un $A$-module fidèlement plat.
+Comme $X$ est un schéma quasi-compact, on conclut par le critère de Serre
+(II, 5.2.1).
+\end{proof}
+
+\begin{proposition}[1.4.17]
+\label{III.1.4.17-fr}
+Soient $X$ un préschéma,
+$0\to\mathcal F\xrightarrow{u}\mathcal G\xrightarrow{v}\mathcal H\to0$
+une suite exacte de $\mathcal O_X$-Modules. Si $\mathcal F$ et $\mathcal H$
+sont quasi-cohérents, il en est de même de $\mathcal G$.
+\end{proposition}
+
+\oldpage[III]{95}
+\begin{proof}
+La question étant locale sur $X$, on peut supposer
+$X=\operatorname{Spec}(A)$ affine et il suffit alors de prouver que
+$\mathcal G$ vérifie les conditions d~1) et d~2) de (I, 1.4.1) (avec
+$V=X$). La vérification de d~2) est immédiate, car si
+$t\in\Gamma(X,\mathcal G)$ a une restriction nulle à $D(f)$, il en est de
+même de son image $v(t)\in\Gamma(X,\mathcal H)$~; il y a donc $m>0$ tel que
+$f^mv(t)=v(f^mt)=0$ (I, 1.4.1), et comme $\Gamma$ est exact à gauche,
+$f^mt=u(s)$, où $s\in\Gamma(X,\mathcal F)$~; comme $u$ est injectif, la
+restriction de $s$ à $D(f)$ est nulle, d'où (I, 1.4.1) l'existence d'un
+entier $n>0$ tel que $f^ns=0$~; on en déduit finalement
+$f^{m+n}t=u(f^ns)=0$.
+
+Vérifions maintenant d~1), et soit $t'\in\Gamma(D(f),\mathcal G)$~; comme
+$\mathcal H$ est quasi-cohérent, il existe un entier $m$ tel que
+$f^mv(t')=v(f^mt')$ se prolonge en une section
+$z\in\Gamma(X,\mathcal H)$ (I, 1.4.1). Mais en vertu de
+(\hyperref[III.1.3.1-fr]{1.3.1}) (ou de (I, 5.1.9.2)) appliqué au
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$, la suite
+$\Gamma(X,\mathcal G)\to\Gamma(X,\mathcal H)\to0$ est exacte, donc il existe
+$t\in\Gamma(X,\mathcal G)$ tel que $z=v(t)$~; on voit donc que
+$v(f^mt'-t'')=0$, en désignant par $t''$ la restriction de $t$ à $D(f)$~;
+on a donc $f^mt'-t''=u(s')$, où $s'\in\Gamma(D(f),\mathcal F)$. Mais comme
+$\mathcal F$ est quasi-cohérent, il existe un entier $n>0$ tel que $f^ns'$
+se prolonge en une section $s\in\Gamma(X,\mathcal F)$~; comme
+$f^{m+n}t'-f^nt''=u(f^ns')$, on voit que $f^{m+n}t'$ est la restriction à
+$D(f)$ de la section $f^nt+u(s)\in\Gamma(X,\mathcal G)$, ce qui achève
+la démonstration.
+\end{proof}
+
+\section{Étude cohomologique des morphismes projectifs}
+\label{section:III.2-fr}
+
+\subsection{Calculs explicites de certains groupes de cohomologie}
+\label{subsection:III.2.1-fr}
+
+\begin{env}[2.1.1]
+\label{III.2.1.1-fr}
+Soient $X$ un préschéma, $\mathcal L$ un $\mathcal O_X$-Module inversible~;
+considérons l'anneau gradué (0\textsubscript{I}, 5.4.6)
+\begin{equation}
+\label{III.2.1.1.1-fr}
+\tag{2.1.1.1}
+S=\Gamma_\bullet(X,\mathcal L)
+=\bigoplus_{n\in\mathbb Z}\Gamma(X,\mathcal L^{\otimes n}).
+\end{equation}
+Soit $(f_i)_{1\leq i\leq r}$ une famille finie d'éléments \emph{homogènes}
+de $S$, soit $f_i\in S_{d_i}$~; posons
+$U_i=X_{f_i}$, $U=\bigcup_iU_i$, et désignons par $\mathfrak U$ le
+recouvrement $(U_i)$ de $U$. Pour tout $\mathcal O_X$-Module quasi-cohérent
+$\mathcal F$, on posera
+\begin{align}
+\label{III.2.1.1.2-fr}
+\tag{2.1.1.2}
+H^\bullet(U,\mathcal F(*))
+&=\bigoplus_{n\in\mathbb Z}
+H^\bullet(U,\mathcal F\otimes\mathcal L^{\otimes n}),\\
+\label{III.2.1.1.3-fr}
+\tag{2.1.1.3}
+H^\bullet(\mathfrak U,\mathcal F(*))
+&=\bigoplus_{n\in\mathbb Z}
+H^\bullet(\mathfrak U,\mathcal F\otimes\mathcal L^{\otimes n}).
+\end{align}
+Les groupes abéliens (\hyperref[III.2.1.1.2-fr]{2.1.1.2}) et
+(\hyperref[III.2.1.1.3-fr]{2.1.1.3}) sont \emph{bigradués}, en prenant
+\[
+(H^\bullet(U,\mathcal F(*)))_{mn}
+=H^m(U,\mathcal F\otimes\mathcal L^{\otimes n})
+\]
+et une définition analogue pour
+(\hyperref[III.2.1.1.3-fr]{2.1.1.3}). Pour le deuxième degré, il est clair
+que ces groupes sont des $S$-modules gradués, comme il résulte par exemple du
+fait que $\mathcal F\mapsto H^m(U,\mathcal F)$ et
+$\mathcal F\mapsto H^m(\mathfrak U,\mathcal F)$ sont des foncteurs.
+\end{env}
+
+\begin{env}[2.1.2]
+\label{III.2.1.2-fr}
+Considérons maintenant le $S$-module gradué (0\textsubscript{I}, 5.4.6)
+\begin{equation}
+\label{III.2.1.2.1-fr}
+\tag{2.1.2.1}
+M=\Gamma_\bullet(\mathcal L,\mathcal F)
+=H^0(X,\mathcal F(*))
+=\bigoplus_{n\in\mathbb Z}
+\Gamma(X,\mathcal F\otimes\mathcal L^{\otimes n}).
+\end{equation}

@@ -1,0 +1,52 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{265}
+En effet (\textbf{II}, 4.5.4), il existe alors un voisinage ouvert affine de l'ensemble fini $\operatorname{Ass}(\sh{O}_X)$.
+\end{proof}
+
+\begin{remark}[21.3.6]
+\label{IV.21.3.6}
+Rappelons (\hyperref[0.5.4.7]{$\mathbf{0}_{\mathrm I}$, 5.4.7}) que l'on a un isomorphisme canonique $\pi:\mathrm{H}^1(X,\sh{O}_X^*)\xrightarrow{\sim}\operatorname{Pic}(X)$ défini de la façon suivante.
+On part d'un $1$-cocycle $(c_{\alpha\beta})$ à valeurs dans $\sh{O}_X^*$ correspondant à un recouvrement ouvert $(U_\alpha)$ de $X$, $c_{\alpha\beta}$ étant un élément de $\Gamma(U_\alpha\cap U_\beta,\sh{O}_X^*)$, et on lui associe la classe du $\sh{O}_X$-Module inversible obtenu en recollant les $\sh{O}_{U_\alpha}$ suivant les isomorphismes $\sh{O}_{U_\alpha}|(U_\alpha\cap U_\beta)\xrightarrow{\sim}\sh{O}_{U_\beta}|(U_\alpha\cap U_\beta)$ définis par la multiplication par $c_{\alpha\beta}$.
+D'autre part, on déduit de la suite exacte de faisceaux de groupes commutatifs
+\[
+  1\to\sh{O}_X^*\to\sh{M}_X^*\to\sh{D}iv_X\to0
+\]
+l'homomorphisme bord de la suite exacte de cohomologie
+\[
+\label{IV.21.3.6.1}
+  \partial:\operatorname{Div}(X)\to\mathrm{H}^1(X,\sh{O}_X^*).
+  \tag{21.3.6.1}
+\]
+Montrons que l'homomorphisme composé
+\[
+  \operatorname{Div}(X)\xrightarrow{\partial}\mathrm{H}^1(X,\sh{O}_X^*)\xrightarrow{\pi}\operatorname{Pic}(X)
+\]
+n'est autre que l'homomorphisme $l$ défini dans \sref{IV.21.3.2.2}.
+En effet on doit partir d'un diviseur $D$ et d'un recouvrement ouvert $(U_\alpha)$ de $X$ tel que $D|U_\alpha=\operatorname{div}_{U_\alpha}(g_\alpha)$, où $g_\alpha$ est une fonction méromorphe régulière au-dessus de $U_\alpha$;
+$\partial(D)$ est la classe de cohomologie du cocycle $(c_{\alpha\beta})$, où $c_{\alpha\beta}=g_{\alpha|\beta}g_{\beta|\alpha}^{-1}$, $g_{\alpha|\beta}$ désignant la restriction de $g_\alpha$ à $U_\alpha\cap U_\beta$.
+Il est clair que l'image par $\pi$ de cette classe de cohomologie est la classe de l'Idéal fractionnaire inversible $\sh{L}$ tel que pour tout $\alpha$, $\sh{L}|U_\alpha=\sh{O}_{U_\alpha}.g_\alpha^{-1}$, qui n'est autre par définition que $\sh{O}_X(D)$ \sref{IV.21.2.8}.
+\end{remark}
+
+\subsection{Images réciproques de diviseurs}
+\EGAReaderTarget{ega4.c04.subsec.21-4}{subsection:IV.21.4}
+\label{IV.21.4}
+
+\begin{env}[21.4.1]
+\EGAReaderTarget{ega4.c04.statement.21-4-1}{IV.21.4.1}
+Soit $f:X'\to X$ un morphisme d'espaces annelés;
+proposons-nous de donner des conditions permettant d'associer à un diviseur $D$ sur $X$ un diviseur $D'$ sur $X'$, \emph{image réciproque} de $D$ par $f$.
+Notons d'abord pour cela que pour toute section $t\in\Gamma(X,\sh{O}_X^*)$, l'image de $t$ par l'homomorphisme canonique $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ est encore inversible, autrement dit appartient à $\Gamma(X',\sh{O}_{X'}^*)$.
+Considérons alors $D$ comme donné par la classe d'équivalence d'un couple $(\sh{L},s)$, où $\sh{L}$ est un $\sh{O}_X$-Module inversible et $s$ une section méromorphe régulière de $\sh{L}$ au-dessus de $X$ \sref{IV.21.2.11}.
+Formons le $\sh{O}_{X'}$-Module inversible $f^*(\sh{L})=\sh{L}'$;
+dire que l'image réciproque $s\circ f$ de $s$ par $f$ existe \sref{IV.20.1.11} et est une section méromorphe régulière de $\sh{L}'$ au-dessus de $X'$ revient à dire que les images réciproques par $f$ de $s$ et de $s^{\otimes(-1)}$ existent, autrement dit que $s\in\Gamma(X,\sh{M}_f(\sh{L}))$ et $s^{\otimes(-1)}\in\Gamma(X,\sh{M}_f(\sh{L}^{-1}))$;
+la remarque faite ci-dessus montre alors que si $(\sh{L}_1,s_1)$ est un couple équivalent à $(\sh{L},s)$ au sens de \sref{IV.21.2.10}, l'image réciproque $s_1\circ f$ existe et est une section méromorphe régulière de $\sh{L}_1'=f^*(\sh{L}_1)$ au-dessus de $X'$, et les couples $(\sh{L}',s\circ f)$ et $(\sh{L}_1',s_1\circ f)$ sont équivalents.
+On peut donc poser la définition suivante :
+\end{env}
+
+\begin{definition}[21.4.2]
+\EGAReaderTarget{ega4.c04.def.21-4-2}{IV.21.4.2}
+Étant donné un morphisme $f:X'\to X$ d'espaces annelés, on dit que l'\emph{image réciproque par $f$} d'un diviseur $D$ sur $X$ existe si l'on a $s_D\in\Gamma(X,\sh{M}_f(\sh{O}_X(D)))$ et $s_{-D}\in\Gamma(X,\sh{M}_f(\sh{O}_X(-D)))$ (cf. \sref{IV.20.1.11}).
+On appelle alors \emph{image réciproque} de $D$ par $f$ et l'on note $f^*(D)$ le diviseur sur $X'$ qui correspond canoniquement \sref{IV.21.2.11} à la classe du couple $(f^*(\sh{O}_X(D)),s_D\circ f)$.
+\end{definition}
+
+Il résulte aussitôt de cette définition que si $D$ et $D'$ ont des images réciproques par $f$, il en est de même de $-D$ et de $D+D'$ (compte tenu de \sref{IV.21.2.9.4}) et que l'on a

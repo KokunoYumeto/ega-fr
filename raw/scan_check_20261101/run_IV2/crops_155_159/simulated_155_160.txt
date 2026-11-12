@@ -1,0 +1,647 @@
+\oldpage[IV-2]{155}
+tel que $\mathcal F|u^{-1}(U)$ soit plat sur $U$. Si $Y$ est alors le
+sous-préschéma réduit de $S$ ayant pour espace sous-jacent $S\setmin U$, il y a par
+hypothèse une partition $(Y_i)$ de $Y$ en ensembles localement fermés dans
+$Y$ (donc dans $S$) tels que
+$\mathcal F_i=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{Y_i}$ soit plat
+sur $Y_i$ pour tout $i$; il est clair que les $Y_i$ et $U$ forment une
+partition répondant à la question.
+\end{proof}
+
+\subsection{Dimension et profondeur d'un Module normalement plat le long d'un
+sous-préschéma fermé.}
+\label{subsection:IV.6.10}
+
+\begin{env}[6.10.1]
+\EGAReaderTarget{ega4.c04.statement.6-10-1}{IV.2.s6.10.1-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal J$ un Idéal
+quasi-cohérent de $\mathcal O_X$, $Y$ le sous-préschéma fermé de $X$ défini
+par $\mathcal J$, $j:Y\to X$ l'injection canonique. Pour tout entier $k\geq0$,
+le $\mathcal O_X$-Module
+$\mathcal J^k\mathcal F/\mathcal J^{k+1}\mathcal F$ est annulé par
+$\mathcal J$, donc de la forme $j_*(\mathcal G_k)$, où $\mathcal G_k=j^*(\mathcal J^k\mathcal F/\mathcal J^{k+1}\mathcal F)=j^*(\mathcal J^k\mathcal F)$
+est un $\mathcal O_Y$-Module cohérent. Par abus de langage, nous noterons
+$\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$ le
+$\mathcal O_Y$-\emph{Module gradué} égal à la somme directe
+\[
+\bigoplus_{k=0}^{\infty}\mathcal G_k
+=j^*\left(\bigoplus_{k=0}^{\infty}
+\mathcal J^k\mathcal F/\mathcal J^{k+1}\mathcal F\right);
+\]
+en particulier, on a
+$\operatorname{gr}_{\mathcal J}^{0}(\mathcal F)=\mathcal G_0
+=\mathcal F\otimes_{\mathcal O_Y}\mathcal O_Y=j^*(\mathcal F)$. Nous dirons
+(avec Hironaka) que $\mathcal F$ est \emph{normalement plat le long de} $Y$ si
+$\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$ est un
+$\mathcal O_Y$-\emph{Module plat}. Il revient au même ((2.1.12) et
+$(\mathbf{0}_{\mathrm I},6.1.2)$) de dire que chacun des $\mathcal O_Y$-Modules
+$\mathcal G_k=j^*(\mathcal J^k\mathcal F)$ est \emph{localement libre}.
+\end{env}
+
+\begin{proposition}[6.10.2]
+\label{IV.2.s6.10.2-fr}
+Soient $X$ un préschéma localement noethérien, $Y$ un sous-préschéma fermé
+\textup{intègre} de $X$. Pour tout $\mathcal O_X$-Module cohérent $\mathcal F$, il
+existe un ouvert $U$ de $X$ tel que $Y\cap U\ne\varnothing$ et que
+$\mathcal F|U$ soit normalement plat le long de $Y\cap U$.
+\end{proposition}
+
+\begin{proof}
+Soit en effet $\mathcal J$ l'Idéal cohérent de $\mathcal O_X$ définissant
+$Y$; la $\mathcal O_Y$-Algèbre
+$\mathcal B=\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal O_X)$ est
+quasi-cohérente et \emph{de type fini} car elle est engendrée par
+$\operatorname{gr}_{\mathcal J}^{1}(\mathcal O_X)$, image réciproque de
+$\mathcal J/\mathcal J^2$; comme
+$\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$ est un
+$\mathcal B$-module quasi-cohérent engendré par
+$\operatorname{gr}_{\mathcal J}^{1}(\mathcal F)$, c'est un
+$\mathcal B$-Module \emph{de type fini}. Si l'on pose
+$Z=\operatorname{Spec}(\mathcal B)$, le morphisme structural $u:Z\to Y$ est
+alors de type fini, et si $\mathcal H$ est le $\mathcal O_Z$-Module cohérent
+tel que $u_*(\mathcal H)=\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$,
+il suffit d'appliquer à $u$ et à $\mathcal H$ le théorème de platitude
+générique (6.9.1) pour prouver la proposition.
+\end{proof}
+
+\begin{proposition}[6.10.3]
+\label{IV.2.s6.10.3-fr}
+Les notations étant celles de \textup{(6.10.1)}, supposons que $\mathcal F$ soit
+normalement plat le long de $Y$. Alors:
+\begin{enumerate}
+\item[\textup{(i)}] $Y\cap\operatorname{Supp}(\mathcal F)$ est une partie à la fois
+ouverte et fermée de $Y$ \textup{(autrement dit, une} réunion de composantes connexes
+de $Y$).
+\item[\textup{(ii)}] Si $\mathcal J$ est localement nilpotent,
+$\operatorname{Supp}(\mathcal F)$ est une partie ouverte et fermée de $X$, et
+pour tout $x\in\operatorname{Supp}(\mathcal F)$, on a
+\end{enumerate}
+\begin{align}
+\dim(\mathcal F_x)&=\dim(\mathcal O_{Y,x})
+  \tag{6.10.3.1}\label{IV.2.s6.10.3.1-fr}\\
+\operatorname{prof}(\mathcal F_x)&=\operatorname{prof}(\mathcal O_{Y,x})
+  \tag{6.10.3.2}\label{IV.2.s6.10.3.2-fr}\\
+\operatorname{coprof}(\mathcal F_x)&=\operatorname{coprof}(\mathcal O_{Y,x}).
+  \tag{6.10.3.3}\label{IV.2.s6.10.3.3-fr}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] Avec les notations de (6.10.1), on a
+$Y\cap\operatorname{Supp}(\mathcal F)=\operatorname{Supp}(\mathcal G_0)$
+(\textbf{I}, 9.1.13), et comme par hypothèse $\mathcal G_0$ est un
+$\mathcal O_Y$-Module localement libre de type fini, son support est à la fois
+ouvert et fermé dans $Y$.
+
+\oldpage[IV-2]{156}
+
+\item[(ii)] L'hypothèse que $\mathcal J$ est localement nilpotent entraîne que
+les espaces sous-jacents à $X$ et à $Y$ sont les mêmes, d'où les deux premières
+assertions de (ii), compte tenu de (5.1.12.1); il reste à prouver (6.10.3.2),
+car on en déduira aussitôt (6.10.3.3) par différence. Soit
+$(f_i)_{1\leq i\leq p}$ une suite finie d'éléments de l'idéal maximal de
+$\mathcal O_{X,x}$ dont les images dans
+$\mathcal O_{Y,x}=\mathcal O_{X,x}/\mathcal J_x$ forment une suite
+$\mathcal O_{Y,x}$-régulière \emph{maximale}; l'hypothèse sur $\mathcal F$ et
+$\mathcal J$ entraîne que le $\mathcal O_{Y,x}$-module
+$\operatorname{gr}_{\mathcal J_x}^{\bullet}(\mathcal F_x)$ est libre de type
+fini, donc la suite $(f_i)$ est
+$\operatorname{gr}_{\mathcal J_x}^{\bullet}(\mathcal F_x)$-régulière; on en
+déduit que cette suite est aussi $\mathcal F_x$-\emph{régulière} (\textbf{0}, 15.1.19). Soit
+d'autre part $n$ le plus grand entier tel que
+$\mathcal F_x^{(n)}=\mathcal J_x^n\mathcal F_x\ne0$. L'hypothèse entraîne
+aussi que
+$\operatorname{gr}_{\mathcal J_x}^{\bullet}
+(\mathcal F_x/\mathcal F_x^{(n)})$ est libre de type fini, donc la suite
+$(f_i)$ est aussi $(\mathcal F_x/\mathcal F_x^{(n)})$-\emph{régulière}
+(\emph{loc. cit.}). Appliquant le lemme (3.4.1.4), on en conclut par récurrence
+sur $i$, une suite exacte
+\[
+0\longrightarrow
+\mathcal F_x^{(n)}/\left(\sum_{i=1}^{p}f_i\mathcal F_x^{(n)}\right)
+\longrightarrow
+\mathcal F_x/\left(\sum_{i=1}^{p}f_i\mathcal F_x\right).
+\]
+
+Mais l'hypothèse entraîne que $\mathcal F_x^{(n)}$ est un
+$\mathcal O_{Y,x}$-module libre de type fini et $\ne0$, donc
+$\mathcal F_x^{(n)}/(\sum_{i=1}^{p}f_i\mathcal F_x^{(n)})$ est isomorphe à
+un module de la forme
+$(\mathcal O_{Y,x}/(\sum_{i=1}^{p}f_i\mathcal O_{Y,x}))^m$ avec $m>0$; comme
+$\operatorname{prof}(\mathcal O_{Y,x}/(\sum_{i=1}^{p}f_i\mathcal O_{Y,x}))=0$
+(\textbf{0}, 16.4.6) on a aussi, par la caractérisation (\textbf{0}, 16.4.6, (i)) des modules
+de profondeur nulle,
+$\operatorname{prof}(\mathcal F_x^{(n)}/(\sum_{i=1}^{p}f_i\mathcal F_x^{(n)}))=0$,
+puis
+$\operatorname{prof}(\mathcal F_x/(\sum_{i=1}^{p}f_i\mathcal F_x))=0$;
+les $(f_i)_x$ appartenant à l'idéal maximal de $\mathcal O_{Y,x}$ et formant
+une suite $\mathcal F_x$-\emph{régulière}, cela montre que l'on a
+$\operatorname{prof}(\mathcal F_x)=p$ (\textbf{0}, 16.4.6, (ii)).
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[6.10.4]
+\label{IV.2.s6.10.4-fr}
+Soit $U_{S_n}(\mathcal F)$ \textup{(resp.} $U_{C_n}(\mathcal F)$) l'ensemble des
+$x\in X$ tels que $\mathcal F$ vérifie $(S_n)$ au point $x$ \textup{(resp.} tels que
+$\operatorname{coprof}(\mathcal F_x)\leq n$). Si $\mathcal F$ est normalement
+plat le long de $Y$, si $\operatorname{Supp}(\mathcal F)=X$ et si $\mathcal J$
+est localement nilpotent, on a
+$U_{S_n}(\mathcal F)=U_{S_n}(\mathcal O_Y)$ et
+$U_{C_n}(\mathcal F)=U_{C_n}(\mathcal O_Y)$.
+\end{corollary}
+
+\begin{proposition}[6.10.5]
+\label{IV.2.s6.10.5-fr}
+Les notations étant celles de \textup{(6.10.1)}, supposons que $Y$ soit connexe et non
+vide, et que $\mathcal F$ soit normalement plat le long de $Y$. Pour tout
+entier $n\geq0$, on pose
+\begin{equation}
+r(n)=\operatorname{rg}_{\mathcal O_Y}
+(\operatorname{gr}_{\mathcal J}^{n}(\mathcal F))
+\tag{6.10.5.1}\label{IV.2.s6.10.5.1-fr}
+\end{equation}
+(le $\mathcal O_Y$-Module localement libre
+$\operatorname{gr}_{\mathcal J}^{n}(\mathcal F)$ étant nécessairement de rang
+constant). Alors:
+\begin{enumerate}
+\item[\textup{(i)}] Il existe un polynôme $P\in\mathbf Q[T]$ tel que $P(n)=r(n)$ pour
+tout $n$ assez grand.
+\item[\textup{(ii)}] On a $Y\cap\operatorname{Supp}(\mathcal F)=\varnothing$
+(autrement dit $\mathcal F/\mathcal J\mathcal F=0$), ou
+$Y\cap\operatorname{Supp}(\mathcal F)=Y$ (autrement dit
+$Y\subset\operatorname{Supp}(\mathcal F)$).
+\end{enumerate}
+Dans le second cas, notons $d\setmin 1$ le degré de $P$; pour tout point maximal $y$
+de $Y$, on a
+\begin{equation}
+\dim(\mathcal F_y)=d
+\tag{6.10.5.2}\label{IV.2.s6.10.5.2-fr}
+\end{equation}
+et en particulier
+\begin{equation}
+\operatorname{codim}(Y,\operatorname{Supp}(\mathcal F))=d.
+\tag{6.10.5.3}\label{IV.2.s6.10.5.3-fr}
+\end{equation}
+\begin{enumerate}
+\item[\textup{(iii)}] Supposons $Y\subset\operatorname{Supp}(\mathcal F)$. Pour tout
+$x\in Y$, on a
+\end{enumerate}
+\begin{equation}
+\dim(\mathcal F_x)=\dim(\mathcal O_{Y,x})+d.
+\tag{6.10.5.4}\label{IV.2.s6.10.5.4-fr}
+\end{equation}
+
+De façon plus précise, il existe dans $\mathcal J_x$ des éléments $f_i$
+$(1\leq i\leq d)$ faisant partie d'un système de paramètres pour
+$\mathcal F_x$ \textup{(\textbf{0}, 16.3.6)} et tels que, dans
+$\operatorname{Spec}(\mathcal O_{X,x})$, on ait
+$V(\mathcal J_x)=V(\sum_{i=1}^{d}f_i\mathcal O_{X,x})\cap\operatorname{Supp}(\mathcal F)$.
+\end{proposition}
+
+\oldpage[IV-2]{157}
+\begin{proof}
+Comme $Y$ est supposé connexe, la première assertion de (ii) découle de
+(6.10.3, (i)). Si l'on a
+$Y\cap\operatorname{Supp}(\mathcal F)=\varnothing$, l'assertion (i) est
+triviale avec $P=0$. Supposons que
+$\operatorname{Supp}(\mathcal F)\supset Y$, et soit $y$ un point maximal de
+$Y$; comme on a alors $Y=\operatorname{Supp}(\mathcal F/\mathcal J\mathcal F)$,
+$\mathcal F_y/\mathcal J_y\mathcal F_y$ est un
+$\mathcal O_{X,y}$-module de longueur finie (3.1.4); posant
+$s(n)=\operatorname{long}(\operatorname{gr}_{\mathcal J_y}^{n}(\mathcal F_y))$,
+on sait qu'il y a un polynôme $R\in\mathbf Q[T]$ tel que $s(n)=R(n)$ pour
+$n$ assez grand, savoir le polynôme $H(n+1)\setmin H(n)$, où $H$ est le polynôme
+de Hilbert-Samuel de $\mathcal F_y$ pour la filtration
+$\mathcal J_y$-préadique (\textbf{0}, 16.2.1). Comme les
+$\mathcal O_{Y,y}$-modules
+$\operatorname{gr}_{\mathcal J_y}^{n}(\mathcal F_y)$ sont libres par
+hypothèse, on a $r(n)=s(n)/m$, en désignant par $m$ la longueur du
+$\mathcal O_{X,y}$-module $\mathcal O_{Y,y}=\mathcal O_{X,y}/\mathcal J_y$; on satisfait donc
+à (i) en
+prenant $P=\frac{1}{m}R$. On sait en outre (\textbf{0}, 16.2.3) que
+$\deg(H)=\dim(\mathcal F_y)$, d'où la relation (6.10.5.2); la relation
+(6.10.5.3) s'en déduit à l'aide de (5.1.12.2).
+
+Reste à prouver (iii) pour un point quelconque $x\in Y$. Posons
+$A=\mathcal O_{X,x}$, $\mathfrak J=\mathcal J_x$, de sorte que
+$\mathcal O_{Y,x}=A/\mathfrak J$, et $M=\mathcal F_x$; soit
+$S=\operatorname{gr}_{\mathfrak J}^{\bullet}(A)$, qui est une
+$(A/\mathfrak J)$-algèbre graduée de type fini, à degrés positifs, telle
+que $S_0=A/\mathfrak J$, et engendrée par ses éléments homogènes de degré
+$1$; soit enfin
+$N=\operatorname{gr}_{\mathfrak J}^{\bullet}(M)$, qui est un $S$-module
+gradué de type fini, chaque composante homogène $N_n$ étant par hypothèse
+un $(A/\mathfrak J)$-module libre de longueur $r(n)$. Soient $\mathfrak m$
+l'idéal maximal de $A$, $k=A/\mathfrak m$ son corps résiduel;
+$B=S\otimes_A k$ est une $k$-algèbre graduée de type fini, à degrés
+positifs, engendrée par ses éléments homogènes de degré $1$ et telle que
+$B_0=k$, de sorte que $\mathfrak q=B^+=\bigoplus_{n\geq1}B_n$ est un idéal
+maximal dans $B$; $E=N\otimes_A k$ est un $B$-module gradué de type fini
+tel que $\operatorname{rg}_k(E_n)=r(n)$. Appliquons (\textbf{0}, 16.2.7) à l'anneau
+gradué $B=S\otimes_A k$ et au $B$-module gradué $E=N\otimes_A k$, et soit
+$f_i\in\mathfrak J^{n_i}$ $(1\leq i\leq d)$ un élément dont $t_i$ est
+l'image dans $B_{n_i}$. Pour $n\geq\sup_i(n_i)$, considérons le sous-$A$-module
+$\sum_{i=1}^{d}f_i\mathfrak J^{n-n_i}M$ de $M$; comme le composant homogène
+de degré $n$ du sous-module $\sum_{i=1}^{d}t_iE$ de $E$ est égal à
+$E_n$ dès que $n$ est assez grand, on voit que, pour $n$ assez grand, on a
+\[
+\mathfrak J^nM=\sum_{i=1}^{d}f_i\mathfrak J^{n-n_i}M+
+\mathfrak m\mathfrak J^nM
+\]
+et comme $\mathfrak J^nM$ est un $A$-module de type fini, cela entraîne,
+par le lemme de Nakayama,
+\[
+\mathfrak J^nM=\sum_{i=1}^{d}f_i\mathfrak J^{n-n_i}M
+\subset\sum_{i=1}^{d}f_iM.
+\]
+Si $\mathfrak a$ est l'annulateur de $M$, on a donc (\textbf{0}$_{\rm I}$, 1.7.5)
+dans $\operatorname{Spec}(A)$
+\[
+V\left(\sum_{i=1}^{d}f_iA\right)\cap V(\mathfrak a)
+\subset V(\mathfrak J^n)\cap V(\mathfrak a)
+=V(\mathfrak J)\cap V(\mathfrak a)=V(\mathfrak J)
+\]
+puisque par hypothèse
+$Y\cap\operatorname{Spec}(A)=V(\mathfrak J)\cap\operatorname{Supp}(M)
+=V(\mathfrak J)$. Comme d'autre part les $f_i$ appartiennent à
+$S$, on a
+$V(\mathfrak J)\subset V(\sum_{i=1}^{d}f_iA)$, ce qui prouve la dernière
+relation de (iii). Il reste à montrer que les $f_i$ font partie d'un système
+de paramètres pour $M$. Remplaçant $A$ par $A/\mathfrak a$ et les $f_i$ par
+leurs images dans $A/\mathfrak a$, on peut se borner au cas où
+$\mathfrak a=0$; on vient de voir que l'on a
+$\dim(A/\mathfrak J)=\dim(A/(\sum_{i=1}^{d}f_iA))$
+et il reste donc à prouver (\textbf{0}, 16.3.7) que l'on a
+\[
+\dim(A)\geq\dim(A/\mathfrak J)+d.
+\]
+
+Or, soit $\mathfrak p$ un idéal premier de $A$ contenant $\mathfrak J$ et
+tel que $\dim(A/\mathfrak J)=\dim(A/\mathfrak p)$, de sorte que
+$\mathfrak p$ est minimal parmi les idéaux premiers contenant
+$\mathfrak J$. On a donc $\mathfrak p=\mathfrak j_y$ où
+$y\in\operatorname{Spec}(A)$ est un point maximal de $Y$. Mais en vertu de
+(6.10.5.2) et de l'hypothèse
+$\operatorname{Spec}(A)=\operatorname{Supp}(M)$, on a
+$\dim(A_{\mathfrak p})=d$; l'inégalité
+$\dim(A/\mathfrak p)+\dim(A_{\mathfrak p})\leq\dim(A)$ (\textbf{0}, 16.1.4)
+achève la démonstration.
+\end{proof}
+
+\begin{proposition}[6.10.6]
+\label{IV.2.s6.10.6-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent, $Y$ un sous-préschéma fermé irréductible de
+$X$, de point générique $y\in\operatorname{Supp}(\mathcal F)$. Il existe
+alors un voisinage ouvert non vide $U$ de $y$ dans $X$ tel que, our tout
+$x\in U\cap Y$, on ait
+\begin{align}
+\dim(\mathcal F_x)&=\dim(\mathcal F_y)+\dim(\mathcal O_{Y,x})
+\tag{6.10.6.1}\label{IV.2.s6.10.6.1-fr}\\
+\operatorname{prof}(\mathcal F_x)&=\operatorname{prof}(\mathcal F_y)+
+\operatorname{prof}(\mathcal O_{Y,x})
+\tag{6.10.6.2}\label{IV.2.s6.10.6.2-fr}\\
+\operatorname{coprof}(\mathcal F_x)&=\operatorname{coprof}(\mathcal F_y)+
+\operatorname{coprof}(\mathcal O_{Y,x}).
+\tag{6.10.6.3}\label{IV.2.s6.10.6.3-fr}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+\oldpage[IV-2]{158}
+Soit $Y'=Y_{\mathrm{red}}$, qui est un sous-préschéma fermé \emph{intègre} de $Y$
+ayant même espace sous-jacent, et défini par un Idéal localement nilpotent
+$\mathcal K$ de $\mathcal O_Y$ (\textbf{I}, 6.1.6). Il en résulte que
+$\operatorname{gr}_{\mathcal K}^{\bullet}(\mathcal O_Y)$ est un
+$\mathcal O_{Y'}$-Module \emph{cohérent}, et comme $Y'$ est intègre, il y a un
+voisinage ouvert $V$ de $y$ dans $Y'$ tel que
+$\operatorname{gr}_{\mathcal K}^{\bullet}(\mathcal O_Y)|V$ soit localement
+libre (\textbf{0}$_{\rm I}$, 5.2.7); autrement dit, quitte à remplacer $X$ par un
+voisinage de $y$, on peut supposer que $\mathcal O_Y$ est \emph{normalement plat}
+le long de $Y'$; on déduit donc de (6.10.3) que l'on a
+\[
+\dim(\mathcal O_{Y,x})=\dim(\mathcal O_{Y',x}),\qquad
+\operatorname{prof}(\mathcal O_{Y,x})=
+\operatorname{prof}(\mathcal O_{Y',x})
+\]
+pour tout $x\in Y$; cela permet de se borner au cas où le sous-préschéma
+fermé $Y$ est \emph{intègre}.
+
+Cela étant, en vertu de (6.10.2), on peut, en remplaçant $X$ par un
+voisinage ouvert de $y$, supposer que $\mathcal F$ est \emph{normalement plat} le
+long de $Y$. Comme $y\in\operatorname{Supp}(\mathcal F)$, la relation
+(6.10.6.1) résulte de (6.10.5.2) et (6.10.5.4). Posons maintenant
+$p=\operatorname{prof}(\mathcal F_y)$; remplaçant au besoin $X$ par un
+voisinage ouvert de $y$, on peut supposer qu'il existe $p$ sections $f_i$
+$(1\leq i\leq p)$ de $\mathcal O_X$ au-dessus de $X$, formant une suite
+$\mathcal F$-régulière, tels que les $(f_i)_y$ appartiennent à l'idéal
+maximal $\mathfrak m_y$ de $\mathcal O_{X,y}$ et que
+$\operatorname{prof}(\mathcal F_y/(\sum_{i=1}^{p}(f_i)_y\mathcal F_y))=0$
+(\textbf{0}, 16.4.6). Si $\mathcal J$ est l'Idéal de $\mathcal O_X$ qui définit
+$Y$, on a $\mathcal J_y=\mathfrak m_y$ et, en remplaçant encore au besoin $X$
+par un voisinage de $y$, on peut supposer que
+$f_i\in\Gamma(X,\mathcal J)$ pour $1\leq i\leq p$. En outre, si l'on pose
+$\mathcal G=\mathcal F/(\sum_{i=1}^{p}f_i\mathcal F)$, l'hypothèse
+$\operatorname{prof}(\mathcal G_y)=0$ entraîne que $\mathcal G_y$ contient
+un sous-module isomorphe à
+$\mathcal O_{X,y}/\mathfrak m_y$ (\textbf{0}, 16.4.6); le même raisonnement (compte
+tenu de (\textbf{0}$_{\rm I}$, 5.3.8 et 5.2.7)) montre qu'on peut supposer qu'il
+existe un \emph{sous-$\mathcal O_X$-Module} $\mathcal G'$ de $\mathcal G$
+\emph{isomorphe à} $\mathcal O_X/\mathcal J$ de sorte que
+$\mathcal G'_x=\mathcal O_{Y,x}$ pour tout $x\in Y$. Posons
+$\mathcal G''=\mathcal G/\mathcal G'$; remplaçant $X$ par un voisinage
+ouvert de $y$, on peut, en vertu de (6.10.2), supposer que $\mathcal G'$ et
+$\mathcal G''$ sont \emph{normalement plats} le long de $Y$. Soit alors $x$ un
+point quelconque de $Y$, et posons
+$q=\operatorname{prof}(\mathcal O_{Y,x})=\operatorname{prof}(\mathcal G'_x)$;
+soit $(g_j)_{1\leq j\leq q}$ une suite maximale
+$\mathcal G'_x$-régulière d'éléments de l'idéal maximal
+$\mathfrak m_x$ de $\mathcal O_{X,x}$. Chacun des composants homogènes de
+$\operatorname{gr}_{\mathcal J_x}^{\bullet}(\mathcal G''_x)$ est un
+$\mathcal O_{Y,x}$-module plat de type fini par hypothèse, donc est un
+$\mathcal O_{Y,x}$-module \emph{libre}, et il en est par suite de même de
+$\operatorname{gr}_{\mathcal J_x}^{\bullet}(\mathcal G''_x)$; comme la
+suite $(g_j)$ est $\mathcal O_{Y,x}$-régulière, elle est par suite
+$\operatorname{gr}_{\mathcal J_x}^{\bullet}(\mathcal G''_x)$-régulière,
+d'où l'on conclut qu'elle est $\mathcal G''_x$-\emph{régulière} (\textbf{0}, 15.1.19).
+Appliquant le lemme (\textbf{0}, 15.1.18) à la suite exacte
+\[
+0\longrightarrow\mathcal G'_x\longrightarrow\mathcal G_x
+\longrightarrow\mathcal G''_x\longrightarrow0
+\]
+par récurrence sur $j$, on en conclut une suite exacte
+\[
+0\longrightarrow\mathcal G'_x/
+\left(\sum_{j=1}^{q}g_j\mathcal G'_x\right)
+\longrightarrow\mathcal G_x/
+\left(\sum_{j=1}^{q}g_j\mathcal G_x\right).
+\]
+Mais par hypothèse
+$\operatorname{prof}(\mathcal G'_x/(\sum_{j=1}^{q}g_j\mathcal G'_x))=0$
+(\textbf{0}, 16.4.6); par la caractérisation (\textbf{0}, 16.4.6) des modules de profondeur
+nulle, on en conclut que
+$\operatorname{prof}(\mathcal G_x/(\sum_{j=1}^{q}g_j\mathcal G_x))=0=\operatorname{prof}(\mathcal F_x/(\sum_{i=1}^{p}f_i\mathcal F_x+\sum_{j=1}^{q}g_j\mathcal F_x))$;
+la suite $(g_j)$ étant $\mathcal G'_x$-régulière et
+$\mathcal G''_x$-régulière, est aussi $\mathcal G_x$-\emph{régulière}; enfin, la
+suite $((f_i)_x)$ est $\mathcal F_x$-régulière par hypothèse et est formée
+d'éléments de l'idéal maximal $\mathfrak m_x$; on en déduit (\textbf{0}, 16.4.6)
+que $\operatorname{prof}(\mathcal F_x)=p+q$, ce qui achève la
+démonstration.
+\end{proof}
+
+\subsection{\texorpdfstring{Critères pour que les ensembles
+$U_{S_n}(\mathcal F)$ ou $U_{C_n}(\mathcal F)$ soient ouverts.}{Critères pour que les ensembles U\string_\string{S\string_n\string}(F) ou U\string_\string{C\string_n\string}(F) soient ouverts}}
+\label{IV.2.s6.11-fr}
+
+\begin{lemma}[6.11.1]
+\label{IV.2.s6.11.1-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent; alors la fonction
+$x\leadsto\operatorname{dim.proj}(\mathcal F_x)$ est semi-continue
+supérieurement dans $X$.
+\end{lemma}
+
+\begin{proof}
+On peut se borner au cas où $X=\operatorname{Spec}(A)$ est le spectre d'un
+anneau noethérien et $\mathcal F=\widetilde M$, où $M$ est un $A$-module de
+type fini. Supposons que pour un $x\in X$, on ait
+$\operatorname{dim.proj}(M_x)=n<+\infty$ (si $n=+\infty$ il n'y a rien à
+démontrer); il existe une résolution de $M$
+\[
+L_{n-1}\longrightarrow L_{n-2}\longrightarrow\ldots
+\longrightarrow L_0\longrightarrow M\longrightarrow0
+\]
+\oldpage[IV-2]{159}
+où les $L_i$ sont des $A$-modules libres \emph{de type fini} ($A$ étant
+noethérien), d'où une suite exacte
+\[
+0\longrightarrow R\longrightarrow L_{n-1}\longrightarrow L_{n-2}
+\longrightarrow\ldots\longrightarrow L_0\longrightarrow M
+\longrightarrow0
+\]
+où $R$ est un $A$-module de type fini; on en déduit une suite exacte
+\[
+0\longrightarrow R_x\longrightarrow(L_{n-1})_x\longrightarrow\ldots
+\longrightarrow(L_0)_x\longrightarrow M_x\longrightarrow0
+\]
+où les $(L_i)_x$ sont des $A_x$-modules libres de type fini; comme par
+hypothèse $\operatorname{dim.proj}(M_x)=n$, cela entraîne que $R_x$ est un
+$A_x$-module projectif de type fini (M, VI, 2.1) et par suite un
+$A_x$-module \emph{libre} de type fini (\textbf{0}$_{\rm III}$, 10.1.3). On en conclut qu'il
+existe un voisinage ouvert $U$ de $x$ dans $X$ tel que, pour tout
+$x'\in U$, $R_{x'}$ soit un $A_{x'}$-module libre (\textbf{0}$_{\rm I}$, 5.2.7),
+donc $M_{x'}$ admet une résolution projective de longueur $n$, autrement
+dit $\operatorname{dim.proj}(M_{x'})\leq n$, ce qui prouve le lemme.
+\end{proof}
+
+\begin{proposition}[6.11.2]
+\label{IV.2.s6.11.2-fr}
+Soit $X$ un préschéma localement noethérien et localement immersible dans
+un schéma régulier \textup{(5.11.1)}; soit $\mathcal F$ un $\mathcal O_X$-Module
+cohérent. Alors:
+\begin{enumerate}
+\item[\textup{(i)}] \textup{(M. Auslander)} La fonction
+$x\leadsto\operatorname{coprof}(\mathcal F_x)$ est semi-continue
+supérieurement dans $X$ \textup{(autrement dit, pour tout entier $n$, l'ensemble
+$U_{C_n}(\mathcal F)$ des $x\in X$ tels que
+$\operatorname{coprof}(\mathcal F_x)\leq n$ est} ouvert).
+\item[\textup{(ii)}] Pour tout entier $n$, l'ensemble $U_{S_n}(\mathcal F)$ des
+$x\in X$ tels que $\mathcal F$ possède la propriété $(S_n)$ au point $x$
+est ouvert.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] La question étant locale sur $X$, on peut, en vertu de
+l'hypothèse, se borner au cas où $X$ est un sous-schéma fermé d'un schéma
+affine régulier $Y$. Si $j:X\to Y$ est l'injection canonique, et
+$\mathcal G=j_*(\mathcal F)$, on sait qu'on a alors, pour tout $x\in X$,
+$\dim(\mathcal F_x)=\dim(\mathcal G_x)$ et
+$\operatorname{prof}(\mathcal F_x)=\operatorname{prof}(\mathcal G_x)$,
+donc $\operatorname{coprof}(\mathcal F_x)=
+\operatorname{coprof}(\mathcal G_x)$, et comme
+$\operatorname{coprof}(\mathcal G_x)=0$ pour $y\in Y\setmin X$, on est ramené à
+prouver la propriété pour $\mathcal G$; autrement dit, on peut se borner au
+cas où $X$ est un schéma affine \emph{régulier}. On sait alors (\textbf{0}, 17.3.4) que
+l'on a
+\[
+\operatorname{prof}(\mathcal F_x)=\dim(\mathcal O_{X,x})\setmin
+\operatorname{dim.proj}(\mathcal F_x).
+\]
+
+D'autre part, si $S$ est l'unique sous-préschéma fermé de $X$ ayant pour
+espace sous-jacent $\operatorname{Supp}(\mathcal F)$, on a
+$\dim(\mathcal F_x)=\operatorname{codim}(\overline{\{x\}},S)$ (5.1.12.1), et, en
+vertu de (5.1.9)
+\[
+\dim(\mathcal F_x)=\dim(\mathcal O_{X,x})\setmin\operatorname{codim}_x(S,X)
+\]
+puisque $\mathcal O_{X,x}$ est un anneau régulier, et \emph{a fortiori}
+biéquidimensionnel (\textbf{0}, 16.5.12). On peut donc écrire
+\begin{equation}
+\operatorname{coprof}(\mathcal F_x)=
+\operatorname{dim.proj}(\mathcal F_x)\setmin\operatorname{codim}_x(S,X)
+\tag{6.11.2.1}\label{IV.2.s6.11.2.1-fr}
+\end{equation}
+et la proposition résulte alors de (6.11.1) et de (\textbf{0}, 14.2.6).
+
+\oldpage[IV-2]{160}
+
+\item[(ii)] Comme les $U_{C_n}(\mathcal F)$ sont ouverts pour tout $n$ par
+(i), les $Z_n=X-U_{C_n}(\mathcal F)$ sont fermés dans $X$; en outre il est
+clair que $Z_{n+1}\subset Z_n$, et comme $\dim(\mathcal F_x)$ est finie
+pour tout $x\in X$ et
+$\operatorname{coprof}(\mathcal F_x)\leq\dim(\mathcal F_x)$,
+l'intersection des $Z_n$ est vide; comme on peut se borner au cas où $X$
+est affine, donc quasi-compact, on peut supposer qu'il existe un $m$ tel
+que $Z_m=\varnothing$. Or, il résulte de (5.7.4) que la relation
+$x\in U_{S_k}(\mathcal F)$ équivaut à l'ensemble des relations
+\begin{equation}
+\operatorname{codim}_x(Z_n,S)>n+k
+\tag{6.11.2.2}\label{IV.2.s6.11.2.2-fr}
+\end{equation}
+pour tout $n\geq0$; mais pour $n\geq m$ cette relation est automatiquement
+vérifiée, donc on n'a en fait à considérer les relations (6.11.2.2) que
+pour $0\leq n<m$. Or (0, 14.2.6) l'ensemble $V_{n,k}$ des $x$ vérifiant
+(6.11.2.2) est ouvert, et $U_{S_k}(\mathcal F)$, intersection des $V_{n,k}$
+pour $0\leq n<m$, est aussi ouvert. C.Q.F.D.
+\end{enumerate}
+\end{proof}
+
+Rappelons que l'hypothèse que $X$ est localement immersible dans un schéma
+régulier est toujours remplie lorsque $X$ est un préschéma localement de
+type fini sur un corps $k$ (5.8.3).
+
+\begin{corollary}[6.11.3]
+\label{IV.2.s6.11.3-fr}
+Sous les hypothèses de (6.11.2), l'ensemble $\operatorname{CM}(\mathcal F)$
+des points $x\in X$ tels que $\mathcal F_x$ soit un module de
+Cohen--Macaulay est ouvert dans $X$.
+\end{corollary}
+
+\begin{proof}
+En effet, c'est l'ensemble $U_{C_0}(\mathcal F)$.
+\end{proof}
+
+\begin{remarks}[6.11.4]
+\label{IV.2.s6.11.4-fr}
+\begin{enumerate}
+\item[(i)] Le raisonnement de (6.11.2, (ii)) prouve que (sans hypothèse sur
+$X$) lorsque $U_{C_n}(\mathcal F)$ est ouvert pour tout entier $n$, alors
+$U_{S_n}(\mathcal F)$ est ouvert pour tout entier $n$.
+\item[(ii)] On a
+$\operatorname{CM}(\mathcal F)=\bigcap_nU_{S_n}(\mathcal F)$. Si tout point
+$x\in X$ admet un voisinage ouvert $V$ qui soit de dimension finie, la
+suite des intersections $V\cap U_{S_n}(\mathcal F)$ est stationnaire
+puisqu'il existe un $m$ tel que $\dim(\mathcal F_x)\leq m$ pour tout
+$x\in V$; par suite, si les $U_{S_n}(\mathcal F)$ sont ouverts pour tout
+entier $n$, $\operatorname{CM}(\mathcal F)$ est alors ouvert dans $X$.
+\item[(iii)] On écrira $U_{S_n}(X)$, $U_{C_n}(X)$,
+$\operatorname{CM}(X)$ au lieu de $U_{S_n}(\mathcal O_X)$,
+$U_{C_n}(\mathcal O_X)$, $\operatorname{CM}(\mathcal O_X)$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[6.11.5]
+\label{IV.2.s6.11.5-fr}
+Soient $A$ un anneau local noethérien, $M$ un $A$-module de type fini. Pour
+tout idéal premier $\mathfrak p$ de $A$, on a
+\begin{equation}
+\operatorname{coprof}_{A_{\mathfrak p}}(M_{\mathfrak p})\leq
+\operatorname{coprof}_A(M).
+\tag{6.11.5.1}\label{IV.2.s6.11.5.1-fr}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On peut se borner au cas où $M_{\mathfrak p}\ne0$. Comme $\widehat A$ est
+un $A$-module fidèlement plat (0$_{\rm I}$, 7.3.5), il existe un idéal
+premier $\mathfrak q$ de $\widehat A$ au-dessus de $\mathfrak p$
+(0$_{\rm I}$, 6.5.1); comme
+$\widehat M_{\mathfrak q}=(M\otimes_A\widehat A)_{\mathfrak q}
+=M\otimes_A\widehat A_{\mathfrak q}$ et que
+$\widehat A_{\mathfrak q}$ est un $\widehat A$-module plat, donc un
+$A_{\mathfrak p}$-module plat (0$_{\rm I}$, 6.2.1), il résulte de (6.3.2),
+appliqué à l'homomorphisme local
+$A_{\mathfrak p}\to\widehat A_{\mathfrak q}$, à $M_{\mathfrak p}$ et
+$\widehat M_{\mathfrak q}$, que l'on a
+$\operatorname{coprof}_{A_{\mathfrak p}}(M_{\mathfrak p})\leq
+\operatorname{coprof}_{\widehat A_{\mathfrak q}}
+(\widehat M_{\mathfrak q})$. D'autre part,
+$X=\operatorname{Spec}(\widehat A)$ est isomorphe à un sous-schéma d'un
+schéma régulier en vertu du théorème de Cohen (0, 19.8.8, (i)). On déduit
+donc de (6.11.2) que l'on a
+$\operatorname{coprof}_{\widehat A_{\mathfrak q}}
+(\widehat M_{\mathfrak q})\leq
+\operatorname{coprof}_{\widehat A}(\widehat M)$; enfin, on sait que
+$\operatorname{coprof}_{\widehat A}(\widehat M)=
+\operatorname{coprof}_A(M)$ (0, 16.4.10), ce qui achève de démontrer
+(6.11.5).
+\end{proof}
+
+Cette proposition justifie la définition de la coprofondeur d'un
+$A$-module lorsque $A$ n'est pas un anneau local, donnée dans (5.7.12).
+
+\begin{proposition}[6.11.6]
+\label{IV.2.s6.11.6-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent, $n$ un entier $>0$. Supposons que pour tout
+sous-préschéma fermé intègre $Y$ de $X$, il existe une partie ouverte non
+vide $W$ de $Y$ telle que le sous-préschéma de $Y$ induit sur l'ouvert $W$
+vérifie $(S_n)$. Alors l'ensemble $U_{S_n}(\mathcal F)$ est ouvert dans
+$X$.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$, on peut se borner au cas où $X$ est
+noethérien. Nous allons raisonner par récurrence sur $n$: pour $n=1$,
+l'ensemble $U_{S_1}(\mathcal F)$ est ouvert dans $X$, car l'ensemble des
+$x\in X$ où $\mathcal F$ ne vérifie pas $(S_1)$ est l'ensemble des $x$ tels
+que $\mathcal F_x$ admette des idéaux premiers associés immergés (5.7.5);
+si $(Z_j)$ est la famille finie des cycles premiers associés à $\mathcal F$
+qui sont immergés, on a par suite
+$U_{S_1}(\mathcal F)=X-\bigcup_jZ_j$, d'où notre assertion puisque les
+$Z_j$ sont fermés. Nous supposerons donc désormais que $n>1$. En second
+lieu, on peut se borner au cas où
+$\operatorname{Supp}(\mathcal F)=X$, car il y a un sous-préschéma fermé
+$T$ de $X$ ayant $\operatorname{Supp}(\mathcal F)$ pour espace sous-jacent,
+et un $\mathcal O_T$-Module cohérent $\mathcal G$ tels que
+$\mathcal F=j_*(\mathcal G)$, $j:T\to X$ étant l'injection canonique
+(Err$_{\rm III}$, 30); comme il revient au même de prouver que $\mathcal F$
+ou $\mathcal G$ vérifie $(S_n)$ en un point
+$x\in\operatorname{Supp}(\mathcal F)$, on peut se borner à considérer le
+cas où $T=X$. Notons enfin que par définition (5.7.2),
+$U_{S_n}(\mathcal F)$ est stable par générisation. Nous allons utiliser le
+lemme suivant:
+
+\begin{lemma}[6.11.6.1]
+\label{IV.2.s6.11.6.1-fr}
+Soient $X$ un espace noethérien dans lequel toute partie fermée irréductible
+admet un point générique, $E$ une partie de $X$. Pour que $E$ soit ouverte
+dans $X$, il faut et il suffit que $E$ soit stable par générisation, et que,
+pour toute partie ouverte $V$ de $X$ et toute partie irréductible $Y$ fermée
+dans $V$, telles que $V-Y\subset E$ et que le point générique de $Y$
+appartienne à $E$, $E\cap Y$ contienne une partie ouverte non vide de $Y$.
+\end{lemma}
+
+\begin{proof}
+On observera que ce critère entraîne celui de (0$_{\rm III}$, 9.2.6)
+lorsque toute partie fermée irréductible de $X$ admet un point générique.
+Il n'y a évidemment à démontrer que la suffisance des conditions énoncées.
+
+Considérons l'intérieur $U$ de $E$; l'ensemble fermé $X-U$ est réunion de
+ses composantes irréductibles, qui sont en nombre fini et fermées dans $X$.
+Si on avait $E\ne U$, l'hypothèse que $E$ est stable par générisation
+entraînerait que le point générique $z$ d'une des composantes irréductibles
+de $X-U$ appartiendrait à $E$. Or, $z$ n'appartient qu'à une seule des
+composantes irréductibles de $X-U$; si $T$ est la réunion des autres
+composantes irréductibles de $X-U$, $V=X-T$ est ouvert dans $X$, réunion de
+$U$ et de l'ensemble $Y=\overline{\{z\}}\cap V$ fermé dans $V$ et
+irréductible. Par hypothèse $E\cap Y$ contient une partie $W$ ouverte dans
+$Y$; on en conclut que $U\cup W$ est ouvert dans $V$, donc dans $X$, ce qui
+est absurde puisque $U$ est supposé être l'intérieur de $E$.
+\end{proof}
+

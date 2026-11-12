@@ -1,0 +1,86 @@
+% from ega2-1-fr.tex
+\oldpage[II]{8}
+tels que les $f^{-1}(S_\alpha)$ soient affines. Alors tout homomorphisme
+$\omega:\mathcal{A}(X)\to\mathcal{A}(Y)$ de $\mathcal{O}_S$-Algèbres donne
+par restriction une famille d'homomorphismes
+\[
+  \omega_\alpha:
+  \mathcal{A}(f^{-1}(S_\alpha))\to
+  \mathcal{A}(g^{-1}(S_\alpha))
+\]
+de $\mathcal{O}_{S_\alpha}$-Algèbres, donc une famille de
+$S_\alpha$-morphismes
+$h_\alpha:g^{-1}(S_\alpha)\to f^{-1}(S_\alpha)$ d'après ce qui précède.
+Tout revient à voir que pour tout ouvert affine $U$ d'une base de
+$S_\alpha\cap S_\beta$, les restrictions de $h_\alpha$ et de $h_\beta$ à
+$g^{-1}(U)$ coïncident, ce qui est évident, puisque, en vertu de ce qui
+précède, ces restrictions correspondent toutes deux à l'homomorphisme
+$\mathcal{A}(X)|U\to\mathcal{A}(Y)|U$ restriction de $\omega$.
+
+\begin{corollary}[1.2.8]
+\label{II.1.2.8-fr}
+Soient $X$, $Y$ deux $S$-schémas qui sont affines au-dessus de $S$. Pour
+qu'un $S$-morphisme $h:Y\to X$ soit un isomorphisme, il faut et il suffit que
+$\mathcal{A}(h):\mathcal{A}(X)\to\mathcal{A}(Y)$ soit un isomorphisme.
+\end{corollary}
+
+Cela résulte aussitôt de (\hyperref[II.1.2.7-fr]{1.2.7}) et du caractère
+fonctoriel de $\mathcal{A}(X)$.
+
+\subsection{Préschéma affine au-dessus de $S$ associé à une
+$\mathcal{O}_S$-Algèbre}
+\label{subsection:II.1.3-fr}
+
+\begin{proposition}[1.3.1]
+\label{II.1.3.1-fr}
+Soit $S$ un préschéma. Pour toute $\mathcal{O}_S$-Algèbre quasi-cohérente
+$\mathcal{B}$, il existe un préschéma $X$ affine au-dessus de $S$, défini à
+un $S$-isomorphisme unique près, tel que $\mathcal{A}(X)=\mathcal{B}$.
+\end{proposition}
+
+L'unicité résulte de (\hyperref[II.1.2.8-fr]{1.2.8})~; démontrons l'existence
+de $X$. Pour tout ouvert affine $U\subset S$, soit $X_U$ le préschéma
+$\operatorname{Spec}(\Gamma(U,\mathcal{B}))$~; comme
+$\Gamma(U,\mathcal{B})$ est une $\Gamma(U,\mathcal{O}_S)$-algèbre, $X_U$
+est un $S$-préschéma (\hyperref[I.1.6.1-fr]{I, 1.6.1}). En outre, comme
+$\mathcal{B}$ est quasi-cohérente, la $\mathcal{O}_S$-Algèbre
+$\mathcal{A}(X_U)$ s'identifie canoniquement à $\mathcal{B}|U$
+(\hyperref[I.1.3.7-fr]{I, 1.3.7},
+\hyperref[I.1.3.13-fr]{1.3.13} et
+\hyperref[I.1.6.3-fr]{1.6.3}). Soit $V$ un second ouvert affine de $S$, et
+soit $X_{U,V}$ le préschéma induit par $X_U$ sur $f_U^{-1}(U\cap V)$, en
+désignant par $f_U$ le morphisme structural $X_U\to S$~; $X_{U,V}$ et
+$X_{V,U}$ sont affines sur $U\cap V$
+(\hyperref[II.1.2.5-fr]{1.2.5}), et par définition $\mathcal{A}(X_{U,V})$
+et $\mathcal{A}(X_{V,U})$ s'identifient canoniquement à
+$\mathcal{B}|(U\cap V)$. Il y a donc
+(\hyperref[II.1.2.8-fr]{1.2.8}) un $S$-isomorphisme canonique
+$\theta_{U,V}:X_{V,U}\to X_{U,V}$~; en outre, si $W$ est un troisième
+ouvert affine de $S$, et si $\theta'_{U,V}$, $\theta'_{V,W}$,
+$\theta'_{U,W}$ sont les restrictions de $\theta_{U,V}$, $\theta_{V,W}$,
+$\theta_{U,W}$ aux images réciproques de $U\cap V\cap W$ dans $X_V$,
+$X_W$ et $X_W$ respectivement par les morphismes structuraux, on a
+$\theta'_{U,V}\circ\theta'_{V,W}=\theta'_{U,W}$. Il existe par suite un
+préschéma $X$, un recouvrement $(T_U)$ de $X$ par des ouverts affines, et
+pour chaque $U$ un isomorphisme $\varphi_U:X_U\to T_U$, de sorte que
+$\varphi_U$ applique $f_U^{-1}(U\cap V)$ sur $T_U\cap T_V$ et que l'on ait
+$\theta_{U,V}=\varphi_U^{-1}\circ\varphi_V$
+(\hyperref[I.2.3.1-fr]{I, 2.3.1}). Le morphisme
+$g_U=f_U\circ\varphi_U^{-1}$ fait de $T_U$ un $S$-préschéma, et les
+morphismes $g_U$ et $g_V$ coïncident dans $T_U\cap T_V$, donc $X$ est un
+$S$-préschéma. En outre, il est clair par définition que $X$ est affine
+au-dessus de $S$ et que $\mathcal{A}(T_U)=\mathcal{B}|U$, donc
+$\mathcal{A}(X)=\mathcal{B}$.
+
+On dit que le $S$-schéma $X$ ainsi défini est \emph{associé à la
+$\mathcal{O}_S$-Algèbre $\mathcal{B}$} ou est le \emph{spectre de
+$\mathcal{B}$}, et on le note $\operatorname{Spec}(\mathcal{B})$.
+
+\begin{corollary}[1.3.2]
+\label{II.1.3.2-fr}
+Soient $X$ un préschéma affine au-dessus de $S$, $f:X\to S$ le morphisme
+structural. Pour tout ouvert affine $U\subset S$, le préschéma induit sur
+$f^{-1}(U)$ est un schéma affine d'anneau
+$\Gamma(U,\mathcal{A}(X))$.
+\end{corollary}
+

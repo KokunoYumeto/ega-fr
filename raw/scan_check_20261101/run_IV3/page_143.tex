@@ -1,0 +1,108 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{143}
+
+soit bijective, puisque $C$ est une $B$-algèbre de type fini. Mais alors
+l'application $B_\lambda\to B$ est bijective par fidèle platitude, donc
+$B=B_\lambda$ est une $A$-algèbre de type fini.
+
+Supposons maintenant que $g\circ f$ soit de présentation finie, $C$ étant donc
+une $A$-algèbre de présentation finie. D'après la première partie du
+raisonnement, on a
+\[
+B=A[T_1,\ldots,T_n]/\widetilde{\mathfrak J}
+\]
+pour un idéal $\widetilde{\mathfrak J}$~; soit
+$(\widetilde{\mathfrak J}_\lambda)$ la famille filtrante des idéaux de type
+fini de $A[T_1,\ldots,T_n]$ contenus dans $\widetilde{\mathfrak J}$, de sorte
+que $\widetilde{\mathfrak J}=\varinjlim\widetilde{\mathfrak J}_\lambda$ et
+$B=\varinjlim B_\lambda$, avec
+$B_\lambda=A[T_1,\ldots,T_n]/\widetilde{\mathfrak J}_\lambda$. Appliquant
+comme ci-dessus (8.8.2), (8.10.5) et (11.2.6), on a
+$C=C_\alpha\otimes_{B_\alpha}B$, où $C_\alpha$ est une
+$B_\alpha$-algèbre de présentation finie et un $B_\alpha$-module fidèlement
+plat~; on posera encore $C_\lambda=C_\alpha\otimes_{B_\alpha}B_\lambda$ pour
+$\lambda\geq\alpha$, de sorte que
+\[
+C_\lambda=C_\alpha/\big(C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}_\lambda/\widetilde{\mathfrak J}_\alpha)\big)
+\]
+par platitude, et de même
+\[
+C=C_\alpha/\big(C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}/\widetilde{\mathfrak J}_\alpha)\big).
+\]
+Comme par hypothèse $C$ est une $A$-algèbre de présentation finie ainsi que
+$C_\alpha$, $C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}/\widetilde{\mathfrak J}_\alpha)$ est un idéal de
+type fini de $C_\alpha$ (1.4.4), et les
+$C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}_\lambda/\widetilde{\mathfrak J}_\alpha)$
+s'identifient à des idéaux de type fini de $C_\alpha$ dont
+$C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}/\widetilde{\mathfrak J}_\alpha)$ est la réunion. Il
+existe par suite un $\lambda\geq\alpha$ tel que
+\[
+C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}/\widetilde{\mathfrak J}_\alpha)
+=C_\alpha\otimes_{B_\alpha}
+(\widetilde{\mathfrak J}_\lambda/\widetilde{\mathfrak J}_\alpha),
+\]
+d'où $\widetilde{\mathfrak J}=\widetilde{\mathfrak J}_\lambda$ par fidèle
+platitude, ce qui prouve que $B$ est une $A$-algèbre de présentation finie.
+\end{proof}
+
+\subsection{Descente de la platitude par des morphismes quelconques~: cas d'un préschéma de base artinien}
+\label{subsection:IV.11.4-fr}
+
+\begin{theorem}[11.4.1]
+\label{IV.11.4.1-fr}
+Soient $A$ un anneau, $\mathfrak J$ un idéal nilpotent de $A$,
+$u_\lambda:A\to B_\lambda$ $(\lambda\in L)$ une famille d'homomorphismes
+d'anneaux telle que l'intersection des noyaux des $u_\lambda$ soit réduite à
+$0$. Soit $M$ un $A$-module tel que pour tout $\lambda\in L$,
+$M\otimes_A B_\lambda$ soit un $B_\lambda$-module libre et que
+$M\otimes_A(A/\mathfrak J)$ soit un $(A/\mathfrak J)$-module libre. Alors $M$
+est un $A$-module libre. Si de plus l'ensemble d'indices $L$ est fini, on peut
+remplacer partout «~libre~» par «~plat~» dans l'énoncé précédent.
+\end{theorem}
+
+\begin{proof}
+Dans les deux cas il suffira de prouver que $M$ est un $A$-module \emph{plat}~:
+en effet, lorsque $M\otimes_A(A/\mathfrak J)$ est un
+$(A/\mathfrak J)$-module libre, il en résultera que $M$ est un $A$-module libre
+en vertu de $(\mathbf 0_{\mathrm{III}},10.1.2)$.
+
+Nous utiliserons le lemme suivant, qui généralise
+$(\mathbf 0_{\mathrm{III}},10.2.1)$~:
+
+\begin{lemma}[11.4.1.1]
+\label{IV.11.4.1.1-fr}
+Soit $A$ un anneau muni d'une filtration finie
+$(\mathfrak J_n)_{0\leq n\leq N+1}$, avec $\mathfrak J_0=A$,
+$\mathfrak J_{N+1}=0$. Soit $M$ un $A$-module muni de la filtration
+$(\mathfrak J_nM)_{0\leq n\leq N+1}$, et désignons par
+$\operatorname{gr}(A)$ et $\operatorname{gr}(M)$ l'anneau et le module gradués
+correspondants. Supposons que $M\otimes_A(A/\mathfrak J_1)$ soit un
+$(A/\mathfrak J_1)$-module plat et que l'homomorphisme canonique
+\begin{equation}
+\operatorname{gr}_0(M)\otimes_{\operatorname{gr}_0(A)}\operatorname{gr}(A)
+\longrightarrow\operatorname{gr}(M)
+\label{IV.11.4.1.2-fr}
+\tag{11.4.1.2}
+\end{equation}
+soit injectif. Alors $M$ est un $A$-module plat.
+\end{lemma}
+
+L'homomorphisme canonique (11.4.1.2) se définit de la même façon que celui de
+$(\mathbf 0_{\mathrm{III}},10.1.1)$ comme étant en degré $n$ l'homomorphisme
+\[
+(M/\mathfrak J_1M)\otimes(\mathfrak J_n/\mathfrak J_{n+1})
+=(M\otimes\mathfrak J_n)/
+(\operatorname{Im}(M\otimes\mathfrak J_{n+1})
++\operatorname{Im}(\mathfrak J_1M\otimes\mathfrak J_n))
+\longrightarrow\mathfrak J_nM/\mathfrak J_{n+1}M
+\]
+provenant de l'homomorphisme canonique $M\otimes\mathfrak J_n\to\mathfrak J_nM$
+par passage aux quotients. Le lemme se démontre par récurrence sur $N$,
+puisqu'il n'y a rien à démontrer pour $N=0$.
+

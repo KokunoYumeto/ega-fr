@@ -1,0 +1,84 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{175}
+  \item[(ii)] Dans l'énoncé de (21.8.5), et par suite aussi dans celui de
+  (21.8.3, $b)$), on ne peut omettre l'hypothèse que $\Upsilon_{L/K/k_0}$ est
+  de rang fini sur $L$. Prenons pour $k_0$ le corps premier $\mathbf F_p$,
+  pour $K$ un corps tel que $[K:K^p]$ soit infini dénombrable (par exemple le
+  corps de fractions rationnelles $\mathbf F_p(X_1,\ldots,X_n,\ldots)$ à une
+  infinité d'indéterminées)~; le procédé de construction de (21.8.6) montre
+  aussitôt qu'il existe une suite infinie strictement décroissante $(K_n)$ de
+  sous-corps de $K$ telle que $K_0=K$ et $\bigcap_nK_n=K^p$. Nous allons
+  construire une suite croissante d'extensions finies $M_n$ de $K$, telle que
+  si $M$ est la réunion des $M_n$, l'extension $L=M^{1/p}$ de $K$ mette
+  (21.8.5) en défaut. Pour cela, soit $x$ un élément de $K-K^p$, posons
+  $M_0=K^p$, et $M_n=K^p(a_1x,a_2x,\ldots,a_nx)$ pour $n\geqslant1$, où les
+  $a_n$ sont construits par récurrence de façon que $a_n\in K_n$ et
+  $a_{n+1}\notin M_n(x)$ pour tout $n$~: cela est possible, car $M_n(x)$ est
+  de degré fini sur $K^p$, tandis qu'il n'en est pas de même de $K_n$. On en
+  conclut aussitôt que $x\notin M=L^p$, mais comme
+  $x=(a_nx)a_n^{-1}$, on a $x\in K_n(M)=K_n(L^p)$ pour tout $n$.
+\end{enumerate}
+\end{remarks}
+
+\begin{proposition}[21.8.8]
+\label{0.21.8.8-fr}
+Soit $k$ un corps de caractéristique $p>0$, et soient
+$A=k[[T_1,\ldots,T_r]]$ l'anneau des séries formelles à $r$ indéterminées sur
+$k$, $K=k((T_1,\ldots,T_r))$ son corps des fractions. Alors il existe une
+famille filtrante décroissante $(A_\alpha)$ de sous-anneaux noethériens de $A$
+telle que $A$ soit un $A_\alpha$-module libre de type fini pour tout $\alpha$
+et que, si $K_\alpha$ est le corps des fractions de $A_\alpha$, on ait
+$\bigcap_\alpha K_\alpha=K^p$.
+\end{proposition}
+
+\begin{proof}
+On peut écrire $K^p=k^p((T_1^p,\ldots,T_r^p))$~; on a vu dans la démonstration
+de (21.8.6) qu'il existe une famille décroissante $(k_\alpha)$ de sous-corps
+de $k$ telle que $[k:k_\alpha]$ soit fini pour tout $\alpha$ et
+$\bigcap_\alpha k_\alpha=k^p$~; il est clair que si l'on pose
+$A_\alpha=k_\alpha[[T_1^p,\ldots,T_r^p]]$, $A$ est un $A_\alpha$-module
+libre de type fini~; tout revient donc à prouver la relation
+\begin{equation}
+\tag{21.8.8.1}
+\label{0.21.8.8.1-fr}
+  \bigcap_\alpha k_\alpha((T_1^p,\ldots,T_r^p))
+  =k^p((T_1^p,\ldots,T_r^p)).
+\end{equation}
+Comme $\bigcap_\alpha k_\alpha=k^p$, cela va résulter des deux lemmes suivants.
+\end{proof}
+
+\begin{lemma}[21.8.8.2]
+\label{0.21.8.8.2-fr}
+Si $k'$ est une extension d'un corps $k$, on a
+\[
+  k'[[T_1,\ldots,T_r]]\cap k((T_1,\ldots,T_r))=k[[T_1,\ldots,T_r]].
+\]
+\end{lemma}
+
+\begin{proof}
+En effet, posons $C=k[[T_1,\ldots,T_r]]$, $D=k'[[T_1,\ldots,T_r]]$~; comme
+$k((T_1,\ldots,T_r))$ est le corps des fractions de $C$, il suffira de
+prouver que $D$ est un $C$-module \emph{fidèlement plat} (Bourbaki,
+\emph{Alg. comm.}, chap.~I, \S~3, n\textsuperscript{o}~5, prop.~10). Or, $C$
+et $D$ sont des anneaux locaux noethériens, et si $\mathfrak m$ est l'idéal
+maximal de $C$, on a
+$D/\mathfrak m^jD=(C/\mathfrak m^j)\otimes_k k'$, donc
+$D/\mathfrak m^jD$ est un $(C/\mathfrak m^j)$-module plat~; il suffit donc
+d'appliquer ($\mathbf 0_{\mathrm{III}}$, 10.2.1) et
+($\mathbf 0_{\mathrm I}$, 6.6.2).
+\end{proof}
+
+\begin{lemma}[21.8.8.3]
+\label{0.21.8.8.3-fr}
+Soient $k$ un corps, $(k_\alpha)$ une famille filtrante décroissante de
+sous-corps de $k$, et posons $k_0=\bigcap_\alpha k_\alpha$. On suppose qu'il
+existe une puissance $q$ de l'exposant caractéristique de $k$ telle que
+$k^q\subset k_0$. Alors on a
+\begin{equation}
+\tag{21.8.8.4}
+\label{0.21.8.8.4-fr}
+  \bigcap_\alpha k_\alpha((T_1,\ldots,T_r))=k_0((T_1,\ldots,T_r)).
+\end{equation}
+\end{lemma}
+
+\begin{proof}

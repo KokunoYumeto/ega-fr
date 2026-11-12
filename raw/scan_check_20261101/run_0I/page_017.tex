@@ -1,0 +1,80 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{17}
+\begin{env}[1.4.6]
+\label{0.1.4.6-fr}
+Soient $S_1$, $S_2$ deux parties multiplicatives de $A$; alors $S_1S_2$ est aussi une partie multiplicative de $A$.
+Désignons par $S_2'$ l'image canonique de $S_2$ dans l'anneau $S_1^{-1}A$, qui est une partie multiplicative de cet anneau.
+Pour tout $A$-module $M$, il existe alors un isomorphisme fonctoriel
+\[
+  S_2'^{-1}(S_1^{-1}M)\xrightarrow{\sim}(S_1S_2)^{-1}M
+\]
+qui fait correspondre à $(m/s_1)/(s_2/1)$ l'élément $m/(s_1s_2)$.
+\end{env}
+
+\subsection{Changement d'anneau}
+\label{subsection:0.1.5-fr}
+
+\begin{env}[1.5.1]
+\label{0.1.5.1-fr}
+Soient $A$, $A'$ deux anneaux, $\varphi$ un homomorphisme $A'\to A$, $S$ (resp. $S'$) une partie multiplicative de $A$ (resp. $A'$), telle que $\varphi(S')\subset S$; l'homomorphisme composé
+\[
+  A'\xrightarrow{\varphi}A\longrightarrow S^{-1}A
+\]
+se factorise en
+\[
+  A'\longrightarrow S'^{-1}A'\xrightarrow{\varphi^{S'}}S^{-1}A
+\]
+en vertu de (1.2.4); on a $\varphi^{S'}(a'/s')=\varphi(a')/\varphi(s')$.
+Si $A=\varphi(A')$ et $S=\varphi(S')$, $\varphi^{S'}$ est \emph{surjective}.
+Si $A'=A$ et si $\varphi$ est l'identité, $\varphi^{S'}$ n'est autre que l'homomorphisme $\rho_A^{S,S'}$ défini en (1.4.1).
+\end{env}
+
+\begin{env}[1.5.2]
+\label{0.1.5.2-fr}
+Sous les hypothèses de (1.5.1), soit $M$ un $A$-module.
+Il existe un homomorphisme canonique fonctoriel
+\[
+  \sigma:S'^{-1}(M_{[\varphi]})\longrightarrow
+  (S^{-1}M)_{[\varphi^{S'}]}
+\]
+de $S'^{-1}A'$-modules, faisant correspondre à tout élément $m/s'$ de $S'^{-1}(M_{[\varphi]})$ l'élément $m/\varphi(s')$ de $(S^{-1}M)_{[\varphi^{S'}]}$; on vérifie en effet immédiatement que cette définition ne dépend pas de l'expression $m/s'$ de l'élément considéré.
+Lorsque $S=\varphi(S')$, l'homomorphisme $\sigma$ est \emph{bijectif}.
+Lorsque $A'=A$ et que $\varphi$ est l'identité, $\sigma$ n'est autre que l'homomorphisme $\rho_M^{S,S'}$ défini en (1.4.1).
+
+Lorsqu'on prend en particulier $M=A$, l'homomorphisme $\varphi$ définit sur $A$ une structure de $A'$-algèbre; $S'^{-1}(A_{[\varphi]})$ est alors muni d'une structure d'anneau, pour laquelle il s'identifie à $(\varphi(S'))^{-1}A$, et l'homomorphisme
+\[
+  \sigma:S'^{-1}(A_{[\varphi]})\longrightarrow S^{-1}A
+\]
+est un homomorphisme de $S'^{-1}A'$-algèbres.
+\end{env}
+
+\begin{env}[1.5.3]
+\label{0.1.5.3-fr}
+Soient $M$ et $N$ deux $A$-modules; en composant les homomorphismes définis dans (1.3.4) et (1.5.2), on obtient un homomorphisme
+\[
+  (S^{-1}M\otimes_{S^{-1}A}S^{-1}N)_{[\varphi^{S'}]}
+  \longleftarrow
+  S'^{-1}((M\otimes_A N)_{[\varphi]})
+\]
+qui est un isomorphisme lorsque $\varphi(S')=S$.
+De même, en composant les homomorphismes (1.3.5) et (1.5.2), on obtient un homomorphisme
+\[
+  S'^{-1}((\operatorname{Hom}_A(M,N))_{[\varphi]})
+  \longrightarrow
+  (\operatorname{Hom}_{S^{-1}A}(S^{-1}M,S^{-1}N))_{[\varphi^{S'}]}
+\]
+qui est un isomorphisme lorsque $\varphi(S')=S$ et que $M$ admet une présentation finie.
+\end{env}
+
+\begin{env}[1.5.4]
+\label{0.1.5.4-fr}
+Considérons maintenant un $A'$-module $N'$, et formons le produit tensoriel $N'\otimes_{A'}A_{[\varphi]}$, qui peut être considéré comme un $A$-module en posant
+\[
+  a.(n'\otimes b)=n'\otimes(ab).
+\]
+Il existe un isomorphisme fonctoriel de $S^{-1}A$-modules
+\[
+  \tau:(S'^{-1}N')\otimes_{S'^{-1}A'}(S^{-1}A)_{[\varphi^{S'}]}
+  \xrightarrow{\sim}
+  S^{-1}(N'\otimes_{A'}A_{[\varphi]})
+\]

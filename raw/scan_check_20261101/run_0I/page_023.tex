@@ -1,0 +1,94 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{23}
+
+\subsection{Espaces noethériens}
+\label{subsection:0.2.2-fr}
+
+\begin{env}[2.2.1]
+\label{0.2.2.1-fr}
+On dit qu'un espace topologique $X$ est \emph{noethérien} si l'ensemble des
+ouverts de $X$ vérifie la condition \emph{maximale}, ou, ce qui revient au
+même, si l'ensemble des fermés de $X$ vérifie la condition \emph{minimale}. On
+dit que $X$ est \emph{localement noethérien} si tout $x\in X$ admet un
+voisinage qui est un sous-espace noethérien.
+\end{env}
+
+\begin{env}[2.2.2]
+\label{0.2.2.2-fr}
+Soit $E$ un ensemble ordonné vérifiant la condition \emph{minimale}, et soit
+$P$ une propriété des éléments de $E$ soumise à la condition suivante~: si
+$a\in E$ est tel que pour tout $x<a$, $P(x)$ soit vraie, alors $P(a)$ est
+vraie. Dans ces conditions, \emph{$P(x)$ est vraie pour tout $x\in E$}
+(«~principe de récurrence noethérienne~»). En effet, soit $F$ l'ensemble des
+$x\in E$ pour lesquels $P(x)$ est fausse~; si $F$ était non vide, il aurait un
+élément minimal $a$, et comme alors $P(x)$ est vraie pour tout $x<a$, $P(a)$
+serait aussi vraie, ce qui est contradictoire.
+
+Nous appliquerons en particulier ce principe lorsque $E$ est un \emph{ensemble
+de parties fermées d'un espace noethérien}.
+\end{env}
+
+\begin{env}[2.2.3]
+\label{0.2.2.3-fr}
+Tout sous-espace d'un espace noethérien est noethérien. Inversement, tout
+espace topologique réunion finie de sous-espaces noethériens est noethérien.
+\end{env}
+
+\begin{env}[2.2.4]
+\label{0.2.2.4-fr}
+Tout espace noethérien est quasi-compact~; inversement, tout espace topologique
+dans lequel tout ouvert est quasi-compact est noethérien.
+\end{env}
+
+\begin{env}[2.2.5]
+\label{0.2.2.5-fr}
+Un espace noethérien n'a qu'un nombre \emph{fini} de composantes
+irréductibles, comme on le voit par récurrence noethérienne.
+\end{env}
+
+\section{Compléments sur les faisceaux}
+\label{section:0.3-fr}
+
+\subsection{Faisceaux à valeurs dans une catégorie}
+\label{subsection:0.3.1-fr}
+
+\begin{env}[3.1.1]
+\label{0.3.1.1-fr}
+Soient $\mathbf{K}$ une catégorie, $(A_\alpha)_{\alpha\in I}$,
+$(A_{\alpha\beta})_{(\alpha,\beta)\in I\times I}$ deux familles d'objets de
+$\mathbf{K}$ telles que $A_{\beta\alpha}=A_{\alpha\beta}$,
+$(\rho_{\alpha\beta})_{(\alpha,\beta)\in I\times I}$ une famille de morphismes
+$\rho_{\alpha\beta}:A_\alpha\to A_{\alpha\beta}$. Nous dirons qu'un couple
+formé d'un objet $A$ de $\mathbf{K}$ et d'une famille de morphismes
+$\rho_\alpha:A\to A_\alpha$ est \emph{solution du problème universel} défini
+par la donnée des familles $(A_\alpha)$, $(A_{\alpha\beta})$ et
+$(\rho_{\alpha\beta})$ si, pour tout objet $B$ de $\mathbf{K}$, l'application
+qui, à tout $f\in\operatorname{Hom}(B,A)$ fait correspondre la famille
+$(\rho_\alpha\circ f)\in\prod_\alpha\operatorname{Hom}(B,A_\alpha)$ est une
+\emph{bijection} de $\operatorname{Hom}(B,A)$ sur l'ensemble des $(f_\alpha)$
+telles que
+$\rho_{\alpha\beta}\circ f_\alpha=\rho_{\beta\alpha}\circ f_\beta$ pour tout
+couple d'indices $(\alpha,\beta)$. On voit aussitôt que s'il existe une telle
+solution, elle est unique à un isomorphisme près.
+\end{env}
+
+\begin{env}[3.1.2]
+\label{0.3.1.2-fr}
+Nous ne rappellerons pas la définition d'un \emph{préfaisceau}
+$U\to\mathcal{F}(U)$ sur un espace topologique $X$, à valeurs dans une
+catégorie $\mathbf{K}$ (G, I, 1.9)~; nous dirons qu'un tel préfaisceau est un
+\emph{faisceau à valeurs dans $\mathbf{K}$} s'il satisfait à l'axiome
+suivant~:
+
+\smallskip
+\noindent
+\textup{(F)} \emph{Pour tout recouvrement $(U_\alpha)$ d'un ouvert $U$ de $X$
+par des ouverts $U_\alpha$ contenus dans $U$, si on désigne par $\rho_\alpha$
+(resp. $\rho_{\alpha\beta}$) le morphisme de restriction}
+\[
+  \mathcal{F}(U)\to\mathcal{F}(U_\alpha)
+  \qquad
+  \bigl(\text{resp. }\mathcal{F}(U_\alpha)
+  \to\mathcal{F}(U_\alpha\cap U_\beta)\bigr),
+\]
+

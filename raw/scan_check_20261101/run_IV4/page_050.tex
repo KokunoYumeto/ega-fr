@@ -1,0 +1,106 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{50}
+est exacte; en outre, pour tout $x\in X$, il existe un voisinage ouvert $U$
+de $x$ tel que les restrictions à $U$ des homomorphismes de (16.9.13.1)
+forment une suite exacte et scindée.
+\end{proposition}
+
+Prouvons d'abord le lemme suivant:
+
+\begin{lemma}[16.9.13.2]
+\label{IV.16.9.13.2}
+Soient $A$ un anneau, $\mathfrak{I}$ un idéal de $A$,
+$A'=A/\mathfrak{I}$, $(f_i)_{1\leq i\leq r}$ une suite d'éléments de $A$ qui
+est $A'$-régulière, $\mathfrak{K}=\sum_i f_iA$,
+$\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$,
+$\mathfrak{K}'=\sum_i f_iA'$, de sorte que $C=A/\mathfrak{L}$ est isomorphe à
+$A'/\mathfrak{K}'$. Alors pour tout entier $n>0$ et tout entier $N\geq n$,
+on a la relation
+\[
+  \mathfrak{I}\cap\mathfrak{K}^n
+  =\mathfrak{I}\mathfrak{K}^n+(\mathfrak{I}\cap\mathfrak{K}^N).
+  \tag{16.9.13.3}
+  \label{IV.16.9.13.3}
+\]
+\end{lemma}
+
+Il suffit évidemment de prouver que tout élément du premier membre est
+contenu dans le second, et, par récurrence sur $n$, on se ramène au cas où
+$N=n+1$. Un élément du premier membre de (16.9.13.3), étant dans
+$\mathfrak{K}^n$, s'écrit $P(f_1,\ldots,f_r)$, où
+$P\in A[T_1,\ldots,T_r]$ est homogène et de degré $n$. Si $f_i'$ est l'image
+canonique de $f_i$ dans $A'$, l'hypothèse
+$P(f_1,\ldots,f_r)\in\mathfrak{I}$ signifie que
+$P(f_1',\ldots,f_r')=0$. Mais
+$P(f_1',\ldots,f_r')\in\mathfrak{K}'^n$, donc l'image canonique de
+$P(f_1',\ldots,f_r')$ dans
+$\mathfrak{K}'^n/\mathfrak{K}'^{n+1}$ est nulle. Or l'hypothèse que la suite
+$(f_i)$ est $A'$-régulière implique que l'homomorphisme canonique
+\[
+  \mathbf{S}_C^n(\mathfrak{K}'/\mathfrak{K}'^2)
+  \longrightarrow\mathfrak{K}'^n/\mathfrak{K}'^{n+1}
+\]
+est bijectif (0, 15.1.9); on conclut que les coefficients de $P$ appartiennent
+à $\mathfrak{L}=\mathfrak{I}+\mathfrak{K}$. Il en résulte aussitôt que l'on a
+$P(f_1,\ldots,f_r)\in\mathfrak{I}\mathfrak{K}^n+\mathfrak{K}^{n+1}$, et comme
+$P(f_1,\ldots,f_r)\in\mathfrak{I}$, on a finalement
+\[
+  P(f_1,\ldots,f_r)
+  \in\mathfrak{I}\mathfrak{K}^n
+    +(\mathfrak{I}\cap\mathfrak{K}^{n+1}),
+\]
+ce qui prouve le lemme.
+
+En prenant les quotients des deux membres de (16.9.13.3) par
+$\mathfrak{I}\mathfrak{K}^n$, on voit que les relations (16.9.13.3) pour
+$N\geq n$ entraînent
+\[
+  (\mathfrak{I}\cap\mathfrak{K}^n)/\mathfrak{I}\mathfrak{K}^n
+  \subset\bigcap_{N\geq n}\mathfrak{K}^N
+    \cdot(A/(\mathfrak{I}\mathfrak{K}^n)).
+  \tag{16.9.13.4}
+  \label{IV.16.9.13.4}
+\]
+On en déduit le
+
+\begin{corollary}[16.9.13.5]
+\label{IV.16.9.13.5}
+Supposons vérifiées les hypothèses de (16.9.13.2) et supposons en outre que
+l'anneau $A$ soit noethérien et que $\mathfrak{K}$ soit contenu dans le
+radical de $A$. Alors on a pour tout entier $n>0$,
+\[
+  \mathfrak{I}\cap\mathfrak{K}^n=\mathfrak{I}\mathfrak{K}^n.
+  \tag{16.9.13.6}
+  \label{IV.16.9.13.6}
+\]
+\end{corollary}
+
+En effet, le second membre de (16.9.13.4) est alors nul, puisque
+$A/\mathfrak{I}\mathfrak{K}^n$ est un $A$-module de type fini (Bourbaki,
+\emph{Alg. comm.}, chap.~III, §~3, n\textsuperscript{o}~3, prop.~6).
+
+Prenons en particulier $n=2$ dans (16.9.13.6), et remarquons que l'on a
+$\mathfrak{L}^2=\mathfrak{I}^2+\mathfrak{I}\mathfrak{K}+\mathfrak{K}^2
+=\mathfrak{I}\mathfrak{L}+\mathfrak{K}^2$; puisque
+$\mathfrak{I}\mathfrak{L}\subset\mathfrak{L}^2$, on en déduit que
+\[
+  \mathfrak{I}\cap\mathfrak{L}^2
+  =\mathfrak{I}\mathfrak{L}+(\mathfrak{I}\cap\mathfrak{K}^2)
+  =\mathfrak{I}\mathfrak{L}+\mathfrak{I}\mathfrak{K}^2
+  =\mathfrak{I}\mathfrak{L},
+\]
+autrement dit
+\[
+  \mathfrak{I}\cap\mathfrak{L}^2=\mathfrak{I}\mathfrak{L},
+  \tag{16.9.13.7}
+  \label{IV.16.9.13.7}
+\]
+ce qu'on peut encore exprimer en disant que l'homomorphisme canonique
+\[
+  \mathfrak{I}/\mathfrak{I}\mathfrak{L}
+  \longrightarrow(\mathfrak{I}+\mathfrak{L}^2)/\mathfrak{L}^2
+\]
+est bijectif.
+
+Ces lemmes étant démontrés, prouvons la première assertion de (16.9.13): il
+suffit

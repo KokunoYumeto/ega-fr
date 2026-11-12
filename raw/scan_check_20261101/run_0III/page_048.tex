@@ -1,0 +1,96 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{48}
+Prenons alors
+\[
+Q_{i+1}=Q'_{i+1}\times Q''_{i+1},\qquad
+d_{i+1}=d'_{i+1}+d''_{i+1},\qquad
+u_{i+1}=u'_{i+1}+u''_{i+1}.
+\]
+Comme $d_{i+1}(Q_{i+1})=d'_{i+1}(Q'_{i+1})=N_i\subset Z_i(Q_\bullet)$, on a
+$d_i\circ d_{i+1}=0$ et, avec les notations usuelles,
+$B_i(Q_\bullet)=N_i$, ce qui vérifie $(\mathrm I_{i+1})$. La commutativité
+des diagrammes (\hyperref[0.11.9.1.3-fr]{11.9.1.3}) et
+(\hyperref[0.11.9.1.4-fr]{11.9.1.4}) montre que
+$d_{i+1}\circ u_{i+1}=u_i\circ d_{i+1}$. Par définition de $N_i$, le
+morphisme
+\[
+H_i(Q_\bullet)=Z_i(Q_\bullet)/N_i\longrightarrow H_i(P_\bullet)
+\]
+déduit du système des $u_k$ ($k\leq i+1$) est le morphisme déduit de $v_i$
+par passage aux quotients, donc c'est un isomorphisme puisque $v_i$ est un
+épimorphisme, d'où $(\mathrm{II}_{i+1})$. Enfin, on a
+$Q''_{i+1}\subset Z_{i+1}(Q_\bullet)$ par définition; le choix de
+$u''_{i+1}$ montre que le morphisme
+\[
+v_{i+1}:Z_{i+1}(Q_\bullet)\longrightarrow Z_{i+1}(P_\bullet)
+\longrightarrow H_{i+1}(P_\bullet)
+\]
+est un épimorphisme, sa restriction à $Q''_{i+1}$ l'étant déjà, d'où
+$(\mathrm{III}_{i+1})$. La récurrence peut donc se poursuivre, et la
+proposition est démontrée.
+\end{proof}
+
+\begin{corollary}[11.9.2]
+\label{0.11.9.2-fr}
+Soient $A$ un anneau noethérien (non nécessairement commutatif),
+$P_\bullet=(P_i)_{i\in\mathbb Z}$ un complexe de $A$-modules à droite. On
+suppose que les $H_i(P_\bullet)$ sont des $A$-modules de type fini et qu'il
+existe $d$ tel que $H_i(P_\bullet)=0$ pour $i<d$. Alors il existe un complexe
+$Q_\bullet=(Q_i)_{i\in\mathbb Z}$ formé de $A$-modules à droite libres de
+rang fini, tel que $Q_i=0$ pour $i<d$, et un homomorphisme
+$u:Q_\bullet\to P_\bullet$ de complexes, tel que l'homomorphisme
+$H_\bullet(Q_\bullet)\to H_\bullet(P_\bullet)$ correspondant à $u$ soit
+bijectif.
+\end{corollary}
+
+\begin{proof}
+On applique (\hyperref[0.11.9.1-fr]{11.9.1}) en prenant pour $\mathcal C$ la
+catégorie des $A$-modules à droite, pour $K'$ (resp. $K''$) l'ensemble des
+$A$-modules de type fini (resp. l'ensemble des $A$-modules libres de rang
+fini); la vérification des conditions (i), (ii) et (iii) de
+(\hyperref[0.11.9.1-fr]{11.9.1}) est immédiate, compte tenu de l'hypothèse
+que $A$ est noethérien.
+\end{proof}
+
+\begin{env}[11.9.3]
+\label{0.11.9.3-fr}
+\emph{Remarques}.
+\begin{enumerate}
+\item[{\rm(i)}] Sous les conditions de
+(\hyperref[0.11.9.2-fr]{11.9.2}), supposons en outre que les $P_i$ soient des
+$A$-modules à droite plats. Alors, pour tout $A$-module à gauche $M$,
+l'homomorphisme de complexes
+\[
+u\otimes 1:Q_\bullet\otimes_A M\longrightarrow P_\bullet\otimes_A M
+\]
+définit encore un isomorphisme
+$H_\bullet(Q_\bullet\otimes_A M)\simeq
+H_\bullet(P_\bullet\otimes_A M)$ de l'homologie comme nous le verrons au
+chap.~III.
+\item[{\rm(ii)}] La conclusion de (\hyperref[0.11.9.2-fr]{11.9.2}) n'est
+plus nécessairement exacte lorsqu'on ne suppose pas $A$ noethérien; en
+effet, en l'appliquant à un complexe réduit à $0$ sauf pour un seul terme, on
+en conclurait que tout $A$-module à gauche de type fini admet une résolution
+par des modules libres de type fini, ce qui n'est pas vrai en général
+(cf. Bourbaki, \emph{Alg. comm.}, chap.~I, \S~2, exerc.~6).
+
+Toutefois, au lieu de supposer $A$ noethérien, on peut supposer seulement que
+les $H_i(P_\bullet)$ ont une $\infty$-présentation finie (cf. chap.~IV).
+\end{enumerate}
+\end{env}
+
+\subsection{Caractéristique d'Euler-Poincaré d'un complexe de modules de
+longueur finie}
+\label{subsection:0.11.10-fr}
+
+\begin{env}[11.10.1]
+\label{0.11.10.1-fr}
+Soient $A$ un anneau (non nécessairement commutatif),
+\[
+\label{0.11.10.1.1-fr}
+\tag{11.10.1.1}
+M^\bullet:0\longrightarrow M^0\longrightarrow M^1
+\longrightarrow\cdots\longrightarrow M^n\longrightarrow0
+\]
+un complexe de $A$-modules à gauche de longueur finie. On appelle
+\emph{caractéristique d'Euler-Poincaré} de ce complexe le nombre

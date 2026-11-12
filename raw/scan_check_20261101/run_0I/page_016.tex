@@ -1,0 +1,80 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{16}
+est commutatif, pour tout homomorphisme $u:M\to N$; on notera en outre que $T^{-1}u$ est entièrement déterminé par $S^{-1}u$, car pour $m\in M$ et $t\in T$, on a
+\[
+  (T^{-1}u)(m/t)=(t/1)^{-1}\rho^{T,S}\bigl((S^{-1}u)(m/1)\bigr).
+\]
+\end{env}
+
+\begin{env}[1.4.2]
+\label{0.1.4.2-fr}
+Avec les mêmes notations, pour deux $A$-modules $M$, $N$, les diagrammes (cf. (1.3.4) et (1.3.5))
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+(S^{-1}M)\otimes_{S^{-1}A}(S^{-1}N) \arrow[r,"\sim"] \arrow[d]
+  & S^{-1}(M\otimes_A N) \arrow[d]
+  \\
+(T^{-1}M)\otimes_{T^{-1}A}(T^{-1}N) \arrow[r,"\sim"]
+  & T^{-1}(M\otimes_A N)
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+S^{-1}\operatorname{Hom}_A(M,N) \arrow[r] \arrow[d]
+  & \operatorname{Hom}_{S^{-1}A}(S^{-1}M,S^{-1}N) \arrow[d] \\
+T^{-1}\operatorname{Hom}_A(M,N) \arrow[r]
+  & \operatorname{Hom}_{T^{-1}A}(T^{-1}M,T^{-1}N)
+\end{tikzcd}
+\]
+sont commutatifs.
+\end{env}
+
+\begin{env}[1.4.3]
+\label{0.1.4.3-fr}
+Il y a un cas important dans lequel l'homomorphisme $\rho^{T,S}$ est \emph{bijectif}, savoir lorsque tout élément de $T$ est diviseur d'un élément de $S$; on identifie alors par $\rho^{T,S}$ les modules $S^{-1}M$ et $T^{-1}M$.
+On dit que $S$ est \emph{saturé} si tout diviseur dans $A$ d'un élément de $S$ est dans $S$; en remplaçant $S$ par l'ensemble $T$ de tous les diviseurs des éléments de $S$ (ensemble qui est multiplicatif et saturé), on voit qu'on peut toujours, si l'on veut, se limiter à la considération de modules de fractions $S^{-1}M$, où $S$ est saturé.
+\end{env}
+
+\begin{env}[1.4.4]
+\label{0.1.4.4-fr}
+Si $S$, $T$, $U$ sont trois parties multiplicatives de $A$ telles que $S\subset T\subset U$, on a
+\[
+  \rho^{U,S}=\rho^{U,T}\circ\rho^{T,S}.
+\]
+\end{env}
+
+\begin{env}[1.4.5]
+\label{0.1.4.5-fr}
+Considérons une \emph{famille filtrante croissante} $(S_\alpha)$ de parties multiplicatives de $A$ (on écrira $\alpha\leq\beta$ pour $S_\alpha\subset S_\beta$), et soit $S$ la partie multiplicative $\bigcup_\alpha S_\alpha$; posons
+\[
+  \rho_{\beta\alpha}=\rho_A^{S_\beta,S_\alpha}\quad\text{pour }\alpha\leq\beta;
+\]
+en vertu de (1.4.4), les homomorphismes $\rho_{\beta\alpha}$ définissent un anneau $A'$ \emph{limite inductive} du système inductif d'anneaux $(S_\alpha^{-1}A,\rho_{\beta\alpha})$.
+Soit $\rho_\alpha$ l'application canonique $S_\alpha^{-1}A\to A'$, et posons $\varphi_\alpha=\rho_A^{S,S_\alpha}$; comme $\varphi_\alpha=\varphi_\beta\circ\rho_{\beta\alpha}$ pour $\alpha\leq\beta$ d'après (1.4.4), on peut définir de façon unique un homomorphisme $\varphi:A'\to S^{-1}A$ tel que le diagramme
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+  & S_\alpha^{-1}A
+      \arrow[ddl,"\rho_\alpha"']
+      \arrow[d,"\rho_{\beta\alpha}"]
+      \arrow[ddr,"\varphi_\alpha"] & \\
+  & S_\beta^{-1}A
+      \arrow[dl,"\rho_\beta"]
+      \arrow[dr,"\varphi_\beta"'] & \\
+A' \arrow[rr,"\varphi"'] & & S^{-1}A
+\end{tikzcd}
+\qquad(\alpha\leq\beta)
+\]
+soit commutatif.
+En fait, $\varphi$ est un \emph{isomorphisme}~: il est en effet immédiat par construction que $\varphi$ est surjectif.
+D'autre part, si $\rho_\alpha(a/s_\alpha)\in A'$ est tel que $\varphi(\rho_\alpha(a/s_\alpha))=0$, cela signifie que $a/s_\alpha=0$ dans $S^{-1}A$, c'est-à-dire qu'il existe $s\in S$ tel que $sa=0$; mais il y a un $\beta\geq\alpha$ tel que $s\in S_\beta$, et par suite, comme $\rho_\alpha(a/s_\alpha)=\rho_\beta(sa/ss_\alpha)=0$, on voit que $\varphi$ est injectif.
+On traite de même le cas d'un $A$-module $M$, et on a ainsi défini des isomorphismes canoniques
+\[
+  \varinjlim S_\alpha^{-1}A\xrightarrow{\sim}
+  (\varinjlim S_\alpha)^{-1}A,
+  \qquad
+  \varinjlim S_\alpha^{-1}M\xrightarrow{\sim}
+  (\varinjlim S_\alpha)^{-1}M,
+\]
+le second étant \emph{fonctoriel en $M$}.
+\end{env}
+

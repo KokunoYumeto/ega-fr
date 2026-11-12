@@ -1,0 +1,384 @@
+\oldpage[0\textsubscript{IV-1}]{126}
+(i) Il est immédiat que $\varphi$ (avec les notations de
+\sref{0.20.4.6-fr}) est nécessairement l'application
+$z\leadsto(\varepsilon(z),z\setmin p_1(\varepsilon(z)))$, et l'isomorphisme
+réciproque l'application $(b,x)\leadsto p_1(b)+x$ ; ces deux applications
+étant continues, cela prouve la première assertion. On notera que cela
+entraîne que la topologie de $B$ s'identifie (par $p_1$) au \emph{quotient}
+de la topologie de $B\otimes_A B$ par $\mathfrak{J}_{B/A}$.
+
+(ii) Le fait que $d_{B/A}$ soit une $A$-dérivation de $B$ résulte de la
+définition \sref{0.20.4.6-fr} et de \sref{0.20.1.1-fr}.
+
+Pour prouver la propriété universelle, rappelons que
+$\operatorname{D\acute{e}r.\ cont}_A(B,L)$ s'identifie canoniquement à
+l'ensemble $G$ des homomorphismes continus de $A$-algèbres
+$u:B\to D_B(L)$ tels que le composé
+$B\xrightarrow{u}D_B(L)\xrightarrow{q}B$ soit l'identité (où $q(b,0)=b$ est
+la projection ; cf. \sref{0.20.1.6-fr} et \sref{0.20.3.2-fr}). D'autre part,
+grâce à l'isomorphisme $\varphi$,
+$\operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)$ s'identifie canoniquement à
+l'ensemble des homomorphismes continus de $B$-algèbres
+$v:\mathrm{P}^1_{B/A}\to D_B(L)$ tels que le composé
+$\mathrm{P}^1_{B/A}\xrightarrow{v}D_B(L)\xrightarrow{q}B$ soit
+l'augmentation $\varepsilon$. Comme on a $p_2=p_1\setmin d_{B/A}$ par définition,
+tout revient à prouver que tout $u\in G$ se factorise en
+\[
+\xymatrix{
+  B \ar[r]^u \ar[d]_{p_2} & D_B(L) \\
+  \mathrm{P}^1_{B/A} \ar[ur]_v &
+}
+\]
+où $v$ est un $B$-homomorphisme continu. Or, on a déjà un homomorphisme
+continu de $A$-algèbres $j:b\leadsto(b,0)$ de $B$ dans $D_B(L)$, qui
+appartient à $G$ ; par définition du produit tensoriel topologique
+d'algèbres topologiques ($\mathbf{0}_{\mathrm I}$, 7.7.6), il existe donc un
+$A$-homomorphisme continu d'algèbres
+$w:B\otimes_A B\to D_B(L)$ rendant commutatif le diagramme
+\[
+\xymatrix{
+  B\otimes_A B \ar[dr]_w & B \ar[l]_{j_1} \ar[d]^j \\
+  B \ar[u]^{j_2} \ar[r]_u & D_B(L)
+}
+\]
+On a donc par définition
+$w(b\otimes1\setmin 1\otimes b)=j(b)\setmin u(b)\in L$, et en vertu de
+\sref{0.20.4.4-fr}, cela entraîne $w(\mathfrak{J})\subset L$ donc
+$w(\mathfrak{J}^2)=0$ ; par suite $w$ se factorise en
+\[
+  B\otimes_A B\to\mathrm{P}^1_{B/A}\xrightarrow{v}D_B(L)
+\]
+où $v$ est un homomorphisme continu de $A$-algèbres ; d'ailleurs, comme
+$v\circ p_1=j$ est un homomorphisme de $B$-algèbres, il en est de même de
+$v$ par définition de la structure de $B$-algèbre de
+$\mathrm{P}^1_{B/A}$ ; comme on a par définition $u=v\circ p_2$, cela
+termine la démonstration.
+\end{proof}
+
+\begin{theorem}[20.4.9]
+\label{0.20.4.9-fr}
+Supposons que $B$ soit une $A$-algèbre topologique formellement lisse. Alors
+le $B$-module topologique $\Omega^1_{B/A}$ est formellement projectif.
+\end{theorem}
+
+\begin{proof}
+En effet, l'hypothèse entraîne que $B\otimes_A B$ (muni de la structure de
+$B$-algèbre topologique définie par $j_1$) est une $B$-algèbre topologique
+formellement lisse (\ref{0.19.3.5-fr}, (iii)), et par suite aussi une
+$A$-algèbre topologique formellement lisse (\ref{0.19.3.5-fr}, (ii)) ; comme
+$B$ est topologiquement isomorphe à la $A$-algèbre quotient
+$(B\otimes_A B)/\mathfrak{J}$ et est une $A$-algèbre formellement lisse, la
+conclusion résulte de \sref{0.19.5.3-fr}.
+\end{proof}
+
+\oldpage[0\textsubscript{IV-1}]{127}
+\begin{corollary}[20.4.10]
+\label{0.20.4.10-fr}
+Supposons en outre que dans $B$ le carré de tout idéal ouvert soit ouvert ;
+alors, pour tout idéal ouvert $\mathfrak{K}$ de $B$,
+$\Omega^1_{B/A}\otimes_B(B/\mathfrak{K})
+=\Omega^1_{B/A}/\mathfrak{K}.\Omega^1_{B/A}$ est un
+$(B/\mathfrak{K})$-module projectif.
+\end{corollary}
+
+\begin{proof}
+En effet, la topologie de $\Omega^1_{B/A}$ est alors déduite de celle de
+$B$ \sref{0.20.4.5-fr}, et il suffit d'appliquer \sref{0.19.2.4-fr}.
+\end{proof}
+
+\begin{corollary}[20.4.11]
+\label{0.20.4.11-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $\rho:A\to B$ un
+homomorphisme local, faisant de $B$ une $A$-algèbre topologique formellement
+lisse (pour les topologies préadiques). Alors, pour tout idéal de définition
+$\mathfrak{b}$ de $B$,
+$\Omega^1_{B/A}\otimes_B(B/\mathfrak{b})$ est un
+$(B/\mathfrak{b})$-module libre.
+\end{corollary}
+
+\begin{proof}
+En effet, il résulte de \sref{0.20.4.10-fr} que ce module est projectif, et
+comme $B/\mathfrak{b}$ est un anneau \emph{artinien}, tout
+$(B/\mathfrak{b})$-module projectif est libre
+($\mathbf{0}_{\mathrm{III}}$, 10.1.3).
+\end{proof}
+
+\begin{proposition}[20.4.12]
+\label{0.20.4.12-fr}
+Soient $A$ un anneau topologique, $B$ une $A$-algèbre topologique. Si
+l'homomorphisme structural $A\to B$ est surjectif, on a
+$\Omega^1_{B/A}=0$.
+\end{proposition}
+
+\begin{proof}
+En effet, on a $\operatorname{D\acute{e}r}_A(B,L)=0$ pour tout $B$-module
+$L$ en vertu de \sref{0.20.1.1-fr}, et la proposition découle donc aussitôt
+de \sref{0.20.4.8-fr}.
+\end{proof}
+
+\begin{examples}[20.4.13]
+\label{0.20.4.13-fr}
+\begin{enumerate}
+  \item[\rm(i)] Soient $A$ un anneau,
+  $B=A[X_\alpha]_{\alpha\in I}$ une algèbre de polynômes sur $A$. Alors
+  $\Omega^1_{B/A}$ est un $B$-module \emph{libre}, dont les $dX_\alpha$ forment une
+  \emph{base}. En effet, les $dX_\alpha$ engendrent ce $B$-module
+  \sref{0.20.4.7-fr}. D'autre part, si $L$ est un $B$-module libre, ayant
+  une base $(z_\alpha)_{\alpha\in I}$ dont $I$ est l'ensemble d'indices, il
+  existe un $A$-homomorphisme $u$ de $B$ dans $D_B(L)$ tel que
+  $u(X_\alpha)=(X_\alpha,z_\alpha)$, pour tout $\alpha\in I$, donc
+  \sref{0.20.1.5-fr} une $A$-dérivation $D$ de $B$ dans $L$ telle que
+  $D(X_\alpha)=z_\alpha$ pour tout $\alpha$ ; en vertu de
+  \sref{0.20.4.8.1-fr}, cela prouve que les $dX_\alpha$ sont linéairement
+  indépendants.
+  \item[\rm(ii)] Soient $A$ un anneau, $L$ un $A$-module, $B$ la
+  $A$-algèbre $D_A(L)$ ; alors l'homomorphisme canonique
+  $x\leadsto d_{B/A}x$ de $L$ dans $\Omega^1_{B/A}$ est \emph{bijectif}, car
+  il est immédiat que les $B$-dérivations de $B=D_A(L)$ dans un $B$-module
+  $M$ sont les applications de la forme $(b,x)\leadsto u(x)$, où
+  $u\in\operatorname{Hom}_A(L,M)$ ; on conclut donc par
+  (\ref{0.20.4.8-fr}, (ii)).
+  \item[\rm(iii)] Supposons que $B$ soit le produit de deux $A$-algèbres
+  topologiques $B_1$, $B_2$ (identifiées à des idéaux de $B$). Alors les
+  images de $B_1\otimes_A B_2$ et de $B_2\otimes_A B_1$ par l'homomorphisme
+  $p$ \sref{0.20.4.1.1-fr} sont nulles, d'où il résulte aussitôt que
+  $\mathrm{P}^1_{B/A}$ s'identifie au \emph{produit}
+  $\mathrm{P}^1_{B_1/A}\times\mathrm{P}^1_{B_2/A}$, et que le $B$-module
+  $\Omega^1_{B/A}$ est \emph{somme directe} (topologique) des $B$-modules
+  $\Omega^1_{B_1/A}$ et $\Omega^1_{B_2/A}$ (annulés respectivement par
+  $B_2$ et $B_1$).
+  \item[\rm(iv)] Soient $A$, $B$ deux anneaux intègres tels que $A\subset
+  B$, que $A$ soit intégralement clos, $B$ entier sur $A$, et que le corps
+  des fractions de $B$ soit une extension \emph{séparable} de celui de $A$. Alors
+  le $B$-module $\Omega^1_{B/A}$ est un \emph{module de torsion}. En effet,
+  pour tout $x\in B$, le polynôme minimal de $x$ par rapport au corps des
+  fractions $K$ de $A$ est un polynôme $f(T)$ appartenant à $A[T]$ ; comme
+  $x$ est séparable sur $K$, on a $f'(x)\neq0$ et d'autre part on déduit de
+  la relation $f(x)=0$ que $f'(x)d_{B/A}x=0$, d'où notre assertion en vertu
+  de \sref{0.20.4.7-fr}.
+\end{enumerate}
+\end{examples}
+
+\begin{remarks}[20.4.14]
+\label{0.20.4.14-fr}
+\begin{enumerate}
+  \item[\rm(i)] On notera que le $B$-module $\Omega^1_{B/A}$, privé de sa
+  topologie, est indépendant des topologies de $A$ et de $B$.
+  \item[\rm(ii)] Nous introduirons plus tard l'« algèbre des parties
+  principales d'ordre $n$ » de $B$ par rapport à $A$,
+  $\mathrm{P}^n_{B/A}=(B\otimes_A B)/(\mathfrak{J}_{B/A})^{n+1}$, qui est à
+  la base du « calcul différentiel d'ordre $n$ ».
+\end{enumerate}
+\end{remarks}
+
+\oldpage[0\textsubscript{IV-1}]{128}
+
+\subsection{Propriétés fonctorielles fondamentales de
+\texorpdfstring{$\Omega^1_{B/A}$}{Omega1(B/A)}.}
+\label{subsection:0.20.5-fr}
+
+\begin{env}[20.5.1]
+\label{0.20.5.1-fr}
+Dans tout ce numéro et le suivant, sauf mention expresse du contraire, les
+anneaux et modules considérés sont supposés munis de la topologie
+\emph{discrète}.
+\end{env}
+
+\begin{env}[20.5.2]
+\label{0.20.5.2-fr}
+Soient $A$ un anneau, $B$, $C$ deux $A$-algèbres, $u:B\to C$ un
+$A$-homomorphisme ; on a un diagramme commutatif
+\[
+\xymatrix{
+  B\otimes_A B \ar[r]^{u\otimes u} \ar[d]_{p_{B/A}} &
+  C\otimes_A C \ar[d]^{p_{C/A}} \\
+  B \ar[r]_u & C
+}
+\tag{20.5.2.1}
+\label{0.20.5.2.1-fr}
+\]
+d'où par passage aux quotients, un $A$-homomorphisme d'algèbres
+\begin{equation}
+\tag{20.5.2.2}
+\label{0.20.5.2.2-fr}
+  u':\mathrm{P}^1_{B/A}\to\mathrm{P}^1_{C/A}
+\end{equation}
+tel que le diagramme
+\[
+\xymatrix{
+  \mathrm{P}^1_{B/A} \ar[r]^{u'} & \mathrm{P}^1_{C/A} \\
+  B \ar[u]^{p_1} \ar[r]_u & C \ar[u]_{p_1}
+}
+\]
+soit commutatif ; comme $u\otimes u$ applique $\mathfrak{J}_{B/A}$ dans
+$\mathfrak{J}_{C/A}$, on obtient, en restreignant $u'$ à
+$\Omega^1_{B/A}$, une application
+\begin{equation}
+\tag{20.5.2.3}
+\label{0.20.5.2.3-fr}
+  u'':\Omega^1_{B/A}\to\Omega^1_{C/A}
+\end{equation}
+telle que le couple $(u'',u)$ soit un \emph{di-homomorphisme} pour la
+structure de $B$-module de $\Omega^1_{B/A}$ et la structure de $C$-module de
+$\Omega^1_{C/A}$ ; ce dernier fait permet d'en déduire canoniquement un
+\emph{homomorphisme de $C$-modules}
+\begin{equation}
+\tag{20.5.2.4}
+\label{0.20.5.2.4-fr}
+  u_{C/B/A}:\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}.
+\end{equation}
+
+En outre, comme le diagramme
+\[
+\xymatrix{
+  \mathrm{P}^1_{B/A} \ar[r]^{u'} & \mathrm{P}^1_{C/A} \\
+  B \ar[u]^{p_2} \ar[r]_u & C \ar[u]_{p_2}
+}
+\tag{20.5.2.5}
+\label{0.20.5.2.5-fr}
+\]
+\oldpage[0\textsubscript{IV-1}]{129}
+est aussi commutatif, on en déduit que le diagramme
+\[
+\xymatrix{
+  \Omega^1_{B/A} \ar[r]^{u'} & \Omega^1_{C/A} \\
+  B \ar[u]^{d_{B/A}} \ar[r]_u & C \ar[u]_{d_{C/A}}
+}
+\tag{20.5.2.6}
+\label{0.20.5.2.6-fr}
+\]
+est commutatif.
+
+Enfin, si $w:C\to D$ est un second homomorphisme de $A$-algèbres, on a la
+propriété de transitivité
+\begin{equation}
+\tag{20.5.2.7}
+\label{0.20.5.2.7-fr}
+  (w\circ u)_{D/B/A}
+  =w_{D/C/A}\circ(u_{C/B/A}\otimes1_D)
+\end{equation}
+comme il résulte de la définition.
+\end{env}
+
+\begin{env}[20.5.3]
+\label{0.20.5.3-fr}
+Soient maintenant $A$, $B$ deux anneaux, $v:A\to B$ un homomorphisme
+d'anneaux, $C$ une $B$-algèbre qui devient une $A$-algèbre au moyen de $v$ ;
+alors l'application canonique $v_0:C\otimes_A C\to C\otimes_B C$ est un
+\emph{di-homomorphisme} surjectif d'algèbres (relatif à $v:A\to B$) tel que
+le diagramme
+\[
+\xymatrix{
+  C\otimes_A C \ar[r]^{v_0} \ar[d]_{p_{C/A}} &
+  C\otimes_B C \ar[d]^{p_{C/B}} \\
+  C \ar[r]_{1_C} & C
+}
+\tag{20.5.3.1}
+\label{0.20.5.3.1-fr}
+\]
+soit commutatif ; par passage aux quotients, on en déduit un
+di-homomorphisme d'algèbres
+\begin{equation}
+\tag{20.5.3.2}
+\label{0.20.5.3.2-fr}
+  v':\mathrm{P}^1_{C/A}\to\mathrm{P}^1_{C/B}
+\end{equation}
+tel que le diagramme
+\[
+\xymatrix{
+  \mathrm{P}^1_{C/A} \ar[r]^{v'} & \mathrm{P}^1_{C/B} \\
+  C \ar[u]^{p_1} \ar[r]_{1_C} & C \ar[u]_{p_1}
+}
+\]
+soit commutatif. Comme $v_0$ applique $\mathfrak{J}_{C/A}$ dans
+$\mathfrak{J}_{C/B}$ on obtient, en restreignant $v'$ à
+$\Omega^1_{C/A}$, une application
+\begin{equation}
+\tag{20.5.3.3}
+\label{0.20.5.3.3-fr}
+  v_{C/B/A}:\Omega^1_{C/A}\to\Omega^1_{C/B}
+\end{equation}
+qui est un \emph{homomorphisme de $C$-modules}.
+
+\oldpage[0\textsubscript{IV-1}]{130}
+En outre, comme le diagramme
+\[
+\xymatrix{
+  \mathrm{P}^1_{C/A} \ar[r]^{v'} & \mathrm{P}^1_{C/B} \\
+  C \ar[u]^{p_2} \ar[r]_{1_C} & C \ar[u]_{p_2}
+}
+\tag{20.5.3.4}
+\label{0.20.5.3.4-fr}
+\]
+est aussi commutatif, on en déduit que le diagramme
+\[
+\xymatrix{
+  \Omega^1_{C/A} \ar[r]^{v_{C/B/A}} & \Omega^1_{C/B} \\
+  C \ar[u]^{d_{C/A}} \ar[r]_{1_C} & C \ar[u]_{d_{C/B}}
+}
+\tag{20.5.3.5}
+\label{0.20.5.3.5-fr}
+\]
+est commutatif.
+
+Enfin, si $s:A'\to A$ est un second homomorphisme d'anneaux, on a la
+propriété de transitivité
+\begin{equation}
+\tag{20.5.3.6}
+\label{0.20.5.3.6-fr}
+  (v\circ s)_{C/B/A'}=v_{C/B/A}\circ s_{C/A/A'}.
+\end{equation}
+\end{env}
+
+\begin{env}[20.5.4]
+\label{0.20.5.4-fr}
+Si maintenant on a un diagramme commutatif d'homomorphismes d'anneaux
+\[
+\xymatrix{
+  B \ar[r]^v & B' \\
+  A \ar[u]^f \ar[r]_u & A' \ar[u]_g
+}
+\]
+on déduit de \sref{0.20.5.2.4-fr} et \sref{0.20.5.3.3-fr}, par composition,
+un homomorphisme de \emph{$B'$-modules}
+\begin{equation}
+\tag{20.5.4.1}
+\label{0.20.5.4.1-fr}
+  \Omega^1_{B/A}\otimes_B B'
+  \xrightarrow{v_{B'/B/A}}\Omega^1_{B'/A}
+  \xrightarrow{u_{B'/A'/A}}\Omega^1_{B'/A'}
+\end{equation}
+tel que le diagramme de $A'$-homomorphismes
+\[
+\xymatrix{
+  \Omega^1_{B/A}\otimes_B B' \ar[r] & \Omega^1_{B'/A'} \\
+  B' \ar[u]^{d_{B/A}\otimes1} \ar[r]_{1_{B'}} &
+  B' \ar[u]_{d_{B'/A'}}
+}
+\tag{20.5.4.2}
+\label{0.20.5.4.2-fr}
+\]
+soit commutatif.
+
+L'homomorphisme \sref{0.20.5.4.1-fr} correspond d'ailleurs à un
+di-homomorphisme de $B$-modules
+\begin{equation}
+\tag{20.5.4.3}
+\label{0.20.5.4.3-fr}
+  \Omega^1_{B/A}\to\Omega_{B'/A'}.
+\end{equation}
+\end{env}
+
+\begin{proposition}[20.5.5]
+\label{0.20.5.5-fr}
+Si $A'$, $B$ sont deux $A$-algèbres et $B'=B\otimes_A A'$,
+l'homomorphisme canonique \textup{\sref{0.20.5.4.1-fr}}.
+\begin{equation}
+\tag{20.5.5.1}
+\label{0.20.5.5.1-fr}
+  \Omega^1_{B/A}\otimes_B B'\to\Omega^1_{B'/A'}
+\end{equation}
+est bijectif.
+\end{proposition}
+
+\begin{proof}

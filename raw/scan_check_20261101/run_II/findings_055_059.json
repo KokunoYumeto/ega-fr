@@ -1,0 +1,1042 @@
+[
+ {
+  "page": 55,
+  "where": "top of the page: 'où M est un S-module gradué, et ℐ=𝔍̃' (continuation of the sentence of p. 54)",
+  "scan": "flush left, continues the sentence; no paragraph break",
+  "tex": "\\oldpage[II]{55}\n\noù $M$ est",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{55}\n\noù $M$ est",
+   "new": "\\oldpage[II]{55}\noù $M$ est"
+  },
+  "note": "Spurious paragraph break. The blank line before the marker (end of the p. 54 segment) is removed by the p. 54 entry of findings_050_054.json (already in FIXLOG.jsonl); this edit removes the one after it."
+ },
+ {
+  "page": 55,
+  "where": "first line: 'ℐ=𝔍̃, où 𝔍 est un idéal de A'",
+  "scan": "Fraktur capital 𝔍 (twice), the same glyph as 'h≠0 dans 𝔍' on p. 54 and as on p. 85",
+  "tex": "$\\mathcal{I}=\\widetilde{\\mathfrak{I}}$, où $\\mathfrak{I}$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$\\mathcal{I}=\\widetilde{\\mathfrak{I}}$, où $\\mathfrak{I}$",
+   "new": "$\\mathcal{I}=\\widetilde{\\mathfrak{J}}$, où $\\mathfrak{J}$"
+  },
+  "note": "Checked on a crop at 5x. The edition writes this printed Fraktur glyph as \\mathfrak{J} (p. 54, 98 times in ega2-1-fr.tex, all of EGA I after the p. 120 fix); \\mathfrak{I} renders as a different letter. The script letter here is the print's script I (no descender, as for the ideal of 𝒪_Y on p. 54), so \\mathcal{I} stays."
+ },
+ {
+  "page": 55,
+  "where": "line 3: '(𝔍M)_(f)=𝔍.M_(f)'",
+  "scan": "same Fraktur glyph 𝔍 (twice)",
+  "tex": "$(\\mathfrak{I}M)_{(f)}=\\mathfrak{I}\\cdot M_{(f)}$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$(\\mathfrak{I}M)_{(f)}=\\mathfrak{I}",
+   "new": "$(\\mathfrak{J}M)_{(f)}=\\mathfrak{J}"
+  },
+  "note": "Same letter as the previous finding; does not overlap the product-dot finding that follows."
+ },
+ {
+  "page": 55,
+  "where": "line 3: '𝔍.M_(f)'",
+  "scan": "product dot on the baseline (full-stop height): 𝔍.M_(f)",
+  "tex": "\\mathfrak{I}\\cdot M_{(f)}",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\cdot M_{(f)}",
+   "new": ".M_{(f)}"
+  },
+  "note": "Checked on a crop: a full stop on the baseline, not a centred dot; same notation and same fix as ℐ.ℳ̃ in (3.2.4.1) on p. 54 (findings_050_054.json)."
+ },
+ {
+  "page": 55,
+  "where": "line 4: 'vu (I, 1.3.13 et 1.6.9)'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.3.13-fr]{I, 1.3.13} et",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 1.3.13}",
+   "new": "{\\textbf{I}, 1.3.13}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 55,
+  "where": "line 4: 'vu (I, 1.3.13 et 1.6.9)'",
+  "scan": "'et 1.6.9': the chapter numeral is not repeated before 1.6.9",
+  "tex": "\\hyperref[I.1.6.9-fr]{I, 1.6.9}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\hyperref[I.1.6.9-fr]{I, 1.6.9}",
+   "new": "\\hyperref[I.1.6.9-fr]{1.6.9}"
+  },
+  "note": "The TeX adds 'I, ' to the second reference; the link target stays."
+ },
+ {
+  "page": 55,
+  "where": "Proposition (3.2.5), first sentence: 'pour tout n∈Z. En particulier'",
+  "scan": "the Z is a light roman capital, not the bold Z of the integers (the same statement ends with a bold 'n∈𝐙.')",
+  "tex": "$n\\in\\mathbf{Z}$. En particulier",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$n\\in\\mathbf{Z}$. En particulier",
+   "new": "$n\\in\\mathrm{Z}$. En particulier"
+  },
+  "corrected": "$n\\in\\mathbf{Z}$",
+  "note": "Font slip in the print, checked on a crop at 3x against the bold Z two lines below. The TeX silently corrects it; the fix restores the printed roman Z (\\mathrm keeps it upright; a plain $Z$ would follow the edition's treatment of upright capitals)."
+ },
+ {
+  "page": 55,
+  "where": "Proposition (3.2.5): 'le (𝒪_X|X_f)-Module (𝒮(nd))~|X_f'",
+  "scan": "(𝒮(nd))~|X_f: tilde written after the closing parenthesis",
+  "tex": "$\\widetilde{\\mathcal{S}(nd)}|X_f$",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widetilde{\\mathcal{S}(nd)}|X_f$",
+   "new": "$(\\mathcal{S}(nd))\\supertilde|X_f$"
+  },
+  "note": "The TeX also drops the printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "Proposition (3.2.5): 'engendrée par 𝒮_1 (3.1.9), les 𝒪_X-Modules'",
+  "scan": "reference (3.1.9) upright inside the italic statement",
+  "tex": "(\\hyperref[II.3.1.9-fr]{3.1.9}), les",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.3.1.9-fr]{3.1.9}), les",
+   "new": "\\textup{(\\hyperref[II.3.1.9-fr]{3.1.9})}, les"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 55,
+  "where": "Proposition (3.2.5): 'les 𝒪_X-Modules (𝒮(n))~ sont inversibles'",
+  "scan": "(𝒮(n))~",
+  "tex": "$\\widetilde{\\mathcal{S}(n)}$ sont inversibles",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widetilde{\\mathcal{S}(n)}$ sont inversibles",
+   "new": "$(\\mathcal{S}(n))\\supertilde$ sont inversibles"
+  },
+  "note": "The TeX also drops the printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "proof of (3.2.5): 'un isomorphisme canonique de (𝒮(nd))~|(X_f∩φ⁻¹(U))'",
+  "scan": "(𝒮(nd))~|(X_f∩φ⁻¹(U))",
+  "tex": "$\\widetilde{\\mathcal{S}(nd)}|(X_f\\cap\\varphi^{-1}(U))$",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widetilde{\\mathcal{S}(nd)}|(X_f",
+   "new": "$(\\mathcal{S}(nd))\\supertilde|(X_f"
+  },
+  "note": "The TeX also drops the printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "(3.2.5.1): '𝒪_X(n)=(𝒮(n))~'",
+  "scan": "(𝒮(n))~",
+  "tex": "\\mathcal{O}_X(n)=\\widetilde{\\mathcal{S}(n)}",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathcal{O}_X(n)=\\widetilde{\\mathcal{S}(n)}",
+   "new": "\\mathcal{O}_X(n)=(\\mathcal{S}(n))\\supertilde"
+  },
+  "note": "The TeX also drops the printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "display after (3.2.5.2): '((𝒮|U)(n))~=𝒪_X(n)|f⁻¹(U)'",
+  "scan": "((𝒮|U)(n))~",
+  "tex": "\\widetilde{(\\mathcal{S}|U)(n)}",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widetilde{(\\mathcal{S}|U)(n)}",
+   "new": "((\\mathcal{S}|U)(n))\\supertilde"
+  },
+  "note": "The TeX also drops the outer printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "(3.2.6.1): 'λ : M̃⊗_{𝒪_X}Ñ → (ℳ⊗_𝒮𝒩)~'",
+  "scan": "(ℳ⊗_𝒮𝒩)~",
+  "tex": "\\widetilde{\\mathcal{M}\\otimes_{\\mathcal{S}}\\mathcal{N}}",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widetilde{\\mathcal{M}\\otimes_{\\mathcal{S}}\\mathcal{N}}",
+   "new": "(\\mathcal{M}\\otimes_{\\mathcal{S}}\\mathcal{N})\\supertilde"
+  },
+  "note": "The TeX also drops the printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "(3.2.6.2): 'μ : (ℋom_𝒮(ℳ, 𝒩))~ → ℋom_{𝒪_X}(M̃, Ñ)'",
+  "scan": "(ℋom_𝒮(ℳ, 𝒩))~",
+  "tex": "\\widetilde{\\mathcal{H}om_{\\mathcal{S}}(\\mathcal{M},\\mathcal{N})}",
+  "kind": "convention",
+  "convention": 5,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widetilde{\\mathcal{H}om_{\\mathcal{S}}(\\mathcal{M},\\mathcal{N})}",
+   "new": "(\\mathcal{H}om_{\\mathcal{S}}(\\mathcal{M},\\mathcal{N}))\\supertilde"
+  },
+  "note": "The TeX also drops the printed parentheses."
+ },
+ {
+  "page": 55,
+  "where": "Proposition (3.2.6), last sentence: 'engendrée par 𝒮_1 (3.1.9), λ est un isomorphisme'",
+  "scan": "reference (3.1.9) upright inside the italic statement",
+  "tex": "(\\hyperref[II.3.1.9-fr]{3.1.9}), $\\lambda$",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.3.1.9-fr]{3.1.9}), $\\lambda$",
+   "new": "\\textup{(\\hyperref[II.3.1.9-fr]{3.1.9})}, $\\lambda$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 55,
+  "where": "Proposition (3.2.6), last sentence: 'une présentation finie (3.1.1), μ est un isomorphisme'",
+  "scan": "reference (3.1.1) upright inside the italic statement",
+  "tex": "(\\hyperref[II.3.1.1-fr]{3.1.1}), $\\mu$",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.3.1.1-fr]{3.1.1}), $\\mu$",
+   "new": "\\textup{(\\hyperref[II.3.1.1-fr]{3.1.1})}, $\\mu$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 56,
+  "where": "Proposition (3.2.10): 'Proj(𝒮) (3.1.8, (iii)). Pour tout entier'",
+  "scan": "reference (3.1.8, (iii)) upright inside the italic statement",
+  "tex": "(\\hyperref[II.3.1.8-fr]{3.1.8, (iii)}). Pour",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.3.1.8-fr]{3.1.8, (iii)}). Pour",
+   "new": "\\textup{(\\hyperref[II.3.1.8-fr]{3.1.8, (iii)})}. Pour"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 56,
+  "where": "Proposition (3.2.10): 'Pour tout entier n∈Z, g_*(...)'",
+  "scan": "the Z is a light roman capital, not the bold Z (bold elsewhere on the page: (3.2.8), (3.2.9) (ii), (3.3.1.1))",
+  "tex": "entier $n\\in\\mathbf{Z}$",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "entier $n\\in\\mathbf{Z}$",
+   "new": "entier $n\\in\\mathrm{Z}$"
+  },
+  "corrected": "$n\\in\\mathbf{Z}$",
+  "note": "Font slip in the print, checked on a crop at 2x; same slip as in (3.2.5) on p. 55. The TeX silently corrects it."
+ },
+ {
+  "page": 56,
+  "where": "proof of (3.2.10): 'sur (S_(L)(n))_(f⊗c^d)'",
+  "scan": "subscript (f⊗c^d): plain exponent d, no ⊗ in the exponent",
+  "tex": "(S_{(L)}(n))_{(f\\otimes c^{\\otimes d})}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "_{(f\\otimes c^{\\otimes d})}",
+   "new": "_{(f\\otimes c^d)}"
+  },
+  "note": "Checked on a crop at 4x. The print writes c^d, c^n, c^{n+kd}, c^d in this proof; the TeX adds ⊗ to all four exponents (four findings)."
+ },
+ {
+  "page": 56,
+  "where": "proof of (3.2.10): 'en faisant correspondre à (x/f^k)⊗c^n'",
+  "scan": "(x/f^k)⊗c^n: plain exponent n",
+  "tex": "$(x/f^k)\\otimes c^{\\otimes n}$",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(x/f^k)\\otimes c^{\\otimes n}",
+   "new": "(x/f^k)\\otimes c^n"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 56,
+  "where": "proof of (3.2.10): 'où x∈S_{kd+n} l'élément'",
+  "scan": "no comma after S_{kd+n} (the incidental clause opened by ', où' is not closed)",
+  "tex": "où $x\\in S_{kd+n}$, l'élément",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "où $x\\in S_{kd+n}$, l'élément",
+   "new": "où $x\\in S_{kd+n}$ l'élément"
+  },
+  "corrected": "où $x\\in S_{kd+n}$, l'élément",
+  "note": "Checked on a crop: no comma mid-line. The TeX silently supplies it; the diplomatic text keeps the printed punctuation."
+ },
+ {
+  "page": 56,
+  "where": "proof of (3.2.10): 'l'élément (x⊗c^{n+kd})/(f⊗c^d)^k'",
+  "scan": "x⊗c^{n+kd}: plain exponent n+kd",
+  "tex": "(x\\otimes c^{\\otimes(n+kd)})",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "c^{\\otimes(n+kd)}",
+   "new": "c^{n+kd}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 56,
+  "where": "proof of (3.2.10): 'l'élément (x⊗c^{n+kd})/(f⊗c^d)^k'",
+  "scan": "(f⊗c^d)^k: plain exponent d",
+  "tex": "/(f\\otimes c^{\\otimes d})^k",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "/(f\\otimes c^{\\otimes d})^k",
+   "new": "/(f\\otimes c^d)^k"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 56,
+  "where": "3.3, opening sentence: 'On suppose dans tout ce numéro que ... engendrée par 𝒮_1 (3.1.9).'",
+  "scan": "the italic sentence ends at 𝒮_1; the reference (3.1.9) is upright",
+  "tex": "$\\mathcal{S}_1$\n(\\hyperref[II.3.1.9-fr]{3.1.9}).}",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal{S}_1$\n(\\hyperref[II.3.1.9-fr]{3.1.9}).}",
+   "new": "$\\mathcal{S}_1$}\n(\\hyperref[II.3.1.9-fr]{3.1.9})."
+  },
+  "note": "Checked on a crop. The \\emph is closed before the reference instead of adding \\textup."
+ },
+ {
+  "page": 56,
+  "where": "(3.3.1.1): 'Γ_*(ℱ)=⊕_{n∈Z} p_*(ℱ(n))'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "\\Gamma_*(\\mathcal{F})",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\Gamma_*(\\mathcal{F})",
+   "new": "\\bbGamma_*(\\mathcal{F})"
+  },
+  "note": "Checked on a crop at 3x. The bold Γ is notation, not decoration: (3.3.1.1) defines the graded 𝒪_Y-Module 𝚪_*(ℱ) with a bold Γ, while the graded S-module Γ_*(ℱ) of §2 (e.g. (2.6.4.2) on p. 38) and its use in the last line of the (3.3.4) chain on p. 58 are printed with the ordinary Γ. The TeX writes both as \\Gamma_*. \\bbGamma (=\\boldsymbol{\\Gamma}) is defined in preamble-base.tex and used for this functor in ega3-1-fr.tex."
+ },
+ {
+  "page": 56,
+  "where": "end of the page: blank line after the (3.3.1.1) display, before \\oldpage[II]{57}",
+  "scan": "the sentence continues on p. 57 ('et en particulier', flush left)",
+  "tex": "\\tag{3.3.1.1}\n\\]\n\n",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\tag{3.3.1.1}\n\\]\n\n",
+   "new": "\\tag{3.3.1.1}\n\\]\n"
+  },
+  "note": "Spurious paragraph break at the page boundary; apply together with the p. 57 finding that removes the blank line after \\oldpage[II]{57}."
+ },
+ {
+  "page": 57,
+  "where": "top of the page: 'et en particulier'",
+  "scan": "flush left, continues the sentence of (3.3.1)",
+  "tex": "\\oldpage[II]{57}\n\net en particulier",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{57}\n\net en particulier",
+   "new": "\\oldpage[II]{57}\net en particulier"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 56 finding that removes the blank line before the marker."
+ },
+ {
+  "page": 57,
+  "where": "(3.3.1.2): 'Γ_*(𝒪_X)=⊕ p_*(𝒪_X(n)).'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "  \\Gamma_*(\\mathcal{O}_X)\n  =\\bigoplus",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\Gamma_*(\\mathcal{O}_X)\n  =\\bigoplus",
+   "new": "  \\bbGamma_*(\\mathcal{O}_X)\n  =\\bigoplus"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "after (3.3.1.2): 'On sait (0, 4.2.2) qu'il existe'",
+  "scan": "new paragraph (first line indented)",
+  "tex": "\\]\nOn sait",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nOn sait",
+   "new": "\\]\n\nOn sait"
+  },
+  "note": "Missing paragraph break."
+ },
+ {
+  "page": 57,
+  "where": "'On sait (0, 4.2.2)'",
+  "scan": "bold 0",
+  "tex": "(\\hyperref[0.4.2.2-fr]{0, 4.2.2})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 4.2.2}",
+   "new": "{\\textbf{0}, 4.2.2}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 57,
+  "where": "'on déduit donc de (3.2.7.1) que Γ_*(𝒪_X) est muni'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\Gamma_*(\\mathcal{O}_X)$ est muni",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma_*(\\mathcal{O}_X)$ est muni",
+   "new": "$\\bbGamma_*(\\mathcal{O}_X)$ est muni"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "'définit de même sur Γ_*(ℱ) une structure'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\Gamma_*(\\mathcal{F})$ une structure",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma_*(\\mathcal{F})$ une structure",
+   "new": "$\\bbGamma_*(\\mathcal{F})$ une structure"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "'structure de Module gradué sur Γ_*(𝒪_X).'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\Gamma_*(\\mathcal{O}_X)$.\n\nEn vertu",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma_*(\\mathcal{O}_X)$.\n\nEn vertu",
+   "new": "$\\bbGamma_*(\\mathcal{O}_X)$.\n\nEn vertu"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "'du foncteur p_* (0, 4.2.1)'",
+  "scan": "bold 0",
+  "tex": "(\\hyperref[0.4.2.1-fr]{0, 4.2.1})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 4.2.1}",
+   "new": "{\\textbf{0}, 4.2.1}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 57,
+  "where": "'(0, 4.2.1), Γ_*(ℱ) est un foncteur covariant'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\Gamma_*(\\mathcal{F})$ est un foncteur",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma_*(\\mathcal{F})$ est un foncteur",
+   "new": "$\\bbGamma_*(\\mathcal{F})$ est un foncteur"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "'dans 𝒪_X, Γ_*(𝒥) s'identifie'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\Gamma_*(\\mathcal{J})$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma_*(\\mathcal{J})$",
+   "new": "$\\bbGamma_*(\\mathcal{J})$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "end of (3.3.1): 'faisceau gradué d'idéaux de Γ_*(𝒪_X).'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "de $\\Gamma_*(\\mathcal{O}_X)$.\n\\end{env}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $\\Gamma_*(\\mathcal{O}_X)$.\n\\end{env}",
+   "new": "de $\\bbGamma_*(\\mathcal{O}_X)$.\n\\end{env}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "after (3.3.2.1): 'Appliquant ce résultat à chacun des ℳ_n'",
+  "scan": "new paragraph (first line indented)",
+  "tex": "\\]\nAppliquant",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nAppliquant",
+   "new": "\\]\n\nAppliquant"
+  },
+  "note": "Missing paragraph break."
+ },
+ {
+  "page": 57,
+  "where": "(3.3.2.3): 'α : ℳ → Γ_*(M̃)'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "\\alpha:\\mathcal{M}\\longrightarrow\\Gamma_*(\\widetilde{\\mathcal{M}})",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\alpha:\\mathcal{M}\\longrightarrow\\Gamma_*(\\widetilde{\\mathcal{M}})",
+   "new": "\\alpha:\\mathcal{M}\\longrightarrow\\bbGamma_*(\\widetilde{\\mathcal{M}})"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "'on vérifie que α : 𝒮 → Γ_*(𝒪_X) est un homomorphisme'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\alpha:\\mathcal{S}\\to\\Gamma_*(\\mathcal{O}_X)$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\alpha:\\mathcal{S}\\to\\Gamma_*(\\mathcal{O}_X)",
+   "new": "\\alpha:\\mathcal{S}\\to\\bbGamma_*(\\mathcal{O}_X)"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 57,
+  "where": "'il correspond (0, 4.4.3) un homomorphisme canonique'",
+  "scan": "bold 0",
+  "tex": "(\\hyperref[0.4.4.3-fr]{0, 4.4.3})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 4.4.3}",
+   "new": "{\\textbf{0}, 4.4.3}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 57,
+  "where": "after (3.3.2.4): 'On vérifie sans peine que cet homomorphisme'",
+  "scan": "new paragraph (first line indented)",
+  "tex": "\\]\nOn vérifie sans peine",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nOn vérifie sans peine",
+   "new": "\\]\n\nOn vérifie sans peine"
+  },
+  "note": "Missing paragraph break."
+ },
+ {
+  "page": 57,
+  "where": "before (3.3.2.5): '(de degré 0) de 𝒪_Y-Modules gradués'",
+  "scan": "'gradués' in italics",
+  "tex": "(de degré $0$) de $\\mathcal{O}_Y$-Modules gradués",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(de degré $0$) de $\\mathcal{O}_Y$-Modules gradués",
+   "new": "(de degré $0$) de $\\mathcal{O}_Y$-Modules \\emph{gradués}"
+  },
+  "note": "Checked on a crop: only the word 'gradués' (alone on its line) is italic."
+ },
+ {
+  "page": 57,
+  "where": "end of the page: blank line after the (3.3.2.5) display, before \\oldpage[II]{58}",
+  "scan": "the sentence continues on p. 58 ('où la graduation du second membre ...', flush left)",
+  "tex": "\\tag{3.3.2.5}\n\\]\n\n",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\tag{3.3.2.5}\n\\]\n\n",
+   "new": "\\tag{3.3.2.5}\n\\]\n"
+  },
+  "note": "Spurious paragraph break at the page boundary; apply together with the p. 58 finding that removes the blank line after \\oldpage[II]{58}."
+ },
+ {
+  "page": 58,
+  "where": "top of the page: 'où la graduation du second membre provient naturellement'",
+  "scan": "flush left, continues the sentence of (3.3.2)",
+  "tex": "\\oldpage[II]{58}\n\noù la graduation",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{58}\n\noù la graduation",
+   "new": "\\oldpage[II]{58}\noù la graduation"
+  },
+  "note": "Spurious paragraph break; apply together with the p. 57 finding that removes the blank line before the marker."
+ },
+ {
+  "page": 58,
+  "where": "'compte tenu de (I, 1.6.7)'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.6.7-fr]{I, 1.6.7})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 1.6.7}",
+   "new": "{\\textbf{I}, 1.6.7}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 58,
+  "where": "'correspond (I, 1.3.8) à l'homomorphisme'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.3.8-fr]{I, 1.3.8})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 1.3.8}",
+   "new": "{\\textbf{I}, 1.3.8}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 58,
+  "where": "'qui, à x⊗1 (x∈M_n) fait correspondre x/1'",
+  "scan": "no comma after (x∈M_n) (the incidental 'à x⊗1 (x∈M_n)' opened by 'qui,' is not closed)",
+  "tex": "($x\\in M_n$), fait",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "($x\\in M_n$), fait",
+   "new": "($x\\in M_n$) fait"
+  },
+  "corrected": "($x\\in M_n$), fait",
+  "note": "Checked on a crop: the line ends with the closing parenthesis at the margin, no comma. The TeX silently supplies it."
+ },
+ {
+  "page": 58,
+  "where": "Proposition (3.3.3): 'ne s'annule pas (0, 5.5.2).'",
+  "scan": "reference (0, 5.5.2) upright inside the italic statement",
+  "tex": "(\\hyperref[0.5.5.2-fr]{0, 5.5.2})",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[0.5.5.2-fr]{0, 5.5.2})",
+   "new": "\\textup{(\\hyperref[0.5.5.2-fr]{0, 5.5.2})}"
+  },
+  "note": "Checked on a crop. Listed before the convention-2 fix of the same reference: apply this one first."
+ },
+ {
+  "page": 58,
+  "where": "Proposition (3.3.3): '(0, 5.5.2)'",
+  "scan": "bold 0",
+  "tex": "(\\hyperref[0.5.5.2-fr]{0, 5.5.2})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 5.5.2}",
+   "new": "{\\textbf{0}, 5.5.2}"
+  },
+  "note": "Chapter numeral printed bold. Apply after the convention-6 fix of the same reference (listed just before)."
+ },
+ {
+  "page": 58,
+  "where": "proof of (3.3.3): 'au-dessus de X (0, 4.2.1))'",
+  "scan": "bold 0",
+  "tex": "(\\hyperref[0.4.2.1-fr]{0, 4.2.1}))",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 4.2.1}",
+   "new": "{\\textbf{0}, 4.2.1}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'par suite Γ_*(ℱ)=⊕ p_*(ℱ(n)) est aussi'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$\\Gamma_*(\\mathcal{F})=\\bigoplus_{n\\in\\mathbf{Z}}p_*(\\mathcal{F}(n))$",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma_*(\\mathcal{F})=\\bigoplus",
+   "new": "$\\bbGamma_*(\\mathcal{F})=\\bigoplus"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'quasi-cohérent (I, 1.4.1 et 1.3.9)'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.4.1-fr]{I, 1.4.1} et",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 1.4.1}",
+   "new": "{\\textbf{I}, 1.4.1}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'quasi-cohérent (I, 1.4.1 et 1.3.9);'",
+  "scan": "'et 1.3.9': the chapter numeral is not repeated",
+  "tex": "\\hyperref[I.1.3.9-fr]{I, 1.3.9})~;",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\hyperref[I.1.3.9-fr]{I, 1.3.9})~;",
+   "new": "\\hyperref[I.1.3.9-fr]{1.3.9})~;"
+  },
+  "note": "The TeX adds 'I, ' to the second reference; the link target stays."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'si X est de type fini sur Y (I, 9.2.2)'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.9.2.2-fr]{I, 9.2.2})",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 9.2.2}",
+   "new": "{\\textbf{I}, 9.2.2}"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'On en conclut que (Γ_*(ℱ))~ est défini'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "$(\\Gamma_*(\\mathcal{F}))^{\\sim}$ est défini",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$(\\Gamma_*(\\mathcal{F}))^{\\sim}$ est défini",
+   "new": "$(\\bbGamma_*(\\mathcal{F}))^{\\sim}$ est défini"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'Pour tout ouvert affine U de Y, on a ((I, 1.3.9) et (2.5.4))'",
+  "scan": "each reference has its own parentheses inside the outer pair: ((I, 1.3.9) et (2.5.4))",
+  "tex": "a (\\hyperref[I.1.3.9-fr]{I, 1.3.9} et\n\\hyperref[II.2.5.4-fr]{2.5.4})",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "a (\\hyperref[I.1.3.9-fr]{I, 1.3.9} et\n\\hyperref[II.2.5.4-fr]{2.5.4})",
+   "new": "a ((\\hyperref[I.1.3.9-fr]{I, 1.3.9}) et\n(\\hyperref[II.2.5.4-fr]{2.5.4}))"
+  },
+  "note": "Checked on a crop. Listed before the convention-2 fix of the same reference: apply this one first (the convention-2 'old' survives this edit, not the reverse)."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4): 'on a ((I, 1.3.9) et (2.5.4))'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.3.9-fr]{I, 1.3.9} et",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[I.1.3.9-fr]{I, 1.3.9}",
+   "new": "(\\hyperref[I.1.3.9-fr]{\\textbf{I}, 1.3.9}"
+  },
+  "note": "Chapter numeral printed bold. Apply after the punctuation fix just above."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.4.1): 'β : (Γ_*(ℱ))~ → ℱ'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "\\beta:(\\Gamma_*(\\mathcal{F}))^{\\sim}\\longrightarrow\\mathcal{F}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\beta:(\\Gamma_*(\\mathcal{F}))^{\\sim}",
+   "new": "\\beta:(\\bbGamma_*(\\mathcal{F}))^{\\sim}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.5.1): 'M̃ → (Γ_*(M̃))~ → M̃'",
+  "scan": "bold Γ in Γ_*",
+  "tex": "(\\Gamma_*(\\widetilde{\\mathcal{M}}))^{\\sim}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\Gamma_*(\\widetilde{\\mathcal{M}}))^{\\sim}",
+   "new": "(\\bbGamma_*(\\widetilde{\\mathcal{M}}))^{\\sim}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 58,
+  "where": "(3.3.5.2): 'Γ_*(ℱ) → Γ_*((Γ_*(ℱ))~) → Γ_*(ℱ)', arrow label Γ_*(β)",
+  "scan": "bold Γ in all five Γ_*, including the arrow label",
+  "tex": "  \\Gamma_*(\\mathcal{F})\\xrightarrow{\\alpha}\n  \\Gamma_*((\\Gamma_*(\\mathcal{F}))^{\\sim})\n  \\xrightarrow{\\Gamma_*(\\beta)}\\Gamma_*(\\mathcal{F})",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "  \\Gamma_*(\\mathcal{F})\\xrightarrow{\\alpha}\n  \\Gamma_*((\\Gamma_*(\\mathcal{F}))^{\\sim})\n  \\xrightarrow{\\Gamma_*(\\beta)}\\Gamma_*(\\mathcal{F})",
+   "new": "  \\bbGamma_*(\\mathcal{F})\\xrightarrow{\\alpha}\n  \\bbGamma_*((\\bbGamma_*(\\mathcal{F}))^{\\sim})\n  \\xrightarrow{\\bbGamma_*(\\beta)}\\bbGamma_*(\\mathcal{F})"
+  },
+  "note": "Checked on a crop at 2.5x; five occurrences in one edit."
+ },
+ {
+  "page": 58,
+  "where": "end of page_058.tex: heading '3.4. Conditions de finitude.'",
+  "scan": "printed p. 58 ends with '... on est ramené à (2.6.5).'; the heading 3.4 is the first line of p. 59",
+  "tex": "\\subsection{Conditions de finitude.}\n\\label{subsection:II.3.4-fr}\n\n\\oldpage[II]{59}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Conditions de finitude.}\n\\label{subsection:II.3.4-fr}\n\n",
+   "new": ""
+  },
+  "note": "Two-part move: this edit deletes the heading from the end of the p. 58 segment; the p. 59 finding re-inserts it after \\oldpage[II]{59}. Apply both or neither."
+ },
+ {
+  "page": 59,
+  "where": "start of page_059.tex: heading '3.4. Conditions de finitude.'",
+  "scan": "p. 59 begins with the heading",
+  "tex": "\\oldpage[II]{59}\n\n\\begin{proposition}[3.4.1]",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{59}\n\n\\begin{proposition}[3.4.1]",
+   "new": "\\oldpage[II]{59}\n\n\\subsection{Conditions de finitude.}\n\\label{subsection:II.3.4-fr}\n\n\\begin{proposition}[3.4.1]"
+  },
+  "note": "Second half of the move begun by the p. 58 marker finding. Apply both or neither."
+ },
+ {
+  "page": 59,
+  "where": "Proposition (3.4.1): 'engendrée par 𝒮_1 (3.1.9); on suppose'",
+  "scan": "reference (3.1.9) upright inside the italic statement",
+  "tex": "(\\hyperref[II.3.1.9-fr]{3.1.9})~;",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.3.1.9-fr]{3.1.9})~;",
+   "new": "\\textup{(\\hyperref[II.3.1.9-fr]{3.1.9})}~;"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 59,
+  "where": "proof of (3.4.1): '(I, 1.3.9 et 1.3.12)'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.3.9-fr]{I, 1.3.9} et",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 1.3.9} et",
+   "new": "{\\textbf{I}, 1.3.9} et"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 59,
+  "where": "proof of (3.4.1): '(I, 1.3.9 et 1.3.12)'",
+  "scan": "'et 1.3.12': the chapter numeral is not repeated",
+  "tex": "\\hyperref[I.1.3.12-fr]{I, 1.3.12}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\hyperref[I.1.3.12-fr]{I, 1.3.12}",
+   "new": "\\hyperref[I.1.3.12-fr]{1.3.12}"
+  },
+  "note": "The TeX adds 'I, ' to the second reference; the link target stays."
+ },
+ {
+  "page": 59,
+  "where": "(3.4.2): 'et compte tenu de (I, 1.3.9); lorsque u est'",
+  "scan": "bold I",
+  "tex": "(\\hyperref[I.1.3.9-fr]{I, 1.3.9})~; lorsque",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 1.3.9})~; lorsque",
+   "new": "{\\textbf{I}, 1.3.9})~; lorsque"
+  },
+  "note": "Chapter numeral printed bold."
+ },
+ {
+  "page": 59,
+  "where": "(3.4.2), last line: 'on dit aussi que u est un (TN)-isomorphisme.'",
+  "scan": "'isomorphisme' in roman (the earlier '(TN)-injectif', '-surjectif', '-bijectif' are italic)",
+  "tex": "(\\textbf{TN})-\\emph{isomorphisme}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\textbf{TN})-\\emph{isomorphisme}",
+   "new": "(\\textbf{TN})-isomorphisme"
+  },
+  "note": "Checked on a crop at 2.5x. The print may have meant italics for the defined term, but the printed word is roman."
+ },
+ {
+  "page": 59,
+  "where": "Proposition (3.4.3) (i): 'Si ℳ vérifie la condition (TF),'",
+  "scan": "(TF) upright bold inside the italic statement",
+  "tex": "la condition (\\textbf{TF})",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "la condition (\\textbf{TF})",
+   "new": "la condition \\textup{(\\textbf{TF})}"
+  },
+  "note": "Checked on a crop. In the italic environment \\textbf gives bold italic and italic parentheses."
+ },
+ {
+  "page": 59,
+  "where": "Proposition (3.4.3) (ii): 'Supposons que ℳ vérifie (TF);'",
+  "scan": "(TF) upright bold inside the italic statement",
+  "tex": "(\\textbf{TF})~; pour que",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\textbf{TF})~; pour que",
+   "new": "\\textup{(\\textbf{TF})}~; pour que"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 59,
+  "where": "Proposition (3.4.3) (ii): 'il faut et il suffit que ℳ vérifie (TN).'",
+  "scan": "(TN) upright bold inside the italic statement",
+  "tex": "vérifie (\\textbf{TN}).",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "vérifie (\\textbf{TN}).",
+   "new": "vérifie \\textup{(\\textbf{TN})}."
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 59,
+  "where": "Théorème (3.4.4): 'l'homomorphisme canonique β (3.3.4) est un isomorphisme'",
+  "scan": "reference (3.3.4) upright inside the italic statement",
+  "tex": "$\\beta$ (\\hyperref[II.3.3.4-fr]{3.3.4})",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\beta$ (\\hyperref[II.3.3.4-fr]{3.3.4})",
+   "new": "$\\beta$ \\textup{(\\hyperref[II.3.3.4-fr]{3.3.4})}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 59,
+  "where": "Corollaire (3.4.5): 'Sous les hypothèses de (3.4.4), tout'",
+  "scan": "reference (3.4.4) upright inside the italic statement",
+  "tex": "(\\hyperref[II.3.4.4-fr]{3.4.4})",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[II.3.4.4-fr]{3.4.4})",
+   "new": "\\textup{(\\hyperref[II.3.4.4-fr]{3.4.4})}"
+  },
+  "note": "Checked on a crop."
+ }
+]

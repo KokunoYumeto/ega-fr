@@ -1,0 +1,80 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{92}
+
+Ce numéro utilise les résultats du chapitre III; il ne sera pas utilisé dans la
+suite de ce chapitre.
+
+\begin{proposition}[5.3.1]
+\label{IV.2.s5.3.1-fr}
+Soient $A$ un anneau local artinien, $X$ un schéma projectif sur
+$\operatorname{Spec}(A)$, $\mathcal L$ un $\mathcal O_X$-Module inversible
+très ample relativement à $A$, $\mathcal F$ un $\mathcal O_X$-Module cohérent
+$\ne0$; on pose
+$\mathcal F(n)=\mathcal F\otimes_{\mathcal O_X}\mathcal L^{\otimes n}$ pour
+$n\in\mathbf Z$. Alors le degré du polynôme de Hilbert
+$P(n)=\chi_A(\mathcal F(n))$ de $\mathcal F$ par rapport à $A$ (III, 2.5.3)
+est égal à la dimension de $\operatorname{Supp}(\mathcal F)$.
+\end{proposition}
+
+\begin{proof}
+Raisonnons par récurrence sur
+$d=\dim(\operatorname{Supp}(\mathcal F))$. On sait qu'il existe un
+sous-préschéma fermé $Y$ de $X$ dont $\operatorname{Supp}(\mathcal F)$ est
+l'espace sous-jacent, et un $\mathcal O_Y$-Module cohérent $\mathcal G$ tel
+que $\mathcal F=j_*(\mathcal G)$, où $j:Y\to X$ est l'injection canonique
+$(\mathbf{Err}_{\mathrm{III}},30)$. Il est immédiat que les polynômes de
+Hilbert de $\mathcal F$ et de $\mathcal G$ sont les mêmes, donc on peut se
+borner au cas où $X=\operatorname{Supp}(\mathcal F)$. Supposons d'abord
+$d=0$; tous les points de $X$ étant fermés, $X$ est un schéma artinien
+(I, 6.2.2), donc $\mathcal F(n)=\mathcal F$ pour tout entier $n$, et l'on a
+par suite (III, 2.5.3)
+\[
+\chi_A(\mathcal F(n))=\operatorname{long}_A(\Gamma(X,\mathcal F))
+\]
+pour $n$ assez grand, et le degré du polynôme de Hilbert est donc $0$.
+Supposons maintenant $d>0$, et posons
+$Z=\operatorname{Ass}(\mathcal F)$, qui est un ensemble fini (3.1.6); il
+existe un entier $m>0$ et une section
+$f\in\Gamma(X,\mathcal L^{\otimes m})$ tels que $X_f$ soit un voisinage de
+$Z$ (II, 4.5.4). La multiplication par $f$ est un homomorphisme
+\[
+\mu_f:\mathcal F\longrightarrow\mathcal F(m)
+\]
+qui est injectif (3.1.8); on a donc une suite exacte
+\begin{equation}
+0\longrightarrow\mathcal F\xrightarrow{\mu_f}\mathcal F(m)
+\longrightarrow\mathcal G\longrightarrow0
+\tag{5.3.1.1}\label{IV.2.s5.3.1.1-fr}
+\end{equation}
+où $\mathcal G$ est cohérent. En vertu du lemme de Nakayama, les points
+$x\in\operatorname{Supp}(\mathcal G)$ sont exactement ceux pour lesquels
+$f(x)=0$. Nous allons en déduire que l'on a
+\begin{equation}
+\dim(\operatorname{Supp}(\mathcal G))=d-1.
+\tag{5.3.1.2}\label{IV.2.s5.3.1.2-fr}
+\end{equation}
+Cela résultera du lemme suivant:
+\end{proof}
+
+\begin{lemma}[5.3.1.3]
+\label{IV.2.s5.3.1.3-fr}
+Soient $A$ un anneau local artinien, $X$ un schéma projectif sur
+$\operatorname{Spec}(A)$, $\mathcal L$ un $\mathcal O_X$-Module inversible
+ample relativement à $A$; alors, pour toute section $g$ de $\mathcal L$
+au-dessus de $X$, l'ensemble $X_g$ des $x\in X$ tels que $g(x)=0$ rencontre
+toute composante irréductible de $X$ de dimension $\ne0$.
+\end{lemma}
+
+\begin{proof}
+En effet (II, 5.5.7), l'ensemble $X_g$ est un ouvert affine de $X$, et s'il
+contient une composante irréductible $X'$ de $X$, le sous-préschéma fermé
+réduit de $X$ ayant $X'$ pour espace sous-jacent est à la fois projectif et
+affine sur $A$, donc fini sur $A$ (III, 4.4.2), et par suite un schéma
+artinien, donc de dimension $0$.
+\end{proof}
+
+\begin{proof}
+Ce lemme étant établi, notons que puisque $Z$ contient les points maximaux de
+$X$, $X_f$ est dense, donc $\operatorname{Supp}(\mathcal G)$ est rare dans
+$X$, et la relation (5.3.1.2) résulte du lemme et de (5.2.4).
+

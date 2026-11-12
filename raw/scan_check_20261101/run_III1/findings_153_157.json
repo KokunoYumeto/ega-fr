@@ -1,0 +1,1846 @@
+[
+ {
+  "page": 153,
+  "where": "top of p. 153: blank line after \\oldpage[III]{153}",
+  "scan": "p. 153 begins flush left 'de 𝔛; en d'autres termes, ...': the statement of Corollaire (5.2.4) runs on from p. 152",
+  "tex": "\\oldpage[III]{153} followed by a blank line (new paragraph)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{153}\n\nde $\\mathfrak X$",
+   "new": "\\oldpage[III]{153}\nde $\\mathfrak X$"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). The blank line before the marker (last line of the p. 152 segment) must also go; that edit is in the p. 152 batch."
+ },
+ {
+  "page": 153,
+  "where": "Corollaire (5.2.4), end of the statement: '(𝒪_𝔛(—n))^k'",
+  "scan": "𝒪_𝔛(—n): unary minus printed as the long dash (4x crop: the dash is longer than the n)",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "medium",
+  "fix": {
+   "old": "(\\mathcal O_{\\mathfrak X}(-n))^k",
+   "new": "(\\mathcal O_{\\mathfrak X}(\\setmin n))^k"
+  },
+  "note": "Long dash used for a minus sign, not a set difference (GLOBAL_ISSUES 23); \\setmin as for the subtractions on p. 95, pending the convention-7 decision. The superscript minus signs on these pages (⊗(−n), f^{-1}) are short and are not reported."
+ },
+ {
+  "page": 153,
+  "where": "proof of (5.2.4): 'il résulte de l'hypothèse sur ℒ_0 et de (II, 4.5.5)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 4.5.5)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 4.5.5)",
+   "new": "(\\textbf{II}, 4.5.5)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 153,
+  "where": "proof of (5.2.4): 'l'homomorphisme Γ(𝔛, ℱ(n))→Γ(𝔛, ℱ_0(n)) soit surjectif'",
+  "scan": "the formula is set inline in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\Gamma(\\mathfrak X,\\mathcal F(n))\\longrightarrow\n\\Gamma(\\mathfrak X,\\mathcal F_0(n))\n\\]",
+   "new": "$\\Gamma(\\mathfrak X,\\mathcal F(n))\\longrightarrow\n\\Gamma(\\mathfrak X,\\mathcal F_0(n))$"
+  },
+  "note": "Layout: the print sets this formula inline (GLOBAL_ISSUES 21/36)."
+ },
+ {
+  "page": 153,
+  "where": "proof of (5.2.4): 'engendrent ℱ_0(n) (0_I, 5.2.3)'",
+  "scan": "(0, ...) with the chapter numeral in bold",
+  "tex": "($0_{\\mathrm I}$, 5.2.3)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 5.2.3)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 5.2.3)"
+  },
+  "note": "Bold 0 (GLOBAL_ISSUES 35: $\\mathbf{0}_{\\mathrm I}$)."
+ },
+ {
+  "page": 153,
+  "where": "proof of (5.2.4), end: 'engendrent ℱ(n) (0_I, 5.1.1)'",
+  "scan": "(0, ...) with the chapter numeral in bold",
+  "tex": "($0_{\\mathrm I}$, 5.1.1)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 5.1.1)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 5.1.1)"
+  },
+  "note": "Bold 0 (GLOBAL_ISSUES 35)."
+ },
+ {
+  "page": 153,
+  "where": "heading of (5.2.5)",
+  "scan": "'(5.2.5) Démonstration du théorème d'existence : cas projectif.': the title is bold, like the number (crop)",
+  "tex": "\\emph{...}: italic title",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Démonstration du théorème d'existence : cas projectif.}",
+   "new": "\\textbf{Démonstration du théorème d'existence : cas projectif.}"
+  },
+  "note": "Same for (5.2.6) and 5.3.5 (p. 155). Independent of the next finding."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): after the title",
+  "scan": "the title stands on its own line; 'Les notations étant celles de (5.1.4)' begins a new, indented paragraph",
+  "tex": "title and text run on in one paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "cas projectif.}\nLes notations",
+   "new": "cas projectif.}\n\nLes notations"
+  },
+  "note": "Missing paragraph break after the heading. Independent of the font finding (non-overlapping change)."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5), l. 1: 'supposons f projectif, de sorte qu'il existe'",
+  "scan": "'projectif' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "supposons $f$\nprojectif,",
+   "new": "supposons $f$\n\\emph{projectif},"
+  },
+  "note": ""
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'un 𝒪_X-Module ample ℒ (I, 5.5.4)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 5.5.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 5.5.4)",
+   "new": "(\\textbf{I}, 5.5.4)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'est égal au sous-préschéma fermé X_n×_Y Y_n=f^{-1}(Y_n) de X'",
+  "scan": "X_n×_Y Y_n (subscript n on the first X; 2x crop)",
+  "tex": "$X\\times_Y Y_n$ (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$X\\times_Y Y_n=f^{-1}(Y_n)$",
+   "new": "$X_n\\times_Y Y_n=f^{-1}(Y_n)$"
+  },
+  "corrected": "$X\\times_Y Y_n=f^{-1}(Y_n)$",
+  "note": "The TeX silently corrects; the fix restores the printed reading. The closed subprescheme f^{-1}(Y_n) of X is X×_Y Y_n; the printed X_n×_Y Y_n is not a subprescheme of X. Not in the EGA III errata (ega3-7-fr.tex)."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'si ℒ' est le complété ℒ⊗_{𝒪_X}𝒪_X̂ de ℒ, on a donc'",
+  "scan": "si ℒ' est le complété ℒ⊗_{𝒪_X}𝒪_X̂ de ℒ (crop)",
+  "tex": "si ℒ'=ℒ⊗_{𝒪_X}𝒪_X̂ est le complété de ℒ",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal L'=\\mathcal L\\otimes_{\\mathcal O_X}\\mathcal O_{\\widehat X}$ est le\ncomplété de $\\mathcal L$",
+   "new": "$\\mathcal L'$ est le\ncomplété $\\mathcal L\\otimes_{\\mathcal O_X}\\mathcal O_{\\widehat X}$ de $\\mathcal L$"
+  },
+  "note": "Different wording: the print has no '=' and puts the tensor product after 'complété'."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'on sait que ℒ'_0 est ample (II, 4.6.13, (i bis))'",
+  "scan": "'ample' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est ample",
+   "new": "est \\emph{ample}"
+  },
+  "note": ""
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): '(II, 4.6.13, (i bis))'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 4.6.13,",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 4.6.13,",
+   "new": "(\\textbf{II}, 4.6.13,"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): '(II, 4.6.13, (i bis))'",
+  "scan": "'bis' in italics, 'i' upright (crop)",
+  "tex": "upright 'bis'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(i bis)",
+   "new": "(i \\emph{bis})"
+  },
+  "note": "As GLOBAL_ISSUES 26 for EGA II."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'isomorphe à un quotient de 𝒢=(ℒ'^{⊗(−n)})^k pour des entiers'",
+  "scan": "the formula is set inline in the running text (crop)",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\mathcal G=(\\mathcal L'^{\\otimes(-n)})^k\n\\]",
+   "new": "$\\mathcal G=(\\mathcal L'^{\\otimes(-n)})^k$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'le complété de (ℒ^{⊗(−n)})^k (I, 10.8.10)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.8.10)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.10)",
+   "new": "(\\textbf{I}, 10.8.10)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.5): 'un 𝒪_X̂-Module cohérent (0_I, 5.3.4)'",
+  "scan": "(0, ...) with the chapter numeral in bold",
+  "tex": "($0_{\\mathrm I}$, 5.3.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 5.3.4)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 5.3.4)"
+  },
+  "note": "Bold 0 (GLOBAL_ISSUES 35)."
+ },
+ {
+  "page": 153,
+  "where": "heading of (5.2.6)",
+  "scan": "'(5.2.6) Démonstration du théorème d'existence; cas quasi-projectif.': bold title (crop)",
+  "tex": "\\emph{...}: italic title",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Démonstration du théorème d'existence; cas quasi-projectif.}",
+   "new": "\\textbf{Démonstration du théorème d'existence; cas quasi-projectif.}"
+  },
+  "note": "As for (5.2.5)."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): after the title",
+  "scan": "the title stands on its own line; 'Les notations étant toujours celles de (5.1.4)' begins a new, indented paragraph",
+  "tex": "title and text run on in one paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "cas quasi-projectif.}\nLes notations",
+   "new": "cas quasi-projectif.}\n\nLes notations"
+  },
+  "note": "Missing paragraph break after the heading."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6), l. 2: 'supposons maintenant que f soit quasi-projectif.'",
+  "scan": "'quasi-projectif' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit quasi-projectif. Il existe",
+   "new": "soit \\emph{quasi-projectif}. Il existe"
+  },
+  "note": ""
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'induit sur un ouvert de Z (II, 5.3.2)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 5.3.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 5.3.2)",
+   "new": "(\\textbf{II}, 5.3.2)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'si on pose Z'=g^{-1}(Y'), on a X'=X∩Z''",
+  "scan": "Z'=g ¹(Y'): the minus sign of the exponent did not print; a blank gap stands before the 1 (3x crop)",
+  "tex": "$Z'=g^{-1}(Y')$ (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "$Z'=g^{-1}(Y')$",
+   "new": "$Z'=g^{\\phantom{-}1}(Y')$"
+  },
+  "corrected": "$Z'=g^{-1}(Y')$",
+  "note": "Print defect (failed sort or inking), handled like the unprinted periods '8 8 5' (EGA II p. 180). The TeX silently corrects; the fix restores the printed reading with the gap. The same formula g^{-1}(Y') is printed correctly at the foot of the page."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'sur l'ouvert X∩Z' de Ẑ (I, 10.8.5)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.8.5)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.5)",
+   "new": "(\\textbf{I}, 10.8.5)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'dont le support T' est propre sur Ŷ'",
+  "scan": "'propre sur' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est\npropre sur $\\widehat Y$",
+   "new": "est\n\\emph{propre sur} $\\widehat Y$"
+  },
+  "note": ""
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'on en conclut que T' est propre sur Y, donc fermé dans Z''",
+  "scan": "'sur' in italics, 'propre' upright (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "propre sur $Y$, donc",
+   "new": "propre \\emph{sur} $Y$, donc"
+  },
+  "note": ""
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'donc fermé dans Z' (II, 5.4.10)'",
+  "scan": "'fermé dans' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "donc\nfermé dans $Z'$",
+   "new": "donc\n\\emph{fermé dans} $Z'$"
+  },
+  "note": ""
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'donc fermé dans Z' (II, 5.4.10)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 5.4.10)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 5.4.10)",
+   "new": "(\\textbf{II}, 5.4.10)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'le faisceau induit sur X̂ par le 𝒪_Z-Module 𝒢' obtenu par recollement'",
+  "scan": "𝒪_Z-Module 𝒢': subscript Z without a hat (4x crop)",
+  "tex": "$\\mathcal O_{\\widehat Z}$ (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "par le $\\mathcal O_{\\widehat Z}$-Module",
+   "new": "par le $\\mathcal O_Z$-Module"
+  },
+  "corrected": "$\\mathcal O_{\\widehat Z}$",
+  "note": "The TeX silently corrects; the fix restores the printed reading. 𝒢' is glued from sheaves on the opens X̂ and Ẑ—T' of Ẑ, so it is an 𝒪_Ẑ-Module (the next sentence applies (5.2.5) to it on Ẑ). The hat may have failed to print. Not in the EGA III errata."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'du faisceau 0 sur l'ouvert Ẑ—T' de Ẑ'",
+  "scan": "Ẑ—T' with the long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat Z-T'$",
+   "new": "$\\widehat Z\\setmin T'$"
+  },
+  "note": "Set difference printed with the long dash; \\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'dans l'ouvert intersection X̂—T''",
+  "scan": "X̂—T' with the long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat X-T'$",
+   "new": "$\\widehat X\\setmin T'$"
+  },
+  "note": "Set difference printed with the long dash; \\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 153,
+  "where": "(5.2.6): 'de sorte que T'=T∩Z' (I, 10.8.12)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.8.12)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.12)",
+   "new": "(\\textbf{I}, 10.8.12)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 153,
+  "where": "end of the p. 153 segment: blank line before \\oldpage[III]{154}",
+  "scan": "p. 154 begins flush left 'Comme h est propre (II, 5.4.2), ...': the paragraph of (5.2.6) runs on",
+  "tex": "contenant $T'$. + blank line + \\oldpage[III]{154}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "contenant $T'$.\n\n",
+   "new": "contenant $T'$.\n"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Apply together with the p. 154 finding for the blank line after the marker."
+ },
+ {
+  "page": 154,
+  "where": "top of p. 154: blank line after \\oldpage[III]{154}",
+  "scan": "'Comme h est propre' starts flush left (no indent): continuation of the paragraph of (5.2.6)",
+  "tex": "\\oldpage[III]{154} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{154}\n\nComme",
+   "new": "\\oldpage[III]{154}\nComme"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Second half; see the last p. 153 finding."
+ },
+ {
+  "page": 154,
+  "where": "(5.2.6), end: 'Comme h est propre (II, 5.4.2)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 5.4.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 5.4.2)",
+   "new": "(\\textbf{II}, 5.4.2)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 154,
+  "where": "(5.2.6), end: 'induit sur X̂ par 𝒢̂ (I, 10.8.4)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.8.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.4)",
+   "new": "(\\textbf{I}, 10.8.4)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 154,
+  "where": "heading 5.3",
+  "scan": "'5.3. Démonstration du théorème d'existence : cas général.' (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Démonstration du théorème d'existence : cas général}",
+   "new": "\\subsection{Démonstration du théorème d'existence : cas général.}"
+  },
+  "note": "As heading 12.4 on p. 62: the \\subsection titles of ega3-1-fr.tex lack the printed full stop."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.1): 'Sous les conditions de (5.1.4), si'",
+  "scan": "(5.1.4) upright inside the italic statement (crop)",
+  "tex": "italic (inside the lemma environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[III.5.1.4-fr]{5.1.4}), si",
+   "new": "\\textup{(\\hyperref[III.5.1.4-fr]{5.1.4})}, si"
+  },
+  "note": ""
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.1): 'si 0→ℋ→ℱ→𝒢→0 est une suite exacte'",
+  "scan": "the sequence is set inline",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n0\\to\\mathcal H\\to\\mathcal F\\to\\mathcal G\\to0\n\\]",
+   "new": "$0\\to\\mathcal H\\to\\mathcal F\\to\\mathcal G\\to0$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.1): 'un élément du A-module Ext^1_{𝒪_X̂}(X̂; ℬ̂, 𝒞̂) (0, 12.3.2)'",
+  "scan": "the formula is set inline",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\operatorname{Ext}^1_{\\mathcal O_{\\widehat X}}\n(\\widehat X;\\widehat{\\mathcal B},\\widehat{\\mathcal C})\n\\]",
+   "new": "$\\operatorname{Ext}^1_{\\mathcal O_{\\widehat X}}\n(\\widehat X;\\widehat{\\mathcal B},\\widehat{\\mathcal C})$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.1): '(0, 12.3.2)'",
+  "scan": "(0, ...) with the chapter numeral in bold",
+  "tex": "($0$, 12.3.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0$, 12.3.2)",
+   "new": "(\\textbf{0}, 12.3.2)"
+  },
+  "note": "Bold 0 in the reference to chapter 0."
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.1): 'canoniquement isomorphe à Ext^1_{𝒪_X}(X; ℬ, 𝒞) (4.5.2)'",
+  "scan": "the formula is set inline",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\operatorname{Ext}^1_{\\mathcal O_X}(X;\\mathcal B,\\mathcal C)\n\\]",
+   "new": "$\\operatorname{Ext}^1_{\\mathcal O_X}(X;\\mathcal B,\\mathcal C)$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.1): 'Mais par définition (compte tenu de (I, 10.8.8, (ii)))'",
+  "scan": "(I, 10.8.8, (ii)) (2.5x crop)",
+  "tex": "(I, 10.8.8, (iii))",
+  "kind": "number",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.8, (iii))",
+   "new": "(\\textbf{I}, 10.8.8, (ii))"
+  },
+  "note": "Transcription error: (I, 10.8.8) has only parts (i) and (ii) (ega1-10-fr.tex); (ii), the isomorphism γ^♯: i^*(ℱ)→ℱ_{/X'}, is the part used. One edit for this finding and the next (bold I)."
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.1): same reference '(I, 10.8.8, (ii))'",
+  "scan": "bold I",
+  "tex": "(I, ...)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 154,
+  "where": "Corollaire (5.3.2): 'Sous les conditions de (5.1.1), soit'",
+  "scan": "(5.1.1) upright inside the italic statement (crop)",
+  "tex": "italic (inside the corollary environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[III.5.1.1-fr]{5.1.1}), soit",
+   "new": "\\textup{(\\hyperref[III.5.1.1-fr]{5.1.1})}, soit"
+  },
+  "note": ""
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.2): 'à la suite exacte 0→Ker (u)→ℱ→Im (u)→0.'",
+  "scan": "the sequence is set inline, followed by the full stop",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n0\\to\\operatorname{Ker}(u)\\to\\mathcal F\\to\\operatorname{Im}(u)\\to0.\n\\]",
+   "new": "$0\\to\\operatorname{Ker}(u)\\to\\mathcal F\\to\\operatorname{Im}(u)\\to0$."
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.3): 'Sous les conditions de (5.1.1), soient'",
+  "scan": "(5.1.1) upright inside the italic statement (crop)",
+  "tex": "italic (inside the lemma environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[III.5.1.1-fr]{5.1.1}), soient",
+   "new": "\\textup{(\\hyperref[III.5.1.1-fr]{5.1.1})}, soient"
+  },
+  "note": ""
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.4): 'si U=X—Supp(𝒪_X/ℳ)'",
+  "scan": "X—Supp with the long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "U=X-\\operatorname{Supp}",
+   "new": "U=X\\setmin\\operatorname{Supp}"
+  },
+  "note": "Set difference printed with the long dash; \\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.4): 'ρ_ℱ : ℱ→f̂_*(f̂^*(ℱ))'",
+  "scan": "f̂^*(ℱ): superscript star only (crop)",
+  "tex": "\\widehat f^{,*}: a comma before the star",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\rho_{\\mathcal F}:\\mathcal F\\longrightarrow\n\\widehat f_*\\bigl(\\widehat f^{,*}(\\mathcal F)\\bigr)\n\\]",
+   "new": "$\\rho_{\\mathcal F}:\\mathcal F\\longrightarrow\n\\widehat f_*\\bigl(\\widehat f^{*}(\\mathcal F)\\bigr)$"
+  },
+  "note": "^{,*} typesets a comma the print does not have (17 such ^{,..} in ega3-1-fr.tex, see final message). One edit for this finding and the next (display set inline)."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.4): same formula",
+  "scan": "set inline in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.4): '(0_I, 4.4.3) soient annulés'",
+  "scan": "(𝟎_I, 4.4.3): bold 0",
+  "tex": "($0_{\\mathrm I}$, 4.4.3)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 4.4.3)",
+   "new": "\\textup{($\\mathbf{0}_{\\mathrm I}$, 4.4.3)}"
+  },
+  "note": "One edit for this finding and the next (convention 6)."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.4): same reference",
+  "scan": "upright inside the italic statement (crop)",
+  "tex": "italic (inside the lemma environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 154,
+  "where": "Lemme (5.3.4), end: 'soient annulés par ℳ̂^n'",
+  "scan": "ℳ̂^n (3x crop: no comma)",
+  "tex": "\\widehat{\\mathcal M}^{,n}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widehat{\\mathcal M}^{,n}",
+   "new": "\\widehat{\\mathcal M}^{n}"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 154,
+  "where": "proof of (5.3.4): 'au cas où B est un anneau adique noethérien'",
+  "scan": "'adique' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un anneau adique\nnoethérien",
+   "new": "un anneau \\emph{adique}\nnoethérien"
+  },
+  "note": ""
+ },
+ {
+  "page": 154,
+  "where": "end of the p. 154 segment: blank line before \\oldpage[III]{155}",
+  "scan": "the sentence 'B_1 est donc un | anneau adique noethérien ...' runs on to p. 155",
+  "tex": "blank line after 'est donc un'",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$B_1$ est donc un\n\n",
+   "new": "$B_1$ est donc un\n"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Apply together with the first p. 155 finding."
+ },
+ {
+  "page": 155,
+  "where": "top of p. 155: blank line after \\oldpage[III]{155}",
+  "scan": "p. 155 begins flush left 'anneau adique noethérien dont 𝔎_1 ...', mid-sentence",
+  "tex": "\\oldpage[III]{155} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{155}\n\nanneau",
+   "new": "\\oldpage[III]{155}\nanneau"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Second half; see the last p. 154 finding."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'qui est un morphisme propre (II, 5.4.2)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 5.4.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 5.4.2)",
+   "new": "(\\textbf{II}, 5.4.2)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'l'application identique de B_1 (I, 10.9.1)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.9.1)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.9.1)",
+   "new": "(\\textbf{I}, 10.9.1)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'Supp(𝒪_{X_1}/ℳ_1)=h^{-1}(Supp(𝒪_X/ℳ)) (I, 9.1.13)'",
+  "scan": "the formula is set inline",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\operatorname{Supp}(\\mathcal O_{X_1}/\\mathcal M_1)\n=h^{-1}(\\operatorname{Supp}(\\mathcal O_X/\\mathcal M))\n\\]",
+   "new": "$\\operatorname{Supp}(\\mathcal O_{X_1}/\\mathcal M_1)\n=h^{-1}(\\operatorname{Supp}(\\mathcal O_X/\\mathcal M))$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): '(I, 9.1.13), donc'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 9.1.13)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 9.1.13)",
+   "new": "(\\textbf{I}, 9.1.13)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'si U_1=X_1—Supp(𝒪_{X_1}/ℳ_1)'",
+  "scan": "X_1—Supp with the long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "U_1=X_1-\\operatorname{Supp}",
+   "new": "U_1=X_1\\setmin\\operatorname{Supp}"
+  },
+  "note": "Set difference printed with the long dash; \\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'est un isomorphisme (I, 3.2.7)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 3.2.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 3.2.7)",
+   "new": "(\\textbf{I}, 3.2.7)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 's'identifient par ĥ (I, 10.9.5)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.9.5). Toutes",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.9.5). Toutes",
+   "new": "(\\textbf{I}, 10.9.5). Toutes"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'le 𝒪_X-Module cohérent Ñ (I, 10.10.5)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.10.5)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.10.5)",
+   "new": "(\\textbf{I}, 10.10.5)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'et par suite f̂^*(ℱ)=(f^*(𝒢))^ (I, 10.9.5)'",
+  "scan": "(f^*(𝒢))^: parenthesis and a circumflex raised after it (crop)",
+  "tex": "\\widehat{f^*(\\mathcal G)} (wide hat, no parentheses)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\widehat f^{,*}(\\mathcal F)=\\widehat{f^*(\\mathcal G)}\n\\]",
+   "new": "$\\widehat f^{*}(\\mathcal F)=(f^*(\\mathcal G))^{\\widehat{\\,}}$"
+  },
+  "note": "Raised circumflex written as in the EGA II p. 194 findings (^{\\widehat{\\,}}; a \\superhat macro is pending, GLOBAL_ISSUES 31). One edit for this finding and the next two (extra comma, display set inline)."
+ },
+ {
+  "page": 155,
+  "where": "same formula: 'f̂^*(ℱ)'",
+  "scan": "f̂^* (no comma)",
+  "tex": "\\widehat f^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 155,
+  "where": "same formula",
+  "scan": "set inline in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): '(I, 10.9.5). En outre'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.9.5). En outre",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.9.5). En outre",
+   "new": "(\\textbf{I}, 10.9.5). En outre"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): '(4.1.5), f̂_*((f^*(𝒢))^) s'identifie canoniquement à (f_*(f^*(𝒢)))^, et l'homomorphisme'",
+  "scan": "words 's'identifie canoniquement à' between the two formulas, all inline (crop)",
+  "tex": "displayed '... \\simeq ...,': the words are replaced by \\simeq",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\widehat f_*\\bigl(\\widehat{f^*(\\mathcal G)}\\bigr)\n\\simeq\\widehat{f_*\\bigl(f^*(\\mathcal G)\\bigr)},\n\\]",
+   "new": "$\\widehat f_*((f^*(\\mathcal G))^{\\widehat{\\,}})$ s'identifie canoniquement à\n$(f_*(f^*(\\mathcal G)))^{\\widehat{\\,}}$,"
+  },
+  "note": "One edit for this finding and the next two (raised circumflexes, display set inline). The print's parentheses are of ordinary size."
+ },
+ {
+  "page": 155,
+  "where": "same passage: '(f^*(𝒢))^' and '(f_*(f^*(𝒢)))^'",
+  "scan": "circumflex raised after the closing parenthesis (twice)",
+  "tex": "\\widehat{f^*(\\mathcal G)}, \\widehat{f_*\\bigl(f^*(\\mathcal G)\\bigr)}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 155,
+  "where": "same passage",
+  "scan": "set inline in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'le conoyau ℛ de ρ_𝒢 : 𝒢→f_*(f^*(𝒢)) sont des 𝒪_X-Modules'",
+  "scan": "the formula is set inline",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\rho_{\\mathcal G}:\\mathcal G\\longrightarrow f_*\\bigl(f^*(\\mathcal G)\\bigr)\n\\]",
+   "new": "$\\rho_{\\mathcal G}:\\mathcal G\\longrightarrow f_*\\bigl(f^*(\\mathcal G)\\bigr)$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'leurs restrictions à U sont évidemment nuls'",
+  "scan": "'nuls' (crop)",
+  "tex": "'nulles' (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "évidemment nulles",
+   "new": "évidemment nuls"
+  },
+  "corrected": "évidemment nulles",
+  "note": "Agreement error in the print (the subject is 'restrictions'). The TeX silently corrects; the fix restores the printed reading."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4): 'ℳ^n𝒫=ℳ^nℛ=0 (I, 9.3.4)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 9.3.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 9.3.4)",
+   "new": "(\\textbf{I}, 9.3.4)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4), end: 'ℳ̂^n𝒫̂=ℳ̂^nℛ̂=0', first term",
+  "scan": "ℳ̂^n (crop: no comma)",
+  "tex": "\\widehat{\\mathcal M}^{,n}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widehat{\\mathcal M}^{,n}\\widehat{\\mathcal P}",
+   "new": "\\widehat{\\mathcal M}^{n}\\widehat{\\mathcal P}"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4), end: 'ℳ̂^n𝒫̂=ℳ̂^nℛ̂=0', second term",
+  "scan": "ℳ̂^n (crop: no comma)",
+  "tex": "\\widehat{\\mathcal M}^{,n}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widehat{\\mathcal M}^{,n}\\widehat{\\mathcal R}",
+   "new": "\\widehat{\\mathcal M}^{n}\\widehat{\\mathcal R}"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 155,
+  "where": "proof of (5.3.4), end: '(I, 10.8.8 et 10.8.10)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.8.8 et 10.8.10)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.8 et 10.8.10)",
+   "new": "(\\textbf{I}, 10.8.8 et 10.8.10)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "heading 5.3.5: number",
+  "scan": "'5.3.5. Fin de la démonstration du théorème d'existence.': number without parentheses, followed by a full stop, set like the heading '5.3.' (crop); (5.2.5) and (5.2.6) have parentheses",
+  "tex": "\\begin{env}[5.3.5] prints '(5.3.5)'",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{env}[5.3.5]\n\\label{III.5.3.5-fr}\n",
+   "new": "\\par\\medskip\\noindent\\textbf{5.3.5.}\\ \\label{III.5.3.5-fr}\n"
+  },
+  "note": "Part 1 of 2: apply together with the p. 156 finding that replaces the matching \\end{env} (after C.Q.F.D.) by \\par. The env environment cannot print the number without parentheses; the edit writes the environment's own opening code by hand. Independent of the next two findings."
+ },
+ {
+  "page": 155,
+  "where": "heading 5.3.5: title",
+  "scan": "bold title (crop)",
+  "tex": "\\emph{...}: italic title",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{Fin de la démonstration du théorème d'existence.}",
+   "new": "\\textbf{Fin de la démonstration du théorème d'existence.}"
+  },
+  "note": "As for (5.2.5) and (5.2.6)."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: after the title",
+  "scan": "the title stands on its own line; 'Les hypothèses étant celles de (5.1.4)' begins a new, indented paragraph",
+  "tex": "title and text run on in one paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "théorème d'existence.}\nLes hypothèses",
+   "new": "théorème d'existence.}\n\nLes hypothèses"
+  },
+  "note": "Missing paragraph break after the heading."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: 'le principe de récurrence noethérienne (0_I, 2.2.2)'",
+  "scan": "(0, ...) with the chapter numeral in bold",
+  "tex": "($0_{\\mathrm I}$, 2.2.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0_{\\mathrm I}$, 2.2.2)",
+   "new": "($\\mathbf{0}_{\\mathrm I}$, 2.2.2)"
+  },
+  "note": "Bold 0 (GLOBAL_ISSUES 35)."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: 'le lemme de Chow (II, 5.6.1)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 5.6.1)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 5.6.1)",
+   "new": "(\\textbf{II}, 5.6.1)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: 'un sous-préschéma fermé d'espace sous-jacent X—U'",
+  "scan": "X—U with the long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "sous-jacent $X-U$",
+   "new": "sous-jacent $X\\setmin U$"
+  },
+  "note": "Set difference printed with the long dash; \\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: '(I, 5.2.2), et soit ℱ'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 5.2.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 5.2.2)",
+   "new": "(\\textbf{I}, 5.2.2)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: 'Alors ĝ^*(ℱ) est un 𝒪_Ẑ-Module cohérent'",
+  "scan": "ĝ^* (no comma)",
+  "tex": "\\widehat g^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Alors $\\widehat g^{,*}(\\mathcal F)$",
+   "new": "Alors $\\widehat g^{*}(\\mathcal F)$"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: 'donc propre (II, 5.4.6)'",
+  "scan": "(II, ...) with the chapter numeral in bold",
+  "tex": "(II, 5.4.6)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(II, 5.4.6)",
+   "new": "(\\textbf{II}, 5.4.6)"
+  },
+  "note": "Bold II in the reference to chapter II."
+ },
+ {
+  "page": 155,
+  "where": "5.3.5: 'Comme h est quasi-projectif, ĝ^*(ℱ) est algébrisable'",
+  "scan": "ĝ^* (no comma)",
+  "tex": "\\widehat g^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "quasi-projectif, $\\widehat g^{,*}(\\mathcal F)$",
+   "new": "quasi-projectif, $\\widehat g^{*}(\\mathcal F)$"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 155,
+  "where": "end of the p. 155 segment: blank line before \\oldpage[III]{156}",
+  "scan": "the sentence 'On en conclut | que ĝ_*(ĝ^*(ℱ)) est ...' runs on to p. 156",
+  "tex": "blank line after 'On en conclut'",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "On en conclut\n\n",
+   "new": "On en conclut\n"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Apply together with the first p. 156 finding."
+ },
+ {
+  "page": 156,
+  "where": "top of p. 156: blank line after \\oldpage[III]{156}",
+  "scan": "p. 156 begins flush left 'que ĝ_*(ĝ^*(ℱ)) est un ...', mid-sentence",
+  "tex": "\\oldpage[III]{156} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{156}\n\nque",
+   "new": "\\oldpage[III]{156}\nque"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Second half; see the last p. 155 finding."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5, l. 1: 'que ĝ_*(ĝ^*(ℱ)) est un 𝒪_X̂-Module algébrisable'",
+  "scan": "ĝ^* (no comma)",
+  "tex": "\\widehat g^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widehat g^{,*}(\\mathcal F)\\bigr)$ est un",
+   "new": "\\widehat g^{*}(\\mathcal F)\\bigr)$ est un"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5, l. 2: 'appliquer à ℱ et à g le résultat de (5.2.4) : le noyau 𝒫'",
+  "scan": "(5.2.4) (crop)",
+  "tex": "(\\hyperref[III.5.3.4-fr]{5.3.4}) (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\hyperref[III.5.3.4-fr]{5.3.4})~: le noyau",
+   "new": "(\\hyperref[III.5.2.4-fr]{5.2.4})~: le noyau"
+  },
+  "corrected": "(\\hyperref[III.5.3.4-fr]{5.3.4})",
+  "note": "The result applied (kernel and cokernel of ρ_ℱ killed by a power ℳ̂^n) is Lemme (5.3.4); (5.2.4) is the corollary on quotients of 𝒪_𝔛(−n)^k. The TeX silently corrects; the fix restores the printed reading (link target as printed, as in the EGA II p. 129 finding). Not in the EGA III errata."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'ρ_ℱ : ℱ→ĝ_*(ĝ^*(ℱ)) sont annulés'",
+  "scan": "ĝ^* (no comma)",
+  "tex": "\\widehat g^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\widehat g^{,*}(\\mathcal F)\\bigr)$ sont annulés",
+   "new": "\\widehat g^{*}(\\mathcal F)\\bigr)$ sont annulés"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'par une puissance ℳ̂^n'",
+  "scan": "ℳ̂^n (no comma)",
+  "tex": "\\widehat{\\mathcal M}^{,n}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "puissance $\\widehat{\\mathcal M}^{,n}$",
+   "new": "puissance $\\widehat{\\mathcal M}^{n}$"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'ayant X—U pour espace sous-jacent'",
+  "scan": "X—U with the long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "ayant $X-U$ pour",
+   "new": "ayant $X\\setmin U$ pour"
+  },
+  "note": "Set difference printed with the long dash; \\setmin is not yet the long dash (global change pending)."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'est l'injection canonique (I, 10.14.7). On peut'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.14.7). On",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.14.7). On",
+   "new": "(\\textbf{I}, 10.14.7). On"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: '𝒫=ĵ_*(ĵ^*(𝒫)))', inner term",
+  "scan": "ĵ^* (no comma)",
+  "tex": "\\widehat j^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\bigl(\\widehat j^{,*}(\\mathcal P)",
+   "new": "\\bigl(\\widehat j^{*}(\\mathcal P)"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'On peut donc écrire 𝒫=ĵ_*(ĵ^*(𝒫))) et ℛ=ĵ_*(ĵ^*(ℛ))'",
+  "scan": "𝒫=ĵ_*(ĵ^*(𝒫))): three closing parentheses (3x crop; the ℛ formula has two)",
+  "tex": "two closing parentheses (silently corrected)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\bigr)$ et\n$\\mathcal R=",
+   "new": "\\bigr))$ et\n$\\mathcal R="
+  },
+  "corrected": "$\\mathcal P=\\widehat j_*\\bigl(\\widehat j^{*}(\\mathcal P)\\bigr)$",
+  "note": "Extra closing parenthesis in the print. The TeX silently corrects; the fix restores the printed reading. Independent of the comma finding before it."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'ℛ=ĵ_*(ĵ^*(ℛ))'",
+  "scan": "ĵ^* (no comma)",
+  "tex": "\\widehat j^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\bigl(\\widehat j^{,*}(\\mathcal R)",
+   "new": "\\bigl(\\widehat j^{*}(\\mathcal R)"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'que ĵ^*(𝒫) et ĵ^*(ℛ) sont des 𝒪_T̂-Modules', first term",
+  "scan": "ĵ^* (no comma)",
+  "tex": "\\widehat j^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat j^{,*}(\\mathcal P)$",
+   "new": "$\\widehat j^{*}(\\mathcal P)$"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "5.3.5: 'que ĵ^*(𝒫) et ĵ^*(ℛ) sont des 𝒪_T̂-Modules', second term",
+  "scan": "ĵ^* (no comma)",
+  "tex": "\\widehat j^{,*}",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat j^{,*}(\\mathcal R)$",
+   "new": "$\\widehat j^{*}(\\mathcal R)$"
+  },
+  "note": "Extra comma in the exponent."
+ },
+ {
+  "page": 156,
+  "where": "end of 5.3.5 (after C.Q.F.D.)",
+  "scan": "(see the 5.3.5 heading finding on p. 155)",
+  "tex": "\\end{env}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\hfill C.Q.F.D.\n\\end{env}",
+   "new": "\\hfill C.Q.F.D.\n\\par"
+  },
+  "note": "Part 2 of 2 of the 5.3.5 heading edit (p. 155): apply both or neither. \\par is the environment's own closing code."
+ },
+ {
+  "page": 156,
+  "where": "heading 5.4",
+  "scan": "'... Schémas formels algébrisables.' (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Schémas formels algébrisables}",
+   "new": "Schémas formels algébrisables.}"
+  },
+  "note": "As heading 5.3 (p. 154)."
+ },
+ {
+  "page": 156,
+  "where": "Théorème (5.4.1), end: 'l'application f⇝f̂ est une bijection'",
+  "scan": "f ⇝ f̂ (wavy arrow, crop)",
+  "tex": "$f\\mapsto\\widehat f$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'application $f\\mapsto\\widehat f$",
+   "new": "l'application $f\\leadsto\\widehat f$"
+  },
+  "note": "Wavy maps-to arrow in the print (\\leadsto; GLOBAL_ISSUES 33)."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'Montrons d'abord que f⇝f̂ est injective'",
+  "scan": "f ⇝ f̂ (wavy arrow, crop)",
+  "tex": "$f\\mapsto\\widehat f$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Montrons d'abord que $f\\mapsto\\widehat f$",
+   "new": "Montrons d'abord que $f\\leadsto\\widehat f$"
+  },
+  "note": "Wavy maps-to arrow (\\leadsto)."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'On sait alors (I, 10.9.4)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.9.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.9.4)",
+   "new": "(\\textbf{I}, 10.9.4)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'Prouvons maintenant que f⇝f̂ est surjective'",
+  "scan": "f ⇝ f̂ (wavy arrow, crop)",
+  "tex": "$f\\mapsto\\widehat f$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Prouvons maintenant que $f\\mapsto\\widehat f$",
+   "new": "Prouvons maintenant que $f\\leadsto\\widehat f$"
+  },
+  "note": "Wavy maps-to arrow (\\leadsto)."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'Z est de type fini sur S (I, 6.3.4)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 6.3.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 6.3.4)",
+   "new": "(\\textbf{I}, 6.3.4)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'les prolongements p̂ et q̂ (I, 10.9.7)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.9.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.9.7)",
+   "new": "(\\textbf{I}, 10.9.7)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'Ŷ est séparé sur Ŝ (I, 10.15.7)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.15.7)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.15.7)",
+   "new": "(\\textbf{I}, 10.15.7)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'le morphisme graphe Γ_h=(1_X̂, h) : X̂→Ẑ est une immersion fermée'",
+  "scan": "the formula is set inline",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\Gamma_h=(1_{\\widehat X},h):\\widehat X\\to\\widehat Z\n\\]",
+   "new": "$\\Gamma_h=(1_{\\widehat X},h):\\widehat X\\to\\widehat Z$"
+  },
+  "note": "Layout: inline in the print."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'une immersion fermée (I, 10.15.4)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.15.4)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.15.4)",
+   "new": "(\\textbf{I}, 10.15.4)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'est un isomorphisme (I, 10.14.3)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.14.3)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.14.3)",
+   "new": "(\\textbf{I}, 10.14.3)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1): 'l'injection canonique T→Z (I, 10.14.7). Alors'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.14.7). Alors",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.14.7). Alors",
+   "new": "(\\textbf{I}, 10.14.7). Alors"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 156,
+  "where": "proof of (5.4.1), last line: 'car il en est ainsi de (p∘i)^=p̂∘î par hypothèse'",
+  "scan": "(p∘i)^: circumflex raised after the parenthesis (crop)",
+  "tex": "\\widehat{p\\circ i}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat{p\\circ i}=\\widehat p\\circ\\widehat i$",
+   "new": "$(p\\circ i)^{\\widehat{\\,}}=\\widehat p\\circ\\widehat i$"
+  },
+  "note": "Raised circumflex as in the EGA II p. 194 findings."
+ },
+ {
+  "page": 156,
+  "where": "end of the p. 156 segment: blank line before \\oldpage[III]{157}",
+  "scan": "the sentence 'et il suffit d'appliquer | (4.6.8) en notant ...' runs on to p. 157",
+  "tex": "blank line after 'd'appliquer'",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "d'appliquer\n\n",
+   "new": "d'appliquer\n"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Apply together with the first p. 157 finding."
+ },
+ {
+  "page": 157,
+  "where": "top of p. 157: blank line after \\oldpage[III]{157}",
+  "scan": "p. 157 begins flush left '(4.6.8) en notant comme ci-dessus ...', mid-sentence",
+  "tex": "\\oldpage[III]{157} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[III]{157}\n\n(4.6.8)",
+   "new": "\\oldpage[III]{157}\n(4.6.8)"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). Second half; see the last p. 156 finding."
+ },
+ {
+  "page": 157,
+  "where": "proof of (5.4.1): 'l'isomorphisme réciproque de (p∘i)^=w'",
+  "scan": "(p∘i)^ (raised circumflex, crop)",
+  "tex": "\\widehat{p\\circ i}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat{p\\circ i}=w$",
+   "new": "$(p\\circ i)^{\\widehat{\\,}}=w$"
+  },
+  "note": "Raised circumflex after the parenthesis."
+ },
+ {
+  "page": 157,
+  "where": "proof of (5.4.1): 'on a (Γ_f)^=î∘ĝ=j∘w=Γ_h.'",
+  "scan": "(Γ_f)^ with a raised circumflex; the formula is set inline (crop)",
+  "tex": "displayed \\widehat{\\Gamma_f}=...",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\widehat{\\Gamma_f}=\\widehat i\\circ\\widehat g=j\\circ w=\\Gamma_h.\n\\]",
+   "new": "$(\\Gamma_f)^{\\widehat{\\,}}=\\widehat i\\circ\\widehat g=j\\circ w=\\Gamma_h$."
+  },
+  "note": "One edit for this finding and the next (display set inline)."
+ },
+ {
+  "page": 157,
+  "where": "same formula",
+  "scan": "set inline in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "note": "Covered by the edit of the preceding finding."
+ },
+ {
+  "page": 157,
+  "where": "proof of (5.4.1): 'Mais on sait que (Γ_f)^=Γ_f̂ (I, 10.9.8)'",
+  "scan": "(Γ_f)^ (raised circumflex, crop)",
+  "tex": "\\widehat{\\Gamma_f}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\widehat{\\Gamma_f}=\\Gamma_{\\widehat f}$",
+   "new": "$(\\Gamma_f)^{\\widehat{\\,}}=\\Gamma_{\\widehat f}$"
+  },
+  "note": "Raised circumflex after the parenthesis."
+ },
+ {
+  "page": 157,
+  "where": "proof of (5.4.1): '(I, 10.9.8), d'où finalement'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.9.8)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.9.8)",
+   "new": "(\\textbf{I}, 10.9.8)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 157,
+  "where": "after (5.4.1): 'que le foncteur X⇝X̂ est pleinement fidèle'",
+  "scan": "X ⇝ X̂ (wavy arrow)",
+  "tex": "$X\\mapsto\\widehat X$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$X\\mapsto\\widehat X$",
+   "new": "$X\\leadsto\\widehat X$"
+  },
+  "note": "Wavy maps-to arrow (\\leadsto)."
+ },
+ {
+  "page": 157,
+  "where": "after (5.4.1): 'est pleinement fidèle (0, 8.1.6)'",
+  "scan": "'pleinement fidèle' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est pleinement fidèle",
+   "new": "est \\emph{pleinement fidèle}"
+  },
+  "note": ""
+ },
+ {
+  "page": 157,
+  "where": "after (5.4.1): '(0, 8.1.6)'",
+  "scan": "(0, ...) with the chapter numeral in bold",
+  "tex": "($0$, 8.1.6)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "($0$, 8.1.6)",
+   "new": "(\\textbf{0}, 8.1.6)"
+  },
+  "note": "Bold 0 in the reference to chapter 0."
+ },
+ {
+  "page": 157,
+  "where": "after (5.4.1): 'une sous-catégorie de la seconde'",
+  "scan": "'sous-catégorie' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sous-catégorie de la seconde",
+   "new": "\\emph{sous-catégorie} de la seconde"
+  },
+  "note": ""
+ },
+ {
+  "page": 157,
+  "where": "heading of (5.4.2)",
+  "scan": "'Scholie (5.4.2). — Avec les notations ...': a statement heading ('Scholie' italic, number, '. —'), body roman (crop)",
+  "tex": "\\begin{env}[5.4.2] + \\emph{Scholie.}: '(5.4.2) Scholie. Avec ...' (no dash, order reversed)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{env}[5.4.2]\n\\label{III.5.4.2-fr}\n\\emph{Scholie.}\n",
+   "new": "\\begin{scholium}[5.4.2]\n\\label{III.5.4.2-fr}\n"
+  },
+  "note": "Part 1 of 2: apply together with the finding 'end of Scholie (5.4.2)' (\\end{env} -> \\end{scholium}). The preamble's scholium environment prints 'Scholie (n). ---' with a roman body, as the print (number font: document-wide)."
+ },
+ {
+  "page": 157,
+  "where": "Scholie (5.4.2): 'se donner un S-morphisme f : X→Y équivaut à se donner'",
+  "scan": "'équivaut' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "f:X\\to Y$ équivaut",
+   "new": "f:X\\to Y$ \\emph{équivaut}"
+  },
+  "note": ""
+ },
+ {
+  "page": 157,
+  "where": "Scholie (5.4.2): 'et de (I, 10.12.3)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.12.3)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.12.3)",
+   "new": "(\\textbf{I}, 10.12.3)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 157,
+  "where": "Scholie (5.4.2): 'système inductif adique (I, 10.12.2)'",
+  "scan": "(I, ...) with the chapter numeral in bold",
+  "tex": "(I, 10.12.2)",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.12.2)",
+   "new": "(\\textbf{I}, 10.12.2)"
+  },
+  "note": "Bold I in the reference to chapter I."
+ },
+ {
+  "page": 157,
+  "where": "end of Scholie (5.4.2)",
+  "scan": "(see the heading finding)",
+  "tex": "\\end{env}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$f_n:X_n\\to Y_n$.\n\\end{env}",
+   "new": "$f_n:X_n\\to Y_n$.\n\\end{scholium}"
+  },
+  "note": "Part 2 of 2 of the (5.4.2) heading edit: apply both or neither."
+ },
+ {
+  "page": 157,
+  "where": "Remarque (5.4.3): 'et qui ne sont pas algébrisables (tout comme'",
+  "scan": "'ne sont pas algébrisables' in italics in the roman remark (crop)",
+  "tex": "no \\emph",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et qui ne sont pas algébrisables",
+   "new": "et qui \\emph{ne sont pas algébrisables}"
+  },
+  "note": "Judged with the remark body as roman (document-wide remark item)."
+ },
+ {
+  "page": 157,
+  "where": "proof of (5.4.4): 'la fibre f^{-1}(y) soit finie (4.8.11)'",
+  "scan": "'finie' in italics (crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit finie (",
+   "new": "soit \\emph{finie} ("
+  },
+  "note": ""
+ },
+ {
+  "page": 157,
+  "where": "end of the p. 157 segment: blank line before \\oldpage[III]{158}",
+  "scan": "p. 158 begins flush left 'Soit ℒ un 𝒪_𝔛-Module inversible, et supposons ...' (italic): the statement of Théorème (5.4.5) runs on",
+  "tex": "blank line after '=ℱ/𝔍^{k+1}ℱ.'",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathcal F/\\mathfrak J^{k+1}\\mathcal F$.\n\n",
+   "new": "\\mathcal F/\\mathfrak J^{k+1}\\mathcal F$.\n"
+  },
+  "note": "Spurious paragraph break at a page break inside a paragraph (GLOBAL_ISSUES item 20). The blank line after \\oldpage[III]{158} (p. 158 batch) must also go; top of p. 158 checked on page_158_s1.png."
+ }
+]

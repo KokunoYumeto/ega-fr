@@ -1,0 +1,81 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{216}
+
+  ainsi obtenu s'appliquera en particulier à des morphismes \emph{plats} (2.4.6),
+  dont l'importance en géométrie algébrique va croissant. On peut considérer que
+  les énoncés faisant intervenir l'hypothèse qu'un morphisme est universellement
+  ouvert sont des généralisations communes d'énoncés faisant intervenir une
+  hypothèse de normalité et d'énoncés faisant intervenir une hypothèse de platitude.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Morphismes universellement ouverts et quasi-sections}
+\label{subsection:IV.14.5-fr}
+
+\begin{lemma}[14.5.1]
+\label{IV.14.5.1-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, $f:X\to Y$ un
+morphisme localement de type fini, $x$ un point de $X$, tel que $f$ soit
+équidimensionnel (13.3.2) au point $x$~; on pose $y=f(x)$,
+$e=\dim_x(f^{-1}(y))$. Soit $X'$ une partie fermée irréductible de $X$ contenant
+$x$, $n$ un entier tel que l'on ait $\operatorname{codim}(X',X)\leq n$ et
+$\dim_x(X'\cap f^{-1}(y))\leq e-n$. Alors on a nécessairement
+$\operatorname{codim}(X',X)=n$, $\dim_x(X'\cap f^{-1}(y))=e-n$, et la restriction $X'\to Y$
+de $f$ est un morphisme équidimensionnel en $x$ (et a fortiori dominant).
+\end{lemma}
+
+La question étant locale sur $X$, on peut supposer que $f$ est de type fini et
+\emph{équidimensionnel}, de sorte que pour \emph{tout} $z\in Y$, \emph{toutes} les
+composantes irréductibles de $f^{-1}(z)$ sont de dimension $e$ (13.3.1, $a''$).
+Soient $x'$ le point générique de $X'$, $y'=f(x')$,
+$Y'=\overline{\{y'\}}=\overline{f(X')}$ et posons $Z=f^{-1}(Y')$. En vertu de
+($\mathbf 0$, 14.2.2), on a
+\begin{equation}
+  \operatorname{codim}(X',Z)\leq n.
+  \tag{14.5.1.1}\label{IV.14.5.1.1-fr}
+\end{equation}
+Et si les deux membres sont égaux, on a nécessairement $\operatorname{codim}(X',X)=n$ et $Z$
+contient une composante irréductible de $X$, ce qui entraîne (13.3.1) que
+$f(X')$ est dense dans $Y$ et par suite $Z=X$~; donc l'égalité
+$\operatorname{codim}(X',Z)=n$ équivaut à la conjonction de l'égalité $\operatorname{codim}(X',X)=n$ et de
+la relation $Z=X$.
+
+D'autre part, en raisonnant dans les préschémas réduits de $Y$ et $X$ ayant $Y'$
+et $Z$ respectivement pour espaces sous-jacents, on déduit de (5.1.2) et de
+(\textbf{I}, 3.6.5) que l'on a
+\begin{equation}
+  \operatorname{codim}(X'\cap f^{-1}(y'),f^{-1}(y'))=\operatorname{codim}(X',Z).
+  \tag{14.5.1.2}\label{IV.14.5.1.2-fr}
+\end{equation}
+En vertu de l'hypothèse, $f^{-1}(y')$ est biéquidimensionnel (5.2.1) et de
+dimension $e$, donc ($\mathbf 0$, 14.3.5), on a, en vertu de (14.5.1.2) et
+(14.5.1.1)
+\begin{equation}
+  e'=\dim(X'\cap f^{-1}(y'))=e-\operatorname{codim}(X',Z)\geq e-n,
+  \tag{14.5.1.3}\label{IV.14.5.1.3-fr}
+\end{equation}
+l'égalité ayant lieu si et seulement si $\operatorname{codim}(X',X)=n$ et si $f(X')$ est dense
+dans $Y$. Enfin, (13.1.1), on a $\dim_x(X'\cap f^{-1}(y))\geq e'$, d'où, par
+(14.5.1.3),
+\begin{equation}
+  \dim_x(X'\cap f^{-1}(y))\geq e'\geq e-n.
+  \tag{14.5.1.4}\label{IV.14.5.1.4-fr}
+\end{equation}
+Or, par hypothèse, on a aussi $\dim_x(X'\cap f^{-1}(y))\leq e-n$, d'où les
+conclusions de la proposition.
+
+\begin{corollary}[14.5.2]
+\label{IV.14.5.2-fr}
+Les hypothèses sur $f$, $X$, $Y$, $x$ étant celles de (14.5.1), supposons en
+outre que $x$ ne soit pas point maximal de $f^{-1}(y)$. Alors il existe un
+voisinage ouvert affine $U$ de $x$ dans $X$, et une section
+$g\in\Gamma(U,\mathcal O_X)$ telle que l'ensemble $X'$ des $x'\in U$ tels que
+$g(x')=0$ contienne $x$ et ne contienne aucun point maximal de $f^{-1}(y)$. Pour
+tout $g$ ayant ces propriétés, $X'$ est équidimensionnel sur $Y$ au point $x$, et
+l'on a
+\begin{equation}
+  \dim_x(X'\cap f^{-1}(y))=e-1 \qquad\text{et}\qquad \operatorname{codim}(X',X)=1.
+  \tag{14.5.2.1}\label{IV.14.5.2.1-fr}
+\end{equation}
+\end{corollary}
+

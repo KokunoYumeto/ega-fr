@@ -1,0 +1,74 @@
+% from ega0-20-fr.tex
+\oldpage[0\textsubscript{IV-1}]{126}
+(i) Il est immédiat que $\varphi$ (avec les notations de
+\sref{0.20.4.6-fr}) est nécessairement l'application
+$z\mapsto(\varepsilon(z),z-p_1(\varepsilon(z)))$, et l'isomorphisme
+réciproque l'application $(b,x)\mapsto p_1(b)+x$ ; ces deux applications
+étant continues, cela prouve la première assertion. On notera que cela
+entraîne que la topologie de $B$ s'identifie (par $p_1$) au \emph{quotient}
+de la topologie de $B\otimes_A B$ par $\mathfrak{J}_{B/A}$.
+
+(ii) Le fait que $d_{B/A}$ soit une $A$-dérivation de $B$ résulte de la
+définition \sref{0.20.4.6-fr} et de \sref{0.20.1.1-fr}.
+
+Pour prouver la propriété universelle, rappelons que
+$\operatorname{D\acute{e}r.\ cont}_A(B,L)$ s'identifie canoniquement à
+l'ensemble $G$ des homomorphismes continus de $A$-algèbres
+$u:B\to D_B(L)$ tels que le composé
+$B\xrightarrow{u}D_B(L)\xrightarrow{q}B$ soit l'identité (où $q(b,0)=b$ est
+la projection ; cf. \sref{0.20.1.6-fr} et \sref{0.20.3.2-fr}). D'autre part,
+grâce à l'isomorphisme $\varphi$,
+$\operatorname{Hom.\ cont}_B(\Omega^1_{B/A},L)$ s'identifie canoniquement à
+l'ensemble des homomorphismes continus de $B$-algèbres
+$v:\mathrm{P}^1_{B/A}\to D_B(L)$ tels que le composé
+$\mathrm{P}^1_{B/A}\xrightarrow{v}D_B(L)\xrightarrow{q}B$ soit
+l'augmentation $\varepsilon$. Comme on a $p_2=p_1-d_{B/A}$ par définition,
+tout revient à prouver que tout $u\in G$ se factorise en
+\[
+\xymatrix{
+  B \ar[r]^u \ar[d]_{p_2} & D_B(L) \\
+  \mathrm{P}^1_{B/A} \ar[ur]_v &
+}
+\]
+où $v$ est un $B$-homomorphisme continu. Or, on a déjà un homomorphisme
+continu de $A$-algèbres $j:b\mapsto(b,0)$ de $B$ dans $D_B(L)$, qui
+appartient à $G$ ; par définition du produit tensoriel topologique
+d'algèbres topologiques ($\mathbf{0_I}$, 7.7.6), il existe donc un
+$A$-homomorphisme continu d'algèbres
+$w:B\otimes_A B\to D_B(L)$ rendant commutatif le diagramme
+\[
+\xymatrix{
+  B\otimes_A B \ar[dr]^w & B \ar[l]_{j_1} \ar[d]^j \\
+  B \ar[u]^{j_2} \ar[r]_u & D_B(L)
+}
+\]
+On a donc par définition
+$w(b\otimes1-1\otimes b)=j(b)-u(b)\in L$, et en vertu de
+\sref{0.20.4.4-fr}, cela entraîne $w(\mathfrak{J})\subset L$ donc
+$w(\mathfrak{J}^2)=0$ ; par suite $w$ se factorise en
+\[
+  B\otimes_A B\to\mathrm{P}^1_{B/A}\xrightarrow{v}D_B(L)
+\]
+où $v$ est un homomorphisme continu de $A$-algèbres ; d'ailleurs, comme
+$v\circ p_1=j$ est un homomorphisme de $B$-algèbres, il en est de même de
+$v$ par définition de la structure de $B$-algèbre de
+$\mathrm{P}^1_{B/A}$ ; comme on a par définition $u=v\circ p_2$, cela
+termine la démonstration.
+\end{proof}
+
+\begin{theorem}[20.4.9]
+\label{0.20.4.9-fr}
+Supposons que $B$ soit une $A$-algèbre topologique formellement lisse. Alors
+le $B$-module topologique $\Omega^1_{B/A}$ est \emph{formellement projectif}.
+\end{theorem}
+
+\begin{proof}
+En effet, l'hypothèse entraîne que $B\otimes_A B$ (muni de la structure de
+$B$-algèbre topologique définie par $j_1$) est une $B$-algèbre topologique
+formellement lisse \sref{0.19.3.5-fr}, (iii), et par suite aussi une
+$A$-algèbre topologique formellement lisse \sref{0.19.3.5-fr}, (ii) ; comme
+$B$ est topologiquement isomorphe à la $A$-algèbre quotient
+$(B\otimes_A B)/\mathfrak{J}$ et est une $A$-algèbre formellement lisse, la
+conclusion résulte de \sref{0.19.5.3-fr}.
+\end{proof}
+

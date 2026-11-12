@@ -1,0 +1,154 @@
+%%%% page 130
+% from ega4-18-fr.tex
+\oldpage[IV-4]{130}
+de ses restrictions $g^{(\alpha)}:S'^{(\alpha)}=g^{-1}(S^{(\alpha)})\to S^{(\alpha)}$ le soit, et si l'on pose $S'_0=g^{-1}(S_0)$, $S'^{(\alpha)}_0=(g^{(\alpha)})^{-1}(S^{(\alpha)}_0)$, il y a correspondance biunivoque entre les parties ouvertes et fermées $U$ (resp. $U_0$) de $S'$ (resp. $S'_0$) et les familles $(U^{(\alpha)})$ (resp. $U^{(\alpha)}_0$) où $U^{(\alpha)}$ (resp. $U^{(\alpha)}_0$) est une partie ouverte et fermée de $S'^{(\alpha)}$ (resp. $S'^{(\alpha)}_0$), d'où l'assertion (ii).
+
+\begin{remark}[18.5.7]
+\label{IV.18.5.7}
+Soient $S=\Spec(A)$ un schéma affine, $S_0$ un sous-schéma fermé de $S$ défini par un idéal $\mathfrak J$ de $A$. Alors, si le couple $(S,S_0)$ est hensélien, l'idéal $\mathfrak J$ est nécessairement contenu dans le \emph{radical} de $A$. En effet, si $\mathfrak m$ est un idéal maximal de $A$, $\mathfrak m$ doit appartenir à $V(\mathfrak J)=S_0$, en vertu de (18.5.4.3), autrement dit on doit avoir $\mathfrak J\subset\mathfrak m$, d'où la conclusion. En particulier, supposons que $S_0$ soit \emph{réduit à un point}, c'est-à-dire que l'idéal $\mathfrak J$ soit \emph{maximal}; alors $\mathfrak J$ doit être le radical de $A$, autrement dit $A$ doit être un anneau \emph{local}, $S_0$ étant l'unique point fermé de $\Spec(A)$.
+\end{remark}
+
+\begin{definition}[18.5.8]
+\EGAReaderTarget{ega4.c04.def.18-5-8}{IV.18.5.8}
+On dit qu'un anneau $A$ est hensélien s'il est semi-local et si, en désignant par $\mathfrak r$ le radical de $A$, le couple $(\Spec(A),\Spec(A/\mathfrak r))$ est hensélien. On appelle schéma local hensélien un schéma isomorphe au spectre d'un anneau local hensélien.
+\end{definition}
+
+\begin{proposition}[18.5.9]
+\label{IV.18.5.9}
+\begin{enumerate}
+  \item[\textup{(i)}] Pour qu'un anneau semi-local $A$ soit hensélien, il faut et il suffit qu'il soit composé direct d'anneaux locaux henséliens.
+  \item[\textup{(ii)}] Pour qu'un anneau local $A$ soit hensélien, il faut et il suffit que toute $A$-algèbre finie $B$ soit isomorphe à un produit d'anneaux \textup{locaux}.
+\end{enumerate}
+\end{proposition}
+
+(i) En effet, la définition, appliquée à $S=\Spec(A)$ et $S_0=\Spec(A/\mathfrak r)$ montre, puisque $S_0$ est un ensemble fini discret et fermé dans $S$, que $S$ est réunion d'un nombre fini de parties ouvertes et fermées $S_i$ ($1\leq i\leq n$) deux à deux disjointes, dont chacune contient exactement un des idéaux maximaux $\mathfrak m_i$ de $A$; la conclusion résulte de (18.5.6, (ii)) et de la remarque (18.5.7).
+
+(ii) Tout morphisme fini $S'\to\Spec(A)$ est de la forme $\Spec(B)\to\Spec(A)$, où $B$ est une $A$-algèbre finie. Si $k$ est le corps résiduel de $A$, $\Spec(B\otimes_A k)$ est un spectre d'anneau artinien, donc fini et discret. Dire que le couple $(\Spec(A),\Spec(k))$ est hensélien signifie donc que $B$ est composé direct d'anneaux $A_i$ tels que $\Spec(A_i\otimes_A k)$ soit réduit à un point, c'est-à-dire que $A_i$ (qui est une $A$-algèbre \emph{finie}) ne doit avoir qu'un seul idéal maximal (Bourbaki, \emph{Alg. comm.}, chap. V, \textsection~2, n\textsuperscript{o}~1, prop. 1).
+
+L'étude des anneaux henséliens est donc essentiellement ramenée à celle des anneaux \emph{locaux} henséliens.
+
+\begin{proposition}[18.5.10]
+\label{IV.18.5.10}
+Si $A$ est un anneau hensélien, toute $A$-algèbre finie $B$ est un anneau hensélien \textup{(donc} composé direct d'anneaux locaux henséliens \textup{(18.5.9))}.
+\end{proposition}
+
+En effet, si $\mathfrak r'$ est le radical de $B$, l'image réciproque de $\mathfrak r'$ dans $A$ est le radical $\mathfrak r$ de $A$, et tout idéal de $B$ au-dessus d'un idéal maximal de $A$ est un idéal maximal de $B$, donc l'ensemble $V(\mathfrak r')$ dans $\Spec(B)$ est l'image réciproque de l'ensemble $V(\mathfrak r)$ dans $\Spec(A)$. La proposition est alors une conséquence de (18.5.6, (i)).
+
+\begin{theorem}[18.5.11]
+\label{IV.18.5.11}
+Soient $A$ un anneau local, $\mathfrak m$ son idéal maximal. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $A$ est hensélien, autrement dit, toute $A$-algèbre finie $B$ est isomorphe à un produit d'anneaux locaux.
+
+
+%%%% page 131
+% from ega4-18-fr.tex
+\oldpage[IV-4]{131}
+
+  \item[\textup{a$'$)}] La condition \textup{a)} est satisfaite pour toutes les $A$-algèbres $B$ de la forme $A[T]/F.A[T]$, où $F\in A[T]$ est un polynôme unitaire.
+  \item[\textup{b)}] Soient $S=\Spec(A)$, $S_0=\Spec(\boldsymbol{k})$. Pour tout morphisme étale $g:S'\to S$, si l'on pose $S'_0=S'\otimes_A k$, toute $S_0$-section $u_0$ de $S'_0$ est la restriction d'une $S$-section $u$ de $S'$.
+  \item[\textup{c)}] Pour tout morphisme $f:X\to S$, séparé et localement de type fini, et tout point $x\in X$ tel que $f(x)$ soit égal au point fermé $s$ de $S$ et que $f$ soit quasi-fini au point $x$ \textup{(\textbf{Err}$_{\mathrm{III}}$, 20)}, $X$ est somme de deux préschémas $X'$, $X''$ tels que $X'=\Spec(\sh{O}_{X,x})$ et que $f|X':X'\to S$ soit un morphisme \textup{fini}.
+  \item[\textup{c$'$)}] Pour tout morphisme localement de type fini $f:X\to S$, et tout point $x\in X$ tel que $f$ soit quasi-fini au point $x$, et que $f(x)$ soit égal au point fermé $s$ de $S$, $\sh{O}_{X,x}$ est une algèbre finie sur $\sh{O}_{S,s}=A$.
+  \item[\textup{c$''$)}] Pour tout morphisme localement de présentation finie $f:X\to S$, et tout point $x\in X$ tel que $f$ soit quasi-fini au point $x$, et que $f(x)$ soit égal au point fermé $s$ de $S$, $\sh{O}_{X,x}$ est une algèbre finie et de présentation finie sur $\sh{O}_{S,s}=A$.
+\end{enumerate}
+\end{theorem}
+
+Notons d'abord que la condition \emph{c$'$)} (resp. $c'')$) est équivalente à la même condition où on suppose de plus $f$ \emph{séparé}, la question étant locale sur $X$. De même, la condition \emph{b)} est équivalente à la même condition où l'on suppose de plus $g$ \emph{séparé}: en effet, il suffit d'appliquer cette dernière à la restriction de $g$ à un voisinage ouvert affine du point $u_0(S_0)$ dans $S'$. Bornons-nous donc désormais au cas où, dans \emph{b)}, \emph{c$'$)} et \emph{c$''$)}, les morphismes donnés sont \emph{séparés}.
+
+Le fait que \emph{a)} implique \emph{b)} et que \emph{b)} implique \emph{a$'$)} est un cas particulier de (18.5.4). Montrons en outre que \emph{a$'$)} implique \emph{a)}. Il s'agit de prouver que si $e_0$ est un idempotent de $C=B\otimes_A k$, il existe un idempotent $e\in B$ dont $e_0$ est l'image canonique. Si $b$ est un élément de $B$ dont l'image dans $C$ est $e_0$, la sous-$A$-algèbre $A[b]=B'$ de $B$ est finie, et l'image canonique $C'$ de $B'\otimes_A k$ dans $C$ contient $e_0$. Or, $B'\otimes_A k$ est une $k$-algèbre finie, donc composée directe de $k$-algèbres locales finies, et par suite $e_0$ est l'image dans $C'$ d'un idempotent $e'_0$ de $B'\otimes_A k$. On est ainsi ramené au cas où $B$ est monogène, et par suite isomorphe à une $A$-algèbre quotient d'une algèbre de la forme $A[T]/F.A[T]$, où $F$ est un polynôme unitaire. Or, en vertu de \emph{a$'$)}, $A[T]/F.A[T]$ est composée directe d'anneaux locaux, donc il en est de même de toutes ses algèbres quotients, ce qui achève de prouver l'existence de l'idempotent $e$.
+
+Il est immédiat que \emph{c)} entraîne \emph{a)}, comme on le voit en raisonnant par récurrence sur le nombre d'idéaux maximaux de l'anneau semi-local $B$. Pour voir que \emph{a)} implique \emph{c)}, on peut, en vertu de (13.1.4), se borner au cas où $f$ est un morphisme affine et quasi-fini. Alors, par application du « Main theorem » (8.12.8), $f$ peut s'écrire comme un morphisme composé $X\xrightarrow{j}Y\xrightarrow{g}S$, où $g$ est un morphisme fini et $j$ une immersion ouverte. Comme $Y=\Spec(B)$, où $B$ est une $A$-algèbre finie, il résulte de \emph{a)} que $B$ est composée directe d'anneaux locaux, qui sont évidemment des $A$-algèbres finies, et $\sh{O}_{X,x}$ s'identifie à l'un de ces anneaux locaux puisque $f(x)=s$; en outre, tout ouvert de $Y$ contenant $x$ contient nécessairement $\Spec(\sh{O}_{X,x})$.
+
+Il est trivial que \emph{c)} implique \emph{c$'$)}, en vertu de la remarque du début. Prouvons que \emph{c$'$)} implique \emph{c$''$)}. Supposons en effet \emph{c$'$)} vérifiée, et prouvons que sous les conditions
+
+%%%% page 132
+% from ega4-18-fr.tex
+\oldpage[IV-4]{132}
+de \emph{c$''$)}, l'ensemble $Z=\Spec(\sh{O}_{X,x})$ s'identifie alors à une partie \emph{ouverte et fermée} de $X$, ce qui établira \emph{c$''$)} (\textbf{I}, 2.4.2). En premier lieu, le morphisme composé $Z\xrightarrow{j}X\xrightarrow{f}S$, où $j$ est le morphisme canonique (\textbf{I}, 2.4.1), est fini et de présentation finie par hypothèse, et comme $f$ est séparé et localement de présentation finie, $j$ est aussi un morphisme fini et de présentation finie ((\textbf{II}, 6.1.5) et (1.4.3)); $j$ est par suite un morphisme fermé (\textbf{II}, 6.1.10), ce qui prouve que $Z$ est fermé dans $X$. Il résulte alors de (\textbf{I}, 2.4.2) et (\textbf{I}, 4.2.2) que $j$ est une immersion fermée. Mais si $\mathscr J$ est l'idéal de $\sh{O}_X$ définissant $Z$, on a alors par hypothèse $\mathscr J_x=0$, donc aussi $\mathscr J_z=0$ en tout point $z$ d'un voisinage ouvert $V$ de $x$ dans $X$, puisque par hypothèse $\mathscr J$ est un $\sh{O}_X$-Module quasi-cohérent de type fini ((1.4.7) et ($\mathbf{0}_{\mathrm I}$, 5.2.2)). Or, un tel voisinage contient $Z$, donc $Z$ est ouvert dans $X$ puisque $\mathscr J|V=0$.
+
+Enfin, \emph{c$''$)} implique \emph{a$'$)}: en effet, si $B=A[T]/F.A[T]$, le morphisme $X=\Spec(B)\to\Spec(A)=Y$ est fini et de présentation finie, et la démonstration précédente montre que $B$ est composée directe des $A$-algèbres finies $\sh{O}_{X,x_i}$, où les $x_i$ sont les points de la fibre du point fermé de $Y$.
+
+\begin{corollary}[18.5.12]
+\label{IV.18.5.12}
+Soient $A$ un anneau semi-local, $\mathfrak r$ son radical; posons $S=\Spec(A)$, $S_0=\Spec(A/\mathfrak r)$. Pour que $A$ soit hensélien, il faut et il suffit que, pour tout morphisme \textup{fini} $f:X\to S$ et tout morphisme \textup{étale et séparé} $g:Y\to S$, si l'on pose $X_0=X\times_S S_0$ \textup{et} $Y_0=Y\times_S S_0$, l'application canonique
+\[
+  \Hom_S(X,Y)\longrightarrow\Hom_{S_0}(X_0,Y_0)
+\]
+soit bijective.
+\end{corollary}
+
+La suffisance de la condition résulte de l'équivalence de \emph{a)} et \emph{b)} dans (18.5.11), en appliquant cette condition au cas où $f=1_S$. Pour voir que la condition est nécessaire, notons que si $A$ est hensélien, le couple $(X,X_0)$ est hensélien par (18.5.6, (i)); en outre $\Hom_S(X,Y)=\Gamma(X\times_S Y/X)$ et $\Hom_{S_0}(X_0,Y_0)=\Gamma(X_0\times_{S_0}Y_0/X_0)$; comme $X\times_S Y$ est étale et séparé sur $X$, la conclusion résulte de ce que \emph{a)} implique \emph{b)} dans (18.5.4).
+
+\begin{remark}[18.5.13]
+\label{IV.18.5.13}
+Les conditions équivalentes \emph{a)}, \emph{a$'$)}, \emph{b)} du théorème (18.5.11) sont encore équivalentes à la suivante (« lemme de Hensel »):
+\begin{enumerate}
+  \item[\textup{a$''$)}] \itshape Pour tout polynôme unitaire $F\in A[T]$, d'image canonique $F_0\in k[T]$, et toute décomposition $F_0=G_0H_0$ de $F_0$ en un produit de deux polynômes unitaires \textup{étrangers} $G_0$, $H_0$ de $k[T]$, il existe un couple unique $(G,H)$ de polynômes unitaires de $A[T]$ possédant les propriétés suivantes: $G_0$ et $H_0$ sont les images canoniques respectives de $G$ et $H$, on a $F=GH$, et l'idéal de $A[T]$ engendré par $G$ et $H$ est égal à $A[T]$.
+\end{enumerate}
+\end{remark}
+
+Nous établirons d'abord le lemme suivant:
+
+\begin{lemma}[18.5.13.1]
+\label{IV.18.5.13.1}
+Soient $A$ un anneau local de corps résiduel $k$, $F\in A[T]$ un polynôme unitaire, $B$ la $A$-algèbre $A[T]/F.A[T]$. Il existe une correspondance canonique entre les décompositions de $B$ en composée directe de deux $A$-algèbres quotients $B'$, $B''$ et les décompositions $F=GH$ de $F$ en produit de deux polynômes unitaires $G$, $H$ de $A[T]$, tels que l'idéal engendré par $G$ et $H$ soit égal à $A[T]$; les algèbres quotients $B'$, $B''$ correspondant à un tel couple de polynômes $G$, $H$ sont respectivement $A[T]/H.A[T]$ et $A[T]/G.A[T]$.
+\end{lemma}
+
+
+%%%% page 133
+% from ega4-18-fr.tex
+\oldpage[IV-4]{133}
+
+Si $F=GH$ et si $G$ et $H$ engendrent l'idéal $A[T]$, il y a deux polynômes $P$, $Q$ de $A[T]$ tels que $1=PG+QH$. On en déduit que l'intersection des idéaux principaux $\mathfrak a=G.A[T]$ et $\mathfrak b=H.A[T]$ est égale à $\mathfrak c=F.A[T]$: en effet, si $R\in G.A[T]\cap H.A[T]$, on peut écrire $R=PRG+QRH$; or $RH$ (resp. $RG$) est un multiple de $F$ puisque $R$ est un multiple de $G$ (resp. $H$), donc $R\in F.A[T]$. Comme $A[T]=\mathfrak a+\mathfrak b$, $A[T]/\mathfrak c$ est somme directe des idéaux $\mathfrak a/(\mathfrak a\cap\mathfrak b)$ et $\mathfrak b/(\mathfrak a\cap\mathfrak b)$, canoniquement isomorphes respectivement à $A[T]/\mathfrak b$ et $A[T]/\mathfrak a$.
+
+Inversement, supposons donnée une décomposition de $B$ en composée directe de deux $A$-algèbres $B'$, $B''$, qui s'identifient canoniquement à deux idéaux $e'B$, $e''B$ de $B$, correspondant à une décomposition $1=e'+e''$ de $1$ en idempotents orthogonaux $e'$, $e''$ de $B$. Posons encore $B_0=B\otimes_A k=k[T]/F_0.k[T]$, où $F_0$ est l'image canonique de $F$ dans $k[T]$, de même degré $n$ que $F$; si $e'_0$, $e''_0$ sont les images canoniques de $e'$, $e''$ dans $B_0$, ce sont deux idempotents orthogonaux tels que $1=e'_0+e''_0$, et $B_0$ est donc composée directe de $B'_0=e'_0B_0$ et $B''_0=e''_0B_0$. Soient $t$ et $t_0$ les images canoniques de $T$ dans $B$ et $B_0$; comme $B'_0$ (resp. $B''_0$) est une $k$-algèbre finie engendrée par $t'_0=e'_0t_0$ (resp. $t''_0=e''_0t_0$), elle admet une base de la forme $\{e'_0,t'_0,t_0'{}^2,\ldots,t_0'{}^{s-1}\}$ (resp. $\{e''_0,t''_0,t_0''{}^2,\ldots,t_0''{}^{r-1}\}$) avec $r+s=n$. D'autre part, $B$ étant un $A$-module libre (de base $\{1,t,\ldots,t^{n-1}\}$), $B'$ et $B''$ sont des $A$-modules projectifs, donc libres puisque $A$ est un anneau local (Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~5, n\textsuperscript{o}~3, cor. de la prop. 5); il résulte donc de ce qui précède et de Bourbaki, \emph{Alg. comm.}, chap. II, \textsection~3, n\textsuperscript{o}~3, prop. 5, que si l'on pose $t'=e't$, $t''=e''t$, $\{e',t',\ldots,t'^{s-1}\}$ (resp. $\{e'',t'',\ldots,t''^{r-1}\}$) est une base du $A$-module $B'$ (resp. $B''$). Il y a donc un polynôme unitaire $H$ (resp. $G$) de degré $s$ (resp. $r$) de $A[T]$ tel que $e'H(t')=0$ et $e''G(t'')=0$; comme $t^h=t'^h+t''^h$ pour tout entier $h\geq1$, et $t'^h=e't'^h$, $t''^h=e''t''^h$, on a aussi $G(t)=e'G'(t')$ et $H(t)=e''H(t'')$, d'où $G(t)H(t)=0$; on en conclut que le polynôme $G(T)H(T)$ est divisible par $F(T)$; mais comme les degrés de ces deux polynômes unitaires sont les mêmes, on a $GH=F$. En outre, $B'$ (resp. $B''$) est isomorphe à $A[T]/H.A[T]$ (resp. $A[T]/G.A[T]$). Enfin, il y a deux polynômes $R$, $S$ de $A[T]$ tels que $e'=R(t)$ et $e''=S(t)$; comme $R(t)=e'R(t')+e''R(t'')$, on a nécessairement $e''R(t'')=0$ et de même $e'S(t')=0$, de sorte que, par définition de $G$ et $H$, $R=QH$ et $S=PG$, où $P$, $Q$ appartiennent à $A[T]$; la relation $1=R(t)+S(t)$ dans $B$ donne donc par définition $PG+QH=1+LF$ pour un certain polynôme $L\in A[T]$, et comme $F=GH$, cela prouve que l'idéal engendré par $G$ et $H$ est $A[T]$, et achève de démontrer le lemme.
+
+Ce lemme étant établi, il suffit de l'appliquer à l'anneau local $A$ d'une part, au corps $k$ de l'autre, pour voir aussitôt que les conditions \emph{a$'$)} et \emph{a$''$)} sont équivalentes.
+
+\begin{proposition}[18.5.14]
+\label{IV.18.5.14}
+Tout anneau semi-local $A$, séparé et complet pour la topologie $\mathfrak r$-préadique \textup{(}où $\mathfrak r$ est le radical de $A$\textup{)} est hensélien.
+\end{proposition}
+
+En effet, $A$ est composé direct d'anneaux locaux séparés et complets (Bourbaki, \emph{Alg. comm.}, chap. III, \textsection~2, n\textsuperscript{o}~13, cor. de la prop. 19), donc on est ramené au cas où $A$ est un anneau local. Vérifions le critère \emph{a$'$)} de (18.5.11). Comme $B$ est un $A$-module libre de type fini, il est évidemment séparé et complet pour la topologie $\mathfrak r$-préadique,
+
+%%%% page 134
+% from ega4-18-fr.tex
+\oldpage[IV-4]{134}
+qui est aussi la topologie $\mathfrak s$-préadique, où $\mathfrak s$ est le radical de l'anneau semi-local $B$, car $B/\mathfrak rB$ est un anneau artinien de radical $\mathfrak s/\mathfrak rB$. On sait alors (Bourbaki, \emph{Alg. comm.}, chap. III, \textsection~2, n\textsuperscript{o}~13, cor. de la prop. 19) que $B$ est composé direct d'anneaux locaux.
+
+\begin{proposition}[18.5.15]
+\label{IV.18.5.15}
+Soient $A$ un anneau hensélien, $\mathfrak r$ son radical. Alors le foncteur $B\leadsto B/\mathfrak rB$ est une équivalence de la catégorie des $A$-algèbres finies et étales avec la catégorie des $(A/\mathfrak r)$-algèbres finies et étales.
+\end{proposition}
+
+Le fait que le foncteur de l'énoncé soit pleinement fidèle est un cas particulier de (18.5.12). Pour montrer que ce foncteur est une équivalence de catégories, on peut se borner au cas où $A$ est local; il suffit alors d'appliquer (18.1.1) (pour les morphismes étales), à $S=\Spec(A)$ et $S_0=\Spec(A/\mathfrak r)$, réduit à un seul point.
+
+\begin{remarks}[18.5.16]
+\label{IV.18.5.16}
+\begin{enumerate}
+  \item[(i)] Nous ignorons si la proposition (18.5.15) se généralise à un couple hensélien $(S,S_0)$, même lorsque $S$ est affine et noethérien.
+  \item[(ii)] Soient $A$ un anneau \emph{noethérien}, $\mathfrak J$ un idéal de $A$ tel que $A$ soit \emph{séparé et complet} pour la topologie $\mathfrak J$-préadique. Alors le couple $(\Spec(A),\Spec(A/\mathfrak J))$ est hensélien: en effet, pour toute $A$-algèbre finie $B$, $B$ est séparé et complet pour la topologie $\mathfrak J$-préadique ($\mathbf{0}_{\mathrm I}$, 7.3.6). Remplaçant $B$ par $A$ et $\mathfrak J B$ par $\mathfrak J$, tout revient donc à voir que l'application qui, à tout idempotent de $A$, fait correspondre sa classe mod. $\mathfrak J$, est \emph{bijective}. Or on a $A=\varprojlim (A/\mathfrak J^n)$. Notons $\operatorname{Idem}(A)$ l'ensemble des idempotents de $A$, et pour tout homomorphisme d'anneaux $\varphi:A\to B$, soit $\operatorname{Idem}(\varphi)$ l'application de $\operatorname{Idem}(A)$ dans $\operatorname{Idem}(B)$ restriction de $\varphi$; il résulte de la définition de la limite projective que l'on a $\operatorname{Idem}(A)=\varprojlim\operatorname{Idem}(A/\mathfrak J^n)$ pour les applications $\psi_{nm}:\operatorname{Idem}(A/\mathfrak J^m)\to\operatorname{Idem}(A/\mathfrak J^n)$ restriction des applications canoniques $A/\mathfrak J^m\to A/\mathfrak J^n$. Mais puisque $\Spec(A/\mathfrak J^n)\to\Spec(A/\mathfrak J^m)$ est un homéomorphisme, les $\psi_{nm}$ sont des bijections (comme on l'a vu dans la démonstration de (18.5.3)); cela prouve donc notre assertion.
+\end{enumerate}
+\end{remarks}
+
+\begin{theorem}[18.5.17]
+\label{IV.18.5.17}
+Soient $A$ un anneau local hensélien, $S=\Spec(A)$, $s$ le point fermé de $S$. Pour tout morphisme lisse $f:X\to S$, l'application canonique
+\[
+  \Gamma(X/S)\longrightarrow\Gamma(X_s/\boldsymbol{k}(s))
+\]
+\textup{(}où $X_s=f^{-1}(s)$\textup{)} est surjective.
+\end{theorem}
+
+La donnée d'une $\boldsymbol{k}(s)$-section de $X_s$ équivaut à celle d'un point $x\in X$ au-dessus de $s$ rationnel sur $\boldsymbol{k}(s)$, et il s'agit de prouver qu'il existe une $S$-section $u:S\to X$ telle que $u(s)=x$. Compte tenu de (17.16.3, (i)), on peut supposer que $f$ est \emph{étale}. Alors la conclusion résulte du critère (18.5.11, \emph{b)}). (Le lecteur notera qu'en vertu de ce critère, la validité de (18.5.17) pour un anneau local donné $A$ est nécessaire et suffisante pour que $A$ soit hensélien).
+
+\begin{remark}[18.5.18]
+\label{IV.18.5.18}
+Les conditions de (18.5.11) sont encore équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{d)}] \itshape Pour tout morphisme localement de type fini $f:X\to S$ et tout point $x\in X$ tel que $f(x)$ soit le point fermé $s$ de $S$ et que $\sh{O}_{X,x}/\mathfrak m_s\sh{O}_{X,x}$ soit un corps canoniquement isomorphe à $\boldsymbol{k}(s)=k$, il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que $f|U$ soit une immersion fermée.
+\end{enumerate}
+\end{remark}
+
+

@@ -1,0 +1,98 @@
+% from ega2-1-fr.tex
+\oldpage[II]{49}
+
+\begin{proof}
+Comme $X'$ est isomorphe à $\operatorname{Proj}(S/\mathfrak{J})$, la
+condition est suffisante en vertu de (\hyperref[II.2.4.4-fr]{2.4.4}). Pour
+voir qu'elle est nécessaire, considérons la suite exacte
+$0\to\mathcal{J}\to\mathcal{O}_X\to\mathcal{O}_X/\mathcal{J}$, qui donne une
+suite exacte
+\[
+  0\longrightarrow\Gamma_\bullet(\mathcal{J})
+  \longrightarrow\Gamma_\bullet(\mathcal{O}_X)
+  \longrightarrow\Gamma_\bullet(\mathcal{O}_X/\mathcal{J}).
+\]
+Il suffit de prouver que si $f\in S_m$, $g\in S_n$ sont tels que l'image dans
+$\Gamma_\bullet(\mathcal{O}_X/\mathcal{J})$ de $\alpha_{n+m}(fg)$ est nulle,
+alors l'une des images de $\alpha_m(f)$, $\alpha_n(g)$ est nulle. Or, par
+définition, ces images sont des sections des
+$(\mathcal{O}_X/\mathcal{J})$-Modules inversibles
+$\mathcal{L}=(\mathcal{O}_X/\mathcal{J})(m)$ et
+$\mathcal{L}'=(\mathcal{O}_X/\mathcal{J})(n)$ au-dessus du schéma intègre
+$X'$~; l'hypothèse entraîne que le produit de ces deux sections est nul dans
+$\mathcal{L}\otimes\mathcal{L}'$
+((\hyperref[II.2.9.3-fr]{2.9.3}) et
+(\hyperref[II.2.5.14.1-fr]{2.5.14.1})), donc l'une d'elles est nulle en vertu
+de (\hyperref[I.7.4.4-fr]{I, 7.4.4}).
+\end{proof}
+
+\begin{corollary}[2.9.5]
+\label{II.2.9.5-fr}
+Soient $A$ un anneau, $M$ un $A$-module, $S$ une $A$-algèbre graduée
+engendrée par l'ensemble $S_1$ des éléments homogènes de degré~$1$,
+$u:M\to S_1$ un homomorphisme surjectif de $A$-modules,
+$\overline{u}:\mathbf{S}(M)\to S$ l'homomorphisme (de $A$-algèbres) de
+l'algèbre symétrique $\mathbf{S}(M)$ de $M$ dans $S$ qui prolonge $u$. Le
+morphisme correspondant à $\overline{u}$ est alors une immersion fermée de
+$\operatorname{Proj}(S)$ dans $\operatorname{Proj}(\mathbf{S}(M))$.
+\end{corollary}
+
+\begin{proof}
+En effet, $\overline{u}$ est surjectif par hypothèse et il suffit d'appliquer
+(\hyperref[II.2.9.2-fr]{2.9.2}).
+\end{proof}
+
+\section{Spectre homogène d'un faisceau d'algèbres graduées}
+\label{section:II.3-fr}
+
+\subsection{Spectre homogène d'une $\mathcal{O}_Y$-Algèbre graduée
+quasi-cohérente.}
+\label{subsection:II.3.1-fr}
+\label{II.3.1-fr}
+
+\begin{env}[3.1.1]
+\label{II.3.1.1-fr}
+Soient $Y$ un préschéma, $\mathcal{S}$ une $\mathcal{O}_Y$-Algèbre graduée,
+$\mathcal{M}$ un $\mathcal{S}$-Module gradué. Si $\mathcal{S}$ est
+\emph{quasi-cohérente}, chacun de ses composants homogènes $\mathcal{S}_n$ est
+un $\mathcal{O}_Y$-Module \emph{quasi-cohérent}, étant l'image de
+$\mathcal{S}$ par un homomorphisme de $\mathcal{S}$ dans lui-même
+((\hyperref[I.1.3.8-fr]{I, 1.3.8}) et
+(\hyperref[I.1.3.9-fr]{I, 1.3.9}))~; de même, si $\mathcal{M}$ est
+quasi-cohérent en tant que $\mathcal{O}_Y$-Module, ses composants homogènes
+$\mathcal{M}_n$ le sont aussi, et réciproquement. Si $d$ est un entier $>0$,
+on désignera par $\mathcal{S}^{(d)}$ la somme directe des
+$\mathcal{O}_Y$-Modules $\mathcal{S}_{nd}$ ($n\in\mathbf{Z}$), qui est
+quasi-cohérente si $\mathcal{S}$ l'est
+(\hyperref[I.1.3.9-fr]{I, 1.3.9})~; pour tout entier $k$ tel que
+$0\leq k\leq d-1$, on désignera par $\mathcal{M}^{(d,k)}$ (ou
+$\mathcal{M}^{(d)}$ pour $k=0$) la somme directe des
+$\mathcal{M}_{nd+k}$ ($n\in\mathbf{Z}$), qui est un
+$\mathcal{S}^{(d)}$-Module gradué, quasi-cohérent lorsque $\mathcal{S}$ et
+$\mathcal{M}$ sont quasi-cohérents (\hyperref[I.9.6.1-fr]{I, 9.6.1}). On
+notera $\mathcal{M}(n)$ le $\mathcal{S}$-Module gradué tel que
+$(\mathcal{M}(n))_k=\mathcal{M}_{n+k}$ pour tout $k\in\mathbf{Z}$~; si
+$\mathcal{S}$ et $\mathcal{M}$ sont quasi-cohérents, $\mathcal{M}(n)$ est un
+$\mathcal{S}$-Module gradué quasi-cohérent
+(\hyperref[I.9.6.1-fr]{I, 9.6.1}).
+
+Nous dirons que $\mathcal{M}$ est un $\mathcal{S}$-Module gradué
+\emph{de type fini} (resp. qu'il admet une \emph{présentation finie}) si pour
+tout $y\in Y$, il existe un voisinage ouvert $U$ de $y$ et des entiers $n_i$
+(resp. des entiers $m_i$ et $n_j$) tels qu'il y ait un homomorphisme surjectif
+de degré~$0$
+\[
+  \bigoplus_{i=1}^r(\mathcal{S}(n_i)|U)\longrightarrow\mathcal{M}|U
+\]
+(resp. que $\mathcal{M}|U$ soit isomorphe au conoyau d'un homomorphisme de
+degré~$0$
+\[
+  \bigoplus_{i=1}^r(\mathcal{S}(m_i)|U)
+  \longrightarrow\bigoplus_{j=1}^s(\mathcal{S}(n_j)|U)).
+\]
+
+Soient $U$ un ouvert affine de $Y$, $A=\Gamma(U,\mathcal{O}_Y)$ son anneau~;
+par hypothèse, la $(\mathcal{O}_Y|U)$-Algèbre graduée $\mathcal{S}|U$ est
+isomorphe à $\widetilde{S}$, où $S=\Gamma(U,\mathcal{S})$ est une
+$A$-algèbre
+

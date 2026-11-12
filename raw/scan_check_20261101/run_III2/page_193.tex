@@ -1,0 +1,119 @@
+% from ega3-7-fr.tex
+\oldpage[III]{193}
+$P_\bullet\otimes_A B$ est un complexe de $B$-modules plats
+($0_{\mathrm I}$, 6.2.1), et pour tout $B$-module $N$, on a
+\[
+  H_\bullet(P_\bullet\otimes_A N)
+  =
+  H_\bullet\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr),
+\]
+donc
+\[
+  T_p^{(B)}(N)
+  =
+  H_p\bigl((P_\bullet\otimes_A B)\otimes_B N\bigr);
+\]
+appliquant (7.4.2) à $T_p^{(B)}$, on voit que l'hypothèse que $T_p^{(B)}$ est
+exact à droite est équivalente au fait que $Z'_{p-1}(P_\bullet\otimes_A B)$ est
+un $B$-module plat.
+
+Le critère précédent amène à étudier de plus près le cas des anneaux de
+valuation discrète :
+\end{proof}
+
+\begin{proposition}[7.6.3]
+Sous les conditions de (7.4.1), supposons que $A$ soit un anneau noethérien
+régulier de dimension 1 (autrement dit, que $A$ est noethérien et que, pour tout
+$x\in\operatorname{Spec}(A)$, $A_x$ est un corps ou un anneau de valuation
+discrète). Alors, pour tout entier $p$ et tout $A$-module $M$, on a une suite
+exacte canonique fonctorielle en $M$
+\[
+  0
+  \longrightarrow T_p(A)\otimes_A M
+  \xrightarrow{t_M}T_p(M)
+  \longrightarrow \operatorname{Tor}_1^A\bigl(T_{p-1}(A),M\bigr)
+  \longrightarrow0.
+  \tag{7.6.3.1}\label{III.7.6.3.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Dans ce qui suit, nous supprimerons pour simplifier la mention du complexe
+$P_\bullet$ dans les notations homologiques usuelles $H_p(P_\bullet)$,
+$B_p(P_\bullet)$, $Z_p(P_\bullet)$ et $Z'_p(P_\bullet)$. On a les trois suites
+exactes
+\begin{gather*}
+  0\longrightarrow H_p\longrightarrow Z'_p\longrightarrow B_{p-1}
+  \longrightarrow0,\\
+  0\longrightarrow B_{p-1}\longrightarrow Z_{p-1}\longrightarrow H_{p-1}
+  \longrightarrow0,\\
+  0\longrightarrow Z_{p-1}\longrightarrow P_{p-1}\longrightarrow B_{p-2}
+  \longrightarrow0.
+\end{gather*}
+Comme $P_{p-1}$ et $P_{p-2}$ sont plats, il en est de même de leurs
+sous-modules respectifs $B_{p-1}$, $Z_{p-1}$ et $B_{p-2}$ puisqu'il y a
+identité entre $A_x$-modules plats et $A_x$-modules sans torsion (pour tout
+$x\in\operatorname{Spec}(A)$); par tensorisation avec $M$, on a donc les suites
+exactes
+\[
+  0=\operatorname{Tor}_1^A(B_{p-1},M)
+  \longrightarrow H_p\otimes M
+  \longrightarrow Z'_p\otimes M
+  \xrightarrow{u}B_{p-1}\otimes M
+  \longrightarrow0
+  \tag{7.6.3.2}\label{III.7.6.3.2.fr}
+\]
+\[
+  0=\operatorname{Tor}_1^A(Z_{p-1},M)
+  \longrightarrow\operatorname{Tor}_1^A(H_{p-1},M)
+  \longrightarrow B_{p-1}\otimes M
+  \xrightarrow{v}Z_{p-1}\otimes M
+  \tag{7.6.3.3}\label{III.7.6.3.3.fr}
+\]
+\[
+  0=\operatorname{Tor}_1^A(B_{p-2},M)
+  \longrightarrow Z_{p-1}\otimes M
+  \xrightarrow{w}P_{p-1}\otimes M.
+  \tag{7.6.3.4}\label{III.7.6.3.4.fr}
+\]
+Par définition,
+$T_p(M)=\operatorname{Ker}(d_p\otimes1)/\operatorname{Im}(d_{p+1}\otimes1)$;
+c'est donc le noyau de l'homomorphisme
+\[
+  (P_p\otimes M)/\operatorname{Im}(d_{p+1}\otimes1)
+  \longrightarrow P_{p-1}\otimes M
+\]
+obtenu à partir de $d_p\otimes1$ par passage au quotient, homomorphisme qui
+s'écrit aussi $Z'_p\otimes M\to P_{p-1}\otimes M$ par définition de
+$Z'_p=P_p/B_p$; or, cet homomorphisme peut être considéré comme le composé
+\[
+  Z'_p\otimes M
+  \xrightarrow{u}B_{p-1}\otimes M
+  \xrightarrow{v}Z_{p-1}\otimes M
+  \xrightarrow{w}P_{p-1}\otimes M.
+\]
+Comme $w$ est injectif d'après (7.6.3.4), on a une suite exacte
+\[
+  0\longrightarrow\operatorname{Ker}u
+  \longrightarrow T_p(M)
+  \longrightarrow\operatorname{Ker}v
+  \longrightarrow0,
+\]
+qui n'est autre que (7.6.3.1), compte tenu de (7.6.3.2) et (7.6.3.3) et de ce
+que $H_p=T_p(A)$ par définition.
+\end{proof}
+
+\begin{remarks}[7.6.4]
+\begin{enumerate}
+  \item[(i)] $H_\bullet(P_\bullet\otimes_A M)$ est l'homologie du bicomplexe
+    $P_\bullet\otimes_A M$, où $M$ est considéré comme un complexe réduit à son
+    terme de degré 0; elle est par suite (6.3.6 et 6.3.2) l'aboutissement de la
+    suite spectrale régulière dont le terme $E_2$ est
+    \[
+      E^2_{pq}
+      =
+      \operatorname{Tor}_p^A\bigl(H_q(P_\bullet),M\bigr)
+      =
+      \operatorname{Tor}_p^A\bigl(T_q(A),M\bigr).
+    \]
+    

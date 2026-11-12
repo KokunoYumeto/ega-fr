@@ -1,0 +1,99 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{117}
+par la suite, impliquant que l'ensemble des points de platitude d'un morphisme
+localement de présentation finie est ouvert.
+
+Dans les n$^\mathrm{os}$~4 à 8, nous étudions la question de la «~descente~» de
+la platitude, consistant à trouver des conditions utiles sur un morphisme de
+changement de base $Y'\to Y$ (non plat en général) pour pouvoir conclure que si
+$X\times_YY'$ est plat sur $Y'$, $X$ est plat sur $Y$. Ces résultats, plus
+techniques que ceux des n$^\mathrm{os}$~1 à 3, sont d'une utilisation moins
+fréquente dans la suite~; ils joueront cependant un rôle important dans les
+techniques de construction non projectives, au chapitre suivant. Le seul
+résultat des n$^\mathrm{os}$~4 à 8 utilisé dans la suite du chap.~IV est le
+critère valuatif de platitude (11.8), qu'on appliquera dans (15.2).
+
+Enfin, les n$^\mathrm{os}$~9 et 10 sont consacrés à l'étude d'une notion qui
+précise, en théorie des schémas, celle de densité au sens topologique, savoir la
+notion de famille de sous-préschémas \emph{schématiquement dense} dans un
+préschéma donné, et notamment l'étude du comportement de cette notion par
+changement de base (plat ou quelconque). Cette notion est surtout utilisée,
+pour l'instant, dans l'étude des schémas en groupes.
+
+\subsection{Ensembles de platitude (cas noethérien)}
+\label{subsection:IV.11.1-fr}
+
+\begin{theorem}[11.1.1]
+\label{IV.11.1.1-fr}
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme
+localement de type fini, $\mathcal F$ un $\mathcal O_X$-Module cohérent. Alors
+l'ensemble $U$ des $x\in X$ tels que $\mathcal F$ soit $f$-plat au point $x$
+est ouvert dans $X$.
+\end{theorem}
+
+La question étant évidemment locale sur $X$ et $Y$, on peut supposer
+$Y=\operatorname{Spec}(A)$, $X=\operatorname{Spec}(B)$, $A$ étant noethérien et
+$B$ une $A$-algèbre de type fini. On a alors $\mathcal F=\widetilde M$, où $M$
+est un $B$-module de type fini. Appliquons le critère
+($\mathbf 0_{\mathrm{III}}$, 9.2.6)~: il suffit donc de démontrer l'assertion
+suivante~:
+
+\begin{env}[11.1.1.1]
+\label{IV.11.1.1.1-fr}
+\emph{Soient $A$ un anneau noethérien, $B$ une $A$-algèbre de type fini, $M$ un
+$B$-module de type fini, $\mathfrak q$ un idéal premier de $B$, $\mathfrak p$
+son image réciproque dans $A$. On suppose que $M_{\mathfrak q}$ soit un
+$A_{\mathfrak p}$-module plat. Alors il existe $g\in B-\mathfrak q$ tel que,
+pour tout idéal premier $\mathfrak q'\supset\mathfrak q$ de $B$ tel que
+$g\notin\mathfrak q'$, $M_{\mathfrak q'}$ soit un
+$A_{\mathfrak p'}$-module plat, en désignant par $\mathfrak p'$ l'image
+réciproque de $\mathfrak q'$ dans $A$ (il revient d'ailleurs au même
+($\mathbf 0_{\mathrm I}$, 6.3.1) de dire que $M_{\mathfrak q'}$ est un
+$A$-module plat).}
+\end{env}
+
+Considérons pour cela $B_{\mathfrak q'}$ comme une $A$-algèbre~; on a
+évidemment
+$\mathfrak pB_{\mathfrak q'}\subset\mathfrak q'B_{\mathfrak q'}$. On sait
+alors ($\mathbf 0_{\mathrm{III}}$, 10.2.2) que pour que $M_{\mathfrak q'}$ soit
+un $A$-module plat, il faut et il suffit que
+$M_{\mathfrak q'}/\mathfrak pM_{\mathfrak q'}$ soit un
+$(A/\mathfrak p)$-module plat et que l'on ait
+$\operatorname{Tor}_1^A(M_{\mathfrak q'},A/\mathfrak p)=0$. Or, on a
+$M_{\mathfrak q'}=M\otimes_BB_{\mathfrak q'}$~; $B_{\mathfrak q'}$ étant plat
+sur $B$, on a
+\[
+  M_{\mathfrak q'}/\mathfrak pM_{\mathfrak q'}
+  =(M/\mathfrak pM)_{\mathfrak q'}
+\]
+et
+\[
+  \operatorname{Tor}_1^A(M_{\mathfrak q'},A/\mathfrak p)
+  =(\operatorname{Tor}_1^A(M,A/\mathfrak p))_{\mathfrak q'}
+\]
+(en définissant le Tor à l'aide d'une résolution projective de
+$A/\mathfrak p$)~; pour la même raison, comme on doit avoir
+$g\notin\mathfrak q'$, $B_{\mathfrak q'}$ est plat sur $B_g$, donc
+\[
+  (M/\mathfrak pM)_{\mathfrak q'}
+  =((M/\mathfrak pM)_g)_{\mathfrak q'B_g}
+\]
+et
+\[
+  (\operatorname{Tor}_1^A(M,A/\mathfrak p))_{\mathfrak q'}
+  =((\operatorname{Tor}_1^A(M,A/\mathfrak p))_g)_{\mathfrak q'B_g},
+\]
+où dans ces formules, $M/\mathfrak pM$ et
+$\operatorname{Tor}_1^A(M,A/\mathfrak p)$ sont considérés comme des
+$B$-modules. Compte tenu de ($\mathbf 0_{\mathrm I}$, 6.3.2), on voit qu'on
+est ramené à prouver le
+
+\begin{lemma}[11.1.1.2]
+\label{IV.11.1.1.2-fr}
+Sous les conditions de (11.1.1.1), il existe $g\in B-\mathfrak q$ tel que~:
+\begin{enumerate}[label=(\roman*)]
+  \item $(M/\mathfrak pM)_g$ soit un $(A/\mathfrak p)$-module plat~;
+  \item $(\operatorname{Tor}_1^A(M,A/\mathfrak p))_g=0$.
+\end{enumerate}
+\end{lemma}
+

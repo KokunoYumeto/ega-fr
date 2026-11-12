@@ -1,0 +1,50 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{296}
+longueur $n_{x'}$ de $\sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}$ est égale à $\mu_{x'}n_y$, $\mu_{x'}$ étant le nombre rationnel défini dans \sref{IV.21.10.10}.
+Comme $\sh{O}_{X',x'}/t'_{x'}\sh{O}_{X',x'}$ est de longueur finie, il a même longueur que son complété $\mathfrak{m}_{x'}$-préadique $A'/t'_{x'}A'$, qu'on peut aussi écrire $A'/t_yA'$;
+d'ailleurs, comme $t'_{x'}$ est régulier par hypothèse dans $\sh{O}_{X',x'}$, il l'est aussi dans $A'$ par platitude $(\mathbf{0}_{\mathrm{I}},6.3.4)$, et lorsque $A'$ est considéré comme $A$-module, on peut aussi dire que $t_y$ est $A'$-régulier.
+Comme $A$ est de dimension $1$ et que $A'$ est un $A$-module de type fini tel que $A'\otimes_AK$ soit un $K$-module libre de rang $r_{x'}$, on peut appliquer \sref{IV.21.10.13}, (v) à $M=A'$ et à $t_y$, et la longueur de $A'/t_yA'$ en tant que $A$-module est donc $r_{x'}n_y$.
+Comme $\boldsymbol{k}(x')$ est un $\boldsymbol{k}(x)$-espace vectoriel de rang $q_{x'}$, la longueur de $A'/t_yA'$ en tant que $A'$-module est donc $r_{x'}n_y/q_{x'}=\mu_{x'}n_y$, ce qui achève la démonstration.
+\end{proof}
+
+\begin{env}[21.10.14]
+\EGAReaderTarget{ega4.c04.statement.21-10-14}{IV.21.10.14}
+Soient maintenant $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme ayant les \emph{deux propriétés} suivantes:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item $f$ est fini;
+  \item l'image par $f$ de tout point maximal de $X'$ est un point maximal de $X$.
+\end{enumerate}
+Pour tout $x\in X^{(1)}$, les points $x'\in f^{-1}(x)$ appartiennent alors tous à $X'^{(1)}$, comme il résulte de l'hypothèse \emph{b)} et de l'inégalité $(\mathbf{0},16.3.9.1)$, la fibre $f^{-1}(x)$ étant discrète.
+Soit alors
+\[
+  Z'=\sum_{x'\in X'^{(1)}}n_{x'}\cdot\overline{\{x'\}}
+\]
+un cycle $1$-codimensionnel sur $X'$.
+Pour tout $x\in X^{(1)}$, définissons un entier $n_x$ par la formule
+\[
+  n_x=\sum_{x'\in f^{-1}(x)}n_{x'}\cdot[\boldsymbol{k}(x'): \boldsymbol{k}(x)],
+\]
+ce qui a un sens, les points de $f^{-1}(x)$ étant en nombre fini et $\boldsymbol{k}(x')$ étant un corps de degré fini sur $\boldsymbol{k}(x)$ \sref[I]{I.6.4.4}.
+En outre, l'ensemble des $x\in X^{(1)}$ tels que $n_x\neq0$ est \emph{localement fini} dans $X$, car il est contenu dans l'image par $f$ de l'ensemble des $x'\in X'^{(1)}$ tels que $n_{x'}\neq0$, et la conclusion résulte de ce que le morphisme $f$ est quasi-compact.
+On peut donc définir un cycle $1$-codimensionnel sur $X$ en posant
+\[
+\label{IV.21.10.14.1}
+  f_*(Z')=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}
+  \tag{21.10.14.1}
+\]
+et on dit que $f_*(Z')$ est l'\emph{image directe} de $Z'$ par $f$.
+Il est clair que l'application $f_*:\mathfrak{Z}^1(X')\to\mathfrak{Z}^1(X)$ ainsi définie est un homomorphisme de groupes ordonnés.
+En outre, si $U$ est un ouvert de $X$, $f_U:f^{-1}(U)\to U$ la restriction de $f$, il résulte aussitôt des définitions que l'on a
+\[
+\label{IV.21.10.14.2}
+  (f_U)_*(Z'|f^{-1}(U))=f_*(Z')|U,
+  \tag{21.10.14.2}
+\]
+donc, en désignant par $\psi$ l'application continue sous-jacente au morphisme $f$, les applications $\Gamma(f^{-1}(U),\mathscr{Z}^1_{X'})\to\Gamma(U,\mathscr{Z}^1_X)$ que l'on vient de définir définissent un homomorphisme de faisceaux de groupes commutatifs ordonnés sur $X$
+\[
+  \psi_*(\mathscr{Z}^1_{X'})\to\mathscr{Z}^1_X.
+\]
+\end{env}
+
+\begin{proposition}[21.10.15]
+\label{IV.21.10.15}

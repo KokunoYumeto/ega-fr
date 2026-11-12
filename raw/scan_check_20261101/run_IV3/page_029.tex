@@ -1,0 +1,106 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{29}
+(i) Considérons d'abord le cas où $S_0=\operatorname{Spec}(A_0)$,
+$X_\alpha=\operatorname{Spec}(B_\alpha)$ et
+$Y_\alpha=\operatorname{Spec}(C_\alpha)$ sont affines~; alors les
+$S_\lambda=\operatorname{Spec}(A_\lambda)$ et $S=\operatorname{Spec}(A)$ sont
+aussi affines, avec $A=\varinjlim A_\lambda$, et les assertions de (i) sont
+équivalentes au
+\end{proof}
+
+\begin{lemma}[8.8.2.1]
+\label{IV.8.8.2.1-fr}
+Soient $A_0$ un anneau, $(A_\lambda)_{\lambda\in L}$ un système inductif de
+$A_0$-algèbres, $A=\varinjlim A_\lambda$~; soient $B_\alpha$ une
+$A_\alpha$-algèbre, $C_\alpha$ une $A_\alpha$-algèbre de type fini (resp. de
+présentation finie). Alors l'homomorphisme canonique
+\begin{equation}
+\varinjlim_\lambda
+\operatorname{Hom}_{A_\lambda\text{-alg.}}
+  (C_\alpha\otimes_{A_\alpha}A_\lambda,
+   B_\alpha\otimes_{A_\alpha}A_\lambda)
+\longrightarrow
+\operatorname{Hom}_{A\text{-alg.}}
+  (C_\alpha\otimes_{A_\alpha}A,
+   B_\alpha\otimes_{A_\alpha}A)
+\tag{8.8.2.2}\label{IV.8.8.2.2-fr}
+\end{equation}
+est injectif (resp. bijectif).
+\end{lemma}
+
+\begin{proof}
+On sait que l'on a des isomorphismes canoniques fonctoriels
+\[
+\operatorname{Hom}_{A_\lambda\text{-alg.}}
+ (C_\alpha\otimes_{A_\alpha}A_\lambda,
+  B_\alpha\otimes_{A_\alpha}A_\lambda)
+\xrightarrow{\sim}
+\operatorname{Hom}_{A_\alpha\text{-alg.}}
+ (C_\alpha,B_\alpha\otimes_{A_\alpha}A_\lambda)
+\]
+\[
+\operatorname{Hom}_{A\text{-alg.}}
+ (C_\alpha\otimes_{A_\alpha}A,
+  B_\alpha\otimes_{A_\alpha}A)
+\xrightarrow{\sim}
+\operatorname{Hom}_{A_\alpha\text{-alg.}}
+ (C_\alpha,B_\alpha\otimes_{A_\alpha}A)
+\]
+en vertu de la propriété universelle du produit tensoriel de deux algèbres. Il
+suffit donc de prouver le
+\end{proof}
+
+\begin{lemma}[8.8.2.3]
+\label{IV.8.8.2.3-fr}
+Soient $E$ un anneau, $G$ une $E$-algèbre de type fini (resp. de présentation
+finie), $(F_\lambda)$ un système inductif de $E$-algèbres. Alors
+l'homomorphisme canonique
+\[
+\varinjlim\operatorname{Hom}_{E\text{-alg.}}(G,F_\lambda)
+\longrightarrow
+\operatorname{Hom}_{E\text{-alg.}}(G,\varinjlim F_\lambda)
+\]
+qui, à tout système inductif d'homomorphismes
+$\theta_\lambda:G\to F_\lambda$ de $E$-algèbres, fait correspondre sa limite
+inductive, est injectif (resp. bijectif).
+\end{lemma}
+
+\begin{proof}
+Supposons d'abord la $E$-algèbre $G$ de type fini, et soit
+$(t_i)_{1\leq i\leq n}$ un système de générateurs de cette $E$-algèbre~;
+montrons que si $(\theta'_\lambda)$, $(\theta''_\lambda)$ sont deux systèmes
+inductifs d'homomorphismes $G\to F_\lambda$ tels que
+$\varinjlim\theta'_\lambda=\varinjlim\theta''_\lambda$, il existe un
+$\mu\geq\lambda$ tel que $\theta'_\mu=\theta''_\mu$. En effet, si
+$\varphi_{\mu\lambda}:F_\lambda\to F_\mu$ et
+$\varphi_\lambda:F_\lambda\to F=\varinjlim F_\lambda$ sont les
+homomorphismes canoniques du système inductif $(F_\lambda)$, par hypothèse,
+pour chaque indice $i$, il existe un indice $\lambda_i$ tel que
+$\varphi_{\lambda_i}(\theta'_{\lambda_i}(t_i))=
+\varphi_{\lambda_i}(\theta''_{\lambda_i}(t_i))$, et l'on peut supposer tous
+les $\lambda_i$ égaux à un même $\lambda$~; il en résulte de la même manière
+l'existence d'un $\mu\geq\lambda$ tel que
+$\varphi_{\mu\lambda}(\theta'_\lambda(t_i))=
+\varphi_{\mu\lambda}(\theta''_\lambda(t_i))$ pour $1\leq i\leq n$,
+c'est-à-dire $\theta'_\mu(t_i)=\theta''_\mu(t_i)$ pour $1\leq i\leq n$,
+d'où $\theta'_\mu=\theta''_\mu$.
+
+Supposons en second lieu $G$ de présentation finie, de sorte que l'on a
+\[
+G=E[T_1,\ldots,T_n]/\mathfrak J,
+\]
+où $\mathfrak J$ est un idéal de type fini, $t_i$ étant la classe de $T_i$
+mod. $\mathfrak J$. Soit $(P_j)_{1\leq j\leq m}$ un système de générateurs de
+$\mathfrak J$. Supposons donné un homomorphisme de $E$-algèbres
+$\theta:G\to F$~; posons $b_i=\theta(t_i)$~; par définition, on a donc
+$P_j(b_1,b_2,\ldots,b_n)=\theta(P_j(t_1,\ldots,t_n))=0$ pour
+$1\leq j\leq m$. Or, il existe un $\lambda$ et des éléments
+$x_1,\ldots,x_n$ dans $F_\lambda$ tels que $b_i=\varphi_\lambda(x_i)$ pour
+$1\leq i\leq n$~; on a donc
+$\varphi_\lambda(P_j(x_1,\ldots,x_n))=P_j(b_1,\ldots,b_n)=0$, et par suite il
+existe $\mu\geq\lambda$ tel que
+$\varphi_{\mu\lambda}(P_j(x_1,\ldots,x_n))=
+P_j(\varphi_{\mu\lambda}(x_1),\ldots,\varphi_{\mu\lambda}(x_n))=0$ pour
+$1\leq j\leq m$~; on en conclut qu'il existe un homomorphisme de
+$E$-algèbres $\theta_\mu:G\to F_\mu$ tel que
+$\theta_\mu(t_i)=\varphi_{\mu\lambda}(x_i)$

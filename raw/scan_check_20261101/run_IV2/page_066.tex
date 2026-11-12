@@ -1,0 +1,91 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{66}
+
+\begin{corollary}[4.5.17]
+\label{IV.2.4.5.17-fr}
+Supposons que le $k$-préschéma $X$ contienne un point $x$ tel que la fermeture
+algébrique séparable de $k$ dans $k(x)$ soit finie sur $k$. Pour que $X$ soit
+géométriquement connexe, il faut et il suffit que pour toute extension finie
+séparable $K$ de $k$, $X\otimes_k K$ soit connexe.
+\end{corollary}
+
+\begin{remark}[4.5.18]
+\label{IV.2.4.5.18-fr}
+Nous verrons au \S~8 (8.4.5) que la conclusion de (4.5.17) est encore valable
+si, au lieu de supposer vérifiée la condition de l'énoncé, on suppose que $X$
+est \emph{quasi-compact}.
+\end{remark}
+
+\begin{proposition}[4.5.19]
+\EGAReaderTarget{ega4.c04.prop.4-5-19}{IV.2.4.5.19-fr}
+Soient $X$ un $k$-préschéma, $Z$ une partie de $X$, $k'$ une extension
+algébriquement close de $k$, $X'=X\otimes_k k'$, $p:X'\to X$ la projection
+canonique. On suppose que $Z'=p^{-1}(Z)$ est contenu dans une seule composante
+irréductible $X'_0$ de $X'$. Alors on a $X'_0=p^{-1}(X_0)$, où
+$X_0=p(X'_0)$ est une composante irréductible de $X$ contenant $Z$, et en outre
+$X_0$ est géométriquement irréductible. Si de plus $X'_0$ est la seule
+composante irréductible de $X'$ qui rencontre $Z'$, alors $X_0$ est la seule
+composante irréductible de $X$ qui rencontre $Z$.
+\end{proposition}
+
+Pour montrer que $X'_0=p^{-1}(X_0)$, nous allons appliquer le
+
+\begin{lemma}[4.5.19.1]
+\label{IV.2.4.5.19.1-fr}
+Soient $T$, $T'$ deux préschémas, $p:T'\to T$ un morphisme~; considérons le
+préschéma $T''=T'\times_T T'$, et soient $p_1:T''\to T'$, $p_2:T''\to T'$ les
+projections canoniques. Pour qu'une partie $U'$ de $T'$ soit de la forme
+$p^{-1}(U)$, où $U\subset T$, il faut et il suffit que l'on ait
+$p_1^{-1}(U')=p_2^{-1}(U')$.
+\end{lemma}
+
+\begin{proof}
+Le morphisme structural $q:T''\to T$ est égal à $p\circ p_1$ et à
+$p\circ p_2$ par définition, donc la relation est nécessaire. Inversement,
+supposons-la vérifiée~; soient $u'$ un point de $U'$, $t'$ un point de
+$p^{-1}(p(u'))$~; comme $p(t')=p(u')$, il existe un point $t''\in T''$ tel que
+$p_1(t'')=u'$, $p_2(t'')=t'$ (I, 3.4.7)~; donc
+$t''\in p_1^{-1}(U')=p_2^{-1}(U')$ par hypothèse, et par suite
+$t'=p_2(t'')\in U'$, ce qui prouve le lemme.
+\end{proof}
+
+\begin{proof}
+Ce lemme étant établi, pour démontrer que $X'_0=p^{-1}(X_0)$, formons donc le
+produit $X''=X'\times_X X'$ (relatif au morphisme $p:X'\to X$)~; si $p_1$ et
+$p_2$ sont les projections canoniques de $X''$ dans $X'$, il s'agit donc de
+montrer que $p_1^{-1}(X'_0)=p_2^{-1}(X'_0)$. Or, si l'on pose
+$S=\operatorname{Spec}(k)$, $S'=\operatorname{Spec}(k')$, observons que si
+$S''=S'\times_S S'=\operatorname{Spec}(k'\otimes_k k')$, on peut aussi écrire
+$X''=X'\times_{S'}S''$. Si $\varphi'':X''\to S''$ est le morphisme structural,
+il suffit de prouver que pour tout $s''\in S''$, on a
+\[
+p_1^{-1}(X'_0)\cap\varphi''^{-1}(s'')
+=p_2^{-1}(X'_0)\cap\varphi''^{-1}(s'').
+\]
+Si l'on pose $T=\operatorname{Spec}(k(s''))$,
+$U=X''\times_{S''}T=\varphi''^{-1}(s'')$, et si $v:U\to X''$ est la projection
+canonique, il s'agit donc de prouver que
+$U_1=v^{-1}(p_1^{-1}(X'_0))$ et $U_2=v^{-1}(p_2^{-1}(X'_0))$, qui sont des
+composantes irréductibles de $U$ (4.4.5) sont identiques. On a le diagramme
+\begin{equation}
+\tag{4.5.19.2}
+\label{IV.2.4.5.19.2-fr}
+\xymatrix@C=3.2em@R=3.0em{
+X\ar[d]
+  & X'\ar[l]_p\ar[d]
+  & X''\ar@<.55ex>[l]^{p_2}\ar@<-.55ex>[l]_{p_1}
+       \ar[d]^{\varphi''}
+  & U\ar[l]_v\ar[d]
+\\
+S
+  & S'\ar[l]
+  & S''\ar@<.55ex>[l]\ar@<-.55ex>[l]
+  & T\ar[l].
+}
+\end{equation}
+Par construction, $U_1$ et $U_2$ contiennent toutes deux l'ensemble
+$w^{-1}(Z)$, où
+\[
+w=p\circ p_1\circ v=p\circ p_2\circ v.
+\]
+

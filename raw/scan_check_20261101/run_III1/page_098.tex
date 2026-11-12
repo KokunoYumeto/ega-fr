@@ -1,0 +1,113 @@
+% from ega3-1-fr.tex
+\oldpage[III]{98}
+effet, lorsqu'il en est ainsi, tout $\mathcal O_X$-Module quasi-cohérent est
+de la forme $\widetilde M$ (II, 2.7.7).
+\end{env}
+
+\begin{env}[2.1.7]
+\label{III.2.1.7-fr}
+Nous allons appliquer (\hyperref[III.2.1.5-fr]{2.1.5}) dans le cas
+$S=A[T_0,\ldots,T_r]$, où $A$ est un anneau quelconque, les $T_i$ sont des
+indéterminées, avec $M=S$ et $f_i=T_i$. On est donc essentiellement ramené
+à calculer $H^\bullet((\mathbf T),S)$, où
+$\mathbf T=(T_i)_{0\leq i\leq r}$.
+\end{env}
+
+\begin{lemma}[2.1.8]
+\label{III.2.1.8-fr}
+Si $S=A[T_0,\ldots,T_r]$, on a, avec
+$\mathbf T=(T_i)_{0\leq i\leq r}$,
+\begin{align}
+\label{III.2.1.8.1-fr}
+\tag{2.1.8.1}
+H^i(\mathbf T^n,S)&=0 &&\text{si }i\neq r+1,\\
+\label{III.2.1.8.2-fr}
+\tag{2.1.8.2}
+H^{r+1}(\mathbf T^n,S)&=S/(\mathbf T^n).
+\end{align}
+Le $A$-module $H^{r+1}(\mathbf T^n,S)$ a donc une base sur $A$ formée des
+classes mod. $(\mathbf T^n)$ des monômes
+\[
+T_{\mathbf p}=T_0^{p_0}\cdots T_r^{p_r},
+\qquad \mathbf p=(p_0,\ldots,p_r),\quad 0\leq p_i<n
+\quad\text{pour tout }i.
+\]
+\end{lemma}
+
+\begin{proof}
+C'est une conséquence immédiate de (1.1.3.5) et de la prop. (1.1.4), dont
+les hypothèses sont trivialement vérifiées.
+\end{proof}
+
+\begin{env}[2.1.9]
+\label{III.2.1.9-fr}
+Passons à la limite inductive sur $n$~; les relations
+(\hyperref[III.2.1.8.1-fr]{2.1.8.1}) donnent
+$H^i((\mathbf T),S)=0$ pour $i\neq r+1$. Pour $i=r+1$, le système inductif
+est formé des $S/(\mathbf T^n)$, l'homomorphisme
+\[
+\varphi_{nm}:S/(\mathbf T^n)\longrightarrow S/(\mathbf T^m)
+\qquad(0\leq n\leq m)
+\]
+étant la multiplication par $(T_0\cdots T_r)^{m-n}$. Pour
+$n\geq\sup(p_i)_{0\leq i\leq r}$, désignons par
+$\xi_{\mathbf p}^{(n)}=\xi_{p_0,\ldots,p_r}^{(n)}$ la classe de
+$T_0^{n-p_0}\cdots T_r^{n-p_r}\pmod{(\mathbf T^n)}$~; on a alors
+$\varphi_{nm}(\xi_{\mathbf p}^{(n)})=\xi_{\mathbf p}^{(m)}$, et ces éléments
+ont donc même image canonique
+$\xi_{\mathbf p}=\xi_{p_0,\ldots,p_r}$ dans la limite inductive
+$H^{r+1}((\mathbf T),S)$~; en vertu de la définition du degré donnée dans
+(\hyperref[III.2.1.2-fr]{2.1.2}), le degré de $\xi_{\mathbf p}$ est donc
+égal à $-|\mathbf p|=-(p_0+p_1+\cdots+p_r)$. Il est clair que les
+$\xi_{\mathbf p}^{(n)}$ pour $0<p_i\leq n$ et $0\leq i\leq r$ forment une
+base de $S/(\mathbf T^n)$. On déduit donc aussitôt de
+(\hyperref[III.2.1.8-fr]{2.1.8})~:
+\end{env}
+
+\begin{corollary}[2.1.10]
+\label{III.2.1.10-fr}
+Avec les notations de (\hyperref[III.2.1.8-fr]{2.1.8}), on a
+\begin{equation}
+\label{III.2.1.10.1-fr}
+\tag{2.1.10.1}
+H^i((\mathbf T),S)=0\qquad\text{pour }i\neq r+1,
+\end{equation}
+et $H^{r+1}((\mathbf T),S)$ est un $A$-module libre dont une base est formée
+des éléments $\xi_{p_0,\ldots,p_r}$ tels que $p_i>0$ pour $0\leq i\leq r$.
+\end{corollary}
+
+\begin{env}[2.1.11]
+\label{III.2.1.11-fr}
+\emph{Remarque.} --- Soit $N$ un $A$-module quelconque et soit
+$M=S\otimes_A N$~; le raisonnement de
+(\hyperref[III.2.1.8-fr]{2.1.8}) montre que l'on a plus généralement
+\begin{align}
+\label{III.2.1.11.1-fr}
+\tag{2.1.11.1}
+H^i(\mathbf T^n,M)&=0 &&\text{si }i\neq r+1,\\
+\label{III.2.1.11.2-fr}
+\tag{2.1.11.2}
+H^{r+1}(\mathbf T^n,M)&=(S/(\mathbf T^n))\otimes_A N,
+\end{align}
+car la dernière formule se déduit directement de (1.1.3.5), et d'autre
+part il est clair que
+\[
+M/(T_0^nM+\cdots+T_{i-1}^nM)
+=\bigl(S/(T_0^nS+\cdots+T_{i-1}^nS)\bigr)\otimes_A N,
+\]
+l'idéal $T_0^nS+\cdots+T_{i-1}^nS$ étant facteur direct dans le
+$A$-module $S$~; cela permet d'appliquer (1.1.4) à $M$, et on obtient ainsi
+(\hyperref[III.2.1.11.1-fr]{2.1.11.1}).
+\end{env}
+
+Combinant (\hyperref[III.2.1.10-fr]{2.1.10}) et
+(\hyperref[III.2.1.5-fr]{2.1.5}), on obtient~:
+
+\begin{proposition}[2.1.12]
+\label{III.2.1.12-fr}
+Soient $A$ un anneau, $r$ un entier $>0$, et
+$X=\mathbf P_A^r$ (II, 4.1.1). Alors~:
+\begin{enumerate}
+\item[{\rm(i)}] On a $H^i(X,\mathcal O_X(*))=0$ pour $i\neq0,r$.
+\item[{\rm(ii)}] L'homomorphisme canonique
+$\alpha:S\to H^0(X,\mathcal O_X(*))$ (II, 2.6.2) est bijectif.

@@ -1,0 +1,69 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{257}
+
+Si on note $\sh{S}(\sh{O}_X)^{-1}$ le faisceau dont les sections au-dessus de $U$ sont les inverses dans $\Gamma(U,\sh{M}_X^*)$ des éléments de $\Gamma(U,\sh{S}(\sh{O}_X))$, il est clair que l'on a $\Gamma(U,\sh{S}(\sh{O}_X))\cap\Gamma(U,\sh{S}(\sh{O}_X)^{-1})=\Gamma(U,\sh{O}_X^*)$, donc
+\[
+\label{IV.21.1.5.2}
+  \sh{S}(\sh{O}_X)\cap\sh{S}(\sh{O}_X)^{-1}=\sh{O}_X^*.
+  \tag{21.1.5.2}
+\]
+
+\begin{definition}[21.1.6]
+\EGAReaderTarget{ega4.c04.def.21-1-6}{IV.21.1.6}
+Le sous-faisceau d'ensembles de $\sh{D}iv_X$, image canonique du sous-faisceau $\sh{S}(\sh{O}_X)$ de $\sh{M}_X^*$, est noté $\sh{D}iv_X^+$; ses sections au-dessus de $X$ sont appelées \emph{diviseurs positifs sur $X$}, et leur ensemble est noté $\operatorname{Div}^+(X)$.
+\end{definition}
+
+Puisque $\sh{S}(\sh{O}_X)$ est un faisceau de monoïdes (multiplicatifs), on a
+\[
+\label{IV.21.1.6.1}
+  \operatorname{Div}^+(X)+\operatorname{Div}^+(X)\subset\operatorname{Div}^+(X)
+  \tag{21.1.6.1}
+\]
+et d'autre part, en vertu de \sref{IV.21.1.5.2} et \sref{IV.21.1.3.3}
+\[
+\label{IV.21.1.6.2}
+  \operatorname{Div}^+(X)\cap(-\operatorname{Div}^+(X))=\{0\}.
+  \tag{21.1.6.2}
+\]
+Ces deux relations montrent que $\operatorname{Div}^+(X)$ est l'ensemble des éléments positifs pour une \emph{structure d'ordre} sur le groupe $\operatorname{Div}(X)$, compatible avec cette structure de groupe; on note cette relation d'ordre $D\leq D'$, autrement dit, on a
+\[
+\label{IV.21.1.6.3}
+  D\geq0 \iff D\in\operatorname{Div}^+(X).
+  \tag{21.1.6.3}
+\]
+
+Nous supposerons toujours dans ce qui suit que $\operatorname{Div}(X)$ est muni de cette structure d'ordre;
+il est clair que $\sh{D}iv_X^+|U=\sh{D}iv_U^+$, donc $\Gamma(U,\sh{D}iv_X^+)=\operatorname{Div}^+(U)$, et on peut donc dire que $\sh{D}iv_X^+$ définit sur $\sh{D}iv_X$ une structure de faisceau de groupes ordonnés.
+La fibre $(\sh{D}iv_X^+)_x$ en un point $x$ du faisceau $\sh{D}iv_X^+$ est un sous-monoïde du groupe $(\sh{D}iv_X)_x$, ensemble des éléments $\geq0$ pour une structure d'ordre compatible avec la structure de groupe;
+pour un diviseur $D$ sur $X$, il revient au même de dire que $D\geq0$ ou que $D_x\geq0$ pour tout $x\in X$.
+
+Par définition, pour toute fonction méromorphe régulière $f$ sur $X$, on a la relation
+\[
+\label{IV.21.1.6.4}
+  \operatorname{div}(f)\geq0 \iff f\in\Gamma(X,\sh{S}(\sh{O}_X))
+  \tag{21.1.6.4}
+\]
+autrement dit, $\operatorname{div}(f)\geq0$ signifie que $f$ est une \emph{section régulière} de $\sh{O}_X$, ou encore une section de $\sh{O}_X$ \emph{inversible dans} $M(X)$.
+
+Plus généralement, étant donné un diviseur $D$ sur $X$, la relation $\operatorname{div}(f)\geq D$ est équivalente à la suivante : pour tout ouvert $U$ de $X$ tel que $D|U=\operatorname{div}(g)$, où $g\in\Gamma(U,\sh{M}_X^*)$, il existe un élément régulier $t$ de $\Gamma(U,\sh{O}_X)$ tel que $f|U=tg$.
+
+\begin{env}[21.1.7]
+\label{IV.21.1.7}
+Soient $\sh{L}$ un $\sh{O}_X$-Module inversible, $s$ une section méromorphe régulière de $\sh{L}$ au-dessus de $X$; on a la relation
+\[
+\label{IV.21.1.7.1}
+  \operatorname{div}(s)\geq0 \iff s\in\Gamma(X,\sh{L})\cap\Gamma(X,(\sh{M}_X(\sh{L}))^*)
+  \tag{21.1.7.1}
+\]
+comme il résulte aussitôt des définitions \sref{IV.21.1.4} et \sref{IV.21.1.6}.
+\end{env}
+
+\begin{proposition}[21.1.8]
+\EGAReaderTarget{ega4.c04.prop.21-1-8}{IV.21.1.8}
+Soient $X$ un préschéma localement noethérien, $D$ un diviseur sur $X$.
+Supposons que pour tout $x\in X$ tel que $\operatorname{prof}(\sh{O}_{X,x})=1$ on ait $D_x\geq0$ (resp. $D_x=0$).
+Alors on a $D\geq0$ (resp. $D=0$).
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $X$, on peut supposer que $D=\operatorname{div}(f)$, $f$ étant une

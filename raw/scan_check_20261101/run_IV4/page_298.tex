@@ -1,0 +1,56 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{298}
+$A$-algèbre qui est un $A$-module libre de rang fini;
+en outre, on peut supposer que $D'=\operatorname{div}(t')$, où $t'$ est un élément régulier de $A'$;
+on a alors $f_*(D')=\operatorname{div}(t)$, où $t=\mathrm{N}_{A'/A}(t')$ est un élément régulier de $A$ \sref{IV.21.5.2}.
+On peut se borner au cas où $t'$ n'est pas inversible dans $A'$, ce qui équivaut au fait que $t$ ne l'est pas dans $A$;
+l'anneau $A/tA$ est alors de longueur finie et $\neq0$, et $A'/tA'$ est composé direct d'anneaux locaux artiniens $A'_i$ $(1\leq i\leq r)$, le corps résiduel de $A'_i$ étant $\boldsymbol{k}(x'_i)$, où les $x'_i$ $(1\leq i\leq r)$ sont les points de $X'$ au-dessus de $x$.
+Si $t'_i$ $(1\leq i\leq r)$ est l'image de $t'$ dans $A'_i$, $A'/t'A'$ est composé direct des $A'_i/t'_iA'_i$;
+comme le produit $\operatorname{long}_{A'_i}(A'_i/t'_iA'_i)\cdot[\boldsymbol{k}(x'_i):\boldsymbol{k}(x)]$ est égal à $\operatorname{long}_A(A'_i/t'_iA'_i)$, on voit que la multiplicité au point $x$ du premier membre de \sref{IV.21.10.17.1} est $\operatorname{long}_A(A'/t'A')$, si bien que la formule à démontrer se réduit à
+\[
+\label{IV.21.10.17.2}
+  \operatorname{long}_A(A'/t'A')=\operatorname{long}_A(A/tA).
+  \tag{21.10.17.2}
+\]
+
+Cette relation découle du lemme plus général suivant.
+\end{proof}
+
+\begin{lemma}[21.10.17.3]
+\label{IV.21.10.17.3}
+Soient $A$ un anneau local noethérien de dimension $1$, $M$ un $A$-module libre de rang fini, $u$ un endomorphisme injectif de $M$.
+Alors on a
+\[
+\label{IV.21.10.17.4}
+  \operatorname{long}_A(\operatorname{Coker}u)=\operatorname{long}_A(A/(\det u)A).
+  \tag{21.10.17.4}
+\]
+\end{lemma}
+
+\begin{proof}
+Distinguons plusieurs cas.
+
+I) $A$ est un anneau de valuation discrète.
+Soit en effet $\pi$ une uniformisante de $A$, et remarquons que $\operatorname{long}_A(A/\pi^kA)=k$;
+si $n$ est le rang de $M$ et si $\pi^{m_i}$ $(1\leq i\leq n)$ sont les facteurs invariants de $u$, $\operatorname{Coker}(u)$ est somme directe des $A$-modules $A/\pi^{m_i}A$, donc a pour longueur $m=\sum_{i=1}^nm_i$ et $\det(u)$ est produit d'un élément inversible et de $\pi^m$, d'où la conclusion dans ce cas (Bourbaki, \emph{Alg.}, chap.~VII, \textsection~4, n\textsuperscript{o}~5, cor.~1 de la prop.~4).
+
+II) $A$ est un anneau complet intègre (de dimension $1$).
+On sait alors $(\mathbf{0},19.8.8)$, (ii) qu'il y a un sous-anneau $B$ de $A$, qui est un anneau de valuation discrète, tel que $B\to A$ soit un homomorphisme local faisant de $A$ un $B$-module de type fini;
+comme ce $B$-module est évidemment sans torsion, il est libre (Bourbaki, \emph{Alg. comm.}, chap.~VI, \textsection~3, n\textsuperscript{o}~6, lemme~1).
+Notons $M'$ l'ensemble $M$ muni de sa structure de $B$-module (libre), par $u'$ l'endomorphisme $u$ considéré comme $B$-endomorphisme.
+Il résulte de I) que l'on a
+\[
+\label{IV.21.10.17.5}
+  \operatorname{long}_B(\operatorname{Coker}u')=\operatorname{long}_B(B/(\det u')B).
+  \tag{21.10.17.5}
+\]
+Mais on a (Bourbaki, \emph{Alg.}, chap.~VIII, \textsection~12, n\textsuperscript{o}~2, prop.~7)
+\[
+  \det u'=\mathrm{N}_{A/B}(\det u),
+\]
+donc, en appliquant \sref{IV.21.10.17.4} à l'homothétie $x\mapsto(\det u)x$ du $B$-module libre $A$, il vient
+\[
+  \operatorname{long}_B(B/(\det u')B)=\operatorname{long}_B(A/(\det u)A),
+\]
+d'où, en portant dans \sref{IV.21.10.17.5} et divisant par $[\boldsymbol{k}(A):\boldsymbol{k}(B)]$, longueur du $B$-module $\boldsymbol{k}(A)$, on obtient \sref{IV.21.10.17.4} dans le cas envisagé.
+

@@ -1,0 +1,97 @@
+% from ega2-1-fr.tex
+\oldpage[II]{6}
+noterons $\mathcal{A}(X)$ lorsqu'il n'en résultera pas de confusion~; si $U$
+est un ouvert de $S$, on a
+\[
+  \mathcal{A}(f^{-1}(U))=\mathcal{A}(X)|U.
+\]
+De même, pour tout $\mathcal{O}_X$-Module $\mathcal{F}$ (resp. toute
+$\mathcal{O}_X$-Algèbre $\mathcal{B}$), nous écrirons
+$\mathcal{A}(\mathcal{F})$ (resp. $\mathcal{A}(\mathcal{B})$) l'image directe
+$f_*(\mathcal{F})$ (resp. $f_*(\mathcal{B})$) qui est un
+$\mathcal{A}(X)$-Module (resp. une $\mathcal{A}(X)$-Algèbre), et non seulement
+un $\mathcal{O}_S$-Module (resp. $\mathcal{O}_S$-Algèbre).
+\end{env}
+
+\begin{env}[1.1.2]
+\label{II.1.1.2-fr}
+Soient $Y$ un second $S$-préschéma, $g:Y\to S$ son morphisme structural,
+$h:X\to Y$ un $S$-morphisme~; on a donc le diagramme commutatif
+\[
+  \xymatrix{
+    X\ar[rr]^h\ar[rd]_f && Y\ar[ld]^g\\
+    & S
+  }
+  \tag{1.1.2.1}\label{II.1.1.2.1-fr}
+\]
+
+On a par définition $h=(\psi,\theta)$, où
+$\theta:\mathcal{O}_Y\to h_*(\mathcal{O}_X)=\psi_*(\mathcal{O}_X)$ est un
+homomorphisme de faisceaux d'anneaux~; on en déduit
+(\hyperref[0.4.2.2-fr]{0, 4.2.2}) un homomorphisme de
+$\mathcal{O}_S$-Algèbres
+\[
+  g_*(\theta):g_*(\mathcal{O}_Y)\to
+  g_*(h_*(\mathcal{O}_X))=f_*(\mathcal{O}_X),
+\]
+autrement dit, un homomorphisme de $\mathcal{O}_S$-Algèbres
+$\mathcal{A}(Y)\to\mathcal{A}(X)$, que nous noterons aussi
+$\mathcal{A}(h)$. Si $h':Y\to Z$ est un second $S$-morphisme, il est immédiat
+que $\mathcal{A}(h'\circ h)=\mathcal{A}(h)\circ\mathcal{A}(h')$. Nous avons
+donc défini un \emph{foncteur contravariant} $\mathcal{A}(X)$ sur la catégorie
+des $S$-préschémas, à valeurs dans la catégorie des
+$\mathcal{O}_S$-Algèbres.
+
+Soient maintenant $\mathcal{F}$ un $\mathcal{O}_X$-Module, $\mathcal{G}$ un
+$\mathcal{O}_Y$-Module, et $u:\mathcal{G}\to\mathcal{F}$ un $h$-morphisme,
+c'est-à-dire (\hyperref[0.4.4.1-fr]{0, 4.4.1}) un homomorphisme de
+$\mathcal{O}_Y$-Modules $\mathcal{G}\to h_*(\mathcal{F})$. Alors
+\[
+  g_*(u):g_*(\mathcal{G})\to g_*(h_*(\mathcal{F}))=f_*(\mathcal{F})
+\]
+est un homomorphisme $\mathcal{A}(\mathcal{G})\to
+\mathcal{A}(\mathcal{F})$ de $\mathcal{O}_S$-Modules, que nous noterons
+$\mathcal{A}(u)$~; en outre, le couple
+$(\mathcal{A}(h),\mathcal{A}(u))$ constitue un \emph{di-homomorphisme} du
+$\mathcal{A}(Y)$-Module $\mathcal{A}(\mathcal{G})$ dans le
+$\mathcal{A}(X)$-Module $\mathcal{A}(\mathcal{F})$.
+\end{env}
+
+\begin{env}[1.1.3]
+\label{II.1.1.3-fr}
+Le préschéma $S$ étant fixé, on peut considérer les couples
+$(X,\mathcal{F})$, où $X$ est un $S$-préschéma et $\mathcal{F}$ un
+$\mathcal{O}_X$-Module, comme formant une \emph{catégorie}, en définissant un
+\emph{morphisme} $(X,\mathcal{F})\to(Y,\mathcal{G})$ comme un couple $(h,u)$,
+où $h:X\to Y$ est un $S$-morphisme et $u:\mathcal{G}\to\mathcal{F}$ un
+$h$-morphisme. On peut alors dire que
+$(\mathcal{A}(X),\mathcal{A}(\mathcal{F}))$ est un \emph{foncteur
+contravariant} à valeurs dans la catégorie dont les objets sont les couples
+formés d'une $\mathcal{O}_S$-Algèbre et d'un Module sur cette Algèbre, et les
+morphismes sont les di-homomorphismes.
+\end{env}
+
+\subsection{Préschémas affines sur un préschéma}
+\label{subsection:II.1.2-fr}
+
+\begin{definition}[1.2.1]
+\label{II.1.2.1-fr}
+Soient $X$ un $S$-préschéma, $f:X\to S$ son morphisme structural. On dit que
+$X$ est \emph{affine au-dessus de $S$} s'il existe un recouvrement
+$(S_\alpha)$ de $S$ par des ouverts affines tels que, pour tout $\alpha$, le
+préschéma induit par $X$ sur l'ensemble ouvert $f^{-1}(S_\alpha)$ soit affine.
+\end{definition}
+
+\begin{example}[1.2.2]
+\label{II.1.2.2-fr}
+Tout sous-préschéma fermé de $S$ est un $S$-préschéma affine au-dessus de $S$
+(\hyperref[I.4.2.3-fr]{I, 4.2.3} et
+\hyperref[I.4.2.4-fr]{4.2.4}).
+\end{example}
+
+\begin{remark}[1.2.3]
+\label{II.1.2.3-fr}
+Un préschéma $X$ affine au-dessus de $S$ n'est pas nécessairement un schéma
+affine, comme le montre l'exemple $X=S$ (\hyperref[II.1.2.2-fr]{1.2.2}).
+D'autre part, si un schéma affine $X$ est un $S$-préschéma, $X$ n'est pas
+nécessairement affine au-dessus

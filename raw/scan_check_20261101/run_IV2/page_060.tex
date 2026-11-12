@@ -1,0 +1,81 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{60}
+
+\item[(ii)] Pour tout $x\in X$, $f^{-1}(x)$ est irréductible (resp. connexe).
+\end{enumerate}
+Alors pour que $X'$ soit irréductible (resp. connexe), il faut et il suffit
+que $X$ le soit.
+\end{lemma}
+
+\begin{proof}
+L'assertion relative à la connexité n'est autre que Bourbaki,
+\emph{Top. gén.}, chap.~I\textsuperscript{er}, 3\textsuperscript{e} éd.,
+\S~11, n\textsuperscript{o}~3, prop.~7. Prouvons l'assertion relative à
+l'irréductibilité~; la condition étant trivialement nécessaire puisque $f$
+est surjective, prouvons qu'elle est suffisante. Soient donc $X'_1$, $X'_2$
+deux parties fermées de $X'$ telles que $X'=X'_1\cup X'_2$, et désignons par
+$X_i$ $(i=1,2)$ l'ensemble des $x\in X$ tels que $f^{-1}(x)\subset X'_i$~; on
+a donc $X_i=X-f(X'-X'_i)$, et comme $f$ est ouverte, on en conclut que $X_i$
+est une partie \emph{fermée} de $X$ $(i=1,2)$. D'autre part, pour tout
+$x\in X$, $f^{-1}(x)$ est irréductible par hypothèse, et est réunion des deux
+parties fermées $X'_1\cap f^{-1}(x)$ et $X'_2\cap f^{-1}(x)$~; l'une de ces
+deux parties doit donc être égale à $f^{-1}(x)$, ce qui signifie que l'on doit
+avoir $x\in X_1$ ou $x\in X_2$~; on a donc $X=X_1\cup X_2$, et comme $X$ est
+irréductible par hypothèse, on en déduit $X=X_1$ ou $X=X_2$, donc
+$X'=X'_1$ ou $X'=X'_2$.
+\end{proof}
+
+\begin{remark}[4.4.3]
+\label{IV.2.4.4.3-fr}
+Si la topologie de $X$ n'est pas quotient de celle de $X'$ par la relation
+d'équivalence définie par $f$, il peut se faire que $X$ et toutes les fibres
+$f^{-1}(x)$ soient irréductibles, sans que $X'$ soit connexe~: on en a un
+exemple en prenant pour $X$ un schéma irréductible (par exemple la droite
+affine $\operatorname{Spec}(k[T])$ sur un corps $k$ algébriquement clos), en
+considérant un point fermé $x_0$ de $X$ et en prenant pour $X'$ l'espace
+\emph{somme} de $\{x_0\}$ et du sous-espace ouvert $X-\{x_0\}$ de $X$. De
+même, si l'on remplace l'hypothèse «~$f$ ouverte~» par «~$f$ fermée~» (et même
+«~$f$ propre~») (ce qui entraîne pourtant que la topologie de $X$ est alors
+quotient de celle de $X'$ par la relation définie par $f$), il peut se faire
+que $X$ et toutes les fibres $f^{-1}(x)$ soient irréductibles sans que $X'$ le
+soit. Prenons encore pour $X$ la droite affine sur $k$, désignons par $S$ le
+produit $X\times_k\mathbf P$, où $\mathbf P$ est la droite projective sur
+$k$~; si $x_0$ est un point fermé de $X$, $t_0$ un point fermé de $\mathbf P$,
+$p:S\to X$, $q:S\to\mathbf P$ les projections, désignons par $X'$ le
+sous-préschéma réduit ayant pour espace sous-jacent l'ensemble fermé
+$p^{-1}(x_0)\cup q^{-1}(t_0)$, et prenons pour $f$ la restriction à $X'$ de
+$p$~; $f$ est propre mais $X'$ n'est pas irréductible.
+\end{remark}
+
+\begin{theorem}[4.4.4]
+\label{IV.2.4.4.4-fr}
+Soient $k$ un corps algébriquement clos, $X$ un $k$-préschéma. Si $X$ est
+irréductible (resp. connexe), il en est de même de $X\otimes_k K$ pour toute
+extension $K$ de $k$.
+\end{theorem}
+
+\begin{proof}
+On a vu en effet (4.4.1) que le morphisme $p:X\otimes_k K\to X$ est
+fidèlement plat et ouvert~; pour pouvoir appliquer le lemme (4.4.2), il suffit
+donc de vérifier que les fibres $p^{-1}(x)$ sont irréductibles pour tout
+$x\in X$. Mais le $k(x)$-préschéma $p^{-1}(x)$ est isomorphe à
+$\operatorname{Spec}(k(x)\otimes_k K)$ (I, 3.6.2), donc intègre en vertu de
+l'hypothèse sur $k$ et de (4.3.9).
+\end{proof}
+
+\begin{corollary}[4.4.5]
+\label{IV.2.4.4.5-fr}
+Soient $k$ un corps algébriquement clos, $X$ un $k$-préschéma, $K$ une
+extension de $k$, $p:X\otimes_k K\to X$ la projection canonique. Si $Z$ est
+une partie irréductible (resp. connexe) de $X$, $p^{-1}(Z)$ est irréductible
+(resp. connexe)~; en particulier, si $X_0$ est une composante irréductible
+(resp. la composante connexe) de $X$ contenant $Z$, $p^{-1}(X_0)$ est une
+composante irréductible (resp. connexe) de $X\otimes_k K$ contenant
+$p^{-1}(Z)$.
+\end{corollary}
+
+\begin{proof}
+La seconde assertion résulte de (4.4.1) et de la première appliquée en
+remplaçant $Z$ par $X_0$~; pour prouver la première, soient $X'$ l'espace
+sous-jacent à $X\otimes_k K$, $Z'=p^{-1}(Z)$~; la
+

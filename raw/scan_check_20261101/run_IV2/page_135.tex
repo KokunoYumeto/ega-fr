@@ -1,0 +1,77 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{135}
+
+critères permettant d'affirmer que le \emph{lieu singulier} (ou certains
+ensembles analogues) de certains préschémas sont des ensembles fermés; ces
+critères joueront un rôle important au §~7.
+
+\subsection{Platitude et dimension}
+
+\begin{proposition}[6.1.1]
+\label{IV.2.s6.1.1-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $\mathfrak m$ l'idéal maximal
+de $A$, $k=A/\mathfrak m$ son corps résiduel,
+$\varphi:A\to B$ un homomorphisme local. On suppose que pour tout idéal
+premier $\mathfrak p$ de $A$, distinct de $\mathfrak m$, et pour tout élément
+minimal $\mathfrak q$ de l'ensemble des idéaux premiers de $B$ contenant
+$\mathfrak pB$, $\varphi^{-1}(\mathfrak q)$ soit distinct de $\mathfrak m$
+(autrement dit, qu'aucune composante irréductible de
+$\operatorname{Spec}(B/\mathfrak pB)$ ne soit contenue dans l'image réciproque
+du point fermé $\mathfrak m$ de $\operatorname{Spec}(A)$ dans
+$\operatorname{Spec}(B)$). Alors on a
+\begin{equation}
+\dim(B)=\dim(A)+\dim(B\otimes_A k).
+\tag{6.1.1.1}\label{IV.2.s6.1.1.1-fr}
+\end{equation}
+\end{proposition}
+
+Raisonnons par récurrence sur $n=\dim(A)$; l'assertion est triviale pour
+$n=0$, $\mathfrak mB$ étant alors contenu dans le nilradical de $B$ puisque
+$\mathfrak m$ est le nilradical de $A$. On peut donc supposer $n>0$. Soient
+$\mathfrak q_i$ $(1\leq i\leq m)$ les idéaux premiers minimaux de $B$, et soit
+$\mathfrak p_i=\varphi^{-1}(\mathfrak q_i)$; pour tout $i$, on a
+$\mathfrak p_i\neq\mathfrak m$; sinon il existerait (puisque $n>0$) un idéal
+premier $\mathfrak p\neq\mathfrak m$ contenu dans $\mathfrak p_i$ et comme
+$\mathfrak q_i$ est minimal parmi les idéaux premiers de $B$ contenant
+$\mathfrak pB$, on aboutirait à une contradiction avec l'hypothèse. Par suite
+$\mathfrak m$ est distinct de la réunion des $\mathfrak p_i$ et des idéaux
+minimaux $\mathfrak p'_j$ $(1\leq j\leq r)$ de $A$ (Bourbaki,
+\emph{Alg. comm.}, chap.~II, §~1, n\textsuperscript{o}~1, prop.~2) et il
+existe un $a\in\mathfrak m$ n'appartenant à aucun des $\mathfrak p_i$ ni des
+$\mathfrak p'_j$. Posons $A'=A/aA$, $B'=B/aB$; on a (0, 16.3.4)
+\[
+\dim(A')=\dim(A)-1,\qquad \dim(B')=\dim(B)-1
+\]
+par construction de $a$, et d'autre part
+$B'\otimes_{A'}k=B\otimes_Ak=B/\mathfrak mB$, donc
+\[
+\dim(B'\otimes_{A'}k)=\dim(B\otimes_Ak)
+\]
+et il suffit par suite de démontrer (6.1.1.1) pour $A'$ et $B'$; or, en vertu
+de la correspondance biunivoque entre idéaux de $A$ (resp. $B$) contenant $a$
+et idéaux de $A'$ (resp. $B'$), les hypothèses de l'énoncé sont aussi
+valables pour $A'$ et $B'$; on peut donc appliquer l'hypothèse de récurrence,
+ce qui achève la démonstration.
+
+\begin{corollary}[6.1.2]
+\label{IV.2.s6.1.2-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens, $k$ le corps résiduel de
+$A$, $\varphi:A\to B$ un homomorphisme local, $M\neq0$ un $A$-module de type
+fini, $N\neq0$ un $B$-module de type fini. Si $N$ est un $A$-module plat
+(resp. si $B$ est un $A$-module plat), on a
+\begin{equation}
+\dim_B(M\otimes_A N)=\dim_A(M)+
+\dim_{B\otimes_Ak}(N\otimes_Ak)
+\tag{6.1.2.1}\label{IV.2.s6.1.2.1-fr}
+\end{equation}
+(resp. (6.1.1.1)).
+\end{corollary}
+
+Il suffit de prouver l'assertion concernant $N$; d'autre part, si
+$\mathfrak b$ est l'annulateur de $N$, on peut remplacer $B$ par
+$B/\mathfrak b$, et par suite supposer que
+$\operatorname{Supp}(N)=\operatorname{Spec}(B)$; l'hypothèse signifie alors
+que le morphisme $f:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$
+correspondant à $\varphi$ est \emph{quasi-plat} (2.3.3); on en conclut
+(2.3.4) que pour tout idéal premier $\mathfrak p\neq\mathfrak m$ de $A$,
+

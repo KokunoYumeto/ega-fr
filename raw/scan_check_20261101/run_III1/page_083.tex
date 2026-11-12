@@ -1,0 +1,97 @@
+% from ega3-1-fr.tex
+\oldpage[III]{83}
+\begin{env}[1.1.3]
+\label{III.1.1.3-fr}
+Des complexes précédents, on déduit comme d'ordinaire les \emph{$A$-modules
+d'homologie et de cohomologie} (G, I, 2.2)
+\begin{align}
+\label{III.1.1.3.1-fr}
+\tag{1.1.3.1}
+H_\bullet(\mathbf f,M)&=H_\bullet(K_\bullet(\mathbf f,M)),\\
+\label{III.1.1.3.2-fr}
+\tag{1.1.3.2}
+H^\bullet(\mathbf f,M)&=H^\bullet(K^\bullet(\mathbf f,M)).
+\end{align}
+On définit d'ailleurs un $A$-isomorphisme
+$K_i(\mathbf f,M)\xrightarrow{\sim}K^{r-i}(\mathbf f,M)$ en faisant
+correspondre à toute chaîne
+$z=\sum(\mathbf e_{i_1}\wedge\cdots\wedge\mathbf e_{i_k})\otimes
+z_{i_1\ldots i_k}$ la cochaîne $g_z$ telle que
+$g_z(j_1,\ldots,j_{r-k})=\varepsilon z_{i_1\ldots i_k}$, où
+$(j_h)_{1\leq h\leq r-k}$ est la suite strictement croissante complémentaire
+de la suite strictement croissante $(i_h)_{1\leq h\leq k}$ dans $[1,r]$ et
+$\varepsilon=(-1)^\nu$, $\nu$ étant le nombre d'inversions de la permutation
+$i_1,\ldots,i_k,j_1,\ldots,j_{r-k}$ de $[1,r]$. On vérifie que
+$g_{dz}=d(g_z)$, ce qui donne un isomorphisme
+\begin{equation}
+\label{III.1.1.3.3-fr}
+\tag{1.1.3.3}
+H^i(\mathbf f,M)\xrightarrow{\sim}H_{r-i}(\mathbf f,M)
+\qquad\text{pour }0\leq i\leq r.
+\end{equation}
+Dans ce chapitre, nous aurons surtout à considérer les modules de cohomologie
+$H^\bullet(\mathbf f,M)$.
+
+Pour un $\mathbf f$ donné, il est immédiat (G, I, 2.1) que
+$M\mapsto H^\bullet(\mathbf f,M)$ est un \emph{foncteur cohomologique}
+(T, II, 2.1), de la catégorie des $A$-modules dans celle des $A$-modules
+gradués, nul pour les degrés $<0$ et $>r$. En outre, on a
+\begin{equation}
+\label{III.1.1.3.4-fr}
+\tag{1.1.3.4}
+H^0(\mathbf f,M)=\operatorname{Hom}_A(A/(\mathbf f),M)
+\end{equation}
+en désignant par $(\mathbf f)$ l'idéal de $A$ engendré par
+$f_1,\ldots,f_r$~; cela résulte aussitôt de
+(\hyperref[III.1.1.2.3-fr]{1.1.2.3}), et il est clair que
+$H^0(\mathbf f,M)$ s'identifie au sous-module de $M$ \emph{annulé par
+$(\mathbf f)$}. De même, on a d'après
+(\hyperref[III.1.1.2.3-fr]{1.1.2.3})
+\begin{equation}
+\label{III.1.1.3.5-fr}
+\tag{1.1.3.5}
+H^r(\mathbf f,M)=M/\Bigl(\sum_{i=1}^r f_iM\Bigr)
+=(A/(\mathbf f))\otimes_A M.
+\end{equation}
+Nous utiliserons le résultat connu suivant, dont nous rappellerons une
+démonstration pour être complet~:
+\end{env}
+
+\begin{proposition}[1.1.4]
+\label{III.1.1.4-fr}
+Soient $A$ un anneau, $\mathbf f=(f_i)_{1\leq i\leq r}$ une famille finie
+d'éléments de $A$, $M$ un $A$-module. Si, pour $1\leq i\leq r$, l'homothétie
+$z\mapsto f_i z$ dans $M_{i-1}=M/(f_1M+\cdots+f_{i-1}M)$ est injective, on a
+$H^i(\mathbf f,M)=0$ pour $i\neq r$.
+\end{proposition}
+
+\begin{proof}
+Il suffit en effet de prouver que $H_i(\mathbf f,M)=0$ pour tout $i>0$ en
+vertu de (\hyperref[III.1.1.3.3-fr]{1.1.3.3}). Raisonnons par récurrence sur
+$r$, le cas $r=0$ étant trivial. Posons
+$\mathbf f'=(f_i)_{1\leq i\leq r-1}$~; cette famille vérifie les conditions de
+l'énoncé, donc, si on pose $L_\bullet=K_\bullet(\mathbf f',M)$, on a
+$H_i(L_\bullet)=0$ pour $i>0$ par hypothèse, et
+$H_0(L_\bullet)=M_{r-1}$ en vertu de
+(\hyperref[III.1.1.3.3-fr]{1.1.3.3}) et
+(\hyperref[III.1.1.3.5-fr]{1.1.3.5}). Posons pour abréger
+$K_\bullet=K_\bullet(f_r)=K_0\oplus K_1$, avec $K_0=K_1=A$,
+$d_1:K_1\to K_0$ étant la multiplication par $f_r$~; on a par définition
+(\hyperref[III.1.1.1-fr]{1.1.1})
+$K_\bullet(\mathbf f,M)=K_\bullet\otimes_A L_\bullet$. Or, on a le lemme
+suivant~:
+
+\begin{lemma}[1.1.4.1]
+\label{III.1.1.4.1-fr}
+Soit $K_\bullet$ un complexe de chaînes formé de $A$-modules libres, nuls sauf
+en dimensions $0$ et $1$. Pour tout complexe de chaînes $L_\bullet$ formé de
+$A$-modules, on a une suite exacte
+\[
+0\longrightarrow H_0(K_\bullet\otimes H_p(L_\bullet))
+\longrightarrow H_p(K_\bullet\otimes L_\bullet)
+\longrightarrow H_1(K_\bullet\otimes H_{p-1}(L_\bullet))
+\longrightarrow0
+\]
+pour tout indice $p$.
+\end{lemma}
+

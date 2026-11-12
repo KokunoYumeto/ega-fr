@@ -1,0 +1,97 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{123}
+
+l'hypothèse que $M\otimes_AN$ est un $C$-module plat. Posant
+$Q=\operatorname{Ker}(\varepsilon\otimes1)=\operatorname{Im}(j\otimes1)$
+dans la suite exacte (11.2.3.1), on a les deux suites exactes
+$0\to Q\to L_0\otimes_AN\to M\otimes_AN\to0$ et
+$T\to R\otimes_AN\to Q\to0$, où les homomorphismes sont des homomorphismes
+de $C$-modules~; utilisant l'hypothèse de platitude, on en déduit
+($\mathbf 0_{\mathrm I}$, 6.1.2) la suite exacte
+\[
+0\to Q\otimes_CC'\to(L_0\otimes_AN)\otimes_CC'
+\to(M\otimes_AN)\otimes_CC'\to0
+\]
+et d'autre part, le produit tensoriel étant exact à droite, on a la suite
+exacte
+\[
+T\otimes_CC'\to(R\otimes_AN)\otimes_CC'\to Q\otimes_CC'\to0,
+\]
+d'où finalement la suite exacte
+\[
+T\otimes_CC'\to(R\otimes_AN)\otimes_CC'\to
+(L_0\otimes_AN)\otimes_CC'\to(M\otimes_AN)\otimes_CC'\to0.
+\]
+Mais par définition, pour tout $C$-module $P$,
+$P\otimes_CC'=P\otimes_AA'$, d'où la conclusion.
+
+\begin{lemma}[11.2.5]
+\label{IV.11.2.5-fr}
+Soient $A$ un anneau, $\mathfrak J$ un idéal de $A$, $B$ une $A$-algèbre,
+$M$ un $B$-module, $A\to A'$ un homomorphisme d'anneaux. On pose
+$\mathfrak J'=\mathfrak JA'$, $B'=B\otimes_AA'$,
+$M'=M\otimes_AA'=M\otimes_BB'$. Soit $\mathfrak p'$ un idéal premier de
+$B'$ contenant $\mathfrak J'B'$. On suppose vérifiée l'une des hypothèses
+suivantes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $\mathfrak J$ est nilpotent.
+\item $A'$ est noethérien, $B'$ est une $A'$-algèbre de type fini, $M'$ un
+$B'$-module de type fini.
+\end{enumerate}
+Dans ces conditions, supposons vérifiées les deux propriétés suivantes~:
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item $M\otimes_A(A/\mathfrak J)$ est un $(A/\mathfrak J)$-module plat.
+\item L'homomorphisme canonique composé
+\[
+\operatorname{Tor}_1^A(M,A/\mathfrak J)\xrightarrow{\psi_1}
+\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J')\xrightarrow{\theta}
+(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}
+\]
+(où $\psi_1$ est l'homomorphisme (11.2.1.1) et $\theta$ l'homomorphisme
+canonique d'un $B'$-module dans son localisé en $\mathfrak p'$) est nul.
+\end{enumerate}
+Alors $M'_{\mathfrak p'}$ est un $A'$-module plat.
+\end{lemma}
+
+Notons que dans l'hypothèse b) $M'_{\mathfrak p'}$ est un
+$B'_{\mathfrak p'}$-module de type fini, $B'_{\mathfrak p'}$ une
+$A'$-algèbre noethérienne, et que $\mathfrak J'B'_{\mathfrak p'}$ est
+contenu dans le radical $\mathfrak p'B'_{\mathfrak p'}$ de
+$B'_{\mathfrak p'}$~; dans l'hypothèse a), $\mathfrak J'$ est nilpotent~;
+on va donc pouvoir appliquer le critère de platitude
+($\mathbf 0_{\mathrm{III}}$, 10.2.1) ou ($\mathbf 0_{\mathrm{III}}$, 10.2.2)
+suivant que a) ou b) est vérifiée. En premier lieu, on a
+\[
+M'_{\mathfrak p'}\otimes_{A'}(A'/\mathfrak J')
+=(M'\otimes_{A'}(A'/\mathfrak J'))_{\mathfrak p'}
+=((M\otimes_A(A/\mathfrak J))\otimes_{A/\mathfrak J}
+(A'/\mathfrak J'))_{\mathfrak p'}~;
+\]
+l'hypothèse (i) entraîne donc que
+$M'_{\mathfrak p'}\otimes_{A'}(A'/\mathfrak J')$ est un
+$(A'/\mathfrak J')$-module plat, compte tenu de
+($\mathbf 0_{\mathrm I}$, 6.2.1 et 6.3.2). Reste donc à voir que
+$\operatorname{Tor}_1^{A'}(M'_{\mathfrak p'},A'/\mathfrak J')=0$~; or ce
+$B'_{\mathfrak p'}$-module est égal à
+$(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}$, en vertu
+de la platitude de $B'_{\mathfrak p'}$ sur $B'$. Mais en vertu de
+l'hypothèse (ii), l'homomorphisme composé
+$\theta\circ\varphi_1:\operatorname{Tor}_1^A(M,A/\mathfrak J)\otimes_AA'
+\to(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}$ est
+nul~; par ailleurs, (11.2.4) appliqué à $C=A/\mathfrak J$ et $N=C$ montre
+(compte tenu de l'hypothèse (i)) que $\varphi_1$ est \emph{surjectif} (car
+$A'/\mathfrak J'=C\otimes_AA'$)~; donc l'homomorphisme $\theta$ est
+\emph{nul} et comme l'image par $\theta$ de
+$\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J')$ engendre le
+$B'_{\mathfrak p'}$-module
+$(\operatorname{Tor}_1^{A'}(M',A'/\mathfrak J'))_{\mathfrak p'}$, ce
+dernier est nul. C.Q.F.D.
+
+\begin{theorem}[11.2.6]
+\label{IV.11.2.6-fr}
+Les notations étant celles de (8.5.1) et (8.8.1), on suppose $S_\alpha$
+quasi-compact, $X_\alpha$ et $Y_\alpha$ de présentation finie sur
+$S_\alpha$~; soient $f_\alpha:X_\alpha\to Y_\alpha$ un
+$S_\alpha$-morphisme, $\mathcal F_\alpha$ un
+$\mathcal O_{X_\alpha}$-Module quasi-cohérent de présentation finie.
+

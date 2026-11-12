@@ -1,0 +1,84 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{128}
+
+soit surjectif~; cela signifie aussi que, pour tout entier $n$,
+l'homomorphisme canonique de $k(\mathfrak q)$-modules
+\[
+\left(\bigoplus_{-N\leq i\leq N}(M_i\otimes_{B_0}B_{n-i})\right)
+\otimes_Ak(\mathfrak q)\longrightarrow M_n\otimes_Ak(\mathfrak q)
+\]
+est surjectif. Or, $M_n$ est un $B_0$-module de type fini, $B_0$ un anneau
+local et $\mathfrak qB_0\subset\mathfrak m$~; donc le lemme de Nakayama prouve
+que chacun des homomorphismes canoniques
+\[
+\bigoplus_{-N\leq i\leq N}(M_i\otimes_{B_0}B_{n-i})\longrightarrow M_n
+\]
+est surjectif, d'où la conclusion.
+
+\begin{corollary}[11.2.9.4]
+\label{IV.11.2.9.4-fr}
+Sous les hypothèses de (11.2.9.3), on suppose en outre que chacun des $B_i$ et
+chacun des $M_i$ soit un $B_0$-module de présentation finie, et que $M$ soit
+un $A$-module plat. Pour que $M$ soit un $B$-module de présentation finie, il
+faut et il suffit que $M\otimes_Ak(\mathfrak q)$ soit un
+$(B\otimes_Ak(\mathfrak q))$-module de présentation finie.
+\end{corollary}
+
+En vertu de (11.2.9.3), si la condition de l'énoncé est vérifiée, $M$ est un
+$B$-module de type fini, donc il existe un $B$-module libre \emph{gradué} de
+type fini $L$ (ayant donc une base finie formée d'éléments homogènes) et un
+homomorphisme gradué surjectif de degré 0, $u:L\to M$. Soit $R=\ker(u)$, qui
+est un $B$-module gradué~; il y a donc un nombre fini d'entiers $m_j$
+($1\leq j\leq r$) tels que pour chaque entier $i$, $R_i$ soit le noyau d'un
+homomorphisme surjectif
+\[
+\bigoplus_{1\leq j\leq r}B_{i+m_j}\longrightarrow M_i~;
+\]
+on conclut alors de l'hypothèse sur les $M_i$ et les $B_i$ que $R_i$ est un
+$B_0$-module de type fini (Bourbaki, \emph{Alg. comm.}, chap.~I, \S~2,
+n$^\circ$~8, lemme 9). Pour prouver que $R$ est un $B$-module de type fini,
+notons qu'en vertu de l'hypothèse de platitude et de
+($\mathbf 0_{\mathrm I}$, 6.1.2) la suite
+\[
+0\longrightarrow R\otimes_Ak(\mathfrak q)
+\longrightarrow L\otimes_Ak(\mathfrak q)
+\longrightarrow M\otimes_Ak(\mathfrak q)\longrightarrow0
+\]
+est exacte, et l'hypothèse entraîne donc (Bourbaki, \emph{loc. cit.}) que
+$R\otimes_Ak(\mathfrak q)$ est un $(B\otimes_Ak(\mathfrak q))$-module de type
+fini~; il suffit donc d'appliquer à $R$ le lemme (11.2.9.3).
+
+\medskip
+\noindent\textbf{III)} \emph{Réduction au cas où les homomorphismes de
+transitions $\varphi_{\mu\lambda}:A_\lambda\to A_\mu$ (pour
+$\lambda\leq\mu$) sont injectifs.} --- Soit $A'_\lambda$ l'image de
+$A_\lambda$ par l'homomorphisme canonique $\varphi_\lambda:A_\lambda\to A$~;
+il est clair que les $A'_\lambda$ forment un système inductif de sous-anneaux
+noethériens de $A$, dont la limite inductive est $A$, et les homomorphismes de
+transition $A'_\lambda\to A'_\mu$ (pour $\lambda\leq\mu$) sont injectifs.
+Posons $B'_\lambda=B_0\otimes_{A_0}A'_\lambda$,
+$\mathfrak J'_\lambda=\mathfrak J_0B'_\lambda$,
+$M'_\lambda=M_0\otimes_{A_0}A'_\lambda=M_\lambda\otimes_{A_\lambda}A'_\lambda$~;
+on a encore $B=\varinjlim B'_\lambda$, $M=\varinjlim M'_\lambda$. Supposons
+que l'on ait prouvé qu'il existe un $\lambda$ tel que, pour $\mu\geq\lambda$,
+$\operatorname{gr}_{\mathfrak J'_\mu}^*(M'_\mu)$ soit un $A'_\mu$-module
+plat. Soit $\mathfrak a_\lambda$ le noyau de l'homomorphisme $\varphi_\lambda$,
+qui est donc un idéal de type fini de l'anneau noethérien $A_\lambda$. Il
+résulte de la définition de la limite inductive qu'il existe un indice
+$\mu\geq\lambda$ tel que $\varphi_{\mu\lambda}(\mathfrak a_\lambda)=0$,
+autrement dit l'homomorphisme $\varphi_{\mu\lambda}$ se factorise en
+$\varphi_{\mu\lambda}:A_\lambda\to A'_\lambda\to A_\mu$, et l'on peut écrire
+$B_\mu=B'_\lambda\otimes_{A'_\lambda}A_\mu$,
+$\mathfrak J_\mu=\mathfrak J'_\lambda B_\mu$, et
+$M_\mu=M'_\lambda\otimes_{A'_\lambda}A_\mu$~; on déduit donc de (11.2.9.2)
+que $\operatorname{gr}_{\mathfrak J_\mu}^*(M_\mu)$ est un $A_\mu$-module
+plat.
+
+\medskip
+\noindent\textbf{IV)} \emph{Réduction au cas où
+$B_0=A_0[T_1,\ldots,T_n]$ et
+$\operatorname{gr}_{\mathfrak J_0}^*(B_0)=B_0$.} --- En vertu de l'hypothèse,
+il y a un système $(t_i)_{1\leq i\leq n}$ de générateurs de la $A_0$-algèbre
+de type fini $B_0$, tel que les $t_i$ pour $i\leq m$ engendrent l'idéal
+$\mathfrak J_0$ de $B_0$. Posons $B'_0=A_0[T_1,\ldots,T_n]$,
+

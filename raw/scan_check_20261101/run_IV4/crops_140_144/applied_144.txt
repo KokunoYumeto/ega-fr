@@ -1,0 +1,42 @@
+\oldpage[IV-4]{144}
+
+Supposons enfin $A$ strictement formellement caténaire; alors on vient de voir que ${}^h\!A$ est formellement caténaire, et il reste à prouver que les fibres du morphisme $\Spec(\widehat A)\to\Spec({}^h\!A)$ vérifient la propriété $(S_1)$ (7.2.5, \emph{b)}). Mais cela résulte de l'hypothèse sur $A$ et de (18.7.2) appliqué au cas où $\boldsymbol{P}(Z,k)$ est la propriété $(S_1)$ pour $Z$.
+
+\begin{corollary}[18.7.6]
+\label{IV.18.7.6}
+Si un anneau local noethérien $A$ est excellent \textup{(7.8.2)}, il en est de même de ${}^h\!A$.
+\end{corollary}
+
+\begin{remark}[18.7.7]
+\label{IV.18.7.7}
+Il peut se faire que ${}^h\!A$ soit un anneau local excellent sans que $A$ soit universellement caténaire (ni par suite excellent). Pour le voir, reprenons l'exemple de l'anneau $A$ de (5.6.11), avec les mêmes notations. L'anneau $E$ construit dans (5.6.11) est excellent lorsque $k_0$ est de caractéristique $0$ (7.8.3, (ii) et (iii)); considérons deux anneaux $E_1$, $E_2$ isomorphes à $E$, et « recollons » $\Spec(E_1)$ et $\Spec(E_2)$ de sorte que si $\mathfrak m_i$ et $\mathfrak m'_i$ sont les idéaux maximaux de $E_i$ ($i=1,2$) correspondant à $\mathfrak m$ et $\mathfrak m'$, le point $\mathfrak m_1$ soit « recollé » à $\mathfrak m'_2$ et le point $\mathfrak m_2$ à $\mathfrak m'_1$; de façon précise, si $\varepsilon_i$ et $\varepsilon'_i$ sont les homomorphismes canoniques de $E_i$ sur $\boldsymbol{k}(\mathfrak m_i)$ et $\boldsymbol{k}(\mathfrak m'_i)$ ($i=1,2$), le schéma obtenu est $\Spec(R)$, où $R$ est le sous-anneau de $E_1\times E_2$ formé des couples $(x_1,x_2)$ tels que $\varepsilon'_2(x_2)=\sigma(\varepsilon_1(x_1))$ et $\varepsilon'_1(x_1)=\sigma(\varepsilon_2(x_2))$. On vérifie aisément (par exemple à l'aide de (17.6.3)) que $R$ est une $C$-algèbre finie et étale, et qu'il y a deux idéaux maximaux $\mathfrak r_1$, $\mathfrak r_2$ de $R$ au-dessus de l'idéal maximal $\mathfrak n$ de $C$, les complétés de $R_{\mathfrak r_1}$ et $R_{\mathfrak r_2}$ étant canoniquement isomorphes à celui de $A=C_{\mathfrak n}$; $R_{\mathfrak r_1}$ est donc une $A$-algèbre strictement essentiellement étale, et par suite son hensélisé est égal à ${}^h\!A$. En outre, on a vu (7.8.4, (ii)) que les fibres formelles de $A$ sont géométriquement régulières, donc il en est de même de celles de ${}^h\!A$ (18.7.2). Enfin, l'anneau $R$ est universellement caténaire, car ses quotients par ses deux idéaux premiers minimaux sont isomorphes à $E$, d'où la conclusion par (5.6.3, (iii)). L'anneau $R_{\mathfrak r_1}$ est donc excellent, et il en est par suite de même de ${}^h\!A$ (18.7.6), alors que $A$ n'est pas universellement caténaire.
+\end{remark}
+
+\subsection{Anneaux strictement locaux et hensélisation stricte.}
+\EGAReaderTarget{ega4.c04.subsec.18-8}{subsection:IV.18.8}
+
+\begin{proposition}[18.8.1]
+\label{IV.18.8.1}
+Soit $A$ un anneau local. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $A$ est un anneau hensélien et son corps résiduel $k$ est séparablement clos.
+  \item[\textup{b)}] $A$ est un anneau hensélien et tout revêtement étale de $S=\Spec(A)$ est trivial.
+  \item[\textup{c)}] Pour tout morphisme étale $f:X\to S$ et tout point $x\in X$ tel que $f(x)$ soit le point fermé $s$ de $S$, il existe une $S$-section $u:S\to X$ de $X$ telle que $u(s)=x$.
+\end{enumerate}
+\end{proposition}
+
+L'hypothèse \emph{c)} implique que pour tout morphisme étale $f:X\to S$, les corps résiduels aux points de $f^{-1}(s)$ sont tous isomorphes à $k$, et en outre que la condition \emph{b)} de (18.5.11) est vérifiée. Donc $A$ est hensélien, et le fait que tout revêtement étale de $S$ est trivial résulte de (18.2.10, (ii)); donc \emph{c)} implique \emph{b)}. Comme les revêtements étales de $\Spec(k)$ sont triviaux si et seulement si $k$ est séparablement clos, \emph{b)} implique \emph{a)} en vertu de (18.5.11, \emph{b)}). Enfin, il résulte aussi de (18.5.11, \emph{b)}) que \emph{a)} implique \emph{c)}.
+
+\begin{definition}[18.8.2]
+\EGAReaderTarget{ega4.c04.def.18-8-2}{IV.18.8.2}
+On dit qu'un anneau local est un anneau \emph{strictement local} s'il vérifie les conditions équivalentes de \textup{(18.8.1)}. On appelle schéma \emph{strictement local} un schéma isomorphe au spectre d'un anneau strictement local.
+\end{definition}
+
+\begin{remark}[18.8.3]
+\label{IV.18.8.3}
+Les conditions de (18.8.1) sont encore équivalentes à la suivante:
+\begin{enumerate}
+  \item[\textup{d)}] \itshape Pour tout morphisme localement de type fini $f:X\to S$ et tout point $x\in X$ tel que $f(x)$ soit le point fermé $s$ de $S$ et que $\sh{O}_{X,x}/\mathfrak m_s\sh{O}_{X,x}$ soit un corps, extension finie séparable de $\boldsymbol{k}(s)=k$, il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que $f|U$ soit une immersion fermée.
+\end{enumerate}
+\end{remark}
+

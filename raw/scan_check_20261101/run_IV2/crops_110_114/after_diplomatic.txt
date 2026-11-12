@@ -1,0 +1,418 @@
+===== page 110
+% from ega4-2-fr.tex
+\oldpage[IV-2]{110}
+
+On notera que l'ensemble $Z$ n'est pas nécessairement constructible: on a un
+exemple de ce fait en prenant $X=\operatorname{Spec}(A)$, où $A$ est un
+anneau intègre noethérien ayant une infinité d'idéaux maximaux, et $Z$ le
+complémentaire du point générique de $X$.
+
+Si $Z$ est fermé et si $i:X\setmin Z\to X$ est l'injection canonique, on a
+\begin{equation}
+\mathcal H^0_{X/Z}(\mathcal F)=i_*(\mathcal F|X\setmin Z)
+\tag{5.9.1.3}\label{IV.2.s5.9.1.3-fr}
+\end{equation}
+et en particulier, pour $Z=\varnothing$,
+$\mathcal H^0_{X/Z}(\mathcal F)=\mathcal F$.
+
+\begin{proposition}[5.9.2]
+\label{IV.2.s5.9.2-fr}
+\begin{enumerate}
+\item[\textup{(i)}] Le foncteur
+$\mathcal F\leadsto\mathcal H^0_{X/Z}(\mathcal F)$ est exact à gauche.
+\item[\textup{(ii)}] Si $\mathcal F$ est quasi-cohérent, il en est de même de
+$\mathcal H^0_{X/Z}(\mathcal F)$.
+\end{enumerate}
+\end{proposition}
+
+L'assertion (i) résulte de la définition (5.9.1.1), du fait que
+$(i_\alpha)_*$ est un foncteur exact à gauche et de ce que la limite
+inductive préserve l'exactitude dans la catégorie des $\mathcal O_X$-Modules.
+L'assertion (ii) résulte de (\textbf{I}, 9.2.2) et du fait qu'une limite inductive de
+$\mathcal O_X$-Modules quasi-cohérents est quasi-cohérente (\textbf{I}, 1.3.9).
+
+\begin{remark}[5.9.3]
+\label{IV.2.s5.9.3-fr}
+Si $\mathcal F$ est une $\mathcal O_X$-\emph{Algèbre}, il en est de même de
+$\mathcal H^0_{X/Z}(\mathcal F)$ $(\mathbf{0}_{\mathrm I},4.2.4)$; en particulier
+$\mathcal H^0_{X/Z}(\mathcal O_X)$ est une $\mathcal O_X$-Algèbre
+quasi-cohérente, et pour tout $\mathcal O_X$-Module $\mathcal F$,
+$\mathcal H^0_{X/Z}(\mathcal F)$ est un
+$\mathcal H^0_{X/Z}(\mathcal O_X)$-Module, qui est quasi-cohérent si
+$\mathcal F$ est quasi-cohérent (\textbf{I}, 9.6.1). Plus particulièrement,
+supposons que $X=\operatorname{Spec}(A)$, où $A$ est \emph{intègre} et noethérien;
+alors $\mathcal H^0_{X/Z}(\mathcal O_X)$ est la $\mathcal O_X$-Algèbre
+$\widetilde B$, où
+\begin{equation}
+B=\bigcap_{\mathfrak p\in X-Z}A_{\mathfrak p}.
+\tag{5.9.3.1}\label{IV.2.s5.9.3.1-fr}
+\end{equation}
+Cela résulte en effet de (5.9.1.2) et de (\textbf{I}, 8.2.1.1).
+\end{remark}
+
+\begin{proposition}[5.9.4]
+\label{IV.2.s5.9.4-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$ stable
+par spécialisation, $X'$ un préschéma localement noethérien,
+$f:X'\to X$ un morphisme plat. Alors $Z'=f^{-1}(Z)$ est stable par
+spécialisation et pour tout $\mathcal O_X$-Module quasi-cohérent $\mathcal F$,
+on a un isomorphisme canonique
+\begin{equation}
+f^*(\mathcal H^0_{X/Z}(\mathcal F))
+\xrightarrow{\sim}\mathcal H^0_{X'/Z'}(f^*(\mathcal F))
+\tag{5.9.4.1}\label{IV.2.s5.9.4.1-fr}
+\end{equation}
+\end{proposition}
+
+En effet, avec les notations de (5.9.1), $Z'_\alpha=f^{-1}(Z_\alpha)$ est
+fermé dans $X'$ et $Z'$ est réunion des $Z'_\alpha$; en outre,
+$(i_\alpha)_{(X')}$ est l'injection canonique
+$i'_\alpha:U'_\alpha\to X'$, si
+$U'_\alpha=X'\setmin Z'_\alpha=f^{-1}(U_\alpha)$. Comme $f$ est plat, on sait
+(2.3.1) que l'homomorphisme canonique
+$f^*((i_\alpha)_*(\mathcal F|U_\alpha))
+\longrightarrow(i'_\alpha)_*(f^*(\mathcal F)|U'_\alpha)$
+est bijectif; comme, pour $\alpha\leq\beta$, le diagramme
+\[
+\xymatrix{
+f^*((i_\alpha)_*(\mathcal F|U_\alpha))
+  \ar[r]^{\sim}\ar[d] &
+(i'_\alpha)_*(f^*(\mathcal F)|U'_\alpha)\ar[d]\\
+f^*((i_\beta)_*(\mathcal F|U_\beta))
+  \ar[r]^{\sim} &
+(i'_\beta)_*(f^*(\mathcal F)|U'_\beta)
+}
+\]
+\oldpage[IV-2]{111}
+est commutatif, on a donc, en passant à la limite, un isomorphisme canonique
+$\varinjlim_\alpha
+(f^*((i_\alpha)_*(\mathcal F|U_\alpha)))
+\xrightarrow{\sim}\mathcal H^0_{X'/Z'}(f^*(\mathcal F))$.
+===== page 111
+% from ega4-2-fr.tex
+Mais comme le foncteur $f^*$ commute aux limites inductives
+$(\mathbf{0}_{\mathrm I},4.3.2)$, cela donne par définition l'isomorphisme
+(5.9.1.1) cherché.
+
+\begin{corollary}[5.9.5]
+\label{IV.2.s5.9.5-fr}
+Sous les hypothèses de \textup{(5.9.4)}, si
+$\mathcal H^0_{X/Z}(\mathcal F)$ est cohérent, il en est de même de
+$\mathcal H^0_{X'/Z'}(f^*(\mathcal F))$. La réciproque est vraie lorsque
+$f$ est un morphisme fidèlement plat et quasi-compact.
+\end{corollary}
+
+La première assertion résulte de (5.9.4.1) et de $(\mathbf{0}_{\mathrm I},5.3.11)$;
+la seconde équivaut à dire que si
+$\mathcal H^0_{X'/Z'}(f^*(\mathcal F))$ est de type fini, il en est de même
+de $\mathcal H^0_{X/Z}(\mathcal F)$; cela résulte de (5.9.4.1) et de
+(2.5.2).
+
+\begin{corollary}[5.9.6]
+\label{IV.2.s5.9.6-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$ stable
+par spécialisation, $\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent.
+Pour tout $x\in X$, posons $X_x=\operatorname{Spec}(\mathcal O_x)$,
+$Z_x=Z\cap X_x$; on a un isomorphisme canonique fonctoriel
+\begin{equation}
+(\mathcal H^0_{X/Z}(\mathcal F))_x
+\xrightarrow{\sim}\mathcal H^0_{X_x/Z_x}(\widetilde{\mathcal F}_x)
+\tag{5.9.6.1}\label{IV.2.s5.9.6.1-fr}
+\end{equation}
+\end{corollary}
+
+Il suffit d'appliquer (5.9.4) au morphisme canonique $X_x\to X$, qui est
+plat, et de tenir compte de (\textbf{I}, 1.6.5).
+
+\begin{env}[5.9.7]
+\label{IV.2.s5.9.7-fr}
+Avec les notations de (5.9.1), on a pour tout $\alpha$ un homomorphisme
+canonique fonctoriel
+$\mathcal F\longrightarrow(i_\alpha)^*(\mathcal F|U_\alpha)$
+$(\mathbf{0}_{\mathrm I},4.4.3.2)$,
+et ces homomorphismes forment un système inductif; par passage à la limite
+inductive, on en déduit donc un homomorphisme canonique fonctoriel
+\begin{equation}
+\rho_{X/Z}:\mathcal F\longrightarrow\mathcal H^0_{X/Z}(\mathcal F)
+\tag{5.9.7.1}\label{IV.2.s5.9.7.1-fr}
+\end{equation}
+\end{env}
+
+\begin{proposition}[5.9.8]
+\EGAReaderTarget{ega4.c04.prop.5-9-8}{IV.2.s5.9.8-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$ stable
+par spécialisation, $\mathcal F$ un $\mathcal O_X$-Module. Les propriétés
+suivantes sont équivalentes:
+\begin{enumerate}
+\item[\textup{a)}] L'homomorphisme $\rho_{X/Z}$ \textup{(5.9.7.1)} est injectif
+(\textup{resp.} bijectif).
+\item[\textup{b)}] Pour tout ouvert noethérien $V$ de $X$, l'homomorphisme
+\[
+(\rho_{X/Z})_V:\Gamma(V,\mathcal F)\longrightarrow
+\varinjlim_\alpha\Gamma(V\cap U_\alpha,\mathcal F)
+\]
+est injectif (\textup{resp.} bijectif).
+\item[\textup{a')}] Pour toute partie fermée $T\subset Z$ de $X$, l'homomorphisme
+canonique $(\mathbf{0}_{\mathrm I},4.4.3.2)$
+\[
+\mathcal F\longrightarrow i_*(\mathcal F|X\setmin T)
+\]
+(où $i:X\setmin T\to X$ est l'injection canonique) est injectif
+(\textup{resp.} bijectif).
+\item[\textup{b')}] Pour toute partie fermée $T\subset Z$ de $X$ et tout ouvert
+noethérien $V$ de $X$, l'homomorphisme de restriction
+\[
+\Gamma(V,\mathcal F)\longrightarrow
+\Gamma(V\cap(X\setmin T),\mathcal F)
+\]
+est injectif (\textup{resp.} bijectif).
+\end{enumerate}
+\end{proposition}
+
+Compte tenu de (5.9.1.2), l'équivalence de \emph{a)} et \emph{b)} (resp. \emph{a')} et \emph{b')})
+résulte de
+===== page 112
+% from ega4-2-fr.tex
+\oldpage[IV-2]{112}
+la définition du foncteur $\Gamma$ et du fait qu'il est exact à gauche.
+Comme l'homomorphisme $(\rho_{X/Z})_V$ est le composé
+\begin{equation}
+\Gamma(V,\mathcal F)\longrightarrow
+\Gamma(V\cap(X\setmin T),\mathcal F)\longrightarrow
+\varinjlim_\alpha\Gamma(V\cap U_\alpha,\mathcal F)
+\tag{5.9.8.1}\label{IV.2.s5.9.8.1-fr}
+\end{equation}
+pour toute partie fermée $T\subset Z$, si $(\rho_{X/Z})_V$ est injectif, il
+en est de même de
+$\Gamma(V,\mathcal F)\to\Gamma(V\cap(X\setmin T),\mathcal F)$; d'autre part, le
+fait que \emph{b')} implique \emph{b)} résulte de la définition d'une limite inductive. Il
+reste à montrer que si $\rho_{X/Z}$ est bijectif, il en est de même de
+$\Gamma(V,\mathcal F)\to\Gamma(V\cap(X\setmin T),\mathcal F)$, et pour cela il
+suffit, en vertu de (5.9.8.1), de voir que si $U'\subset U$ sont deux
+ouverts contenus dans $V$ et contenant $V\cap Z$, l'homomorphisme de
+restriction $\Gamma(U,\mathcal F)\to\Gamma(U',\mathcal F)$ est injectif;
+mais cela résulte de ce que $\rho_{X/Z}$ est injectif, en remplaçant dans ce
+qui précède $V$ par $U$ et $V\cap(X\setmin T)$ par $U'$.
+
+\begin{definition}[5.9.9]
+\label{IV.2.s5.9.9-fr}
+Sous les hypothèses de \textup{(5.9.8)}, on dit que $\mathcal F$ est $Z$-pur
+(\textup{resp.} $Z$-clos) si l'homomorphisme $\rho_{X/Z}$ est injectif
+(\textup{resp.} bijectif).
+\end{definition}
+
+Si $X=\operatorname{Spec}(A)$ est affine, $\mathcal F=\widetilde M$, où
+$M$ est un $A$-module, on dira que $M$ est $Z$-pur (resp. $Z$-clos) lorsque
+$\mathcal F$ est $Z$-pur (resp. $Z$-clos).
+
+On dit que $\mathcal F$ est $Z$-\emph{pur} (resp. $Z$-\emph{clos}) \emph{en un point}
+$x\in X$ si (avec les notations de (5.9.6)) $\mathcal F_x$ est
+$Z_x$-pur (resp. $Z_x$-clos); il revient au même, en vertu de (5.9.6), de
+dire que l'homomorphisme canonique
+$\mathcal F_x\longrightarrow(\mathcal H^0_{X/Z}(\mathcal F))_x$
+est \emph{injectif} (resp. \emph{bijectif}).
+
+On notera que pour tout $x\in X\setmin Z$, $\mathcal F$ est $Z$-\emph{clos au point} $x$,
+en vertu de (5.9.8).
+
+\begin{corollary}[5.9.10]
+\label{IV.2.s5.9.10-fr}
+\begin{enumerate}
+\item[\textup{(i)}] Soit $(V_\lambda)$ un recouvrement ouvert de $X$. Pour que
+$\mathcal F$ soit $Z$-pur (\textup{resp.} $Z$-clos), il faut et il suffit que pour
+tout $\lambda$, $\mathcal F|V_\lambda$ soit $(Z\cap V_\lambda)$-pur
+(\textup{resp.} $(Z\cap V_\lambda)$-clos).
+\item[\textup{(ii)}] Soit $Z'$ une partie de $Z$ stable par spécialisation. Si
+$\mathcal F$ est $Z$-pur (\textup{resp.} $Z$-clos), il est $Z'$-pur
+(\textup{resp.} $Z'$-clos).
+\end{enumerate}
+\end{corollary}
+
+Cela résulte aussitôt de (5.9.8, \emph{b')}).
+
+\begin{proposition}[5.9.11]
+\label{IV.2.s5.9.11-fr}
+Sous les hypothèses de \textup{(5.9.8)}, les $\mathcal O_X$-Modules
+$\operatorname{Ker}(\rho_{X/Z})$ et $\operatorname{Coker}(\rho_{X/Z})$ ont
+leur support contenu dans $Z$, et le $\mathcal O_X$-Module
+$\mathcal H^0_{X/Z}(\mathcal F)$ est $Z$-clos. En outre, si
+$u:\mathcal F\to\mathcal F'$ est un homomorphisme de
+$\mathcal O_X$-Modules tel que $\mathcal F'$ soit $Z$-clos, $u$ se factorise
+d'une seule manière en
+$\mathcal F\xrightarrow{\rho_{X/Z}}\mathcal H^0_{X/Z}(\mathcal F)
+\xrightarrow{v}\mathcal F'$.
+Si en outre les supports de $\operatorname{Ker}(u)$ et de
+$\operatorname{Coker}(u)$ sont contenus dans $Z$, $v$ est un isomorphisme.
+\end{proposition}
+
+La première assertion signifie que, pour tout $x\in X\setmin Z$, on a
+\[
+\operatorname{Ker}(\rho_{X/Z})_x
+=\operatorname{Coker}(\rho_{X/Z})_x=0,
+\]
+i.e. que $(\rho_{X/Z})_x$ est bijectif, ou encore que $\mathcal F$ est
+$Z$-pur en $x$, comme il a été signalé plus haut (5.9.9).
+
+Pour montrer que $\mathcal H^0_{X/Z}(\mathcal F)$ est $Z$-clos, il s'agit de
+voir que pour un ouvert noethérien $V$ de $X$,
+$\varinjlim_\beta
+\Gamma(V\cap U_\beta,\mathcal H^0_{X/Z}(\mathcal F))$
+est égale à $\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))$; mais par définition
+$\Gamma(V\cap U_\beta,\mathcal H^0_{X/Z}(\mathcal F))
+=\varinjlim_\alpha\Gamma(V\cap U_\alpha\cap U_\beta,\mathcal F)$.
+Or, la famille double $(U_\alpha\cap U_\beta)$ est filtrante décroissante,
+et notre assertion résulte de (5.9.1) et du théorème de la double limite
+inductive.
+
+===== page 113
+% from ega4-2-fr.tex
+\oldpage[IV-2]{113}
+
+Passons à la seconde partie de la proposition. L'existence et l'unicité de
+$v$ résultent de ce que pour tout $\alpha$, $(i_\alpha)_*(u)$ est l'unique
+homomorphisme rendant commutatif le diagramme
+\[
+\xymatrix{
+\mathcal F\ar[r]^u\ar[d] & \mathcal F'\ar[d]\\
+(i_\alpha)_*(\mathcal F|U_\alpha)
+\ar[r]_{(i_\alpha)_*(u)} &
+(i_\alpha)_*(\mathcal F'|U_\alpha)
+}
+\]
+de ce qu'il y a un unique homomorphisme $w$ rendant commutatifs tous les
+diagrammes
+\[
+\xymatrix{
+(i_\alpha)_*(\mathcal F|U_\alpha)
+\ar[r]^{(i_\alpha)_*(u)}\ar[d] &
+(i_\alpha)_*(\mathcal F'|U_\alpha)\ar@{-}[d]\\
+\mathcal H^0_{X/Z}(\mathcal F)\ar[r]_w &
+\mathcal H^0_{X/Z}(\mathcal F')
+}
+\]
+et enfin de ce que $\mathcal F'$ et
+$\mathcal H^0_{X/Z}(\mathcal F')$ s'identifient canoniquement par hypothèse.
+
+Reste à voir que si les supports de $\operatorname{Ker}(u)$ et de
+$\operatorname{Coker}(u)$ sont contenus dans $Z$, $v$ est un isomorphisme.
+Il suffit de voir que pour tout ouvert noethérien $V$, l'homomorphisme
+correspondant
+$\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))
+\longrightarrow\Gamma(V,\mathcal F')$
+est alors un isomorphisme. Or, si une section
+$t\in\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))$ a pour image $0$ dans
+$\Gamma(V,\mathcal F')$, notons que pour un indice $\alpha$, on a
+$t\in\Gamma(V\cap U_\alpha,\mathcal F)$, et en vertu de l'hypothèse sur
+$u$, on a $t_y=0$ pour tout $y\in V\cap(X\setmin Z)$; il y a par suite un ouvert
+contenant $V\cap(X\setmin Z)$ tel que la restriction de $t$ à cet ouvert soit
+nulle, donc par définition $t$ est l'élément $0$ de
+$\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))$.
+Prouvons maintenant que toute section $s'\in\Gamma(V,\mathcal F')$ est
+l'image d'une section de $\mathcal H^0_{X/Z}(\mathcal F)$ au-dessus de $V$.
+Par hypothèse, pour tout $x\in V\cap(X\setmin Z)$ il existe une section $s^{(x)}$
+de $\mathcal F$ au-dessus d'un voisinage ouvert $W^{(x)}$ de $x$ dans $X$,
+dont l'image par $u$ est $s'|W^{(x)}$; $s'|W^{(x)}$ est donc aussi l'image
+par $v$ de la section $t^{(x)}$ de $\mathcal H^0_{X/Z}(\mathcal F)$, image
+canonique de $s^{(x)}$. En outre, comme on a vu que $v$ est injectif, les
+restrictions de $t^{(x)}$ et $t^{(x')}$ à $W^{(x)}\cap W^{(x')}$ sont
+identiques pour deux points quelconques $x$, $x'$ de $V\cap(X\setmin Z)$; les
+$t^{(x)}$ sont par suite restrictions d'une même section $t$ de
+$\mathcal H^0_{X/Z}(\mathcal F)$ au-dessus d'un voisinage ouvert $U$ de
+$(X\setmin Z)\cap V$. Mais comme $\mathcal H^0_{X/Z}(\mathcal F)$ est $Z$-clos,
+$t$ se prolonge d'une seule manière en une section de
+$\mathcal H^0_{X/Z}(\mathcal F)$ au-dessus de $V$, dont l'image par $v$ a
+même restriction que $s'$ à $U$, et coïncide donc avec $s'$ pour la même
+raison.
+
+On dit que $\mathcal H^0_{X/Z}(\mathcal F)$ est la $Z$-\emph{clôture} de
+$\mathcal F$.
+
+===== page 114
+% from ega4-2-fr.tex
+\oldpage[IV-2]{114}
+
+\begin{remarks}[5.9.12]
+\label{IV.2.s5.9.12-fr}
+\begin{enumerate}
+\item[(i)] Soit $\boldsymbol{C}(X)$ la catégorie des $\mathcal O_X$-Modules, et
+soit $\boldsymbol{C}_Z(X)$ la sous-catégorie de $\boldsymbol{C}(X)$ formée des
+$\mathcal O_X$-Modules de support contenu dans $Z$; cette sous-catégorie est
+localisante au sens de Gabriel, et le foncteur $\mathcal H^0_{X/Z}$ n'est
+autre que le foncteur localisation de Gabriel (cf. [27]; cela fournirait une
+autre démonstration de (5.9.11)). Lorsque $Z$ est fermé, le foncteur
+$i^*:\boldsymbol{C}(X)\to\boldsymbol{C}(X\setmin Z)$ (où $i:X\setmin Z\to X$ est l'injection
+canonique) définit une \emph{équivalence} de catégories
+$\boldsymbol{C}(X)/\boldsymbol{C}_Z(X)\approx\boldsymbol{C}(X\setmin Z)$.
+\item[(ii)] Il résulte de (5.9.11) que la condition
+$\mathcal H^0_{X/Z}(\mathcal F)=0$ est \emph{équivalente} à
+$\operatorname{Supp}(\mathcal F)\subset Z$. Elle entraîne en effet cette
+dernière puisque le noyau de $\rho_{X/Z}$ est alors égal à $\mathcal F$.
+Inversement, si $\operatorname{Supp}(\mathcal F)\subset Z$, il suffit
+d'appliquer la seconde partie de (5.9.11) à l'unique homomorphisme
+$u:\mathcal F\to0$ pour en conclure que l'homomorphisme correspondant
+$v:\mathcal H^0_{X/Z}(\mathcal F)\to0$ est un isomorphisme.
+\item[(iii)] Les développements précédents gardent un sens pour tout espace
+annelé localement noethérien dont toute partie fermée irréductible admet
+exactement un point générique. En particulier ils s'appliquent, sur un
+préschéma localement noethérien, à des \emph{faisceaux de groupes abéliens}
+quelconques (considérés comme Modules sur le faisceau simple associé au
+préfaisceau constant $\mathbf Z$). On a encore pour tout $x\in X$
+l'isomorphisme canonique (5.9.6.1), dans lequel
+$\widetilde{\mathcal F}_x$ désigne le faisceau \emph{induit} sur le sous-espace
+$X_x$ de $X$ par le faisceau $\mathcal F$; la démonstration directe résulte
+aussitôt de la définition (5.9.1.2) et du théorème de la double limite
+inductive.
+\end{enumerate}
+\end{remarks}
+
+\subsection{\texorpdfstring{Propriété $(S_2)$ et $Z$-clôture.}{Propriété (S\string_2) et Z-clôture}}
+
+\begin{env}[5.10.1]
+\label{IV.2.s5.10.1-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent; pour toute partie $T$ de $X$, nous poserons
+\begin{equation}
+\operatorname{prof}_T(\mathcal F)
+=\inf_{x\in T}\operatorname{prof}(\mathcal F_x)
+\tag{5.10.1.1}\label{IV.2.s5.10.1.1-fr}
+\end{equation}
+\end{env}
+
+\begin{proposition}[5.10.2]
+\EGAReaderTarget{ega4.c04.prop.5-10-2}{IV.2.s5.10.2-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$ stable
+par spécialisation, $\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent.
+Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+\item[\textup{a)}] $\mathcal F$ est $Z$-pur.
+\item[\textup{b)}] $\operatorname{Ass}(\mathcal F)$ ne rencontre pas $Z$.
+\end{enumerate}
+Si en outre $\mathcal F$ est cohérent, ces conditions sont aussi équivalentes
+à la suivante:
+\begin{enumerate}
+\item[\textup{c)}] $\operatorname{prof}_Z(\mathcal F)\geq1$.
+\end{enumerate}
+\end{proposition}
+
+Dire que $\mathcal F$ est $Z$-pur signifie que pour tout ouvert noethérien
+$V$ de $X$, et tout ouvert $U\supset X\setmin Z$, l'homomorphisme de restriction
+$\Gamma(V,\mathcal F)\longrightarrow\Gamma(V\cap U,\mathcal F)$
+est injectif (5.9.8); mais d'après (3.1.8) cela équivaut à
+$V\cap\operatorname{Ass}(\mathcal F)\subset U$, d'où l'équivalence de \emph{a)} et
+\emph{b)}. En outre, dire que $x\in\operatorname{Ass}(\mathcal F)$ signifie
+qu'aucun élément de $\mathfrak m_x$ n'est $\mathcal F_x$-régulier (3.1.2),
+donc, lorsque $\mathcal F$ est cohérent, cela s'écrit encore
+$\operatorname{prof}(\mathcal F_x)=0$; on en déduit aussitôt dans ce cas
+l'équivalence de \emph{b)} et \emph{c)}.
+
+\begin{corollary}[5.10.3]
+\label{IV.2.s5.10.3-fr}
+Soit
+$0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarrow\mathcal F''\longrightarrow0$
+une suite exacte de $\mathcal O_X$-Modules quasi-cohérents. Si $\mathcal F$
+est $Z$-pur, il en est de même de $\mathcal F'$; inversement, si
+$\mathcal F'$ et $\mathcal F''$ sont $Z$-purs, il en est de même de
+$\mathcal F$.
+\end{corollary}
+

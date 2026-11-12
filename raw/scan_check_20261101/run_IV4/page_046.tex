@@ -1,0 +1,96 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{46}
+  tout homomorphisme $u$ de $\mathscr{P}_{X/S}^n(\mathscr{F})$ dans
+  $\mathscr{G}$ correspondant biunivoquement à la famille de ses composés
+  \[
+    u_\mu:\mathscr{P}_{X/S}^n(\mathscr{F})
+    \longrightarrow\mathscr{G}\longrightarrow\mathscr{G}_\mu.
+  \]
+  On a donc
+  \[
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\mu\in M}
+    \operatorname{Diff}_{X/S}^n(\mathscr{F},\mathscr{G}_\mu),
+  \]
+  et par suite aussi
+  \[
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G})
+    =\prod_{\mu\in M}
+    \mathscr{D}\!iff_{X/S}^n(\mathscr{F},\mathscr{G}_\mu).
+  \]
+  \item[(ii)] Jusqu'ici, on n'a guère rencontré d'opérateurs différentiels
+  $\mathscr{F}\to\mathscr{G}$ que lorsque $\mathscr{F}$ et $\mathscr{G}$ sont
+  des $\mathcal{O}_X$-Modules localement libres de rang fini, auquel cas, leur
+  structure se ramène localement, en vertu de (i), à celle du faisceau
+  $\mathscr{D}\!iff_{X/S}$; cette dernière va être étudiée plus loin (16.11)
+  dans un cas particulier.
+\end{enumerate}
+\end{remarks}
+
+\subsection{Immersions régulières et quasi-régulières.}
+\EGAReaderTarget{ega4.c04.subsec.16-9}{IV.16.9}
+
+\begin{definition}[16.9.1]
+\EGAReaderTarget{ega4.c04.def.16-9-1}{IV.16.9.1}
+Soit $X$ un espace annelé. On dit qu'un Idéal $\mathscr{I}$ de
+$\mathcal{O}_X$ est \emph{régulier} (resp. \emph{quasi-régulier}) si, pour
+tout point $x\in\operatorname{Supp}(\mathcal{O}_X/\mathscr{I})$, il existe un
+voisinage ouvert $U$ de $x$ dans $X$ et une suite régulière (0, 15.2.2) (resp.
+quasi-régulière (0, 15.2.2)) d'éléments de $\Gamma(U,\mathcal{O}_X)$ qui
+engendre $\mathscr{I}|U$.
+\end{definition}
+
+On dira qu'une suite régulière (resp. quasi-régulière) de sections de
+$\mathcal{O}_X$ au-dessus de $U$ qui engendre $\mathscr{I}|U$ est un
+\emph{système régulier} (resp. \emph{quasi-régulier}) \emph{de générateurs}
+de $\mathscr{I}|U$.
+
+\begin{definition}[16.9.2]
+\EGAReaderTarget{ega4.c04.def.16-9-2}{IV.16.9.2}
+Soit $j:Y\to X$ une immersion de préschémas et soit $U$ un ouvert de $X$ tel
+que $j(Y)\subset U$ et que $j$ soit une immersion fermée de $Y$ dans $U$. On
+dit que $j$ est \emph{régulière} (resp. \emph{quasi-régulière}) si le
+sous-préschéma fermé $j(Y)$ de $U$ associé à $j$ est défini par un Idéal
+régulier (resp. quasi-régulier) de $\mathcal{O}_U$ (condition indépendante de
+l'ouvert $U$ choisi).
+\end{definition}
+
+On dit qu'un sous-préschéma $Y$ d'un préschéma $X$ est \emph{régulièrement
+immergé} (resp. \emph{quasi-régulièrement immergé}) si l'injection canonique
+$j:Y\to X$ est une immersion régulière (resp. quasi-régulière). Si $Y$ est un
+sous-préschéma fermé de $X$ et $\mathscr{I}$ l'Idéal de $\mathcal{O}_X$ qui
+définit $Y$, il revient au même de dire que $\mathscr{I}$ est \emph{régulier}
+(resp. \emph{quasi-régulier}).
+
+Par exemple, si $A$ est un anneau \emph{intègre}, $f$ un élément $\neq0$ de
+$A$, le sous-préschéma fermé $V(f)$ de $\operatorname{Spec}(A)$ (isomorphe à
+$\operatorname{Spec}(A/fA)$) est \emph{régulièrement immergé} dans
+$\operatorname{Spec}(A)$.
+
+Tout Idéal régulier est quasi-régulier (0, 15.2.2); toute immersion régulière
+est quasi-régulière (cf. (16.9.11) pour une réciproque).
+
+\begin{proposition}[16.9.3]
+\label{IV.16.9.3}
+Soient $X$ un espace annelé, $\mathscr{I}$ un Idéal de $\mathcal{O}_X$,
+$(f_i)_{1\leq i\leq m}$ une suite finie de sections de $\mathcal{O}_X$
+au-dessus de $X$ engendrant $\mathscr{I}$. Pour que $(f_i)$ soit une suite
+quasi-régulière (0, 15.2.2), il faut et il suffit que les conditions suivantes
+soient vérifiées:
+\begin{enumerate}
+  \item[(i)] Les images canoniques des $f_i$ dans
+  $\mathscr{I}/\mathscr{I}^2$ forment une base de cet
+  $\mathcal{O}_X/\mathscr{I}$-Module.
+  \item[(ii)] L'homomorphisme surjectif canonique (16.1.2.2)
+  \[
+    \mathbf{S}_{\mathcal{O}_X/\mathscr{I}}^{\bullet}
+    (\mathscr{I}/\mathscr{I}^2)
+    \longrightarrow\mathscr{G}r_{\mathscr{I}}^{\bullet}(\mathcal{O}_X)
+  \]
+  est bijectif.
+\end{enumerate}
+En outre, s'il en est ainsi, toute suite $(f'_i)_{1\leq i\leq n}$ de $n$
+sections de $\mathscr{I}$ au-dessus de $X$ qui engendre $\mathscr{I}$ est
+quasi-régulière.
+\end{proposition}
+

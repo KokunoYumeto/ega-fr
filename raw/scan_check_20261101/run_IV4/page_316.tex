@@ -1,0 +1,79 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{316}
+(i) Comme le fait que l'homomorphisme canonique
+$\mathcal O_X\to j_*(\mathcal O_U)$ soit bijectif est une propriété locale sur $X$,
+tout revient à voir (en vertu de (21.13.5)), en désignant par
+$j_\alpha:U\cap W_\alpha\to W_\alpha$ l'injection canonique, que l'on a la propriété
+suivante : si, pour tout $\alpha$ et pour tout $\mathcal O_U$-Module inversible
+$\mathscr L$, $(j_\alpha)_*(\mathscr L|(U\cap W_\alpha))$ est un
+$\mathcal O_{W_\alpha}$-Module inversible, alors $j_*(\mathscr L)$ est un
+$\mathcal O_X$-Module inversible. Mais la propriété d'être un $\mathcal O_X$-Module
+inversible est locale sur $X$, et $(W_\alpha)$ est un recouvrement ouvert de $X$;
+comme on a
+\[
+  j_*(\mathscr L)|W_\alpha
+  =(j_\alpha)_*(\mathscr L|(U\cap W_\alpha)),
+\]
+cela prouve notre assertion.
+
+(ii) Posons $U'=X-Y'$, et soit $j':U'\to X$ l'injection canonique. Dire que
+l'homomorphisme $\mathcal O_X\to j'_*(\mathcal O_{U'})$ est bijectif revient à dire
+que pour tout ouvert $V$ de $X$, l'homomorphisme
+$\Gamma(V,\mathcal O_X)\to\Gamma(V\cap U',\mathcal O_X)$ est bijectif; mais
+l'homomorphisme composé
+\[
+  \Gamma(V,\mathcal O_X)\longrightarrow\Gamma(V\cap U',\mathcal O_X)
+  \longrightarrow\Gamma(V\cap U,\mathcal O_X)
+\]
+est bijectif par hypothèse (21.13.5), et en remplaçant $V$ par $V\cap U'$, on voit que
+$\Gamma(V\cap U',\mathcal O_X)\to\Gamma(V\cap U,\mathcal O_X)$ est bijectif, donc
+$\Gamma(V,\mathcal O_X)\to\Gamma(V\cap U',\mathcal O_X)$ est bijectif. Notons ensuite
+que si $j'':U\to U'$ est l'injection canonique et si $\mathscr L'$ est un
+$\mathcal O_{U'}$-Module inversible, $\mathscr L'|U$ est un $\mathcal O_U$-Module
+inversible, donc
+$j_*(\mathscr L'|U)=j'_*(j''_*(\mathscr L'|U))$ est par hypothèse un
+$\mathcal O_X$-Module inversible. Comme le couple $(U',U'\cap Y)$ est parafactoriel
+en vertu de (i), on a $j''_*(\mathscr L'|U)\cong\mathscr L'$, donc
+$j'_*(\mathscr L')$ est un $\mathcal O_X$-Module inversible. Il suffit alors pour
+conclure de remplacer dans le raisonnement précédent $X$, $U$ et $U'$ par $V$,
+$V\cap U$ et $V\cap U'$, où $V$ est un ouvert de $X$.
+
+(iii) Posons $U'=X'-Y'=f^{-1}(U)$ et notons que puisqu'il s'agit de préschémas, on
+peut écrire $U'=U\times_X X'$; soit $f_U:f^{-1}(U)\to U$ la restriction de $f$ et
+soit $j':U'\to X'$ l'injection canonique, qui s'écrit aussi $j_{(X')}$. Montrons
+d'abord que l'homomorphisme canonique
+$\rho:\mathcal O_X\to j_*(\mathcal O_U)$ est bijectif; pour cela, notons que par
+hypothèse l'homomorphisme canonique
+$\mathcal O_{X'}\to j'_*(\mathcal O_{U'})$ est bijectif; mais puisque le morphisme
+$j$ est quasi-compact et séparé par hypothèse, et le morphisme $f$ plat,
+$j'_*(\mathcal O_{U'})=j'_*(f_U^*(\mathcal O_U))$ s'identifie canoniquement à
+$f^*(j_*(\mathcal O_U))$ en vertu de (2.3.1); comme
+$\mathcal O_{X'}=f^*(\mathcal O_X)$, on voit que l'homomorphisme
+$f^*(\rho):f^*(\mathcal O_X)\to f^*(j_*(\mathcal O_U))$ est bijectif; on en conclut
+que $\rho$ est bijectif puisque $f$ est fidèlement plat (2.2.7). Considérons ensuite
+un $\mathcal O_U$-Module inversible $\mathscr L$, et soit
+$\mathscr L'=f_U^*(\mathscr L)$, qui est un $\mathcal O_{U'}$-Module inversible. Par
+hypothèse $j'_*(f_U^*(\mathscr L))$ est un $\mathcal O_{X'}$-Module inversible, qui
+est isomorphe à $f^*(j_*(\mathscr L))$ par (2.3.1) comme ci-dessus. Mais puisque $f$
+est fidèlement plat et quasi-compact, cela entraîne que $j_*(\mathscr L)$ est un
+$\mathcal O_X$-Module localement libre (2.5.2). Pour achever la démonstration, il
+suffit de remplacer $X$ par un ouvert $V$ et $X'$ par $f^{-1}(V)$ dans ce qui
+précède.
+\end{proof}
+
+\begin{definition}[21.13.7]
+\EGAReaderTarget{ega4.c04.def.21-13-7}{IV.21.13.7}
+On dit qu'un anneau local $A$ est \emph{parafactoriel} si, posant
+$X=\operatorname{Spec}(A)$ et désignant par $a$ le point fermé de $X$, le couple
+$(X,\{a\})$ est parafactoriel.
+\end{definition}
+
+\begin{proposition}[21.13.8]
+\label{IV.21.13.8}
+Les notations étant celles de (21.13.7), on pose $U=X-\{a\}$. Pour que $A$ soit
+parafactoriel, il faut et il suffit qu'il vérifie les conditions suivantes :
+\begin{enumerate}[label=(\roman*)]
+  \item L'homomorphisme canonique
+  $A=\Gamma(X,\mathcal O_X)\to\Gamma(U,\mathcal O_X)$ est bijectif.
+  \item $\operatorname{Pic}(U)=0$.
+\end{enumerate}

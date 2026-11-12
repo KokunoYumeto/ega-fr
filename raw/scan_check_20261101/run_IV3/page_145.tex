@@ -1,0 +1,101 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{145}
+
+et comme $M_0$ est par hypothèse un $A_0$-module \emph{plat}, le noyau de
+$f_\lambda$ est égal à $M_0\otimes_{A_0}R_\lambda$, où $R_\lambda$ est le
+noyau de
+$\operatorname{gr}(u_\lambda):\operatorname{gr}(A)
+\to\operatorname{gr}_{\mathfrak J}(B_\lambda)$. Tout revient donc à prouver
+que
+\[
+\bigcap_{\lambda\in L}(M_0\otimes_{A_0}R_\lambda)=0.
+\]
+Or, par définition des $\mathfrak J_n$, l'intersection des noyaux des
+homomorphismes
+\[
+\mathfrak J_nA/\mathfrak J_{n+1}A
+\longrightarrow\mathfrak J^nB_\lambda/\mathfrak J^{n+1}B_\lambda,
+\]
+lorsque $\lambda$ parcourt $L$, est réduite à $0$, autrement dit
+$\bigcap_{\lambda\in L}R_\lambda=0$. Cela étant, supposons d'abord que $M_0$
+soit un $A_0$-module libre~; prenant une base de $M_0$, on voit aussitôt que
+l'on a
+\[
+M_0\otimes_{A_0}\Big(\bigcap_{\lambda\in L}R_\lambda\Big)
+=\bigcap_{\lambda\in L}(M_0\otimes_{A_0}R_\lambda),
+\]
+d'où la proposition dans ce cas. Lorsque $L$ est fini, la formule précédente
+est encore vraie sous la seule hypothèse que $M_0$ est un $A_0$-module plat
+$(\mathbf 0_{\mathrm I},6.1.3)$, ce qui termine la démonstration.
+\end{proof}
+
+\begin{remark}[11.4.2]
+\label{IV.11.4.2-fr}
+La conclusion de (11.4.1) peut être inexacte si $L$ est infini et si l'on
+suppose seulement que $M\otimes_A(A/\mathfrak J)$ est un
+$(A/\mathfrak J)$-module plat. Par exemple, soient $V$ un anneau de valuation
+discrète, $K$ son corps des fractions, et soit $A=V[T]/(T^2)$ ($T$
+indéterminée)~; prenons pour $\mathfrak J$ l'image de $(T)$ dans $A$, de sorte
+que $A/\mathfrak J=V$, et prenons $M=K$, qui est un
+$(A/\mathfrak J)$-module, donc égal à $M\otimes_A(A/\mathfrak J)$~; en outre
+$M$ est un $(A/\mathfrak J)$-module plat, mais non un $A$-module plat, car
+puisque $\mathfrak J$ est nilpotent, il résulterait de
+$(\mathbf 0_{\mathrm{III}},10.1.2)$ que $M$ serait un $A$-module libre, ce qui
+est absurde puisque $\mathfrak JK=0$. Considérons d'autre part l'idéal maximal
+$\mathfrak m$ de l'anneau local noethérien $A$~; on a $\mathfrak mK=K$, donc
+$M\otimes_A(A/\mathfrak m^n)=0$ quel que soit l'entier $n$~; les
+$(A/\mathfrak m^n)$-modules $M\otimes_A(A/\mathfrak m^n)$ sont donc plats pour
+tout $n$, et l'intersection des $\mathfrak m^n$ est réduite à $0$.
+\end{remark}
+
+\begin{corollary}[11.4.3]
+\label{IV.11.4.3-fr}
+Soient $A$ un anneau semi-local dont le radical $\mathfrak J$ est nilpotent
+(par exemple un anneau artinien), $u_\lambda:A\to B_\lambda$ $(\lambda\in L)$
+une famille d'homomorphismes d'anneaux telle que l'intersection des noyaux des
+$u_\lambda$ soit réduite à $0$. Pour qu'un $A$-module $M$ soit plat, il faut et
+il suffit que pour tout $\lambda\in L$, $M\otimes_A B_\lambda$ soit un
+$B_\lambda$-module plat.
+\end{corollary}
+
+\begin{proof}
+Comme $A/\mathfrak J$ est composé direct d'un nombre fini de corps (Bourbaki,
+\emph{Alg. comm.}, chap.~II, \S~3, n$^\circ$~5, prop.~16) et que $\mathfrak J$
+est nilpotent, $A$ est composé direct d'un nombre fini d'anneaux locaux $A_i$
+dont le radical est nilpotent (\emph{loc. cit.}, \S~4, n$^\circ$~3, cor.~1 de
+la prop.~15) et $M$ est par suite somme directe de $A_i$-modules $M_i$, chaque
+$M_i$ étant annulé par les $A_j$ d'indice $j\neq i$~; pour que $M$ soit un
+$A$-module plat, il faut et il suffit que chacun des $M_i$ soit un $A_i$-module
+plat~; d'ailleurs l'intersection des noyaux des homomorphismes
+\[
+A_i\longrightarrow A\xrightarrow{u_\lambda}B_\lambda
+\]
+est réduite à $0$, et $M_i\otimes_{A_i}B_\lambda$ est facteur direct de
+$M\otimes_A B_\lambda$. On peut donc se borner au cas où $A$ est en outre
+local. Alors $A/\mathfrak J$ est un corps, donc
+$M\otimes_A(A/\mathfrak J)$ est un $(A/\mathfrak J)$-module libre, et il
+suffit de voir que pour tout $\lambda$, $M\otimes_A B_\lambda$ est un
+$B_\lambda$-module libre, en vertu de (11.4.1). Mais si l'on pose
+$\mathfrak J_\lambda=\mathfrak JB_\lambda$,
+\[
+(M\otimes_A B_\lambda)\otimes_{B_\lambda}(B_\lambda/\mathfrak J_\lambda)
+=(M\otimes_A(A/\mathfrak J))\otimes_{A/\mathfrak J}
+ (B_\lambda/\mathfrak J_\lambda)
+\]
+est un $(B_\lambda/\mathfrak J_\lambda)$-module libre, et
+$\mathfrak J_\lambda$ est nilpotent. La conclusion résulte donc de l'hypothèse
+que $M\otimes_A B_\lambda$ est un $B_\lambda$-module plat et de
+$(\mathbf 0_{\mathrm{III}},10.1.2)$.
+\end{proof}
+
+\begin{corollary}[11.4.4]
+\label{IV.11.4.4-fr}
+Soient $A$ un anneau, $M$ un $A$-module~; on suppose qu'il existe un idéal
+nilpotent $\mathfrak J$ de $A$ tel que $M\otimes_A(A/\mathfrak J)$ soit un
+$(A/\mathfrak J)$-module libre. Alors l'ensemble des idéaux $\mathfrak K$ de
+$A$ tels que $M\otimes_A(A/\mathfrak K)$ soit un $(A/\mathfrak K)$-module
+libre admet un plus petit élément $\mathfrak K_0$ (qui est aussi le plus petit
+des idéaux $\mathfrak K$ tels que $M\otimes_A(A/\mathfrak K)$ soit un
+$(A/\mathfrak K)$-module plat).
+\end{corollary}
+

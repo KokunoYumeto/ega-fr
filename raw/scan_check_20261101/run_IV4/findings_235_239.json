@@ -1,0 +1,830 @@
+[
+ {
+  "page": 235,
+  "where": "l. 2: 'S^{-1}A = lim A_t' (lim with an arrow below)",
+  "scan": "index t under the arrow of the lim",
+  "tex": "\\varinjlim A_t: no index",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$S^{-1}A=\\varinjlim A_t$",
+   "new": "$S^{-1}A=\\varinjlim_t A_t$"
+  },
+  "note": "The index is missing (its position under or beside the lim is not at issue)."
+ },
+ {
+  "page": 235,
+  "where": "l. 3: 'la relation « t est un diviseur de t' » (0_I, 1.4.5)'",
+  "scan": "(0_I, 1.4.5): bold 0 with a light roman subscript I (crop p235_0I.png)",
+  "tex": "\\sref[0]{0.1.4.5} prints '(0, 1.4.5)': bold 0 without the subscript I",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref[0]{0.1.4.5}",
+   "new": "\\sref[$\\mathbf{0}_{\\mathrm I}$]{0.1.4.5}"
+  },
+  "note": "Keeps the link. The IV-4 \\sref sets its optional argument in \\textbf, but math ignores that, so this gives a bold 0 with a LIGHT subscript I as printed (test compile; \\sref[0\\textsubscript{I}] would bold the I), the form ($\\mathbf{0}_{\\mathrm I}$, ...) of ega4-16/17/18. The same \\sref[0] form occurs twice more in ega4-20 (p. 226) and 15 times in ega4-21b: check those against the print."
+ },
+ {
+  "page": 235,
+  "where": "l. 4: 'M'(X) = lim Γ(U, O_X)' (lim with an arrow below)",
+  "scan": "index U under the arrow of the lim",
+  "tex": "\\varinjlim\\Gamma(U,\\sh{O}_X): no index",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$M'(X)=\\varinjlim\\Gamma(U,\\sh{O}_X)$",
+   "new": "$M'(X)=\\varinjlim_U\\Gamma(U,\\sh{O}_X)$"
+  },
+  "note": "The index is missing (its position is not at issue)."
+ },
+ {
+  "page": 235,
+  "where": "proof, 'dire que U=X—Y (où Y=V(𝔍) est fermé dans X)'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U=X-Y$",
+   "new": "$U=X\\setmin Y$"
+  },
+  "note": "\\setmin as in the earlier IV-4 fixes."
+ },
+ {
+  "page": 236,
+  "where": "(ii), l. 4: 'il existe dans A—Q des éléments ≠0'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "dans $A-Q$ des",
+   "new": "dans $A\\setmin Q$ des"
+  },
+  "note": ""
+ },
+ {
+  "page": 236,
+  "where": "(iii), l. 4: 'donc Γ(X, 𝓜_X) = M(X) = A;'",
+  "scan": "no primes: Γ(X, 𝓜_X) = M(X) = A (crop p236_primes1.png)",
+  "tex": "\\Gamma(X,\\sh{M}'_X)=M'(X)=A: two primes added",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\Gamma(X,\\sh{M}'_X)=M'(X)=A$",
+   "new": "$\\Gamma(X,\\sh{M}_X)=M(X)=A$"
+  },
+  "note": "In (iii) only the first sentence has 𝓜'_X; the TeX also primes this formula and the next two. Not a misprint: X is noetherian, so 𝓜_X = 𝓜'_X and M(X) = M'(X) (20.2.12)."
+ },
+ {
+  "page": 236,
+  "where": "(iii), l. 5: 'si 𝓜_X était quasi-cohérent'",
+  "scan": "𝓜_X without prime (crop p236_primes2.png)",
+  "tex": "\\sh{M}'_X",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si $\\sh{M}'_X$ était",
+   "new": "si $\\sh{M}_X$ était"
+  },
+  "note": "See the previous finding."
+ },
+ {
+  "page": 236,
+  "where": "(iii), l. 5: '𝓜_X|U = R(U) est un faisceau simple'",
+  "scan": "𝓜_X|U without prime (crops p236_primes1.png, p236_primes2.png)",
+  "tex": "\\sh{M}'_X|U",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\sh{M}'_X|U=R(U)$",
+   "new": "$\\sh{M}_X|U=R(U)$"
+  },
+  "note": "See the previous findings."
+ },
+ {
+  "page": 236,
+  "where": "(iv): 'sont ceux qui contiennent l'ensemble Ass(O_X)'",
+  "scan": "'contiennent l'ensemble' italic (crop p236_ensemble.png)",
+  "tex": "only 'contiennent' emphasised",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{contiennent} l'ensemble",
+   "new": "\\emph{contiennent l'ensemble}"
+  },
+  "note": "Remark body judged as roman (document-wide remark font)."
+ },
+ {
+  "page": 236,
+  "where": "(20.2.14), l. 3-4: 'on appelle Idéal des dénominateurs de u l'annulateur'",
+  "scan": "no article before the italic 'Idéal' (crop p236_appelle.png)",
+  "tex": "'on appelle l'\\emph{Idéal ...}': article added",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on appelle l'\\emph{Idéal",
+   "new": "on appelle \\emph{Idéal"
+  },
+  "note": "Rewording: the print has no article here."
+ },
+ {
+  "page": 236,
+  "where": "Proposition (20.2.15), l. 2 (first word of the line): 'quasi-|cohérent,'",
+  "scan": "the t of 'cohérent' is BOLD italic (wrong fount), not at a line end: side by side with the t of 'section' on the same line it has a 5 px median stroke (mean 5.8 px, 190 dark px) against 4 px (mean 4.0 px, 151 dark px); the n before it (170 against 173 px for the n of 'une') and the comma after it (64 against 61 px for the comma after 'morphisme') are normal (crops p236_coherent2.png, p236_t_cmp2.png, p236_n_cmp.png)",
+  "tex": "normal italic t (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "-Module quasi-cohérent,",
+   "new": "-Module quasi-cohéren\\textbf{t},"
+  },
+  "corrected": "-Module quasi-cohérent,",
+  "note": "Wrong-fount letter recorded as a misprint (GLOBAL_ISSUES 29/99; mid-line, so not item 100). The fix restores the printed reading."
+ },
+ {
+  "page": 236,
+  "where": "Remarque (20.2.16), l. 1: 'le préfaisceau U ⇝ Ps.hom_S(U, Y)'",
+  "scan": "wavy arrow (crop p236_arrow.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$U\\mapsto\\operatorname{Ps.hom}_S(U,Y)$",
+   "new": "$U\\leadsto\\operatorname{Ps.hom}_S(U,Y)$"
+  },
+  "note": "ega4-20 has no \\leadsto at all (25 \\mapsto): its other \\mapsto need the same check (item 33)."
+ },
+ {
+  "page": 236,
+  "where": "Remarque (20.2.16), l. 3: 'un spectre d'un anneau semi-local noethérien A'",
+  "scan": "'semi-local' italic",
+  "tex": "roman (no \\emph)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "anneau semi-local noethérien",
+   "new": "anneau \\emph{semi-local} noethérien"
+  },
+  "note": "Remark body judged as roman (document-wide remark font)."
+ },
+ {
+  "page": 237,
+  "where": "Remarque (20.2.16), l. 2: 'l'ouvert U = X—{x', x''}'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U=X-\\{x',x''\\}$",
+   "new": "$U=X\\setmin\\{x',x''\\}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "l. 2: 'Soient U' = X—{x'}'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U'=X-\\{x'\\}$",
+   "new": "$U'=X\\setmin\\{x'\\}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "l. 2: 'U'' = X—{x''}'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$U''=X-\\{x''\\}$",
+   "new": "$U''=X\\setmin\\{x''\\}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "l. 6: 'au même pseudo-morphisme de U dans Y, mais qui sont tels que'",
+  "scan": "'sont' (crop p237_sont.png)",
+  "tex": "'soient'",
+  "kind": "word",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "mais qui soient tels que",
+   "new": "mais qui sont tels que"
+  },
+  "note": "The TeX turns the print's indicative into a subjunctive (rewording)."
+ },
+ {
+  "page": 237,
+  "where": "l. 8-9: 'considérons une partie fermée irréductible Z de X'",
+  "scan": "'irréductible' italic (crop p237_irred.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "fermée irréductible $Z$",
+   "new": "fermée \\emph{irréductible} $Z$"
+  },
+  "note": "Remark body judged as roman (document-wide remark font)."
+ },
+ {
+  "page": 237,
+  "where": "l. 10: 'le long de l'ouvert partout dense X—Z (I, 2.3.1)'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "dense $X-Z$",
+   "new": "dense $X\\setmin Z$"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "l. 10-11: 'des isomorphismes structuraux Y' ⥲ X, Y'' ⥲ X'",
+  "scan": "two isomorphism arrows, a tilde over each arrow (crop p237_iso.png)",
+  "tex": "$Y'\\to X$, $Y''\\to X$: plain arrows",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y'\\to X$, $Y''\\to X$",
+   "new": "$Y'\\xrightarrow{\\sim}X$, $Y''\\xrightarrow{\\sim}X$"
+  },
+  "note": "Not convention 4 (the TeX has a plain arrow, not \\simeq); written as FIX_POLICY writes convention 4."
+ },
+ {
+  "page": 237,
+  "where": "l. 12: 'les restrictions de u' et u'' à U—(U∩Z) sont égales'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "à $U-(U\\cap Z)$ sont",
+   "new": "à $U\\setmin(U\\cap Z)$ sont"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "l. 12: 'et U—(U∩Z) est un ouvert dense dans U'",
+  "scan": "long dash",
+  "tex": "minus sign",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "et $U-(U\\cap Z)$ est",
+   "new": "et $U\\setmin(U\\cap Z)$ est"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "heading 20.3: 'Composition des pseudo-morphismes.'",
+  "scan": "full stop after the title",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Composition des pseudo-morphismes}",
+   "new": "\\subsection{Composition des pseudo-morphismes.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58; same form as the earlier IV-4 subsection-title page fixes."
+ },
+ {
+  "page": 237,
+  "where": "(20.3.1), l. 2: 'f: Y → Z un morphisme.'",
+  "scan": "'morphisme' italic (crop p237_morph.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$f:Y\\to Z$ un morphisme.",
+   "new": "$f:Y\\to Z$ un \\emph{morphisme}."
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "(20.3.1): 'le pseudo-morphisme de X dans Z composé de f et de ω'",
+  "scan": "only 'composé' italic; 'de' and 'et de' roman (crop p237_compose1.png)",
+  "tex": "\\emph{composé de $f$ et de $\\omega$}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{composé de $f$ et de $\\omega$}",
+   "new": "\\emph{composé} de $f$ et de $\\omega$"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "(20.3.2), l. 3-4: 'tel que l'ouvert V' = f^{-1}(dom_S(ω)) soit schématiquement dense dans X''",
+  "scan": "'schématiquement dense dans' italic (crop p237_schem.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit schématiquement dense dans $X'$ ;",
+   "new": "soit \\emph{schématiquement dense dans} $X'$ ;"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "(20.3.2), l. 5: 'du S-morphisme u∘(f|U')'",
+  "scan": "u∘(f|U') (crop p237_UV.png)",
+  "tex": "u\\circ(f|U'): the TeX keeps the printed reading",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "$u\\circ(f|V')$",
+  "note": "No U' is defined in (20.3.2): u is defined on dom_S(ω) and f maps V' = f^{-1}(dom_S(ω)) into it, so the restriction meant is f|V'. Not in Err_IV (Liste 3)."
+ },
+ {
+  "page": 237,
+  "where": "(20.3.2), l. 6: 'est le pseudo-S-morphisme composé de ω et de f'",
+  "scan": "only 'composé' italic (crop p237_compose2.png)",
+  "tex": "\\emph{composé de $\\omega$ et de $f$}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{composé de $\\omega$ et de $f$}",
+   "new": "\\emph{composé} de $\\omega$ et de $f$"
+  },
+  "note": ""
+ },
+ {
+  "page": 237,
+  "where": "display (20.3.2.1): 'f^{-1}(dom_S(ω)) ⊂ dom_S(ω∘f).'",
+  "scan": "full stop after the formula (crop p237_disp.png)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\operatorname{dom}_S(\\omega\\circ f)\n  \\tag{20.3.2.1}",
+   "new": "\\operatorname{dom}_S(\\omega\\circ f).\n  \\tag{20.3.2.1}"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "l. 2: 'un préfaisceau d'ensembles V ⇝ Ps.hom_S(V, Y)^{f^V}'",
+  "scan": "wavy arrow (crop p238_arr1.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$V\\mapsto\\operatorname{Ps.hom}_S(V,Y)^{f^V}$",
+   "new": "$V\\leadsto\\operatorname{Ps.hom}_S(V,Y)^{f^V}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "l. 3: 'sous-préfaisceau de V ⇝ Ps.hom_S(V, Y)'",
+  "scan": "wavy arrow (crop p238_arr2.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $V\\mapsto\\operatorname{Ps.hom}_S(V,Y)$,",
+   "new": "de $V\\leadsto\\operatorname{Ps.hom}_S(V,Y)$,"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "l. 4: 'que l'on note 𝒫s.hom_S(X, Y)^f'",
+  "scan": "script P followed by italic 's.hom' (the same form in (20.3.4), crop p238_psh.png)",
+  "tex": "\\mathscr{P}\\!s.\\!\\operatorname{hom}: upright 'hom'",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "que l'on note $\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X,Y)^f$",
+   "new": "que l'on note $\\mathscr{P}\\!s.\\mathit{hom}_S(X,Y)^f$"
+  },
+  "note": "Only the sheaf 𝒫s.hom has the italic 'hom' (like the sheaf Proj, GLOBAL_ISSUES 31); the roman Ps.hom of the sets is right. ega4-20 writes the sheaf this way 13 times (pp. 232-234, 238-239, 250)."
+ },
+ {
+  "page": 238,
+  "where": "l. 4: 'une application ω ⇝ ω∘f^V'",
+  "scan": "wavy arrow (crop p238_arr3.png)",
+  "tex": "\\mapsto",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\omega\\mapsto\\omega\\circ f^V$",
+   "new": "$\\omega\\leadsto\\omega\\circ f^V$"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "l. 5: 'qui définit donc un f-morphisme de faisceaux'",
+  "scan": "'f-morphisme' italic (crop p238_fmorph.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un $f$-morphisme de",
+   "new": "un \\emph{$f$-morphisme} de"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "display at the end of (20.3.2): '𝒫s.hom_S(X, Y)^f → 𝒫s.hom_S(X', Y).'",
+  "scan": "italic 'hom' twice",
+  "tex": "upright \\operatorname{hom} twice",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X,Y)^f\\to\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X',Y).",
+   "new": "\\mathscr{P}\\!s.\\mathit{hom}_S(X,Y)^f\\to\\mathscr{P}\\!s.\\mathit{hom}_S(X',Y)."
+  },
+  "note": "See the finding for l. 4."
+ },
+ {
+  "page": 238,
+  "where": "(20.3.3), second paragraph: 'D'autre part, pour tout S-morphisme g: Y → Z'",
+  "scan": "new indented paragraph",
+  "tex": "same paragraph (no blank line before 'D'autre part')",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\omega\\circ(f\\circ f')$.\nD'autre part",
+   "new": "\\omega\\circ(f\\circ f')$.\n\nD'autre part"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "(20.3.4), l. 2: '𝒫s.hom_S(X, Y)^f = 𝒫s.hom_S(X, Y)'",
+  "scan": "italic 'hom' twice (crop p238_psh.png)",
+  "tex": "upright \\operatorname{hom} twice",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X,Y)^f=\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X,Y)$",
+   "new": "$\\mathscr{P}\\!s.\\mathit{hom}_S(X,Y)^f=\\mathscr{P}\\!s.\\mathit{hom}_S(X,Y)$"
+  },
+  "note": "See the finding for l. 4."
+ },
+ {
+  "page": 238,
+  "where": "(20.3.4), l. 4: 'lorsqu'il en est ainsi, alors, pour tout ouvert U'",
+  "scan": "'alors,' set in BOLD roman (wrong fount), mid-line: mean stroke run 6.05 px against 5.32 px for 'ainsi' and 4.8-5.0 px for the words around it; its a 247 against 186 dark px for the a of 'ainsi'; its comma 87 against 65 px for the comma after 'ainsi' (crops p238_alors.png, p238_alors_z.png)",
+  "tex": "normal weight (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "ainsi, alors, pour",
+   "new": "ainsi, \\textbf{alors,} pour"
+  },
+  "corrected": "ainsi, alors, pour",
+  "note": "Wrong-fount word recorded as a misprint (GLOBAL_ISSUES 29/99; cf. p. 68). The fix restores the printed reading."
+ },
+ {
+  "page": 238,
+  "where": "(20.3.4), l. 5 (first character of the line): 'ω : U → Y'",
+  "scan": "this ω is BOLD (wrong fount): 274 dark px and a mean stroke run of 5.5 px against 219 px and 4.4 px for the ω of 'ω∘f^U' later on the same line (crops p238_omega.png, p238_omega_cmp.png, p238_w1.png)",
+  "tex": "\\omega (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "pseudo-$S$-morphisme $\\omega:U\\to Y$",
+   "new": "pseudo-$S$-morphisme $\\boldsymbol{\\omega}:U\\to Y$"
+  },
+  "corrected": "pseudo-$S$-morphisme $\\omega:U\\to Y$",
+  "note": "Wrong-fount letter recorded as a misprint (GLOBAL_ISSUES 29/99); a single letter at the start of the line, as the é of p. 204, so not item 100. The fix restores the printed reading."
+ },
+ {
+  "page": 238,
+  "where": "proof of (20.3.5): 'L'assertion (i) résulte de (11.10.5, (ii), b))'",
+  "scan": "italic 'b)' (letter and its parenthesis) with no opening parenthesis (crop p238_b.png)",
+  "tex": "\\sref{IV.11.10.5}[(ii), (b)] prints '(11.10.5, (ii), (b))': an added '(' and an upright b",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.11.10.5}[(ii), (b)]",
+   "new": "\\sref{IV.11.10.5}[(ii), \\emph{b)}]"
+  },
+  "note": "The third \\sref argument is set inside \\normalfont, so \\emph gives the printed italic. ega4-20 has 8 such '[..., (a)]' labels; the other 5 (after p. 239) need the same check."
+ },
+ {
+  "page": 238,
+  "where": "proof of (20.3.5): 'l'assertion (ii) résulte de (11.10.5, (ii), a))'",
+  "scan": "italic 'a)' with no opening parenthesis (crop p238_a.png)",
+  "tex": "\\sref{IV.11.10.5}[(ii), (a)] prints '(11.10.5, (ii), (a))'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.11.10.5}[(ii), (a)]",
+   "new": "\\sref{IV.11.10.5}[(ii), \\emph{a)}]"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "proof of (20.3.5): 'tout ouvert V dans U est rétrocompact'",
+  "scan": "'rétrocompact' italic (crop p238_a.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est rétrocompact",
+   "new": "est \\emph{rétrocompact}"
+  },
+  "note": ""
+ },
+ {
+  "page": 238,
+  "where": "proof of (20.3.5): 'tout ouvert V dense dans U, f^{-1}(V) est dense dans f^{-1}(U)'",
+  "scan": "the first 'dense' is italic too",
+  "tex": "only the second 'dense' emphasised",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ouvert $V$ dense dans $U$",
+   "new": "ouvert $V$ \\emph{dense} dans $U$"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "l. 1 (first line of the page): 'tout point maximal de X' appartenant à f^{-1}(V)'",
+  "scan": "f^{-1}(V) (crop p239_fV.png)",
+  "tex": "f^{-1}(U) (silent correction)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "appartenant à $f^{-1}(U)$ est un point",
+   "new": "appartenant à $f^{-1}(V)$ est un point"
+  },
+  "corrected": "appartenant à $f^{-1}(U)$ est un point",
+  "note": "The step needs the maximal points of X' that lie in f^{-1}(U) (p. 238: 'il suffit que f^{-1}(V) contienne tous les points maximaux de X' appartenant à f^{-1}(U)'); with f^{-1}(V) it proves nothing. Not in Err_IV (Liste 3). The marker and page break are right (not a boundary fix)."
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6): item labels a), b)",
+  "scan": "roman (upright) labels (crop p239_ab.png)",
+  "tex": "label=\\emph{\\alph*)}: italic in the roman env",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{enumerate}[label=\\emph{\\alph*)}]",
+   "new": "\\begin{enumerate}[label=\\alph*)]"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6) a): 'X est localement noethérien;'",
+  "scan": "'est localement noethérien' italic (crop p239_ab.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item $X$ est localement noethérien ;",
+   "new": "\\item $X$ \\emph{est localement noethérien} ;"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6) b): 'X est réduit et l'ensemble de ses composantes irréductibles est localement fini.'",
+  "scan": "italic after X (crop p239_ab.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.",
+   "new": "\\item $X$ \\emph{est réduit et l'ensemble de ses composantes irréductibles est localement fini}."
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6): 'Alors, pour tout x∈X' after the list",
+  "scan": "new indented paragraph",
+  "tex": "follows \\end{enumerate} without a blank line, so no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\nAlors, pour tout",
+   "new": "\\end{enumerate}\n\nAlors, pour tout"
+  },
+  "note": "Item 80 pattern."
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6): 'dans le cas a), la condition (iii)'",
+  "scan": "italic 'a)' (crop p239_cas.png)",
+  "tex": "roman 'a)'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans le cas~a), la",
+   "new": "dans le cas~\\emph{a)}, la"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6): 'dans le cas b).'",
+  "scan": "italic 'b)' (crop p239_cas.png)",
+  "tex": "roman 'b)'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "dans le cas~b).",
+   "new": "dans le cas~\\emph{b)}."
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6): 'Pour tout pseudo-S-morphisme ω de X dans Y'",
+  "scan": "'tout' italic (crop p239_cas.png)",
+  "tex": "roman",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Pour tout pseudo-$S$-morphisme",
+   "new": "Pour \\emph{tout} pseudo-$S$-morphisme"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "(20.3.6): 'si X vérifie la condition a) (resp. b)) de (20.3.6)'",
+  "scan": "italic 'a)' and 'b)', upright '(resp.' and outer ')' (crop p239_cond.png)",
+  "tex": "roman a), b)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "la condition~a) (resp. b))",
+   "new": "la condition~\\emph{a)} (resp. \\emph{b)})"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "display (20.3.6.1): '(𝒫s.hom_S(X, Y))_x → Ps.hom_S(Spec(O_{X,x}), Y)'",
+  "scan": "italic 'hom' in the sheaf 𝒫s.hom",
+  "tex": "upright \\operatorname{hom}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X,Y))_x",
+   "new": "(\\mathscr{P}\\!s.\\mathit{hom}_S(X,Y))_x"
+  },
+  "note": "As on p. 238."
+ },
+ {
+  "page": 239,
+  "where": "after (20.3.6.1): 'la fibre au point x du faisceau 𝒫s.hom_S(X, Y)'",
+  "scan": "italic 'hom'",
+  "tex": "upright \\operatorname{hom}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "du faisceau $\\mathscr{P}\\!s.\\!\\operatorname{hom}_S(X,Y)$",
+   "new": "du faisceau $\\mathscr{P}\\!s.\\mathit{hom}_S(X,Y)$"
+  },
+  "note": "As on p. 238."
+ },
+ {
+  "page": 239,
+  "where": "proof of (20.3.7): 'Par application de la méthode de (8.1.2, a))'",
+  "scan": "italic 'a)' with no opening parenthesis (crop p239_812.png)",
+  "tex": "\\sref{IV.8.1.2}[(a)] prints '(8.1.2, (a))'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\sref{IV.8.1.2}[(a)]",
+   "new": "\\sref{IV.8.1.2}[\\emph{a)}]"
+  },
+  "note": "As the two on p. 238."
+ },
+ {
+  "page": 239,
+  "where": "Proposition (20.3.8), l. 2: '(resp. quasi-compact et quasi-séparé)'",
+  "scan": "'(resp.' upright; the words and the closing parenthesis italic (crops p239_resp1.png, p239_separe.png)",
+  "tex": "'(resp.' italic (statement environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. quasi-compact",
+   "new": "\\textup{(resp.} quasi-compact"
+  },
+  "note": "Item 101: upright only where 'resp.' stands next to the parenthesis."
+ },
+ {
+  "page": 239,
+  "where": "Proposition (20.3.8), l. 2: '(resp. localement de présentation finie)'",
+  "scan": "'(resp.' upright; the closing parenthesis after 'finie' italic (crops p239_resp2.png, p239_finie.png)",
+  "tex": "'(resp.' italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(resp. localement de présentation",
+   "new": "\\textup{(resp.} localement de présentation"
+  },
+  "note": ""
+ },
+ {
+  "page": 239,
+  "where": "Proposition (20.3.8): 'Alors, l'application canonique' after the list",
+  "scan": "new indented line (paragraph) after (ii)",
+  "tex": "follows \\end{enumerate} without a blank line, so no indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\nAlors, l'application canonique",
+   "new": "\\end{enumerate}\n\nAlors, l'application canonique"
+  },
+  "note": "Item 80 pattern."
+ },
+ {
+  "page": 239,
+  "where": "Proposition (20.3.8), last line: 'est injective (resp. bijective).'",
+  "scan": "'(resp.' upright; 'bijective)' italic (crop p239_resp3.png)",
+  "tex": "'(resp.' italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "est injective (resp. bijective)",
+   "new": "est injective \\textup{(resp.} bijective)"
+  },
+  "note": ""
+ }
+]

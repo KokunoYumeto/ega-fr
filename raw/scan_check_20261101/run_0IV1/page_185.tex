@@ -1,0 +1,84 @@
+% from ega0-22-fr.tex
+\oldpage[0\textsubscript{IV-1}]{185}
+
+Ce résultat se généralise comme suit~:
+
+\begin{proposition}[22.1.4]
+\label{0.22.1.4-fr}
+Soit $\varphi:A\to B$ un homomorphisme local d'anneaux locaux noethériens,
+$k$ (resp. $K$) le corps résiduel de $A$ (resp. $B$). Pour que $B$ soit une
+$A$-algèbre formellement lisse (pour les topologies préadiques), il faut et
+il suffit que pour tout anneau local artinien $C$, de corps résiduel égal à
+$K$, tout homomorphisme local $A\to C$ (faisant de $C$ une $A$-algèbre
+topologique), et tout idéal nilpotent $\mathfrak J$ de $C$, tout
+$A$-homomorphisme local $B\to C/\mathfrak J$ tel que l'homomorphisme
+$K\to K$ obtenu par passage aux quotients soit l'identité, se factorise en
+\[
+  B\xrightarrow{f}C\longrightarrow C/\mathfrak J,
+\]
+où $f$ est un $A$-homomorphisme local.
+\end{proposition}
+
+\begin{proof}
+La condition étant nécessaire par définition (19.3.1), montrons qu'elle est
+suffisante. Comme les $\widehat A$-homomorphismes locaux de $\widehat B$ dans
+une $\widehat A$-algèbre locale discrète proviennent par extension des
+$A$-homomorphismes locaux de $B$ dans cette algèbre, on peut se borner au cas
+où $A$ et $B$ sont \emph{complets}, en vertu de (19.3.6). Lorsque $A$ est un
+\emph{corps} $k$, la proposition résulte de (22.1.3.3), où l'on prend pour
+$\Lambda$ le sous-corps premier de $k$, et de (19.6.1).
+
+Dans le cas général, posons $B_0=B\otimes_Ak=B/\mathfrak mB$
+($\mathfrak m$ idéal maximal de $A$), qui est complet. Si $C_0$ est une
+$k$-algèbre locale artinienne de corps résiduel égal à $K$, $\mathfrak J_0$
+un idéal nilpotent de $C_0$, tout $k$-homomorphisme local
+$g_0:B_0\to C_0/\mathfrak J_0$ donnant l'identité sur $K$ par passage aux
+quotients, donne par composition un $A$-homomorphisme local
+\[
+  g:B\longrightarrow B_0\xrightarrow{g_0}C_0/\mathfrak J_0
+\]
+qui par hypothèse se factorise donc en
+$B\xrightarrow{f}C_0\to C_0/\mathfrak J_0$, où $f$ est un
+$A$-homomorphisme local~; mais comme $C_0$ est une $k$-algèbre, $f$ se
+factorise en $B\to B_0\xrightarrow{f_0}C_0$, où $f_0$ est un
+$k$-homomorphisme local. On voit donc que les hypothèses de l'énoncé sont
+encore remplies lorsqu'on y substitue $B_0$ et $k$ à $B$ et $A$
+respectivement~; donc $B_0$ est une $k$-algèbre \emph{formellement lisse}
+d'après ce que l'on vient de voir.
+
+Appliquant (19.7.2) et (19.7.1), on voit qu'il existe un anneau local
+noethérien complet $B'$, un homomorphisme local $A\to B'$ faisant de $B'$ un
+$A$-module \emph{plat} et une $A$-algèbre \emph{formellement lisse}, et un
+$k$-isomorphisme
+\[
+  u'_0:B'_0=B'\otimes_Ak\xrightarrow{\sim}B_0.
+\]
+Soit $v'_0$ l'isomorphisme réciproque de $u'_0$~; nous nous proposons de
+montrer qu'il existe un $A$-homomorphisme local $v:B\to B'$ tel que $v'_0$
+provienne de $v$ par passage aux quotients. Pour cela, désignons par
+$\mathfrak n$ et $\mathfrak n'$ les idéaux maximaux respectifs de $B$ et
+$B'$, et, pour tout $j$, soit
+\[
+  w_j:B/(\mathfrak n^{j+1}+\mathfrak mB)
+  \longrightarrow B'/(\mathfrak n'^{j+1}+\mathfrak mB')
+\]
+l'homomorphisme déduit de $v'_0$ par passage aux quotients~; il suffira de
+former pour tout $j$ un $A$-homomorphisme local
+$v_j:B/\mathfrak n^{j+1}\to B'/\mathfrak n'^{j+1}$ tel que les diagrammes
+\[
+\xymatrix@C=4em@R=3em{
+  B/\mathfrak n^{j+1} \ar[r]^{v_j} \ar[d] &
+  B'/\mathfrak n'^{j+1} \ar[d] \\
+  B/\mathfrak n^j \ar[r]_{v_{j-1}} & B'/\mathfrak n'^j
+}
+\qquad
+\xymatrix@C=4em@R=3em{
+  B/\mathfrak n^{j+1} \ar[r]^{v_j} \ar[d] &
+  B'/\mathfrak n'^{j+1} \ar[d] \\
+  B/(\mathfrak n^{j+1}+\mathfrak mB) \ar[r]_{w_j} &
+  B'/(\mathfrak n'^{j+1}+\mathfrak mB')
+}
+\]
+soient commutatifs~; $B$ et $B'$ étant complets, l'homomorphisme
+$v=\varprojlim v_j$ répondra à la question.
+

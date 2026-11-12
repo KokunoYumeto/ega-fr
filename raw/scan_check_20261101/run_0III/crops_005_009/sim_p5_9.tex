@@ -1,0 +1,374 @@
+\clearpage
+\thispagestyle{plain}
+\markboth{PRÉLIMINAIRES}{PRÉLIMINAIRES}
+\oldpage[0\textsubscript{III}]{5}
+\phantomsection
+\label{chapter:0III-fr}
+
+\begin{center}
+{\large CHAPITRE 0 (\textit{suite})\footnotemark\par}
+\vspace{1.5em}
+{\Large\bfseries PRÉLIMINAIRES\par}
+\end{center}
+
+\footnotetext{Pour faciliter la recherche des références, on renverra
+désormais aux paragraphes du chapitre 0 publiés avec le chapitre I par le
+signe $\mathbf{0}_{\mathrm I}$.}
+
+\setcounter{section}{7}
+\section{Foncteurs représentables}
+\label{section:0.8-fr}
+
+\setcounter{subsection}{0}
+\subsection{Foncteurs représentables}
+\label{subsection:0.8.1-fr}
+
+\begin{env}[8.1.1]
+\label{0.8.1.1-fr}
+Nous désignerons par $\boldsymbol{\mathit{Ens}}$ la catégorie des ensembles. Soit $\boldsymbol{C}$ une
+catégorie~; pour deux objets $X$, $Y$ de $\boldsymbol{C}$, nous poserons
+$h_X(Y)=\operatorname{Hom}(Y,X)$~; pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$,
+nous désignerons par $h_X(u)$ l'application $v\mapsto vu$ de
+$\operatorname{Hom}(Y',X)$ dans $\operatorname{Hom}(Y,X)$. Il est immédiat
+qu'avec ces définitions, $h_X:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est un \emph{foncteur
+contravariant}, c'est-à-dire un objet de la catégorie, notée
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$, des foncteurs covariants de la
+catégorie $\boldsymbol{C}^0$, duale de la catégorie $\boldsymbol{C}$, dans la catégorie
+$\boldsymbol{\mathit{Ens}}$ (T, 1.7, \textit{d}) et [29]).
+\end{env}
+
+\begin{env}[8.1.2]
+\label{0.8.1.2-fr}
+Soit maintenant $w:X\to X'$ un morphisme dans $\boldsymbol{C}$~; pour tout $Y\in\boldsymbol{C}$ et
+tout $v\in\operatorname{Hom}(Y,X)=h_X(Y)$, on a
+$wv\in\operatorname{Hom}(Y,X')=h_{X'}(Y)$~; désignons par $h_w(Y)$
+l'application $v\mapsto wv$ de $h_X(Y)$ dans $h_{X'}(Y)$. Il est immédiat
+que pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{h_w(Y')} &
+    h_X(Y)\ar[d]^{h_w(Y)}\\
+    h_{X'}(Y')\ar[r]_{h_{X'}(u)} &
+    h_{X'}(Y)
+  }
+\]
+est commutatif~; autrement dit, $h_w$ est un \emph{morphisme fonctoriel}
+$h_X\to h_{X'}$ (T, 1.2), ou encore un morphisme dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ (T, 1.7, \textit{d})). Les définitions de
+$h_X$ et de $h_w$ constituent donc la définition d'un \emph{foncteur
+covariant canonique}
+\[
+  h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}}).
+  \tag{8.1.2.1}
+\]
+\end{env}
+
+\begin{env}[8.1.3]
+\label{0.8.1.3-fr}
+Soient $X$ un objet de $\boldsymbol{C}$, $F$ un foncteur contravariant de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$ (objet de $\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Soit
+$g:h_X\to F$ un \emph{morphisme fonctoriel}~: pour tout $Y\in\boldsymbol{C}$,
+\oldpage[0\textsubscript{III}]{6}
+$g(Y)$ est donc une application $h_X(Y)\to F(Y)$ telle que pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\ar[r]^{h_X(u)}\ar[d]_{g(Y')} &
+    h_X(Y)\ar[d]^{g(Y)}\\
+    F(Y')\ar[r]_{F(u)} & F(Y)
+  }
+  \tag{8.1.3.1}\label{0.8.1.3.1-fr}
+\]
+soit commutatif. En particulier, on a une application
+$g(X):h_X(X)=\operatorname{Hom}(X,X)\to F(X)$, d'où un élément
+\[
+  \alpha(g)=(g(X))(1_X)\in F(X)
+  \tag{8.1.3.2}
+\]
+et par suite une application canonique
+\[
+  \alpha:\operatorname{Hom}(h_X,F)\to F(X).
+  \tag{8.1.3.3}
+\]
+
+Inversement, considérons un élément $\xi\in F(X)$~; pour tout morphisme
+$v:Y\to X$ dans $\boldsymbol{C}$, $F(v)$ est une application $F(X)\to F(Y)$~;
+considérons l'application
+\[
+  v\mapsto(F(v))(\xi)
+  \tag{8.1.3.4}
+\]
+de $h_X(Y)$ dans $F(Y)$~; si on désigne par $(\beta(\xi))(Y)$ cette
+application,
+\[
+  \beta(\xi):h_X\to F
+  \tag{8.1.3.5}
+\]
+est un \emph{morphisme fonctoriel}, car on a pour tout morphisme
+$u:Y\to Y'$ dans $\boldsymbol{C}$,
+$(F(vu))(\xi)=(F(v)\circ F(u))(\xi)$, ce qui vérifie la commutativité de
+(\hyperref[0.8.1.3.1-fr]{8.1.3.1}) pour $g=\beta(\xi)$. On a ainsi défini
+une application canonique
+\[
+  \beta:F(X)\to\operatorname{Hom}(h_X,F).
+  \tag{8.1.3.6}
+\]
+\end{env}
+
+\begin{proposition}[8.1.4]
+\label{0.8.1.4-fr}
+Les applications $\alpha$ et $\beta$ sont des bijections réciproques l'une de
+l'autre.
+\end{proposition}
+
+Calculons $\alpha(\beta(\xi))$ pour $\xi\in F(X)$~; pour tout $Y\in\boldsymbol{C}$,
+$(\beta(\xi))(Y)$ est l'application
+$g_1(Y):v\mapsto(F(v))(\xi)$ de $h_X(Y)$ dans $F(Y)$. On a donc
+\[
+  \alpha(\beta(\xi))=(g_1(X))(1_X)=(F(1_X))(\xi)
+  =1_{F(X)}(\xi)=\xi.
+\]
+Calculons maintenant $\beta(\alpha(g))$ pour
+$g\in\operatorname{Hom}(h_X,F)$~; pour tout $Y\in\boldsymbol{C}$,
+$(\beta(\alpha(g)))(Y)$ est l'application
+$v\mapsto(F(v))((g(X))(1_X))$~; en vertu de la commutativité de
+(\hyperref[0.8.1.3.1-fr]{8.1.3.1}), cette application n'est autre que
+$v\mapsto(g(Y))((h_X(v))(1_X))=(g(Y))(v)$ par définition de $h_X(v)$,
+autrement dit, elle est égale à $g(Y)$, ce qui démontre la proposition.
+
+\begin{env}[8.1.5]
+\label{0.8.1.5-fr}
+Rappelons qu'une \emph{sous-catégorie} $\boldsymbol{C}'$ d'une catégorie $\boldsymbol{C}$ est définie
+par la condition que ses objets soient des objets de $\boldsymbol{C}$, et que si $X'$,
+$Y'$ sont deux objets de $\boldsymbol{C}'$, l'ensemble
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')$ des morphismes $X'\to Y'$ \emph{dans
+$\boldsymbol{C}'$} est une partie de l'ensemble $\operatorname{Hom}_{\mathbf{C}}(X',Y')$ des
+morphismes $X'\to Y'$ \emph{dans $\boldsymbol{C}$}, l'application canonique de
+<<~composition des morphismes~>>
+\[
+  \operatorname{Hom}_{\mathbf{C}'}(X',Y')\times\operatorname{Hom}_{\mathbf{C}'}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}'}(X',Z')
+\]
+\oldpage[0\textsubscript{III}]{7}
+étant la restriction de l'application canonique
+\[
+  \operatorname{Hom}_{\mathbf{C}}(X',Y')\times\operatorname{Hom}_{\mathbf{C}}(Y',Z')
+  \to\operatorname{Hom}_{\mathbf{C}}(X',Z').
+\]
+
+On dit que $\boldsymbol{C}'$ est une sous-catégorie \emph{pleine} de $\boldsymbol{C}$ si
+$\operatorname{Hom}_{\mathbf{C}'}(X',Y')=\operatorname{Hom}_{\mathbf{C}}(X',Y')$ pour tout
+couple d'objets de $\boldsymbol{C}'$. La sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}$ formée des objets de
+$\boldsymbol{C}$ isomorphes aux objets de $\boldsymbol{C}'$ est encore alors une sous-catégorie pleine
+de $\boldsymbol{C}$, \emph{équivalente} (T, 1.2) à $\boldsymbol{C}'$ comme on le vérifie sans peine.
+
+Un foncteur covariant $F:\boldsymbol{C}_1\to\boldsymbol{C}_2$ est dit \emph{pleinement fidèle} si,
+pour tout couple d'objets $X_1$, $Y_1$ de $\boldsymbol{C}_1$, l'application
+$u\mapsto F(u)$ de $\operatorname{Hom}(X_1,Y_1)$ dans
+$\operatorname{Hom}(F(X_1),F(Y_1))$ est \emph{bijective}~; cela entraîne que
+la sous-catégorie $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ est \emph{pleine}. En outre, si deux
+objets $X_1$, $X'_1$ ont même image $X_2$, il existe un isomorphisme unique
+$u:X_1\to X'_1$ tel que $F(u)=1_{X_2}$. Pour tout objet $X_2$ de $F(\boldsymbol{C}_1)$,
+soit alors $G(X_2)$ un des objets $X_1$ de $\boldsymbol{C}_1$ tel que $F(X_1)=X_2$
+($G$ étant défini au moyen de l'axiome de choix)~; pour tout morphisme
+$v:X_2\to Y_2$ dans $F(\boldsymbol{C}_1)$, $G(v)$ sera l'unique morphisme
+$u:G(X_2)\to G(Y_2)$ tel que $F(u)=v$~; $G$ est alors un \emph{foncteur} de
+$F(\boldsymbol{C}_1)$ dans $\boldsymbol{C}_1$~; $FG$ est le foncteur identique dans $F(\boldsymbol{C}_1)$, et ce
+qui précède montre qu'il existe un isomorphisme de foncteurs
+$\varphi:\boldsymbol{\mathit{1}}_{\mathbf{C}_1}\to GF$ tel que $F$, $G$, $\varphi$ et l'identité
+$\boldsymbol{\mathit{1}}_{F(\mathbf{C}_1)}\to FG$ définissent une \emph{équivalence} de la catégorie $\boldsymbol{C}_1$
+et de la sous-catégorie pleine $F(\boldsymbol{C}_1)$ de $\boldsymbol{C}_2$ (T, 1.2).
+\end{env}
+
+\begin{env}[8.1.6]
+\label{0.8.1.6-fr}
+Appliquons la prop. (\hyperref[0.8.1.4-fr]{8.1.4}) au cas où le foncteur $F$
+est $h_{X'}$, $X'$ étant un objet quelconque de $\boldsymbol{C}$~; l'application
+$\beta:\operatorname{Hom}(X,X')\to\operatorname{Hom}(h_X,h_{X'})$ n'est
+autre ici que l'application $w\mapsto h_w$ définie dans
+(\hyperref[0.8.1.2-fr]{8.1.2})~; cette application étant \emph{bijective},
+on voit, avec la terminologie de (\hyperref[0.8.1.5-fr]{8.1.5}), que~:
+\end{env}
+
+\begin{proposition}[8.1.7]
+\label{0.8.1.7-fr}
+Le foncteur canonique
+$h:\boldsymbol{C}\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ est pleinement fidèle.
+\end{proposition}
+
+\begin{env}[8.1.8]
+\label{0.8.1.8-fr}
+Soit $F$ un foncteur contravariant de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$~; on dit que
+$F$ est \emph{représentable} s'il existe un objet $X\in\boldsymbol{C}$ tel que $F$ soit
+\emph{isomorphe} à $h_X$~; il résulte de
+(\hyperref[0.8.1.7-fr]{8.1.7}) que la donnée d'un $X\in\boldsymbol{C}$ et d'un
+isomorphisme de foncteurs $g:h_X\to F$ détermine $X$ à un isomorphisme
+unique près. La prop. (\hyperref[0.8.1.7-fr]{8.1.7}) signifie encore que $h$
+définit une \emph{équivalence} de $\boldsymbol{C}$ et de la sous-catégorie pleine de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$ formée des \emph{foncteurs
+contravariants représentables}. Il résulte d'ailleurs de
+(\hyperref[0.8.1.4-fr]{8.1.4}) que la donnée d'un morphisme fonctoriel
+$g:h_X\to F$ équivaut à celle d'un élément $\xi\in F(X)$~; dire que $g$ est
+un \emph{isomorphisme} équivaut pour $\xi$ à la condition suivante~:
+\emph{pour tout objet $Y$ de $\boldsymbol{C}$ l'application
+$v\mapsto(F(v))(\xi)$ de $\operatorname{Hom}(Y,X)$ dans $F(Y)$ est
+bijective}. Lorsque $\xi$ vérifie cette condition, on dira que le couple
+$(X,\xi)$ \emph{représente} le foncteur représentable $F$. Par abus de
+langage, on dira aussi que l'objet $X\in\boldsymbol{C}$ représente $F$ s'il existe
+$\xi\in F(X)$ tel que $(X,\xi)$ représente $F$, autrement dit si $h_X$ est
+isomorphe à $F$.
+
+Soient $F$, $F'$ deux foncteurs contravariants représentables de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, $h_X\to F$ et $h_{X'}\to F'$ deux isomorphismes de
+foncteurs. Alors il résulte de (\hyperref[0.8.1.6-fr]{8.1.6}) qu'il y a une
+correspondance biunivoque canonique entre $\operatorname{Hom}(X,X')$ et
+l'ensemble $\operatorname{Hom}(F,F')$ des morphismes fonctoriels $F\to F'$.
+\end{env}
+
+\begin{env}[8.1.9]
+\label{0.8.1.9-fr}
+\textit{Exemples. I : limites projectives.} La notion de foncteur
+contravariant représentable couvre en particulier la notion <<~duale~>> de
+la notion usuelle de <<~solution d'un
+\oldpage[0\textsubscript{III}]{8}
+problème universel~>>. Plus généralement, nous allons voir que la notion de
+\emph{limite projective} est un cas particulier de celle de foncteur
+représentable. Rappelons que dans une catégorie $\boldsymbol{C}$, on définit un
+\emph{système projectif} par la donnée d'un ensemble préordonné $I$, d'une
+famille $(A_\alpha)_{\alpha\in I}$ d'objets de $\boldsymbol{C}$, et, pour tout couple
+d'indices $(\alpha,\beta)$ tel que $\alpha\leq\beta$, d'un morphisme
+$u_{\alpha\beta}:A_\beta\to A_\alpha$. Une \emph{limite projective} de ce
+système dans $\boldsymbol{C}$ est constituée par un objet $B$ de $\boldsymbol{C}$ (noté
+$\varprojlim A_\alpha$), et, pour chaque $\alpha\in I$, un morphisme
+$u_\alpha:B\to A_\alpha$, tels que~: 1\textsuperscript{o}
+$u_\alpha=u_{\alpha\beta}u_\beta$ pour $\alpha\leq\beta$~;
+2\textsuperscript{o} Pour tout objet $X$ de $\boldsymbol{C}$ et toute famille
+$(v_\alpha)_{\alpha\in I}$ de morphismes $v_\alpha:X\to A_\alpha$, telle
+que $v_\alpha=u_{\alpha\beta}v_\beta$ pour $\alpha\leq\beta$, il existe un
+morphisme unique $v:X\to B$ (noté $\varprojlim v_\alpha$) tel que
+$v_\alpha=u_\alpha v$ pour tout $\alpha\in I$ (T, 1.8). Ceci s'interprète de
+la façon suivante~: les $u_{\alpha\beta}$ définissent canoniquement des
+applications
+\[
+  \overline{u}_{\alpha\beta}:\operatorname{Hom}(X,A_\beta)
+  \to\operatorname{Hom}(X,A_\alpha)
+\]
+qui définissent un \emph{système projectif} d'ensembles
+$(\operatorname{Hom}(X,A_\alpha),\overline{u}_{\alpha\beta})$, et
+$(v_\alpha)$ est par définition un élément de l'ensemble
+$\varprojlim_\alpha\operatorname{Hom}(X,A_\alpha)$~; il est clair que
+$X\mapsto\varprojlim\operatorname{Hom}(X,A_\alpha)$ est un
+\emph{foncteur contravariant} de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, et l'existence de
+la limite projective $B$ équivaut à dire que
+$(v_\alpha)\mapsto\varprojlim v_\alpha$ est un \emph{isomorphisme} de
+foncteurs en $X$
+\[
+  \varprojlim\operatorname{Hom}(X,A_\alpha)
+  \xrightarrow{\sim}\operatorname{Hom}(X,B)
+  \tag{8.1.9.1}
+\]
+autrement dit que le foncteur
+$X\mapsto\varprojlim\operatorname{Hom}(X,A_\alpha)$ est
+\emph{représentable}.
+\end{env}
+
+\begin{env}[8.1.10]
+\label{0.8.1.10-fr}
+\textit{Exemples. II : Objet final.} Soient $\boldsymbol{C}$ une catégorie, $\{a\}$ un
+ensemble réduit à un seul élément. Considérons le foncteur contravariant
+$F:\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ qui, à tout objet $X$ de $\boldsymbol{C}$ fait correspondre
+l'ensemble $\{a\}$ et à tout morphisme $X\to X'$ dans $\boldsymbol{C}$ l'unique
+application $\{a\}\to\{a\}$. Dire que ce foncteur est \emph{représentable}
+signifie qu'il existe un objet $\boldsymbol{e}\in\boldsymbol{C}$ tel que pour tout $Y\in\boldsymbol{C}$,
+$\operatorname{Hom}(Y,\boldsymbol{e})=h_{\mathbf{e}}(Y)$ soit \emph{réduit à un élément}~; on dit
+que $\boldsymbol{e}$ est un \emph{objet final} de $\boldsymbol{C}$, et il est clair que deux objets
+finaux de $\boldsymbol{C}$ sont isomorphes (ce qui permet de définir, en général à l'aide
+de l'axiome de choix, \emph{un} objet final de $\boldsymbol{C}$ qu'on note alors $\boldsymbol{e}_{\mathbf{C}}$). Par
+exemple, dans la catégorie $\boldsymbol{\mathit{Ens}}$, les objets finaux sont les
+ensembles réduits à un élément~; dans la catégorie des \emph{algèbres
+augmentées} sur un corps $K$ (où les morphismes sont les homomorphismes
+d'algèbres compatibles avec les augmentations), $K$ est un objet final~;
+dans la catégorie des \emph{$S$-préschémas} (\textbf{I}, 2.5.1), $S$ est un objet
+final.
+\end{env}
+
+\begin{env}[8.1.11]
+\label{0.8.1.11-fr}
+Pour deux objets $X$, $Y$ d'une catégorie $\boldsymbol{C}$, posons
+$h'_X(Y)=\operatorname{Hom}(X,Y)$ et pour tout morphisme $u:Y\to Y'$, soit
+$h_X(u)$ l'application $v\mapsto uv$ de $\operatorname{Hom}(X,Y)$ dans
+$\operatorname{Hom}(X,Y')$~; $h'_X$ est alors un \emph{foncteur covariant}
+$\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$, d'où l'on déduit comme dans
+(\hyperref[0.8.1.2-fr]{8.1.2}) la définition d'un foncteur covariant
+canonique $h':\boldsymbol{C}^0\to\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$~; un foncteur
+\emph{covariant} $F$ de $\boldsymbol{C}$ dans $\boldsymbol{\mathit{Ens}}$, autrement dit un objet de
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C},\boldsymbol{\mathit{Ens}})$ est alors dit \emph{représentable}
+s'il existe un objet $X\in\boldsymbol{C}$ (nécessairement unique à isomorphisme unique
+près) tel que $F$ soit \emph{isomorphe à $h'_X$}~; nous laissons au lecteur
+le soin de développer les considérations <<~duales~>> des précédentes pour
+cette notion, qui couvre cette fois celle de \emph{limite inductive}, et en
+particulier la notion usuelle de <<~solution de problème universel~>>.
+\end{env}
+
+\oldpage[0\textsubscript{III}]{9}
+\subsection{Structures algébriques dans les catégories}
+\label{subsection:0.8.2-fr}
+
+\begin{env}[8.2.1]
+\label{0.8.2.1-fr}
+Étant donnés deux foncteurs contravariants $F$, $F'$ de $\boldsymbol{C}$ dans
+$\boldsymbol{\mathit{Ens}}$, rappelons que pour tout objet $Y\in\boldsymbol{C}$, on pose
+$(F\times F')(Y)=F(Y)\times F'(Y)$, et pour tout morphisme $u:Y\to Y'$ dans
+$\boldsymbol{C}$, on pose $(F\times F')(u)=F(u)\times F'(u)$ qui est l'application
+$(t,t')\mapsto(F(u)(t),F'(u)(t'))$ de $F(Y')\times F'(Y')$ dans
+$F(Y)\times F'(Y)$~; $F\times F':\boldsymbol{C}\to\boldsymbol{\mathit{Ens}}$ est donc un
+\emph{foncteur contravariant} (qui n'est autre d'ailleurs que le
+\emph{produit} des objets $F$, $F'$ dans la catégorie
+$\boldsymbol{\mathit{Hom}}(\boldsymbol{C}^0,\boldsymbol{\mathit{Ens}})$). Étant donné un objet $X\in\boldsymbol{C}$, nous
+appellerons \emph{loi de composition interne} sur $X$ un \emph{morphisme fonctoriel}
+\[
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+Autrement dit (T, 1.2), pour tout objet $Y\in\boldsymbol{C}$, $\gamma_X(Y)$ est une
+application $h_X(Y)\times h_X(Y)\to h_X(Y)$ (donc par définition une
+\emph{loi de composition interne} sur l'ensemble $h_X(Y)$) soumise à la
+condition que, pour tout morphisme $u:Y\to Y'$ dans $\boldsymbol{C}$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\times h_X(Y')
+      \ar[rr]^{h_X(u)\times h_X(u)}\ar[dd]_{\gamma_X(Y')} &&
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y')\ar[rr]_{h_X(u)} && h_X(Y)
+  }
+\]
+soit commutatif~; cela signifie que pour les lois de composition
+$\gamma_X(Y)$ et $\gamma_X(Y')$, $h_X(u)$ est un \emph{homomorphisme} de
+$h_X(Y')$ dans $h_X(Y)$.
+
+De la même façon, étant donnés deux objets $Z$, $X$ de $\boldsymbol{C}$, on appelle
+\emph{loi de composition externe sur $X$, ayant $Z$ comme domaine
+d'opérateurs}, un morphisme fonctoriel
+\[
+  \omega_{X,Z}:h_Z\times h_X\to h_X.
+  \tag{8.2.1.2}
+\]
+
+On voit comme ci-dessus que pour tout $Y\in\boldsymbol{C}$, $\omega_{X,Z}(Y)$ est une loi
+de composition externe sur $h_X(Y)$, ayant $h_Z(Y)$ comme domaine
+d'opérateurs, et telle que pour tout morphisme $u:Y\to Y'$, $h_X(u)$ et
+$h_Z(u)$ forment un \emph{dihomomorphisme} de
+$(h_Z(Y'),h_X(Y'))$ dans $(h_Z(Y),h_X(Y))$.
+\end{env}
+
+\begin{env}[8.2.2]
+\label{0.8.2.2-fr}
+Soit $X'$ un second objet de $\boldsymbol{C}$, et supposons donnée sur $X'$ une loi de
+composition interne $\gamma_{X'}$~; nous dirons qu'un morphisme
+$w:X\to X'$ dans $\boldsymbol{C}$ est un \emph{homomorphisme} pour ces lois de
+composition, si pour tout $Y\in\boldsymbol{C}$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+\emph{homomorphisme} pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième
+
+\end{env}

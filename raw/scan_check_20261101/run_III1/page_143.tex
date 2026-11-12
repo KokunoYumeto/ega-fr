@@ -1,0 +1,97 @@
+% from ega3-1-fr.tex
+\oldpage[III]{143}
+
+Pour traiter le cas où $f_z$ est une immersion fermée, on peut donc déjà
+supposer que le morphisme $f$ est fini, donc que
+$X=\operatorname{Spec}(\mathcal B)$, où $\mathcal B$ est une
+$\mathcal O_Y$-Algèbre cohérente, le morphisme $f$ correspondant (II, 1.2.7)
+à l'homomorphisme canonique $u:\mathcal O_Y\to\mathcal B$. Si l'on prouve
+que pour tout $y\in h^{-1}(z)$, l'homomorphisme
+$u_y:\mathcal O_y\to\mathcal B_y$ est surjectif, il en résultera que pour un
+voisinage $V_y$ de $y$, $u|V_y$ sera surjectif, le faisceau
+$\operatorname{Coker}u$ étant cohérent (0\textsubscript{I}, 5.3.4 et 5.2.2).
+Cela étant, le morphisme fini $f_z$ correspond à l'homomorphisme
+\[
+v=u\otimes1:
+\mathcal O_Y\otimes_{\mathcal O_Z}k(z)
+\longrightarrow
+\mathcal B\otimes_{\mathcal O_Z}k(z),
+\]
+et l'hypothèse que $f_z$ est une immersion fermée entraîne que
+l'homomorphisme
+\[
+u_y\otimes1:
+\mathcal O_y\otimes_{\mathcal O_z}k(z)
+\longrightarrow
+\mathcal B_y\otimes_{\mathcal O_z}k(z)
+\]
+est surjectif. Comme $\mathcal B_y$ est un $\mathcal O_y$-module de type
+fini et $\mathcal O_y$ un anneau local noethérien, la conclusion résulte
+comme dans (\hyperref[III.4.6.3-fr]{4.6.3}) du lemme de Nakayama.
+
+\noindent\textit{(ii)} Le même raisonnement que ci-dessus montre qu'il
+suffit cette fois de prouver que $u_y$ est bijectif, sachant que
+$u_y\otimes1$ est bijectif.
+
+Cela résultera du lemme suivant~:
+\end{proof}
+
+\begin{lemma}[4.6.7.1]
+\label{III.4.6.7.1-fr}
+Soient $A$, $B$ deux anneaux locaux noethériens,
+$\rho:A\to B$ un homomorphisme local, $u:N\to M$ un homomorphisme de
+$B$-modules. On suppose que $M$ est un $A$-module plat, $N$ un $B$-module
+de type fini et que
+\[
+u\otimes1:N\otimes_Ak\longrightarrow M\otimes_Ak
+\]
+(où $k$ est le corps résiduel de $A$) est injectif. Alors $N$ est un
+$A$-module plat et $u$ est injectif.
+\end{lemma}
+
+\begin{proof}
+Pour établir la première assertion, il faut montrer que pour tout couple de
+$A$-modules de type fini $P$, $Q$ et tout $A$-homomorphisme injectif
+$v:P\to Q$,
+$1_N\otimes v:N\otimes_AP\to N\otimes_AQ$ est injectif. Or, on a le
+diagramme commutatif
+\[
+\xymatrix{
+N\otimes_AP\ar[r]^{1_N\otimes v}\ar[d]_{u\otimes1_P}
+  &N\otimes_AQ\ar[d]^{u\otimes1_Q}\\
+M\otimes_AP\ar[r]_{1_M\otimes v}
+  &M\otimes_AQ
+}
+\]
+et comme $1_M\otimes v$ est injectif par hypothèse, il suffira de prouver
+qu'il en est de même de $u\otimes1_P$. Soit $\mathfrak m$ l'idéal maximal
+de $A$~; la filtration $\mathfrak m$-adique sur le $A$-module
+$N\otimes_AP$ est aussi sa filtration $\mathfrak mB$-adique en tant que
+$B$-module~; la topologie définie par cette filtration est donc séparée,
+puisque $B$ est noethérien, que $\mathfrak mB$ est contenu dans le radical de
+$B$, et que $N\otimes_AP$ est un $B$-module de type fini, $N$ étant un
+$B$-module de type fini et $P$ un $A$-module de type fini
+(0\textsubscript{I}, 7.3.5). Il suffit donc de prouver que l'homomorphisme
+\[
+\operatorname{gr}(u\otimes1_P):
+\operatorname{gr}_\bullet(N\otimes_AP)
+\longrightarrow
+\operatorname{gr}_\bullet(M\otimes_AP)
+\]
+(où les modules gradués sont relatifs aux filtrations $\mathfrak m$-adiques)
+est injectif (Bourbaki, \emph{Alg. comm.}, chap. III, \S\,2, no~8, cor. 1 du
+th. 1). Notons maintenant que puisque $M$ est un $A$-module plat, les
+homomorphismes
+\[
+M\otimes_A(\mathfrak m^nP)
+\longrightarrow
+\mathfrak m^n(M\otimes_AP)
+\]
+sont bijectifs~; il en est donc de même de l'homomorphisme canonique
+\[
+\varphi_M:
+\operatorname{gr}_0(M)\otimes_A\operatorname{gr}_\bullet(P)
+\longrightarrow
+\operatorname{gr}_\bullet(M\otimes_AP).
+\]
+

@@ -1,0 +1,102 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{23}
+\begin{corollary}[8.5.4]
+\label{IV.8.5.4-fr}
+Supposons $S_0$ quasi-compact et quasi-séparé~; alors, pour tout
+$\mathcal O_{S_\lambda}$-Module quasi-cohérent $\mathcal G_\lambda$,
+l'homomorphisme canonique (8.5.1.4) est bijectif.
+\end{corollary}
+
+\begin{proof}
+En effet, il suffit d'appliquer (8.5.2, (i)) au cas où
+$\mathcal F_\lambda=\mathcal O_{S_\lambda}$, qui est de présentation finie.
+\end{proof}
+
+\begin{proposition}[8.5.5]
+\label{IV.8.5.5-fr}
+Supposons $S_0$ quasi-compact, et supposons que $\mathcal F_\lambda$ soit un
+$\mathcal O_{S_\lambda}$-Module quasi-cohérent de présentation finie. Pour que
+$\mathcal F$ soit localement libre (resp. localement libre de rang $n$), il
+faut et il suffit qu'il existe $\mu\geq\lambda$ tel que $\mathcal F_\mu$ le
+soit.
+\end{proposition}
+
+\begin{proof}
+La condition étant trivialement suffisante, prouvons qu'elle est nécessaire.
+Si $\mathcal F$ est localement libre (resp. localement libre de rang $n$), il
+existe un recouvrement ouvert affine fini $(V_i)$ de $S$ tel que
+$\mathcal F|V_i$ soit isomorphe à $\mathcal O_S^{n_i}|V_i$ (resp.
+$\mathcal O_S^n|V_i$) pour tout $i$. En vertu de (8.2.11), il existe un
+$\nu\geq\lambda$ et pour chaque $i$ un ouvert quasi-compact $U_{i\nu}$ de
+$S_\nu$ tels que $V_i=u_\nu^{-1}(U_{i\nu})$. Comme $S_\nu$ est quasi-compact,
+chaque $U_{i\nu}$ est réunion finie d'ouverts affines~; on est donc ramené au
+cas où $S_0$ est affine et $\mathcal F=\mathcal O_S^n$~; on sait alors qu'il
+existe $\mu\geq\lambda$ tel que $\mathcal F_\mu$ soit isomorphe à
+$\mathcal O_{S_\mu}^n$ (8.5.2.5).
+\end{proof}
+
+\begin{proposition}[8.5.6]
+\label{IV.8.5.6-fr}
+Supposons $S_0$ quasi-compact, et considérons une suite
+\[
+  \mathcal F_\lambda\longrightarrow\mathcal G_\lambda
+  \longrightarrow\mathcal H_\lambda\longrightarrow0
+\]
+d'homomorphismes de $\mathcal O_{S_\lambda}$-Modules quasi-cohérents, où
+$\mathcal F_\lambda$ et $\mathcal G_\lambda$ sont de type fini et
+$\mathcal H_\lambda$ de présentation finie. Pour que la suite correspondante
+$\mathcal F\to\mathcal G\to\mathcal H\to0$ soit exacte, il faut et il suffit
+qu'il existe $\mu\geq\lambda$ tel que la suite
+$\mathcal F_\mu\to\mathcal G_\mu\to\mathcal H_\mu\to0$ le soit (auquel cas il
+en est de même de la suite
+$\mathcal F_\nu\to\mathcal G_\nu\to\mathcal H_\nu\to0$ pour
+$\nu\geq\mu$).
+\end{proposition}
+
+\begin{proof}
+Le fait que la condition soit suffisante et la dernière assertion résultent
+de ce que le foncteur $u_\lambda^*$ (resp. $u_{\mu\nu}^*$) est exact à droite.
+Pour démontrer que la condition est nécessaire, notons qu'il résulte de
+l'hypothèse et de (8.5.2, (i)) qu'il existe $\nu\geq\lambda$ tel que le composé
+$\mathcal F_\nu\to\mathcal G_\nu\to\mathcal H_\nu$ soit nul. Si l'on pose
+$\mathcal H'_\nu=\operatorname{Coker}(\mathcal F_\nu\to\mathcal G_\nu)$, on a
+donc un homomorphisme $f_\nu:\mathcal H'_\nu\to\mathcal H_\nu$~; par
+hypothèse, $u_\nu^*(f_\nu)$ est un isomorphisme, et il résulte donc de
+(8.5.2.4) qu'il existe $\mu\geq\nu$ tel que $u_{\nu\mu}^*(f_\nu)$ soit un
+isomorphisme, ce qui achève la démonstration.
+\end{proof}
+
+\begin{corollary}[8.5.7]
+\label{IV.8.5.7-fr}
+Supposons $S_0$ quasi-compact, $\mathcal F_\lambda$ quasi-cohérent,
+$\mathcal G_\lambda$ quasi-cohérent de type fini, et soit
+$f_\lambda:\mathcal F_\lambda\to\mathcal G_\lambda$ un homomorphisme. Pour que
+$f=u_\lambda^*(f_\lambda):\mathcal F\to\mathcal G$ soit surjectif, il faut et
+il suffit qu'il existe $\mu\geq\lambda$ tel que
+$f_\mu=u_{\lambda\mu}^*(f_\lambda):\mathcal F_\mu\to\mathcal G_\mu$ le soit.
+\end{corollary}
+
+\begin{proof}
+C'est le cas particulier de (8.5.6) appliqué à la suite
+$0\to\mathcal H_\lambda\to0\to0$, où
+$\mathcal H_\lambda=\operatorname{Coker}(f_\lambda)$, qui est quasi-cohérent et
+de type fini (compte tenu de ce que l'on a
+$\mathcal H=\operatorname{Coker}(f)$ et
+$\mathcal H_\mu=\operatorname{Coker}(f_\mu)$, en vertu de l'exactitude à droite
+des foncteurs $u_\lambda^*$ et $u_{\lambda\mu}^*$).
+\end{proof}
+
+\begin{corollary}[8.5.8]
+\EGAReaderTarget{ega4.c04.cor.8-5-8}{IV.8.5.8-fr}
+Supposons $S_0$ quasi-compact et les morphismes
+$u_{\lambda\mu}:S_\mu\to S_\lambda$ plats. Alors~:
+\begin{enumerate}[label=(\roman*)]
+  \item Soit
+  $\mathcal F_\lambda\xrightarrow{f_\lambda}\mathcal G_\lambda
+  \xrightarrow{g_\lambda}\mathcal H_\lambda$ une suite d'homomorphismes de
+  $\mathcal O_{S_\lambda}$-Modules quasi-cohérents, tels que
+  $\operatorname{Im}f_\lambda$ et $\operatorname{Ker}g_\lambda$ soient de type
+  fini. Pour que la suite correspondante
+  $\mathcal F\xrightarrow{f}\mathcal G\xrightarrow{g}\mathcal H$ soit
+
+  

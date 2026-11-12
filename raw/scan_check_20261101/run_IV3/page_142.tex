@@ -1,0 +1,83 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{142}
+
+il faut et il suffit que $P\otimes_C(C/\mathfrak N)$ soit un
+$(C/\mathfrak N)$-module libre. Notons d'autre part que si $C$ est un anneau
+noethérien réduit, il existe $g\in C$ tel que $C_g$ soit un anneau intègre.
+Utilisons maintenant le lemme (6.9.2)~: on peut définir par récurrence une suite
+$(f_i)_{i\geq1}$ d'éléments de $A$ de la façon suivante~:
+\begin{enumerate}
+\item[$1^\circ$] $f_1$ est tel que $A_1=(A_{\mathrm{red}})_{f_1}$ soit
+intègre et $M\otimes_A A_1$ un $A_1$-module libre~;
+\item[$2^\circ$] si l'idéal $\mathfrak J_i$ engendré par $f_1,\ldots,f_i$
+est $A$, $f_{i+1}=f_i$~;
+\item[$3^\circ$] si au contraire $\mathfrak J_i\neq A$, $f_{i+1}$ est un
+élément n'appartenant pas à $\mathfrak J_i$ tel que
+$A_{i+1}=((A/\mathfrak J_i)_{\mathrm{red}})_{f_{i+1}}$ soit intègre et
+$M\otimes_A A_{i+1}$ un $A_{i+1}$-module libre.
+\end{enumerate}
+Comme $A$ est noethérien, la suite croissante $(\mathfrak J_i)$ est
+stationnaire, donc il existe $n$ tel que $f_1,\ldots,f_n$ engendrent l'idéal
+$A$, et les $f_i$ répondent à la question puisque
+\[
+((A/\mathfrak J_i)_{\mathrm{red}})_{f_{i+1}}
+=((A/\mathfrak J_i)_{f_{i+1}})_{\mathrm{red}}.
+\]
+\end{proof}
+
+\begin{proposition}[11.3.16]
+\label{IV.11.3.16-fr}
+Soient $f:X\to Y$ un morphisme fidèlement plat de présentation finie,
+$g:Y\to Z$ un morphisme tel que $g\circ f:X\to Z$ soit un morphisme de type
+fini (resp. de présentation finie). Alors $g$ est un morphisme de type fini
+(resp. de présentation finie).
+\end{proposition}
+
+\begin{proof}
+Comme $f$ est surjectif et $g\circ f$ quasi-compact, $g$ est quasi-compact
+(1.1.3). Montrons d'abord que si $g\circ f$ est de présentation finie, $g$ est
+quasi-séparé. En effet, considérons un ouvert affine $W\subset Z$, et soit
+$(V_i)$ un recouvrement affine fini de $g^{-1}(W)$~; il s'agit de voir que les
+$V_i\cap V_j$ sont quasi-compacts (1.2.6 et 1.2.7). Pour chaque $i$, soit
+$(U_{ih})$ un recouvrement ouvert affine fini de $f^{-1}(V_i)$~; comme $f$ est
+de présentation finie, les $U_{ih}\cap U_{jk}$ sont tous quasi-compacts~; or,
+puisque $f$ est surjectif, $V_i\cap V_j$ est réunion des images
+$f(U_{ih}\cap U_{jk})$ pour $h$, $k$ variables, donc est quasi-compact puisque
+$f$ est continue.
+
+La question est donc locale sur $Y$ et on peut supposer que
+$Y=\operatorname{Spec}(B)$ et $Z=\operatorname{Spec}(A)$ sont affines, $X$
+étant réunion finie d'ouverts affines $X_i=\operatorname{Spec}(C_i)$, où les
+$C_i$ sont des $B$-algèbres de type fini (resp. de présentation finie). Si
+$X'$ est le préschéma somme des $X_i$, $p:X'\to X$ le morphisme qui coïncide
+avec l'injection canonique dans chaque $X_i$, $p$ est un morphisme fidèlement
+plat de présentation finie (1.6.5), donc $g\circ f\circ p$ est un morphisme de
+type fini (resp. de présentation finie) et $f\circ p$ un morphisme fidèlement
+plat de présentation finie. On peut par suite supposer aussi que
+$X=\operatorname{Spec}(C)$ est affine, et on est donc ramené à prouver le
+corollaire suivant.
+\end{proof}
+
+\begin{corollary}[11.3.17]
+\label{IV.11.3.17-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $C$ une $B$-algèbre de présentation
+finie et qui soit un $B$-module fidèlement plat. Alors, si $C$ est une
+$A$-algèbre de type fini (resp. de présentation finie), $B$ est une
+$A$-algèbre de type fini (resp. de présentation finie).
+\end{corollary}
+
+\begin{proof}
+Supposons d'abord que $g\circ f$ soit de type fini. Soit $(B_\lambda)$ la
+famille filtrante croissante des sous-$A$-algèbres de type fini de $B$~; en
+vertu de (8.8.2), il existe un indice $\alpha$ tel que
+$C=C_\alpha\otimes_{B_\alpha}B$, où $C_\alpha$ est une
+$B_\alpha$-algèbre de présentation finie~; en outre (8.10.5 et 11.2.6) on peut
+supposer que $C_\alpha$ est un $B_\alpha$-module fidèlement plat. Pour
+$\lambda\geq\alpha$, on a donc
+$C=C_\lambda\otimes_{B_\lambda}B$, où $C_\lambda$ est un
+$B_\lambda$-module fidèlement plat~; comme l'application $B_\lambda\to B$ est
+injective, on en déduit qu'il en est de même de $C_\lambda\to C$. En outre,
+comme $C=\varinjlim C_\lambda$, tout élément de $C$ appartient à un
+$C_\lambda$, et par suite il existe $\lambda$ tel que l'application
+$C_\lambda\to C$
+

@@ -1,0 +1,70 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{93}
+
+Cela étant, de la suite exacte (5.3.1.1), on déduit, pour tout $n$, la suite
+exacte
+\[
+0\longrightarrow\mathcal F(n)\longrightarrow\mathcal F(n+m)
+\longrightarrow\mathcal G(n)\longrightarrow0
+\]
+et pour $n$ assez grand, on a donc aussi la suite exacte (III, 2.2.3)
+\[
+0\longrightarrow\Gamma(X,\mathcal F(n))
+\longrightarrow\Gamma(X,\mathcal F(n+m))
+\longrightarrow\Gamma(X,\mathcal G(n))\longrightarrow0,
+\]
+d'où, compte tenu de (III, 2.5.3), pour $n$ assez grand,
+\[
+\chi_A(\mathcal G(n))
+=\chi_A(\mathcal F(n+m))-\chi_A(\mathcal F(n)).
+\]
+Comme en vertu de (5.3.1.2) et de l'hypothèse de récurrence, le degré du
+polynôme $\chi_A(\mathcal G(n))$ est $d-1$, la relation précédente entraîne
+que le degré de $\chi_A(\mathcal F(n))$ est $d$, C.Q.F.D.
+\end{proof}
+
+\subsection{Dimension de l'image d'un morphisme}
+\label{IV.2.s5.4-fr}
+
+\begin{proposition}[5.4.1]
+\label{IV.2.s5.4.1-fr}
+Soient $X$, $Y$ deux préschémas localement noethériens, $f:X\to Y$ un
+morphisme.
+\begin{enumerate}
+\item[(i)] Si $f$ est quasi-fini, on a
+$\dim(X)\leq\dim(\overline{f(X)})\leq\dim(Y)$.
+\item[(ii)] Si $f$ est surjectif et ouvert (resp. surjectif et fermé), on a
+$\dim(X)\geq\dim(Y)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] On peut remplacer $f$ par $f_{\mathrm{red}}$ (II, 6.2.4), donc
+supposer $X$ et $Y$ réduits; si $Z$ est le sous-préschéma fermé réduit de $Y$
+ayant pour espace sous-jacent $\overline{f(X)}$, on a alors $f=j\circ g$, où
+$j:Z\to Y$ est l'injection canonique et $g:X\to Z$ est un morphisme
+quasi-fini (I, 5.2.2 et II, 6.2.4). On peut donc se borner au cas où $f(X)$
+est dense dans $Y$. Pour tout $x\in X$, $\mathcal O_x$ est alors un
+$\mathcal O_{f(x)}$-module quasi-fini (II, 6.2.2), et par suite
+$\mathfrak m_{f(x)}\mathcal O_x$ est un idéal de définition de $\mathcal O_x$
+$(0_{\mathrm I},7.4.4)$; mais on sait (0, 16.3.10) que si $A\to B$ est un
+homomorphisme local d'anneaux locaux noethériens, tel que, si $\mathfrak m$
+est l'idéal maximal de $A$, $\mathfrak mB$ soit un idéal de définition de
+$B$, alors on a $\dim(B)\leq\dim(A)$; cela achève de démontrer (i) en vertu
+de (5.1.4).
+
+\item[(ii)] La définition de la dimension (0, 14.1.2) montre qu'il suffit de
+prouver que pour toute suite $(y_i)_{0\leq i\leq n}$ d'éléments distincts de
+$Y$ telle que $y_i\in\overline{\{y_{i+1}\}}$ pour $0\leq i\leq n-1$, il
+existe une suite $(x_i)_{0\leq i\leq n}$ de points de $X$ telle que
+$x_i\in\overline{\{x_{i+1}\}}$ pour $0\leq i\leq n-1$ et $f(x_i)=y_i$
+pour tout $i$. Supposons d'abord $f$ surjectif et ouvert et démontrons
+l'existence de $x_i$ par récurrence sur $i$; l'existence de $x_0\in X$ tel
+que $f(x_0)=y_0$ résulte de ce que $f$ est surjectif. Si les $x_i$ ont été
+déterminés pour $i\leq m$ de façon à satisfaire à $f(x_i)=y_i$ pour
+$i\leq m$ et $x_i\in\overline{\{x_{i+1}\}}$ pour $i<m$, on note que puisque
+$f$ est ouvert et $y_{m+1}$ une générisation de $y_m$, il existe
+$x_{m+1}\in f^{-1}(y_{m+1})$ qui est une générisation de $x_m$ (1.10.3) et
+la récurrence peut se poursuivre.
+

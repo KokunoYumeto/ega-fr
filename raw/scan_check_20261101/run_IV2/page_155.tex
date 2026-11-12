@@ -1,0 +1,102 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{155}
+
+tel que $\mathcal F|_{u^{-1}(U)}$ soit plat sur $U$. Si $Y$ est alors le
+sous-préschéma réduit de $S$ ayant pour espace sous-jacent $S-U$, il y a par
+hypothèse une partition $(Y_i)$ de $Y$ en ensembles localement fermés dans
+$Y$ (donc dans $S$) tels que
+$\mathcal F_i=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{Y_i}$ soit plat
+sur $Y_i$ pour tout $i$; il est clair que les $Y_i$ et $U$ forment une
+partition répondant à la question.
+\end{proof}
+
+\subsection{Dimension et profondeur d'un Module normalement plat le long d'un
+sous-préschéma fermé}
+\label{subsection:IV.6.10}
+
+\begin{env}[6.10.1]
+\EGAReaderTarget{ega4.c04.statement.6-10-1}{IV.2.s6.10.1-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal J$ un Idéal
+quasi-cohérent de $\mathcal O_X$, $Y$ le sous-préschéma fermé de $X$ défini
+par $\mathcal J$, $j:Y\to X$ l'injection canonique. Pour tout entier $k\geq0$,
+le $\mathcal O_X$-Module
+$\mathcal J^k\mathcal F/\mathcal J^{k+1}\mathcal F$ est annulé par
+$\mathcal J$, donc de la forme $j_*(\mathcal G_k)$, où
+\[
+\mathcal G_k=j^*(\mathcal J^k\mathcal F/\mathcal J^{k+1}\mathcal F)
+=j^*(\mathcal J^k\mathcal F)
+\]
+est un $\mathcal O_Y$-Module cohérent. Par abus de langage, nous noterons
+$\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$ le
+$\mathcal O_Y$-Module gradué égal à la somme directe
+\[
+\bigoplus_{k=0}^{\infty}\mathcal G_k
+=j^*\left(\bigoplus_{k=0}^{\infty}
+\mathcal J^k\mathcal F/\mathcal J^{k+1}\mathcal F\right);
+\]
+en particulier, on a
+$\operatorname{gr}_{\mathcal J}^{0}(\mathcal F)=\mathcal G_0
+=\mathcal F\otimes_{\mathcal O_X}\mathcal O_Y=j^*(\mathcal F)$. Nous dirons
+(avec Hironaka) que $\mathcal F$ est normalement plat le long de $Y$ si
+$\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$ est un
+$\mathcal O_Y$-Module plat. Il revient au même ((2.1.12) et
+$(0_{\mathrm I},6.1.2)$) de dire que chacun des $\mathcal O_Y$-Modules
+$\mathcal G_k=j^*(\mathcal J^k\mathcal F)$ est localement libre.
+\end{env}
+
+\begin{proposition}[6.10.2]
+\label{IV.2.s6.10.2-fr}
+Soient $X$ un préschéma localement noethérien, $Y$ un sous-préschéma fermé
+intègre de $X$. Pour tout $\mathcal O_X$-Module cohérent $\mathcal F$, il
+existe un ouvert $U$ de $X$ tel que $Y\cap U\ne\varnothing$ et que
+$\mathcal F|U$ soit normalement plat le long de $Y\cap U$.
+\end{proposition}
+
+\begin{proof}
+Soit en effet $\mathcal J$ l'Idéal cohérent de $\mathcal O_X$ définissant
+$Y$; la $\mathcal O_Y$-Algèbre
+$\mathcal B=\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal O_X)$ est
+quasi-cohérente et de type fini car elle est engendrée par
+$\operatorname{gr}_{\mathcal J}^{1}(\mathcal O_X)$, image réciproque de
+$\mathcal J/\mathcal J^2$; comme
+$\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$ est un
+$\mathcal B$-module quasi-cohérent engendré par
+$\operatorname{gr}_{\mathcal J}^{0}(\mathcal F)$, c'est un
+$\mathcal B$-Module de type fini. Si l'on pose
+$Z=\operatorname{Spec}(\mathcal B)$, le morphisme structural $u:Z\to Y$ est
+alors de type fini, et si $\mathcal H$ est le $\mathcal O_Z$-Module cohérent
+tel que $u_*(\mathcal H)=\operatorname{gr}_{\mathcal J}^{\bullet}(\mathcal F)$,
+il suffit d'appliquer à $u$ et à $\mathcal H$ le théorème de platitude
+générique (6.9.1) pour prouver la proposition.
+\end{proof}
+
+\begin{proposition}[6.10.3]
+\label{IV.2.s6.10.3-fr}
+Les notations étant celles de (6.10.1), supposons que $\mathcal F$ soit
+normalement plat le long de $Y$. Alors:
+\begin{enumerate}
+\item[(i)] $Y\cap\operatorname{Supp}(\mathcal F)$ est une partie à la fois
+ouverte et fermée de $Y$ (autrement dit, une réunion de composantes connexes
+de $Y$).
+\item[(ii)] Si $\mathcal J$ est localement nilpotent,
+$\operatorname{Supp}(\mathcal F)$ est une partie ouverte et fermée de $X$, et
+pour tout $x\in\operatorname{Supp}(\mathcal F)$, on a
+\end{enumerate}
+\begin{align}
+\dim(\mathcal F_x)&=\dim(\mathcal O_{Y,x})
+  \tag{6.10.3.1}\label{IV.2.s6.10.3.1-fr}\\
+\operatorname{prof}(\mathcal F_x)&=\operatorname{prof}(\mathcal O_{Y,x})
+  \tag{6.10.3.2}\label{IV.2.s6.10.3.2-fr}\\
+\operatorname{coprof}(\mathcal F_x)&=\operatorname{coprof}(\mathcal O_{Y,x}).
+  \tag{6.10.3.3}\label{IV.2.s6.10.3.3-fr}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] Avec les notations de (6.10.1), on a
+$Y\cap\operatorname{Supp}(\mathcal F)=\operatorname{Supp}(\mathcal G_0)$
+(I, 9.1.13), et comme par hypothèse $\mathcal G_0$ est un
+$\mathcal O_Y$-Module localement libre de type fini, son support est à la fois
+ouvert et fermé dans $Y$.
+

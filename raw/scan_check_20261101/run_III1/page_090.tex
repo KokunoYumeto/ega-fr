@@ -1,0 +1,114 @@
+% from ega3-1-fr.tex
+\oldpage[III]{90}
+\begin{proposition}[1.4.5]
+\label{III.1.4.5-fr}
+Soient $X$ un schéma quasi-compact, $\mathcal L$ un $\mathcal O_X$-Module
+inversible, et considérons l'anneau gradué
+$A_\bullet=\Gamma_\bullet(\mathcal L)$ (0\textsubscript{I}, 5.4.6)~; alors
+\[
+H^\bullet(\mathcal F,\mathcal L)
+=\bigoplus_{n\in\mathbb Z}H^\bullet(X,\mathcal F\otimes\mathcal L^{\otimes n})
+\]
+est un $A_\bullet$-module gradué, et pour tout $f\in A_n$, on a un
+isomorphisme canonique
+\begin{equation}
+\label{III.1.4.5.1-fr}
+\tag{1.4.5.1}
+H^\bullet(X_f,\mathcal F)
+\xrightarrow{\sim}(H^\bullet(\mathcal F,\mathcal L))_{(f)}
+\end{equation}
+de $(A_\bullet)_{(f)}$-modules.
+\end{proposition}
+
+\begin{proof}
+Comme $X$ est un schéma quasi-compact, on peut calculer la cohomologie de
+tous les $\mathcal O_X$-Modules
+$\mathcal F\otimes\mathcal L^{\otimes n}$ à l'aide d'un même recouvrement
+fini $\mathfrak U=(U_i)$ par des ouverts affines tels que la restriction
+$\mathcal L\vert U_i$ soit isomorphe à $\mathcal O_X\vert U_i$ pour chaque
+$i$ (\hyperref[III.1.4.1-fr]{1.4.1}). Il est alors immédiat que les
+$U_i\cap X_f$ sont des ouverts affines (I, 1.3.6), et l'on peut donc aussi
+calculer la cohomologie
+$H^\bullet(X_f,\mathcal F\otimes\mathcal L^{\otimes n})$ à l'aide du
+recouvrement $\mathfrak U\vert X_f=(U_i\cap X_f)$
+(\hyperref[III.1.4.1-fr]{1.4.1}). Il est immédiat que pour tout $f\in A_n$,
+la multiplication par $f$ définit un homomorphisme
+\[
+C^\bullet(\mathfrak U,\mathcal F\otimes\mathcal L^{\otimes m})
+\longrightarrow
+C^\bullet(\mathfrak U,\mathcal F\otimes\mathcal L^{\otimes(m+n)}),
+\]
+d'où un homomorphisme
+\[
+H^\bullet(\mathfrak U,\mathcal F\otimes\mathcal L^{\otimes m})
+\longrightarrow
+H^\bullet(\mathfrak U,\mathcal F\otimes\mathcal L^{\otimes(m+n)}),
+\]
+ce qui établit la première assertion. D'autre part, pour $f\in A_n$ donné,
+il résulte de (I, 9.3.2) que l'on a un isomorphisme de complexes de
+$(A_\bullet)_{(f)}$-modules
+\[
+C^\bullet(\mathfrak U\vert X_f,\mathcal F)
+\xrightarrow{\sim}
+\left(C^\bullet\left(\mathfrak U,
+\bigoplus_{n\in\mathbb Z}\mathcal F\otimes\mathcal L^{\otimes n}
+\right)\right)_{(f)}
+\]
+compte tenu de (I, 1.3.9, (ii)). Passant à la cohomologie de ces deux
+complexes, on en déduit l'isomorphisme
+(\hyperref[III.1.4.5.1-fr]{1.4.5.1}), en se souvenant que le foncteur
+$M\mapsto M_{(f)}$ est exact dans la catégorie des $A_\bullet$-modules
+gradués.
+\end{proof}
+
+\begin{corollary}[1.4.6]
+\label{III.1.4.6-fr}
+On suppose vérifiées les hypothèses de
+(\hyperref[III.1.4.5-fr]{1.4.5}) et on suppose en outre que
+$\mathcal L=\mathcal O_X$. Si on pose $A=\Gamma(X,\mathcal O_X)$, alors,
+pour tout $f\in A$, on a un isomorphisme canonique
+\[
+H^\bullet(X_f,\mathcal F)
+\xrightarrow{\sim}(H^\bullet(X,\mathcal F))_f
+\]
+de $A_f$-modules.
+\end{corollary}
+
+\begin{corollary}[1.4.7]
+\label{III.1.4.7-fr}
+Soient $X$ un schéma quasi-compact, $f$ un élément de
+$\Gamma(X,\mathcal O_X)$.
+\begin{enumerate}
+\item[(i)] Supposons l'ouvert $X_f$ affine. Alors, pour tout
+$\mathcal O_X$-Module quasi-cohérent $\mathcal F$, tout $i>0$ et tout
+$\xi\in H^i(X,\mathcal F)$, il existe un entier $n>0$ tel que $f^n\xi=0$.
+\item[(ii)] Inversement, supposons que $X_f$ soit quasi-compact et que pour
+tout faisceau quasi-cohérent $\mathcal J$ d'idéaux de $\mathcal O_X$ et tout
+$\zeta\in H^1(X,\mathcal J)$, il existe $n>0$ tel que $f^n\zeta=0$. Alors
+$X_f$ est affine.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\begin{enumerate}
+\item[(i)] Si $X_f$ est affine, on a $H^i(X_f,\mathcal F)=0$ pour tout
+$i>0$ (\hyperref[III.1.3.1-fr]{1.3.1}), donc l'assertion résulte directement
+de (\hyperref[III.1.4.6-fr]{1.4.6}).
+\item[(ii)] En vertu du critère de Serre (II, 5.2.1), il suffit de prouver
+que pour tout Idéal quasi-cohérent $\mathcal K$ de
+$\mathcal O_X\vert X_f$, on a $H^1(X_f,\mathcal K)=0$. Comme $X_f$ est un
+ouvert quasi-compact dans un schéma quasi-compact $X$, il existe un Idéal
+quasi-cohérent $\mathcal J$ de $\mathcal O_X$ tel que
+$\mathcal K=\mathcal J\vert X_f$ (I, 9.4.2). En vertu de
+(\hyperref[III.1.4.6-fr]{1.4.6}), on a
+$H^1(X_f,\mathcal K)=(H^1(X,\mathcal J))_f$, et l'hypothèse entraîne que le
+second membre est nul, d'où la conclusion.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[1.4.8]
+\label{III.1.4.8-fr}
+On notera que (\hyperref[III.1.4.7-fr]{1.4.7}, (i)) redonne une
+démonstration plus simple de la relation (II, 4.5.13.2).
+\end{remark}
+

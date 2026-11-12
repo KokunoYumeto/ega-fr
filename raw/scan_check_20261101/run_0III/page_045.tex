@@ -1,0 +1,113 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{45}
+La proposition (\hyperref[0.11.8.5-fr]{11.8.5}) ramène le calcul de la
+cohomologie de $\mathrm L^\bullet(A,B;\Gamma)$ à celui de la cohomologie de
+$\mathrm C^\bullet(A,B;\Gamma)$. Rappelons d'autre part que cette dernière
+est, en vertu du th. d'Eilenberg-Zilber (G, I, 3.10.2), canoniquement
+isomorphe à la cohomologie du complexe de cochaînes défini comme suit : on
+forme le complexe de chaînes $\mathrm P_\bullet(A,B)$, constitué par les
+combinaisons linéaires des $(\sigma,\tau)\in\Sigma(A)\times\Sigma(B)$ tels
+que $\sigma$ et $\tau$ aient le même degré; la différentielle de ce complexe
+est donnée par
+\[
+d(\sigma,\tau)=\sum_{j,k}(-1)^{j+k}(\sigma_j,\tau_k)
+\]
+si
+\[
+d\sigma=\sum_j(-1)^j\sigma_j,\qquad
+d\tau=\sum_k(-1)^k\tau_k;
+\]
+on a alors deux homomorphismes canoniques de complexes
+\[
+f:\mathrm P_\bullet(A,B)\longrightarrow
+\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B),\qquad
+g:\mathrm C_\bullet(A)\otimes\mathrm C_\bullet(B)
+\longrightarrow\mathrm P_\bullet(A,B),
+\]
+et on démontre (\emph{loc. cit.}) qu'il y a des homotopies $h$, $h'$ telles
+que
+\[
+f\circ g-1=d\circ h+h\circ d,\qquad
+g\circ f-1=d\circ h'+h'\circ d.
+\]
+En outre, on a
+\[
+f(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|),\qquad
+g(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|)
+\]
+et les homotopies $h$, $h'$ peuvent être prises telles que
+\[
+h(\sigma,\tau)\in\mathrm C_\bullet(|\sigma|)
+\otimes\mathrm C_\bullet(|\tau|),\qquad
+h'(\sigma,\tau)\in\mathrm P_\bullet(|\sigma|,|\tau|).
+\]
+Ce point provient de ce que la définition de $h(\sigma,\tau)$ et
+$h'(\sigma,\tau)$ peut se faire par récurrence sur la somme des degrés de
+$\sigma$ et $\tau$, et de ce que les
+\[
+H^q(\mathrm C_\bullet(|\sigma|)\otimes\mathrm C_\bullet(|\tau|))
+\quad\text{et}\quad
+H^q(\mathrm P_\bullet(|\sigma|,|\tau|))
+\]
+sont nuls pour $q>0$ (\emph{loc. cit.}); on raisonne alors comme dans
+(\hyperref[0.11.8.3-fr]{11.8.3}) et la conclusion en résulte.
+
+On définit alors $\mathrm P^\bullet(A,B;\Gamma)$ comme l'ensemble des
+familles $\lambda=(\lambda(\sigma,\tau))$ où $(\sigma,\tau)$ parcourt les
+couples dont les termes ont même degré, avec
+$\lambda(\sigma,\tau)\in\Gamma_{\sigma,\tau}$, et comme on a
+\[
+d\sigma=\sum_j(-1)^j\sigma_j,\qquad
+d\tau=\sum_k(-1)^k\tau_k,
+\]
+\[
+d\lambda(\sigma,\tau)=
+\sum_{j,k}(-1)^{j+k}\lambda(\sigma_j,\tau_k)
+\]
+est défini et donne la différentielle du complexe
+$\mathrm P^\bullet(A,B;\Gamma)$. Cela étant, les applications
+\[
+{}'f:\lambda\mapsto\lambda\circ f,\quad
+{}'g:\lambda\mapsto\lambda\circ g,\quad
+{}'h:\lambda\mapsto\lambda\circ h,\quad
+{}'h':\lambda\mapsto\lambda\circ h'
+\]
+sont toutes définies en vertu des remarques qui précèdent;
+$\mathop{}'f\circ{}'g$ et $\mathop{}'g\circ{}'f$ sont donc homotopes à
+l'identité, d'où l'isomorphisme cherché entre la cohomologie de
+$\mathrm C^\bullet(A,B;\Gamma)$ et celle de
+$\mathrm P^\bullet(A,B;\Gamma)$.
+\end{env}
+
+\begin{env}[11.8.7]
+\label{0.11.8.7-fr}
+\emph{Remarque}. Le même raisonnement que dans
+(\hyperref[0.11.8.3-fr]{11.8.3}), mais appliqué à
+$\mathrm C_\bullet(A)$ et $\mathrm L_\bullet(A)$, montre que si $j$ et $p$
+sont définis comme dans (\hyperref[0.11.8.1-fr]{11.8.1}), $f=j\circ p$
+vérifie encore une relation (\hyperref[0.11.8.3.1-fr]{11.8.3.1}), avec
+$|h(\sigma)|\subset|\sigma|$, d'où on déduit comme dans
+(\hyperref[0.11.8.5-fr]{11.8.5}) un isomorphisme de la cohomologie de
+$\mathrm L^\bullet(A;\Gamma)$ sur celle de
+$\mathrm C^\bullet(A;\Gamma)$, ces deux complexes étant définis de façon
+évidente. C'est le résultat dont la démonstration est esquissée dans
+(G, I, 3.8.1).
+\end{env}
+
+\begin{env}[11.8.8]
+\label{0.11.8.8-fr}
+Reprenons maintenant les notations et hypothèses de
+(\hyperref[0.11.8.2-fr]{11.8.2}), et considérons un complexe
+$\Gamma^\bullet=(\Gamma^k)$ de systèmes de coefficients sur
+$\Sigma(A)\times\Sigma(B)$ : pour chaque $(\sigma,\tau)$, les
+$\Gamma^k_{\sigma,\tau}$ forment donc un complexe de groupes abéliens
+$(k\in\mathbb Z)$, et on a les diagrammes commutatifs
+\[
+\xymatrix{
+\Gamma^k_{\sigma,\tau}\ar[r]\ar[d] &
+\Gamma^{k+1}_{\sigma,\tau}\ar[d]\\
+\Gamma^k_{\sigma',\tau'}\ar[r] &
+\Gamma^{k+1}_{\sigma',\tau'}
+}
+\]

@@ -1,0 +1,84 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{51}
+
+paramètres pour $M$ $(0,16.3.6)$. Si le $A$-module
+\[
+N=M\Big/\Big(\sum_{i=1}^k x_iM\Big)
+\]
+est intègre (3.2.4), alors $M$ est intègre et la suite
+$(x_i)_{1\leqslant i\leqslant k}$ est $M$-régulière.
+\end{corollary}
+
+\begin{proof}
+Par récurrence sur $k$, on est aussitôt ramené au cas $k=1$~; nous écrirons
+$x$ au lieu de $x_1$~; l'hypothèse que $x$ fait partie d'un système de
+paramètres pour $M$ entraîne que
+$\dim(N)=\dim(M)-1$ $(0,16.3.7)$. Posons $n=\dim(N)$~; il y a donc un élément
+minimal $\mathfrak p$ de $\operatorname{Supp}(M)$ tel que
+$\dim(M/\mathfrak pM)=n+1$ $(0,16.3.4)$, et pour tout entier $j>0$ on a alors
+aussi $\dim(M/\mathfrak p^jM)=n+1$ $(0,16.3.5)$~; en outre $x$ fait partie
+d'un système de paramètres pour $M/\mathfrak p^jM$ $(0,16.3.5)$, donc, si
+l'on pose $M'=M/\mathfrak p^jM$ et $N'=M'/xM'$, on a $\dim(N')=n$. Il est
+clair que l'on a un homomorphisme surjectif $v:N\to N'$~; montrons que $v$ est
+bijectif. En effet, si $P=\operatorname{Ker}(v)$, on a
+$\operatorname{Ass}(P)\subset\operatorname{Ass}(N)$ et puisque $N$ est
+intègre, l'hypothèse $P\neq0$ entraînerait que $\operatorname{Ass}(P)$ et
+$\operatorname{Ass}(N)$ seraient tous deux réduits à l'unique point
+$\mathfrak q$ de
+$\operatorname{Ass}(N)=\operatorname{Supp}(N)$~; mais comme
+$\dim(N')=\dim(N)$, on a $N'_{\mathfrak q}\neq0$, et l'hypothèse
+$\operatorname{long}(N_{\mathfrak q})=1$ entraîne
+$\operatorname{long}(N'_{\mathfrak q})=1$ puisque
+$N_{\mathfrak q}\to N'_{\mathfrak q}$ est surjective. On aurait donc
+$P_{\mathfrak q}=0$, contrairement à l'hypothèse, d'où notre assertion.
+Mais alors $N'$, étant isomorphe à $N$, est intègre~; en outre, le support de
+$N'$ (égal à l'intersection de $\operatorname{Supp}(M')$ et de $V(x)$) ne
+peut contenir $\operatorname{Supp}(M')$, et ce dernier ensemble est
+irréductible par construction. L'hypothèse que $M'/xM'$ est intègre (donc
+réduit) entraîne alors que $x$ est $M'$-régulier en vertu de (3.4.6). On en
+conclut que le noyau de l'homothétie $z\mapsto xz$ dans $M$ est contenu dans
+$\mathfrak p^jM\subset\mathfrak m^jM$ pour tout entier $j$, et ce noyau est
+donc réduit à $0$ $(0_{\mathrm I},7.3.5)$, ce qui prouve que $x$ est
+$M$-régulier. On peut alors appliquer (3.4.5), ce qui prouve que $M$ est
+intègre.
+\end{proof}
+
+\begin{remark}[3.4.8]
+\label{IV.2.3.4.8-fr}
+La proposition analogue à (3.4.7), où on remplace «~intègre~» par
+«~réduit~» n'est plus nécessairement exacte. Considérons par exemple l'anneau
+de polynômes $C=K[X,Y,Z]$ sur un corps $K$, l'anneau quotient
+$B=C/\mathfrak p\mathfrak q$, où $\mathfrak p=CZ$,
+$\mathfrak q=CX^2+CY$~; soit $A$ l'anneau local de $B$ correspondant à l'idéal
+maximal image de $CX+CY+CZ$ dans $B$. Si $x$, $z$ sont les images canoniques
+de $X$, $Z$ dans $A$, il est clair que $xz\neq0$ mais $x^2z^2=0$~; d'autre
+part, comme $A/xA$ est isomorphe à $K[Y,Z]/(YZ)$, on a
+$\dim(A/xA)=1$ tandis que $\dim(A)=2$, donc $x$ appartient à un système de
+paramètres de $A$ $(0,16.3.4)$, $A/xA$ est réduit, mais $A$ ne l'est pas.
+\end{remark}
+
+\begin{proposition}[3.4.9]
+\label{IV.2.3.4.9-fr}
+Soient $A$ un anneau noethérien, $M$ un $A$-module de type fini, $f$ un
+élément $M$-régulier de $A$ tel que $M/fM$ n'ait pas d'idéaux premiers
+associés immergés. Si $\mathfrak p_i$ $(1\leqslant i\leqslant m)$ sont les
+idéaux premiers associés à $M/fM$, alors, pour tout entier $n>0$, $f^nM$ est
+l'intersection des images réciproques des $f^nM_{\mathfrak p_i}$ par les
+applications canoniques $M\to M_{\mathfrak p_i}$ $(1\leqslant i\leqslant m)$.
+\end{proposition}
+
+\begin{proof}
+Tout revient à montrer que les $\mathfrak p_i$ sont aussi les idéaux premiers
+associés à $M/f^nM$, car alors les saturés de $f^nM$ pour les
+$\mathfrak p_i$ sont les sous-modules de la décomposition primaire réduite
+(nécessairement unique) de $f^nM$ dans $M$. Or, on a
+\[
+\operatorname{Ass}(f^{n-1}M/f^nM)
+\subset\operatorname{Ass}(M/f^nM)
+\subset\operatorname{Ass}(M/f^{n-1}M)
+\cup\operatorname{Ass}(f^{n-1}M/f^nM)
+\]
+par (3.1.7), et comme $f$ est $M$-régulier,
+$f^{n-1}M/f^nM$ est isomorphe à $M/fM$~; il suffit alors de raisonner par
+récurrence sur $n$.
+\end{proof}

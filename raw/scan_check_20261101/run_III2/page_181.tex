@@ -1,0 +1,92 @@
+% from ega3-7-fr.tex
+\oldpage[III]{181}
+  \item[c)] Pour tout $A$-module à gauche $M$, l'homomorphisme fonctoriel
+    canonique (7.2.2.1)
+    \[
+      T_p(A_s)\otimes_A M\longrightarrow T_p(M)
+      \tag{7.3.1.1}\label{III.7.3.1.1.fr}
+    \]
+    est un isomorphisme.
+  \item[d)] Pour tout $A$-module à gauche $M$, l'homomorphisme (7.3.1.1) est
+    un épimorphisme.
+  \item[e)] $T_p$ est isomorphe à un foncteur
+    $M\mapsto N\otimes_A M$, où $N$ est un $A$-module à droite.
+\end{enumerate}
+Si en outre les conditions de (7.2.7) sur $A$ et $\mathfrak m$ sont vérifiées,
+les conditions précédentes sont aussi équivalentes à
+\begin{enumerate}
+  \item[f)] L'homomorphisme canonique
+    \[
+      T_p(\varepsilon):T_p(A_s)\longrightarrow T_p(k)
+    \]
+    est un épimorphisme.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Comme par définition d'un foncteur homologique, $T_i$ est semi-exact pour tous
+les $i$ tels que $T_i$ soit défini, et que, pour toute suite exacte
+\[
+  0\longrightarrow M'\xrightarrow{u}M\xrightarrow{v}M''\longrightarrow0,
+\]
+on a
+\[
+  \operatorname{Ker}(T_{i-1}(u))
+  =
+  \operatorname{Coker}(T_i(v)),
+\]
+il est clair que $a)$ et $b)$ sont équivalentes et les autres assertions
+résultent trivialement de (7.2.5) et (7.2.7).
+\end{proof}
+
+\begin{corollary}[7.3.2]
+Soit $A$ un anneau commutatif. Avec les notations de (7.3.1), supposons $T_p$
+exact à droite. Si $f\in A$ n'appartient à l'annulateur d'aucun élément
+$\ne0$ d'un $A$-module $M$, alors $f$ n'appartient à l'annulateur d'aucun
+élément $\ne0$ de $T_{p-1}(M)$. En particulier, si $A$ est intègre, le
+$A$-module $T_{p-1}(A)$ est sans torsion.
+\end{corollary}
+
+\begin{proof}
+En effet, si $h_f$ désigne l'homothétie $x\mapsto fx$ de $M$, l'hypothèse
+signifie que $h_f$ est injectif; il en est donc de même de $T_{p-1}(h_f)$ par
+la condition $b)$ de (7.3.1).
+\end{proof}
+
+\begin{proposition}[7.3.3]
+Soient $A$ un anneau, $T_\bullet$ un foncteur homologique covariant de
+$\mathbf{Ab}_A$ dans $\mathbf{Ab}$, commutant aux sommes directes. Soit $p$ un
+entier tel que $T_{p-1}$, $T_p$ et $T_{p+1}$ soient définis. Les conditions
+suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $T_p$ est exact.
+  \item[b)] $T_{p+1}$ et $T_p$ sont exacts à droite.
+  \item[c)] $T_p$ et $T_{p-1}$ sont exacts à gauche.
+  \item[d)] $T_{p+1}$ est exact à droite et $T_{p-1}$ est exact à gauche.
+  \item[e)] Pour tout $A$-module $M$, les homomorphismes canoniques
+    \[
+      T_i(A_s)\otimes_A M\longrightarrow T_i(M)
+      \tag{7.3.3.1}\label{III.7.3.3.1.fr}
+    \]
+    sont des isomorphismes pour $i=p$ et $i=p+1$.
+  \item[$e'$)] Pour tout $A$-module $M$, les homomorphismes canoniques
+    (7.3.3.1) sont des épimorphismes pour $i=p$ et $i=p+1$.
+  \item[f)] Pour tout $A$-module $M$, l'homomorphisme (7.3.3.1) est un
+    isomorphisme pour $i=p$ et $T_p(A_s)$ est un $A$-module à droite plat.
+  \item[$f'$)] Pour tout $A$-module $M$, l'homomorphisme (7.3.3.1) est un
+    épimorphisme pour $i=p$ et $T_p(A_s)$ est un $A$-module à droite plat.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'équivalence des conditions $a)$, $b)$, $c)$, $d)$ résulte de l'équivalence
+des conditions $a)$ et $b)$ de (7.3.1). L'équivalence de $b)$, $e)$ et $e')$
+résulte de l'équivalence de $a)$, $c)$ et $d)$ dans (7.3.1). Enfin, dire que
+$T_p(A_s)$ est plat signifie que le foncteur
+\[
+  M\mapsto T_p(A_s)\otimes_A M
+\]
+est exact à gauche; l'équivalence de $a)$, $f)$ et $f')$ résulte encore de
+l'équivalence de $a)$, $c)$, $d)$ dans (7.3.1).
+\end{proof}
+

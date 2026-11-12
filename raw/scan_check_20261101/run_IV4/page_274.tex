@@ -1,0 +1,49 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{274}
+appelées \emph{cycles localement principaux};
+un tel cycle $Z$ est donc caractérisé par le fait que, pour tout $y\in X$, il y a un voisinage ouvert $U$ de $y$ dans $X$ et une fonction méromorphe régulière $f$ sur $U$ telle que $Z|U=\sum_{x\in U\cap X^{(1)}}o_x(f)(\overline{\{x\}}\cap U)$.
+Si $Z=\sum_{x\in X^{(1)}}n_x\cdot\overline{\{x\}}$, il revient au même de dire que, pour tout $y\in X$, si l'on pose $T_y=\Spec(\sh{O}_{X,y})$ et $Z_y=\sum_{x\in X^{(1)}\cap T_y}n_x(\overline{\{x\}}\cap T_y)$, $Z_y$ est \emph{principal}, autrement dit il existe une fonction méromorphe régulière $g$ sur $T_y$ telle que $Z_y=\operatorname{cyc}(\operatorname{div}(g))$.
+Cela résulte aussitôt en effet de la définition précédente et de \sref{IV.20.3.7} qui établit une correspondance biunivoque entre les fonctions méromorphes régulières sur $T_y$ et les germes de fonctions méromorphes régulières sur les voisinages ouverts de $y$ dans $X$ lorsque $X$ est localement noethérien.
+On exprime encore le fait que $Z_y$ est principal en disant que $Z$ est \emph{principal au point $y$}.
+L'ensemble des points où $Z$ est principal est évidemment \emph{ouvert}, en vertu de ce qui précède.
+
+On déduit de l'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ un homomorphisme $\operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$, en vertu de la définition de $\mathfrak{Z}^1_\mathrm{princ}(X)$.
+On dit que le groupe $\mathfrak{Z}^1(X)/\mathfrak{Z}^1_\mathrm{princ}(X)$ est le \emph{groupe des classes de cycles $1$-codimensionnels} de $X$ et on le note $\mathfrak{Cl}(X)$.
+Deux éléments de $\mathfrak{Z}^1(X)$ ayant même image dans $\mathfrak{Cl}(X)$ sont appelés \emph{linéairement équivalents}.
+\end{env}
+
+\begin{env}[21.6.8]
+\label{IV.21.6.8}
+Considérons en particulier le cas où $X=\Spec(A)$, où $A$ est un anneau \emph{noethérien intègre et intégralement clos}.
+Alors $X^{(1)}$ est l'ensemble des \emph{idéaux premiers de hauteur $1$} de $A$, et $\mathfrak{Z}^1(X)$ s'identifie donc au \emph{groupe des diviseurs} (au sens de N.~Bourbaki) de l'anneau de Krull $A$ (Bourbaki, \emph{Alg.\ comm.}, chap.~VII, \textsection~1, n\textsuperscript{o}~3, cor.\ du th.~2 et n\textsuperscript{o}~6, th.~3).
+
+Comme d'autre part, les fonctions méromorphes régulières sur $X$ s'identifient alors aux éléments non nuls du corps des fractions $K$ de $A$, l'application $f\mapsto\operatorname{cyc}(\operatorname{div}(f))$ de $M(X)$ dans $\mathfrak{Z}^1(X)$ s'identifie à l'application notée $f\mapsto\operatorname{div}(f)$ dans Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~1);
+$\mathfrak{Z}^1_\mathrm{princ}(X)$ s'identifie donc au \emph{groupe des diviseurs principaux} de $A$ au sens de Bourbaki, et $\mathfrak{Cl}(X)$ au \emph{groupe des classes de diviseurs} de $A$ au sens de Bourbaki (\emph{loc.\ cit.}, \textsection~1, n\textsuperscript{o}~2 et n\textsuperscript{o}~10).
+\end{env}
+
+\begin{theorem}[21.6.9]
+\EGAReaderTarget{ega4.c04.thm.21-6-9}{IV.21.6.9}
+Soit $X$ un préschéma localement noethérien normal.
+\begin{enumerate}[label=(\roman*)]
+  \item L'homomorphisme canonique $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est injectif et son image est formée des cycles localement principaux.
+  \item Les conditions suivantes sont équivalentes:
+  \begin{enumerate}[label=\emph{\alph*)}]
+    \item L'homomorphisme $\operatorname{cyc}:\operatorname{Div}(X)\to\mathfrak{Z}^1(X)$ est bijectif.
+    \item Tout cycle $1$-codimensionnel est localement principal.
+    \item Pour tout $x\in X$, l'anneau local $\sh{O}_{X,x}$ est factoriel.
+  \end{enumerate}
+  (On dit alors que $X$ est un préschéma \emph{localement factoriel}.)
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item Il suffit de démontrer que
+\[
+\label{IV.21.6.9.1}
+  \operatorname{cyc}^{-1}(\mathfrak{Z}^{1+}(X))=\operatorname{Div}^+(X),
+  \tag{21.6.9.1}
+\]
+puisque l'on a $\operatorname{Div}^+(X)\cap(-\operatorname{Div}^+(X))=0$ et $\mathfrak{Z}^{1+}(X)\cap(-\mathfrak{Z}^{1+}(X))=0$.
+On est donc ramené à prouver que si $D$ est un diviseur sur $X$ tel que $\operatorname{mult}_x(D)\geq0$ pour tout $x\in X^{(1)}$, on a $D\geq0$.
+Or, pour tout $x\notin X^{(1)}$, l'anneau local $\sh{O}_{X,x}$ est intègre et intégralement clos et

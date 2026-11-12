@@ -1,0 +1,94 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{38}
+\begin{proposition}[3.1.7]
+\EGAReaderTarget{ega4.c04.prop.3-1-7}{IV.2.3.1.7-fr}
+Soit $X$ un préschéma.
+\begin{enumerate}
+\item[\emph{(i)}] Soit $0\to\mathcal F'\to\mathcal F\to\mathcal F''\to0$
+une suite exacte de $\mathcal O_X$-Modules quasi-cohérents. Alors
+\[
+\operatorname{Ass}(\mathcal F')\subset\operatorname{Ass}(\mathcal F)
+\subset\operatorname{Ass}(\mathcal F')\cup\operatorname{Ass}(\mathcal F'').
+\]
+\item[\emph{(ii)}] Soient $\mathcal F$ un $\mathcal O_X$-Module
+quasi-cohérent, $(\mathcal F_\alpha)$ une famille de sous-$\mathcal O_X$-Modules
+quasi-cohérents de $\mathcal F$ telle que $\mathcal F$ soit réunion des
+$\mathcal F_\alpha$. Alors
+$\operatorname{Ass}(\mathcal F)=\bigcup_\alpha\operatorname{Ass}(\mathcal F_\alpha)$.
+\item[\emph{(iii)}] Pour toute famille $(\mathcal F_\alpha)$ de
+$\mathcal O_X$-Modules quasi-cohérents, on a
+$\operatorname{Ass}(\bigoplus_\alpha\mathcal F_\alpha)
+=\bigcup_\alpha\operatorname{Ass}(\mathcal F_\alpha)$.
+\end{enumerate}
+\end{proposition}
+
+On est aussitôt ramené aux propositions correspondantes pour les modules
+(Bourbaki, \emph{loc. cit.}, \S~1, n\textsuperscript{o}~1, formule (1), prop.~3
+et cor.~1 de la prop.~3).
+
+\begin{proposition}[3.1.8]
+\label{IV.2.3.1.8-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module quasi-cohérent, $U$ un ouvert de $X$, $\mathcal J$ un
+Idéal cohérent de $\mathcal O_X$ définissant un sous-préschéma fermé de $X$
+ayant $X-U$ pour espace sous-jacent. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}
+\item[\emph{a)}] $\operatorname{Ass}(\mathcal F)\subset U$.
+\item[\emph{b)}] Pour tout ouvert affine $V$, toute section de $\mathcal F$
+au-dessus de $V$, dont la restriction à $V\cap U$ est nulle, est égale à $0$.
+\item[\emph{c)}] L'homomorphisme canonique
+$\mathcal F\to\mathcal Hom_{\mathcal O_X}(\mathcal J,\mathcal F)$ est
+injectif.
+\end{enumerate}
+\end{proposition}
+
+La question étant locale, on peut supposer $X=\operatorname{Spec}(A)$ affine,
+$A$ étant un anneau noethérien, $\mathcal F=\widetilde M$, où $M$ est un
+$A$-module, et $\mathcal J=\widetilde{\mathfrak J}$, où $\mathfrak J$ est un
+idéal de $A$. L'homomorphisme $M\to\operatorname{Hom}_A(\mathfrak J,M)$ fait
+correspondre à $m\in M$ l'homomorphisme $x\mapsto xm$ de $\mathfrak J$ dans
+$M$~; dire qu'il n'est pas injectif signifie qu'il existe un $m\ne0$ dans
+$M$ tel que $\mathfrak Jm=0$.
+
+Montrons d'abord que \emph{c)} implique \emph{a)}~: en effet, si
+$\operatorname{Ass}(\mathcal F)$ rencontrait alors $X-U$, il y aurait un
+idéal premier $\mathfrak p\in\operatorname{Ass}(M)$ contenant $\mathfrak J$,
+donc un élément $m\ne0$ de $M$ tel que $\mathfrak Jm=0$. En second lieu,
+\emph{b)} implique \emph{c)}~: en effet, si l'on avait alors
+$\mathfrak Jm=0$ pour un $m\ne0$ dans $M$, pour tout idéal premier
+$\mathfrak q\not\supset\mathfrak J$, il existe un $a\in\mathfrak J$ non dans
+$\mathfrak q$, donc la relation $am=0$ entraîne que l'image canonique de $m$
+dans $M_\mathfrak q$ est $0$, autrement dit $m$ serait une section $\ne0$ de
+$\mathcal F$ au-dessus de $X$ dont la restriction à $U$ serait nulle.
+
+Enfin \emph{a)} entraîne \emph{b)}. Pour le voir, notons que l'homomorphisme
+canonique
+\[
+M\longrightarrow\prod_{\mathfrak p\in\operatorname{Ass}(M)}M_\mathfrak p
+\]
+est \emph{injectif}~: en effet, si $N$ est le noyau de cet homomorphisme, on a
+$\operatorname{Ass}(N)\subset\operatorname{Ass}(M)$~; s'il existait un
+$\mathfrak p\in\operatorname{Ass}(N)$, il y aurait un élément $n\in N$ dont
+$\mathfrak p$ serait l'annulateur~; mais par définition de $N$, il y a un
+élément $s\notin\mathfrak p$ tel que $sn=0$, ce qui est absurde~; on en conclut
+que $\operatorname{Ass}(N)=\varnothing$, d'où $N=0$. Or la condition
+\emph{a)} entraîne que si $m\in M$ est une section de $\mathcal F$ dont la
+restriction à $U$ est nulle, l'image canonique de $m$ dans $M_\mathfrak p$ est
+nulle pour tout $\mathfrak p\in\operatorname{Ass}(M)$, donc $m=0$. C.Q.F.D.
+
+\begin{corollary}[3.1.9]
+\label{IV.2.3.1.9-fr}
+Soient $X$ un préschéma localement noethérien, $\mathcal F$ un
+$\mathcal O_X$-Module quasi-cohérent, $f$ une section de $\mathcal O_X$
+au-dessus de $X$. Pour que $f$ soit $\mathcal F$-régulière
+$(0,15.2.2)$, il faut et il suffit que
+$\operatorname{Ass}(\mathcal F)\subset X_f$.
+\end{corollary}
+
+En effet, il est immédiat que dire que $f$ est $\mathcal F$-régulière signifie
+que l'homomorphisme canonique
+$\mathcal F\to\mathcal Hom_{\mathcal O_X}(f\mathcal O_X,\mathcal F)$ est
+injectif, et il suffit d'appliquer (3.1.8) à l'Idéal
+$\mathcal J=f\mathcal O_X$.
+

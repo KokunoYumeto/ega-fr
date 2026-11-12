@@ -1,0 +1,79 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{109}
+
+\subsection{\texorpdfstring{Modules $Z$-purs et $Z$-clos}{Modules Z-purs et Z-clos}}
+
+Une partie des notions et résultats de cette section et de la suivante sont des
+cas particuliers de notions et résultats développés au chapitre III dans la
+théorie de la cohomologie locale. Pour la commodité du lecteur, nous en donnons
+ici un exposé indépendant.
+
+\begin{env}[5.9.1]
+\label{IV.2.s5.9.1-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$
+\emph{stable par spécialisation}: cela signifie que pour toute partie finie
+$M$ de $Z$, l'adhérence de $M$ est contenue dans $Z$, et par suite $Z$ est
+réunion d'une famille filtrante croissante $(Z_\alpha)$ de parties fermées de
+$X$; inversement, il est clair qu'une telle réunion est stable par
+spécialisation.
+
+Posons $U_\alpha=X-Z_\alpha$, de sorte que $X-Z$ est intersection de la
+famille filtrante décroissante d'ouverts $U_\alpha$; soit
+$i_\alpha:U_\alpha\to X$ l'injection canonique et pour
+$U_\alpha\supset U_\beta$, soit $i_{\alpha\beta}:U_\beta\to U_\alpha$
+l'injection canonique, de sorte que l'on a
+$i_\beta=i_\alpha\circ i_{\alpha\beta}$. Soit $\mathcal F$ un
+$\mathcal O_X$-Module (non nécessairement quasi-cohérent); on a donc
+\[
+(i_\beta)_*(\mathcal F|U_\beta)
+=(i_\alpha)_*((i_{\alpha\beta})_*(\mathcal F|U_\beta));
+\]
+de l'homomorphisme canonique $(0_{\mathrm I},4.4.3.2)$
+\[
+\mathcal F|U_\alpha\longrightarrow
+(i_{\alpha\beta})_*(\mathcal F|U_\beta)
+\]
+on déduit donc, par application du foncteur $(i_\alpha)_*$, un homomorphisme
+\[
+\rho_{\beta\alpha}:(i_\alpha)_*(\mathcal F|U_\alpha)
+\longrightarrow(i_\beta)_*(\mathcal F|U_\beta)
+\]
+et l'on vérifie aussitôt que l'on a
+$\rho_{\gamma\alpha}=\rho_{\gamma\beta}\circ\rho_{\beta\alpha}$ pour
+$U_\alpha\supset U_\beta\supset U_\gamma$; autrement dit, les
+$\mathcal O_X$-Modules $(i_\alpha)_*(\mathcal F|U_\alpha)$ forment un
+\emph{système inductif} pour les homomorphismes $\rho_{\beta\alpha}$.
+On pose
+\begin{equation}
+\mathcal H^0_{X/Z}(\mathcal F)
+=\varinjlim_\alpha(i_\alpha)_*(\mathcal F|U_\alpha).
+\tag{5.9.1.1}\label{IV.2.s5.9.1.1-fr}
+\end{equation}
+
+Ce $\mathcal O_X$-Module ne dépend pas de la famille croissante
+$(Z_\alpha)$ de fermés dont $Z$ est la réunion: en effet, soit $V$ un ouvert
+noethérien de $X$; on sait $(0_{\mathrm{II}},3.10.1)$ que dans la catégorie
+des $\mathcal O_V$-Modules, le foncteur
+$\mathcal G\mapsto\Gamma(V,\mathcal G)$ commute aux limites inductives; on a
+donc en vertu de (5.9.1.1)
+\begin{equation}
+\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))
+=\varinjlim_\alpha\Gamma(V\cap U_\alpha,\mathcal F).
+\tag{5.9.1.2}\label{IV.2.s5.9.1.2-fr}
+\end{equation}
+
+Soit alors $(Z'_\lambda)$ une seconde famille filtrante croissante de fermés
+de $X$, de réunion $Z$; $V\cap Z_\alpha$ est donc réunion des
+$V\cap Z_\alpha\cap Z'_\lambda$; mais $V\cap Z_\alpha$ est localement fermé
+dans $X$, donc toute partie fermée irréductible de $V\cap Z_\alpha$ admet un
+point générique; comme les $V\cap Z_\alpha\cap Z'_\lambda$ sont fermés dans
+$V\cap Z_\alpha$ et forment (pour $\alpha$ fixe) une famille filtrante
+croissante, il existe un indice $\lambda$ tel que
+$V\cap Z_\alpha\cap Z'_\lambda=V\cap Z_\alpha$
+$(0_{\mathrm{III}},9.2.4)$, autrement dit
+$V\cap Z_\alpha\subset V\cap Z'_\lambda$. Ceci prouve que les familles
+filtrantes décroissantes $V\cap U_\alpha$, $V\cap U'_\lambda$ (où
+$U'_\lambda=X-Z'_\lambda$) sont cofinales l'une de l'autre, d'où notre
+assertion, en vertu de (5.9.1.2).
+\end{env}
+

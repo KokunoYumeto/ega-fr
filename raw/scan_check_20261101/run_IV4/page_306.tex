@@ -1,0 +1,79 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{306}
+que la réunion de ces ouverts $V$ est le \emph{plus grand} d'entre eux, $U_1$, qui
+contient $U$; en vertu de ce qui précède, $U_1$ est aussi le plus grand ouvert ne
+rencontrant pas l'ensemble
+\[
+  \operatorname{Daf}(U/X)=f^0(U^0)-U
+\]
+(« défaut d'affinité » de l'ouvert $U$ relativement à $X$, qui est vide si et seulement
+si $U$ est affine sur $X$); autrement dit, l'ensemble fermé $Z=X-U_1$ est
+l'\emph{adhérence} de l'ensemble $\operatorname{Daf}(U/X)$.
+
+On notera que pour tout morphisme \emph{plat} $h:X'\to X$, si l'on pose
+$U'=h^{-1}(U)$, on a
+\[
+\label{IV.21.12.5.1}
+  \operatorname{Daf}(U'/X')=h^{-1}(\operatorname{Daf}(U/X))
+  \tag{21.12.5.1}
+\]
+comme il résulte aussitôt de (21.12.2.1) et de $(\mathbf I, 3.4.8)$. En particulier,
+pour tout ouvert $V$ de $X$, on a
+\[
+\label{IV.21.12.5.2}
+  \operatorname{Daf}((U\cap V)/V)=\operatorname{Daf}(U/X)\cap V
+  \tag{21.12.5.2}
+\]
+et pour tout $x\in X$,
+\[
+\label{IV.21.12.5.3}
+  \operatorname{Daf}((U\cap\operatorname{Spec}(\mathcal O_{X,x}))
+  /\operatorname{Spec}(\mathcal O_{X,x}))
+  =\operatorname{Daf}(U/X)\cap\operatorname{Spec}(\mathcal O_{X,x}).
+  \tag{21.12.5.3}
+\]
+\end{env}
+
+Nous allons, lorsque $X$ est localement noethérien, donner des précisions sur la nature
+de l'ensemble $\operatorname{Daf}(U/X)$, qui montreront par exemple que lorsque $U$ est
+partout dense dans $X$, $\operatorname{Daf}(U/X)$ n'est pas un ensemble fermé rare
+quelconque :
+
+\begin{theorem}[21.12.6]
+\label{IV.21.12.6}
+Soient $X$ un préschéma localement noethérien, $U$ un ouvert non vide de $X$,
+$f:U\to X$ l'injection canonique. Alors :
+\begin{enumerate}[label=(\roman*)]
+  \item L'adhérence $Z=X-U_1$ de $\operatorname{Daf}(U/X)$ est de codimension
+  $\geq2$ dans $X$.
+  \item Si $T=X-U\supset Z$ est de codimension $\geq2$, le morphisme
+  $f^0:U^0\to X$ est surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Montrons d'abord que pour tout point $x\in\operatorname{Daf}(U/X)$ on a
+nécessairement $\dim(\mathcal O_{X,x})>1$. En effet, $x$ ne peut évidemment être point
+maximal de $X$, étant contenu dans $\overline U-U$; il s'agit donc de voir que l'on ne
+peut avoir $\dim(\mathcal O_{X,x})=1$. Or, cette relation entraînerait, par (21.12.5.3),
+$x\in\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))$, où
+$U^{(x)}=U\cap\operatorname{Spec}(\mathcal O_{X,x})$. Mais les seuls ouverts de
+$\operatorname{Spec}(\mathcal O_{X,x})$ sont $\operatorname{Spec}(\mathcal O_{X,x})$
+lui-même et les parties de l'ensemble (fini) des points maximaux de
+$\operatorname{Spec}(\mathcal O_{X,x})$. Or, l'ensemble ouvert réduit à un point maximal
+de $\operatorname{Spec}(\mathcal O_{X,x})$ est affine, par définition des préschémas; on
+en conclut que \emph{tous} les ensembles ouverts dans
+$\operatorname{Spec}(\mathcal O_{X,x})$ sont affines, donc
+$\operatorname{Daf}(U^{(x)}/\operatorname{Spec}(\mathcal O_{X,x}))=\varnothing$
+contrairement à l'hypothèse faite.
+
+Pour prouver (i) il faut montrer davantage, savoir que si $x\in X$ est tel que
+$\dim(\mathcal O_{X,x})=1$, il existe un voisinage ouvert $W$ de $x$ dans $X$ tel que
+$W$ ne rencontre pas $\operatorname{Daf}(U/X)$, c'est-à-dire tel que l'injection
+canonique $f_W:U\cap W\to W$ soit affine. Mais, avec les mêmes notations que ci-dessus,
+on vient de voir que l'injection canonique
+$f^{(x)}:U^{(x)}\to\operatorname{Spec}(\mathcal O_{X,x})$ est affine. On peut
+évidemment se borner au cas où $X$ est noethérien; comme le morphisme $f$ est de
+présentation finie, la conclusion résulte de (8.10.5, (viii)) appliqué suivant la
+méthode de (8.1.2, a)).
+

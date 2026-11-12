@@ -1,0 +1,101 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{112}
+
+la définition du foncteur $\Gamma$ et du fait qu'il est exact à gauche.
+Comme l'homomorphisme $(\rho_{X/Z})_V$ est le composé
+\begin{equation}
+\Gamma(V,\mathcal F)\longrightarrow
+\Gamma(V\cap(X-T),\mathcal F)\longrightarrow
+\varinjlim_\alpha\Gamma(V\cap U_\alpha,\mathcal F)
+\tag{5.9.8.1}\label{IV.2.s5.9.8.1-fr}
+\end{equation}
+pour toute partie fermée $T\subset Z$, si $(\rho_{X/Z})_V$ est injectif, il
+en est de même de
+$\Gamma(V,\mathcal F)\to\Gamma(V\cap(X-T),\mathcal F)$; d'autre part, le
+fait que b') implique b) résulte de la définition d'une limite inductive. Il
+reste à montrer que si $\rho_{X/Z}$ est bijectif, il en est de même de
+$\Gamma(V,\mathcal F)\to\Gamma(V\cap(X-T),\mathcal F)$, et pour cela il
+suffit, en vertu de (5.9.8.1), de voir que si $U'\subset U$ sont deux
+ouverts contenus dans $V$ et contenant $V\cap Z$, l'homomorphisme de
+restriction $\Gamma(U,\mathcal F)\to\Gamma(U',\mathcal F)$ est injectif;
+mais cela résulte de ce que $\rho_{X/Z}$ est injectif, en remplaçant dans ce
+qui précède $V$ par $U$ et $V\cap(X-T)$ par $U'$.
+
+\begin{definition}[5.9.9]
+\label{IV.2.s5.9.9-fr}
+Sous les hypothèses de (5.9.8), on dit que $\mathcal F$ est $Z$-pur
+(resp. $Z$-clos) si l'homomorphisme $\rho_{X/Z}$ est injectif
+(resp. bijectif).
+\end{definition}
+
+Si $X=\operatorname{Spec}(A)$ est affine, $\mathcal F=\widetilde M$, où
+$M$ est un $A$-module, on dira que $M$ est $Z$-pur (resp. $Z$-clos) lorsque
+$\mathcal F$ est $Z$-pur (resp. $Z$-clos).
+
+On dit que $\mathcal F$ est $Z$-pur (resp. $Z$-clos) \emph{en un point}
+$x\in X$ si (avec les notations de (5.9.6)) $\widetilde{\mathcal F}_x$ est
+$Z_x$-pur (resp. $Z_x$-clos); il revient au même, en vertu de (5.9.6), de
+dire que l'homomorphisme canonique
+\[
+\mathcal F_x\longrightarrow(\mathcal H^0_{X/Z}(\mathcal F))_x
+\]
+est injectif (resp. bijectif).
+
+On notera que pour tout $x\in X-Z$, $\mathcal F$ est $Z$-clos au point $x$,
+en vertu de (5.9.8).
+
+\begin{corollary}[5.9.10]
+\label{IV.2.s5.9.10-fr}
+\begin{enumerate}
+\item[(i)] Soit $(V_\lambda)$ un recouvrement ouvert de $X$. Pour que
+$\mathcal F$ soit $Z$-pur (resp. $Z$-clos), il faut et il suffit que pour
+tout $\lambda$, $\mathcal F|V_\lambda$ soit $(Z\cap V_\lambda)$-pur
+(resp. $(Z\cap V_\lambda)$-clos).
+\item[(ii)] Soit $Z'$ une partie de $Z$ stable par spécialisation. Si
+$\mathcal F$ est $Z$-pur (resp. $Z$-clos), il est $Z'$-pur
+(resp. $Z'$-clos).
+\end{enumerate}
+\end{corollary}
+
+Cela résulte aussitôt de (5.9.8, b')).
+
+\begin{proposition}[5.9.11]
+\label{IV.2.s5.9.11-fr}
+Sous les hypothèses de (5.9.8), les $\mathcal O_X$-Modules
+$\operatorname{Ker}(\rho_{X/Z})$ et $\operatorname{Coker}(\rho_{X/Z})$ ont
+leur support contenu dans $Z$, et le $\mathcal O_X$-Module
+$\mathcal H^0_{X/Z}(\mathcal F)$ est $Z$-clos. En outre, si
+$u:\mathcal F\to\mathcal F'$ est un homomorphisme de
+$\mathcal O_X$-Modules tel que $\mathcal F'$ soit $Z$-clos, $u$ se factorise
+d'une seule manière en
+\[
+\mathcal F\xrightarrow{\rho_{X/Z}}\mathcal H^0_{X/Z}(\mathcal F)
+\xrightarrow{v}\mathcal F'.
+\]
+Si en outre les supports de $\operatorname{Ker}(u)$ et de
+$\operatorname{Coker}(u)$ sont contenus dans $Z$, $v$ est un isomorphisme.
+\end{proposition}
+
+La première assertion signifie que, pour tout $x\in X-Z$, on a
+\[
+\operatorname{Ker}(\rho_{X/Z})_x
+=\operatorname{Coker}(\rho_{X/Z})_x=0,
+\]
+i.e. que $(\rho_{X/Z})_x$ est bijectif, ou encore que $\mathcal F$ est
+$Z$-pur en $x$, comme il a été signalé plus haut (5.9.9).
+
+Pour montrer que $\mathcal H^0_{X/Z}(\mathcal F)$ est $Z$-clos, il s'agit de
+voir que pour un ouvert noethérien $V$ de $X$,
+\[
+\varinjlim_\beta
+\Gamma(V\cap U_\beta,\mathcal H^0_{X/Z}(\mathcal F))
+\]
+est égale à $\Gamma(V,\mathcal H^0_{X/Z}(\mathcal F))$; mais par définition
+\[
+\Gamma(V\cap U_\beta,\mathcal H^0_{X/Z}(\mathcal F))
+=\varinjlim_\alpha\Gamma(V\cap U_\alpha\cap U_\beta,\mathcal F).
+\]
+Or, la famille double $(U_\alpha\cap U_\beta)$ est filtrante décroissante,
+et notre assertion résulte de (5.9.1) et du théorème de la double limite
+inductive.
+

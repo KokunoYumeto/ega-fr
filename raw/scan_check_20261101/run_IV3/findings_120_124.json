@@ -1,0 +1,631 @@
+[
+ {
+  "page": 120,
+  "where": "first line: 'Comme les L'_i sont des A'-modules libres, on sait (M, V, 1.1)'",
+  "scan": "'libres' in italics",
+  "tex": "'libres' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A'$-modules libres,",
+   "new": "$A'$-modules \\emph{libres},"
+  },
+  "note": ""
+ },
+ {
+  "page": 120,
+  "where": "top of p. 120: 'Comme les L'_i sont des A'-modules libres ...' (continuation of (11.2.1))",
+  "scan": "the line starts flush left (no indent): the paragraph of (11.2.1) runs on after the display (11.2.1.4) that ends p. 119",
+  "tex": "\\end{env} closes (11.2.1) at the end of the p. 119 segment and blank lines surround \\oldpage[IV-3]{120}, so 'Comme les' starts a new indented paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "\\oldpage[IV-3]{120}\n\nComme les",
+   "new": "\\oldpage[IV-3]{120}\n\\noindent Comme les"
+  },
+  "note": "Paragraph structure only. The print's (11.2.1) runs on to 'est commutatif.' just before (11.2.2), so the \\end{env} at the end of the p. 119 segment stands too early; moving it would touch p. 119, so this edit only removes the indent (\\noindent, as the (16.4.5) precedent)."
+ },
+ {
+  "page": 120,
+  "where": "diagram after 'formant un diagramme commutatif', top row (left end and between L'_i and L'_0)",
+  "scan": "'...' on the baseline (enlarged crop: the dots sit at the foot of L and M, below the arrows)",
+  "tex": "\\cdots (centred dots), twice",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\cdots\\ar[r]&L'_{i+1}\\ar[r]^{f'_i}\\ar[d]_{u_{i+1}}&\nL'_i\\ar[r]\\ar[d]_{u_i}&\\cdots\\ar[r]&",
+   "new": "\\ldots\\ar[r]&L'_{i+1}\\ar[r]^{f'_i}\\ar[d]_{u_{i+1}}&\nL'_i\\ar[r]\\ar[d]_{u_i}&\\ldots\\ar[r]&"
+  },
+  "note": "GLOBAL_ISSUES 22 (\\cdots for baseline dots)."
+ },
+ {
+  "page": 120,
+  "where": "same diagram, bottom row (left end and between L''_i and L''_0)",
+  "scan": "'...' on the baseline",
+  "tex": "\\cdots, twice",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\cdots\\ar[r]&L''_{i+1}\\ar[r]_{f''_i}&L''_i\\ar[r]&\\cdots\\ar[r]&",
+   "new": "\\ldots\\ar[r]&L''_{i+1}\\ar[r]_{f''_i}&L''_i\\ar[r]&\\ldots\\ar[r]&"
+  },
+  "note": ""
+ },
+ {
+  "page": 120,
+  "where": "same diagram, end of the bottom row 'M' -> 0'",
+  "scan": "no full stop after 0 (enlarged crop)",
+  "tex": "'0.' (full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "&M'\\ar[r]&0.",
+   "new": "&M'\\ar[r]&0"
+  },
+  "note": ""
+ },
+ {
+  "page": 120,
+  "where": "after the diagram: 'Si l'on compose l'homomorphisme u_• : L'_• -> L''_• de complexes ...'",
+  "scan": "'Si l'on compose' begins a new, indented paragraph",
+  "tex": "no blank line after \\]: the text continues the paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nSi l'on compose",
+   "new": "\\]\n\nSi l'on compose"
+  },
+  "note": "Missing paragraph break after a display (GLOBAL_ISSUES 47)."
+ },
+ {
+  "page": 120,
+  "where": "(11.2.2), l. 1-2: 'considérons maintenant un système inductif filtrant de A-algèbres'",
+  "scan": "'système inductif' in italics, 'filtrant' roman (enlarged crop)",
+  "tex": "\\emph{système inductif filtrant}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{système inductif filtrant}",
+   "new": "\\emph{système inductif} filtrant"
+  },
+  "note": ""
+ },
+ {
+  "page": 120,
+  "where": "(11.2.2): 'est un système inductif de A_α-modules' (across the page break 120/121)",
+  "scan": "'système' (last word of p. 120) and 'inductif de' and '-modules' (first line of p. 121) in italics (enlarged crop)",
+  "tex": "\\emph{système¶inductif} de $A_\\alpha$-modules: the italics stop after 'inductif'",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "inductif} de $A_\\alpha$-modules.",
+   "new": "inductif de $A_\\alpha$-modules}."
+  },
+  "note": "Listed before the marker entry below, so that its 'old' is still inside the p. 120 segment when it is applied."
+ },
+ {
+  "page": 120,
+  "where": "page break 120/121 inside (11.2.2): 'est un système | inductif de A_α-modules. Posons ...'",
+  "scan": "p. 120 ends with 'est un système'; p. 121 begins 'inductif de A_α-modules. Posons A' = lim A_α, ...' (page_121_s1.png); Lemme (11.2.2.2) comes after the end of (11.2.2) on p. 121",
+  "tex": "\\oldpage[IV-3]{121} stands after \\end{env} of (11.2.2), before \\begin{lemma}[11.2.2.2]: the rest of (11.2.2) ('inductif de ... à prouver le', 9 printed lines of p. 121) lies in the p. 120 segment",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "est un \\emph{système\n",
+   "new": "est un \\emph{système\n\\oldpage[IV-3]{121}\n"
+  },
+  "note": "Marker move, part 1 of 2 (apply both or neither): inserts the marker at the break, inside the \\emph group (as at 0_I p. 41), with no blank lines, so the sentence stays one paragraph. Part 2 (page 121) removes the old marker. Apply after the italics entry above."
+ },
+ {
+  "page": 121,
+  "where": "start of page_121.tex (old position of the p. 121 marker)",
+  "scan": "Lemme (11.2.2.2) is not the start of p. 121: the last lines of (11.2.2) precede it",
+  "tex": "\\oldpage[IV-3]{121} before \\begin{lemma}[11.2.2.2]",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{121}\n\n\\begin{lemma}[11.2.2.2]",
+   "new": "\\begin{lemma}[11.2.2.2]"
+  },
+  "note": "Marker move, part 2 of 2: apply together with the page-120 marker entry (which inserts the marker after 'est un \\emph{système')."
+ },
+ {
+  "page": 121,
+  "where": "Lemme (11.2.2.2), l. 6: 'si h'_βα : F(M_α) -> F(M_β) (pour α ≤ β)'",
+  "scan": "h'_{βα} with a prime, the same sign as in h'_α beside it (enlarged crop)",
+  "tex": "h^0_{\\beta\\alpha}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "si $h^0_{\\beta\\alpha}",
+   "new": "si $h'_{\\beta\\alpha}"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "Lemme (11.2.2.2), l. 7: '(F(M_α), h'_βα) est un système inductif de A_α-modules'",
+  "scan": "h'_{βα} (prime)",
+  "tex": "h^0_{\\beta\\alpha}",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(F(M_\\alpha),h^0_{\\beta\\alpha})",
+   "new": "(F(M_\\alpha),h'_{\\beta\\alpha})"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "'Pour la démonstration, voir Bourbaki, Alg., chap. II, 3e éd.'",
+  "scan": "superscript e upright (roman), enlarged crop",
+  "tex": "3$^e$ (math italic e)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "3$^e$",
+   "new": "3\\textsuperscript{e}"
+  },
+  "note": "The edition's usual form is \\textsuperscript{e}."
+ },
+ {
+  "page": 121,
+  "where": "same sentence: '§ 6, nº 6, cor. de la prop. 10'",
+  "scan": "raised letter o (enlarged crop)",
+  "tex": "n$^\\circ$ (a ring)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "n$^\\circ$~6",
+   "new": "n\\textsuperscript{o}~6"
+  },
+  "note": "As the 0_IV-1 pages 156-164 findings; the edition's usual form is n\\textsuperscript{o}."
+ },
+ {
+  "page": 121,
+  "where": "(11.2.3), l. 2-3: 'alors ψ_1 est l'homomorphisme Ker(f_0⊗1_N)/Im(f_1⊗1_N) -> Ker(f''_0⊗1_N')/Im(f''_1⊗1_N') qui se déduit'",
+  "scan": "the formula is in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\n\\operatorname{Ker}(f_0\\otimes1_N)/\\operatorname{Im}(f_1\\otimes1_N)\n\\to\n\\operatorname{Ker}(f''_0\\otimes1_{N'})/\n\\operatorname{Im}(f''_1\\otimes1_{N'})\n\\]",
+   "new": "$\\operatorname{Ker}(f_0\\otimes1_N)/\\operatorname{Im}(f_1\\otimes1_N)\n\\to\n\\operatorname{Ker}(f''_0\\otimes1_{N'})/\n\\operatorname{Im}(f''_1\\otimes1_{N'})$"
+  },
+  "note": "Display vs inline; no connecting word is lost."
+ },
+ {
+  "page": 121,
+  "where": "(11.2.3), displayed formula 'u_1⊗1 : L_0⊗_A N -> L''_0⊗_A' N' = L''_0⊗_A N.'",
+  "scan": "L_0, L''_0, L''_0: subscript 0 three times, with u_1 (enlarged crop)",
+  "tex": "u_1\\otimes1:L_0\\otimes_AN\\to L''_0\\otimes_{A'}N'=L''_0\\otimes_AN. (keeps the printed reading)",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "u_1\\otimes1:L_1\\otimes_AN\\to L''_1\\otimes_{A'}N'=L''_1\\otimes_AN.",
+  "note": "f_i : L_{i+1} -> L_i ((11.2.1.3), (11.2.1.4)), so Ker(f_0⊗1_N) lies in L_1⊗_A N and the map restricted is u_1⊗1 on L_1⊗_A N (cf. g_0⊗1_N : L_1⊗_A N -> R⊗_A N on p. 122, and u_1 : L'_1 -> L''_1). The TeX keeps the printed reading."
+ },
+ {
+  "page": 121,
+  "where": "(11.2.3.2), end: '... -> M'⊗_A' N' -> 0'",
+  "scan": "no full stop after 0 (enlarged crop)",
+  "tex": "'\\to0.' (full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "M'\\otimes_{A'}N'\\to0.",
+   "new": "M'\\otimes_{A'}N'\\to0"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "'On a d'autre part un homomorphisme de A'-modules' after (11.2.3.2)",
+  "scan": "'On a d'autre part' begins a new, indented paragraph",
+  "tex": "no blank line after \\end{equation}: the text continues the paragraph",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{equation}\nOn a d'autre part",
+   "new": "\\end{equation}\n\nOn a d'autre part"
+  },
+  "note": "Missing paragraph break after a display (GLOBAL_ISSUES 47)."
+ },
+ {
+  "page": 122,
+  "where": "square 'L_1 -> R, L''_1 -> R''' after 'la commutativité du diagramme'",
+  "scan": "no full stop after R'' (enlarged crop)",
+  "tex": "'R''.' (full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "L''_1\\ar[r]&R''.",
+   "new": "L''_1\\ar[r]&R''"
+  },
+  "note": ""
+ },
+ {
+  "page": 122,
+  "where": "'est commutatif, ce qui résulte de la commutativité du diagrammc'",
+  "scan": "'diagrammc': the last letter is a c, the same glyph (ball terminal) as the c of 'commutatif' on that line (enlarged crop); not a broken e",
+  "tex": "'diagramme': silently corrected",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "du diagramme",
+   "new": "du diagrammc"
+  },
+  "corrected": "du diagramme",
+  "note": "Wrong letter in the print; the diplomatic text restores it."
+ },
+ {
+  "page": 122,
+  "where": "Lemme (11.2.4), last line: '(cf. (11.2.1.5)) est surjectif.'",
+  "scan": "'(cf. (11.2.1.5))' roman inside the italic statement",
+  "tex": "italic (lemma environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(cf. (11.2.1.5)) est surjectif.",
+   "new": "\\textup{(cf. (11.2.1.5))} est surjectif."
+  },
+  "note": ""
+ },
+ {
+  "page": 122,
+  "where": "proof of (11.2.4): 'l'homomorphisme v est surjectif, et il en est donc de même de v⊗1'",
+  "scan": "'surjectif' in italics",
+  "tex": "'surjectif' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$v$ est surjectif,",
+   "new": "$v$ est \\emph{surjectif},"
+  },
+  "note": ""
+ },
+ {
+  "page": 122,
+  "where": "same proof: '(Bourbaki, Alg. comm., chap. Ier, § 1, nº 4, ...)'",
+  "scan": "raised letter o",
+  "tex": "n$^\\circ$ (a ring)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "n$^\\circ$~4",
+   "new": "n\\textsuperscript{o}~4"
+  },
+  "note": "The edition's usual form is n\\textsuperscript{o}."
+ },
+ {
+  "page": 122,
+  "where": "page break 122/123 mid-sentence: 'Utilisons pour cela | l'hypothèse que M⊗_A N est un C-module plat.'",
+  "scan": "one sentence across the page break",
+  "tex": "blank lines before and after \\oldpage[IV-3]{123} (paragraph break)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Utilisons pour cela\n\n",
+   "new": "Utilisons pour cela\n"
+  },
+  "note": "GLOBAL_ISSUES 20; the marker is in the right place. Removes the blank line before the marker; the page-123 entry removes the one after it (both needed)."
+ },
+ {
+  "page": 123,
+  "where": "start of page_123.tex: 'l'hypothèse que M⊗_A N est un C-module plat' (continues 'Utilisons pour cela')",
+  "scan": "continuation of the sentence begun on p. 122",
+  "tex": "blank line after \\oldpage[IV-3]{123}",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{123}\n\nl'hypothèse",
+   "new": "\\oldpage[IV-3]{123}\nl'hypothèse"
+  },
+  "note": "With the page-122 entry (blank line before the marker)."
+ },
+ {
+  "page": 123,
+  "where": "l. 1: 'l'hypothèse que M⊗_A N est un C-module plat.'",
+  "scan": "'plat' in italics",
+  "tex": "'plat' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$C$-module plat.",
+   "new": "$C$-module \\emph{plat}."
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "l. 3: 'des homomorphismes de C-modules;'",
+  "scan": "'modules' in italics",
+  "tex": "'modules' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de $C$-modules~;",
+   "new": "de $C$-\\emph{modules}~;"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "second display 'T⊗_C C' -> (R⊗_A N)⊗_C C' -> Q⊗_C C' -> 0'",
+  "scan": "no comma after 0 (enlarged crop)",
+  "tex": "'\\to0,' (comma)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Q\\otimes_CC'\\to0,",
+   "new": "Q\\otimes_CC'\\to0"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "third display '... -> (M⊗_A N)⊗_C C' -> 0'",
+  "scan": "no full stop after 0 (enlarged crop)",
+  "tex": "'\\to0.' (full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(M\\otimes_AN)\\otimes_CC'\\to0.",
+   "new": "(M\\otimes_AN)\\otimes_CC'\\to0"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "Lemme (11.2.5), l. 3: 'Soit p' un idéal premier de B' contenant JB'.'",
+  "scan": "Fraktur J without a prime: 𝔍B' (enlarged crop; the proof has 𝔍'B'_p' with a prime)",
+  "tex": "\\mathfrak J'B'",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "contenant $\\mathfrak J'B'$",
+   "new": "contenant $\\mathfrak JB'$"
+  },
+  "note": "The same ideal (𝔍B' = 𝔍'B'); the diplomatic text follows the print."
+ },
+ {
+  "page": 123,
+  "where": "Lemme (11.2.5), item labels a), b)",
+  "scan": "a) and b) in italics, like the statement; (i), (ii) upright",
+  "tex": "label=\\emph{\\alph*)} inside the italic lemma gives upright a), b)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{enumerate}[label=\\emph{\\alph*)}]",
+   "new": "\\begin{enumerate}[label=\\textit{\\alph*)}]"
+  },
+  "note": "The (i), (ii) labels (label=\\emph{(\\roman*)}, upright) match the print. GLOBAL_ISSUES 16 and 22."
+ },
+ {
+  "page": 123,
+  "where": "proof of (11.2.5), l. 1: 'Notons que dans l'hypothèse b) M'_p' est un ...'",
+  "scan": "'b)' in italics",
+  "tex": "'b)' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'hypothèse b)",
+   "new": "l'hypothèse \\emph{b)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "same proof, l. 3: 'dans l'hypothèse a), J' est nilpotent'",
+  "scan": "'a)' in italics",
+  "tex": "'a)' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'hypothèse a)",
+   "new": "l'hypothèse \\emph{a)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "same proof, l. 4: 'suivant que a) ou b) est vérifiée'",
+  "scan": "'a)' and 'b)' in italics",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "suivant que a) ou b)",
+   "new": "suivant que \\emph{a)} ou \\emph{b)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "same proof: 'En premier lieu, on a M'_p'⊗_A'(A'/J') = (M'⊗_A'(A'/J'))_p' = ((M⊗_A(A/J))⊗_A/J(A'/J'))_p'; l'hypothèse (i) ...'",
+  "scan": "the formula is in the running text, followed by '; l'hypothèse (i)' on the same line",
+  "tex": "displayed with \\[ ... \\] (the '~;' inside the display)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\[\nM'_{\\mathfrak p'}\\otimes_{A'}(A'/\\mathfrak J')\n=(M'\\otimes_{A'}(A'/\\mathfrak J'))_{\\mathfrak p'}\n=((M\\otimes_A(A/\\mathfrak J))\\otimes_{A/\\mathfrak J}\n(A'/\\mathfrak J'))_{\\mathfrak p'}~;\n\\]",
+   "new": "$M'_{\\mathfrak p'}\\otimes_{A'}(A'/\\mathfrak J')\n=(M'\\otimes_{A'}(A'/\\mathfrak J'))_{\\mathfrak p'}\n=((M\\otimes_A(A/\\mathfrak J))\\otimes_{A/\\mathfrak J}\n(A'/\\mathfrak J'))_{\\mathfrak p'}$~;"
+  },
+  "note": "Display vs inline; no connecting word is lost."
+ },
+ {
+  "page": 123,
+  "where": "same proof: 'or ce B'_p'-module est égal à (Tor_1^A'(M', A'/J'))_p' en vertu de la platitude'",
+  "scan": "no comma before 'en vertu' (enlarged crop)",
+  "tex": "comma after the formula",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "_{\\mathfrak p'}$, en vertu",
+   "new": "_{\\mathfrak p'}$ en vertu"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "Corollaire (11.2.6.1), l. 3-4: 'On pose B_λ = B_0⊗_A_0 A_λ, M_λ = ..., A = lim A_λ, B = lim B_λ = B_0⊗_A_0 A, M = lim M_λ = M_0⊗_A_0 A = M_0⊗_B_0 B.'",
+  "scan": "the five equalities are in the running text, separated by commas, ending with a full stop",
+  "tex": "a gathered display of three lines (\\qquad separators)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "On pose\n\\[\n\\begin{gathered}\nB_\\lambda=B_0\\otimes_{A_0}A_\\lambda,\\qquad\nM_\\lambda=M_0\\otimes_{A_0}A_\\lambda=M_0\\otimes_{B_0}B_\\lambda,\\\\\nA=\\varinjlim A_\\lambda,\\qquad\nB=\\varinjlim B_\\lambda=B_0\\otimes_{A_0}A,\\\\\nM=\\varinjlim M_\\lambda=M_0\\otimes_{A_0}A=M_0\\otimes_{B_0}B.\n\\end{gathered}\n\\]",
+   "new": "On pose\n$B_\\lambda=B_0\\otimes_{A_0}A_\\lambda$,\n$M_\\lambda=M_0\\otimes_{A_0}A_\\lambda=M_0\\otimes_{B_0}B_\\lambda$,\n$A=\\varinjlim A_\\lambda$, $B=\\varinjlim B_\\lambda=B_0\\otimes_{A_0}A$,\n$M=\\varinjlim M_\\lambda=M_0\\otimes_{A_0}A=M_0\\otimes_{B_0}B$."
+  },
+  "note": "Display vs inline; no connecting word is lost."
+ },
+ {
+  "page": 124,
+  "where": "step label 'I) Réduction au cas où les A_λ sont noethériens.'",
+  "scan": "'I)' in ordinary roman weight (compare the bold Z of 'Z-algèbre' on the next line; enlarged crop)",
+  "tex": "\\textbf{I)}",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\noindent\\textbf{I)} \\emph{Réduction",
+   "new": "\\noindent I) \\emph{Réduction"
+  },
+  "note": "ega4-11-fr.tex sets all its step labels I)-VI) bold (16 times); see the final report."
+ },
+ {
+  "page": 124,
+  "where": "step I): 'on peut donc déjà supposer que A_0 est noethérien.'",
+  "scan": "'noethérien' in italics",
+  "tex": "'noethérien' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$A_0$ est noethérien.",
+   "new": "$A_0$ est \\emph{noethérien}."
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "step I): 'où C_λ est une sous-A_0-algèbre de type fini de A_λ'",
+  "scan": "'de type fini' in italics, 'de' included (enlarged crop)",
+  "tex": "de \\emph{type fini}: 'de' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "algèbre de\n\\emph{type fini}",
+   "new": "algèbre \\emph{de\ntype fini}"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "step I): 'cette fois les A_ξ sont noethériens;'",
+  "scan": "'noethériens' in italics",
+  "tex": "'noethériens' upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sont\nnoethériens~;",
+   "new": "sont\n\\emph{noethériens}~;"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "step I): '(Bourbaki, Alg., chap. II, 3e éd., § 6, nº 4, prop. 7)'",
+  "scan": "superscript e upright (roman)",
+  "tex": "3$^e$ (math italic e)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "3$^e$",
+   "new": "3\\textsuperscript{e}"
+  },
+  "note": "The edition's usual form is \\textsuperscript{e}."
+ },
+ {
+  "page": 124,
+  "where": "same reference: 'nº 4'",
+  "scan": "raised letter o",
+  "tex": "n$^\\circ$ (a ring)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "medium",
+  "fix": {
+   "old": "n$^\\circ$~4",
+   "new": "n\\textsuperscript{o}~4"
+  },
+  "note": "The edition's usual form is n\\textsuperscript{o}."
+ },
+ {
+  "page": 124,
+  "where": "page break 124/125 (step I)): '... soit p un idéal premier de B, tel que M_p soit un A-module plat; il existe alors ξ∈H tel que, si p_ξ est l'image | réciproque de p dans B_ξ, ...'",
+  "scan": "p. 124 ends with 'tel que M_p soit un A-module plat; il existe alors ξ∈H tel que, si p_ξ est l'image' (page_124_s4.png); p. 125 begins 'réciproque de p dans B_ξ' (page_125_s1.png); one sentence",
+  "tex": "the p. 124 segment stops at 'idéal premier de $B$,'; then a blank line, \\oldpage[IV-3]{125}, a blank line and 'tel que $M_{\\mathfrak p}$ ...': the marker stands about one and a half printed lines too early, inside a spurious paragraph break",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "un idéal premier de $B$,\n\n",
+   "new": "un idéal premier de $B$,\n"
+  },
+  "note": "Marker move, part 1 of 2: removes the blank line before the marker (GLOBAL_ISSUES 20). Part 2 (page 125, below) moves the marker to 'l'image | réciproque' and drops the blank line after it. Apply both."
+ },
+ {
+  "page": 125,
+  "where": "start of page_125.tex: 'tel que M_p soit un A-module plat; il existe alors ξ∈H tel que, si p_ξ est l'image' (printed at the foot of p. 124)",
+  "scan": "p. 125 begins 'réciproque de p dans B_ξ, (M_ξ)_p_ξ soit un A_ξ-module plat.'",
+  "tex": "\\oldpage[IV-3]{125} and a blank line stand before 'tel que $M_{\\mathfrak p}$'",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-3]{125}\n\ntel que $M_{\\mathfrak p}$ soit un $A$-module plat~; il existe alors\n$\\xi\\in H$ tel que, si $\\mathfrak p_\\xi$ est l'image réciproque de",
+   "new": "tel que $M_{\\mathfrak p}$ soit un $A$-module plat~; il existe alors\n$\\xi\\in H$ tel que, si $\\mathfrak p_\\xi$ est l'image\n\\oldpage[IV-3]{125}\nréciproque de"
+  },
+  "note": "OUTSIDE pages 120-124 (page_125.tex): part 2 of the 124/125 marker move begun by the page-124 entry. The p. 125 checker may report the same move from its side; apply only one version."
+ }
+]

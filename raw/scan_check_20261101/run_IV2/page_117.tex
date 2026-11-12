@@ -1,0 +1,78 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{117}
+
+formons pour ces deux composantes une suite $(X_i)$ ayant la propriété énoncée
+dans b) et posons $U_i=X_i\cap U$ pour $1\leq i\leq n$; alors $U_i$ est une
+composante irréductible de $U$ (0$_\mathrm I$, 2.1.6) et de plus
+$U_i\cap U_{i-1}\neq\varnothing$ pour $1\leq i\leq n$, sinon on aurait
+$X_i\cap X_{i-1}\subset Y$, donc $X_i\cap X_{i-1}\in\mathfrak F$,
+contrairement à la définition des $X_i$. Cela entraîne que $U$ est connexe.
+
+Montrons maintenant que a) entraîne b). Désignons par $Y$ la réunion de la
+famille $(X_\alpha\cap X_\beta)$, où $(X_\alpha,X_\beta)$ parcourt l'ensemble
+des couples de composantes irréductibles distinctes de $X$ telles que
+$X_\alpha\cap X_\beta\in\mathfrak F$. Pour tout point $y\in Y$, il y a un
+voisinage ouvert $V$ de $y$ dans $X$ ne rencontrant qu'un nombre fini de
+composantes irréductibles de $X$; cela montre d'une part que $Y$ est fermé et
+d'autre part que $V\cap Y$ est intersection de $V$ et d'un ensemble de
+$\mathfrak F$; en vertu de l'hypothèse faite sur $\mathfrak F$, on a
+$Y\in\mathfrak F$, donc $U=X-Y$ est connexe; en outre $Y$ est rare dans $X$.
+Soient alors $X'$, $X''$ deux composantes irréductibles distinctes de $X$,
+$U'$, $U''$ leurs traces respectives sur $U$; ce sont des composantes
+irréductibles distinctes de $U$ (0$_\mathrm I$, 2.1.6). Or la réunion des
+composantes irréductibles $W$ de $U$ telles qu'il existe une suite
+$(U_i)_{0\leq i\leq n}$ de composantes irréductibles de $U$ pour laquelle
+$U_0=U'$, $U_{i-1}\neq U_i$ et $U_{i-1}\cap U_i\neq\varnothing$ pour
+$1\leq i\leq n$ et $U_n=W$ est un ensemble ouvert et fermé dans $U$, puisque
+$U$ est localement noethérien et par suite ses composantes irréductibles
+forment une famille localement finie d'ensembles fermés. Il y a donc une telle
+suite $(U_i)$ pour laquelle $U_n=U''$; soit $X_i$ ($0\leq i\leq n$) la
+composante irréductible de $X$ telle que $X_i\cap U=U_i$
+(0$_\mathrm I$, 2.1.6); comme $U_{i-1}\neq U_i$, on a
+$X_{i-1}\neq X_i$ pour $1\leq i\leq n$; si l'on avait
+$X_{i-1}\cap X_i\in\mathfrak F$ pour un $i$ tel que $1\leq i\leq n$, on en
+déduirait $X_{i-1}\cap X_i\subset Y$ par définition de $Y$, d'où
+$U_{i-1}\cap U_i=\varnothing$, contrairement à l'hypothèse. Ceci achève la
+démonstration du lemme.
+
+On notera que l'hypothèse faite sur $X$ dans (5.10.8) est vérifiée lorsque $X$
+est un préschéma de Cohen-Macaulay et $d\geq2$.
+
+\begin{corollary}[5.10.9]
+\label{IV.2.s5.10.9-fr}
+Si un anneau local noethérien $A$ vérifie $(S_2)$ et est caténaire, il est
+équidimensionnel.
+\end{corollary}
+
+L'hypothèse de (5.10.8) est alors vérifiée par $X=\operatorname{Spec}(A)$,
+avec $d=2$. Pour montrer que toutes les composantes irréductibles de $X$ ont
+même dimension, il suffit alors, en vertu de (5.10.8), de montrer que deux
+telles composantes $X'$, $X''$ ont même dimension lorsque l'on suppose en
+outre que $\operatorname{codim}(X'\cap X'',X)=1$. Il y a alors une composante
+irréductible $Z$ de $X'\cap X''$ telle que
+$\operatorname{codim}(Z,X)=1$, donc $\operatorname{codim}(Z,X')=1$, puisque
+$\operatorname{codim}(Z,X)\geq\operatorname{codim}(Z,X')\geq1$; de même
+$\operatorname{codim}(Z,X'')=1$, et comme $X$ est caténaire, cela entraîne
+$\dim(X')=\dim(X'')$.
+
+\begin{proposition}[5.10.10]
+\label{IV.2.s5.10.10-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$ stable
+par spécialisation, $\mathcal F$ un $\mathcal O_X$-Module cohérent et supposons
+que le $\mathcal O_X$-Module $\mathcal H^0_{X/Z}(\mathcal F)$ soit cohérent.
+Alors:
+\begin{enumerate}
+\item[(i)] On a
+$\operatorname{prof}_Z(\mathcal H^0_{X/Z}(\mathcal F))\geq2$.
+\item[(ii)] Pour tout point
+$x\in\operatorname{Ass}(\mathcal F)\cap(X-Z)$, on a
+\[
+\operatorname{codim}(Z\cap\overline{\{x\}},\overline{\{x\}})\geq2.
+\]
+\item[(iii)] L'ensemble $U$ des $x\in X$ tels que
+$\operatorname{prof}_{Z_x}(\widetilde{\mathcal F}_x)\geq2$ (notations de
+(5.9.6)) est ouvert dans $X$; on a $X-U\subset Z$, et $U$ est le plus grand
+ouvert de $X$ tel que $\mathcal F|U$ soit $(Z\cap U)$-clos.
+\end{enumerate}
+\end{proposition}
+

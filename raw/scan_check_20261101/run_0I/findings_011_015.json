@@ -1,0 +1,212 @@
+[
+ {
+  "page": 11,
+  "where": "top of p. 11, before (1.0.1): chapter title, and the position of \\oldpage[0\\textsubscript{I}]{11}",
+  "scan": "p. 11 opens with the chapter title 'CHAPITRE 0' / 'PRÉLIMINAIRES' (bold), then '§ 1. ANNEAUX DE FRACTIONS' and '1.0. Anneaux et algèbres.'",
+  "tex": "no chapter title at all (EGA_FR.tex inputs ega1/intro-fr.tex and then ega1/ega0-1-fr.tex directly); ega0-1-fr.tex begins with \\section{Anneaux de fractions} and \\subsection{Anneaux et algèbres}, and \\oldpage[0\\textsubscript{I}]{11} stands only after them (l. 8)",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\section{Anneaux de fractions}\n\\label{section:0.1-fr}\n\n\\setcounter{subsection}{-1}\n\\subsection{Anneaux et algèbres}\n\\label{subsection:0.1.0-fr}\n\n\\oldpage[0\\textsubscript{I}]{11}\n",
+   "new": "\\clearpage\n\\oldpage[0\\textsubscript{I}]{11}\n\\begin{center}\n{\\large CHAPITRE 0\\par}\n\\vspace{1.5em}\n{\\Large\\bfseries PRÉLIMINAIRES\\par}\n\\end{center}\n\n\\section{Anneaux de fractions}\n\\label{section:0.1-fr}\n\n\\setcounter{subsection}{-1}\n\\subsection{Anneaux et algèbres}\n\\label{subsection:0.1.0-fr}\n\n"
+  },
+  "note": "The 'old' string is ll. 1-8 of ega0-1-fr.tex: text before the file's first marker plus the marker line, so it is not contained in page_011.tex and must be applied by hand. This single edit adds the chapter title (same markup as chapter1-frontmatter-fr.tex and ega3-1-fr.tex 'CHAPITRE 0 (suite)') and puts the page-11 marker before every heading printed on p. 11."
+ },
+ {
+  "page": 12,
+  "where": "end of page_012.tex: heading '1.2. Modules et anneaux de fractions.'",
+  "scan": "p. 12 ends with '(1.1.2) ... Le radical de A/ℜ(A) est (0).'; the heading '1.2. Modules et anneaux de fractions.' is the first line of p. 13",
+  "tex": "\\subsection{Modules et anneaux de fractions} and its \\label stand at the end of page 12, before \\oldpage[0\\textsubscript{I}]{13}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Modules et anneaux de fractions}\n\\label{subsection:0.1.2-fr}\n\n",
+   "new": ""
+  },
+  "note": "Moves the heading (not the marker) so that both edits stay inside their page segments and do not depend on the order in which they are applied. Apply together with the page-13 finding that re-inserts the heading after \\oldpage[0\\textsubscript{I}]{13}."
+ },
+ {
+  "page": 13,
+  "where": "start of p. 13: heading '1.2. Modules et anneaux de fractions.'",
+  "scan": "the heading opens p. 13",
+  "tex": "page_013.tex starts with \\oldpage[0\\textsubscript{I}]{13} followed by \\begin{env}[1.2.1]; the heading is at the end of page 12",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[0\\textsubscript{I}]{13}\n\\begin{env}[1.2.1]",
+   "new": "\\oldpage[0\\textsubscript{I}]{13}\n\\subsection{Modules et anneaux de fractions}\n\\label{subsection:0.1.2-fr}\n\n\\begin{env}[1.2.1]"
+  },
+  "note": "Apply together with the page-12 finding that removes the heading from the end of page 12."
+ },
+ {
+  "page": 13,
+  "where": "(1.2.1): '2° le complémentaire A—𝔭 d'un idéal premier 𝔭 de A'",
+  "scan": "A—𝔭 (long dash, set difference)",
+  "tex": "$A-\\mathfrak{p}$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$A-\\mathfrak{p}$ d'un idéal",
+   "new": "$A\\setmin\\mathfrak{p}$ d'un idéal"
+  },
+  "note": "Set difference; the minus signs in s(s_1m_2-s_2m_1) and fT-1 on this page are subtractions."
+ },
+ {
+  "page": 13,
+  "where": "(1.2.2): 'on appelle application canonique de M dans S^{-1}M'",
+  "scan": "'application' roman, only 'canonique' italic",
+  "tex": "\\emph{application canonique}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{application canonique}",
+   "new": "application \\emph{canonique}"
+  },
+  "note": "Checked on a zoomed crop."
+ },
+ {
+  "page": 13,
+  "where": "(1.2.2): 'l'application i^S_M : m→m/1 (aussi notée i^S)'",
+  "scan": "plain arrow: m→m/1",
+  "tex": "$i_M^S:m\\mapsto m/1$",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "m\\mapsto m/1",
+   "new": "m\\to m/1"
+  },
+  "note": "Checked on a zoomed crop."
+ },
+ {
+  "page": 13,
+  "where": "(1.2.3), second paragraph: 'Lorsque S=A—𝔭, où 𝔭 est un idéal premier de A'",
+  "scan": "A—𝔭 (long dash, set difference)",
+  "tex": "$S=A-\\mathfrak{p}$",
+  "kind": "convention",
+  "convention": 7,
+  "confidence": "high",
+  "fix": {
+   "old": "$S=A-\\mathfrak{p}$",
+   "new": "$S=A\\setmin\\mathfrak{p}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 13,
+  "where": "(1.2.4), display 'u : A → S^{-1}A → B'",
+  "scan": "the arrow labels i^S_A and u* are printed below the two arrows",
+  "tex": "u:A\\xrightarrow{i_A^S}S^{-1}A\\xrightarrow{u^*}B (labels above the arrows)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "u:A\\xrightarrow{i_A^S}S^{-1}A\\xrightarrow{u^*}B",
+   "new": "u:A\\xrightarrow[i_A^S]{}S^{-1}A\\xrightarrow[u^*]{}B"
+  },
+  "note": "Position of the labels only; checked on a zoomed crop. In (1.3.2) and (1.4.1) (pp. 14-15) the print puts the labels above the arrows, as the TeX does, so this is not a document-wide convention."
+ },
+ {
+  "page": 14,
+  "where": "(1.2.4), display 'v : M → S^{-1}M → N'",
+  "scan": "the arrow labels i^S_M and v* are printed below the two arrows",
+  "tex": "v:M\\xrightarrow{i_M^S}S^{-1}M\\xrightarrow{v^*}N (labels above the arrows)",
+  "kind": "formula",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "v:M\\xrightarrow{i_M^S}S^{-1}M\\xrightarrow{v^*}N",
+   "new": "v:M\\xrightarrow[i_M^S]{}S^{-1}M\\xrightarrow[v^*]{}N"
+  },
+  "note": "Position of the labels only, as in the u-display of (1.2.4) on p. 13; checked on a zoomed crop."
+ },
+ {
+  "page": 14,
+  "where": "(1.2.6): 'L'application 𝔭'→(i^S_A)^{-1}(𝔭')'",
+  "scan": "plain arrow",
+  "tex": "$\\mathfrak{p}'\\mapsto(i_A^S)^{-1}(\\mathfrak{p}')$",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathfrak{p}'\\mapsto(i_A^S)^{-1}",
+   "new": "\\mathfrak{p}'\\to(i_A^S)^{-1}"
+  },
+  "note": "Checked on a zoomed crop."
+ },
+ {
+  "page": 14,
+  "where": "(1.3.2), after the second display: 'En particulier, si u : M→N est injectif ...'",
+  "scan": "'En particulier' begins a new, indented paragraph (the line after the first display, 'est exacte, il en est de même de la suite', is flush left)",
+  "tex": "no paragraph break: 'En particulier' follows \\] directly",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nEn particulier",
+   "new": "\\]\n\nEn particulier"
+  },
+  "note": "Paragraph break only."
+ },
+ {
+  "page": 15,
+  "where": "(1.3.3), display 'S^{-1} lim M_α ⥲ lim S^{-1}M_α'",
+  "scan": "no punctuation after the display",
+  "tex": "\\varinjlim S^{-1}M_\\alpha,",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\varinjlim S^{-1}M_\\alpha,",
+   "new": "\\varinjlim S^{-1}M_\\alpha"
+  },
+  "note": "Extra comma in the TeX; checked on a zoomed crop."
+ },
+ {
+  "page": 15,
+  "where": "(1.3.5): 'fait correspondre l'homomorphisme m/t→u(m)/st'",
+  "scan": "plain arrow",
+  "tex": "$m/t\\mapsto u(m)/st$",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "m/t\\mapsto u(m)/st",
+   "new": "m/t\\to u(m)/st"
+  },
+  "note": "Checked on a zoomed crop."
+ },
+ {
+  "page": 15,
+  "where": "(1.4.1): '; on a i^T_A=ρ^{T,S}_A∘i^S_A. Pour tout A-module M'",
+  "scan": "the formula is in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a\n\\[\n  i_A^T=\\rho_A^{T,S}\\circ i_A^S.\n\\]\nPour tout",
+   "new": "on a $i_A^T=\\rho_A^{T,S}\\circ i_A^S$.\nPour tout"
+  },
+  "note": "Layout only (display vs inline); the formula itself matches."
+ },
+ {
+  "page": 15,
+  "where": "(1.4.1): 'et on a encore i^T_M=ρ^{T,S}_M∘i^S_M ; dans l'identification canonique'",
+  "scan": "the formula is in the running text",
+  "tex": "displayed with \\[ ... \\]",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "et on a encore\n\\[\n  i_M^T=\\rho_M^{T,S}\\circ i_M^S;\n\\]\ndans",
+   "new": "et on a encore $i_M^T=\\rho_M^{T,S}\\circ i_M^S$;\ndans"
+  },
+  "note": "Layout only (display vs inline); the formula itself matches."
+ }
+]

@@ -1,0 +1,80 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{169}
+part, la vérification de (9.2.1, (ii)) se fait aisément en utilisant l'étude des
+cycles premiers associés au voisinage de la fibre générique (9.8.3), ainsi que
+(9.5.2) et (9.5.3).
+\end{proof}
+
+Ce lemme étant établi, on peut, en vertu de (8.9.1) et (8.2.11), supposer qu'il
+existe un sous-anneau noethérien $A_0$ de $A$, un préschéma de type fini $X_0$
+sur $S_0=\operatorname{Spec}(A_0)$, un ouvert $U_0$ de $X_0$ et un
+$\mathcal O_{X_0}$-Module cohérent $\mathcal F_0$ tels que
+$X=X_0\times_{S_0}S$ et que, si $p_0:X\to X_0$ est la projection canonique,
+on ait $U=p_0^{-1}(U_0)$ et $\mathcal F=p_0^*(\mathcal F_0)$. Soit
+$(A_\alpha)$ la famille filtrante des sous-anneaux de $A$ qui sont des
+$A_0$-algèbres de type fini, et posons
+$S_\alpha=\operatorname{Spec}(A_\alpha)$,
+$X_\alpha=X_0\times_{S_0}S_\alpha$,
+$U_\alpha=U_0\times_{S_0}S_\alpha$,
+$\mathcal F_\alpha=\mathcal F_0\otimes_{S_0}S_\alpha$~; soit $u_\alpha$
+l'homomorphisme canonique relatif à $\mathcal F_\alpha$ et $U_\alpha$, défini
+comme dans (11.9.17). Pour tout $s\in S$, l'hypothèse que $u_s$ soit injectif
+entraîne que $(u_\alpha)_{s_\alpha}$ l'est aussi (11.9.10, (i)), où
+$s_\alpha=q_\alpha(s)$ est l'image de $s$ par le morphisme
+$q_\alpha:S\to S_\alpha$. Si $E_\alpha$ est l'ensemble des
+$s_\alpha\in S_\alpha$ tels que $(u_\alpha)_{s_\alpha}$ soit injectif, on a
+donc $S=q_\alpha^{-1}(E_\alpha)$, et les $E_\alpha$ forment un système
+projectif d'ensembles. Mais le lemme (11.9.17.1) appliqué à $u_\alpha$ montre
+que $E_\alpha$ est constructible dans $S_\alpha$~; on déduit donc de (8.3.4)
+qu'il existe un indice $\alpha$ tel que $E_\alpha=S_\alpha$. Mais alors, comme
+$X_\alpha$ est noethérien, $u_\alpha$ est universellement injectif en vertu de
+(11.9.16), donc il en est de même de $u$.
+
+\emph{B) Cas général.} --- L'ouvert $U$ est réunion filtrante croissante
+d'ouverts quasi-compacts $U_\lambda$~; si $j_\lambda:U_\lambda\to X$ est
+l'injection canonique et
+$u_\lambda:\mathcal F\to(j_\lambda)_*(j_\lambda^*(\mathcal F))$
+l'homomorphisme correspondant, il résulte du lemme (11.9.17.1) que l'ensemble
+$E_\lambda$ des $s\in S$ tels que $(u_\lambda)_s$ soit injectif est
+constructible. D'autre part, pour un $s\in S$, dire que $u_s$ (resp.
+$(u_\lambda)_s$) est injectif signifie que
+$\operatorname{Ass}(\mathcal F_s)\subset U\cap X_s$ (resp.
+$\operatorname{Ass}(\mathcal F_s)\subset U_\lambda\cap X_s$) (5.10.2).
+Comme $\operatorname{Ass}(\mathcal F_s)$ est fini (3.1.6), dire que $u_s$ est
+injectif signifie donc qu'il existe $\lambda$ tel que $s\in E_\lambda$~;
+l'hypothèse signifie par suite que $S=\bigcup_\lambda E_\lambda$. En vertu de
+(1.9.9), il existe un indice $\lambda$ tel que $S=E_\lambda$, d'où l'on
+conclut par la première partie du raisonnement que $u_\lambda$ est
+universellement injectif. Il résulte alors de la factorisation de $u_\lambda$~:
+\[
+\mathcal F\xrightarrow{u}j_*(\mathcal F|U)\longrightarrow
+(j_\lambda)_*(\mathcal F|U_\lambda)
+\]
+que $u$ est aussi universellement injectif.
+\end{proof}
+
+\begin{remark}[11.9.18]
+\label{IV.11.9.18-fr}
+Soient $X$ un préschéma, $\mathcal F$, $\mathcal G$ deux
+$\mathcal O_X$-Modules quasi-cohérents de présentation finie, $\mathcal G$
+étant en outre supposé \emph{localement libre},
+$u:\mathcal F\to\mathcal G$ un homomorphisme. Les conditions suivantes sont
+équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+  \item pour tout morphisme $g:X'\to X$, l'homomorphisme
+  $g^*(u):g^*(\mathcal F)\to g^*(\mathcal G)$ est injectif~;
+  \item pour tout $x\in X$, l'homomorphisme
+  $u\otimes 1_{k(x)}:\mathcal F\otimes_{\mathcal O_X}k(x)
+  \to\mathcal G\otimes_{\mathcal O_X}k(x)$ est injectif~;
+  \item pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ tel que
+  $u|U:\mathcal F|U\to\mathcal G|U$ soit un isomorphisme de $\mathcal F|U$
+  sur un facteur direct de $\mathcal G|U$.
+\end{enumerate}
+
+En effet, il est clair que c) entraîne a) et que a) entraîne b). Le fait que
+b) entraîne c) résulte de $(\mathbf 0,19.1.12)$,
+$(\mathbf 0_{\mathrm I},5.2.5)$ et $(\mathbf 0_{\mathrm I},5.5.5)$.
+
+Lorsque les conditions équivalentes précédentes sont vérifiées, on dit que
+$u$ est \emph{universellement injectif}.
+\end{remark}

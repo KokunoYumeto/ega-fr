@@ -1,0 +1,102 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{159}
+
+des fractions de $A$, $u$ est évidemment injectif. On notera par contre que
+l'homomorphisme $\widehat u:\widehat{\mathcal O}_y\to
+\widehat{\mathcal O}_{z_1}$ n'est pas injectif, car
+$\widehat{\mathcal O}_{z_1}$ est un anneau intègre local ($z_1$ étant un point
+simple), tandis que $\widehat{\mathcal O}_y$ a deux idéaux premiers minimaux
+distincts (correspondant aux deux «~branches~» de $Y$) et admet donc des
+diviseurs de zéro. Cela donne un exemple montrant que dans l'énoncé (11.5.2), on
+ne peut pas remplacer l'hypothèse que $\widehat u$ est injectif par l'hypothèse
+que $u$ lui-même est injectif, même lorsque $A'$ est un anneau local. Il suffit
+en effet de prendre (avec les notations précédentes) $A=\mathcal O_y$,
+$A'=\mathcal O_{z_1}$, $Y=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(A')$~; le raisonnement de (11.7.3) prouve encore que la
+première projection $p:X\times_Y X\to X$ est un isomorphisme, bien que $f$ ne
+soit pas plat au point $z_1$.
+\end{env}
+
+\begin{env}[11.7.5]
+\EGAReaderTarget{ega4.c04.statement.11-7-5}{IV.11.7.5-fr}
+Les exemples de (11.7.2) et (11.7.3) expliquent la restriction aux anneaux
+locaux \emph{unibranches} dans (11.6.1) et (11.6.2). Nous allons voir maintenant
+que dans (11.6.1), on ne peut affaiblir l'hypothèse sur $A$ en supposant
+seulement $A$ unibranche. Considérons en effet l'anneau local intègre complet
+$A=\mathbf R[[U,V]]/(U^2+V^2)$ qui est unibranche mais non géométriquement
+unibranche (6.5.11). On sait (\emph{loc. cit.}) que si $u,v$ sont les images de
+$U$ et $V$ dans $A$, la clôture intégrale de $A$ est $\overline A=A[t]$ avec
+$t=v/u$, tel que $t^2=-1$, si bien que $\overline A$ est isomorphe à
+$\mathbf C[[U]]$. Posons $Y=\operatorname{Spec}(A)$,
+$X=\operatorname{Spec}(\overline A)$ (normalisé de $Y$ (\textbf{II}, 6.3.8)) et
+soient $y$ et $x$ les points fermés de $Y$ et $X$ respectivement~; nous allons
+montrer que pour une $A$-algèbre locale convenable $A'$, si l'on pose
+$Y'=\operatorname{Spec}(A')$, $X'=X\times_Y Y'$, et si $y'$ désigne le point
+fermé de $Y'$, $\mathcal O_{X'}$ est $Y'$-plat en un point de $X'$ dont les
+projections dans $X$ et $Y'$ sont respectivement $x$ et $y'$, mais n'est pas
+$Y'$-plat en tous les points ayant ces projections~; il en résultera évidemment
+(2.1.4) que $\mathcal O_X$ n'est pas $Y$-plat au point $x$ (ce qui est d'ailleurs
+trivial \emph{a priori}, $\overline A$ n'étant pas un $A$-module libre).
+
+Soit $B=A\otimes_{\mathbf R}\mathbf C$, isomorphe à
+$\mathbf C[[U,V]]/(U+iV)(U-iV)$~; $B$ a deux idéaux premiers minimaux
+$\mathfrak p'$, $\mathfrak p''$ engendrés respectivement par $u+iv$ et $u-iv$,
+et $\mathfrak n=\mathfrak p'+\mathfrak p''$ est l'idéal maximal de l'anneau
+local complet $B$. Soit $\overline B=\overline A\otimes_{\mathbf R}\mathbf C$~;
+$\overline B$ est composée directe de deux algèbres isomorphes à
+$\mathbf C[[U]]$, engendrées par les idempotents
+$e'=(1\otimes1+t\otimes i)/2$ et $e''=(1\otimes1-t\otimes i)/2$~; comme
+l'homomorphisme $A\to\overline A$ est injectif, il en est de même de
+$B\to\overline B$, et les images de $u+iv$ et de $u-iv$ par cette injection sont
+respectivement $ue'$ et $ue''$~; on en conclut aussitôt que $\overline B$
+s'identifie canoniquement à $(B/\mathfrak p')\oplus(B/\mathfrak p'')$. Cela
+étant, prenons pour $A'$ l'anneau local $B/\mathfrak p'$~; alors
+$\overline A\otimes_A A'$ s'identifie à $\overline B\otimes_B A'$. Mais on a
+$(B/\mathfrak p')\otimes_B(B/\mathfrak p')=B/\mathfrak p'$ et
+$(B/\mathfrak p')\otimes_B(B/\mathfrak p'')=B/\mathfrak n$, donc
+$\overline A\otimes_A A'$ est isomorphe à $A'\oplus(B/\mathfrak n)$. Cela
+établit notre assertion, car $B/\mathfrak n=A'/(\mathfrak n/\mathfrak p')$
+n'est pas un $A'$-module plat (sans quoi ce serait un $A'$-module libre
+(Bourbaki, \emph{Alg. comm.}, chap.~II, \S~3, n$^\circ$~2, cor.~2 de la
+prop.~5), ce qui est absurde).
+\end{env}
+
+\subsection{Un critère valuatif de platitude}
+\label{subsection:IV.11.8-fr}
+
+\begin{theorem}[11.8.1]
+\label{IV.11.8.1-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie, $\mathcal F$ un
+$\mathcal O_X$-Module quasi-cohérent de présentation finie, $x$ un point de
+$X$, $y=f(x)$. On suppose l'anneau local $\mathcal O_y$ intègre (resp. réduit et
+noethérien). Pour que $\mathcal F$ soit $f$-plat au point $x$, il faut et il
+suffit que, pour tout anneau de valuation (resp. tout anneau de valuation
+discrète) $A'$ et tout homomorphisme local $\mathcal O_y\to A'$, la condition
+suivante soit satisfaite~: en posant $Y'=\operatorname{Spec}(A')$,
+$X'=X\times_Y Y'$, $f'=f_{(Y')}$, le $\mathcal O_{X'}$-Module
+$\mathcal F'=\mathcal F\otimes_Y Y'$ est $f'$-plat en tous les points $x'$ de
+$X'$ dont les projections respectives dans $X$ et $Y'$ sont $x$ et le point
+fermé $y'$ de $Y'$.
+\end{theorem}
+
+\begin{proof}
+La condition étant évidemment nécessaire (2.1.4), reste à prouver qu'elle est
+suffisante. On peut évidemment ((\textbf I, 3.6.5) et (\textbf I, 2.4.4)) se
+borner au cas où $Y=\operatorname{Spec}(A)$ est le spectre d'un anneau local $A$
+et $y$ le point fermé de $Y$.
+
+\medskip
+\noindent\textbf{(i)} \emph{Cas où $A$ est intègre.} --- Soient $K$ le corps
+des fractions de $A$, $A_1$ la clôture intégrale de $A$~; si l'on pose
+$Y_1=\operatorname{Spec}(A_1)$, $X_1=X\times_Y Y_1$, $f_1=f_{(Y_1)}$, il suffit,
+en vertu de (11.5.5), de montrer que
+$\mathcal F_1=\mathcal F\otimes_Y Y_1$ est $f_1$-plat en \emph{tous} les points
+$x_1$ de $X_1$ dont $x$ est la projection dans $X$. Or, si $f_1(x_1)=y_1$, on a
+$\mathfrak i_{y_1}=\mathfrak m_1$, où $\mathfrak m_1$ est un idéal premier de
+$A_1$ dont $\mathfrak m=\mathfrak i_y$ est la trace sur $A$ ($\mathfrak m_1$
+est d'ailleurs nécessairement un idéal maximal). Soit alors $A'$ un anneau de
+valuation pour $K$ qui domine $\mathcal O_{y_1}=(A_1)_{\mathfrak m_1}$~;
+l'homomorphisme $A\to\mathcal O_{y_1}$ étant local, il en est de même de
+$A\to A'$. Il existe alors au moins un
+% IV3_B23_P159_END
+

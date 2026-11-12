@@ -1,0 +1,75 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{267}
+par $f$ de tout ouvert schématiquement dense dans $X$ est un ouvert schématiquement dense dans $X'$;
+on conclut donc par \sref{IV.20.3.12}.
+\end{proof}
+
+\begin{corollary}[21.4.6]
+\label{IV.21.4.6}
+Soit $X$ un préschéma ayant l'une des propriétés suivantes :
+\begin{enumerate}[label=(\roman*)]
+  \item $X$ est localement noethérien.
+  \item $X$ est réduit et l'ensemble de ses composantes irréductibles est localement fini.
+\end{enumerate}
+Alors, pour tout $x\in X$, on a un isomorphisme canonique
+\[
+\label{IV.21.4.6.1}
+  (\sh{D}iv_X)_x\xrightarrow{\sim}\operatorname{Div}(\sh{O}_{X,x}).
+  \tag{21.4.6.1}
+\]
+\end{corollary}
+
+\begin{proof}
+Cela résulte en effet de \sref{IV.20.2.11}, \sref{IV.20.3.7} et de ce que $(\sh{O}_X^*)_x$ s'identifie au groupe des éléments inversibles de l'anneau $\sh{O}_{X,x}$.
+\end{proof}
+
+\begin{env}[21.4.7]
+\label{IV.21.4.7}
+Soient $X$, $X'$ deux préschémas, $f:X'\to X$ un morphisme.
+Si $D$ est un diviseur \emph{positif} sur $X$ tel que l'image réciproque $f^*(D)$ soit définie \sref{IV.21.4.2}, alors le sous-préschéma fermé $Y(f^*(D))$ de $X'$ n'est autre que l'image réciproque $f^{-1}(Y(D))$;
+cela résulte aussitôt des définitions \sref{IV.21.4.2} et \sref{IV.21.2.12}.
+\end{env}
+
+\begin{proposition}[21.4.8]
+\EGAReaderTarget{ega4.c04.prop.21-4-8}{IV.21.4.8}
+Soient $X$, $Y$ deux préschémas;
+$f:X\to Y$ un morphisme fidèlement plat.
+Alors, si un diviseur $D$ sur $Y$ est tel que $f^*(D)\geq0$ (l'existence de $f^*(D)$ résultant de \sref{IV.21.4.5}), on a $D\geq0$.
+En particulier, l'application $D\mapsto f^*(D)$ de $\operatorname{Div}(Y)$ dans $\operatorname{Div}(X)$ est injective.
+\end{proposition}
+
+\begin{proof}
+La question étant locale sur $Y$, on peut se borner au cas où $D=\operatorname{div}(w)$, avec $w=uv^{-1}$, $u$ et $v$ étant deux sections régulières de $\sh{O}_Y$ au-dessus de $Y$.
+Par hypothèse on a $u\sh{O}_X\subset v\sh{O}_X$, donc, pour tout $x\in X$, si l'on pose $y=f(x)$, on a $u_y\sh{O}_{X,x}\subset v_y\sh{O}_{X,x}$;
+on en conclut que $u_y\sh{O}_{Y,y}\subset v_y\sh{O}_{Y,y}$ en vertu de l'hypothèse que $\sh{O}_{X,x}$ est un $\sh{O}_{Y,y}$-module fidèlement plat et de Bourbaki, \emph{Alg. comm.}, chap.~I, \textsection~3, n\textsuperscript{o}~5, prop.~10,~(ii);
+d'où $u\sh{O}_Y\subset v\sh{O}_Y$, puisque $f$ est surjectif, et par suite $D\geq0$.
+\end{proof}
+
+\subsection{Images directes de diviseurs}
+\EGAReaderTarget{ega4.c04.subsec.21-5}{subsection:IV.21.5}
+\label{IV.21.5}
+
+\begin{env}[21.5.1]
+\label{IV.21.5.1}
+Soient $X$, $X'$ deux préschémas, $f:X'\to X$ un morphisme.
+Nous allons, dans ce numéro, donner des conditions suffisantes pour qu'on puisse associer à tout diviseur $D'$ sur $X'$ un diviseur $D$ sur $X$, \emph{image directe} de $D'$ par $f$.
+Nous nous bornerons au cas où $f$ est un morphisme \emph{fini} (pour des conditions plus générales, voir le chapitre de ce Traité consacré à la théorie des intersections).
+\end{env}
+
+\begin{lemma}[21.5.2]
+\label{IV.21.5.2}
+Soient $A$ un anneau, $E$ un $A$-module libre de rang fini.
+Pour qu'un endomorphisme $u$ de $E$ soit injectif, il faut et il suffit que $\det(u)$ soit un élément régulier de $A$.
+\end{lemma}
+
+\begin{proof}
+Cela est prouvé dans Bourbaki, \emph{Alg.}, chap.~III, 3\textsuperscript{e}~éd., \textsection~8, n\textsuperscript{o}~2, prop.~3.
+\end{proof}
+
+\begin{env}[21.5.3]
+\EGAReaderTarget{ega4.c04.statement.21-5-3}{IV.21.5.3}
+Supposons maintenant que le morphisme $f:X'\to X$ soit fini, et en outre que $f$ vérifie l'une des deux propriétés suivantes :
+\begin{enumerate}[label=\Roman*)]
+  \item $f$ est un morphisme fini \emph{localement libre}, autrement dit \sref{IV.18.2.7} le $\sh{O}_X$-Module quasi-cohérent de type fini $f_*(\sh{O}_{X'})$ est localement libre.
+  \item $X$ est un préschéma localement noethérien réduit, le $\sh{R}(X)$-Module $f_*(\sh{O}_{X'})\otimes_{\sh{O}_X}\sh{R}(X)$ est localement libre, et pour toute section $s'\in\Gamma(f^{-1}(U),\sh{O}_{X'})$ ($U$ ouvert
+  

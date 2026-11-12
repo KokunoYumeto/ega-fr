@@ -1,0 +1,88 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{162}
+en général, que la famille $(\varphi_\lambda)$ soit séparante. Par exemple,
+supposons que $A$ soit un anneau de valuation discrète, d'idéal maximal
+$\mathfrak m$, et considérons la famille des homomorphismes
+$\varphi_k:A\to A/\mathfrak m^k$, dont l'intersection des noyaux
+$\mathfrak m^k$ est réduite à 0~; cette famille n'est toutefois pas séparante,
+car les fibres de tous les $\mathfrak m^k$ au point générique $x$ de
+$X=\operatorname{Spec}(A)$ (qui est ouvert dans $X$) sont égales à
+$\mathcal O_x=k(x)$, corps des fractions de $A$, et leur intersection n'est
+donc pas réduite à 0.
+\end{env}
+
+\begin{env}[11.9.5]
+\label{IV.11.9.5-fr}
+Nous allons principalement nous occuper dans ce qui suit du problème du
+\emph{changement de base} pour les familles séparantes. Les notations étant
+celles de (11.9.1), considérons un morphisme $g:X'\to X$ et posons
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_X}\mathcal O_{X'}
+=g^*(\mathcal F)$, et, pour tout $\lambda$,
+$Z'_\lambda=Z_\lambda\times_X X'$, $f'_\lambda=f_\lambda\times 1$,
+$\mathcal G'_\lambda=\mathcal G_\lambda\otimes_{\mathcal O_{Z_\lambda}}
+\mathcal O_{Z'_\lambda}=(g'_\lambda)^*(\mathcal G_\lambda)$, où
+$g'_\lambda:Z'_\lambda\to Z_\lambda$ est la projection canonique. Pour tout
+$\lambda$, on désigne alors par
+$u'_\lambda:\mathcal F'\to(f'_\lambda)_*(\mathcal G'_\lambda)$
+l'homomorphisme obtenu comme suit~: soit
+\[
+\psi:(f_\lambda)_*(\mathcal G_\lambda)\longrightarrow
+(f_\lambda)_*((g'_\lambda)_*((g'_\lambda)^*(\mathcal G_\lambda)))
+=g_*((f'_\lambda)_*(\mathcal G'_\lambda))
+\]
+l'homomorphisme $(f_\lambda)_*(\rho_{\mathcal G_\lambda})$, où
+$\rho_{\mathcal G_\lambda}$ est l'homomorphisme canonique
+$(\mathbf 0_{\mathrm I},4.4.3.2)$ correspondant à $g'_\lambda$. Alors
+$u'_\lambda$ est défini comme le composé
+\[
+g^*(\mathcal F)\xrightarrow{g^*(u_\lambda)}
+g^*((f_\lambda)_*(\mathcal G_\lambda))
+\xrightarrow{g^*(\psi)}g^*g_*((f'_\lambda)_*(\mathcal G'_\lambda))
+\xrightarrow{\sigma}(f'_\lambda)_*(\mathcal G'_\lambda)
+\]
+où $\sigma=\sigma_{(f'_\lambda)_*(\mathcal G'_\lambda)}$ est
+l'homomorphisme canonique $(\mathbf 0_{\mathrm I},4.4.3.3)$ correspondant à
+$g$. On dira pour abréger que $u'_\lambda$ est \emph{déduit de $u_\lambda$
+par le changement de base} $g$. Lorsque $f_\lambda:Z_\lambda\to X$ est un
+morphisme \emph{affine}, on a
+$(f'_\lambda)_*(\mathcal G'_\lambda)=g^*((f_\lambda)_*(\mathcal G_\lambda))$,
+et dans ce cas on a donc simplement $u'_\lambda=g^*(u_\lambda)$.
+
+On peut aussi interpréter $u'_\lambda$ de la façon suivante~: il suffit de
+connaître la valeur de $u'_\lambda(t')$, lorsque $t'$ est une section de
+$\mathcal F'$ au-dessus d'un ouvert $U'$ de $X'$, du type particulier
+suivant~: $t'$ est la restriction à $U'$ de l'image canonique par
+$\Gamma(U,\mathcal F)\to\Gamma(g^{-1}(U),\mathcal F')$ d'une section $t$ de
+$\mathcal F$ au-dessus d'un ouvert $U$ de $X$ contenant $g(U')$ (ces sections
+engendrant en effet le $\mathcal O_{X'}$-Module $\mathcal F'$
+$(\mathbf 0_{\mathrm I},3.7.1)$). Considérons la section $u_\lambda(t)$ de
+$\mathcal G_\lambda$ au-dessus de $f_\lambda^{-1}(U)$, et son image canonique
+$t''$ par
+$\Gamma(f_\lambda^{-1}(U),\mathcal G_\lambda)\to
+\Gamma((g'_\lambda)^{-1}(f_\lambda^{-1}(U)),\mathcal G'_\lambda)$~; alors
+$u'_\lambda(t')$ est la restriction de $t''$ à $(f'_\lambda)^{-1}(U')$.
+Considérons en particulier le cas où $Z_\lambda$ est un sous-préschéma induit
+sur un ouvert de $X$, $\mathcal G_\lambda=j_\lambda^*(\mathcal F)$, où
+$j_\lambda:Z_\lambda\to X$ est l'injection canonique, et où $u_\lambda$ est
+l'homomorphisme canonique
+$\rho_{\mathcal F}:\mathcal F\to(j_\lambda)_*(j_\lambda^*(\mathcal F))
+=(j_\lambda)_*(\mathcal G_\lambda)$ $(\mathbf 0_{\mathrm I},4.4.3.2)$
+correspondant à $j_\lambda$. Alors $Z'_\lambda$ est induit sur un ouvert de
+$X'$, et l'interprétation précédente montre que $u'_\lambda$ n'est autre que
+l'homomorphisme canonique
+$\rho_{\mathcal F'}:\mathcal F'\to
+(j'_\lambda)_*((j'_\lambda)^*(\mathcal F'))
+=(j'_\lambda)_*(\mathcal G'_\lambda)$ correspondant à l'injection canonique
+$j'_\lambda:Z'_\lambda\to X'$.
+\end{env}
+
+\begin{env}[11.9.6]
+\label{IV.11.9.6-fr}
+Sous les conditions de (11.9.5), supposons que $X$ et $X'$ soient affines, et
+que l'on veuille prouver que pour toute section $t'$ de $\mathcal F'$ au-dessus
+de $X'$, dont les images par tous les $u'_\lambda$ sont nulles, alors $t'$ est
+elle-même nulle. Alors, on peut aussi se borner au cas où $Z_\lambda=X$ pour
+tout $\lambda\in L$. En effet, avec les notations de (11.9.3) et de (11.9.5),
+si l'on pose $Y'_{\lambda\mu}=(g'_\lambda)^{-1}(Y_{\lambda\mu})$,
+l'homomorphisme $v'_{\lambda\mu}$ déduit de $v_{\lambda\mu}$ par le changement
+de base $g$ n'est autre que l'homomorphisme canonique

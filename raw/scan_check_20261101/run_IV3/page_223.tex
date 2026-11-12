@@ -1,0 +1,84 @@
+% from ega4-14-fr.tex
+\oldpage[IV-3]{223}
+
+\begin{proof}
+C'est un cas particulier de (\textbf{I}, 3.3.11), où l'on remplace le diagramme par
+\[
+  \xymatrix{
+    X \ar[r]^{p_1} \ar[d]_{f} & X\times_S Y \ar[r]^{s'} \ar[d]^{p_2} & X \ar[d]^{f} \\
+    S \ar[r] & Y \ar[r]_{s} & S
+  }
+\]
+\end{proof}
+
+Appliquant ce lemme en y remplaçant $S$, $Y$ par $Y$, $Y'$, on voit que l'on peut
+écrire $f=(f')_{(Y)}$ pour le changement de base $s:Y\to Y'$, donc $f$ est affine
+puisque $f'$ l'est. C.Q.F.D.
+
+Une variante de ce critère est la suivante~:
+
+\begin{corollary}[14.5.12]
+\label{IV.14.5.12-fr}
+Avec les notations et hypothèses générales de (14.5.11), soit $\mathcal L$ un
+$\mathcal O_X$-Module inversible. Supposons qu'il existe une partie fermée $Z$ de
+$X$, propre sur $Y$ (\textbf{II}, 5.4.10) et telle que le préschéma induit par $X$
+sur l'ouvert $X-Z$ soit normal. Alors, pour que $\mathcal L$ soit ample relativement
+à $f$, il faut et il suffit que
+$\mathcal L'=\mathcal L\otimes_{\mathcal O_Y}\mathcal O_{Y'}$ soit ample
+relativement à $f'$.
+\end{corollary}
+
+Gardons les notations de la démonstration de (14.5.11). Posons
+$\mathcal L_1=\mathcal L\otimes_{\mathcal O_Y}\mathcal O_{Y_1}$~; il suffira de
+prouver que $\mathcal L_1$ est ample relativement à $f\circ p$, en vertu de
+(\textbf{III}, 2.6.2)~; mais $f\circ p=h\circ f_1$, et, compte tenu de
+(\textbf{II}, 4.6.13, (v)), il suffira de prouver que $\mathcal L_1$ est ample
+relativement à $f_1$. La question étant locale sur $Y_1$, on peut de nouveau
+supposer que $g'$ admet une section $s$~; si
+$\mathcal L'_1=\mathcal L'\otimes_{\mathcal O_{Y'}}\mathcal O_{Y'_1}$, on peut
+alors écrire, en vertu du lemme (14.5.11.1),
+$\mathcal L_1=\mathcal L'_1\otimes_{\mathcal O_{Y'_1}}\mathcal O_{Y_1}$ pour le
+changement de base $s:Y_1\to Y'_1$~; la conclusion résulte donc de deux
+applications de (\textbf{II}, 4.6.13, (iii)).
+
+% IV3_B31_P223_END_BEFORE_SECTION_15
+
+% (continued in ega4-15-fr.tex, before its first page marker)
+\section{Étude des fibres d'un morphisme universellement ouvert}
+\label{section:IV.15-fr}
+
+\subsection{Multiplicités des fibres d'un morphisme universellement ouvert}
+\label{subsection:IV.15.1-fr}
+
+\begin{proposition}[15.1.1]
+\label{IV.15.1.1-fr}
+Soient $Y$ un préschéma irréductible localement noethérien, de point générique
+$\eta$, $f:X\to Y$ un morphisme localement de type fini, $y$ un point de $Y$,
+$\mathcal F$ un $\mathcal O_X$-Module cohérent~; on pose
+$\mathcal F_y=\mathcal F\otimes_{\mathcal O_Y}\mathbf{k}(y)$ (faisceau de modules
+sur la fibre $f^{-1}(y)$). Soit $z$ le point générique d'une composante
+irréductible de $\operatorname{Supp}(\mathcal F_y)$, et soient $X_i$
+($1\leqslant i\leqslant n$) ceux des sous-préschémas fermés réduits de $X$ dont
+l'espace sous-jacent est une composante irréductible de
+$\operatorname{Supp}(\mathcal F)$ contenant $z$, et qui sont tels que la
+restriction $X_i\to Y$ de $f$ soit un morphisme universellement ouvert au point
+$z$~; soit $z_i$ le point générique de $X_i$ ($1\leqslant i\leqslant n$). Si
+$\lambda_x(\mathcal F_y)$ (resp. $\lambda_t(\mathcal F_\eta)$) désigne la longueur
+géométrique de $\mathcal F_y$ en un point $x\in f^{-1}(y)$ (resp. celle de
+$\mathcal F_\eta$ en un point $t\in f^{-1}(\eta)$) (4.7.5), on a
+\[
+\tag{15.1.1.1}
+\label{IV.15.1.1.1-fr}
+  \lambda_z(\mathcal F_y)\geqslant
+  \sum_{i=1}^{n}\lambda_{z_i}(\mathcal F_\eta).
+\]
+Si de plus on suppose l'anneau $\mathcal O_y$ régulier, on a
+\[
+\tag{15.1.1.2}
+\label{IV.15.1.1.2-fr}
+  \operatorname{long}((\mathcal F_y)_z)\geqslant
+  \sum_{i=1}^{n}\operatorname{long}((\mathcal F_\eta)_{z_i}).
+\]
+\end{proposition}
+
+\begin{proof}

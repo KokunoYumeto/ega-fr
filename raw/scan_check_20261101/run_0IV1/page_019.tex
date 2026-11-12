@@ -1,0 +1,98 @@
+% from ega0-15-fr.tex
+\oldpage[0\textsubscript{IV-1}]{19}
+Comme $N$ est un $A$-module plat, il résulte de l'exactitude de la suite
+$0\to R\to M\to N\to0$ que la suite
+\[
+  0\longrightarrow R\otimes_A k\longrightarrow M\otimes_A k
+  \longrightarrow N\otimes_A k\longrightarrow0
+\]
+est exacte ($0_{\mathrm I}$, 6.1.2)~; on a donc
+$R\otimes_A k=\sum_i g_i(M\otimes_A k)$. Comme $M$ est un $B$-module de type
+fini et que $B$ est noethérien, $R$ est aussi un $B$-module de type fini,
+d'où $R=\sum_i f_iM$ en vertu du lemme de Nakayama, les $f_i$ appartenant à
+l'idéal maximal de $B$.
+\end{proof}
+
+\begin{lemma}[15.1.18]
+\label{0.15.1.18-fr}
+Soient $A$ un anneau, $M$ un $A$-module muni d'une filtration séparée et
+exhaustive $(M_k)_{k\geq0}$, et soit $f\in A$ un élément
+$\gr_\bullet(M)$-régulier. Alors~:
+\begin{enumerate}
+  \item[(i)] $f$ est $M$-régulier.
+  \item[(ii)] Pour tout $k$, on a $M_k\cap fM=fM_k$, et l'image canonique
+  $M'_k$ de $M_k$ dans $M'=M/fM$ est donc canoniquement isomorphe à
+  $M_k/fM_k$.
+  \item[(iii)] La suite
+  \[
+    0\longrightarrow M_{k+1}/fM_{k+1}\longrightarrow M_k/fM_k
+    \longrightarrow\gr_k(M)/f\cdot\gr_k(M)\longrightarrow0
+  \]
+  est exacte, et si l'on munit $M'$ de la filtration quotient $(M'_k)$,
+  $\gr_\bullet(M')$ est donc canoniquement isomorphe à
+  $\gr_\bullet(M)/f\cdot\gr_\bullet(M)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+L'assertion (i) résulte de l'hypothèse sur $f$ et de Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~2, no~8, cor.~1 du th.~1. Comme
+$\gr_\bullet(M/M_k)$ est facteur direct de $\gr_\bullet(M)$, $f$ est
+$\gr_\bullet(M/M_k)$-régulier pour tout $k$, donc $(M/M_k)$-régulier par
+(i), ce qui établit (ii). Pour prouver (iii), il suffit de voir que
+l'application $M_{k+1}/fM_{k+1}\to M_k/fM_k$ est injective~: or, si
+$x\in M_{k+1}$ est tel que $x\in fM_k$, il résulte de (ii) que
+$x\in fM_{k+1}$, ce qui achève de prouver le lemme.
+\end{proof}
+
+\begin{proposition}[15.1.19]
+\label{0.15.1.19-fr}
+Soient $A$ un anneau, $M$ un $A$-module muni d'une filtration
+$(M_k)_{k\geq0}$ telle que $M_0=M$, $(f_i)_{1\leq i\leq n}$ une suite
+$\gr_\bullet(M)$-régulière d'éléments de $A$. Supposons en outre que pour
+$0\leq i\leq n-1$, la filtration quotient de $(M_k)$ sur
+\[
+  M/\left(\sum_{j\leq i}f_jM\right)
+\]
+soit séparée. Alors la suite $(f_i)$ est $M$-régulière, et si l'on pose
+\[
+  M'=M/\left(\sum_{i\leq n}f_iM\right)
+\]
+et que l'on munit $M'$ de la filtration quotient de $(M_k)$,
+$\gr_\bullet(M')$ est canoniquement isomorphe à
+\[
+  \gr_\bullet(M)/
+  \left(\sum_{i\leq n}f_i\gr_\bullet(M)\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Pour $n=1$, la proposition résulte du lemme (15.1.18). Raisonnons par
+récurrence sur $n$, en posant
+\[
+  N=M/\left(\sum_{i\leq n-1}f_iM\right)
+\]
+et en désignant par $(N_k)$ la filtration quotient de $(M_k)$ sur $N$, qui
+est séparée par hypothèse~; en outre $\gr_\bullet(N)$ est isomorphe à
+\[
+  \gr_\bullet(M)/
+  \left(\sum_{i\leq n-1}f_i\gr_\bullet(M)\right).
+\]
+Par hypothèse $f_n$ est donc $\gr_\bullet(N)$-régulier, et il résulte donc du
+lemme (15.1.18) appliqué à $N$ que $f_n$ est $N$-régulier et
+$\gr_\bullet(M')$ isomorphe à
+$\gr_\bullet(N)/f_n\gr_\bullet(N)$, ce qui démontre la proposition.
+\end{proof}
+
+La proposition (15.1.19) s'appliquera en particulier pour les filtrations
+vérifiant l'une ou l'autre hypothèse suivante~:
+\begin{enumerate}
+  \item[$1^\circ$] La filtration $(M_k)$ est finie et séparée (puisque cela
+  entraîne $M_k=0$ pour $k$ assez grand)~;
+  \item[$2^\circ$] $A$ est un anneau noethérien, $\mathfrak{J}$ un idéal
+  contenu dans le radical de $A$, $M$ un $A$-module de type fini et $(M_k)$
+  la filtration $\mathfrak{J}$-préadique ($0_{\mathrm I}$, 7.3.5).
+\end{enumerate}
+
+\begin{corollary}[15.1.20]
+\label{0.15.1.20-fr}

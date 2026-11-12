@@ -1,0 +1,95 @@
+% from ega3-1-fr.tex
+\oldpage[III]{131}
+
+Soit $Y'$ le $Y$-schéma fini au-dessus de $Y$ tel que
+$\mathcal A(Y')=\mathcal A(X)$, qui est déterminé à un $Y$-isomorphisme
+près (II, 1.3.1 et 6.1.3)~; si $f'=\mathcal A(e)$ est le $Y$-morphisme
+$X\to Y'$ déduit de l'isomorphisme identique
+$e:\mathcal A(Y')\to\mathcal A(X)$ (II, 1.2.7), $f'$ est propre,
+$f'_*(\mathcal O_X)$ est isomorphe à $\mathcal O_{Y'}$, et les fibres
+$f'^{-1}(y')$ du morphisme $f'$ sont connexes et non vides pour tout
+$y'\in Y'$.
+\end{theorem}
+
+\begin{proof}
+Soit $g:Y'\to Y$ le morphisme structural. Pour prouver que l'homomorphisme
+$\theta:\mathcal O_{Y'}\to f'_*(\mathcal O_X)$ entrant dans la définition
+du morphisme $f'$ est bijectif, il suffit, puisque $Y'$ est affine sur $Y$,
+de prouver que
+\[
+g_*(\theta):g_*(\mathcal O_{Y'})\longrightarrow
+g_*(f'_*(\mathcal O_X))=f_*(\mathcal O_X)
+\]
+est l'identité (II, 1.4.2)~; mais cela résulte des définitions puisque
+$g_*(\mathcal O_{Y'})=\mathcal A(Y')$ et
+$f_*(\mathcal O_X)=\mathcal A(X)$. Le fait que $\mathcal A(X)$ est
+cohérent est un cas particulier du th. de finitude
+(\hyperref[III.3.2.1-fr]{3.2.1}). Comme $f$ est propre et $g$ séparé,
+$f'$ est propre (II, 5.4.3, (i))~; pour terminer la démonstration de
+(\hyperref[III.4.3.1-fr]{4.3.1}), il suffit donc d'en prouver le
+\end{proof}
+
+\begin{corollary}[4.3.2]
+\label{III.4.3.2-fr}
+Sous les hypothèses de (\hyperref[III.4.3.1-fr]{4.3.1}), supposons de plus
+que $f_*(\mathcal O_X)$ soit isomorphe à $\mathcal O_Y$. Alors les fibres
+$f^{-1}(y)$ de $f$ sont connexes et non vides pour tout $y\in Y$.
+\end{corollary}
+
+\begin{proof}
+L'hypothèse que $f_*(\mathcal O_X)$ est isomorphe à $\mathcal O_Y$
+entraîne déjà que $f$ est dominant, donc surjectif puisque $f$ est une
+application fermée. On peut se ramener, comme dans
+(\hyperref[III.4.2.1-fr]{4.2.1}), au cas où $y$ est fermé dans $Y$~;
+$f^{-1}(y)$ étant un espace noethérien, a un nombre fini de composantes
+connexes, et c'est l'espace sous-jacent du complété $\widehat X$ le long de
+$f^{-1}(y)$. Si $Z_i$ ($1\leq i\leq n$) sont ces composantes connexes, il
+est clair que $\Gamma(\widehat X,\mathcal O_{\widehat X})$ est composé
+direct des anneaux $\Gamma(Z_i,\mathcal O_{\widehat X})$, et chacun de ces
+derniers n'est pas réduit à $0$, puisque la section unité est distincte de
+$0$ en chaque point de $\widehat X$. Or, si on applique
+(\hyperref[III.4.1.5-fr]{4.1.5}) à $\mathcal F=\mathcal O_X$, dont le
+complété le long de $f^{-1}(y)$ est $\mathcal O_{\widehat X}$, on voit que
+$\Gamma(\widehat X,\mathcal O_{\widehat X})$ est isomorphe au séparé
+complété $\mathfrak m_y$-adique $\widehat{\mathcal O}_y$ de l'anneau local
+$\mathcal O_y$~; c'est donc un anneau local qui ne peut être composé
+direct de plusieurs anneaux non réduits à $0$ (sans quoi il aurait
+plusieurs idéaux maximaux distincts). On a donc $n=1$, ce qui démontre le
+corollaire.
+\end{proof}
+
+\begin{corollary}[4.3.3]
+\label{III.4.3.3-fr}
+Sous les hypothèses de (\hyperref[III.4.3.1-fr]{4.3.1}), pour tout $y\in Y$,
+l'ensemble des composantes connexes de la fibre $f^{-1}(y)$ est en
+correspondance biunivoque avec l'ensemble fini des points de la fibre
+$g^{-1}(y)$, où $g:Y'\to Y$ est le morphisme structural (autrement dit,
+l'ensemble des idéaux maximaux de $(f_*(\mathcal O_X))_y$).
+\end{corollary}
+
+\begin{proof}
+Puisque $Y'$ est fini sur $Y$, on sait en effet que $g^{-1}(y)$ est un
+espace fini discret (II, 6.1.7). Comme
+$f^{-1}(y)=f'^{-1}(g^{-1}(y))$, le corollaire résulte de cette remarque et
+de (\hyperref[III.4.3.1-fr]{4.3.1}).
+\end{proof}
+
+On a ainsi une interprétation remarquable du $Y$-préschéma $Y'$ défini
+dans (\hyperref[III.4.3.1-fr]{4.3.1}). La factorisation $f=g\circ f'$ du
+morphisme propre $f$ est analogue à la factorisation obtenue par K.~Stein
+pour les applications holomorphes d'espaces analytiques, et nous
+l'appellerons par la suite la \emph{factorisation de Stein} de $f$.
+
+\begin{remark}[4.3.4]
+\label{III.4.3.4-fr}
+Soit $k$ une extension du corps $k(y)$~: si le préschéma
+\[
+f^{-1}(y)\otimes_{k(y)}k=X\times_Y\operatorname{Spec}(k)
+\]
+est connexe, il en est de même de $f^{-1}(y)$, qui en est l'image par un
+morphisme de projection (I, 3.4.7). Nous dirons que, pour un morphisme
+$f:X\to Y$ de préschémas et un point $y\in Y$, la fibre $f^{-1}(y)$ est
+\emph{géométriquement connexe}, si pour toute extension $k$ de $k(y)$, le
+préschéma
+$f^{-1}(y)\otimes_{k(y)}k=X\times_Y\operatorname{Spec}(k)$ est connexe.
+

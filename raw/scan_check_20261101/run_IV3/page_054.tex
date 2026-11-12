@@ -1,0 +1,79 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{54}
+Reste à prouver que (8.14.2.4) est surjective. Soit donc $v:Z\to V$ un
+$S$-morphisme~; par hypothèse il existe un $\lambda$ et un $S$-morphisme
+$w_\lambda:Z_\lambda\to X$ tels que $j\circ v$ se factorise en
+\[
+Z\xrightarrow{u_\lambda}Z_\lambda\xrightarrow{w_\lambda}X,
+\]
+et tout revient à prouver qu'il existe $\mu\geqslant\lambda$ tel que le
+morphisme
+\[
+Z_\mu\xrightarrow{u_{\lambda\mu}}Z_\lambda
+\xrightarrow{w_\lambda}X
+\]
+(où $u_{\lambda\mu}$ est le morphisme de transition) se factorise en
+\[
+Z_\mu\xrightarrow{v_\mu}V\xrightarrow{j}X.
+\]
+Posons, pour tout $\mu\geqslant\lambda$,
+$U_\mu=u_{\lambda\mu}^{-1}(w_\lambda^{-1}(V))$. On a
+\[
+u_\mu^{-1}(U_\mu)=u_\lambda^{-1}(U_\lambda)
+=u_\lambda^{-1}(w_\lambda^{-1}(V))=v^{-1}(V)=Z.
+\]
+Comme les $Z_\lambda$ sont quasi-compacts et que les $U_\mu$, étant ouverts,
+sont ind-constructibles (1.9.6), on déduit de (8.3.4) qu'il existe
+$\mu\geqslant\lambda$ tel que $U_\mu=Z_\mu$. C.Q.F.D.
+
+\begin{remark}[8.14.3]
+\label{IV.8.14.3-fr}
+Le fait que l'application (8.14.2.1) soit injective lorsque $f$ est localement
+de type fini (8.8.2, (i)) amène naturellement à se demander si ce résultat
+admet aussi une réciproque. Il n'en est rien, même lorsque $S$ et $X$ sont
+affines, car il existe des monomorphismes $X\to S$ qui ne sont pas de type fini
+(I, 2.4.2), et qui mettent donc en défaut cette conjecture.
+\end{remark}
+
+% (continued in ega4-9-fr.tex, before its first page marker)
+\section{Propriétés constructibles}
+\label{section:IV.9-fr}
+
+Soient $S$ un préschéma, $f:X\to S$ un morphisme de
+\emph{présentation finie} (1.6.1), $\mathcal F$ un $\mathcal O_X$-Module
+quasi-cohérent de \emph{présentation finie}. On se propose dans ce paragraphe
+de donner des critères assurant, par exemple, que l'ensemble des $s\in S$ tels
+que le $k(s)$-préschéma
+$X_s=f^{-1}(s)=X\times_S\operatorname{Spec}(k(s))$ a une certaine propriété,
+ou tels que le $\mathcal O_{X_s}$-Module
+$\mathcal F_s=\mathcal F\otimes_{\mathcal O_X}k(s)$ a une certaine propriété,
+est \emph{localement constructible}, ou tout au moins
+\emph{ind-constructible} (1.9.4)~; on verra que c'est le cas pour la plupart
+des propriétés qui s'introduisent en Géométrie algébrique. En supposant
+seulement $f$ \emph{localement de présentation finie}, on donnera aussi (9.9)
+des critères pour que l'ensemble des points $x\in X$ où la fibre $X_{f(x)}$
+(ou le $\mathcal O_{X_{f(x)}}$-Module $\mathcal F_{f(x)}$) a une certaine
+propriété, soit \emph{localement constructible}. On verra au \S~12 que ces
+résultats, joints à l'hypothèse supplémentaire que $f$ est \emph{plat}
+(resp. \emph{propre et plat}), permettent de prouver que les ensembles
+considérés dans $X$ (resp. dans $S$) sont même \emph{ouverts} dans de nombreux
+cas.
+
+\subsection{Le principe de l'extension finie}
+\label{subsection:IV.9.1-fr}
+
+\begin{proposition}[9.1.1]
+\label{IV.9.1.1-fr}
+\textnormal{(Principe de l'extension finie).} Soient $k$ un corps,
+$\mathcal C$ un ensemble d'extensions de $k$. On suppose vérifiées les
+conditions suivantes~:
+\begin{enumerate}[label=(\roman*)]
+  \item Si $K\in\mathcal C$ et s'il existe un $k$-homomorphisme $K\to K'$
+  (où $K'$ appartient à l'univers où l'on se place), alors
+  $K'\in\mathcal C$.
+  \item Si $K\in\mathcal C$, il existe une sous-extension $K'$ de $K$, de
+  type fini sur $k$, telle que $K'\in\mathcal C$.
+  \item Si $K\in\mathcal C$ est le corps de fractions d'une $k$-algèbre
+  intègre de type fini $A$, il existe $f\in A-\{0\}$ tel que pour tout idéal
+  maximal $\mathfrak m$ de $A$ on ait $A_f/\mathfrak m\in\mathcal C$.
+\end{enumerate}

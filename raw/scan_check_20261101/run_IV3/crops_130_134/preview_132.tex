@@ -1,0 +1,77 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{132}
+pour $\lambda\leq\mu$ et les homomorphismes $v_\lambda$ sont \emph{surjectifs}.
+Pour un $\lambda$ fixé, considérons les sous-$C$-modules
+$\operatorname{Ker}(v_{\mu\lambda})=N'_\mu$ de $N_\lambda\otimes_{A_\lambda}A$~; par
+définition de la limite inductive, ils forment une famille filtrante croissante
+de sous-$C$-modules de $\operatorname{Ker}(v_\lambda)$, dont la réunion est
+$\operatorname{Ker}(v_\lambda)$~; mais on a vu dans V) que $N$ est un $C$-module de
+présentation finie, donc (Bourbaki, \emph{Alg. comm.}, chap.~I, \S~2,
+n\textsuperscript{o}~8, lemme 9) $\operatorname{Ker}(v_\lambda)$ est un $C$-module \emph{de type fini}~; il
+existe par suite un indice $\mu\geq\lambda$ tel que
+$N'_\mu=\operatorname{Ker}(v_\lambda)$, ce qui signifie (vu le fait que $v_{\mu\lambda}$ est
+surjectif) que $v_\mu$ est \emph{injectif}~; comme il est surjectif, cela
+prouve (11.2.9.9).
+
+Quitte à remplacer $A_0$ et $M_0$ par $A_\lambda$ et $M_\lambda$ pour
+$\lambda$ assez grand, on peut donc supposer que l'homomorphisme canonique
+$v_\lambda$ est bijectif pour \emph{tout} $\lambda$. Posons alors
+$P_\lambda=N_0\otimes_{C_0}C_\lambda=N_0\otimes_{A_0}A_\lambda$, de sorte que
+$N=\varinjlim P_\lambda$. Comme $C_0$ est une $A_0$-algèbre de présentation
+finie et $P_0$ un $C_0$-module de présentation finie, on peut appliquer à
+$C$ et $N$ le résultat de (11.2.6.1) et on voit donc qu'il existe un indice
+$\lambda$ tel que, pour $\mu\geq\lambda$, $P_\mu$ soit un $A_\mu$-module
+\emph{plat}. Or, pour $\mu\geq\lambda$, on a un diagramme commutatif
+\[
+\xymatrix{
+P_\mu \ar[r] \ar[d]_{w_\mu} & N \ar@{=}[d] \\
+N_\mu \ar[r] & N
+}
+\]
+où il résulte des définitions que $w_\mu$ est \emph{surjectif}. Comme, en
+vertu de III), les homomorphismes $A_\mu\to A$ sont injectifs et que $P_\mu$
+est un $A_\mu$-module \emph{plat}, l'homomorphisme canonique
+$P_\mu\to N=P_\mu\otimes_{A_\mu}A$ est \emph{injectif}~; on conclut donc du
+diagramme commutatif précédent que $w_\mu$ est aussi \emph{injectif}, donc bijectif,
+et par suite $N_\mu$ est un $A_\mu$-module \emph{plat} pour $\mu\geq\lambda$, ce qui
+achève de prouver (11.2.9).
+\end{proof}
+
+\begin{remark}[11.2.10]
+\label{IV.11.2.10-fr}
+Nous ignorons si la généralisation de (11.2.6, (i)) analogue au th. de Raynaud,
+est valable.
+\end{remark}
+
+\subsection{Application à l'élimination d'hypothèses noethériennes.}
+\label{subsection:IV.11.3-fr}
+\label{IV.11.3-fr}
+
+\begin{theorem}[11.3.1]
+\label{IV.11.3.1-fr}
+Soient $f:X\to Y$ un morphisme localement de présentation finie,
+$\mathcal F$ un $\mathcal O_X$-Module quasi-cohérent de présentation finie.
+Alors l'ensemble $U$ des points $x\in X$ tels que $\mathcal F$ soit $f$-plat
+au point $x$ est ouvert dans $X$. Si de plus $\operatorname{Supp}(\mathcal F)=X$,
+$f|U$ est un morphisme ouvert.
+\end{theorem}
+
+\begin{proof}
+La seconde assertion a déjà été démontrée (2.4.6) et n'a été insérée que pour
+mémoire.
+
+La question étant locale sur $X$ et $Y$, on peut supposer que $X$ et $Y$ sont
+affines, et que $f$ est un morphisme de présentation finie. Soit $x\in X$ un
+point tel que $\mathcal F$ soit $f$-plat au point $x$. Appliquant (11.2.7), on
+peut supposer que
+$X=X_0\times_{Y_0}Y$, $f=f_0\times1$,
+$\mathcal F=\mathcal F_0\otimes_{\mathcal O_{Y_0}}\mathcal O_Y$,
+où $Y_0$ est noethérien, $f_0:X_0\to Y_0$ un morphisme de type fini,
+$\mathcal F_0$ un $\mathcal O_{X_0}$-Module cohérent~; en outre, si $x_0$ est la
+projection canonique de $x$ dans $X_0$, on peut supposer que $\mathcal F_0$ est
+$f_0$-plat au point $x_0$. Alors, en vertu de (11.1.1), l'ensemble $U_0$ des
+points de $X_0$ où $\mathcal F_0$ est $f_0$-plat est un voisinage de $x_0$~;
+donc $\mathcal F$ est $f$-plat aux points de l'image réciproque de $U_0$ dans
+$X$ (2.1.4), et cela prouve que $U$ est un voisinage de $x$.
+\end{proof}
+

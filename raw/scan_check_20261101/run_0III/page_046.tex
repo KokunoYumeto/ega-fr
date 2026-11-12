@@ -1,0 +1,113 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{46}
+pour $(\sigma,\tau)\leq(\sigma',\tau')$. Alors on vérifie aussitôt que
+\[
+\mathrm C^\bullet(A,B;\Gamma^\bullet)
+=\bigl(\mathrm C^h(A,B;\Gamma^k)\bigr)_{(h,k)\in\mathbb Z\times\mathbb Z}
+\]
+est un bicomplexe de groupes abéliens, et
+\[
+\mathrm L^\bullet(A,B;\Gamma^\bullet)
+=\bigl(\mathrm L^h(A,B;\Gamma^k)\bigr)
+\]
+en est un sous-bicomplexe.
+\end{env}
+
+\begin{proposition}[11.8.9]
+\label{0.11.8.9-fr}
+\emph{L'injection canonique
+\[
+\mathrm L^\bullet(A,B;\Gamma^\bullet)\longrightarrow
+\mathrm C^\bullet(A,B;\Gamma^\bullet)
+\]
+définit un isomorphisme pour la cohomologie de ces deux bicomplexes.}
+\end{proposition}
+
+\begin{proof}
+Posons $\mathrm C^{\bullet\bullet}=
+\mathrm C^\bullet(A,B;\Gamma^\bullet)$ et
+$\mathrm L^{\bullet\bullet}=
+\mathrm L^\bullet(A,B;\Gamma^\bullet)$ pour simplifier, et notons que
+puisque $\mathrm C^{hk}=\mathrm L^{hk}=0$ pour $h<0$, les secondes suites
+spectrales de ces bicomplexes sont régulières
+(\hyperref[0.11.3.3-fr]{11.3.3}); l'homomorphisme
+$\mathrm L^{\bullet\bullet}\to\mathrm C^{\bullet\bullet}$ fournit donc un
+morphisme de suites spectrales
+\[
+{}''E(\mathrm L^{\bullet\bullet})\longrightarrow
+{}''E(\mathrm C^{\bullet\bullet})
+\]
+qui, pour les termes $E_2$, se réduit à
+\[
+\label{0.11.8.9.1-fr}
+\tag{11.8.9.1}
+H^p_{\mathrm{II}}(H^q_{\mathrm I}(\mathrm L^{\bullet\bullet}))
+\longrightarrow
+H^p_{\mathrm{II}}(H^q_{\mathrm I}(\mathrm C^{\bullet\bullet})).
+\]
+Mais pour tout $k\in\mathbb Z$, il résulte de
+(\hyperref[0.11.8.3-fr]{11.8.3}) que l'homomorphisme
+$H^q_{\mathrm I}(\mathrm L^{\bullet,k})\to
+H^q_{\mathrm I}(\mathrm C^{\bullet,k})$ est bijectif; la conclusion résulte
+donc de (\hyperref[0.11.1.5-fr]{11.1.5}).
+\end{proof}
+
+\begin{env}[11.8.10]
+\label{0.11.8.10-fr}
+De même, avec les notations de (\hyperref[0.11.8.6-fr]{11.8.6}), on a des
+homomorphismes canoniques de bicomplexes
+\[
+\mathrm C^\bullet(A,B;\Gamma^\bullet)\longrightarrow
+\mathrm P^\bullet(A,B;\Gamma^\bullet)
+\]
+(avec des notations évidentes), et le même raisonnement que dans
+(\hyperref[0.11.8.9-fr]{11.8.9}), basé cette fois sur
+(\hyperref[0.11.8.6-fr]{11.8.6}), montre que cet homomorphisme donne encore
+un isomorphisme en cohomologie.
+\end{env}
+
+\subsection{Un lemme sur les complexes de type fini}
+\label{subsection:0.11.9-fr}
+
+\begin{proposition}[11.9.1]
+\label{0.11.9.1-fr}
+Soient $\mathcal C$ une catégorie abélienne, $K'$ et $K''$ des parties de
+l'ensemble des objets de $\mathcal C$, telles que $K''\subset K'$, et
+vérifiant les conditions suivantes :
+\begin{enumerate}
+\item[{\rm(i)}] \emph{Pour tout objet $A'\in K'$ et tout épimorphisme
+$u:A\to A'$ dans $\mathcal C$, il existe un objet $B\in K''$ et un morphisme
+$v:B\to A$ tels que $u\circ v$ soit un épimorphisme.}
+\item[{\rm(ii)}] \emph{Pour tout couple d'objets $A\in K'$, $B\in K'$ et
+tout épimorphisme $u:A\to B$, $\operatorname{Ker}(u)$ appartient à $K'$.}
+\item[{\rm(iii)}] \emph{Le produit de deux objets de $K''$ appartient à
+$K''$.}
+\end{enumerate}
+\emph{Soit $P_\bullet=(P_i)_{i\in\mathbb Z}$ un complexe dans $\mathcal C$,
+tel que $H_i(P_\bullet)\in K'$ pour tout $i$, et qu'il existe $d$ tel que
+$H_i(P_\bullet)=0$ pour $i<d$. Alors il existe un complexe
+$Q_\bullet=(Q_i)_{i\in\mathbb Z}$ dans $\mathcal C$, tel que $Q_i\in K''$
+pour tout $i$ et $Q_i=0$ pour $i<d$, et un morphisme
+$u:Q_\bullet\to P_\bullet$ de complexes tel que le morphisme correspondant
+$H_\bullet(Q_\bullet)\to H_\bullet(P_\bullet)$ soit un isomorphisme.}
+\end{proposition}
+
+\begin{proof}
+Démontrons d'abord la conséquence suivante de la propriété (i) :
+
+\emph{(i bis) Soient $u:C\to B$ un épimorphisme dans $\mathcal C$, $A$ un
+objet de $K'$, $v:A\to B$ un morphisme dans $\mathcal C$; il existe alors un
+objet $D\in K''$, un épimorphisme $u':D\to A$ et un morphisme $v':D\to C$
+tels que le diagramme}
+\[
+\xymatrix{
+D\ar[r]^{u'}\ar[d]_{v'} & A\ar[d]^{v}\\
+C\ar[r]_{u} & B
+}
+\tag{11.9.1.1}\label{0.11.9.1.1-fr}
+\]
+\emph{soit commutatif.}
+
+Considérons en effet le produit fibré $C\times_B A$ dans $\mathcal C$ et les
+projections canoniques $p:C\times_B A\to C$, $q:C\times_B A\to A$, rendant
+commutatif le diagramme

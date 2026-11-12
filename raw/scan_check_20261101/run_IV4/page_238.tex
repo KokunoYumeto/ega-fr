@@ -1,0 +1,36 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{238}
+application canonique de restriction $\operatorname{Ps.hom}_S(X,Y)^f\to\operatorname{Ps.hom}_S(V,Y)^{f^V}$, ce qui permet de définir un \emph{préfaisceau} d'ensembles $V\mapsto\operatorname{Ps.hom}_S(V,Y)^{f^V}$ sur $X$, sous-préfaisceau de $V\mapsto\operatorname{Ps.hom}_S(V,Y)$, d'où un faisceau d'ensembles associé que l'on note $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f$.
+En outre, pour tout ouvert $V$ de $X$, on a une application $\omega\mapsto\omega\circ f^V$ de $\operatorname{Ps.hom}_S(V,Y)^{f^V}$ dans $\operatorname{Ps.hom}_S(f^{-1}(V),Y)$, qui définit donc un $f$-morphisme de faisceaux d'ensembles
+\[
+  \mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f\to\mathscr{P}\!s.\!\operatorname{hom}_S(X',Y).
+\]
+\end{env}
+
+\begin{env}[20.3.3]
+\label{IV.20.3.3}
+Soit maintenant $f':X''\to X'$ un $S$-morphisme tel que l'ouvert $f'^{-1}(f^{-1}(\operatorname{dom}_S(\omega)))$ soit schématiquement dense dans $X''$ ; alors $\omega\circ(f\circ f')$ est défini et $u\circ f\circ f'$ appartient à ce pseudo-$S$-morphisme ; en outre, en vertu de \sref{IV.20.3.2.1}, $f'^{-1}(\operatorname{dom}_S(\omega\circ f))$ est \emph{a fortiori} schématiquement dense dans $X''$, donc $(\omega\circ f)\circ f'$ est aussi défini et $u\circ f\circ f'$ appartient à ce pseudo-$S$-morphisme, donc on a $(\omega\circ f)\circ f'=\omega\circ(f\circ f')$.
+D'autre part, pour tout $S$-morphisme $g:Y\to Z$, on a $\operatorname{dom}_S(g\circ\omega)=\operatorname{dom}_S(\omega)$ \sref{IV.20.3.1}, donc $(g\circ\omega)\circ f$ est défini, et $g\circ u\circ f$ appartient à ce pseudo-$S$-morphisme, ce qui montre que $(g\circ\omega)\circ f=g\circ(\omega\circ f)$.
+\end{env}
+
+\begin{env}[20.3.4]
+\label{IV.20.3.4}
+Le cas le plus important dans la définition \sref{IV.20.3.2} est celui où l'on a $\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)^f=\mathscr{P}\!s.\!\operatorname{hom}_S(X,Y)$ : il suffit pour cela que pour tout ouvert $U$ de $X$, et tout ouvert $V$ schématiquement dense dans $U$, $f^{-1}(V)$ soit schématiquement dense dans $f^{-1}(U)$ ; lorsqu'il en est ainsi, alors, pour \emph{tout} ouvert $U$ de $X$ et \emph{tout} pseudo-$S$-morphisme $\omega:U\to Y$, on peut définir le composé $\omega\circ f^U$, \emph{même si $Y$ n'est pas séparé sur $S$}.
+En effet, si $u':U'\to Y$ et $u'':U''\to Y$ sont deux morphismes de la classe $\omega$, ils coïncident dans un ouvert $U_0$ schématiquement dense dans $U$, donc les morphismes composés $f^{-1}(U')\to U'\xrightarrow{u'}Y$ et $f^{-1}(U'')\to U''\xrightarrow{u''}Y$ coïncident dans $f^{-1}(U_0)$, qui est par hypothèse schématiquement dense dans $f^{-1}(U)$ ; on peut donc définir $\omega\circ f^U$ comme la classe d'un quelconque des morphismes $f^{-1}(U')\to U'\xrightarrow{u'}Y$, où $u'$ appartient à $\omega$.
+\end{env}
+
+\begin{proposition}[20.3.5]
+\EGAReaderTarget{ega4.c04.prop.20-3-5}{IV.20.3.5}
+Soient $X$, $X'$ deux préschémas, $f:X'\to X$ un morphisme.
+Alors, dans chacun des trois cas suivants, pour tout ouvert $U$ de $X$ et tout ouvert $V$ schématiquement dense dans $U$, $f^{-1}(V)$ est schématiquement dense dans $f^{-1}(U)$ :
+\begin{enumerate}[label=\emph{(\roman*)}]
+  \item $f$ est plat et localement de présentation finie.
+  \item $f$ est plat et l'espace sous-jacent à $X$ est localement noethérien.
+  \item $X'$ est réduit, l'ensemble des composantes irréductibles de $X$ est localement fini, et toute composante irréductible de $X'$ domine une composante irréductible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+L'assertion~(i) résulte de \sref{IV.11.10.5}[(ii), (b)] ; l'assertion~(ii) résulte de \sref{IV.11.10.5}[(ii), (a)], car alors tout ouvert $V$ dans $U$ est rétrocompact, autrement dit l'injection canonique $j:V\to U$ est un morphisme quasi-compact.
+Enfin, pour prouver~(iii), notons que puisque $X'$ est réduit, il suffit de montrer que pour tout ouvert $U$ de $X$ et tout ouvert $V$ dense dans $U$, $f^{-1}(V)$ est \emph{dense} dans $f^{-1}(U)$.
+Or, pour que $f^{-1}(V)$ soit dense dans $f^{-1}(U)$, il suffit que $f^{-1}(V)$ contienne tous les points maximaux de $X'$ appartenant à $f^{-1}(U)$ ; la conclusion résulte donc de l'hypothèse que l'image par $f$ de tout point

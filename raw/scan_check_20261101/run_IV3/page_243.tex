@@ -1,0 +1,29 @@
+% from ega4-15-terminal-fr.tex
+\oldpage[IV-3]{243}
+\begin{proof}
+Le fait que a) implique b) résulte de (\textbf{II}, 5.4.2), et l'implication b) $\Rightarrow$ c) résulte de (\textbf{II}, 7.3.10). Reste donc à montrer que c) entraîne a). La question étant locale sur $Y$, on peut supposer $Y$ affine, donc noethérien. En vertu du lemme de Chow (\textbf{II}, 5.6.1), il existe un préschéma intègre $X'$, un morphisme projectif $p:P\to Y$, une immersion ouverte dominante $j:X'\to P$, et un morphisme projectif et birationnel (donc surjectif) $g:X'\to X$ tels que le diagramme
+\[
+\xymatrix{
+P\ar[d]_-{p} & X'\ar[l]_-{j}\ar[d]^-{g}\\
+Y & X\ar[l]^-{f}
+}
+\]
+soit commutatif. Comme $X'$ est intègre et $j$ dominant, $P$ est irréductible, et l'on peut, en remplaçant $P$ par $P_{\mathrm{red}}$, supposer $P$ intègre (\textbf{I}, 5.2.2 et \textbf{II}, 5.5.5, (vi)). Tout revient à prouver qu'il existe un voisinage ouvert $U$ de $y$ tel que $p^{-1}(U)\subset j(X')$, car alors la restriction de $j$ à
+\[
+j^{-1}\bigl(p^{-1}(U)\bigr)=g^{-1}\bigl(f^{-1}(U)\bigr)=V
+\]
+sera un isomorphisme sur $p^{-1}(U)$, donc la restriction $V\to U$ de $f\circ g$ sera propre, et comme la restriction $V\to f^{-1}(U)$ de $g$ est surjective, la restriction $f^{-1}(U)\to U$ de $f$ sera propre (\textbf{II}, 5.4.3). Comme $T=P-j(X')$ est fermé dans $P$, $p(T)$ est fermé dans $Y$, et il suffit de montrer que $y\notin p(T)$, ou encore que tout $z'\in P$ tel que $p(z')=y$ \emph{appartient à} $j(X')$. Or, le corps des fractions rationnelles $R(P)$ est égal à $R(X')$, donc à $R(X)$ par construction; comme on peut se borner au cas où $z'$ n'est pas le point générique de $P$, il existe un anneau de valuation discrète $A$ ayant $R(X)$ pour corps des fractions et dominant $\mathcal O_{z'}$ (\textbf{II}, 7.1.7); comme $p(z')=y$, $A$ domine aussi $\mathcal O_y$, donc par hypothèse il existe un $x\in X$ tel que $f(x)=y$ et que $A$ domine $\mathcal O_x$. Comme $g$ est propre, il existe $x'\in X'$ tel que $g(x')=x$ et que $A$ domine $\mathcal O_{x'}$ (\textbf{II}, 7.3.10); donc $z'$ et $j(x')$ sont deux points de $P$ dont les anneaux locaux $\mathcal O_z$ et $\mathcal O_{j(x')}=\mathcal O_{x'}$ sont apparentés (\textbf{I}, 8.1.4); comme $P$ est un schéma, cela entraîne $z'=j(x')$ (\textbf{I}, 8.2.2), ce qui achève la démonstration.
+\end{proof}
+
+\begin{remark}[15.7.3]
+\label{IV.15.7.3-fr}
+On peut dans (15.7.2) supprimer l'hypothèse que $Y$ est localement noethérien, en remplaçant dans la condition c) les anneaux de valuation discrète par des anneaux de valuation quelconque; la démonstration est alors inchangée, compte tenu de (\textbf{II}, 7.3.10).
+\end{remark}
+
+\begin{corollary}[15.7.4]
+\label{IV.15.7.4-fr}
+Soient $Y$ un préschéma noethérien, $f:X\to Y$ un morphisme séparé de type fini, $Z$ une partie de $X$ tel que les points maximaux de son adhérence $\overline Z$ appartiennent à $Z$ (ce qui est le cas lorsque $Z$ est fini, ou lorsque $Z$ est constructible ($\mathbf{0}_{\mathrm{III}}$, 9.2.2)). Soit $y$ un point de $Y$. Les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[\rm a)] L'ensemble $\overline Z$ est propre sur $Y$ au point $y$.
+  \item[\rm b)] Si $Y_1=\operatorname{Spec}(\mathcal O_y)$, $X_1=X\times_Y Y_1$, et si $g_1:X_1\to X$ est la projection canonique et $Z_1=g_1^{-1}(Z)$, l'adhérence $\overline Z_1$ de $Z_1$ dans $X_1$ est propre sur $Y_1$.
+  \item[\rm c)] Pour tout schéma $Y'=\operatorname{Spec}(A')$, où $A'$ est un anneau de valuation discrète, et tout morphisme $g:Y'\to Y$, tel que l'image $g(y')$ du point fermé $y'$ de $Y'$ soit $y$, on a la propriété suivante : posant $X'=X\times_Y Y'$, $f'=f_{(Y')}:X'\to Y'$, $g'=g_{(X)}:X'\to X$, $Z'=g'^{-1}(Z)$, et désignant par $\eta'$

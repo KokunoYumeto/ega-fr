@@ -1,0 +1,51 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{262}
+méromorphe régulière $s$ de $\sh{L}$ au-dessus de $X$, on notera $\operatorname{cl}(\sh{L},s)$ l'élément de $D(X)$ correspondant au couple $(\sh{L},s)$.
+Il résulte de (\hyperref[0.5.4.3]{$\mathbf{0}_{\mathrm I}$, 5.4.3}) que si $s$, $s'$ sont deux sections méromorphes régulières de $\sh{L}$ au-dessus de $X$, la relation $\operatorname{cl}(\sh{L},s)=\operatorname{cl}(\sh{L},s')$ équivaut à l'existence d'une section $t\in\Gamma(X,\sh{O}_X^*)$ telle que $s'=ts$.
+
+Il est immédiat que si $(\sh{L},s)$ est équivalent à $(\sh{L}_1,s_1)$ et $(\sh{L}',s')$ à $(\sh{L}_1',s_1')$, les couples $(\sh{L}\otimes\sh{L}',s\otimes s')$ et $(\sh{L}_1\otimes\sh{L}_1',s_1\otimes s_1')$ sont équivalents;
+on définit donc dans $D(X)$ une loi de composition en posant
+\[
+\label{IV.21.2.10.1}
+  \operatorname{cl}(\sh{L},s)\operatorname{cl}(\sh{L}',s')=\operatorname{cl}(\sh{L}\otimes\sh{L}',s\otimes s');
+  \tag{21.2.10.1}
+\]
+il est immédiat que c'est une loi de groupe commutatif, dont l'élément neutre est $\operatorname{cl}(\sh{O}_X,1)$ et où l'inverse de $\operatorname{cl}(\sh{L},s)$ est $\operatorname{cl}(\sh{L}^{-1},s^{\otimes(-1)})$.
+\end{env}
+
+\begin{proposition}[21.2.11]
+\EGAReaderTarget{ega4.c04.prop.21-2-11}{IV.21.2.11}
+Les applications
+\[
+\label{IV.21.2.11.1}
+  D\mapsto\operatorname{cl}(\sh{O}_X(D),s_D),\qquad \operatorname{cl}(\sh{L},s)\mapsto\operatorname{div}(s)
+  \tag{21.2.11.1}
+\]
+sont des isomorphismes réciproques de $\operatorname{Div}(X)$ sur $D(X)$ et de $D(X)$ sur $\operatorname{Div}(X)$ respectivement.
+\end{proposition}
+
+\begin{proof}
+Compte tenu de \sref{IV.21.2.8.3}, \sref{IV.21.2.9.4} et \sref{IV.21.2.10.1}, il suffit de voir que les composés de ces deux applications sont les identités dans $\operatorname{Div}(X)$ et $D(X)$ respectivement.
+La première assertion n'est autre que \sref{IV.21.2.9.3}.
+D'autre part, soit $D=\operatorname{div}(s)$, où $s$ est une section méromorphe régulière de $\sh{L}$ au-dessus de $X$, et soit $U$ un ouvert de $X$ tel qu'il existe un isomorphisme de $\sh{L}|U$ sur $\sh{O}_U$ transformant $s|U$ en $f\in\Gamma(U,\sh{M}_X^*)$, de sorte que $D|U=\operatorname{div}_U(f)$, $\sh{O}_X(D)|U=\sh{O}_U.f^{-1}$ et $s_D|U$ est l'élément unité de $\Gamma(U,\sh{M}_X)$.
+Il y a donc un isomorphisme $v_U:\sh{L}|U\to\sh{O}_U.f^{-1}=\sh{O}_X(D)|U$ tel que $\overline{v}_U$ (notation de \sref{IV.21.2.10}) transforme $s|U$ en $f.f^{-1}=1$;
+on voit aussitôt que ces isomorphismes sont compatibles avec les opérations de restriction, donc définissent un isomorphisme $v:\sh{L}\to\sh{O}_X(D)$ tel que $\overline{v}(s)=s_D$.
+\end{proof}
+
+On peut transporter par le premier des isomorphismes \sref{IV.21.2.11.1} la structure de groupe ordonné de $\operatorname{Div}(X)$ à $D(X)$;
+les éléments $\geq0$ de $D(X)$ sont donc les classes $\operatorname{cl}(\sh{L},s)$ telles que $\operatorname{div}(s)\geq0$, c'est-à-dire \sref{IV.21.1.7.1} telles que
+\[
+  s\in\Gamma(X,\sh{L})\cap\Gamma(X,(\sh{M}_X(\sh{L}))^*).
+\]
+
+\begin{env}[21.2.12]
+\label{IV.21.2.12}
+Soit $D$ un diviseur \emph{positif} sur un \emph{préschéma} $X$;
+l'Idéal fractionnaire $\sh{J}_X(D)$ est donc un Idéal de $\sh{O}_X$, qui est un $\sh{O}_X$-Module inversible;
+soit $Y(D)$ le sous-préschéma fermé de $X$ qu'il définit.
+Pour tout $x\in Y(D)$, il y a par hypothèse un voisinage ouvert $U$ de $x$ dans $X$ et une section régulière $t\in\Gamma(U,\sh{O}_X)$ telle que $\sh{J}_X(D)|U=\sh{O}_U.t$ \sref{IV.21.2.7};
+en d'autres termes, l'immersion canonique $Y(D)\to X$ est \emph{régulière et de codimension $1$} en tout point de $Y(D)$ \sref{IV.19.1.4}.
+Inversement, si $Y$ est un sous-préschéma fermé de $X$, régulièrement immergé dans $X$ et de codimension $1$ en tout point de $Y$, il existe un diviseur positif et un seul $D$ tel que $Y(D)=Y$, car pour tout $x\in Y$, il y a un voisinage $U$ de $x$ dans $X$ tel que $Y\cap U$ soit défini par un Idéal de $\sh{O}_U$ de la forme $\sh{O}_U.t$, où $t$ est régulier dans $\Gamma(U,\sh{O}_X)$.
+On notera que l'on a alors $\operatorname{Supp}(D)=Y(D)$, car dire que $D_x\neq0$ signifie que $t_x$ (avec les notations ci-dessus) n'est pas inversible, c'est-à-dire que $x\in Y(D)$.
+\end{env}
+

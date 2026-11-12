@@ -1,0 +1,86 @@
+% from ega0-19-fr.tex
+\oldpage[0\textsubscript{IV-1}]{89}
+
+\begin{proof}
+La nécessité de la condition résulte de (19.4.2). Pour voir qu'elle est
+suffisante, notons d'abord qu'en considérant un système fondamental de
+voisinages ouverts de $0$ dans $A$ formés d'idéaux
+$\mathfrak J_\alpha$ contenus dans $\mathfrak J$, on peut, en vertu de
+(19.4.2), se ramener au cas où $A$ est discret puisque
+$B/\mathfrak J_\alpha B$ est un
+$(A/\mathfrak J_\alpha)$-module formellement projectif (19.2.5)~; par
+définition d'un anneau préadmissible, $\mathfrak J$ est alors
+\emph{nilpotent}. Il suffit en outre de démontrer la proposition lorsque
+$\mathfrak J^2=0$, car si $\mathfrak J^m=0$, on l'appliquera successivement
+aux anneaux $A_k=A/\mathfrak J^k$ et $B_k=B/\mathfrak J^kB$ et à l'idéal
+$\mathfrak J^{k-1}/\mathfrak J^k$ de $A_k$ pour $k=2,3,\ldots,m$, en
+notant (19.2.5) que $B_k=B\otimes_A A_k$ est un $A_k$-module formellement
+projectif. Appliquons le critère (19.4.5), (ii) en considérant un idéal ouvert
+$\mathfrak R$ de $B$ et un $2$-cocycle de Hochschild $A$-bilinéaire
+symétrique $f$ de $(B/\mathfrak R)\times(B/\mathfrak R)$ dans un
+$(B/\mathfrak R)$-module $L$. Considérons d'abord le cas particulier où
+$\mathfrak JL=0$, de sorte que $L$ peut aussi être considéré comme un
+$(B_0/\mathfrak RB_0)$-module, et $f$ se factorise en
+\[
+  (B/\mathfrak R)\times(B/\mathfrak R)\to
+  (B_0/\mathfrak RB_0)\times(B_0/\mathfrak RB_0)
+  \xrightarrow{f_0}L,
+\]
+où $f_0$ est un $2$-cocycle de Hochschild bilinéaire symétrique. En vertu de
+l'hypothèse, il y a donc un idéal ouvert
+$\mathfrak R'\subset\mathfrak R$ dans $B$ et une application
+$A_0$-linéaire $g_0:B_0/\mathfrak R'B_0\to L$ telle que
+\[
+  f_0(\varphi_0(x),\varphi_0(y))
+  =xg_0(y)-g_0(xy)+g_0(x)y
+\]
+pour $x,y$ dans $B_0/\mathfrak R'B_0$, $\varphi_0$ étant
+l'homomorphisme canonique
+$B_0/\mathfrak R'B_0\to B_0/\mathfrak RB_0$. On en conclut aussitôt que
+l'application $A$-linéaire composée
+$g:B/\mathfrak R'\to B_0/\mathfrak R'B_0\xrightarrow{g_0}L$ est telle
+que $dg=f\circ(\varphi\times\varphi)$, où
+$\varphi:B/\mathfrak R'\to B/\mathfrak R$ est l'homomorphisme
+canonique.
+
+Passons maintenant au cas général, et considérons d'abord le
+$(B/\mathfrak R)$-module $L/\mathfrak JL=L'$, pour lequel on a
+$\mathfrak JL'=0$~; si $f'$ est l'application $A$-bilinéaire composée
+$(B/\mathfrak R)\times(B/\mathfrak R)\xrightarrow{f}L\to L'$, $f'$ est
+encore un $2$-cocycle de Hochschild symétrique, et en vertu de ce qui précède,
+il existe un idéal ouvert $\mathfrak R'\subset\mathfrak R$ dans $B$ et
+une application $A$-linéaire $g':B/\mathfrak R'\to L'$ vérifiant
+$dg'=f'\circ(\varphi'\times\varphi')$ pour l'application canonique
+$\varphi':B/\mathfrak R'\to B/\mathfrak R$. Comme $B$ est un
+$A$-module formellement projectif, il existe un idéal ouvert
+$\mathfrak R'_1\subset\mathfrak R'$ et une application $A$-linéaire
+$g_1:B/\mathfrak R'_1\to L$ telle que l'homomorphisme
+$B/\mathfrak R'_1\to B/\mathfrak R'\xrightarrow{g'}L'$ se factorise en
+$B/\mathfrak R'_1\xrightarrow{g_1}L\to L'$. Considérons alors le
+$2$-cocycle de Hochschild
+\[
+  f_1(x,y)=f(\varphi_1(x),\varphi_1(y))-xg_1(y)+g_1(xy)-g_1(x)y,
+\]
+application $A$-bilinéaire symétrique de
+$(B/\mathfrak R'_1)\times(B/\mathfrak R'_1)$ dans $L$. Le choix de
+$g_1$ entraîne que $f_1$ prend ses valeurs dans $\mathfrak JL$. Comme
+$\mathfrak J(\mathfrak JL)=0$, on peut de nouveau appliquer le premier cas,
+et il y a donc un idéal ouvert
+$\mathfrak R''\subset\mathfrak R'_1$ et une application $A$-linéaire
+$g_2:B/\mathfrak R''\to\mathfrak JL$ telle que
+\[
+  f_1(\varphi_2(x),\varphi_2(y))=xg_2(y)-g_2(xy)+g_2(x)y
+\]
+dans $(B/\mathfrak R'')\times(B/\mathfrak R'')$,
+$\varphi_2:B/\mathfrak R''\to B/\mathfrak R'_1$ étant l'application
+canonique~; l'application $A$-linéaire
+$g=g_2+g_1\circ\varphi_2:B/\mathfrak R''\to L$ vérifie donc
+$dg=f\circ(\varphi\times\varphi)$ pour l'application canonique
+$\varphi:B/\mathfrak R''\to B/\mathfrak R$. C.Q.F.D.
+\end{proof}
+
+\subsection{Lissité formelle et anneaux gradués associés}
+\label{subsection:0.19.5-fr}
+
+\begin{env}[19.5.1]
+\label{0.19.5.1-fr}

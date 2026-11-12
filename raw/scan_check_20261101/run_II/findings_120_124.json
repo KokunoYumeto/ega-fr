@@ -1,0 +1,548 @@
+[
+ {
+  "page": 120,
+  "where": "top of page: blank line after \\oldpage[II]{120}",
+  "scan": "'brique L′ (resp. K′) de L ...' continues the word 'algé-|brique' and the sentence of p. 119: no paragraph break",
+  "tex": "\\oldpage[II]{120} followed by a blank line (the source also has a blank line before the marker)",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{120}\n\n$L'$",
+   "new": "\\oldpage[II]{120}\n$L'$"
+  },
+  "note": "Apply together with removing the blank line before the marker at the end of the p. 119 segment ('fermeture algébrique\\n\\n' -> 'fermeture algébrique\\n', ega2-1-fr.tex ll. 10616-10617), which is not in page_120.tex. The whole word 'algébrique' (printed algé-|brique) stands before the marker."
+ },
+ {
+  "page": 120,
+  "where": "Remarque (6.3.10), l. 2: 'soit de rang fini sur k(ξ_i)'",
+  "scan": "'de rang fini' italic, 'de' included",
+  "tex": "de \\emph{rang fini}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit de \\emph{rang fini} sur",
+   "new": "soit \\emph{de rang fini} sur"
+  },
+  "note": "Checked on a crop. Remark body judged as roman."
+ },
+ {
+  "page": 120,
+  "where": "Remarque (6.3.10), l. 2: 'sur k(ξ_i)'",
+  "scan": "bold italic k",
+  "tex": "$k(\\xi_i)$",
+  "kind": "convention",
+  "convention": 1,
+  "confidence": "high",
+  "fix": {
+   "old": "sur $k(\\xi_i)$",
+   "new": "sur $\\boldsymbol{k}(\\xi_i)$"
+  },
+  "note": ""
+ },
+ {
+  "page": 120,
+  "where": "Remarque (6.3.10): 'est un C-module de type fini (6.3.4)'",
+  "scan": "'module de type fini' italic (C- roman)",
+  "tex": "$C$-module de type fini without emphasis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$C$-module de type fini",
+   "new": "$C$-\\emph{module de type fini}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 120,
+  "where": "Remarque (6.3.10): 'algèbre de type fini sur un corps ([13], t. I, p. 267, th. 9)'",
+  "scan": "([13], t. I, p. 267, th. 9): the bracket closes after the number, the locator follows outside it",
+  "tex": "(\\cite[t.~I, p.~267, th.~9]{I-13}), which prints ([13, t. I, p. 267, th. 9])",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\cite[t.~I, p.~267, th.~9]{I-13})",
+   "new": "(\\cite{I-13}, t.~I, p.~267, th.~9)"
+  },
+  "note": "Same repair as EGA I p. 148 ((\\cite{I-1}, p.~3-11 et 3-12)); the master file uses the standard \\cite. The 'I' of 't. I' is roman (checked on a crop at 4x)."
+ },
+ {
+  "page": 120,
+  "where": "Remarque (6.3.10): 'ou sur Z [9, I, p. 93, th. 3], ou sur un anneau local'",
+  "scan": "[9, I, p. 93, th. 3]: no parentheses and no 't.'",
+  "tex": "(\\cite[t.~I, p.~93, th.~3]{I-9}), which prints ([9, t. I, p. 93, th. 3])",
+  "kind": "extra",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\cite[t.~I, p.~93, th.~3]{I-9})",
+   "new": "\\cite[I, p.~93, th.~3]{I-9}"
+  },
+  "note": "Checked on a crop. The print uses this bracket form only here; the neighbouring citations read ([13], t. I, ...) and ([25], p. 298)."
+ },
+ {
+  "page": 120,
+  "where": "Remarque (6.3.10), last sentence: 'lorsque X est un schéma de type fini sur un corps, ou sur Z'",
+  "scan": "'de type fini' italic, 'sur un corps' roman",
+  "tex": "de \\emph{type fini sur un corps}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "schéma de \\emph{type fini sur un corps}",
+   "new": "schéma \\emph{de type fini} sur un corps"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 120,
+  "where": "(6.4.1.1): 'P(u, T)=det(T.I—(u⊗1))'",
+  "scan": "T.I with a baseline dot",
+  "tex": "T\\cdot I (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "T\\cdot I-(u\\otimes1)",
+   "new": "T.I-(u\\otimes1)"
+  },
+  "note": "Checked on a crop at 2.5x; as the earlier fixes f\\cdot m -> f.m and a_i\\mathbin{\\cdot}(t_i|V) -> a_i.(t_i|V)."
+ },
+ {
+  "page": 120,
+  "where": "(6.4.1), after (6.4.1.2): 'on dit que les σ_i(u) sont les fonctions symétriques élémentaires de u'",
+  "scan": "'fonctions symétriques élémentaires' italic, 'de' roman",
+  "tex": "\\emph{fonctions symétriques élémentaires de $u$}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{fonctions symétriques élémentaires de $u$}",
+   "new": "\\emph{fonctions symétriques élémentaires} de $u$"
+  },
+  "note": "Checked on a crop. In (6.4.2), p. 121, the print does set 'de u' italic; the TeX is right there."
+ },
+ {
+  "page": 120,
+  "where": "end of p. 120: display (6.4.1.3); the sentence continues on p. 121 with 'ce qui s'écrit aussi'",
+  "scan": "p. 121 begins 'ce qui s'écrit aussi' flush left: same paragraph",
+  "tex": "blank line after \\] at the end of the page segment (before \\oldpage[II]{121})",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\tag{6.4.1.3}\n\\]\n\n",
+   "new": "\\tag{6.4.1.3}\n\\]\n"
+  },
+  "note": "Apply together with the p. 121 finding that removes the blank line after \\oldpage[II]{121}."
+ },
+ {
+  "page": 121,
+  "where": "top of page: blank line after \\oldpage[II]{121}",
+  "scan": "'ce qui s'écrit aussi' continues the sentence of p. 120 after display (6.4.1.3); no indent",
+  "tex": "\\oldpage[II]{121} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{121}\n\nce qui",
+   "new": "\\oldpage[II]{121}\nce qui"
+  },
+  "note": "Apply together with the p. 120 end-of-page finding (blank line after \\] of (6.4.1.3))."
+ },
+ {
+  "page": 121,
+  "where": "(6.4.1.4): '(det u).1_E=uQ(u)', the dot",
+  "scan": "baseline dot after (det u)",
+  "tex": "(\\det u)\\cdot (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\det u)\\cdot",
+   "new": "(\\det u)."
+  },
+  "note": "Checked on a crop. Independent of the next finding (non-overlapping strings)."
+ },
+ {
+  "page": 121,
+  "where": "(6.4.1.4): '(det u).1_E=uQ(u)', the identity",
+  "scan": "1_E: the old-style figure 1 (x-height, upright) with subscript E, as in det(1_ℰ)=1_𝒜 of (6.4.8.2)",
+  "tex": "I_E (capital letter I)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "I_E=uQ(u)",
+   "new": "1_E=uQ(u)"
+  },
+  "note": "Checked on a crop: the glyph is the small old-style 1, not the full-height italic I of T.I in (6.4.1.1)."
+ },
+ {
+  "page": 121,
+  "where": "after (6.4.1.4): '(1_E automorphisme identique de E), avec'",
+  "scan": "1_E (old-style figure 1)",
+  "tex": "$I_E$",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "($I_E$ automorphisme",
+   "new": "($1_E$ automorphisme"
+  },
+  "note": "Same glyph as in (6.4.1.4)."
+ },
+ {
+  "page": 121,
+  "where": "(6.4.2), end of the first paragraph: 'l'homomorphisme canonique x→x⊗1'",
+  "scan": "plain arrow →",
+  "tex": "x\\mapsto x\\otimes1",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "$x\\mapsto x\\otimes1$",
+   "new": "$x\\to x\\otimes1$"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "after Proposition (6.4.3): 'Remplaçant u par T.I—u⊗1 et A par A[T]'",
+  "scan": "T.I with a baseline dot",
+  "tex": "T\\cdot I (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$T\\cdot I-u\\otimes1$",
+   "new": "$T.I-u\\otimes1$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 121,
+  "where": "after Proposition (6.4.3): 'Mais alors l'application u→det u est un homomorphisme'",
+  "scan": "plain arrow →",
+  "tex": "u\\mapsto\\det u",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "$u\\mapsto\\det u$",
+   "new": "$u\\to\\det u$"
+  },
+  "note": ""
+ },
+ {
+  "page": 121,
+  "where": "after Proposition (6.4.3): '(si E admet un système de n générateurs), donc les éléments det u'",
+  "scan": "comma after the closing parenthesis",
+  "tex": "semicolon (~;)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "générateurs)~; donc",
+   "new": "générateurs), donc"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 122,
+  "where": "Corollaire (6.4.4): 'Sous les hypothèses de (6.4.3), si on suppose en outre'",
+  "scan": "reference (6.4.3) upright inside the italic statement",
+  "tex": "(\\hyperref[II.6.4.3-fr]{6.4.3}) italic in the corollary environment",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "hypothèses de (\\hyperref[II.6.4.3-fr]{6.4.3})",
+   "new": "hypothèses de \\textup{(\\hyperref[II.6.4.3-fr]{6.4.3})}"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 122,
+  "where": "after Proposition (6.4.5): 'est évidemment inverse de det u dans A′'",
+  "scan": "'dans' italic",
+  "tex": "dans (roman, no emphasis)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "inverse de $\\det u$ dans $A'$",
+   "new": "inverse de $\\det u$ \\emph{dans} $A'$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 122,
+  "where": "Lemme (6.4.5.1): 'tel que A′ soit entier sur A'",
+  "scan": "'entier' roman inside the italic statement",
+  "tex": "entier (italic in the lemma environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "soit entier sur $A$",
+   "new": "soit \\textup{entier} sur $A$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 122,
+  "where": "after Lemme (6.4.5.1): 'premier th. de Cohen-Seidenberg ([13], t. I, p. 257, th. 3)'",
+  "scan": "([13], t. I, p. 257, th. 3)",
+  "tex": "(\\cite[t.~I, p.~257, th.~3]{I-13}), which prints ([13, t. I, p. 257, th. 3])",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\cite[t.~I, p.~257, th.~3]{I-13})",
+   "new": "(\\cite{I-13}, t.~I, p.~257, th.~3)"
+  },
+  "note": "As on p. 120."
+ },
+ {
+  "page": 122,
+  "where": "Remarque (6.4.7): 'Soit E un A-module de type fini, et supposons que E⊗_A K soit'",
+  "scan": "'supposons' italic, 'que' roman",
+  "tex": "\\emph{supposons que}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{supposons que}",
+   "new": "\\emph{supposons} que"
+  },
+  "note": "Checked on a crop. Remark body judged as roman."
+ },
+ {
+  "page": 122,
+  "where": "Remarque (6.4.7): 'soit un K-module libre de rang n'",
+  "scan": "'libre' italic",
+  "tex": "libre (no emphasis)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$K$-module libre de rang $n$",
+   "new": "$K$-module \\emph{libre} de rang $n$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 122,
+  "where": "after Lemme (6.4.7.1): 'une A-algèbre qui est un A-module de type fini ([13], t. I, p. 255, th. 1)'",
+  "scan": "([13], t. I, p. 255, th. 1)",
+  "tex": "(\\cite[t.~I, p.~255, th.~1]{I-13}), which prints ([13, t. I, p. 255, th. 1])",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\cite[t.~I, p.~255, th.~1]{I-13})",
+   "new": "(\\cite{I-13}, t.~I, p.~255, th.~1)"
+  },
+  "note": "As on p. 120. Independent of the end-of-page finding (non-overlapping strings)."
+ },
+ {
+  "page": 122,
+  "where": "end of p. 122: 'On peut donc' continues on p. 123 with 'remplacer A par A[T]'",
+  "scan": "no paragraph break: the sentence runs on to p. 123",
+  "tex": "blank line at the end of the page segment (before \\oldpage[II]{123})",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "On peut donc\n\n",
+   "new": "On peut donc\n"
+  },
+  "note": "Apply together with the p. 123 finding that removes the blank line after \\oldpage[II]{123}."
+ },
+ {
+  "page": 123,
+  "where": "top of page: blank line after \\oldpage[II]{123}",
+  "scan": "'remplacer A par A[T] ...' continues the sentence 'On peut donc' of p. 122; flush left",
+  "tex": "\\oldpage[II]{123} followed by a blank line",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[II]{123}\n\nremplacer",
+   "new": "\\oldpage[II]{123}\nremplacer"
+  },
+  "note": "Apply together with the p. 122 end-of-page finding."
+ },
+ {
+  "page": 123,
+  "where": "Remarque (6.4.7), proof of (6.4.7.1): 'et de ce que v→det v est un homomorphisme'",
+  "scan": "plain arrow →",
+  "tex": "v\\mapsto\\det v",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "$v\\mapsto\\det v$",
+   "new": "$v\\to\\det v$"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "(6.4.8): 'que nous noterons det u et appellerons le déterminant de u'",
+  "scan": "'déterminant' italic, 'de u' roman",
+  "tex": "\\emph{déterminant de $u$}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{déterminant de $u$}",
+   "new": "\\emph{déterminant} de $u$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 123,
+  "where": "(6.4.8): '(ce qui sera le cas (0, 5.4.1) pour X connexe)'",
+  "scan": "bold 0",
+  "tex": "{0, 5.4.1}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 5.4.1}",
+   "new": "{\\textbf{0}, 5.4.1}"
+  },
+  "note": ""
+ },
+ {
+  "page": 123,
+  "where": "(6.4.8.3): 'det(s.u)=s^n det u'",
+  "scan": "baseline dot",
+  "tex": "s\\cdot u (centred dot)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\det(s\\cdot u)",
+   "new": "\\det(s.u)"
+  },
+  "note": "Checked on a crop at 2.5x."
+ },
+ {
+  "page": 124,
+  "where": "(6.4.8), second paragraph: 'si ce dernier est de rang constant) (0, 5.4.5)'",
+  "scan": "bold 0",
+  "tex": "{0, 5.4.5}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 5.4.5}",
+   "new": "{\\textbf{0}, 5.4.5}"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "(6.4.8), after the display: '(0, 4.4.6). On a des résultats analogues'",
+  "scan": "bold 0",
+  "tex": "{0, 4.4.6}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{0, 4.4.6}",
+   "new": "{\\textbf{0}, 4.4.6}"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "(6.4.9): 'un faisceau de corps localement simple (I, 7.3.4)'",
+  "scan": "bold I",
+  "tex": "{I, 7.3.4}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 7.3.4}",
+   "new": "{\\textbf{I}, 7.3.4}"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "(6.4.9): 'un R(X)-Module localement libre (I, 7.3.6)'",
+  "scan": "bold I",
+  "tex": "{I, 7.3.6}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 7.3.6}",
+   "new": "{\\textbf{I}, 7.3.6}"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "(6.4.9): 'que l'on appelle encore déterminant de u'",
+  "scan": "'déterminant' italic, 'de u' roman",
+  "tex": "\\emph{déterminant de $u$}",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\emph{déterminant de $u$}",
+   "new": "\\emph{déterminant} de $u$"
+  },
+  "note": "Checked on a crop."
+ },
+ {
+  "page": 124,
+  "where": "(6.4.9): 'de l'homomorphisme u→det u, appliqué aux modules de sections'",
+  "scan": "plain arrow →",
+  "tex": "u\\mapsto\\det u",
+  "kind": "convention",
+  "convention": 3,
+  "confidence": "high",
+  "fix": {
+   "old": "$u\\mapsto\\det u$",
+   "new": "$u\\to\\det u$"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "(6.4.9), last paragraph: 'f^*(R(Y))→R(X) (I, 7.3.8 (1))'",
+  "scan": "bold I",
+  "tex": "{I, 7.3.8}",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "{I, 7.3.8}",
+   "new": "{\\textbf{I}, 7.3.8}"
+  },
+  "note": ""
+ },
+ {
+  "page": 124,
+  "where": "last line: 'Si v est un endo-' (word continued as 'morphisme' on p. 125)",
+  "scan": "'endomorphisme' hyphenated across the page break; word and sentence continue on p. 125",
+  "tex": "endo-\\n\\n\\oldpage[II]{125}\\n\\nmorphisme: the hyphen is typeset and the blank lines make a paragraph break inside the word",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "endo-\n\n",
+   "new": "endo%\n"
+  },
+  "note": "As canoni-/quement at pp. 36-37. Apply together with the p. 125 fix '\\oldpage[II]{125}\\n\\nmorphisme' -> '\\oldpage[II]{125}\\nmorphisme' (not in this batch); \\oldpage ends with \\ignorespaces, so the result typesets 'endomorphisme'."
+ }
+]

@@ -1,0 +1,139 @@
+% from ega0-19-fr.tex
+\oldpage[0\textsubscript{IV-1}]{98}
+
+\begin{lemma}[19.5.6.7]
+\label{0.19.5.6.7-fr}
+Supposons que $B$ soit préadmissible, que $\mathfrak J/\mathfrak J^2$ soit un
+$C$-module formellement projectif, que $C$ soit une $A$-algèbre formellement
+lisse et que les $\varphi_n$ soient des bimorphismes formels. Alors, pour tout
+couple d'indices $\alpha$, $\beta$ tel que $\alpha\leq\beta$ et tout
+homomorphisme $v_{\alpha\beta}:F_{\beta,n}\to E_{\alpha,n}$ vérifiant les
+conditions de (19.5.6.3, (i)), il existe un indice $\gamma\geq\beta$ tel que,
+pour tout indice $\mu\geq\gamma$, il y ait un diagramme commutatif de
+$A$-homomorphismes
+\[
+\xymatrix@C=4em@R=3em{
+  F_{\beta,n}\ar[r]^{v_{\alpha\beta}} & E_{\alpha,n} \\
+  & E_{\mu,n}\ar[ul]_{u_{\beta\mu}}\ar[u]_{p_{\alpha\mu}}
+}
+\]
+où $p_{\alpha\mu}$ est l'homomorphisme de transition.
+\end{lemma}
+
+\begin{proof}
+Appliquant le critère (19.1.3) à chacun des $\varphi_j$ pour $0\leq j\leq n$,
+on voit qu'il existe un indice $\gamma\geq\beta$ et des homomorphismes
+uniquement déterminés (et surjectifs) de $C_\gamma$-modules
+\[
+  w_{\beta\gamma}^j:\gr^j(E_{\gamma,n})\longrightarrow
+  \gr^j(F_{\beta,n})
+\]
+tels que les composés
+\[
+  \gr^j(F_{\gamma,n})
+  \xrightarrow{\varphi_{\gamma\gamma,j}}\gr^j(E_{\gamma,n})
+  \xrightarrow{w_{\beta\gamma}^j}\gr^j(F_{\beta,n})
+\]
+soient les homomorphismes de transition (le fait qu'on puisse choisir le même
+indice $\gamma$ pour tous les $\varphi_j$ résulte de ce qu'ils sont en nombre
+fini). En outre, l'unicité des $w_{\beta\gamma}^j$ prouve (puisque $\varphi$ est
+un homomorphisme d'algèbres graduées) que
+$w_{\beta\gamma}=(w_{\beta\gamma}^j)_{0\leq j\leq n}$ est un homomorphisme de
+$C_\gamma$-algèbres graduées
+\[
+  \gr^*(E_{\gamma,n})\longrightarrow
+  \gr^*(F_{\beta,n})=F_{\beta,n}.
+\]
+En outre, comme $\varphi_{\gamma\gamma,0}$ et $\varphi_{\gamma\gamma,1}$ sont
+les homomorphismes identiques,
+$w_{\beta\gamma}^0:C_\gamma\to C_\beta$ et
+$w_{\beta\gamma}^1:\mathfrak J_\gamma/\mathfrak J_\gamma^2
+\to\mathfrak J_\beta/\mathfrak J_\beta^2$ sont les homomorphismes de
+transition, et il en est donc de même de
+$\gr^0(v_{\alpha\beta}\circ w_{\beta\gamma})$ et de
+$\gr^1(v_{\alpha\beta}\circ w_{\beta\gamma})$~; comme
+$\gr^*(E_{\gamma,n})$ est engendré par $\gr^1(E_{\gamma,n})$, on en conclut que
+$\gr^j(v_{\alpha\beta}\circ w_{\beta\gamma})$ est aussi l'homomorphisme de
+transition pour $0\leq j\leq n$.
+
+Appliquons maintenant à $\alpha$, $\beta$ et $\gamma$ le lemme (19.5.6.3,
+(ii)), ce qui donne le diagramme (19.5.6.4) avec $\delta\geq\gamma$~; puis
+répétons le raisonnement du début en remplaçant $\alpha$ et $\beta$ par
+$\gamma$ et $\delta$. On obtient ainsi un indice $\lambda\geq\delta$ et un
+diagramme commutatif d'homomorphismes
+\[
+\xymatrix@C=4em@R=4em{
+  \gr^*(E_{\gamma,n})\ar[r]^{w_{\beta\gamma}} &
+  F_{\beta,n}\ar[r]^{v_{\alpha\beta}} & E_{\alpha,n} \\
+  \gr^*(E_{\lambda,n})\ar[u]_{\gr^*(p_{\gamma\lambda})}
+    \ar[r]_{w_{\delta\lambda}} &
+  F_{\delta,n}\ar[u]_{q_{\beta\delta}}\ar[r]_{v_{\gamma\delta}} &
+  E_{\gamma,n}\ar[u]_{p_{\alpha\gamma}}
+    \ar@{-->}[ul]_{u_{\beta\gamma}}
+}
+\]
+où les flèches verticales sont les homomorphismes de transition. Tout revient
+à prouver l'existence de l'homomorphisme $u_{\beta\gamma}$ laissant le
+diagramme commutatif, et pour cela il suffit évidemment de montrer que l'on a
+\[
+  \operatorname{Ker}(v_{\gamma\delta})
+  \subset\operatorname{Ker}(q_{\beta\delta}),
+\]
+$v_{\gamma\delta}$ et $q_{\beta\delta}$ étant surjectifs. Comme
+$w_{\delta\lambda}$ est surjectif, cette dernière relation équivaut à
+\[
+\begin{split}
+  \operatorname{Ker}(v_{\gamma\delta}\circ w_{\delta\lambda})
+  &\subset\operatorname{Ker}(q_{\beta\delta}\circ w_{\delta\lambda})\\
+  &=\operatorname{Ker}\bigl(w_{\beta\gamma}\circ
+  (\gr(p_{\gamma\lambda}))\bigr).
+\end{split}
+\]
+Mais on a vu ci-dessus que
+$\gr(p_{\gamma\lambda})=\gr(v_{\gamma\delta}\circ w_{\delta\lambda})$ et il
+est clair que
+\[
+\begin{split}
+  \operatorname{Ker}(v_{\gamma\delta}\circ w_{\delta\lambda})
+  &\subset\operatorname{Ker}\bigl(\gr(v_{\gamma\delta}\circ
+  w_{\delta\lambda})\bigr)\\
+  &=\operatorname{Ker}(\gr(p_{\gamma\lambda}))
+  \subset\operatorname{Ker}\bigl(w_{\beta\gamma}\circ
+  (\gr(p_{\gamma\lambda}))\bigr),
+\end{split}
+\]
+ce qui achève la démonstration du lemme, car pour tout $\mu\geq\gamma$, il
+suffira de définir $u_{\beta\mu}$ comme le composé
+\[
+  E_{\mu,n}\xrightarrow{p_{\gamma\mu}}E_{\gamma,n}
+  \xrightarrow{u_{\beta\gamma}}F_{\beta,n}.
+\]
+\end{proof}
+
+\begin{env}[19.5.6.8]
+\label{0.19.5.6.8-fr}
+\emph{Démonstration de} (19.5.3, (iii)). --- Soient $G$ une $A$-algèbre
+topologique discrète, $\mathfrak R$ un idéal de carré nul dans $G$,
+$f:B\to G/\mathfrak R$ un $A$-homomorphisme continu d'algèbres. Comme
+$G/\mathfrak R$ est discrète, il y a un indice $\alpha$ tel que $f$ s'annule
+dans $\mathfrak b_\alpha$~; par hypothèse, il existe un entier $m$ tel que
+$\mathfrak J^m\subset\mathfrak b_\alpha$, donc $f$ se factorise en
+\[
+  B\xrightarrow{p_\alpha}E_{\alpha,n}
+  \xrightarrow{f_{\alpha,n}}G/\mathfrak R,
+\]
+où l'on prend $n=2m$. Les hypothèses du lemme (19.5.6.3) étant satisfaites, on
+a tout d'abord un $\beta\geq\alpha$ et un $A$-homomorphisme composé
+\begin{equation}
+\label{0.19.5.6.9-fr}
+  f_{\alpha,n}\circ v_{\alpha\beta}:F_{\beta,n}
+  \xrightarrow{v_{\alpha\beta}}E_{\alpha,n}
+  \xrightarrow{f_{\alpha,n}}G/\mathfrak R.
+  \tag{19.5.6.9}
+\end{equation}
+Comme $F_{\beta,n}$ est une $C_\beta$-algèbre, donc \emph{a fortiori} une
+$C$-algèbre topologique (discrète), cela donne par composition un
+$A$-homomorphisme continu
+$r:C\to F_{\beta,n}\to G/\mathfrak R$. Comme d'autre part $C$ est une
+$A$-algèbre formellement lisse,
+

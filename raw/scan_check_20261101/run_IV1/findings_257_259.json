@@ -1,0 +1,142 @@
+[
+ {
+  "page": 257,
+  "where": "top right, above the page-number column (before the Chapitre 0 line)",
+  "scan": "column head 'Pages' (small capitals, a short rule under it) above the page numbers",
+  "tex": "(nothing): the entries follow \\section*{TABLE DES MATIÈRES} directly",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\section*{TABLE DES MATIÈRES}\n",
+   "new": "\\section*{TABLE DES MATIÈRES}\n\n\\hfill\\textsc{Pages}\n"
+  },
+  "note": "Contents column head, added the same way as in the EGA II and EGA III part 1 contents (GLOBAL_ISSUES item 45). The short rule under it is layout. Anchored on the \\section* line so that it does not touch the Chapitre 0 line; it lands before the \\newcommand line, which typesets nothing."
+ },
+ {
+  "page": 257,
+  "where": "Chapitre 0 line",
+  "scan": "CHAPITRE o. — Préliminaires (suite): 'Chapitre' in small capitals with a full capital C (enlarged crop), set like 'CHAPITRE IV.' on p. 259",
+  "tex": "\\ivonecontentsline{Chapitre 0.}{...}: 'Chapitre 0.' roman, in the label box",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ivonecontentsline{Chapitre 0.}{",
+   "new": "\\ivonecontentsline{}{\\textsc{Chapitre 0.} "
+  },
+  "note": "Same form as the TeX's own Chapitre IV line on p. 259 (empty label box; '\\textsc{Chapitre IV.} --- \\textbf{...}' in the title box). The new string ends with a space. Does not overlap the dash fix (next finding); in either order the two give '\\ivonecontentsline{}{\\textsc{Chapitre 0.} --- \\textbf{Préliminaires} ...'."
+ },
+ {
+  "page": 257,
+  "where": "Chapitre 0 line",
+  "scan": "CHAPITRE o. — Préliminaires: a long dash between 'o.' and 'Préliminaires' (enlarged crop)",
+  "tex": "no dash: 'Chapitre 0.' in the label box, then \\textbf{Préliminaires}",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\textbf{Préliminaires}",
+   "new": "--- \\textbf{Préliminaires}"
+  },
+  "note": "The TeX's Chapitre IV line (p. 259) has the dash."
+ },
+ {
+  "page": 257,
+  "where": "Chapitre 0 line, '(suite)'",
+  "scan": "'(suite)' italic, its parentheses italic too (slanted; enlarged crop)",
+  "tex": "(\\emph{suite}): upright parentheses",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\emph{suite})}{5}",
+   "new": "\\textit{(suite)}}{5}"
+  },
+  "note": "As fixed in the EGA III part 1 contents and in the chapter heading on p. 5 (\\textit{(suite)})."
+ },
+ {
+  "page": 258,
+  "where": "top right, above the page-number column (before 19.3.)",
+  "scan": "column head 'Pages' (small capitals, short rule under it), as on p. 257",
+  "tex": "(nothing): the page starts with the 19.3 entry",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ivonecontentsline{19.3.}",
+   "new": "\\hfill\\textsc{Pages}\n\n\\ivonecontentsline{19.3.}"
+  },
+  "note": "Contents column head, added the same way as in the EGA II and EGA III part 1 contents (GLOBAL_ISSUES item 45). The short rule under it is layout. Repeated on each contents page."
+ },
+ {
+  "page": 259,
+  "where": "top right, above the page-number column (before 22.5.)",
+  "scan": "column head 'Pages' (small capitals, short rule under it), as on pp. 257-258",
+  "tex": "(nothing): the page starts with the 22.5 entry",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ivonecontentsline{22.5.}",
+   "new": "\\hfill\\textsc{Pages}\n\n\\ivonecontentsline{22.5.}"
+  },
+  "note": "Contents column head, added the same way as in the EGA II and EGA III part 1 contents (GLOBAL_ISSUES item 45). The short rule under it is layout. Repeated on each contents page."
+ },
+ {
+  "page": 259,
+  "where": "back-matter entry 'Bibliographie (suite)'",
+  "scan": "BIBLIOGRAPHIE in small capitals with a full capital B (enlarged crop)",
+  "tex": "Bibliographie, roman",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{}{Bibliographie",
+   "new": "{}{\\textsc{Bibliographie}"
+  },
+  "note": "As in the EGA II and EGA III contents. Does not overlap the '(suite)' fix (next finding)."
+ },
+ {
+  "page": 259,
+  "where": "back-matter entry 'Bibliographie (suite)', '(suite)'",
+  "scan": "'(suite)' italic, its parentheses italic too (slanted; enlarged crop)",
+  "tex": "(\\emph{suite}): upright parentheses",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\emph{suite})}{251}",
+   "new": "\\textit{(suite)}}{251}"
+  },
+  "note": "Same as the EGA II and EGA III contents entry (\\textsc{Bibliographie} \\textit{(suite)})."
+ },
+ {
+  "page": 259,
+  "where": "back-matter entry 'Index des notations'",
+  "scan": "INDEX DES NOTATIONS in small capitals with a full capital I (enlarged crop)",
+  "tex": "Index des notations, roman",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{}{Index des notations}",
+   "new": "{}{\\textsc{Index des notations}}"
+  },
+  "note": "As in the EGA II contents."
+ },
+ {
+  "page": 259,
+  "where": "back-matter entry 'Index terminologique'",
+  "scan": "INDEX TERMINOLOGIQUE in small capitals with a full capital I (enlarged crop)",
+  "tex": "Index terminologique, roman",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "{}{Index terminologique}",
+   "new": "{}{\\textsc{Index terminologique}}"
+  },
+  "note": "As in the EGA II contents."
+ }
+]

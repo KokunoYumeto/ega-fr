@@ -1,0 +1,126 @@
+\oldpage[III]{202}
+il correspond à ce dernier un homomorphisme unique
+$v:\mathscr Q'\to\mathscr Q$ de $\mathscr O_Y$-Modules tel que le diagramme
+\[
+\xymatrix@C=42pt@R=28pt{
+  \Gamma(X,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \ar[r]\ar[d]_-{\sim}
+  &
+  \Gamma(X,\mathscr F'\otimes_{\mathscr O_Y}\mathscr M)
+    \ar[d]^-{\sim}
+  \\
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q,\mathscr M)
+    \ar[r]
+  &
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr Q',\mathscr M)
+}
+\]
+soit commutatif (0, 8.1.4). Comme le foncteur contravariant
+$\mathscr N\mapsto\operatorname{Hom}_{\mathscr O_Y}(\mathscr N,\mathscr M)$ est
+exact à gauche dans la catégorie des $\mathscr O_Y$-Modules, il suffit de prendre
+$\mathscr R=\operatorname{Coker}(v)$ pour obtenir l'isomorphisme (7.7.7.2)
+cherché.
+\end{proof}
+
+\begin{corollary}[7.7.8]
+Sous les hypothèses de (7.7.6) relatives à $X$, $Y$ et $f$, soient $\mathscr F$,
+$\mathscr G$ deux $\mathscr O_X$-Modules cohérents vérifiant les conditions
+suivantes : (i) $\mathscr F$ est $Y$-plat ; (ii) $\mathscr G$ est isomorphe au
+conoyau d'un homomorphisme de $\mathscr O_X$-Modules localement libres de type
+fini $\mathscr E_1\to\mathscr E_0$. Considérons les deux foncteurs en le
+$\mathscr O_Y$-Module quasi-cohérent $\mathscr M$ :
+\begin{align*}
+  \mathscr T(\mathscr M)
+  &=
+  f_*
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr),\\
+  T(\mathscr M)
+  &=
+  \Gamma(Y,\mathscr T(\mathscr M))
+  =
+  \operatorname{Hom}_{\mathscr O_X}
+    (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M).
+\end{align*}
+Alors il existe un $\mathscr O_Y$-Module cohérent $\mathscr N$ (déterminé à
+isomorphisme unique près) et des isomorphismes de foncteurs
+\[
+  \mathscr T(\mathscr M)
+  \xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_Y}(\mathscr N,\mathscr M)
+  \tag{7.7.8.1}\label{III.7.7.8.1.fr}
+\]
+\[
+  T(\mathscr M)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_{\mathscr O_Y}(\mathscr N,\mathscr M).
+  \tag{7.7.8.2}\label{III.7.7.8.2.fr}
+\]
+\end{corollary}
+
+\begin{proof}
+En vertu de l'isomorphisme fonctoriel ($0_{\mathrm I}$, 5.4.2.1), on a des
+isomorphismes fonctoriels en $\mathscr M$
+\begin{align*}
+  \mathscr{H}\!om_{\mathscr O_X}
+    (\mathscr E_i,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  &\xrightarrow{\sim}
+  \check{\mathscr E}_i
+    \otimes_{\mathscr O_X}
+    (\mathscr F\otimes_{\mathscr O_Y}\mathscr M)\\
+  &\xrightarrow{\sim}
+  (\check{\mathscr E}_i\otimes_{\mathscr O_X}\mathscr F)
+    \otimes_{\mathscr O_Y}\mathscr M\\
+  &\xrightarrow{\sim}
+  \mathscr{H}\!om_{\mathscr O_X}(\mathscr E_i,\mathscr F)
+    \otimes_{\mathscr O_Y}\mathscr M
+\end{align*}
+pour $i=0,1$. Posons
+$\mathscr F_i=\mathscr{H}\!om_{\mathscr O_X}(\mathscr E_i,\mathscr F)$ pour
+$i=0,1$ ; ce sont des $\mathscr O_X$-Modules cohérents ($0_{\mathrm I}$, 5.3.5)
+et $Y$-plats ($0_{\mathrm I}$, 5.4.2) ; soit
+$u=\mathscr{H}\!om(v,1_{\mathscr F}):\mathscr F_0\to\mathscr F_1$. En vertu de
+l'exactitude à gauche du foncteur
+$\mathscr H\mapsto\mathscr{H}\!om_{\mathscr O_X}
+(\mathscr H,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)$, on a des isomorphismes
+fonctoriels en $\mathscr M$
+\begin{align*}
+  \mathscr{H}\!om_{\mathscr O_X}
+    (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  &\xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr E_0,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr E_1,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)\\
+  &\xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    \mathscr F_0\otimes_{\mathscr O_Y}\mathscr M
+    \longrightarrow
+    \mathscr F_1\otimes_{\mathscr O_Y}\mathscr M
+  \bigr).
+\end{align*}
+Puisque $f_*$ est exact à gauche, on en déduit un isomorphisme fonctoriel
+\[
+  f_*
+  \bigl(
+    \mathscr{H}\!om_{\mathscr O_X}
+      (\mathscr G,\mathscr F\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)
+  \xrightarrow{\sim}
+  \operatorname{Ker}
+  \bigl(
+    f_*(\mathscr F_0\otimes_{\mathscr O_Y}\mathscr M)
+    \longrightarrow
+    f_*(\mathscr F_1\otimes_{\mathscr O_Y}\mathscr M)
+  \bigr)
+\]
+et il suffit alors d'appliquer (7.7.7).
+\end{proof}
+

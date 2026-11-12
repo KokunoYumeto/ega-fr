@@ -1,0 +1,92 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{47}
+et des $\mathfrak{p}_i$, donc dans l'un des $\mathfrak{p}_i$, puisque
+$\mathfrak{m}\not\subset\mathfrak{m}^2$ (Bourbaki, \emph{Alg.~comm.},
+chap.~II, \S~1, no~1, prop.~2)~; $\mathfrak{m}$ étant maximal, cela prouve le
+lemme.
+\end{proof}
+
+\begin{lemma}[17.3.1.3]
+\label{0.17.3.1.3-fr}
+Si $a\in\mathfrak{m}-\mathfrak{m}^2$, $\mathfrak{m}/Aa$ est isomorphe à un
+facteur direct de $\mathfrak{m}/a\mathfrak{m}$.
+\end{lemma}
+
+\begin{proof}
+Il existe un système minimal de générateurs de $\mathfrak{m}$ contenant $a$
+(dont les images dans $\mathfrak{m}/\mathfrak{m}^2$ forment une base de ce
+$k$-espace vectoriel)~; soit $\mathfrak{b}$ l'idéal engendré par les éléments
+de ce système autres que $a$. Comme la relation $xa\in\mathfrak{b}$ entraîne
+$x\in\mathfrak{m}$ (en considérant l'image de $xa$ dans
+$\mathfrak{m}/\mathfrak{m}^2$), on a
+$\mathfrak{b}\cap Aa\subset a\mathfrak{m}$ d'où un homomorphisme
+$\mathfrak{b}/(\mathfrak{b}\cap Aa)\longrightarrow
+\mathfrak{m}/a\mathfrak{m}$ déduit de l'injection
+$\mathfrak{b}\longrightarrow\mathfrak{m}$ par passage aux quotients, et qui
+est \emph{injectif}. En outre, $\mathfrak{b}+Aa=\mathfrak{m}$, et
+l'homomorphisme composé
+\[
+  \mathfrak{m}/Aa=(\mathfrak{b}+Aa)/Aa
+  \xrightarrow{\sim}\mathfrak{b}/(\mathfrak{b}\cap Aa)
+  \longrightarrow\mathfrak{m}/a\mathfrak{m}
+  \longrightarrow\mathfrak{m}/Aa
+\]
+est l'identité~; d'où le lemme.
+\end{proof}
+
+\begin{lemma}[17.3.1.4]
+\label{0.17.3.1.4-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak{m}$ son idéal maximal, $E$
+un $A$-module de type fini et de dimension projective finie. Si
+$a\in\mathfrak{m}$ est $A$-régulier et $E$-régulier, alors $E/aE$ est un
+$(A/aA)$-module de dimension projective finie, au plus égale à
+$\operatorname{dim.proj}_A(E)$.
+\end{lemma}
+
+\begin{proof}
+Raisonnons par récurrence sur $h=\operatorname{dim.proj}_A(E)$, le cas $h=0$
+étant trivial puisque alors $E$ est un $A$-module projectif, donc $E/aE$ un
+$(A/aA)$-module projectif. Il existe une suite exacte
+\[
+  0\longrightarrow N\longrightarrow L\longrightarrow E\longrightarrow0
+\]
+où $L$ est libre et $\operatorname{dim.proj}_A(N)=h-1$ (17.2.2, (iii)), $N$
+étant de type fini. En outre, la suite
+\[
+  0\longrightarrow N/aN\longrightarrow L/aL\longrightarrow E/aE
+  \longrightarrow0
+\]
+est exacte (15.1.18). Comme $a$ est $A$-régulier, il est aussi $N$-régulier
+puisque $L$ est libre~; l'hypothèse de récurrence entraîne que $N/aN$ est un
+$(A/aA)$-module de dimension projective $\leq h-1$, et comme $L/aL$ est un
+$(A/aA)$-module libre, $E/aE$ est un $(A/aA)$-module de dimension projective
+$\leq h$.
+\end{proof}
+
+Examinons maintenant deux cas~:
+
+\medskip\noindent\textbf{I.} --- Supposons d'abord que tout élément de
+$\mathfrak{m}-\mathfrak{m}^2$ soit diviseur de zéro dans $A$, auquel cas
+(17.3.1.2) il existe $c\neq0$ dans $A$ tel que $c\mathfrak{m}=0$. Montrons
+alors que $\mathfrak{m}=0$. S'il n'en était pas ainsi, notons d'abord que
+$\mathfrak{m}$ ne pourrait être un $A$-module projectif, car il serait libre
+(Bourbaki, \emph{Alg.~comm.}, chap.~II, \S~3, no~2, cor.~2 de la prop.~5),
+ce qui contredit la relation $c\mathfrak{m}=0$. On aurait donc
+$n=\operatorname{dim.coh}(A)\geq1$. Comme
+$\mathfrak{m}\in\operatorname{Ass}(A)$, il existerait une suite exacte de
+$A$-homomorphismes
+\[
+  0\longrightarrow k\longrightarrow A\longrightarrow E\longrightarrow0.
+\]
+Mais cela est absurde, car en vertu de la relation $n\geq1$, la suite exacte
+des Tor donnerait la suite exacte
+$0\longrightarrow\operatorname{Tor}^A_{n+1}(E,k)\longrightarrow
+\operatorname{Tor}^A_n(k,k)\longrightarrow0$~; or on a
+$\operatorname{Tor}^A_{n+1}(E,k)=0$ (17.2.2, (ii)) et
+$\operatorname{Tor}^A_n(k,k)\neq0$ (17.2.11) et nous avons abouti à une
+contradiction.
+
+\medskip\noindent\textbf{II.} --- On peut donc se borner au cas où il existe
+$a\in\mathfrak{m}-\mathfrak{m}^2$ qui est un élément $A$-régulier, et par
+suite aussi $\mathfrak{m}$-régulier. Considérons l'anneau $A'=A/aA$ et son
+idéal

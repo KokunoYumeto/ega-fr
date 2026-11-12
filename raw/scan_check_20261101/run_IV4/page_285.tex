@@ -1,0 +1,52 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{285}
+Comme les points de $X_0$ sont fermés dans $X$, on a $((i_x)_*(A(x)))_y=0$ pour tout $y\neq x\in X_0$;
+cette remarque prouve l'assertion d'unicité relative aux groupes $A(x)$, et il est clair par ailleurs que \emph{a)} implique \emph{a$'$)}.
+Pour voir que \emph{a$'$)} implique \emph{b)}, on peut se borner au cas où $U$ est noethérien;
+alors (G, II, 3.10) on a
+\[
+  \Gamma(U,\bigoplus_{x\in X_0}(i_x)_*(A(x)))
+  =\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(A(x))),
+\]
+donc toute section $s$ de $\sh{F}$ au-dessus de $U$ est somme directe d'un nombre \emph{fini} de sections $s_k\in\Gamma(U,(i_{x_k})_*(A(x_k)))$ ($1\leq k\leq n$) avec $x_k\in X_0$.
+Mais puisque $x_k$ est fermé dans $X$, le support de $s_k$ est réduit à $\{x_k\}$, donc le support de $s$ est contenu dans l'ensemble fini des $x_k$, qui est évidemment discret puisque les points $x_k$ sont fermés dans $X$.
+Montrons enfin que \emph{b)} entraîne \emph{a)};
+pour tout ouvert noethérien $U$, tout support d'une section de $\sh{F}$ au-dessus de $U$ étant discret et quasi-compact, est \emph{fini}.
+On déduit donc de l'hypothèse \emph{b)} que pour tout ouvert noethérien $U$, l'image de l'homomorphisme \sref{IV.21.9.1.1} (pour $Y=X_0$) est contenue dans $\bigoplus_{x\in X_0}\Gamma(U,(i_x)_*(\sh{F}_x))$ et que cet homomorphisme est injectif, ce qui établit \emph{a)}.
+
+Enfin, pour montrer que $\sh{F}$ est flasque, considérons une section $s$ de $\sh{F}$ au-dessus d'un ouvert $U$ de $X$;
+comme le support de $s$ est un sous-espace discret et fermé dans $X$, on prolonge $s$ en une section $s'$ de $\sh{F}$ au-dessus de $X$ en posant $s'_x=0$ dans $X-U$.
+\end{proof}
+
+\begin{remark}[21.9.3]
+\label{IV.21.9.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Dans la condition \emph{b)} de \sref{IV.21.9.2}, il ne suffit pas de supposer que le support de toute section de $\sh{F}$ au-dessus d'un ouvert quelconque de $X$ soit \emph{discret};
+c'est ce que montre l'exemple où on prend pour $X$ un spectre d'anneau de valuation discrète, avec un point fermé $b$ et un point générique $a$, et pour $\sh{F}$ le faisceau de groupes commutatifs tel que $\sh{F}_b=0$ et $\sh{F}_a=\bb{Z}$.
+
+  \item Les conditions de \sref{IV.21.9.2} étant supposées vérifiées, soit $E$ une partie discrète de $X_0$, et pour tout $x\in E$, soit $a(x)$ un élément de $A(x)$.
+Il existe alors une section $t$ de $\bigoplus_{x\in X_0}(i_x)_*(A(x))$ et une seule au-dessus de $X$ telle que $t_x=a(x)$ pour tout $x\in E$ et que le support de $t$ soit contenu dans $E$.
+En effet, pour tout ouvert noethérien $U$, $E\cap U$ est fini, et il suffit de prendre pour $t$ la section de $\bigoplus_{x\in E}(i_x)_*(A(x))$ dont la restriction à chaque ouvert noethérien $U$ est la somme des $a(x)$ pour $x\in E\cap U$.
+\end{enumerate}
+\end{remark}
+
+\begin{proposition}[21.9.4]
+\label{IV.21.9.4}
+Soient $X$ un préschéma localement noethérien de dimension $\leq1$, $X^{(1)}$ l'ensemble des points $x\in X$ tels que $\dim(\sh{O}_{X,x})=1$.
+On a alors un isomorphisme canonique
+\[
+\label{IV.21.9.4.1}
+  \sh{D}iv_X\simto\bigoplus_{x\in X^{(1)}}(i_x)_*(\operatorname{Div}(\sh{O}_{X,x}))
+  \tag{21.9.4.1}
+\]
+et $\sh{D}iv_X$ est flasque.
+\end{proposition}
+
+\begin{proof}
+Compte tenu de l'isomorphisme \sref{IV.21.4.6.1}, l'homomorphisme \sref{IV.21.9.4.1} est défini par \sref{IV.21.9.1.2}:
+prouvons que c'est une bijection.
+Comme $\dim(X)\leq1$, les points de $X^{(1)}$ sont les \emph{points fermés non isolés} de $X$.
+On est ramené à prouver que:
+1\textsuperscript{o} $\sh{D}iv_X$ vérifie la condition \emph{b)} de \sref{IV.21.9.2};
+2\textsuperscript{o} pour tout point isolé $x\in X$, on a $(\sh{D}iv_X)_x=0$.
+Le second point résulte de ce qu'alors $\sh{O}_{X,x}$ est un anneau artinien et de ce que tout élément régulier de $\sh{O}_{X,x}$ est donc inversible.

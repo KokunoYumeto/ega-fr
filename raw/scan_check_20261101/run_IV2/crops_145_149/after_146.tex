@@ -1,0 +1,114 @@
+% from ega4-2-fr.tex
+\subsection{Application aux changements de base dans les préschémas algébriques.}
+
+\begin{proposition}[6.7.1]
+\label{IV.2.s6.7.1-fr}
+Soient $k$ un corps, $X$ un $k$-préschéma localement noethérien,
+$\mathscr F$ un $\mathcal O_X$-Module cohérent. Soit $k'$ une extension
+de $k$; posons $X'=X\otimes_k k'$, $\mathscr F'=\mathscr F\otimes_k k'$
+et soit $p:X'\to X$ la projection canonique. On suppose, soit que
+$X$ est localement de type fini sur $k$, soit que $k'$ est une extension
+de type fini de $k$, de sorte que dans les deux cas $X'$ est localement
+noethérien. Soient $x'$ un point de $X'$, $x=p(x')$. Alors:
+\begin{enumerate}
+\item[\textup{(i)}] On a $\operatorname{coprof}(\mathscr F_x)=
+\operatorname{coprof}(\mathscr F'_{x'})$; en particulier, pour que
+$\mathscr F_x$ soit un $\mathcal O_x$-module de Cohen-Macaulay, il
+faut et il suffit que $\mathscr F'_{x'}$ soit un
+$\mathcal O_{x'}$-module de Cohen-Macaulay.
+\item[\textup{(ii)}] Pour que $\mathscr F$ vérifie la propriété $(S_n)$ au point
+$x$, il faut et il suffit que $\mathscr F'$ vérifie $(S_n)$ au point
+$x'$.
+\end{enumerate}
+\end{proposition}
+
+\oldpage[IV-2]{146}
+
+\begin{proof}
+On sait que $p$ est fidèlement plat (2.2.13); les deux assertions sont
+donc conséquences respectives de (6.3.2) et (6.4.2), pourvu que l'on
+prouve que $p^{-1}(x)=\operatorname{Spec}(\boldsymbol{k}(x)\otimes_k k')$ est un
+\emph{préschéma de Cohen-Macaulay}; comme l'un des deux corps $\boldsymbol{k}(x)$, $k'$ est
+une extension de type fini de $k$ par hypothèse on est ramené à prouver
+le
+\end{proof}
+
+\begin{lemma}[6.7.1.1]
+\label{IV.2.s6.7.1.1-fr}
+Soient $K$, $L$ deux extensions d'un corps $k$, dont l'une est de type
+fini (de sorte que l'anneau $K\otimes_k L$ est noethérien). Alors
+$K\otimes_k L$ est un anneau de Cohen-Macaulay.
+\end{lemma}
+
+\begin{proof}
+Supposons par exemple que $L$ soit une extension de type fini de $k$,
+de sorte que $L$ est extension finie d'une extension pure $k(\mathbf t)$
+de $k$ ($\mathbf t$ étant un système $(t_i)_{1\leqslant i\leqslant m}$
+d'indéterminées). Si on pose $A=K\otimes_k k(\mathbf t)$,
+$B=K\otimes_k L$, $B$ est un $A$-module plat $(\mathbf{0}_{\mathrm I},6.2.1)$ et de type fini;
+le morphisme $h:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ est
+donc fini, et comme tout préschéma artinien est de Cohen-Macaulay, pour
+prouver que $B$ est un anneau de Cohen-Macaulay, il suffit de prouver que
+$A$ est un anneau de Cohen-Macaulay (6.3.5). Or, si $S$ est l'ensemble
+des éléments $\neq 0$ de $k[\mathbf t]$, on a $A=S^{-1}A'$, où
+$A'=K\otimes_k k[\mathbf t]=K[\mathbf t]$; en vertu de
+(\textbf{0}, 16.5.13), il suffit de prouver que $A'$ est un anneau de
+Cohen-Macaulay; mais cela résulte de ce que $A'$ est \emph{régulier} (\textbf{0}, 17.3.7).
+\end{proof}
+
+\begin{corollary}[6.7.2]
+\EGAReaderTarget{ega4.c04.cor.6-7-2}{IV.2.s6.7.2-fr}
+Pour que $\mathcal O_x$ soit un anneau de Cohen-Macaulay \textup{(resp.} pour
+que $X$ vérifie $(S_{\boldsymbol{n}})$ au point $x$), il faut et il suffit
+que $\mathcal O'_{x'}$ soit un anneau de Cohen-Macaulay \textup{(resp.} que $X'$
+vérifie $(S_{\boldsymbol{n}})$ au point $x'$).
+\end{corollary}
+
+\begin{corollary}[6.7.3]
+\label{IV.2.s6.7.3-fr}
+Soient $X$, $Y$ deux $k$-préschémas localement noethériens, l'un au
+moins étant localement de type fini sur $k$. Soit $\mathscr F$ \textup{(resp.}
+$\mathscr G$) un $\mathcal O_X$-Module cohérent \textup{(resp.} un
+$\mathcal O_Y$-Module cohérent). Si $\mathscr F$ et $\mathscr G$
+vérifient la propriété $(S_n)$, il en est de même de
+$\mathscr F\otimes_k\mathscr G$.
+\end{corollary}
+
+\begin{proof}
+L'hypothèse entraîne que $X\times_kY$ est localement noethérien; notons
+$p:X\times_kY\to X$ et $q:X\times_{\boldsymbol k}Y\to Y$ les projections canoniques,
+qui sont des morphismes plats. Supposons par exemple que $X$ soit
+localement de type fini sur $k$; on peut écrire
+$\mathscr F\otimes_k\mathscr G=p^*(\mathscr F)\otimes_k\mathscr G$
+et puisque $\mathscr F$ est plat relativement au morphisme structural
+$X\to\operatorname{Spec}(k)$, $p^*(\mathscr F)$ est $q$-plat (2.1.4).
+Appliquons le critère (6.4.1, (ii)) au morphisme $q$; il suffit de voir
+que pour tout $y\in Y$, $p^*(\mathscr F)\otimes_{\mathcal O_Y}\boldsymbol{k}(y)$
+a la propriété $(S_n)$; mais
+$p^*(\mathscr F)\otimes_{\mathcal O_Y}\boldsymbol{k}(y)=\mathscr F\otimes_k \boldsymbol{k}(y)$,
+et comme $X$ est localement de type fini sur $k$, la conclusion résulte
+de (6.7.1, (ii)).
+\end{proof}
+
+\begin{proposition}[6.7.4]
+\label{IV.2.s6.7.4-fr}
+Pour un préschéma localement noethérien $Z$, et un point $z\in Z$,
+soit $\boldsymbol{P}(Z,z)$ l'une des propriétés suivantes:
+\begin{enumerate}
+\item[\textup{a)}] $Z$ est régulier au point $z$.
+\item[\textup{b)}] $Z$ vérifie $(R_n)$ au point $z$.
+\item[\textup{c)}] $Z$ est normal au point $z$.
+\item[\textup{d)}] $Z$ est réduit au point $z$.
+\end{enumerate}
+Cela étant, sous les hypothèses et avec les notations de \textup{(6.7.1)}, si
+$\boldsymbol{P}(X',x')$ est vraie, il en est de même de $\boldsymbol{P}(X,x)$. La réciproque est
+vraie si $k'$ est une extension séparable de $k$.
+\end{proposition}
+
+\begin{proof}
+Le cas où $\boldsymbol{P}$ est la propriété \emph{d)} n'a été mis que pour mémoire, ayant
+déjà été traité (2.1.13 et 4.6.1). Le même raisonnement qu'au début
+de (6.7.1) montre que la première assertion résulte
+respectivement de (6.5.2, (i)), (6.5.3, (i)) et (6.5.4, (i)); de même,
+la seconde assertion résultera de (6.5.2, (ii)), (6.5.3, (ii)) et
+(6.5.4, (ii))

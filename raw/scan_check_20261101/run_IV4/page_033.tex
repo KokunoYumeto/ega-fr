@@ -1,0 +1,103 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{33}
+affines $V'\subset V$ et $W'\subset W$. Mais en vertu de la description
+précédente de $h$, cela résulte de la commutativité du diagramme (0, 20.5.4.2).
+
+Les applications
+$\Gamma(U_0,\mathscr{G})\times P(U_0)\to P(U_0)$ définissent donc un
+homomorphisme de \emph{faisceaux d'ensembles}
+$m:\mathscr{G}\times\mathscr{P}\to\mathscr{P}$ tel que, pour tout ouvert
+$U_0$ pour lequel $\Gamma(U_0,\mathscr{P})\neq\varnothing$,
+\[
+  m_{U_0}:\Gamma(U_0,\mathscr{G})\times\Gamma(U_0,\mathscr{P})
+  \longrightarrow\Gamma(U_0,\mathscr{P})
+\]
+soit une loi externe définissant sur $\Gamma(U_0,\mathscr{P})$ une structure
+de torseur sous le groupe $\Gamma(U_0,\mathscr{G})$.
+\end{env}
+
+\begin{env}[16.5.15]
+\EGAReaderTarget{ega4.c04.statement.16-5-15}{IV.16.5.15}
+D'une façon générale, lorsqu'on se donne sur un espace topologique $Z$ un
+faisceau d'ensembles $\mathscr{P}$, un faisceau de groupes $\mathscr{G}$ (non
+nécessairement commutatif) et un homomorphisme de faisceaux d'ensembles
+$m:\mathscr{G}\times\mathscr{P}\to\mathscr{P}$ tel que, pour tout ouvert
+$U\subset Z$ tel que $\Gamma(U,\mathscr{P})\neq\varnothing$,
+\[
+  m_U:\Gamma(U,\mathscr{G})\times\Gamma(U,\mathscr{P})
+  \longrightarrow\Gamma(U,\mathscr{P})
+\]
+fasse de $\Gamma(U,\mathscr{P})$ un \emph{torseur} sous le groupe
+$\Gamma(U,\mathscr{G})$, on dit que $\mathscr{P}$ est un
+\emph{pseudo-torseur} (ou \emph{faisceau formellement principal homogène})
+sous le faisceau de groupes $\mathscr{G}$. On dit que $\mathscr{P}$ est un
+\emph{torseur} (ou \emph{faisceau principal homogène}) sous $\mathscr{G}$ si
+de plus $\Gamma(U,\mathscr{P})\neq\varnothing$ pour tout ouvert
+$U\neq\varnothing$ d'une base convenable de la topologie de $Z$.
+
+Pour la théorie générale des torseurs, nous renvoyons à [42]; nous nous
+bornerons ici à rappeler la correspondance canonique entre les classes
+d'isomorphie de ces torseurs (pour un $\mathscr{G}$ donné) et les éléments de
+l'ensemble de cohomologie $H^1(Z,\mathscr{G})$. Considérons en effet un
+torseur $\mathscr{P}$ sous $\mathscr{G}$ et un recouvrement ouvert
+$(U_\lambda)$ de $Z$ tel que
+$\Gamma(U_\lambda,\mathscr{P})\neq\varnothing$ pour tout $\lambda$;
+désignons par $p_\lambda$ un élément de
+$\Gamma(U_\lambda,\mathscr{P})$. Pour tout couple d'indices $\lambda$, $\mu$
+tel que $U_\lambda\cap U_\mu\neq\varnothing$, il existe alors un élément et
+un seul $\gamma_{\lambda\mu}$ de
+$\Gamma(U_\lambda\cap U_\mu,\mathscr{G})$ tel que
+\[
+  \gamma_{\lambda\mu}\cdot
+  (p_\mu|U_\lambda\cap U_\mu)=p_\lambda|U_\lambda\cap U_\mu;
+\]
+en outre, si $\lambda$, $\mu$, $\nu$ sont trois indices tels que
+$U_\lambda\cap U_\mu\cap U_\nu\neq\varnothing$, les restrictions
+$\gamma'_{\lambda\mu}$, $\gamma'_{\mu\nu}$, $\gamma'_{\lambda\nu}$ de
+$\gamma_{\lambda\mu}$, $\gamma_{\mu\nu}$, $\gamma_{\lambda\nu}$ à
+$U_\lambda\cap U_\mu\cap U_\nu$ vérifient la condition
+$\gamma'_{\lambda\nu}=\gamma'_{\lambda\mu}\gamma'_{\mu\nu}$; autrement dit
+$(\lambda,\mu)\mapsto\gamma_{\lambda\mu}$ est un \emph{1-cocycle} du
+recouvrement $(U_\lambda)$ à valeurs dans $\mathscr{G}$. Si, pour tout
+$\lambda$, $p'_\lambda$ est un second élément de
+$\Gamma(U_\lambda,\mathscr{P})$, il existe un élément et un seul
+$\beta_\lambda\in\Gamma(U_\lambda,\mathscr{G})$ tel que
+$p'_\lambda=\beta_\lambda\cdot p_\lambda$ et le 1-cocycle
+$(\gamma'_{\lambda\mu})$ correspondant à la famille $(p'_\lambda)$ est donné
+par
+\[
+  \gamma'_{\lambda\mu}=\beta_\lambda\gamma_{\lambda\mu}\beta_\mu^{-1},
+\]
+autrement dit, est \emph{cohomologue} à $(\gamma_{\lambda\mu})$.
+Inversement, la donnée d'un 1-cocycle $(\gamma_{\lambda\mu})$ définit, pour
+tout couple $(\lambda,\mu)$, un automorphisme $\theta_{\lambda\mu}$ du
+faisceau \emph{d'ensembles}
+$\mathscr{G}|U_\lambda\cap U_\mu$, savoir la translation à droite par
+$\gamma_{\lambda\mu}$, et le fait qu'il s'agisse d'un cocycle montre que l'on
+peut \emph{recoller} les faisceaux d'ensembles $\mathscr{G}|U_\lambda$ à
+l'aide des automorphismes $\theta_{\lambda\mu}$ (0, 3.3.1); on obtient ainsi
+de façon évidente un torseur sous $\mathscr{G}$, soit $\mathscr{P}$, et si
+l'on prend pour $p_\lambda$ la section unité au-dessus de $U_\lambda$, le
+1-cocycle correspondant n'est autre que le 1-cocycle donné
+$(\gamma_{\lambda\mu})$; en outre, si l'on remplace
+$(\gamma_{\lambda\mu})$ par un 1-cocycle
+$\gamma'_{\lambda\mu}=\beta_\lambda\gamma_{\lambda\mu}\beta_\mu^{-1}$ qui
+lui est cohomologue, on vérifie aussitôt que le torseur obtenu est isomorphe
+à $\mathscr{P}$.
+
+En particulier, si $(\gamma_{\lambda\mu})$ est un \emph{1-cobord}, autrement
+dit de la forme
+$\gamma_{\lambda\mu}=\beta_\lambda\beta_\mu^{-1}$, le torseur obtenu
+$\mathscr{P}$ est \emph{isomorphe à $\mathscr{G}$} (considéré comme torseur
+sous lui-même pour les translations à gauche); on dit dans ce cas que
+$\mathscr{P}$ est \emph{trivial}, et la réciproque est évidente.
+
+Plus particulièrement, il résulte de (III, 1.3.1) que l'on a:
+\end{env}
+
+\begin{proposition}[16.5.16]
+\label{IV.16.5.16}
+Soient $Z$ un schéma affine, $\mathscr{G}$ un $\mathcal{O}_Z$-Module
+quasi-cohérent; alors tout torseur sous $\mathscr{G}$ est trivial.
+\end{proposition}
+

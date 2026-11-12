@@ -1,0 +1,110 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{37}
+propriétés suivantes~:
+\begin{enumerate}
+  \item[$1^\circ$] Tout $Q^i$ est un objet injectif de $\mathcal C$~;
+  \item[$2^\circ$] Pour tout $i\geq0$, on a
+    $\mathrm Z^i(Q^\bullet)=\mathrm B^i(Q^\bullet)$, et
+    $\mathrm Z^i(Q^\bullet)$ est facteur direct de $Q^i$.
+\end{enumerate}
+Alors~:
+\begin{enumerate}
+  \item[(i)] Tout $Q^\bullet\in\mathfrak J$ est un objet injectif de
+    $\mathcal K$.
+  \item[(ii)] Tout objet de $\mathcal K$ est isomorphe à un sous-complexe
+    d'un complexe appartenant à $\mathfrak J$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\textup{(i)} Soient $A^\bullet=(A^i)$ un objet de $\mathcal K$,
+$A'^\bullet=(A'^i)$ un sous-objet de $A^\bullet$,
+$Q^\bullet=(Q^i)$ un objet de $\mathfrak J$, et supposons donné un morphisme
+$f=(f^i):A'^\bullet\to Q^\bullet$, qu'il s'agit de prolonger en un morphisme
+$g=(g^i):A^\bullet\to Q^\bullet$. Nous utiliserons le langage de la catégorie
+des modules pour simplifier (cf. [27]).
+
+Identifions $Q^i$ à
+$\mathrm B^i(Q^\bullet)\oplus\mathrm B^{i+1}(Q^\bullet)$~; procédons par
+récurrence sur $i$, et supposons donc les $g^j$ définis pour $j<i$,
+compatibles avec les opérateurs de dérivation $d^j:A^j\to A^{j+1}$ et
+$d'^j:Q^j\to Q^{j+1}$ pour $j<i-1$ et tels en outre que~:
+\begin{enumerate}
+  \item[$1^\circ$] $g^{i-1}(\mathrm Z^{i-1}(A^\bullet))\subset
+    \mathrm Z^{i-1}(Q^\bullet)$~;
+  \item[$2^\circ$] Si on pose $C^j=(d^j)^{-1}(A'^{j+1})$ pour tout $j$, alors
+    $d'^{i-1}\circ g^{i-1}$ coïncide avec $f^i\circ d^{i-1}$ sur $C^{i-1}$.
+\end{enumerate}
+Le morphisme $f^i:A'^i\to Q^i$ donne par composition avec les projections
+deux morphismes
+$f'^i:A'^i\to\mathrm B^i(Q^\bullet)$ et
+$f''^i:A'^i\to\mathrm B^{i+1}(Q^\bullet)$. Comme
+$d'^{i-1}\circ g^{i-1}$ applique $A^{i-1}$ dans
+$\mathrm B^i(Q^\bullet)$ et s'annule dans $\mathrm Z^{i-1}(A^\bullet)$, il
+définit un morphisme
+$h^i:\mathrm B^i(A^\bullet)\to\mathrm B^i(Q^\bullet)$, et puisque
+$d'^{i-1}\circ g^{i-1}$ coïncide avec $f^i\circ d^{i-1}$ sur $C^{i-1}$,
+$h^i$ coïncide avec $f'^i$ dans
+$\mathrm B^i(A^\bullet)\cap A'^i$. Comme $\mathrm B^i(Q^\bullet)$, facteur
+direct de $Q^i$, est injectif, il y a un morphisme
+$g'^i:A^i\to\mathrm B^i(Q^\bullet)$ qui coïncide avec $h^i$ dans
+$\mathrm B^i(A^\bullet)$ et avec $f'^i$ dans $A'^i$. Considérons d'autre part
+le morphisme
+$f''^{i+1}\circ d^i:C^i\to\mathrm B^{i+1}(Q^\bullet)$, qui s'annule dans
+$\mathrm Z^i(A^\bullet)$~; comme $\mathrm B^{i+1}(Q^\bullet)$ est injectif,
+il y a un morphisme $g''^i:A^i\to\mathrm B^{i+1}(Q^\bullet)$, qui coïncide
+avec $f''^{i+1}\circ d^i$ dans $C^i$ et avec $0$ dans
+$\mathrm Z^i(A^\bullet)$. Il suffit alors de prendre $g^i=g'^i+g''^i$ pour
+pouvoir poursuivre la récurrence.
+
+\textup{(ii)} Pour plonger $A^\bullet=(A^i)$ dans un complexe appartenant à
+$\mathfrak J$, on prend pour chaque $i\geq1$ un objet injectif $Q'^i$ de
+$\mathcal C$ tel qu'il existe une injection $f'^i:A^i\to Q'^i$. Posons alors
+\[
+  Q^i=0\quad(i<0),\qquad Q^0=Q'^1,\qquad
+  Q^i=Q'^i\oplus Q'^{i+1}\quad(i\geq1),
+\]
+avec l'opérateur de dérivation évident. Posons
+$f^i=f'^i+(f'^{i+1}\circ d^i)$ pour tout $i$ (avec $f'^i=0$ pour $i\leq0$)~;
+il est immédiat que $f^i$ est injectif pour tout $i$, et que les $f^i$ sont
+compatibles avec les opérateurs de dérivation.
+\end{proof}
+
+\begin{corollary}[11.5.2.2]
+\label{0.11.5.2.2-fr}
+Tout objet $K^\bullet$ de $\mathcal K$ admet une résolution droite formée
+d'objets de $\mathfrak J$. Si $L^{\bullet\bullet}$ est une telle résolution,
+pour toute résolution $L'^{\bullet\bullet}$ de $K^\bullet$, formée d'objets
+de $\mathcal K$, il y a un morphisme de bicomplexes
+$F:L'^{\bullet\bullet}\to L^{\bullet\bullet}$ compatible avec les
+augmentations, et deux tels morphismes $F$, $F'$ sont homotopes.
+\end{corollary}
+
+\begin{proof}
+Ce n'est autre que (M, V, 1.1 a)) appliqué à la catégorie abélienne
+$\mathcal K$.
+\end{proof}
+
+\begin{env}[11.5.2.3]
+\label{0.11.5.2.3-fr}
+Ces préliminaires étant posés, considérons une résolution de
+Cartan-Eilenberg injective $L'^{\bullet\bullet}$ de $K^\bullet$ et une
+résolution $L^{\bullet\bullet}$ de $K^\bullet$ formée d'objets de
+$\mathfrak J$, et montrons que l'on a un isomorphisme
+\[
+  \mathrm H^\bullet(T(L'^{\bullet\bullet}))\xrightarrow{\sim}
+  \mathrm H^\bullet(T(L^{\bullet\bullet})).
+\]
+On déduit en effet de (\hyperref[0.11.5.2.2-fr]{11.5.2.2}) un morphisme de
+bicomplexes $T(L'^{\bullet\bullet})\to T(L^{\bullet\bullet})$, et par suite
+un morphisme
+$'E(T(L'^{\bullet\bullet}))\to{}'E(T(L^{\bullet\bullet}))$ des premières
+suites spectrales de ces bicomplexes. Comme en vertu de
+(\hyperref[0.11.3.3-fr]{11.3.3}), ces suites spectrales sont régulières, il
+suffit (\hyperref[0.11.1.5-fr]{11.1.5}) de voir que le morphisme précédent est
+un isomorphisme pour les termes $E_2$, ou encore que
+$\mathrm H_{\mathrm{II}}^q(T(L^{i,\bullet}))$ est égal à
+$\mathrm R^qT(K^i)$~; comme $L^{i,\bullet}$ est une résolution droite de
+$K^i$, on est ramené à prouver le
+\end{env}
+

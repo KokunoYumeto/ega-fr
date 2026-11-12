@@ -1,0 +1,92 @@
+% from ega0-1-fr.tex
+\oldpage[0\textsubscript{I}]{30}
+
+à la limite un morphisme
+\[
+  \psi_x:(\psi_*(\mathcal{F}))_{\psi(x)}\to\mathcal{F}_x
+\]
+des fibres~; en général, ce morphisme n'est \emph{ni injectif ni surjectif}.
+Il est fonctoriel~; en effet, si
+$u:\mathcal{F}_1\to\mathcal{F}_2$ est un morphisme de préfaisceaux sur $X$ à
+valeurs dans $\mathbf{K}$, le diagramme
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+(\psi_*(\mathcal{F}_1))_{\psi(x)}
+  \arrow[r,"\psi_x"] \arrow[d,"{(\psi_*(u))_{\psi(x)}}"']
+  & (\mathcal{F}_1)_x \arrow[d,"u_x"] \\
+(\psi_*(\mathcal{F}_2))_{\psi(x)}
+  \arrow[r,"\psi_x"']
+  & (\mathcal{F}_2)_x
+\end{tikzcd}
+\]
+est commutatif. Si $Z$ est un troisième espace topologique,
+$\psi':Y\to Z$ une application continue, et $\psi''=\psi'\circ\psi$, on a
+\[
+  \psi_x''=\psi_x\circ\psi'_{\psi(x)}
+\]
+pour $x\in X$.
+\end{env}
+
+\begin{env}[3.4.5]
+\label{0.3.4.5-fr}
+Sous les hypothèses de (3.4.4), supposons en outre que $\psi$ soit un
+\emph{homéomorphisme} de $X$ sur le sous-espace $\psi(X)$ de $Y$. Alors, pour
+tout $x\in X$, $\psi_x$ est un \emph{isomorphisme}. Ceci s'applique en
+particulier à l'injection canonique $j$ d'une partie $X$ de $Y$ dans $Y$.
+\end{env}
+
+\begin{env}[3.4.6]
+\label{0.3.4.6-fr}
+Supposons que $\mathbf{K}$ soit la catégorie des groupes, ou des anneaux, etc.
+Si $\mathcal{F}$ est un faisceau sur $X$ à valeurs dans $\mathbf{K}$, de
+support $S$, et si $y\notin\overline{\psi(S)}$, il résulte de la définition de
+$\psi_*(\mathcal{F})$ que
+\[
+  (\psi_*(\mathcal{F}))_y=\{0\},
+\]
+autrement dit le support de $\psi_*(\mathcal{F})$ est contenu dans
+$\overline{\psi(S)}$~; mais il n'est pas nécessairement contenu dans
+$\psi(S)$. Sous les mêmes hypothèses, si $j$ est l'injection canonique d'une
+partie $X$ de $Y$ dans $Y$, le faisceau $j_*(\mathcal{F})$ induit
+$\mathcal{F}$ sur $X$~; si de plus $X$ est \emph{fermée} dans $Y$,
+$j_*(\mathcal{F})$ est le faisceau sur $Y$ qui induit $\mathcal{F}$ sur $X$
+et $0$ sur $Y-X$ (G, II, 2.9.2), mais il est en général distinct de ce dernier
+lorsqu'on suppose $X$ localement fermé mais non fermé.
+\end{env}
+ 
+\subsection{Images réciproques de préfaisceaux}
+
+\begin{env}[3.5.1]
+\label{0.3.5.1-fr}
+Sous les hypothèses de (3.4.1), si $\mathcal{F}$ (resp. $\mathcal{G}$) est un
+préfaisceau sur $X$ (resp. $Y$) à valeurs dans $\mathbf{K}$, tout morphisme
+$u:\mathcal{G}\to\psi_*(\mathcal{F})$ de préfaisceaux sur $Y$ s'appelle encore
+un $\psi$-\emph{morphisme} de $\mathcal{G}$ dans $\mathcal{F}$, et se note
+aussi $\mathcal{G}\to\mathcal{F}$. On désigne aussi par
+$\operatorname{Hom}_\psi(\mathcal{G},\mathcal{F})$ l'ensemble
+$\operatorname{Hom}_Y(\mathcal{G},\psi_*(\mathcal{F}))$ des
+$\psi$-morphismes de $\mathcal{G}$ dans $\mathcal{F}$.
+
+Pour tout couple $(U,V)$, où $U$ est un ouvert de $X$, $V$ un ouvert de $Y$
+tel que $\psi(U)\subset V$, on a un morphisme
+$u_{U,V}:\mathcal{G}(V)\to\mathcal{F}(U)$ en composant le morphisme de
+restriction
+$\mathcal{F}(\psi^{-1}(V))\to\mathcal{F}(U)$ et le morphisme
+$u_V:\mathcal{G}(V)\to\psi_*(\mathcal{F})(V)=\mathcal{F}(\psi^{-1}(V))$~; il
+est immédiat que ces morphismes rendent commutatifs les diagrammes
+\begin{equation*}
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathcal{G}(V) \arrow[r,"u_{U,V}"] \arrow[d]
+  & \mathcal{F}(U) \arrow[d] \\
+\mathcal{G}(V') \arrow[r,"u_{U',V'}"']
+  & \mathcal{F}(U')
+\end{tikzcd}
+\tag{3.5.1.1}\label{0.3.5.1.1-fr}
+\end{equation*}
+pour $U'\subset U$, $V'\subset V$, $\psi(U')\subset V'$. Inversement, la
+donnée d'une famille $(u_{U,V})$ de morphismes rendant commutatifs les
+diagrammes (3.5.1.1) définit un $\psi$-morphisme $u$, car il suffit de prendre
+\[
+  u_V=u_{\psi^{-1}(V),V}.
+\]
+

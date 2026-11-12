@@ -1,0 +1,75 @@
+% from ega3-1-fr.tex
+\oldpage[III]{103}
+soit bijectif. En d'autres termes, l'homomorphisme canonique
+\[
+\alpha:\mathcal M\longrightarrow\bbGamma_*(\shProj(\mathcal M))
+\]
+est un \textbf{(TN)}-isomorphisme.
+\end{theorem}
+
+\begin{proof}
+On peut se borner au cas où $\mathcal M$ est un $\mathcal S$-module de
+type fini (II, 3.4.2). Comme $Y$ est quasi-compact, il existe un entier
+$d>0$ tel que $\mathcal S^{(d)}$ soit engendrée par le
+$\mathcal O_Y$-Module quasi-cohérent $\mathcal S_d$, ce dernier étant de
+type fini (II, 3.1.10), donc cohérent puisque $Y$ est noethérien.
+Remarquons maintenant que $\mathcal M$ est somme directe des
+$\mathcal M^{(d,k)}$ pour $0\leq k<d$ et que chacun des
+$\mathcal M^{(d,k)}$ est un $\mathcal S^{(d)}$-Module quasi-cohérent de
+type fini, ainsi qu'il résulte de (II, 2.1.6, (iii)), la question étant
+locale sur $Y$. Or, il suffit évidemment de prouver que chacun des
+homomorphismes canoniques
+\[
+\alpha:\mathcal M^{(d,k)}
+\longrightarrow\bbGamma_*((\shProj(\mathcal M))^{(d,k)})
+\]
+est un \textbf{(TN)}-isomorphisme. Compte tenu de (II, 8.14.13), et
+notamment du diagramme (8.14.13.4), on voit qu'on est ramené à prouver le
+théorème lorsque $\mathcal S$ est engendrée par $\mathcal S_1$ et que
+$\mathcal S_1$ est un $\mathcal O_Y$-Module cohérent.
+
+Comme $Y$ est noethérien, le même raisonnement qu'au début de
+(\hyperref[III.2.2.2-fr]{2.2.2}) montre qu'on peut se borner au cas où
+$Y=\operatorname{Spec}(A)$, $\mathcal S=\widetilde S$,
+$\mathcal M=\widetilde M$, $A$ étant un anneau noethérien, $S_1$ un
+$A$-module de type fini et $M$ un $S$-module gradué de type fini.
+Montrons qu'il suffit alors de prouver le théorème lorsque $M=S$. En effet,
+dans le cas général, on a une suite exacte
+\[
+L'\longrightarrow L\longrightarrow M\longrightarrow0,
+\]
+où $L$ et $L'$ sont des sommes directes de modules gradués de la forme
+$S(m)$. Si le résultat est vrai pour $M=S$, il l'est aussi pour $M=S(m)$,
+donc pour $L$ et $L'$. Considérons alors le diagramme commutatif
+\[
+\xymatrix{
+\widetilde {L'_n}\ar[r]\ar[d]_{\alpha_n} &
+\widetilde {L_n}\ar[r]\ar[d]^{\alpha_n} &
+\widetilde {M_n}\ar[r]\ar[d]^{\alpha_n} & 0\\
+q_*(\widetilde {L'}(n))\ar[r] &
+q_*(\widetilde L(n))\ar[r] &
+q_*(\widetilde M(n))\ar[r] & 0 .
+}
+\]
+La deuxième ligne est exacte en vertu de
+(\hyperref[III.2.2.3-fr]{2.2.3}), dès que $n$ est assez grand~; comme il
+en est de même de la première et que les deux flèches verticales de gauche
+sont des isomorphismes, il en est de même de la troisième.
+
+Cela étant, pour prouver le théorème lorsque $M=S$, supposons d'abord que
+$S=A[T_0,\ldots,T_r]$ ($T_i$ indéterminées)~; dans ce cas, notre assertion
+n'est autre que (\hyperref[III.2.1.11-fr]{2.1.11}, (ii)). Dans le cas
+général, $S$ s'identifie à un quotient d'un anneau
+$S'=A[T_0,\ldots,T_r]$ par un idéal gradué, donc $X$ à un sous-schéma
+fermé de $X'=\mathbf P_A^r$ (II, 2.9.2). Si $j$ est l'injection canonique
+$X\to X'$, $j_*(\widetilde S(n))$ n'est autre que le
+$\mathcal O_{X'}$-Module $(\shProj(\widetilde S))(n)$ où $S$ est considéré
+comme un $S'$-module gradué~; cela résulte en effet aussitôt de
+(II, 2.8.7). Comme $j_*(\widetilde S(n))$ est un
+$\mathcal O_{X'}$-Module vérifiant \textbf{(TF)}, l'homomorphisme canonique
+$\alpha_n:S_n\to\Gamma(X',j_*(\widetilde S(n)))$ est bijectif pour $n$
+assez grand, en vertu de ce qui précède~; cela achève la démonstration,
+puisque
+$\Gamma(X',j_*(\widetilde S(n)))=\Gamma(X,\widetilde S(n))$.
+\end{proof}
+

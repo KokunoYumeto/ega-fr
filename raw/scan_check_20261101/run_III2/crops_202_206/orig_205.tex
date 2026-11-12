@@ -1,0 +1,96 @@
+% from ega3-7-fr.tex
+\oldpage[III]{205}
+\emph{homologiquement plat sur $Y$ au point $y$, en dimension $p$} (ou
+\emph{cohomologiquement plat sur $Y$ au point $y$, en dimension $-p$}) s'il
+existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+$\mathscr T_p^U=\mathscr T_U^{-p}$ soit exact. On dit que $\mathscr P_\bullet$ est
+\emph{homologiquement plat en dimension $p$ sur $Y$} (ou
+\emph{cohomologiquement plat en dimension $-p$ sur $Y$}) s'il est
+homologiquement plat sur $Y$ en tout point $y\in Y$, en dimension $p$.
+
+Lorsque $\mathscr P_\bullet$ est homologiquement plat sur $Y$ (resp. sur $Y$ au
+point $y$) pour \emph{toute dimension $p$}, on dit simplement que
+$\mathscr P_\bullet$ est \emph{homologiquement plat sur $Y$} (resp. sur $Y$ au
+point $y$) ou \emph{cohomologiquement plat sur $Y$} (resp. sur $Y$ au point
+$y$).
+\end{definition}
+
+\begin{env}[7.8.2]
+Par définition, la notion de platitude homologique sur $Y$ est \emph{locale sur
+$Y$}. Si $Y$ est localement noethérien, ou un \emph{schéma}, pour que
+$\mathscr P_\bullet$ soit homologiquement plat sur $Y$ en dimension $p$, il faut
+et il suffit que le foncteur $\mathscr T_p$ soit \emph{exact} : la démonstration
+a été faite dans le cas où $Y$ est localement noethérien au cours de la
+démonstration de (7.7.5) ; le raisonnement est le même (basé sur (I, 9.4.2)
+appliqué à un ouvert affine dans un schéma quasi-compact) lorsque $Y$ est un
+schéma.
+\end{env}
+
+\begin{proposition}[7.8.3]
+Les notations et hypothèses étant celles de (7.8.1), les conditions suivantes
+sont équivalentes :
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ est homologiquement plat sur $Y$ au point $y$
+    en dimension $p$.
+  \item[b)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+    $\mathscr T_p^U$ et $\mathscr T_{p+1}^U$ soient exacts à droite.
+  \item[c)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+    $\mathscr T_p^U$ et $\mathscr T_{p-1}^U$ soient exacts à gauche.
+  \item[d)] Il existe un voisinage ouvert $U$ de $y$ dans $Y$ tel que
+    $\mathscr T_{p+1}^U$ soit exact à droite et $\mathscr T_{p-1}^U$ exact à
+    gauche.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Compte tenu de l'interprétation de $\mathscr T_p$ lorsque $Y$ est affine, cela
+n'est qu'une traduction d'une partie de (7.3.3).
+\end{proof}
+
+\begin{proposition}[7.8.4]
+Soient $Y$ un préschéma localement noethérien, $f:X\to Y$ un morphisme propre,
+$\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules cohérents et $Y$-plats
+limité inférieurement, $\mathscr T_\bullet$ le foncteur défini par (7.7.1.1).
+Pour tout $y\in Y$, les conditions suivantes sont équivalentes :
+\begin{enumerate}
+  \item[a)] $\mathscr P_\bullet$ est homologiquement plat sur $Y$ en $y$ en
+    dimension $p$.
+  \item[b)] Le foncteur $T_p^{\mathscr O_y}$ est exact.
+  \item[c)] Il existe un entier $n_0$ tel que pour $n\geq n_0$, on ait
+    \[
+      \operatorname{long}T_p^{\mathscr O_y}
+        (\mathscr O_y/\mathfrak m_y^{n+1})
+      =
+      \operatorname{long}T_p^{\mathscr O_y}(\kappa(y))
+      \cdot
+      \operatorname{long}(\mathscr O_y/\mathfrak m_y^{n+1})
+      \tag{7.8.4.1}\label{III.7.8.4.1.fr}
+    \]
+    (où il s'agit de longueurs de $\mathscr O_y$-modules).
+  \item[d)] Il y a un voisinage ouvert $U$ de $y$ tel que
+    $(\mathscr H^{-p}(f,\mathscr P^\bullet))|U$ soit isomorphe à un
+    $(\mathscr O_Y|U)$-Module de la forme $(\mathscr O_Y|U)^m$ et que, pour tout
+    $(\mathscr O_Y|U)$-Module quasi-cohérent $\mathscr M$, l'homomorphisme
+    canonique
+    \[
+      ((\mathscr H^{-p}(f,\mathscr P^\bullet))|U)
+      \otimes_{\mathscr O_Y|U}\mathscr M
+      \longrightarrow
+      \mathscr H^{-p}
+      \bigl(
+        f,(\mathscr P^\bullet|U)
+          \otimes_{\mathscr O_Y|U}\mathscr M
+      \bigr)
+      \tag{7.8.4.2}\label{III.7.8.4.2.fr}
+    \]
+    soit bijectif.
+\end{enumerate}
+Lorsque ces conditions sont vérifiées, on a en outre la propriété suivante :
+\begin{enumerate}
+  \item[e)] Il existe un voisinage de $y$ dans lequel la fonction
+    $z\mapsto d_p(z)$ (définie dans (7.7.5.1)) est constante.
+\end{enumerate}
+De plus, si $Y$ est réduit au point $y$ ($0_{\mathrm I}$, 4.1.4), e) est
+équivalente aux autres conditions.
+\end{proposition}
+

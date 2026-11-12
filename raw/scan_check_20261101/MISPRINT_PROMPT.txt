@@ -1,0 +1,48 @@
+You correct the printed misprints in the corrected French edition of EGA (Grothendieck–Dieudonné).
+
+The French EGA has two editions. The diplomatic edition reproduces the printed pages, including their misprints. The
+corrected edition is meant to give the correct reading wherever the print has a misprint, but it still holds whatever
+the transcription had before the scan check: often the printed (wrong) reading, sometimes another slip (e.g. the print
+has u^♭, the correct reading is v^♭, and the old transcription had v^b). The checkers recorded every misprint with
+the printed reading and the correct one.
+
+Your batch file: {BATCH} (plain text; read it in large parts, about 1,500 lines per Read). Per printed page: the
+corrected edition's text of the page ("----- corrected edition, <file>, page ... -----"), then the misprints recorded
+there ("[id ...]" with WHERE, PRINT, CORRECT, TEX BEFORE, NOTE), then the diplomatic edits made on that page for
+misprints (OLD = the transcription before, NEW = the printed reading).
+
+For each id decide:
+- "apply": the corrected edition does not yet give the correct reading. Give an exact edit of the corrected edition:
+  "file" (as named in the block), "old" (an exact substring of that page's text, long enough to occur only once in
+  it) and "new" (the same text with the correct reading). Change only the misprint itself.
+- "already": the corrected edition already has the correct reading.
+- "keep": the recorded "correct" reading is not a certain correction (a deliberate notation or abuse of notation, a
+  reading that the mathematics does not settle, a correction that would change the author's argument or wording
+  beyond the slip, or a typographic detail of the print without effect on the meaning such as spacing or the shape
+  of a dash). Say why in "note".
+- "unclear": you cannot find the place; say why in "note".
+
+Rules:
+- Check each correction against the mathematics of the passage yourself: the right letter, index, sign, reference
+  number or word must follow from the context (definitions, the statement being proved, the numbering of the cited
+  item). A recorded "correct" reading is a proposal, not an authority.
+- Corrections of references: the corrected number must point to the statement actually used (check its content in
+  the context or by its number in the page's own text); otherwise "keep".
+- French spelling and grammar slips of the print (accents, agreement, a missing letter): "apply" with the correct
+  French.
+- Use the edition's own LaTeX conventions as they appear in the page text. Never change \oldpage markers or \label
+  keys.
+- If one edit covers several ids, put it in the first and give the others "already" with note "covered by <id>".
+
+OUTFILE {OUTFILE}: one JSON list, one object per id, in the batch's order:
+  {"id": "...", "decision": "apply"|"already"|"keep"|"unclear", "file": ..., "old": ..., "new": ..., "note": "..."}
+("file", "old", "new" only for "apply"; LF line breaks as \n.)
+
+Work economically: read the batch in large parts, keep your decisions as you go, write OUTFILE once at the end. Then
+run once
+  python -I user\Documents\ega_scan_check_20261101\apply_misprint_decisions.py {OUTFILE} --dry
+which checks every "apply" edit without changing anything and prints the ids it rejects; correct only those and write
+OUTFILE again. No other scripts or tools.
+
+Final message, short: counts per decision; then the "keep" decisions that a reader should still know about (a real
+error of the print you could not settle), one line each. Nothing else.

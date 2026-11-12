@@ -1,0 +1,100 @@
+% from ega3-7-fr.tex
+\oldpage[III]{177}
+$\mathbf Z$-homomorphisme $x\mapsto f_x$ de $M$ dans
+$\operatorname{Hom}_{\mathbf Z}(N,P)$ tel que
+\[
+  f_{ax}(t)=f_x(ta)
+  \qquad\text{pour }a\in A,\ t\in N,\ x\in M,
+\]
+les deux applications étant reliées par $u(t,x)=f_x(t)$.
+\end{env}
+
+\begin{env}[7.2.2]
+Soit $T:\mathbf{Ab}_A\to\mathbf{Ab}$ un foncteur covariant additif. Nous
+allons définir pour tout $A$-module à gauche $M$, un homomorphisme canonique
+fonctoriel en $M$, de $\mathbf Z$-modules
+\[
+  t_M:T(A_s)\otimes_A M\longrightarrow T(M).
+  \tag{7.2.2.1}\label{III.7.2.2.1.fr}
+\]
+Il suffira pour cela, en vertu de (7.2.1), de définir un
+$\mathbf Z$-homomorphisme $x\mapsto t'_M(x)$ de $M$ dans
+$\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$, tel que l'on ait
+\[
+  t'_M(ax)(y)=t'_M(x)(ya)
+  \qquad\text{pour }a\in A,\ x\in M,\ y\in T(A_s).
+\]
+Notons pour cela que
+$\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$ est canoniquement muni d'une
+structure de $A$-module à gauche provenant de la structure de $A$-module à
+droite de $T(A_s)$, la loi externe étant telle que si
+$a\in A$, $v\in\operatorname{Hom}_{\mathbf Z}(T(A_s),T(M))$,
+\[
+  (a\cdot v)(y)=v(ya)
+  \qquad\text{pour }y\in T(A_s).
+\]
+Cela étant, nous définirons $t'_M$ comme composé des deux homomorphismes
+canoniques
+\[
+  M\xrightarrow{\sim}\operatorname{Hom}_A(A_s,M)
+  \xrightarrow{T}
+  \operatorname{Hom}_{\mathbf Z}(T(A_s),T(M)),
+\]
+la seconde flèche étant l'application $u\mapsto T(u)$, la première
+l'isomorphisme canonique de $A$-modules $x\mapsto\theta_x$ tel que
+$\theta_x(\xi)=\xi x$ pour $\xi\in A$, $x\in M$. On a
+$\theta_{ax}=\theta_x\circ h_a$, donc
+\[
+  T(\theta_{ax})
+  =
+  T(\theta_x\circ h_a)
+  =
+  T(\theta_x)\circ T(h_a)
+\]
+et par suite, pour $y\in T(A_s)$,
+\[
+  T(\theta_{ax})(y)
+  =
+  T(\theta_x)(T(h_a)(y))
+  =
+  T(\theta_x)(ya)
+\]
+par définition de la loi externe sur $T(A_s)$, ce qui prouve l'existence de
+$t_M$; il est immédiat de vérifier que cet homomorphisme est fonctoriel en
+$M$, c'est-à-dire que pour tout homomorphisme $w:M\to M'$ de $A$-modules à
+gauche, le diagramme
+\[
+\xymatrix@C=30pt@R=30pt{
+  T(A_s)\otimes_A M
+  \ar[r]^-{t_M}\ar[d]_{1\otimes w}
+  &
+  T(M)\ar[d]^{T(w)}
+  \\
+  T(A_s)\otimes_A M'
+  \ar[r]_-{t_{M'}}
+  &
+  T(M')
+}
+\tag{7.2.2.2}\label{III.7.2.2.2.fr}
+\]
+est commutatif.
+
+La fonctorialité de l'homomorphisme (7.2.2.1) montre que lorsque $A$ est
+commutatif, c'est un homomorphisme de $A$-modules (cf. (7.1.2)).
+\end{env}
+
+\begin{env}[7.2.3]
+Lorsque $A$ est commutatif, on peut plus généralement définir un
+homomorphisme canonique de $A$-modules
+\[
+  T(N)\otimes_A M\longrightarrow T(N\otimes_A M)
+  \tag{7.2.3.1}\label{III.7.2.3.1.fr}
+\]
+pour tout $A$-module $N$; il suffit dans la construction de (7.2.2) de
+remplacer l'homomorphisme $\theta_x$ par l'homomorphisme de $A$-modules
+\[
+  N\longrightarrow N\otimes_A M
+\]
+qui à tout $y\in N$ fait correspondre $y\otimes x$. Il est immédiat que cet
+homomorphisme est fonctoriel en $M$ et $N$.
+

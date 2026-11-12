@@ -1,0 +1,36 @@
+\oldpage[IV-4]{89}
+$S$-isomorphisme du préschéma $G$, la « translation à gauche » $\tau_s$, transformant les points de la section unité de $G$ en les points de $s(S)$; on en conclut que $G$ est lisse sur $S$ aux points de $s(S)$.
+\end{examples}
+
+\begin{remark}[17.12.8]
+\label{IV.17.12.8}
+Un $S$-préschéma en groupes $G$, de type fini (et même fini) sur un préschéma localement noethérien $S$, peut être différentiellement lisse sur $S$ sans être lisse (ni même \emph{plat}) sur $S$. Prenons par exemple pour $S$ le spectre de l'algèbre des nombres duaux $D=k[T]/T^2k[T]$ sur un corps $k$, pour $G$ le spectre de la $D$-algèbre composée directe $E=D\oplus k$. On définit sur $G$ une structure de $S$-schéma en groupes en définissant une « application diagonale » $\delta$, homomorphisme de $E$ dans $E\otimes_DE$: si $e'$, $e''$ sont les idempotents, images canoniques de l'unité $1$ de $D$ dans les facteurs $D$ et $k$ de $E$, on vérifie sans peine qu'on obtient une telle application diagonale en prenant $\delta(e')=e'\otimes e'+e''\otimes e''$ et $\delta(e'')=e'\otimes e''+e''\otimes e'$.
+La section unité du schéma en groupes $G$ correspond à l'homomorphisme $E\to D$ qui est l'identité dans $D$ et $0$ dans $k$; c'est un isomorphisme de $S$ sur une composante connexe de $G$, et \emph{a fortiori} $G$ est différentiellement lisse sur $S$ (17.12.6), mais il est clair que $G$ n'est pas $S$-plat.
+\end{remark}
+
+\subsection{Morphismes transversaux.}
+\EGAReaderTarget{ega4.c04.subsec.17-13}{subsection:IV.17.13}
+\label{IV.17.13}
+
+\begin{env}[17.13.1]
+\label{IV.17.13.1}
+Soient $S$ un préschéma, $X$, $Y$, $X'$ trois $S$-préschémas, $i:Y\to X$ une $S$-\emph{immersion}, $f:X'\to X$ un $S$-morphisme. Posons $Y'=Y\times_XX'$, et soient $g:Y'\to Y$, $j:Y'\to X'$ les projections canoniques, de sorte qu'on a le diagramme commutatif
+\[
+\label{IV.17.13.1.1}
+\tag{17.13.1.1}
+\xymatrix{
+  Y \ar[d]_i & Y' \ar[l]_g \ar[d]^j\\
+  X & X' \ar[l]^f
+}
+\]
+et que $j$ est une $S$-immersion. On a alors un diagramme commutatif de $\sh{O}_{Y'}$-Modules quasi-cohérents
+\[
+\label{IV.17.13.1.2}
+\tag{17.13.1.2}
+\begin{tikzcd}
+  g^*(\sh{N}_{Y/X}) \ar{r} \ar{d}[swap]{\operatorname{gr}_1(g)} & f^*(\varOmega^1_{X/S})\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} \ar{d} & g^*(\varOmega^1_{Y/S}) \ar{r} \ar{d} & 0\\
+  \sh{N}_{Y'/X'} \ar{r} & \varOmega^1_{X'/S}\otimes_{\sh{O}_{X'}}\sh{O}_{Y'} \ar{r} & \varOmega^1_{Y'/S} \ar{r} & 0
+\end{tikzcd}
+\]
+où la ligne inférieure est la suite exacte (16.4.21) appliquée à $j$, la ligne supérieure provient de la même suite exacte pour $i$, par application du foncteur exact à droite $g^*$ (qui la laisse donc exacte); $\operatorname{gr}_1(g)$ est défini en (16.2.1), et la commutativité des deux carrés résulte de (\textbf{0}, 20.5.7.3) et (\textbf{0}, 20.5.11.3).
+

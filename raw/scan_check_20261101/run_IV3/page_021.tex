@@ -1,0 +1,92 @@
+% from ega4-8-fr.tex
+\oldpage[IV-3]{21}
+  si bien que l'homomorphisme (8.5.2.2) n'est autre, à des isomorphismes
+  canoniques près, que l'homomorphisme canonique
+  \begin{equation}
+    \varinjlim\operatorname{Hom}_{A_0}(M_0,N_\lambda)
+    \longrightarrow
+    \operatorname{Hom}_{A_0}(M_0,\varinjlim N_\lambda),
+    \tag{8.5.2.3}\label{IV.8.5.2.3-fr}
+  \end{equation}
+  qui, à tout système inductif d'homomorphismes de $A_0$-modules
+  $\theta_\lambda:M_0\to N_\lambda$, fait correspondre sa limite inductive.
+
+  Or, si $M_0$ est de type fini (resp. de présentation finie), on a une suite
+  exacte $A_0^m\to M_0\to0$ (resp. $A_0^n\to A_0^m\to M_0\to0$)~; comme il est
+  clair que (8.5.2.3) est bijectif lorsque $M_0$ est de la forme $A_0^q$, il
+  suffit d'utiliser l'exactitude à gauche du foncteur
+  $M_0\mapsto\operatorname{Hom}_{A_0}(M_0,P)$ et l'exactitude du foncteur
+  $\varinjlim$ (dans la catégorie des groupes abéliens) pour conclure.
+
+  Passons au cas où $S_0$ est quasi-compact, et soit $(U_i)$ un recouvrement
+  fini de $S_0$ par des ouverts affines~; pour tout $\lambda$, les
+  $U_{i\lambda}=u_{0\lambda}^{-1}(U_i)$ forment un recouvrement ouvert affine de
+  $S_\lambda$, et les $V_i=u_0^{-1}(U_i)$ un recouvrement ouvert affine de $S$.
+  Pour voir que $u_{\mathcal F,\mathcal G}$ est injectif, il faut prouver que
+  si $f_\lambda:\mathcal F_\lambda\to\mathcal G_\lambda$ est tel que
+  $f=u_\lambda^*(f_\lambda)=0$, alors il existe $\mu\geq\lambda$ tel que
+  $f_\mu=u_{\lambda\mu}^*(f_\lambda)=0$. En vertu du lemme (8.5.2.1), pour
+  chaque $i$ il existe un $\lambda_i$ tel que
+  $f_\mu|U_{i\mu}=0$ pour $\mu\geq\lambda_i$. Il suffit donc de prendre $\mu$
+  plus grand que tous les $\lambda_i$.
+
+  Supposons en outre $S_0$ quasi-séparé et $\mathcal F_0$ de présentation finie,
+  et soit $f:\mathcal F\to\mathcal G$ un homomorphisme de
+  $\mathcal O_S$-Modules. En vertu du lemme (8.5.2.1), pour tout $i$, il existe
+  un indice $\lambda_i$ et un homomorphisme
+  $f_{\lambda_i}^{(i)}:\mathcal F_{\lambda_i}|U_{i,\lambda_i}
+  \to\mathcal G_{\lambda_i}|U_{i,\lambda_i}$ tels que
+  $u_{\lambda_i}^*(f_{\lambda_i}^{(i)})=f|V_i$. Comme $L$ est filtrant, on peut
+  en outre supposer tous les $\lambda_i$ égaux à un même $\lambda$. Notons
+  maintenant que $S_\lambda$ est quasi-séparé (1.2.3) et
+  $\mathcal F_\lambda$ est un $\mathcal O_{S_\lambda}$-Module quasi-cohérent de
+  présentation finie $(0_{\mathrm I},5.2.5)$~; comme, pour tout couple d'indices
+  $i,j$, $U_{ij\lambda}=U_{i\lambda}\cap U_{j\lambda}$ est quasi-compact et que
+  l'on a
+  \[
+    u_\lambda^*(f_\lambda^{(i)}|U_{ij\lambda})
+    =u_\lambda^*(f_\lambda^{(j)}|U_{ij\lambda})
+    =f|(V_i\cap V_j)
+  \]
+  par définition, il résulte de ce qu'on a vu plus haut qu'il existe un indice
+  $\lambda_{ij}$ tel que
+  \[
+    u_{\lambda\mu}^*(f_\lambda^{(i)}|U_{ij\lambda})
+    =u_{\lambda\mu}^*(f_\lambda^{(j)}|U_{ij\lambda})
+    \quad\text{pour }\mu\geq\lambda_{ij}~;
+  \]
+  prenant $\mu$ plus grand que tous les $\lambda_{ij}$, on voit donc que
+  $u_{\lambda\mu}^*(f_\lambda^{(i)})$ et
+  $u_{\lambda\mu}^*(f_\lambda^{(j)})$ coïncident dans
+  $U_{i\mu}\cap U_{j\mu}$ pour tout couple $(i,j)$, et par suite définissent
+  un homomorphisme $f_\mu:\mathcal F_\mu\to\mathcal G_\mu$ tel que
+  $f=u_\mu^*(f_\mu)$.
+\end{enumerate}
+\end{proof}
+
+Avant de passer à la démonstration de (ii), notons les corollaires suivants de
+(i)~:
+
+\begin{corollary}[8.5.2.4]
+\label{IV.8.5.2.4-fr}
+Supposons $S_0$ quasi-compact, $\mathcal F_\lambda$ quasi-cohérent de type fini,
+$\mathcal G_\lambda$ quasi-cohérent de présentation finie. Soit
+$f_\lambda:\mathcal F_\lambda\to\mathcal G_\lambda$ un homomorphisme. Pour que
+$f=u_\lambda^*(f_\lambda):\mathcal F\to\mathcal G$ soit un isomorphisme, il faut
+et il suffit qu'il existe $\mu\geq\lambda$ tel que
+$f_\mu=u_{\lambda\mu}^*(f_\lambda):\mathcal F_\mu\to\mathcal G_\mu$ soit un
+isomorphisme.
+\end{corollary}
+
+\begin{proof}
+On peut toujours supposer $S_\lambda=S_0$~; la question étant locale sur $S_0$,
+on peut en outre ($S_0$ étant quasi-compact et $L$ filtrant) se ramener au cas
+où $S_0$ est affine, donc quasi-séparé. La condition étant trivialement
+suffisante, il reste à montrer qu'elle est nécessaire~: or, il y a par
+hypothèse un $\mathcal O_S$-homomorphisme $g:\mathcal G\to\mathcal F$ tel que
+$g\circ f=1_{\mathcal F}$ et $f\circ g=1_{\mathcal G}$. Comme $\mathcal G$ est
+de présentation finie, il existe $\nu\geq\lambda$ et un homomorphisme
+$g_\nu:\mathcal G_\nu\to\mathcal F_\nu$ tels que $g=u_\nu^*(g_\nu)$ en vertu de
+(8.5.2, (i))~; on a par suite
+$u_\nu^*(g_\nu\circ f_\nu)=1_{\mathcal F}$
+

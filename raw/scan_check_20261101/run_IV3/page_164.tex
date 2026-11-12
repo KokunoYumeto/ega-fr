@@ -1,0 +1,87 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{164}
+  \item Supposons que $g$ soit un morphisme plat, et en outre que l'une des
+  deux conditions suivantes soit vérifiée~:
+  \begin{enumerate}[label=\emph{\alph*)}]
+    \item $L$ est fini et les $f_\lambda$ sont quasi-compacts.
+    \item Le morphisme $g$ est localement de présentation finie.
+  \end{enumerate}
+  Alors, si la famille $(u_\lambda)$ est séparante, il en est de même de la
+  famille $(u'_\lambda)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item En vertu de (2.2.8), il suffit de montrer que si une section $t$ de
+  $\mathcal F$ au-dessus d'un ouvert $U$ de $X$ appartient au noyau de chacun
+  des $u_\lambda$, son image $t'$ par l'homomorphisme canonique
+  \[
+  \Gamma(\rho):\Gamma(U,\mathcal F)\longrightarrow
+  \Gamma(g^{-1}(U),g^*(\mathcal F))
+  =\Gamma(U,g_*(g^*(\mathcal F)))
+  \]
+  est nulle. Or les images de $t'$ par les $g^*(u_\lambda)$ sont les images
+  des $u_\lambda(t)$ par l'homomorphisme
+  \[
+  \Gamma(U,(f_\lambda)_*(\mathcal G_\lambda))\longrightarrow
+  \Gamma(g^{-1}(U),g^*((f_\lambda)_*(\mathcal G_\lambda))),
+  \]
+  donc sont nulles, et \emph{a fortiori} on a $u'_\lambda(t')=0$ pour tout
+  $\lambda$, donc $t'=0$ par hypothèse, ce qui prouve (i).
+
+  \item La question étant locale sur $X$ et $X'$, on peut se borner au cas où
+  $X=\operatorname{Spec}(A)$ et $X'=\operatorname{Spec}(A')$ sont affines,
+  $A'$ étant un $A$-module plat, et à prouver que, pour toute section $z'$ de
+  $\mathcal F'$ au-dessus de $X'$ dont les images par tous les $u'_\lambda$
+  sont nulles, alors $z'$ est elle-même nulle. On a vu en outre (11.9.6) que
+  l'on peut alors supposer que $Z_\lambda=X$ pour tout $\lambda$.
+
+  Distinguons maintenant les deux cas.
+
+  \emph{a)} Si $L$ est fini et les $f_\lambda$ quasi-compacts, on a vu (11.9.3)
+  qu'on peut encore se ramener au cas où $Z_\lambda=X$ pour tout
+  $\lambda\in L$, et où en outre $L$ est fini. Il revient au même alors de dire
+  que l'intersection des noyaux des
+  $u_\lambda:\mathcal F\to\mathcal G_\lambda$ est nulle, ou que
+  l'homomorphisme
+  $u=(u_\lambda):\mathcal F\to\mathcal G=\bigoplus_\lambda\mathcal G_\lambda$
+  est injectif. Comme $u'=g^*(u)$ est injectif puisque $g$ est plat, la
+  proposition est démontrée dans ce cas.
+
+  \emph{b)} Soient $\mathcal F=\widetilde M$,
+  $\mathcal G_\lambda=\widetilde N_\lambda$, et posons
+  $M'=M\otimes_A A'$, $N'_\lambda=N_\lambda\otimes_A A'$, de sorte que
+  $\mathcal F'=\widetilde{M'}$, $\mathcal G'_\lambda=\widetilde{N'_\lambda}$~;
+  par abus de langage, nous noterons encore $u_\lambda$ l'homomorphisme
+  $M\to N_\lambda$, et $u'_\lambda$ l'homomorphisme
+  $u_\lambda\otimes 1:M'\to N'_\lambda$. Donnons-nous un élément $z'\in M'$
+  tel que $u'_\lambda(z')=0$ pour tout $\lambda$~; il s'agit de prouver que
+  l'on a $z'=0$. Or, l'hypothèse que $g$ est plat et de présentation finie
+  entraîne, d'après (11.3.15), qu'il existe une suite finie
+  $(s_i)_{1\leq i\leq n}$ d'éléments de $A$, telle que, si l'on pose
+  $\mathfrak J_k=s_1A+\cdots+s_kA$, et
+  $A_i=A_{s_i}/\mathfrak J_{i-1}A_{s_i}$, l'anneau
+  $A'_i=A'\otimes_A A_i$ soit un $A_i$-module \emph{libre} pour
+  $1\leq i\leq n$, et $\mathfrak J_n=A$. La proposition sera établie si nous
+  prouvons pour $1\leq i\leq n$ l'assertion suivante~:
+  \begin{enumerate}[label=$(*_i)$]
+    \item \emph{Il existe un entier $m_i>0$ tel que $s_j^{m_i}z'=0$ pour
+    $j\leq i$.}
+  \end{enumerate}
+  En effet, posant alors $k=m_n$ et notant que les $s_i^k$ ($1\leq i\leq n$)
+  engendrent aussi l'idéal unité de $A$, l'assertion $(*_n)$ montrera que $z'$,
+  combinaison linéaire des $s_i^kz'$, est nul.
+
+  Prouvons $(*_i)$ par récurrence sur $i$, l'assertion étant vide pour $i=0$.
+  Supposons donc $i>0$ et soit $m$ un multiple commun des $m_j$ pour
+  $j\leq i-1$. Remarquons que (pour $1\leq h\leq n$) si
+  $\mathfrak J'_h$ est l'idéal engendré par les $s_j^m$ ($0\leq j\leq h$),
+  $\mathfrak J_h/\mathfrak J'_h$ est nilpotent~; remplacer les $s_j$ par
+  $s_j^m$ pour $1\leq j\leq n$ revient donc à remplacer, pour
+  $1\leq h\leq n$, $A_h$ par
+  $A_{s_h}/\mathfrak J'_{h-1}A_{s_h}=B_h$, de sorte que
+  $A_h=B_h/(\mathfrak J_{h-1}/\mathfrak J'_{h-1})B_h$~; comme $A'$ est un
+  $A$-module plat, il résulte de $(\mathbf 0_{\mathrm{III}},10.1.2)$ que
+  $B'_h=A'\otimes_A B_h$ est encore un $B_h$-module libre. On peut donc
+  

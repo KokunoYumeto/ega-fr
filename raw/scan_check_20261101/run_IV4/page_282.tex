@@ -1,0 +1,51 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{282}
+
+\begin{proposition}[21.8.5]
+\label{IV.21.8.5}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme entier;
+on suppose qu'il existe un ouvert schématiquement dense $U$ dans $X$ tel que $f^{-1}(U)$ soit schématiquement dense dans $X'$ (cf.\ \sref{IV.20.3.5}), et que le morphisme $f^{-1}(U)\to U$, restriction de $f$, soit un isomorphisme.
+Alors:
+\begin{enumerate}[label=(\roman*)]
+  \item L'homomorphisme $\theta':\sh{M}_X\to f_*(\sh{M}_{X'})$ est défini et bijectif, l'homomorphisme
+\[
+  \theta^*:\sh{O}^*_X\to f_*(\sh{O}^*_{X'})
+\]
+est injectif, l'homomorphisme $\theta''^*:\sh{D}iv_X\to f_*(\sh{D}iv_{X'})$ est surjectif, $\operatorname{Ker}(\theta''^*)$ est isomorphe à $\sh{N}=\operatorname{Coker}(\theta^*)$ et le support du faisceau de groupes multiplicatifs $\sh{N}$ est contenu dans $S=X-U$.
+  \item Supposons de plus l'ensemble $S$ discret et posons pour abréger $\sh{O}'_X=f_*(\sh{O}_{X'})$.
+Alors on a un diagramme commutatif
+\[
+\label{IV.21.8.5.1}
+  \xymatrix{
+    1 \ar[r] & \prod_{s\in S}\sh{O}'^{*}_{X,s}/\sh{O}^*_{X,s} \ar[r]^-{j} \ar[d] & \operatorname{Div}(X) \ar[r] \ar[d]^{k_X} & \operatorname{Div}(X') \ar[r] \ar[d]^{k_{X'}} & 0\\
+    1 \ar[r] & \bigl(\prod_{s\in S}\sh{O}'^{*}_{X,s}/\sh{O}^*_{X,s}\bigr)/\operatorname{Im}\Gamma(X',\sh{O}^*_{X'}) \ar[r]^-{j'} & \operatorname{Pic}(X) \ar[r] & \operatorname{Pic}(X') \ar[r] & 0
+  }
+  \tag{21.8.5.1}
+\]
+où les lignes sont exactes et où la flèche verticale de gauche est l'homomorphisme canonique.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+  \item L'hypothèse entraîne que l'on a un isomorphisme canonique $\sh{M}''_X\simto f_*(\sh{M}''_{X'})$ pour les faisceaux de germes de pseudo-fonctions \sref{IV.20.2.2}, d'où l'assertion relative à $\theta'$ vu l'existence des isomorphismes canoniques $\sh{M}_X\simto\sh{M}''_X$ et $\sh{M}_{X'}\simto\sh{M}''_{X'}$ \sref{IV.20.2.11}.
+Le reste de l'assertion (i) découle de \sref{IV.21.8.4}, sauf ce qui concerne le support de $\sh{N}$, qui résulte directement de l'hypothèse sur $U$.
+
+  \item Appliquant la suite exacte de cohomologie aux deux suites exactes de faisceaux de groupes commutatifs
+\[
+\label{IV.21.8.5.2}
+\begin{gathered}
+  1\to\sh{N}\to\sh{D}iv_X\to f_*(\sh{D}iv_{X'})\to0,\\
+  1\to\sh{O}^*_X\to f_*(\sh{O}^*_{X'})\to\sh{N}\to1,
+\end{gathered}
+  \tag{21.8.5.2}
+\]
+il vient respectivement les suites exactes
+\[
+\label{IV.21.8.5.3}
+\begin{gathered}
+  1\to\Gamma(X,\sh{N})\xrightarrow{j}\operatorname{Div}(X)\to\operatorname{Div}(X')\to\HH^1(X,\sh{N}),\\
+  \Gamma(X',\sh{O}^*_{X'})\to\Gamma(X,\sh{N})\xrightarrow{\partial}\operatorname{Pic}(X)\to\operatorname{Pic}(X')\to\HH^1(X,\sh{N}),
+\end{gathered}
+  \tag{21.8.5.3}
+\]

@@ -1,0 +1,108 @@
+% from ega1-10-fr.tex
+\oldpage[I]{211}
+  \item[\rm{(ii)}] Soient $\mathfrak{X}$, $\mathfrak{Y}$, $\mathfrak{S}$ trois
+  préschémas formels localement noethériens,
+  $f:\mathfrak{X}\to\mathfrak{S}$ une immersion fermée,
+  $g:\mathfrak{Y}\to\mathfrak{S}$ un morphisme. Alors le morphisme
+  $\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}\to\mathfrak{Y}$ est une
+  immersion fermée.
+  \item[\rm{(iii)}] Soient $\mathfrak{S}$ un préschéma formel localement
+  noethérien, $\mathfrak{X}'$, $\mathfrak{Y}'$ deux
+  $\mathfrak{S}$-préschémas formels localement noethériens tels que
+  $\mathfrak{X}'\times_{\mathfrak{S}}\mathfrak{Y}'$ soit localement
+  noethérien. Si $\mathfrak{X}$, $\mathfrak{Y}$ sont des
+  $\mathfrak{S}$-préschémas formels localement noethériens,
+  $f:\mathfrak{X}\to\mathfrak{X}'$, $g:\mathfrak{Y}\to\mathfrak{Y}'$ deux
+  $\mathfrak{S}$-morphismes qui sont des immersions fermées, alors
+  $f\times_{\mathfrak{S}}g$ est une immersion fermée.
+\end{enumerate}
+\end{proposition}
+
+En vertu de (\hyperref[I.3.5.1-fr]{3.5.1}), il suffit encore de prouver (i)
+et (ii).
+
+Pour démontrer (i), on peut supposer que $\mathfrak{Y}$ (resp.
+$\mathfrak{Z}$) est un sous-préschéma fermé de $\mathfrak{X}$ (resp.
+$\mathfrak{Y}$) défini par un faisceau cohérent $\mathscr{J}$ (resp.
+$\mathscr{K}$) d'idéaux de $\mathscr{O}_{\mathfrak{X}}$ (resp.
+$\mathscr{O}_{\mathfrak{Y}}$)~; si $\psi$ est l'injection
+$\mathfrak{Y}\to\mathfrak{X}$ des espaces sous-jacents,
+$\psi_*(\mathscr{K})$ est un faisceau cohérent d'idéaux de
+$\psi_*(\mathscr{O}_{\mathfrak{Y}})
+=\mathscr{O}_{\mathfrak{X}}/\mathscr{J}$
+(\hyperref[0.5.3.12-fr]{0, 5.3.12}), donc aussi un
+$\mathscr{O}_{\mathfrak{X}}$-Module cohérent
+(\hyperref[0.5.3.10-fr]{0, 5.3.10})~; le noyau $\mathscr{K}_1$ de
+$\mathscr{O}_{\mathfrak{X}}\to
+(\mathscr{O}_{\mathfrak{X}}/\mathscr{J})/\psi_*(\mathscr{K})$ est donc un
+faisceau cohérent d'idéaux de $\mathscr{O}_{\mathfrak{X}}$
+(\hyperref[0.5.3.4-fr]{0, 5.3.4}), et
+$\mathscr{O}_{\mathfrak{X}}/\mathscr{K}_1$ est isomorphe à
+$\psi_*(\mathscr{O}_{\mathfrak{Y}}/\mathscr{K})$, ce qui prouve que
+$\mathfrak{Z}$ est isomorphe à un sous-préschéma fermé de $\mathfrak{X}$.
+
+Pour démontrer (ii), il est immédiat qu'on peut se limiter au cas où
+$\mathfrak{S}=\operatorname{Spf}(A)$,
+$\mathfrak{X}=\operatorname{Spf}(B)$,
+$\mathfrak{Y}=\operatorname{Spf}(C)$, $A$ étant un anneau
+$\mathfrak{J}$-adique noethérien, $B=A/\mathfrak{a}$, où $\mathfrak{a}$ est
+un idéal de $A$, $C$ une $A$-algèbre topologique adique et noethérienne. Tout
+revient à prouver que l'homomorphisme
+$C\to C\widehat{\otimes}_A(A/\mathfrak{a})$ est \emph{surjectif}~: or,
+$A/\mathfrak{a}$ est un $A$-module de type fini, et sa topologie est la
+topologie $\mathfrak{J}$-adique~; il résulte alors de
+(\hyperref[0.7.7.8-fr]{0, 7.7.8}) que
+$C\widehat{\otimes}_A(A/\mathfrak{a})$ s'identifie à
+$C\otimes_A(A/\mathfrak{a})=C/\mathfrak{a}C$, d'où notre assertion.
+
+\begin{corollary}[10.14.6]
+\label{I.10.14.6-fr}
+Sous les hypothèses de (\hyperref[I.10.14.5-fr]{10.14.5, (ii)}), soient
+$p:\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}\to\mathfrak{X}$,
+$q:\mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}\to\mathfrak{Y}$ les
+projections, de sorte que le diagramme
+\[
+  \xymatrix{
+    \mathfrak{X} \ar[d]_{f}
+    & \mathfrak{X}\times_{\mathfrak{S}}\mathfrak{Y}
+      \ar[l]_{p} \ar[d]^{q}\\
+    \mathfrak{S}
+    & \mathfrak{Y} \ar[l]^{g}
+  }
+\]
+est commutatif. Pour tout $\mathscr{O}_{\mathfrak{X}}$-Module cohérent
+$\mathscr{F}$, on a alors un isomorphisme canonique de
+$\mathscr{O}_{\mathfrak{Y}}$-Modules
+\[
+  \label{I.10.14.6.1-fr}
+  u:g^*(f_*(\mathscr{F}))
+  \xrightarrow{\sim}
+  q_*(p^*(\mathscr{F})).
+  \tag{10.14.6.1}
+\]
+\end{corollary}
+
+Pour définir un homomorphisme
+$g^*(f_*(\mathscr{F}))\to q_*(p^*(\mathscr{F}))$, on sait qu'il revient au
+même de définir un homomorphisme
+$f_*(\mathscr{F})\to g_*(q_*(p^*(\mathscr{F})))
+=f_*(p_*(p^*(\mathscr{F})))$
+(\hyperref[0.4.4.3-fr]{0, 4.4.3})~: nous prendrons $u=f_*(\rho)$, où $\rho$
+est l'homomorphisme canonique
+$\mathscr{F}\to p_*(p^*(\mathscr{F}))$
+(\hyperref[0.4.4.3-fr]{0, 4.4.3}). Pour voir que $u$ est un isomorphisme, on
+se ramène aussitôt au cas où $\mathfrak{S}$, $\mathfrak{X}$,
+$\mathfrak{Y}$ sont des spectres formels d'anneaux adiques noethériens $A$,
+$B$, $C$, avec les conditions vues ci-dessus dans
+(\hyperref[I.10.14.5-fr]{10.14.5, (ii)})~; on a alors
+$\mathscr{F}=M^\Delta$, où $M$ est un $(A/\mathfrak{a})$-module de type fini
+(\hyperref[I.10.10.5-fr]{10.10.5}), et les deux membres de
+(\hyperref[I.10.14.6.1-fr]{10.14.6.1}) s'identifient respectivement, en vertu
+de (\hyperref[I.10.10.8-fr]{10.10.8}), à
+$(C\otimes_A M)^\Delta$ et à
+$((C/\mathfrak{a}C)\otimes_{A/\mathfrak{a}}M)^\Delta$, d'où le corollaire,
+puisque
+$(C/\mathfrak{a}C)\otimes_{A/\mathfrak{a}}M
+=(C\otimes_A(A/\mathfrak{a}))\otimes_{A/\mathfrak{a}}M$ s'identifie
+canoniquement à $C\otimes_A M$.
+

@@ -1,0 +1,81 @@
+% from ega4-21c-fr.tex
+\oldpage[IV-4]{313}
+peut, par un changement de base $\operatorname{Spec}(\mathcal O_{S,s})\to S$, se
+ramener au cas où $S$ est un schéma local de point fermé $s$ et de point générique
+$\eta$, et il faut montrer que, pour que $f_s$ soit un isomorphisme, il faut et il suffit
+que $f_\eta$ le soit. Or, la suffisance de cette condition résulte de (21.12.15). Pour
+montrer qu'elle est nécessaire, on raisonne comme dans la démonstration de (21.12.15)
+(en remarquant, avec les mêmes notations, que la projection du point fermé de $S$ est le
+point fermé de $S_0$) pour se ramener au cas où en outre $S$ est \emph{noethérien};
+mais alors la conclusion résulte de $(\mathbf{III}, 4.6.7$, (ii)).
+\end{proof}
+
+\begin{remarks}[21.12.17]
+\label{IV.21.12.17}
+(i) La conclusion de la proposition (21.12.15) n'est plus valable si on élimine
+l'hypothèse que les fibres $X_s$ sont irréductibles. Prenons en effet
+$S=\operatorname{Spec}(A)$, où $A$ est un anneau de valuation discrète,
+$Y=\mathbb P^1_S$, qui est propre et lisse sur $S$ (17.3.9). Notons encore $s$ et
+$\eta$ le point fermé et le point générique de $S$; soit $z$ un point fermé de $Y_s$,
+par exemple un point rationnel sur $k=k(s)$, et soit $X$ le $Y$-préschéma obtenu en
+faisant éclater le point $z$. Comme l'anneau de polynômes $A[T]$ est régulier
+$(\mathbf 0, 17.3.7)$ et de dimension $2$, on voit comme dans la démonstration de
+(15.1.1.6) que, si $f:X\to Y$ est le morphisme structural, $f^{-1}(z)$ est isomorphe
+à $\mathbb P^1_k$, et d'autre part, le complémentaire de $f^{-1}(z)$ dans $X_s$ est
+isomorphe à $Y_s-\{z\}$, donc $Z_1=f^{-1}(z)$ et $Z_2$, adhérence dans $X_s$ du
+complémentaire de $Z_1$, sont les deux composantes irréductibles de $X_s$. Par
+ailleurs, $f$ est évidemment propre et $g=h\circ f$ est plat, car $X$ est intègre
+$(\mathbf{II}, 8.1.4)$ et pour tout ouvert affine $U$ de $X$, l'homomorphisme
+$A\to\Gamma(U,\mathcal O_X)$ est injectif $(\mathbf I, 1.2.7)$, donc
+$\Gamma(U,\mathcal O_X)$ est un $A$-module sans torsion, et par suite plat puisque $A$
+est un anneau de valuation discrète $(\mathbf 0_{\mathrm I}, 6.3.4)$. Il est clair que
+$f_\eta:X_\eta\to Y_\eta$ est un isomorphisme, bien que
+$f_s:X_s\to Y_s$ n'en soit pas un.
+
+(ii) La conclusion de (21.12.15) tombe aussi en défaut si, dans les hypothèses, on
+supprime l'hypothèse que $f$ est \emph{propre}. Il suffit pour le voir de définir $S$ et
+$Y$ comme dans (i), mais de remplacer $X$ par le complémentaire $X'$ de $Z_2$ dans le
+préschéma $X$ défini dans (i), $f$ par la restriction $f':X'\to Y$ de $f$; le morphisme
+$g':X'\to S$, restriction de $g$, est encore plat, et cette fois $X'_s$ est
+géométriquement irréductible; $X'_s$ est d'ailleurs isomorphe au complémentaire d'un
+point fermé dans $\mathbb P^1_k$, donc est un schéma affine isomorphe à $\mathbb A^1_k$;
+comme son image dans $Y_s$ est réduite au point fermé $z$, $f'$ n'est pas propre
+$(\mathbf{III}, 4.4.2)$ et $f'_s$ n'est pas un isomorphisme, bien que $f'_\eta$ en soit
+un.
+
+(iii) Il se peut que l'énoncé de la proposition (21.12.15) reste valable quand on y
+remplace le mot « isomorphisme » par « morphisme étale » (cf. (21.12.14, (v))). Il en
+sera alors encore de même de (21.12.16).
+\end{remarks}
+\subsection{Couples parafactoriels. Anneaux locaux parafactoriels}
+\EGAReaderTarget{ega4.c04.subsec.21-13}{subsection:IV.21.13}
+\label{IV.21.13}
+
+\begin{definition}[21.13.1]
+\EGAReaderTarget{ega4.c04.def.21-13-1}{IV.21.13.1}
+Soient $X$ un espace annelé, $Y$ une partie fermée de $X$, $U=X-Y$.
+On dit que le couple $(X,Y)$ est \emph{parafactoriel} si, pour tout ouvert $V$ de $X$,
+le foncteur restriction
+$\mathscr L\mapsto\mathscr L|(U\cap V)$, de la catégorie des
+$\mathcal O_V$-Modules inversibles dans celle des $\mathcal O_{U\cap V}$-Modules
+inversibles, est une \emph{équivalence de catégories}.
+\end{definition}
+
+Dire que le couple $(X,Y)$ est parafactoriel signifie donc que, pour tout ouvert $V$
+de $X$, les conditions suivantes sont vérifiées :
+\begin{enumerate}[label=\arabic*\textsuperscript{o}]
+  \item le foncteur $\mathscr L\mapsto\mathscr L|(U\cap V)$ est \emph{pleinement
+  fidèle}, autrement dit, pour deux $\mathcal O_V$-Modules inversibles $\mathscr L$,
+  $\mathscr L'$, l'application de restriction
+  \[
+    \operatorname{Hom}_{\mathcal O_V}(\mathscr L,\mathscr L')
+    \longrightarrow
+    \operatorname{Hom}_{\mathcal O_{U\cap V}}
+    (\mathscr L|(U\cap V),\mathscr L'|(U\cap V))
+  \]
+  est \emph{bijective};
+  \item le foncteur $\mathscr L\mapsto\mathscr L|(U\cap V)$ est
+  \emph{essentiellement surjectif}, autrement dit, pour tout
+  $\mathcal O_{U\cap V}$-Module inversible $\mathscr L_0$, il existe un
+  $\mathcal O_V$-Module inversible $\mathscr L$ tel que $\mathscr L_0$ soit
+  

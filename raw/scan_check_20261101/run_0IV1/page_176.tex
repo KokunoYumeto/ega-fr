@@ -1,0 +1,96 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{176}
+Il suffit de prouver qu'un élément $f\ne0$ du premier membre de (21.8.8.4)
+appartient au second membre. Soient $\gamma$ un indice,
+$g\in k_\gamma[[T_1,\ldots,T_r]]$ tel que
+$gf\in k_\gamma[[T_1,\ldots,T_r]]$~; quitte à remplacer $g$ par $g^q$, on
+peut supposer que $g\in k_0[[T_1,\ldots,T_r]]$. Alors, pour tout
+$\alpha\geqslant\gamma$, on a
+\[
+  gf\in k_\gamma[[T_1,\ldots,T_r]]\cap k_\alpha((T_1,\ldots,T_r))
+  =k_\alpha[[T_1,\ldots,T_r]]
+\]
+en vertu du lemme (21.8.8.2). Mais il est clair que l'intersection des
+anneaux $k_\alpha[[T_1,\ldots,T_r]]$ n'est autre que
+$k_0[[T_1,\ldots,T_r]]$, et l'on a donc bien
+$f\in k_0((T_1,\ldots,T_r))$.
+\end{proof}
+
+\subsection{Modules de différentielles complétés dans les anneaux de séries formelles}
+\label{subsection:0.21.9-fr}
+
+Dans ce numéro, les corps ne sont plus nécessairement supposés être de
+caractéristique $>0$.
+
+\begin{lemma}[21.9.1]
+\label{0.21.9.1-fr}
+Soient $k$ un corps, $A$ un anneau local noethérien complet qui est une
+$k$-algèbre, $K$ le corps résiduel de $A$. Si $K$ est une extension de type
+fini de $k$, le $A$-module $\widehat\Omega^1_{A/k}$ est de type fini.
+\end{lemma}
+
+\begin{proof}
+En vertu de (20.7.15), il suffit de prouver que $\Omega^1_{K/k}$ est un
+$K$-espace vectoriel de rang fini. Or, par hypothèse, $K$ est le corps des
+fractions d'une $k$-algèbre de type fini $B$~; comme $\Omega^1_{B/k}$ est un
+$B$-module de type fini en vertu de (20.4.7), la conclusion résulte de
+(20.5.9).
+\end{proof}
+
+\begin{proposition}[21.9.2]
+\label{0.21.9.2-fr}
+Soient $k_0$ un corps, $A$ un anneau local noethérien complet qui est une
+$k_0$-algèbre formellement lisse, $\mathfrak m$ son idéal maximal,
+$K=A/\mathfrak m$ son corps résiduel (de sorte qu'en tant qu'anneau $A$ est
+isomorphe à un anneau de séries formelles $K[[T_1,\ldots,T_r]]$ (19.6.5)).
+Si $K$ est une extension de type fini de $k_0$, alors
+$\widehat\Omega^1_{A/k_0}$ est un $A$-module libre de rang égal à
+$\dim(A)+\deg.\operatorname{tr}_{k_0}K$. En outre, pour tout sous-corps $k$
+de $k_0$ tel que $\Omega^1_{k_0/k}$ soit de rang fini,
+$\widehat\Omega^1_{A/k}$ est un $A$-module libre de rang égal à
+\[
+  \dim(A)+\deg.\operatorname{tr}_{k_0}K
+  +\operatorname{rg}_{k_0}(\Omega^1_{k_0/k}).
+\]
+\end{proposition}
+
+\begin{proof}
+Il est clair que, si $P$ est le sous-corps premier de $k_0$, $K$ est une
+$P$-algèbre formellement lisse (19.6.1). Notons d'autre part que l'on a
+$\Upsilon^K_{A/k_0/P}=0$~: en effet, cela revient à voir que l'homomorphisme
+\[
+  u_{A/k_0/P}\otimes1_K:
+  \Omega^1_{k_0/P}\otimes_{k_0}K
+  \longrightarrow \Omega^1_{A/P}\otimes_A K
+\]
+est injectif (20.6.14.5), $u$ désignant l'homomorphisme structural
+$k_0\to A$. Mais comme $A$ est une $k_0$-algèbre formellement lisse par
+hypothèse, il résulte de (20.7.2) que $u_{A/k_0/P}$ est formellement
+inversible à gauche, donc (19.1.7) $u_{A/k_0/P}\otimes1_K$ est inversible à
+gauche et \emph{a fortiori} injectif, ce qui prouve notre assertion.
+Appliquant la suite exacte (20.6.22.1), où $\Lambda,A,B,C$ sont remplacés par
+$P,k_0,A,K$, il vient la suite exacte
+\[
+  0\longrightarrow \Upsilon^K_{A/k_0}
+  \longrightarrow \mathfrak m/\mathfrak m^2
+  \longrightarrow \Omega^1_{A/k_0}\otimes_A K
+  \longrightarrow \Omega^1_{K/k_0}\longrightarrow0,
+\]
+de sorte que l'on a
+\[
+\begin{split}
+  \operatorname{rg}_K(\Omega^1_{A/k_0}\otimes_AK)
+  &={\operatorname{rg}}_K(\mathfrak m/\mathfrak m^2)
+    +\bigl(\operatorname{rg}_K(\Omega^1_{K/k_0})
+    -\operatorname{rg}_K(\Upsilon_{K/k_0})\bigr)\\
+  &={\operatorname{rg}}_K(\mathfrak m/\mathfrak m^2)
+    +\deg.\operatorname{tr}_{k_0}K
+\end{split}
+\]
+en vertu de (21.7.1). D'autre part, $\widehat\Omega^1_{A/k_0}$ est un
+$A$-module formellement projectif (20.4.9), et comme sa topologie est la
+topologie $\mathfrak m$-préadique (20.4.5),
+$\widehat\Omega^1_{A/k_0}/\mathfrak m^{j+1}\widehat\Omega^1_{A/k_0}$ est un
+$(A/\mathfrak m^{j+1})$-module projectif pour tout $j$ (19.2.4), donc libre
+($\mathbf 0_{\mathrm{III}}$, 10.1.2) et de rang
+

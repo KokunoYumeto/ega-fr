@@ -1,0 +1,116 @@
+% from ega3-6-fr.tex
+\oldpage[III]{142}
+
+et nous dirons que cet $A$-module est l'hypertor d'indice $n$ des deux
+complexes $P_\bullet$, $Q_\bullet$. On sait que dans la catégorie des
+complexes de $A$-modules limités inférieurement, les
+$\mathbf{Tor}_n^A(P_\bullet,Q_\bullet)$ forment un bifoncteur homologique en
+$P_\bullet$, $Q_\bullet$ (0, 11.6.5). En outre :
+\end{env}
+
+\begin{proposition}[6.3.2]
+Le bifoncteur $\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)$ est
+l'aboutissement commun de deux bifoncteurs spectraux
+$'E(P_\bullet,Q_\bullet)$, $''E(P_\bullet,Q_\bullet)$, dont les termes $E_2$
+sont
+\begin{align}
+  'E^2_{pq}
+    &=H_p\bigl(\operatorname{Tor}_q^A(P_\bullet,Q_\bullet)\bigr),
+    \tag{6.3.2.1}\label{III.6.3.2.1.fr}\\
+  ''E^2_{pq}
+    &=\bigoplus_{q'+q''=q}
+      \operatorname{Tor}_p^A\bigl(H_{q'}(P_\bullet),H_{q''}(Q_\bullet)\bigr).
+    \tag{6.3.2.2}\label{III.6.3.2.2.fr}
+\end{align}
+où, dans (6.3.2.1), $\operatorname{Tor}_q^A(P_\bullet,Q_\bullet)$ désigne le
+bicomplexe formé des $A$-modules $\operatorname{Tor}_q^A(P_i,Q_j)$. La suite
+spectrale (6.3.2.2) est toujours régulière; si $P_\bullet$ et $Q_\bullet$
+sont limités inférieurement, ou si $A$ est de dimension cohomologique finie,
+les deux suites spectrales (6.3.2.1) et (6.3.2.2) sont birégulières.
+\end{proposition}
+
+\begin{proof}
+Cela résulte de (0, 11.6.5), car lorsque $A$ est de dimension cohomologique
+finie $n$, tout $A$-module admet une résolution projective de longueur $n$
+(M, VI, 2.1).
+\end{proof}
+
+\begin{corollary}[6.3.3]
+Soient $P'_\bullet$, $Q'_\bullet$ deux complexes de $A$-modules,
+$u:P_\bullet\to P'_\bullet$, $v:Q_\bullet\to Q'_\bullet$ deux homomorphismes
+de complexes. Si les homomorphismes
+$H_\bullet(u):H_\bullet(P_\bullet)\to H_\bullet(P'_\bullet)$,
+$H_\bullet(v):H_\bullet(Q_\bullet)\to H_\bullet(Q'_\bullet)$ déduits
+respectivement de $u$ et $v$ sont bijectifs, alors l'homomorphisme
+$\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)\to
+\mathbf{Tor}_\bullet^A(P'_\bullet,Q'_\bullet)$ déduit de $u$ et $v$ est
+bijectif.
+\end{corollary}
+
+\begin{proof}
+En effet, l'homomorphisme de suites spectrales
+$''E(P_\bullet,Q_\bullet)\to''E(P'_\bullet,Q'_\bullet)$ déduit de $u$ et $v$
+est alors un isomorphisme pour les termes $E_2$ et la conclusion résulte de
+ce que ces suites sont régulières en vertu de (6.3.2) (0, 11.1.5).
+\end{proof}
+
+\begin{proposition}[6.3.4]
+Soient $P_\bullet$, $Q_\bullet$ deux complexes de $A$-modules, limités
+inférieurement. Soit $L_{\bullet\bullet}$ (resp. $M_{\bullet\bullet}$) un
+bicomplexe formé de $A$-modules plats, tel que pour tout $i$,
+$L_{i,\bullet}$ (resp. $M_{i,\bullet}$) soit une résolution de $P_i$
+(resp. $Q_i$). On a alors des isomorphismes canoniques
+\[
+  \mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)
+  \xrightarrow{\sim}H_\bullet(L_{\bullet\bullet}\otimes_AQ_\bullet)
+  \xrightarrow{\sim}H_\bullet(P_\bullet\otimes_AM_{\bullet\bullet})
+  \xrightarrow{\sim}H_\bullet(L_{\bullet\bullet}\otimes_AM_{\bullet\bullet})
+  \tag{6.3.4.1}\label{III.6.3.4.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Cela résulte de (0, 11.6.5, (ii) et (iii)) et de la définition des
+$A$-modules plats.
+\end{proof}
+
+\begin{namedtheorem}[6.3.5]{Remarques}
+(i) Avec les notations de (6.3.1), les bicomplexes
+$L_{\bullet\bullet}\otimes_A M_{\bullet\bullet}$ et
+$M_{\bullet\bullet}\otimes_A L_{\bullet\bullet}$ sont canoniquement
+isomorphes, d'où un isomorphisme canonique
+$\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)\xrightarrow{\sim}
+\mathbf{Tor}_\bullet^A(Q_\bullet,P_\bullet)$.
+
+(ii) Si $F$ et $G$ sont deux $A$-modules, $P_\bullet$ et $Q_\bullet$ les
+complexes de $A$-modules réduits à $F$ et $G$ respectivement en degré 0 et
+nuls dans les autres degrés, alors deux résolutions projectives $L_\bullet$,
+$M_\bullet$ de $F$ et $G$ respectivement peuvent être considérées comme des
+résolutions de Cartan-Eilenberg de $P_\bullet$ et $Q_\bullet$ en les
+complétant par des zéros. On a par suite dans ce cas
+$\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)
+=\operatorname{Tor}_\bullet^A(F,G)$.
+\end{namedtheorem}
+
+\begin{proposition}[6.3.6]
+Soient $(P_\bullet^\lambda)$, $(Q_\bullet^\mu)$ deux systèmes inductifs
+filtrants de complexes de $A$-modules; on a un isomorphisme canonique
+\[
+  \varinjlim_{\lambda,\mu}
+  \mathbf{Tor}_\bullet^A(P_\bullet^\lambda,Q_\bullet^\mu)
+  \xrightarrow{\sim}
+  \mathbf{Tor}_\bullet^A
+  \left(\varinjlim_\lambda P_\bullet^\lambda,
+        \varinjlim_\mu Q_\bullet^\mu\right).
+  \tag{6.3.6.1}\label{III.6.3.6.1.fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Posons $P_\bullet=\varinjlim_\lambda P_\bullet^\lambda$,
+$Q_\bullet=\varinjlim_\mu Q_\bullet^\mu$; par fonctorialité, il est clair que
+les $\mathbf{Tor}_\bullet^A(P_\bullet^\lambda,Q_\bullet^\mu)$ forment un
+système inductif et que les applications
+$\mathbf{Tor}_\bullet^A(P_\bullet^\lambda,Q_\bullet^\mu)\to
+\mathbf{Tor}_\bullet^A(P_\bullet,Q_\bullet)$ déduites
+

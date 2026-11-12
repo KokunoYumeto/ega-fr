@@ -1,0 +1,65 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{215}
+
+Nous procéderons par récurrence sur $m$, supposant donc (19.7.1.6) vérifiée lorsqu'on remplace $m$ par un entier $m'<m$. Nous considérerons d'autre part, pour $m$ fixé et pour un entier $d\geq0$, la relation
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^dN\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$*_d$}
+\end{equation}
+
+Il est clair qu'il suffit de démontrer $(*_d)$ pour $d=m$, et d'autre part $(*_0)$ est trivialement vraie. Nous prouverons $(*_d)$ par récurrence sur $d$; autrement dit, nous supposons, pour un $d\geq0$ fixé (avec $d<m$), que $(*_d)$ est vraie, et nous voulons prouver
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap\mathfrak R^{d+1}N\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$*_{d+1}$}
+\end{equation}
+
+Considérons pour cela, pour un $h\geq0$, la relation
+\begin{equation}
+  R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)\subset(R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\cap\mathfrak L^mN)+\mathfrak L^{m+1}N.
+  \tag{$**_{d+1,h}$}
+\end{equation}
+
+L'hypothèse $(*_d)$ implique que $(**_{d+1,0})$ est vraie. Nous prouverons par récurrence sur $h$ que $(**_{d+1,h})$ est vraie pour tout $h\geq0$. Mais on a le
+
+\begin{lemma}[19.7.1.7]
+\label{IV.19.7.1.7}
+Soient $A$ un anneau noethérien, $N$ un $A$-module de type fini, $E$, $F$ deux sous-modules de $N$, $\mathfrak L$ un idéal de $A$. Pour tout $k>0$ il existe $h>0$ tel que
+\[
+  E\cap(F+\mathfrak L^hN)\subset(E\cap F)+\mathfrak L^kN.
+\]
+\end{lemma}
+
+En effet, soit $\varphi:N\to N/(E\cap F)=N_1$ l'homomorphisme canonique, et posons $E_1=\varphi(E)$, $F_1=\varphi(F)$, de sorte que $E_1\cap F_1=0$ et $\varphi(E\cap(F+\mathfrak L^hN))=E_1\cap(F_1+\mathfrak L^hN_1)$. On sait ($0_{\mathrm I}$, 7.3.2) qu'il existe $h$ tel que $(E_1+F_1)\cap\mathfrak L^hN_1\subset\mathfrak L^k(E_1+F_1)$; si $h$ est ainsi choisi et si $x_1\in E_1$ est tel qu'il existe $y_1\in F_1$ pour lequel $x_1-y_1\in\mathfrak L^hN_1$, on en déduit d'après ce qui précède qu'il existe $u_1\in\mathfrak L^kE_1$ et $v_1\in\mathfrak L^kF_1$ tels que $x_1=u_1$ et $y_1=v_1$; donc $E_1\cap(F_1+\mathfrak L^hN_1)\subset\mathfrak L^kN_1$, ce qui prouve le lemme.
+
+Il suffit alors d'appliquer ce lemme avec $E=R\cap\mathfrak L^mN$, $F=\mathfrak R^{d+1}N$ et de prendre $k=m+1$ pour en déduire qu'avec la valeur de $h$ correspondante, $(**_{d+1,h})$ entraîne $(*_{d+1})$.
+
+Nous supposons donc dans tout ce qui suit que $(**_{d+1,h})$ est vérifiée.
+
+\begin{env}[19.7.1.8]
+\label{IV.19.7.1.8}
+Démonstration de $(**_{d+1,h+1})$: Premier cas: $h\leq m-d$.
+\end{env}
+
+Partons donc d'un élément
+\begin{env}[19.7.1.9]
+\label{IV.19.7.1.9}
+\[
+  g\in R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^hN)\cap\mathfrak L^mN
+\]
+\end{env}
+congru mod. $\mathfrak L^{m+1}N$ à un élément $g_1\in R\cap(\mathfrak R^mN+\mathfrak L^{m+1}N)$; on a donc
+\begin{env}[19.7.1.10]
+\label{IV.19.7.1.10}
+\[
+  g\in\mathfrak R^mN+\mathfrak L^{m+1}N.
+\]
+\end{env}
+
+Il suffira de prouver que $g$ est aussi congru mod. $\mathfrak L^{m+1}N$ à un élément $g_2\in R\cap(\mathfrak R^{d+1}N+\mathfrak R^d\mathfrak L^{h+1}N)$, car cela entraînera $g_2\in\mathfrak L^mN$, puisque l'on aura $g\in\mathfrak L^mN$ et $g_2-g\in\mathfrak L^{m+1}N$. Dans le cas $h\leq m-d$ que nous considérons, il suffit de démontrer la relation
+\begin{env}[19.7.1.11]
+\label{IV.19.7.1.11}
+\[
+  (\mathfrak R^mN+\mathfrak L^{m+1}N)\cap\mathfrak R^dN\subset\mathfrak L^{m-d+1}\mathfrak R^dN+\mathfrak R^{d+1}N.
+\]
+\end{env}
+

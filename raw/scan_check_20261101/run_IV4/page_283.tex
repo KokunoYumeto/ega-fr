@@ -1,0 +1,30 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{283}
+compte tenu de l'isomorphisme canonique $\operatorname{Pic}(X')\simto\HH^1(X,f_*(\sh{O}^*_{X'}))$ \sref{IV.21.8.2}.
+Or, comme le support de $\sh{N}$ est contenu dans l'ensemble discret $S$, fermé dans $X$, on a
+\[
+  \HH^1(X,\sh{N})=\HH^1(S,\sh{N}|S)\quad\text{(G, II, 4.9.2)},\qquad
+  \HH^1(S,\sh{N}|S)=\prod_{s\in S}\HH^1(\{s\},\sh{N}_s)=0
+\]
+par définition de la cohomologie (G, II, 4.4).
+De même on a $\Gamma(X,\sh{N})=\prod_{s\in S}\sh{N}_s$ et $\sh{N}_s=\sh{O}'^{*}_{X,s}/\sh{O}^*_{X,s}$ en vertu de la seconde suite exacte \sref{IV.21.8.5.2}.
+Reste à préciser les injections $j$ et $j'$.
+Or, on peut décrire une section $t$ de $\sh{N}$ au-dessus de $X$ en prenant un recouvrement de $X$ formé de $U$ et d'ouverts $U_i$ tels que $U_i\cap S$ soit réduit à un seul point $s_i$, et que $U_i\cap U_j\subset U$ pour $i\neq j$, puis en considérant pour chaque $i$ une section $t_i$ de $\sh{N}$ au-dessus de $U_i$, nécessairement telle que $(t_i)_{s_i}\in\sh{O}'^{*}_{X,s_i}/\sh{O}^*_{X,s_i}$ et $(t_i)_x=0$ aux points $x\in U_i-\{s_i\}$.
+Le germe $(t_i)_{s_i}$ provient d'une section $u_i$ de $\sh{O}^*_{X'}$ au-dessus de $f^{-1}(U_i)$, qu'on peut aussi considérer comme une section de $\sh{M}^*_{X'}$ au-dessus de $f^{-1}(U_i)$, donc une section de $\sh{M}^*_X$ au-dessus de $U_i$ (en vertu de l'hypothèse);
+il correspond canoniquement à cette section une section $d_i\in\Gamma(U_i,\sh{D}iv_X)$ et comme dans $f^{-1}(U\cap U_i)$ la restriction de $u_i$ s'identifie à une section de $\sh{O}^*_X$ au-dessus de $U\cap U_i$ en vertu de l'hypothèse, les restrictions des $d_i$ à $U\cap U_i$ sont toutes nulles, donc les $d_i$ sont les restrictions d'un même diviseur de $\operatorname{Div}(X)$, qui est l'image de la section $t$ par $j$.
+De même, l'image de $t$ par $\partial:\Gamma(X,\sh{N})\to\HH^1(X,\sh{O}^*_X)$ provient du cocycle égal à la restriction de $u_i$ dans $U\cap U_i$ pour chaque $i$, à $(u_i|(U_i\cap U_j))(u_j|(U_i\cap U_j))^{-1}$ dans $U_i\cap U_j$, d'où l'expression de $j'(t)$ et la commutativité du diagramme \sref{IV.21.8.5.1}.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[21.8.6]
+\label{IV.21.8.6}
+\begin{enumerate}[label=(\roman*)]
+  \item Les conditions d'application de \sref{IV.21.8.5}, (i) sont en particulier remplies lorsque $X$ est un préschéma localement noethérien réduit n'ayant qu'un nombre fini de composantes irréductibles, $X'$ son normalisé et que $X'$ est aussi localement noethérien (\sref[II]{II.6.3.8});
+le $\sh{O}_X$-Module $\sh{D}iv_X$ est alors une \emph{extension} de $f_*(\sh{D}iv_{X'})$ par le conoyau $\sh{N}$ de $\sh{O}^{*}_X\to f_*(\sh{O}^*_{X'})$, que l'on peut considérer comme connu.
+Si de plus $X$ est une courbe algébrique (réduite) sur un corps $k$, on est dans les conditions d'application de \sref{IV.21.8.5}, (ii).
+
+  \item Lorsque les conditions d'application de \sref{IV.21.8.5}, (ii) sont remplies et en outre que l'homomorphisme canonique global $\Gamma(X,\sh{O}_X)\to\Gamma(X',\sh{O}_{X'})$ est \emph{bijectif}, on voit que les noyaux des homomorphismes surjectifs $\operatorname{Div}(X)\to\operatorname{Div}(X')$ et $\operatorname{Pic}(X)\to\operatorname{Pic}(X')$ sont \emph{isomorphes}.
+
+  \item Lorsque les conditions d'application de \sref{IV.21.8.5}, (ii) sont remplies, on voit que l'homomorphisme $\operatorname{Div}(X)\to\operatorname{Div}(X')$ ne peut être injectif (auquel cas il est bijectif) que si $\sh{O}'^{*}_{X,s}=\sh{O}^*_{X,s}$ pour tout $s\in S$.
+Pour un $s\in S$ tel que l'anneau $\sh{O}'_{X,s}$ soit \emph{local} (ce qui, compte tenu du fait que $X'=\Spec(\sh{O}'_X)$ \sref[II]{II.1.3}, signifie qu'il n'existe qu'un seul point $s'\in X'$ au-dessus de $s$) cela entraîne nécessairement que les corps résiduels $\boldsymbol{k}(s)$ et $\boldsymbol{k}(s')$ sont égaux et que $1+\mathfrak{m}_s=1+\mathfrak{m}_{s'}$, donc finalement équivaut à la relation $\sh{O}'_{X,s}=\sh{O}_{X,s}$ ou encore (compte tenu de l'hypothèse) au fait qu'il y a un voisinage ouvert $V$ de $s$ dans $X$ tel que le morphisme $f^{-1}(V)\to V$ soit un isomorphisme.
+Dans le cas général, l'anneau $\sh{O}'_{X,s}$ est semi-local (c'est évident lorsque le morphisme $f$ est fini et dans le cas général cela résulte de \sref[0]{0.23.2.6}), l'homomorphisme canonique $\sh{O}^{*}_{X,s}\to\sh{O}'^{*}_{X,s}$ définit, par passage aux quotients, un homomorphisme du groupe multiplicatif $\boldsymbol{k}(s)^*$ dans le produit des groupes multiplicatifs $\boldsymbol{k}(s'_j)^*$, les $s'_j$ étant les points (en

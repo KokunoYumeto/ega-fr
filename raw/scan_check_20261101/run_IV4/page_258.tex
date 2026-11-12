@@ -1,0 +1,56 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{258}
+fonction méromorphe régulière sur $X$;
+la relation $D_x\geq0$ équivaut à $x\in\operatorname{dom}(f)$, donc l'hypothèse signifie que si $T=X-\operatorname{dom}(f)$, on a $\operatorname{prof}(\sh{O}_{X,x})\geq2$ pour tout $x\in T$ (car $\operatorname{dom}(f)$ contient les points maximaux de $X$).
+Par suite \sref{IV.5.10.5} l'homomorphisme de restriction $\Gamma(X,\sh{O}_X)\to\Gamma(X-T,\sh{O}_X)$ est bijectif, ce qui montre qu'il existe une section $s$ de $\sh{O}_X$ au-dessus de $X$ telle que $f=s|(X-T)$.
+Mais par définition de $T$, cela entraîne $T=\varnothing$, donc $f=s$ et $D\geq0$.
+L'assertion relative à la relation $D_x=0$ s'en déduit aussitôt en appliquant ce qui précède à $-D$, en vertu de \sref{IV.21.1.6.2}.
+\end{proof}
+
+
+\begin{corollary}[21.1.9]
+\label{IV.21.1.9}
+Soient $X$ un préschéma localement noethérien, $D$ un diviseur sur $X$.
+Soit $S$ le support de $D$.
+Alors, pour tout point maximal $x$ de $S$, on a $\operatorname{prof}(\sh{O}_{X,x})=1$.
+\end{corollary}
+
+\begin{proof}
+Posons en effet $X_1=\operatorname{Spec}(\sh{O}_{X,x})$;
+compte tenu de \sref{IV.20.2.11} et \sref{IV.20.3.6}, le faisceau $\sh{M}_{X_1}^*$ est induit sur $X_1$ par $\sh{M}_X^*$, donc on peut se borner au cas où $X=X_1$, auquel cas, comme $x\in S$ et que $x$ est point maximal de $S$, on a nécessairement $S=\{x\}$.
+Si l'on avait alors $\operatorname{prof}(\sh{O}_{X,x})\neq1$, on en conclurait, en vertu de \sref{IV.21.1.8}, que $D=0$, ce qui contredit la définition de $S$.
+\end{proof}
+
+\begin{proposition}[21.1.10]
+\label{IV.21.1.10}
+Soit $A$ un anneau local noethérien;
+pour que $\operatorname{Div}(A)=0$, il faut et il suffit que $\operatorname{prof}(A)=0$ (autrement dit, que l'idéal maximal $\mathfrak{m}$ de $A$ soit associé à $A$ (\hyperref[0.16.4.6]{$\mathbf{0}$, 16.4.6})).
+\end{proposition}
+
+\begin{proof}
+En effet, dire que $\operatorname{Div}(A)=0$ signifie que dans $A$ tout élément régulier est inversible, ou encore que tous les éléments de $\mathfrak{m}$ sont diviseurs de zéro, ce qui signifie que $\mathfrak{m}\in\operatorname{Ass}(A)$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~1, n\textsuperscript{o}~1, cor.~3 de la prop.~2).
+\end{proof}
+
+\subsection{Diviseurs et Idéaux fractionnaires inversibles}
+\EGAReaderTarget{ega4.c04.subsec.21-2}{subsection:IV.21.2}
+
+\begin{env}[21.2.1]
+\EGAReaderTarget{ega4.c04.statement.21-2-1}{IV.21.2.1}
+Soit $(X,\sh{O}_X)$ un espace annelé.
+On appelle \emph{Idéal fractionnaire sur $X$} un sous-$\sh{O}_X$-Module du $\sh{O}_X$-Module $\sh{M}_X$ des germes de fonctions méromorphes sur $X$.
+Un Idéal fractionnaire $\sh{J}$ sur $X$ qui est un $\sh{O}_X$-Module inversible est appelé \emph{Idéal fractionnaire inversible}.
+\end{env}
+
+\begin{proposition}[21.2.2]
+\label{IV.21.2.2}
+Pour qu'un Idéal fractionnaire $\sh{J}$ sur $X$ soit inversible, il faut et il suffit que pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ et une section $f\in\Gamma(U,\sh{M}_X^*)$ tels que $\sh{J}|U=\sh{O}_U.f$.
+\end{proposition}
+
+\begin{proof}
+La condition est évidemment suffisante, l'application $s\mapsto s(f|V)$ de $\Gamma(V,\sh{O}_X)$ dans $\Gamma(V,\sh{J})$ étant évidemment bijective pour tout ouvert $V\subset U$.
+Pour voir qu'elle est nécessaire, notons qu'il existe par hypothèse un voisinage ouvert $U$ de $x$ et un isomorphisme de $\sh{O}_X$-Modules $\sh{O}_U\xrightarrow{\sim}\sh{J}|U$.
+Si $f$ est l'image de la section $1\in\Gamma(U,\sh{O}_X)$ par cet isomorphisme, on peut supposer, en restreignant $U$, que l'on a $f=u/s$, où $u\in\Gamma(U,\sh{O}_X)$ et $s\in\Gamma(U,\sh{S}(\sh{O}_X))$, et l'isomorphisme considéré fait alors correspondre, à toute section $v\in\Gamma(V,\sh{O}_X)$ (où $V$ est un ouvert contenu dans $U$), la section $v(u|V)/(s|V)$;
+dire que l'application ainsi définie est bijective signifie que $u|V$ est un élément régulier de $\Gamma(V,\sh{O}_X)$, donc $f\in\Gamma(U,\sh{M}_X^*)$.
+\end{proof}
+
+On notera que pour tout ouvert $U$ de $X$ tel que $\sh{J}|U=\sh{O}_U.f$ avec $f\in\Gamma(U,\sh{M}_X^*)$, la section $f$ est déterminée \emph{à la multiplication près} par un élément de $\Gamma(U,\sh{O}_X^*)$, puisque la

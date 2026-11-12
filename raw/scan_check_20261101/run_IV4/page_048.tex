@@ -1,0 +1,95 @@
+% from ega4-16-fr.tex
+\oldpage[IV-4]{48}
+  prenant $X=\operatorname{Spec}(A)$, où $A$ est un anneau de Dedekind, et
+  $\mathscr{I}=\widetilde{\mathfrak{I}}$, où $\mathfrak{I}$ est un idéal
+  premier non principal de $A$; on a alors en effet
+  $\mathscr{I}_y/\mathscr{I}_y^2=0$ en tout point $y$ distinct du point
+  $x\in X$ correspondant à $\mathfrak{I}$, et
+  $\mathscr{I}_x/\mathscr{I}_x^2$ est de rang $1$ sur le corps
+  $\mathcal{O}_x/\mathscr{I}_x$; en outre $\mathscr{I}$ est évidemment un
+  Idéal régulier.
+  \item[(ii)] Dans (16.9.5), on ne peut remplacer « quasi-régulière » par
+  « régulière », même lorsque $X$ est un préschéma (cf. (16.9.12)).
+  Désignons en effet par $B$ l'anneau des germes de fonctions indéfiniment
+  différentiables au point $0$ dans $\mathbb{R}$; il a un idéal maximal
+  $\mathfrak{m}$ engendré par le germe $t$ de l'application identique de
+  $\mathbb{R}$ au point $0$, et l'intersection $\mathfrak{n}$ des
+  $\mathfrak{m}^k$ pour $k>0$ n'est pas réduite à $0$. Soit maintenant $A$
+  l'anneau quotient $B[T]/\mathfrak{n}TB[T]$, et soient $f_1,f_2$ les images
+  canoniques dans $A$ des éléments $t$ et $T$ de $B[T]$. La suite
+  $(f_1,f_2)$ est régulière dans $A$: en effet, $f_1$ n'est pas diviseur de
+  $0$ dans $A$, car la relation $tP[T]\in\mathfrak{n}TB[T]$, pour un
+  polynôme $P\in B[T]$, entraîne que les produits de $t$ par les coefficients
+  de $P$ appartiennent à l'idéal $\mathfrak{n}$, et il en résulte aussitôt que
+  ces coefficients sont eux-mêmes dans $\mathfrak{n}$, donc
+  $P[T]\in\mathfrak{n}TB[T]$. Comme $B/tB$ est isomorphe à $\mathbb{R}$,
+  $A/f_1A$ est isomorphe à l'anneau de polynômes $\mathbb{R}[T]$, donc
+  intègre, et l'image de $f_2$ dans $A/f_1A$, étant égale à $T$, n'est donc
+  pas diviseur de $0$, ce qui prouve notre assertion. Cependant $f_2$ est
+  diviseur de $0$ dans $A$, car pour tout élément $x\in\mathfrak{n}$ non nul,
+  l'image de $x$ dans $A$ est $\ne0$, mais l'image de $xT$ est nulle. On en
+  conclut que la suite $(f_2,f_1)$ n'est pas régulière dans $A$; d'autre part
+  l'idéal $\mathfrak{I}=f_1A+f_2A$ est distinct de $A$, donc les conditions
+  b), b') et c) de (16.9.5) n'entraînent pas la condition a) lorsqu'on y
+  remplace « quasi-régulière » par « régulière ».
+\end{enumerate}
+\end{remarks}
+
+\begin{env}[16.9.7]
+\EGAReaderTarget{ega4.c04.statement.16-9-7}{IV.16.9.7}
+Si $X=\operatorname{Spec}(A)$ est un schéma affine, nous dirons qu'un idéal
+$\mathfrak{I}$ de $A$ est régulier (resp. quasi-régulier) si l'Idéal
+$\mathscr{I}=\widetilde{\mathfrak{I}}$ de $\mathcal{O}_X$ est régulier
+(resp. quasi-régulier); on notera que cette notion est locale et n'implique
+nullement l'existence d'un système de générateurs de $\mathfrak{I}$ formant
+dans $A$ une suite régulière (resp. quasi-régulière) comme le montre l'exemple
+(16.9.6, (i)); il en est toutefois ainsi lorsque $A$ est local (16.9.5).
+
+La proposition (16.9.4) se traduit en termes d'immersions quasi-régulières de
+la façon suivante:
+\end{env}
+
+\begin{proposition}[16.9.8]
+\label{IV.16.9.8}
+Soit $j:Y\to X$ un morphisme de préschémas; pour que $j$ soit une immersion
+quasi-régulière, il faut et il suffit que $j$ satisfasse aux conditions
+suivantes:
+\begin{enumerate}
+  \item[(i)] $j$ est une immersion localement de présentation finie.
+  \item[(ii)] Le faisceau conormal
+  $\operatorname{Gr}^1(j)=\mathcal{N}_{Y/X}$ (16.1.2) est un
+  $\mathcal{O}_Y$-Module localement libre.
+  \item[(iii)] L'homomorphisme canonique
+  \[
+    \operatorname{S}_{\mathcal{O}_Y}^{\bullet}
+      (\operatorname{Gr}^1(j))\longrightarrow\operatorname{Gr}^{\bullet}(j)
+  \]
+  (16.1.2.2) est bijectif.
+\end{enumerate}
+\end{proposition}
+
+La question étant locale sur $Y$, on peut se borner au cas où $j$ est
+l'injection canonique d'un sous-préschéma fermé $Y$ de $X$, et alors la
+traduction de (16.9.4) en (16.9.8) résulte de l'explicitation de
+$\operatorname{Gr}^1(j)$ et $\operatorname{Gr}^{\bullet}(j)$ en termes de
+l'Idéal $\mathscr{I}$ de $\mathcal{O}_X$ définissant le sous-préschéma $Y$
+(16.1.3, (ii)).
+
+\begin{corollary}[16.9.9]
+\label{IV.16.9.9}
+Soient $Y$ un préschéma, $X$ un $Y$-préschéma, $j:Y\to X$ une $Y$-section
+de $X$, de sorte que le $n$-ème invariant normal $\mathscr{A}^{(n)}$ de $j$
+(16.1.2) est une $\mathcal{O}_Y$-Algèbre augmentée (16.1.7); posons
+$\mathscr{A}^{(\infty)}=\varprojlim\mathscr{A}^{(n)}$. Pour que $j$ soit une
+immersion quasi-régulière, il faut et il suffit que $j$ soit localement de
+présentation finie, et que tout $y\in Y$ admette un voisinage ouvert affine
+$U$ d'anneau $C$ tel que $\mathscr{A}^{(\infty)}|U$ soit isomorphe comme
+$\mathcal{O}_U$-Algèbre topologique augmentée à
+$\mathcal{O}_U[[T_1,\ldots,T_n]]$.
+\end{corollary}
+
+On peut se borner au cas où $j$ est une immersion fermée en se restreignant
+à un voisinage assez petit de $y$ (voir le raisonnement de (16.4.11)), et
+alors $\mathcal{O}_Y$ s'identifie à une Algèbre quotient
+$\mathcal{O}_X/\mathscr{I}$ et l'homomorphisme surjectif canonique
+$\mathcal{O}_X\to\mathcal{O}_Y$ admet un

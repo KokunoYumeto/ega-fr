@@ -1,0 +1,100 @@
+[
+ {
+  "page": 5,
+  "where": "page marker (first line of the page)",
+  "scan": "Printed p. 5 is the opening page of CHAPITRE 0 (suite), chapter 0 of EGA IV-1 (p. 6 carries the running head 'Chap. 0'). The scan's folio reads 101; this scan series runs 96 ahead of the edition's numbering (p. 222 shows 318), so the number 5 is right.",
+  "tex": "\\oldpage[IV-1]{5}; every later chapter-0 page of the fascicle is \\oldpage[0\\textsubscript{IV-1}]{N}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-1]{5}",
+   "new": "\\oldpage[0\\textsubscript{IV-1}]{5}"
+  },
+  "note": "Use the chapter-0 label, as the edition does for the opening pages of the other chapter-0 parts: \\oldpage[0\\textsubscript{I}]{11} (ega0-1-fr.tex) and \\oldpage[0\\textsubscript{III}]{5} (ega3-1-fr.tex, also a 'CHAPITRE 0 (suite)' page). The label [IV-1] belongs to chapter IV proper, which starts at \\oldpage[IV-1]{222} (ega4-1-fr.tex). After the change, page_inventory_r20 counts p. 5 under 0_IV-1 (pp. 5-221) and IV-1 keeps pp. 222-259. Because the two labels differed, page_005.tex ran to the end of ega0-14-fr.tex (printed pp. 6-12); only the text before the p. 6 marker was compared here. Printed p. 5 ends with '... conceptions générales (2).' and footnotes (1) and (2), and printed p. 6 opens with the section 14 heading, so the p. 6 marker placed before \\setcounter{section}{13} is right."
+ },
+ {
+  "page": 5,
+  "where": "chapter heading",
+  "scan": "CHAPITRE O (suite) (1): 'suite' is italic and so are its parentheses (slanted; the parentheses of the footnote mark (1) are upright)",
+  "tex": "CHAPITRE 0 (suite), upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "CHAPITRE 0 (suite)",
+   "new": "CHAPITRE 0 \\textit{(suite)}"
+  },
+  "note": "Enlarged crop. On 0_III p. 5 the print has upright parentheses around an italic 'suite' (fixed there as (\\textit{suite}), which is right for that page); here the parentheses are italic. The 'O' is the print's figure 0."
+ },
+ {
+  "page": 5,
+  "where": "footnote (1), l. 1",
+  "scan": "le symbole O_N with a bold 0",
+  "tex": "$0_N$, plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "symbole $0",
+   "new": "symbole $\\mathbf{0}"
+  },
+  "note": "Bold chapter-0 sign, as $\\mathbf{0}_{\\mathrm I}$ elsewhere in this file. The upright subscript N is the next finding (adjacent, not overlapping)."
+ },
+ {
+  "page": 5,
+  "where": "footnote (1), l. 1",
+  "scan": "subscript N of the bold O_N is an upright (small-capital) N",
+  "tex": "$0_N$ with an italic N",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "_N$ (resp.",
+   "new": "_{\\mathrm N}$ (resp."
+  },
+  "note": "Enlarged crop. The EGA III errata footnote writes the same subscript upright: $\\mathbf{Err}_{\\mathrm N}$. Independent of the bold-0 fix just before (adjacent, not overlapping)."
+ },
+ {
+  "page": 5,
+  "where": "footnote (1), l. 1",
+  "scan": "(resp. Err_N): 'Err' bold upright, subscript N upright (small capital)",
+  "tex": "$\\operatorname{Err}_N$: light Err, italic N",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\operatorname{Err}_N$",
+   "new": "$\\mathbf{Err}_{\\mathrm N}$"
+  },
+  "note": "Enlarged crop. The EGA III errata footnote writes this symbol $\\mathbf{Err}_{\\mathrm N}$."
+ },
+ {
+  "page": 5,
+  "where": "footnote (1), l. 1",
+  "scan": "la partie du chapitre o (resp. ...): the 0 is bold",
+  "tex": "chapitre 0, plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "chapitre 0 (resp.",
+   "new": "chapitre \\textbf{0} (resp."
+  },
+  "note": "Enlarged crop: bold chapter number 0 (old-style figure shape)."
+ },
+ {
+  "page": 5,
+  "where": "footnote (1), l. 2",
+  "scan": "jointe au chapitre N. with an upright roman N",
+  "tex": "$N$ (math italic)",
+  "kind": "font",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "jointe au chapitre\n$N$.}",
+   "new": "jointe au chapitre\nN.}"
+  },
+  "note": "Enlarged crop. The EGA III errata footnote also has 'chapitre N' in text."
+ }
+]

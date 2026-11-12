@@ -1,0 +1,91 @@
+% from ega1-5-fr.tex
+\oldpage[I]{132}
+Il y a en effet un ouvert $U$ de $Y$ tel que
+$X=U\cap\overline{X}$~; comme $X$ est un sous-préschéma réduit de $Z$ en
+vertu de (\hyperref[I.5.2.2-fr]{5.2.2}), le sous-préschéma $X$ est induit par
+$Z$ sur le sous-espace ouvert $X$ en vertu de l'unicité
+(\hyperref[I.5.2.1-fr]{5.2.1}).
+
+\begin{corollary}[5.2.4]
+\label{I.5.2.4-fr}
+Soient $f:X\to Y$ un morphisme, $X'$ (resp. $Y'$) un sous-préschéma fermé de
+$X$ (resp. $Y$) défini par un faisceau d'idéaux quasi-cohérent $\mathscr{J}$
+(resp. $\mathscr{K}$) de $\mathscr{O}_X$ (resp. $\mathscr{O}_Y$). Supposons
+que $X'$ soit réduit et que $f(X')\subset Y'$. Alors on a
+$f^*(\mathscr{K})\mathscr{O}_X\subset\mathscr{J}$.
+\end{corollary}
+
+Comme la restriction de $f$ à $X'$ se factorise en
+$X'\to Y'\to Y$ d'après (\hyperref[I.5.2.2-fr]{5.2.2}), il suffit d'appliquer
+(\hyperref[I.4.4.6-fr]{4.4.6}).
+
+\subsection{Diagonale; graphe d'un morphisme.}
+\label{subsection:I.5.3-fr}
+
+\begin{env}[5.3.1]
+\label{I.5.3.1-fr}
+Soit $X$ un $S$-préschéma~; on appelle \emph{morphisme diagonal} de $X$ dans
+$X\times_S X$, et on note $\Delta_{X|S}$, ou $\Delta_X$, ou même $\Delta$ si
+aucune confusion n'est possible, le $S$-morphisme $(1_X,1_X)_S$, autrement
+dit, l'unique $S$-morphisme $\Delta_X$ tel que
+\[
+  p_1\circ\Delta_X=p_2\circ\Delta_X=1_X
+  \tag{5.3.1.1}\label{I.5.3.1.1-fr}
+\]
+en désignant par $p_1$, $p_2$ les projections de $X\times_S X$
+(déf. \hyperref[I.3.2.1-fr]{3.2.1}). Si $f:T\to X$, $g:T\to Y$ sont deux
+$S$-morphismes, on vérifie aussitôt que
+\[
+  (f,g)_S=(f\times_S g)\circ\Delta_{T|S}
+  \tag{5.3.1.2}\label{I.5.3.1.2-fr}
+\]
+
+Le lecteur observera que la définition précédente et les résultats énoncés
+dans les n\textsuperscript{os} (\hyperref[I.5.3.1-fr]{5.3.1}) à (5.3.8) sont
+valables dans toute catégorie, \emph{pourvu que les produits qui y figurent
+existent dans cette catégorie}.
+\end{env}
+
+\begin{proposition}[5.3.2]
+\label{I.5.3.2-fr}
+Soient $X$, $Y$ deux $S$-préschémas~; si on identifie canoniquement le produit
+$(X\times Y)\times(X\times Y)$ à $(X\times X)\times(Y\times Y)$, le morphisme
+$\Delta_{X\times Y}$ s'identifie à $\Delta_X\times\Delta_Y$.
+\end{proposition}
+
+En effet, si $p_1$, $q_1$ sont les premières projections
+$X\times X\to X$, $Y\times Y\to Y$, la première projection
+$(X\times Y)\times(X\times Y)\to X\times Y$ s'identifie à $p_1\times q_1$,
+et l'on a
+\[
+  (p_1\times q_1)\circ(\Delta_X\times\Delta_Y)
+  =(p_1\circ\Delta_X)\times(q_1\circ\Delta_Y)=1_{X\times Y}
+\]
+même raisonnement pour les secondes projections.
+
+\begin{corollary}[5.3.4]
+\label{I.5.3.4-fr}
+Pour toute extension $S'\to S$ du préschéma de base,
+$\Delta_{X_{(S')}}$ s'identifie canoniquement à $(\Delta_X)_{(S')}$.
+\end{corollary}
+
+Il suffit de remarquer que $(X\times_S X)_{(S')}$ s'identifie canoniquement à
+$X_{(S')}\times_{S'}X_{(S')}$
+(\hyperref[I.3.3.10-fr]{3.3.10}).
+
+\begin{proposition}[5.3.5]
+\label{I.5.3.5-fr}
+Soient $X$, $Y$ deux $S$-préschémas, $\varphi:S\to T$ un morphisme, faisant de
+tout $S$-préschéma un $T$-préschéma. Soient $f:X\to S$, $Y\to S$ les
+morphismes structuraux, $p$, $q$ les projections de $X\times_S Y$,
+$\pi=f\circ p=g\circ q$ le morphisme structural $X\times_S Y\to S$. Alors, le
+diagramme
+\[
+  \xymatrix{
+    X\times_S Y\ar[r]^{(p,q)_T}\ar[d]_\pi &
+    X\times_T Y\ar[d]^{f\times_T g}\\
+    S\ar[r]_{\Delta_{S|T}} &
+    S\times_T S
+  }
+  \tag{5.3.5.1}\label{I.5.3.5.1-fr}
+\]

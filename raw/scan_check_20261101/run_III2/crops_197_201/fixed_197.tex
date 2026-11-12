@@ -1,0 +1,82 @@
+% from ega3-7-fr.tex
+\oldpage[III]{197}
+En effet, partant de la suite exacte
+$0\to Z_1\to P_1\to B_0\to0$, on en tire la suite exacte
+$0\longrightarrow\operatorname{Tor}_1^A(B_0,k)\longrightarrow Z_1\otimes k\longrightarrow P_1\otimes k\xrightarrow{u}B_0\otimes k\longrightarrow0$.
+De la suite exacte $0\to B_0\to Z_0\to Z'_0\to0$, on tire, puisque $Z_0=P_0$
+est plat,
+$\operatorname{Tor}_1^A(B_0,k)=\operatorname{Tor}_2^A(Z'_0,k)$; par définition,
+on a $Z_1=T_1(A)$; enfin, on a $T_1(k)=\operatorname{Ker}(d\otimes1)$, et
+$d\otimes1$ se factorise en
+$P_1\otimes k\xrightarrow{u}B_0\otimes k\xrightarrow{v}Z_0\otimes k=P_0\otimes k$;
+on a $T_1(k)=u^{-1}(R)$, où $R=\operatorname{Ker}v$, et comme $u$ est
+surjectif, $R=u(T_1(k))$; enfin,
+$R=\operatorname{Tor}_1^A(Z'_0,k)$ par définition de $v$, ce qui achève
+d'établir la suite exacte (7.6.11.7).
+\end{proof}
+
+Pour déduire alors \emph{c)} de \emph{b)}, on considère une suite exacte
+$L_1\xrightarrow{d}L_0\longrightarrow N\longrightarrow0$,
+où $L_0$ et $L_1$ sont des modules libres de type fini; considérons le foncteur
+$T$ associé au complexe formé de $L_1$ et $L_0$; comme $L_0$ et $L_1$ sont
+libres, ils s'identifient à leurs biduals; donc si
+$M=\operatorname{Coker}({}^t d)$, $T_1(A)=\operatorname{Ker}(d)=\check M$;
+par ailleurs, $M\otimes_A k=\operatorname{Coker}({}^t d\otimes1_k)$ a même rang
+sur $k$ que $\operatorname{Ker}(d\otimes1_k)$. L'hypothèse \emph{b)} entraîne par suite
+que
+\[
+  \operatorname{rang}_k\bigl(T_1(A)\otimes_A k\bigr)
+  \leq
+  \operatorname{rang}_k\bigl(T_1(k)\bigr);
+\]
+comme $Z'_0=N$, l'inégalité (7.6.11.4) résulte donc de la suite exacte
+(7.6.11.7).
+Enfin, pour prouver que \emph{c)} entraîne \emph{a)}, appliquons (7.6.11.6) en remplaçant
+$P_0$ et $P_1$ par $P_p$ et $P_{p-1}$; l'hypothèse \emph{c)} appliquée au module
+$Z'_p$ donne $\operatorname{rang}_kR\geq\operatorname{rang}_kS$, où
+$R=\operatorname{Ker}(P_p\otimes k\longrightarrow P_{p-1}\otimes k)$ et $S=Z_p\otimes k$.
+Or, si l'on factorise $d_{p+1}:P_{p+1}\to P_p$ en
+$P_{p+1}\xrightarrow{v}Z_p\xrightarrow{j}P_p$
+on a
+$\operatorname{Im}(d_{p+1}\otimes1)=(j\otimes1)\bigl(\operatorname{Im}(v\otimes1)\bigr)$.
+Comme
+\[
+  T_p(A)\otimes_A k
+  =(Z_p/B_p)\otimes_A k
+  =(Z_p\otimes k)/\operatorname{Im}(v\otimes1),
+\]
+et
+$T_p(k)=R/\operatorname{Im}(d_{p+1}\otimes1)$,
+on en conclut bien l'inégalité (7.6.11.2).
+
+Cela étant, supposons que l'anneau local $A$ soit \emph{régulier} de dimension $n$;
+on sait alors [17] que le $A$-module
+$\operatorname{Tor}_i^A(k,k)$ est isomorphe à la puissance extérieure
+$\bigwedge\nolimits^i(\mathfrak m/\mathfrak m^2)$;
+on voit donc que la condition (7.6.11.4) n'est pas vérifiée pour $N=k$, dès que
+$n\geq4$.
+Par contre, si l'anneau local intègre $A$ est tel que tout $A$-module \emph{réflexif}
+de type fini soit \emph{libre} (ce qui est le cas lorsque $A$ est un anneau régulier
+de dimension 2), la condition (7.6.11.3) est vérifiée : en effet, on sait que le
+dual $\check M$ d'un $A$-module $M$ de type fini $M$ est réflexif, donc libre, et
+par suite
+$\operatorname{rang}_k(\check M\otimes_A k)=\operatorname{rang}_K(\check M)=\operatorname{rang}_K(M)$
+($K$ corps des fractions de $A$); par ailleurs, on sait que toute base sur $k$
+de $M\otimes_A k$ est formée d'images d'un système de générateurs de $M$
+(Bourbaki, \emph{Alg. comm.}, chap. II, \S 3, n\textsuperscript{o} 2, cor. 2 de
+la prop. 4), donc
+$\operatorname{rang}_K(M)\leq\operatorname{rang}_k(M\otimes_A k)$, ce qui
+prouve notre assertion.
+\end{remark}
+
+\subsection{Application aux morphismes propres : I. La propriété d'échange.}
+\label{subsection:III.7.7.fr}
+
+Les trois numéros qui suivent sont, pour l'essentiel, des traductions, dans le
+langage des morphismes de préschémas, des résultats des numéros précédents.
+
+\begin{env}[7.7.1]
+Soit $f:X\to Y$ un morphisme quasi-compact et séparé de préschémas, et soit
+$\mathscr P_\bullet$ un complexe de $\mathscr O_X$-Modules quasi-cohérents, dont
+l'opérateur de dérivation est de degré $-1$; supposons en outre que les
+$\mathscr O_X$-Modules $\mathscr P_i$ sont $Y$-\emph{plats} ($\mathbf{0}_{\mathrm I}$, 6.7.1).

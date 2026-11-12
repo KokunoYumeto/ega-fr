@@ -1,0 +1,33 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{177}
+
+\begin{corollary}[18.11.8]
+\label{IV.18.11.8}
+Soient $k$ un corps, $A$ une $k$-algèbre locale noethérienne complète intègre, dont le corps résiduel est une extension finie de $k$. Si $K$ est le corps des fractions de $A$, on a
+\[
+  \operatorname{rg}_K\bigl((\hat{\Omega}^1_{A/k})\otimes_A K\bigr)\geq\dim(A).
+\]
+\end{corollary}
+
+Il suffit de faire $\mathfrak p=0$ dans (18.11.7).
+
+\begin{corollary}[18.11.9]
+\label{IV.18.11.9}
+Soient $k$ un corps, $A$ une $k$-algèbre locale noethérienne complète de dimension $n$, dont le corps résiduel est une extension finie de $k$. Soit $\mathfrak p$ un idéal premier de $A$ distinct de l'idéal maximal, et contenant un idéal premier minimal $\mathfrak q$ tel que $\dim(A/\mathfrak q)=n$. Supposons que le $A_{\mathfrak p}$-module $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ admette $n$ générateurs. Alors:
+\begin{enumerate}
+  \item[(i)] Le $A_{\mathfrak p}$-module $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ est libre de rang $n$.
+  \item[(ii)] Il existe un $k$-homomorphisme local $u:B\to A$, où $B=k[[T_1,\ldots,T_n]]$, faisant de $A$ une $B$-algèbre finie, et tel que le morphisme correspondant $\Spec(A)\to\Spec(B)$ soit étale au point $\mathfrak p$.
+  \item[(iii)] La $k$-algèbre $A_{\mathfrak p}$ est géométriquement régulière.
+\end{enumerate}
+\end{corollary}
+
+Prouvons d'abord (ii); en vertu de (18.11.5), il existe un homomorphisme local
+\[
+  u:B=k[[T_1,\ldots,T_n]]\longrightarrow A
+\]
+faisant de $A$ une $B$-algèbre finie, et tel que le morphisme correspondant $\Spec(A)\to\Spec(B)$ soit non ramifié au point $\mathfrak p$; posons $\mathfrak r=u^{-1}(\mathfrak p)$. L'hypothèse sur $\mathfrak q\subset\mathfrak p$, et le fait que $A$ soit un quotient d'anneau régulier (0, 19.8.8) impliquent que l'on a $\dim(A_{\mathfrak p})=n-\dim(A/\mathfrak p)$ (0, 16.5.12). On a de même $\dim(B_{\mathfrak r})=n-\dim(B/\mathfrak r)$. Enfin, puisque le morphisme $\Spec(A)\to\Spec(B)$ est non ramifié au point $\mathfrak p$, la fibre de ce morphisme au point $\mathfrak r$ est de dimension 0, donc (0, 16.3.9) on a $\dim(A/\mathfrak p)\leq\dim(B/\mathfrak r)$ et par suite $\dim(B_{\mathfrak r})\leq\dim(A_{\mathfrak p})$. On conclut donc de (18.10.1) que le morphisme $\Spec(A)\to\Spec(B)$ est étale au point $\mathfrak p$.
+
+L'assertion (iii) résulte de ce que $A_{\mathfrak p}$ est formellement lisse sur $B_{\mathfrak r}$ et que $B_{\mathfrak r}$ est formellement lisse sur $k$ (pour les topologies préadiques) (0, 19.3.4 et 19.3.5), donc $A_{\mathfrak p}$ est formellement lisse sur $k$ pour sa topologie préadique, et par suite est géométriquement régulier sur $k$ (0, 22.5.8).
+
+Prouvons enfin (i). Soit $k'$ une extension algébriquement close de $k$, et considérons la $k'$-algèbre semi-locale $A'=A\widehat{\otimes}_k k'$. Si l'on considère $A$ comme $B$-module de type fini au moyen de l'homomorphisme $u$, on peut donc écrire, à un isomorphisme canonique près, $A'=A\otimes_B(B\widehat{\otimes}_k k')$ ((7.5.7.1), dans l'énoncé duquel on rappelle qu'il n'est pas nécessaire de supposer que le corps résiduel de $B$ soit une extension finie de $k$). Posons $B'=B\widehat{\otimes}_k k'$, qui s'identifie canoniquement à l'algèbre de séries formelles $k'[[T_1,\ldots,T_n]]$. Puisque le morphisme $\Spec(A)\to\Spec(B)$ est fini et étale au point $\mathfrak p$, le morphisme $\Spec(A')\to\Spec(B')$ est fini, et étale en tout point $\mathfrak p'$ au-dessus de $\mathfrak p$ (17.3.3); d'ailleurs, $A'$ est composé direct d'anneaux locaux $A'_i$ de dimension $n$ ($1\leq i\leq r$) (18.11.4) et $\mathfrak p'$ s'identifie à un idéal premier $\mathfrak p'_i$ de l'un des $A'_i$. Le même raisonnement que ci-dessus prouve alors que $(A'_i)_{\mathfrak p'_i}$ est géométriquement régulier sur $k'$, et comme $k'$ est parfait, il résulte de (18.11.3) que $(\hat{\Omega}^1_{A'_i/k'})_{\mathfrak p'_i}$ est un $(A'_i)_{\mathfrak p'_i}$-module libre de type fini. Mais puisque $(\hat{\Omega}^1_{A'_i/k'})_{\mathfrak p'_i}$ est isomorphe à $(\hat{\Omega}^1_{A/k})_{\mathfrak p}\otimes_{A_{\mathfrak p}}(A'_i)_{\mathfrak p'_i}$ (18.11.4) et que $(A'_i)_{\mathfrak p'_i}$ est un $A_{\mathfrak p}$-module fidèlement plat, on voit que $(\hat{\Omega}^1_{A/k})_{\mathfrak p}$ est un $A_{\mathfrak p}$-module libre de type fini (2.5.2);
+

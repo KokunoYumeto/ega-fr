@@ -1,0 +1,65 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{263}
+
+\subsection{Équivalence linéaire des diviseurs}
+\EGAReaderTarget{ega4.c04.subsec.21-3}{subsection:IV.21.3}
+
+\begin{env}[21.3.1]
+\EGAReaderTarget{ega4.c04.statement.21-3-1}{IV.21.3.1}
+On dit qu'un diviseur $D$ sur $X$ est \emph{principal} s'il est de la forme $\operatorname{div}(f)$, où $f$ est une fonction méromorphe régulière sur $X$;
+les fonctions méromorphes régulières $f'$ telles que $\operatorname{div}(f')=D$ sont alors toutes celles de la forme $tf$, où $t\in\Gamma(X,\sh{O}_X^*)$ \sref{IV.21.1.3.4}.
+L'ensemble des diviseurs principaux est un sous-groupe de $\operatorname{Div}(X)$, noté $\operatorname{Div.princ}(X)$, isomorphe à $\Gamma(X,\sh{M}_X^*)/\Gamma(X,\sh{O}_X^*)$.
+Deux diviseurs $D$, $D'$ sont dits \emph{linéairement équivalents} si $D-D'$ est un diviseur principal;
+les diviseurs principaux sont donc les diviseurs linéairement équivalents à $0$.
+\end{env}
+
+\begin{env}[21.3.2]
+\label{IV.21.3.2}
+Rappelons (\hyperref[0.5.4.7]{$\mathbf{0}_{\mathrm I}$, 5.4.7}) que l'on peut parler de l'ensemble des classes d'équivalence des $\sh{O}_X$-Modules inversibles pour la relation d'isomorphie;
+on désigne cet ensemble par $\operatorname{Pic}(X)$, et pour tout $\sh{O}_X$-Module inversible $\sh{L}$, on note $\operatorname{cl}(\sh{L})$ la classe d'équivalence des $\sh{O}_X$-Modules isomorphes à $\sh{L}$;
+en outre, $\operatorname{Pic}(X)$ est un groupe commutatif pour la multiplication définie par $\operatorname{cl}(\sh{L})\operatorname{cl}(\sh{L}')=\operatorname{cl}(\sh{L}\otimes\sh{L}')$.
+Il est clair que l'application
+\[
+\label{IV.21.3.2.1}
+  r:\operatorname{cl}(\sh{L},s)\mapsto\operatorname{cl}(\sh{L})
+  \tag{21.3.2.1}
+\]
+est un homomorphisme du groupe $D(X)$ \sref{IV.21.2.10} dans le groupe $\operatorname{Pic}(X)$.
+Par composition, on en déduit donc un homomorphisme
+\[
+\label{IV.21.3.2.2}
+  l:\operatorname{Div}(X)\xrightarrow{\sim}D(X)\xrightarrow{r}\operatorname{Pic}(X)
+  \tag{21.3.2.2}
+\]
+(aussi noté $l_X$) tel que, pour tout diviseur $D$, on ait
+\[
+\label{IV.21.3.2.3}
+  l(D)=\operatorname{cl}(\sh{O}_X(D)).
+  \tag{21.3.2.3}
+\]
+
+Notons enfin que, si $u:X'\to X$ est un morphisme d'espaces annelés, $\sh{L}_1$, $\sh{L}_2$ deux $\sh{O}_X$-Modules inversibles isomorphes, les $\sh{O}_{X'}$-Modules inversibles $u^*(\sh{L}_1)$ et $u^*(\sh{L}_2)$ (\hyperref[0.5.4.5]{$\mathbf{0}_{\mathrm I}$, 5.4.5}) sont isomorphes;
+comme d'autre part, pour deux $\sh{O}_X$-Modules inversibles quelconques $\sh{L}_1$, $\sh{L}_2$, on a $u^*(\sh{L}_1\otimes\sh{L}_2)=u^*(\sh{L}_1)\otimes u^*(\sh{L}_2)$ à isomorphisme canonique près (\hyperref[0.4.3.3]{$\mathbf{0}_{\mathrm I}$, 4.3.3}), on voit que le morphisme $u$ définit canoniquement un homomorphisme de groupes commutatifs
+\[
+\label{IV.21.3.2.4}
+  \operatorname{Pic}(u):\operatorname{Pic}(X)\to\operatorname{Pic}(X').
+  \tag{21.3.2.4}
+\]
+\end{env}
+
+\begin{proposition}[21.3.3]
+\label{IV.21.3.3}
+\begin{enumerate}[label=(\roman*)]
+  \item Le noyau de l'homomorphisme canonique $l:\operatorname{Div}(X)\to\operatorname{Pic}(X)$ est le sous-groupe $\operatorname{Div.princ}(X)$, autrement dit, pour que $\sh{O}_X(D)$ et $\sh{O}_X(D')$ soient isomorphes, il faut et il suffit que $D$ et $D'$ soient linéairement équivalents.
+  On a donc un homomorphisme injectif canonique
+  \[
+  \label{IV.21.3.3.1}
+    \operatorname{Div}(X)/\operatorname{Div.princ}(X)\to\operatorname{Pic}(X)
+    \tag{21.3.3.1}
+  \]
+  déduit de $l$.
+  \item Pour qu'un $\sh{O}_X$-Module inversible $\sh{L}$ soit tel que $\operatorname{cl}(\sh{L})$ soit de la forme $l(D)$, ou encore pour que $\sh{L}$ soit isomorphe à un $\sh{O}_X$-Module de la forme $\sh{O}_X(D)$, il faut et il suffit qu'il existe une section méromorphe régulière de $\sh{L}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}

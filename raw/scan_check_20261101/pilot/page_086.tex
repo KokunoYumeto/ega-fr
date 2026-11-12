@@ -1,0 +1,74 @@
+\oldpage[I]{86}
+\begin{proposition}[1.3.6]
+\label{I.1.3.6-fr}
+Pour tout $f\in A$, l'ensemble ouvert $D(f)\subset X$ s'identifie
+canoniquement au spectre premier $\operatorname{Spec}(A_f)$, et le faisceau
+$\widetilde{M_f}$ associé au $A_f$-module $M_f$ s'identifie canoniquement à
+la restriction $\widetilde{M}|D(f)$.
+\end{proposition}
+
+La première assertion est un cas particulier de
+(\hyperref[I.1.2.6-fr]{1.2.6}). En outre, si $g\in A$ est tel que
+$D(g)\subset D(f)$, $M_g$ s'identifie canoniquement au module des fractions
+de $M_f$ dont les dénominateurs sont les puissances de l'image canonique de
+$g$ dans $A_f$ (\hyperref[0.1.4.6-fr]{0, 1.4.6}). L'identification canonique
+de $\widetilde{M_f}$ à $\widetilde{M}|D(f)$ résulte alors des définitions.
+
+\begin{theorem}[1.3.7]
+\label{I.1.3.7-fr}
+Pour tout $A$-module $M$ et tout $f\in A$, l'homomorphisme
+\[
+  \theta_f:M_f\longrightarrow\Gamma(D(f),\widetilde{M})
+\]
+est bijectif (autrement dit, le préfaisceau $D(f)\mapsto M_f$ est un
+\emph{faisceau}). En particulier, $M$ s'identifie par $\theta_1$ à
+$\Gamma(X,\widetilde{M})$.
+\end{theorem}
+
+On notera que, si $M=A$, $\theta_f$ est un homomorphisme de structure
+d'anneau~; le th. (\hyperref[I.1.3.7-fr]{1.3.7}) entraînera donc que, si on
+identifie les anneaux $A_f$ et $\Gamma(D(f),\widetilde{A})$ au moyen de
+$\theta_f$, l'homomorphisme
+$\theta_f:M_f\to\Gamma(D(f),\widetilde{M})$ sera un isomorphisme de
+\emph{modules}.
+
+Montrons d'abord que $\theta_f$ est \emph{injectif}. En effet, si
+$\xi\in M_f$ est tel que $\theta_f(\xi)=0$, cela signifie que pour tout idéal
+premier $\mathfrak{p}$ de $A_f$, il existe $h\notin\mathfrak{p}$ tel que
+$h\xi=0$~; comme l'annulateur de $\xi$ n'est contenu dans aucun idéal premier
+de $A_f$, c'est $A_f$ tout entier, donc $\xi=0$.
+
+Reste à montrer que $\theta_f$ est \emph{surjectif}~; on peut se ramener au
+cas où $f=1$, le cas général s'en déduisant en «~localisant~» à l'aide de
+(\hyperref[I.1.3.6-fr]{1.3.6}). Soit donc $s$ une section de $\widetilde{M}$
+au-dessus de $X$~; en vertu de (\hyperref[I.1.3.4-fr]{1.3.4}) et de
+(\hyperref[I.1.1.10-fr]{1.1.10, (ii)}), il existe un recouvrement
+\emph{fini} $(D(f_i))_{i\in I}$ de $X$ ($f_i\in A$) tel que, pour tout
+$i\in I$, la restriction $s_i=s|D(f_i)$ soit de la forme
+$\theta_{f_i}(\xi_i)$, où $\xi_i\in M_{f_i}$. Si $i$, $j$ sont deux indices
+de $I$, en écrivant que les restrictions de $s_i$ et de $s_j$ à
+$D(f_i)\cap D(f_j)=D(f_i f_j)$ sont égales, il vient par définition de
+$\widetilde{M}$
+\begin{equation}
+  \rho_{f_i f_j,f_i}(\xi_i)=\rho_{f_i f_j,f_j}(\xi_j).
+  \tag{1.3.7.1}\label{I.1.3.7.1-fr}
+\end{equation}
+Par définition, on peut écrire, pour chaque $i\in I$,
+$\xi_i=z_i/f_i^{n_i}$, où $z_i\in M$, et comme $I$ est fini, en multipliant
+chaque $z_i$ par une puissance de $f_i$, on peut supposer tous les $n_i$
+égaux à un même $n$. Alors par définition, (\hyperref[I.1.3.7.1-fr]{1.3.7.1})
+signifie qu'il existe un entier $m_{ij}\geq0$ tel que
+$(f_i f_j)^{m_{ij}}(f_j^n z_i-f_i^n z_j)=0$, et on peut encore supposer tous
+les $m_{ij}$ égaux à un même entier $m$~; remplaçant alors $z_i$ par
+$f_i^m z_i$, on est ramené au cas où $m=0$, autrement dit au cas où l'on a
+\begin{equation}
+  f_j^n z_i=f_i^n z_j
+  \tag{1.3.7.2}\label{I.1.3.7.2-fr}
+\end{equation}
+quels que soient $i$, $j$. Or, on a $D(f_i^n)=D(f_i)$, et comme les $D(f_i)$
+forment un recouvrement de $X$, l'idéal engendré par les $f_i^n$ est $A$~;
+en d'autres termes, il existe des éléments $g_i\in A$ tels que
+$\sum_i g_i f_i^n=1$. Considérons alors l'élément
+$z=\sum_i g_i z_i$ de $M$~; d'après (\hyperref[I.1.3.7.2-fr]{1.3.7.2}), on a
+$f_i^n z=\sum_j g_j f_i^n z_j=(\sum_j g_j f_j^n)z_i=z_i$, d'où par
+définition $\xi_i=z/1$ dans $M_{f_i}$. On en conclut

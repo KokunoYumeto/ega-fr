@@ -1,0 +1,33 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{128}
+
+  \item[b)] Pour tout morphisme étale et séparé $g:S'\to S$, l'application canonique
+  \begin{equation}
+    \Gamma(S'/S)\longrightarrow\Gamma(S'\times_S S_0/S_0)
+    \tag{18.5.4.2}\label{IV.18.5.4.2}
+  \end{equation}
+  est bijective.
+\end{enumerate}
+La condition $b)$ entraîne $a')$; si de plus $S$ est quasi-compact et quasi-séparé, la condition $a)$ entraîne $b)$.
+\end{proposition}
+
+Prouvons d'abord que $b)$ entraîne $a')$. Supposons donc $b)$ vérifiée, et soit $g:S'\to S$ un morphisme fini et localement libre; posons $S'_0=S'\times_S S_0$, de sorte que $g_0=g_{(S_0)}:S'_0\to S_0$ est fini et localement libre. Alors il résulte de (18.5.3) que $P=\mathbf{Of}(S')$ est un $S$-préschéma \emph{étale et séparé}; en outre, la définition du foncteur $\operatorname{Of}$ montre aussitôt que si l'on pose $P_0=\mathbf{Of}(S'_0)$ (pour la catégorie des $S_0$-préschémas), on a $P_0=P\times_S S_0$. Cela étant, on a par définition le diagramme commutatif
+\[
+\xymatrix{
+  \Gamma(P/S)\ar[r]\ar[d]^{\sim} & \Gamma(P_0/S_0)\ar[d]^{\sim}\\
+  \operatorname{Of}(S')\ar[r] & \operatorname{Of}(S'_0)
+}
+\]
+où les flèches verticales sont les bijections canoniques. Comme l'hypothèse $b)$, appliquée au morphisme $P\to S$, entraîne que la première ligne est une bijection, il en est de même de la seconde, ce qui établit notre assertion.
+
+Avant de prouver que $a)$ entraîne $b)$ lorsque $S$ est quasi-compact et quasi-séparé, nous établirons le
+
+\begin{lemma}[18.5.4.3]
+\label{IV.18.5.4.3}
+Si $S$ et $S_0$ vérifient la condition $a)$ de (18.5.4), alors, pour tout morphisme fini $g:S'\to S$, $S'$ est l'unique voisinage de $S'_0=g^{-1}(S_0)=S'\times_S S_0$ dans $S'$.
+\end{lemma}
+
+En effet, il revient au même de dire que si $T'$ est une partie fermée de $S'$ telle que $T'\cap S'_0=\varnothing$, alors $T'=\varnothing$. Or, si l'on désigne encore par $T'$ un sous-préschéma fermé de $S'$ ayant $T'$ pour espace sous-jacent, le morphisme composé $h:T'\to S'\xrightarrow{g}S$ est fini et $h^{-1}(S_0)$ est vide; la condition $a)$ appliquée au morphisme $h$ entraîne que $T'$ est nécessairement vide.
+
+Ce lemme étant démontré, prouvons d'abord que, sous l'hypothèse $a)$, l'application (18.5.4.2) est \emph{injective}. En effet, si $u'$, $u''$ sont deux $S$-sections de $S'$, le fait que le morphisme $S'\to S$ soit non ramifié entraîne que le préschéma des coïncidences de $u'$ et $u''$ est induit sur un ouvert $U$ de $S$ (17.4.6). Si les restrictions à $S_0$ de $u'$ et $u''$ sont les mêmes, le fait que $u'$ et $u''$ sont des immersions ouvertes (17.4.1) entraîne que $U$ contient $S_0$, donc est égal à $S$ en vertu du lemme (18.5.4.3) appliqué au cas où $S'=S$.
+

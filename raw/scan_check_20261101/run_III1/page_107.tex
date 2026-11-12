@@ -1,0 +1,94 @@
+% from ega3-1-fr.tex
+\oldpage[III]{107}
+\begin{proof}
+En effet, $f$ est projectif (II, 5.5.5, (v)) et comme $Y$ est projectif
+sur $k$, la condition supplémentaire de
+(\hyperref[III.2.3.6-fr]{2.3.6}) est vérifiée~; il suffit alors de
+considérer le sous-schéma fermé $Y'$ de $Y$ défini par l'Idéal cohérent
+$\mathcal J$ du cor. (\hyperref[III.2.3.6-fr]{2.3.6}).
+\end{proof}
+
+\begin{env}[2.3.8]
+\label{III.2.3.8-fr}
+\emph{Remarque.} Au chap. IV, en étudiant la notion de diviseur, nous
+verrons que si, dans l'énoncé de
+(\hyperref[III.2.3.5-fr]{2.3.5}), on suppose que les anneaux
+$\mathcal O_y$ $(y\in Y)$ sont factoriels (ce qui est le cas par exemple
+si $Y$ est non singulier), alors $X$ peut se déduire de $Y$ en faisant
+éclater un sous-préschéma fermé $Y'$ de $Y$ dont l'espace sous-jacent est
+contenu dans $Y-U$.
+\end{env}
+
+\subsection{Une généralisation du théorème fondamental}
+\label{subsection:III.2.4-fr}
+
+\begin{theorem}[2.4.1]
+\label{III.2.4.1-fr}
+Soient $Y$ un préschéma noethérien, $\mathcal S$ une
+$\mathcal O_Y$-Algèbre quasi-cohérente de type fini. Soient
+$f:X\to Y$ un morphisme projectif, $\mathcal S'=f^*(\mathcal S)$,
+$\mathcal M$ un $\mathcal S'$-Module quasi-cohérent de type fini.
+Alors~:
+\begin{enumerate}
+\item[(i)] Pour tout $p\in\mathbb Z$, $R^pf_*(\mathcal M)$ est un
+$\mathcal S$-Module de type fini.
+\item[(ii)] Soit de plus $\mathcal L$ un $\mathcal O_X$-Module inversible
+ample pour $f$, et posons
+$\mathcal M(n)=\mathcal M\otimes\mathcal L^{\otimes n}$ pour tout
+$n\in\mathbb Z$. Il existe un entier $N$ tel que, pour $n\geq N$, on ait
+\[
+R^pf_*(\mathcal M(n))=0
+\tag{2.4.1.1}\label{III.2.4.1.1-fr}
+\]
+pour tout $p>0$, et que l'homomorphisme canonique
+\[
+f^*(f_*(\mathcal M(n)))\longrightarrow\mathcal M(n)
+\]
+(0\textsubscript{I}, 4.4.3) soit surjectif.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Posons $Y'=\operatorname{Spec}(\mathcal S)$,
+$X'=\operatorname{Spec}(\mathcal S')$ de sorte que
+$X'=X\times_Y Y'$ (II, 1.5.5)~; soient $g:Y'\to Y$,
+$g':X'\to X$ les morphismes structuraux, qui sont affines par
+définition, et $f'=f_{(Y')}:X'\to Y'$~; on a donc un diagramme
+commutatif
+\[
+\xymatrix{
+X\ar[d]_f & X'\ar[l]_{g'}\ar[d]^{f'}\ar[dl]^{h}\\
+Y & Y'\ar[l]^{g}
+}
+\]
+et le morphisme $f'$ est projectif (II, 5.5.5, (iii))~; posons
+$h=f\circ g'=g\circ f'$.
+
+(i) Soit $\widetilde{\mathcal M}$ le $\mathcal O_{X'}$-Module associé au
+$\mathcal S'$-Module quasi-cohérent $\mathcal M$, quand $X'$ est
+considéré comme un $X$-schéma affine (II, 1.4.3), de sorte que l'on a
+$\mathcal M=g'_*(\widetilde{\mathcal M})$~; comme $\mathcal M$ est un
+$\mathcal S'$-Module de type fini, $\widetilde{\mathcal M}$ est un
+$\mathcal O_{X'}$-Module de type fini (II, 1.4.5)~; comme $h$ est de type
+fini, puisque $g$ et $f'$ le sont (II, 1.3.7 et I, 6.3.4, (ii)), $X'$ est
+noethérien (I, 6.3.7) et $\widetilde{\mathcal M}$ est par suite cohérent.
+Cela étant, comme $g'$ est affine, l'homomorphisme canonique
+$R^pf_*(\mathcal M)\to R^ph_*(\widetilde{\mathcal M})$ est bijectif
+(\hyperref[III.1.3.4-fr]{1.3.4}). En outre, cet homomorphisme est un
+homomorphisme de $\mathcal S$-Modules~; en effet, de l'homomorphisme
+canonique
+\[
+g'_*(\mathcal O_{X'})\otimes_{\mathcal O_X}
+g'_*(\widetilde{\mathcal M})\longrightarrow
+g'_*(\widetilde{\mathcal M})
+\tag{2.4.1.2}\label{III.2.4.1.2-fr}
+\]
+qui définit la structure de $\mathcal S'$-Module de $\mathcal M$ (en se
+rappelant que $\mathcal S'=g'_*(\mathcal O_{X'})$), on déduit
+canoniquement un homomorphisme
+\[
+f_*(g'_*(\mathcal O_{X'}))\otimes
+R^pf_*(g'_*(\widetilde{\mathcal M}))\longrightarrow
+R^pf_*(g'_*(\widetilde{\mathcal M})).
+\]
+

@@ -1,0 +1,69 @@
+% from ega0-19-fr.tex
+\oldpage[0\textsubscript{IV-1}]{74}
+
+\begin{proof}
+En vertu de (19.1.7), on a des diagrammes commutatifs
+\[
+  \xymatrix{
+    0\ar[r] & M_n\ar[r]^{u_n} & N_n\ar[r]^{p_n} & P_n\ar[r] & 0\\
+    0\ar[r] & M_{n+1}\ar[u]^f\ar[r]_{u_{n+1}} &
+      N_{n+1}\ar[u]^g\ar[r]_{p_{n+1}} & P_{n+1}\ar[u]^h\ar[r] & 0
+  }
+\]
+où les lignes sont des suites exactes \emph{scindées}, autrement dit, il existe
+pour chaque $n$ un homomorphisme $s_n:P_n\to N_n$ tel que
+$p_n\circ s_n=1_{P_n}$. Nous allons montrer que l'on peut, par récurrence sur
+$n$, définir un homomorphisme $s'_n:P_n\to N_n$ tel que
+$p_n\circ s'_n=1_{P_n}$ et que les diagrammes
+\[
+  \xymatrix{
+    P_n\ar[r]^{s'_n} & N_n\\
+    P_{n+1}\ar[u]^h\ar[r]_{s'_{n+1}} & N_{n+1}\ar[u]^g
+  }
+\]
+soient commutatifs. En effet, $g\circ s_{n+1}-s'_n\circ h$ est un
+homomorphisme de $P_{n+1}$ dans
+\[
+  u_n(M_n)=u_{n+1}(M_{n+1})/
+  \mathfrak J_nu_{n+1}(M_{n+1})~;
+\]
+comme $P_{n+1}$ est un $(A/\mathfrak J_{n+1})$-module \emph{projectif}, cet
+homomorphisme se factorise en
+\[
+  P_{n+1}\xrightarrow{t_{n+1}}u_{n+1}(M_{n+1})
+  \longrightarrow
+  u_{n+1}(M_{n+1})/\mathfrak J_nu_{n+1}(M_{n+1}),
+\]
+d'où l'on conclut aussitôt que $s'_{n+1}=s_{n+1}-t_{n+1}$ répond à la
+question. Cela étant, de la décomposition de $N_n$ en somme directe de
+$u_n(M_n)$ et de $s'_n(P_n)$, on déduit aussitôt un homomorphisme
+$w_n:N_n\to M_n$ inverse à gauche de $u_n$ et tel que les diagrammes
+\[
+  \xymatrix{
+    N_n\ar[r]^{w_n} & M_n\\
+    N_{n+1}\ar[u]^g\ar[r]_{w_{n+1}} & M_{n+1}\ar[u]^f
+  }
+\]
+soient commutatifs. Le système projectif $(w_n)$ admet alors une limite
+projective $\widehat w:\widehat N\to\widehat M=M$, d'où par composition avec
+l'homomorphisme canonique $N\to\widehat N$, un homomorphisme $w:N\to M$ tel
+que, pour tout $n$, l'endomorphisme $(w\circ u)_n$ de
+$M_n=M/\mathfrak J_nM$ déduit de $w\circ u$ par passage aux quotients soit
+l'identité~; cela entraîne que $w\circ u=1_M$ puisque $M$ est séparé et
+complet.
+\end{proof}
+
+\begin{proposition}[19.1.9]
+\label{0.19.1.9-fr}
+Soient $A$ un anneau topologique préadmissible ($\mathbf{0}_{\mathrm I}$,
+7.1.2), $\mathfrak Q$ un idéal de définition de $A$,
+$(\mathfrak J_\lambda)$ un système fondamental d'idéaux ouverts de $A$.
+Soient $M$, $N$ deux $A$-modules topologiques dont les topologies sont déduites
+de celles de $A$, et tels que pour tout $\lambda$,
+$N/\mathfrak J_\lambda N$ soit un $(A/\mathfrak J_\lambda)$-module projectif
+(cf. (19.2.3)). Soit $u:M\to N$ un $A$-homomorphisme. Alors les conditions
+suivantes sont équivalentes~:
+\begin{enumerate}
+  \item[a)] $u$ est formellement inversible à gauche.
+
+  

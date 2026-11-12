@@ -1,0 +1,89 @@
+% from ega2-1-fr.tex
+\oldpage[II]{29}
+Lorsqu'on parlera du spectre premier homogène $\operatorname{Proj}(S)$ comme
+d'un \emph{schéma}, il s'agira toujours de la structure qui vient d'être
+définie.
+
+\begin{example}[2.4.3]
+\label{II.2.4.3-fr}
+Prenons $S=K[T_1,T_2]$, $K$ étant un corps, $T_1$, $T_2$ deux
+indéterminées, et $S$ étant gradué par le degré total. Il résulte de
+(\hyperref[II.2.3.14-fr]{2.3.14}) que $\operatorname{Proj}(S)$ est réunion
+de $D_+(T_1)$ et $D_+(T_2)$~; on voit aussitôt que ces schémas affines sont
+canoniquement isomorphes à $K[T]$, et que $\operatorname{Proj}(S)$
+s'obtient par le recollement de ces deux schémas affines décrit dans
+(\hyperref[I.2.3.2-fr]{I, 2.3.2}) (cf.
+(\hyperref[II.7.4.14-fr]{7.4.14})).
+\end{example}
+
+\begin{proposition}[2.4.4]
+\label{II.2.4.4-fr}
+Soit $S$ un anneau gradué à degrés positifs, et soit $X$ le schéma
+$\operatorname{Proj}(S)$.
+\begin{enumerate}
+  \item[\rm(i)] Si $\mathfrak{N}_+$ est le nilradical de $S_+$
+    (\hyperref[II.2.1.10-fr]{2.1.10}), le schéma $X_{\mathrm{red}}$ est
+    canoniquement isomorphe à $\operatorname{Proj}(S/\mathfrak{N}_+)$~; en
+    particulier, si $S$ est essentiellement réduite,
+    $\operatorname{Proj}(S)$ est réduit.
+  \item[\rm(ii)] Supposons $S$ essentiellement réduit. Alors, pour que $X$
+    soit intègre, il faut et il suffit que $S$ soit essentiellement intègre.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+  \item[\rm(i)] Soit $\overline{S}$ l'anneau gradué
+    $S/\mathfrak{N}_+$, et désignons par $x\mapsto\overline{x}$
+    l'homomorphisme canonique $S\to\overline{S}$, de degré $0$. Pour tout
+    $f\in S_d$ ($d>0$), l'homomorphisme canonique
+    $S_f\to\overline{S}_{\overline{f}}$
+    (\hyperref[0.1.5.1-fr]{0, 1.5.1}) est surjectif et de degré $0$, donc
+    par restriction donne un homomorphisme surjectif
+    $S_{(f)}\to\overline{S}_{(\overline{f})}$~; si on suppose
+    $f\notin\mathfrak{N}_+$, on vérifie immédiatement que
+    $\overline{S}_{(\overline{f})}$ est réduit, et que le noyau de
+    l'homomorphisme précédent est le nilradical de $S_{(f)}$, autrement dit
+    $\overline{S}_{(\overline{f})}=(S_{(f)})_{\mathrm{red}}$. À cet
+    homomorphisme correspond donc une immersion fermée
+    $D_+(\overline{f})\to D_+(f)$ qui identifie $D_+(\overline{f})$ à
+    $(D_+(f))_{\mathrm{red}}$ (\hyperref[I.5.1.2-fr]{I, 5.1.2}), et est en
+    particulier un homéomorphisme des espaces sous-jacents à ces deux
+    schémas affines. En outre, si $g\notin\mathfrak{N}_+$ est un second
+    élément homogène de $S_+$, le diagramme
+    \[
+      \xymatrix{
+        S_{(f)}\ar[r]\ar[d]
+        & \overline{S}_{(\overline{f})}\ar[d]\\
+        S_{(fg)}\ar[r]
+        & \overline{S}_{(\overline{fg})}
+      }
+    \]
+    est commutatif~; comme en outre les $D_+(f)$, pour $f$ homogène de
+    degré $>0$ et $f\notin\mathfrak{N}_+$, forment un recouvrement de
+    $X=\operatorname{Proj}(S)$ (\hyperref[II.2.3.7-fr]{2.3.7}), on voit
+    que les morphismes $D_+(\overline{f})\to D_+(f)$ sont les restrictions
+    d'une immersion fermée
+    $\operatorname{Proj}(\overline{S})\to\operatorname{Proj}(S)$ qui est
+    un homéomorphisme des espaces sous-jacents~; d'où la conclusion
+    (\hyperref[I.5.1.2-fr]{I, 5.1.2}).
+  \item[\rm(ii)] Supposons que $S$ soit essentiellement intègre, autrement
+    dit que $(0)$ soit un idéal gradué premier de $S_+$ distinct de $S_+$~;
+    alors $X$ est réduit en vertu de (i) et irréductible en vertu de
+    (\hyperref[II.2.3.17-fr]{2.3.17}). Inversement, supposons que $S$ soit
+    essentiellement réduit et $X$ intègre~; alors, pour $f\neq0$ homogène
+    dans $S_+$, on a $D_+(f)\neq\varnothing$
+    (\hyperref[II.2.3.7-fr]{2.3.7})~; l'hypothèse que $X$ est irréductible
+    entraîne que $D_+(f)\cap D_+(g)\neq\varnothing$ pour $f$, $g$
+    homogènes et $\neq0$ dans $S_+$~; donc $fg\neq0$ en vertu de
+    (\hyperref[II.2.3.3.2-fr]{2.3.3.2}), et on en conclut que $S_+$ n'a pas
+    de diviseurs de zéro, d'où la première assertion.
+\end{enumerate}
+\end{proof}
+
+\begin{env}[2.4.5]
+\label{II.2.4.5-fr}
+Étant donné un anneau commutatif $A$, rappelons qu'on dit qu'un anneau
+gradué $S$ est une \emph{$A$-algèbre graduée} s'il est muni d'une structure
+de $A$-algèbre telle que chacun des sous-groupes $S_n$ soit un $A$-module~;
+il suffit d'ailleurs pour cela que $S_0$ soit

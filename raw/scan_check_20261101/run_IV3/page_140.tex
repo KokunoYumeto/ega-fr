@@ -1,0 +1,102 @@
+% from ega4-11-fr.tex
+\oldpage[IV-3]{140}
+
+idéal de $A$, $\mathfrak p$ un idéal premier de $B$ contenant $\mathfrak JB$.
+Alors les deux conditions suivantes sont équivalentes~:
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $M_\mathfrak p$ est un $A$-module plat.
+\item $M_\mathfrak p/\mathfrak JM_\mathfrak p$ est un
+$(A/\mathfrak J)$-module plat et
+$\operatorname{Tor}_1^A(A/\mathfrak J,M_\mathfrak p)=0$.
+\end{enumerate}
+Lorsque $A$ est \emph{noethérien}, c'est une conséquence de
+$(\mathbf 0_{\mathrm{III}},10.2.2)$ appliqué à la $A$-algèbre noethérienne
+$B_\mathfrak p$~; peut-on en déduire l'énoncé général par un passage à la
+limite inductive~?
+
+Il convient de noter à ce propos qu'une telle généralisation n'est certainement
+pas possible lorsqu'on remplace la condition b) ci-dessus par l'une des
+conditions c), d) de $(\mathbf 0_{\mathrm{III}},10.2.1)$ où $M$ est remplacé
+par $M_\mathfrak p$. Prenons par exemple pour $A$ un anneau local dont l'idéal
+maximal $\mathfrak J$ est principal et tel que l'intersection
+\[
+\mathfrak R=\bigcap_{n\geq0}\mathfrak J^{n+1}
+\]
+ne soit pas réduite à $0$ (par exemple l'anneau des germes de fonctions
+numériques indéfiniment différentiables au voisinage de $0$ dans $\mathbf R$).
+Prenons $B=A$, $\mathfrak p=\mathfrak J$, et $M=A/\mathfrak N$, où
+$\mathfrak N$ est un sous-module monogène $\neq0$ de $\mathfrak R$~; $M$ est
+donc de présentation finie. Il est clair que $M$ n'est pas un $A$-module plat,
+car étant de présentation finie, il serait libre (Bourbaki, \emph{Alg. comm.},
+chap.~II, \S~3, n$^\circ$~2, cor.~2 de la prop.~5), ce qui est absurde puisque
+$\mathfrak N\neq0$. Cependant,
+\[
+\mathfrak J^kM/\mathfrak J^{k+n}M\simeq A/\mathfrak J^n
+\]
+quels que soient $k$ et $n$ positifs, donc $M$ vérifie bien les conditions c)
+et d) de $(\mathbf 0_{\mathrm{III}},10.2.1)$ puisque $A/\mathfrak J$ est un
+corps.
+\end{remark}
+\begin{proposition}[11.3.13]
+\label{IV.11.3.13-fr}
+Soient $f:X\to Y$ un morphisme de préschémas, $x$ un point de $X$ tel que
+$f$ soit plat au point $x$~; posons $y=f(x)$.
+\begin{enumerate}[label=\emph{(\roman*)}]
+\item Si $X$ est réduit (resp. normal) au point $x$, alors $Y$ est réduit
+(resp. normal) au point $y$.
+\item On suppose de plus que $f$ soit de présentation finie au point $x$.
+Alors, si $Y$ est réduit (resp. normal) au point $y$ et si le morphisme $f$
+est réduit (resp. normal) au point $x$ (6.8.1), $X$ est réduit (resp. normal)
+au point $x$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+La première assertion n'est mise que pour mémoire, ayant été démontrée dans
+(2.1.13). Pour prouver (ii), on peut se borner au cas où $X=\operatorname{Spec}(B)$,
+$Y=\operatorname{Spec}(A)$, où $A$ est un anneau local réduit (resp. intègre et
+intégralement clos) et $B$ une $A$-algèbre de présentation finie. On peut alors
+(8.9.1) écrire
+\[
+B=B_0\otimes_{A_0}A,
+\]
+où $A_0$ est une sous-$\mathbf Z$-algèbre de type fini de $A$ et $B_0$ une
+$A_0$-algèbre de type fini. Soit $(C_\alpha)$ la famille filtrante croissante
+des sous-$A_0$-algèbres de type fini de $A$, qui sont donc des
+$\mathbf Z$-algèbres de type fini~; on a $A=\varinjlim C_\alpha$. Distinguons
+maintenant les deux cas~:
+
+\noindent 1\textsuperscript{o} Supposons $A$ réduit et $f$ réduit au point
+$x$. Si $\mathfrak m$ est l'idéal maximal de $A$, soit
+$\mathfrak p_\alpha$ l'idéal premier $\mathfrak m\cap C_\alpha$, et posons
+$A'_\alpha=(C_\alpha)_{\mathfrak p_\alpha}$, de sorte que l'on a aussi
+$A=\varinjlim A'_\alpha$ (5.13.3). Posons
+$Y_\alpha=\operatorname{Spec}(A'_\alpha)$,
+$X_\alpha=\operatorname{Spec}(B_0\otimes_{A_0}A'_\alpha)$ et soient
+$f_\alpha:X_\alpha\to Y_\alpha$, $x_\alpha$ (resp. $y_\alpha$) la projection
+de $x$ (resp. $y$) dans $X_\alpha$ (resp. $Y_\alpha$). Puisque $f$ est réduit
+au point $x$, il existe $\alpha_0$ tel que $f_\alpha$ soit réduit au point
+$x_\alpha$ pour $\alpha\geq\alpha_0$ ((6.7.8) et (11.2.6))~; comme
+$Y_\alpha$ et $X_\alpha$ sont noethériens et que $A'_\alpha$ est réduit
+(puisqu'il en est ainsi de $C_\alpha$), on déduit de (3.3.5) que $X_\alpha$
+est réduit au point $x_\alpha$. Mais puisque
+$B=\varinjlim(B_0\otimes_{A_0}A'_\alpha)$, on a aussi
+$\mathcal O_{X,x}=\varinjlim\mathcal O_{X_\alpha,x_\alpha}$ (5.13.3) et par
+suite $\mathcal O_{X,x}$ est réduit (5.13.2).
+
+\noindent 2\textsuperscript{o} Supposons $A$ intégralement clos et $f$ normal
+au point $x$. Comme $C_\alpha$ est universellement japonais (7.7.4), sa
+clôture intégrale $C'_\alpha$ est une $C_\alpha$-algèbre finie, évidemment
+contenue dans $A$. Soit $\mathfrak p'_\alpha$ l'idéal premier
+$\mathfrak m\cap C'_\alpha$, et posons
+$A''_\alpha=(C'_\alpha)_{\mathfrak p'_\alpha}$, de sorte que $A''_\alpha$
+est un anneau local noethérien intègre et intégralement clos, et que l'on a
+$A=\varinjlim A''_\alpha$ (5.13.3). Posons
+$Y'_\alpha=\operatorname{Spec}(A''_\alpha)$,
+$X'_\alpha=\operatorname{Spec}(B_0\otimes_{A_0}A''_\alpha)$ et soient
+$f'_\alpha:X'_\alpha\to Y'_\alpha$, $x'_\alpha$ (resp. $y'_\alpha$) la
+projection de $x$ (resp. $y$) dans $X'_\alpha$ (resp. $Y'_\alpha$). Puisque
+$f$ est normal au point $x$, il existe $\alpha_0$ tel que, pour
+$\alpha\geq\alpha_0$, $f'_\alpha$ soit normal au point $x'_\alpha$ ((6.7.8)
+et (11.2.6))~;
+

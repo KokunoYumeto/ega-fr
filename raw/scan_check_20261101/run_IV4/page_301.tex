@@ -1,0 +1,47 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{301}
+Pour appliquer ce lemme lorsque $A$ est un anneau complet et $\mathfrak{m}\notin\operatorname{Ass}(A)$, on observe que si $u$ est injectif, il en est de même des $u_i$ (avec les notations du lemme):
+en effet, $\det u$ est alors un élément régulier de $A$, donc n'appartient à aucun des $\mathfrak{p}_i$, et son image $\det u_i$ dans $A/\mathfrak{p}_i$ est par suite un élément $\neq0$ de cet anneau intègre, ce qui prouve que $u_i$ est injectif.
+Comme $\operatorname{Coker}(u_i)$ est image de $\operatorname{Coker}(u)$, il est aussi de longueur finie et $\chi(M_i,u_i)$ est donc défini pour tout $i$;
+on a par suite la formule \sref{IV.21.10.17.8}.
+D'autre part, puisque $\det(u)$ est un élément régulier de $A$, il n'est contenu dans aucun des $\mathfrak{p}_i$;
+l'idéal $(\det u)A$ est donc $\mathfrak{m}$-primaire et le quotient $A/(\det u)A$ de longueur finie.
+Appliquant le même raisonnement que ci-dessus à l'homothétie injective $t:\xi\mapsto(\det u)\xi$ de $A$ et à ses images $t_i=\det u_i$ dans les $A/\mathfrak{p}_i$, il vient
+\[
+  \chi(A,t)=\sum_i\operatorname{long}(A_{\mathfrak{p}_i})\cdot\chi(A/\mathfrak{p}_i,t_i).
+\]
+Mais les anneaux $A/\mathfrak{p}_i$ sont intègres et complets, et en appliquant le résultat de II) à chacun d'eux, on obtient encore la relation \sref{IV.21.10.17.4} pour $M$ et $u$.
+
+IV) Cas général.
+Posons $A'=\widehat{A}$, $M'=M\otimes_AA'$, $u'=u\otimes1_{A'}$;
+on a $\det(u')=\det(u)$, et par platitude, $\operatorname{Coker}(u')=(\operatorname{Coker}(u))_{(A')}$ et $A'/(\det u)A'=(A/(\det u)A)_{(A')}$;
+comme la formule \sref{IV.21.10.17.4} est vraie pour $A'$ et $u'$ en vertu de III), elle est aussi vraie pour $A$ et $u$ en vertu de \sref{IV.4.7.1}.
+
+Ceci termine donc la démonstration de \sref{IV.21.10.17}.
+
+\begin{proposition}[21.10.18]
+\label{IV.21.10.18}
+Soient $X$, $X'$ deux préschémas localement noethériens, $f:X'\to X$ un morphisme fini, transformant tout point maximal de $X'$ en un point maximal de $X$, et vérifiant pour tout $x'\in X'$ l'une des conditions (ii), (iii), (iv) de \sref{IV.21.10.10}.
+On suppose en outre qu'il existe un entier $n$ tel que, pour tout point maximal $x$ de $X$, $(f_*(\sh{O}_{X'}))_x$ soit un $\sh{O}_{X,x}$-module libre de rang $n$.
+Alors, pour tout cycle $1$-codimensionnel $Z$ sur $X$, on a
+\[
+\label{IV.21.10.18.1}
+  f_*(f^*(Z))=n\cdot Z
+  \tag{21.10.18.1}
+\]
+(« formule de projection »).
+\end{proposition}
+
+\begin{proof}
+En vertu des définitions, on est aussitôt ramené au cas où $X$ est spectre d'un anneau local noethérien $A$ de dimension $1$, de point fermé $x$, et où $Z=\overline{\{x\}}$;
+posons $X'=\Spec(A')$ où $A'$ est une $A$-algèbre finie, et, pour tout idéal premier minimal $\mathfrak{p}_i$ de $A$, $A'_{\mathfrak{p}_i}$ est un $A_{\mathfrak{p}_i}$-module libre de rang $n$.
+Montrons qu'on peut se borner en outre au cas où $A$ est complet.
+Faisons en effet le changement de base $h:Y\to X$, où $Y=\Spec(B)$, avec $B=\widehat{A}$, et posons
+\[
+  Y'=X'\times_XY=\Spec(B\otimes_AA'),\qquad g=f_{\{Y\}}:Y'\to Y;
+\]
+le morphisme $g$ est alors fini, et comme $h$ est plat, les points maximaux de $Y$ sont au-dessus de ceux de $X$;
+au-dessus de chacun des $\mathfrak{p}_i$, il n'y a qu'un nombre fini d'idéaux minimaux $\mathfrak{p}_{ij}$ de $B$, et $(B\otimes_AA')_{\mathfrak{p}_{ij}}$ est un $B_{\mathfrak{p}_{ij}}$-module libre de rang $n$.
+Enfin, si $f$ vérifie l'une des conditions (ii), (iii) ou (iv) de \sref{IV.21.10.10} en chacun des points $x'$ de $f^{-1}(x)$, $g$ vérifie la condition correspondante en l'unique point $y'$ de $g^{-1}(y)$ au-dessus de $x'$ (en désignant par $y$ le point fermé de $Y$);
+c'est immédiat pour les conditions (ii) et (iv);
+pour la condition (iii), elle implique que $A$ est un anneau de valuation discrète, donc il en est de même de $B$, et la condition

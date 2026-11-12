@@ -1,0 +1,57 @@
+% from ega4-21b-fr.tex
+\oldpage[IV-4]{299}
+III) $A$ est un anneau complet.
+Notons qu'on peut supposer en outre que $\mathfrak{m}\notin\operatorname{Ass}(A)$;
+en effet, puisque $\det(u)$ est un élément régulier de $A$, si l'on avait $\mathfrak{m}\in\operatorname{Ass}(A)$, on en déduirait $\det(u)\notin\mathfrak{m}$, donc $\det(u)$ serait inversible, $u$ un automorphisme de $M$, et la formule \sref{IV.21.10.17.4} devient alors triviale, les deux membres étant nuls.
+
+Dans ce qui suit, pour un endomorphisme $v$ d'un module $N$ sur un anneau $R$, tel que $\operatorname{Ker}v$ et $\operatorname{Coker}v$ soient de longueur finie, on posera
+\[
+  \chi(N,v)=\operatorname{long}_R(\operatorname{Ker}(v))-\operatorname{long}_R(\operatorname{Coker}(v)).
+\]
+On notera que l'hypothèse sur $v$ revient à dire que le complexe
+\[
+  K^0:0\to N\xrightarrow{v}N\to0
+\]
+a ses modules de cohomologie de longueur finie et que $\chi(N,v)=\chi(H^0(K^0))$ $(\mathbf{0}_{\mathrm{III}},11.10)$.
+On en déduit que si $N'$, $N$, $N''$ sont trois $R$-modules, si l'on a un diagramme commutatif
+\[
+  \xymatrix{
+    0 \ar[r] & N' \ar[r]^r \ar[d]^{v'} & N \ar[r]^s \ar[d]^v & N'' \ar[r] \ar[d]^{v''} & 0\\
+    0 \ar[r] & N' \ar[r]_r & N \ar[r]_s & N'' \ar[r] & 0
+  }
+\]
+dont les lignes sont exactes, et si deux des trois nombres $\chi(N,v)$, $\chi(N',v')$ et $\chi(N'',v'')$ sont définis, alors il en est de même du troisième et on a
+\[
+\label{IV.21.10.17.6}
+  \chi(N,v)=\chi(N',v')+\chi(N'',v'').
+  \tag{21.10.17.6}
+\]
+Cela résulte en effet aussitôt de la suite exacte de cohomologie.
+
+Enfin, si $N$ est un $R$-module de longueur finie, on a $\chi(N,v)=0$.
+
+Avec ces notations, on a le lemme suivant.
+\end{proof}
+
+\begin{lemma}[21.10.17.7]
+\label{IV.21.10.17.7}
+Soient $A$ un anneau local noethérien de dimension $1$ dont l'idéal maximal $\mathfrak{m}$ est tel que $\mathfrak{m}\notin\operatorname{Ass}(A)$;
+soient $\mathfrak{p}_i$ $(1\leq i\leq n)$ les idéaux premiers minimaux de $A$.
+Soient $M$ un $A$-module libre de type fini, $u$ un endomorphisme de $M$ tel que $\chi(M,u)$ soit défini;
+pour chaque $i$, posons $M_i=M\otimes_A(A/\mathfrak{p}_i)$ et soit $u_i$ l'endomorphisme $u\otimes1_{A/\mathfrak{p}_i}$ de $M_i$;
+alors si $\chi(M_i,u_i)$ est défini pour chaque $i$, on a
+\[
+\label{IV.21.10.17.8}
+  \chi(M,u)=\sum_{i=1}^n\operatorname{long}(A_{\mathfrak{p}_i})\cdot\chi(M_i,u_i).
+  \tag{21.10.17.8}
+\]
+\end{lemma}
+
+\begin{proof}
+Puisque $\mathfrak{m}\notin\operatorname{Ass}(A)$, on a une décomposition primaire réduite unique $(0)=\bigcap_{1\leq i\leq n}\mathfrak{q}_i$, où l'idéal $\mathfrak{q}_i$ est $\mathfrak{p}_i$-primaire pour $1\leq i\leq n$.
+Si l'on pose $M'_i=M\otimes_A(A/\mathfrak{q}_i)$, on a donc une suite exacte
+\[
+  0\to M\to\bigoplus_iM'_i\to M''\to0
+\]
+de $A$-modules, où $M''$ est de longueur finie:
+en effet, en localisant la suite exacte précédente en chacun des $\mathfrak{p}_i$, on obtient $M''_{\mathfrak{p}_i}=0$, car $(\mathfrak{q}_i)_{\mathfrak{p}_i}=0$ et $(\mathfrak{q}_j)_{\mathfrak{p}_i}=A_{\mathfrak{p}_i}$ pour $j\neq i$ (Bourbaki, \emph{Alg. comm.}, chap.~IV, \textsection~2, n\textsuperscript{o}~4, prop.~6), donc $(M'_i)_{\mathfrak{p}_i}=M_{\mathfrak{p}_i}$ et $(M'_j)_{\mathfrak{p}_i}=0$;

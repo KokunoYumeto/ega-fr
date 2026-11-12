@@ -1,0 +1,97 @@
+% from ega0-17-fr.tex
+\oldpage[0\textsubscript{IV-1}]{40}
+polynômes $k[\mathrm{T}_1,\ldots,\mathrm{T}_r]$~; compte tenu de ce que tout
+$A$-module de type fini est séparé pour la filtration $\mathfrak{m}$-préadique
+($0_{\mathrm I}$, 7.3.5), il résulte de (15.1.9) que les conditions a) et d)
+sont équivalentes~; en outre, comme toute suite $A$-régulière d'éléments de
+$\mathfrak{m}$ a au plus $n$ éléments (16.4.1), on voit que d) entraîne c).
+Reste à prouver que c) entraîne a).
+
+Posons pour abréger
+$\mathrm{S}=\mathbf{S}^*(\mathfrak{m}/\mathfrak{m}^2)
+=k[\mathrm{T}_1,\ldots,\mathrm{T}_n]$,
+$\mathrm{G}=\operatorname{gr}^*_{\mathfrak{m}}(A)$, et considérons la suite
+exacte
+$0\longrightarrow\mathfrak{J}\longrightarrow\mathrm{S}
+\xrightarrow{\varphi}\mathrm{G}\longrightarrow0$, où le noyau
+$\mathfrak{J}$ de $\varphi$ est donc un idéal gradué de $\mathrm{S}$. Pour
+tout entier $s>0$, on a donc
+\begin{equation}
+\label{0.17.1.1.1-fr}
+\tag{17.1.1.1}
+  \binom{s+n-1}{n-1}
+  =\operatorname{long}(\mathrm{S}_s)
+  =\operatorname{long}(\mathrm{G}_s)
+  +\operatorname{long}(\mathfrak{J}_s).
+\end{equation}
+
+Supposons $\mathfrak{J}\neq0$, de sorte qu'il existe un élément homogène
+$u\in\mathfrak{J}$ de degré $h>0$~; $\mathfrak{J}_s$ contient
+$u\mathrm{S}_{s-h}$ pour $s\geq h$, et comme $u\neq0$ et que $\mathrm{S}$ est
+intègre, $u\mathrm{S}_{s-h}$ est isomorphe à $\mathrm{S}_{s-h}$ comme
+$k$-espace vectoriel~; on aurait donc
+$\operatorname{long}(\mathfrak{J}_s)\geq
+\operatorname{long}(\mathrm{S}_{s-h})=\binom{s-h+n-1}{n-1}$, d'où pour
+$s\geq h$,
+\begin{equation}
+\label{0.17.1.1.2-fr}
+\tag{17.1.1.2}
+  \operatorname{long}(\mathrm{G}_s)
+  \leq\binom{s+n-1}{n-1}-\binom{s-h+n-1}{n-1}.
+\end{equation}
+Or, le second membre de (17.1.1.2) est un polynôme en $s$ de degré
+$\leq n-2$~; mais on a
+$\mathrm{G}_s=\mathfrak{m}^s/\mathfrak{m}^{s+1}$, et pour $s$ assez grand,
+$\operatorname{long}(\mathrm{G}_s)$ est un polynôme en $s$ de degré exactement
+égal à $n-1$ dont le coefficient dominant est $>0$ (16.2.1), ce qui contredit
+l'inégalité (17.1.1.2). C.Q.F.D.
+\end{proof}
+
+\begin{definition}[17.1.2]
+\label{0.17.1.2-fr}
+On dit qu'un anneau local noethérien qui vérifie les conditions équivalentes de
+(17.1.1) est \emph{régulier}.
+\end{definition}
+
+\begin{corollary}[17.1.3]
+\label{0.17.1.3-fr}
+Un anneau local régulier est intègre, intégralement clos, et un anneau de
+Cohen-Macaulay.
+\end{corollary}
+
+\begin{proof}
+La dernière assertion résulte de (17.1.1, d))~; d'autre part, si $A$ est
+régulier, $\operatorname{gr}^*_{\mathfrak{m}}(A)$ est intègre et complètement
+intégralement clos, étant isomorphe à $k[\mathrm{T}_1,\ldots,\mathrm{T}_n]$~;
+on en conclut que $A$ possède aussi ces deux propriétés (Bourbaki,
+\emph{Alg.~comm.}, chap.~III, \S~2, no~3, cor. de la prop.~1 et chap.~V,
+\S~1, no~5, prop.~15).
+\end{proof}
+
+\begin{examples}[17.1.4]
+\label{0.17.1.4-fr}
+\begin{enumerate}
+  \item[\rm (i)] Un anneau local régulier de \emph{dimension} $0$, étant
+  intègre par (17.1.3), est nécessairement un \emph{corps}, et réciproquement.
+  \item[\rm (ii)] Pour qu'un anneau local noethérien de \emph{dimension} $1$
+  soit régulier, il faut et il suffit qu'il soit un \emph{anneau de valuation
+  discrète}~: en effet, dire qu'un anneau local noethérien de dimension $1$ est
+  régulier signifie que son idéal maximal est \emph{principal} et la conclusion
+  résulte de Bourbaki, \emph{Alg.~comm.}, chap.~VI, \S~3, no~6, prop.~9.
+  \item[\rm (iii)] Soit $k$ un corps~; l'anneau de séries formelles
+  $A=k[[\mathrm{T}_1,\ldots,\mathrm{T}_n]]$ est un \emph{anneau régulier de
+  dimension $n$}~; en effet, il est clair que les $\mathrm{T}_i$
+  $(1\leq i\leq n)$ engendrent l'idéal maximal $\mathfrak{m}$ de $A$ et
+  forment une suite $A$-régulière, car
+  $A/(\mathrm{T}_1A+\cdots+\mathrm{T}_iA)$ est isomorphe à
+  $k[[\mathrm{T}_{i+1},\ldots,\mathrm{T}_n]]$.
+\end{enumerate}
+\end{examples}
+
+\begin{proposition}[17.1.5]
+\label{0.17.1.5-fr}
+Pour qu'un anneau local noethérien $A$ soit régulier, il faut et il suffit que
+son complété $\widehat{A}$ le soit.
+\end{proposition}
+
+\begin{proof}

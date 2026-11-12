@@ -1,0 +1,66 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{183}
+
+5.4.9), donc surjectif puisqu'il est dominant; on en conclut (II, 5.4.3 et 5.4.9) que $h$ est aussi universellement fermé, donc propre puisqu'il est de type fini et séparé. Mais alors, pour tout $y\in Y$, le morphisme $h^{-1}(y)\to\Spec(k(y))$ déduit de $h$ est propre et affine, donc fini (III, 4.4.2), autrement dit $h$ est quasi-fini; on déduit donc de (18.12.4) que $h$ est fini, ce qui prouve que $B'$ est une $A$-algèbre finie, et par suite que $b$ est entier sur $A$. C.Q.F.D.
+
+\begin{remark}[18.12.9]
+\label{IV.18.12.9}
+Il se peut qu'un morphisme $f:X\to Y$ soit entier lorsqu'on le suppose seulement séparé, universellement fermé et tel que pour tout $y\in Y$, le morphisme $f^{-1}(y)\to\Spec(k(y))$ déduit de $f$ soit entier. Il faudrait pour cela prouver que ces conditions impliquent que $f$ est affine, ou encore que toute fibre $X_y$ est contenue dans un voisinage ouvert affine.
+\end{remark}
+
+\begin{corollary}[18.12.10]
+\label{IV.18.12.10}
+Un morphisme $f:X\to Y$ qui est injectif et universellement fermé est entier.
+\end{corollary}
+
+Il suffit, par (18.12.8), de prouver que $f$ est affine, ce qui résulte du lemme (18.12.7.1) et de l'hypothèse.
+
+\begin{corollary}[18.12.11]
+\label{IV.18.12.11}
+Soit $f:X\to Y$ un morphisme de préschémas (resp. un morphisme localement de type fini). Pour que $f$ soit un homéomorphisme universel (2.4.2), il faut et il suffit que $f$ soit entier (resp. fini), radiciel et surjectif.
+\end{corollary}
+
+On sait que les conditions sont suffisantes (2.4.5); elles sont nécessaires en vertu de (18.12.10) et (18.12.4).
+
+La proposition suivante améliore (8.11.2):
+
+\begin{proposition}[18.12.12]
+\label{IV.18.12.12}
+Tout morphisme $f:X\to Y$ qui est quasi-fini et séparé est quasi-affine.
+\end{proposition}
+
+Posons $\mathscr A=f_*(\sh{O}_X)$, qui est une $\sh{O}_Y$-Algèbre quasi-cohérente puisque $f$ est quasi-compact et séparé (1.7.4); soit $Z=\Spec(\mathscr A)$ (II, 1.3.1) de sorte que $f$ se factorise canoniquement en
+\[
+  X\xrightarrow{g}Z\xrightarrow{h}Y,
+\]
+$h$ étant affine et $g$ correspondant à l'automorphisme identique de $\mathscr A$ (II, 1.2.7); il suffira de prouver que $g$ est une immersion ouverte, ou, ce qui revient au même (17.9.1) que $g$ est étale et radiciel. Il suffira évidemment de montrer que, pour tout $y\in Y$, le morphisme $g$ est étale et radiciel en chaque point de $f^{-1}(y)$. Or, pour tout $y\in Y$, on peut appliquer à $f$ le résultat de (18.12.3), dont nous conservons les notations; puisque le morphisme $Y'\to Y$ est plat, et que $f$ est quasi-compact et séparé, on a, à un isomorphisme canonique près,
+\[
+  f'_*(\sh{O}_{X'})=\mathscr A\otimes_{\sh{O}_Y}\sh{O}_{Y'}=\mathscr A'
+\]
+(2.3.1), donc $Z'=Z\times_Y Y'$ s'identifie à $\Spec(f'_*(\sh{O}_{X'}))$, et dans la factorisation canonique
+\[
+  X'\xrightarrow{g'}Z'\xrightarrow{h'}Y'
+\]
+de $f'$ (II, 1.2.7), on a $h'=h_{(Y')}$ et $g'=g_{(Y')}$. Cela étant, la décomposition de $X'$ en somme de deux sous-préschémas $X'_1$, $X'_2$ entraîne la décomposition de $\mathscr A'$ en produit direct des deux $\sh{O}_{Y'}$-Algèbres quasi-cohérentes $\mathscr A'_1$, $\mathscr A'_2$, images directes respectives de $\sh{O}_{X'_1}$ et $\sh{O}_{X'_2}$, de sorte que $Z'$ s'identifie à la somme $Z'_1\amalg Z'_2$, où $Z'_i=\Spec(\mathscr A'_i)$ et $g'(X'_i)\subset Z'_i$ pour $i=1,2$. Comme $X'_1$ est fini sur $Y'$, $g'_1=g'|X'_1$ est un isomorphisme de $X'_1$ sur $Z'_1$, puisque $f'|X'_1$ est affine; comme $X'_2\cap f'^{-1}(y')=\varnothing$, on voit que $g'$ est étale et radiciel en chaque point de $f'^{-1}(y')$. Le morphisme $Y'\to Y$ étant plat et localement de présentation finie, on déduit donc d'abord de (17.7.4) que $g$ est étale en tous les points de $X$ projections de points de $f'^{-1}(y')$, c'est-à-dire en tous les points de $f^{-1}(y)$ (I, 3.5.2). D'autre part, le morphisme
+\[
+  g'_{y'}:f'^{-1}(y')\longrightarrow h'^{-1}(y')
+\]
+déduit de $g'$ est radiciel; comme $k(y')=k(y)$, le morphisme $g_y:f^{-1}(y)\to h^{-1}(y)$ est aussi radiciel, autrement dit $g$ est radiciel en chaque point de $f^{-1}(y)$, ce qui achève de prouver la proposition.
+
+L'énoncé suivant améliore de même (8.12.6):
+
+\begin{corollary}[18.12.13]
+\label{IV.18.12.13}
+(« Main Theorem » de Zariski). Soient $Y$ un préschéma quasi-compact et quasi-séparé, $f:X\to Y$ un morphisme quasi-fini et séparé. Alors il existe une factorisation de $f$
+\[
+  X\xrightarrow{g}Z\xrightarrow{u}Y
+\]
+où $g$ est une immersion ouverte (nécessairement quasi-compacte) et $u$ un morphisme fini.
+\end{corollary}
+
+En effet, il résulte de (18.12.12) que $f$ est quasi-affine, donc quasi-projectif. On peut alors appliquer (8.12.8), où l'hypothèse de l'existence d'un $\sh{O}_Y$-Module ample peut en fait être remplacée par la seule hypothèse que $Y$ est quasi-compact et quasi-séparé: en effet, il résulte de (8.12.3) que l'existence de la factorisation annoncée dans (8.12.8) est une propriété locale sur $Y$, et qu'il suffit donc de la prouver lorsque $Y$ est affine.
+
+\begin{remark}[18.12.14]
+\label{IV.18.12.14}
+On peut donner de (18.12.13) une démonstration analogue à celle de (18.12.12) n'utilisant pas (8.12.8) (mais utilisant (18.12.3), donc (18.5.11), qui lui-même se sert du « Main Theorem » sous sa forme locale (8.12.9)). Gardons en effet les notations de la démonstration de (18.12.12), et soit $\mathscr B$ la $\sh{O}_Y$-Algèbre quasi-cohérente, fermeture intégrale de $\sh{O}_Y$ dans $\mathscr A$ (II, 6.3.2). Si l'on pose $T=\Spec(\mathscr B)$, il suffit, en vertu de (8.12.3), de prouver que le $Y$-morphisme $g:X\to T$ correspondant à l'injection canonique $\mathscr B\to\mathscr A$ est une immersion, et pour cela il suffit de montrer (17.9.1) que $g$ est étale et radiciel. Avec les notations de (18.12.12), on peut supposer que $Y=\Spec(C)$ et $Y'=\Spec(C')$ sont affines, $C'$ étant une $C$-algèbre étale (17.3.2); donc $\mathscr A=\widetilde A$, où $A$ est une $C$-algèbre, $\mathscr A'=\widetilde{A'}$ avec $A'=A\otimes_C C'$, et $\mathscr B=\widetilde B$, où $B$ est la fermeture intégrale de $C$ dans $A$. L'algèbre $A'$ est isomorphe au produit $A'_1\times A'_2$, où $A'_1$ est une $C'$-algèbre finie. Il suffira de prouver que $B'=B\otimes_C C'$, qui
+

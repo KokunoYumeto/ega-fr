@@ -1,0 +1,87 @@
+% from ega0-23-fr.tex
+\oldpage[0\textsubscript{IV-1}]{218}
+
+le nilradical de $B$, le noyau de $v$ est $K'\otimes_A\mathfrak N$, donc il est
+contenu dans le nilradical de $K'\otimes_AB$~; on en conclut aussitôt que si
+l'image par $h=w\circ v\circ u$ d'un élément $x\in A'\otimes_AB$ est
+nilpotent, $x$ est nilpotent, ce qui prouve le lemme.
+\end{proof}
+
+\begin{proposition}[23.2.4]
+\label{0.23.2.4-fr}
+Soient $A$ un anneau intègre, $K$ son corps des fractions, $B$ un anneau
+noethérien, $\mathfrak q_i$ ($1\leqslant i\leqslant n$) ses idéaux premiers
+minimaux, $\varphi:A\to B$ un homomorphisme d'anneaux. On suppose que les
+$B/\mathfrak q_i$ sont des anneaux japonais, et que $B$ soit un $A$-module
+plat. Soit $K'$ une extension finie de $K$, et soit $(C_\lambda)$ la famille
+filtrante croissante des sous-anneaux de $K'$ qui sont des $A$-algèbres
+finies et admettent $K'$ pour corps des fractions~; la réunion $A'$ des
+$C_\lambda$ est donc la fermeture intégrale de $A$ dans $K'$. Alors~:
+\begin{enumerate}
+  \item[(i)] Il existe un indice $\alpha$ tel que pour $\lambda\geqslant
+  \alpha$, l'homomorphisme canonique
+  \begin{equation}
+  \label{0.23.2.4.1-fr}
+    (C_\alpha\otimes_AB)_{\mathrm{red}}
+    \longrightarrow(C_\lambda\otimes_AB)_{\mathrm{red}}
+    \tag{23.2.4.1}
+  \end{equation}
+  soit bijectif.
+  \item[(ii)] Si en outre $B$ est un $A$-module fidèlement plat, le morphisme
+  $\operatorname{Spec}(A')\to\operatorname{Spec}(C_\alpha)$ est radiciel.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\emph{(i)} Soit $B_1=B_{\mathrm{red}}$, et soit $R$ l'anneau total des
+fractions de $B_1$~; comme $A$ est intègre et $B$ un $A$-module plat, tout
+élément $\neq0$ de $A$ est $B$-régulier (0\textsubscript{I}, 6.3.4), donc
+l'homomorphisme composé $A\xrightarrow{\varphi}B\to B_1$ se prolonge en un
+homomorphisme $K\to R$~; on peut alors écrire
+$K'\otimes_AR=(K'\otimes_AK)\otimes_KR$, et comme $K'\otimes_AK$
+s'identifie à $K'$, on a $K'\otimes_AR=K'\otimes_KR$. Comme $R$ est composé
+direct des corps des fractions $L_i$ des $B/\mathfrak q_i$,
+$K'\otimes_AR$ est composé direct des $K'\otimes_KL_i$, et par suite
+$(K'\otimes_AR)_{\mathrm{red}}$ est composé direct d'un nombre fini
+d'extensions finies des $L_i$. En vertu de l'hypothèse, la fermeture
+intégrale de $B/\mathfrak q_i$ dans une extension finie de $L_i$ est un
+$(B/\mathfrak q_i)$-module de type fini, donc un $B$-module de type fini~;
+on en conclut que la fermeture intégrale $B'$ de $B$ dans
+$(K'\otimes_AR)_{\mathrm{red}}$ est un $B$-module de type fini. En vertu de
+(23.2.3), les $(C_\lambda\otimes_AB)_{\mathrm{red}}$ s'identifient
+canoniquement à des sous-anneaux de $(K'\otimes_AR)_{\mathrm{red}}$ qui sont
+des $B$-algèbres finies, donc contenues dans $B'$. Comme $B$ est noethérien
+et $B'$ un $B$-module de type fini, la famille filtrante des
+$(C_\lambda\otimes_AB)_{\mathrm{red}}$ admet un \emph{plus grand élément}
+$(C_\alpha\otimes_AB)_{\mathrm{red}}$, ce qui prouve (i).
+
+\emph{(ii)} Comme $B$ est un $A$-module fidèlement plat, il suffit
+(IV, 2.6.1, (v)) de montrer que le morphisme
+$\operatorname{Spec}(A'\otimes_AB)\to
+\operatorname{Spec}(C_\alpha\otimes_AB)$ est radiciel, ou, ce qui revient au
+même (I, 5.1.6), que le morphisme
+$\operatorname{Spec}(A'\otimes_AB)_{\mathrm{red}}\to
+\operatorname{Spec}(C_\alpha\otimes_AB)_{\mathrm{red}}$ est radiciel~; mais
+on a $A'\otimes_AB=\varinjlim_\lambda(C_\lambda\otimes_AB)$, donc
+(IV, 5.13.2)
+$(A'\otimes_AB)_{\mathrm{red}}=
+\varinjlim_\lambda(C_\lambda\otimes_AB)_{\mathrm{red}}$, et la conclusion
+résulte de (i).
+\end{proof}
+
+\begin{corollary}[23.2.5]
+\label{0.23.2.5-fr}
+Soient $A$ un anneau local noethérien intègre, $K$ son corps des fractions,
+$K'$ une extension finie de $K$. Soit $(C_\lambda)$ la famille filtrante
+croissante des sous-anneaux de $K'$ qui sont des $A$-algèbres finies (donc
+des anneaux noethériens semi-locaux (Bourbaki, \emph{Alg. comm.}, chap.~IV,
+§~2, n\textsuperscript{o}~5, cor.~3 de la prop.~9)) et admettent $K'$ pour
+corps des fractions. Alors il existe $\alpha$ tel que l'homomorphisme
+$(\widehat C_\alpha)_{\mathrm{red}}\to
+(\widehat C_\lambda)_{\mathrm{red}}$ soit un isomorphisme pour
+$\lambda\geqslant\alpha$, et si $A'$ est la fermeture intégrale de $A$ dans
+$K'$, le morphisme
+$\operatorname{Spec}(A')\to\operatorname{Spec}(C_\alpha)$ est radiciel
+(cf. (23.2.2)).
+\end{corollary}
+

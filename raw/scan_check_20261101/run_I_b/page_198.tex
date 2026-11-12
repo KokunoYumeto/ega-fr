@@ -1,0 +1,105 @@
+% from ega1-10-fr.tex
+\oldpage[I]{198}
+
+donc son support est fermé (\hyperref[0.5.2.2-fr]{0, 5.2.2}) et
+évidemment contenu dans $\operatorname{Supp}(\mathscr{F})\cap X'$. Pour
+montrer qu'il est égal à ce dernier ensemble, on est aussitôt ramené à
+prouver que la relation $\Gamma(X',\mathscr{F}_{/X'})=0$ entraîne
+$\operatorname{Supp}(\mathscr{F})\cap X'=\varnothing$~; or cela résulte de
+(\hyperref[I.10.8.11-fr]{10.8.11}) et de
+(\hyperref[I.1.4.1-fr]{1.4.1}).
+
+\begin{corollary}[10.8.13]
+\label{I.10.8.13-fr}
+Soit $u:\mathscr{F}\to\mathscr{G}$ un homomorphisme de
+$\mathscr{O}_X$-Modules cohérents. Pour que
+$u_{/X'}:\mathscr{F}_{/X'}\to\mathscr{G}_{/X'}$ soit nul, il faut et il
+suffit que $u$ soit nul dans un voisinage de $X'$.
+\end{corollary}
+
+En effet, d'après (\hyperref[I.10.8.8-fr]{10.8.8, (ii)}), $u_{/X'}$
+s'identifie à $i^*(u)$, donc si on considère $u$ comme une section au-dessus
+de $X$ du faisceau
+$\mathscr{H}=\mathscr{H}\!om_{\mathscr{O}_X}(\mathscr{F},\mathscr{G})$,
+$u_{/X'}$ est la section de
+$i^*(\mathscr{H})=\mathscr{H}_{/X'}$ au-dessus de $X'$ qui lui correspond
+canoniquement ((\hyperref[I.10.8.10.2-fr]{10.8.10.2}) et
+(\hyperref[0.4.4.6-fr]{0, 4.4.6})). Il suffit donc d'appliquer
+(\hyperref[I.10.8.11-fr]{10.8.11}) au $\mathscr{O}_X$-Module cohérent
+$\mathscr{H}$.
+
+\begin{corollary}[10.8.14]
+\label{I.10.8.14-fr}
+Soit $u:\mathscr{F}\to\mathscr{G}$ un homomorphisme de
+$\mathscr{O}_X$-Modules cohérents. Pour que $u_{/X'}$ soit un monomorphisme
+(resp. un épimorphisme), il faut et il suffit que $u$ soit un monomorphisme
+(resp. un épimorphisme) dans un voisinage de $X'$.
+\end{corollary}
+
+Soient $\mathscr{P}$ et $\mathscr{N}$ le conoyau et le noyau de $u$, de
+sorte qu'on a la suite exacte
+\[
+  0\to\mathscr{N}\xrightarrow{v}\mathscr{F}\xrightarrow{u}
+  \mathscr{G}\xrightarrow{w}\mathscr{P}\to0,
+\]
+d'où (\hyperref[I.10.8.8-fr]{10.8.8, (i)}) la suite exacte
+\[
+  0\to\mathscr{N}_{/X'}\xrightarrow{v_{/X'}}
+  \mathscr{F}_{/X'}\xrightarrow{u_{/X'}}
+  \mathscr{G}_{/X'}\xrightarrow{w_{/X'}}
+  \mathscr{P}_{/X'}\to0.
+\]
+Si $u_{/X'}$ est un monomorphisme (resp. un épimorphisme), on a
+$v_{/X'}=0$ (resp. $w_{/X'}=0$), donc il y a un voisinage de $X'$ dans
+lequel $v=0$ (resp. $w=0$) en vertu de
+(\hyperref[I.10.8.13-fr]{10.8.13}).
+
+\subsection{Prolongement d'un morphisme aux complétés.}
+\label{subsection:I.10.9-fr}
+
+\begin{env}[10.9.1]
+\label{I.10.9.1-fr}
+Soient $X$, $Y$ deux préschémas (usuels) localement noethériens,
+$f:X\to Y$ un morphisme, $X'$ (resp. $Y'$) une partie fermée de l'espace
+sous-jacent $X$ (resp. $Y$), telles que $f(X')\subset Y'$. Soit
+$\mathscr{J}$ (resp. $\mathscr{K}$) un faisceau d'idéaux de
+$\mathscr{O}_X$ (resp. $\mathscr{O}_Y$) tel que le support de
+$\mathscr{O}_X/\mathscr{J}$ (resp. $\mathscr{O}_Y/\mathscr{K}$) soit
+$X'$ (resp. $Y'$) et que
+$f^*(\mathscr{K})\mathscr{O}_X\subset\mathscr{J}$~; on notera qu'il
+existe toujours de tels faisceaux d'idéaux, car on peut par exemple prendre
+pour $\mathscr{J}$ le plus grand faisceau d'idéaux de $\mathscr{O}_X$
+définissant un sous-préschéma de $X$ ayant $X'$ pour espace sous-jacent
+(\hyperref[I.5.2.1-fr]{5.2.1}), et l'hypothèse $f(X')\subset Y'$ entraîne
+alors $f^*(\mathscr{K})\mathscr{O}_X\subset\mathscr{J}$
+(\hyperref[I.5.2.4-fr]{5.2.4}). On a donc pour tout entier $n>0$,
+$f^*(\mathscr{K}^n)\mathscr{O}_X\subset\mathscr{J}^n$
+(\hyperref[0.4.3.5-fr]{0, 4.3.5})~; par suite
+(\hyperref[I.4.4.6-fr]{4.4.6}), si on pose
+\[
+  X'_n=(X',\mathscr{O}_X/\mathscr{J}^{n+1}),\qquad
+  Y'_n=(Y',\mathscr{O}_Y/\mathscr{K}^{n+1}),
+\]
+on déduit de $f$ un morphisme $f_n:X'_n\to Y'_n$, et il est immédiat que
+les $f_n$ forment un système inductif. Nous désignerons sa limite inductive
+(\hyperref[I.10.6.8-fr]{10.6.8}) par
+$\widehat f:X_{/X'}\to Y_{/Y'}$, et nous dirons (par abus de langage) que
+$\widehat f$ est le \emph{prolongement de $f$ aux complétés de $X$ et $Y$
+le long de $X'$ et $Y'$}. Il est immédiat de vérifier que ce morphisme ne
+dépend pas du choix des faisceaux d'idéaux $\mathscr{J}$, $\mathscr{K}$
+vérifiant les conditions ci-dessus. Il suffit de le voir en effet lorsque
+$X$ et $Y$ sont des schémas affines noethériens d'anneaux $A$, $B$~; alors
+$\mathscr{J}=\widetilde{\mathfrak{J}}$,
+$\mathscr{K}=\widetilde{\mathfrak{K}}$, où $\mathfrak{J}$ (resp.
+$\mathfrak{K}$) est un idéal de $A$ (resp. $B$), $f$ correspond à un
+homomorphisme d'anneaux $\varphi:B\to A$ tel que
+$\varphi(\mathfrak{K})\subset\mathfrak{J}$
+(\hyperref[I.4.4.6-fr]{4.4.6} et
+\hyperref[I.1.7.4-fr]{1.7.4})~; \emph{$\widehat f$ est alors le morphisme
+qui correspond (\hyperref[I.10.2.2-fr]{10.2.2}) à l'homomorphisme continu
+$\widehat\varphi:\widehat B\to\widehat A$}, où $\widehat A$ (resp.
+$\widehat B$) est le séparé complété de $A$ (resp. $B$) pour la topologie
+$\mathfrak{J}$-préadique (resp. $\mathfrak{K}$-préadique)
+(\hyperref[I.10.6.8-fr]{10.6.8})~; et on sait que si on remplace
+$\mathscr{J}$ par un autre
+

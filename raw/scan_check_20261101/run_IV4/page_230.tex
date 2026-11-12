@@ -1,0 +1,37 @@
+% from ega4-20-fr.tex
+\oldpage[IV-4]{230}
+d'anneaux de $\sh{M}_X$, et on déduit canoniquement de $\theta^\#:\psi^*(\sh{O}_X)\to\sh{O}_{X'}$ un homomorphisme de faisceaux d'anneaux $\theta^{\prime\#}:\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ prolongeant $\theta^\#$ (Bourbaki, \emph{Alg. comm.}, chap.~II, \textsection2, n\textsuperscript{o}1, prop.~2) ; d'où, en se rappelant que $f^*(\sh{M}_f)=\psi^*(\sh{M}_f)\otimes_{\psi^*(\sh{O}_X)}\sh{O}_{X'}$, un homomorphisme canonique de $\sh{O}_{X'}$-algèbres
+\[
+\label{IV.20.1.11.1}
+  f^*(\sh{M}_f)\to\sh{M}_{X'}.
+  \tag{20.1.11.1}
+\]
+Pour toute fonction méromorphe $\vphi$ sur $X$, qui \emph{est une section de $\sh{M}_f$}, $\Gamma(\theta^{\prime\#})(\vphi)$ est une fonction méromorphe sur $X'$, dite \emph{image réciproque de $\vphi$ par $f$}, et notée $\vphi\circ f$ si cela n'entraîne pas confusion.
+
+De même, si $\sh{F}$ est un $\sh{O}_X$-module, on pose $\sh{M}_f(\sh{F})=\sh{F}\otimes_{\sh{O}_X}\sh{M}_f$, et on déduit aussitôt de $\theta^{\prime\#}$ un homomorphisme canonique (qu'on écrit aussi $u\mapsto u\circ f$)
+\[
+  \Gamma(X,\sh{M}_f(\sh{F}))\to\Gamma(X',\sh{M}_{X'}(f^*(\sh{F}))).
+\]
+En outre, si $u\in\Gamma(X,\sh{M}_f(\sh{F}))$ est définie \sref{IV.20.1.7} en un point $x$, $u$ coïncide, dans un voisinage $U$ de $x$, avec une section de la forme $\sum_i h_i\otimes(t_i/s_i)$, où les $h_i$ appartiennent à $\Gamma(U,\sh{F})$, les $t_i$ à $\Gamma(U,\sh{O}_X)$ et les $s_i$ à $\Gamma(U,\sh{S}_f)$.
+Comme par hypothèse les images des $s_i$ dans $\Gamma(f^{-1}(U),\sh{O}_{X'})$ sont régulières, on voit que $u\circ f$ est définie en tout point de $f^{-1}(U)$ ; autrement dit, on a
+\[
+\label{IV.20.1.11.2}
+  f^{-1}(\operatorname{dom}(u))\subset\operatorname{dom}(u\circ f).
+  \tag{20.1.11.2}
+\]
+Nous verrons plus loin \sref{IV.20.6.5}[(i)] des exemples (avec $\sh{F}=\sh{O}_X$) où les deux membres de \sref{IV.20.1.11.2} peuvent être distincts.
+
+Considérons en particulier le cas où $\sh{M}_f=\sh{M}_X$ ; alors, si $\sh{L}$ est un $\sh{O}_X$-module inversible, l'image dans $\sh{M}_{X'}(f^*(\sh{L}))$, par $\Gamma(\theta^{\prime\#})$, d'une section méromorphe \emph{régulière} de $\sh{L}$ au-dessus de $X$ \sref{IV.20.1.8} est une section méromorphe \emph{régulière} de $f^*(\sh{L})$ au-dessus de $X'$, comme il résulte aussitôt de la définition de ces sections, et du fait qu'un homomorphisme d'anneaux transforme un élément inversible en un élément inversible.
+
+Soit $f':X''\to X'$ un second morphisme d'espaces annelés, et supposons que $\sh{M}_f=\sh{M}_X$ et $\sh{M}_{f'}=\sh{M}_{X'}$ ; alors, si l'on pose $f''=f\circ f'$, on a aussi $\sh{M}_{f''}=\sh{M}_X$, et l'on voit aussitôt que pour toute section méromorphe $u$ de $\sh{F}$ au-dessus de $X$, on a $u\circ f''=(u\circ f)\circ f'$.
+\end{env}
+
+\begin{proposition}[20.1.12]
+\label{IV.20.1.12}
+Si le morphisme $f:X'\to X$ est plat \sref[0\textsubscript{I}]{0.6.7.1}, on a $\sh{M}_f=\sh{M}_X$, et l'homomorphisme $\vphi\mapsto\vphi\circ f$ est défini dans $M(X)$ tout entier.
+En outre, si $f$ est un morphisme (plat) d'espaces annelés en anneaux locaux, on a $\operatorname{dom}(\vphi\circ f)=f^{-1}(\operatorname{dom}(\vphi))$ ; si de plus $f$ est surjectif (donc fidèlement plat), l'homomorphisme $\vphi\mapsto\vphi\circ f$ est injectif.
+\end{proposition}
+
+\begin{proof}
+La première assertion résulte de ce que, si $B$ est une $A$-algèbre qui est un $A$-module plat, tout élément de $A$ non diviseur de $0$ dans $A$ est non diviseur de $0$ dans $B$ \sref[0\textsubscript{I}]{0.6.3.4}.
+Pour prouver les autres assertions, notons que, pour tout $x'\in X'$, si $x=f(x')$, $\sh{O}_{X',x'}$ est un $\sh{O}_{X,x}$-module plat, et comme l'homomorphisme $\sh{O}_{X,x}\to\sh{O}_{X',x'}$ est \emph{local} par hypothèse, il est injectif (\sref[0\textsubscript{I}]{0.6.5.1} et \sref[0\textsubscript{I}]{0.6.6.2}) ; si l'on pose $A=\sh{O}_{X,x}$, $B=\sh{O}_{X',x'}$, de sorte que $A$ s'identifie à un sous-anneau de $B$, $(f^*(\sh{M}_X))_{x'}$ est égal à $S^{-1}A\otimes_A B=S^{-1}B$, où $S$ est l'ensemble des éléments réguliers de $A$, $(\sh{M}_{X'})_{x'}$ est égal à $T^{-1}B$, où $T$ est l'ensemble

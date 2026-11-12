@@ -1,0 +1,56 @@
+% from ega3-1-fr.tex
+\oldpage[0\textsubscript{III}]{9}
+Étant donnés deux foncteurs contravariants $F$, $F'$ de $C$ dans
+$\mathrm{Ens}$, rappelons que pour tout objet $Y\in C$, on pose
+$(F\times F')(Y)=F(Y)\times F'(Y)$, et pour tout morphisme $u:Y\to Y'$ dans
+$C$, on pose $(F\times F')(u)=F(u)\times F'(u)$ qui est l'application
+$(t,t')\mapsto((F(u))(t),(F'(u))(t'))$ de $F(Y')\times F'(Y')$ dans
+$F(Y)\times F'(Y)$~; $F\times F':C\to\mathrm{Ens}$ est donc un
+\emph{foncteur contravariant} (qui n'est autre d'ailleurs que le
+\emph{produit} des objets $F$, $F'$ dans la catégorie
+$\operatorname{Hom}(C^0,\mathrm{Ens})$). Étant donné un objet $X\in C$, nous
+appellerons \emph{loi de composition interne sur $X$} un morphisme fonctoriel
+\[
+  \gamma_X:h_X\times h_X\to h_X.
+  \tag{8.2.1.1}
+\]
+
+Autrement dit (T, 1.2), pour tout objet $Y\in C$, $\gamma_X(Y)$ est une
+application $h_X(Y)\times h_X(Y)\to h_X(Y)$ (donc par définition une
+\emph{loi de composition interne} sur l'ensemble $h_X(Y)$) soumise à la
+condition que, pour tout morphisme $u:Y\to Y'$ dans $C$, le diagramme
+\[
+  \xymatrix{
+    h_X(Y')\times h_X(Y')
+      \ar[rr]^{h_X(u)\times h_X(u)}\ar[dd]_{\gamma_X(Y')} &&
+    h_X(Y)\times h_X(Y)\ar[dd]^{\gamma_X(Y)}\\\\
+    h_X(Y')\ar[rr]_{h_X(u)} && h_X(Y)
+  }
+\]
+soit commutatif~; cela signifie que pour les lois de composition
+$\gamma_X(Y)$ et $\gamma_X(Y')$, $h_X(u)$ est un \emph{homomorphisme} de
+$h_X(Y')$ dans $h_X(Y)$.
+
+De la même façon, étant donnés deux objets $Z$, $X$ de $C$, on appelle
+\emph{loi de composition externe sur $X$, ayant $Z$ comme domaine
+d'opérateurs}, un morphisme fonctoriel
+\[
+  \omega_{X,Z}:h_Z\times h_X\to h_X.
+  \tag{8.2.1.2}
+\]
+
+On voit comme ci-dessus que pour tout $Y\in C$, $\omega_{X,Z}(Y)$ est une loi
+de composition externe sur $h_X(Y)$, ayant $h_Z(Y)$ comme domaine
+d'opérateurs, et telle que pour tout morphisme $u:Y\to Y'$, $h_X(u)$ et
+$h_Z(u)$ forment un \emph{dihomomorphisme} de
+$(h_Z(Y'),h_X(Y'))$ dans $(h_Z(Y),h_X(Y))$.
+\end{env}
+
+\begin{env}[8.2.2]
+\label{0.8.2.2-fr}
+Soit $X'$ un second objet de $C$, et supposons donnée sur $X'$ une loi de
+composition interne $\gamma_{X'}$~; nous dirons qu'un morphisme
+$w:X\to X'$ dans $C$ est un \emph{homomorphisme} pour ces lois de
+composition, si pour tout $Y\in C$, $h_w(Y):h_X(Y)\to h_{X'}(Y)$ est un
+homomorphisme pour les lois de composition $\gamma_X(Y)$ et
+$\gamma_{X'}(Y)$. Si $X''$ est un troisième

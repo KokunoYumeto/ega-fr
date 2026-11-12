@@ -1,0 +1,160 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{205}
+
+\begin{lemma}[7.5.1.1]
+\label{IV.2.s7.5.1.1-fr}
+Soit $\mathcal C$ une sous-catégorie pleine de la catégorie des anneaux
+locaux noethériens, telle que tout anneau quotient d'un anneau de
+$\mathcal C$ appartienne encore à $\mathcal C$. Soit $\boldsymbol R(C)$ une
+propriété telle que si $C\in\mathcal C$ et si $t$ est un élément régulier de
+l'idéal maximal de $C$ tel que $\boldsymbol R(C/tC)$ soit vraie, alors
+$\boldsymbol R(C)$ est vraie.
+
+Cela étant, soient $C$ un anneau local régulier, $k$ son corps résiduel,
+$D$ un anneau local appartenant à $\mathcal C$,
+$\varphi:C\to D$ un homomorphisme local faisant de $D$ un $C$-module plat.
+Alors, si $\boldsymbol R(D\otimes_C k)$ est vraie, il en est de même de
+$\boldsymbol R(D)$.
+\end{lemma}
+
+\begin{proof}
+Raisonnons par récurrence sur $n=\dim(C)$, le lemme étant vrai par hypothèse
+si $n=0$, puisqu'alors $C=k$. Soit $t$ un élément de l'idéal maximal
+$\mathfrak m$ de $C$ n'appartenant pas à $\mathfrak m^2$; on sait alors que
+$C/tC$ est régulier et que $\dim(C/tC)=n-1$ ((0, 17.1.8) et (0, 16.3.4)).
+Comme
+\[
+(D/tD)\otimes_{C/tC}k=D\otimes_C k,
+\]
+et que $D/tD\in\mathcal C$, l'hypothèse de récurrence montre que
+$\boldsymbol R(D/tD)$ est vraie; en outre, $t$ est $C$-régulier, donc aussi
+$D$-régulier par platitude (0$_{\mathrm I}$, 6.3.4); l'hypothèse faite sur
+$\boldsymbol R$ montre donc que $\boldsymbol R(D)$ est vraie.
+\end{proof}
+
+Pour terminer la démonstration de (7.5.1), il suffit ici d'appliquer le
+lemme (7.5.1.1) en prenant pour $\mathcal C$ la catégorie des anneaux locaux
+des spectres d'anneaux locaux complets, tenant compte de l'hypothèse
+$(\mathrm R_{\mathrm{IV}})$, et prenant pour $C$ l'anneau
+$A_{\mathfrak p}$, pour $D$ l'anneau $B_{\mathfrak q}$.
+\end{proof}
+
+\begin{corollary}[7.5.2]
+\label{IV.2.s7.5.2-fr}
+Soient $A$ un anneau local noethérien, $\mathfrak m$ l'idéal maximal de $A$,
+$k=A/\mathfrak m$ son corps résiduel, $B$ un anneau local noethérien,
+$\varphi:A\to B$ un homomorphisme local tel que :
+\begin{enumerate}
+\item[\emph{(i)}] Le corps résiduel de $B$ est une extension finie de $k$.
+\item[\emph{(ii)}] $B$ est un $A$-module plat.
+\end{enumerate}
+Soit d'autre part $\boldsymbol R(C)$ une propriété vérifiant les conditions
+$(\mathrm R_{\mathrm{II}})$ (7.3.10), $(\mathrm R_{\mathrm{III}})$
+(7.3.18) et $(\mathrm R_{\mathrm{IV}})$ (7.5.1). Enfin, soit
+$\boldsymbol R'(C)$ une propriété vérifiant la condition suivante :
+\begin{quote}
+$(\mathrm R_{\mathrm V})$ Si $C$, $D$ sont deux anneaux locaux noethériens,
+$\psi:C\to D$ un homomorphisme local tel que
+\[
+g={}^a\psi:\operatorname{Spec}(D)\to\operatorname{Spec}(C)
+\]
+soit un $\boldsymbol P$-morphisme, alors la propriété
+$\boldsymbol R'(C)$ implique $\boldsymbol R(D)$.
+\end{quote}
+Supposons que le morphisme canonique
+$\operatorname{Spec}(\widehat A)\to\operatorname{Spec}(A)$ soit un
+$\boldsymbol P'$-morphisme, où $\boldsymbol P'$ se définit à partir de
+$\boldsymbol R'$ comme $\boldsymbol P$ à partir de $\boldsymbol R$ dans
+(7.5.0).
+
+Cela étant, soit
+$f={}^a\varphi:\operatorname{Spec}(B)\to\operatorname{Spec}(A)$, et
+supposons que la propriété
+\[
+\boldsymbol P(\operatorname{Spec}(\widehat B
+\otimes_{\widehat A}k),k)
+\]
+soit vraie. Alors, pour tout $x\in\operatorname{Spec}(A)$, la propriété
+$\boldsymbol P(f^{-1}(x),k(x))$ est vraie (autrement dit, $f$ est un
+$\boldsymbol P$-morphisme).
+\end{corollary}
+
+\begin{proof}
+Procédons encore en deux étapes :
+
+\emph{I) Réduction à l'étude des anneaux locaux de la fibre générique.} ---
+Appliquons encore le lemme (7.3.16.2); la seule différence avec le
+raisonnement de I) dans (7.5.1) est qu'ici l'anneau $A'$ est seulement un
+anneau semi-local intègre, mais non nécessairement local; tout idéal maximal
+$\mathfrak n'$ de $B'$ est alors au-dessus d'un idéal maximal $\mathfrak m'$
+de $A'$; comme tout anneau local de
+$\operatorname{Spec}(B'\otimes_{A'}K')$ est un anneau local de
+$\operatorname{Spec}(B')$, donc de l'un des
+$\operatorname{Spec}(B'_{\mathfrak n'})$ (au-dessus du point générique de
+$\operatorname{Spec}(A'_{\mathfrak m'}))$ on est ramené à prouver que les
+anneaux locaux de
+\[
+\operatorname{Spec}(B'_{\mathfrak n'}
+\otimes_{A'_{\mathfrak m'}}K')
+\]
+possèdent la propriété $\boldsymbol R$. Or, la définition de
+$\boldsymbol P'$ implique que si $\boldsymbol P'(Z,k)$ est vraie, il en est
+de même de $\boldsymbol P'(Z\otimes_k k',k')$ pour toute extension finie
+$k'$ de $k$; le même raisonnement que dans (7.3.7) prouve que les fibres
+formelles de $A'_{\mathfrak m'}$ possèdent la propriété $\boldsymbol P'$.
+On voit comme dans la partie I) de la démonstration de (7.5.1) que
+$A'_{\mathfrak m'}$ et $B'_{\mathfrak n'}$ vérifient les conditions (i) et
+(ii) de (7.5.2); d'autre part, si $k'$ est le corps résiduel de
+$A'_{\mathfrak m'}$, la propriété
+\[
+\boldsymbol P(\operatorname{Spec}(\widehat{B'_{\mathfrak n'}}
+\otimes_{\widehat{A'_{\mathfrak m'}}}k'),k')
+\]
+est vraie : en effet, le complété de $A'_{\mathfrak m'}$ est l'un des
+anneaux locaux composants de
+$\widehat{A'}=\widehat A\otimes_A A'$ et le complété de
+$B'_{\mathfrak n'}$ l'un des anneaux locaux composants de
+\[
+\widehat{B'}=\widehat B\otimes_B B'
+=\widehat B\otimes_A A'
+=\widehat B\otimes_{\widehat A}\widehat{A'};
+\]
+le raisonnement de I), dans (7.5.1), prouve donc notre assertion.
+
+On peut donc se borner au cas où $A$ est en outre supposé intègre, et à
+prouver que, si $K$ est le corps des fractions de $A$, les anneaux locaux de
+$\operatorname{Spec}(B\otimes_A K)$ possèdent la propriété
+$\boldsymbol R$.
+
+\emph{II) Réduction au cas où $A$ et $B$ sont complets.} --- Soient $\xi$
+le point générique de $\operatorname{Spec}(A)$, $y$ un point quelconque de
+$f^{-1}(\xi)$; il s'agit de prouver que
+$\boldsymbol R(\mathscr O_y)$ est vraie; compte tenu de la condition
+$(\mathrm R_{\mathrm{II}})$, il suffira de voir qu'il existe dans
+$\operatorname{Spec}(\widehat B)$ un point $z$ au-dessus de $y$ et tel que
+$\boldsymbol R(\mathscr O_z)$ soit vraie. Or, il résulte de l'hypothèse
+faite sur $\operatorname{Spec}(\widehat B\otimes_{\widehat A}k)$ et de
+(7.5.1) que le morphisme
+\enlargethispage{5\baselineskip}
+\[
+{}^a\widehat\varphi:\operatorname{Spec}(\widehat B)
+\to\operatorname{Spec}(\widehat A)
+\]
+est un $\boldsymbol P$-morphisme. D'autre part, pour tout point
+$z\in\operatorname{Spec}(\widehat B)$ au-dessus de $y$ (il en existe,
+puisque $\widehat B$ est un $B$-module fidèlement plat), l'image $x$ de $z$
+dans $\operatorname{Spec}(\widehat A)$ appartient à la fibre
+$h^{-1}(\xi)$ pour le morphisme canonique
+$h:\operatorname{Spec}(\widehat A)\to\operatorname{Spec}(A)$; en vertu de
+l'hypothèse faite sur $A$, la propriété
+$\boldsymbol R'(\mathscr O_x)$ est vraie; donc en vertu de
+$(\mathrm R_{\mathrm V})$, $\boldsymbol R(\mathscr O_z)$ est vraie.
+C.Q.F.D.
+\end{proof}
+
+\begin{examples}[7.5.3]
+\label{IV.2.s7.5.3-fr}
+Considérons les propriétés $\boldsymbol R(C)$ suivantes ($C$ étant un anneau
+local noethérien) :
+\begin{enumerate}
+\item[\emph{(i)}] (aussi notée $(\mathrm i_n)$) $\operatorname{coprof}(C)\leq n$.

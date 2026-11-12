@@ -1,0 +1,93 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{54}
+
+raisonnement que dans (4.1.2.1) montre que si $\dim(U_i)=n_i$, il existe un
+$k$-morphisme $g_i:U_i\to\mathbf V_k^{n_i}$ qui est fini et dominant, donc
+surjectif (II, 6.1.10). Soit $n=\dim(X)=\sup_i n_i$~; pour chaque $n_i$ il y a
+donc un morphisme $h_i:\mathbf V_k^{n_i}\to\mathbf V_k^n$ qui est une
+immersion fermée correspondant à l'homomorphisme canonique
+$k[T_1,\ldots,T_n]\to k[T_1,\ldots,T_{n_i}]$, et qui est l'identité pour
+$n_i=n$. Comme $U$ est somme des $U_i$, on prendra pour $g$ le morphisme qui
+dans chaque $U_i$ coïncide avec $h_i\circ g_i$~; il est évidemment fini et
+surjectif. Lorsque $n'\geqslant n$, on aura un morphisme fini
+$U\to\mathbf V_k^{n'}$ en composant l'immersion fermée canonique
+$\mathbf V_k^n\to\mathbf V_k^{n'}$ avec $g$~; lorsque $n'\leqslant n$, on
+compose de même avec $g$ le morphisme canonique
+$p:\mathbf V_k^n\to\mathbf V_k^{n'}$ correspondant à l'injection canonique
+$k[T_1,\ldots,T_{n'}]\to k[T_1,\ldots,T_n]$, en notant que $p$ est fidèlement
+plat, donc \emph{surjectif}.
+\end{proof}
+
+\begin{remark}[4.1.3]
+\label{IV.2.4.1.3-fr}
+Le corollaire (4.1.2.1) montre que dans la formule (4.1.1.1), on peut supposer
+que $x$ parcourt l'ensemble de \emph{tous les points} de $X$.
+\end{remark}
+
+\begin{corollary}[4.1.4]
+\label{IV.2.4.1.4-fr}
+Soient $X$ un préschéma localement de type fini sur un corps $k$, $K$ une
+extension de $k$~; alors $\dim(X\otimes_k K)=\dim(X)$.
+\end{corollary}
+
+\begin{proof}
+On peut évidemment se borner au cas où $X$ est de type fini sur $k$~; alors le
+morphisme $u:X\otimes_k K\to X$ est fidèlement plat (2.2.13, (i)), donc si
+$U$ est un ouvert partout dense dans $X$, $u^{-1}(U)=U\otimes_k K$ est dense
+dans $X\otimes_k K$ (2.3.10)~; si $g:U\to\mathbf V_k^n$ est fini et
+surjectif, il en est de même de
+$g_{(K)}:U\otimes_k K\to\mathbf V_K^n$ (I, 3.5.2 et II, 6.1.5), d'où le
+corollaire.
+\end{proof}
+
+\begin{corollary}[4.1.5]
+\label{IV.2.4.1.5-fr}
+Soient $X$ et $Y$ deux préschémas localement de type fini sur un corps $k$~;
+alors $\dim(X\times_k Y)=\dim(X)+\dim(Y)$.
+\end{corollary}
+
+\begin{proof}
+Il suffit de démontrer que si $U$ (resp. $V$) est un voisinage affine d'un
+point $x$ (resp. $y$) de $X$ (resp. $Y$) tel que
+$\operatorname{deg.tr.}_k k(x)=m=\dim U$ et
+$\operatorname{deg.tr.}_k k(y)=n=\dim V$, alors on a
+$\dim(U\times_k V)=m+n$, autrement dit, on peut supposer en vertu de (4.1.2)
+qu'il existe des $k$-morphismes finis surjectifs
+$f:X\to\mathbf V_k^m$, $g:Y\to\mathbf V_k^n$~; alors
+$f\times g:X\times_k Y\to\mathbf V_k^{m+n}$ est fini et surjectif
+(I, 3.5.2 et II, 6.1.5), d'où le corollaire.
+\end{proof}
+
+\subsection{Cycles premiers associés sur les préschémas algébriques}
+\label{subsection:IV.2.4.2-fr}
+
+\begin{proposition}[4.2.1]
+\EGAReaderTarget{ega4.c04.prop.4-2-1}{IV.2.4.2.1-fr}
+Soient $K$ et $L$ deux extensions d'un corps $k$, telles que $K\otimes_k L$
+soit noethérien. Alors les idéaux premiers associés à $K\otimes_k L$ sont
+minimaux, et si $E$ est le corps résiduel de l'anneau local d'un tel idéal, on
+a
+\begin{equation}
+\tag{4.2.1.1}
+\label{IV.2.4.2.1.1-fr}
+\operatorname{deg.tr.}_K E=\operatorname{deg.tr.}_k L,
+\qquad
+\operatorname{deg.tr.}_L E=\operatorname{deg.tr.}_k K,
+\end{equation}
+d'où
+\begin{equation}
+\tag{4.2.1.2}
+\label{IV.2.4.2.1.2-fr}
+\operatorname{deg.tr.}_k E
+=\operatorname{deg.tr.}_k K+\operatorname{deg.tr.}_k L.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On sait que $K$ est une extension algébrique d'une extension transcendante
+pure $K'=k(\mathbf t)$, où $\mathbf t=(t_\alpha)_{\alpha\in I}$ est une famille
+d'indéterminées~; l'anneau $k[\mathbf t]\otimes_k L=L[\mathbf t]$ est intègre,
+donc il en est de même de $K'\otimes_k L$, qui en est un anneau de fractions,
+et le corps des fractions de $K'\otimes_k L$ est $L(\mathbf t)$~; on a le
+diagramme commutatif d'homomorphismes canoniques
+

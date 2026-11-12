@@ -1,0 +1,88 @@
+% from ega4-2-fr.tex
+\oldpage[IV-2]{115}
+
+Cela résulte de la forme (5.10.2, b)) de la condition pour qu'un
+$\mathcal O_X$-Module quasi-cohérent soit $Z$-pur, et de (3.1.7).
+
+\begin{corollary}[5.10.4]
+\label{IV.2.s5.10.4-fr}
+Supposons $\mathcal F$ cohérent. Pour que $\mathcal F$ soit $Z$-pur en un
+point $x\in X$, il faut et il suffit que
+\[
+\operatorname{prof}_{Z_x}(\widetilde{\mathcal F}_x)\geq1
+\]
+(avec les notations de (5.9.6)).
+\end{corollary}
+
+Cela résulte aussitôt de (5.10.2) et (5.9.6).
+
+\begin{theorem}[5.10.5]
+\EGAReaderTarget{ega4.c04.thm.5-10-5}{IV.2.s5.10.5-fr}
+Soient $X$ un préschéma localement noethérien, $Z$ une partie de $X$ stable
+par spécialisation, $\mathcal F$ un $\mathcal O_X$-Module cohérent. Pour que
+$\mathcal F$ soit $Z$-clos, il faut et il suffit que l'on ait
+\[
+\operatorname{prof}_Z(\mathcal F)\geq2.
+\]
+\end{theorem}
+
+En vertu de (5.10.2), on peut se borner au cas où $\mathcal F$ est $Z$-pur
+et $\operatorname{prof}_Z(\mathcal F)\geq1$. De plus, dire que
+$\operatorname{prof}_Z(\mathcal F)\geq2$ équivaut à dire que pour toute partie
+fermée $Z_\alpha$ de $Z$, $\operatorname{prof}_{Z_\alpha}(\mathcal F)\geq2$;
+et de même, il résulte de (5.9.8) que dire que $\mathcal F$ est $Z$-clos
+équivaut à dire que $\mathcal F$ est $Z_\alpha$-clos pour tout $\alpha$. On
+peut donc déjà se borner au cas où $Z$ est fermé. La question étant locale,
+il suffit, pour tout $x\in Z$, de prouver le théorème pour $\mathcal F|U$,
+$U$ étant un voisinage ouvert affine de $x$, et l'on peut donc se borner au
+cas où $X=U$ est affine. On sait alors que $\operatorname{Ass}(\mathcal F)$
+est fini (3.1.6), et comme
+$\operatorname{Ass}(\mathcal F)\subset X-Z$, il y a une section $f$ de
+$\mathcal O_X$ au-dessus de $X$ telle que
+$\operatorname{Ass}(\mathcal F)\subset X_f\subset X-Z$ (II, 4.5.4); on en
+déduit que $f$ est $\mathcal F$-régulière (3.1.9) et que pour tout $y\in Z$,
+on a $f_y\in\mathfrak m_y$, donc
+\[
+\operatorname{prof}(\mathcal F_y)
+=1+\operatorname{prof}(\mathcal F_y/f_y\mathcal F_y)
+\quad(0, 16.4.6).
+\]
+La condition $\operatorname{prof}_Z(\mathcal F)\geq2$ équivaut donc à
+$\operatorname{prof}_Z(\mathcal F/f\mathcal F)\geq1$, ou encore (5.10.2) au
+fait que $\mathcal F/f\mathcal F$ est $Z$-pur, et il suffit de voir que cette
+dernière propriété équivaut au fait que $\mathcal F$ est $Z$-clos.
+
+Considérons la suite exacte
+\[
+0\longrightarrow\mathcal F\xrightarrow{f}\mathcal F
+\longrightarrow\mathcal F/f\mathcal F\longrightarrow0
+\]
+(l'homothétie de rapport $f:\mathcal F\to\mathcal F$ étant par hypothèse
+injective); si on pose $W=X-Z$, on a le diagramme commutatif
+\[
+\xymatrix{
+0\ar[r] & \Gamma(X,\mathcal F)\ar[r]^f\ar[d] &
+\Gamma(X,\mathcal F)\ar[r]\ar[d] &
+\Gamma(X,\mathcal F/f\mathcal F)\ar[r]\ar[d] & 0\\
+0\ar[r] & \Gamma(W,\mathcal F)\ar[r]_f &
+\Gamma(W,\mathcal F)\ar[r] & \Gamma(W,\mathcal F/f\mathcal F)
+}
+\]
+où les deux lignes sont exactes ($X$ étant affine). Si l'homomorphisme de
+restriction $\Gamma(X,\mathcal F)\to\Gamma(W,\mathcal F)$ est bijectif, on
+déduit de ce diagramme que
+\[
+\Gamma(X,\mathcal F/f\mathcal F)
+\longrightarrow\Gamma(W,\mathcal F/f\mathcal F)
+\]
+est injectif, et cela montre (5.9.8) que si $\mathcal F$ est $Z$-clos,
+$\mathcal F/f\mathcal F$ est $Z$-pur. Inversement, supposons que
+$\mathcal F/f\mathcal F$ soit $Z$-pur, et soit $s$ une section de $\mathcal F$
+au-dessus de $W$; comme $X_f\subset W$, il existe un entier $n>0$ tel que
+$f^n(s|X_f)$ se prolonge en une section $t$ de $\mathcal F$ au-dessus de $X$
+(I, 1.4.1); d'ailleurs, les restrictions de $t$ et de $f^ns$ à $X_f$ étant
+les mêmes, il en résulte que la restriction de $t$ à $W$ est égale à $f^ns$
+en vertu de la relation $\operatorname{Ass}(\mathcal F)\subset X_f$
+(5.10.2); comme $f$ est $\mathcal F$-régulier, il suffira de voir que $t$ est
+de la forme $f^nt'$, où $t'\in\Gamma(X,\mathcal F)$
+

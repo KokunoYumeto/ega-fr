@@ -1,0 +1,42 @@
+% from ega4-17-fr.tex
+\oldpage[IV-4]{60}
+\begin{enumerate}
+  \item[(i)] On sait (16.3.9) que si $f$ est localement de type fini, $\varOmega_f^1$ est un $\sh{O}_X$-Module de type fini. Pour prouver que, dans tous les cas, il est localement projectif, on peut se borner, en vertu de (17.1.6), au cas où $Y=\Spec(A)$ et $X=\Spec(B)$ sont affines, et cela résulte de l'hypothèse sur $f$ et de (\textbf{0}, 20.4.9 et \textbf{0}, 19.2.1).
+  \item[(ii)] Ici encore, on peut se borner au cas où $X$, $Y$ et $Z$ sont affines (17.1.6) et la conclusion résulte dans ce cas de l'interprétation des Modules figurant dans la suite (17.2.3.1) et de (\textbf{0}, 20.5.7).
+\end{enumerate}
+
+\begin{corollary}[17.2.4]
+\label{IV.17.2.4}
+Si $f:X\to Y$ est un morphisme formellement étale, alors, pour tout morphisme $g:Y\to Z$, l'homomorphisme canonique de $\sh{O}_X$-Modules
+\[
+  f^*(\varOmega_{Y/Z}^1)\longrightarrow\varOmega_{X/Z}^1
+\]
+est bijectif.
+\end{corollary}
+
+Cela résulte de l'exactitude de la suite (17.2.3.1) et du fait que l'on a alors $\varOmega_{X/Y}^1=0$ (17.2.1).
+
+\begin{proposition}[17.2.5]
+\label{IV.17.2.5}
+Soient $f:X\to Y$ un morphisme, $X'$ un sous-préschéma de $X$ tel que le morphisme composé $X'\xrightarrow{j}X\xrightarrow{f}Y$ (où $j$ est l'injection canonique) soit formellement lisse. Alors la suite de $\sh{O}_{X'}$-Modules \textup{(16.4.21)}
+\[
+\label{IV.17.2.5.1}
+  0\longrightarrow\mathcal{N}_{X'/X}\longrightarrow\varOmega_{X/Y}^1\otimes_{\sh{O}_X}\sh{O}_{X'}\longrightarrow\varOmega_{X'/Y}^1\longrightarrow0
+  \tag{17.2.5.1}
+\]
+est exacte; en outre, pour tout $x\in X$, il existe un voisinage ouvert $U$ de $x$ tel que les restrictions à $U$ des homomorphismes de \textup{(17.2.5.1)} forment une suite exacte et \emph{scindée}.
+\end{proposition}
+
+Toujours en vertu de (17.1.6), on peut se borner au cas où $Y=\Spec(A)$ et $X=\Spec(B)$ sont affines, et $X'=\Spec(B/\mathfrak{J})$, où $\mathfrak{J}$ est un idéal de $B$. Alors le faisceau conormal $\mathcal{N}_{X'/X}$ correspond au $B$-module $\mathfrak{J}/\mathfrak{J}^2$ (16.1.3), et la conclusion découle de (\textbf{0}, 20.5.14).
+
+\begin{proposition}[17.2.6]
+\label{IV.17.2.6}
+Soient $X$, $Y$ deux préschémas, $f:X\to Y$ un morphisme localement de type fini. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[\textup{a)}] $f$ est un monomorphisme.
+  \item[\textup{b)}] $f$ est radiciel et formellement non ramifié.
+  \item[\textup{c)}] Pour tout $y\in Y$, la fibre $f^{-1}(y)$ est vide ou $\boldsymbol{k}(y)$-isomorphe à $\Spec(\boldsymbol{k}(y))$ \textup{(autrement dit, est réduite à un seul point $z$ tel que} $\boldsymbol{k}(y)\to\sh{O}_z/\mathfrak{m}_y\sh{O}_z$ \textup{soit un \emph{isomorphisme})}.
+\end{enumerate}
+\end{proposition}
+
+Le fait que \emph{a)} entraîne \emph{c)} résulte de (8.11.5.1). Il est clair que \emph{c)} entraîne que $f$ est radiciel; montrons qu'il résulte aussi de \emph{c)} que $\varOmega_{X/Y}^1=0$, ce qui prouvera que \emph{c)} entraîne \emph{b)} (17.2.1). Notons que le $\sh{O}_X$-Module $\varOmega_{X/Y}^1$ est quasi-cohérent de type fini (16.3.9). Il résulte donc de (\textbf{I}, 9.1.13.1) que, pour que $(\varOmega_{X/Y}^1)_x=0$, il faut et il suffit que si l'on pose $Y_1=\Spec(\boldsymbol{k}(y))$, $X_1=f^{-1}(y)=X\times_Y Y_1$, on ait $(\varOmega_{X_1/Y_1}^1)_x=0$; mais comme le morphisme $f_1:X_1\to Y_1$ déduit de $f$ est formellement non ramifié en vertu de l'hypothèse \emph{c)} (17.1.3), la conclusion résulte de (17.2.1). Prouvons enfin que \emph{b)} entraîne \emph{a)}; pour cela, considérons le morphisme diagonal $g=\Delta_f:X\to X\times_Y X$; puisque $f$ est radiciel, $g$ est surjectif (1.8.7.1); d'autre part, $\varOmega_{X/Y}^1$ est par définition le faisceau conormal $\mathscr{G}r_1(g)$ de l'immersion $g$ (16.3.1), et dire que $f$ est formellement non ramifié signifie donc que

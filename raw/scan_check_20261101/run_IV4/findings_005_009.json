@@ -1,0 +1,1106 @@
+[
+ {
+  "page": 5,
+  "where": "top of p. 5: chapter heading (before the section 16 title)",
+  "scan": "CHAPITRE IV (fin) ['(fin)' italic, with italic parentheses], then 'ÉTUDE LOCALE DES SCHÉMAS / ET DES MORPHISMES DE SCHÉMAS' in large bold capitals",
+  "tex": "absent: ega4-16-fr.tex begins with \\section{Invariants différentiels. ...}; EGA_IV4_FR.tex has no chapter heading either",
+  "kind": "missing",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\section{Invariants",
+   "new": "\\clearpage\n\\thispagestyle{plain}\n\\oldpage[IV-4]{5}\n\\phantomsection\n\\label{chapter:IV4-fr}\n\n\\begin{center}\n{\\large CHAPITRE IV \\textit{(fin)}\\par}\n\\vspace{1.5em}\n{\\Large\\bfseries ÉTUDE LOCALE DES SCHÉMAS\\\\\nET DES MORPHISMES DE SCHÉMAS\\par}\n\\end{center}\n\n\\section{Invariants"
+  },
+  "note": "OUTSIDE the page segment: 'old' is line 1 of ega4-16-fr.tex, before the file's first marker (unique there). Same block as the openings of ega4-2-fr.tex (IV-2) and ega4-8-fr.tex (IV-3), with (fin) for (suite); the label chapter:IV4-fr is unused so far. The new block also carries the p. 5 marker: apply together with the next finding (which deletes the old marker), both or neither."
+ },
+ {
+  "page": 5,
+  "where": "top of p. 5: page marker",
+  "scan": "printed p. 5 begins with the chapter heading, then the section 16 title, then 'Dans ce paragraphe'",
+  "tex": "\\oldpage[IV-4]{5} stands after \\section{...} and \\label{section:IV.16} (ega4-16-fr.tex line 4): the section title falls before the marker",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{5}\nDans ce paragraphe",
+   "new": "Dans ce paragraphe"
+  },
+  "note": "Deletes the misplaced marker; apply only together with the chapter-heading finding above, whose new text puts \\oldpage[IV-4]{5} before the chapter heading and the \\section."
+ },
+ {
+  "page": 5,
+  "where": "section 16 title",
+  "scan": "'§ 16. INVARIANTS DIFFÉRENTIELS' / 'MORPHISMES DIFFÉRENTIELLEMENT LISSES' on two centred lines, no full stop between the two titles",
+  "tex": "\\section{Invariants différentiels. Morphismes différentiellement lisses} (full stop between them)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "low",
+  "fix": {
+   "old": "différentiels. Morphismes",
+   "new": "différentiels\\texorpdfstring{\\\\}{.} Morphismes"
+  },
+  "note": "OUTSIDE the page segment (ega4-16-fr.tex line 1, unique there). The print separates the two titles by the line break only (IV-3's § 11 title, by contrast, prints its full stop inside a line); the contents line in ega4-backmatter-contents-fr.tex keeps the full stop (printed contents not checked here). May be treated as heading layout in the heading pass: coordinator's decision. No overlap with the chapter-heading edit."
+ },
+ {
+  "page": 5,
+  "where": "introduction, l. 7: 'dans le cadre affine, dans (0, 21))'",
+  "scan": "(𝟎, 21): bold 0",
+  "tex": "(0, 21), plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "dans (0, 21))",
+   "new": "dans (\\textbf{0}, 21))"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 5,
+  "where": "subsection heading 16.1",
+  "scan": "'16.1. Invariants normaux d'une immersion.' (final full stop)",
+  "tex": "\\subsection{Invariants normaux d'une immersion} (no full stop)",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Invariants normaux d'une immersion}",
+   "new": "\\subsection{Invariants normaux d'une immersion.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58 (subsection titles lack the printed full stop); same form as the IV-1 to IV-3 page fixes."
+ },
+ {
+  "page": 5,
+  "where": "(16.1.1), l. 2: 'morphisme d'espaces annelés (0_I, 4.1.1)'",
+  "scan": "(𝟎_I, 4.1.1): bold 0",
+  "tex": "(0\\textsubscript{I}, 4.1.1), plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0\\textsubscript{I}, 4.1.1)",
+   "new": "(\\textbf{0}\\textsubscript{I}, 4.1.1)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 5,
+  "where": "(16.1.1), display: 'θ♯ : ψ*(O_X) → O_Y'",
+  "scan": "θ♯ (sharp sign, enlarged crop)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\theta^\\#:\\psi^*",
+   "new": "\\theta^\\sharp:\\psi^*"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 5,
+  "where": "(16.1.1), after the display: 'soit surjectif, de sorte que'",
+  "scan": "*surjectif* italic",
+  "tex": "surjectif upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soit surjectif, de sorte",
+   "new": "soit \\emph{surjectif}, de sorte"
+  },
+  "note": ""
+ },
+ {
+  "page": 5,
+  "where": "Définition (16.1.2), l. 2: 'le n-ème invariant normal de f'",
+  "scan": "'invariant normal' roman inside the italic statement (enlarged crop)",
+  "tex": "italic (definition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "-ème invariant normal",
+   "new": "-ème \\textup{invariant normal}"
+  },
+  "note": "Defined term printed roman."
+ },
+ {
+  "page": 5,
+  "where": "Définition (16.1.2), ll. 2-3: 'le n-ème voisinage infinitésimal de Y pour le morphisme f'",
+  "scan": "'voisinage infinitésimal de' roman (Y in the formula); 'pour le morphisme f' italic again",
+  "tex": "italic (definition environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "-ème voisinage\ninfinitésimal de",
+   "new": "-ème \\textup{voisinage\ninfinitésimal de}"
+  },
+  "note": "Defined term printed roman, including 'de'."
+ },
+ {
+  "page": 5,
+  "where": "Définition (16.1.2), after (16.1.2.1): 'le faisceau d'anneaux gradués associé à f'",
+  "scan": "'associé à' roman; 'est appelé le faisceau d'anneaux gradués' and 'f' italic (enlarged crop)",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "gradués associé à $f$",
+   "new": "gradués \\textup{associé à} $f$"
+  },
+  "note": ""
+ },
+ {
+  "page": 5,
+  "where": "Définition (16.1.2), last sentence: 'est appelé le faisceau conormal de f'",
+  "scan": "'faisceau conormal' roman; 'le' and 'de f' italic",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "faisceau conormal",
+   "new": "\\textup{faisceau conormal}"
+  },
+  "note": ""
+ },
+ {
+  "page": 5,
+  "where": "Définition (16.1.2), last sentence: '(que l'on note aussi N_{Y/X} s'il n'en résulte pas de confusion)'",
+  "scan": "the whole parenthesis roman",
+  "tex": "italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(que l'on note aussi $\\mathscr{N}_{Y/X}$ s'il n'en résulte pas de confusion)",
+   "new": "\\textup{(que l'on note aussi $\\mathscr{N}_{Y/X}$ s'il n'en résulte pas de confusion)}"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "first lines: 'par la puissance (J_f/J_f^{n+1})^m de l'Idéal d'augmentation de O_{Y(n)}, noyau de φ_{0n} : O_{Y(n)} → O_Y'",
+  "scan": "(𝒥_f/𝒥_f^{n+1})^m ... de 𝒪_{Y(n)}, noyau de φ_{0n} : 𝒪_{Y(n)} → 𝒪_Y (enlarged crop)",
+  "tex": "the same: the TeX keeps the printed reading",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": null,
+  "corrected": "$(\\mathscr{I}_f/\\mathscr{I}_f^{m+1})^{n+1}$ de l'Idéal d'augmentation de $\\mathcal{O}_{Y^{(m)}}$, noyau de $\\varphi_{0m}:\\mathcal{O}_{Y^{(m)}}\\to\\mathcal{O}_Y$",
+  "note": "Mathematical slip in the print (n and m interchanged): φ_{nm} : O_{Y(m)} = ψ*(O_X)/J^{m+1} → O_{Y(n)} = ψ*(O_X)/J^{n+1} has kernel J^{n+1}/J^{m+1} = (J/J^{m+1})^{n+1}, the (n+1)-th power of the augmentation Ideal of O_{Y(m)} (kernel of φ_{0m}); the printed (J/J^{n+1})^m is an ideal of O_{Y(n)}, not of O_{Y(m)}. The corrected edition (whose text is also the printed one) needs the correction or a mathematical note."
+ },
+ {
+  "page": 6,
+  "where": "l. 3: 'de l'Idéal d'augmentation de O_{Y(n)}'",
+  "scan": "*Idéal d'augmentation* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "de l'Idéal d'augmentation de",
+   "new": "de l'\\emph{Idéal d'augmentation} de"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "l. 6: 'où θ_n♯ est le morphisme canonique'",
+  "scan": "θ_n♯ (sharp sign)",
+  "tex": "\\theta_n^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta_n^\\#$",
+   "new": "$\\theta_n^\\sharp$"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 6,
+  "where": "l. 8: 'et les Gr_k(f) des O_Y-Modules.'",
+  "scan": "*Modules* italic (enlarged crop)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal{O}_Y$-Modules.",
+   "new": "$\\mathcal{O}_Y$-\\emph{Modules}."
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "paragraph before (16.1.2.2): 'on a un homomorphisme canonique surjectif de O_Y-Algèbres graduées'",
+  "scan": "*homomorphisme canonique surjectif* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "on a un homomorphisme canonique\nsurjectif de",
+   "new": "on a un \\emph{homomorphisme canonique\nsurjectif} de"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "display (16.1.2.2): 'S•_{O_Y}(Gr_1(f)) → Gr_•(f)'",
+  "scan": "bold upright S (symmetric algebra) with raised bullet and subscript O_Y (enlarged crop)",
+  "tex": "\\mathscr{S} (script S)",
+  "kind": "symbol",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\mathscr{S}_{\\mathcal{O}_Y}^{\\bullet}",
+   "new": "\\mathbf{S}_{\\mathcal{O}_Y}^{\\bullet}"
+  },
+  "note": "Wrong letter. ega4-16-fr.tex writes the symmetric-algebra S as \\mathscr{S} 40 times (other IV-4 files: \\mathbf S); see the final message."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3): the body",
+  "scan": "heading 'Exemples (16.1.3). —' italic; the body, including the labels (i), (ii), roman",
+  "tex": "the IV-4 examples environment is \\itshape for the whole body (EGA_IV4_FR.tex line 142); IV-1 and IV-2 use \\textit for the heading only",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\noindent\\itshape Exemples (#1). ---\\ }{\\par}",
+   "new": "\\noindent\\textit{Exemples (#1). ---}\\ }{\\par}"
+  },
+  "note": "OUTSIDE the page: preamble EGA_IV4_FR.tex (unique there); covers both IV-4 examples environments ((16.1.3) and one in ega4-17). The \\emph fixes inside (16.1.3) below assume this roman body."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3) (i): 'θ♯ : O_x → O_y soit un homomorphisme surjectif'",
+  "scan": "θ♯ (sharp sign)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta^\\#:\\mathcal{O}_x",
+   "new": "$\\theta^\\sharp:\\mathcal{O}_x"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3) (i): 'un homomorphisme surjectif d'anneaux'",
+  "scan": "*surjectif* italic in the roman body",
+  "tex": "upright word (italic only through the environment)",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "surjectif d'anneaux",
+   "new": "\\emph{surjectif} d'anneaux"
+  },
+  "note": "Judged with the roman examples body (finding above)."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3) (ii), 2nd paragraph: 'l'homomorphisme tel que θ_0♯ soit'",
+  "scan": "θ_0♯ (sharp sign)",
+  "tex": "\\theta_0^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta_0^\\#$ soit",
+   "new": "$\\theta_0^\\sharp$ soit"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3) (ii): 'l'homomorphisme tel que θ♯ = θ_0♯' (first sharp)",
+  "scan": "θ♯ (sharp sign)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta^\\#=\\theta_0",
+   "new": "$\\theta^\\sharp=\\theta_0"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #. Order-independent of the next edit."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3) (ii): 'l'homomorphisme tel que θ♯ = θ_0♯' (second sharp)",
+  "scan": "θ_0♯ (sharp sign)",
+  "tex": "\\theta_0^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "=\\theta_0^\\#$",
+   "new": "=\\theta_0^\\sharp$"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 6,
+  "where": "Exemples (16.1.3) (ii): 'Comme θ♯ est surjectif'",
+  "scan": "θ♯ (sharp sign)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "Comme $\\theta^\\#$ est surjectif",
+   "new": "Comme $\\theta^\\sharp$ est surjectif"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 6,
+  "where": "(16.1.4), ll. 1-2: 'ne sont pas munis canoniquement d'une structure de O_Y-Module,'",
+  "scan": "the whole phrase italic, through 'O_Y-Module'",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ne sont pas munis canoniquement d'une structure de\n$\\mathcal{O}_Y$-Module,",
+   "new": "\\emph{ne sont pas munis canoniquement d'une structure de\n$\\mathcal{O}_Y$-Module},"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "(16.1.4), l. 2: 'ni a fortiori d'une structure'",
+  "scan": "*a fortiori* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ni a fortiori",
+   "new": "ni \\emph{a fortiori}"
+  },
+  "note": ""
+ },
+ {
+  "page": 6,
+  "where": "Proposition (16.1.5), label (i)",
+  "scan": "label (i) upright",
+  "tex": "\\item[(i)] comes out italic in the italic proposition",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(i)] $\\mathscr{G}r_\\bullet(f)$",
+   "new": "\\item[\\textup{(i)}] $\\mathscr{G}r_\\bullet(f)$"
+  },
+  "note": "Roman-numeral labels in italic statements are upright (GLOBAL_ISSUES 16)."
+ },
+ {
+  "page": 7,
+  "where": "Proposition (16.1.5), label (ii)",
+  "scan": "label (ii) upright",
+  "tex": "\\item[(ii)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(ii)]",
+   "new": "\\item[\\textup{(ii)}]"
+  },
+  "note": "GLOBAL_ISSUES 16."
+ },
+ {
+  "page": 7,
+  "where": "Proposition (16.1.5) (ii), 2nd line: 'de X.'",
+  "scan": "'de' set in bold italic and 'X.' in bold upright (wrong fount; enlarged crops, compared with 'sur X et sur Y' on the same page)",
+  "tex": "de $X$. (ordinary weight): silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "sous-préschémas de $X$.",
+   "new": "sous-préschémas \\textbf{de} $\\mathbf{X}$."
+  },
+  "corrected": "sous-préschémas de $X$.",
+  "note": "Wrong-fount line in the print (GLOBAL_ISSUES 29: wrong-font letters are reproduced in the diplomatic text). Separate from the (ii) label edit."
+ },
+ {
+  "page": 7,
+  "where": "Proposition (16.1.5), label (iii)",
+  "scan": "label (iii) upright",
+  "tex": "\\item[(iii)] italic",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(iii)]",
+   "new": "\\item[\\textup{(iii)}]"
+  },
+  "note": "GLOBAL_ISSUES 16."
+ },
+ {
+  "page": 7,
+  "where": "Proposition (16.1.5) (iii), end: 'coïncident avec celles définies dans (16.1.2).'",
+  "scan": "(16.1.2) upright",
+  "tex": "(16.1.2) italic inside the proposition",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "dans\n(16.1.2).",
+   "new": "dans\n\\textup{(16.1.2)}."
+  },
+  "note": "Reference printed upright inside the italic statement."
+ },
+ {
+  "page": 7,
+  "where": "proof of (16.1.5), end: 'par J^k/J^{k+1} (III, 1.4.17).'",
+  "scan": "(𝐈𝐈𝐈, 1.4.17): bold III",
+  "tex": "(III, 1.4.17), plain",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr{I}^k/\\mathscr{I}^{k+1}$ (III, 1.4.17)",
+   "new": "$\\mathscr{I}^k/\\mathscr{I}^{k+1}$ (\\textbf{III}, 1.4.17)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 7,
+  "where": "Corollaire (16.1.6), l. 1: 'Sous les hypothèses générales de (16.1.5), si l'immersion'",
+  "scan": "(16.1.5) upright",
+  "tex": "italic inside the corollary",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(16.1.5), si l'immersion",
+   "new": "\\textup{(16.1.5)}, si l'immersion"
+  },
+  "note": "Reference printed upright inside the italic statement."
+ },
+ {
+  "page": 7,
+  "where": "proof of (16.1.6): 'donc les J^n/J^{n+1} sont des O_Y-Modules de type fini'",
+  "scan": "'-Modules' set in bold (wrong fount; enlarged crop, compared with '-Mo(dules)' two paragraphs above)",
+  "tex": "$\\mathcal{O}_Y$-Modules (ordinary weight): silent correction",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathcal{O}_Y$-Modules de type fini",
+   "new": "$\\mathcal{O}_Y$\\textbf{-Modules} de type fini"
+  },
+  "corrected": "$\\mathcal{O}_Y$-Modules de type fini",
+  "note": "Wrong-fount word (GLOBAL_ISSUES 29). The hyphen is bold too."
+ },
+ {
+  "page": 7,
+  "where": "Corollaire (16.1.7), l. 1: 'Sous les hypothèses générales de (16.1.5), soit g : X→Y'",
+  "scan": "(16.1.5) upright",
+  "tex": "italic inside the corollary",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(16.1.5), soit $g",
+   "new": "\\textup{(16.1.5)}, soit $g"
+  },
+  "note": "Reference printed upright inside the italic statement."
+ },
+ {
+  "page": 7,
+  "where": "Corollaire (16.1.7): 'φ_{nm} : O_{Y(m)} → O_{Y(n)} (n≤m) sont des homomorphismes'",
+  "scan": "parentheses of (n≤m) upright",
+  "tex": "($n\\leq m$): italic parentheses inside the corollary",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "($n\\leq m$) sont",
+   "new": "\\textup{($n\\leq m$)} sont"
+  },
+  "note": "Same treatment as the earlier page fixes of parenthesised formulas in italic statements."
+ },
+ {
+  "page": 7,
+  "where": "proof of (16.1.7), end: 'd'un nombre fini de Gr_k(f) (III, 1.4.17).'",
+  "scan": "(𝐈𝐈𝐈, 1.4.17): bold III",
+  "tex": "(III, 1.4.17), plain",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\mathscr{G}r_k(f)$ (III, 1.4.17)",
+   "new": "$\\mathscr{G}r_k(f)$ (\\textbf{III}, 1.4.17)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 7,
+  "where": "proof of (16.1.8), end: 'et de (0_I, 5.3.7).'",
+  "scan": "(𝟎_I, 5.3.7): bold 0",
+  "tex": "(0\\textsubscript{I}, 5.3.7), plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(0\\textsubscript{I}, 5.3.7)",
+   "new": "(\\textbf{0}\\textsubscript{I}, 5.3.7)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 7,
+  "where": "end of the p. 7 segment: opening of Proposition (16.1.9)",
+  "scan": "printed p. 7 ends with the proof of (16.1.8) ('... et de (0_I, 5.3.7).'); 'Proposition (16.1.9). — Soient X un préschéma' is the first line of p. 8",
+  "tex": "\\begin{proposition}[16.1.9] and \\label{IV.16.1.9} stand before \\oldpage[IV-4]{8}",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\begin{proposition}[16.1.9]\n\\label{IV.16.1.9}\n",
+   "new": ""
+  },
+  "note": "Two-part move (the opening moves, not the marker, so each edit stays in its own page segment): this edit deletes the opening here; the p. 8 marker finding re-inserts it after \\oldpage[IV-4]{8}. Apply both or neither."
+ },
+ {
+  "page": 8,
+  "where": "top of p. 8: Proposition (16.1.9)",
+  "scan": "p. 8 begins with 'Proposition (16.1.9). — Soient X un préschéma'",
+  "tex": "page_008.tex begins after \\begin{proposition}[16.1.9]\\label (those lines are in p. 7's segment)",
+  "kind": "marker",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\oldpage[IV-4]{8}\nSoient",
+   "new": "\\oldpage[IV-4]{8}\n\\begin{proposition}[16.1.9]\n\\label{IV.16.1.9}\nSoient"
+  },
+  "note": "Second half of the move begun by the p. 7 marker finding. Apply both or neither."
+ },
+ {
+  "page": 8,
+  "where": "Proposition (16.1.9), label a)",
+  "scan": "'a)' upright, without an opening parenthesis",
+  "tex": "\\item[(a)]: italic '(a)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(a)]",
+   "new": "\\item[\\textup{a)}]"
+  },
+  "note": "Same form as the earlier page fixes of lettered labels in italic statements."
+ },
+ {
+  "page": 8,
+  "where": "Proposition (16.1.9), label b)",
+  "scan": "'b)' upright, without an opening parenthesis",
+  "tex": "\\item[(b)]: italic '(b)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(b)]",
+   "new": "\\item[\\textup{b)}]"
+  },
+  "note": "Same form as the earlier page fixes of lettered labels in italic statements."
+ },
+ {
+  "page": 8,
+  "where": "Proposition (16.1.9), label c)",
+  "scan": "'c)' upright, without an opening parenthesis",
+  "tex": "\\item[(c)]: italic '(c)'",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\item[(c)]",
+   "new": "\\item[\\textup{c)}]"
+  },
+  "note": "Same form as the earlier page fixes of lettered labels in italic statements."
+ },
+ {
+  "page": 8,
+  "where": "Proposition (16.1.9): 'De plus, si l'entier n vérifie ...'",
+  "scan": "'De plus' opens a new indented paragraph of the statement",
+  "tex": "text follows \\end{enumerate} directly, so it is set without an indent",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\end{enumerate}\nDe plus,",
+   "new": "\\end{enumerate}\n\nDe plus,"
+  },
+  "note": "Paragraph break (GLOBAL_ISSUES 80 pattern)."
+ },
+ {
+  "page": 8,
+  "where": "Proposition (16.1.9): 'si l'entier n vérifie b) ou c)' (label b)",
+  "scan": "b) upright inside the italic statement",
+  "tex": "italic b)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "vérifie b) ou",
+   "new": "vérifie \\textup{b)} ou"
+  },
+  "note": "Order-independent of the next edit."
+ },
+ {
+  "page": 8,
+  "where": "Proposition (16.1.9): 'si l'entier n vérifie b) ou c)' (label c)",
+  "scan": "c) upright inside the italic statement",
+  "tex": "italic c)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "ou c), il existe",
+   "new": "ou \\textup{c)}, il existe"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9), l. 2: 'un Idéal quasi-cohérent de type fini J de O_X'",
+  "scan": "*de type fini* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "quasi-cohérent de type fini\n$\\mathscr{I}$",
+   "new": "quasi-cohérent \\emph{de type fini}\n$\\mathscr{I}$"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9): 'L'équivalence de b) et c)'",
+  "scan": "*b)* and *c)* italic (letter and parenthesis)",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "L'équivalence de b) et c),",
+   "new": "L'équivalence de \\emph{b)} et \\emph{c)},"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9): 'J^n|U = J^{n+1}|U (0_I, 5.2.2)'",
+  "scan": "(𝟎_I, 5.2.2): bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "|U$ (0\\textsubscript{I}, 5.2.2)",
+   "new": "|U$ (\\textbf{0}\\textsubscript{I}, 5.2.2)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9): 'Pour prouver que a) entraîne b)'",
+  "scan": "*a)* and *b)* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "Pour prouver que a) entraîne b),",
+   "new": "Pour prouver que \\emph{a)} entraîne \\emph{b)},"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9): 'le Nilradical N de O_X (I, 5.1.2)'",
+  "scan": "(𝐈, 5.1.2): bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 5.1.2)",
+   "new": "(\\textbf{I}, 5.1.2)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9): 'il est nilpotent, ce qui prouve b).'",
+  "scan": "*b)* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "ce qui prouve b).",
+   "new": "ce qui prouve \\emph{b)}."
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9): 'pour prouver que b) entraîne a)'",
+  "scan": "*b)* and *a)* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "prouver que b) entraîne a),",
+   "new": "prouver que \\emph{b)} entraîne \\emph{a)},"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "proof of (16.1.9), end: 'un ouvert U de X contenant Y (0_I, 5.2.2)'",
+  "scan": "(𝟎_I, 5.2.2): bold 0",
+  "tex": "plain 0",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "$Y$ (0\\textsubscript{I}, 5.2.2)",
+   "new": "$Y$ (\\textbf{0}\\textsubscript{I}, 5.2.2)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 8,
+  "where": "Corollaire (16.1.10): '(autrement dit pour que j soit un isomorphisme local au point y)'",
+  "scan": "the parenthesis roman, with *isomorphisme local* italic inside it (enlarged crop)",
+  "tex": "all italic (corollary environment)",
+  "kind": "convention",
+  "convention": 6,
+  "confidence": "high",
+  "fix": {
+   "old": "(autrement dit pour que $j$ soit un isomorphisme local au\npoint $y$)",
+   "new": "\\textup{(autrement dit pour que $j$ soit un \\emph{isomorphisme local} au\npoint $y$)}"
+  },
+  "note": "Roman clause inside the italic statement; the \\emph inside \\textup gives the printed italic of 'isomorphisme local'."
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'la limite projective du système projectif (O_{Y(n)}, φ_nm) de faisceaux d'anneaux sur Y est appelé l'invariant normal'",
+  "scan": "'est appelé' (masculine participle; the subject is 'la limite projective')",
+  "tex": "est\\nappelé: the TeX keeps the printed reading",
+  "kind": "misprint_in_print",
+  "convention": null,
+  "confidence": "medium",
+  "fix": null,
+  "corrected": "appelée",
+  "note": "Agreement slip in the print; the TeX keeps it (fix null). The corrected edition may give 'appelée'."
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'appelé l'invariant normal d'ordre infini de f'",
+  "scan": "*invariant normal d'ordre infini* italic in the roman remark",
+  "tex": "no emphasis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "l'invariant normal d'ordre infini de",
+   "new": "l'\\emph{invariant normal d'ordre infini} de"
+  },
+  "note": "Remark body judged as roman (document-wide remark item)."
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'n'est autre que le complété formel de O_X'",
+  "scan": "*complété formel* italic",
+  "tex": "no emphasis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "le complété formel de",
+   "new": "le \\emph{complété formel} de"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'le long de Y (I, 10.8.4)'",
+  "scan": "(𝐈, 10.8.4): bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.4)",
+   "new": "(\\textbf{I}, 10.8.4)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'le préschéma formel complété de X'",
+  "scan": "*complété* italic ('le préschéma formel' roman)",
+  "tex": "no emphasis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "formel complété de",
+   "new": "formel \\emph{complété} de"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'le long de Y (I, 10.8.5)'",
+  "scan": "(𝐈, 10.8.5): bold I",
+  "tex": "plain I",
+  "kind": "convention",
+  "convention": 2,
+  "confidence": "high",
+  "fix": {
+   "old": "(I, 10.8.5)",
+   "new": "(\\textbf{I}, 10.8.5)"
+  },
+  "note": "Bold chapter number in the reference."
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (i): 'Y^(∞) est le voisinage formel de Y dans X'",
+  "scan": "*voisinage formel* italic",
+  "tex": "no emphasis",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "le voisinage formel de",
+   "new": "le \\emph{voisinage formel} de"
+  },
+  "note": ""
+ },
+ {
+  "page": 8,
+  "where": "Remarques (16.1.11) (ii): 'l'homomorphisme θ♯ : ψ*(O_X) → O_Y soit surjectif'",
+  "scan": "θ♯ (sharp sign)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta^\\#:\\psi^*(\\mathcal{O}_X)\\to\\mathcal{O}_Y$",
+   "new": "$\\theta^\\sharp:\\psi^*(\\mathcal{O}_X)\\to\\mathcal{O}_Y$"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "subsection heading 16.2",
+  "scan": "'16.2. Propriétés fonctorielles des invariants normaux d'une immersion.' (final full stop)",
+  "tex": "no full stop",
+  "kind": "punctuation",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\subsection{Propriétés fonctorielles des invariants normaux d'une immersion}",
+   "new": "\\subsection{Propriétés fonctorielles des invariants normaux d'une immersion.}"
+  },
+  "note": "GLOBAL_ISSUES 43/58."
+ },
+ {
+  "page": 9,
+  "where": "(16.2.1), l. 2: 'les homomorphismes θ♯ et θ'♯ soient surjectifs' (θ♯)",
+  "scan": "θ♯ (sharp sign)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "homomorphismes $\\theta^\\#$ et",
+   "new": "homomorphismes $\\theta^\\sharp$ et"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "(16.2.1), l. 2: 'les homomorphismes θ♯ et θ'♯ soient surjectifs' (θ'♯)",
+  "scan": "θ'♯ (sharp sign)",
+  "tex": "\\theta'^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta'^\\#$ soient",
+   "new": "$\\theta'^\\sharp$ soient"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #. Order-independent of the next edit."
+ },
+ {
+  "page": 9,
+  "where": "(16.2.1), l. 2: 'soient surjectifs ;'",
+  "scan": "*surjectifs* italic",
+  "tex": "upright",
+  "kind": "italics",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "soient surjectifs;",
+   "new": "soient \\emph{surjectifs};"
+  },
+  "note": ""
+ },
+ {
+  "page": 9,
+  "where": "after diagram (16.2.1.1): 'Posons u=(ρ, λ), v=(σ, μ).'",
+  "scan": "'Posons' opens a new indented paragraph",
+  "tex": "'Posons' follows \\] directly: no paragraph break",
+  "kind": "other",
+  "convention": null,
+  "confidence": "high",
+  "fix": {
+   "old": "\\]\nPosons",
+   "new": "\\]\n\nPosons"
+  },
+  "note": "Paragraph break after a display (GLOBAL_ISSUES 47 pattern)."
+ },
+ {
+  "page": 9,
+  "where": "square diagram after 'Posons': top arrow label ψ'*(μ♯)",
+  "scan": "sharp sign (enlarged crop)",
+  "tex": "^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[r]^-{\\psi'^*(\\mu^\\#)}",
+   "new": "\\ar[r]^-{\\psi'^*(\\mu^\\sharp)}"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "square diagram after 'Posons': left arrow label ρ*(θ♯)",
+  "scan": "sharp sign (enlarged crop)",
+  "tex": "^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[d]_{\\rho^*(\\theta^\\#)}",
+   "new": "\\ar[d]_{\\rho^*(\\theta^\\sharp)}"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "square diagram after 'Posons': right arrow label θ'♯",
+  "scan": "sharp sign (enlarged crop)",
+  "tex": "^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[d]^{\\theta'^\\#}",
+   "new": "\\ar[d]^{\\theta'^\\sharp}"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "square diagram after 'Posons': bottom arrow label λ♯",
+  "scan": "sharp sign (enlarged crop)",
+  "tex": "^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "\\ar[r]_-{\\lambda^\\#}",
+   "new": "\\ar[r]_-{\\lambda^\\sharp}"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "after the square diagram: 'si J et J' sont les noyaux de θ♯ et θ'♯' (θ♯)",
+  "scan": "θ♯ (sharp sign)",
+  "tex": "\\theta^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "noyaux de\n$\\theta^\\#$",
+   "new": "noyaux de\n$\\theta^\\sharp$"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "after the square diagram: 'si J et J' sont les noyaux de θ♯ et θ'♯' (θ'♯)",
+  "scan": "θ'♯ (sharp sign)",
+  "tex": "\\theta'^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "$\\theta'^\\#$, que",
+   "new": "$\\theta'^\\sharp$, que"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "'que l'on a ψ'*(μ♯)(ρ*(J)) ⊂ J''",
+  "scan": "μ♯ (sharp sign)",
+  "tex": "\\mu^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mu^\\#)(\\rho^*(\\mathscr{I}))",
+   "new": "(\\mu^\\sharp)(\\rho^*(\\mathscr{I}))"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "'pour tout entier n, ψ'*(μ♯)(ρ*(J^n)) ⊂ J'^n'",
+  "scan": "μ♯ (sharp sign)",
+  "tex": "\\mu^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "(\\mu^\\#)(\\rho^*(\\mathscr{I}^n))",
+   "new": "(\\mu^\\sharp)(\\rho^*(\\mathscr{I}^n))"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ },
+ {
+  "page": 9,
+  "where": "'ce qui montre que ψ'*(μ♯) définit, par passage aux quotients'",
+  "scan": "μ♯ (sharp sign)",
+  "tex": "\\mu^\\#",
+  "kind": "convention",
+  "convention": 9,
+  "confidence": "high",
+  "fix": {
+   "old": "que $\\psi'^*(\\mu^\\#)$ définit",
+   "new": "que $\\psi'^*(\\mu^\\sharp)$ définit"
+  },
+  "note": "Convention 9: the print has the sharp sign; ^\\# typesets #."
+ }
+]

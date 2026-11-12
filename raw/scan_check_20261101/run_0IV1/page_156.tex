@@ -1,0 +1,106 @@
+% from ega0-21-fr.tex
+\oldpage[0\textsubscript{IV-1}]{156}
+D'après (21.1.5, (iii)), $\mathfrak J_{B/A}$ est un nilidéal~; en outre,
+en vertu de (20.4.4) et de l'hypothèse, $\mathfrak J_{B/A}$ est un idéal de
+type fini, donc il est nilpotent~; comme la relation $\Omega^1_{B/A}=0$
+signifie que $\mathfrak J_{B/A}=\mathfrak J_{B/A}^2$, on en conclut que
+$\mathfrak J_{B/A}=0$, ou encore que $\pi:B\otimes_A B\to B$ est bijectif.
+Par ailleurs, tout élément de $B$ ayant sa puissance $p^s$-ième dans $u(A)$,
+$B$ est entier sur $A$, et étant de type fini, c'est une $A$-algèbre finie.
+On est ainsi ramené à prouver le lemme suivant (où l'on ne suppose pas que
+les anneaux considérés sont de caractéristique $p$) :
+\end{proof}
+
+\begin{lemma}[21.1.6.1]
+\label{0.21.1.6.1-fr}
+Soient $R$ un anneau, $S$ une $R$-algèbre finie~; si l'homomorphisme
+canonique $\pi:S\otimes_R S\to S$ est bijectif, alors l'homomorphisme
+structural $u:R\to S$ est surjectif.
+\end{lemma}
+
+\begin{proof}
+Il suffit de montrer que, pour tout idéal maximal $\mathfrak m$ de $R$, si
+l'on pose $T=R-\mathfrak m$, l'homomorphisme
+$u_{\mathfrak m}:R_{\mathfrak m}\to T^{-1}S$ est surjectif (Bourbaki,
+\emph{Alg. comm.}, chap.~II, §~3, n$^\circ$~3, th.~1)~; or l'hypothèse
+entraîne que l'homomorphisme
+$(T^{-1}S)\otimes_{R_{\mathfrak m}}(S/\mathfrak mS)\to T^{-1}S$
+est bijectif (0$_I$, 1.3.4), et comme $T^{-1}S$ est une
+$R_{\mathfrak m}$-algèbre finie, on voit qu'on peut se borner au cas où
+$R$ est un anneau local.
+
+Désignant encore par $\mathfrak m$ son idéal maximal, il suffit de prouver que
+$u\otimes1:R/\mathfrak m\to S/\mathfrak mS$ est surjectif, en vertu du
+lemme de Nakayama ($S$ étant un $R$-module de type fini)~; comme
+l'homomorphisme canonique
+$(S/\mathfrak mS)\otimes_{R/\mathfrak m}(S/\mathfrak mS)\to S/\mathfrak mS$
+est bijectif et que $S/\mathfrak mS$ est une $(R/\mathfrak m)$-algèbre finie,
+on est finalement ramené au cas où $R$ est un corps~; mais alors les rangs de
+$S\otimes_R S$ et de $S$ sur $R$ ne peuvent être égaux que si $S$ est de rang
+$0$ ou $1$, donc si $u:R\to S$ est surjectif.
+\end{proof}
+
+\begin{proposition}[21.1.7]
+\label{0.21.1.7-fr}
+Soient $A$ un anneau, $B$ une $A$-algèbre, $(x_\alpha)_{\alpha\in I}$ une
+famille d'éléments de $B$. Considérons les propriétés suivantes~:
+\begin{enumerate}
+  \item[a)] $B=A[B^p,(x_\alpha)]$, autrement dit la $A[B^p]$-algèbre
+  $B$ est engendrée par la famille $(x_\alpha)_{\alpha\in I}$.
+  \item[b)] Le $A[B^p]$-module $B$ est engendré par les monômes
+  $\prod_\alpha x_\alpha^{n(\alpha)}$, où $(n(\alpha))_{\alpha\in I}$ est
+  une famille d'entiers à support fini telle que $0\leq n(\alpha)<p$ pour
+  tout $\alpha\in I$.
+  \item[c)] Le $B$-module $\Omega^1_{B/A}$ est engendré par les
+  $d_{B/A}(x_\alpha)$ $(\alpha\in I)$.
+\end{enumerate}
+Alors les propriétés a) et b) sont équivalentes et entraînent c)~; si, en
+outre, $B$ est une $A[B^p]$-algèbre de type fini, c) est équivalente à a) et b).
+\end{proposition}
+
+\begin{proof}
+Il est clair que b) entraîne a), et inversement a) entraîne b), car tout
+monôme $\prod_\alpha x_\alpha^{m(\alpha)}$, où les $m(\alpha)$ sont des
+entiers $\geq0$ (formant une famille à support fini), peut s'écrire
+$(\prod_\alpha x_\alpha^{q(\alpha)})^p\prod_\alpha x_\alpha^{r(\alpha)}$,
+en divisant chaque $m(\alpha)$ par $p$, ce qui donne
+$m(\alpha)=p q(\alpha)+r(\alpha)$ avec $0\leq r(\alpha)<p$.
+Le fait que a) entraîne c) résulte de (21.1.5, (ii)) et de (20.4.7).
+
+Supposons inversement c) vérifiée et que $B$ soit une $A[B^p]$-algèbre de
+type fini~; soit $B'$ la sous-$A[B^p]$-algèbre de $B$ engendrée par les
+$x_\alpha$~; dans la suite exacte (20.5.7.1)
+\[
+\Omega^1_{B'/A[B^p]}\otimes_{B'}B\longrightarrow
+\Omega^1_{B/A[B^p]}\longrightarrow\Omega^1_{B/B'}\longrightarrow0
+\]
+l'hypothèse entraîne que la flèche de gauche est surjective (compte tenu de
+(21.1.5, (ii)))~; on a donc $\Omega^1_{B/B'}=0$, et comme
+$B^p\subset B'\subset B$ et que $B$ est une $B'$-algèbre de type fini,
+on a nécessairement $B'=B$ par (21.1.6).
+\end{proof}
+
+\begin{remark}[21.1.8]
+\label{0.21.1.8-fr}
+Lorsque $B$ est un corps, nous démontrerons l'équivalence des propriétés a),
+b) et c) sans hypothèse de finitude (21.4.5).
+\end{remark}
+
+\begin{definition}[21.1.9]
+\label{0.21.1.9-fr}
+Soient $A$ un anneau (de caractéristique $p$), $B$ une $A$-algèbre. On dit
+qu'une famille $(x_\alpha)_{\alpha\in I}$ d'éléments de $B$ est $p$-libre sur
+$A$ (resp. un système de $p$-générateurs de $B$ sur $A$, resp. une $p$-base
+de $B$ sur $A$) si la famille des monômes
+$\prod_\alpha x_\alpha^{n(\alpha)}$ ($0\leq n(\alpha)<p$,
+$(n(\alpha))_{\alpha\in I}$ à support fini) est une famille libre (resp. un
+système de générateurs, resp. une base) dans le $A[B^p]$-module $B$.
+\end{definition}
+
+On a des définitions correspondantes pour un ensemble $M$ d'éléments de $B$,
+en considérant la famille définie par l'injection canonique $M\to B$.
+Lorsqu'on prend pour $A$ le corps premier $\mathbf F_p$ (auquel cas
+$A[B^p]=B^p$), on omet la mention de $A$ dans la définition précédente (ou
+l'on dit encore qu'une famille est «absolument» $p$-libre, resp. un système
+«absolu» de $p$-générateurs, resp. une $p$-base «absolue»).
+

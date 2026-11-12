@@ -1,0 +1,109 @@
+\oldpage[I]{83}
+de $X$~; en outre, $X$ n'admet qu'un seul point générique puisque c'est un
+espace de Kolmogoroff ((\hyperref[I.1.1.8-fr]{1.1.8}) et
+(\hyperref[0.2.1.3-fr]{0, 2.1.3})).
+
+\begin{proposition}[1.1.15]
+\label{I.1.1.15-fr}
+Si $\mathfrak{J}$ est un idéal de $A$ contenu dans le radical
+$\mathfrak{R}(A)$, le seul voisinage de $V(\mathfrak{J})$ dans
+$X=\operatorname{Spec}(A)$ est l'espace $X$ tout entier.
+\end{proposition}
+
+En effet, tout idéal maximal de $A$ appartient par définition à
+$V(\mathfrak{J})$. Comme tout idéal $\mathfrak{a}$ de $A$ est contenu dans un
+idéal maximal, on a $V(\mathfrak{a})\cap V(\mathfrak{J})\neq\varnothing$,
+d'où la proposition.
+
+\subsection{Propriétés fonctorielles des spectres premiers d'anneaux}
+\label{subsection:I.1.2-fr}
+
+\begin{env}[1.2.1]
+\label{I.1.2.1-fr}
+Soient $A$, $A'$ deux anneaux,
+\[
+  \varphi:A'\longrightarrow A
+\]
+un homomorphisme d'anneaux. Pour tout idéal premier
+$x=\mathfrak{j}_x\in\operatorname{Spec}(A)=X$, l'anneau
+$A'/\varphi^{-1}(\mathfrak{j}_x)$ est canoniquement isomorphe à un
+sous-anneau de $A/\mathfrak{j}_x$, donc est intègre, autrement dit
+$\varphi^{-1}(\mathfrak{j}_x)$ est un idéal premier de $A'$~; nous le
+noterons ${}^a\varphi(x)$, et nous avons ainsi défini une application
+\[
+  {}^a\varphi:X=\operatorname{Spec}(A)\longrightarrow
+  X'=\operatorname{Spec}(A')
+\]
+(aussi notée $\operatorname{Spec}(\varphi)$) que nous appellerons
+l'application associée à l'homomorphisme $\varphi$. Nous désignerons par
+$\varphi^x$ l'homomorphisme injectif de
+$A'/\varphi^{-1}(\mathfrak{j}_x)$ dans $A/\mathfrak{j}_x$, déduit de
+$\varphi$ par passage aux quotients, ainsi que son prolongement canonique en
+un monomorphisme de corps
+\[
+  \varphi^x:K({}^a\varphi(x))\longrightarrow K(x)~;
+\]
+pour tout $f'\in A'$, on a donc par définition
+\begin{equation}
+  \varphi^x\bigl(f'({}^a\varphi(x))\bigr)=\bigl(\varphi(f')\bigr)(x)
+  \qquad(x\in X).
+  \tag{1.2.1.1}\label{I.1.2.1.1-fr}
+\end{equation}
+\end{env}
+
+\begin{proposition}[1.2.2]
+\label{I.1.2.2-fr}
+\begin{enumerate}
+  \item[\rm(i)] Pour toute partie $E'$ de $A'$, on a
+  \begin{equation}
+    {}^a\varphi^{-1}(V(E'))=V(\varphi(E'))
+    \tag{1.2.2.1}\label{I.1.2.2.1-fr}
+  \end{equation}
+  et en particulier, pour tout $f'\in A'$,
+  \begin{equation}
+    {}^a\varphi^{-1}(D(f'))=D(\varphi(f')).
+    \tag{1.2.2.2}\label{I.1.2.2.2-fr}
+  \end{equation}
+  \item[\rm(ii)] Pour tout idéal $\mathfrak{a}$ de $A$, on a
+  \begin{equation}
+    \overline{{}^a\varphi(V(\mathfrak{a}))}
+    =V(\varphi^{-1}(\mathfrak{a})).
+    \tag{1.2.2.3}\label{I.1.2.2.3-fr}
+  \end{equation}
+\end{enumerate}
+\end{proposition}
+
+En effet, la relation ${}^a\varphi(x)\in V(E')$ est par définition
+équivalente à $E'\subset\varphi^{-1}(\mathfrak{j}_x)$, donc à
+$\varphi(E')\subset\mathfrak{j}_x$, et finalement à
+$x\in V(\varphi(E'))$, d'où (i). Pour démontrer (ii), on peut supposer
+$\mathfrak{a}$ égal à sa racine, puisque
+$V(\mathfrak{r}(\mathfrak{a}))=V(\mathfrak{a})$
+(\hyperref[I.1.1.2-fr]{1.1.2 (v)}) et
+$\varphi^{-1}(\mathfrak{r}(\mathfrak{a}))
+=\mathfrak{r}(\varphi^{-1}(\mathfrak{a}))$~; si on pose
+$Y=V(\mathfrak{a})$, et
+$\mathfrak{a}'=\mathfrak{j}({}^a\varphi(Y))$, on a
+$\overline{{}^a\varphi(Y)}=V(\mathfrak{a}')$ (prop.
+(\hyperref[I.1.1.4-fr]{1.1.4 (ii)}))~; la relation
+$f'\in\mathfrak{a}'$ est par définition équivalente à $f'(x')=0$ pour tout
+$x'\in{}^a\varphi(Y)$, donc, en vertu de la formule
+(\hyperref[I.1.2.1.1-fr]{1.2.1.1}), elle est aussi équivalente à
+$\varphi(f')(x)=0$ pour tout $x\in Y$, ou encore à
+$\varphi(f')\in\mathfrak{j}(Y)=\mathfrak{a}$, puisque $\mathfrak{a}$ est
+égal à sa racine~; d'où (ii).
+
+\begin{corollary}[1.2.3]
+\label{I.1.2.3-fr}
+L'application ${}^a\varphi$ est continue.
+\end{corollary}
+
+Remarquons que si $A''$ est un troisième anneau, $\varphi'$ un homomorphisme
+$A''\to A'$, on a
+${}^a(\varphi'\circ\varphi)={}^a\varphi\circ{}^a\varphi'$~; ce résultat et le
+cor. (\hyperref[I.1.2.3-fr]{1.2.3}) signifient que
+$\operatorname{Spec}(A)$ est un foncteur contravariant en $A$, de la
+catégorie des anneaux dans celle des espaces topologiques.
+
+\begin{corollary}[1.2.4]
+\label{I.1.2.4-fr}

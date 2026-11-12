@@ -1,0 +1,36 @@
+% from ega4-18-fr.tex
+\oldpage[IV-4]{180}
+
+il existe un $k'$-homomorphisme local $B'=k'[[T_1,\ldots,T_n]]\to A'_{\mathrm{red}}$ faisant de $A'_{\mathrm{red}}$ une $B'$-algèbre finie, et tel que le corps des fractions $K'$ de $A'_{\mathrm{red}}$ soit une extension finie séparable du corps des fractions $k'((T_1,\ldots,T_n))$ de $B'$.
+\end{corollary}
+
+Le morphisme $\Spec(A')\to\Spec(A)$ étant radiciel et fini, $A'$ est un anneau local complet et son nilradical est le seul idéal premier au-dessus de l'idéal $0$ de $A$; par platitude, $A'$ s'identifie à un sous-anneau de $K\otimes_k k'$, qui est d'ailleurs l'anneau total des fractions de $A'$; on a par suite $K'=(K\otimes_k k')_{\mathrm{red}}$. Il s'agit de prouver, vu l'équivalence $d)\Leftrightarrow c)$ de (18.11.10), qu'il existe une extension radicielle finie $k'$ de $k$ telle que $(K\otimes_k k')_{\mathrm{red}}$ soit une extension séparable de $k'$ (6.7.6). Or on sait (0, 19.8.9) que sous les hypothèses faites, il existe une sous-$k$-algèbre $C=k[[T_1,\ldots,T_m]]$ de $A$ telle que $A$ soit une $C$-algèbre finie; $K$ est donc une extension finie du corps des fractions $K_1=k((T_1,\ldots,T_m))$ de $C$, qui est séparable sur $k$ (0, 21.9.6.4). Si $p$ est l'exposant caractéristique de $k$, on peut donc écrire
+\[
+  K\otimes_k k^{p^{-\infty}}=K\otimes_{K_1}(K_1\otimes_k k^{p^{-\infty}})
+\]
+et $K_1\otimes_k k^{p^{-\infty}}$ est un corps, extension radicielle de $K_1$; on en conclut que $K\otimes_k k^{p^{-\infty}}$ est une algèbre finie sur le corps $K_1\otimes_k k^{p^{-\infty}}$, donc un anneau artinien. La conclusion résulte donc du lemme plus général suivant:
+
+\begin{lemma}[18.11.12.1]
+\label{IV.18.11.12.1}
+Soient $k$ un corps de caractéristique $p>0$, $K$ une extension de $k$. Les conditions suivantes sont équivalentes:
+\begin{enumerate}
+  \item[$a)$] L'anneau $K\otimes_k k^{p^{-\infty}}$ est artinien.
+  \item[$b)$] Il existe une extension $k'$ de $k$ de type fini telle que $(K\otimes_k k')_{\mathrm{red}}$ soit une $k'$-algèbre séparable.
+  \item[$c)$] Il existe une extension finie radicielle $k'$ de $k$ telle que $(K\otimes_k k')_{\mathrm{red}}$ soit une extension séparable de $k'$.
+\end{enumerate}
+\end{lemma}
+
+Montrons d'abord que $c)$ entraîne $a)$. L'anneau $A=K\otimes_k k'$ est alors un anneau artinien local, et si $\mathfrak N$ est son nilradical, le corps résiduel $L=A/\mathfrak N$ est séparable sur $k'$; par suite $L\otimes_{k'}k^{p^{-\infty}}$ est un corps, et comme il est égal à
+\[
+  (A\otimes_{k'}k^{p^{-\infty}})/(\mathfrak N\otimes_{k'}k^{p^{-\infty}}),
+\]
+on voit que $\mathfrak N\otimes_{k'}k^{p^{-\infty}}$ est le nilradical de $A\otimes_{k'}k^{p^{-\infty}}=K\otimes_k k^{p^{-\infty}}$; comme $\mathfrak N$ est un idéal de type fini, le nilradical de $K\otimes_k k^{p^{-\infty}}$ est donc de type fini, ce qui entraîne que l'anneau $K\otimes_k k^{p^{-\infty}}$ est artinien.
+
+Inversement, prouvons que $a)$ entraîne $c)$. Soit $\mathfrak N$ le nilradical de l'anneau local artinien $B=K\otimes_k k^{p^{-\infty}}$, qui est par hypothèse engendré par un nombre fini d'éléments de la forme
+\[
+  y_i=\sum_j x_{ij}\otimes\xi_{ij},\qquad x_{ij}\in K,\quad \xi_{ij}\in k^{p^{-\infty}}.
+\]
+Soient $k'$ l'extension radicielle finie de $k$ engendrée par les $\xi_{ij}$, $\mathfrak N_0$ l'idéal de $B_0=K\otimes_k k'$ engendré par les $y_i$; il est clair que les $y_i$ sont nilpotents dans $B_0$; d'autre part, on a $\mathfrak N_0\otimes_{k'}k^{p^{-\infty}}=\mathfrak N$, et par suite $\mathfrak N\cap B_0=\mathfrak N_0$, $\mathfrak N_0$ contient le nilradical de $B_0$, donc il lui est égal. Comme $B/\mathfrak N=(B_0/\mathfrak N_0)\otimes_{k'}k^{p^{-\infty}}$ est réduit, on en conclut que $B_0/\mathfrak N_0=(K\otimes_k k')_{\mathrm{red}}$ est séparable sur $k$ (4.6.1).
+
+Il est clair que $c)$ entraîne $b)$. Inversement, supposons $b)$ vérifiée, et notons qu'il existe une extension séparable $k_1$ de $k$ telle que $k'$ soit une extension radicielle finie de $k_1$; posons $K_1=K\otimes_k k_1$, qui est un corps. Appliquant l'équivalence de $a)$ et $c)$ à l'extension $K_1$ de $k_1$, on voit que $K_1\otimes_{k_1}k_1^{p^{-\infty}}$ est un anneau artinien; mais cet anneau est égal
+

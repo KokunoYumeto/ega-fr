@@ -1,0 +1,108 @@
+% from ega3-1-fr.tex
+\oldpage[III]{109}
+mêmes hypothèses de finitude sur $\mathcal S$ et $\mathcal M$) on conclut
+de (\hyperref[III.2.4.1-fr]{2.4.1}) que
+\[
+\bigoplus_{k\in\mathbb Z}R^pf_*(\mathcal M_k)
+\]
+est un $\mathcal S$-Module de type fini pour tout $p$, et (sous les
+hypothèses supplémentaires de (\hyperref[III.2.4.1-fr]{2.4.1}), (ii))
+qu'il existe $N$ tel que pour $n\geq N$, on ait
+$R^pf_*(\mathcal M_k(n))=0$ pour tout $p>0$ et tout $k\in\mathbb Z$, et
+que l'homomorphisme canonique
+$f^*(f_*(\mathcal M_k(n)))\to\mathcal M_k(n)$ soit surjectif pour tout
+$k\in\mathbb Z$.
+\end{env}
+
+\subsection{Caractéristique d'Euler-Poincaré et polynôme de Hilbert}
+\label{subsection:III.2.5-fr}
+
+\begin{env}[2.5.1]
+\label{III.2.5.1-fr}
+Soient $A$ un anneau artinien, $X$ un $A$-schéma projectif sur
+$Y=\operatorname{Spec}(A)$. Pour tout $\mathcal O_X$-Module cohérent
+$\mathcal F$, les $H^i(X,\mathcal F)$ $(i\geq0)$ sont des $A$-modules de
+type fini (\hyperref[III.2.2.1-fr]{2.2.1}), donc ici de longueur finie
+puisque $A$ est artinien. On sait en outre
+(\hyperref[III.2.2.1-fr]{2.2.1}) que $H^i(X,\mathcal F)=0$ sauf pour un
+nombre fini de valeurs de $i\geq0$~; le nombre entier
+\[
+\chi_A(\mathcal F)=\sum_{i=0}^{\infty}(-1)^i
+\operatorname{long}(H^i(X,\mathcal F))
+\tag{2.5.1.1}\label{III.2.5.1.1-fr}
+\]
+est donc défini pour tout $\mathcal O_X$-Module cohérent $\mathcal F$.
+Lorsque $A$ est un anneau local artinien, on dit que $\chi_A(\mathcal F)$
+est la caractéristique d'Euler-Poincaré de $\mathcal F$ (par rapport à
+l'anneau $A$). Pour $\mathcal F=\mathcal O_X$, on dit que
+$\chi_A(\mathcal O_X)$ est le genre arithmétique de $X$ (par rapport à
+$A$).
+\end{env}
+
+\begin{proposition}[2.5.2]
+\label{III.2.5.2-fr}
+Soit
+\[
+0\longrightarrow\mathcal F'\longrightarrow\mathcal F
+\longrightarrow\mathcal F''\longrightarrow0
+\]
+une suite exacte de $\mathcal O_X$-Modules cohérents~; on a alors
+\[
+\chi_A(\mathcal F)=\chi_A(\mathcal F')+\chi_A(\mathcal F'').
+\tag{2.5.2.1}\label{III.2.5.2.1-fr}
+\]
+\end{proposition}
+
+\begin{proof}
+Comme les modules de cohomologie de $\mathcal F$, $\mathcal F'$,
+$\mathcal F''$ sont nuls sauf un nombre fini d'entre eux, il y a un
+entier $r>0$ tel que la suite exacte de cohomologie s'écrive
+\[
+0\to H^0(X,\mathcal F')\to H^0(X,\mathcal F)
+\to H^0(X,\mathcal F'')\to H^1(X,\mathcal F')\to\cdots
+\]
+\[
+\cdots\to H^r(X,\mathcal F')\to H^r(X,\mathcal F)
+\to H^r(X,\mathcal F'')\to0.
+\]
+Or, on sait que dans une suite exacte de $A$-modules de longueur finie,
+ayant des 0 aux deux extrémités, la somme alternée des longueurs est
+nulle (0, 11.10.1)~; appliquant ce résultat, on trouve immédiatement la
+formule (\hyperref[III.2.5.2.1-fr]{2.5.2.1}).
+\end{proof}
+
+On notera que le résultat de (\hyperref[III.2.5.2-fr]{2.5.2}) s'applique
+toutes les fois que l'on sait que $X$ est un $A$-schéma quasi-compact et
+que les $A$-modules $H^i(X,\mathcal F)$ sont de type fini pour tout
+$\mathcal O_X$-Module cohérent $\mathcal F$
+(\hyperref[III.1.4.12-fr]{1.4.12}).
+
+\begin{theorem}[2.5.3]
+\label{III.2.5.3-fr}
+Soient $A$ un anneau local artinien, $X$ un schéma projectif sur
+$Y=\operatorname{Spec}(A)$, $\mathcal L$ un $\mathcal O_X$-Module
+inversible très ample relativement à $Y$, $\mathcal F$ un
+$\mathcal O_X$-Module cohérent~; on pose
+$\mathcal F(n)=\mathcal F\otimes_{\mathcal O_X}\mathcal L^{\otimes n}$
+pour tout $n\in\mathbb Z$.
+\begin{enumerate}
+\item[(i)] Il existe un polynôme unique $P\in\mathbb Q[T]$ tel que
+$\chi_A(\mathcal F(n))=P(n)$ pour tout $n\in\mathbb Z$ (on dit que $P$
+est le polynôme de Hilbert de $\mathcal F$ par rapport à $A$).
+\item[(ii)] Pour $n$ assez grand, on a
+$\chi_A(\mathcal F(n))=\operatorname{long}_A
+\Gamma(X,\mathcal F(n))$.
+\item[(iii)] Le terme de plus haut degré de $\chi_A(\mathcal F(n))$ a un
+coefficient $\geq0$.
+\end{enumerate}
+\end{theorem}
+
+Ajoutons qu'au chap. IV, dans le paragraphe consacré à la notion de
+dimension, nous démontrerons en outre que le degré de
+$\chi_A(\mathcal F(n))$ est égal à la dimension du support de
+$\mathcal F$.
+
+\begin{proof}
+Comme on a $H^i(X,\mathcal F(n))=0$ pour tout $i>0$ dès que $n$ est
+assez grand (\hyperref[III.2.2.1-fr]{2.2.1}),
+

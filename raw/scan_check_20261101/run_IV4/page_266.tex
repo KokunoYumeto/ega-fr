@@ -1,0 +1,44 @@
+% from ega4-21a-fr.tex
+\oldpage[IV-4]{266}
+$f^*(D+D')=f^*(D)+f^*(D')$.
+Autrement dit, l'ensemble $\operatorname{Div}^f(X)$ des diviseurs sur $X$ dont l'image réciproque par $f$ existe est un sous-groupe de $\operatorname{Div}(X)$, et l'application $D\mapsto f^*(D)$ est un homomorphisme croissant du sous-groupe ordonné $\operatorname{Div}^f(X)$ dans le groupe ordonné $\operatorname{Div}(X')$, rendant commutatif le diagramme
+\[
+\label{IV.21.4.2.1}
+  \xymatrix{
+    \operatorname{Div}^f(X) \ar[r]^{l_X} \ar[d]_{f^*} & \operatorname{Pic}(X) \ar[d]^{\operatorname{Pic}(f)} \\
+    \operatorname{Div}(X') \ar[r]^{l_{X'}} & \operatorname{Pic}(X')
+  }
+  \tag{21.4.2.1}
+\]
+
+\begin{env}[21.4.3]
+\label{IV.21.4.3}
+La définition \sref{IV.21.4.2} montre aussitôt que, pour que $f^*(D)$ existe, il faut et il suffit que pour tout ouvert $U$ de $X$, l'image réciproque par $f^U:f^{-1}(U)\to U$ (restriction de $f$) de $D|U$ existe.
+Or, si $D=\operatorname{div}(g)$, où $g$ est une fonction méromorphe régulière sur $X$, dire que l'image réciproque de $s_D$ par $f$ existe et est une section méromorphe régulière de $f^*(\sh{O}_X(D))$ signifie \sref{IV.21.2.9} que l'image réciproque de $g$ par $f$ existe et est une fonction méromorphe régulière sur $X'$.
+On en déduit aussitôt une seconde description de $\operatorname{Div}^f(X)$ et de $f^*(D)$ : on considère le sous-faisceau de groupes de $\sh{M}_X^*$, noté $\sh{M}_f^*$, formé des germes de fonctions méromorphes régulières sur un ouvert de $X$ et dont l'image réciproque par $f$ existe et est régulière sur l'ouvert image réciproque \sref{IV.20.1.11}.
+Alors si $f=(\psi,\theta)$, l'homomorphisme canonique \sref{IV.20.1.11} $\psi^*(\sh{M}_f)\to\sh{M}_{X'}$ donne par restriction un homomorphisme de faisceaux de groupes $\psi^*(\sh{M}_f^*)\to\sh{M}_{X'}^*$.
+Posant $\sh{D}iv_X'=\sh{M}_f^*/\sh{O}_X^*$, on a $\operatorname{Div}^f(X)=\Gamma(X,\sh{D}iv_X')$, et l'application $D\mapsto f^*(D)$ correspond à l'homomorphisme de faisceaux de groupes $\psi^*(\sh{M}_f^*)/\psi^*(\sh{O}_X^*)\to\sh{M}_{X'}^*/\sh{O}_{X'}^*=\sh{D}iv_{X'}$ déduit du précédent par passage aux quotients.
+\end{env}
+
+\begin{env}[21.4.4]
+\EGAReaderTarget{ega4.c04.statement.21-4-4}{IV.21.4.4}
+Il résulte aussitôt des définitions précédentes que si $f':X''\to X'$ est un second morphisme d'espaces annelés, $D$ un diviseur sur $X$ tel que les images réciproques $f^*(D)$ et $f'^*(f^*(D))$ existent, alors $(f\circ f')^*(D)$ existe et est égal à $f'^*(f^*(D))$.
+\end{env}
+
+\begin{proposition}[21.4.5]
+\label{IV.21.4.5}
+Soit $f:X'\to X$ un morphisme d'espaces annelés.
+Dans chacun des trois cas suivants, l'image réciproque par $f$ de tout diviseur sur $X$ est définie :
+\begin{enumerate}[label=(\roman*)]
+  \item $f$ est plat.
+  \item $X$ et $X'$ sont des préschémas localement noethériens et l'on a $f(\operatorname{Ass}(\sh{O}_{X'}))\subset\operatorname{Ass}(\sh{O}_X)$.
+  \item $X$ et $X'$ sont des préschémas, l'ensemble des composantes irréductibles de $X$ est localement fini, $X'$ est réduit et toute composante irréductible de $X'$ domine une composante irréductible de $X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Il suffit en effet de montrer que dans les trois cas on a $\sh{M}_f=\sh{M}_X$;
+dans le cas (i), cela résulte de \sref{IV.20.1.12}.
+Dans le cas (iii), on peut se borner au cas où $X=\operatorname{Spec}(A)$ et $X'=\operatorname{Spec}(A')$ sont affines;
+si $s\in A$ est régulier, il n'appartient à aucun idéal premier minimal de $A$ \sref{IV.20.1.3.1}, donc l'hypothèse entraîne que son image dans $A'$ n'appartient à aucun idéal premier minimal de $A'$, et est par suite un élément régulier de $A'$ \sref{IV.20.1.3.1}.
+Dans le cas (ii) les fonctions méromorphes sur $X'$ s'identifient aux pseudo-fonctions sur $X'$ \sref{IV.20.2.11}, et l'hypothèse, jointe à \sref{IV.20.2.13},~(iv), assure que l'image réciproque
