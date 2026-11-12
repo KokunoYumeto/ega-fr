@@ -18,11 +18,11 @@ préschémas considérés, le fait que l'ensemble des points fermés soit partou
 dense (et même «~très dense~» (10.1.3)) permet de ne considérer que ces points
 dans beaucoup de démonstrations~; on rejoint ainsi le point de vue classique
 des «~variétés algébriques~» qui, de notre point de vue, sont les ensembles
-de points fermés des \emph{préschémas algébriques sur un corps}, et on fait le
+de points fermés des \emph{préschémas algébriques} sur un corps, et on fait le
 lien entre le langage des schémas et celui des «~variétés~» ou «~espaces
 algébriques~» de Serre (10.9 et 10.10).
 
-\subsection{Parties très denses d'un espace topologique}
+\subsection{Parties très denses d'un espace topologique.}
 \label{subsection:IV.10.1-fr}
 
 \begin{env}[10.1.1]
@@ -34,7 +34,7 @@ quasi-constructible} si pour tout $x\in X$, il existe un voisinage ouvert $V$
 de $x$ tel que $T\cap V$ soit quasi-constructible dans $V$. Il est clair que
 toute partie quasi-constructible de $X$ est localement quasi-constructible~:
 la réciproque est vraie si $X$ est quasi-compact. Le raisonnement de
-($\mathbf 0_{\mathrm{III}}$, 9.1.3), où l'on supprime le mot
+($\mathbf 0_{\mathrm{III}}$, 9.1.3), où on supprime le mot
 «~rétrocompact~», montre que l'ensemble des parties quasi-constructibles
 (resp. localement quasi-constructibles) de $X$, que nous désignerons par
 $\mathfrak{Qc}(X)$ (resp. $\mathfrak{Lqc}(X)$) est stable par réunion finie,
@@ -68,24 +68,24 @@ suivantes sont équivalentes~:
   \item Pour toute partie $Z\neq\varnothing$ de $X$ localement
   quasi-constructible, on a $Z\cap X_0\neq\varnothing$.
   \item[\emph{b$'$)}] Pour toute partie localement quasi-constructible $Z$ de
-  $X$, on a $Z\subset\overline{Z\cap X_0}$ (autrement dit $Z\cap X_0$ est
-  \emph{dense} dans $Z$).
-  \item L'application $U\mapsto U\cap X_0$ de $\mathfrak O(X)$ dans
-  $\mathfrak O(X_0)$ est injective (donc bijective).
-  \item[\emph{c$'$)}] L'application $F\mapsto F\cap X_0$ de $\mathfrak F(X)$
-  dans $\mathfrak F(X_0)$ est injective (donc bijective).
-  \item[\emph{c$''$)}] L'application $Z\mapsto Z\cap X_0$ de
-  $\mathfrak{Qc}(X)$ dans $\mathfrak{Qc}(X_0)$ est injective (donc bijective).
-  \item[\emph{c$'''$)}] L'application $Z\mapsto Z\cap X_0$ de
+  $X$, on a $Z\subset\overline{Z\cap X_0}$ \textup{(autrement dit $Z\cap X_0$ est
+  \emph{dense} dans $Z$)}.
+  \item L'application $U\leadsto U\cap X_0$ de $\mathfrak O(X)$ dans
+  $\mathfrak O(X_0)$ est injective \textup{(donc \emph{bijective})}.
+  \item[\emph{c$'$)}] L'application $F\leadsto F\cap X_0$ de $\mathfrak F(X)$
+  dans $\mathfrak F(X_0)$ est injective \textup{(donc \emph{bijective})}.
+  \item[\emph{c$''$)}] L'application $Z\leadsto Z\cap X_0$ de
+  $\mathfrak{Qc}(X)$ dans $\mathfrak{Qc}(X_0)$ est injective \textup{(donc \emph{bijective})}.
+  \item[\emph{c$'''$)}] L'application $Z\leadsto Z\cap X_0$ de
   $\mathfrak{Lqc}(X)$ dans $\mathfrak{Lqc}(X_0)$ est injective.
 \end{enumerate}
 En outre, lorsque ces conditions sont vérifiées, l'application
-$Z\mapsto Z\cap X_0$ de $\mathfrak{Lqc}(X)$ dans $\mathfrak{Lqc}(X_0)$ est
+$Z\leadsto Z\cap X_0$ de $\mathfrak{Lqc}(X)$ dans $\mathfrak{Lqc}(X_0)$ est
 bijective.
 \end{proposition}
 
 Notons que les assertions de surjectivité dans \emph{c)} et \emph{c$'$)} sont
-triviales~: elles entraînent que toute partie localement fermée dans $X_0$ est
+triviales~; elles entraînent que toute partie localement fermée dans $X_0$ est
 trace sur $X_0$ d'une partie localement fermée dans $X$, donc l'application
 $\mathfrak{Qc}(X)\to\mathfrak{Qc}(X_0)$ définie dans \emph{c$''$)} est aussi
 surjective.
@@ -110,8 +110,8 @@ Pour voir que \emph{b)} entraîne \emph{b$'$)}, il suffit d'appliquer
 $Z$. Comme $\overline{Z\cap X_0}\subset\overline{Z}$, il est trivial
 que \emph{b$'$)} implique \emph{a$'$)}. Pour montrer que \emph{a$'$)} entraîne
 \emph{a)}, remarquons que si $Z$ est localement fermée dans $X$, on peut
-écrire $Z=F-F'$ où $F$ et $F'$ sont fermés dans $X$ et $F'\subset F$~; d'où
-$Z\cap X_0=(F\cap X_0)-(F'\cap X_0)$. Si l'on avait
+écrire $Z=F\setmin F'$ où $F$ et $F'$ sont fermés dans $X$ et $F'\subset F$~; d'où
+$Z\cap X_0=(F\cap X_0)\setmin(F'\cap X_0)$. Si l'on avait
 $Z\cap X_0=\varnothing$, on en déduirait $F\cap X_0=F'\cap X_0$, donc
 $F=F'$ en vertu de \emph{a$'$)}, c'est-à-dire $Z=\varnothing$.
 
@@ -119,29 +119,28 @@ Pour voir que \emph{a)} entraîne \emph{c$'''$)}, il suffit de montrer que si
 $Z\neq\varnothing$ est localement quasi-constructible, on a
 $Z\cap X_0\neq\varnothing$~: en effet, la relation
 $Z'\cap X_0=Z''\cap X_0$ est équivalente à
-$((Z'\cup Z'')-(Z'\cap Z''))\cap X_0=\varnothing$. Autrement dit, il suffit de
+$((Z'\cup Z'')\setmin(Z'\cap Z''))\cap X_0=\varnothing$. Autrement dit, il suffit de
 prouver que \emph{a)} entraîne \emph{b)}~; en outre, remplaçant $X$ et $X_0$
 par un ouvert $U$ de $X$ et par $U\cap X_0$ respectivement, on est bien
-ramené au cas où $Z$ est localement fermée dans $X$, d'où la conclusion.
+ramené au cas où $Z$ est localement fermé dans $X$, d'où la conclusion.
 
 Reste à montrer que l'application
 $\mathfrak{Lqc}(X)\to\mathfrak{Lqc}(X_0)$ est surjective. Soit donc $Z_0$ une
 partie localement quasi-constructible de $X_0$~: il y a un recouvrement
 $(V_\alpha)$ de $X_0$ par des ouverts de $X_0$ tel que $Z_0\cap V_\alpha$ soit
 quasi-constructible dans $V_\alpha$ (et
-\oldpage[IV-3]{97}
 donc aussi dans $X_0$). En vertu de \emph{c)}, il y a pour tout $\alpha$ un
-seul ouvert $U_\alpha$ de $X$ tel que $X_0\cap U_\alpha=V_\alpha$, et en
+seul ouvert $U_\alpha$ de $X$
+\oldpage[IV-3]{97}
+tel que $X_0\cap U_\alpha=V_\alpha$, et en
 vertu de \emph{c$''$)} un seul ensemble quasi-constructible $Z_\alpha$ dans
 $X$ tel que $Z_0\cap V_\alpha=X_0\cap Z_\alpha$. Si $\alpha$ et $\beta$ sont
 deux indices quelconques, on a
-\[
-Z_\beta\cap U_\alpha\cap X_0
+$Z_\beta\cap U_\alpha\cap X_0
 =U_\alpha\cap Z_0\cap V_\beta
 =V_\alpha\cap Z_0\cap V_\beta
 =Z_\alpha\cap X_0\cap V_\beta
-\subset Z_\alpha\cap X_0~;
-\]
+\subset Z_\alpha\cap X_0$~;
 comme $Z_\beta\cap U_\alpha$ et $Z_\alpha$ sont quasi-constructibles dans
 $X$, il résulte de \emph{c$''$)} que
 $Z_\beta\cap U_\alpha\subset Z_\alpha$. Si l'on pose
@@ -153,7 +152,7 @@ localement quasi-constructible dans $X$ et $Z_0=Z\cap X_0$.
 \begin{definition}[10.1.3]
 \label{IV.10.1.3-fr}
 Lorsqu'une partie $X_0$ d'un espace topologique vérifie les conditions
-équivalentes de (10.1.2), on dit que $X_0$ est \emph{très dense} dans $X$.
+équivalentes de \textup{(10.1.2)}, on dit que $X_0$ est très dense dans $X$.
 \end{definition}
 
 On a déjà vu au cours de la démonstration de (10.1.2) que $X_0$ est alors
@@ -173,7 +172,7 @@ même de la seconde, car si $Z\neq\varnothing$ est localement fermée dans $X$,
 $Z\cap U_\alpha$ est localement fermée dans $U_\alpha$ pour tout $\alpha$,
 et $Z\cap U_\alpha\neq\varnothing$ pour un $\alpha$ au moins.
 
-\subsection{Quasi-homéomorphismes}
+\subsection{Quasi-homéomorphismes.}
 \label{subsection:IV.10.2-fr}
 
 \begin{proposition}[10.2.1]
@@ -181,15 +180,15 @@ et $Z\cap U_\alpha\neq\varnothing$ pour un $\alpha$ au moins.
 Soient $X_0$, $X$ deux espaces topologiques, $f:X_0\to X$ une application
 continue. Les conditions suivantes sont équivalentes~:
 \begin{enumerate}[label=\emph{\alph*)}]
-  \item L'application $U\mapsto f^{-1}(U)$ de $\mathfrak O(X)$ dans
+  \item L'application $U\leadsto f^{-1}(U)$ de $\mathfrak O(X)$ dans
   $\mathfrak O(X_0)$ est bijective.
-  \item[\emph{a$'$)}] L'application $F\mapsto f^{-1}(F)$ de $\mathfrak F(X)$
+  \item[\emph{a$'$)}] L'application $F\leadsto f^{-1}(F)$ de $\mathfrak F(X)$
   dans $\mathfrak F(X_0)$ est bijective.
   \item La topologie de $X_0$ est image réciproque par $f$ de celle de $X$, et
-  $f(X_0)$ est très dense (10.1.3) dans $X$.
-  \item Le foncteur $\mathcal F\mapsto f^*(\mathcal F)$ de la catégorie des
-  faisceaux d'ensembles (resp. des faisceaux de groupes abéliens) sur $X$ dans
-  la catégorie des faisceaux d'ensembles (resp. des faisceaux de groupes
+  $f(X_0)$ est très dense \textup{(10.1.3)} dans $X$.
+  \item Le foncteur $\mathcal F\leadsto f^*(\mathcal F)$ de la catégorie des
+  faisceaux d'ensembles (\textup{resp.} des faisceaux de groupes abéliens) sur $X$ dans
+  la catégorie des faisceaux d'ensembles (\textup{resp.} des faisceaux de groupes
   abéliens) sur $X_0$ est une équivalence de catégories.
 \end{enumerate}
 \end{proposition}
@@ -201,9 +200,9 @@ ouverts distincts $U_1$, $U_2$ de $X$ tels que
 $U_1\cap f(X_0)=U_2\cap f(X_0)$, et par suite
 $f^{-1}(U_1)=f^{-1}(U_2)$, ce qui achève de montrer que \emph{a)} entraîne
 \emph{b)}. Inversement, la condition \emph{b)} implique que les applications
-$U\mapsto U\cap f(X_0)$ de $\mathfrak O(X)$ dans $\mathfrak O(f(X_0))$ et
-$V\mapsto f^{-1}(V)$ de $\mathfrak O(f(X_0))$ dans $\mathfrak O(X_0)$ sont
-bijectives, donc il en est de même de leur composée $U\mapsto f^{-1}(U)$.
+$U\leadsto U\cap f(X_0)$ de $\mathfrak O(X)$ dans $\mathfrak O(f(X_0))$ et
+$V\leadsto f^{-1}(V)$ de $\mathfrak O(f(X_0))$ dans $\mathfrak O(X_0)$ sont
+bijectives, donc il en est de même de leur composée $U\leadsto f^{-1}(U)$.
 
 Pour voir que \emph{a)} entraîne \emph{c)}, il suffit d'appliquer la définition
 de $f^*(\mathcal F)$ ($\mathbf 0_{\mathrm I}$, 3.7.1) et les axiomes des
@@ -238,9 +237,7 @@ en supposant \emph{c)} vérifiée pour les catégories de faisceaux de groupes
 abéliens sur $X$ et $X_0$. Or, si $\mathbf Z_X$ désigne le faisceau simple sur
 $X$ associé au préfaisceau constant égal à $\mathbf Z$, on a un isomorphisme
 canonique
-\[
-\Gamma(X,\mathcal F)\xrightarrow{\sim}\operatorname{Hom}(\mathbf Z_X,\mathcal F)
-\]
+$\Gamma(X,\mathcal F)\xrightarrow{\sim}\operatorname{Hom}(\mathbf Z_X,\mathcal F)$
 fonctoriel en $\mathcal F$ (même raisonnement que dans
 ($\mathbf 0_{\mathrm I}$, 5.1.1))~; comme il est clair par définition
 ($\mathbf 0_{\mathrm I}$, 3.7.1) que $f^*(\mathbf Z_X)=\mathbf Z_{X_0}$,
@@ -265,7 +262,7 @@ $s_x\neq0_x$, et $y$ est fermé dans $X$. C.Q.F.D.
 \begin{definition}[10.2.2]
 \label{IV.10.2.2-fr}
 Lorsqu'une application continue $f:X_0\to X$ vérifie les conditions
-équivalentes de (10.2.1), on dit que $f$ est un \emph{quasi-homéomorphisme} de
+équivalentes de \textup{(10.2.1)}, on dit que $f$ est un quasi-homéomorphisme de
 $X_0$ dans $X$.
 \end{definition}
 
@@ -293,7 +290,7 @@ $Y'$ par celle de $Y$. D'autre part,
 \oldpage[IV-3]{99}
 soit $Z\neq\varnothing$ une partie fermée \emph{dans} $Y'$, et $z\in Z$~; il
 y a un voisinage ouvert $U$ de $z$ dans $Y$ tel que $U\cap Y'$ soit réunion
-d'un nombre fini de parties $Y'_j$ fermées dans $U$~; si $j$ est un indice tel
+d'un nombre fini de parties $Y'_i$ fermées \emph{dans} $U$~; si $j$ est un indice tel
 que $z\in Y'_j$, $Z\cap Y'_j$ est donc fermé dans $U$. Puisque $f(X)\cap U$
 est très dense dans $U$ (10.1.4), $Z\cap Y'_j\cap f(X)$ n'est pas vide
 (10.1.2, \emph{a)}), ni \emph{a fortiori} $Z\cap f(X)$~; mais comme
@@ -315,8 +312,8 @@ Cela résulte aussitôt du critère (10.2.1, \emph{b)}) et de (10.1.4).
 \label{IV.10.2.6-fr}
 Soient $f:X\to Y$ un quasi-homéomorphisme, $Y'$ une partie localement
 quasi-constructible de $Y$, $X'=f^{-1}(Y')$. Pour que $Y'$ soit quasi-compact
-(resp. noethérien, resp. rétrocompact dans $Y$), il faut et il suffit que $X'$
-soit quasi-compact (resp. noethérien, resp. rétrocompact dans $X$).
+(\textup{resp.} noethérien, \textup{resp.} rétrocompact dans $Y$), il faut et il suffit que $X'$
+soit quasi-compact (\textup{resp.} noethérien, \textup{resp.} rétrocompact dans $X$).
 \end{corollary}
 
 Démontrons d'abord les deux premières assertions~; en vertu de (10.2.4), on
@@ -325,7 +322,7 @@ noethérien) signifie que pour toute famille filtrante croissante $(U_\alpha)$
 dans $\mathfrak O(X)$ ayant $X$ pour plus grand élément (resp. pour toute
 famille filtrante croissante $(U_\alpha)$ dans $\mathfrak O(X)$), il existe
 $\gamma$ tel que $U_\alpha=U_\gamma$ pour $\alpha\geq\gamma$. Comme
-$U\mapsto f^{-1}(U)$ est une bijection de $\mathfrak O(Y)$ sur
+$U\leadsto f^{-1}(U)$ est une bijection de $\mathfrak O(Y)$ sur
 $\mathfrak O(X)$, notre assertion résulte aussitôt de la remarque précédente.
 
 Les ouverts quasi-compacts de $X$ sont donc les ensembles de la forme
@@ -340,8 +337,8 @@ ouvert quasi-compact $U$, c'est-à-dire que $Y'$ est rétrocompact dans $Y$.
 \begin{proposition}[10.2.7]
 \label{IV.10.2.7-fr}
 Soit $f:X\to Y$ un quasi-homéomorphisme. Alors l'application
-$Z\mapsto f^{-1}(Z)$ de $\mathfrak P(Y)$ dans $\mathfrak P(X)$ définit par
-restriction les bijections suivantes (cf. (10.1.1) pour les notations)~:
+$Z\leadsto f^{-1}(Z)$ de $\mathfrak P(Y)$ dans $\mathfrak P(X)$ définit par
+restriction les bijections suivantes \textup{(cf. (10.1.1) pour les notations)}~:
 \[
 \begin{gathered}
 \mathfrak O(Y)\xrightarrow{\sim}\mathfrak O(X)\\
@@ -355,10 +352,11 @@ restriction les bijections suivantes (cf. (10.1.1) pour les notations)~:
 \]
 \end{proposition}
 
-\oldpage[IV-3]{100}
 Pour les deux premières, ce n'est autre que la définition (10.2.2)~; comme la
 topologie de $X$ est l'image réciproque par $f$ de celle de $f(X)$ les cinq
-dernières applications, où l'on remplace $Y$ par $f(X)$, sont bijectives. On
+dernières appli%
+\oldpage[IV-3]{100}
+cations, où l'on remplace $Y$ par $f(X)$, sont bijectives. On
 peut donc (par (10.2.1, \emph{b)})) se borner au cas où $X$ est un sous-espace
 très dense de $Y$, et le fait que les applications
 $\mathfrak{Lf}(Y)\to\mathfrak{Lf}(X)$,
@@ -396,10 +394,7 @@ sont \emph{bijectifs} pour tout $i$.
 
 (ii) Si $f:X\to Y$ est une application continue et $\mathcal F$,
 $\mathcal G$ deux faisceaux de groupes abéliens sur $Y$, on a
-\[
-f^*(\mathcal F\otimes_{\mathbf Z_Y}\mathcal G)
-=f^*(\mathcal F)\otimes_{\mathbf Z_X}f^*(\mathcal G)
-\]
+$f^*(\mathcal F\otimes_{\mathbf Z_Y}\mathcal G)=f^*(\mathcal F)\otimes_{\mathbf Z_X}f^*(\mathcal G)$
 à un isomorphisme canonique près ($\mathbf 0_{\mathrm I}$, 4.3.3). On en
 conclut que si $f$ est un quasi-homéomorphisme, $f^*$ est encore une
 \emph{équivalence} de la catégorie des faisceaux d'anneaux sur $Y$, et de la
@@ -418,7 +413,7 @@ $(Y,\mathcal O_Y)$, l'espace $X$ et le quasi-homéomorphisme $\psi$ (que l'on
 peut prendre arbitraire). Lorsque $f$ est un quasi-isomorphisme d'espaces
 annelés, le foncteur
 \[
-\mathcal F\mapsto f^*(\mathcal F)
+\mathcal F\leadsto f^*(\mathcal F)
 \]
 est une \emph{équivalence} de la catégorie des $\mathcal O_Y$-Modules et de
 celle des $\mathcal O_X$-Modules, puisque $f^*(\mathcal F)$ s'identifie
@@ -435,15 +430,15 @@ l'espace annelé $X$, sont équivalentes.
 \end{remarks}
 
 \oldpage[IV-3]{101}
-\subsection{Espaces de Jacobson}
+\subsection{Espaces de Jacobson.}
 \label{subsection:IV.10.3-fr}
 
 \begin{definition}[10.3.1]
 \label{IV.10.3.1-fr}
-On dit qu'un espace topologique $X$ est un \emph{espace de Jacobson} si
-l'ensemble $X_0$ des points fermés de $X$ est très dense dans $X$ (autrement
-dit, si l'injection canonique $X_0\to X$ est un
-quasi-homéomorphisme).
+On dit qu'un espace topologique $X$ est un espace de Jacobson si
+l'ensemble $X_0$ des points fermés de $X$ est très dense dans $X$ \textup{(autrement
+dit, si l'injection canonique $X_0\to X$ est un}
+quasi-homéomorphisme\textup{)}.
 \end{definition}
 
 Cela signifie donc (10.1.2) que toute partie localement fermée (ou seulement
@@ -485,14 +480,14 @@ contiennent~; mais $U_\alpha\cap U_\beta$ est ouvert dans $U_\alpha$, donc $x$
 est fermé dans $U_\alpha\cap U_\beta$, et en vertu de (10.3.2), $x$ est aussi
 fermé dans $U_\beta$, ce qui achève la démonstration.
 
-\subsection{Préschémas de Jacobson et anneaux de Jacobson}
+\subsection{Préschémas de Jacobson et anneaux de Jacobson.}
 \EGAReaderTarget{ega4.c04.subsec.10-4}{subsection:IV.10.4-fr}
 
 \begin{definition}[10.4.1]
 \label{IV.10.4.1-fr}
-On dit qu'un préschéma $X$ est un \emph{préschéma de Jacobson} si l'espace
+On dit qu'un préschéma $X$ est un préschéma de Jacobson si l'espace
 topologique $X$ sous-jacent est un espace de Jacobson. On dit qu'un anneau
-$A$ est un \emph{anneau de Jacobson} si $\operatorname{Spec}(A)$ est un
+$A$ est un anneau de Jacobson si $\operatorname{Spec}(A)$ est un
 préschéma de Jacobson.
 \end{definition}
 
@@ -576,7 +571,7 @@ lemme suivant~:
 Soit $X$ un espace topologique ayant la propriété suivante~: pour toute partie
 localement fermée $Z\neq\varnothing$ de $X$, il existe une partie $Z'$ de $Z$,
 localement fermée dans $X$ (ou dans $Z$, ce qui revient au même), et un point
-$x\in Z'$, fermé dans $Z'$. Alors, pour que $X$ soit un espace de Jacobson, il
+$x\in Z'$, fermé \textup{dans} $Z'$. Alors, pour que $X$ soit un espace de Jacobson, il
 faut et il suffit qu'aucun point non fermé $x$ de $X$ ne soit isolé dans
 $\overline{\{x\}}$.
 \end{lemma}
@@ -590,7 +585,6 @@ de Jacobson. Inversement, supposons vérifiée la condition de l'énoncé~; alor
 l'ensemble des points fermés de $X$ est identique à l'ensemble $X_0$ des
 $x\in X$ qui sont isolés dans $\overline{\{x\}}$~; mais il résulte de
 (5.1.10.1) que
-
 \oldpage[IV-3]{103}
 cet ensemble est \emph{très dense} dans $X$, donc $X$ est un espace de
 Jacobson par définition.
@@ -647,9 +641,8 @@ questions de Géométrie algébrique (8.1.2, \emph{c)}). Nous allons en donner
 deux exemples~:
 \end{env}
 
-\begin{env}[10.4.10]
-\label{IV.10.4.10-fr}
-\textbf{Applications (10.4.10)~: I~: Démonstration de (6.15.9).} --- Soient
+\par\medskip\noindent\label{IV.10.4.10-fr}%
+\emph{Applications} \textbf{(10.4.10)}~: I~: \emph{Démonstration de} (6.15.9). --- Soient
 $k$ un corps séparablement clos, $X$ un $k$-préschéma localement de type fini
 sur $k$ et \emph{unibranche}. On sait que la fermeture intégrale d'une
 $k$-algèbre intègre de type fini $A$ dans une extension finie de son corps des
@@ -662,21 +655,20 @@ contient tous les points \emph{fermés} de $X$. La conclusion résulte donc de
 (10.4.6), (10.3.1) et de la bijectivité de l'application canonique
 $\mathfrak{Lc}(X)\to\mathfrak{Lc}(X_0)$ (où $X_0$ est l'ensemble des points
 fermés de $X$) (10.2.7).
-\end{env}
+\par
 
-\begin{env}[10.4.11]
-\EGAReaderTarget{ega4.c04.statement.10-4-11}{IV.10.4.11-fr}
-\textbf{Applications~: II~: Proposition (10.4.11).} --- Soient $S$ un
+\par\medskip\noindent\EGAReaderTarget{ega4.c04.statement.10-4-11}{IV.10.4.11-fr}%
+\emph{Applications}~: II~: \emph{Proposition} \textbf{(10.4.11)}. --- \emph{Soient $S$ un
 préschéma, $X$ un $S$-préschéma de type fini. Tout $S$-endomorphisme de $X$
-qui est radiciel est surjectif (donc bijectif).
-\end{env}
+qui est radiciel est surjectif} (donc \emph{bijectif}).
+\par
 
 \oldpage[IV-3]{104}
 Soient $f:X\to S$ le morphisme structural, $g:X\to X$ le $S$-endomorphisme
 considéré et, pour tout $s\in S$, soit $g_s$ le morphisme déduit de $g$ par le
-changement de base $\operatorname{Spec}(k(s))\to S$, qui est un
-$k(s)$-endomorphisme de la fibre
-$f^{-1}(s)=X\times_S\operatorname{Spec}(k(s))$.
+changement de base $\operatorname{Spec}(\boldsymbol{k}(s))\to S$, qui est un
+$\boldsymbol{k}(s)$-endomorphisme de la fibre
+$f^{-1}(s)=X\times_S\operatorname{Spec}(\boldsymbol{k}(s))$.
 
 Pour prouver que $g$ est surjectif, il suffit de prouver que $g_s$ est
 surjectif pour tout $s\in S$, donc on peut (en vertu de (\textbf{I}, 3.5.7))
@@ -685,18 +677,18 @@ auquel cas $f$ est un morphisme de présentation finie, puisque $S$ est
 noethérien. Appliquant (8.9.1) et (8.10.5, (vii)), on est ramené au cas où
 $S=\operatorname{Spec}(A)$, où $A$ est une sous-$\mathbf Z$-algèbre de type
 fini de $k$. Or $X$ est alors un préschéma de Jacobson (10.4.7), et $g(X)$ est
-constructible dans $X$ (\textbf{I}, 1.8.5), donc, pour prouver que $g(X)=X$,
+constructible dans $X$ (1.8.5), donc, pour prouver que $g(X)=X$,
 il suffit de montrer que $g(X)$ contient tous les points \emph{fermés} de $X$
 (10.3.1).
 
 \begin{lemma}[10.4.11.1]
 \label{IV.10.4.11.1-fr}
 Soit $Y$ un $\mathbf Z$-préschéma de type fini.
-\begin{enumerate}[label=(\roman*)]
+\begin{enumerate}[label=\textup{(\roman*)}]
   \item Pour qu'un point $y\in Y$ soit fermé dans $Y$, il faut et il suffit
-  que $k(y)$ soit un corps fini.
+  que $\boldsymbol{k}(y)$ soit un corps fini.
   \item Pour tout nombre premier $p$ et tout entier $d\geq1$, l'ensemble des
-  points $y\in Y$ tels que $k(y)$ soit une extension de $\mathbf F_p$ dont le
+  points $y\in Y$ tels que $\boldsymbol{k}(y)$ soit une extension de $\mathbf F_p$ dont le
   degré divise $d$ est fini.
 \end{enumerate}
 \end{lemma}
@@ -707,18 +699,18 @@ un nombre premier, et de (\textbf{I}, 6.4.2). D'autre part, comme $Y$ est
 réunion finie d'ouverts affines de type fini sur $\mathbf Z$, on peut se
 borner pour prouver (ii) au cas où $Y=\operatorname{Spec}(C)$, où $C$ est une
 $\mathbf Z$-algèbre de type fini. Or, les points $y\in Y$ tels que le degré de
-$k(y)$ sur $\mathbf F_p$ divise $d$ correspondent biunivoquement aux
+$\boldsymbol{k}(y)$ sur $\mathbf F_p$ divise $d$ correspondent biunivoquement aux
 homomorphismes $C\to\mathbf F_{p^d}$~; mais si $(t_i)$ est un système de
 générateurs de la $\mathbf Z$-algèbre $C$, tout homomorphisme de $C$ est
 déterminé par ses valeurs aux éléments $t_i$, et par suite il n'y a qu'un
 nombre fini d'homomorphismes de $C$ dans un corps fini.
 
 Cela étant, $X$ est un $\mathbf Z$-préschéma de type fini~; soit $T_{p,d}$
-l'ensemble des points fermés $z\in X$ tels que $k(z)$ soit une extension de
+l'ensemble des points fermés $z\in X$ tels que $\boldsymbol{k}(z)$ soit une extension de
 $\mathbf F_p$ de degré divisant $d$~; il résulte de (10.4.11.1) que l'ensemble
 $T_{p,d}$ est fini et que l'ensemble des points fermés de $X$ est réunion des
 $T_{p,d}$. En outre, si $z\in T_{p,d}$ et si $h$ est un endomorphisme
-quelconque de $X$, $k(h(z))$ est isomorphe à un sous-corps de $k(z)$, donc
+quelconque de $X$, $\boldsymbol{k}(h(z))$ est isomorphe à un sous-corps de $\boldsymbol{k}(z)$, donc
 $h(z)\in T_{p,d}$, autrement dit $T_{p,d}$ est \emph{stable} par tout
 endomorphisme de $X$. Comme $g$ est par hypothèse injectif, sa restriction à
 $T_{p,d}$ est \emph{bijective} puisque $T_{p,d}$ est fini, ce qui achève de
@@ -729,24 +721,23 @@ $X$ est un $S$-préschéma de présentation finie, d'autre part que $g$ est un
 monomorphisme, alors on peut affirmer que $g$ est un \emph{automorphisme} de
 $X$.
 
-\subsection{Préschémas de Jacobson noethériens}
+\subsection{Préschémas de Jacobson noethériens.}
 \label{subsection:IV.10.5-fr}
 
 \begin{proposition}[10.5.1]
 \label{IV.10.5.1-fr}
 Soit $B$ un anneau intègre noethérien. Les conditions équivalentes \emph{a)} à
-\emph{d)} de (10.4.4) sont alors aussi équivalentes aux suivantes~:
-\begin{enumerate}[label=\emph{\alph*)}]
+\emph{d)} de \textup{(10.4.4)} sont alors aussi équivalentes aux suivantes~:
+\begin{enumerate}[label=\alph*)]
   \setcounter{enumi}{4}
   \item $\operatorname{Spec}(B)$ est fini.
   \item $B$ est un anneau semi-local de dimension $\leq1$.
 \end{enumerate}
 \end{proposition}
 
-Il résulte en effet du théorème d'Artin--Tate ($\mathbf 0$, 16.3.3) que les
+Il résulte en effet du théorème d'Artin-Tate ($\mathbf 0$, 16.3.3) que les
 conditions \emph{a)} et \emph{f)} sont équivalentes. La condition \emph{f)}
 implique que $\operatorname{Spec}(B)$ est réunion de l'ensemble
-
 \oldpage[IV-3]{105}
 fini de ses points fermés et de son point générique, donc \emph{f)} implique
 \emph{e)} sans supposer $A$ noethérien. Enfin \emph{e)} implique \emph{d)} sans
@@ -799,7 +790,7 @@ $3$ points.
 \begin{proposition}[10.5.5]
 \label{IV.10.5.5-fr}
 Soit $X$ un préschéma noethérien.
-\begin{enumerate}[label=(\roman*)]
+\begin{enumerate}[label=\textup{(\roman*)}]
   \item L'ensemble $X_0$ des points $x\in X$ tels que $\overline{\{x\}}$ soit
   fini est très dense dans $X$.
   \item Pour que $X$ soit un préschéma de Jacobson, il faut et il suffit qu'il
@@ -816,7 +807,7 @@ l'assertion (ii), remarquons que pour qu'un point non fermé $x$ de $X$
 appartienne à $X_0$, il faut et il suffit que le sous-préschéma fermé intègre
 $Y$ de $X$ ayant $\overline{\{x\}}$ pour espace sous-jacent soit de dimension
 $1$ et fini, donc réunion finie de sous-préschémas ouverts (dans $Y$) affines
-$U_i$ qui sont des spectres d'anneaux semi-locaux intègres de dimension $1$.
+$U_i$ qui sont des spectres d'anneau semi-locaux intègres de dimension $1$.
 Inversement, s'il y a un sous-préschéma $Z$ de $X$ qui soit spectre d'un anneau
 semi-local intègre de dimension $1$, $Z$ n'est pas un préschéma de Jacobson
 (10.5.2), donc il en est de même de $X$ (10.3.2).
@@ -838,18 +829,18 @@ semi-local intègre de dimension $1$. On conclut à l'aide de (10.3.3).
 \label{IV.10.5.7-fr}
 Soient $X$ un préschéma localement noethérien, $Y$ une partie fermée de $X$
 telle que toute partie fermée non vide de $X$ rencontre $Y$. Alors le
-préschéma induit sur l'ouvert $X-Y$ est un préschéma de Jacobson.
+préschéma induit sur l'ouvert $X\setmin Y$ est un préschéma de Jacobson.
 \end{proposition}
 
 Appliquons le critère (10.5.5, (ii)), et supposons qu'il y ait un
-sous-préschéma $Z$ de $X-Y$ qui soit spectre d'un anneau semi-local intègre de
+sous-préschéma $Z$ de $X\setmin Y$ qui soit spectre d'un anneau semi-local intègre de
 dimension $1$, le point générique $z$ de $Z$ étant donc isolé dans $Z$ (ou
 dans l'adhérence $\overline Z$ de $Z$ dans $X$), et $Z$ étant distinct de
 $\{z\}$. Soit $y\neq z$ un point de $Z$~; comme il n'appartient pas à $Y$, il
 n'est pas fermé dans $X$, et son adhérence $\overline{\{y\}}$ dans $X$
 rencontre $Y$ en un point $x\neq y$ qui est donc spécialisation de $y$.
 L'existence de la chaîne
-$\{x\}\subset\overline{\{y\}}\subset\overline{\{z\}}$ montre alors que la
+$\overline{\{x\}}\subset\overline{\{y\}}\subset\overline{\{z\}}$ montre alors que la
 dimension de $\overline{\{z\}}$ serait $\geq2$, et il en serait de même de la
 dimension de $U\cap\overline{\{z\}}$, où $U$ est un voisinage ouvert affine
 (donc noethérien) de $x$ dans $X$. Or, cela contredit le fait que le point
@@ -860,7 +851,7 @@ $U\cap\overline{\{z\}}$ (10.5.3).
 \label{IV.10.5.8-fr}
 Soit $A$ un anneau noethérien~; pour tout élément $f$ du radical $\mathfrak R$
 de $A$, l'anneau $A_f$ est un anneau de Jacobson, et l'ouvert
-$\operatorname{Spec}(A)-V(\mathfrak R)$ est un schéma de Jacobson.
+$\operatorname{Spec}(A)\setmin V(\mathfrak R)$ est un schéma de Jacobson.
 \end{corollary}
 
 Si $X=\operatorname{Spec}(A)$, $Y=V(\mathfrak J)$, où $\mathfrak J$ est un
@@ -874,7 +865,7 @@ de (10.5.7).
 \begin{corollary}[10.5.9]
 \label{IV.10.5.9-fr}
 Soient $A$ un anneau local noethérien, $\mathfrak m$ son idéal maximal,
-$X=\operatorname{Spec}(A)$, $Y=X-\{\mathfrak m\}$~; alors $Y$ est un schéma de
+$X=\operatorname{Spec}(A)$, $Y=X\setmin\{\mathfrak m\}$~; alors $Y$ est un schéma de
 Jacobson, dont les points fermés sont les idéaux premiers
 $\mathfrak p\in\operatorname{Spec}(A)$ tels que $\dim(A/\mathfrak p)=1$.
 \end{corollary}
@@ -900,14 +891,13 @@ envisagés dans l'énoncé est réduite à $0$. Supposons d'abord que $A$ soit
 intègre et de dimension $1$~; en vertu du théorème de Nagata ($\mathbf 0$,
 23.1.5 et 23.1.6), la clôture intégrale $A'$ de $A$ est un anneau local
 complet intègre et
-
 \oldpage[IV-3]{107}
 intégralement clos et de dimension $1$ et une $A$-algèbre finie~; c'est donc
 un anneau de valuation discrète, et la proposition en résulte aussitôt dans
 ce cas.
 
 Passons au cas général~; soit $x$ le point fermé de
-$X=\operatorname{Spec}(A)$, et posons $Y=X-\{x\}$~; on sait (10.5.9) que $Y$
+$X=\operatorname{Spec}(A)$, et posons $Y=X\setmin\{x\}$~; on sait (10.5.9) que $Y$
 est un préschéma de Jacobson. Montrons que cela entraîne que l'intersection
 des idéaux premiers $\mathfrak p$ de $A$ tels que
 $\dim(A/\mathfrak p)=1$ est \emph{réduite à $0$}~; la proposition en résultera
@@ -918,7 +908,7 @@ discrète $V$, faisant de $V$ une $(A/\mathfrak p)$-algèbre finie, est réduite
 signifie que l'ensemble de ces idéaux est dense dans $X$, ou encore dans $Y$
 (puisque $Y$ est dense dans $X$), et cela résulte aussitôt de (10.5.9).
 
-\subsection{Dimension dans les préschémas de Jacobson}
+\subsection{Dimension dans les préschémas de Jacobson.}
 \label{subsection:IV.10.6-fr}
 
 Les résultats de ce numéro précisent dans certains cas et généralisent des résultats
@@ -928,21 +918,21 @@ du \S~5.
 \label{IV.10.6.1-fr}
 Soit $S$ un préschéma localement noethérien, vérifiant en outre les conditions
 suivantes~: $1^\circ$ $S$ est un préschéma de Jacobson~; $2^\circ$ pour tout
-$s\in S$, $\mathcal O_{S,s}$ est universellement caténaire (5.6.2)~; $3^\circ$ toute
-composante irréductible $S'$ de $S$ est équicodimensionnelle (autrement dit, pour
+$s\in S$, $\mathcal O_{S,s}$ est universellement caténaire \textup{(5.6.2)}~; $3^\circ$ toute
+composante irréductible $S'$ de $S$ est équicodimensionnelle \textup{(autrement dit, pour
 tout point fermé $s$ de $S'$ et tout sous-préschéma de $S$ ayant $S'$ pour espace
-sous-jacent, on a $\dim(S')=\dim(\mathcal O_{S',s})$). On a alors les propriétés
+sous-jacent, on a $\dim(S')=\dim(\mathcal O_{S',s})$)}. On a alors les propriétés
 suivantes~:
-\begin{enumerate}[label=(\roman*)]
+\begin{enumerate}[label=\textup{(\roman*)}]
   \item Pour tout morphisme localement de type fini $g:X\to S$, $X$ vérifie les
   conditions $1^\circ$, $2^\circ$ et $3^\circ$ précédentes. En particulier, si $X$
-  est équidimensionnel (par exemple si $X$ est irréductible), $X$ est
-  biéquidimensionnel (autrement dit, $X$ est caténaire et pour tout point fermé
-  $x$ de $X$, on a $\dim(\mathcal O_{X,x})=\dim(X)$ ($\mathbf 0$, 14.3.3)).
+  est équidimensionnel \textup{(par exemple si $X$ est \emph{irréductible})}, $X$ est
+  biéquidimensionnel \textup{(autrement dit, $X$ est caténaire et pour tout point fermé
+  $x$ de $X$, on a $\dim(\mathcal O_{X,x})=\dim(X)$ ($\mathbf 0$, 14.3.3))}.
   \item Soient $X$, $Y$ deux $S$-préschémas localement de type fini sur $S$,
   $f:X\to Y$ un $S$-morphisme~; on suppose $X$ irréductible et $f$ dominant. Si
-  $\xi$ (resp. $\eta$) est le point générique de $X$ (resp. $Y$) et
-  $e=\dim(f^{-1}(\eta))=\deg.\operatorname{tr}_{k(\eta)}k(\xi)$, on a
+  $\xi$ \textup{(resp. $\eta$)} est le point générique de $X$ \textup{(resp. $Y$)} et
+  $e=\dim(f^{-1}(\eta))=\deg.\operatorname{tr}_{\mathbf{k}(\eta)}\boldsymbol{k}(\xi)$, on a
   \begin{equation}
   \label{IV.10.6.1.1-fr}
   \tag{10.6.1.1}
@@ -950,14 +940,14 @@ suivantes~:
   \end{equation}
   \item Soient $X$, $Y$ deux $S$-préschémas localement de type fini sur $S$,
   $f:X\to Y$ un $S$-morphisme, $n$ un entier $\geq0$ tel que l'on ait
-  $\dim(f^{-1}(y))\geq n$ (resp. $\dim(f^{-1}(y))\leq n$) pour tout $y\in Y$.
+  $\dim(f^{-1}(y))\geq n$ \textup{(resp. $\dim(f^{-1}(y))\leq n$)} pour tout $y\in Y$.
   Alors on a
   \begin{equation}
   \label{IV.10.6.1.2-fr}
   \tag{10.6.1.2}
   \dim(X)\geq\dim(Y)+n
   \end{equation}
-  (resp.
+  \textup{(resp.}
   \begin{equation}
   \label{IV.10.6.1.3-fr}
   \tag{10.6.1.3}
@@ -970,7 +960,6 @@ suivantes~:
 $\mathcal O_{X,x}$ est anneau local d'une $\mathcal O_{S,g(x)}$-algèbre de type fini en
 un idéal premier, et l'homomorphisme
 $\mathcal O_{S,g(x)}\to\mathcal O_{X,x}$
-
 \oldpage[IV-3]{108}
 est local~; donc (5.6.3, (iv)) $\mathcal O_{X,x}$ est universellement caténaire. Pour
 démontrer que $X$ vérifie la condition $3^\circ$, considérons plusieurs cas~:
@@ -982,8 +971,8 @@ $\mathcal O_{S,s}$, est caténaire (5.6.1), donc les conditions $2^\circ$ et $3^
 entraînent que $S'$ est biéquidimensionnel ($\mathbf 0$, 14.3.3). En vertu de
 (5.1.2) et de ($\mathbf 0$, 14.3.3.2), on a donc
 \[
-  \dim(\mathcal O_{X,x})=\dim(\mathcal O_{S',x})-\dim(\mathcal O_{S',\xi})
-  =\dim(S')-\dim(\mathcal O_{S',\xi})
+  \dim(\mathcal O_{X,x})=\dim(\mathcal O_{S',x})\setmin\dim(\mathcal O_{S',\xi})
+  =\dim(S')\setmin\dim(\mathcal O_{S',\xi})
 \]
 ce qui prouve que $\dim(\mathcal O_{X,x})$ ne dépend pas du point fermé $x$
 considéré, d'où l'assertion dans ce cas (5.1.4).
@@ -1011,7 +1000,7 @@ ci-dessus, on peut ensuite remplacer $S$ par le sous-préschéma réduit ayant
 $\overline{g(X)}$ pour espace sous-jacent~; on est alors ramené au cas \emph{b)},
 et cela achève de démontrer (i).
 
-(ii) Le morphisme $f$ étant localement de type fini (\textbf{I}, 1.3.4), on peut
+(ii) Le morphisme $f$ étant localement de type fini (1.3.4), on peut
 appliquer les résultats de (i) en remplaçant $S$ par $Y$~; en outre, comme $X$
 est irréductible et $f$ dominant, on peut aussi remplacer $S$ par $Y$ dans
 (10.6.1.4), ce qui donne (10.6.1.1).
@@ -1026,14 +1015,14 @@ irréductible $X'$ de $X$ telle que $f(X')$ soit dense dans $Y'$ ($\mathbf 0_{\m
 2.1.8). Considérons les sous-préschémas réduits de $X$, $Y$ ayant respectivement
 pour espaces sous-jacents $X'$, $Y'$, et la restriction $X'\to Y'$ de $f$
 (\textbf{I}, 5.2.2)~; il résulte alors de (ii) que
-$\dim(X')\geq\dim(Y')+n$, et a fortiori $\dim(X)\geq\dim(Y')+n$~; ceci étant vrai
+$\dim(X')\geq\dim(Y')+n$, et \emph{a fortiori} $\dim(X)\geq\dim(Y')+n$~; ceci étant vrai
 pour toute composante irréductible $Y'$ de $Y$, on en conclut l'inégalité
 (10.6.1.2).
 
 \begin{corollary}[10.6.2]
 \label{IV.10.6.2-fr}
 Supposons que $X$ vérifie les conditions $1^\circ$, $2^\circ$ et $3^\circ$ de
-(10.6.1). Alors, pour tout ouvert $U$ dense dans $X$, on a
+\textup{(10.6.1)}. Alors, pour tout ouvert $U$ dense dans $X$, on a
 $\dim(U)=\dim(X)$.
 \end{corollary}
 
@@ -1046,16 +1035,16 @@ composante irréductible de $X$, donc $\dim(U)=\dim(X)$ en vertu de (10.6.1) et
 \begin{proposition}[10.6.3]
 \label{IV.10.6.3-fr}
 Supposons que $X$ vérifie les conditions $1^\circ$, $2^\circ$ et $3^\circ$ de
-(10.6.1), et soit $Y$ une partie fermée de $X$. Alors, pour tout $x\in Y$, et
+\textup{(10.6.1)}, et soit $Y$ une partie fermée de $X$. Alors, pour tout $x\in Y$, et
 tout voisinage ouvert $U$ de $x$ dans $X$ ne rencontrant pas les composantes
 irréductibles de $Y$ qui ne contiennent pas $x$, on a
 \begin{equation}
 \label{IV.10.6.3.1-fr}
 \tag{10.6.3.1}
-\dim_x(Y)=\dim(U\cap Y)=\dim(\overline{\{x\}})
+\dim_x(Y)=\dim(U\cap Y)=\dim\overline{\{x\}}
  +\operatorname{codim}(\overline{\{x\}},Y)=\sup_i\dim(Y_i)
 \end{equation}
-où $Y_i$ ($1\leq i\leq m$) sont les composantes irréductibles de $Y$ contenant
+où $Y_i$ \textup{(}$1\leq i\leq m$\textup{)} sont les composantes irréductibles de $Y$ contenant
 $x$.
 \end{proposition}
 
@@ -1064,7 +1053,7 @@ on peut se borner, en vertu de (10.6.1, (i)), au cas où $Y=X$. En vertu du choi
 de $U$, $U$ est réunion des $U\cap X_i$, donc
 $\dim(U)=\sup_i\dim(U\cap X_i)$~; mais d'après (10.6.2) appliqué à un
 sous-préschéma fermé de $X$ ayant $X_i$ pour espace sous-jacent, on a (compte
-tenu de (10.6.1, (i))) $\dim(U\cap X_i)=\dim(X_i)$~; cela démontre que le second
+tenu de (10.6.1, (i))), $\dim(U\cap X_i)=\dim(X_i)$~; cela démontre que le second
 et le quatrième terme de (10.6.3.1) sont égaux. Comme $U\cap X_i$ est
 biéquidimensionnel (10.6.1, (i)) (puisque l'immersion $U\cap X_i\to X_i$ est de
 type fini (\textbf{I}, 6.3.5)), on a
@@ -1091,12 +1080,12 @@ on obtient
   =\dim(\overline{\{x\}})+\operatorname{codim}(\overline{\{x\}},X)
 \]
 par définition de la codimension ($\mathbf 0$, 14.2.1). Ceci montre que $\dim(U)$
-est indépendante du voisinage ouvert $U$ de $x$ vérifiant les conditions de
+est \emph{indépendante} du voisinage ouvert $U$ de $x$ vérifiant les conditions de
 l'énoncé, donc est égal à $\dim_x(X)$, par ($\mathbf 0$, 14.1.4.1).
 
 \begin{corollary}[10.6.4]
 \label{IV.10.6.4-fr}
-Sous les hypothèses de (10.6.3), soient $\mathcal F$ un $\mathcal O_X$-Module cohérent,
+Sous les hypothèses de \textup{(10.6.3)}, soient $\mathcal F$ un $\mathcal O_X$-Module cohérent,
 $Y$ son support. Pour tout $x\in Y$, on a
 \begin{equation}
 \label{IV.10.6.4.1-fr}
@@ -1108,20 +1097,19 @@ $Y$ son support. Pour tout $x\in Y$, on a
 En effet, cela résulte de (10.6.3.1) et de la formule
 $\dim(\mathcal F_x)=\operatorname{codim}(\overline{\{x\}},Y)$ (5.1.12.2).
 
-\subsection{Exemples et contre-exemples}
+\subsection{Exemples et contre-exemples.}
 \label{subsection:IV.10.7-fr}
 
 \begin{env}[10.7.1]
 \label{IV.10.7.1-fr}
-Soit $S$ un préschéma localement noethérien de dimension $\leq1$ et supposons
-que $S$ soit un \emph{préschéma de Jacobson}~; lorsque $S$ est noethérien, il
+Soit $S$ un préschéma localement noethérien \emph{de dimension} $\leq1$ et supposons
+que $S$ soit un \emph{préschéma de Jacobson}~; lorsque $S$ est \emph{noethérien}, il
 revient au même de dire que les composantes irréductibles de $S$ de dimension
-$1$ sont infinies, car tout $x\in S$ qui n'est pas fermé est le point générique
-d'une telle composante (10.4.5 et 10.5.4). Alors $S$ vérifie aussi les conditions
-$2^\circ$ et $3^\circ$ de (10.6.1)~: en effet, tout anneau local $\mathcal O_{S,s}$
+$1$ sont \emph{infinies}, car tout $x\in S$ qui n'est pas fermé est le point générique
+d'une telle composante (10.4.5 et 10.5.4). Alors $S$ \emph{vérifie aussi les conditions
+$2^\circ$ et $3^\circ$ de} (10.6.1)~: en effet, tout anneau local $\mathcal O_{S,s}$
 est de dimension $0$ ou $1$, et par suite est universellement caténaire (7.2.9)~;
 d'autre part, une composante irréductible $S'$ de $S$ est, soit réduite
-
 \oldpage[IV-3]{110}
 à un point, soit de dimension $1$, et pour tout point fermé $s\in S'$,
 $\mathcal O_{S',s}$ est nécessairement de dimension $1$.
@@ -1136,7 +1124,7 @@ fini sur un corps ou sur $\mathbf Z$}.
 \label{IV.10.7.2-fr}
 Soit $A$ un anneau local noethérien \emph{universellement caténaire} et soit $S$
 le \emph{complémentaire dans $X=\operatorname{Spec}(A)$ du point fermé} $a$.
-Alors $S$ vérifie les conditions $1^\circ$, $2^\circ$ et $3^\circ$ de (10.6.1)~:
+Alors $S$ \emph{vérifie les conditions $1^\circ$, $2^\circ$ et $3^\circ$ de} (10.6.1)~:
 en effet, on a déjà vu que $S$ est un préschéma de Jacobson (10.5.9)~; comme $A$
 est universellement caténaire, il en est de même des anneaux locaux $A_{\mathfrak p}$
 aux idéaux premiers de $A$ (5.6.3). D'autre part, une composante irréductible $S'$
@@ -1152,7 +1140,7 @@ est équicodimensionnel (5.1.4).
 \label{IV.10.7.3-fr}
 Soit $A$ un anneau de valuation discrète~; montrons que dans l'anneau
 $B=A[T_1,\ldots,T_n]$ des polynômes à $n$ indéterminées, il existe deux idéaux
-maximaux $\mathfrak m$, $\mathfrak n$ de \emph{hauteurs respectives} $n$ et
+maximaux $\mathfrak m$, $\mathfrak n$ \emph{de hauteurs respectives $n$ et}
 $n+1$. On l'a vu dans (5.2.5, (i)) pour $n=1$~; démontrons-le par récurrence sur
 $n$. Comme $A[T_1,\ldots,T_{n+1}]$ est un $A[T_1,\ldots,T_n]$-module libre,
 donc fidèlement plat, il y a dans $A[T_1,\ldots,T_{n+1}]$ deux idéaux maximaux
@@ -1160,16 +1148,16 @@ $\mathfrak m'$, $\mathfrak n'$ respectivement au-dessus de $\mathfrak m$ et
 $\mathfrak n$ ($\mathbf 0_{\mathrm I}$, 6.5.1)~; en outre, d'après (5.5.3), ces
 idéaux sont nécessairement de hauteurs respectives $n+1$ et $n+2$, d'où notre
 assertion. Supposons $n\geq2$ dans ce qui suit. Soit
-$\mathfrak J=\mathfrak m\cap\mathfrak n=\mathfrak m\mathfrak n$, et
+$\mathfrak J$ l'idéal $\mathfrak m\cap\mathfrak n=\mathfrak m\mathfrak n$, et
 $R=1+\mathfrak J$ qui est une partie multiplicative de $B$~; si l'on pose
 $B'=R^{-1}B$, l'idéal $\mathfrak J'=R^{-1}\mathfrak J$ est contenu dans le
-radical de $B'$ (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~3,
+\emph{radical} de $B'$ (Bourbaki, \emph{Alg. comm.}, chap.~III, \S~3,
 n\textsuperscript{o}~5, prop.~12)~; on sait que $X'=\operatorname{Spec}(B')$
 s'identifie en tant qu'espace topologique à un sous-espace de
 $X=\operatorname{Spec}(B)$, et qu'aux points $x$ de $X'$, les anneaux locaux
 $\mathcal O_{X,x}$ et $\mathcal O_{X',x}$ sont les mêmes (\textbf{I}, 1.6.2).
 Considérons alors dans $X'$ l'ensemble fermé $Y'=V(\mathfrak J')$, et soit
-$S=X'-Y'$~; on sait (10.5.7) que $S$ est un préschéma de Jacobson, évidemment
+$S=X'\setmin Y'$~; on sait (10.5.7) que $S$ est un préschéma de Jacobson, évidemment
 irréductible et noethérien~; en outre les anneaux locaux
 $\mathcal O_{S,s}=\mathcal O_{X,s}$ sont universellement caténaires pour tout $s\in S$
 en vertu de (5.6.3), puisque $A$ est universellement caténaire (5.6.4). Pourtant,
@@ -1195,7 +1183,7 @@ dans $X'$ soit $\{a,a'\}$~; comme $B'_{\mathfrak m'}$ est biéquidimensionnel,
 $\mathfrak p'$ est alors de hauteur $n-1$. On construit de la même manière un
 idéal premier non maximal $\mathfrak q'$ de $B'$ de hauteur $n$, tel que si $b$
 est le point correspondant de $X'$, l'adhérence de $b$ dans $X'$ soit
-$\{b,b'\}$. Cela étant, $a$ et $b$ sont dans $S$, donc \emph{fermés dans $S$},
+$\{b,b'\}$. Cela étant, $a$ et $b$ sont dans $S$, donc \emph{fermés} dans $S$,
 et répondent par suite à la question.
 \end{env}
 
@@ -1205,8 +1193,8 @@ et répondent par suite à la question.
 \begin{definition}[10.8.1]
 \label{IV.10.8.1-fr}
 Soient $X$ un préschéma localement noethérien, $\mathcal F$ un $\mathcal O_X$-Module
-cohérent. Pour tout $x\in X$, on appelle \emph{profondeur rectifiée de $\mathcal F$
-au point $x$} et on note $\operatorname{prof}^{*}_{x}(\mathcal F)$ le nombre (entier
+cohérent. Pour tout $x\in X$, on appelle profondeur rectifiée de $\mathcal F$
+au point $x$ et on note $\operatorname{prof}^{*}_{x}(\mathcal F)$ le nombre (entier
 $\geq0$ ou $+\infty$) égal à
 \begin{equation}
 \label{IV.10.8.1.1-fr}
@@ -1215,7 +1203,7 @@ $\geq0$ ou $+\infty$) égal à
 =\operatorname{prof}(\mathcal F_x)+\dim(\overline{\{x\}})
 \end{equation}
 où $\overline{\{x\}}$ est l'adhérence du point $x$ dans $X$. Pour toute partie
-$Z$ de $X$, on appelle \emph{profondeur rectifiée de $\mathcal F$ le long de $Z$}
+$Z$ de $X$, on appelle profondeur rectifiée de $\mathcal F$ le long de $Z$
 et on note $\operatorname{prof}^{*}_{Z}(\mathcal F)$ le nombre
 \begin{equation}
 \label{IV.10.8.1.2-fr}
@@ -1242,7 +1230,7 @@ $\mathcal G$ un $\mathcal O_Y$-Module cohérent. On sait (5.7.3, (vi)) que l'on 
 $\operatorname{prof}(\mathcal G_x)=\operatorname{prof}(j_*(\mathcal G)_x)$ pour tout
 $x\in Y$~; on en déduit que l'on a aussi
 $\operatorname{prof}^{*}_{x}(\mathcal G)
-=\operatorname{prof}^{*}_{x}(j_*(\mathcal G))$ pour tout $x\in Y$.
+=\operatorname{prof}^{*}_{x}j_*((\mathcal G))$ pour tout $x\in Y$.
 
 (iii) La notion de profondeur rectifiée n'a d'intérêt que lorsqu'elle est de
 caractère \emph{local}, c'est-à-dire qu'elle ne change pas lorsqu'on remplace $X$
@@ -1281,12 +1269,12 @@ d'où le lemme.
 
 \begin{corollary}[10.8.4]
 \label{IV.10.8.4-fr}
-Sous les hypothèses de (10.8.3), la fonction
-$x\mapsto\operatorname{prof}^{*}_{x}(\mathcal F)$ est semi-continue inférieurement.
+Sous les hypothèses de \textup{(10.8.3)}, la fonction
+$x\leadsto\operatorname{prof}^{*}_{x}(\mathcal F)$ est semi-continue inférieurement.
 \end{corollary}
 
 Cela résulte de (10.8.3.1), puisque
-$x\mapsto\dim.\operatorname{proj}(\mathcal F_x)$ est semi-continue supérieurement
+$x\leadsto\dim.\operatorname{proj}(\mathcal F_x)$ est semi-continue supérieurement
 (6.11.1).
 
 \begin{proposition}[10.8.5]
@@ -1296,7 +1284,7 @@ type fini sur $S$, $\mathcal F$ un $\mathcal O_X$-Module cohérent. On suppose q
 vérifie les conditions suivantes~: $1^\circ$ $S$ est un préschéma de Jacobson~;
 $2^\circ$ $S$ est régulier~; $3^\circ$ les composantes irréductibles de $S$ sont
 équicodimensionnelles. Alors la fonction
-$x\mapsto\operatorname{prof}^{*}_{x}(\mathcal F)$ est semi-continue inférieurement
+$x\leadsto\operatorname{prof}^{*}_{x}(\mathcal F)$ est semi-continue inférieurement
 dans $X$~; autrement dit, pour tout entier $n$, l'ensemble $U_n$ des $x\in X$
 tels que $\operatorname{prof}^{*}_{x}(\mathcal F)\geq n$ est ouvert.
 \end{proposition}
@@ -1314,7 +1302,6 @@ vérifiant également les conditions $1^\circ$, $2^\circ$ et $3^\circ$ de (10.6.
 compte tenu de la remarque (10.8.2, (ii)), on est ainsi ramené au cas où $X$ est
 en outre régulier et noethérien. Mais comme les anneaux locaux de $X$ sont alors
 intègres, les composantes irréductibles de $X$ sont
-
 \oldpage[IV-3]{112}
 ouvertes (\textbf{I}, 6.1.10), et on peut par suite supposer aussi $X$
 irréductible. Alors, comme les anneaux locaux de $X$ sont caténaires
@@ -1327,27 +1314,27 @@ vérifie les conditions de (10.8.5).
 
 \begin{corollary}[10.8.6]
 \label{IV.10.8.6-fr}
-Les hypothèses étant celles de (10.8.5), pour tout $x\in X$, le nombre
+Les hypothèses étant celles de \textup{(10.8.5)}, pour tout $x\in X$, le nombre
 $\operatorname{prof}^{*}_{x}(\mathcal F)$ est l'unique entier $n$ ayant la propriété
 suivante~: il existe un voisinage ouvert $U$ de $x$ dans $X$ tel que pour tout
-point $x'\in U\cap\overline{\{x\}}$, fermé dans $U$, on ait
+point $x'\in U\cap\overline{\{x\}}$, fermé \textup{dans} $U$, on ait
 $\operatorname{prof}(\mathcal F_{x'})=n$. En particulier, pour que
-$\operatorname{prof}^{*}_{x}(\mathcal F)\geq m$ (resp.
-$\operatorname{prof}^{*}_{x}(\mathcal F)\leq m$), il faut et il suffit qu'il existe
+$\operatorname{prof}^{*}_{x}(\mathcal F)\geq m$ \textup{(resp.}
+$\operatorname{prof}^{*}_{x}(\mathcal F)\leq m$\textup{)}, il faut et il suffit qu'il existe
 un voisinage ouvert $V$ de $x$ dans $X$ tel que, pour tout
-$x'\in V\cap\overline{\{x\}}$, fermé dans $V$, on ait
-$\operatorname{prof}(\mathcal F_{x'})\geq m$ (resp.
-$\operatorname{prof}(\mathcal F_{x'})\leq m$).
+$x'\in V\cap\overline{\{x\}}$, fermé \textup{dans} $V$, on ait
+$\operatorname{prof}(\mathcal F_{x'})\geq m$ \textup{(resp.}
+$\operatorname{prof}(\mathcal F_{x'})\leq m$\textup{)}.
 \end{corollary}
 
 En effet, on peut se borner au cas où $x$ n'est pas fermé~; si
 $\operatorname{prof}^{*}_{x}(\mathcal F)=n$, l'ensemble des $y\in X$ tels que
 $\operatorname{prof}^{*}_{y}(\mathcal F)\leq n$ est fermé en vertu de (10.8.5), donc
 contient $\overline{\{x\}}$, et en vertu de la semi-continuité inférieure de
-$y\mapsto\operatorname{prof}^{*}_{y}(\mathcal F)$, il existe un voisinage ouvert $U$
+$y\leadsto\operatorname{prof}^{*}_{y}(\mathcal F)$, il existe un voisinage ouvert $U$
 de $x$ tel que $\operatorname{prof}^{*}_{y}(\mathcal F)=n$ pour tout
 $y\in U\cap\overline{\{x\}}$, donc $\operatorname{prof}(\mathcal F_{x'})=n$ si
-$x'\in U\cap\overline{\{x\}}$ est fermé dans $U$ (puisque la notion de profondeur
+$x'\in U\cap\overline{\{x\}}$ est \emph{fermé} dans $U$ (puisque la notion de profondeur
 rectifiée est locale).
 
 Pour les préschémas vérifiant les hypothèses de (10.8.5), la notion de profondeur
@@ -1358,7 +1345,7 @@ dans toute partie fermée de $X$).
 \begin{proposition}[10.8.7]
 \label{IV.10.8.7-fr}
 Soit $S$ un préschéma localement noethérien vérifiant les conditions $1^\circ$,
-$2^\circ$ et $3^\circ$ de (10.6.1). Soient $X$ un préschéma localement de type
+$2^\circ$ et $3^\circ$ de \textup{(10.6.1)}. Soient $X$ un préschéma localement de type
 fini sur $S$, $\mathcal F$ un $\mathcal O_X$-Module cohérent,
 $Y=\operatorname{Supp}(\mathcal F)$. Alors, pour tout $x\in Y$, on a
 \begin{equation}
@@ -1377,23 +1364,21 @@ définition de $\operatorname{prof}^{*}_{x}(\mathcal F)$.
 
 \begin{corollary}[10.8.8]
 \label{IV.10.8.8-fr}
-Les hypothèses sur $f$ et $\mathcal F$ étant celles de (9.9.1), la fonction
-$x\mapsto\operatorname{prof}^{*}_{x}(\mathcal F_{f(x)})$ est constructible.
+Les hypothèses sur $f$ et $\mathcal F$ étant celles de \textup{(9.9.1)}, la fonction
+$x\leadsto\operatorname{prof}^{*}_{x}(\mathcal F_{f(x)})$ est constructible.
 \end{corollary}
 
 Notons que pour tout $s\in S$, la fibre $X_s$ étant un préschéma localement de
-type fini sur $k(s)$, est un préschéma de Jacobson (10.4.7)~; comme en outre
-$\operatorname{Spec}(k(s))$ vérifie les conditions de (10.6.1), on a
-\[
-  \operatorname{prof}^{*}_{x}(\mathcal F_{f(x)})
+type fini sur $\boldsymbol{k}(s)$, est un préschéma de Jacobson (10.4.7)~; comme en outre
+$\operatorname{Spec}(\boldsymbol{k}(s))$ vérifie les conditions de (10.6.1), on a
+$\operatorname{prof}^{*}_{x}(\mathcal F_{f(x)})
   =\dim_x(\operatorname{Supp}(\mathcal F_{f(x)}))
-  -\operatorname{coprof}((\mathcal F_{f(x)})_x)
-\]
+  -\operatorname{coprof}((\mathcal F_{f(x)})_x)$
 (10.8.7). Or, si $Z=\operatorname{Supp}(\mathcal F)$, on a
 $Z_{f(x)}=\operatorname{Supp}(\mathcal F_{f(x)})$ (\textbf{I}, 9.1.13) et $Z$ est
 localement constructible (8.9.1)~; donc les fonctions
-$x\mapsto\dim_x(\operatorname{Supp}(\mathcal F_{f(x)}))$ et
-$x\mapsto\operatorname{coprof}((\mathcal F_{f(x)})_x)$ sont localement
+$x\leadsto\dim_x(\operatorname{Supp}(\mathcal F_{f(x)}))$ et
+$x\leadsto\operatorname{coprof}((\mathcal F_{f(x)})_x)$ sont localement
 constructibles ((9.9.1) et (9.9.3)), ce qui prouve la proposition.
 
 \subsection{Spectres maximaux et ultrapréschémas}
@@ -1403,18 +1388,18 @@ Les résultats de ce numéro ne seront pas utilisés par la suite.
 
 \begin{env}[10.9.1]
 \label{IV.10.9.1-fr}
-Soit $X$ un préschéma de Jacobson, et soit $S(X)$ l'\emph{espace annelé} dont
-l'espace sous-jacent est le sous-espace des points fermés de $X$, et le faisceau
-d'anneaux le faisceau induit sur ce sous-espace par $\mathcal O_X$, autrement dit
+Soit $X$ un \emph{préschéma de Jacobson}, et soit $S(X)$ l'\emph{espace annelé} dont
+l'espace sous-jacent est le sous-espace des points \emph{fermés} de $X$, et le faisceau
+d'anneaux le faisceau \emph{induit} sur ce sous-espace par $\mathcal O_X$, autrement dit
 le faisceau d'anneaux $\psi^*(\mathcal O_X)$, en désignant par
-$\psi:S(X)\to X$ l'injection canonique. Comme $\psi$ est un quasi-
+$\psi:S(X)\to X$ l'injection canonique. Comme $\psi$ est un quasi-%
 \oldpage[IV-3]{113}
 homéomorphisme, on a vu (10.2.8, (ii)) que si
 $\theta:\mathcal O_X\to\psi_*(\mathcal O_{S(X)})$ est l'homomorphisme de
 faisceaux d'anneaux tel que
 $\theta^\sharp:\psi^*(\mathcal O_X)\to\mathcal O_{S(X)}$ soit l'identité,
 alors $j_X=(\psi,\theta)$ est un \emph{quasi-isomorphisme} d'espaces annelés,
-et $\mathcal F\mapsto j_X^*(\mathcal F)$ une équivalence de la catégorie des
+et $\mathcal F\leadsto j_X^*(\mathcal F)$ une équivalence de la catégorie des
 $\mathcal O_X$-Modules et de celle des $\mathcal O_{S(X)}$-Modules. Il est clair
 que dans cette équivalence, aux $\mathcal O_X$-Modules localement libres (resp.
 cohérents) correspondent les $\mathcal O_{S(X)}$-Modules localement libres
@@ -1444,10 +1429,8 @@ que cela définit un homomorphisme de faisceaux d'anneaux
 $S(\lambda):\mathcal O_{S(Y)}\to\rho_*(\mathcal O_{S(X)})$ (en se rappelant
 que les ouverts de $S(X)$ (resp. $S(Y)$) correspondent biunivoquement à ceux de
 $X$ (resp. $Y$) (10.2.1))~; on obtient ainsi un morphisme d'espaces annelés
-\[
-  S(f)=(S(\rho),S(\lambda)):(S(X),\mathcal O_{S(X)})\longrightarrow
-  (S(Y),\mathcal O_{S(Y)})
-\]
+$S(f)=(S(\rho),S(\lambda)):(S(X),\mathcal O_{S(X)})\longrightarrow
+  (S(Y),\mathcal O_{S(Y)})$
 tel que le diagramme
 \[
 \begin{tikzcd}
@@ -1458,15 +1441,15 @@ X \ar[r,"f"'] & Y
 soit commutatif~; en outre, si $Z$ est un troisième préschéma de Jacobson et
 $g:Y\to Z$ un morphisme localement de type fini, il est clair que
 $S(g\circ f)=S(g)\circ S(f)$. On a ainsi défini un \emph{foncteur covariant}
-$S:\mathbf C\to\mathbf C'$, où $\mathbf C'$ est la catégorie des \emph{espaces
-annelés en anneaux locaux}, et $\mathbf C$ la catégorie dont les objets sont les
+$S:\boldsymbol{C}\to\boldsymbol{C}'$, où $\boldsymbol{C}'$ est la catégorie des \emph{espaces
+annelés en anneaux locaux}, et $\boldsymbol{C}$ la catégorie dont les objets sont les
 \emph{préschémas de Jacobson} et les morphismes sont les morphismes
 \emph{localement de type fini} entre préschémas de Jacobson.
 \end{env}
 
 \begin{env}[10.9.3]
 \label{IV.10.9.3-fr}
-Proposons-nous de déterminer la sous-catégorie $\mathbf C''$ de $\mathbf C'$
+Proposons-nous de déterminer la sous-catégorie $\boldsymbol{C}''$ de $\boldsymbol{C}'$
 formée des espaces annelés isomorphes aux $S(X)$ et dont les morphismes
 proviennent des $S(f)$. Supposons d'abord que $X=\operatorname{Spec}(A)$, où
 $A$ est un anneau de Jacobson~; alors $S(X)$ est l'ensemble des \emph{idéaux
@@ -1475,7 +1458,7 @@ sorte qu'une base de cette topologie est formée des
 $D^m(h)=D(h)\cap S(X)$, ensemble des idéaux maximaux $\mathfrak m$ de $A$ tels
 que $h\notin\mathfrak m$, où $h$ parcourt $A$~; $2^\circ$ du faisceau d'anneaux
 $\mathcal O_{S(X)}$ tel que
-$\Gamma(D^m(h),\mathcal O_{S(X)})=A_h$. Nous dirons que cet espace annelé est
+$\Gamma(D^m(h),\mathcal O_{S(X)})=A_f$. Nous dirons que cet espace annelé est
 le \emph{spectre maximal} de l'anneau de Jacobson $A$ et nous le noterons
 $\operatorname{Spm}(A)$.
 
@@ -1484,16 +1467,16 @@ induit sur $D^m(h)$ par $S(X)$ est $S(D(h))$ et l'injection canonique
 $D^m(h)\to S(X)$ d'espaces annelés est égale à $S(j)$.
 
 Soient $B$ un second anneau de Jacobson, $Y=\operatorname{Spec}(B)$,
-$\varphi:B\to A$ un homomorphisme d'anneaux faisant de $A$ une $B$-algèbre de
-type fini, $f=({}^a\varphi,\widetilde\varphi):X\to Y$ le morphisme
+$\varphi:B\to A$ un homomorphisme d'anneaux faisant de $A$ une $B$-algèbre \emph{de
+type fini}, $f=({}^a\varphi,\widetilde\varphi):X\to Y$ le morphisme
 correspondant de préschémas, et
 \[
   S(f):\operatorname{Spm}(A)\longrightarrow\operatorname{Spm}(B)
 \]
 le morphisme d'espaces annelés correspondant à $f$. Il est clair que
 $S(f)=(\psi,\theta)$ est un morphisme d'espaces annelés en anneaux locaux,
-c'est-à-dire ($\mathrm{Err}_{\mathrm{II}}$, 1.8.2) que pour tout
-$x\in\operatorname{Spm}(A)$, $\theta_x^\sharp$ est un homomorphisme local.
+c'est-à-dire ($\mathbf{Err}_{\mathrm{II}}$, 1.8.2) que pour tout
+$x\in\operatorname{Spm}(A)$, $\theta_x^\sharp$ est un homomorphisme \emph{local}.
 Réciproquement~:
 \end{env}
 
@@ -1529,39 +1512,39 @@ $u=S(f)$.
 Considérons maintenant un espace annelé $(X,\mathcal O_X)$~; nous dirons qu'une
 partie ouverte $U$ de $X$ est \emph{ultra-affine} si l'espace annelé induit
 $(U,\mathcal O_X|U)$ est isomorphe à un spectre maximal
-$\operatorname{Spm}(A)$, où $A$ est un anneau de Jacobson. Nous dirons que $X$
+$\operatorname{Spm}(A)$, où $A$ est un \emph{anneau de Jacobson}. Nous dirons que $X$
 est un \emph{ultra-préschéma} si tout point de $X$ admet un voisinage ouvert
 ultra-affine. On montre, comme dans (\textbf I, 2.1.3 et 2.1.4) que les ouverts
 ultra-affines forment une \emph{base} de la topologie de $X$ et que $X$ est un
 espace de Kolmogoroff. Si $Y$ est un second ultra-préschéma, nous dirons qu'un
 morphisme d'espaces annelés $f:X\to Y$ est un \emph{morphisme
 d'ultra-préschémas} s'il vérifie les conditions suivantes~: $1^\circ$ $f$ est
-un morphisme d'espaces annelés en anneaux locaux~; $2^\circ$ pour tout $x\in X$,
+un morphisme d'\emph{espaces annelés en anneaux locaux}~; $2^\circ$ pour tout $x\in X$,
 il y a un voisinage ouvert ultra-affine $V$ de $f(x)$ dans $Y$ et un voisinage
 ouvert ultra-affine $U$ de $x$ dans $X$ tels que $f(U)\subset V$ et que
 l'homomorphisme
 $\Gamma(V,\mathcal O_Y)\to\Gamma(U,\mathcal O_X)$ correspondant à $f$ fasse
-de $\Gamma(U,\mathcal O_X)$ une $\Gamma(V,\mathcal O_Y)$-algèbre de type fini.
+de $\Gamma(U,\mathcal O_X)$ une $\Gamma(V,\mathcal O_Y)$-\emph{algèbre de type fini}.
 
 Il est immédiat qu'on définit bien ainsi des morphismes, le composé de deux
 morphismes en étant un troisième grâce à la remarque finale de (10.9.3). Il
-est clair que la catégorie $\mathbf C''_0$ ainsi définie est une sous-catégorie
-de $\mathbf C'$ qui contient $\mathbf C''$~; nous nous proposons de montrer que
-$\mathbf C''=\mathbf C''_0$, autrement dit~:
+est clair que la catégorie $\boldsymbol{C}''_0$ ainsi définie est une sous-catégorie
+de $\boldsymbol{C}'$ qui contient $\boldsymbol{C}''$~; nous nous proposons de montrer que
+$\boldsymbol{C}''=\boldsymbol{C}''_0$, autrement dit~:
 \end{env}
 
 \begin{proposition}[10.9.6]
 \label{IV.10.9.6-fr}
-Le foncteur $X\mapsto S(X)$ de $\mathbf C$ dans $\mathbf C''_0$ est une
+Le foncteur $X\leadsto S(X)$ de $\boldsymbol{C}$ dans $\boldsymbol{C}''_0$ est une
 équivalence de catégories.
 \end{proposition}
 
-$1^\circ$ Montrons d'abord que le foncteur $X\mapsto S(X)$ est
-\emph{pleinement fidèle}, autrement dit que pour $X$, $Y$ dans $\mathbf C$,
+$1^\circ$ Montrons d'abord que le foncteur $X\leadsto S(X)$ est
+\emph{pleinement fidèle}, autrement dit que pour $X$, $Y$ dans $\boldsymbol{C}$,
 l'application canonique
 \[
   \operatorname{Hom}_{\mathbf C}(X,Y)\longrightarrow
-  \operatorname{Hom}_{\mathbf C''_0}(S(X),S(Y))
+  \operatorname{Hom}_{\mathbf C_0{}'}(S(X),S(Y))
 \]
 est \emph{bijective}. En premier lieu elle est \emph{injective}~: soient en
 effet $f$, $g$ deux morphismes localement de type fini de $X$ dans $Y$ et
@@ -1576,11 +1559,11 @@ suffit (\textbf I, 2.2.4) de montrer que les homomorphismes d'anneaux
 $B\to\Gamma(X,\mathcal O_X)$ correspondant à $f$ et $g$ sont alors les mêmes.
 Or, pour tout $s\in B$, les images de $s$ par ces homomorphismes sont deux
 sections de $\mathcal O_X$ au-dessus de $X$ qui, par hypothèse, induisent la
-même section au-dessus de $S(X)$~; on sait donc (10.2.8) que ces sections sont
+\emph{même} section au-dessus de $S(X)$~; on sait donc (10.2.8) que ces sections sont
 identiques, d'où notre assertion. Prouvons en second lieu que tout morphisme
-$h:S(X)\to S(Y)$ (pour la catégorie $\mathbf C''_0$) est de la forme $S(f)$,
+$h:S(X)\to S(Y)$ (pour la catégorie $\boldsymbol{C}''_0$) est de la forme $S(f)$,
 où $f:X\to Y$ est un morphisme localement de type fini. Par hypothèse, il
-existe un recouvrement ouvert ultra-affine $(U'_\lambda)$ (resp.
+existe un recouvrement ouvert ultra-affine $(U')$ (resp.
 $(V'_\mu)$) de $S(X)$ (resp. $S(Y)$) tel que pour tout $\lambda$,
 $h(U'_\lambda)$ soit contenu dans un $V'_\mu$ et qu'il corresponde au
 morphisme $h_\lambda:U'_\lambda\to V'_\mu$, restriction de $h$, un
@@ -1588,8 +1571,8 @@ homomorphisme d'anneaux
 $\Gamma(V'_\mu,\mathcal O_{S(Y)})\to
 \Gamma(U'_\lambda,\mathcal O_{S(X)})$ faisant du second anneau une algèbre de
 type fini sur le premier. On peut supposer que
-$U'_\lambda=U_\lambda\cap S(X)$ et $V'_\mu=V_\mu\cap S(Y)$, où
-$U_\lambda$ et $V_\mu$ sont des ouverts affines uniquement déterminés dans
+$U'=U_\lambda\cap S(X)$ et $V'_\mu=V_\mu\cap S(Y)$, où
+$U_\lambda$ et $V_\mu$ sont des ouverts affines \emph{uniquement déterminés} dans
 $X$ et $Y$ respectivement~; si l'on prouve que, pour tout $\lambda$,
 $h_\lambda=S(f_\lambda)$ où $f_\lambda:U_\lambda\to V_\mu$ est un morphisme
 de type fini, alors il résulte de la première partie du raisonnement,
@@ -1640,7 +1623,7 @@ nous nous bornerons donc à de brèves indications.
 \label{IV.10.10.2-fr}
 Étant donné un ultra-préschéma fixe $R$, on peut naturellement (comme dans
 toute catégorie) définir la notion de $R$-\emph{ultra-préschéma}. Considérons
-en particulier un corps algébriquement clos $k$~; $\operatorname{Spm}(k)$ est
+en particulier un \emph{corps algébriquement clos $k$}~; $\operatorname{Spm}(k)$ est
 alors identique à $\operatorname{Spec}(k)$~; nous dirons qu'un
 $\operatorname{Spm}(k)$-ultra-préschéma $X'$ est un \emph{espace
 préalgébrique sur $k$}~: c'est donc un espace $k$-annelé en anneaux locaux dont
@@ -1648,7 +1631,7 @@ tout point a un voisinage ouvert isomorphe au spectre maximal d'une $k$-algèbre
 de type fini~; il revient au même de dire (par (10.9.6)) que $X'=S(X)$, où $X$
 est un préschéma localement de type fini sur $k$. Si $X$, $Y$, $Z$ sont trois
 $k$-préschémas localement de type fini, il en est de même de
-$X\times_ZY$ (\textbf I, 3.4), donc en vertu de (10.9.6), la notion de produit
+$X\times_ZY$ (1.3.4), donc en vertu de (10.9.6), la notion de produit
 existe dans la catégorie des espaces préalgébriques sur $k$ (aussi bien le
 produit «~sur $k$~» $X'\times_kY'$ que le «~produit fibré~»
 $X'\times_{Z'}Y'$, où $X'$, $Y'$, $Z'$ sont trois espaces préalgébriques sur
@@ -1663,14 +1646,14 @@ est une partie \emph{fermée} de $X'\times_kX'$.
 \label{IV.10.10.3-fr}
 Les simplifications qui proviennent de l'hypothèse que $k$ est algébriquement
 clos tiennent d'abord à ce que, pour un $k$-préschéma $X$, localement de type
-fini, il y a correspondance biunivoque entre \emph{points fermés de $X$},
+fini, il y a correspondance biunivoque entre \emph{points fermés} de $X$,
 \emph{points de $X$ à valeurs dans $k$} (\textbf I, 3.4.4) et \emph{points de
 $X$ rationnels sur $k$} (\textbf I, 3.4.5), en vertu de (\textbf I, 6.4.2).
 Cela montre en particulier (en vertu de (\textbf I, 3.4.3.1)) que pour deux
 espaces $k$-préalgébriques $X'$, $Y'$, l'ensemble sous-jacent au produit
-$X'\times_kY'$ est identique à l'\emph{ensemble produit} $X'\times Y'$ des
+$X'\times_kY'$ \emph{est identique à l'ensemble produit} $X'\times Y'$ des
 ensembles sous-jacents (mais bien entendu la topologie de l'espace sous-jacent
-à $X'\times_kY'$ n'est pas la \emph{topologie produit} des topologies des
+à $X'\times_kY'$ \emph{n'est pas la topologie produit} des topologies des
 espaces sous-jacents à $X'$ et $Y'$, elle est en général strictement plus fine
 que cette dernière).
 
@@ -1680,33 +1663,33 @@ corps résiduel est \emph{isomorphe à $k$}~; si $A$ et $B$ sont deux telles
 $k$-algèbres locales, tout $k$-homomorphisme $\varphi:A\to B$ est
 nécessairement \emph{local}~: en effet, si un élément $x$ de l'idéal maximal de
 $A$ était tel que $\varphi(x)$ soit inversible, il existerait $\lambda\in k$
-non nul tel que $\varphi(x-\lambda.1)$ appartienne à l'idéal maximal de $B$, ce
-qui est absurde puisque $x-\lambda.1$ est inversible dans $A$. On conclut
+non nul tel que $\varphi(x\setmin\lambda.1)$ appartienne à l'idéal maximal de $B$, ce
+qui est absurde puisque $x\setmin\lambda.1$ est inversible dans $A$. On conclut
 aussitôt de là que si $X'=S(X)$, $Y'=S(Y)$ sont deux espaces préalgébriques sur
-$k$, tout morphisme $X'\to Y'$ d'espaces $k$-annelés est aussi un morphisme
-d'espaces $k$-annelés en anneaux locaux (\textbf I, 1.8.2~; cf.
-$\mathrm{Err}_{\mathrm{II}}$). D'ailleurs, avec les notations précédentes, si
+$k$, tout morphisme $X'\to Y'$ d'\emph{espaces $k$-annelés} est aussi un morphisme
+d'\emph{espaces $k$-annelés en anneaux locaux} (\textbf I, 1.8.2~; cf.
+$\mathbf{Err}_{\mathrm{II}}$). D'ailleurs, avec les notations précédentes, si
 $A$ et $B$ sont des $k$-algèbres de type fini, $\varphi$ fait de $B$ une
-$A$-algèbre de type fini~; donc tout morphisme $X'\to Y'$ de $k$-espaces
+$A$-algèbre de type fini~; donc \emph{tout} morphisme $X'\to Y'$ de $k$-espaces
 annelés est, en vertu de (10.9.6), de la forme $S(f)$, où $f:X\to Y$ est un
-morphisme de $k$-préschémas.
+\emph{morphisme de $k$-préschémas}.
 
 Enfin, pour tout ouvert $U$ de $X'$, toute section
 $s\in\Gamma(U,\mathcal O_{X'})$, et tout $x\in U$, $s(x)$
 ($\mathbf 0_{\mathrm I}$, 5.5.1) s'identifie à un élément de $k$, et l'on a
-ainsi associé à $s$ une application $\overline s:x\mapsto s(x)$ de $U$ dans
-$k$, autrement dit une section au-dessus de $U$ du faisceau $\mathcal A(X')$
-des germes d'applications de $X'$ dans $k$~; comme l'application
-$h_U:s\mapsto\overline s$ est évidemment un homomorphisme d'anneaux
+ainsi associé à $s$ une application $\overline s:x\leadsto s(x)$ de $U$ dans
+$k$, autrement dit une section au-dessus de $U$ du \emph{faisceau $\mathcal A(X')$
+des germes d'applications de $X'$ dans $k$}~; comme l'application
+$h_U:s\leadsto\overline s$ est évidemment un homomorphisme d'anneaux
 $\Gamma(U,\mathcal O_{X'})\to\Gamma(U,\mathcal A(X'))$ et commute aux
 restrictions à un ouvert $V\subset U$, les $h_U$ définissent un homomorphisme
-de faisceaux d'anneaux $h:\mathcal O_{X'}\to\mathcal A(X')$. Si l'on prend
+de \emph{faisceaux d'anneaux} $h:\mathcal O_{X'}\to\mathcal A(X')$. Si l'on prend
 pour $U$ un ouvert ultra-affine $\operatorname{Spm}(A)$, où $A$ est un anneau
 de Jacobson, dire que $\overline s=0$ signifie que pour tout idéal maximal
 $\mathfrak m$ de $A$, $s$ appartient à $\mathfrak m$, ou encore que $s$ est
 dans le \emph{radical} de $A$~; mais comme $A$ est un anneau de Jacobson, son
 radical est égal à son nilradical~; pour que $h_U$ soit injective, il faut et
-il suffit par suite que $A$ soit réduit.
+il suffit par suite que $A$ soit \emph{réduit}.
 \end{env}
 
 \begin{env}[10.10.4]
@@ -1716,9 +1699,9 @@ ainsi de $X$~; comme l'ensemble des points $x\in X$ où $X$ est réduit est
 ouvert ($\mathbf 0_{\mathrm I}$, 5.2.2), son complémentaire contient au moins
 un point fermé s'il est non vide (5.1.11), et il revient donc au même de dire
 que $X'$ est réduit ou que chacun de ses anneaux locaux $\mathcal O_x$ (pour
-$x\in X'$) est réduit. On vient de voir dans (10.10.3) que pour que
+$x\in X'$) est \emph{réduit}. On vient de voir dans (10.10.3) que pour que
 l'homomorphisme $h:\mathcal O_{X'}\to\mathcal A(X')$ soit \emph{injectif}, il
-faut et il suffit que $X'$ soit réduit. Dans (FAC), Serre se borne en fait aux
+faut et il suffit que $X'$ soit \emph{réduit}. Dans (FAC), Serre se borne en fait aux
 espaces préalgébriques \emph{réduits}, ce qui lui permet de définir
 $\mathcal O_{X'}$ comme un \emph{sous-faisceau} de $\mathcal A(X')$. On notera
 que si $X'$ et $Y'$ sont des $k$-espaces préalgébriques réduits, il en est de
@@ -1735,7 +1718,7 @@ réduits sur $Z'$ n'est pas réduit en général, ce qui implique que la catégo
 de ces espaces est insuffisante dans de nombreuses questions (notamment dans
 la théorie des groupes algébriques). Mais comme on l'a vu ci-dessus, on peut
 garder le langage de Serre sans se limiter, comme ce dernier (qui en outre ne
-considère que des espaces préalgébriques quasi-compacts), au cas des espaces
+considère que des espaces préalgébriques \emph{quasi-compacts}), au cas des espaces
 préalgébriques réduits.
 \end{env}
 
@@ -1744,10 +1727,10 @@ préalgébriques réduits.
 \begin{env}[10.10.5]
 \label{IV.10.10.5-fr}
 Enfin, on peut aussi considérer des ultra-préschémas sur un corps $k$
-quelconque en conservant un langage qui reste proche de celui de Serre, et en
-introduisant, comme chez Weil, une extension algébriquement close fixe $K$ de
+\emph{quelconque} en conservant un langage qui reste proche de celui de Serre, et en
+introduisant, comme chez Weil, une extension algébriquement close \emph{fixe} $K$ de
 $k$ (choisie assez grande, par exemple de degré de transcendance infini sur
-$k$, pour avoir suffisamment de «~points génériques~» au sens de Weil). À tout
+$k$, pour avoir suffisamment de «~points génériques~» au sens de Weil). A tout
 préschéma $X$ localement de type fini sur $k$, on associe alors l'ensemble
 $S_K(X)=S(X\otimes_kK)$ des points de $X$ à valeurs dans $K$~; on a une
 application canonique $j:S_K(X)\to X$ que l'on démontre être un
@@ -1758,7 +1741,7 @@ espaces $k$-annelés en anneaux locaux, que l'on pourrait appeler catégorie des
 $(k,K)$-espaces préalgébriques. On peut montrer qu'on y peut encore définir des
 produits et généraliser les résultats de (10.10.3) et (10.10.4)
 ($\mathcal A(X')$ étant ici remplacé par le faisceau $\mathcal A_K(X')$ des
-germes d'applications de $X'$ dans $K$). Toutefois ce point de vue fait jouer
+germes d'applications de $X'$ \emph{dans} $K$). Toutefois ce point de vue fait jouer
 un rôle artificiel à un surcorps arbitrairement choisi de $k$, et nous ne le
 signalons que pour le rejeter.
 \end{env}
