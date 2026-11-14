@@ -14,7 +14,7 @@ préparation des sources et l'assemblage des éditions sont documentés pour GPT
 GPT-6 Astra (effort Ultra, depuis octobre 2026).
 
 Depuis le 1er novembre 2026, la transcription est vérifiée page par page sur les numérisations Numdam des fascicules
-imprimés, par Claude Opus 5.5 (Anthropic) ; l'historique des commits indique les parties déjà vérifiées. Les
+imprimés, par Claude Opus 5.5 (Anthropic, effort non enregistré) ; l'historique des commits indique les parties déjà vérifiées. Les
 corrections de transcription entrent dans les deux éditions ; l'édition diplomatique garde les coquilles de
 l'imprimé.
 
